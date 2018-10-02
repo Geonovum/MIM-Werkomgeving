@@ -9,7 +9,7 @@ Werkversie
 ----------
 
 In deze map staan documenten die “under construction” zijn. De indeling onder de
-map Werkversie wordt door het team bepaald, zodanig dat het de teamwerkwijze het
+map Werkversie wordt door het team bepaald, zodanig dat die de teamwerkwijze het
 beste ondersteunt. Op een bepaald moment zijn de documenten geschikt om “in
 consultatie” te gaan. De relevante documenten worden voorzien van een
 versienummer “x.y.z” en gekopieerd naar de map
