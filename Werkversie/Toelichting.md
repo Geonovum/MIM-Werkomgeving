@@ -1,4 +1,4 @@
-*[Toelichting FINAL versie]*
+### [Toelichting FINAL versie]
 
 Deze versie is voorgelegd voor officiele besluitvorming en heet daarom versie
 1.0 FINAL. Dit document wordt gezien als geheel stabiel.

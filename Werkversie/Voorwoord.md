@@ -1,5 +1,3 @@
->   **Voorwoord**
-
 Informatie is een belangrijke motor voor het functioneren van de overheid in
 Nederland. Steeds meer wordt er samengewerkt en uitgewisseld tussen
 verschillende overheidslagen en instanties. Daarom is het van groot belang dat

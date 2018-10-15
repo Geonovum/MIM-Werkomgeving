@@ -1,12 +1,10 @@
-Afspraken & Regels
-==================
+# Afspraken & Regels
 
 >   In deze paragraaf gaan we in op een aantal aspecten van het zojuist
 >   beschreven metamodel en afspraken en regels die van toepassing zijn voor een
 >   informatiemodel.
 
-Datatype(n) 
-------------
+## Datatype(n)
 
 Een datatype is een typering van een eigenschap. Datatypen in een
 informatiemodel beschrijven de structuur waaraan de data van objecten moet
@@ -45,7 +43,7 @@ Dit wordt gedaan in een metagegeven lengte. De data van het attribuut moet dan
 voldoen aan het datatype én aan het metagegeven lengte. De lengte wordt dus niet
 in het datatype zelf vastgelegd.
 
-### 3.1.1 Primitive datatypes 
+### Primitive datatypes
 
 Dit metamodel onderkend (momenteel) de volgende extern gedefinieerde primitive
 datatypes. Deze zijn allemaal gebaseerd op [GAB]:
@@ -82,7 +80,7 @@ Aanbeveling: als er niet mee gerekend kan worden, zoals de bankrekening zelf
 (waar een saldo op staat, maar die bedoelen we hier expliciet niet), gebruik dan
 een CharacterString met een patroon.
 
-### 3.1.2. Primitief datatype zelf definiëren 
+### Primitief datatype zelf definiëren
 
 Het is ook mogelijk om in het eigen informatiemodel een eigen primitive datatype
 te definiëren in de vorm van een «Primitief datatype», met als UML metaclass de
@@ -105,7 +103,7 @@ opgenomen, zijn:
     koppeltekens – en \_ en spaties. De minimale lengte is tenminste 1, de
     maximale lengte is onbepaald. De 1e positie mag géén spatie bevatten.
 
-### 3.1.3. Datatypen landelijk
+### Datatypen landelijk
 
 Wanneer op landelijk niveau afspraken zijn gemaakt (bijvoorbeeld in GAB), voor
 algemene datatypen, die niet primitief zijn, zoals Postcode, dan worden deze
@@ -191,7 +189,7 @@ gegevensgroep gezien als een apart te beheren object. Er wordt dan een apart
 «Objecttype» gemaakt. Het is wel mogelijk, hoewel uitzonderlijk, om binnen een
 gegevensgroeptype nog een ander gegevensgroeptype te modelleren.
 
-### 3.3.1. Hergebruik 
+### Hergebruik
 
 Het kan voorkomen dat meerdere objecttypes gebruik maken van dezelfde
 gegevensgroeptype, omdat de definitie voor alle objecttypes gelijk is of moet
@@ -219,7 +217,7 @@ gegevensgroepen. Vanwege dit hergebruik is daarom de kardinaliteit van de
 relatie van gegevensgroep naar gegevensgroeptype aan de source kant 1..\*. Zie
 2.1.1.
 
-### 3.3.2 Gegevensgroep versus Gestructureerd datatype 
+### Gegevensgroep versus Gestructureerd datatype
 
 Een gegevensgroep is niet hetzelfde als een Gestructureerd datatype.
 
@@ -583,8 +581,8 @@ waardoor er (te) vaak nieuwe versies moeten worden uitgebracht. De aanbeveling
 is om de specificatie van dergelijke constraints buiten het informatiemodel te
 specificeren, bijvoorbeeld als validatieregel.
 
-Historie 
----------
+Historie
+--------
 
 Deze paragraaf geeft in meer detail aan wat we onder de metagegevens *Indicatie
 materiële historie en Indicatie formele historie* verstaan.
@@ -709,8 +707,8 @@ Opmerking: de metagegevens Indicatie materiële historie en Indicatie formele
 mogen worden opgenomen in een logisch model (of worden overgenomen van het
 conceptuele naar het logische informatiemodel).
 
-Afleidbare gegevens 
---------------------
+Afleidbare gegevens
+-------------------
 
 In een informatiemodel kan de behoefte bestaan om afgeleide gegevens op te
 nemen: dit zijn gegevens die afleidbaar zijn uit andere attribuut- en/of
@@ -756,8 +754,8 @@ onderscheid in de volgende groepen van gegevens:
 |                             |                                                                                                                                                                                                                |
 |  Overig                     | Indien het géén van de voorgaande categorieën betreft. Veelal gaat het dan om proces-, taakveld- of domeinspecifieke gegevens.                                                                                 |
 
-Mogelijk geen waarde 
----------------------
+Mogelijk geen waarde
+--------------------
 
 Een attribuut kan geen waarde hebben, omdat de waarde optioneel is en er niet
 is. Bijvoorbeeld bij een tussenvoegsel van een achternaam. Maar een attribuut
@@ -812,8 +810,8 @@ wanneer het een situatie betreft waarin gegevens worden overgenomen uit een
 registratie die wel de waarde ‘onbekend’ gebruikt. Dan kan er ook gekozen worden
 voor het 1:1 overgenomen van de gegevensdefinitie uit deze andere registratie.
 
-Externe schema’s (her) gebruiken 
----------------------------------
+Externe schema’s (her) gebruiken
+--------------------------------
 
 >   In bepaalde situaties is het mogelijk dat een ander informatiemodel al één
 >   op één de specificaties in UML bevat die relevant zijn voor het eigen
@@ -960,7 +958,7 @@ beschrijft enkele punten die op het niveau van dit metamodel zijn afgesproken.
 De verdere invulling van de naamgevingsconventies is aan de opsteller van het
 informatiemodel zelf (zie ook bijlage 1).
 
-### Alternatief 1: natuurlijke taal, die dichtbij de gebruiker staat 
+### Alternatief 1: natuurlijke taal, die dichtbij de gebruiker staat
 
 Met natuurlijke taal wordt bedoeld, zoals de gebruikers erover praten, in
 normaal Nederlands. Veelal zijn dit alleen letters en cijfers, met spaties.
@@ -975,7 +973,7 @@ e.d. Bijvoorbeeld: ‘Natuurlijk persoon’ en ‘naam’ met type CharacterStri
 Regel: voor conceptuele informatiemodellen wordt altijd alternatief 1
 gehanteerd.
 
-### Alternatief 2: (ook) leesbaar door systemen 
+### Alternatief 2: (ook) leesbaar door systemen
 
 Met machine leesbare taal wordt bedoeld dat deze eenvoudig door systemen te
 verwerken is. Veelal zijn dit alleen letters en cijfers, zonder spaties, zonder
@@ -1003,7 +1001,7 @@ conceptuele model. Dit kan bijvoorbeeld met een trace of door opname van de naam
 in de alias (zie 3.16.20), zodat lezers goed de overgang van conceptueel naar
 logisch kunnen volgen.
 
-### Naamgeving voor metamodel elementen 
+### Naamgeving voor metamodel elementen
 
 Voor stereotypes en metagegevens worden dezelfde naamgevingsconventies toegepast
 als in alternatief 1 waarbij de eerste letter een hoofdletter is voor alle

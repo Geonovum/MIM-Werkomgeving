@@ -1,5 +1,5 @@
-Metamodel 
-==========
+﻿Metamodel 
+=========
 
 Dit hoofdstuk beschrijft het metamodel in diagramvorm en in tekst. De eerste
 paragraaf bevat diagrammen, in UML; elk biedt een eigen view op een gedeelte van
@@ -36,8 +36,8 @@ Uitgangspunten voor het metamodel zijn:
     aangegeven hoe het metamodel in Enterprise Architect toegepast wordt.
     Hierdoor borgen we deze relatie.
 
-2.1 Structuur metamodel 
-------------------------
+Structuur metamodel 
+-------------------
 
 Deze paragraaf bevat een overzicht van het metamodel en geeft alle
 modelelementen weer in diagram vorm. De beschrijving van de modelelementen in
@@ -103,7 +103,7 @@ View 2: Datatypen
 
 ### Overige 
 
-![](media/7baaa89c777f44aa1ce6e1cefa6baf65.png)
+![xxxx](media/7baaa89c777f44aa1ce6e1cefa6baf65.png)
 
 *Constraint*
 
@@ -139,17 +139,17 @@ View 4: Relatiesoort en relatierol
 | Extern                | «Extern»       | (UML) Package         | Package \|      |
 | View                  | «View»         | (UML) Package         | Package         |
 
-2.2 Betekenis modelelementen
-----------------------------
+Betekenis modelelementen
+------------------------
 
 In deze paragraaf staan alle modelelementen opgesomd, die gebruikt worden bij
 het maken van een informatiemodel. Bijna alle hebben een UML-metaclass als
 basis, deze is dan aangegeven. Dit is ook opgenomen in diagram vorm, in bijlage
 3.
 
-### 2.2.1 Objecten en attributen 
+### Objecten en attributen 
 
-1.  **Objecttype** *- Stereotype «Objecttype»*: De UML-representatie van een
+>   **Objecttype**  *- Stereotype «Objecttype»*: De UML-representatie van een
     objecttype, uitgedrukt in een stereotype van UML-Class (metaclass).
 
 >   Er zijn verschillende modelelementen die gebaseerd zijn op UML-Class, zoals
@@ -202,7 +202,7 @@ basis, deze is dan aangegeven. Dit is ook opgenomen in diagram vorm, in bijlage
 >   vastgelegd kunnen worden (records, entiteiten e.d.) op basis van andere
 >   overwegingen.
 
-1.  **Attribuutsoort** – *Stereotype «Attribuutsoort»*: De UML-representatie van
+>  **Attribuutsoort** – *Stereotype «Attribuutsoort»*: De UML-representatie van
     een attribuutsoort, uitgedrukt in een stereotype van UML-Property[^1]
     (metaclass).
 
@@ -255,7 +255,7 @@ basis, deze is dan aangegeven. Dit is ook opgenomen in diagram vorm, in bijlage
 >   objecttype 'persoon'. Wanneer ‘oogkleur’ niet relevant is voor het domein,
 >   wordt deze niet gemodelleerd.*
 
-1.  **Gegevensgroep***– Stereotype «Gegevensgroep»*: De UML-representatie van
+>   **Gegevensgroep***– Stereotype «Gegevensgroep»*: De UML-representatie van
     een gegevensgroep, uitgedrukt in een stereotype van UML-property
     (metaclass).
 
@@ -284,7 +284,7 @@ basis, deze is dan aangegeven. Dit is ook opgenomen in diagram vorm, in bijlage
 >   als modelelement kunnen definiëren, zonder dat er we er waardes van
 >   vastleggen. Alleen van kleur en sterkte leggen we waardes vast).*
 
-1.  **Gegevensgroeptype** *– Stereotype «Gegevensgroeptype»*: De
+>   **Gegevensgroeptype** *– Stereotype «Gegevensgroeptype»*: De
     UML-representatie van een gegevensgroeptype, uitgedrukt in een stereotype
     van UML-Class (metaclass).
 
@@ -332,12 +332,12 @@ basis, deze is dan aangegeven. Dit is ook opgenomen in diagram vorm, in bijlage
 >   Een gegevensgroeptype is verbonden met een objecttype, via het modelelement
 >   Gegevensgroep.
 
-### 2.2.2 Relaties 
+### Relaties 
 
 Verbanden met betekenis, die gelegd zijn tussen modelelementen van het type
 UML-Class.
 
-1.  **Generalisatie:** De UML-representatie van een specialisatie, uitgedrukt in
+>   **Generalisatie:** De UML-representatie van een specialisatie, uitgedrukt in
     een UML-generalization (metaclass).
 
 >   **Definitie Generalisatie**
@@ -362,7 +362,7 @@ UML-Class.
 >   en APPARTEMENTSRECHT hebben beide ‘Kadastrale aanduiding’ en een ‘relatie
 >   met ONROERENDE ZAAK FILIATIE’.*
 
-1.  **Relatiesoort** *– Stereotype «Relatiesoort»*: De UML-representatie van een
+>   **Relatiesoort** *– Stereotype «Relatiesoort»*: De UML-representatie van een
     relatiesoort, uitgedrukt in een stereotype van UML-association (metaclass).
 
 **Definitie Relatiesoort**
@@ -391,7 +391,7 @@ UML-Class.
 >   te verbinden, zonder dat er eigenschappen over deze relatie worden
 >   vastgelegd, dan heeft deze het stereotype «Relatiesoort».
 
-1.  **Relatieklasse** *- Stereotype «Relatieklasse»*: De UML-representatie van
+>   **Relatieklasse** *- Stereotype «Relatieklasse»*: De UML-representatie van
     een Relatieklasse, uitgedrukt in een stereotype van UML-associationClass
     (metaclass).
 
@@ -419,7 +419,7 @@ UML-Class.
 >   CONTRACT wordt dan gemodelleerd als objecttype, waarbij beschreven wordt wat
 >   er moet gebeuren wanneer één van de SUBJECTen niet meer bestaat.
 
-1.  **Externe koppeling** *– Stereotype «Externe koppeling»***:** De
+>   **Externe koppeling** *– Stereotype «Externe koppeling»***:** De
     UML-representatie van een externe koppeling, uitgedrukt in een stereotype
     van UML-association (metaclass). De source kant van het aggregatietype is
     ‘composite’ (de gesloten diamant staat aan de kant van het objecttype die de
@@ -432,7 +432,7 @@ UML-Class.
 >   objecttype van een extern informatiemodel. De relatie zelf hoort bij het
 >   ‘eigen’ objecttype. Zie ook 3.14.
 
-1.  **Relatierol** *– Stereotype «Relatierol»*: De UML-representatie van een
+>   **Relatierol** *– Stereotype «Relatierol»*: De UML-representatie van een
     relatierol, uitgedrukt in een stereotype van UML-Property[^2] (metaclass).
 
     [^2]: In versies voor UML 2.5 werd de rol nog op UML-associationEnd
@@ -457,13 +457,13 @@ ander object.
 >   andere PERSOON. De relatie krijgt de naam ‘overdracht’ , met de source rol
 >   ‘vervreemder’ en de target rol ‘verkrijger’.*
 
-### 2.2.3. Waardenlijsten 
+### Waardenlijsten 
 
 Een datatype waarvan de mogelijke waarden zijn opgesomd in een lijst. De waarde
 van een attribuutsoort moet één van de waarden zijn uit de gespecificeerde
 waardenlijst.
 
-1.  **Referentielijst** *– Stereotype «Referentielijst»***:** De
+>   **Referentielijst** *– Stereotype «Referentielijst»***:** De
     UML-representatie van een referentielijst, uitgedrukt in een stereotype van
     UML-Datatype (metaclass).
 
@@ -498,7 +498,7 @@ waardenlijst.
 >   objecttype dat als type een referentielijst heeft bevat in de registratie
 >   daarom (vaak) alleen een referentie naar een object uit de lijst.
 
-1.  **Referentie element** *– Stereotype «Referentie element»*: De
+>   **Referentie element** *– Stereotype «Referentie element»*: De
     UML-representatie van een referentie-element uitgedrukt in een stereotype
     van UML-Property(metaclass).
 
@@ -515,7 +515,7 @@ waardenlijst.
 >   geschikt om gebruikt te worden als referentie (zoals bedoeld in de definitie
 >   van Referentielijst).
 
-1.  **Enumeratie**
+>   **Enumeratie**
 
 >   Voor enumeraties is geen stereotype gespecificeerd. In het metamodel maken
 >   we gebruik van de bestaande UML-enumeration (metaclass) voor de
@@ -535,7 +535,7 @@ waardenlijst.
 >   *Bijvoorbeeld: geslacht (man, vrouw, overig), de typering van een openbare
 >   ruimte (spoorbaan, plein, straat).*
 
-1.  **Enumeratiewaarde**
+>   **Enumeratiewaarde**
 
 >   Voor enumeratiewaarde is geen stereotype gespecificeerd. In het metamodel
 >   maken we gebruik van de bestaande UML-enumerationLiteral (metaclass) voor de
@@ -549,7 +549,7 @@ waardenlijst.
 >   *Bijvoorbeeld: geslacht: man, vrouw, overig, type openbare ruimte:
 >   spoorbaan, plein, straat.*
 
-1.  **Stereotype** «**Codelist**»: De UML-representatie van een codelist,
+>   **Stereotype** «**Codelist**»: De UML-representatie van een codelist,
     uitgedrukt in een stereotype van UML-datatype (metaclass).
 
 **Definitie Codelist**
@@ -579,7 +579,7 @@ waardenlijst.
 >   een Enumeratie. Welk specifiek attribuut dit is en wat de betekenis daarvan
 >   is staat in de codelist zelf gedefinieerd.
 
-### 2.2.4 Datatypen
+### Datatypen
 
 Een datatype die de structuur beschrijft waaraan een waarde (zie 2.2.1 Objecten
 en attributen) moet voldoen.
@@ -591,7 +591,7 @@ als type van een attribuutsoort.
 Anders gezegd, Datatypes zijn veelal herbruikbaar en kunnen gespecificeerd
 worden bij diverse «Attribuutsoort»-en.
 
-1.  **Primitief datatype -** «Primitief datatype»: in het metamodel maken we
+>   **Primitief datatype -** «Primitief datatype»: in het metamodel maken we
     gebruik van de bestaande UML-PrimitiveType (metaclass) voor de specificaties
     van een primitief datatype.
 
@@ -633,12 +633,9 @@ Postcode niet meer in het eigen model opgenomen te worden.
 >   dat eenmalig gedefinieerd wordt en op meerdere plekken in het model gebruikt
 >   moet kunnen worden met altijd exact dezelfde structuur en waardenbereik (zie
 >   ook ‘patroon’ in 3.5). Dit datatype, met een eigen naam, wordt vervolgens
->   gebruikt als type van een attribuutsoort.  
->     
->     
->   
+>   gebruikt als type van een attribuutsoort.    
 
-1.  **Gestructureerd datatype** *– stereotype «Gestructureerd datatype»***:** De
+>   **Gestructureerd datatype** *– stereotype «Gestructureerd datatype»***:** De
     UML-representatie van een gestructureerd datatype uitgedrukt in UML-datatype
     (metaclass) met ten minste twee keer een UML-Property.
 
@@ -675,7 +672,7 @@ Postcode niet meer in het eigen model opgenomen te worden.
 >   *Voorbeeld: Gestructureerd datatype Bedrag bestaat uit de data-elementen som
 >   en valuta.*
 
-1.  **Data element** *- Stereotype «Data element»***:** De UML-representatie van
+>   **Data element** *- Stereotype «Data element»***:** De UML-representatie van
     een data element uitgedrukt in UML-property (metaclass).
 
 >   **Definitie Data element**
@@ -693,7 +690,7 @@ Postcode niet meer in het eigen model opgenomen te worden.
 >   structuur van een gegeven en heeft zelf een datatype. Dit datatype is
 >   meestal een primitief datatype.
 
-1.  **Union** *– Stereotype «Union»***:** De UML-representatie van een union
+>   **Union** *– Stereotype «Union»***:** De UML-representatie van een union
     uitgedrukt in UML-datatype (metaclass).
 
 >   **Definitie Union**
@@ -706,7 +703,7 @@ Postcode niet meer in het eigen model opgenomen te worden.
 >   *Voorbeeld: Union LineOrPolygon. Deze biedt een keuze uit Union element Line
 >   of Union element Polygon.*
 
-1.  **Union element** *- Stereotype «Union element»***:** De UML-representatie
+>   **Union element** *- Stereotype «Union element»***:** De UML-representatie
     van een union element uitgedrukt in UML-property (metaclass), dat zelf een
     type heeft dat uitgedrukt is in een UML-datatype (metaclass).
 
@@ -720,13 +717,13 @@ Postcode niet meer in het eigen model opgenomen te worden.
 >   *Voorbeeld: union element Line en union element Polygon zijn beiden
 >   onderdeel van Union LineOrPolygon*
 
-### 2.2.5 Packages 
+### Packages 
 
   
 Een package is een benoemde en begrensde verzameling/groepering van
 modelelementen.
 
-1.  **Extern** - Stereotype «Extern»**:** De UML-representatie van een extern
+>   **Extern** - Stereotype «Extern»**:** De UML-representatie van een extern
     package uitgedrukt in UML-package (metaclass)
 
 >   **Definitie Extern**
@@ -739,7 +736,7 @@ modelelementen.
 >   van attribuutsoort Identificatie wegdeel in RSGB verwijst naar het datatype
 >   NEN3610ID zoals opgenomen in het Externe package.*
 
-1.  **View** *- Stereotype «View»***:** De UML-representatie van een view
+>   **View** *- Stereotype «View»***:** De UML-representatie van een view
     package uitgedrukt in UML-package (metaclass)
 
 >   **Definitie View**
@@ -754,9 +751,9 @@ modelelementen.
 >   definities van de BAG worden gevolgd. Vanuit modelleringsperspectief wordt
 >   dit gezien als een view.*
 
-### 2.2.6 Overig
+### Overig
 
-1.  **Id** *- Stereotype «id»*[^4] *bij target role van de «relatiesoort»*: De
+>   **Id** *- Stereotype «id»*[^4] *bij target role van de «relatiesoort»*: De
     UML-representatie van een relatie die een identificerende rol speelt,
     uitgedrukt bij een UML-property (metaclass).  
       
@@ -780,7 +777,7 @@ Toelichting:
 >   samengesteld uit het attribuut Buurtcode van BUURT en de verwijzing naar de
 >   WIJK (de identificatie van WIJK).*
 
-1.  **Constraint** - Voor Constraint is geen stereotype gespecificeerd. In het
+>   **Constraint** - Voor Constraint is geen stereotype gespecificeerd. In het
     metamodel maken we gebruik van de bestaande UML-Constraint (metaclass).
 
 >   **Definitie**  
@@ -803,8 +800,8 @@ Toelichting:
 >   leeg is, dan is (optioneel) attribuut 2 verplicht’, of een bijzondere regel,
 >   zoals ‘11-proef is van toepassing op dit attribuut’.*
 
-2.3 Specificatie metagegevens
------------------------------
+Specificatie metagegevens
+-------------------------
 
 Elk modelelement kent een aantal metagegevens, die bepaalde aspecten van het
 modelelement specificeren. Een aantal daarvan worden gemodelleerd in UML. Deze
@@ -815,7 +812,7 @@ modelelement (als er in H2.2 sprake is van een generalisatie, dan worden deze
 tagged values niet overerft. De KKG metaclass Union erft geen metagegevens,
 zoals patroon, van KKG metaclass Datatype).
 
-### 2.3.1 Specificatie metagegevens voor objecten en attributen 
+### Specificatie metagegevens voor objecten en attributen 
 
 **Specificatie voor «Objecttype»**[^5]
 
@@ -939,7 +936,7 @@ De gegevensgroeptypen worden naar de volgende aspecten gespecificeerd:
 |                   |                   |                                                                            |                                       |                 |
 |                   |                   |                                                                            |                                       |                 |
 
-### 2.3.2 Specificatie metagegevens voor relaties
+### Specificatie metagegevens voor relaties
 
 **Relatiesoort en relatierol**
 
@@ -958,7 +955,7 @@ in uw informatiemodel.**
 Beide alternatieven gebruiken relatiesoort en relatierol, maar met andere regels
 voor gebruik.
 
-### 2.3.2.1 Relatiesoort leidend (alternatief 1) 
+### Relatiesoort leidend (alternatief 1) 
 
 Relatiesoort is verplicht, met een naam en met een definitie en deze is leidend.
 Metadata aspecten worden hierbij altijd vastgelegd. Het gebruik van relatierol
@@ -999,7 +996,7 @@ Voor relatierollen worden naar de volgende aspecten gespecificeerd.
 | **Naam**       | 0..1               | De naam van de relatiesoort.                  | *name van de metaclass Namedelement* | *Name*    |
 | **Definitie**  | 0..1               | De beschrijving van de betekenis van dit type | *Body van de metaclass Comment*      | *Notes*   |
 
-### 2.3.2.2 Relatierol is leidend (alternatief 2)
+### Relatierol is leidend (alternatief 2)
 
 Verplichte benoeming van de rol van de target in een relatie met de bijbehoren
 de metagegevens en optioneel de benoeming van de naam van de relatie.
@@ -1075,7 +1072,7 @@ Externe koppelingen worden naar de volgende aspecten gespecificeerd.
 |                            |                    |                                                                                                                                                                                                                                                                                                                                 | *Element bij Relationship Element*                   |                                       |
 | **Uni-directioneel**       | 1                  | Het gerelateerde objecttpe uit een extern informatiemodel (de target) waarvan het objecttype die de eigenaar van deze relatie is (de source) kennis heeft. Het aggregation type van de source is altijd ‘composition’. Alle relaties zijn altijd gericht van het objecttype (source) naar het gerelateerde objecttype (target). |                                                      | *Direction (van source naar target)*  |
 
-### 2.3.3. Specificatie metagegevens voor waardenlijsten 
+### Specificatie metagegevens voor waardenlijsten 
 
 **Specificatie voor «Referentielijst»**
 
@@ -1130,7 +1127,7 @@ Voor codelist worden de volgende aspecten gespecificeerd:
 | **Toelichting**   | 0..1               | Voor lijsten die deel uitmaken van een registratie betreft dit de daarin opgenomen toelichting.                                                                                                                                                                                                      |                                          | *tagged value*  |
 | **Locatie**       | 1..1               | Als het type van het attribuutsoort een waardenlijst is, dan wordt hier de locatie waar deze te vinden is opgegeven. Indien mogelijk is de verwijzing een URI of een URL (als er geen URI is, dan kan dit een URL zijn, waar de waardenlijst op basis van de naam van de waardenlijst te vinden is). |                                          | *tagged value*  |
 
-### 2.3.4. Specificatie metagegevens voor datatypen
+### Specificatie metagegevens voor datatypen
 
 **Specificatie voor «Datatype»**
 
@@ -1199,7 +1196,7 @@ De unions worden naar de volgende aspecten gespecificeerd:
 |                  |                    |                                                                                                                                                     |                                      |                 |
 | **Datum opname** | 1                  | De datum waarop de union is opgenomen in het informatiemodel.                                                                                       |                                      | *Tagged value*  |
 
-**2.3.15 Specificatie voor «Union element»**
+** Specificatie voor «Union element»**
 
 De unionelementen worden naar de volgende aspecten gespecificeerd:
 
@@ -1217,7 +1214,7 @@ De unionelementen worden naar de volgende aspecten gespecificeerd:
 
 -   **Type**
 
-### 2.3.5 Specificatie metagegevens voor packages 
+### Specificatie metagegevens voor packages 
 
   
 **Specificatie voor «Extern»**
@@ -1244,7 +1241,7 @@ View packages worden naar de volgende aspecten gespecificeerd, analoog aan
 | **Definitie**    | 1 | De beschrijving van de betekenis van het package.                                                                                                         | *Body van de metaclass Comment*       | *Notes*            |
 | **Herkomst \***  | 1 | De registratie of het informatiemodel waaraan het package ontleend is. Bij een view is de herkomst nooit de eigen organsiatie.                            |                                       | *Tagged*  *value*  |
 
-### 2.3.6 Specificatie metagegevens - overig
+### Specificatie metagegevens - overig
 
 **Specificatie voor Enumeratie(waarden)**
 
@@ -1280,7 +1277,7 @@ aspecten gespecificeerd:
 | **Specificatie formeel** | 0..1               | De beschrijving van de constraint in een formele specificatietaal, in OCL |                                          | *Notes*  *(type =*  *OCL)*       |
 |                          |                    |                                                                           |                                          |                                  |
 
-### 2.3.6.1 Alias 
+### Alias 
 
 Alle metamodel elementen hebben een naam (metadata aspect) en hiervoor is het
 mogelijk om naast de naam ook een alternatieve weergave van de naam op te nemen.
@@ -1303,7 +1300,7 @@ De alias wordt hier, mede daarom, gebruikt voor (alleen) de modellering van het
 metadata aspect Code, welke aanvullend is op naam (niet een alternatief van
 naam).
 
-### 2.3.6.2 Tagged values en waardenbereik tagged values
+### Tagged values en waardenbereik tagged values
 
 Tagged values, zoals genoemd in de UML-extensie kolom zijn altijd van het
 datatype CharacterString. Aanvullend geldt:
@@ -1324,8 +1321,8 @@ datatype CharacterString. Aanvullend geldt:
 
 [^12]: Geef bij overig in uw eigen informatiemodel aan wat u er onder verstaat.
 
-2.4 Metamodel Tooling 
-----------------------
+Metamodel Tooling 
+-----------------
 
 >   Er is een metamodel *profiel* gemaakt in Sparx Enterprise Architect, dat
 >   gebruikt kan worden bij het modelleren van een informatiemodel. Dit profiel
