@@ -1,9 +1,9 @@
-Bijlage I: Overzicht toegepaste UML metaclasses
-===============================================
+# Bijlagen 
+
+## Bijlage I: Overzicht toegepaste UML metaclasses
 
 ![C:\\Users\\bergelx\\AppData\\Local\\Microsoft\\Windows\\Temporary Internet Files\\Content.Word\\201070420 Overzicht toegepaste UML metaclasses.png](media/2ef8c839d9dbdac594f923dbc66d068b.png)
 
-Bijlage II: Modelelementen en metagegevens als diagram 
 ## Bijlage II: Modelelementen en metagegevens als diagram 
 
 Deze bijlage bevat alle modelelementen en metagegevens in één diagram.
