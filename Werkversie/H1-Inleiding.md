@@ -373,24 +373,24 @@ Het beheer van dit metamodel vindt plaats als samenwerking tussen KING, het
 Kadaster modellenbureau en Geonovum. Voor vragen, suggesties of opmerkingen kunt
 u contact opnemen met:
 
-[Ellen Debats:](ellen.debats@kinggemeenten.nl) en/of
-[Lennart van Bergen:](lennart.vanBergen@kadaster.nl) en/of
-[Paul Janssen:](p.janssen@geonovum.nl)
+[Ellen Debats](ellen.debats@kinggemeenten.nl) en/of
+[Lennart van Bergen](lennart.vanBergen@kadaster.nl) en/of
+[Paul Janssen](p.janssen@geonovum.nl)
 
 ## Normreferenties
 
 | \#  | Naam                                         | **Referentie**                                                                                                                                                                                |
 |-----|----------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 1.  | Unified Modeling Language (UML)              | <http://uml.org>                                                                                                                                                                              |
-| 2.  | OMG Unified Modeling Language TM versie 2.5  | <http://www.omg.org/spec/UML/2.5>                                                                                                                                                             |
-| 3.  | Stelselcatalogus                             | <http://www.stelselcatalogus.nl/over-de-stelselcatalogus/metadata/>                                                                                                                           |
-| 4.  | GAB                                          | <http://www.noraonline.nl/images/noraonline/c/c3/GAB_mogelijk_onvolledige_datum_1.0.pdf>                                                                                                      |
-| 5.  | Handreiking gegevensbeschrijving (NORA)      | <http://noraonline.nl/wiki/Gegevensbeschrijvingen/Handreiking>                                                                                                                                |
+| 1.  | Unified Modeling Language (UML)              | http://uml.org                                                                                                                                                                                |
+| 2.  | OMG Unified Modeling Language TM versie 2.5  | http://www.omg.org/spec/UML/2.5                                                                                                                                                               |
+| 3.  | Stelselcatalogus                             | http://www.stelselcatalogus.nl/over-de-stelselcatalogus/metadata/                                                                                                                             |
+| 4.  | GAB                                          | http://www.noraonline.nl/images/noraonline/c/c3/GAB_mogelijk_onvolledige_datum_1.0.pdf                                                                                                        |
+| 5.  | Handreiking gegevensbeschrijving (NORA)      | http://noraonline.nl/wiki/Gegevensbeschrijvingen/Handreiking                                                                                                                                  |
 | 6.  | ISO 11404                                    | NEN-ISO/IEC 11404:2008 Information technology – General Purpose Datatypes (GPD)                                                                                                               |
-| 7.  | ISO 8601                                     | <https://en.wikipedia.org/wiki/ISO_8601>                                                                                                                                                      |
-| 8.  | Formeel patroon                              | Zoals beschreven in Perl 5: <http://perldoc.perl.org/perlre.html>                                                                                                                             |
-|     | (Reguliere Expressies)                       |                                                                                                                                                                                               |
-| 9.  | OCL                                          | <http://www.omg.org/spec/OCL/2.4/>                                                                                                                                                            |
+| 7.  | ISO 8601                                     | https://en.wikipedia.org/wiki/ISO_8601                                                                                                                                                        |
+| 8.  | Formeel patroon                              | Zoals beschreven in Perl 5: http://perldoc.perl.org/perlre.html                                                                                                                               |
+| &nbsp; | (Reguliere Expressies)                       |                                                                                                                                                                                               |
+| 9.  | OCL                                          | http://www.omg.org/spec/OCL/2.4/                                                                                                                                                              |
 | 10. | NEN 3610/A1:2016 Basismodel Geo- informatie. | NEN 3610:2011/A1:2016 nl. Basismodel geo-informatie - Termen, definities, relaties en algemene regels voor de uitwisseling van informatie over aan de aarde gerelateerde ruimtelijke objecten |
 
 De Stelselcatalogus, het GAB en de Handreiking gegevensbeschrijving raken elkaar

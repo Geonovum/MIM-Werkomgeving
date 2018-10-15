@@ -283,7 +283,7 @@ deze te gebruiken in een union element.
 
 Wanneer een beoogd datatype uit een extern model komt en daar geen metamodel
 stereotype heeft, zoals bijvoorbeeld het geval is bij het GM package waarin een
-datatype als \<\<interface\>\> GM_Point is opgenomen, dan heeft dit datatype
+datatype als <<interface>> GM_Point is opgenomen, dan heeft dit datatype
 niet een KKG stereotype en mogelijk ook niet de UML-metaclass dataType. Het is
 dan aan de modelleur van het informatiemodel om te beoordelen of het type dan
 als datatype gebruikt kan worden. Het is niet gewenst om aan het externe model
@@ -743,7 +743,7 @@ onderscheid in de volgende groepen van gegevens:
 | Authentiek                  | Indien het een authentiek (landelijk) basisgegeven of een als relatiesoort gemodelleerd authentiek (landelijk) basisgegeven is. Basisgegevens zijn altijd gegevens afkomstig uit de landelijke *registraties*. |
 | Basisgegeven                | Indien het een landelijk basisgegeven of een als relatiesoort gemodelleerd (landelijk) basisgegeven is in een landelijke *registratie*, maar in die registratie géén authentiek gegeven is.                    |
 | Landelijk kerngegeven       | Indien het een gegeven of een als relatiesoort gemodelleerd gegeven is in een landelijk sector- en domein-overstijgend informatiemodel en geen authentiek gegeven en geen basisgegeven is.                     |
-|                             |                                                                                                                                                                                                                |
+|    &nbsp;                   | &nbsp;                                                                                                                                                                                                         |
 |  Overig                     | Indien het géén van de voorgaande categorieën betreft. Veelal gaat het dan om proces-, taakveld- of domeinspecifieke gegevens.                                                                                 |
 
 ## Mogelijk geen waarde
