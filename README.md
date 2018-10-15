@@ -53,13 +53,7 @@ en ontstaat de “definitieve versie”. De map
 Publiceren
 ----------
 
-Met het kopiëren naar de definitieve versie zijn we er nog niet. De documenten
-zijn alleen nog maar beschikbaar voor het team dat aan de documenten werkt.
-
-Om de nieuwe versie van MIM te publiceren moeten de documenten nog naar de MIM
-map worden gekopieerd, dat gebeurt door de map
-“MIM-Werkomgeving/Definieve_versie/x.y.z” te kopiëren naar de map “MIM/x.y.z. en
-vervolgens ook naar register.geostandaarden.nl
-
->   Vraag: hebben we de MIM map eigenlijk wel nodig? Publicatie gebeurt immers
->   via register.geostandaarden.nl?
+Met het kopiëren naar de definitieve versie zijn we er nog niet. Vanuit deze map
+worden de documenten naar de
+[www.register.geostandaarden.nl](http://www.register.geostandaarden.nl)
+gepubliceerd.
