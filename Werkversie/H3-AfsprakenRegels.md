@@ -54,13 +54,13 @@ datatypes. Deze zijn allemaal gebaseerd op [GAB]:
 | Integer            | Zie ISO11404 (subtype van ISO Number). Vrij vertaald: geheel getal, lengte is minimaal 1 en maximale lengte is onbepaald, zonder voorloopnullen. *Opmerking*: t.a.v. positieve en negatieve getalen en + en – tekens: bijvoorbeeld -2,0 Het (formeel) patroon geeft aan of een + en/of - teken gebruikt mag worden in het gegeven.                                                                                                                                                                 |
 | Real               | Zie ISO11404 (subtype van ISO Number). Vrij vertaald: een reëel getal, oftewel een rationeel getal zoals een Integer of een Decimal, of niet rationeel getal, zoals pi of de wortel van 2. Deze bestaat uit een (oneindig) aantal getallen, al dan niet achter de komma (floating point). *Opmerking:* t.a.v. positieve en negatieve getalen en + en – tekens: zie Integer.                                                                                                                        |
 | Boolean            | Indicatie met mogelijke waarden True, false, 1 of 0. True en 1 hebben een identieke betekenis: Ja. False en 0 hebben een identieke betekenis: Nee. *Opmerking*: t.a.v. Ja of Nee. Wanneer u de Ja of Nee wilt gebruiken, gebruik dan bv. een Enumeratie genaamd Indicatie, of gebruik AN met een lengte en een (formeel) patroon.                                                                                                                                                                  |
-|                    |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| Date               | 4-cijferig jaar, 2-cijferig maand, 2-cijferig dag uitgedrukt in yyyy-mm-dd conform <https://en.wikipedia.org/wiki/ISO_8601>                                                                                                                                                                                                                                                                                                                                                                        |
-| DateTime           | yyyy-mm-ddThh:mm:ss conform <https://en.wikipedia.org/wiki/ISO_8601>                                                                                                                                                                                                                                                                                                                                                                                                                               |
-| Year               | 4-cijferig jaar uitgedrukt in yyyy conform <https://en.wikipedia.org/wiki/ISO_8601>                                                                                                                                                                                                                                                                                                                                                                                                                |
-| Day                | 2-cijferige dag uitgedrukt in dd conform <https://en.wikipedia.org/wiki/ISO_8601>                                                                                                                                                                                                                                                                                                                                                                                                                  |
-| Month              | 2-cijferige maand uitgedrukt in mm conform <https://en.wikipedia.org/wiki/ISO_8601>                                                                                                                                                                                                                                                                                                                                                                                                                |
-|                    |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| &nbsp;             | &nbsp;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| Date               | 4-cijferig jaar, 2-cijferig maand, 2-cijferig dag uitgedrukt in yyyy-mm-dd conform https://en.wikipedia.org/wiki/ISO_8601                                                                                                                                                                                                                                                                                                                                                                        |
+| DateTime           | yyyy-mm-ddThh:mm:ss conform https://en.wikipedia.org/wiki/ISO_8601                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| Year               | 4-cijferig jaar uitgedrukt in yyyy conform https://en.wikipedia.org/wiki/ISO_8601                                                                                                                                                                                                                                                                                                                                                                                                                |
+| Day                | 2-cijferige dag uitgedrukt in dd conform https://en.wikipedia.org/wiki/ISO_8601                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| Month              | 2-cijferige maand uitgedrukt in mm conform https://en.wikipedia.org/wiki/ISO_8601                                                                                                                                                                                                                                                                                                                                                                                                                |
+| &nbsp;             | &nbsp;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
 | URI                | Unieke identificatie op internet conform RFC3986 en de URI-strategie Linked Open Data. Gestandaardiseerde manier om op het internet dingen (pagina's met informatie, objecten, datasets) uniek te identificeren.                                                                                                                                                                                                                                                                                   |
 
 Het is mogelijk om in de eigen extensie extra primitive datatypes op te nemen,
@@ -115,15 +115,14 @@ ter illustratie zijn opgenomen:
 
 | Postcode | De in Nederland gangbare postcode voor een Nederlands postadres, bestaande uit een numeriek deel en een alfabetisch deel. Het numerieke deel van de postcode bestaat uit vier cijfers, het alfabetische deel van de postcode bestaat uit twee hoofdletters. Conform [GAB Postcodes].                                                                |
 |----------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| DMO      | Datum mogelijk onvolledig. De keuze (\<\<union\>\>) van een periode in de Gregoriaanse kalender, al naar gelang de beschikbare datumelementen, uit de onderliggende subformaten alleen Year, Year en Month of Year, Month en Day. Dit is (nog steeds) overeenkomstig met <https://en.wikipedia.org/wiki/ISO_8601> en [GAB DatumMogelijkOnvolledig]. |
+| DMO      | Datum mogelijk onvolledig. De keuze («union»)  van een periode in de Gregoriaanse kalender, al naar gelang de beschikbare datumelementen, uit de onderliggende subformaten alleen Year, Year en Month of Year, Month en Day. Dit is (nog steeds) overeenkomstig met https://en.wikipedia.org/wiki/ISO_8601 en [GAB DatumMogelijkOnvolledig]. |
 | DTMO     | Een volledige datum waarbij (alleen) de tijd mogelijk ontbreekt. De tijd wordt, zover bekend, ingevuld. Dus alleen de uren als de minuten onbekend zijn.                                                                                                                                                                                            |
 
 -   DateTime, als de tijd wel volledig bekend is
 
 -   Date, als alleen de Date bekend is
 
-Gestructureerd datatype
------------------------
+## Gestructureerd datatype
 
 Een «Gestructureerd datatype» is veelal specifiek binnen een informatiemodel.
 Indien mogelijk wordt zoveel mogelijk hergebruik gemaakt van elders
@@ -173,8 +172,7 @@ Objectnummering. Dit Gestructureerd datatype bestaat uit de data elementen:
 met daarbij een formeel patroon: [0-9]{4}\\.[0-9]{2}\\.[ 0-9]{10} of een (tekst)
 patroon Gemeentecode.Objecttypecode.Nummer
 
-Gegevensgroeptype
------------------
+## Gegevensgroeptype
 
 Bij het modelleren van een objecttype worden attribuutsoorten toegekend aan een
 objecttype. Wanneer er geconstateerd wordt dat een aantal attribuutsoorten
@@ -292,8 +290,7 @@ als datatype gebruikt kan worden. Het is niet gewenst om aan het externe model
 een stereotype toe te voegen, noch om in het externe model de UML-metaclass aan
 te passen.
 
-Domeinwaarden of lijsten
-------------------------
+## Domeinwaarden of lijsten
 
 >   In veel registraties wordt gewerkt met codetabellen om de mogelijke waarden
 >   van een attribuutsoort te specificeren. Deze mogelijke waarden kunnen op
@@ -321,7 +318,7 @@ wordt vooral toegepast bij lijsten die vaker aan verandering onderhevig zijn.
 >   Een lijst waarin we de betekenis en structuur van de lijst expliciet willen
 >   specificeren. Een voorbeeld is de referentielijst LAND of
 >   CultuurcodeOnbebouwd  
->   ( <http://www.kadaster.nl/schemas/waardelijsten/CultuurcodeOnbebouwd> ).
+>   ( http://www.kadaster.nl/schemas/waardelijsten/CultuurcodeOnbebouwd ).
 
 >   De referentielijst is hiermee een bijzondere vorm van datatype.
 
@@ -384,8 +381,7 @@ attribuut wordt in dat geval een CharacterString, met lengte (exact) =4 en het
 patroon voor het attribuut specificeert dat alleen numerieke getallen zijn
 toegestaan: [0-9]{4}.
 
-Abstracte objecttypes en concrete objecten
-------------------------------------------
+## Abstracte objecttypes en concrete objecten
 
 Een objecttype kan aangeduid worden als een abstract objecttype (zie paragraaf
 2.3.1. door middel van indAbstract = J). Het betreft dan altijd een
@@ -513,8 +509,7 @@ objecten hetzelfde zijn. CONTRACT wordt dan gemodelleerd als objecttype, waarbij
 beschreven wordt wat er moet gebeuren wanneer één van de SUBJECTen niet meer
 bestaat.*
 
-Constraint
-----------
+## Constraint
 
 Deze paragraaf gaat dieper in op hoe een Constraint toegepast wordt.
 
@@ -581,8 +576,7 @@ waardoor er (te) vaak nieuwe versies moeten worden uitgebracht. De aanbeveling
 is om de specificatie van dergelijke constraints buiten het informatiemodel te
 specificeren, bijvoorbeeld als validatieregel.
 
-Historie
---------
+## Historie
 
 Deze paragraaf geeft in meer detail aan wat we onder de metagegevens *Indicatie
 materiële historie en Indicatie formele historie* verstaan.
@@ -707,8 +701,7 @@ Opmerking: de metagegevens Indicatie materiële historie en Indicatie formele
 mogen worden opgenomen in een logisch model (of worden overgenomen van het
 conceptuele naar het logische informatiemodel).
 
-Afleidbare gegevens
--------------------
+## Afleidbare gegevens
 
 In een informatiemodel kan de behoefte bestaan om afgeleide gegevens op te
 nemen: dit zijn gegevens die afleidbaar zijn uit andere attribuut- en/of
@@ -723,8 +716,7 @@ afleiding van dit gegeven is niet triviaal. Door het als afleidbaar gegeven op
 te nemen kan het opgevraagd worden zonder dat de historie of andere gegevens van
 het object opgevraagd hoeven te worden om daaruit dit gegeven af te leiden.*
 
-Authentieke gegevens
---------------------
+## Authentieke gegevens
 
 Bij een attribuutsoort of relatiesoort wordt als metagegeven ‘Authentiek’
 opgenomen. Het is een aanduiding of een attribuutsoort of een als relatiesoort
@@ -754,8 +746,7 @@ onderscheid in de volgende groepen van gegevens:
 |                             |                                                                                                                                                                                                                |
 |  Overig                     | Indien het géén van de voorgaande categorieën betreft. Veelal gaat het dan om proces-, taakveld- of domeinspecifieke gegevens.                                                                                 |
 
-Mogelijk geen waarde
---------------------
+## Mogelijk geen waarde
 
 Een attribuut kan geen waarde hebben, omdat de waarde optioneel is en er niet
 is. Bijvoorbeeld bij een tussenvoegsel van een achternaam. Maar een attribuut
@@ -810,8 +801,7 @@ wanneer het een situatie betreft waarin gegevens worden overgenomen uit een
 registratie die wel de waarde ‘onbekend’ gebruikt. Dan kan er ook gekozen worden
 voor het 1:1 overgenomen van de gegevensdefinitie uit deze andere registratie.
 
-Externe schema’s (her) gebruiken
---------------------------------
+## Externe schema’s (her) gebruiken
 
 >   In bepaalde situaties is het mogelijk dat een ander informatiemodel al één
 >   op één de specificaties in UML bevat die relevant zijn voor het eigen
@@ -845,8 +835,7 @@ informatiemodellen kan worden verwezen: NEN3610, of GML3.2*
 >   verwezen worden via een relatie. Dit laatst wordt nader uitgelegd in de
 >   volgende paragraaf.
 
-Koppelen met ander informatiemodel (externe koppeling)
-------------------------------------------------------
+## Koppelen met ander informatiemodel (externe koppeling)
 
 Bij registraties is het regelmatig noodzakelijk om te verwijzen vanuit het eigen
 model naar gegevens uit een andere informatiemodel. Denk aan het opnemen van de
@@ -885,8 +874,7 @@ eigen registratie. Er kan dan volstaan worden met alleen de unieke aanduiding
 van GeregistreerdPersoon. Dit is de BSN. Dit wordt niet gezien als een «externe
 koppeling» maar als een referentie.
 
-Stelselcatalogus en stelselafspraken voor basisregistraties
------------------------------------------------------------
+## Stelselcatalogus en stelselafspraken voor basisregistraties
 
 >   Dit metamodel ondersteunt de metadata die voorgeschreven wordt voor de
 >   stelselcatalogus [H1.11, referentie 3]. Deze paragraaf geeft aan hoe de
@@ -930,7 +918,7 @@ Het metamodel gaat als volgt met de metadata van de stelselcatalogus om:
 | *Herkomst*                   | J                       | J (met aanvullende afspraken)      |
 | *Authentiek*                 | J                       | N (met vertaling)                  |
 | *Kwaliteit*                  | J                       | J                                  |
-|                              |                         |                                    |
+| &nbsp;                       | &nbsp;                  | &nbsp;                             |
 | *Relatie*                    | N                       | n.v.t. (kan wel via een vertaling) |
 | *Wetgeving*                  | N                       | n.v.t.                             |
 | *Eigenaar*                   | N                       | n.v.t.                             |

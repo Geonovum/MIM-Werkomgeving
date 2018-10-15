@@ -13,7 +13,7 @@
 
 img 
 {
-  max-width: 100%;
+  max-width: 90%;
 }
 
 blockquote 
@@ -30,9 +30,25 @@ blockquote:before
 {
   display: block;
   height: 0;
-  /* content: "�"; */   
+  /* content: "|"; */   
   margin-left: -0.95em;
   font: italic 400%/1 Esteban, serif;
   color: #999;
 }
 
+/* Layout van tabellen */
+table
+{
+  empty-cells: show;    /* voorkomt problemen met lege cellen */
+}
+
+thead
+{
+  border-color: darkolivegreen;
+  background-color: lightskyblue
+}
+tbody
+{
+  border-color: darkolivegreen;
+  background-color: lightgreen
+}

@@ -68,7 +68,7 @@ metaclass. Deze in opgenomen in het diagram als ‘blauw gekleurde’ metaclasse
 
 ### Kern 
 
-![C:\\Users\\bergelx\\AppData\\Local\\Microsoft\\Windows\\Temporary Internet Files\\Content.Word\\Kern zonder metagegevens.wmf](media/9862d52a06a577cd856cdefdd88a6c27.wmf)
+![C:\\Users\\bergelx\\AppData\\Local\\Microsoft\\Windows\\Temporary Internet Files\\Content.Word\\Kern zonder metagegevens.wmf](media/9862d52a06a577cd856cdefdd88a6c27.png)
 
 | **KKG metaclass** | **Stereotype**      | **Metaclass UML 2.5**            | **In Sparx EA**  |
 |-------------------|---------------------|----------------------------------|------------------|
@@ -82,7 +82,7 @@ metaclass. Deze in opgenomen in het diagram als ‘blauw gekleurde’ metaclasse
 
 ### Datatypen
 
-![C:\\Users\\bergelx\\AppData\\Local\\Microsoft\\Windows\\Temporary Internet Files\\Content.Word\\Datatypen zonder metagegevens.wmf](media/3b82702b1c5a095dd16c628d8bf0cc34.wmf)
+![C:\\Users\\bergelx\\AppData\\Local\\Microsoft\\Windows\\Temporary Internet Files\\Content.Word\\Datatypen zonder metagegevens.wmf](media/3b82702b1c5a095dd16c628d8bf0cc34.png)
 
 View 2: Datatypen
 
