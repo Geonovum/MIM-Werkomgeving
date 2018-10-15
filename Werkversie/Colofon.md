@@ -1,4 +1,5 @@
-**Colofon**
+Colofon
+=======
 
 Aan de totstandkoming van dit metamodel hebben de volgende inhoudelijke experts
 op het gebied van informatiemodellering meegewerkt:
