@@ -1,5 +1,4 @@
-﻿Metamodel 
-=========
+﻿# Metamodel 
 
 Dit hoofdstuk beschrijft het metamodel in diagramvorm en in tekst. De eerste
 paragraaf bevat diagrammen, in UML; elk biedt een eigen view op een gedeelte van
@@ -36,8 +35,7 @@ Uitgangspunten voor het metamodel zijn:
     aangegeven hoe het metamodel in Enterprise Architect toegepast wordt.
     Hierdoor borgen we deze relatie.
 
-Structuur metamodel 
--------------------
+## Structuur metamodel 
 
 Deze paragraaf bevat een overzicht van het metamodel en geeft alle
 modelelementen weer in diagram vorm. De beschrijving van de modelelementen in
