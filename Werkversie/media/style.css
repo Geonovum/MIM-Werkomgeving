@@ -14,11 +14,12 @@
 img 
 {
   max-width: 100%;
+  height: auto;
 }
 
 blockquote 
 {
-  margin-left: 20px !important;
+  /* margin-left: 20px !important; */
   font-family:  'Esteban', serif !important;
   font-style: italic;
   border-color: transparent !important;
@@ -39,7 +40,8 @@ blockquote:before
 /* Layout van tabellen */
 table
 {
-  empty-cells: show;    /* voorkomt problemen met lege cellen */
+  empty-cells: show;                      /* voorkomt problemen met lege cellen               */
+  min-width: 90%;                         /* alle tabellen minimaal 90% breed                 */
 }
 
 thead
@@ -51,4 +53,14 @@ tbody
 {
   border-color: darkolivegreen;
   background-color: lightgreen
+}
+
+tr:nth-child(even) 
+{
+  background-color: silver;
+}
+
+td 
+{
+  min-width: 100px;
 }

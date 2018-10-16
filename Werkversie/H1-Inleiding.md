@@ -1,5 +1,4 @@
 # Inleiding
-
 Voor u ligt het metamodel voor het beschrijven van informatiemodellen.
 Aanleiding was oorspronkelijk het adviesrapport ‘Rapportage harmonisatie StUF en
 NEN 3610’ (KING/Geonovum, 2010) waarin één van de aanbevelingen was om één
@@ -22,9 +21,8 @@ die deze organisaties hebben opgedaan in de jarenlange praktijk van het
 opstellen van informatiemodellen, is hierin samengebracht.
 
 ## Toepassingsgebied
-
--   Het metamodel biedt de modelleringstaal waarmee een informatiemodel gemaakt,
-    gelezen en begrepen kan worden. Het doel hiervan is:
+Het metamodel biedt de modelleringstaal waarmee een informatiemodel gemaakt,
+gelezen en begrepen kan worden. Het doel hiervan is:
 -   de leesbaarheid en eenduidigheid van informatiemodellen te vergroten;
 -   informatiemodellen op zowel conceptueel als op logisch niveau te kunnen
     opstellen (zie par. 1.4);
@@ -36,8 +34,8 @@ opstellen van informatiemodellen, is hierin samengebracht.
 -   en in het verlengde hiervan, om op een meer geautomatiseerde werkwijze
     sneller en beter voorspelbaar uitwisselingsstandaarden op kunnen stellen. en
 -   om interoperabiliteit tussen registraties te bevorderen.
--   Voor informatiemodellen die op basis van dit metamodel zijn beschreven
-    geldt:
+
+Voor informatiemodellen die op basis van dit metamodel zijn beschreven geldt:
 -   ze zijn eenduidig te interpreteren en goed te vergelijken;
 -   er kan documentatie mee opgesteld of gegenereerd worden welke geschikt is
     voor publicatie;
@@ -51,7 +49,6 @@ opstellen van informatiemodellen, is hierin samengebracht.
     e.d.).
 
 ## Doelgroep
-
 Dit document is primair bestemd voor informatiearchitecten die deze
 informatiemodellen maken; informatieanalisten die willen weten wat de betekenis
 en definitie van informatieobjecten is, en mensen die model-driven verder werken
@@ -62,7 +59,6 @@ informatievoorziening binnen het overheidsdomein, al is het ook in bredere
 context inzetbaar.
 
 ## Leeswijzer
-
 Het metamodel beschrijven we in drie hoofdstukken en een bijlage.
 
 Lees dit hoofdstuk (1 – Inleiding) verder voor inzicht in wat we onder een
@@ -88,7 +84,6 @@ het al dan niet van toepassing zijn daarvan in een conceptueel dan wel een
 logisch informatiemodel.
 
 ## Wat is een informatiemodel
-
 Een informatiemodel beschrijft de structuur, semantiek en de eigenschappen van
 informatie over dingen in de werkelijkheid. Met semantiek wordt de betekenis en
 definitie van de informatie over ‘het ding’ bedoeld, onafhankelijk van een
@@ -152,7 +147,6 @@ gemodelleerd zijn. Beide objecten Jan representeren natuurlijk dezelfde ‘Jan u
 de werkelijkheid’, vanuit het perspectief van het eigen domein bekeken.
 
 ## Typen informatiemodellen
-
 Zoals hiervoor uiteengezet beschrijft een informatiemodel de werkelijkheid. In
 de praktijk blijken hier niveaus in te bestaan, variërend van een zo getrouw
 mogelijke beschrijving van die werkelijkheid tot een specificatie van de wijze
@@ -163,7 +157,6 @@ Veelal worden vier niveaus onderscheiden[^2]:
 Group, rev. 2.0, 1-6-2014
 
 **1. Model van begrippen**
-
 Beschrijft de werkelijkheid binnen het beschouwde domein (de ‘universe of
 discourse’) d.m.v. de daarin gehanteerde begrippen en hun relaties tot elkaar.
 Doel is dat de actoren daarbinnen elkaar begrijpen en één taal spreken. Een
@@ -172,8 +165,7 @@ business’. De begrippen worden beschreven in een formele taal, een vocabulaire
 Een vocabulaire is geen informatiemodel. Begrippen kunnen in meerdere
 informatiemodellen gebruikt worden.
 
-2. Conceptueel informatiemodel
-
+**2. Conceptueel informatiemodel**
 Modellering van de werkelijkheid binnen het beschouwde domein, v.w.b. informatie
 daarvan, onafhankelijk van ontwerp van en implementatie in systemen. Het geeft
 een zo getrouw mogelijke beschrijving van die werkelijkheid en is in natuurlijke
@@ -186,8 +178,7 @@ werkelijkheid ten behoeve van deze communicatie. Een conceptueel informatiemodel
 wordt dan ook opgesteld voor gebruik door mensen, zodat ‘de business’ en de
 ICT-specialisten elkaar gaan begrijpen.
 
-3. Logisch informatie- of gegevensmodel
-
+**3. Logisch informatie- of gegevensmodel**
 Beschrijft hoe de, in het conceptuele model onderscheiden, concepten gebruikt
 worden bij de interactie tussen systemen en hun gebruikers en tussen systemen
 onderling. Anders gezegd, een model van de representatie van informatie over de
@@ -199,8 +190,7 @@ taal beschreven en wordt waar mogelijk gegenereerd vanuit het conceptueel model.
 Het logisch model wordt opgesteld voor ICT-interoperabiliteit, voor gebruik door
 met name de ontwerpers, bouwers en beheerders van ICT-voorzieningen.
 
-4. Fysiek of technisch gegevens- of datamodel
-
+**4. Fysiek of technisch gegevens- of datamodel**
 Specificeert de structuur en eigenschappen van de technologie waarin de
 informatie wordt vastgelegd of uitgewisseld. Dit is sterk afhankelijk van de
 gebruikte opslagtechnologie zoals een specifieke database of de
@@ -232,7 +222,6 @@ bevelen is om eerst een conceptueel model op te stellen en dit vervolgens uit te
 werken naar een logisch model.
 
 ## Wat is het metamodel voor informatiemodellen
-
 Een metamodel is een model van een model. Het definieert een verzameling van
 modelleerconstructies in de vorm van bouwstenen oftewel modelelementen, met
 bijbehorende betekenis en bijbehorende afspraken omtrent hoe deze toe te passen.
@@ -254,7 +243,6 @@ ware de grammatica van de modelleertaal. Het metamodel in dit document is
 gebaseerd op UML.
 
 ## UML
-
 Voor zowel het metamodel als informatiemodellen wordt uitgegaan van UML.
 Registraties en afnemers hiervan kunnen deze gebruiken voor de inrichting van
 hun situatiespecifieke gegevenshuishouding. Belangrijk is dat de lezer eerst
@@ -264,7 +252,6 @@ aan de hand van de vier lagen metamodel architectuur van de Object Management
 Group (OMG). In deze paragaaf gaan we op deze concepten in.
 
 **Vier lagen metamodel architectuur OMG**
-
 Voor de specificatie van het metamodel is gebruik gemaakt van dezelfde formele
 taal waarin de informatiemodellen zijn beschreven, namelijk UML. Het metamodel
 van deze informatiemodellen is een uitbreiding op het basale UML-metamodel.
@@ -314,7 +301,6 @@ het basale UML-metamodel (M2). De extensiemechanismen hiervoor zijn stereotypes,
 tagged values en constraints.
 
 ## Een eigen extensie op het metamodel
-
 Indien er extra metamodelconstructies nodig zijn voor een informatiemodel, dan
 kan dit metamodel uitgebreid worden met een aanvulling oftewel extensie (in de
 vorm van een extra bijlage) die door de betreffende organisatie toegevoegd wordt
@@ -343,7 +329,6 @@ Wel is het mogelijk en toegestaan om het metamodel, of delen ervan, hiervoor te
 gebruiken.
 
 ## Alternatieven
-
 In dit metamodel is op één punt sprake van een keuze tussen twee alternatieven,
 waarvan de modelleur van een informatiemodel één van beide alternatieven kiest.
 Welke je kiest geef je aan bij je eigen informatiemodel, in je eigen extensie
@@ -356,7 +341,6 @@ Indien gewenst kunt u hier vragen over stellen aan de beheerders van dit
 metamodel voordat u een keuze maakt.
 
 ## Beheer
-
 Het beheer van dit metamodel vindt plaats als samenwerking tussen KING, het
 Kadaster modellenbureau en Geonovum. Voor vragen, suggesties of opmerkingen kunt
 u contact opnemen met:
@@ -366,7 +350,6 @@ u contact opnemen met:
  Paul Janssen           p.janssen@geonovum.nl
 
 ## Normreferenties
-
 | \#  | Naam                                         | **Referentie**                                                                                                                                                                                |
 |-----|----------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | 1.  | Unified Modeling Language (UML)              | http://uml.org                                                                                                                                                                                |
