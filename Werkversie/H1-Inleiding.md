@@ -25,38 +25,26 @@ opstellen van informatiemodellen, is hierin samengebracht.
 
 -   Het metamodel biedt de modelleringstaal waarmee een informatiemodel gemaakt,
     gelezen en begrepen kan worden. Het doel hiervan is:
-
 -   de leesbaarheid en eenduidigheid van informatiemodellen te vergroten;
-
 -   informatiemodellen op zowel conceptueel als op logisch niveau te kunnen
     opstellen (zie par. 1.4);
-
 -   informatiemodellen goed aan elkaar te kunnen koppelen op conceptueel en
     logisch niveau;
-
 -   tooling te kunnen ontwikkelen en (her)gebruiken voor resp. door alle
     partijen die kiezen voor dit metamodel;
-
 -   kennis uit verschillende organisaties te bundelen;
-
 -   en in het verlengde hiervan, om op een meer geautomatiseerde werkwijze
     sneller en beter voorspelbaar uitwisselingsstandaarden op kunnen stellen. en
-
 -   om interoperabiliteit tussen registraties te bevorderen.
-
 -   Voor informatiemodellen die op basis van dit metamodel zijn beschreven
     geldt:
-
 -   ze zijn eenduidig te interpreteren en goed te vergelijken;
-
 -   er kan documentatie mee opgesteld of gegenereerd worden welke geschikt is
     voor publicatie;
-
 -   ze kunnen als basis gebruikt worden voor (bij voorkeur model-driven
     generatie van) afgeleide modellen en producten voor een specifiek
     toepassingsgebied/domein zoals bijvoorbeeld NEN3610 of het gemeentelijke
     domein;
-
 -   ze kunnen als basis gebruikt worden voor (bij voorkeur model-driven
     generatie van) afgeleide modellen voor specifieke services en
     informatieproducten (implementatieschema’s, registers, validatieservices
@@ -174,7 +162,7 @@ Veelal worden vier niveaus onderscheiden[^2]:
 [^2]: Ontleend aan: Model Driven Architecture (MDA) Guide; Object Management
 Group, rev. 2.0, 1-6-2014
 
-### Model van begrippen
+**1. Model van begrippen**
 
 Beschrijft de werkelijkheid binnen het beschouwde domein (de ‘universe of
 discourse’) d.m.v. de daarin gehanteerde begrippen en hun relaties tot elkaar.
@@ -184,7 +172,7 @@ business’. De begrippen worden beschreven in een formele taal, een vocabulaire
 Een vocabulaire is geen informatiemodel. Begrippen kunnen in meerdere
 informatiemodellen gebruikt worden.
 
-### Conceptueel informatiemodel
+2. Conceptueel informatiemodel
 
 Modellering van de werkelijkheid binnen het beschouwde domein, v.w.b. informatie
 daarvan, onafhankelijk van ontwerp van en implementatie in systemen. Het geeft
@@ -198,7 +186,7 @@ werkelijkheid ten behoeve van deze communicatie. Een conceptueel informatiemodel
 wordt dan ook opgesteld voor gebruik door mensen, zodat ‘de business’ en de
 ICT-specialisten elkaar gaan begrijpen.
 
-### Logisch informatie- of gegevensmodel
+3. Logisch informatie- of gegevensmodel
 
 Beschrijft hoe de, in het conceptuele model onderscheiden, concepten gebruikt
 worden bij de interactie tussen systemen en hun gebruikers en tussen systemen
@@ -211,7 +199,7 @@ taal beschreven en wordt waar mogelijk gegenereerd vanuit het conceptueel model.
 Het logisch model wordt opgesteld voor ICT-interoperabiliteit, voor gebruik door
 met name de ontwerpers, bouwers en beheerders van ICT-voorzieningen.
 
-### Fysiek of technisch gegevens- of datamodel
+4. Fysiek of technisch gegevens- of datamodel
 
 Specificeert de structuur en eigenschappen van de technologie waarin de
 informatie wordt vastgelegd of uitgewisseld. Dit is sterk afhankelijk van de
@@ -275,7 +263,7 @@ het van belang de modellen in de juiste context te plaatsen. Dit laatste doen we
 aan de hand van de vier lagen metamodel architectuur van de Object Management
 Group (OMG). In deze paragaaf gaan we op deze concepten in.
 
-### Vier lagen metamodel architectuur OMG
+**Vier lagen metamodel architectuur OMG**
 
 Voor de specificatie van het metamodel is gebruik gemaakt van dezelfde formele
 taal waarin de informatiemodellen zijn beschreven, namelijk UML. Het metamodel
@@ -306,7 +294,7 @@ werkelijkheid op een specifiek tijdsmoment vormen.
 | M1             | Modellen, bestaande uit instanties van M2 metamodel constructies             | Klasse “Order”, klasse “Klant”, attribuut “naam” etc          |
 | M0             | Objecten en data, de instanties van M1 model constructies                    | Order 43123, Artikel 8RB31, etc.                              |
 
-Tabel 1 Vier lagen metamodel OMG
+*Tabel 1 Vier lagen metamodel OMG*
 
 De informatiemodellen waarover we het hier in dit document hebben bevinden zich
 op de M1-laag.
@@ -373,9 +361,9 @@ Het beheer van dit metamodel vindt plaats als samenwerking tussen KING, het
 Kadaster modellenbureau en Geonovum. Voor vragen, suggesties of opmerkingen kunt
 u contact opnemen met:
 
-[Ellen Debats](ellen.debats@kinggemeenten.nl) en/of
-[Lennart van Bergen](lennart.vanBergen@kadaster.nl) en/of
-[Paul Janssen](p.janssen@geonovum.nl)
+ Ellen Debats:          ellen.debats@kinggemeenten.nl en/of
+ Lennart van Bergen:    lennart.vanBergen@kadaster.nl) en/of
+ Paul Janssen           p.janssen@geonovum.nl
 
 ## Normreferenties
 
