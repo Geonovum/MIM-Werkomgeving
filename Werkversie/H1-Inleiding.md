@@ -93,14 +93,9 @@ opgeslagen, beheerd en uitgewisseld worden. Die beschrijving heeft de vorm van
 een model dat een gestructureerde weergave is van die werkelijkheid. Een
 dergelijk model is noodzakelijk om deze informatie te kunnen beheren en
 gebruiken (door mensen en machines) bij het communiceren over deze
-werkelijkheid, in registraties[^1] of anderszins, zoals het specificeren van de
+werkelijkheid, in registraties<a href="#fn1-1" id="fn1-1ref"><sup>1-1</sup></a>of anderszins, zoals het specificeren van de
 tussen registraties uit te wisselen gegevens of van de te bevragen informatie
 uit een registratie.
-
-[^1]: De opname in een registratie kent vaak een inwinningsproces, om
-gegevenswaarden over de feitelijke dingen in de werkelijkheid conform het
-informatiemodel in de registratie op te nemen. Dit is een belangrijk proces,
-maar valt buiten scope van het informatiemodel.
 
 Het beschrijven vindt plaats door de informatie te modelleren naar objecttypen
 en de kenmerken daarvan naar attribuutsoorten van die objecttypen en relaties
@@ -151,10 +146,7 @@ Zoals hiervoor uiteengezet beschrijft een informatiemodel de werkelijkheid. In
 de praktijk blijken hier niveaus in te bestaan, variërend van een zo getrouw
 mogelijke beschrijving van die werkelijkheid tot een specificatie van de wijze
 van vastlegging van die werkelijkheid in een database of uitwisselformaat.
-Veelal worden vier niveaus onderscheiden[^2]:
-
-[^2]: Ontleend aan: Model Driven Architecture (MDA) Guide; Object Management
-Group, rev. 2.0, 1-6-2014
+Veelal worden vier niveaus onderscheiden<a href="#fn1-2" id="fn1-2ref"><sup>1-2</sup></a>:
 
 **1. Model van begrippen**
 Beschrijft de werkelijkheid binnen het beschouwde domein (de ‘universe of
@@ -345,9 +337,11 @@ Het beheer van dit metamodel vindt plaats als samenwerking tussen KING, het
 Kadaster modellenbureau en Geonovum. Voor vragen, suggesties of opmerkingen kunt
 u contact opnemen met:
 
- Ellen Debats:          ellen.debats@kinggemeenten.nl en/of
- Lennart van Bergen:    lennart.vanBergen@kadaster.nl) en/of
- Paul Janssen           p.janssen@geonovum.nl
+| **Naam**               | **e-mailadres**               |
+|------------------------|-------------------------------|
+| Ellen Debats           | ellen.debats@kinggemeenten.nl |
+| Lennart van Bergen     | lennart.vanBergen@kadaster.nl |
+| Paul Janssen           | p.janssen@geonovum.nl         |
 
 ## Normreferenties
 | \#  | Naam                                         | **Referentie**                                                                                                                                                                                |
@@ -360,7 +354,7 @@ u contact opnemen met:
 | 6.  | ISO 11404                                    | NEN-ISO/IEC 11404:2008 Information technology – General Purpose Datatypes (GPD)                                                                                                               |
 | 7.  | ISO 8601                                     | https://en.wikipedia.org/wiki/ISO_8601                                                                                                                                                        |
 | 8.  | Formeel patroon                              | Zoals beschreven in Perl 5: http://perldoc.perl.org/perlre.html                                                                                                                               |
-| &nbsp; | (Reguliere Expressies)                       |                                                                                                                                                                                               |
+| &nbsp; | (Reguliere Expressies)                       |                                                                                                                                                                                            |
 | 9.  | OCL                                          | http://www.omg.org/spec/OCL/2.4/                                                                                                                                                              |
 | 10. | NEN 3610/A1:2016 Basismodel Geo- informatie. | NEN 3610:2011/A1:2016 nl. Basismodel geo-informatie - Termen, definities, relaties en algemene regels voor de uitwisseling van informatie over aan de aarde gerelateerde ruimtelijke objecten |
 
@@ -369,3 +363,14 @@ op een aantal vlakken maar er kunnen op deze raakvlaken verschillen zijn in de
 gemaakte afspraken. Voor het metamodel hanteren we daarom de volgende spelregel:
 de Stelselcatalogus is zoveel als mogelijk leidend, vervolgens het GAB en als
 laatste de handreiking.
+
+
+**Voetnoten**
+
+<a id="fn1-1" href="#fn1-1ref"><sup>1-1</sup></a>:De opname in een registratie kent vaak een inwinningsproces, om
+gegevenswaarden over de feitelijke dingen in de werkelijkheid conform het
+informatiemodel in de registratie op te nemen. Dit is een belangrijk proces,
+maar valt buiten scope van het informatiemodel.
+
+<a id="fn1-2" href="#fn1-2ref"><sup>1-2</sup></a>: Ontleend aan: Model Driven Architecture (MDA) Guide; Object Management
+Group, rev. 2.0, 1-6-2014

@@ -11,10 +11,18 @@
 //-- Log . . . :  20181009 - JvG - Initiele versie 
 //-----------------------------------------------------------------------------------*/
 
+
 img 
 {
   max-width: 100%;
   height: auto;
+  width: auto;
+}
+
+img#Geonovum
+{
+  width:132px;
+  height: 67px;
 }
 
 blockquote 
@@ -24,7 +32,8 @@ blockquote
   font-style: italic;
   border-color: transparent !important;
   border-style: none !important;
-  background-color: khaki
+  background-color: darkgray;
+  color: white;
 }
 
 blockquote:before 
@@ -34,7 +43,7 @@ blockquote:before
   /* content: "|"; */   
   margin-left: -0.95em;
   font: italic 400%/1 Esteban, serif;
-  color: #999;
+  color: grey;
 }
 
 /* Layout van tabellen */
@@ -47,17 +56,18 @@ table
 thead
 {
   border-color: darkolivegreen;
-  background-color: lightskyblue
+  background-color: grey;
+  color: white;
 }
 tbody
 {
   border-color: darkolivegreen;
-  background-color: lightgreen
+  background-color: lightgrey
 }
 
 tr:nth-child(even) 
 {
-  background-color: silver;
+  background-color:  darkgrey;
 }
 
 td 

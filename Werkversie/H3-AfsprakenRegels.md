@@ -16,10 +16,8 @@ We onderscheiden de volgende soorten gedefinieerde categorieën voor datatypen:
 1.  Datatypen, primitief: data zoals “Amersfoort” of “10” worden vastgelegd als
     CharacterString en Integer. Dit volgt de internationale standaarden voor
     datatypen.
-
 2.  Datatypen (met een naam), landelijk volgens het GAB: datatypen zoals
     Postcode “1234AB”.
-
 3.  Gestructureerde datatypen: een combinatie van data, zoals een bedrag “5
     euro”, of een GM_Surface. Deze volgen ook internationale of nationale
     standaarden.
@@ -107,14 +105,11 @@ informatiemodellen gedefinieerd en gemodelleerd worden.
 *Voorbeelden* hiervan van landelijke datatypen, die niet tot KKG behoren, maar
 ter illustratie zijn opgenomen:
 
-| Postcode | De in Nederland gangbare postcode voor een Nederlands postadres, bestaande uit een numeriek deel en een alfabetisch deel. Het numerieke deel van de postcode bestaat uit vier cijfers, het alfabetische deel van de postcode bestaat uit twee hoofdletters. Conform [GAB Postcodes].                                                                |
+| &nbsp;   | &nbsp;                                                                                                                                                                                                                                                                                                                                              |
 |----------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| DMO      | Datum mogelijk onvolledig. De keuze («union»)  van een periode in de Gregoriaanse kalender, al naar gelang de beschikbare datumelementen, uit de onderliggende subformaten alleen Year, Year en Month of Year, Month en Day. Dit is (nog steeds) overeenkomstig met https://en.wikipedia.org/wiki/ISO_8601 en [GAB DatumMogelijkOnvolledig]. |
-| DTMO     | Een volledige datum waarbij (alleen) de tijd mogelijk ontbreekt. De tijd wordt, zover bekend, ingevuld. Dus alleen de uren als de minuten onbekend zijn.                                                                                                                                                                                            |
-
--   DateTime, als de tijd wel volledig bekend is
-
--   Date, als alleen de Date bekend is
+| Postcode | De in Nederland gangbare postcode voor een Nederlands postadres, bestaande uit een numeriek deel en een alfabetisch deel. Het numerieke deel van de postcode bestaat uit vier cijfers, het alfabetische deel van de postcode bestaat uit twee hoofdletters. Conform [GAB Postcodes].                                                                |
+| DMO      | Datum mogelijk onvolledig. De keuze («union»)  van een periode in de Gregoriaanse kalender, al naar gelang de beschikbare datumelementen, uit de onderliggende subformaten alleen Year, Year en Month of Year, Month en Day. Dit is (nog steeds) overeenkomstig met https://en.wikipedia.org/wiki/ISO_8601 en [GAB DatumMogelijkOnvolledig].        |
+| DTMO     | Een volledige datum waarbij (alleen) de tijd mogelijk ontbreekt. De tijd wordt, zover bekend, ingevuld. Dus alleen de uren als de minuten onbekend zijn.<br>- DateTime, als de tijd wel volledig bekend is<br>- Date, als alleen de Date bekend is                                                                                                  |
 
 ## Gestructureerd datatype
 Een «Gestructureerd datatype» is veelal specifiek binnen een informatiemodel.
@@ -158,7 +153,6 @@ Objectnummering. Dit Gestructureerd datatype bestaat uit de data elementen:
 -   Gemeentecode (AN, lengte 4)
 -   Objecttypecode (AN, lengte 2)
 -   Nummer (AN, lengte 10)
-
 met daarbij een formeel patroon: [0-9]{4}\\.[0-9]{2}\\.[ 0-9]{10} of een (tekst)
 patroon Gemeentecode.Objecttypecode.Nummer
 
@@ -326,13 +320,11 @@ referentielijst, niet relevant zijn en je voor de definitie alleen wilt
 verwijzen naar de externe waardelijst.
 
 **Waardenbereik en patroon**
-
 In plaats van een opsomming van alle mogelijke waarden via een enumeratie of
 referentielijst leggen we soms voor een attribuut (attribuutsoort, referentie
 element, data element of union element) alleen het waardenbereik vast door
 middel van een patroon. Bijvoorbeeld bij een postcode, of een gemeentecode die
 moet bestaan uit precies 4 getallen, waarbij het eerste getal een 0 mag zijn.
-
 Er wordt met een patroon expliciet niet een Enumeratie bedoeld. Het betreft een
 andersoortige, meer open beschrijving van welke waarden toegestaan zijn voor een
 attribuutsoort.
@@ -368,11 +360,10 @@ deze paragraaf ook de vraag wanneer we specialisaties / generalisaties
 onderkennen in een conceptueel informatiemodel en in een logisch informatiemodel
 
 **Conceptueel informatiemodel**
-*Specialisatie / generalisatie*
 
+*Specialisatie / generalisatie*
 Bovenstaande vragen beantwoorden we aan de hand van een voorbeeld: het
 opleidingsinstituut. 
-
 In de beschouwde werkelijkheid onderscheiden we onder meer als gespreksonderwerp
 personen. Deze personen kunnen docenten en leerlingen zijn. Over al deze
 gespreksonderwerpen willen we gegevens communiceren. Een docent heeft als
@@ -391,7 +382,6 @@ en Leerling hetzelfde gedrag waarbij dat gedrag essentieel van belang is voor
 het te beschouwen domein en daarmee het conceptuele informatiemodel.
 
 *Abstract / concreet*
-
 Wanneer er vanuit wordt gegaan dat binnen het te beschouwen gebied een persoon
 altijd ofwel een docent ofwel leerling kan zijn (en nooit beide tegelijk) dan
 definiëren we een Persoon als een abstract objecttype. Docent en Leerling zijn
@@ -404,23 +394,18 @@ objecttype.
 
 Richtlijnen
 -   Een abstract object is een onderwerp van gesprek binnen het beschouwde
-    gebied. Het heeft dus echt een betekenis[^1] in het beschouwde gebied. Net
+    gebied. Het heeft dus echt een betekenis <a href="#fn3-1" id="fn3-1ref"><sup>3-1</sup></a> in het beschouwde gebied. Net
     als een concreet object, specialisatie of generalisatie.
-
-    [^1]:  
-
 -   De definitie van elk objecttype (dus ook een abstract objecttype) is zodanig
     dat ondubbelzinnig bepaald kan worden dat een object wel of niet tot het
     gedefinieerde type behoort. Dus niet een objecttype met een definitie als
     ‘De gemeenschappelijke eigenschappen van een object…’ Deze definitie is op
     elk objecttype van toepassing.
-
 -   Houd er rekening mee dat afhankelijk van het te beschouwen gebied een object
     uit de werkelijkheid in het ene informatiemodel een concreet objecttype kan
     zijn en in het andere informatiemodel een abstract objecttype.
 
 **Logisch informatiemodel**
-
 In een logisch model gelden in principe dezelfde regels voor abstracte of
 concrete objecttypen. De abstracte objecten worden daarom in principe
 overgenomen. In een logisch model wordt het digitale model van de werkelijkheid
@@ -432,20 +417,16 @@ enige regel die geldt is dat een abstract objecttype niet geïnstantieerd kan
 worden. Elk object is altijd een instantie van een concreet objecttype.
 
 *Algemeen*
-
 -   In UML wordt een abstract objecttype aangeduid door indAbstract met waarde
     “J” en wordt de naam van het abstracte objecttype cursief geschreven
     (voorbeeld: *Persoon*).
-
 -   Een objecttype dat een generalisatie-relatie heeft naar een al dan niet
     abstract objecttype noemen we een specialisatie (van dat objecttype).
     Wanneer de generalisatie een abstract objecttype is, kan de specialisatie
     zelf ook abstract zijn en specialisaties hebben. De ‘onderste’
     specialisaties zijn dan altijd concreet (niet abstract)
-
 -   Modelleer een abstract objecttype pas wanneer er sprake is van twee of meer
     specialisaties
-
 -   De unieke aanduiding kan opgenomen worden in het abstracte objecttype. De
     unieke aanduiding geldt dan voor elke specialisatie van het abstract
     objecttype. Dit betekent dat de unieke aanduiding uniek is binnen de
@@ -566,7 +547,6 @@ Dit betekent dus dat bekend moet zijn wat de waarde van een attribuut op een
 bepaald moment is.
 
 *Tijdslijnen*
-
 Er spelen twee tijdslijnen een rol bij het herleiden van attribuutwaarden:
 -   Wanneer is iets gebeurd, in de werkelijkheid of volgens opgave (wanneer zijn
     de opgenomen gegevens geldig)? Dit valt binnen de tijdlijn van de
@@ -615,13 +595,9 @@ gebruikt moeten worden voor het vastleggen van historie. Deze bij de
 tijdslijn behorende attributen worden op het logische niveau vastgelegd.
 
 **Historie op logisch niveau**
-
-KKG schrijft[^2] geen implementatie van het conceptuele niveau voor. Wel worden
+KKG schrijft<a href="#fn3-2" id="fn3-2ref"><sup>3-2</sup></a> geen implementatie van het conceptuele niveau voor. Wel worden
 er aandachtspunten gegeven om rekening mee te houden. Denk bij de uitwerking
 o.a. aan de volgende aspecten:
-
-[^2]: Hoewel het goed zou zijn om tot een standaard te komen in Nederland is KKG
-niet de plek hiervoor.
 
 -   Het bijhouden van historie met specifieke attributen per objecttype, zoals
     bijvoorbeeld: bouwjaar pand, of met generieke tijdslijnattributen attributen
@@ -654,6 +630,7 @@ vertalen.
 Opmerking: de metagegevens Indicatie materiële historie en Indicatie formele
 mogen worden opgenomen in een logisch model (of worden overgenomen van het
 conceptuele naar het logische informatiemodel).
+
 
 ## Afleidbare gegevens
 In een informatiemodel kan de behoefte bestaan om afgeleide gegevens op te
@@ -934,3 +911,10 @@ In de bijlage is een template opgenomen om de naamgevingsconventies in te
 specificeren. Dit is een hulptabel, die u over kunt nemen naar uw eigen extensie
 (zoals bedoeld in paragraaf 1.8) en in kunt vullen voor uw eigen informatiemodel
 (of organisatie).
+
+**Voetnoten**
+
+<a id="fn3-1" href="#fn3-1ref"><sup>3-1</sup></a>: nb
+
+<a id="fn3-2" href="#fn3-2ref"><sup>3-2</sup></a>: Hoewel het goed zou zijn om tot een standaard te komen in Nederland is KKG
+niet de plek hiervoor.
