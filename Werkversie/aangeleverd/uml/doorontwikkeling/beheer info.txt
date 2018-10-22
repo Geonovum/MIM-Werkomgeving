@@ -1,0 +1,23 @@
+
+
+2018-05-24: Verstuurd naar Peter Lentjes voor doorontwikkeling
+--------------------------------------------------------------------------------------------------------------------
+UML 20171020 versie 1.0.1 - doorontwikkeling:
+20171020:
+definities bij stereotypen toegevoegd in uml profile
+definities/toelichting bij tagged values in uml profile toegevoegd
+toelichting bij toolbox onderdelen toegevoegd.
+
+twee mdg gemaakt. En gecontroleerd in test KKG-alt1_v1.0_build_02.EAP.
+MDG_KKGv1.0-alt1_build_02.xml
+MDG_KKGv1.0-alt2_build_02.xml
+
+Het is UML profile van KKG versie 1.0 buildversie 1.0_02
+
+
+opmerking: nieuw mdg laden. Per onderdeel synchroniseren. Memo velden krijgen geen uitleg bij bestaande tagged values
+---------------------------------------------------------------------------------------------------------------------
+
+UML: 20170703 versie 1.0 umlprofiel KKGv1.0-alt1_0707 , KKGv1.0-alt1_0707
+
+
