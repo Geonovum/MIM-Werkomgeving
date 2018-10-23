@@ -11,7 +11,7 @@
 //-- Log . . . :  20181009 - JvG - Initiele versie 
 //-----------------------------------------------------------------------------------*/
 
-
+/*-- Definitie van Image ------------------------------------------------------------*/
 img 
 {
   max-width: 100%;
@@ -19,12 +19,14 @@ img
   width: auto;
 }
 
+/*-- Definite van het Geonovum Logo bovenaan Respec document ------------------------*/
 img#Geonovum
 {
   width:132px;
   height: 67px;
 }
 
+/*-- Definite van BlockQuotes (uitgelichte tekstblokken) ----------------------------*/
 blockquote 
 {
   /* margin-left: 20px !important; */
@@ -36,6 +38,7 @@ blockquote
   color: white;
 }
 
+/*-- Optioneel een symbool voor de blockquote --------------------------------------*/
 blockquote:before 
 {
   display: block;
@@ -46,31 +49,51 @@ blockquote:before
   color: grey;
 }
 
-/* Layout van tabellen */
+/*-- Definite van tabellen ---------------------------------------------------------*/
 table
 {
-  empty-cells: show;                      /* voorkomt problemen met lege cellen               */
-  min-width: 90%;                         /* alle tabellen minimaal 90% breed                 */
+  empty-cells: show;
+  min-width: 90%;
+  border-color: grey;
+  border-style: solid;
 }
 
+/*-- Definite van de kopregel van een tabel ----------------------------------------*/
 thead
 {
-  border-color: darkolivegreen;
   background-color: grey;
   color: white;
 }
+/*-- Definite van de body van een tabel --------------------------------------------*/
 tbody
 {
   border-color: darkolivegreen;
   background-color: lightgrey
 }
 
+/*-- Definite van de tabel-rij (deze zorgt voor 2 kleuren in de rijen) -------------*/
 tr:nth-child(even) 
 {
   background-color:  darkgrey;
 }
 
+/*-- Definite van de tabel-cel (data) ----------------------------------------------*/
 td 
 {
-  min-width: 100px;
+  min-width: 100px;     /* lege kolommen hebben deze minimale breedte */
+}
+
+/*-- Definite van rode tekst -------------------------------------------------------*/
+r
+{
+  color: red;
+}
+
+/*-- Definite van rose tekstblok ---------------------------------------------------*/
+div#remark
+{
+  border-color: darkblue;
+  border-style: solid;
+  background-color:  rosybrown;
+  color: darkblue;
 }
