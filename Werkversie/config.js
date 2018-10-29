@@ -37,10 +37,20 @@ var respecConfig =
   editors: 
   [
     {
-      name:       "Ing. Jan van Gelder",
+      name:       "Ir. Ellen Debats",
+      company:    "KING",
+      companyURL: "https://www.vng.nl"
+    }, 
+    {
+      name:       "Ir. Lennart van Bergen",
+      company:    "Kadaster",
+      companyURL: "https://www.kadaster.nl"
+    }, 
+    {
+      name:       "Ir. Paul Janssen",
       company:    "Geonovum",
       companyURL: "https://www.geonovum.nl"
-    }
+    },
   ],
   //-- de namen van de Author(s) ------------------------------------------------------
   //-- vul in: per Author: name:, company:, companyURL: -------------------------------
@@ -80,21 +90,6 @@ var respecConfig =
       name:       "Drs. Linda van de Brink",
       company:    "Geonovum",
       companyURL: "https://www.geonovum.nl"
-    },
-    {
-      name:       "Drs. Thies Mesdag",
-      company:    "Kadaster",
-      companyURL: "https://www.kadaster.nl"
-    },
-    {
-      name:       "Drs. Arjan Loeffen",
-      company:    "Armatiek BV",
-      companyURL: "https://www.armatiek.nl"
-    },
-    {
-      name:       "Drs. Jos Warmer",
-      company:    "OpenModeling",
-      companyURL: "https://www.openmodeling.nl"
     },
   ],
   //-- shortName is verplicht! (komt in de URL: kies logische naam) --------------------

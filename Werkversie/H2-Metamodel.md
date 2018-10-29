@@ -430,7 +430,7 @@ Een datatype waarvan de mogelijke waarden zijn opgesomd in een lijst. De waarde
 van een attribuutsoort moet één van de waarden zijn uit de gespecificeerde
 waardenlijst.
 
-**10. Referentielijst** *– Stereotype «Referentielijst»***:** De UML-representatie 
+**10. Referentielijst** *– Stereotype «Referentielijst»*: De UML-representatie 
 van een referentielijst, uitgedrukt in een stereotype van UML-Datatype (metaclass).
 
 >   **Definitie Referentielijst**
@@ -594,7 +594,7 @@ van de bestaande UML-PrimitiveType (metaclass) voor de specificaties van een pri
    ook ‘patroon’ in 3.5). Dit datatype, met een eigen naam, wordt vervolgens
    gebruikt als type van een attribuutsoort.    
 
-**16. Gestructureerd datatype** *– stereotype «Gestructureerd datatype»***:** De
+**16. Gestructureerd datatype** *– stereotype «Gestructureerd datatype»*: De
 UML-representatie van een gestructureerd datatype uitgedrukt in UML-datatype
 (metaclass) met ten minste twee keer een UML-Property.
 
@@ -631,7 +631,7 @@ UML-representatie van een gestructureerd datatype uitgedrukt in UML-datatype
    *Voorbeeld: Gestructureerd datatype Bedrag bestaat uit de data-elementen som
    en valuta.*
 
-**17. Data element** *- Stereotype «Data element»***:** De UML-representatie van
+**17. Data element** *- Stereotype «Data element»*: De UML-representatie van
 een data element uitgedrukt in UML-property (metaclass).
 
 >   **Definitie Data element**
@@ -649,7 +649,7 @@ een data element uitgedrukt in UML-property (metaclass).
    structuur van een gegeven en heeft zelf een datatype. Dit datatype is
    meestal een primitief datatype.
 
-**18. Union** *– Stereotype «Union»***:** De UML-representatie van een union
+**18. Union** *– Stereotype «Union»*: De UML-representatie van een union
     uitgedrukt in UML-datatype (metaclass).
 
 >   **Definitie Union**
@@ -662,7 +662,7 @@ een data element uitgedrukt in UML-property (metaclass).
    *Voorbeeld: Union LineOrPolygon. Deze biedt een keuze uit Union element Line
    of Union element Polygon.*
 
-**19. Union element** *- Stereotype «Union element»***:** De UML-representatie
+**19. Union element** *- Stereotype «Union element»*: De UML-representatie
     van een union element uitgedrukt in UML-property (metaclass), dat zelf een
     type heeft dat uitgedrukt is in een UML-datatype (metaclass).
 
@@ -681,7 +681,7 @@ een data element uitgedrukt in UML-property (metaclass).
 Een package is een benoemde en begrensde verzameling/groepering van
 modelelementen.
 
-**20. Extern** - Stereotype «Extern»**:** De UML-representatie van een extern
+**20. Extern** - Stereotype «Extern»: De UML-representatie van een extern
     package uitgedrukt in UML-package (metaclass)
 
 >   **Definitie Extern**
@@ -694,7 +694,7 @@ modelelementen.
    van attribuutsoort Identificatie wegdeel in RSGB verwijst naar het datatype
    NEN3610ID zoals opgenomen in het Externe package.*
 
-**21. View** *- Stereotype «View»***:** De UML-representatie van een view
+**21. View** *- Stereotype «View»*: De UML-representatie van een view
 package uitgedrukt in UML-package (metaclass)
 
 >   **Definitie View**
@@ -769,14 +769,14 @@ zoals patroon, van KKG metaclass Datatype).
 
 ### Specificatie metagegevens voor objecten en attributen 
 
-**Specificatie voor «Objecttype»**<a href="#fn2-5" id="fn2-5ref"><sup>2-5</sup></a>
+**Specificatie voor «Objecttype»**
 
 De objecttypen worden naar de volgende aspecten gespecificeerd:
 
 | &nbsp;                        | &nbsp;             | &nbsp;                                                                                                                                                                                                                                                                                                                                    | &nbsp;                                   | &nbsp;                                                     |                                                                                                                                     
 |-------------------------------|--------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------|------------------------------------------------------------|
-| **Aspect**<a href="#fn2-6" id="fn2-6ref"><sup>2-6</sup></a> | **Kardi naliteit** | **Toelichting**                                                                                                                                                                                                                                                                                             | **In UML 2.57**                          | **In EA**<a href="#fn2-7" id="fn2-7ref"><sup>2-7</sup></a> |
-| **Naam√ \***                  | 1                  | De naam van het objecttype<a href="#fn2-8" id="fn2-8ref"><sup>2-8</sup></a>.                                                                                                                                                                                                                                                              | <r>*name van de metaclass Named element*</r>    | <r>*Name*</r>                                       |
+| **Aspect**<a href="#fn2-6" id="fn2-6ref"><sup>2-6</sup></a> | **Kardi naliteit** | **Toelichting**                                                                                                                                                                                                                                                                                             | **In UML 2.5**<a href="#fn2-5" id="fn2-5ref"><sup>2-5</sup></a>| **In EA**<a href="#fn2-7" id="fn2-7ref"><sup>2-7</sup></a> |
+| **Naam√ \***                  | 1                  | De naam van het objecttype<a href="#fn2-8" id="fn2-8ref"><sup>2-8</sup></a>.                                                                                                                                                                                                                                                           | <r>*name van de metaclass Named element*</r>    | <r>*Name*</r>                                       |
 | **Herkomst\***                | 1                  | De registratie in wiens catalogus het objecttype is gespecificeerd (oftewel de registratie waar het objecttype deel van uitmaakt). Deze specificatie is toegevoegd omdat het wel duidelijk moet zijn in welke (basis)registratie of informatiemodel het objecttype voorkomt (indien van toepassing).                                      | &nbsp;                                   | *Tagged value*                                             |
 | **Definitie√ \***             | 1                  | De beschrijving van de betekenis van het objecttype zoals gespecificeerd in de catalogus van de desbetreffende (basis)registratie of informatiemodel.                                                                                                                                                                                     | <r>*Body van de metaclass Comment*</r>   | <r>*Notes*</r>                                             |
 | **Herkomst definitie√**       | 1                  | Voor objecttypen die deel uitmaken van een registratie is de definitie hieruit overgenomen.                                                                                                                                                                                                                                               | &nbsp;                                   | *Tagged*  *value*                                          |
@@ -794,7 +794,7 @@ De attribuutsoorten worden naar de volgende aspecten gespecificeerd:
 
 | &nbsp;                                     | &nbsp;             | &nbsp;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      | &nbsp;                                                           | &nbsp;           |
 |--------------------------------------------|--------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------|------------------|
-| **Aspect**                                 | **Kardinaliteit**  | **Toelichting**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             | **In UML 2.57**                                                  | **In EA**        |
+| **Aspect**                                 | **Kardinaliteit**  | **Toelichting**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             | **In UML 2.5**                                                   | **In EA**        |
 | **Naam √**                                 | 1                  | De naam van de attribuutsoort.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              | <r>*name van de metaclass Named element*</r>                     | <r>*Name*</r>    |
 | **Herkomst**                               | 1                  | De registratie of het informatiemodel waaraan de attribuutsoort ontleend is dan wel de eigen organisatie indien het door de eigen organisatie toegevoegd is.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |  &nbsp;                                                          | *Tagged value*   |
 | **Definitie √**                            | 1                  | De beschrijving van de betekenis van de attribuutsoort.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     | <r>*Body van de metaclass Comment*</r>                           | <r>*Notes*</r>   |
@@ -1219,18 +1219,18 @@ tijdelijk gewerkt met dit stereotype. Op termijn komt deze te vervallen.
 betreft veelal overerving van een gegeven van een UML metaclass die niet in dit
 document is benoemd.
 
-<a id="fn2-6" href="#fn2-6ref"><sup>2-6</sup></a>: *Aspect met aanduiding √ is conform stelselafspraken voor
+<a id="fn2-6" href="#fn2-6ref"><sup>2-6</sup></a>: Aspect met aanduiding √ is conform stelselafspraken voor
 basisregistraties. Een \* is conform de stelselcatalogus. Die ook de paragraaf
-in H3 hierover.*
+in H3 hierover.
 
-<a id="fn2-7" href="#fn2-7ref"><sup>2-7</sup></a>: *Rode tekst in de kolom ‘In EA’ betreft een standaard element binnen Sparx
+<a id="fn2-7" href="#fn2-7ref"><sup>2-7</sup></a>: Rode tekst in de kolom ‘In EA’ betreft een standaard element binnen Sparx
 EA. Zwarte tekst in de kolom ‘in EA’ betreft uitbreiding op UML Metamodel, via
-tagged values of aanvullende stereotypes.*
+tagged values of aanvullende stereotypes.
 
-<a id="fn2-8" href="#fn2-8ref"><sup>2-8</sup></a>: *In (basis) registraties is dit meestal gespecificeerd in een catalogus
+<a id="fn2-8" href="#fn2-8ref"><sup>2-8</sup></a>: In (basis) registraties is dit meestal gespecificeerd in een catalogus
 van objecten en begrippen. Deze opmerking geldt voor elk metadata aspect naam
 van de andere modelelementen. Indien het modelelement niet voorkomt in een
-dergelijke catalogus is dan kiest u uiteraard een eigen naam.*
+dergelijke catalogus is dan kiest u uiteraard een eigen naam.
 
 <a id="fn2-9" href="#fn2-9ref"><sup>2-9</sup></a>: Deze specificatie is toegevoegd t.o.v. de registratiecatalogus aangezien
 het hier niet om een registratie gaat maar wel duidelijk moet zijn in welke
