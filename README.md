@@ -14,7 +14,7 @@ bepaald, zodanig dat die de teamwerkwijze het beste ondersteunt. Een Werk Versie
 leidt tot een Consultatie Versie.
 
 De werkversie is hier op te vragen:
-<https://geonovum.github.io/MIM-Werkomgeving/>
+<https://geonovum.github.io/MIM-Werkomgeving/>Werkversie
 
 Consultatieversie
 -----------------
