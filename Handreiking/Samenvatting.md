@@ -1,1 +1,1 @@
-In dit document komt Samenvatting.md
+**Samenvatting**

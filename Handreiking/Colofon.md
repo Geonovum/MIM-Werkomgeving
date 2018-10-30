@@ -1,1 +1,1 @@
-In dit document komt Colofon.md
+** In dit document komt Colofon.md **
