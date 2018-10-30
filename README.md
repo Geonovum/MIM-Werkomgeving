@@ -39,6 +39,16 @@ Definitieve versie
 In deze map komt de Definitieve Versie (DEF) te staan. Dit is een “bevroren”
 versie, waaraan niets meer veranderd mag worden.
 
+Handreiking
+-----------
+
+In deze map staan documenten die horen bij de Handreiking. (HR). De indeling
+onder de map Handreiking wordt door het team bepaald, zodanig dat die de
+teamwerkwijze het beste ondersteunt.
+
+De handreiking is hier op te vragen:
+<https://geonovum.github.io/MIM-Werkomgeving/Handreiking>
+
 Publiceren
 ----------
 
