@@ -77,7 +77,7 @@ var respecConfig =
       companyURL: "https://www.vng.nl"
     },
     {
-      name:       "Ing. Perer Lentjens",
+      name:       "Ing. Peter Lentjens",
       company:    "Kadaster",
       companyURL: "https://www.kadaster.nl"
     },
@@ -87,7 +87,7 @@ var respecConfig =
       companyURL: "https://www.tudelft.nl"
     },
     {
-      name:       "Drs. Linda van de Brink",
+      name:       "Drs. Linda van den Brink",
       company:    "Geonovum",
       companyURL: "https://www.geonovum.nl"
     },
