@@ -113,7 +113,7 @@ var respecConfig =
   //-- Repositorynaam/issues op GitHub ------------------------------------------------
   issueBase: "https://github.com/Geonovum/MIM-Werkomgeving/issues/",
   //-- edDraftURI: de URI van de werkversie van het document
-  edDraftURI: "https://github.com/Geonovum/MIM-Werkomgeving/Werkversie",
+  edDraftURI: "https://geonovum.github.io/MIM-Werkomgeving/Werkversie/",
   //-- license: voor de geldende gebruiksvoorwaarden
   licence: "cc-by-nd",              //-- bronvermelding, geen afgeleide werken (default)
   // licence: "cc0",                //-- Public Domain Dedication
