@@ -4,7 +4,7 @@
 //--              Gebaseerd op https://github.com/Geonovum/respec/wiki
 //--              Deze file moet worden neergezet in de root-directory van de 
 //--              betreffende standaard. 
-//-- Door. . . :  Jan van Gelder
+//-- Door. . . :  Jan van Gelder 
 //-------------------------------------------------------------------------------------
 //-------------------------------------------------------------------------------------
 //-- Log . . . :  20181015 - JvG - Initiele versie 
