@@ -14,10 +14,10 @@
 var respecConfig = 
 {
   //-- specStatus is verplicht! (activeer 1 van de volgende) --------------------------
-  //specStatus: "GN-WV",                // Werk Versie
+  specStatus: "GN-WV",                // Werk Versie
   //specStatus: "GN-CV",              // Consultatie Versie
   //specStatus: "GN-VV",              // Vaststellings Versie
-  specStatus: "GN-DEF",             // Definitieve Versie
+  //specStatus: "GN-DEF",             // Definitieve Versie
   //-- specType is verplicht! (activeer 1 van de volgende) ----------------------------
   //specType: "NO",                   // Norm
   specType: "ST",                     // Standaard
@@ -31,7 +31,7 @@ var respecConfig =
   format: "markdown",                 // altijd "markdown"     
   //-- publishDate is verplicht -------------------------------------------------------
   //-- NB: in de werkversie uitzetten, want dan pakt Respec de pushdate ---------------
-  publishDate: "2017-06-14",  	    // Format is "YYY-MM-DD"
+  //publishDate: "2017-06-14",  	    // Format is "YYY-MM-DD"
   //-- de namen van de Editor(s) ------------------------------------------------------
   //-- vul in: per Editor: name:, company:, companyURL: -------------------------------
   editors: 
@@ -87,13 +87,13 @@ var respecConfig =
       companyURL: "https://www.tudelft.nl"
     },
     {
-      name:       "Drs. Linda van den Brink",
+      name:       "Dr. Linda van den Brink",
       company:    "Geonovum",
       companyURL: "https://www.geonovum.nl"
     },
   ],
   //-- shortName is verplicht! (komt in de URL: kies logische naam) --------------------
-  shortName: "mim10",  	              // Wordt gebruikt in de document URL
+  shortName: "mim11",  	              // Wordt gebruikt in de document URL
   //-- pubDomain is verplicht! (komt in de URL: Activeer 1 van de volgende) ------------
   pubDomain: "mim", 	              // Metamodel Informatie Modellering
   //pubDomain: "bor", 	            // Beheer Openbare Ruimte
