@@ -109,7 +109,7 @@ var respecConfig =
   //pubDomain: "visu", 	            // Visualisatie
   //pubDomain: "wp", 	              // White Paper
   //-- Repositorynaam op GitHub -------------------------------------------------------
-  github: "https://github.com/Geonovum/MIM-Werkomgeving",
+  github: "https://github.com/Geonovum/MIM-Werkomgeving/Werkversie",
   //-- Repositorynaam/issues op GitHub ------------------------------------------------
   issueBase: "https://github.com/Geonovum/MIM-Werkomgeving/issues/",
   //-- license: voor de geldende gebruiksvoorwaarden
