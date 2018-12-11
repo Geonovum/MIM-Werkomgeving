@@ -109,9 +109,11 @@ var respecConfig =
   //pubDomain: "visu", 	            // Visualisatie
   //pubDomain: "wp", 	              // White Paper
   //-- Repositorynaam op GitHub -------------------------------------------------------
-  github: "https://github.com/Geonovum/MIM-Werkomgeving/Werkversie",
+  github: "https://github.com/Geonovum/MIM-Werkomgeving",
   //-- Repositorynaam/issues op GitHub ------------------------------------------------
   issueBase: "https://github.com/Geonovum/MIM-Werkomgeving/issues/",
+  //-- edDraftURI: de URI van de werkversie van het document
+  edDraftURI: "https://github.com/Geonovum/MIM-Werkomgeving/Werkversie",
   //-- license: voor de geldende gebruiksvoorwaarden
   licence: "cc-by-nd",              //-- bronvermelding, geen afgeleide werken (default)
   // licence: "cc0",                //-- Public Domain Dedication
