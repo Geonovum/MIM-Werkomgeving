@@ -14,24 +14,24 @@
 var respecConfig = 
 {
   //-- specStatus is verplicht! (activeer 1 van de volgende) --------------------------
-  specStatus: "GN-WV",                // Werk Versie
-  //specStatus: "GN-CV",              // Consultatie Versie
-  //specStatus: "GN-VV",              // Vaststellings Versie
-  //specStatus: "GN-DEF",             // Definitieve Versie
+  //specStatus: "GN-WV",                  // Werk Versie
+  //specStatus: "GN-CV",                // Consultatie Versie
+  specStatus: "GN-VV",                // Vaststellings Versie
+  //specStatus: "GN-DEF",                 // Definitieve Versie
   //-- specType is verplicht! (activeer 1 van de volgende) ----------------------------
-  //specType: "NO",                   // Norm
+  //specType: "NO",                     // Norm
   //specType: "ST",                     // Standaard
-  //specType: "IM",                   // Informatie Model
-  //specType: "PR",                   // Praktijk Richtlijn
-  specType: "HR",                   // HandReiking
-  //specType: "WA",                   // Werkafspraak
-  //specType: "US",                   // Uitwisselings standaard
-  //specType: "PS",                   // Presentatie sstandaard
+  //specType: "IM",                     // Informatie Model
+  //specType: "PR",                     // Praktijk Richtlijn
+  specType: "HR",                       // HandReiking
+  //specType: "WA",                     // Werkafspraak
+  //specType: "US",                     // Uitwisselings standaard
+  //specType: "PS",                     // Presentatie sstandaard
   //-- format is verplicht! -----------------------------------------------------------
-  format: "markdown",                 // altijd "markdown"     
+  format: "markdown",                   // altijd "markdown"     
   //-- publishDate is verplicht -------------------------------------------------------
   //-- NB: in de werkversie uitzetten, want dan pakt Respec de pushdate ---------------
-  //publishDate: "2018-09-18",  	    // Format is "YYY-MM-DD"
+  //publishDate: "2018-09-18",  	      // Format is "YYY-MM-DD"
   //-- de namen van de Editor(s) ------------------------------------------------------
   //-- vul in: per Editor: name:, company:, companyURL: -------------------------------
   editors: 
@@ -53,7 +53,7 @@ var respecConfig =
     },
   ],
   //-- shortName is verplicht! (komt in de URL: kies logische naam) --------------------
-  shortName: "him",  	              // Wordt gebruikt in de document URL
+  shortName: "him10",  	            // Wordt gebruikt in de document URL
   //-- pubDomain is verplicht! (komt in de URL: Activeer 1 van de volgende) ------------
   pubDomain: "him", 	              // Metamodel Informatie Modellering
   //pubDomain: "bor", 	            // Beheer Openbare Ruimte
@@ -72,6 +72,8 @@ var respecConfig =
   github: "https://github.com/Geonovum/MIM-Werkomgeving",
   //-- Repositorynaam/issues op GitHub ------------------------------------------------
   issueBase: "https://github.com/Geonovum/MIM-Werkomgeving/issues/",
+   //-- edDraftURI: de URI van de werkversie van het document
+   edDraftURI: "https://geonovum.github.io/MIM-Werkomgeving/Werkversie/",
   //-- license: voor de geldende gebruiksvoorwaarden
   licence: "cc-by-nd",              //-- bronvermelding, geen afgeleide werken (default)
   // licence: "cc0",                //-- Public Domain Dedication
