@@ -25,6 +25,6 @@ Publicatie definitieve versies
 ------------------------------
 
 Definitieve versies worden gepubliceerd op
-[www.docs.geostandaarden.nl](http://www.docs.geostandaarden.nl)
+[docs.geostandaarden.nl](http://docs.geostandaarden.nl)
 
 Momenteel is dat nog niet ingericht.
