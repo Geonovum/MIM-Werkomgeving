@@ -4,27 +4,16 @@ MIM-Werkomgeving
 >   Dit is de MIM (Metamodel Informatie Modellering) map waarin de werkversies
 >   van de MIM staan.
 
-De map Werkversie
------------------
-
 In deze map staan de bestanden die horen bij de werkversie van MIM.
 
 De webversie staat hier:
-<https://geonovum.github.io/MIM-Werkomgeving/Werkversie>
+<https://geonovum.github.io/MIM-Werkomgeving>
 
-De map Handreiking
-------------------
-
-In deze map staan de bestanden die horen bij de werkversie van de MIM
-Handreiking.
-
-De webversie staat hier:
-<https://geonovum.github.io/MIM-Werkomgeving/Handreiking>
+De webversie van de Handreiking die hoort bij MIM staat hier:
+<https://geonovum.github.io/HIM-Werkomgeving>
 
 Publicatie definitieve versies
 ------------------------------
 
 Definitieve versies worden gepubliceerd op
 [docs.geostandaarden.nl](http://docs.geostandaarden.nl)
-
-Momenteel is dat nog niet ingericht.
