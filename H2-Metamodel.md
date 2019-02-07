@@ -313,12 +313,13 @@ UML-Class.
 **5. Generalisatie:** De UML-representatie van een specialisatie, uitgedrukt in
     een UML-generalization (metaclass).
 
->   **Definitie Generalisatie**
+>   **Definitie Generalisatie tussen objecttypes**
 >
 >   De typering van het hiërarchische verband tussen een meer generiek object
 >   van een objecttype en een meer specifiek object van een ander objecttype
 >   waarbij het laatstgenoemde object eigenschappen van het eerstgenoemde object
 >   overerft.
+
 
    *Toelichting*
    Een generalisatierelatie geeft aan dat bepaalde eigenschappen van een
@@ -333,6 +334,20 @@ UML-Class.
    APPARTEMENTSRECHT is specialisatie van KADASTRAAL ONROERENDE ZAAK. PERCEEL
    en APPARTEMENTSRECHT hebben beide ‘Kadastrale aanduiding’ en een ‘relatie
    met ONROERENDE ZAAK FILIATIE’.*
+   
+>   **Definitie Generalisatie tussen datatypes**
+
+>	De typering van het hiërarchische verband tussen een meer generieke structuur 
+>	van data in de vorm van een datatype, en een meer specifieke structuur van 
+>	data in de vorm van een ander datatype, waarbij het laatstgenoemde datatype 
+>	de eigenschappen van het eerstgenoemde datatype overerft, én een verbijzondering 
+>	hierin aanbrengt in de vorm van een meer restrictieve  definitie, of een meer
+>	restrictief patroon/formeel patroon.
+
+	*Toelichting* 
+	Het andere datatype is bijvoorbeeld een CharacterString, Integer, GM Surface of DMO
+	en dient als basis voor een zelf te definiëren datatype (zie 3.1.2.). 
+	deze generalisatie is van toepassing op de volgende datatypes: «Primitief datatype», «Gestructureerd datatype», «Referentielijst», «Codelist», «Enumeratie». 
 
 **6. Relatiesoort** *– Stereotype «Relatiesoort»*: De UML-representatie van een
     relatiesoort, uitgedrukt in een stereotype van UML-association (metaclass).
@@ -935,7 +950,7 @@ aspecten gespecificeerd.
 | **Toelichting√ \***               | 0..1               | Een inhoudelijke toelichting op de relatierol.                                                                                                                                                                                                | &nbsp;                                                           | *Tagged value*  |
 
 
-**Specificatie voor «Generalisatie»**
+**Specificatie voor «Generalisatie» tussen objecttypes**
 
 De generalisaties worden naar het volgende aspect gespecificeerd:
 
@@ -944,6 +959,18 @@ De generalisaties worden naar het volgende aspect gespecificeerd:
 | **Naam**                   | 0..1               | De naam van de generalisatie. Standaard ‘is specialisatie van’.     | <r>*name van de metaclass Named element*</r>               | <r>*Name*</r>   |
 | **Objecttype**             | 1                  | Het objecttype dat een specialisatie is van een (ander) objecttype. | <r>*/source: related Element bij Relationship Element*</r> | <r>*Source*</r> |
 | **Gerelateerd objecttype** | 1                  | Het objecttype dat de generalisatie is van een (ander) objecttype.  | <r>*/target: related Element bij Relationship Element*</r> | <r>*Target*</r> |
+
+
+**Specificatie voor «Generalisatie» tussen datatypes**
+
+De generalisaties worden naar het volgende aspect gespecificeerd:
+
+| **Aspect**                 | **Kardinaliteit**  | **Toelichting**                                                     | **In UML 2.5**                                             | **In EA**       |
+|----------------------------|--------------------|---------------------------------------------------------------------|------------------------------------------------------------|-----------------|
+| **Naam**                   | 0..1               | De naam van de generalisatie. Standaard ‘is specialisatie van’.     | <r>*name van de metaclass Named element*</r>               | <r>*Name*</r>   |
+| **Datatype**             | 1                  | Het datatype dat een specialisatie is van een (ander) datatype. | <r>*/source: related Element bij Relationship Element*</r> | <r>*Source*</r> |
+| **Gerelateerd objecttype** | 1                  | Het datatype dat de generalisatie is van een (ander) datatype.  | <r>*/target: related Element bij Relationship Element*</r> | <r>*Target*</r> |
+
 
 
 **Specificatie voor «Relatieklasse»**
