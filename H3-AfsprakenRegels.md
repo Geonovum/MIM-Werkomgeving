@@ -76,11 +76,10 @@ Aanbeveling: als er niet mee gerekend kan worden, zoals de bankrekening zelf
 (waar een saldo op staat, maar die bedoelen we hier expliciet niet), gebruik dan
 een CharacterString met een patroon.
 
-### Primitief datatype zelf definiëren
+### Datatype zelf definiëren
 
-Het is ook mogelijk om in het eigen informatiemodel een eigen primitive datatype
-te definiëren in de vorm van een «Primitief datatype», met als UML metaclass de
-UML-Primitive datatype.
+Het is ook mogelijk om in het eigen informatiemodel een eigen datatype
+te definiëren in de vorm van een «Primitief datatype», «Codelist» of «Referentielijst». Zelf gedefinieerde datatypes hebben altijd een eigen definitie en optioneel een eigen patroon of formeel patroon.
 
 **Voorbeelden** hiervan, die niet tot KKG behoren, maar ter illustratie zijn
 opgenomen, zijn:
@@ -95,6 +94,18 @@ opgenomen, zijn:
     Dit zijn alle alfanumerieke tekens (dus inclusief diakrieten), de
     koppeltekens – en \_ en spaties. De minimale lengte is tenminste 1, de
     maximale lengte is onbepaald. De 1e positie mag géén spatie bevatten.
+-	Een Vlak: een verbijzondering van een GM Surface, met een eigen definitie, die bijvoorbeeld aangeeft dat het om een 2 dimensionale geometrie gaat. 	
+
+
+*OPMERKING: Afbeellding toevoegen*	
+	
+De gele datatypes zijn extern aan het model. 
+
+Het type modelelement (stereotype) verandert niet door de generalisatie. Een zelf gedefinieerd primitief datatype zal een generalisatie hebben met een ander primitief datatype. Een zelf gedefinieerd gestructureerd datatype zal een generalisatie hebben met een ander gestructureerd datatype. 
+
+Het komt voor dat het zelf gedefinieerde datatype een generalisatie heeft naar een extern gedefinieerd datatype, waarvan het modelelement (stereotype) niet is gespecificeerd. Maak dan zelf een inschatting. 
+Let hierbij op bij een «Gestructureerd datatype». Deze hoort altijd twee of meer data elementen te hebben. 	
+	
 
 ### Datatypen landelijk
 Wanneer op landelijk niveau afspraken zijn gemaakt (bijvoorbeeld in GAB), voor
