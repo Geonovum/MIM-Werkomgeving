@@ -1,10 +1,13 @@
-# Afspraken & Regels
+Afspraken & Regels
+==================
 
-In deze paragraaf gaan we in op een aantal aspecten van het zojuist
-beschreven metamodel en afspraken en regels die van toepassing zijn voor een
+In deze paragraaf gaan we in op een aantal aspecten van het zojuist beschreven
+metamodel en afspraken en regels die van toepassing zijn voor een
 informatiemodel.
 
-## Datatype(n)
+Datatype(n)
+-----------
+
 Een datatype is een typering van een eigenschap. Datatypen in een
 informatiemodel beschrijven de structuur waaraan de data van objecten moet
 voldoen. De essentie van datatypen is dat ze gaan over de waarden die
@@ -16,8 +19,10 @@ We onderscheiden de volgende soorten gedefinieerde categorieën voor datatypen:
 1.  Datatypen, primitief: data zoals “Amersfoort” of “10” worden vastgelegd als
     CharacterString en Integer. Dit volgt de internationale standaarden voor
     datatypen.
+
 2.  Datatypen (met een naam), landelijk volgens het GAB: datatypen zoals
     Postcode “1234AB”.
+
 3.  Gestructureerde datatypen: een combinatie van data, zoals een bedrag “5
     euro”, of een GM_Surface. Deze volgen ook internationale of nationale
     standaarden.
@@ -41,6 +46,7 @@ voldoen aan het datatype én aan het metagegeven lengte. De lengte wordt dus nie
 in het datatype zelf vastgelegd.
 
 ### Primitive datatypes
+
 Dit metamodel onderkend (momenteel) de volgende extern gedefinieerde primitive
 datatypes. Deze zijn allemaal gebaseerd op [GAB]:
 
@@ -50,13 +56,13 @@ datatypes. Deze zijn allemaal gebaseerd op [GAB]:
 | Integer            | Zie ISO11404 (subtype van ISO Number). Vrij vertaald: geheel getal, lengte is minimaal 1 en maximale lengte is onbepaald, zonder voorloopnullen. *Opmerking*: t.a.v. positieve en negatieve getalen en + en – tekens: bijvoorbeeld -2,0 Het (formeel) patroon geeft aan of een + en/of - teken gebruikt mag worden in het gegeven.                                                                                                                                                                 |
 | Real               | Zie ISO11404 (subtype van ISO Number). Vrij vertaald: een reëel getal, oftewel een rationeel getal zoals een Integer of een Decimal, of niet rationeel getal, zoals pi of de wortel van 2. Deze bestaat uit een (oneindig) aantal getallen, al dan niet achter de komma (floating point). *Opmerking:* t.a.v. positieve en negatieve getalen en + en – tekens: zie Integer.                                                                                                                        |
 | Boolean            | Indicatie met mogelijke waarden True, false, 1 of 0. True en 1 hebben een identieke betekenis: Ja. False en 0 hebben een identieke betekenis: Nee. *Opmerking*: t.a.v. Ja of Nee. Wanneer u de Ja of Nee wilt gebruiken, gebruik dan bv. een Enumeratie genaamd Indicatie, of gebruik AN met een lengte en een (formeel) patroon.                                                                                                                                                                  |
-| &nbsp;             | &nbsp;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
-| Date               | 4-cijferig jaar, 2-cijferig maand, 2-cijferig dag uitgedrukt in yyyy-mm-dd conform https://en.wikipedia.org/wiki/ISO_8601                                                                                                                                                                                                                                                                                                                                                                        |
-| DateTime           | yyyy-mm-ddThh:mm:ss conform https://en.wikipedia.org/wiki/ISO_8601                                                                                                                                                                                                                                                                                                                                                                                                                               |
-| Year               | 4-cijferig jaar uitgedrukt in yyyy conform https://en.wikipedia.org/wiki/ISO_8601                                                                                                                                                                                                                                                                                                                                                                                                                |
-| Day                | 2-cijferige dag uitgedrukt in dd conform https://en.wikipedia.org/wiki/ISO_8601                                                                                                                                                                                                                                                                                                                                                                                                                  |
-| Month              | 2-cijferige maand uitgedrukt in mm conform https://en.wikipedia.org/wiki/ISO_8601                                                                                                                                                                                                                                                                                                                                                                                                                |
-| &nbsp;             | &nbsp;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+|                    |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| Date               | 4-cijferig jaar, 2-cijferig maand, 2-cijferig dag uitgedrukt in yyyy-mm-dd conform https://en.wikipedia.org/wiki/ISO_8601                                                                                                                                                                                                                                                                                                                                                                          |
+| DateTime           | yyyy-mm-ddThh:mm:ss conform https://en.wikipedia.org/wiki/ISO_8601                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| Year               | 4-cijferig jaar uitgedrukt in yyyy conform https://en.wikipedia.org/wiki/ISO_8601                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| Day                | 2-cijferige dag uitgedrukt in dd conform https://en.wikipedia.org/wiki/ISO_8601                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| Month              | 2-cijferige maand uitgedrukt in mm conform https://en.wikipedia.org/wiki/ISO_8601                                                                                                                                                                                                                                                                                                                                                                                                                  |
+|                    |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
 | URI                | Unieke identificatie op internet conform RFC3986 en de URI-strategie Linked Open Data. Gestandaardiseerde manier om op het internet dingen (pagina's met informatie, objecten, datasets) uniek te identificeren.                                                                                                                                                                                                                                                                                   |
 
 Het is mogelijk om in de eigen extensie extra primitive datatypes op te nemen,
@@ -76,38 +82,70 @@ Aanbeveling: als er niet mee gerekend kan worden, zoals de bankrekening zelf
 (waar een saldo op staat, maar die bedoelen we hier expliciet niet), gebruik dan
 een CharacterString met een patroon.
 
+**Waardenbereik en patroon**
+
+Het waardenbereik van een attribuut kan vastgelegd worden middels de combinatie
+van een primitieve en een patroon dat als restrictie is opgenomen. Bijvoorbeeld
+bij een postcode, of een gemeentecode die moet bestaan uit precies 4 getallen,
+waarbij het eerste getal een 0 mag zijn.
+
+We onderkennen twee soorten patronen: - *Patroon*: het metagegeven (de tagged
+value) ‘Patroon’ in *tekst* vorm. Deze wordt als aanvulling op het datatype
+(bijvoorbeeld Integer ) van het attribuut gespecificeerd. Het patroon bevat een
+specificatie waaraan een waarde moet voldoen. Bijvoorbeeld een postcode, met als
+aanduiding van het patroon: Postcode. De toegestane waarden voor deze patroon
+aanduiding worden dan vastgelegd in documentatie behorende bij het type: alle
+postcodes van 1000AA tot en met 9999ZZ. - Formeel patroon: het metagegeven (de
+tagged value) ‘Formeel patroon’ in *formele specificatie* vorm [H1.11,
+referentie 6], te weten in een reguliere expressie. Bijvoorbeeld een postcode,
+met de expressie: \\d{4}[A-Z]{2}
+
+Een voorbeeld waar een patroon nodig is, is een attribuut waarvan het
+waardenbereik altijd een getal is met precies de lengte 4, zoals bijvoorbeeld
+0001 tot en met 9999, en dus voorloopnullen heeft. Een datatype zoals Integer
+kan hiervoor niet gebruikt worden, omdat 0001 geen getal is. Het type van het
+attribuut wordt in dat geval een CharacterString, met lengte (exact) =4 en het
+patroon voor het attribuut specificeert dat alleen numerieke getallen zijn
+toegestaan: [0-9]{4}.
+
 ### Datatype zelf definiëren
 
-Het is ook mogelijk om in het eigen informatiemodel een eigen datatype
-te definiëren in de vorm van een «Primitief datatype», «Codelist» of «Referentielijst». Zelf gedefinieerde datatypes hebben altijd een eigen definitie en optioneel een eigen patroon of formeel patroon.
+Het is ook mogelijk om in het eigen informatiemodel een eigen datatype te
+definiëren in de vorm van een «Primitief datatype», «Codelist» of
+«Referentielijst». Zelf gedefinieerde datatypes hebben altijd een eigen
+definitie en optioneel een eigen patroon of formeel patroon.
 
 **Voorbeelden** hiervan, die niet tot KKG behoren, maar ter illustratie zijn
-opgenomen, zijn:
--   NietNegatieve*Integer*: een Integer die alleen de waarde 0 of groter mag
-    hebben. Laat de naam van het primitieve type dan wel terugkomen in de naam
-    (dus niet NietNegatiefGetal*)*.
--   Een beperking op een Real te specificeren door Decimal op te nemen (een
-    gebroken getal, met (één of meer) cijfers voor de komma en cijfers achter de
-    komma, conform ISO11404).
--   AN. Deze is gebruikelijk bij een aantal basisregistraties. Datatype met een
-    eigen naam, analoog aan CharacterString, maar met alleen ‘normale’ tekens.
-    Dit zijn alle alfanumerieke tekens (dus inclusief diakrieten), de
-    koppeltekens – en \_ en spaties. De minimale lengte is tenminste 1, de
-    maximale lengte is onbepaald. De 1e positie mag géén spatie bevatten.
--	Een Vlak: een verbijzondering van een GM Surface, met een eigen definitie, die bijvoorbeeld aangeeft dat het om een 2 dimensionale geometrie gaat. 	
+opgenomen, zijn: - NietNegatieve*Integer*: een Integer die alleen de waarde 0 of
+groter mag hebben. Laat de naam van het primitieve type dan wel terugkomen in de
+naam (dus niet NietNegatiefGetal*)*. - Een beperking op een Real te specificeren
+door Decimal op te nemen (een gebroken getal, met (één of meer) cijfers voor de
+komma en cijfers achter de komma, conform ISO11404). - AN. Deze is gebruikelijk
+bij een aantal basisregistraties. Datatype met een eigen naam, analoog aan
+CharacterString, maar met alleen ‘normale’ tekens. Dit zijn alle alfanumerieke
+tekens (dus inclusief diakrieten), de koppeltekens – en \_ en spaties. De
+minimale lengte is tenminste 1, de maximale lengte is onbepaald. De 1e positie
+mag géén spatie bevatten. - Een Vlak: een verbijzondering van een GM Surface,
+met een eigen definitie, die bijvoorbeeld aangeeft dat het om een 2 dimensionale
+geometrie gaat.
 
+*OPMERKING: Afbeellding toevoegen*
 
-*OPMERKING: Afbeellding toevoegen*	
-	
-De gele datatypes zijn extern aan het model. 
+De gele datatypes zijn extern aan het model.
 
-Het type modelelement (stereotype) verandert niet door de generalisatie. Een zelf gedefinieerd primitief datatype zal een generalisatie hebben met een ander primitief datatype. Een zelf gedefinieerd gestructureerd datatype zal een generalisatie hebben met een ander gestructureerd datatype. 
+Het type modelelement (stereotype) verandert niet door de generalisatie. Een
+zelf gedefinieerd primitief datatype zal een generalisatie hebben met een ander
+primitief datatype. Een zelf gedefinieerd gestructureerd datatype zal een
+generalisatie hebben met een ander gestructureerd datatype.
 
-Het komt voor dat het zelf gedefinieerde datatype een generalisatie heeft naar een extern gedefinieerd datatype, waarvan het modelelement (stereotype) niet is gespecificeerd. Maak dan zelf een inschatting. 
-Let hierbij op bij een «Gestructureerd datatype». Deze hoort altijd twee of meer data elementen te hebben. 	
-	
+Het komt voor dat het zelf gedefinieerde datatype een generalisatie heeft naar
+een extern gedefinieerd datatype, waarvan het modelelement (stereotype) niet is
+gespecificeerd. Maak dan zelf een inschatting. Let hierbij op bij een
+«Gestructureerd datatype». Deze hoort altijd twee of meer data elementen te
+hebben.
 
 ### Datatypen landelijk
+
 Wanneer op landelijk niveau afspraken zijn gemaakt (bijvoorbeeld in GAB), voor
 algemene datatypen, die niet primitief zijn, zoals Postcode, dan worden deze
 niet in dit KKG metamodel opgenomen. Wel geeft KKG aan hoe deze in
@@ -116,13 +154,16 @@ informatiemodellen gedefinieerd en gemodelleerd worden.
 *Voorbeelden* hiervan van landelijke datatypen, die niet tot KKG behoren, maar
 ter illustratie zijn opgenomen:
 
-| &nbsp;   | &nbsp;                                                                                                                                                                                                                                                                                                                                              |
-|----------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Postcode | De in Nederland gangbare postcode voor een Nederlands postadres, bestaande uit een numeriek deel en een alfabetisch deel. Het numerieke deel van de postcode bestaat uit vier cijfers, het alfabetische deel van de postcode bestaat uit twee hoofdletters. Conform [GAB Postcodes].                                                                |
-| DMO      | Datum mogelijk onvolledig. De keuze («union»)  van een periode in de Gregoriaanse kalender, al naar gelang de beschikbare datumelementen, uit de onderliggende subformaten alleen Year, Year en Month of Year, Month en Day. Dit is (nog steeds) overeenkomstig met https://en.wikipedia.org/wiki/ISO_8601 en [GAB DatumMogelijkOnvolledig].        |
-| DTMO     | Een volledige datum waarbij (alleen) de tijd mogelijk ontbreekt. De tijd wordt, zover bekend, ingevuld. Dus alleen de uren als de minuten onbekend zijn.<br>- DateTime, als de tijd wel volledig bekend is<br>- Date, als alleen de Date bekend is                                                                                                  |
+| Postcode | De in Nederland gangbare postcode voor een Nederlands postadres, bestaande uit een numeriek deel en een alfabetisch deel. Het numerieke deel van de postcode bestaat uit vier cijfers, het alfabetische deel van de postcode bestaat uit twee hoofdletters. Conform [GAB Postcodes].                                                        |
+|----------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| DMO      | Datum mogelijk onvolledig. De keuze («union») van een periode in de Gregoriaanse kalender, al naar gelang de beschikbare datumelementen, uit de onderliggende subformaten alleen Year, Year en Month of Year, Month en Day. Dit is (nog steeds) overeenkomstig met https://en.wikipedia.org/wiki/ISO_8601 en [GAB DatumMogelijkOnvolledig]. |
+| DTMO     | Een volledige datum waarbij (alleen) de tijd mogelijk ontbreekt. De tijd wordt, zover bekend, ingevuld. Dus alleen de uren als de minuten onbekend zijn.                                                                                                                                                                                    |
+|          | - DateTime, als de tijd wel volledig bekend is                                                                                                                                                                                                                                                                                              |
+|          | - Date, als alleen de Date bekend is                                                                                                                                                                                                                                                                                                        |
 
-## Gestructureerd datatype
+Gestructureerd datatype
+-----------------------
+
 Een «Gestructureerd datatype» is veelal specifiek binnen een informatiemodel.
 Indien mogelijk wordt zoveel mogelijk hergebruik gemaakt van elders
 gedefinieerde «Gestructureerd datatype»n, denk bijvoorbeeld aan de
@@ -160,14 +201,14 @@ gegevenselementen uitgewisseld (de standaardwijze voor een Gestructureerd
 datatype).
 
 Een uitgewerkt voorbeeld van een Gestructureerd datatype met patroon is
-Objectnummering. Dit Gestructureerd datatype bestaat uit de data elementen:
--   Gemeentecode (AN, lengte 4)
--   Objecttypecode (AN, lengte 2)
--   Nummer (AN, lengte 10)
-met daarbij een formeel patroon: [0-9]{4}\\.[0-9]{2}\\.[ 0-9]{10} of een (tekst)
-patroon Gemeentecode.Objecttypecode.Nummer
+Objectnummering. Dit Gestructureerd datatype bestaat uit de data elementen: -
+Gemeentecode (AN, lengte 4) - Objecttypecode (AN, lengte 2) - Nummer (AN, lengte
+10) met daarbij een formeel patroon: [0-9]{4}\\.[0-9]{2}\\.[ 0-9]{10} of een
+(tekst) patroon Gemeentecode.Objecttypecode.Nummer
 
-## Gegevensgroeptype
+Gegevensgroeptype
+-----------------
+
 Bij het modelleren van een objecttype worden attribuutsoorten toegekend aan een
 objecttype. Wanneer er geconstateerd wordt dat een aantal attribuutsoorten
 logisch gezien bij elkaar horen, dan kan er gekozen worden om deze onder te
@@ -182,6 +223,7 @@ gegevensgroep gezien als een apart te beheren object. Er wordt dan een apart
 gegevensgroeptype nog een ander gegevensgroeptype te modelleren.
 
 ### Hergebruik
+
 Het kan voorkomen dat meerdere objecttypes gebruik maken van dezelfde
 gegevensgroeptype, omdat de definitie voor alle objecttypes gelijk is of moet
 zijn. Het is dan modelmatig mogelijk om zo’n gegevensgroeptype te hergebruiken
@@ -209,20 +251,19 @@ relatie van gegevensgroep naar gegevensgroeptype aan de source kant 1..\*. Zie
 2.1.1.
 
 ### Gegevensgroep versus Gestructureerd datatype
-Een gegevensgroep is niet hetzelfde als een Gestructureerd datatype.
--   Een datatype beschrijft de structuur van data, een gegevensgroep beschrijft
-    de semantiek van een kenmerk van een object.
--   Als één kenmerk van een object uit verschillende stukjes data bestaat, dan
-    wordt een Gestructureerd datatype gebruikt. Dit is bijvoorbeeld het geval
-    bij het gestructureerde datatype Bedrag. Deze bestaat uit een ‘hoeveelheid’
-    en ‘muntsoort.
--   Als een object meerdere kenmerken heeft, gemodelleerd als afzonderlijke
-    attribuutsoorten, dan heeft elk kenmerk op zichzelf betekenis. Als één
-    kenmerk wordt weggelaten, of niet bekend of ingewonnen is, dan verandert er
-    niets aan de betekenis van de andere attribuutsoorten.
--   Een ander goed criterium is: als het datatype wordt weggelaten uit het
-    informatiemodel, dan verliest het informatiemodel geen semantiek. Alleen de
-    structuur van een gegeven is dan niet meer bekend.
+
+Een gegevensgroep is niet hetzelfde als een Gestructureerd datatype. - Een
+datatype beschrijft de structuur van data, een gegevensgroep beschrijft de
+semantiek van een kenmerk van een object. - Als één kenmerk van een object uit
+verschillende stukjes data bestaat, dan wordt een Gestructureerd datatype
+gebruikt. Dit is bijvoorbeeld het geval bij het gestructureerde datatype Bedrag.
+Deze bestaat uit een ‘hoeveelheid’ en ‘muntsoort. - Als een object meerdere
+kenmerken heeft, gemodelleerd als afzonderlijke attribuutsoorten, dan heeft elk
+kenmerk op zichzelf betekenis. Als één kenmerk wordt weggelaten, of niet bekend
+of ingewonnen is, dan verandert er niets aan de betekenis van de andere
+attribuutsoorten. - Een ander goed criterium is: als het datatype wordt
+weggelaten uit het informatiemodel, dan verliest het informatiemodel geen
+semantiek. Alleen de structuur van een gegeven is dan niet meer bekend.
 
 Regel: het is niet de bedoeling dat eenzelfde kenmerk van een object in het ene
 model als een gegevensgroep gemodelleerd wordt en in het andere model als een
@@ -234,7 +275,9 @@ semantiek.
     informatiemodel. Een gegevensgroep in een conceptueel model is en blijft dus
     altijd ook een gegevensgroep in een logisch informatiemodel.
 
-## Keuze tussen datatypes (Union)
+Keuze tussen datatypes (Union)
+------------------------------
+
 Wanneer het datatype van een attribuutsoort een keuze uit twee of meer datatypen
 is, dan wordt dit gemodelleerd met het datatype Union. Elk union element van de
 union heeft dan één datatype, de waarde van de attribuutsoort moet aan één van
@@ -270,27 +313,27 @@ deze te gebruiken in een union element.
 
 Wanneer een beoogd datatype uit een extern model komt en daar geen metamodel
 stereotype heeft, zoals bijvoorbeeld het geval is bij het GM package waarin een
-datatype als «interface» GM_Point is opgenomen, dan heeft dit datatype
-niet een KKG stereotype en mogelijk ook niet de UML-metaclass dataType. Het is
-dan aan de modelleur van het informatiemodel om te beoordelen of het type dan
-als datatype gebruikt kan worden. Het is niet gewenst om aan het externe model
-een stereotype toe te voegen, noch om in het externe model de UML-metaclass aan
-te passen.
+datatype als «interface» GM_Point is opgenomen, dan heeft dit datatype niet een
+KKG stereotype en mogelijk ook niet de UML-metaclass dataType. Het is dan aan de
+modelleur van het informatiemodel om te beoordelen of het type dan als datatype
+gebruikt kan worden. Het is niet gewenst om aan het externe model een stereotype
+toe te voegen, noch om in het externe model de UML-metaclass aan te passen.
 
-## Domeinwaarden of lijsten
-In veel registraties wordt gewerkt met codetabellen om de mogelijke waarden
-van een attribuutsoort te specificeren. Deze mogelijke waarden kunnen op
+Domeinwaarden of lijsten
+------------------------
+
+In veel registraties wordt gewerkt met codetabellen om de mogelijke waarden van
+een attribuutsoort te specificeren. Deze mogelijke waarden kunnen op
 verschillende manieren worden opgenomen, afhankelijk van de gewenste
 stabiliteit:
 
-**Enumeraties**.
-Dit zijn statische lijsten, waaruit één waarde gekozen kan worden. De
-registratie en bijbehorende koppelvlakken kunnen erop vertrouwen dat er geen
-nieuwe waardes worden toegevoegd. Als er een nieuwe waarde bij komt wordt
-dit via een modelwijziging doorgevoerd. Dit wordt vooral toegepast bij
-lijsten die niet of weinig veranderen. Zo is bij het attribuutsoort
-Naamgebruik een enumeratie naamgebruik opgenomen met als waarden onder meer
-‘eigen’ en ‘eigen, partner’.
+**Enumeraties**. Dit zijn statische lijsten, waaruit één waarde gekozen kan
+worden. De registratie en bijbehorende koppelvlakken kunnen erop vertrouwen dat
+er geen nieuwe waardes worden toegevoegd. Als er een nieuwe waarde bij komt
+wordt dit via een modelwijziging doorgevoerd. Dit wordt vooral toegepast bij
+lijsten die niet of weinig veranderen. Zo is bij het attribuutsoort Naamgebruik
+een enumeratie naamgebruik opgenomen met als waarden onder meer ‘eigen’ en
+‘eigen, partner’.
 
 Als sprake is van dynamiek in de domeinwaarden wordt een **Referentielijst** of
 **Codelist** gebruikt. Dit betreft de situaties waarin domeinwaarden kunnen
@@ -298,23 +341,22 @@ veranderen en/of het aantal domeinwaarden kan toe- of afnemen. De registratie en
 bijbehorende koppelvlakken worden dan ingericht om hier mee om te gaan. Dit
 wordt vooral toegepast bij lijsten die vaker aan verandering onderhevig zijn.
 
-**Referentielijst.**
-Een lijst waarin we de betekenis en structuur van de lijst expliciet willen
-specificeren. Een voorbeeld is de referentielijst LAND of
+**Referentielijst.** Een lijst waarin we de betekenis en structuur van de lijst
+expliciet willen specificeren. Een voorbeeld is de referentielijst LAND of
 CultuurcodeOnbebouwd  
 ( http://www.kadaster.nl/schemas/waardelijsten/CultuurcodeOnbebouwd ).
 
 De referentielijst is hiermee een bijzondere vorm van datatype.
 
 De naamgeving Referentielijst kan verwarring oproepen maar in principe wordt
-altijd gerefereerd naar gegevens m.b.t. één rij uit de referentielijst. In
-het geval van de referentielijst LAND wordt altijd gerefereerd naar gegevens
-over Nederland (NL) of gegevens over Duitsland.
+altijd gerefereerd naar gegevens m.b.t. één rij uit de referentielijst. In het
+geval van de referentielijst LAND wordt altijd gerefereerd naar gegevens over
+Nederland (NL) of gegevens over Duitsland.
 
 Let op, wanneer er voor een bepaald attribuut in een informatiemodel of
-koppelvlak van een andere organisatie gekozen is voor een referentielijst,
-en uw organisatie koppelt hiermee, dan is het (meestal) onverstandig om in
-het eigen informatiemodel dit te behandelen als enumeratie.
+koppelvlak van een andere organisatie gekozen is voor een referentielijst, en uw
+organisatie koppelt hiermee, dan is het (meestal) onverstandig om in het eigen
+informatiemodel dit te behandelen als enumeratie.
 
 Modelleerrichtlijn: elk attribuut van een object heeft een specifieke lijst met
 toegestane waarden. Modelleer daarom elke waardelijst bij voorkeur specifiek,
@@ -325,42 +367,13 @@ waarvan de specifieke waardelijsten overerven. Het metagegeven locatie is immers
 specifiek voor één waardelijst en moet per individuele waardelijst vastgelegd
 worden.
 
-**CodeList**
-Gebruik een codelist als in het informatiemodel de attributen, zoals bij een
-referentielijst, niet relevant zijn en je voor de definitie alleen wilt
-verwijzen naar de externe waardelijst.
+**CodeList** Gebruik een codelist als in het informatiemodel de attributen,
+zoals bij een referentielijst, niet relevant zijn en je voor de definitie alleen
+wilt verwijzen naar de externe waardelijst.
 
-**Waardenbereik en patroon**
-In plaats van een opsomming van alle mogelijke waarden via een enumeratie of
-referentielijst leggen we soms voor een attribuut (attribuutsoort, referentie
-element, data element of union element) alleen het waardenbereik vast door
-middel van een patroon. Bijvoorbeeld bij een postcode, of een gemeentecode die
-moet bestaan uit precies 4 getallen, waarbij het eerste getal een 0 mag zijn.
-Er wordt met een patroon expliciet niet een Enumeratie bedoeld. Het betreft een
-andersoortige, meer open beschrijving van welke waarden toegestaan zijn voor een
-attribuutsoort.
+Abstracte objecttypes en concrete objecten
+------------------------------------------
 
-We onderkennen twee soorten patronen:
--   *Patroon*: het metagegeven (de tagged value) ‘Patroon’ in *tekst* vorm. Deze
-    wordt als aanvulling op het datatype (bijvoorbeeld Integer ) van het
-    attribuut gespecificeerd. Het patroon bevat een specificatie waaraan een
-    waarde moet voldoen. Bijvoorbeeld een postcode, met als aanduiding van het
-    patroon: Postcode. De toegestane waarden voor deze patroon aanduiding worden
-    dan vastgelegd in documentatie behorende bij het type: alle postcodes van
-    1000AA tot en met 9999ZZ.
--   Formeel patroon: het metagegeven (de tagged value) ‘Formeel patroon’ in
-    *formele specificatie* vorm [H1.11, referentie 6], te weten in een reguliere
-    expressie. Bijvoorbeeld een postcode, met de expressie: \\d{4}[A-Z]{2}
-
-Een voorbeeld waar een patroon nodig is, is een attribuut waarvan het
-waardenbereik altijd een getal is met precies de lengte 4, zoals bijvoorbeeld
-0001 tot en met 9999, en dus voorloopnullen heeft. Een datatype zoals Integer
-kan hiervoor niet gebruikt worden, omdat 0001 geen getal is. Het type van het
-attribuut wordt in dat geval een CharacterString, met lengte (exact) =4 en het
-patroon voor het attribuut specificeert dat alleen numerieke getallen zijn
-toegestaan: [0-9]{4}.
-
-## Abstracte objecttypes en concrete objecten
 Een objecttype kan aangeduid worden als een abstract objecttype (zie paragraaf
 2.3.1. door middel van indAbstract = J). Het betreft dan altijd een
 generalisatie waarbij de specialisaties van dit objecttype op het laagste niveau
@@ -372,17 +385,15 @@ onderkennen in een conceptueel informatiemodel en in een logisch informatiemodel
 
 **Conceptueel informatiemodel**
 
-*Specialisatie / generalisatie*
-Bovenstaande vragen beantwoorden we aan de hand van een voorbeeld: het
-opleidingsinstituut. 
-In de beschouwde werkelijkheid onderscheiden we onder meer als gespreksonderwerp
-personen. Deze personen kunnen docenten en leerlingen zijn. Over al deze
-gespreksonderwerpen willen we gegevens communiceren. Een docent heeft als
-kenmerk dat deze een arbeidscontract met het opleidingsinstituut heeft
-afgesloten en een lesbevoegdheid heeft, terwijl een leerling kenbaar heeft
-gemaakt lessen te willen gaan volgen bij het instituut en dus geen
-arbeidscontract heeft afgesloten. Docenten en leerlingen zijn personen die
-rechten en plichten hebben.
+*Specialisatie / generalisatie* Bovenstaande vragen beantwoorden we aan de hand
+van een voorbeeld: het opleidingsinstituut.  In de beschouwde werkelijkheid
+onderscheiden we onder meer als gespreksonderwerp personen. Deze personen kunnen
+docenten en leerlingen zijn. Over al deze gespreksonderwerpen willen we gegevens
+communiceren. Een docent heeft als kenmerk dat deze een arbeidscontract met het
+opleidingsinstituut heeft afgesloten en een lesbevoegdheid heeft, terwijl een
+leerling kenbaar heeft gemaakt lessen te willen gaan volgen bij het instituut en
+dus geen arbeidscontract heeft afgesloten. Docenten en leerlingen zijn personen
+die rechten en plichten hebben.
 
 Docent is een specialisatie (‘subtype’) van het objecttype Persoon en Leerling
 is een specialisatie van het objecttype Persoon. Een specialisatie ontstaat
@@ -392,66 +403,63 @@ Docent en Leerling. Op onderdelen vertonen de onderscheiden objecttypen Docent
 en Leerling hetzelfde gedrag waarbij dat gedrag essentieel van belang is voor
 het te beschouwen domein en daarmee het conceptuele informatiemodel.
 
-*Abstract / concreet*
-Wanneer er vanuit wordt gegaan dat binnen het te beschouwen gebied een persoon
-altijd ofwel een docent ofwel leerling kan zijn (en nooit beide tegelijk) dan
-definiëren we een Persoon als een abstract objecttype. Docent en Leerling zijn
-dan concrete objecttypen in het conceptueel informatiemodel.
+*Abstract / concreet* Wanneer er vanuit wordt gegaan dat binnen het te
+beschouwen gebied een persoon altijd ofwel een docent ofwel leerling kan zijn
+(en nooit beide tegelijk) dan definiëren we een Persoon als een abstract
+objecttype. Docent en Leerling zijn dan concrete objecttypen in het conceptueel
+informatiemodel.
 
 Een concreet object kan zich alleen in de hoedanigheid als één van de
 specialisaties van het abstracte objecttype op het laagste niveau voordoen. En
 daarmee dus ook in de hoedanigheid van de generalisatie(s) van het concrete
 objecttype.
 
-Richtlijnen
--   Een abstract object is een onderwerp van gesprek binnen het beschouwde
-    gebied. Het heeft dus echt een betekenis <a href="#fn3-1" id="fn3-1ref"><sup>3-1</sup></a> in het beschouwde gebied. Net
-    als een concreet object, specialisatie of generalisatie.
--   De definitie van elk objecttype (dus ook een abstract objecttype) is zodanig
-    dat ondubbelzinnig bepaald kan worden dat een object wel of niet tot het
-    gedefinieerde type behoort. Dus niet een objecttype met een definitie als
-    ‘De gemeenschappelijke eigenschappen van een object…’ Deze definitie is op
-    elk objecttype van toepassing.
--   Houd er rekening mee dat afhankelijk van het te beschouwen gebied een object
-    uit de werkelijkheid in het ene informatiemodel een concreet objecttype kan
-    zijn en in het andere informatiemodel een abstract objecttype.
+Richtlijnen - Een abstract object is een onderwerp van gesprek binnen het
+beschouwde gebied. Het heeft dus echt een betekenis 3-1 in het beschouwde
+gebied. Net als een concreet object, specialisatie of generalisatie. - De
+definitie van elk objecttype (dus ook een abstract objecttype) is zodanig dat
+ondubbelzinnig bepaald kan worden dat een object wel of niet tot het
+gedefinieerde type behoort. Dus niet een objecttype met een definitie als ‘De
+gemeenschappelijke eigenschappen van een object…’ Deze definitie is op elk
+objecttype van toepassing. - Houd er rekening mee dat afhankelijk van het te
+beschouwen gebied een object uit de werkelijkheid in het ene informatiemodel een
+concreet objecttype kan zijn en in het andere informatiemodel een abstract
+objecttype.
 
-**Logisch informatiemodel**
-In een logisch model gelden in principe dezelfde regels voor abstracte of
-concrete objecttypen. De abstracte objecten worden daarom in principe
-overgenomen. In een logisch model wordt het digitale model van de werkelijkheid
-beschreven. Vanuit dit oogpunt kunnen er ook andere redenen zijn om abstracte
-objecttypen te creëren, bijvoorbeeld omdat een abstract object positieve
-effecten heeft voor de implementatie. Denk hierbij aan het aanbrengen van
-(extra) hiërarchie,zowel in semantiek als in ordening van eigenschappen. De
+**Logisch informatiemodel** In een logisch model gelden in principe dezelfde
+regels voor abstracte of concrete objecttypen. De abstracte objecten worden
+daarom in principe overgenomen. In een logisch model wordt het digitale model
+van de werkelijkheid beschreven. Vanuit dit oogpunt kunnen er ook andere redenen
+zijn om abstracte objecttypen te creëren, bijvoorbeeld omdat een abstract object
+positieve effecten heeft voor de implementatie. Denk hierbij aan het aanbrengen
+van (extra) hiërarchie,zowel in semantiek als in ordening van eigenschappen. De
 enige regel die geldt is dat een abstract objecttype niet geïnstantieerd kan
 worden. Elk object is altijd een instantie van een concreet objecttype.
 
-*Algemeen*
--   In UML wordt een abstract objecttype aangeduid door indAbstract met waarde
-    “J” en wordt de naam van het abstracte objecttype cursief geschreven
-    (voorbeeld: *Persoon*).
--   Een objecttype dat een generalisatie-relatie heeft naar een al dan niet
-    abstract objecttype noemen we een specialisatie (van dat objecttype).
-    Wanneer de generalisatie een abstract objecttype is, kan de specialisatie
-    zelf ook abstract zijn en specialisaties hebben. De ‘onderste’
-    specialisaties zijn dan altijd concreet (niet abstract)
--   Modelleer een abstract objecttype pas wanneer er sprake is van twee of meer
-    specialisaties
--   De unieke aanduiding kan opgenomen worden in het abstracte objecttype. De
-    unieke aanduiding geldt dan voor elke specialisatie van het abstract
-    objecttype. Dit betekent dat de unieke aanduiding uniek is binnen de
-    verzameling van alle objecten die als specialisatie onder het abstracte
-    objecttype vallen. Anders gezegd, de unieke aanduiding geldt voor alle
-    concrete objecten die als objecttype de unieke aanduiding erven van het
-    abstracte objecttype. Bijvoorbeeld: als de unieke aanduiding van
-    *\_Kadastraal object* het attribuutsoort Identificatie is en \_*Kadastraal
-    Object* als specialisatie een Perceel kent en een Leidingnetwerk, dan kan
-    het niet zo zijn dat er een perceel object is met identificatie ‘1’ en een
-    leidingnetwerk met identificatie ‘1’. Als dat wel het geval is, dan moet op
-    beide concrete objecttypes een eigen unieke aanduiding gedefinieerd worden.
+*Algemeen* - In UML wordt een abstract objecttype aangeduid door indAbstract met
+waarde “J” en wordt de naam van het abstracte objecttype cursief geschreven
+(voorbeeld: *Persoon*). - Een objecttype dat een generalisatie-relatie heeft
+naar een al dan niet abstract objecttype noemen we een specialisatie (van dat
+objecttype). Wanneer de generalisatie een abstract objecttype is, kan de
+specialisatie zelf ook abstract zijn en specialisaties hebben. De ‘onderste’
+specialisaties zijn dan altijd concreet (niet abstract) - Modelleer een abstract
+objecttype pas wanneer er sprake is van twee of meer specialisaties - De unieke
+aanduiding kan opgenomen worden in het abstracte objecttype. De unieke
+aanduiding geldt dan voor elke specialisatie van het abstract objecttype. Dit
+betekent dat de unieke aanduiding uniek is binnen de verzameling van alle
+objecten die als specialisatie onder het abstracte objecttype vallen. Anders
+gezegd, de unieke aanduiding geldt voor alle concrete objecten die als
+objecttype de unieke aanduiding erven van het abstracte objecttype.
+Bijvoorbeeld: als de unieke aanduiding van *\_Kadastraal object* het
+attribuutsoort Identificatie is en \_*Kadastraal Object* als specialisatie een
+Perceel kent en een Leidingnetwerk, dan kan het niet zo zijn dat er een perceel
+object is met identificatie ‘1’ en een leidingnetwerk met identificatie ‘1’. Als
+dat wel het geval is, dan moet op beide concrete objecttypes een eigen unieke
+aanduiding gedefinieerd worden.
 
-## Relatieklasse (uitzonderingen)
+Relatieklasse (uitzonderingen)
+------------------------------
+
 De gegevens van de relatiesoort worden altijd voor één relatiesoort vastgelegd.
 Het is echter mogelijk dat dezelfde gegevens voor meerdere relaties tegelijk
 gelden. Het is dan niet mogelijk om het te modelleren als relatieklasse. Wel
@@ -473,19 +481,20 @@ objecten hetzelfde zijn. CONTRACT wordt dan gemodelleerd als objecttype, waarbij
 beschreven wordt wat er moet gebeuren wanneer één van de SUBJECTen niet meer
 bestaat.*
 
-## Constraint
+Constraint
+----------
+
 Deze paragraaf gaat dieper in op hoe een Constraint toegepast wordt.
 
-Een Constraint wordt beschreven met een:
--   Naam (UML-constraint name): een naam c.q. label, vaak in steekwoorden.
--   Specificatie in tekst (UML-Constraint Notes, type invariant): een
-    uitgebreide heldere beschrijving van de constraint in gewone tekst.
+Een Constraint wordt beschreven met een: - Naam (UML-constraint name): een naam
+c.q. label, vaak in steekwoorden. - Specificatie in tekst (UML-Constraint Notes,
+type invariant): een uitgebreide heldere beschrijving van de constraint in
+gewone tekst.
 
-en optioneel:
--   Specificatie formeel (UML-Constraint Notes, type OCL): formele specificatie
-    in de Object Constraint Language. De formele specificatie bevat dus de
-    uitgebreide heldere beschrijving van de constraint in gewone tekst EN de
-    formele specificatie in OCL.
+en optioneel: - Specificatie formeel (UML-Constraint Notes, type OCL): formele
+specificatie in de Object Constraint Language. De formele specificatie bevat dus
+de uitgebreide heldere beschrijving van de constraint in gewone tekst EN de
+formele specificatie in OCL.
 
 Twee constraints die gedefinieerd zijn op hetzelfde modelelement mogen niet
 dezelfde naam hebben.
@@ -500,18 +509,16 @@ constraints, 1 met tekst en 1 met OCL, met verplicht ook een andere naam.
 Vandaar onderstaande aanpak:
 
 Als de modelleur kiest om de constraint alleen in gewone taal te beschrijven,
-dan als volgt:
--   Naam (UML-constraint name): een naam c.q. label, vaak in steekwoorden.
--   Specificatie in tekst (UML-Constraint Notes, type invariant): een
-    uitgebreide heldere beschrijving van de constraint in gewone tekst.
+dan als volgt: - Naam (UML-constraint name): een naam c.q. label, vaak in
+steekwoorden. - Specificatie in tekst (UML-Constraint Notes, type invariant):
+een uitgebreide heldere beschrijving van de constraint in gewone tekst.
 
 Als de modelleur kiest om de constraint niet alleen in gewone taal te
-beschrijven, maar ook in een formele taal (OCL), dan als volgt:
--   Naam (UML-constraint name): een naam c.q. label, vaak in steekwoorden.
--   Specificatie formeel (UML-Constraint Notes, type OCL): formele specificatie
-    in de object constraint language (OCL). De uitgebreide heldere beschrijving
-    van de constraint in gewone tekst wordt opgenomen als commentaar, tussen /\*
-    \*/.
+beschrijven, maar ook in een formele taal (OCL), dan als volgt: - Naam
+(UML-constraint name): een naam c.q. label, vaak in steekwoorden. - Specificatie
+formeel (UML-Constraint Notes, type OCL): formele specificatie in de object
+constraint language (OCL). De uitgebreide heldere beschrijving van de constraint
+in gewone tekst wordt opgenomen als commentaar, tussen /\* \*/.
 
 Aanbeveling: als een eigenschap van één UML-attribute, of één UML-association
 met een patroon (zie patroon) of een lengte (zie metadata aspect) of een
@@ -532,7 +539,9 @@ waardoor er (te) vaak nieuwe versies moeten worden uitgebracht. De aanbeveling
 is om de specificatie van dergelijke constraints buiten het informatiemodel te
 specificeren, bijvoorbeeld als validatieregel.
 
-## Historie
+Historie
+--------
+
 Deze paragraaf geeft in meer detail aan wat we onder de metagegevens *Indicatie
 materiële historie en Indicatie formele historie* verstaan.
 
@@ -544,10 +553,9 @@ informatiemodel wordt gemodelleerd is aan de opsteller van het logisch
 informatiemodel zelf. In deze paragraaf wordt wel iets verteld over historie op
 logisch niveau maar dat is niet bindend!
 
-**Algemeen**
-Het aspect tijd speelt een belangrijke rol in (basis)registraties. Daarnaast
-speelt tijd ook een belangrijke rol in het gebruik van de informatie uit
-(basis)registraties. Afnemers hebben eigen rechtsprocedures en moeten kunnen
+**Algemeen** Het aspect tijd speelt een belangrijke rol in (basis)registraties.
+Daarnaast speelt tijd ook een belangrijke rol in het gebruik van de informatie
+uit (basis)registraties. Afnemers hebben eigen rechtsprocedures en moeten kunnen
 herleiden wanneer een gegeven als bekend mocht worden verondersteld. Als
 bijvoorbeeld besluiten ter discussie worden gesteld, is het juridisch van belang
 te achterhalen op basis van welke gegevens zo’n besluit is genomen. Als onjuiste
@@ -557,14 +565,12 @@ de besluitvorming al bekend waren.
 Dit betekent dus dat bekend moet zijn wat de waarde van een attribuut op een
 bepaald moment is.
 
-*Tijdslijnen*
-Er spelen twee tijdslijnen een rol bij het herleiden van attribuutwaarden:
--   Wanneer is iets gebeurd, in de werkelijkheid of volgens opgave (wanneer zijn
-    de opgenomen gegevens geldig)? Dit valt binnen de tijdlijn van de
-    aangehouden werkelijkheid.
--   Vanaf wanneer wist de overheid (als collectief van organisaties) dat de
-    gegevens bekend waren? Dit valt binnen de tijdlijn van het
-    administratieproces of de administratieve werkelijkheid.
+*Tijdslijnen* Er spelen twee tijdslijnen een rol bij het herleiden van
+attribuutwaarden: - Wanneer is iets gebeurd, in de werkelijkheid of volgens
+opgave (wanneer zijn de opgenomen gegevens geldig)? Dit valt binnen de tijdlijn
+van de aangehouden werkelijkheid. - Vanaf wanneer wist de overheid (als
+collectief van organisaties) dat de gegevens bekend waren? Dit valt binnen de
+tijdlijn van het administratieproces of de administratieve werkelijkheid.
 
 In de rapportage 'Architectuur van het stelsel' (Stroomlijning BasisGegevens,
 2006) wordt geadviseerd om beide tijdslijnen te registreren, om de
@@ -573,21 +579,19 @@ registraties wordt hieraan op verschillende wijzen invulling gegeven. Dit
 metamodel schrijft derhalve niet voor welke bij de tijdslijnen behorende
 attributen gebruikt moeten worden voor het vastleggen van historie.
 
-**Historie op conceptueel niveau**
-Op conceptueel niveau is het wel altijd mogelijk om aan te geven dát het
-bijhouden van historie *aan de orde is* voor een (elk) gegeven, dat wil zeggen
-een attribuut of relatie van een object, te weten via een metagegeven. Deze
-metagegevens specificeren we als volgt:
--   *Indicatie materiële historie*: indicatie of de materiële historie van de
-    attribuutsoort te bevragen is. Materiële historie geeft aan wanneer een
-    verandering is opgetreden in de werkelijkheid die heeft geleid tot
-    verandering van de attribuutwaarde. Materiële historie impliceert dat
-    actuele, historische en eventuele toekomstige attribuutwaarden te bevragen
-    zijn.
--   *Indicatie formele historie*: indicatie of de formele historie van de
-    attribuutsoort te bevragen is. Formele historie geeft aan wanneer in de
-    administratie een verandering is verwerkt van de attribuutwaarde (wanneer
-    was de verandering bekend en is deze verwerkt).
+**Historie op conceptueel niveau** Op conceptueel niveau is het wel altijd
+mogelijk om aan te geven dát het bijhouden van historie *aan de orde is* voor
+een (elk) gegeven, dat wil zeggen een attribuut of relatie van een object, te
+weten via een metagegeven. Deze metagegevens specificeren we als volgt: -
+*Indicatie materiële historie*: indicatie of de materiële historie van de
+attribuutsoort te bevragen is. Materiële historie geeft aan wanneer een
+verandering is opgetreden in de werkelijkheid die heeft geleid tot verandering
+van de attribuutwaarde. Materiële historie impliceert dat actuele, historische
+en eventuele toekomstige attribuutwaarden te bevragen zijn. - *Indicatie formele
+historie*: indicatie of de formele historie van de attribuutsoort te bevragen
+is. Formele historie geeft aan wanneer in de administratie een verandering is
+verwerkt van de attribuutwaarde (wanneer was de verandering bekend en is deze
+verwerkt).
 
 *Voorbeelden: ‘bouwjaar pand’ heeft al materiële historie in zich: het bouwjaar
 is het moment waarop de wijziging in de werkelijkheid zich voordeed en wijzigt
@@ -599,27 +603,29 @@ daadwerkelijk kappen van een boom maar het gekapt zijn wel in een registratie
 wil opnemen: ‘indicatie materiële historie’ Nee en ‘indicatie formele historie’
 Ja.*
 
-Richtlijn: op conceptueel niveau worden voor historie alléén indicatie
-materiële historie en indicatie formele historie bij een attribuut of
-relatie vastgelegd, en dus géén bij de tijdslijnen behorende attributen die
-gebruikt moeten worden voor het vastleggen van historie. Deze bij de
-tijdslijn behorende attributen worden op het logische niveau vastgelegd.
+Richtlijn: op conceptueel niveau worden voor historie alléén indicatie materiële
+historie en indicatie formele historie bij een attribuut of relatie vastgelegd,
+en dus géén bij de tijdslijnen behorende attributen die gebruikt moeten worden
+voor het vastleggen van historie. Deze bij de tijdslijn behorende attributen
+worden op het logische niveau vastgelegd.
 
-**Historie op logisch niveau**
-KKG schrijft<a href="#fn3-2" id="fn3-2ref"><sup>3-2</sup></a> geen implementatie van het conceptuele niveau voor. Wel worden
-er aandachtspunten gegeven om rekening mee te houden. Denk bij de uitwerking
-o.a. aan de volgende aspecten:
+**Historie op logisch niveau** KKG schrijft3-2 geen implementatie van het
+conceptuele niveau voor. Wel worden er aandachtspunten gegeven om rekening mee
+te houden. Denk bij de uitwerking o.a. aan de volgende aspecten:
 
 -   Het bijhouden van historie met specifieke attributen per objecttype, zoals
     bijvoorbeeld: bouwjaar pand, of met generieke tijdslijnattributen attributen
     die gelden voor alle objecttypes, zoals begindatum geldigheid. Denk aan de
     attribuutsoort en/of gegevensgroeptype (herbruikbaar);
+
 -   historie bijhouden per attribuut (en relatie) of per versie van een object.
     Bij deze laatste kan de gegevensgroep gekoppeld worden aan bijvoorbeeld elk
     objecttype;
+
 -   de status transities die een object in zijn levenscyclus doorloopt. Er kan
     ook gekozen worden om deze in een conceptueel informatiemodel op te nemen,
     als ze op dat niveau al van belang zijn;
+
 -   status attributen, die iets zeggen *over* gegevens, zoals attributen die
     aangeven wel of niet beschouwd moet worden als onderdeel van de geldige
     gegevens van een object. Er kan ook gekozen worden om deze in een
@@ -642,8 +648,9 @@ Opmerking: de metagegevens Indicatie materiële historie en Indicatie formele
 mogen worden opgenomen in een logisch model (of worden overgenomen van het
 conceptuele naar het logische informatiemodel).
 
+Afleidbare gegevens
+-------------------
 
-## Afleidbare gegevens
 In een informatiemodel kan de behoefte bestaan om afgeleide gegevens op te
 nemen: dit zijn gegevens die afleidbaar zijn uit andere attribuut- en/of
 relatiesoorten binnen het informatiemodel. Dit lijkt op redundantie. Toch hebben
@@ -657,7 +664,9 @@ afleiding van dit gegeven is niet triviaal. Door het als afleidbaar gegeven op
 te nemen kan het opgevraagd worden zonder dat de historie of andere gegevens van
 het object opgevraagd hoeven te worden om daaruit dit gegeven af te leiden.*
 
-## Authentieke gegevens
+Authentieke gegevens
+--------------------
+
 Bij een attribuutsoort of relatiesoort wordt als metagegeven ‘Authentiek’
 opgenomen. Het is een aanduiding of een attribuutsoort of een als relatiesoort
 gemodelleerd landelijk basisgegeven in de catalogus van de desbetreffende
@@ -666,23 +675,23 @@ hoogwaardige kwaliteit en kan zonder nader onderzoek bij de uitvoering van
 publiekrechtelijke taken worden gebruikt.
 
 De specificatie van de waarde van het metagegeven is gebaseerd op het
-onderscheid in de volgende groepen van gegevens:
--   Landelijke registraties met authentieke en niet-authentieke basisgegevens
-    (BAG, BRK, BRP, BGT e.d.);
--   Landelijke sector- en domein-overstijgende informatiemodellen (IMGeo e.d.);
--   Gemeentelijke sector- en domein-overstijgende informatiemodellen (RSGB,
-    RGBZ, ZTC);
--   Sector- en domein-specifieke informatiemodellen (LV-WOZ, IMRO e.d.).
+onderscheid in de volgende groepen van gegevens: - Landelijke registraties met
+authentieke en niet-authentieke basisgegevens (BAG, BRK, BRP, BGT e.d.); -
+Landelijke sector- en domein-overstijgende informatiemodellen (IMGeo e.d.); -
+Gemeentelijke sector- en domein-overstijgende informatiemodellen (RSGB, RGBZ,
+ZTC); - Sector- en domein-specifieke informatiemodellen (LV-WOZ, IMRO e.d.).
 
 | **Waardebereik authentiek** | **Betekenis**                                                                                                                                                                                                  |
 |-----------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Authentiek                  | Indien het een authentiek (landelijk) basisgegeven of een als relatiesoort gemodelleerd authentiek (landelijk) basisgegeven is. Basisgegevens zijn altijd gegevens afkomstig uit de landelijke *registraties*. |
 | Basisgegeven                | Indien het een landelijk basisgegeven of een als relatiesoort gemodelleerd (landelijk) basisgegeven is in een landelijke *registratie*, maar in die registratie géén authentiek gegeven is.                    |
 | Landelijk kerngegeven       | Indien het een gegeven of een als relatiesoort gemodelleerd gegeven is in een landelijk sector- en domein-overstijgend informatiemodel en geen authentiek gegeven en geen basisgegeven is.                     |
-|    &nbsp;                   | &nbsp;                                                                                                                                                                                                         |
+|                             |                                                                                                                                                                                                                |
 |  Overig                     | Indien het géén van de voorgaande categorieën betreft. Veelal gaat het dan om proces-, taakveld- of domeinspecifieke gegevens.                                                                                 |
 
-## Mogelijk geen waarde
+Mogelijk geen waarde
+--------------------
+
 Een attribuut kan geen waarde hebben, omdat de waarde optioneel is en er niet
 is. Bijvoorbeeld bij een tussenvoegsel van een achternaam. Maar een attribuut
 kan ook mogelijk geen waarde hebben, omdat de waarde niet bekend is. Dat er geen
@@ -700,13 +709,11 @@ hebben maken we gebruik van het metagegeven ‘Mogelijk geen waarde’. Dit
 metagegeven geeft op informatiemodelniveau aan dat het attribuut een gangbare
 waarde kan hebben, maar dat deze waarde ook niet bekend kan zijn.
 
-Bij de daadwerkelijke registratie kan het zo zijn dat:
--   De waarde van het attribuut bekend is, te weten een waarde bij een verplicht
-    attribuut, of geen waarde bij een optioneel attribuut.
--   De waarde van het attribuut onbekend is, en niet meer kan worden
-    achterhaald.
--   De waarde van het attribuut onbekend is, en mogelijk wel nog kan worden
-    achterhaald.
+Bij de daadwerkelijke registratie kan het zo zijn dat: - De waarde van het
+attribuut bekend is, te weten een waarde bij een verplicht attribuut, of geen
+waarde bij een optioneel attribuut. - De waarde van het attribuut onbekend is,
+en niet meer kan worden achterhaald. - De waarde van het attribuut onbekend is,
+en mogelijk wel nog kan worden achterhaald.
 
 Wat de toegestane redenen zijn voor een specifiek attribuut, is aan de beheerder
 van het informatiemodel. Het is nuttig om de redenen te beperken op
@@ -733,25 +740,26 @@ wanneer het een situatie betreft waarin gegevens worden overgenomen uit een
 registratie die wel de waarde ‘onbekend’ gebruikt. Dan kan er ook gekozen worden
 voor het 1:1 overgenomen van de gegevensdefinitie uit deze andere registratie.
 
-## Externe schema’s (her) gebruiken
-In bepaalde situaties is het mogelijk dat een ander informatiemodel al één
-op één de specificaties in UML bevat die relevant zijn voor het eigen
+Externe schema’s (her) gebruiken
+--------------------------------
+
+In bepaalde situaties is het mogelijk dat een ander informatiemodel al één op
+één de specificaties in UML bevat die relevant zijn voor het eigen
 informatiemodel. Dit is in het bijzonder het geval als het andere
 informatiemodel ook dit metamodel volgt, maar kan ook het geval zijn bij
 gestandaardiseerde datatypes.  
-Het is dan wenselijk om hiernaar te kunnen verwijzen. Dit kan door deze
-packages over te nemen naar de eigen UML tool en het stereotype «extern» toe
-te kennen. Deze packages worden dan wel buiten het eigen informatiemodel
-gehouden. Ze zijn extern aan het eigen model. Het beheer en de definitie
-vindt dan ook buiten het eigen model plaats.
+Het is dan wenselijk om hiernaar te kunnen verwijzen. Dit kan door deze packages
+over te nemen naar de eigen UML tool en het stereotype «extern» toe te kennen.
+Deze packages worden dan wel buiten het eigen informatiemodel gehouden. Ze zijn
+extern aan het eigen model. Het beheer en de definitie vindt dan ook buiten het
+eigen model plaats.
 
-In deze externe packages die aangeduid worden met het stereotype «extern»
-zijn de relevante specificaties opgenomen die binnen het informatiemodel
-hergebruikt worden. Deze specificaties zijn opgesteld door een externe
-partij die de UML (of ook de XML) schema’s beheert en beschikbaar stelt
-waarnaar vanuit deze specificaties wordt gerefereerd. De packages bevatten
-alleen de constructies die ook daadwerkelijk binnen het ‘eigen’
-informatiemodel wordt gebruikt.
+In deze externe packages die aangeduid worden met het stereotype «extern» zijn
+de relevante specificaties opgenomen die binnen het informatiemodel hergebruikt
+worden. Deze specificaties zijn opgesteld door een externe partij die de UML (of
+ook de XML) schema’s beheert en beschikbaar stelt waarnaar vanuit deze
+specificaties wordt gerefereerd. De packages bevatten alleen de constructies die
+ook daadwerkelijk binnen het ‘eigen’ informatiemodel wordt gebruikt.
 
 *Voorbeeld: voor het uitwisselen van geografische informatie op basis van
 NEN3610 is een tweetal externe packages onderkend waarnaar vanuit de ‘eigen’
@@ -761,12 +769,14 @@ Het is ook mogelijk om binnen een domein of binnen een organisatie een eigen
 «extern» package te definiëren voor datatypen, om over meerdere
 informatiemodellen heen hergebruik mogelijk te maken.
 
-Naast het beschikbaar maken van het externe package kan het modelelement uit
-het externe package gebruikt worden als datatype, maar er kan ook naar
-verwezen worden via een relatie. Dit laatst wordt nader uitgelegd in de
-volgende paragraaf.
+Naast het beschikbaar maken van het externe package kan het modelelement uit het
+externe package gebruikt worden als datatype, maar er kan ook naar verwezen
+worden via een relatie. Dit laatst wordt nader uitgelegd in de volgende
+paragraaf.
 
-## Koppelen met ander informatiemodel (externe koppeling)
+Koppelen met ander informatiemodel (externe koppeling)
+------------------------------------------------------
+
 Bij registraties is het regelmatig noodzakelijk om te verwijzen vanuit het eigen
 model naar gegevens uit een andere informatiemodel. Denk aan het opnemen van de
 identificatie van een object uit een andere registratie, of aan het overnemen
@@ -777,10 +787,10 @@ Deze stereotypes zijn alleen van toepassing binnen een informatiemodel in
 situaties waarbij het ene informatiemodel afhankelijk is van een andere
 informatiemodel.
 
-Uitgangspunten hierbij zijn dat de definitie van de structuur van gegevens
-van het andere informatiemodel één op één overgenomen wordt, waarbij
-expliciet gemaakt wordt welke gegevens tot het eigen model behoren en welke
-tot het andere model.
+Uitgangspunten hierbij zijn dat de definitie van de structuur van gegevens van
+het andere informatiemodel één op één overgenomen wordt, waarbij expliciet
+gemaakt wordt welke gegevens tot het eigen model behoren en welke tot het andere
+model.
 
 Bijvoorbeeld:
 
@@ -804,37 +814,36 @@ eigen registratie. Er kan dan volstaan worden met alleen de unieke aanduiding
 van GeregistreerdPersoon. Dit is de BSN. Dit wordt niet gezien als een «externe
 koppeling» maar als een referentie.
 
-## Stelselcatalogus en stelselafspraken voor basisregistraties
+Stelselcatalogus en stelselafspraken voor basisregistraties
+-----------------------------------------------------------
 
 Dit metamodel ondersteunt de metadata die voorgeschreven wordt voor de
-stelselcatalogus [H1.11, referentie 3]. Deze paragraaf geeft aan hoe de
-metadata in dit metamodel zich verhoudt tot die van de stelselcatalogus,
-zodat deze vanuit uw informatiemodel geleverd kunnen worden aan de
-stelselcatalogus. Er zijn ook stelselafspraken rondom metadata. Een metadata
-aspect in H2.4 met aanduiding **√** is conform stelselafspraken voor
-basisregistraties. Beide gelden.
+stelselcatalogus [H1.11, referentie 3]. Deze paragraaf geeft aan hoe de metadata
+in dit metamodel zich verhoudt tot die van de stelselcatalogus, zodat deze
+vanuit uw informatiemodel geleverd kunnen worden aan de stelselcatalogus. Er
+zijn ook stelselafspraken rondom metadata. Een metadata aspect in H2.4 met
+aanduiding **√** is conform stelselafspraken voor basisregistraties. Beide
+gelden.
 
 De metadata voor de stelselcatalogus en de metadata voor de stelselafspraken
 zijn beide verplicht voor basisregistraties. Als het informatiemodel géén
-basisregistratie is, kan je als organisatie zelf kiezen om (een aantal van)
-deze metadata buiten scope te plaatsen. Dit doe je in de eigen extensie,
-zoals beschreven in paragraf 1.8. De rest van deze paragraaf gaat alleen nog
-in op de metadata voor de stelselcatalogus.
+basisregistratie is, kan je als organisatie zelf kiezen om (een aantal van) deze
+metadata buiten scope te plaatsen. Dit doe je in de eigen extensie, zoals
+beschreven in paragraf 1.8. De rest van deze paragraaf gaat alleen nog in op de
+metadata voor de stelselcatalogus.
 
-Het metamodel gaat als volgt met de metadata van de stelselcatalogus om:
--   Dit metamodel beschrijft de stelselcatalogus metadata alleen voor de
-    metadata die op informatiemodel niveau speelt, niet de overige metadata.
--   Dit metamodel neemt stelselcatalogus metadata altijd op met dezelfde
-    semantiek/betekenis. Als de betekenis van metadata anders is, dan wordt ook
-    niet dezelfde naam gebruikt. Als de betekenis gelijk is, dan kan het wel zo
-    zijn dat dit metamodel een andere naam hanteert. De vertaling wordt
-    hieronder weergegeven.
--   Als de semantiek hetzelfde is, maar het waardenbereik van het gegeven is in
-    dit metamodel een verdere verbijzondering (niet in strijd met) dan hanteert
-    dit metamodel dezelfde metadata en geeft aan hoe de waarde in dit metamodel
-    te vertalen naar de waarde in de stelselcatalogus. Bij automatische
-    verwerking naar de stelselcatalogus is het wellicht dus soms nodig deze
-    waardes om te zetten.
+Het metamodel gaat als volgt met de metadata van de stelselcatalogus om: - Dit
+metamodel beschrijft de stelselcatalogus metadata alleen voor de metadata die op
+informatiemodel niveau speelt, niet de overige metadata. - Dit metamodel neemt
+stelselcatalogus metadata altijd op met dezelfde semantiek/betekenis. Als de
+betekenis van metadata anders is, dan wordt ook niet dezelfde naam gebruikt. Als
+de betekenis gelijk is, dan kan het wel zo zijn dat dit metamodel een andere
+naam hanteert. De vertaling wordt hieronder weergegeven. - Als de semantiek
+hetzelfde is, maar het waardenbereik van het gegeven is in dit metamodel een
+verdere verbijzondering (niet in strijd met) dan hanteert dit metamodel dezelfde
+metadata en geeft aan hoe de waarde in dit metamodel te vertalen naar de waarde
+in de stelselcatalogus. Bij automatische verwerking naar de stelselcatalogus is
+het wellicht dus soms nodig deze waardes om te zetten.
 
 | Metadata in stelselcatalogus | Komt voor in Metamodel? | Waardenbereik hetzelfde?           |
 |------------------------------|-------------------------|------------------------------------|
@@ -845,31 +854,33 @@ Het metamodel gaat als volgt met de metadata van de stelselcatalogus om:
 | *Herkomst*                   | J                       | J (met aanvullende afspraken)      |
 | *Authentiek*                 | J                       | N (met vertaling)                  |
 | *Kwaliteit*                  | J                       | J                                  |
-| &nbsp;                       | &nbsp;                  | &nbsp;                             |
+|                              |                         |                                    |
 | *Relatie*                    | N                       | n.v.t. (kan wel via een vertaling) |
 | *Wetgeving*                  | N                       | n.v.t.                             |
 | *Eigenaar*                   | N                       | n.v.t.                             |
 | *Toegankelijkheid*           | N                       | n.v.t.                             |
 | *Gebruiksvoorwaarden*        | N                       | n.v.t.                             |
 
-Waardenbereik afspraken
--   *Authentiek:* als in dit metamodel ‘Authentiek’ (zie 2.4.21) dan ‘Ja’ in
-    stelselcatalogus, anders Nee.
--   *Herkomst:* Zelf in te vullen. Afspraken hierbij:  
-    Als zelf ingewonnen: noem de inwinnende organisatie. Bijvoorbeeld: KING of
-    Gemeentes.  
-    Als overgenomen uit andere bron, noem de directe bron. Bijvoorbeeld: BAG.
--   *Relatie:* dit is geen metagegeven in dit metamodel, maar een stereotype.
-    Deze is wel af te leiden uit het metagegeven van relatiesoort: gerelateerd
-    objecttype (de target van de relatie).
+Waardenbereik afspraken - *Authentiek:* als in dit metamodel ‘Authentiek’ (zie
+2.4.21) dan ‘Ja’ in stelselcatalogus, anders Nee. - *Herkomst:* Zelf in te
+vullen. Afspraken hierbij:  
+Als zelf ingewonnen: noem de inwinnende organisatie. Bijvoorbeeld: KING of
+Gemeentes.  
+Als overgenomen uit andere bron, noem de directe bron. Bijvoorbeeld: BAG. -
+*Relatie:* dit is geen metagegeven in dit metamodel, maar een stereotype. Deze
+is wel af te leiden uit het metagegeven van relatiesoort: gerelateerd objecttype
+(de target van de relatie).
 
-## Naamgevingsconventies
+Naamgevingsconventies
+---------------------
+
 Naamgevingsconventies zijn belangrijk om te specificeren. Onderstaande
 beschrijft enkele punten die op het niveau van dit metamodel zijn afgesproken.
 De verdere invulling van de naamgevingsconventies is aan de opsteller van het
 informatiemodel zelf (zie ook bijlage 1).
 
 ### Alternatief 1: natuurlijke taal, die dichtbij de gebruiker staat
+
 Met natuurlijke taal wordt bedoeld, zoals de gebruikers erover praten, in
 normaal Nederlands. Veelal zijn dit alleen letters en cijfers, met spaties.
 Koppeltekens (‘-’ of ‘_’) kunnen gebruikt worden, indien gewenst, alsmede
@@ -884,6 +895,7 @@ Regel: voor conceptuele informatiemodellen wordt altijd alternatief 1
 gehanteerd.
 
 ### Alternatief 2: (ook) leesbaar door systemen
+
 Met machine leesbare taal wordt bedoeld dat deze eenvoudig door systemen te
 verwerken is. Veelal zijn dit alleen letters en cijfers, zonder spaties, zonder
 diakrieten. Koppeltekens (‘-’ of ‘_’) kunnen gebruikt worden, maar dit wordt
@@ -911,6 +923,7 @@ in de alias (zie 3.16.20), zodat lezers goed de overgang van conceptueel naar
 logisch kunnen volgen.
 
 ### Naamgeving voor metamodel elementen
+
 Voor stereotypes en metagegevens worden dezelfde naamgevingsconventies toegepast
 als in alternatief 1 waarbij de eerste letter een hoofdletter is voor alle
 stereotypes en tagged values. Echter, als een internationale standaard het
@@ -925,7 +938,7 @@ specificeren. Dit is een hulptabel, die u over kunt nemen naar uw eigen extensie
 
 **Voetnoten**
 
-<a id="fn3-1" href="#fn3-1ref"><sup>3-1</sup></a>: nb
+3-1: nb
 
-<a id="fn3-2" href="#fn3-2ref"><sup>3-2</sup></a>: Hoewel het goed zou zijn om tot een standaard te komen in Nederland is KKG
+3-2: Hoewel het goed zou zijn om tot een standaard te komen in Nederland is KKG
 niet de plek hiervoor.
