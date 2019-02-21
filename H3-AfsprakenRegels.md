@@ -129,7 +129,7 @@ mag géén spatie bevatten. - Een Vlak: een verbijzondering van een GM Surface,
 met een eigen definitie, die bijvoorbeeld aangeeft dat het om een 2 dimensionale
 geometrie gaat.
 
-*OPMERKING: Afbeellding toevoegen*
+![](media/99cc4266ebd831de6477ef7de382f0c4.emf)
 
 De gele datatypes zijn extern aan het model.
 
@@ -158,8 +158,8 @@ ter illustratie zijn opgenomen:
 |----------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | DMO      | Datum mogelijk onvolledig. De keuze («union») van een periode in de Gregoriaanse kalender, al naar gelang de beschikbare datumelementen, uit de onderliggende subformaten alleen Year, Year en Month of Year, Month en Day. Dit is (nog steeds) overeenkomstig met https://en.wikipedia.org/wiki/ISO_8601 en [GAB DatumMogelijkOnvolledig]. |
 | DTMO     | Een volledige datum waarbij (alleen) de tijd mogelijk ontbreekt. De tijd wordt, zover bekend, ingevuld. Dus alleen de uren als de minuten onbekend zijn.                                                                                                                                                                                    |
-|          | - DateTime, als de tijd wel volledig bekend is                                                                                                                                                                                                                                                                                              |
-|          | - Date, als alleen de Date bekend is                                                                                                                                                                                                                                                                                                        |
+|          | \- DateTime, als de tijd wel volledig bekend is                                                                                                                                                                                                                                                                                             |
+|          | \- Date, als alleen de Date bekend is                                                                                                                                                                                                                                                                                                       |
 
 Gestructureerd datatype
 -----------------------
