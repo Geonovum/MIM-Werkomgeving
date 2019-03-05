@@ -856,7 +856,7 @@ Waardenbereik afspraken
 -   *Authentiek:* als in dit metamodel ‘Authentiek’ (zie 2.4.21) dan ‘Ja’ in
     stelselcatalogus, anders Nee.
 -   *Herkomst:* Zelf in te vullen. Afspraken hierbij:  
-    Als zelf ingewonnen: noem de inwinnende organisatie. Bijvoorbeeld: KING of
+    Als zelf ingewonnen: noem de inwinnende organisatie. Bijvoorbeeld: VNG Realisatie of
     Gemeentes.  
     Als overgenomen uit andere bron, noem de directe bron. Bijvoorbeeld: BAG.
 -   *Relatie:* dit is geen metagegeven in dit metamodel, maar een stereotype.

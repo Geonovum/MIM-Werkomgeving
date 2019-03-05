@@ -16,7 +16,7 @@ Toepassing van het metamodel leidt tot eenduidige interpretatie van de
 informatiemodellen en bevordert de uitwisselbaarheid van deze modellen binnen de
 eigen organisatie en – vooral - daarbuiten.
 
-Dit document is opgesteld door KING, Kadaster en Geonovum. De kennis en kunde
+Dit document is opgesteld door VNG Realisatie (voorheen KING), Kadaster en Geonovum. De kennis en kunde
 die deze organisaties hebben opgedaan in de jarenlange praktijk van het
 opstellen van informatiemodellen, is hierin samengebracht.
 
@@ -333,13 +333,13 @@ Indien gewenst kunt u hier vragen over stellen aan de beheerders van dit
 metamodel voordat u een keuze maakt.
 
 ## Beheer
-Het beheer van dit metamodel vindt plaats als samenwerking tussen KING, het
+Het beheer van dit metamodel vindt plaats als samenwerking tussen VNG Realisatie, het
 Kadaster modellenbureau en Geonovum. Voor vragen, suggesties of opmerkingen kunt
 u contact opnemen met:
 
 | **Naam**               | **e-mailadres**               |
 |------------------------|-------------------------------|
-| Ellen Debats           | ellen.debats@kinggemeenten.nl |
+| Ellen Debats           | ellen.debats@vng.nl           |
 | Lennart van Bergen     | lennart.vanBergen@kadaster.nl |
 | Paul Janssen           | p.janssen@geonovum.nl         |
 

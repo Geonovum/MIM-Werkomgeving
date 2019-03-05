@@ -22,7 +22,7 @@ Uitgangspunten voor het metamodel zijn:
     eerst een informatiemodel te maken zonder datatypen. De regel is dat als
     alle datatypen uit het model worden weggelaten, er geen semantische
     betekenis verloren mag gaan.
--   Toolonafhankelijke beschrijving van het metamodel. Omdat KING, Kadaster en
+-   Toolonafhankelijke beschrijving van het metamodel. Omdat VNG Realisatie, Kadaster en
     Geonovum en veel andere organisaties Sparx EA gebruiken is er aanvullend
     aangegeven hoe het metamodel in Enterprise Architect toegepast wordt.
     Hierdoor borgen we deze relatie.
