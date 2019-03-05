@@ -1236,7 +1236,7 @@ en is te vinden op [www.imvertor.org](http://www.imvertor.org).
 
 **Voetnoten**
 
-2-1: In versies voor UML 2.5 heette deze nog UML-attribute.
+<a id="fn2-1" href="#fn2-1ref"><sup>2-1</sup></a>: In versies voor UML 2.5 heette deze nog UML-attribute.
 
 <a id="fn2-1" href="#fn2-1ref"><sup>2-2</sup></a>: In versies voor UML 2.5 werd de rol nog op UML-associationEnd gedefinieerd.
 
