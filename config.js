@@ -31,7 +31,7 @@ var respecConfig =
   format: "markdown",                 // altijd "markdown"     
   //-- publishDate is verplicht -------------------------------------------------------
   //-- NB: in de werkversie uitzetten, want dan pakt Respec de pushdate ---------------
-  //publishDate: "2017-06-14",  	    // Format is "YYY-MM-DD"
+  publishDate: "2017-06-14",  	      // Format is "YYY-MM-DD"
   //-- de namen van de Editor(s) ------------------------------------------------------
   //-- vul in: per Editor: name:, company:, companyURL: -------------------------------
   editors: 
@@ -93,7 +93,7 @@ var respecConfig =
     },
   ],
   //-- shortName is verplicht! (komt in de URL: kies logische naam) --------------------
-  shortName: "mim101", 	              // Wordt gebruikt in de document URL
+  shortName: "mim10", 	            // Wordt gebruikt in de document URL
   //-- pubDomain is verplicht! (komt in de URL: Activeer 1 van de volgende) ------------
   pubDomain: "mim", 	              // Metamodel Informatie Modellering
   //pubDomain: "bor", 	            // Beheer Openbare Ruimte
@@ -120,7 +120,7 @@ var respecConfig =
   // licence: "cc-by",              //-- Attribution, met bronvermelding
   
   //-- localBiblio: lokale bibliografie, voor verwijzigingen
-  //-- NB: kijk eesrt naar de beschikbare www.specref.org voor verwijziging 
+  //-- NB: kijk eerst naar de beschikbare www.specref.org voor verwijziging 
   localBiblio: 
   {
     "CITAAT":
@@ -131,12 +131,13 @@ var respecConfig =
         publisher:  "naam van de publiceerder",
         company:    "eventueel naam van bedrijf",
     }
-  }
+  },
 
   //-- Voor dit blok geldt: alleen als er eerdere versies zijn en altijd beiden aan/uit! 
-  //previousPublishDate: "2018-09-18",  	    // Format is "YYY-MM-DD"
-  //previousMaturity: "CV",                   // kies 1 van deze 2 regels  	  
-  //previousMaturity: "VV",  	                // kies 1 van deze 2 regels
+  previousPublishDate: "2017-06-14",    	    // Format is "YYY-MM-DD"
+  previousMaturity: "GN-DEF",                 // kies 1 van deze 3 regels
+  //previousMaturity: "CV",                   // kies 1 van deze 3 regels  	  
+  //previousMaturity: "VV",  	                // kies 1 van deze 3 regels
 
   //-- Optionele parameters:
   //emailComments: "mim@geonovum.nl",         // reactie mailadres, alleen bij CV!

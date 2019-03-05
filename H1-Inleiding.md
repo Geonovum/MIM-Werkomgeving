@@ -1,4 +1,5 @@
 # Inleiding
+
 Voor u ligt het metamodel voor het beschrijven van informatiemodellen.
 Aanleiding was oorspronkelijk het adviesrapport ‘Rapportage harmonisatie StUF en
 NEN 3610’ (KING/Geonovum, 2010) waarin één van de aanbevelingen was om één
