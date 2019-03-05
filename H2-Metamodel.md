@@ -196,7 +196,7 @@ cq. die objecttypen) naar eenheden die in een registratie vastgelegd kunnen
 worden (records, entiteiten e.d.) op basis van andere overwegingen.
 
 **2. Attribuutsoort** – *Stereotype «Attribuutsoort»*: De UML-representatie van
-een attribuutsoort, uitgedrukt in een stereotype van UML-Property2-1
+een attribuutsoort, uitgedrukt in een stereotype van UML-Property<a href="#fn2-1" id="fn2-1ref"><sup>2-1</sup></a>
 (metaclass).
 
 Er zijn verschillende modelelementen die gebaseerd zijn op UML-property, zoals
@@ -429,7 +429,7 @@ koppeling legt naar het externe objecttype).
 >   ‘eigen’ objecttype. Zie ook 3.14.
 
 **9. Relatierol** *– Stereotype «Relatierol»*: De UML-representatie van een
-relatierol, uitgedrukt in een stereotype van UML-Property2-2 (metaclass).
+relatierol, uitgedrukt in een stereotype van UML-Property<a href="#fn2-2" id="fn2-2ref"><sup>2-2</sup></a> (metaclass).
 
 >   **Definitie Relatierol**
 
@@ -602,7 +602,7 @@ gecreëerd en hebben daarom geen MIM metaclass.
 *Voorbeeld: Documentnummer, Postcode. In het geval van Postcode is de landelijke
 definitie in tekst vastgelegd buiten het informatiemodel zelf, waarbij in het
 eigen model een modelelement is gemaakt in de vorm van het datatype
-Postcode*2-3.
+Postcode*<a href="#fn2-3" id="fn2-3ref"><sup>2-3</sup></a>.
 
 *Toelichting*
 
@@ -737,7 +737,7 @@ gezien als een view.*
 
 ### Overig
 
-**22. Id** *- Stereotype «id»*2-4 *bij target role van de «relatiesoort»*: De
+**22. Id** *- Stereotype «id»*<a href="#fn2-4" id="fn2-4ref"><sup>2-4</sup></a> *bij target role van de «relatiesoort»*: De
 UML-representatie van een relatie die een identificerende rol speelt, uitgedrukt
 bij een UML-property (metaclass).
 
@@ -799,9 +799,9 @@ zoals patroon, van MIM metaclass Datatype).
 
 De objecttypen worden naar de volgende aspecten gespecificeerd:
 
-| **Aspect**2-6                 | **Kardi naliteit** | **Toelichting**                                                                                                                                                                                                                                                                                                                           | **In UML 2.5**2-5                        | **In EA**2-7                                                                                                                                                    |
+| **Aspect**<a href="#fn2-6" id="fn2-6ref"><sup>2-6</sup></a>                 | **Kardinaliteit** | **Toelichting**                                                                                                                                                                                                                                                                                                                           | **In UML 2.5**<a href="#fn2-5" id="fn2-5ref"><sup>2-5</sup></a>                        | **In EA**<a href="#fn2-7" id="fn2-7ref"><sup>2-7</sup></a>                                                                                                                                                    |
 |-------------------------------|--------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Naam√ \***                  | 1                  | De naam van het objecttype2-8.                                                                                                                                                                                                                                                                                                            | *name van de metaclass Named element*    | *Name*                                                                                                                                                          |
+| **Naam√ \***                  | 1                  | De naam van het objecttype<a href="#fn2-8" id="fn2-8ref"><sup>2-8</sup></a>.                                                                                                                                                                                                                                                                                                            | *name van de metaclass Named element*    | *Name*                                                                                                                                                          |
 | **Herkomst\***                | 1                  | De registratie in wiens catalogus het objecttype is gespecificeerd (oftewel de registratie waar het objecttype deel van uitmaakt). Deze specificatie is toegevoegd omdat het wel duidelijk moet zijn in welke (basis)registratie of informatiemodel het objecttype voorkomt (indien van toepassing).                                      |                                          | *Tagged value*                                                                                                                                                  |
 | **Definitie√ \***             | 1                  | De beschrijving van de betekenis van het objecttype zoals gespecificeerd in de catalogus van de desbetreffende (basis)registratie of informatiemodel.                                                                                                                                                                                     | *Body van de metaclass Comment*          | *Notes*                                                                                                                                                         |
 | **Herkomst definitie√**       | 1                  | Voor objecttypen die deel uitmaken van een registratie is de definitie hieruit overgenomen.                                                                                                                                                                                                                                               |                                          | *Tagged value*                                                                                                                                                  |
@@ -1012,7 +1012,7 @@ Voor referentielijsten worden de volgende aspecten gespecificeerd:
 | **Aspect**       | **Kardinaliteit** | **Toelichting**                                                                                                                     | **In UML 2.5**                       | **In EA**      |
 |------------------|-------------------|-------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------|----------------|
 | **Naam**         | 1                 | De naam van de lijst.                                                                                                               | *name van de metaclass Namedelement* | *Name*         |
-| **Herkomst**     | 1                 | De registratie in wiens catalogus de lijst is gespecificeerd (oftewel de registratie waar de referentielijst deel van uitmaakt).2-9 |                                      | *Tagged value* |
+| **Herkomst**     | 1                 | De registratie in wiens catalogus de lijst is gespecificeerd (oftewel de registratie waar de referentielijst deel van uitmaakt).<a href="#fn2-9" id="fn2-9ref"><sup>2-9</sup></a> |                                      | *Tagged value* |
 |                  |                   |                                                                                                                                     |                                      |                |
 | **Definitie**    | 1                 | De beschrijving van de betekenis van de lijst zoals gespecificeerd in de catalogus van de desbetreffende registratie.               | *Body van de metaclass Comment*      | *Notes*        |
 | **Datum opname** | 1                 | De datum waarop de lijst is opgenomen in het informatiemodel.                                                                       |                                      | *Tagged value* |
@@ -1192,7 +1192,7 @@ Deze wordt gemodelleerd met een alias. De alias is optioneel (zie ook 3.16).
 De specificatie van de alias is overgenomen uit UML. De alias is te specificeren
 voor NamedElements (zoals UML-Class, UML-association, UML-UML-Datatype en
 UML-property). De alias is in UML gespecificeerd bij de metaclass Element
-Import2-10. In Enterprise Architect is de alternatieve weergave aan te zetten in
+Import<a href="#fn2-10" id="fn2-10ref"><sup>2-10</sup></a>. In Enterprise Architect is de alternatieve weergave aan te zetten in
 de properties van een Diagram, via: use alias if available.
 
 Een uitzondering is gemaakt voor UML-EnumerationLiteral. De ‘naam’ betreft hier
@@ -1217,7 +1217,7 @@ datatype CharacterString. Aanvullend geldt:
 | Indicatie materiële historie | Ja, Nee, zie Groep                                                                    |
 | Indicatie formele historie   | Ja, Nee, zie Groep                                                                    |
 | Mogelijk geen waarde         | Ja, Nee                                                                               |
-| Authentiek2-11               | Authentiek, Basisgegeven, Landelijk kerngegeven, Gemeentelijk kerngegeven, Overig2-12 |
+| Authentiek<a href="#fn2-11" id="fn2-11ref"><sup>2-11</sup></a>               | Authentiek, Basisgegeven, Landelijk kerngegeven, Gemeentelijk kerngegeven, Overig<a href="#fn2-12" id="fn2-12ref"><sup>2-12</sup></a> |
 
 ## Metamodel Tooling
 
@@ -1238,40 +1238,40 @@ en is te vinden op [www.imvertor.org](http://www.imvertor.org).
 
 2-1: In versies voor UML 2.5 heette deze nog UML-attribute.
 
-2-2: In versies voor UML 2.5 werd de rol nog op UML-associationEnd gedefinieerd.
+<a id="fn2-1" href="#fn2-1ref"><sup>2-2</sup></a>: In versies voor UML 2.5 werd de rol nog op UML-associationEnd gedefinieerd.
 
-2-3: Opmerking: *w*anneer het datatype Postcode landelijk zodanig beschikbaar is
+<a id="fn2-3" href="#fn2-3ref"><sup>2-3</sup></a>: Opmerking: *w*anneer het datatype Postcode landelijk zodanig beschikbaar is
 gemaakt zodat hier gebruik van gemaakt kan worden in het model, dan hoeft
 Postcode niet meer in het eigen model opgenomen te worden.
 
-2-4: In UML 2.5 heeft een target role een UML-Property waarop **isID** kan
+<a id="fn2-4" href="#fn2-4ref"><sup>2-4</sup></a>: In UML 2.5 heeft een target role een UML-Property waarop **isID** kan
 worden gespecificeerd. In Enterprise Architect nog niet. Daarom wordt er
 tijdelijk gewerkt met dit stereotype. Op termijn komt deze te vervallen.
 
-2-5: In deze kolom is opgenomen hoe het element in UML2.5 is benoemd. Het
+<a id="fn2-5" href="#fn2-5ref"><sup>2-5</sup></a>: In deze kolom is opgenomen hoe het element in UML2.5 is benoemd. Het
 betreft veelal overerving van een gegeven van een UML metaclass die niet in dit
 document is benoemd.
 
-2-6: Aspect met aanduiding √ is conform stelselafspraken voor basisregistraties.
+<a id="fn2-6" href="#fn2-6ref"><sup>2-6</sup></a>: Aspect met aanduiding √ is conform stelselafspraken voor basisregistraties.
 Een \* is conform de stelselcatalogus. Die ook de paragraaf in H3 hierover.
 
-2-7: Rode tekst in de kolom ‘In EA’ betreft een standaard element binnen Sparx
+<a id="fn2-7" href="#fn2-7ref"><sup>2-7</sup></a>: Rode tekst in de kolom ‘In EA’ betreft een standaard element binnen Sparx
 EA. Zwarte tekst in de kolom ‘in EA’ betreft uitbreiding op UML Metamodel, via
 tagged values of aanvullende stereotypes.
 
-2-8: In (basis) registraties is dit meestal gespecificeerd in een catalogus van
+<a id="fn2-8" href="#fn2-8ref"><sup>2-8</sup></a>: In (basis) registraties is dit meestal gespecificeerd in een catalogus van
 objecten en begrippen. Deze opmerking geldt voor elk metadata aspect naam van de
 andere modelelementen. Indien het modelelement niet voorkomt in een dergelijke
 catalogus is dan kiest u uiteraard een eigen naam.
 
-2-9: Deze specificatie is toegevoegd t.o.v. de registratiecatalogus aangezien
+<a id="fn2-9" href="#fn2-9ref"><sup>2-9</sup></a>: Deze specificatie is toegevoegd t.o.v. de registratiecatalogus aangezien
 het hier niet om een registratie gaat maar wel duidelijk moet zijn in welke
 registratie de (verwijzing naar de) lijst voorkomt (indien van toepassing).
 
-2-10: Element import wordt in UML ingezet voor het importeren van een
+<a id="fn2-10" href="#fn2-10ref"><sup>2-10</sup></a>: Element import wordt in UML ingezet voor het importeren van een
 NamedElement uit een ander package. In dit metamodel wordt de alias (nog) niet
 zo gebruikt.
 
-2-11: Voor toelichting, zie paragraaf 3.11
+<a id="fn2-11" href="#fn2-11ref"><sup>2-11</sup></a>: Voor toelichting, zie paragraaf 3.11
 
-2-12: Geef bij overig in uw eigen informatiemodel aan wat u er onder verstaat.
+<a id="fn2-12" href="#fn2-12ref"><sup>2-12</sup></a>: Geef bij overig in uw eigen informatiemodel aan wat u er onder verstaat.

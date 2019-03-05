@@ -408,7 +408,7 @@ daarmee dus ook in de hoedanigheid van de generalisatie(s) van het concrete
 objecttype.
 
 Richtlijnen - Een abstract object is een onderwerp van gesprek binnen het
-beschouwde gebied. Het heeft dus echt een betekenis 3-1 in het beschouwde
+beschouwde gebied. Het heeft dus echt een betekenis <a href="#fn3-1" id="fn3-1ref"><sup>3-1</sup></a> in het beschouwde
 gebied. Net als een concreet object, specialisatie of generalisatie. - De
 definitie van elk objecttype (dus ook een abstract objecttype) is zodanig dat
 ondubbelzinnig bepaald kan worden dat een object wel of niet tot het
@@ -599,7 +599,7 @@ en dus géén bij de tijdslijnen behorende attributen die gebruikt moeten worden
 voor het vastleggen van historie. Deze bij de tijdslijn behorende attributen
 worden op het logische niveau vastgelegd.
 
-**Historie op logisch niveau** MIM schrijft3-2 geen implementatie van het
+**Historie op logisch niveau** MIM schrijft<a href="#fn3-2" id="fn3-2ref"><sup>3-2</sup></a> geen implementatie van het
 conceptuele niveau voor. Wel worden er aandachtspunten gegeven om rekening mee
 te houden. Denk bij de uitwerking o.a. aan de volgende aspecten:
 
@@ -921,7 +921,7 @@ specificeren. Dit is een hulptabel, die u over kunt nemen naar uw eigen extensie
 
 **Voetnoten**
 
-3-1: nb
+<a id="fn3-1" href="#fn3-1ref"><sup>3-1</sup></a>: nb
 
-3-2: Hoewel het goed zou zijn om tot een standaard te komen in Nederland is MIM
+<a id="fn3-2" href="#fn3-2ref"><sup>3-2</sup></a>: Hoewel het goed zou zijn om tot een standaard te komen in Nederland is MIM
 niet de plek hiervoor.
