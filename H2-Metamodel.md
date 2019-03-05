@@ -58,9 +58,6 @@ metaclass. Deze in opgenomen in het diagram als ‘blauw gekleurde’ metaclasse
 
 ![](media/6cdcb88c5fe7b0a6b25cf5c55a5fec6e.jpg)
 
-C:\\Users\\bergelx\\AppData\\Local\\Microsoft\\Windows\\Temporary Internet
-Files\\Content.Word\\Kern zonder metagegevens.wmf
-
 | **MIM metaclass** | **Stereotype**      | **Metaclass UML 2.5**            | **In Sparx EA**  |
 |-------------------|---------------------|----------------------------------|------------------|
 | Objecttype        | «Objecttype»        | (UML) Class                      | Class            |
@@ -74,9 +71,6 @@ Files\\Content.Word\\Kern zonder metagegevens.wmf
 ### Datatypen
 
 ![](media/afdcc82758497b2a463b78869a7bee62.jpg)
-
-C:\\Users\\bergelx\\AppData\\Local\\Microsoft\\Windows\\Temporary Internet
-Files\\Content.Word\\Datatypen zonder metagegevens.wmf
 
 View 2: Datatypen
 
@@ -107,10 +101,7 @@ View 3: Constraint
 
 *Relatierol*
 
-![C:\\Users\\bergelx\\AppData\\Local\\Microsoft\\Windows\\Temporary Internet Files\\Content.Word\\20170420 Associatierollen zonder metagegevens.png](media/f2b9b07826b21fb096ed5780e4674f04.png)
-
-C:\\Users\\bergelx\\AppData\\Local\\Microsoft\\Windows\\Temporary Internet
-Files\\Content.Word\\20170420 Associatierollen zonder metagegevens.png
+![](media/f2b9b07826b21fb096ed5780e4674f04.png)
 
 View 4: Relatiesoort en relatierol
 
