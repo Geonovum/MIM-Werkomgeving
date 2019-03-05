@@ -1,5 +1,4 @@
-Metamodel
-=========
+# Metamodel
 
 Dit hoofdstuk beschrijft het metamodel in diagramvorm en in tekst. De eerste
 paragraaf bevat diagrammen, in UML; elk biedt een eigen view op een gedeelte van
@@ -10,7 +9,7 @@ Uitgangspunten voor het metamodel zijn:
 -   Gebruik te maken van de bestaande UML- modelelementen conform UML van OMG.
     OMG noemt dit een UML metaclass. Een voorbeeld hiervan is UML-Class.
 -   Daar waar (semantisch) nodig extensiemechanismen toe te passen met behoud
-    van de betekenis van de UML-metaclasses. Er ontstaat dan een KKG metaclass.
+    van de betekenis van de UML-metaclasses. Er ontstaat dan een MIM metaclass.
     Hoe deze zich verhouden tot UML is weergegeven in de bijlage.
 -   Modelelementen hebben één stereotype. Daarnaast hebben twee verschillende
     stereotypen nooit dezelfde betekenis. Stereotypes worden toegepast als er
@@ -41,14 +40,14 @@ metamodel als geheel: - KERN, met de belangrijkste modelelementen in onderlinge
 samenhang. - DATATYPEN, met de in het model te onderkennen soorten datatypen. -
 OVERIGE modelelementen, die niet altijd aan de orde zijn.
 
-Elk modelelement heeft een KKG metaclass. Deze wordt in UML in een
+Elk modelelement heeft een MIM metaclass. Deze wordt in UML in een
 informatiemodel gemodelleerd als een Metaclass van UML 2.5 en een bijbehorende
-stereotype. Bijvoorbeeld: de KKG metaclass Objecttype wordt gemodelleerd als een
+stereotype. Bijvoorbeeld: de MIM metaclass Objecttype wordt gemodelleerd als een
 UML-Class met stereotype «Objecttype». In Sparx EA wordt dit gemodelleerd met
-een Class. Niet alle KKG metaclasses hebben een stereotype (nodig). In de kolom
+een Class. Niet alle MIM metaclasses hebben een stereotype (nodig). In de kolom
 staat dan ‘-‘.
 
-| **KKG metaclass** | **Stereotype** | **Metaclass UML 2.5** | **In Sparx EA** |
+| **MIM metaclass** | **Stereotype** | **Metaclass UML 2.5** | **In Sparx EA** |
 |-------------------|----------------|-----------------------|-----------------|
 | Objecttype        | «Objecttype»   | (UML) Class           | Class           |
 
@@ -62,7 +61,7 @@ metaclass. Deze in opgenomen in het diagram als ‘blauw gekleurde’ metaclasse
 C:\\Users\\bergelx\\AppData\\Local\\Microsoft\\Windows\\Temporary Internet
 Files\\Content.Word\\Kern zonder metagegevens.wmf
 
-| **KKG metaclass** | **Stereotype**      | **Metaclass UML 2.5**            | **In Sparx EA**  |
+| **MIM metaclass** | **Stereotype**      | **Metaclass UML 2.5**            | **In Sparx EA**  |
 |-------------------|---------------------|----------------------------------|------------------|
 | Objecttype        | «Objecttype»        | (UML) Class                      | Class            |
 | Attribuutsoort    | «Attribuutsoort»    | (UML) Property                   | Attribute        |
@@ -81,7 +80,7 @@ Files\\Content.Word\\Datatypen zonder metagegevens.wmf
 
 View 2: Datatypen
 
-| **KKG metaclass**       | **Stereotype**          | **Metaclass UML 2.5**    | **In Sparx EA**    |
+| **MIM metaclass**       | **Stereotype**          | **Metaclass UML 2.5**    | **In Sparx EA**    |
 |-------------------------|-------------------------|--------------------------|--------------------|
 | Primitief datatype      | «Primitief datatype»    | (UML) Primitive Type     | Datatype           |
 | Gestructureerd datatype | «Gestructuurd datatype» | (UML) Datatype           | Datatype           |
@@ -102,7 +101,7 @@ View 2: Datatypen
 
 View 3: Constraint
 
-| **KKG metaclass** | **Stereotype** | **Metaclass UML 2.5** | **In Sparx EA** |
+| **MIM metaclass** | **Stereotype** | **Metaclass UML 2.5** | **In Sparx EA** |
 |-------------------|----------------|-----------------------|-----------------|
 | Constraint        | \-             | (UML) Constraint      | Constraint      |
 
@@ -115,7 +114,7 @@ Files\\Content.Word\\20170420 Associatierollen zonder metagegevens.png
 
 View 4: Relatiesoort en relatierol
 
-| **KKG metaclass**     | **Stereotype** | **Metaclass UML 2.5** | **In Sparx EA** |
+| **MIM metaclass**     | **Stereotype** | **Metaclass UML 2.5** | **In Sparx EA** |
 |-----------------------|----------------|-----------------------|-----------------|
 | Relatierol (abstract) | «Relatierol»   | Property              | Attribute       |
 | Relatierol source     | «Relatierol»   | Property              | Attribute       |
@@ -123,13 +122,13 @@ View 4: Relatiesoort en relatierol
 
 *Externe koppeling*
 
-| **KKG metaclass** | **Stereotype**      | **Metaclass UML 2.5** | **In Sparx EA** |
+| **MIM metaclass** | **Stereotype**      | **Metaclass UML 2.5** | **In Sparx EA** |
 |-------------------|---------------------|-----------------------|-----------------|
 | Externe koppeling | «Externe koppeling» | (UML) Association     | Association     |
 
 *Packages*
 
-| **KKG metaclass**     | **Stereotype** | **Metaclass UML 2.5** | **In Sparx EA** |
+| **MIM metaclass**     | **Stereotype** | **Metaclass UML 2.5** | **In Sparx EA** |
 |-----------------------|----------------|-----------------------|-----------------|
 | Domein (het eigen IM) | \-             | (UML) Package         | Package \|      |
 | Extern                | «Extern»       | (UML) Package         | Package \|      |
@@ -590,7 +589,7 @@ specificatietalen, dat de structuur van een gegeven beschrijft. Het metamodel
 volgt waar mogelijk de definities zoals beschreven in ISO standaarden (zie
 §3.1). Deze datatypes hebben altijd al een naam en definitie gekregen vanuit
 deze standaarden en deze worden gebruikt. Deze worden niet door de modelleur
-gecreëerd en hebben daarom geen KKG metaclass.
+gecreëerd en hebben daarom geen MIM metaclass.
 
 *Voorbeeld: CharacterString, Integer, DateTime.*
 
@@ -783,8 +782,7 @@ Hoofdstuk 3.
 leeg is, dan is (optioneel) attribuut 2 verplicht’, of een bijzondere regel,
 zoals ‘11-proef is van toepassing op dit attribuut’.*
 
-Specificatie metagegevens
--------------------------
+## Specificatie metagegevens
 
 Elk modelelement kent een aantal metagegevens, die bepaalde aspecten van het
 modelelement specificeren. Een aantal daarvan worden gemodelleerd in UML. Deze
@@ -792,8 +790,8 @@ zijn herkenbaar aan de rode tekst (hiervan worden geen waardes vastgelegd). Een
 aantal worden als waarde vastgelegd, in tagged value vastgelegd. Deze zijn
 herkenbaar aan *Tagged value.* Deze tagged values zijn specifiek voor elk
 modelelement (als er in H2.2 sprake is van een generalisatie, dan worden deze
-tagged values niet overerft. De KKG metaclass Union erft geen metagegevens,
-zoals patroon, van KKG metaclass Datatype).
+tagged values niet overerft. De MIM metaclass Union erft geen metagegevens,
+zoals patroon, van MIM metaclass Datatype).
 
 ### Specificatie metagegevens voor objecten en attributen
 
@@ -1221,8 +1219,7 @@ datatype CharacterString. Aanvullend geldt:
 | Mogelijk geen waarde         | Ja, Nee                                                                               |
 | Authentiek2-11               | Authentiek, Basisgegeven, Landelijk kerngegeven, Gemeentelijk kerngegeven, Overig2-12 |
 
-Metamodel Tooling
------------------
+## Metamodel Tooling
 
 Er is een metamodel *profiel* gemaakt in Sparx Enterprise Architect, dat
 gebruikt kan worden bij het modelleren van een informatiemodel. Dit profiel kan

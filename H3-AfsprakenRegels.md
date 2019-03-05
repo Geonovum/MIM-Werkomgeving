@@ -1,12 +1,10 @@
-Afspraken & Regels
-==================
+# Afspraken & Regels
 
 In deze paragraaf gaan we in op een aantal aspecten van het zojuist beschreven
 metamodel en afspraken en regels die van toepassing zijn voor een
 informatiemodel.
 
-Datatype(n)
------------
+## Datatype(n)
 
 Een datatype is een typering van een eigenschap. Datatypen in een
 informatiemodel beschrijven de structuur waaraan de data van objecten moet
@@ -115,7 +113,7 @@ definiëren in de vorm van een «Primitief datatype», «Codelist» of
 «Referentielijst». Zelf gedefinieerde datatypes hebben altijd een eigen
 definitie en optioneel een eigen patroon of formeel patroon.
 
-**Voorbeelden** hiervan, die niet tot KKG behoren, maar ter illustratie zijn
+**Voorbeelden** hiervan, die niet tot MIM behoren, maar ter illustratie zijn
 opgenomen, zijn: - NietNegatieve*Integer*: een Integer die alleen de waarde 0 of
 groter mag hebben. Laat de naam van het primitieve type dan wel terugkomen in de
 naam (dus niet NietNegatiefGetal*)*. - Een beperking op een Real te specificeren
@@ -148,10 +146,10 @@ hebben.
 
 Wanneer op landelijk niveau afspraken zijn gemaakt (bijvoorbeeld in GAB), voor
 algemene datatypen, die niet primitief zijn, zoals Postcode, dan worden deze
-niet in dit KKG metamodel opgenomen. Wel geeft KKG aan hoe deze in
+niet in dit MIM metamodel opgenomen. Wel geeft MIM aan hoe deze in
 informatiemodellen gedefinieerd en gemodelleerd worden.
 
-*Voorbeelden* hiervan van landelijke datatypen, die niet tot KKG behoren, maar
+*Voorbeelden* hiervan van landelijke datatypen, die niet tot MIM behoren, maar
 ter illustratie zijn opgenomen:
 
 | Postcode | De in Nederland gangbare postcode voor een Nederlands postadres, bestaande uit een numeriek deel en een alfabetisch deel. Het numerieke deel van de postcode bestaat uit vier cijfers, het alfabetische deel van de postcode bestaat uit twee hoofdletters. Conform [GAB Postcodes].                                                        |
@@ -161,8 +159,7 @@ ter illustratie zijn opgenomen:
 |          | \- DateTime, als de tijd wel volledig bekend is                                                                                                                                                                                                                                                                                             |
 |          | \- Date, als alleen de Date bekend is                                                                                                                                                                                                                                                                                                       |
 
-Gestructureerd datatype
------------------------
+## Gestructureerd datatype
 
 Een «Gestructureerd datatype» is veelal specifiek binnen een informatiemodel.
 Indien mogelijk wordt zoveel mogelijk hergebruik gemaakt van elders
@@ -206,8 +203,7 @@ Gemeentecode (AN, lengte 4) - Objecttypecode (AN, lengte 2) - Nummer (AN, lengte
 10) met daarbij een formeel patroon: [0-9]{4}\\.[0-9]{2}\\.[ 0-9]{10} of een
 (tekst) patroon Gemeentecode.Objecttypecode.Nummer
 
-Gegevensgroeptype
------------------
+## Gegevensgroeptype
 
 Bij het modelleren van een objecttype worden attribuutsoorten toegekend aan een
 objecttype. Wanneer er geconstateerd wordt dat een aantal attribuutsoorten
@@ -275,8 +271,7 @@ semantiek.
     informatiemodel. Een gegevensgroep in een conceptueel model is en blijft dus
     altijd ook een gegevensgroep in een logisch informatiemodel.
 
-Keuze tussen datatypes (Union)
-------------------------------
+## Keuze tussen datatypes (Union)
 
 Wanneer het datatype van een attribuutsoort een keuze uit twee of meer datatypen
 is, dan wordt dit gemodelleerd met het datatype Union. Elk union element van de
@@ -314,13 +309,12 @@ deze te gebruiken in een union element.
 Wanneer een beoogd datatype uit een extern model komt en daar geen metamodel
 stereotype heeft, zoals bijvoorbeeld het geval is bij het GM package waarin een
 datatype als «interface» GM_Point is opgenomen, dan heeft dit datatype niet een
-KKG stereotype en mogelijk ook niet de UML-metaclass dataType. Het is dan aan de
+MIM stereotype en mogelijk ook niet de UML-metaclass dataType. Het is dan aan de
 modelleur van het informatiemodel om te beoordelen of het type dan als datatype
 gebruikt kan worden. Het is niet gewenst om aan het externe model een stereotype
 toe te voegen, noch om in het externe model de UML-metaclass aan te passen.
 
-Domeinwaarden of lijsten
-------------------------
+## Domeinwaarden of lijsten
 
 In veel registraties wordt gewerkt met codetabellen om de mogelijke waarden van
 een attribuutsoort te specificeren. Deze mogelijke waarden kunnen op
@@ -371,8 +365,7 @@ worden.
 zoals bij een referentielijst, niet relevant zijn en je voor de definitie alleen
 wilt verwijzen naar de externe waardelijst.
 
-Abstracte objecttypes en concrete objecten
-------------------------------------------
+## Abstracte objecttypes en concrete objecten
 
 Een objecttype kan aangeduid worden als een abstract objecttype (zie paragraaf
 2.3.1. door middel van indAbstract = J). Het betreft dan altijd een
@@ -457,8 +450,7 @@ object is met identificatie ‘1’ en een leidingnetwerk met identificatie ‘1
 dat wel het geval is, dan moet op beide concrete objecttypes een eigen unieke
 aanduiding gedefinieerd worden.
 
-Relatieklasse (uitzonderingen)
-------------------------------
+## Relatieklasse (uitzonderingen)
 
 De gegevens van de relatiesoort worden altijd voor één relatiesoort vastgelegd.
 Het is echter mogelijk dat dezelfde gegevens voor meerdere relaties tegelijk
@@ -481,8 +473,7 @@ objecten hetzelfde zijn. CONTRACT wordt dan gemodelleerd als objecttype, waarbij
 beschreven wordt wat er moet gebeuren wanneer één van de SUBJECTen niet meer
 bestaat.*
 
-Constraint
-----------
+## Constraint
 
 Deze paragraaf gaat dieper in op hoe een Constraint toegepast wordt.
 
@@ -539,8 +530,7 @@ waardoor er (te) vaak nieuwe versies moeten worden uitgebracht. De aanbeveling
 is om de specificatie van dergelijke constraints buiten het informatiemodel te
 specificeren, bijvoorbeeld als validatieregel.
 
-Historie
---------
+## Historie
 
 Deze paragraaf geeft in meer detail aan wat we onder de metagegevens *Indicatie
 materiële historie en Indicatie formele historie* verstaan.
@@ -609,7 +599,7 @@ en dus géén bij de tijdslijnen behorende attributen die gebruikt moeten worden
 voor het vastleggen van historie. Deze bij de tijdslijn behorende attributen
 worden op het logische niveau vastgelegd.
 
-**Historie op logisch niveau** KKG schrijft3-2 geen implementatie van het
+**Historie op logisch niveau** MIM schrijft3-2 geen implementatie van het
 conceptuele niveau voor. Wel worden er aandachtspunten gegeven om rekening mee
 te houden. Denk bij de uitwerking o.a. aan de volgende aspecten:
 
@@ -648,8 +638,7 @@ Opmerking: de metagegevens Indicatie materiële historie en Indicatie formele
 mogen worden opgenomen in een logisch model (of worden overgenomen van het
 conceptuele naar het logische informatiemodel).
 
-Afleidbare gegevens
--------------------
+## Afleidbare gegevens
 
 In een informatiemodel kan de behoefte bestaan om afgeleide gegevens op te
 nemen: dit zijn gegevens die afleidbaar zijn uit andere attribuut- en/of
@@ -664,8 +653,7 @@ afleiding van dit gegeven is niet triviaal. Door het als afleidbaar gegeven op
 te nemen kan het opgevraagd worden zonder dat de historie of andere gegevens van
 het object opgevraagd hoeven te worden om daaruit dit gegeven af te leiden.*
 
-Authentieke gegevens
---------------------
+## Authentieke gegevens
 
 Bij een attribuutsoort of relatiesoort wordt als metagegeven ‘Authentiek’
 opgenomen. Het is een aanduiding of een attribuutsoort of een als relatiesoort
@@ -689,8 +677,7 @@ ZTC); - Sector- en domein-specifieke informatiemodellen (LV-WOZ, IMRO e.d.).
 |                             |                                                                                                                                                                                                                |
 |  Overig                     | Indien het géén van de voorgaande categorieën betreft. Veelal gaat het dan om proces-, taakveld- of domeinspecifieke gegevens.                                                                                 |
 
-Mogelijk geen waarde
---------------------
+## Mogelijk geen waarde
 
 Een attribuut kan geen waarde hebben, omdat de waarde optioneel is en er niet
 is. Bijvoorbeeld bij een tussenvoegsel van een achternaam. Maar een attribuut
@@ -740,8 +727,7 @@ wanneer het een situatie betreft waarin gegevens worden overgenomen uit een
 registratie die wel de waarde ‘onbekend’ gebruikt. Dan kan er ook gekozen worden
 voor het 1:1 overgenomen van de gegevensdefinitie uit deze andere registratie.
 
-Externe schema’s (her) gebruiken
---------------------------------
+## Externe schema’s (her) gebruiken
 
 In bepaalde situaties is het mogelijk dat een ander informatiemodel al één op
 één de specificaties in UML bevat die relevant zijn voor het eigen
@@ -774,8 +760,7 @@ externe package gebruikt worden als datatype, maar er kan ook naar verwezen
 worden via een relatie. Dit laatst wordt nader uitgelegd in de volgende
 paragraaf.
 
-Koppelen met ander informatiemodel (externe koppeling)
-------------------------------------------------------
+## Koppelen met ander informatiemodel (externe koppeling)
 
 Bij registraties is het regelmatig noodzakelijk om te verwijzen vanuit het eigen
 model naar gegevens uit een andere informatiemodel. Denk aan het opnemen van de
@@ -814,8 +799,7 @@ eigen registratie. Er kan dan volstaan worden met alleen de unieke aanduiding
 van GeregistreerdPersoon. Dit is de BSN. Dit wordt niet gezien als een «externe
 koppeling» maar als een referentie.
 
-Stelselcatalogus en stelselafspraken voor basisregistraties
------------------------------------------------------------
+## Stelselcatalogus en stelselafspraken voor basisregistraties
 
 Dit metamodel ondersteunt de metadata die voorgeschreven wordt voor de
 stelselcatalogus [H1.11, referentie 3]. Deze paragraaf geeft aan hoe de metadata
@@ -939,5 +923,5 @@ specificeren. Dit is een hulptabel, die u over kunt nemen naar uw eigen extensie
 
 3-1: nb
 
-3-2: Hoewel het goed zou zijn om tot een standaard te komen in Nederland is KKG
+3-2: Hoewel het goed zou zijn om tot een standaard te komen in Nederland is MIM
 niet de plek hiervoor.
