@@ -1238,7 +1238,7 @@ en is te vinden op [www.imvertor.org](http://www.imvertor.org).
 
 <a id="fn2-1" href="#fn2-1ref"><sup>2-1</sup></a>: In versies voor UML 2.5 heette deze nog UML-attribute.
 
-<a id="fn2-1" href="#fn2-1ref"><sup>2-2</sup></a>: In versies voor UML 2.5 werd de rol nog op UML-associationEnd gedefinieerd.
+<a id="fn2-2" href="#fn2-2ref"><sup>2-2</sup></a>: In versies voor UML 2.5 werd de rol nog op UML-associationEnd gedefinieerd.
 
 <a id="fn2-3" href="#fn2-3ref"><sup>2-3</sup></a>: Opmerking: *w*anneer het datatype Postcode landelijk zodanig beschikbaar is
 gemaakt zodat hier gebruik van gemaakt kan worden in het model, dan hoeft
