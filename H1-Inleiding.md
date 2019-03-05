@@ -9,6 +9,7 @@ NEN3610-informatiemodellen en recente ontwikkelingen zoals onder andere het
 Digitaal Stelsel Omgevingswet, maken de noodzaak om te komen tot één
 modelleertaal urgent.
 
+
 Afspreken dat we UML als modelleertaal gebruiken is hierbij niet voldoende. Een
 metamodel is nodig. Dit is een verzameling van de bouwstenen c.q. de
 modelelementen die gebruikt mogen worden om een informatiemodel mee op te
