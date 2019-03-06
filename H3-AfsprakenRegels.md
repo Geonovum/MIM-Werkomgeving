@@ -127,7 +127,8 @@ mag géén spatie bevatten. - Een Vlak: een verbijzondering van een GM Surface,
 met een eigen definitie, die bijvoorbeeld aangeeft dat het om een 2 dimensionale
 geometrie gaat.
 
-![](media/99cc4266ebd831de6477ef7de382f0c4.emf)
+<!-- ![](media/99cc4266ebd831de6477ef7de382f0c4.emf) -->
+![Datatypen Generalisatie](media/datatypen_generalisatie.png)
 
 De gele datatypes zijn extern aan het model.
 
