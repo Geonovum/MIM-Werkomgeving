@@ -115,7 +115,7 @@ volgende tekst beschrijft hoe dingen in de werkelijkheid zich verhouden tot het
 informatiemodel. We visualiseren dat in onderstaande figuur voor de situatie dat
 er een, van het informatiemodel afgeleide, registratie is.
 
-![](media/c709345d06fbb554b12897bf4d8890e5.png)
+![](media/informatiemodel.png)
 
 Jan en Katrien zijn bijvoorbeeld ‘dingen in de werkelijkheid’. Zij hebben
 bepaalde kenmerken, zoals een naam en een geboortedatum. In een informatiemodel
