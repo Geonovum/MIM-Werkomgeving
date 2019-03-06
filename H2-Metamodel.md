@@ -56,7 +56,8 @@ metaclass. Deze in opgenomen in het diagram als ‘blauw gekleurde’ metaclasse
 
 ### Kern
 
-![](media/6cdcb88c5fe7b0a6b25cf5c55a5fec6e.jpg)
+<!-- ![](media/6cdcb88c5fe7b0a6b25cf5c55a5fec6e.jpg) -->
+![Kern zonder Metagegevens](media/kern_zonder_metagegevens.jpg)
 
 | **MIM metaclass** | **Stereotype**      | **Metaclass UML 2.5**            | **In Sparx EA**  |
 |-------------------|---------------------|----------------------------------|------------------|
@@ -70,7 +71,8 @@ metaclass. Deze in opgenomen in het diagram als ‘blauw gekleurde’ metaclasse
 
 ### Datatypen
 
-![](media/afdcc82758497b2a463b78869a7bee62.jpg)
+<!-- ![](media/afdcc82758497b2a463b78869a7bee62.jpg) -->
+![Datatypen zonder Metagegevens](media/datatypen_zonder_metagegevens.jpg)
 
 View 2: Datatypen
 
@@ -89,7 +91,7 @@ View 2: Datatypen
 
 ### Overige
 
-![](media/23db9303b7990e67f7d15a119edb5984.png)
+![Constraint](media/constraint.png)
 
 *Constraint*
 
@@ -101,7 +103,8 @@ View 3: Constraint
 
 *Relatierol*
 
-![](media/f2b9b07826b21fb096ed5780e4674f04.png)
+<!-- ![](media/f2b9b07826b21fb096ed5780e4674f04.png) -->
+![Relatierol](media/relatierol.png)
 
 View 4: Relatiesoort en relatierol
 
@@ -125,8 +128,7 @@ View 4: Relatiesoort en relatierol
 | Extern                | «Extern»       | (UML) Package         | Package \|      |
 | View                  | «View»         | (UML) Package         | Package         |
 
-Betekenis modelelementen
-------------------------
+## Betekenis modelelementen
 
 In deze paragraaf staan alle modelelementen opgesomd, die gebruikt worden bij
 het maken van een informatiemodel. Bijna alle hebben een UML-metaclass als
@@ -152,11 +154,7 @@ maken wat wordt bedoeld kijken we eerst naar het begrip ‘object’.
 >   Een ding, een tastbaar iets, in de werkelijkheid, zoals daarnaar gekeken
 >   wordt vanuit een bepaald domein.
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-*Toelichting*
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Het wordt veelal als niet politiek correct beschouwd mensen als objecten te
+*Toelichting* Het wordt veelal als niet politiek correct beschouwd mensen als objecten te
 zien. In dit kader, de informatievoorziening, beschouwen we evenwel natuurlijke
 en niet-natuurlijke personen wel als objecten. ‘Tastbaar’ moet hierbij ruim
 geïnterpreteerd worden. Het gaat niet alleen om fysiek herkenbare objecten zoals
@@ -284,7 +282,7 @@ andere de attribuutsoorten Geboortedatum en Geboortegemeente) en Motor (met
 daarin attribuutsoorten over de inhoud, vermogen, serienummer en het soort
 motor) bij een SCHIP.*
 
-*Toelichting bij voorbeeld: in de BRK is een persoon eigenaar van een Schip,
+*Toelichting* bij voorbeeld: in de BRK is een persoon eigenaar van een Schip,
 niet van een Motor. In de BRK kan het eigendom van een Motor niet worden
 overgedragen aan een ander persoon. In een ander informatiemodel, zoals van een
 motorfabriek, zou de Motor wel een objecttype kunnen zijn, omdat het daar wel
@@ -340,12 +338,11 @@ ONROERENDE ZAAK FILIATIE’.*
 >   overerft, én een verbijzondering hierin aanbrengt in de vorm van een meer
 >   restrictieve definitie, of een meer restrictief patroon/formeel patroon.
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Toelichting 
-Het andere datatype is bijvoorbeeld een CharacterString, Integer, GM Surface of DMO
+
+*Toelichting* Het andere datatype is bijvoorbeeld een CharacterString, Integer, GM Surface of DMO
 en dient als basis voor een zelf te definiëren datatype (zie 3.1.2.). 
 deze generalisatie is van toepassing op de volgende datatypes: «Primitief datatype», «Gestructureerd datatype», «Referentielijst», «Codelist», «Enumeratie». 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 
 **6. Relatiesoort** *– Stereotype «Relatiesoort»*: De UML-representatie van een
 relatiesoort, uitgedrukt in een stereotype van UML-association (metaclass).
@@ -355,11 +352,8 @@ relatiesoort, uitgedrukt in een stereotype van UML-association (metaclass).
 >   De typering van het structurele verband tussen een object van een objecttype
 >   en een (ander) object van een ander (of hetzelfde) objecttype.
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-*Toelichting*
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Objecten hebben eigenschappen die gemodelleerd kunnen worden met
+*Toelichting* Objecten hebben eigenschappen die gemodelleerd kunnen worden met
 attribuutsoorten maar ook met relatiesoorten naar andere objecttypen. Als het
 voor het desbetreffende domein van belang is om die eigenschap te modelleren als
 onderdeel van een ander objecttype, dan maakt de relatiesoort die eigenschap
@@ -386,9 +380,7 @@ een Relatieklasse, uitgedrukt in een stereotype van UML-associationClass
 
 >   Een relatiesoort met eigenschappen.
 
-*Toelichting*
-
-De relatieklasse geeft aan dat er een relatie is tussen twee objecten, waarbij
+*Toelichting* De relatieklasse geeft aan dat er een relatie is tussen twee objecten, waarbij
 er gegevens over deze relatie vastgelegd moeten worden. De relatie wordt in dit
 geval behandeld als een object, met gegevens. De gegevens over de relatie
 bestaan alleen zolang de relatie tussen beide objecten bestaat en zolang elk van
@@ -427,9 +419,8 @@ relatierol, uitgedrukt in een stereotype van UML-Property<a href="#fn2-2" id="fn
 >   De benaming van de manier waarop een object deelneemt aan een relatie met
 >   een ander object.
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-*Toelichting:*
-Met relatie wordt in deze elke relatie bedoeld een *«Relatiesoort»*,
+
+*Toelichting* Met relatie wordt in deze elke relatie bedoeld een *«Relatiesoort»*,
 *«Relatieklasse»* of *«Externe koppeling»*. Voor *«*Generalisatie*»* speelt
 het niet. Een relatie heeft een source kant, die de eigenaar is van de
 relatie, en is gericht naar de target kant. De relatierol kan aan beide
@@ -440,7 +431,7 @@ van’ een relatie met PERSOON, 0, 1 of meerdere keren. Andersom is de rol
 ‘kind van’. Een EIGENDOM kan overgedragen worden van de ene PERSOON naar de
 andere PERSOON. De relatie krijgt de naam ‘overdracht’ , met de source rol
 ‘vervreemder’ en de target rol ‘verkrijger’.*
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 
 ### Waardenlijsten
 
@@ -508,9 +499,7 @@ specificaties van een enumeratie.
 >   Een datatype waarvan de mogelijke waarden limitatief zijn opgesomd in een
 >   statische lijst.
 
-*Toelichting*
-
-In de registratie krijgt een attribuut één van deze waarden. De lijst is een
+*Toelichting* In de registratie krijgt een attribuut één van deze waarden. De lijst is een
 statische lijst met constanten (meerdere attributen, zoals bij een
 referentielijst, zijn nooit aan de orde).
 
@@ -544,9 +533,7 @@ Er is wel een verschil in modellering; zie hiervoor de toelichting.
 externe gepubliceerde waardenlijst bevat naast de naam ook de ISO code en de
 ontstaansdatum).*
 
-*Toelichting*
-
-Zowel referentielijsten als codelists zijn in feite waardenlijsten. In
+*Toelichting* Zowel referentielijsten als codelists zijn in feite waardenlijsten. In
 tegenstelling echter tot de referentielijst wordt een codelist *niet* in het
 informatiemodel beschreven, omdat de definitie en semantiek geheel in de externe
 waardenlijst staat en niet (nader) geduid hoeft te worden in het informatiemodel
@@ -595,9 +582,7 @@ definitie in tekst vastgelegd buiten het informatiemodel zelf, waarbij in het
 eigen model een modelelement is gemaakt in de vorm van het datatype
 Postcode*<a href="#fn2-3" id="fn2-3ref"><sup>2-3</sup></a>.
 
-*Toelichting*
-
-Een primitief datatype is een datatype zonder verdere specificatie over de
+*Toelichting* Een primitief datatype is een datatype zonder verdere specificatie over de
 structuur. Dit datatype kent geen UML-property en dus ook geen elementen met
 stereotype «Data element». Dit datatype is enkelvoudig, oftewel niet
 samengesteld, en wordt ook wel simpel datatype genoemd.
@@ -620,9 +605,7 @@ UML-representatie van een gestructureerd datatype uitgedrukt in UML-datatype
 >   Specifiek benoemd gestructureerd datatype dat de structuur van een gegeven
 >   beschrijft, samengesteld uit minimaal twee elementen.
 
-*Toelichting*
-
-In UML wordt een Gestructureerd datatype een structured Datatype genoemd.
+*Toelichting* In UML wordt een Gestructureerd datatype een structured Datatype genoemd.
 
 De waarde van het attribuutsoort verkoopprijs met datatype bedrag is uitgedrukt
 in een combinatie van een som en valuta zoals 35 euro. De introductie van één
@@ -656,9 +639,7 @@ data element uitgedrukt in UML-property (metaclass).
 >   Een onderdeel/element van een Gestructureerd datatype die als type een
 >   datatype heeft.
 
-*Toelichting*
-
-Het data element is een eigenschap van een Gestructureerd datatype en beschrijft
+*Toelichting* Het data element is een eigenschap van een Gestructureerd datatype en beschrijft
 de structuur van een gegeven. Het is niet een eigenschap van een object en niet
 hetzelfde als een attribuutsoort.
 
@@ -737,9 +718,7 @@ bij een UML-property (metaclass).
 >   Aanduiding dat de relatiesoort waarop de *«id»* is gedefinieerd een
 >   onderdeel is van de unieke aanduiding van een objecttype.
 
-*Toelichting:*
-
-Dit wordt alleen gedaan voor objecttypes die zelf geen unieke aanduiding hebben
+*Toelichting* Dit wordt alleen gedaan voor objecttypes die zelf geen unieke aanduiding hebben
 en daarom deze moeten samenstellen met de unieke aanduiding van het gerelateerde
 objecttype.
 
