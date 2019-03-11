@@ -56,7 +56,9 @@ metaclass. Deze in opgenomen in het diagram als ‘blauw gekleurde’ metaclasse
 
 ### Kern
 
-![Kern zonder Metagegevens](media/6cdcb88c5fe7b0a6b25cf5c55a5fec6e.jpg)
+![](media/051b2d56a86f9dd0622b675ffe82c3e5.png)
+
+Kern zonder Metagegevens
 
 Kern zonder Metagegevens
 
@@ -76,7 +78,9 @@ Kern zonder Metagegevens
 
 ### Datatypen
 
-![Datatypen zonder Metagegevens](media/afdcc82758497b2a463b78869a7bee62.jpg)
+![](media/afdcc82758497b2a463b78869a7bee62.jpg)
+
+Datatypen zonder Metagegevens
 
 Datatypen zonder Metagegevens
 
@@ -101,7 +105,9 @@ View 2: Datatypen
 
 ### Overige
 
-![Constraint](media/23db9303b7990e67f7d15a119edb5984.png)
+![](media/505b92a05134fb38d9aec81f23a66bad.png)
+
+Constraint
 
 Constraint
 
@@ -119,7 +125,9 @@ View 3: Constraint
 
 *Relatierol*
 
-![Relatierol](media/f2b9b07826b21fb096ed5780e4674f04.png)
+![](media/240ca39c688efb06f70b34b8ec0b36d0.png)
+
+Relatierol
 
 Relatierol
 
