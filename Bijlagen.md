@@ -4,9 +4,7 @@ Bijlagen
 Bijlage I: Overzicht toegepaste UML metaclasses
 -----------------------------------------------
 
-<!-- ![](media/abd209eeffa0a56d4053128a9f7d8742.jpg) -->
-![](media/afbeelding_bijlage_1.jpg)
-
+![](media/c7ddcf878b6f572a74078f325721c233.wmf)
 
 Bijlage II: Modelelementen en metagegevens als diagram
 ------------------------------------------------------
@@ -15,20 +13,15 @@ Deze bijlage bevat alle modelelementen en metagegevens in één diagram.
 
 *Kern - Relatiesoort is leidend (zie 3.2.3.1)*
 
-<!-- ![C:\\Users\\bergelx\\AppData\\Local\\Microsoft\\Windows\\Temporary Internet Files\\Content.Word\\Kern met metagegevens - alt 1.wmf](media/7b0a492779f2e781d70263610e9d720f.png) -->
-![](media/afbeelding_bijlage_2.png)
-
+![](media/a7b05db81fc1b065f751e059ce9d5ded.wmf)
 
 *Kern - Relatierol is leidend (zie 2.3.2.2)*
 
-<!-- ![C:\\Users\\bergelx\\AppData\\Local\\Microsoft\\Windows\\Temporary Internet Files\\Content.Word\\Kern met metagegevens - alt 2.wmf](media/e6a971df597dfefb3bacab0e07e9cef6.png) -->
-![](media/afbeelding_bijlage_3.png)
+![](media/9e9353a0bd84ed36cf2df46c94513f21.wmf)
 
 *Datatypen*
 
-<!-- ![C:\\Users\\bergelx\\AppData\\Local\\Microsoft\\Windows\\Temporary Internet Files\\Content.Word\\Datatypen met metagegevens.wmf](media/c46609c5de485e293adb57265ed730ac.png) -->
-![](media/afbeelding_bijlage_4.png)
-
+![](media/864fb7b8f193cfa1d51dc378c847dac3.wmf)
 
 Bijlage III: Template naamgeving conventies
 -------------------------------------------

@@ -1,34 +1,34 @@
-# Metamodel
+Metamodel
+=========
 
 Dit hoofdstuk beschrijft het metamodel in diagramvorm en in tekst. De eerste
 paragraaf bevat diagrammen, in UML; elk biedt een eigen view op een gedeelte van
 het model. Het geheel van diagrammen, in samenhang, is opgenomen in bijlage 3.
 
-Uitgangspunten voor het metamodel zijn:
--   UML 2.5 vormt de basis voor de conceptuele beschrijving.
--   Gebruik te maken van de bestaande UML- modelelementen conform UML van OMG.
-    OMG noemt dit een UML metaclass. Een voorbeeld hiervan is UML-Class.
--   Daar waar (semantisch) nodig extensiemechanismen toe te passen met behoud
-    van de betekenis van de UML-metaclasses. Er ontstaat dan een MIM metaclass.
-    Hoe deze zich verhouden tot UML is weergegeven in de bijlage.
--   Modelelementen hebben één stereotype. Daarnaast hebben twee verschillende
-    stereotypen nooit dezelfde betekenis. Stereotypes worden toegepast als er
-    een verbijzondering van een UML constructie nodig is met behoud van de
-    betekenis van de UML-metaclass.
--   Uniforme toepassing van het metamodel in informatiemodellen. Anders gezegd,
-    uitbreiden mag, afwijken niet, maak voor hetzelfde doel geen alternatieve
-    constructies.
--   Datatypen zijn onderdeel van het metamodel en beschrijven de structuur van
-    de data, maar niet de semantiek/betekenis. De aanbeveling is dan ook om
-    eerst een informatiemodel te maken zonder datatypen. De regel is dat als
-    alle datatypen uit het model worden weggelaten, er geen semantische
-    betekenis verloren mag gaan.
--   Toolonafhankelijke beschrijving van het metamodel. Omdat VNG Realisatie, Kadaster en
-    Geonovum en veel andere organisaties Sparx EA gebruiken is er aanvullend
-    aangegeven hoe het metamodel in Enterprise Architect toegepast wordt.
-    Hierdoor borgen we deze relatie.
+Uitgangspunten voor het metamodel zijn: - UML 2.5 vormt de basis voor de
+conceptuele beschrijving. - Gebruik te maken van de bestaande UML-
+modelelementen conform UML van OMG. OMG noemt dit een UML metaclass. Een
+voorbeeld hiervan is UML-Class. - Daar waar (semantisch) nodig
+extensiemechanismen toe te passen met behoud van de betekenis van de
+UML-metaclasses. Er ontstaat dan een MIM metaclass. Hoe deze zich verhouden tot
+UML is weergegeven in de bijlage. - Modelelementen hebben één stereotype.
+Daarnaast hebben twee verschillende stereotypen nooit dezelfde betekenis.
+Stereotypes worden toegepast als er een verbijzondering van een UML constructie
+nodig is met behoud van de betekenis van de UML-metaclass. - Uniforme toepassing
+van het metamodel in informatiemodellen. Anders gezegd, uitbreiden mag, afwijken
+niet, maak voor hetzelfde doel geen alternatieve constructies. - Datatypen zijn
+onderdeel van het metamodel en beschrijven de structuur van de data, maar niet
+de semantiek/betekenis. De aanbeveling is dan ook om eerst een informatiemodel
+te maken zonder datatypen. De regel is dat als alle datatypen uit het model
+worden weggelaten, er geen semantische betekenis verloren mag gaan. -
+Toolonafhankelijke beschrijving van het metamodel. Omdat VNG Realisatie,
+Kadaster en Geonovum en veel andere organisaties Sparx EA gebruiken is er
+aanvullend aangegeven hoe het metamodel in Enterprise Architect toegepast wordt.
+Hierdoor borgen we deze relatie.
 
-## Structuur metamodel 
+Structuur metamodel
+-------------------
+
 Deze paragraaf bevat een overzicht van het metamodel en geeft alle
 modelelementen weer in diagram vorm. De beschrijving van de modelelementen in
 tekst vorm staan in de volgende paragraaf.
@@ -47,23 +47,28 @@ UML-Class met stereotype «Objecttype». In Sparx EA wordt dit gemodelleerd met
 een Class. Niet alle MIM metaclasses hebben een stereotype (nodig). In de kolom
 staat dan ‘-‘.
 
-| **MIM metaclass** | **Stereotype** | **Metaclass UML 2.5** | **In Sparx EA** |
-|-------------------|----------------|-----------------------|-----------------|
-| Objecttype        | «Objecttype»   | (UML) Class           | Class           |
+| **MIM metaclass** | **Stereotype** | **Metaclass UML 2.5z** | **In Sparx EA** |
+|-------------------|----------------|------------------------|-----------------|
+| Objecttype        | «Objecttype»   | (UML) Class            | Class           |
 
 In de diagrammen zijn de UML metaclasses conform UML 2.5 aangeduid als UML
 metaclass. Deze in opgenomen in het diagram als ‘blauw gekleurde’ metaclasses.
 
 ### Kern
 
-<!-- ![](media/6cdcb88c5fe7b0a6b25cf5c55a5fec6e.jpg) -->
-![Kern zonder Metagegevens](media/kern_zonder_metagegevens.jpg)
+![Kern zonder Metagegevens](media/6cdcb88c5fe7b0a6b25cf5c55a5fec6e.jpg)
+
+Kern zonder Metagegevens
+
+Kern zonder Metagegevens
+
+Kern zonder Metagegevens
 
 | **MIM metaclass** | **Stereotype**      | **Metaclass UML 2.5**            | **In Sparx EA**  |
 |-------------------|---------------------|----------------------------------|------------------|
 | Objecttype        | «Objecttype»        | (UML) Class                      | Class            |
 | Attribuutsoort    | «Attribuutsoort»    | (UML) Property                   | Attribute        |
-| Gegevensgroep     | «Gegevensgroep»     | (UML) Association                | Association      |
+| Gegevensgroep     | «Gegevensgroep»     | (UML) Property                   | Attribute        |
 | Gegevensgroeptype | «Gegevensgroeptype» | (UML) Class                      | Class            |
 | Generalisatie     | «Generalisatie»     | (UML) Generalization             | Generalization   |
 | Relatiesoort      | «Relatiesoort»      | (UML) Association                | Association      |
@@ -71,8 +76,13 @@ metaclass. Deze in opgenomen in het diagram als ‘blauw gekleurde’ metaclasse
 
 ### Datatypen
 
-<!-- ![](media/afdcc82758497b2a463b78869a7bee62.jpg) -->
-![Datatypen zonder Metagegevens](media/datatypen_zonder_metagegevens.jpg)
+![Datatypen zonder Metagegevens](media/afdcc82758497b2a463b78869a7bee62.jpg)
+
+Datatypen zonder Metagegevens
+
+Datatypen zonder Metagegevens
+
+Datatypen zonder Metagegevens
 
 View 2: Datatypen
 
@@ -91,7 +101,13 @@ View 2: Datatypen
 
 ### Overige
 
-![Constraint](media/constraint.png)
+![Constraint](media/23db9303b7990e67f7d15a119edb5984.png)
+
+Constraint
+
+Constraint
+
+Constraint
 
 *Constraint*
 
@@ -103,16 +119,21 @@ View 3: Constraint
 
 *Relatierol*
 
-<!-- ![](media/f2b9b07826b21fb096ed5780e4674f04.png) -->
-![Relatierol](media/relatierol.png)
+![Relatierol](media/f2b9b07826b21fb096ed5780e4674f04.png)
+
+Relatierol
+
+Relatierol
+
+Relatierol
 
 View 4: Relatiesoort en relatierol
 
 | **MIM metaclass**     | **Stereotype** | **Metaclass UML 2.5** | **In Sparx EA** |
 |-----------------------|----------------|-----------------------|-----------------|
-| Relatierol (abstract) | «Relatierol»   | Property              | Attribute       |
-| Relatierol source     | «Relatierol»   | Property              | Attribute       |
-| Relatierol target     | «Relatierol»   | Property              | Attribute       |
+| Relatierol (abstract) | «Relatierol»   | Property              | AssociationEnd  |
+| Relatierol source     | «Relatierol»   | Property              | AssociationEnd  |
+| Relatierol target     | «Relatierol»   | Property              | AssociationEnd  |
 
 *Externe koppeling*
 
@@ -128,7 +149,8 @@ View 4: Relatiesoort en relatierol
 | Extern                | «Extern»       | (UML) Package         | Package \|      |
 | View                  | «View»         | (UML) Package         | Package         |
 
-## Betekenis modelelementen
+Betekenis modelelementen
+------------------------
 
 In deze paragraaf staan alle modelelementen opgesomd, die gebruikt worden bij
 het maken van een informatiemodel. Bijna alle hebben een UML-metaclass als
@@ -154,18 +176,18 @@ maken wat wordt bedoeld kijken we eerst naar het begrip ‘object’.
 >   Een ding, een tastbaar iets, in de werkelijkheid, zoals daarnaar gekeken
 >   wordt vanuit een bepaald domein.
 
-*Toelichting:* Het wordt veelal als niet politiek correct beschouwd mensen als objecten te
-zien. In dit kader, de informatievoorziening, beschouwen we evenwel natuurlijke
-en niet-natuurlijke personen wel als objecten. ‘Tastbaar’ moet hierbij ruim
-geïnterpreteerd worden. Het gaat niet alleen om fysiek herkenbare objecten zoals
-auto’s, gebouwen en mensen, ook om zogenaamde virtuele objecten waarover binnen
-het domein door betrokkenen gecommuniceerd wordt zoals kadastrale percelen,
-(maatschappelijke) activiteiten en processen. Hoe een ‘tastbaar iets’ als een
-object beschouwd wordt, hangt af van het domein waarvoor dat ‘tastbaar iets’
-relevant is. Zo wordt de gebouwde omgeving in het ene domein beschouwd als een
-verzameling gebouwen terwijl een ander domein daarin panden onderscheidt. Een
-object is voor een domein relevant als eigenschappen (kenmerken) daarvan van
-belang zijn voor het functioneren van dat domein.
+*Toelichting:* Het wordt veelal als niet politiek correct beschouwd mensen als
+objecten te zien. In dit kader, de informatievoorziening, beschouwen we evenwel
+natuurlijke en niet-natuurlijke personen wel als objecten. ‘Tastbaar’ moet
+hierbij ruim geïnterpreteerd worden. Het gaat niet alleen om fysiek herkenbare
+objecten zoals auto’s, gebouwen en mensen, ook om zogenaamde virtuele objecten
+waarover binnen het domein door betrokkenen gecommuniceerd wordt zoals
+kadastrale percelen, (maatschappelijke) activiteiten en processen. Hoe een
+‘tastbaar iets’ als een object beschouwd wordt, hangt af van het domein waarvoor
+dat ‘tastbaar iets’ relevant is. Zo wordt de gebouwde omgeving in het ene domein
+beschouwd als een verzameling gebouwen terwijl een ander domein daarin panden
+onderscheidt. Een object is voor een domein relevant als eigenschappen
+(kenmerken) daarvan van belang zijn voor het functioneren van dat domein.
 
 >   **Definitie Objecttype**
 
@@ -185,7 +207,7 @@ cq. die objecttypen) naar eenheden die in een registratie vastgelegd kunnen
 worden (records, entiteiten e.d.) op basis van andere overwegingen.
 
 **2. Attribuutsoort** – *Stereotype «Attribuutsoort»*: De UML-representatie van
-een attribuutsoort, uitgedrukt in een stereotype van UML-Property<a href="#fn2-1" id="fn2-1ref"><sup>2-1</sup></a>
+een attribuutsoort, uitgedrukt in een stereotype van UML-Property2-1
 (metaclass).
 
 Er zijn verschillende modelelementen die gebaseerd zijn op UML-property, zoals
@@ -231,8 +253,8 @@ attribuutsoorten zijn die van toepassing zijn voor het objecttype 'persoon'.
 Wanneer ‘oogkleur’ niet relevant is voor het domein, wordt deze niet
 gemodelleerd.*
 
-**3. Gegevensgroep** – * Stereotype «Gegevensgroep»*: De UML-representatie van een
-gegevensgroep, uitgedrukt in een stereotype van UML-property (metaclass).
+**3. Gegevensgroep** – \* Stereotype «Gegevensgroep»\*: De UML-representatie van
+een gegevensgroep, uitgedrukt in een stereotype van UML-property (metaclass).
 
 >   **Definitie Gegevensgroep**
 
@@ -257,7 +279,7 @@ Gegevensgroeptype Oog (merk op dat we het kenmerk Oog als modelelement kunnen
 definiëren, zonder dat er we er waardes van vastleggen. Alleen van kleur en
 sterkte leggen we waardes vast).*
 
-**4. Gegevensgroeptype** – * Stereotype «Gegevensgroeptype»*: De
+**4. Gegevensgroeptype** – \* Stereotype «Gegevensgroeptype»\*: De
 UML-representatie van een gegevensgroeptype, uitgedrukt in een stereotypevan
 UML-Class (metaclass).
 
@@ -286,7 +308,7 @@ motor) bij een SCHIP.*
 niet van een Motor. In de BRK kan het eigendom van een Motor niet worden
 overgedragen aan een ander persoon. In een ander informatiemodel, zoals van een
 motorfabriek, zou de Motor wel een objecttype kunnen zijn, omdat het daar wel
-hét onderwerp van gesprek is.*
+hét onderwerp van gesprek is.\*
 
 Een gegevensgroeptype is meestal het type van slechts één gegevensgroep, omdat
 de semantiek meestal exclusief is voor één objecttype. Echter, hergebruik is
@@ -338,11 +360,11 @@ ONROERENDE ZAAK FILIATIE’.*
 >   overerft, én een verbijzondering hierin aanbrengt in de vorm van een meer
 >   restrictieve definitie, of een meer restrictief patroon/formeel patroon.
 
-
-*Toelichting:* Het andere datatype is bijvoorbeeld een CharacterString, Integer, GM Surface of DMO
-en dient als basis voor een zelf te definiëren datatype (zie 3.1.2.). 
-deze generalisatie is van toepassing op de volgende datatypes: «Primitief datatype», «Gestructureerd datatype», «Referentielijst», «Codelist», «Enumeratie». 
-
+*Toelichting:* Het andere datatype is bijvoorbeeld een CharacterString, Integer,
+GM Surface of DMO en dient als basis voor een zelf te definiëren datatype (zie
+3.1.2.). deze generalisatie is van toepassing op de volgende datatypes:
+«Primitief datatype», «Gestructureerd datatype», «Referentielijst», «Codelist»,
+«Enumeratie».
 
 **6. Relatiesoort** – *Stereotype «Relatiesoort»*: De UML-representatie van een
 relatiesoort, uitgedrukt in een stereotype van UML-association (metaclass).
@@ -351,7 +373,6 @@ relatiesoort, uitgedrukt in een stereotype van UML-association (metaclass).
 
 >   De typering van het structurele verband tussen een object van een objecttype
 >   en een (ander) object van een ander (of hetzelfde) objecttype.
-
 
 *Toelichting:* Objecten hebben eigenschappen die gemodelleerd kunnen worden met
 attribuutsoorten maar ook met relatiesoorten naar andere objecttypen. Als het
@@ -380,11 +401,11 @@ een Relatieklasse, uitgedrukt in een stereotype van UML-associationClass
 
 >   Een relatiesoort met eigenschappen.
 
-*Toelichting:* De relatieklasse geeft aan dat er een relatie is tussen twee objecten, waarbij
-er gegevens over deze relatie vastgelegd moeten worden. De relatie wordt in dit
-geval behandeld als een object, met gegevens. De gegevens over de relatie
-bestaan alleen zolang de relatie tussen beide objecten bestaat en zolang elk van
-beide objecten zelf (nog) bestaan.
+*Toelichting:* De relatieklasse geeft aan dat er een relatie is tussen twee
+objecten, waarbij er gegevens over deze relatie vastgelegd moeten worden. De
+relatie wordt in dit geval behandeld als een object, met gegevens. De gegevens
+over de relatie bestaan alleen zolang de relatie tussen beide objecten bestaat
+en zolang elk van beide objecten zelf (nog) bestaan.
 
 *Bijvoorbeeld: relatieklasse FUNCTIONARIS (een PERSOON is benoemd als de
 FUNCTIONARIS voor een AFDELING en heeft bijvoorbeeld een benoemingsdatum als
@@ -412,26 +433,24 @@ koppeling legt naar het externe objecttype).
 >   ‘eigen’ objecttype. Zie ook 3.14.
 
 **9. Relatierol** – *Stereotype «Relatierol»*: De UML-representatie van een
-relatierol, uitgedrukt in een stereotype van UML-Property<a href="#fn2-2" id="fn2-2ref"><sup>2-2</sup></a> (metaclass).
+relatierol, uitgedrukt in een stereotype van UML-Property2-2 (metaclass).
 
 >   **Definitie Relatierol**
 
 >   De benaming van de manier waarop een object deelneemt aan een relatie met
 >   een ander object.
 
+*Toelichting:* Met relatie wordt in deze elke relatie bedoeld een
+*«Relatiesoort»*, *«Relatieklasse»* of *«Externe koppeling»*. Voor
+*«*Generalisatie*»* speelt het niet. Een relatie heeft een source kant, die de
+eigenaar is van de relatie, en is gericht naar de target kant. De relatierol kan
+aan beide kanten een naam en een definitie krijgen.
 
-*Toelichting:* Met relatie wordt in deze elke relatie bedoeld een *«Relatiesoort»*,
-*«Relatieklasse»* of *«Externe koppeling»*. Voor *«*Generalisatie*»* speelt
-het niet. Een relatie heeft een source kant, die de eigenaar is van de
-relatie, en is gericht naar de target kant. De relatierol kan aan beide
-kanten een naam en een definitie krijgen.
-
-*Bijvoorbeeld: een kind-ouder relatie. Een PERSOON heeft in de rol ‘ouder
-van’ een relatie met PERSOON, 0, 1 of meerdere keren. Andersom is de rol
-‘kind van’. Een EIGENDOM kan overgedragen worden van de ene PERSOON naar de
-andere PERSOON. De relatie krijgt de naam ‘overdracht’ , met de source rol
-‘vervreemder’ en de target rol ‘verkrijger’.*
-
+*Bijvoorbeeld: een kind-ouder relatie. Een PERSOON heeft in de rol ‘ouder van’
+een relatie met PERSOON, 0, 1 of meerdere keren. Andersom is de rol ‘kind van’.
+Een EIGENDOM kan overgedragen worden van de ene PERSOON naar de andere PERSOON.
+De relatie krijgt de naam ‘overdracht’ , met de source rol ‘vervreemder’ en de
+target rol ‘verkrijger’.*
 
 ### Waardenlijsten
 
@@ -499,8 +518,8 @@ specificaties van een enumeratie.
 >   Een datatype waarvan de mogelijke waarden limitatief zijn opgesomd in een
 >   statische lijst.
 
-*Toelichting:* In de registratie krijgt een attribuut één van deze waarden. De lijst is een
-statische lijst met constanten (meerdere attributen, zoals bij een
+*Toelichting:* In de registratie krijgt een attribuut één van deze waarden. De
+lijst is een statische lijst met constanten (meerdere attributen, zoals bij een
 referentielijst, zijn nooit aan de orde).
 
 *Bijvoorbeeld: geslacht (man, vrouw, overig), de typering van een openbare
@@ -533,18 +552,19 @@ Er is wel een verschil in modellering; zie hiervoor de toelichting.
 externe gepubliceerde waardenlijst bevat naast de naam ook de ISO code en de
 ontstaansdatum).*
 
-*Toelichting:* Zowel referentielijsten als codelists zijn in feite waardenlijsten. In
-tegenstelling echter tot de referentielijst wordt een codelist *niet* in het
-informatiemodel beschreven, omdat de definitie en semantiek geheel in de externe
-waardenlijst staat en niet (nader) geduid hoeft te worden in het informatiemodel
-zelf. Een codelist heeft in het informatiemodel daarom geen attributen (en zou
-voor de definitie alleen hoeven te refereren naar de definitie bij de extern
-gepubliceerde waardenlijst, maar voor het gemak is de definitie wel opgenomen
-als metagegeven in dit metamodel). De extern gepubliceerde waardenlijst bevat,
-naast gewone attributen, ook altijd één specifiek attribuut, met daarin de
-domeinwaarden die gebruikt mogen/moeten worden in de registratie. In het gebruik
-is een Codelist daarom analoog aan een Enumeratie. Welk specifiek attribuut dit
-is en wat de betekenis daarvan is staat in de codelist zelf gedefinieerd.
+*Toelichting:* Zowel referentielijsten als codelists zijn in feite
+waardenlijsten. In tegenstelling echter tot de referentielijst wordt een
+codelist *niet* in het informatiemodel beschreven, omdat de definitie en
+semantiek geheel in de externe waardenlijst staat en niet (nader) geduid hoeft
+te worden in het informatiemodel zelf. Een codelist heeft in het informatiemodel
+daarom geen attributen (en zou voor de definitie alleen hoeven te refereren naar
+de definitie bij de extern gepubliceerde waardenlijst, maar voor het gemak is de
+definitie wel opgenomen als metagegeven in dit metamodel). De extern
+gepubliceerde waardenlijst bevat, naast gewone attributen, ook altijd één
+specifiek attribuut, met daarin de domeinwaarden die gebruikt mogen/moeten
+worden in de registratie. In het gebruik is een Codelist daarom analoog aan een
+Enumeratie. Welk specifiek attribuut dit is en wat de betekenis daarvan is staat
+in de codelist zelf gedefinieerd.
 
 ### Datatypen
 
@@ -580,12 +600,12 @@ gecreëerd en hebben daarom geen MIM metaclass.
 *Voorbeeld: Documentnummer, Postcode. In het geval van Postcode is de landelijke
 definitie in tekst vastgelegd buiten het informatiemodel zelf, waarbij in het
 eigen model een modelelement is gemaakt in de vorm van het datatype
-Postcode*<a href="#fn2-3" id="fn2-3ref"><sup>2-3</sup></a>.
+Postcode*2-3.
 
-*Toelichting:* Een primitief datatype is een datatype zonder verdere specificatie over de
-structuur. Dit datatype kent geen UML-property en dus ook geen elementen met
-stereotype «Data element». Dit datatype is enkelvoudig, oftewel niet
-samengesteld, en wordt ook wel simpel datatype genoemd.
+*Toelichting:* Een primitief datatype is een datatype zonder verdere
+specificatie over de structuur. Dit datatype kent geen UML-property en dus ook
+geen elementen met stereotype «Data element». Dit datatype is enkelvoudig,
+oftewel niet samengesteld, en wordt ook wel simpel datatype genoemd.
 
 Wanneer een Primitief datatype wordt gespecificeerd, dan heeft deze standaard
 als primitive datatype een CharacterString.
@@ -605,7 +625,8 @@ UML-representatie van een gestructureerd datatype uitgedrukt in UML-datatype
 >   Specifiek benoemd gestructureerd datatype dat de structuur van een gegeven
 >   beschrijft, samengesteld uit minimaal twee elementen.
 
-*Toelichting:* In UML wordt een Gestructureerd datatype een structured Datatype genoemd.
+*Toelichting:* In UML wordt een Gestructureerd datatype een structured Datatype
+genoemd.
 
 De waarde van het attribuutsoort verkoopprijs met datatype bedrag is uitgedrukt
 in een combinatie van een som en valuta zoals 35 euro. De introductie van één
@@ -639,9 +660,9 @@ data element uitgedrukt in UML-property (metaclass).
 >   Een onderdeel/element van een Gestructureerd datatype die als type een
 >   datatype heeft.
 
-*Toelichting:* Het data element is een eigenschap van een Gestructureerd datatype en beschrijft
-de structuur van een gegeven. Het is niet een eigenschap van een object en niet
-hetzelfde als een attribuutsoort.
+*Toelichting:* Het data element is een eigenschap van een Gestructureerd
+datatype en beschrijft de structuur van een gegeven. Het is niet een eigenschap
+van een object en niet hetzelfde als een attribuutsoort.
 
 Het data element beschrijft in combinatie met andere data-elementen de structuur
 van een gegeven en heeft zelf een datatype. Dit datatype is meestal een
@@ -709,7 +730,7 @@ gezien als een view.*
 
 ### Overig
 
-**22. Id** - *Stereotype «id»*<a href="#fn2-4" id="fn2-4ref"><sup>2-4</sup></a> *bij target role van de «relatiesoort»*: De
+**22. Id** - *Stereotype «id»*2-4 *bij target role van de «relatiesoort»*: De
 UML-representatie van een relatie die een identificerende rol speelt, uitgedrukt
 bij een UML-property (metaclass).
 
@@ -718,9 +739,9 @@ bij een UML-property (metaclass).
 >   Aanduiding dat de relatiesoort waarop de *«id»* is gedefinieerd een
 >   onderdeel is van de unieke aanduiding van een objecttype.
 
-*Toelichting:* Dit wordt alleen gedaan voor objecttypes die zelf geen unieke aanduiding hebben
-en daarom deze moeten samenstellen met de unieke aanduiding van het gerelateerde
-objecttype.
+*Toelichting:* Dit wordt alleen gedaan voor objecttypes die zelf geen unieke
+aanduiding hebben en daarom deze moeten samenstellen met de unieke aanduiding
+van het gerelateerde objecttype.
 
 *Voorbeeld: BUURT heeft zelf geen unieke identificatie. Een BUURT ligt in een
 WIJK en binnen die WIJK is de BUURT wel uniek. De WIJK zelf heeft een unieke
@@ -736,10 +757,10 @@ metamodel maken we gebruik van de bestaande UML-Constraint (metaclass).
 >   Een constraint is een conditie of een beperking, die over een of meerdere
 >   modelelementen uit het informatiemodel geldt.
 
-*Toelichting:* Een constraint kan vastgelegd worden bij alle modelelementen die als basis een
-UML-metaclass hebben waarvan UML aangeeft dat hier een UML-constraint op
-gedefinieerd mag worden. Aanbeveling is om dit waar mogelijk op een
-*«Objecttype»* te doen of eventueel (indien van toepassing) op een
+*Toelichting:* Een constraint kan vastgelegd worden bij alle modelelementen die
+als basis een UML-metaclass hebben waarvan UML aangeeft dat hier een
+UML-constraint op gedefinieerd mag worden. Aanbeveling is om dit waar mogelijk
+op een *«Objecttype»* te doen of eventueel (indien van toepassing) op een
 *«Gegevensgroeptype»* of *«Relatieklasse».*
 
 Een constraint wordt altijd in gewone tekst omschreven en optioneel als formele
@@ -750,7 +771,8 @@ Hoofdstuk 3.
 leeg is, dan is (optioneel) attribuut 2 verplicht’, of een bijzondere regel,
 zoals ‘11-proef is van toepassing op dit attribuut’.*
 
-## Specificatie metagegevens
+Specificatie metagegevens
+-------------------------
 
 Elk modelelement kent een aantal metagegevens, die bepaalde aspecten van het
 modelelement specificeren. Een aantal daarvan worden gemodelleerd in UML. Deze
@@ -767,18 +789,18 @@ zoals patroon, van MIM metaclass Datatype).
 
 De objecttypen worden naar de volgende aspecten gespecificeerd:
 
-| **Aspect**<a href="#fn2-6" id="fn2-6ref"><sup>2-6</sup></a>                 | **Kardinaliteit** | **Toelichting**                                                                                                                                                                                                                                                                                                                           | **In UML 2.5**<a href="#fn2-5" id="fn2-5ref"><sup>2-5</sup></a>                        | **In EA**<a href="#fn2-7" id="fn2-7ref"><sup>2-7</sup></a>                                                                                                                                                    |
-|-------------------------------|--------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Naam√ \***                  | 1                  | De naam van het objecttype<a href="#fn2-8" id="fn2-8ref"><sup>2-8</sup></a>.                                                                                                                                                                                                                                                                                                            | *name van de metaclass Named element*    | *Name*                                                                                                                                                          |
-| **Herkomst\***                | 1                  | De registratie in wiens catalogus het objecttype is gespecificeerd (oftewel de registratie waar het objecttype deel van uitmaakt). Deze specificatie is toegevoegd omdat het wel duidelijk moet zijn in welke (basis)registratie of informatiemodel het objecttype voorkomt (indien van toepassing).                                      |                                          | *Tagged value*                                                                                                                                                  |
-| **Definitie√ \***             | 1                  | De beschrijving van de betekenis van het objecttype zoals gespecificeerd in de catalogus van de desbetreffende (basis)registratie of informatiemodel.                                                                                                                                                                                     | *Body van de metaclass Comment*          | *Notes*                                                                                                                                                         |
-| **Herkomst definitie√**       | 1                  | Voor objecttypen die deel uitmaken van een registratie is de definitie hieruit overgenomen.                                                                                                                                                                                                                                               |                                          | *Tagged value*                                                                                                                                                  |
-| **Datum opname**              | 1                  | De datum waarop het objecttype is opgenomen in het informatiemodel.                                                                                                                                                                                                                                                                       |                                          | *Tagged value*                                                                                                                                                  |
-| **Unieke aanduiding√**        | 1                  | Voor objecttypen die deel uitmaken van een (basis)registratie of informatiemodel betreft dit de wijze waarop daarin voorkomende objecten (van dit type) uniek in de registratie worden aangeduid.                                                                                                                                         | *-*                                      | *isId bij attribuutsoort, --- of --- stereotype «isId» bij target role relatiesoort --- of --- een combinatie van deze twee, elk hiervan meer keren toepasbaar* |
-| **Populatie√ \***             | 0..1               | Voor objecttypen die deel uitmaken van een (basis)registratie betreft dit de beschrijving van de exemplaren van het gedefinieerde objecttype die in de desbetreffende (basis)­registratie voorhanden zijn.                                                                                                                                |                                          | *Tagged value*                                                                                                                                                  |
-| **Kwaliteit√ \***             | 0..1               | Voor objecttypen die deel uitmaken van een registratie betreft dit de waarborgen voor de juistheid van de in de registratie opgenomen objecten van het desbetreffende type.                                                                                                                                                               |                                          | *Tagged value*                                                                                                                                                  |
-| **Toelichting√ \***           | 0..1               | Voor objecttypen die deel uitmaken van een (basis)registratie of informatiemodel betreft dit de daarin opgenomen toelichting.                                                                                                                                                                                                             |                                          | *Tagged value*                                                                                                                                                  |
-| **Indicatie abstract object** | 1                  | Conceptueel model: indicatie dat het objecttype een generalisatie is, waarvan een  object als specialisatie altijd voorkomt in de hoedanigheid van een (en slechts één) van de specialisaties van het betreffende objecttype. Logisch model: Indicatie dat er geen instanties (objecten) voor het betreffende objecttype mogen voorkomen. | *isAbstract bij de metaclass Classifier* | *Abstract*                                                                                                                                                      |
+| **Aspect**2-6                 | **Kardinaliteit** | **Toelichting**                                                                                                                                                                                                                                                                                                                           | **In UML 2.5**2-5                        | **In EA**2-7                                                                                                                                                    |
+|-------------------------------|-------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Naam√ \***                  | 1                 | De naam van het objecttype2-8.                                                                                                                                                                                                                                                                                                            | *name van de metaclass Named element*    | *Name*                                                                                                                                                          |
+| **Herkomst\***                | 1                 | De registratie in wiens catalogus het objecttype is gespecificeerd (oftewel de registratie waar het objecttype deel van uitmaakt). Deze specificatie is toegevoegd omdat het wel duidelijk moet zijn in welke (basis)registratie of informatiemodel het objecttype voorkomt (indien van toepassing).                                      |                                          | *Tagged value*                                                                                                                                                  |
+| **Definitie√ \***             | 1                 | De beschrijving van de betekenis van het objecttype zoals gespecificeerd in de catalogus van de desbetreffende (basis)registratie of informatiemodel.                                                                                                                                                                                     | *Body van de metaclass Comment*          | *Notes*                                                                                                                                                         |
+| **Herkomst definitie√**       | 1                 | Voor objecttypen die deel uitmaken van een registratie is de definitie hieruit overgenomen.                                                                                                                                                                                                                                               |                                          | *Tagged value*                                                                                                                                                  |
+| **Datum opname**              | 1                 | De datum waarop het objecttype is opgenomen in het informatiemodel.                                                                                                                                                                                                                                                                       |                                          | *Tagged value*                                                                                                                                                  |
+| **Unieke aanduiding√**        | 1                 | Voor objecttypen die deel uitmaken van een (basis)registratie of informatiemodel betreft dit de wijze waarop daarin voorkomende objecten (van dit type) uniek in de registratie worden aangeduid.                                                                                                                                         | *-*                                      | *isId bij attribuutsoort, --- of --- stereotype «isId» bij target role relatiesoort --- of --- een combinatie van deze twee, elk hiervan meer keren toepasbaar* |
+| **Populatie√ \***             | 0..1              | Voor objecttypen die deel uitmaken van een (basis)registratie betreft dit de beschrijving van de exemplaren van het gedefinieerde objecttype die in de desbetreffende (basis)­registratie voorhanden zijn.                                                                                                                                |                                          | *Tagged value*                                                                                                                                                  |
+| **Kwaliteit√ \***             | 0..1              | Voor objecttypen die deel uitmaken van een registratie betreft dit de waarborgen voor de juistheid van de in de registratie opgenomen objecten van het desbetreffende type.                                                                                                                                                               |                                          | *Tagged value*                                                                                                                                                  |
+| **Toelichting√ \***           | 0..1              | Voor objecttypen die deel uitmaken van een (basis)registratie of informatiemodel betreft dit de daarin opgenomen toelichting.                                                                                                                                                                                                             |                                          | *Tagged value*                                                                                                                                                  |
+| **Indicatie abstract object** | 1                 | Conceptueel model: indicatie dat het objecttype een generalisatie is, waarvan een  object als specialisatie altijd voorkomt in de hoedanigheid van een (en slechts één) van de specialisaties van het betreffende objecttype. Logisch model: Indicatie dat er geen instanties (objecten) voor het betreffende objecttype mogen voorkomen. | *isAbstract bij de metaclass Classifier* | *Abstract*                                                                                                                                                      |
 
 **Specificatie voor «Attribuutsoort»**
 
@@ -861,30 +883,30 @@ vastgelegd, dan is de metadata hierbij wel verplicht.
 
 De relatiesoorten worden naar de volgende aspecten gespecificeerd.
 
-| **Aspect**                        | **Kardinaliteit** | **Toelichting**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  | **In UML 2.5**                                                  | **In EA**                                                           |
-|-----------------------------------|-------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------|---------------------------------------------------------------------|
-| **Naam√**                         | 1                 | De naam van de relatiesoort.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     | *name van metaclass Named element*                              | *Name*                                                              |
-| **Uni-directioneel**              | 1                 | Het gerelateerde objecttype (de target) waarvan het objecttype, die de eigenaar is van deze relatie (de source), kennis heeft. Alle relaties zijn altijd gericht van het objecttype (source) naar het gerelateerde objecttype (target).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |                                                                 | *Direction van de betreffende assiciation (van source naar target)* |
-| **Objecttype**                    | 1                 | Het objecttype waarvan de relatie een eigenschap is.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             | */source: related Element bij Relationship Element*             | *Source*                                                            |
-| **Gerelateerd objecttype**        | 1                 | Het objecttype waarmee een objecttype een logisch verband heeft                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  | */target: related Element bij Relationship Element*             | *Target*                                                            |
-| **Type aggregatie**               | 1                 | Standaard betreft het geen aggregatie (None). Het type aggregatie mag ‘composite’ zijn. Dit wordt gedaan als er een afhankelijkheid is in die zin dat de target niet kan bestaan zonder de source: de target vervalt als de source vervalt.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      | *isComposite bij metaclass Property*                            | *Aggregation van de source role met waarde composite*               |
-| **Kardinaliteit√**                | 1                 | Deze indicatie geeft aan hoeveel keer waarden van deze relatiesoort (i.c. relaties) kunnen voorkomen bij een object van het betreffende objecttype:                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              | *lowerValue en upperValue van de metaclass MultiplicityElement* | *Multiplicity van de target role*                                   |
-|                                   |                   | 0..1: is soms niet beschikbaar                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |                                                                 |                                                                     |
-|                                   |                   | 1 : is altijd beschikbaar                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |                                                                 |                                                                     |
-|                                   |                   | 0..\*: is niet altijd beschikbaar, kunnen meerdere relaties zijn                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |                                                                 |                                                                     |
-|                                   |                   | 1..\*: is altijd beschikbaar, kunnen meerdere relaties zijn                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |                                                                 |                                                                     |
-|                                   |                   | \*..\*: is niet altijd beschikbaar, kunnen meerdere relaties zijn tussen objecten van hetzelfde objecttype.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |                                                                 |                                                                     |
-|                                   |                   | Indien een relatiesoort deel uit maakt van een gegevensgroeptype, dan wordt de kardinaliteit vermeld van de relatiesoort binnen het gegevensgroeptype. Voor de uiteindelijke kardinaliteit van de relatiesoort moet ook rekening gehouden worden met de kardinaliteit van het gegevensgroeptype.                                                                                                                                                                                                                                                                                                                                                                                                                                                 |                                                                 |                                                                     |
-| **Herkomst \***                   | 1                 | De registratie of het informatiemodel waaraan de relatiesoort ontleend is, dan wel de eigen organisatie. Indien zelf toegevoegd, dan is de herkomst de eigen organisatie.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |                                                                 | *Tagged value*                                                      |
-| **Definitie√ \***                 | 1                 | De beschrijving van de betekenis van de relatiesoort. Deze is verplicht als er geen source role respectievelijk target role is gespecificeerd.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   | *Body van de metaclass Comment*                                 | *Notes*                                                             |
-| **Herkomst definitie√**           | 1                 | De registratie of het informatiemodel waaruit de definitie is overgenomen dan wel een aanduiding die aangeeft uit welke bronnen de definitie is samengesteld.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |                                                                 | *Tagged value*                                                      |
-| **Datum opname**                  | 1                 | De datum waarop de relatiesoort is opgenomen in het informatiemodel.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |                                                                 | *Tagged value*                                                      |
-| **Indicatie materiële historie√** | 1                 | Indicatie of de materiële historie van de relatiesoort te bevragen is. Materiële historie geeft aan wanneer een verandering is opgetreden in de werkelijkheid die heeft geleid tot verandering van de relatie.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |                                                                 | *Tagged value*                                                      |
-| **Indicatie formele historie√**   | 1                 | Indicatie of de formele historie van de relatiesoort te bevragen is. Formele historie geeft aan wanneer in de administratie een verandering is verwerkt van de relatie (wanneer was de verandering bekend en is deze verwerkt).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |                                                                 | *Tagged value*                                                      |
-| **Authentiek√ \***                | 1                 | Aanduiding of de attribuutsoort waarvan de relatiesoort is afgeleid, een authentiek gegeven (attribuutsoort) betreft.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |                                                                 | *Tagged value*                                                      |
-| **Indicatie afleidbaar**          | 1                 | Aanduiding dat gegeven afleidbaar is uit andere attribuut- en/of relatiesoorten.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 | *isDerived bij UML metaclass Assocation*                        | *isDerived*                                                         |
-| **Toelichting√ \***               | 0..1              | Een inhoudelijke toelichting op de relatiesoort.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |                                                                 | *Tagged value*                                                      |
-| **Mogelijk geen waarde**          | 1                 | Aanduiding dat relatiesoort geen waarde met betekenis kan bevatten.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |                                                                 | *Tagged value*                                                      |
+| **Aspect**                        | **Kardinaliteit** | **Toelichting**                                                                                                                                                                                                                                                                                  | **In UML 2.5**                                                  | **In EA**                                                           |
+|-----------------------------------|-------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------|---------------------------------------------------------------------|
+| **Naam√**                         | 1                 | De naam van de relatiesoort.                                                                                                                                                                                                                                                                     | *name van metaclass Named element*                              | *Name*                                                              |
+| **Uni-directioneel**              | 1                 | Het gerelateerde objecttype (de target) waarvan het objecttype, die de eigenaar is van deze relatie (de source), kennis heeft. Alle relaties zijn altijd gericht van het objecttype (source) naar het gerelateerde objecttype (target).                                                          |                                                                 | *Direction van de betreffende assiciation (van source naar target)* |
+| **Objecttype**                    | 1                 | Het objecttype waarvan de relatie een eigenschap is.                                                                                                                                                                                                                                             | */source: related Element bij Relationship Element*             | *Source*                                                            |
+| **Gerelateerd objecttype**        | 1                 | Het objecttype waarmee een objecttype een logisch verband heeft                                                                                                                                                                                                                                  | */target: related Element bij Relationship Element*             | *Target*                                                            |
+| **Type aggregatie**               | 1                 | Standaard betreft het geen aggregatie (None). Het type aggregatie mag ‘composite’ zijn. Dit wordt gedaan als er een afhankelijkheid is in die zin dat de target niet kan bestaan zonder de source: de target vervalt als de source vervalt.                                                      | *isComposite bij metaclass Property*                            | *Aggregation van de source role met waarde composite*               |
+| **Kardinaliteit√**                | 1                 | Deze indicatie geeft aan hoeveel keer waarden van deze relatiesoort (i.c. relaties) kunnen voorkomen bij een object van het betreffende objecttype:                                                                                                                                              | *lowerValue en upperValue van de metaclass MultiplicityElement* | *Multiplicity van de target role*                                   |
+|                                   |                   | 0..1: is soms niet beschikbaar                                                                                                                                                                                                                                                                   |                                                                 |                                                                     |
+|                                   |                   | 1 : is altijd beschikbaar                                                                                                                                                                                                                                                                        |                                                                 |                                                                     |
+|                                   |                   | 0..\*: is niet altijd beschikbaar, kunnen meerdere relaties zijn                                                                                                                                                                                                                                 |                                                                 |                                                                     |
+|                                   |                   | 1..\*: is altijd beschikbaar, kunnen meerdere relaties zijn                                                                                                                                                                                                                                      |                                                                 |                                                                     |
+|                                   |                   | \*..\*: is niet altijd beschikbaar, kunnen meerdere relaties zijn tussen objecten van hetzelfde objecttype.                                                                                                                                                                                      |                                                                 |                                                                     |
+|                                   |                   | Indien een relatiesoort deel uit maakt van een gegevensgroeptype, dan wordt de kardinaliteit vermeld van de relatiesoort binnen het gegevensgroeptype. Voor de uiteindelijke kardinaliteit van de relatiesoort moet ook rekening gehouden worden met de kardinaliteit van het gegevensgroeptype. |                                                                 |                                                                     |
+| **Herkomst \***                   | 1                 | De registratie of het informatiemodel waaraan de relatiesoort ontleend is, dan wel de eigen organisatie. Indien zelf toegevoegd, dan is de herkomst de eigen organisatie.                                                                                                                        |                                                                 | *Tagged value*                                                      |
+| **Definitie√ \***                 | 1                 | De beschrijving van de betekenis van de relatiesoort. Deze is verplicht als er geen source role respectievelijk target role is gespecificeerd.                                                                                                                                                   | *Body van de metaclass Comment*                                 | *Notes*                                                             |
+| **Herkomst definitie√**           | 1                 | De registratie of het informatiemodel waaruit de definitie is overgenomen dan wel een aanduiding die aangeeft uit welke bronnen de definitie is samengesteld.                                                                                                                                    |                                                                 | *Tagged value*                                                      |
+| **Datum opname**                  | 1                 | De datum waarop de relatiesoort is opgenomen in het informatiemodel.                                                                                                                                                                                                                             |                                                                 | *Tagged value*                                                      |
+| **Indicatie materiële historie√** | 1                 | Indicatie of de materiële historie van de relatiesoort te bevragen is. Materiële historie geeft aan wanneer een verandering is opgetreden in de werkelijkheid die heeft geleid tot verandering van de relatie.                                                                                   |                                                                 | *Tagged value*                                                      |
+| **Indicatie formele historie√**   | 1                 | Indicatie of de formele historie van de relatiesoort te bevragen is. Formele historie geeft aan wanneer in de administratie een verandering is verwerkt van de relatie (wanneer was de verandering bekend en is deze verwerkt).                                                                  |                                                                 | *Tagged value*                                                      |
+| **Authentiek√ \***                | 1                 | Aanduiding of de attribuutsoort waarvan de relatiesoort is afgeleid, een authentiek gegeven (attribuutsoort) betreft.                                                                                                                                                                            |                                                                 | *Tagged value*                                                      |
+| **Indicatie afleidbaar**          | 1                 | Aanduiding dat gegeven afleidbaar is uit andere attribuut- en/of relatiesoorten.                                                                                                                                                                                                                 | *isDerived bij UML metaclass Assocation*                        | *isDerived*                                                         |
+| **Toelichting√ \***               | 0..1              | Een inhoudelijke toelichting op de relatiesoort.                                                                                                                                                                                                                                                 |                                                                 | *Tagged value*                                                      |
+| **Mogelijk geen waarde**          | 1                 | Aanduiding dat relatiesoort geen waarde met betekenis kan bevatten.                                                                                                                                                                                                                              |                                                                 | *Tagged value*                                                      |
 
 **Specificatie voor «Relatierol»**
 
@@ -980,7 +1002,7 @@ Voor referentielijsten worden de volgende aspecten gespecificeerd:
 | **Aspect**       | **Kardinaliteit** | **Toelichting**                                                                                                                     | **In UML 2.5**                       | **In EA**      |
 |------------------|-------------------|-------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------|----------------|
 | **Naam**         | 1                 | De naam van de lijst.                                                                                                               | *name van de metaclass Namedelement* | *Name*         |
-| **Herkomst**     | 1                 | De registratie in wiens catalogus de lijst is gespecificeerd (oftewel de registratie waar de referentielijst deel van uitmaakt).<a href="#fn2-9" id="fn2-9ref"><sup>2-9</sup></a> |                                      | *Tagged value* |
+| **Herkomst**     | 1                 | De registratie in wiens catalogus de lijst is gespecificeerd (oftewel de registratie waar de referentielijst deel van uitmaakt).2-9 |                                      | *Tagged value* |
 |                  |                   |                                                                                                                                     |                                      |                |
 | **Definitie**    | 1                 | De beschrijving van de betekenis van de lijst zoals gespecificeerd in de catalogus van de desbetreffende registratie.               | *Body van de metaclass Comment*      | *Notes*        |
 | **Datum opname** | 1                 | De datum waarop de lijst is opgenomen in het informatiemodel.                                                                       |                                      | *Tagged value* |
@@ -1119,7 +1141,7 @@ View packages worden naar de volgende aspecten gespecificeerd, analoog aan
 
 ### Specificatie metagegevens - overig
 
-**Specificatie voor Enumeratie(waarden)**
+**Specificatie voor Enumeratie**
 
 Enumeraties betreffen de metaclass Enumeration en worden naar de volgende
 aspecten gespecificeerd:
@@ -1129,7 +1151,7 @@ aspecten gespecificeerd:
 | **Naam**      | 1                 | De naam van de enumeratie zoals gespecificeerd in de catalogus van de desbetreffende registratie.                          | *name van de metaclass Named element* | *Name*    |
 | **Definitie** | 1                 | De beschrijving van de betekenis van de enumeratie zoals gespecificeerd in de catalogus van de desbetreffende registratie. | *Body van de metaclass Comment*       | *Notes*   |
 
-**Specificatie voor Enumeratie(waarden)**
+**Specificatie voor Enumeratiewaarde**
 
 De enumeratiewaarde zelf betreft de metaclass UML-EnumerationLiteral en kent
 volgende aspecten:
@@ -1160,7 +1182,7 @@ Deze wordt gemodelleerd met een alias. De alias is optioneel (zie ook 3.16).
 De specificatie van de alias is overgenomen uit UML. De alias is te specificeren
 voor NamedElements (zoals UML-Class, UML-association, UML-UML-Datatype en
 UML-property). De alias is in UML gespecificeerd bij de metaclass Element
-Import<a href="#fn2-10" id="fn2-10ref"><sup>2-10</sup></a>. In Enterprise Architect is de alternatieve weergave aan te zetten in
+Import2-10. In Enterprise Architect is de alternatieve weergave aan te zetten in
 de properties van een Diagram, via: use alias if available.
 
 Een uitzondering is gemaakt voor UML-EnumerationLiteral. De ‘naam’ betreft hier
@@ -1185,9 +1207,10 @@ datatype CharacterString. Aanvullend geldt:
 | Indicatie materiële historie | Ja, Nee, zie Groep                                                                    |
 | Indicatie formele historie   | Ja, Nee, zie Groep                                                                    |
 | Mogelijk geen waarde         | Ja, Nee                                                                               |
-| Authentiek<a href="#fn2-11" id="fn2-11ref"><sup>2-11</sup></a>               | Authentiek, Basisgegeven, Landelijk kerngegeven, Gemeentelijk kerngegeven, Overig<a href="#fn2-12" id="fn2-12ref"><sup>2-12</sup></a> |
+| Authentiek2-11               | Authentiek, Basisgegeven, Landelijk kerngegeven, Gemeentelijk kerngegeven, Overig2-12 |
 
-## Metamodel Tooling
+Metamodel Tooling
+-----------------
 
 Er is een metamodel *profiel* gemaakt in Sparx Enterprise Architect, dat
 gebruikt kan worden bij het modelleren van een informatiemodel. Dit profiel kan
@@ -1204,42 +1227,42 @@ en is te vinden op [www.imvertor.org](http://www.imvertor.org).
 
 **Voetnoten**
 
-<a id="fn2-1" href="#fn2-1ref"><sup>2-1</sup></a>: In versies voor UML 2.5 heette deze nog UML-attribute.
+2-1: In versies voor UML 2.5 heette deze nog UML-attribute.
 
-<a id="fn2-2" href="#fn2-2ref"><sup>2-2</sup></a>: In versies voor UML 2.5 werd de rol nog op UML-associationEnd gedefinieerd.
+2-2: In versies voor UML 2.5 werd de rol nog op UML-associationEnd gedefinieerd.
 
-<a id="fn2-3" href="#fn2-3ref"><sup>2-3</sup></a>: Opmerking: *w*anneer het datatype Postcode landelijk zodanig beschikbaar is
+2-3: Opmerking: *w*anneer het datatype Postcode landelijk zodanig beschikbaar is
 gemaakt zodat hier gebruik van gemaakt kan worden in het model, dan hoeft
 Postcode niet meer in het eigen model opgenomen te worden.
 
-<a id="fn2-4" href="#fn2-4ref"><sup>2-4</sup></a>: In UML 2.5 heeft een target role een UML-Property waarop **isID** kan
+2-4: In UML 2.5 heeft een target role een UML-Property waarop **isID** kan
 worden gespecificeerd. In Enterprise Architect nog niet. Daarom wordt er
 tijdelijk gewerkt met dit stereotype. Op termijn komt deze te vervallen.
 
-<a id="fn2-5" href="#fn2-5ref"><sup>2-5</sup></a>: In deze kolom is opgenomen hoe het element in UML2.5 is benoemd. Het
+2-5: In deze kolom is opgenomen hoe het element in UML2.5 is benoemd. Het
 betreft veelal overerving van een gegeven van een UML metaclass die niet in dit
 document is benoemd.
 
-<a id="fn2-6" href="#fn2-6ref"><sup>2-6</sup></a>: Aspect met aanduiding √ is conform stelselafspraken voor basisregistraties.
+2-6: Aspect met aanduiding √ is conform stelselafspraken voor basisregistraties.
 Een \* is conform de stelselcatalogus. Die ook de paragraaf in H3 hierover.
 
-<a id="fn2-7" href="#fn2-7ref"><sup>2-7</sup></a>: Rode tekst in de kolom ‘In EA’ betreft een standaard element binnen Sparx
+2-7: Rode tekst in de kolom ‘In EA’ betreft een standaard element binnen Sparx
 EA. Zwarte tekst in de kolom ‘in EA’ betreft uitbreiding op UML Metamodel, via
 tagged values of aanvullende stereotypes.
 
-<a id="fn2-8" href="#fn2-8ref"><sup>2-8</sup></a>: In (basis) registraties is dit meestal gespecificeerd in een catalogus van
+2-8: In (basis) registraties is dit meestal gespecificeerd in een catalogus van
 objecten en begrippen. Deze opmerking geldt voor elk metadata aspect naam van de
 andere modelelementen. Indien het modelelement niet voorkomt in een dergelijke
 catalogus is dan kiest u uiteraard een eigen naam.
 
-<a id="fn2-9" href="#fn2-9ref"><sup>2-9</sup></a>: Deze specificatie is toegevoegd t.o.v. de registratiecatalogus aangezien
+2-9: Deze specificatie is toegevoegd t.o.v. de registratiecatalogus aangezien
 het hier niet om een registratie gaat maar wel duidelijk moet zijn in welke
 registratie de (verwijzing naar de) lijst voorkomt (indien van toepassing).
 
-<a id="fn2-10" href="#fn2-10ref"><sup>2-10</sup></a>: Element import wordt in UML ingezet voor het importeren van een
+2-10: Element import wordt in UML ingezet voor het importeren van een
 NamedElement uit een ander package. In dit metamodel wordt de alias (nog) niet
 zo gebruikt.
 
-<a id="fn2-11" href="#fn2-11ref"><sup>2-11</sup></a>: Voor toelichting, zie paragraaf 3.11
+2-11: Voor toelichting, zie paragraaf 3.11
 
-<a id="fn2-12" href="#fn2-12ref"><sup>2-12</sup></a>: Geef bij overig in uw eigen informatiemodel aan wat u er onder verstaat.
+2-12: Geef bij overig in uw eigen informatiemodel aan wat u er onder verstaat.
