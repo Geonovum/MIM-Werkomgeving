@@ -60,12 +60,6 @@ metaclass. Deze in opgenomen in het diagram als ‘blauw gekleurde’ metaclasse
 
 Kern zonder Metagegevens
 
-Kern zonder Metagegevens
-
-Kern zonder Metagegevens
-
-Kern zonder Metagegevens
-
 | **MIM metaclass** | **Stereotype**      | **Metaclass UML 2.5**            | **In Sparx EA**  |
 |-------------------|---------------------|----------------------------------|------------------|
 | Objecttype        | «Objecttype»        | (UML) Class                      | Class            |
@@ -78,13 +72,7 @@ Kern zonder Metagegevens
 
 ### Datatypen
 
-![](media/afdcc82758497b2a463b78869a7bee62.jpg)
-
-Datatypen zonder Metagegevens
-
-Datatypen zonder Metagegevens
-
-Datatypen zonder Metagegevens
+![](media/5b9de60fa9082e7bf4ee1b7dde71ee57.png)
 
 Datatypen zonder Metagegevens
 
@@ -109,14 +97,6 @@ View 2: Datatypen
 
 Constraint
 
-Constraint
-
-Constraint
-
-Constraint
-
-*Constraint*
-
 View 3: Constraint
 
 | **MIM metaclass** | **Stereotype** | **Metaclass UML 2.5** | **In Sparx EA** |
@@ -126,12 +106,6 @@ View 3: Constraint
 *Relatierol*
 
 ![](media/240ca39c688efb06f70b34b8ec0b36d0.png)
-
-Relatierol
-
-Relatierol
-
-Relatierol
 
 Relatierol
 
