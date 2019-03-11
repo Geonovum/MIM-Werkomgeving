@@ -1,6 +1,8 @@
 **[Toelichting FINAL versie]**
 
-Deze versie is voorgelegd voor officiele besluitvorming en heet daarom versie
+*NB: Voorwoord moet worden aangepast!!!*
+
+Deze werkversie is voorgelegd voor officiele besluitvorming en heet daarom versie
 1.0 FINAL. Dit document wordt gezien als geheel stabiel.
 
 Mogelijk dat er nog een versie uitkomtwaarin nog wat meer gekeken is naar opmaak
@@ -20,16 +22,16 @@ op het gebied van informatiemodellering meegewerkt:
 
 | Naam                      | Organisatie    | Rol en achtergrond                                                                                                                                              |
 |---------------------------|----------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Ir. Ellen Debats          | VNG Realisatie | Beheerder KKG. KKG kerngroep. Expert gegevenstandaarden. Gemma standaarden, RSGB/RGBZ/imZTC.                                                                    |
-| Ir. Lennart van Bergen    | Kadaster       | Beheerder KKG. KKG kerngroep. Expert informatiemodellering. Modellenbureau Kadaster, IMKAD, IMBAG. Vanuit DSO betrokken bij LVBB (PR30) en de catalogus (PR06). |
-| Ir. Paul Janssen          | Geonovum       | Beheerder KKG. KKG kerngroep. Expert GEO standaarden. NEN3610. IMRO, IMKL. Vanuit DSO betrokken bij informatiemodel standaarden Omgevingswet (PR04).            |
-| Ir. Arjan C. Kloosterboer | VNG Realisatie | KKG kerngroep. Gegevensarchitect GEMMA.                                                                                                                         |
-| Ing. Peter Lentjes        | Kadaster       | KKG kerngroep. Modellenbureau Kadaster, IMBRT, IMGEO (BGT)                                                                                                      |
-| Drs. Wilko Quak           | TU Delft       | KKG kerngroep. Expert GEO standaarden. NEN3610. TU Delft.                                                                                                       |
-| Drs. Linda van de Brink   | Geonovum       | KKG kerngroep. Expert GEO standaarden. NEN3610, BRO, IMGEO (BGT)                                                                                                |
-| Drs. Thies Mesdag         | Kadaster       | Reviewer. Modellenbureau Kadaster, IMKAD.                                                                                                                       |
-| Drs. Arjan Loeffen        | Armatiek BV    | Reviewer. Expert model driven design. Implementatie in tooling.                                                                                                 |
-| Drs. Jos Warmer           | OpenModeling   | Reviewer. Expert UML, model driven design, UML.                                                                                                                 |
+| Ellen Debats              | VNG Realisatie | Beheerder KKG. KKG kerngroep. Expert gegevenstandaarden. Gemma standaarden, RSGB/RGBZ/imZTC.                                                                    |
+| Lennart van Bergen        | Kadaster       | Beheerder KKG. KKG kerngroep. Expert informatiemodellering. Modellenbureau Kadaster, IMKAD, IMBAG. Vanuit DSO betrokken bij LVBB (PR30) en de catalogus (PR06). |
+| Paul Janssen              | Geonovum       | Beheerder KKG. KKG kerngroep. Expert GEO standaarden. NEN3610. IMRO, IMKL. Vanuit DSO betrokken bij informatiemodel standaarden Omgevingswet (PR04).            |
+| Arjan C. Kloosterboer     | VNG Realisatie | KKG kerngroep. Gegevensarchitect GEMMA.                                                                                                                         |
+| Peter Lentjes             | Kadaster       | KKG kerngroep. Modellenbureau Kadaster, IMBRT, IMGEO (BGT)                                                                                                      |
+| Wilko Quak                | TU Delft       | KKG kerngroep. Expert GEO standaarden. NEN3610. TU Delft.                                                                                                       |
+| Linda van de Brink        | Geonovum       | KKG kerngroep. Expert GEO standaarden. NEN3610, BRO, IMGEO (BGT)                                                                                                |
+| Thies Mesdag              | Kadaster       | Reviewer. Modellenbureau Kadaster, IMKAD.                                                                                                                       |
+| Arjan Loeffen             | Armatiek BV    | Reviewer. Expert model driven design. Implementatie in tooling.                                                                                                 |
+| Jos Warmer                | OpenModeling   | Reviewer. Expert UML, model driven design, UML.                                                                                                                 |
 
 **Voorwoord**
 
@@ -48,14 +50,14 @@ geeft niet alleen extra mogelijkheden om informatie slim te combineren maar
 maakt ook een aantal verschillende uitgangspunten zichtbaar in de werkwijze van
 Kadaster, VNG Realisatie (voorheen KING) en Geonovum als het gaat om het modelleren van informatie.
 
-Met het voorliggende KKG-metamodel komen we tot een gemeenschappelijk
+Met het voorliggende MIM-metamodel komen we tot een gemeenschappelijk
 vertrekpunt voor het opstellen van informatiemodellen. Het voorziet enerzijds in
 duidelijke afspraken over het vastleggen van gegevensspecificaties en biedt
 anderzijds ruimte aan de verschillende niveaus van modellering. Bijzonder aan
 het KKG model is dat we afspraken maken die over meerdere bestuurslagen heen
 gaan.
 
-Wij zijn er van overtuigd dat het KKG-metamodel gaat leiden tot vergelijkbare
+Wij zijn er van overtuigd dat het MIM-metamodel gaat leiden tot vergelijkbare
 modellen voor delen van de overheidsinformatievoorziening, zoals bijvoorbeeld de
 informatiehuizen in het DSO, en houvast geeft bij het opstellen van
 informatiemodellen ongeacht het beschouwingsniveau dat van toepassing is. Vanuit
