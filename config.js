@@ -37,17 +37,17 @@ var respecConfig =
   editors: 
   [
     {
-      name:       "Ir. Ellen Debats",
+      name:       "Ellen Debats",
       company:    "VNG Realisatie (voorheen KING)",
       companyURL: "https://www.vng.nl"
     }, 
     {
-      name:       "Ir. Lennart van Bergen",
+      name:       "Lennart van Bergen",
       company:    "Kadaster",
       companyURL: "https://www.kadaster.nl"
     }, 
     {
-      name:       "Ir. Paul Janssen",
+      name:       "Paul Janssen",
       company:    "Geonovum",
       companyURL: "https://www.geonovum.nl"
     },
@@ -57,43 +57,43 @@ var respecConfig =
   authors: 
   [
     {
-      name:       "Ir. Ellen Debats",
+      name:       "Ellen Debats",
       company:    "VNG Realisatie",
       companyURL: "https://www.vng.nl"
     }, 
     {
-      name:       "Ir. Lennart van Bergen",
+      name:       "Lennart van Bergen",
       company:    "Kadaster",
       companyURL: "https://www.kadaster.nl"
     }, 
     {
-      name:       "Ir. Paul Janssen",
+      name:       "Paul Janssen",
       company:    "Geonovum",
       companyURL: "https://www.geonovum.nl"
     },
     {
-      name:       "Ir. Arjan C. Kloosterboer",
+      name:       "Arjan C. Kloosterboer",
       company:    "VNG Realisatie (voorheen KING)",
       companyURL: "https://www.vng.nl"
     },
     {
-      name:       "Ing. Peter Lentjens",
+      name:       "Peter Lentjens",
       company:    "Kadaster",
       companyURL: "https://www.kadaster.nl"
     },
     {
-      name:       "Drs. Wilko Quak",
+      name:       "Wilko Quak",
       company:    "TU Delft",
       companyURL: "https://www.tudelft.nl"
     },
     {
-      name:       "Dr. Linda van den Brink",
+      name:       "Linda van den Brink",
       company:    "Geonovum",
       companyURL: "https://www.geonovum.nl"
     },
   ],
   //-- shortName is verplicht! (komt in de URL: kies logische naam) --------------------
-  shortName: "mim10", 	            // Wordt gebruikt in de document URL
+  shortName: "mim101", 	            // Wordt gebruikt in de document URL
   //-- pubDomain is verplicht! (komt in de URL: Activeer 1 van de volgende) ------------
   pubDomain: "mim", 	              // Metamodel Informatie Modellering
   //pubDomain: "bor", 	            // Beheer Openbare Ruimte
