@@ -11,7 +11,7 @@ Bijlage II: Modelelementen en metagegevens als diagram
 
 Deze bijlage bevat alle modelelementen en metagegevens in één diagram.
 
-*Kern - Relatiesoort is leidend (zie 3.2.3.1)*
+*Kern - Relatiesoort is leidend (zie 2.3.2.1)*
 
 ![](media/3e87a2ea83fc484f3dd9f9c194a4048d.png)
 
