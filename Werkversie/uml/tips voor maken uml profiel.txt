@@ -1,0 +1,6 @@
+Tips bij maken UML profiel:
+
+- neem de definities van tagged valuse niet op in notes veld van taggedvalues.
+- voor: de definitie is dan goed te zien bij het het gebruik van het UML profiel
+- tegen bij de memo velden wordt de tekst uit het notes veld als default tekst gebruikt voor het invullen van het notes veld.
+- status: niet helemaal meer zeker. Moet ik weer testen.

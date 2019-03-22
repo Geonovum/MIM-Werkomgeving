@@ -1,0 +1,44 @@
+
+2019-03-21
+
+MDG, profiel en toolbox aangepast van KKG naar MIM. Alles op basis van zoek/vervang KKG -> MIM
+
+MDG_KKGv1.0-alt1_build_02.xml -> MDG_MIMv1.0.1io-alt1_build_01.xml
+MDG_KKGv1.0-alt2_build_02.xml -> MDG_MIMv1.0.1io-alt2_build_01.xml
+
+KKGv1.0.1-alt1_20171020.xml -> MIMv1.0.1i.o-alt1_20190321.xml
+KKGv1.0.1-alt2_20171020.xml -> MIMv1.0.1io-alt2_20190321.xml
+
+toolbox_KKGv1.0.1_alt1.xml -> toolbox_MIMv1.0.1io_alt1.xml
+toolbox_KKGv1.0.1_alt2.xml -> toolbox_MIMv1.0.1io_alt2.xml
+
+2019-03-xx
+MIM 1.0.1 io.eapx
+Generalisatie tussen datatype in model gezet.
+Generaliastie was al mogelijk in EA UML profiel (MDG)
+
+
+2019-03-xx
+MIM 1.0.1 io.eapx: KKG verbagen door MIM op basis van XML export en weer import
+--------------------------------------------------------------------------------------------
+2018-05-24: Verstuurd naar Peter Lentjes voor doorontwikkeling
+--------------------------------------------------------------------------------------------------------------------
+UML 20171020 versie 1.0.1 - doorontwikkeling:
+20171020:
+definities bij stereotypen toegevoegd in uml profile
+definities/toelichting bij tagged values in uml profile toegevoegd
+toelichting bij toolbox onderdelen toegevoegd.
+
+twee mdg gemaakt. En gecontroleerd in test KKG-alt1_v1.0_build_02.EAP.
+MDG_KKGv1.0-alt1_build_02.xml
+MDG_KKGv1.0-alt1_build_02.xml
+
+Het is UML profile van KKG versie 1.0 buildversie 1.0_02
+
+
+opmerking: nieuw mdg laden. Per onderdeel synchroniseren. Memo velden krijgen geen uitleg bij bestaande tagged values
+---------------------------------------------------------------------------------------------------------------------
+
+UML: 20170703 versie 1.0 umlprofiel KKGv1.0-alt1_0707 , KKGv1.0-alt1_0707
+
+
