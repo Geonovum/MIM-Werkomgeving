@@ -680,23 +680,24 @@ ZTC); - Sector- en domein-specifieke informatiemodellen (LV-WOZ, IMRO e.d.).
 
 ## Mogelijk geen waarde
 
-Een attribuut kan geen waarde hebben, omdat de waarde optioneel is en er niet is. Bijvoorbeeld bij een tussenvoegsel van een achternaam. Maar een attribuut kan ook mogelijk geen waarde hebben, omdat de waarde niet bekend is. Dat er geen waarde bij een attribuut geregistreerd is, wil dus niet zeggen dat er geen betekenis aan gehecht kan worden. Zo kan het niet hebben van een waarde van de overlijdensdatum van een persoon, betekenen dat deze persoon nog leeft. Maar het kan ook betekenen dat de persoon overleden is, maar dat de datum waarop deze persoon overleden is, niet bekend is.
+Een attribuut kan geen waarde hebben, omdat er in de werkelijkheid geen waarde bestaat. Zo hebben sommige achternamen een tussenvoegsel en andere niet. Maar een attribuut kan ook geen waarde hebben, omdat de werkelijke waarde niet bekend is. Dat er geen waarde bij een attribuut geregistreerd is, wil dus niet zeggen dat er geen betekenis aan gehecht kan worden. Zo kan het niet hebben van een waarde van de overlijdensdatum van een persoon betekenen dat deze persoon nog leeft. Maar het kan ook betekenen dat de persoon is overleden, maar dat de datum waarop niet bekend is. Dit verschil is alleen vast te leggen door onderscheid te maken. Een verplicht veld optioneel maken, is niet de juiste oplossing en kan bovendien de indruk geven dat het veld niet relevant is.
 
-Dit verschil is niet vast te leggen zonder onderscheid te maken en vaak is het ook van belang om de reden waarom de waarde niet bekend is, vast te leggen. Een verplicht veld optioneel maken is daarom niet de juiste oplossing. In die situaties waarin het hebben van geen waarde van een attribuut een betekenis kan hebben maken we gebruik van het metagegeven 'Mogelijk geen waarde'. Dit metagegeven geeft op informatiemodelniveau aan dat het attribuut een gangbare waarde kan hebben, maar dat deze waarde ook niet bekend kan zijn.
+Een waarde die in de werkelijkheid niet hoeft te bestaan, modelleren we als een optioneel attribuut met een minimale kardinaliteit van nul. Het ontbreken van een optionele waarde betekent dat bekend is dat er in de betreffende situatie in de werkelijkheid geen waarde bestaat.
 
-Bij de daadwerkelijke registratie kan het zo zijn dat:
+Een attribuut dat niet gevuld hoeft te zijn als de waarde niet bekend is, ongeacht of er in de werkelijkheid een waarde bestaat, modelleren we met het metagegeven 'Mogelijk geen waarde'. Een dergelijk attribuut heeft een waarde uit het gedefinieerde domein of de waarde ontbreekt. Vaak is het zinvol om daarbij dan ook een reden voor het ontbreken op te geven.
 
-- De waarde van het attribuut bekend is, te weten een waarde bij een verplicht attribuut of geen waarde bij een optioneel attribuut.
-- De waarde van het attribuut onbekend is en niet meer kan worden achterhaald.
-- De waarde van het attribuut onbekend is en mogelijk wel nog kan worden achterhaald.
+Het wel of niet optioneel zijn en het wel of niet mogen ontbreken van een waarde die in de werkelijkheid wel bestaat, zijn dus twee verschillende en van elkaar onafhankelijke eigenschappen. In combinatie beschrijven deze eigenschappen vier mogelijkheden:
 
-Wat de toegestane redenen zijn voor een specifiek attribuut, is aan de beheerder van het informatiemodel. Het is nuttig om de redenen te beperken op informatiemodelniveau. Dit kan dan vastgelegd worden bij de attribuutsoort of bij relatiesoort zelf, bijvoorbeeld in de UML Notes. In de registratie mogen dan alleen deze redenen worden geregistreerd.
-
-Een attribuut dat in de werkelijkheid gewoon geen waarde kan hebben en waar bovenstaand onderscheid niet van toepassing is, duiden we niet aan met dit metagegeven. Het betreft dan gewoon een optioneel attribuut dat niet is gevuld. Anders gezegd, het is bekend dat het attribuut niet gevuld is en het hebben van geen waarde heeft dan geen verdere betekenis.
+- Het attribuut heeft in de werkelijkheid altijd een waarde en die waarde moet zijn gevuld, zoals de identificatie;
+- Het attribuut heeft in de werkelijkheid altijd een waarde, maar die waarde hoeft niet bekend te zijn, bijvoorbeeld de geboortedatum;
+- Het attribuut heeft in de werkelijkheid soms een waarde en die waarde moet dan zijn gevuld, bijvoorbeeld de officiële straatnaam;
+- Het attribuut heeft in de werkelijkheid soms een waarde, maar die waarde en zelfs het bestaan ervan hoeven niet bekend te zijn, zoals de titulatuur of de postcode.
 
 Ook een relatiesoort of compositierelatie kan mogelijk geen waarde hebben waaraan betekenis gehecht kan worden en ook daar maken we gebruik van het metagegeven 'Mogelijk geen waarde'.
 
-In de registraties komen we hier en daar enumeraties tegen waarin de waarde 'onbekend' is opgenomen. Bijvoorbeeld de geslachtsaanduiding van een natuurlijk persoon. De enumeratie bestaat uit de waarden man, vrouw en onbekend. In dit metamodel stellen we dat dit niet mag c.q. niet de bedoeling is bij de modellering van eigen gegevens in een eigen informatiemodel. Uitzondering is wanneer het een situatie betreft waarin gegevens worden overgenomen uit een registratie die wel de waarde 'onbekend' gebruikt. Dan kan er ook gekozen worden voor het een-op-een overnemen van de gegevensdefinitie uit deze andere registratie.
+De beheerder van het informatiemodel bepaalt welke redenen hij of zij toestaat voor het ontbreken van waarden die in de werkelijkheid wel bestaan. Het is nuttig om deze redenen op informatiemodelniveau te beperken. Dit kan dan vastgelegd worden bij de attribuutsoort of bij relatiesoort, bijvoorbeeld in de UML Notes. In de registratie mogen alleen deze redenen worden geregistreerd. Daarbij kan het zinvol zijn om te vermelden of een onbekende waarde mogelijk nog kan worden achterhaald of dat dat niet meer kan.
+
+Soms komen we enumeraties tegen waarin een waarde zoals 'onbekend' is opgenomen, bijvoorbeeld bij de geslachtsaanduiding van een natuurlijk persoon. De enumeratie bestaat dan uit de waarden man, vrouw en onbekend. In dit metamodel stellen we dat dit niet mag c.q. niet de bedoeling is bij de modellering van eigen gegevens in een eigen informatiemodel. Er geldt een uitzondering wanneer het gaat om gegevens die worden overgenomen uit een andere registratie die wel de waarde 'onbekend' gebruikt. Dan kan er worden gekozen voor het een-op-een overnemen van de gegevensdefinitie uit de andere registratie.
 
 ## Externe schema’s (her-) gebruiken
 
