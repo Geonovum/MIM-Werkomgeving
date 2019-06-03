@@ -1,0 +1,441 @@
+# MIM vocabulary
+# Currently based on mim 1.0
+#
+# Source: https://www.geonovum.nl/geo-standaarden/metamodel-informatiemodellering/nationaal-metamodel-voor-informatiemodellering
+#
+
+@prefix mim: <http://bp4mc2.org/def/mim#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
+
+#
+# Classes
+#
+
+mim:Objecttype a owl:Class;
+  rdfs:label "Objecttype"@nl;
+  rdfs:comment "De typering van een groep objecten (in de werkelijkheid) die binnen een domein relevant zijn en als gelijksoortig worden beschouwd."@nl;
+.
+mim:Attribuutsoort a owl:Class;
+  rdfs:label "Attribuutsoort"@nl;
+  rdfs:comment "De typering van gelijksoortige gegevens die voor een objecttype van toepassing is."@nl;
+.
+mim:Gegevensgroep a owl:Class;
+  rdfs:label "Gegevensgroep"@nl;
+  rdfs:comment "Een typering van een groep van gelijksoortige gegevens die voor een objecttype van toepassing is."@nl;
+.
+mim:Gegevensgroeptype a owl:Class;
+  rdfs:label "Gegevensgroeptype"@nl;
+  rdfs:comment "Een groep van met elkaar samenhangende attribuutsoorten. Een gegevensgroeptype is altijd een type van een gegevensgroep."@nl;
+.
+mim:Generalisatie a owl:Class;
+  rdfs:label "Generalisatie"@nl;
+  rdfs:comment "De typering van het hiërarchische verband tussen een meer generiek object van een objecttype en een meer specifiek object van een ander objecttype waarbij het laatstgenoemde object eigenschappen van het eerstgenoemde object overerft."@nl;
+.
+mim:Relatiesoort a owl:Class;
+  rdfs:label "Relatiesoort"@nl;
+  rdfs:comment "De typering van het structurele verband tussen een object van een objecttype en een (ander) object van een ander (of hetzelfde) objecttype."@nl;
+.
+mim:Relatieklasse a owl:Class;
+  rdfs:subClassOf mim:Relatiesoort;
+  rdfs:label "Relatieklasse"@nl;
+  rdfs:comment "Een relatiesoort met eigenschappen."@nl;
+.
+
+# Datatypen
+mim:Datatype a owl:Class;
+  rdfs:label "Datatype"@nl;
+  rdfs:comment "Een datatype"; #In het brondocument wordt geen definitieve gegeven van het abstracte datatype
+.
+mim:PrimitiefDatatype a owl:Class;
+  rdfs:subClassOf mim:Datatype;
+  rdfs:label "Primitief datatype"@nl;
+  rdfs:comment "Een in het eigen model gedefinieerd primitieve datatype. Deze worden wel door de modelleur gecreëerd, met een eigen naam en een eigen definitie (en eigen metagegevens)."@nl;
+.
+mim:GestructureerdDatatype a owl:Class;
+  rdfs:subClassOf mim:Datatype;
+  rdfs:label "Gestructureerd datatype"@nl;
+  rdfs:comment "Specifiek benoemd gestructureerd datatype dat de structuur van een gegeven beschrijft, samengesteld uit minimaal twee elementen."@nl;
+.
+mim:DataElement a owl:Class;
+  rdfs:label "Data element"@nl;
+  rdfs:comment "Een onderdeel/element van een Gestructureerd datatype die als type een datatype heeft."@nl;
+.
+mim:Union a owl:Class;
+  rdfs:subClassOf mim:Datatype;
+  rdfs:label "Union"@nl;
+  rdfs:comment "Gestructureerd datatype, waarmee wordt aangegeven dat er meer dan één mogelijkheid is voor het datatype van een attribuut. Het attribuut zelf krijgt als datatype de union. De union biedt een keuze uit verschillende datatypes, elk afzonderlijk beschreven in een union element."@nl;
+.
+mim:UnionElement a owl:Class;
+  rdfs:label "Union element"@nl;
+  rdfs:comment "Een type dat gebruikt kan worden voor het attribuut zoals beschreven in de definitie van Union. Het union element is een onderdeel van een Union, uitgedrukt in een eigenschap (attribute) van een union, die als keuze binnen de Union is gerepresenteerd."@nl;
+.
+mim:Enumeratie a owl:Class;
+  rdfs:subClassOf mim:Datatype;
+  rdfs:label "Enumeratie"@nl;
+  rdfs:comment "Een datatype waarvan de mogelijke waarden limitatief zijn opgesomd in een statische lijst."@nl;
+.
+mim:Enumeratiewaarde a owl:Class;
+  rdfs:label "Enumeratiewaarde"@nl;
+  rdfs:comment "Een gedefinieerde waarde, in de vorm van een eenmalig vastgesteld constant gegeven."@nl;
+.
+mim:Referentielijst a owl:Class;
+  rdfs:subClassOf mim:Datatype;
+  rdfs:label "Referentielijst"@nl;
+  rdfs:comment "Een lijst met een opsomming van de mogelijke domeinwaarden van een attribuutsoort, die buiten het model in een externe waardenlijst worden beheerd. De domeinwaarden in de lijst kunnen in de loop van de tijd aangepast, uitgebreid, of verwijderd worden, zonder dat het informatiemodel aangepast wordt (in tegenstelling tot bij een enumeratie)."@nl;
+.
+mim:ReferentieElement a owl:Class;
+  rdfs:label "Referentie element"@nl;
+  rdfs:comment "Een eigenschap van een object in een referentielijst in de vorm van een gegeven."@nl;
+.
+mim:CodeList a owl:Class;
+  rdfs:subClassOf mim:Datatype;
+  rdfs:label "CodeList"@nl;
+  rdfs:comment "Een referentielijst die extern wordt beheerd, en geen onderdeel is van het informatiemodel"@nl;
+.
+
+# Overige
+mim:Id a owl:Class;
+  rdfs:subClassOf mim:RelatierolTarget;
+  rdfs:label "id"@nl;
+  rdfs:comment "Aanduiding dat de relatiesoort waarop de «id» is gedefinieerd een onderdeel is van de unieke aanduiding van een objecttype."@nl;
+.
+mim:Constraint a owl:Class;
+  rdfs:label "Constraint"@nl;
+  rdfs:comment "Een constraint is een conditie of een beperking, die over een of meerdere modelelementen uit het informatiemodel geldt."@nl;
+.
+
+# Relatierol
+mim:Relatierol a owl:Class;
+  rdfs:label "Relatierol (abstract)"@nl;
+  rdfs:comment "De benaming van de manier waarop een object deelneemt aan een relatie met een ander object."@nl;
+.
+mim:RelatierolSource a owl:Class;
+  rdfs:subClassOf mim:Relatierol;
+  rdfs:label "Relatierol source"@nl;
+.
+mim:RelatierolTarget a owl:Class;
+  rdfs:subClassOf mim:Relatierol;
+  rdfs:label "Relatierol target"@nl;
+.
+
+# Externe koppeling
+mim:ExterneKoppeling a owl:Class;
+  rdfs:label "Externe koppeling"@nl;
+  rdfs:comment "Een associatie waarmee vanuit het perspectief van het eigen informatiemodel een objecttype uit het 'eigen' informatiemodel gekoppeld wordt aan een objecttype van een extern informatiemodel. De relatie zelf hoort bij het 'eigen' objecttype."@nl;
+.
+
+# Packages
+mim:Domein a owl:Class;
+  rdfs:label "Domein (het eigen IM)"@nl;
+.
+mim:Extern a owl:Class;
+  rdfs:label "Extern"@nl;
+  rdfs:comment "Een groepering van constructies die een externe instantie beheert en beschikbaar stelt aan een informatiemodel en die in het informatiemodel ongewijzigd gebruikt worden."@nl;
+.
+mim:View a owl:Class;
+  rdfs:label "View"@nl;
+  rdfs:comment "Een groepering van objecttypen die gespecificeerd zijn in een extern informatiemodel en vanuit het perspectief van het eigen informatiemodel inzicht geeft welke gegevens van deze objecttypen relevant zijn binnen het eigen informatiemodel."@nl;
+.
+
+#
+# Properties (nog controleren welke datatype en welke objecttype)
+#
+
+# Properties uit het model die niet gedefinieerd zijn
+mim:attribuut a owl:ObjectProperty;
+  rdfs:label "attribuut"@nl;
+.
+mim:gegevensgroep a owl:ObjectProperty;
+  rdfs:label "gegevensgroep"@nl;
+.
+
+# Ambigue eigenschappen
+mim:naam a owl:DatatypeProperty;
+  rdfs:label "naam"@nl;
+  rdfs:comment "De naam van het objecttype"@nl;
+  rdfs:comment "De naam van de attribuutsoort"@nl;
+  rdfs:comment "De naam van het gegevensgroep."@nl;
+  rdfs:comment "De naam van het gegevensgroeptype."@nl;
+  rdfs:comment "De naam van de relatiesoort."@nl;
+  rdfs:comment "De naam van de relatiesoort."@nl; #Deze regel komt bij relatierol vandaan
+  rdfs:comment "De naam van de generalisatie. Standaard 'is specialisatie van'."@nl;
+  rdfs:comment "De naam van de relatieklasse."@nl;
+  rdfs:comment "De naam van de externe koppeling. Standaard 'betreft'."@nl;
+  rdfs:comment "De naam van de lijst."@nl;
+  rdfs:comment "De naam van het referentie-element."@nl;
+  rdfs:comment "De naam van de lijst zoals gespecificeerd in de catalogus van de desbetreffende registratie dan wel, indien het een door de eigen organisatie toegevoegde lijst betreft, de door de eigen organisatie vastgestelde naam."@nl;
+  rdfs:comment "De naam van het data-element zoals gespecificeerd in de catalogus van de desbetreffende (basis)registratie."@nl;
+  rdfs:comment "De naam van het Gestructureerd datatype zoals gespecificeerd in de catalogus van de desbetreffende (basis)registratie."@nl;
+  rdfs:comment "De naam van het data-element zoals gespecificeerd in de catalogus van de desbetreffende (basis)registratie."@nl;
+  rdfs:comment "De naam van de union zoals gespecificeerd in de catalogus van de desbetreffende (basis)registratie."@nl;
+  rdfs:comment "De naam van het union element zoals gespecificeerd in de catalogus van de desbetreffende (basis)registratie."@nl;
+  rdfs:comment "De naam van het externe package zoals gespecificeerd door de externe instantie."@nl;
+  rdfs:comment "De naam van het view package."@nl;
+  rdfs:comment "De naam van de enumeratie zoals gespecificeerd in de catalogus van de desbetreffende registratie."@nl;
+  rdfs:comment "De naam van de enumeratiewaarde zoals gespecificeerd in de catalogus van de desbetreffende registratie."@nl;
+  rdfs:comment "De naam van de constraint."@nl;
+.
+mim:alias a owl:DatatypeProperty;
+  rdfs:label "alias"@nl;
+  rdfs:comment "Alternatieve weergave van de naam"@nl;
+.
+mim:datumOpname a owl:DatatypeProperty;
+  rdfs:label "datum opname"@nl;
+  rdfs:comment "De datum waarop het objecttype is opgenomen in het informatiemodel."@nl;
+  rdfs:comment "De datum waarop de attribuutsoort is opgenomen in het informatiemodel."@nl;
+  rdfs:comment "De datum waarop het gegevensgroep is opgenomen in het informatiemodel."@nl;
+  rdfs:comment "De datum waarop het gegevensgroeptype is opgenomen in het informatiemodel."@nl;
+  rdfs:comment "De datum waarop de relatiesoort is opgenomen in het informatiemodel."@nl;
+  rdfs:comment "De datum waarop de externe koppeling is opgenomen in het informatiemodel."@nl;
+  rdfs:comment "De datum waarop de lijst is opgenomen in het informatiemodel."@nl;
+  rdfs:comment "De datum waarop het referentie-element is opgenomen in het informatiemodel."@nl;
+  rdfs:comment "De datum waarop de lijst is opgenomen in het informatiemodel."@nl;
+  rdfs:comment "De datum waarop het Gestructureerd datatype is opgenomen in het informatiemodel."@nl; #Zou eigenlijk datatype moeten zijn, want daarvan
+  rdfs:comment "De datum waarop het Gestructureerd datatype is opgenomen in het informatiemodel."@nl;
+  rdfs:comment "De datum waarop de union is opgenomen in het informatiemodel."@nl;
+.
+mim:herkomst a owl:DatatypeProperty;
+  rdfs:label "herkomst"@nl;
+  rdfs:comment "De registratie in wiens catalogus het objecttype is gespecificeerd (oftewel de registratie waar het objecttype deel van uitmaakt). Deze specificatie is toegevoegd omdat het wel duidelijk moet zijn in welke (basis)registratie of informatiemodel het objecttype voorkomt (indien van toepassing)."@nl;
+  rdfs:comment "De registratie of het informatiemodel waaraan de attribuutsoort ontleend is dan wel de eigen organisatie indien het door de eigen organisatie toegevoegd is."@nl;
+  rdfs:comment "De registratie of het informatiemodel waaraan het gegevensgroep ontleend is dan wel de eigen organisatie indien het door de eigen organisatie toegevoegd is."@nl;
+  rdfs:comment "De registratie of het informatiemodel waaraan de relatiesoort ontleend is, dan wel de eigen organisatie. Indien zelf toegevoegd, dan is de herkomst de eigen organisatie."@nl;
+  rdfs:comment "De registratie in wiens catalogus de lijst is gespecificeerd (oftewel de registratie waar de referentielijst deel van uitmaakt)."@nl;
+  rdfs:comment "De registratie in wiens catalogus de lijst is gespecificeerd (oftewel de registratie waar de lijst deel van uitmaakt)."@nl;
+  rdfs:comment "De registratie of het informatiemodel waaraan het Gestructureerd datatype ontleend is dan wel de eigen organisatie indien het door de eigen organisatie toegevoegd is."@nl; #Copy-paste fout in origineel document: gaat hier om Datatype
+  rdfs:comment "De registratie of het informatiemodel waaraan het Gestructureerd datatype ontleend is dan wel de eigen organisatie indien het door de eigen organisatie toegevoegd is."@nl;
+  rdfs:comment "De registratie of het informatiemodel waaraan de union ontleend is dan wel de eigen organisatie indien het door de eigen organisatie toegevoegd is."@nl;
+  rdfs:comment "De registratie of het informatiemodel waaraan het package ontleend is. Bij een view is de herkomst nooit de eigen organsiatie."@nl;
+  rdfs:comment "De registratie of het informatiemodel waaraan het package ontleend is. Bij een view is de herkomst nooit de eigen organsiatie."@nl;
+.
+mim:definitie a owl:DatatypeProperty;
+  rdfs:label "definitie"@nl;
+  rdfs:comment "De beschrijving van de betekenis van het objecttype zoals gespecificeerd in de catalogus van de desbetreffende (basis)registratie of informatiemodel."@nl;
+  rdfs:comment "De beschrijving van de betekenis van de attribuutsoort."@nl;
+  rdfs:comment "De beschrijving van de betekenis van de gegevensgroep."@nl;
+  rdfs:comment "De beschrijving van de betekenis van de relatiesoort. Deze is verplicht als er geen source role respectievelijk target role is gespecificeerd."@nl;
+  rdfs:comment "De beschrijving van de betekenis van dit type"@nl; #Deze regel komt bij relatierol vandaan
+  rdfs:comment "De beschrijving van de betekenis van de relatieklasse"@nl;
+  rdfs:comment "De beschrijving van de betekenis van de lijst zoals gespecificeerd in de catalogus van de desbetreffende registratie."@nl;
+  rdfs:comment "De beschrijving van de betekenis van het referentie-element."@nl;
+  rdfs:comment "De beschrijving van de betekenis van de lijst zoals gespecificeerd in de catalogus van de desbetreffende registratie."@nl;
+  rdfs:comment "De beschrijving van de betekenis van het data-element zoals gespecificeerd in de catalogus van de desbetreffende (basis)registratie."@nl;
+  rdfs:comment "De beschrijving van de betekenis van het Gestructureerd datatype zoals gespecificeerd in de catalogus van de desbetreffende (basis)registratie."@nl;
+  rdfs:comment "De beschrijving van de betekenis van het data-element zoals gespecificeerd in de catalogus van de desbetreffende (basis)registratie."@nl;
+  rdfs:comment "De beschrijving van de betekenis van de union zoals gespecificeerd in de catalogus van de desbetreffende (basis)registratie."@nl;
+  rdfs:comment "De beschrijving van de betekenis van het union element zoals gespecificeerd in de catalogus van de desbetreffende (basis)registratie."@nl;
+  rdfs:comment "De beschrijving van de betekenis van het package, gezien vanuit het eigen informatiemodel."@nl;
+  rdfs:comment "De beschrijving van de betekenis van het package."@nl;
+  rdfs:comment "De beschrijving van de betekenis van de enumeratie zoals gespecificeerd in de catalogus van de desbetreffende registratie."@nl;
+  rdfs:comment "De beschrijving van de betekenis van de enumeratiewaarde zoals gespecificeerd in de catalogus van de desbetreffende registratie."@nl;
+.
+mim:herkomstDefinitie a owl:DatatypeProperty;
+  rdfs:label "herkomst definitie"@nl;
+  rdfs:comment "Voor objecttypen die deel uitmaken van een registratie is de definitie hieruit overgenomen."@nl;
+  rdfs:comment "De registratie of het informatiemodel waaruit de definitie is overgenomen dan wel een aanduiding die aangeeft uit welke bronnen de definitie is samengesteld."@nl;
+  rdfs:comment "De registratie of het informatiemodel waaruit de definitie is overgenomen dan wel een aanduiding die aangeeft uit welke bronnen de definitie is samengesteld."@nl;
+  rdfs:comment "De registratie of het informatiemodel waaruit de definitie is overgenomen dan wel een aanduiding die aangeeft uit welke bronnen de definitie is samengesteld."@nl;
+.
+mim:toelichting a owl:DatatypeProperty;
+  rdfs:label "toelichting"@nl;
+  rdfs:comment "Voor objecttypen die deel uitmaken van een (basis)registratie of informatiemodel betreft dit de daarin opgenomen toelichting."@nl;
+  rdfs:comment "Een inhoudelijke toelichting op de attribuutsoort."@nl;
+  rdfs:comment "Een inhoudelijke toelichting op de gegevensgroep."@nl;
+  rdfs:comment "Een inhoudelijke toelichting op de relatiesoort."@nl;
+  rdfs:comment "Voor lijsten die deel uitmaken van een registratie betreft dit de daarin opgenomen toelichting."@nl;
+  rdfs:comment "Een inhoudelijke toelichting op het referentie- element."@nl;
+  rdfs:comment "Voor lijsten die deel uitmaken van een registratie betreft dit de daarin opgenomen toelichting."@nl;
+.
+
+mim:indicatieMaterieleHistorie a owl:DatatypeProperty;
+  rdfs:label "Indicatie materiële historie"@nl;
+  rdfs:comment "Indicatie of de materiële historie van de attribuutsoort te bevragen is. Materiële historie geeft aan wanneer een verandering is opgetreden in de werkelijkheid die heeft geleid tot verandering van de attribuutwaarde."@nl;
+  rdfs:comment "Indicatie of de materiële historie van het gegevensgroep te bevragen is. Materiële historie geeft aan wanneer een verandering is opgetreden in de werkelijkheid die heeft geleid tot verandering van de attribuutwaarde."@nl;
+  rdfs:comment "Indicatie of de materiële historie van de relatiesoort te bevragen is. Materiële historie geeft aan wanneer een verandering is opgetreden in de werkelijkheid die heeft geleid tot verandering van de relatie."@nl;
+.
+mim:indicatieFormeleHistorie a owl:DatatypeProperty;
+  rdfs:label "Indicatie formele historie"@nl;
+  rdfs:comment "Indicatie of de formele historie van de attribuutsoort te bevragen is. Formele historie geeft aan wanneer in de administratie een verandering is verwerkt van de attribuutwaarde (wanneer was de verandering bekend en is deze verwerkt)."@nl;
+  rdfs:comment "Indicatie of de formele historie van het gegevensgroep te bevragen is. Formele historie geeft aan wanneer in de administratie een verandering een van de attribuutwaarden van de attribuutsoorten in de groep is verwerkt (wanneer was de verandering bekend en is deze verwerkt)."@nl;
+  rdfs:comment "Indicatie of de formele historie van de relatiesoort te bevragen is. Formele historie geeft aan wanneer in de administratie een verandering is verwerkt van de relatie (wanneer was de verandering bekend en is deze verwerkt)."@nl;
+.
+mim:kardinaliteit a owl:DatatypeProperty;
+  rdfs:label "kardinaliteit"@nl;
+  rdfs:comment "Deze indicatie geeft aan hoeveel keer waarden van deze attribuutsoort kunnen voorkomen bij een object van het betreffende objecttype, of bij het betreffende gegevensgroeptype"@nl;
+  rdfs:comment "Deze indicatie geeft aan hoeveel keer de gegevensgroep kan voorkomen bij een object van het betreffende objecttype"@nl;
+  rdfs:comment "Deze indicatie geeft aan hoeveel keer waarden van deze relatiesoort (i.c. relaties) kunnen voorkomen bij een object van het betreffende objecttype"@nl;
+.
+mim:authentiek a owl:DatatypeProperty;
+  rdfs:label "authentiek"@nl;
+  rdfs:comment "Aanduiding of het een authentiek gegeven (attribuutsoort) betreft."@nl;
+  rdfs:comment "Aanduiding of het een authentiek gegeven betreft."@nl;
+  rdfs:comment "Aanduiding of de attribuutsoort waarvan de relatiesoort is afgeleid, een authentiek gegeven (attribuutsoort) betreft."@nl;
+.
+mim:indicatieAfleidbaar a owl:DatatypeProperty;
+  rdfs:label "indicatie afleidbaar"@nl;
+  rdfs:comment "Aanduiding dat gegeven afleidbaar is uit andere attribuut- en/of relatiesoorten."@nl;
+  rdfs:comment "Aanduiding dat gegeven afleidbaar is uit andere attribuut- en/of relatiesoorten."@nl;
+.
+mim:mogelijkGeenWaarde a owl:DatatypeProperty;
+  rdfs:label "mogelijk geen waarde"@nl;
+  rdfs:comment "Aanduiding dat attribuutsoort geen waarde kan bevatten (de waarde zou er kunnen zijn, maar kan ook onbekend zijn, of bewust weggelaten)."@nl;
+  rdfs:comment "Aanduiding dat relatiesoort geen waarde met betekenis kan bevatten."@nl;
+.
+
+mim:objecttype a owl:ObjectProperty;
+  rdfs:label "objecttype";
+  rdfs:comment "Het objecttype waarvan de relatie een eigenschap is."@nl;
+  rdfs:comment "Het objecttype dat een specialisatie is van een (ander) objecttype."@nl; #Bij generalisatie
+  rdfs:comment "Het objecttype waarvan de relatie een eigenschap is."@nl;
+.
+mim:gerelateerdObjecttype a owl:ObjectProperty;
+  rdfs:label "gerelateerd objecttype";
+  rdfs:comment "Het objecttype waarmee een objecttype een logisch verband heeft"@nl;
+  rdfs:comment "Het objecttype dat de generalisatie is van een (ander) objecttype."@nl; #Bij generalisatie
+  rdfs:comment "Het objecttype uit een extern informatiemodel waarmee een objecttype een logische verbinding heeft."@nl;
+.
+mim:typeAggregatie a owl:ObjectProperty;
+  # Voorlopig: type aggregatie als object-property naar een lijst met aggregatietypen
+  rdfs:label "type aggregatie";
+  rdfs:comment "Het type aggregatie mag 'composite' zijn. Dit wordt gedaan als er een afhankelijkheid is in die zin dat de target niet kan bestaan zonder de source: de target vervalt als de source vervalt."@nl;
+  # Eigenlijk geen definitie, maar dit is wat er in het brondocument staat...
+  rdfs:comment "Aanduiding dat het een compositie relatie is. Waarde is altijd Composite bij externe koppeling."@nl;
+.
+mim:unidirectioneel a owl:DatatypeProperty;
+  rdfs:label "uni-directioneel"@nl;
+  rdfs:comment "Het gerelateerde objecttype (de target) waarvan het objecttype, die de eigenaar is van deze relatie (de source), kennis heeft."@nl;
+  rdfs:comment "Het gerelateerde objecttpe uit een extern informatiemodel (de target) waarvan het objecttype die de eigenaar van deze relatie is (de source) kennis heeft."@nl;
+.
+
+mim:locatie a owl:DatatypeProperty;
+  rdfs:label "Locatie"@nl;
+  rdfs:comment "Als het type van het attribuutsoort een waardenlijst is, dan wordt hier de locatie waar deze te vinden is opgegeven. Dit is in principe een URI (als er geen URI is, dan kan dit een URL zijn, waar de waardenlijst op basis van de naam van de waardenlijst te vinden is)."@nl;
+  rdfs:comment "De verwijzing naar de locatie van het bijbehorende package (dit kan een geheel model zijn in één package). Indien mogelijk is de verwijzing een URI of een URL."@nl;
+  rdfs:comment "De verwijzing naar de locatie van het bijbehorende informatiemodel waar de view over gaat. Indien mogelijk is de verwijzing een URI of een URL."@nl;
+.
+
+mim:element a owl:ObjectProperty;
+  rdfs:label "element"@nl;
+.
+
+# Objecttype
+mim:uniekeAanduiding a owl:DatatypeProperty;
+  rdfs:label "unieke aanduiding"@nl;
+  rdfs:comment "Voor objecttypen die deel uitmaken van een (basis)registratie of informatiemodel betreft dit de wijze waarop daarin voorkomende objecten (van dit type) uniek in de registratie worden aangeduid."@nl;
+.
+mim:populatie a owl:DatatypeProperty;
+  rdfs:label "populatie"@nl;
+  rdfs:comment "Voor objecttypen die deel uitmaken van een (basis)registratie betreft dit de beschrijving van de exemplaren van het gedefinieerde objecttype die in de desbetreffende (basis)- registratie voorhanden zijn."@nl;
+.
+mim:kwaliteit a owl:DatatypeProperty;
+  rdfs:label "kwaliteit"@nl;
+  rdfs:comment "Voor objecttypen die deel uitmaken van een registratie betreft dit de waarborgen voor de juistheid van de in de registratie opgenomen objecten van het desbetreffende type."@nl;
+.
+mim:indicatieAbstractObject a owl:DatatypeProperty;
+  rdfs:label "indicatie abstract object"@nl;
+  rdfs:comment "Conceptueel model: indicatie dat het objecttype een generalisatie is, waarvan een object als specialisatie altijd voorkomt in de hoedanigheid van een (en slechts één) van de specialisaties van het betreffende objecttype."@nl;
+  rdfs:comment "Logisch model: Indicatie dat er geen instanties (objecten) voor het betreffende objecttype mogen voorkomen."@nl;
+.
+
+# Attribuutsoort (komt ook terug bij referentie-element)
+mim:type a owl:ObjectProperty;
+  rdfs:label "type"@nl;
+  rdfs:comment "Het type waarmee waarden van deze attribuutsoort worden vastgelegd. Dit is altijd conform een datatype uit dit metamodel (of een extensie ervan)."@nl;
+.
+mim:lengte a owl:DatatypeProperty;
+  rdfs:label "lengte"@nl;
+  rdfs:comment "De aanduiding van de lengte van een gegeven. Getallen kunnen altijd positief of negatief zijn."@nl;
+.
+mim:patroon a owl:DatatypeProperty;
+  rdfs:label "patroon"@nl;
+  rdfs:comment "De verzameling van waarden die gegevens van deze attribuutsoort kunnen hebben, dat wil zeggen het waardenbereik, uitgedrukt in een specifieke structuur."@nl;
+.
+mim:formeelPatroon a owl:DatatypeProperty;
+  rdfs:label "formeel patroon"@nl;
+  rdfs:comment "Zoals patroon, formeel vastgelegd (met een reguliere expressie), uitgedrukt in een formele taal die door de computer wordt herkend."@nl;
+.
+mim:identificerend a owl:DatatypeProperty;
+  rdfs:label "identificerend"@nl;
+  rdfs:comment "Aanduiding dat attribuutsoort onderdeel uitmaakt van de unieke aanduiding van een object"@nl;
+.
+
+# Gegevensgroep
+mim:gegevensgroeptype a owl:ObjectProperty;
+  rdfs:label "gegevensgroeptype"@nl;
+  rdfs:comment "De verwijzing naar het bijbehorende gegevensgroeptype"@nl;
+.
+
+# Enumeratie
+mim:waarde a owl:ObjectProperty;
+  rdfs:label "waarde"@nl;
+.
+
+# Enumeratiewaarde
+mim:code a owl:DatatypeProperty;
+  rdfs:label "code"@nl;
+  rdfs:comment "De in een registratie of informatiemodel aan de enumeratiewaarde toegekend unieke code"@nl;
+.
+
+# Constraint
+mim:specificatieTekst a owl:DatatypeProperty;
+  rdfs:label "specificatie tekst"@nl;
+  rdfs:comment "De specificatie van de constraint in normale tekst."@nl;
+.
+mim:specificatieFormeel a owl:DatatypeProperty;
+  rdfs:label "specificatie formeel"@nl;
+  rdfs:comment "De beschrijving van de constraint in een formele specificatietaal, in OCL"@nl;
+.
+mim:constraint a owl:ObjectProperty;
+  rdfs:label "constraint"@nl;
+.
+
+#
+# Instanties
+#
+
+# Primitieve Datatypen
+mim:CharacterString a mim:PrimitiefDatatype;
+  rdfs:label "CharacterString"@nl;
+  mim:naam "CharacterString"@nl;
+  mim:definitie "Zie ISO 19103. Vrij vertaald: alle alfanumerieke tekens en speciale tekens die horen bij de gekozen characterset (standaard UTF-8), dus met diakrieten, white spaces, \-teken en newlines of HTML opmaak e.d. Mag starten met spatie. De maximale lengte is onbepaald."@nl;
+.
+mim:Integer a mim:PrimitiefDatatype;
+  rdfs:label "Integer"@nl;
+  mim:naam "Integer"@nl;
+  mim:definitie "Zie ISO11404 (subtype van ISO Number). Vrij vertaald: geheel getal, lengte is minimaal 1 en maximale lengte is onbepaald, zonder voorloopnullen."@nl;
+.
+mim:Real a mim:PrimitiefDatatype;
+  rdfs:label "Real"@nl;
+  mim:naam "Real"@nl;
+  mim:definitie "Zie ISO11404 (subtype van ISO Number). Vrij vertaald: een reëel getal, oftewel een rationeel getal zoals een Integer of een Decimal, of niet rationeel getal, zoals pi of de wortel van 2. Deze bestaat uit een (oneindig) aantal getallen, al dan niet achter de komma (floating point)."@nl;
+.
+
+# type aggregaties
+mim:Aggregatietypen a mim:Enumeratie;
+  rdfs:label "Aggregatietypen";
+  mim:naam "Aggregatietypen";
+  mim:definitie "Aggregatietypen conform UML";
+  mim:waarde mim:None;
+  mim:waarde mim:Composite;
+  mim:waarde mim:Aggregate;
+  skos:member mim:None;
+  skos:member mim:Composite;
+  skos:member mim:Aggregate;
+.
+mim:None a mim:Enumeratiewaarde;
+  rdfs:label "None"@nl;
+  mim:naam "None"@nl;
+  mim:definitie "Er is geen sprake van een aggregate"@nl;
+.
+mim:Composite a mim:Enumeratiewaarde;
+  rdfs:label "Composite"@nl;
+  mim:naam "Composite"@nl;
+  mim:definitie "Compositie (gesloten wiebertje)"@nl;
+.
+mim:Aggregate a mim:Enumeratiewaarde;
+  rdfs:label "Aggregate"@nl;
+  mim:naam "Aggregate"@nl;
+  mim:definitie "Aggregatie (open wiebertje)"@nl;
+.

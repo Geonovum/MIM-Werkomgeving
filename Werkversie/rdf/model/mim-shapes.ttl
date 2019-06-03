@@ -1,0 +1,585 @@
+# MIM vocabulary
+# Currently based on mim 1.0
+#
+# Source: https://www.geonovum.nl/geo-standaarden/metamodel-informatiemodellering/nationaal-metamodel-voor-informatiemodellering
+#
+# Hierbij is variant-1 (Relatiesoort centraal) uitgewerkt, variant-2 vereist eigenlijk een ander shacl model
+# Aanname, hoewel niet als zodanig beschreven, alias overal waar ook naam voorkomt, behalve als er een code voorkomt
+#
+
+@prefix mim: <http://bp4mc2.org/def/mim#>.
+@prefix shape: <http://bp4mc2.org/def/mim-shapes#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix sh: <http://www.w3.org/ns/shacl#>.
+@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
+
+#
+# NodeShapes
+#
+shape:Objecttype a sh:NodeShape;
+  sh:targetClass mim:Objecttype;
+  sh:name "mim:Objecttype";
+  sh:property shape:naam;
+  sh:property shape:alias;
+  sh:property shape:herkomst;
+  sh:property shape:definitie;
+  sh:property shape:herkomstDefinitie;
+  sh:property shape:datumOpname;
+  sh:property shape:uniekeAanduiding;
+  sh:property shape:populatie;
+  sh:property shape:kwaliteit;
+  sh:property shape:toelichting;
+  sh:property shape:indicatieAbstractObject;
+  sh:property shape:attribuut;
+  sh:property shape:gegevensgroep;
+  sh:property shape:constraint;
+.
+shape:Attribuutsoort a sh:NodeShape;
+  sh:targetClass mim:Attribuutsoort;
+  sh:name "mim:Attribuutsoort";
+  sh:property shape:naam;
+  sh:property shape:alias;
+  sh:property shape:herkomst;
+  sh:property shape:definitie;
+  sh:property shape:herkomstDefinitie;
+  sh:property shape:datumOpname;
+  sh:property shape:type;
+  sh:property shape:lengte;
+  sh:property shape:patroon;
+  sh:property shape:formeelPatroon;
+  sh:property shape:indicatieMaterieleHistorie;
+  sh:property shape:indicatieFormeleHistorie;
+  sh:property shape:locatieOptioneel;
+  sh:property shape:kardinaliteit;
+  sh:property shape:authentiek;
+  sh:property shape:toelichting;
+  sh:property shape:indicatieAfleidbaar;
+  sh:property shape:mogelijkGeenWaarde;
+  sh:property shape:identificerend;
+.
+shape:Gegevensgroep a sh:NodeShape;
+  sh:targetClass mim:Gegevensgroep;
+  sh:name "mim:Gegevensgroep";
+  sh:property shape:naam;
+  sh:property shape:alias;
+  sh:property shape:definitie;
+  sh:property shape:toelichting;
+  sh:property shape:gegevensgroeptype;
+  sh:property shape:herkomst;
+  sh:property shape:herkomstDefinitie;
+  sh:property shape:datumOpname;
+  sh:property shape:indicatieMaterieleHistorie;
+  sh:property shape:indicatieFormeleHistorie;
+  sh:property shape:kardinaliteit;
+  sh:property shape:authentiek;
+.
+shape:Gegevensgroeptype a sh:NodeShape;
+  sh:targetClass mim:Gegevensgroeptype;
+  sh:name "mim:Gegevensgroeptype";
+  sh:property shape:naam;
+  sh:property shape:alias;
+  sh:property shape:datumOpname;
+  sh:property shape:attribuut;
+  sh:property shape:gegevensgroep;
+  sh:property shape:constraint;
+.
+shape:Relatiesoort a sh:NodeShape;
+  sh:targetClass mim:Relatiesoort;
+  sh:name "mim:Relatiesoort";
+  sh:property shape:naam;
+  sh:property shape:alias;
+  sh:property shape:unidirectioneel;
+  sh:property shape:objecttype;
+  sh:property shape:gerelateerdObjecttype;
+  sh:property shape:typeAggregatie;
+  sh:property shape:kardinaliteit;
+  sh:property shape:herkomst;
+  sh:property shape:definitie;
+  sh:property shape:herkomstDefinitie;
+  sh:property shape:datumOpname;
+  sh:property shape:indicatieMaterieleHistorie;
+  sh:property shape:indicatieFormeleHistorie;
+  sh:property shape:authentiek;
+  sh:property shape:indicatieAfleidbaar;
+  sh:property shape:toelichting;
+  sh:property shape:mogelijkGeenWaarde;
+.
+shape:Relatierol a sh:NodeShape;
+  sh:targetClass mim:Relatierol;
+  sh:name "mim:Relatierol";
+  sh:property shape:naamOptioneel;
+  sh:property shape:alias;
+  sh:property shape:definitieOptioneel;
+.
+shape:Generalisatie a sh:NodeShape;
+  sh:targetClass mim:Generalisatie;
+  sh:name "mim:Generalisatie";
+  sh:property shape:naam;
+  sh:property shape:alias;
+  sh:property shape:objecttype;
+  sh:property shape:gerelateerdObjecttype;
+.
+shape:Relatieklasse a sh:NodeShape;
+  sh:targetClass mim:Relatieklasse;
+  sh:name "mim:Relatieklasse";
+  sh:property shape:naam;
+  sh:property shape:alias;
+  sh:property shape:definitie;
+  sh:property shape:constraint;
+.
+shape:ExterneKoppeling a sh:NodeShape;
+  sh:targetClass mim:ExterneKoppeling;
+  sh:name "mim:ExterneKoppeling";
+  sh:property shape:naamOptioneel;
+  sh:property shape:alias;
+  sh:property shape:datumOpname;
+  sh:property shape:objecttype;
+  sh:property shape:typeAggregatie;
+  sh:property shape:gerelateerdObjecttype;
+  sh:property shape:unidirectioneel;
+.
+shape:Referentielijst a sh:NodeShape;
+  sh:targetClass mim:Referentielijst;
+  sh:name "mim:Referentielijst";
+  sh:property shape:naam;
+  sh:property shape:alias;
+  sh:property shape:herkomst;
+  sh:property shape:definitie;
+  sh:property shape:datumOpname;
+  sh:property shape:toelichting;
+  sh:property shape:referentieElement;
+.
+shape:ReferentieElement a sh:NodeShape;
+  sh:targetClass mim:ReferentieElement;
+  sh:name "mim:ReferentieElement";
+  sh:property shape:naam;
+  sh:property shape:alias;
+  sh:property shape:definitie;
+  sh:property shape:datumOpname;
+  sh:property shape:type;
+  sh:property shape:lengte;
+  sh:property shape:patroon;
+  sh:property shape:formeelPatroon;
+  sh:property shape:kardinaliteit;
+  sh:property shape:identificerend; #In het document staat hier "identificatie": dat lijkt me een typefout?
+  sh:property shape:toelichting;
+.
+shape:CodeList a sh:NodeShape;
+  sh:targetClass mim:CodeList;
+  sh:name "mim:CodeList";
+  sh:property shape:naam;
+  sh:property shape:alias;
+  sh:property shape:herkomst;
+  sh:property shape:definitie;
+  sh:property shape:datumOpname;
+  sh:property shape:toelichting;
+  sh:property shape:locatie;
+.
+shape:Datatype a sh:NodeShape;
+  sh:targetClass mim:Datatype;
+  sh:name "mim:Datatype";
+  sh:property shape:naam;
+  sh:property shape:alias;
+  sh:property shape:definitie;
+  sh:property shape:lengte;
+  sh:property shape:patroon;
+  sh:property shape:formeelPatroon;
+  sh:property shape:herkomst;
+  sh:property shape:datumOpname;
+.
+shape:GestructureerdDatatype a sh:NodeShape;
+  sh:targetClass mim:GestructureerdDatatype;
+  sh:name "mim:GestructureerdDatatype";
+  sh:property shape:naam;
+  sh:property shape:alias;
+  sh:property shape:herkomst;
+  sh:property shape:definitie;
+  sh:property shape:patroon;
+  sh:property shape:formeelPatroon;
+  sh:property shape:datumOpname;
+  sh:property shape:dataElement;
+.
+shape:DataElement a sh:NodeShape;
+  sh:targetClass mim:DataElement;
+  sh:name "mim:DataElement";
+  sh:property shape:naam;
+  sh:property shape:alias;
+  sh:property shape:definitie;
+  sh:property shape:type;
+  sh:property shape:lengte;
+  sh:property shape:patroon;
+  sh:property shape:formeelPatroon;
+  sh:property shape:kardinaliteit;
+.
+shape:Union a sh:NodeShape;
+  sh:targetClass mim:Union;
+  sh:name "mim:Union";
+  sh:property shape:naam;
+  sh:property shape:alias;
+  sh:property shape:herkomst;
+  sh:property shape:definitie;
+  sh:property shape:datumOpname;
+  sh:property shape:unionElement;
+.
+shape:UnionElement a sh:NodeShape;
+  sh:targetClass mim:UnionElement;
+  sh:name "mim:UnionElement";
+  sh:property shape:naam;
+  sh:property shape:alias;
+  sh:property shape:definitie;
+  sh:property shape:type;
+  sh:property shape:lengte;
+  sh:property shape:patroon;
+  sh:property shape:formeelPatroon;
+  sh:property shape:kardinaliteit;
+.
+shape:Extern a sh:NodeShape;
+  sh:targetClass mim:Extern;
+  sh:name "mim:Extern";
+  sh:property shape:naam;
+  sh:property shape:alias;
+  sh:property shape:locatie;
+  sh:property shape:definitie;
+  sh:property shape:herkomst;
+.
+shape:View a sh:NodeShape;
+  sh:targetClass mim:View;
+  sh:name "mim:View";
+  sh:property shape:naam;
+  sh:property shape:alias;
+  sh:property shape:locatie;
+  sh:property shape:definitie;
+  sh:property shape:herkomst;
+.
+shape:Enumeratie a sh:NodeShape;
+  sh:targetClass mim:Enumeratie;
+  sh:name "mim:Enumeratie";
+  sh:property shape:naam;
+  sh:property shape:alias;
+  sh:property shape:definitie;
+  sh:property shape:waarde;
+.
+shape:Enumeratiewaarde a sh:NodeShape;
+  sh:targetClass mim:Enumeratiewaarde;
+  sh:name "mim:Enumeratiewaarde";
+  sh:property shape:naam;
+  sh:property shape:definitieOptioneel;
+  sh:property shape:code;
+.
+shape:Constraint a sh:NodeShape;
+  sh:targetClass mim:Constraint;
+  sh:name "mim:Constraint";
+  sh:property shape:naam;
+  sh:property shape:alias;
+  sh:property shape:specificatieTekst;
+  sh:property shape:specificatieFormeel;
+.
+
+# De volgende shapes zijn niet expliciet aangegeven, maar bestaan wel
+shape:Domein a sh:NodeShape;
+  sh:targetClass mim:Domein;
+  sh:name "mim:Domein";
+  sh:property shape:naam;
+  sh:property shape:alias;
+.
+shape:PrimitiefDatatype a sh:NodeShape;
+  sh:targetClass mim:PrimitiefDatatype;
+  sh:name "mim:PrimitiefDatatype";
+.
+shape:RelatierolSource a sh:NodeShape;
+  sh:targetClass mim:RelatierolSource;
+  sh:name "mim:RelatierolSource";
+  sh:property shape:objecttype;
+.
+shape:RelatierolTarget a sh:NodeShape;
+  sh:targetClass mim:RelatierolTarget;
+  sh:name "mim:RelatierolTarget";
+  sh:property shape:gerelateerdObjecttype;
+.
+shape:Id a sh:NodeShape;
+  sh:targetClass mim:Id;
+  sh:name "mim:Id";
+.
+
+#
+# PropertyShapes
+#
+
+# De meeste property shapes worden vaker gebruikt. Vandaar dat propertyshapes afzonderlijk zijn benoemd
+
+shape:naam a sh:PropertyShape;
+  sh:path mim:naam;
+  sh:name "mim:naam";
+  sh:minCount 1;
+  sh:maxCount 1;
+  sh:datatype xsd:string;
+.
+# In enkele gevallen wordt de naam-property ook optioneel gebruikt
+shape:naamOptioneel a sh:PropertyShape;
+  sh:path mim:naam;
+  sh:name "mim:naam";
+  sh:maxCount 1;
+  sh:datatype xsd:string;
+.
+shape:herkomst a sh:PropertyShape;
+  sh:path mim:herkomst;
+  sh:name "mim:herkomst";
+  sh:minCount 1;
+  sh:maxCount 1;
+  sh:datatype xsd:string;
+.
+shape:definitie a sh:PropertyShape;
+  sh:path mim:definitie;
+  sh:name "mim:definitie";
+  sh:minCount 1;
+  sh:maxCount 1;
+  sh:datatype xsd:string;
+.
+# In enkele gevallen wordt de definitie-property ook optioneel gebruikt
+shape:definitieOptioneel a sh:PropertyShape;
+  sh:path mim:definitie;
+  sh:name "mim:definitie";
+  sh:maxCount 1;
+  sh:datatype xsd:string;
+.
+shape:herkomstDefinitie a sh:PropertyShape;
+  sh:path mim:herkomstDefinitie;
+  sh:name "mim:herkomstDefinitie";
+  sh:minCount 1;
+  sh:maxCount 1;
+  sh:datatype xsd:string;
+.
+shape:datumOpname a sh:PropertyShape;
+  sh:path mim:datumOpname;
+  sh:name "mim:datumOpname";
+  sh:minCount 1;
+  sh:maxCount 1;
+  sh:datatype xsd:date;
+.
+shape:uniekeAanduiding a sh:PropertyShape;
+  sh:path mim:uniekeAanduiding;
+  sh:name "mim:uniekeAanduiding";
+  sh:minCount 1;
+  sh:maxCount 1;
+  sh:datatype xsd:string;
+.
+shape:populatie a sh:PropertyShape;
+  sh:path mim:populatie;
+  sh:name "mim:populatie";
+  sh:maxCount 1;
+  sh:datatype xsd:string;
+.
+shape:kwaliteit a sh:PropertyShape;
+  sh:path mim:kwaliteit;
+  sh:name "mim:kwaliteit";
+  sh:maxCount 1;
+  sh:datatype xsd:string;
+.
+shape:toelichting a sh:PropertyShape;
+  sh:path mim:toelichting;
+  sh:name "mim:toelichting";
+  sh:maxCount 1;
+  sh:datatype xsd:string;
+.
+shape:indicatieAbstractObject a sh:PropertyShape;
+  sh:path mim:indicatieAbstractObject;
+  sh:name "mim:indicatieAbstractObject";
+  sh:minCount 1;
+  sh:maxCount 1;
+  sh:datatype xsd:boolean;
+.
+shape:attribuut a sh:PropertyShape;
+  sh:path mim:attribuut;
+  sh:name "mim:attribuut";
+  sh:class mim:Attribuutsoort;
+.
+shape:gegevensgroep a sh:PropertyShape;
+  sh:path mim:gegevensgroep;
+  sh:name "mim:gegevensgroep";
+  sh:class mim:Gegevensgroep;
+.
+shape:type a sh:PropertyShape;
+  sh:path mim:type;
+  sh:name "mim:type";
+  sh:minCount 1;
+  sh:maxCount 1;
+  sh:class mim:Datatype;
+.
+shape:lengte a sh:PropertyShape;
+  sh:path mim:lengte;
+  sh:name "mim:lengte";
+  sh:maxCount 1;
+  sh:datatype xsd:string;
+.
+shape:patroon a sh:PropertyShape;
+  sh:path mim:patroon;
+  sh:name "mim:patroon";
+  sh:maxCount 1;
+  sh:datatype xsd:string;
+.
+shape:formeelPatroon a sh:PropertyShape;
+  sh:path mim:formeelPatroon;
+  sh:name "mim:formeelPatroon";
+  sh:maxCount 1;
+  sh:datatype xsd:string;
+.
+shape:indicatieMaterieleHistorie a sh:PropertyShape;
+  sh:path mim:indicatieMaterieleHistorie;
+  sh:name "mim:indicatieMaterieleHistorie";
+  sh:minCount 1;
+  sh:maxCount 1;
+  sh:datatype xsd:boolean;
+.
+shape:indicatieFormeleHistorie a sh:PropertyShape;
+  sh:path mim:indicatieFormeleHistorie;
+  sh:name "mim:indicatieFormeleHistorie";
+  sh:minCount 1;
+  sh:maxCount 1;
+  sh:datatype xsd:boolean;
+.
+shape:locatie a sh:PropertyShape;
+  sh:path mim:locatie;
+  sh:name "mim:locatie";
+  sh:minCount 1;
+  sh:maxCount 1;
+  sh:datatype xsd:string;
+.
+shape:locatieOptioneel a sh:PropertyShape;
+  sh:path mim:locatie;
+  sh:name "mim:locatie";
+  sh:maxCount 1;
+  sh:datatype xsd:string;
+.
+shape:kardinaliteit a sh:PropertyShape;
+  sh:path mim:kardinaliteit;
+  sh:name "mim:kardinaliteit";
+  sh:minCount 1;
+  sh:maxCount 1;
+  sh:datatype xsd:string;
+.
+shape:authentiek a sh:PropertyShape;
+  sh:path mim:authentiek;
+  sh:name "mim:authentiek";
+  sh:minCount 1;
+  sh:maxCount 1;
+  sh:datatype xsd:boolean;
+.
+shape:indicatieAfleidbaar a sh:PropertyShape;
+  sh:path mim:indicatieAfleidbaar;
+  sh:name "mim:indicatieAfleidbaar";
+  sh:minCount 1;
+  sh:maxCount 1;
+  sh:datatype xsd:boolean;
+.
+shape:mogelijkGeenWaarde a sh:PropertyShape;
+  sh:path mim:mogelijkGeenWaarde;
+  sh:name "mim:mogelijkGeenWaarde";
+  sh:minCount 1;
+  sh:maxCount 1;
+  sh:datatype xsd:boolean;
+.
+shape:identificerend a sh:PropertyShape;
+  sh:path mim:identificerend;
+  sh:name "mim:identificerend";
+  sh:maxCount 1;
+  sh:datatype xsd:boolean;
+.
+shape:gegevensgroeptype a sh:PropertyShape;
+  sh:path mim:gegevensgroeptype;
+  sh:name "mim:gegevensgroeptype";
+  sh:minCount 1;
+  sh:maxCount 1;
+  sh:class mim:Gegevensgroeptype;
+.
+shape:unidirectioneel a sh:PropertyShape;
+  sh:path mim:unidirectioneel;
+  sh:name "mim:unidirectioneel";
+  sh:minCount 1;
+  sh:maxCount 1;
+  sh:datatype xsd:boolean;
+.
+shape:objecttype a sh:PropertyShape;
+  sh:path mim:objecttype;
+  sh:name "mim:objecttype";
+  sh:minCount 1;
+  sh:maxCount 1;
+  sh:class mim:Objecttype;
+.
+shape:gerelateerdObjecttype a sh:PropertyShape;
+  sh:path mim:gerelateerdObjecttype;
+  sh:name "mim:gerelateerdObjecttype";
+  sh:minCount 1;
+  sh:maxCount 1;
+  sh:class mim:Objecttype;
+.
+shape:typeAggregatie a sh:PropertyShape;
+  sh:path mim:typeAggregatie;
+  sh:name "mim:typeAggregatie";
+  sh:minCount 1;
+  sh:maxCount 1;
+  sh:node shape:Aggregatietypen;
+.
+shape:Aggregatietypen a sh:NodeShape;
+  sh:name "Aggregatietypen";
+  sh:property [
+    sh:path [sh:inversePath skos:member];
+    sh:hasValue mim:Aggregatietypen;
+  ]
+.
+shape:code a sh:PropertyShape;
+  sh:path mim:code;
+  sh:name "mim:code";
+  sh:maxCount 1;
+  sh:datatype xsd:string;
+.
+shape:specificatieTekst a sh:PropertyShape;
+  sh:path mim:specificatieTekst;
+  sh:name "mim:specificatieTekst";
+  sh:maxCount 1;
+  sh:datatype xsd:string;
+.
+shape:specificatieFormeel a sh:PropertyShape;
+  sh:path mim:specificatieFormeel;
+  sh:name "mim:specificatieFormeel";
+  sh:maxCount 1;
+  sh:datatype xsd:string;
+.
+
+# De volgende shapes zijn niet expliciet benoemd, maar bestaan wel (bv in diagram)
+
+shape:alias a sh:PropertyShape;
+  sh:path mim:alias;
+  sh:name "mim:alias";
+  sh:maxCount 1;
+  sh:datatype xsd:string;
+.
+shape:waarde a sh:PropertyShape;
+  sh:path mim:waarde;
+  sh:name "mim:waarde";
+  sh:minCount 1;
+  sh:class mim:Enumeratiewaarde;
+.
+shape:dataElement a sh:PropertyShape;
+  sh:path mim:element;
+  sh:name "mim:element";
+  sh:class mim:DataElement;
+.
+shape:referentieElement a sh:PropertyShape;
+  sh:path mim:element;
+  sh:name "mim:element";
+  sh:class mim:ReferentieElement;
+  sh:minCount 1;
+.
+shape:unionElement a sh:PropertyShape;
+  sh:path mim:element;
+  sh:name "mim:element";
+  sh:class mim:UnionElement;
+  sh:minCount 2;
+.
+shape:constraint a sh:PropertyShape;
+  sh:path mim:constraint;
+  sh:name "mim:constraint";
+  sh:class mim:Constraint;
+  sh:nodeKind sh:BlankNode;
+.
