@@ -56,6 +56,8 @@ metaclass. Deze in opgenomen in het diagram als ‘blauw gekleurde’ metaclasse
 
 ### Kern
 
+![](media\051b2d56a86f9dd0622b675ffe82c3e5.png)
+
 Kern zonder Metagegevens
 
 | **MIM metaclass** | **Stereotype**      | **Metaclass UML 2.5**            | **In Sparx EA**  |
@@ -69,6 +71,8 @@ Kern zonder Metagegevens
 | Relatieklasse     | «Relatieklasse»     | (UML) Association én (UML) Class | Associationclass |
 
 ### Datatypen
+
+![](media\3e87a2ea83fc484f3dd9f9c194a4048d.png)
 
 Datatypen zonder Metagegevens
 
