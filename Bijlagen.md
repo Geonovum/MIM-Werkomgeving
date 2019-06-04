@@ -4,7 +4,7 @@ Bijlagen
 Bijlage I: Overzicht toegepaste UML metaclasses
 -----------------------------------------------
 
-![](media/ae71a9abaacb1c50f1d25065f10668bd.png)
+![](media/db713545374d78b1070c439199543dc4.png)
 
 Bijlage II: Modelelementen en metagegevens als diagram
 ------------------------------------------------------
@@ -13,15 +13,15 @@ Deze bijlage bevat alle modelelementen en metagegevens in één diagram.
 
 *Kern - Relatiesoort is leidend (zie 2.3.2.1)*
 
-![](media/3e87a2ea83fc484f3dd9f9c194a4048d.png)
+![](media/e24da7f54d6326697cb4c519b5503ab4.png)
 
 *Kern - Relatierol is leidend (zie 2.3.2.2)*
 
-![](media/b8f565ae66f02874449ea0f2e2b6a52d.png)
+![](media/e56ff96ff3a05853b3b9272aac18739e.png)
 
 *Datatypen*
 
-![](media/ff1882c3ee36f2f4b7c634c951825856.png)
+![](media/1a48dec7e8b3c7a17434abb212b2c123.png)
 
 Bijlage III: Template naamgeving conventies
 -------------------------------------------
@@ -62,9 +62,8 @@ Bijlage III: Template naamgeving conventies
 | Code enumeratiewaarde          |                           |   |               |
 | Naam enumeratiewaarde          |                           |   |               |
 
-
 Bijlage IV: Versielog
--------------------------------------------
+---------------------
 
 In deze versie zijn de volgende issues verwerkt:
 
