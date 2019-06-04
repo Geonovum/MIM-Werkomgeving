@@ -867,14 +867,14 @@ Verdere toelichting voor UML modellen:
 
 -   De alias is te specificeren voor NamedElements (zoals UML-Class,
     UML-association, UML-UML-Datatype en UML-property). De alias is in UML
-    gespecificeerd bij de metaclass Element Import.<a href="#fn2-5" id="fn2-5ref"><sup>2-5</sup></a>
+    gespecificeerd bij de metaclass Element Import.<a href="#fn2-10" id="fn2-10ref"><sup>2-10</sup></a>
     In Enterprise Architect is de alternatieve weergave aan te zetten in de
     properties van een Diagram, via: use alias if available.
 
 Bijvoorbeeld: OnroerendeZaak heeft als alias Onroerende zaak.
 
 *Toepassing*: alle modelelementen die een naam hebben, uitgezonderd de
-Enumeratiewaarde.<a href="#fn2-10" id="fn2-10ref"><sup>2-10</sup></a>
+Enumeratiewaarde.<a href="#fn2-13" id="fn2-13ref"><sup>2-13</sup></a>
 
 Metagegeven: **Definitie**
 
@@ -1700,13 +1700,17 @@ catalogus is dan kiest u uiteraard een eigen naam.
 het hier niet om een registratie gaat maar wel duidelijk moet zijn in welke
 registratie de (verwijzing naar de) lijst voorkomt (indien van toepassing).
 
-<a id="fn2-10" href="#fn2-10ref"><sup>2-10</sup></a>: Een uitzondering is gemaakt voor UML modellen voor de
+<a id="fn2-10" href="#fn2-10ref"><sup>2-10</sup></a>: Element import wordt in UML ingezet voor het importeren van een
+NamedElement uit een ander package. In dit metamodel wordt de alias (nog) niet
+zo gebruikt.
+
+<a id="fn2-11" href="#fn2-11ref"><sup>2-11</sup></a>: Voor toelichting, zie paragraaf 3.11
+
+<a id="fn2-12" href="#fn2-12ref"><sup>2-12</sup></a>: Geef bij overig in uw eigen informatiemodel aan wat u er onder verstaat.
+
+<a id="fn2-13" href="#fn2-13ref"><sup>2-13</sup></a>: Een uitzondering is gemaakt voor UML modellen voor de
 UML-EnumerationLiteral. De ‘naam’ betreft hier een daadwerkelijk waarde, waarin
 de naam gelijk staat aan de waarde. Het is daarom expliciet ongewenst om
 hiervoor een alternatieve naamgeving te gebruiken. De alias wordt hier, mede
 daarom, gebruikt voor (alleen) de modellering van het metadata aspect Code,
 welke aanvullend is op naam (niet een alternatief van naam).
-
-<a id="fn2-11" href="#fn2-11ref"><sup>2-11</sup></a>: Voor toelichting, zie paragraaf 3.11
-
-<a id="fn2-12" href="#fn2-12ref"><sup>2-12</sup></a>: Geef bij overig in uw eigen informatiemodel aan wat u er onder verstaat.
