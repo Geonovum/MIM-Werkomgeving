@@ -93,6 +93,8 @@ View 2: Datatypen
 
 ### Overige
 
+![](media/505b92a05134fb38d9aec81f23a66bad.png)
+
 Constraint
 
 View 3: Constraint
@@ -102,6 +104,8 @@ View 3: Constraint
 | Constraint        | \-             | (UML) Constraint      | Constraint      |
 
 *Relatierol*
+
+![](media/240ca39c688efb06f70b34b8ec0b36d0.png)
 
 Relatierol
 
