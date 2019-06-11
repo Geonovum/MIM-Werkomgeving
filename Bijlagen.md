@@ -90,6 +90,8 @@ In deze versie zijn de volgende issues verwerkt:
 | [Issue #49](https://github.com/Geonovum/MIM-Werkomgeving/issues/49)  | Aspect "definitie" heeft meerdere definities |
 | [Issue #50](https://github.com/Geonovum/MIM-Werkomgeving/issues/50)  | Aspect "herkomst" heeft meerdere definities |
 | [Issue #52](https://github.com/Geonovum/MIM-Werkomgeving/issues/52)  | Aspect "datum opname" heeft meerdere definities |
+| [Issue #53](https://github.com/Geonovum/MIM-Werkomgeving/issues/53)  | Aspect "naam" heeft meerdere definities |
+| [Issue #54](https://github.com/Geonovum/MIM-Werkomgeving/issues/54)  | Aspect per meta class of aspect als unieke properties |
 | [Issue #55](https://github.com/Geonovum/MIM-Werkomgeving/issues/55)  | Aspect "constraint" ontbreekt in de tekst |
 | [Issue #58](https://github.com/Geonovum/MIM-Werkomgeving/issues/58)  | Aspect "alias" ontbreekt in de tekst en komt ook niet voor in het UML bestand |
 | [Issue #60](https://github.com/Geonovum/MIM-Werkomgeving/issues/60)  | Type fout constraint bij referentie element |
