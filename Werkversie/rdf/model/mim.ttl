@@ -6,6 +6,12 @@
 # Adaptation source: https://geonovum.github.io/MIM-Werkomgeving
 #
 
+# TODO's
+# - Referentiebestand goed maken
+# - Onderzoeken of het wenselijk is om begrippen afzonderlijk te definieren (lijkt in ieder geval handig voor controle);
+# - Toelichtingen ook opnemen? -> Maar dan wel bij begrippen??
+# - Alternatief 1 (relatiesoort is leidend) is uitgewerkt, beter zou zijn om beide alternatieven uit te werken
+
 @prefix mim: <http://bp4mc2.org/def/mim#>.
 @prefix mimdoc: <http://bp4mc2.org/def/mimdoc#>.
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
