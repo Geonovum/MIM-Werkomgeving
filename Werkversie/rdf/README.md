@@ -36,6 +36,15 @@ De huidige status van deze beschrijving is *concept*. Op de volgende hoofdpunten
 - Een handreiking is gewenst hoe vanuit een MiM RDF informatiemodel een RDF ontologie gemaakt kan worden. Hierbij kan aangesloten worden bij de ontwikkelingen rondom [NEN3610 en Linked data](https://github.com/Geonovum/NEN3610-Linkeddata).
 - Het MiM in RDF dient opgenomen te worden als onderdeel van de MiM standaard.
 
+### Statusupdate bij Werkversie MiM 1.1 van 17 juli 2019
+
+De werkversie is doorgenomen en opgenomen. Hieruit zijn een aantal extra TODO's gekomen:
+- Referentie-bestand goed aanmaken;
+- MiM-shapes bijwerken en plaatjes opnieuw maken;
+- Onderzoeken of het wenselijk is om begrippen afzonderlijk te definieren (lijkt in ieder geval handig voor controle);
+- Toelichtingen ook opnemen? -> Maar dan wel bij begrippen??
+- Alternatief 1 (relatiesoort is leidend) is uitgewerkt, beter zou zijn om beide alternatieven uit te werken
+
 ## Interpretatie
 
 Bij het opstellen van het MiM in RDF is gebruik gemaakt van de tekstuele beschrijving van het MiM. Er is een 1-op-1 omzetting gedaan, zonder enige aanpassing van de beschrijvingen. Dit maakt het mogelijk om een MiM informatiemodel om te zetten van een UML representatie naar een RDF representatie en weer terug, zonder verlies van informatie.
