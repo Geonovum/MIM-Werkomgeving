@@ -22,14 +22,15 @@ tekst vorm staan in de volgende paragraaf.
 
 De modelelementen zijn verdeeld over een diagrammen, die elk een eigen view op
 een deel van het metamodel tonen. Elk view toont een aantal van de
-modelelementen, inclusief hun onderlinge samenhang. Alle views samen vormen het
-metamodel als geheel: 
+modelelementen, inclusief hun onderlinge samenhang. 
+
+Alle views samen vormen het metamodel als geheel: 
 - KERN, met de belangrijkste modelelementen in onderlinge
 samenhang. 
 - DATATYPEN, met de in het model te onderkennen soorten datatypen. 
 - OVERIGE modelelementen, die niet altijd aan de orde zijn.
 
-Elk modelelement heeft een MIM metaclass. 
+Elk modelelement heeft een MIM metaclass met een naam. Hieraan is elk modelelement te herkennen in alle diagrammen en in de tekst en in elke specificatie taal die een uitdrukking is van dit metamodel. 
 
 ### Kern
 
@@ -78,7 +79,7 @@ View 2: Datatypen
 
 Constraint
 
-View 3: Constraint
+View 3a: Constraint
 
 | **MIM metaclass** | 
 |-------------------|
@@ -91,7 +92,7 @@ TODO: nieuw diagram zonder UML.
 
 Relatierol
 
-View 4: Relatiesoort en relatierol
+View 3b: Relatiesoort en relatierol
 
 | **MIM metaclass**     | 
 |-----------------------|
@@ -105,7 +106,7 @@ View 4: Relatiesoort en relatierol
 |-------------------|
 | Externe koppeling |
 
-View 5: groepering
+View 3c: Groepering
 
 *Packages*
 
