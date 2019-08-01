@@ -1,30 +1,17 @@
 Metamodel
 =========
 
-Dit hoofdstuk beschrijft het metamodel in diagramvorm en in tekst. De eerste
-paragraaf bevat diagrammen, in UML; elk biedt een eigen view op een gedeelte van
-het model. Het geheel van diagrammen, in samenhang, is opgenomen in bijlage 3.
+Dit hoofdstuk beschrijft het metamodel in diagramvorm en in tekst. De eerste paragraaf bevat een diagram, die het overzicht van de modelelementen aangeeft, en hun onderlinge verhouding. Hierna worden alle modelelementen beschreven en toegelicht.
+Deze modelelementen worden gebruikt bij het maken van een informatiemodel. 
 
-Uitgangspunten voor het metamodel zijn: - UML 2.5 vormt de basis voor de
-conceptuele beschrijving. - Gebruik te maken van de bestaande UML-
-modelelementen conform UML van OMG. OMG noemt dit een UML metaclass. Een
-voorbeeld hiervan is UML-Class. - Daar waar (semantisch) nodig
-extensiemechanismen toe te passen met behoud van de betekenis van de
-UML-metaclasses. Er ontstaat dan een MIM metaclass. Hoe deze zich verhouden tot
-UML is weergegeven in de bijlage. - Modelelementen hebben één stereotype.
-Daarnaast hebben twee verschillende stereotypen nooit dezelfde betekenis.
-Stereotypes worden toegepast als er een verbijzondering van een UML constructie
-nodig is met behoud van de betekenis van de UML-metaclass. - Uniforme toepassing
-van het metamodel in informatiemodellen. Anders gezegd, uitbreiden mag, afwijken
-niet, maak voor hetzelfde doel geen alternatieve constructies. - Datatypen zijn
-onderdeel van het metamodel en beschrijven de structuur van de data, maar niet
-de semantiek/betekenis. De aanbeveling is dan ook om eerst een informatiemodel
-te maken zonder datatypen. De regel is dat als alle datatypen uit het model
-worden weggelaten, er geen semantische betekenis verloren mag gaan. -
-Toolonafhankelijke beschrijving van het metamodel. Omdat VNG Realisatie,
-Kadaster en Geonovum en veel andere organisaties Sparx EA gebruiken is er
-aanvullend aangegeven hoe het metamodel in Enterprise Architect toegepast wordt.
-Hierdoor borgen we deze relatie.
+Uitgangspunten voor het metamodel zijn: 
+- Elk modelelement heeft een naam en een eigen MIM metaclass, waaraan je het modelelement overal kan herkennen. 
+- De modelelementen worden eerst uitgelegt zonder een specifieke specificatie taal te gebruiken. Dit is zodat we hierna kunnen aangeven hoe je het modelelement uitdrukt per specifieke specificatie taal, te weten in UML of in w3C specificatie technieken.
+- Toolonafhankelijke beschrijving van het metamodel. Omdat VNG Realisatie, Kadaster en Geonovum en veel andere organisaties Sparx EA gebruiken is er aanvullend aangegeven hoe het metamodel in Enterprise Architect toegepast wordt. Hierdoor borgen we deze relatie.
+- Uniforme toepassing van het metamodel in informatiemodellen. Anders gezegd, uitbreiden mag, afwijken
+niet, maak voor hetzelfde doel geen alternatieve constructies. 
+- Datatypen zijn onderdeel van het metamodel en beschrijven de structuur van de data, maar niet de semantiek/betekenis. De aanbeveling is dan ook om eerst een informatiemodel te maken zonder datatypen. De regel is dat als alle datatypen uit het model worden weggelaten, er geen semantische betekenis verloren mag gaan. 
+
 
 Structuur metamodel
 -------------------
@@ -36,41 +23,35 @@ tekst vorm staan in de volgende paragraaf.
 De modelelementen zijn verdeeld over een diagrammen, die elk een eigen view op
 een deel van het metamodel tonen. Elk view toont een aantal van de
 modelelementen, inclusief hun onderlinge samenhang. Alle views samen vormen het
-metamodel als geheel: - KERN, met de belangrijkste modelelementen in onderlinge
-samenhang. - DATATYPEN, met de in het model te onderkennen soorten datatypen. -
-OVERIGE modelelementen, die niet altijd aan de orde zijn.
+metamodel als geheel: 
+- KERN, met de belangrijkste modelelementen in onderlinge
+samenhang. 
+- DATATYPEN, met de in het model te onderkennen soorten datatypen. 
+- OVERIGE modelelementen, die niet altijd aan de orde zijn.
 
-Elk modelelement heeft een MIM metaclass. Deze wordt in UML in een
-informatiemodel gemodelleerd als een Metaclass van UML 2.5 en een bijbehorende
-stereotype. Bijvoorbeeld: de MIM metaclass Objecttype wordt gemodelleerd als een
-UML-Class met stereotype «Objecttype». In Sparx EA wordt dit gemodelleerd met
-een Class. Niet alle MIM metaclasses hebben een stereotype (nodig). In de kolom
-staat dan ‘-‘.
-
-| **MIM metaclass** | **Stereotype** | **Metaclass UML 2.5z** | **In Sparx EA** |
-|-------------------|----------------|------------------------|-----------------|
-| Objecttype        | «Objecttype»   | (UML) Class            | Class           |
-
-In de diagrammen zijn de UML metaclasses conform UML 2.5 aangeduid als UML
-metaclass. Deze in opgenomen in het diagram als ‘blauw gekleurde’ metaclasses.
+Elk modelelement heeft een MIM metaclass. 
 
 ### Kern
+
+TODO: nieuw diagram zonder UML erin. 
 
 ![](media/f12fbb3dc2e205d26a1d0d27cbd325b3.png)
 
 Kern zonder Metagegevens
 
-| **MIM metaclass** | **Stereotype**      | **Metaclass UML 2.5**            | **In Sparx EA**  |
-|-------------------|---------------------|----------------------------------|------------------|
-| Objecttype        | «Objecttype»        | (UML) Class                      | Class            |
-| Attribuutsoort    | «Attribuutsoort»    | (UML) Property                   | Attribute        |
-| Gegevensgroep     | «Gegevensgroep»     | (UML) Property                   | Attribute        |
-| Gegevensgroeptype | «Gegevensgroeptype» | (UML) Class                      | Class            |
-| Generalisatie     | «Generalisatie»     | (UML) Generalization             | Generalization   |
-| Relatiesoort      | «Relatiesoort»      | (UML) Association                | Association      |
-| Relatieklasse     | «Relatieklasse»     | (UML) Association én (UML) Class | Associationclass |
+| **MIM metaclass** |
+|-------------------|
+| Objecttype        | 
+| Attribuutsoort    | 
+| Gegevensgroep     | 
+| Gegevensgroeptype | 
+| Generalisatie     | 
+| Relatiesoort      | 
+| Relatieklasse     | 
 
 ### Datatypen
+
+TODO: nieuw diagram, zonder UML erin.
 
 ![](media/e529a1c0a1d6183d686d5aa57d0d0c63.png)
 
@@ -78,18 +59,18 @@ Datatypen zonder Metagegevens
 
 View 2: Datatypen
 
-| **MIM metaclass**       | **Stereotype**          | **Metaclass UML 2.5**    | **In Sparx EA**    |
-|-------------------------|-------------------------|--------------------------|--------------------|
-| Primitief datatype      | «Primitief datatype»    | (UML) Primitive Type     | Datatype           |
-| Gestructureerd datatype | «Gestructuurd datatype» | (UML) Datatype           | Datatype           |
-| Data element            | «Data element»          | (UML) Property           | Attribute          |
-| Union                   | «Union»                 | (UML) Datatype           | Datatype           |
-| Union element           | «Union element»         | (UML) Property           | Attribute          |
-| Enumeratie              | \-                      | (UML) Enumeration        | Enumeration        |
-| Enumeratiewaarde        | \-                      | (UML) EnumerationLiteral | EnumerationLiteral |
-| Referentielijst         | «Referentielijst»       | (UML) Datatype           | Datatype           |
-| Referentie element      | «Referentie element»    | (UML) Property           | Attribute          |
-| Codelist                | «Codelist               | (UML) Datatype           | Datatype           |
+| **MIM metaclass**       | 
+|-------------------------|
+| Primitief datatype      |
+| Gestructureerd datatype |
+| Data element            |
+| Union                   |
+| Union element           |
+| Enumeratie              |
+| Enumeratiewaarde        | 
+| Referentielijst         | 
+| Referentie element      | 
+| Codelist                | 
 
 ### Overige
 
@@ -99,37 +80,42 @@ Constraint
 
 View 3: Constraint
 
-| **MIM metaclass** | **Stereotype** | **Metaclass UML 2.5** | **In Sparx EA** |
-|-------------------|----------------|-----------------------|-----------------|
-| Constraint        | \-             | (UML) Constraint      | Constraint      |
+| **MIM metaclass** | 
+|-------------------|
+| Constraint        |
 
 *Relatierol*
 
+TODO: nieuw diagram zonder UML.
 ![](media/240ca39c688efb06f70b34b8ec0b36d0.png)
 
 Relatierol
 
 View 4: Relatiesoort en relatierol
 
-| **MIM metaclass**     | **Stereotype** | **Metaclass UML 2.5** | **In Sparx EA** |
-|-----------------------|----------------|-----------------------|-----------------|
-| Relatierol (abstract) | «Relatierol»   | Property              | AssociationEnd  |
-| Relatierol source     | «Relatierol»   | Property              | AssociationEnd  |
-| Relatierol target     | «Relatierol»   | Property              | AssociationEnd  |
+| **MIM metaclass**     | 
+|-----------------------|
+| Relatierol (abstract) |
+| Relatierol source     |
+| Relatierol target     |
 
 *Externe koppeling*
 
-| **MIM metaclass** | **Stereotype**      | **Metaclass UML 2.5** | **In Sparx EA** |
-|-------------------|---------------------|-----------------------|-----------------|
-| Externe koppeling | «Externe koppeling» | (UML) Association     | Association     |
+| **MIM metaclass** |
+|-------------------|
+| Externe koppeling |
+
+View 5: groepering
 
 *Packages*
 
-| **MIM metaclass**     | **Stereotype** | **Metaclass UML 2.5** | **In Sparx EA** |
-|-----------------------|----------------|-----------------------|-----------------|
-| Domein (het eigen IM) | \-             | (UML) Package         | Package         |
-| Extern                | «Extern»       | (UML) Package         | Package         |
-| View                  | «View»         | (UML) Package         | Package         |
+| **MIM metaclass**     |
+|-----------------------|
+| Informatiemodel       | 
+| Domein (het eigen IM) |
+| Extern                | 
+| View                  | 
+
 
 Betekenis modelelementen
 ------------------------
@@ -141,14 +127,9 @@ basis, deze is dan aangegeven. Dit is ook opgenomen in diagram vorm, in bijlage
 
 ### Objecten en attributen
 
-**1. Objecttype** *- Stereotype «Objecttype»*: De UML-representatie van een
-objecttype, uitgedrukt in een stereotype van UML-Class (metaclass).
+**1. Objecttype** *
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Er zijn verschillende modelelementen die gebaseerd zijn op UML-Class, zoals
-aangegeven in §2.1. Wanneer een UML-Class in het informatiemodel gelezen
-moet worden als een objecttype, dan krijgt deze het stereotype «Objecttype».
-
 Een objecttype is een groep van gelijksoortige objecten. Om duidelijk te
 maken wat wordt bedoeld kijken we eerst naar het begrip ‘object’.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -188,14 +169,7 @@ registratie. Daartoe is veelal een interpretatie nodig (van die werkelijkheid
 cq. die objecttypen) naar eenheden die in een registratie vastgelegd kunnen
 worden (records, entiteiten e.d.) op basis van andere overwegingen.
 
-**2. Attribuutsoort** – *Stereotype «Attribuutsoort»*: De UML-representatie van
-een attribuutsoort, uitgedrukt in een stereotype van UML-Property<a href="#fn2-1" id="fn2-1ref"><sup>2-1</sup></a>
-(metaclass).
-
-Er zijn verschillende modelelementen die gebaseerd zijn op UML-property, zoals
-aangegeven in §2.1.2. Wanneer een UML-property in het informatiemodel de
-betekenis heeft van een attribuut van een objecttype, dan heeft deze het
-stereotype «Attribuutsoort».
+**2. Attribuutsoort**
 
 Een attribuutsoort is een type van gelijksoortige attributen of gegevens.
 Daartoe kijken we eerst naar het begrip ‘gegeven’.
@@ -235,8 +209,7 @@ attribuutsoorten zijn die van toepassing zijn voor het objecttype 'persoon'.
 Wanneer ‘oogkleur’ niet relevant is voor het domein, wordt deze niet
 gemodelleerd.*
 
-**3. Gegevensgroep** – \* Stereotype «Gegevensgroep»\*: De UML-representatie van
-een gegevensgroep, uitgedrukt in een stereotype van UML-property (metaclass).
+**3. Gegevensgroep**
 
 >   **Definitie Gegevensgroep**
 
@@ -261,9 +234,7 @@ Gegevensgroeptype Oog (merk op dat we het kenmerk Oog als modelelement kunnen
 definiëren, zonder dat er we er waardes van vastleggen. Alleen van kleur en
 sterkte leggen we waardes vast).*
 
-**4. Gegevensgroeptype** – \* Stereotype «Gegevensgroeptype»\*: De
-UML-representatie van een gegevensgroeptype, uitgedrukt in een stereotypevan
-UML-Class (metaclass).
+**4. Gegevensgroeptype**
 
 >   **Definitie Gegevensgroeptype**
 
@@ -310,8 +281,7 @@ Gegevensgroep.
 Verbanden met betekenis, die gelegd zijn tussen modelelementen van het type
 UML-Class.
 
-**5. Generalisatie:** De UML-representatie van een specialisatie, uitgedrukt in
-een UML-generalization (metaclass).
+**5. Generalisatie:**
 
 >   **Definitie Generalisatie tussen objecttypes**
 
@@ -348,8 +318,7 @@ GM Surface of DMO en dient als basis voor een zelf te definiëren datatype (zie
 «Primitief datatype», «Gestructureerd datatype», «Referentielijst», «Codelist»,
 «Enumeratie».
 
-**6. Relatiesoort** – *Stereotype «Relatiesoort»*: De UML-representatie van een
-relatiesoort, uitgedrukt in een stereotype van UML-association (metaclass).
+**6. Relatiesoort**
 
 >   **Definitie Relatiesoort**
 
@@ -375,9 +344,7 @@ Wanneer een relatie (UML-assocation) gebruikt wordt om objecten aan elkaar te
 verbinden, zonder dat er eigenschappen over deze relatie worden vastgelegd, dan
 heeft deze het stereotype «Relatiesoort».
 
-**7. Relatieklasse** - *Stereotype «Relatieklasse»*: De UML-representatie van
-een Relatieklasse, uitgedrukt in een stereotype van UML-associationClass
-(metaclass).
+**7. Relatieklasse**
 
 >   **Definitie Relatieklasse**
 
@@ -401,11 +368,7 @@ relatie voor alle betrokken objecten hetzelfde zijn. CONTRACT wordt dan
 gemodelleerd als objecttype, waarbij beschreven wordt wat er moet gebeuren
 wanneer één van de SUBJECTen niet meer bestaat.
 
-**8. Externe koppeling** – *Stereotype «Externe koppeling»*: De
-UML-representatie van een externe koppeling, uitgedrukt in een stereotype van
-UML-association (metaclass). De source kant van het aggregatietype is
-‘composite’ (de gesloten diamant staat aan de kant van het objecttype die de
-koppeling legt naar het externe objecttype).
+**8. Externe koppeling** 
 
 >   **Definitie Externe koppeling**
 
@@ -414,8 +377,7 @@ koppeling legt naar het externe objecttype).
 >   objecttype van een extern informatiemodel. De relatie zelf hoort bij het
 >   ‘eigen’ objecttype. Zie ook 3.14.
 
-**9. Relatierol** – *Stereotype «Relatierol»*: De UML-representatie van een
-relatierol, uitgedrukt in een stereotype van UML-Property<a href="#fn2-2" id="fn2-2ref"><sup>2-2</sup></a> (metaclass).
+**9. Relatierol**
 
 >   **Definitie Relatierol**
 
@@ -440,9 +402,7 @@ Een datatype waarvan de mogelijke waarden zijn opgesomd in een lijst. De waarde
 van een attribuutsoort moet één van de waarden zijn uit de gespecificeerde
 waardenlijst.
 
-**10. Referentielijst** – *Stereotype «Referentielijst»*: De UML-representatie
-van een referentielijst, uitgedrukt in een stereotype van UML-Datatype
-(metaclass).
+**10. Referentielijst** 
 
 >   **Definitie Referentielijst**
 
@@ -474,9 +434,7 @@ de referentielijst en er is bewust gekozen om een referentielijst te modelleren.
 Het attribuut van een objecttype dat als type een referentielijst heeft bevat in
 de registratie daarom (vaak) alleen een referentie naar een object uit de lijst.
 
-**11. Referentie element** – *Stereotype «Referentie element»*: De
-UML-representatie van een referentie-element uitgedrukt in een stereotype van
-UML-Property(metaclass).
+**11. Referentie element** 
 
 >   **Definitie Referentie element**
 
@@ -520,8 +478,7 @@ enumeratiewaarde.
 *Bijvoorbeeld: geslacht: man, vrouw, overig, type openbare ruimte: spoorbaan,
 plein, straat.*
 
-**14. Stereotype** «**Codelist**»: De UML-representatie van een codelist,
-uitgedrukt in een stereotype van UML-datatype (metaclass).
+**14. Stereotype** «**Codelist**
 
 >   **Definitie Codelist**
 
@@ -560,11 +517,9 @@ als type van een attribuutsoort.
 Anders gezegd, Datatypes zijn veelal herbruikbaar en kunnen gespecificeerd
 worden bij diverse «Attribuutsoort»-en.
 
-**15. Primitief datatype** - «Primitief datatype»: in het metamodel maken we
-gebruik van de bestaande UML-PrimitiveType (metaclass) voor de specificaties van
-een primitief datatype.
+**15. Primitief datatype** 
 
-**UML-PrimitiveType** Een standaard datatype, zoals bekend in vele
+**PrimitiveType** Een standaard datatype, zoals bekend in vele
 specificatietalen, dat de structuur van een gegeven beschrijft. Het metamodel
 volgt waar mogelijk de definities zoals beschreven in ISO standaarden (zie
 §3.1). Deze datatypes hebben altijd al een naam en definitie gekregen vanuit
@@ -598,17 +553,14 @@ kunnen worden met altijd exact dezelfde structuur en waardenbereik (zie ook
 ‘patroon’ in 3.5). Dit datatype, met een eigen naam, wordt vervolgens gebruikt
 als type van een attribuutsoort.
 
-**16. Gestructureerd datatype** – *stereotype «Gestructureerd datatype»*: De
-UML-representatie van een gestructureerd datatype uitgedrukt in UML-datatype
-(metaclass) met ten minste twee keer een UML-Property.
+**16. Gestructureerd datatype** 
 
 >   **Definitie Gestructureerd datatype**
 
 >   Specifiek benoemd gestructureerd datatype dat de structuur van een gegeven
 >   beschrijft, samengesteld uit minimaal twee elementen.
 
-*Toelichting:* In UML wordt een Gestructureerd datatype een structured Datatype
-genoemd.
+*Toelichting:* 
 
 De waarde van het attribuutsoort verkoopprijs met datatype bedrag is uitgedrukt
 in een combinatie van een som en valuta zoals 35 euro. De introductie van één
@@ -634,8 +586,7 @@ geen Gestructureerd datatype).
 *Voorbeeld: Gestructureerd datatype Bedrag bestaat uit de data-elementen som en
 valuta.*
 
-**17. Data element** - *Stereotype «Data element»*: De UML-representatie van een
-data element uitgedrukt in UML-property (metaclass).
+**17. Data element** 
 
 >   **Definitie Data element**
 
@@ -650,8 +601,7 @@ Het data element beschrijft in combinatie met andere data-elementen de structuur
 van een gegeven en heeft zelf een datatype. Dit datatype is meestal een
 primitief datatype.
 
-**18. Union** – *Stereotype «Union»*: De UML-representatie van een union
-uitgedrukt in UML-datatype (metaclass).
+**18. Union** 
 
 >   **Definitie Union**
 
@@ -663,9 +613,7 @@ uitgedrukt in UML-datatype (metaclass).
 *Voorbeeld: Union LineOrPolygon. Deze biedt een keuze uit Union element Line of
 Union element Polygon.*
 
-**19. Union element** - *Stereotype «Union element»*: De UML-representatie van
-een union element uitgedrukt in UML-property (metaclass), dat zelf een type
-heeft dat uitgedrukt is in een UML-datatype (metaclass).
+**19. Union element** 
 
 >   **Definitie Union element**
 
@@ -682,8 +630,7 @@ van Union LineOrPolygon*
 Een package is een benoemde en begrensde verzameling/groepering van
 modelelementen.
 
-**20. Extern** - *Stereotype «Extern»*: De UML-representatie van een extern
-package uitgedrukt in UML-package (metaclass)
+**20. Extern** 
 
 >   **Definitie Extern**
 
@@ -695,8 +642,7 @@ package uitgedrukt in UML-package (metaclass)
 attribuutsoort Identificatie wegdeel in RSGB verwijst naar het datatype
 NEN3610ID zoals opgenomen in het Externe package.*
 
-**21. View** - *Stereotype «View»*: De UML-representatie van een view package
-uitgedrukt in UML-package (metaclass)
+**21. View** 
 
 >   **Definitie View**
 
@@ -712,21 +658,7 @@ gezien als een view.*
 
 ### Overig
 
-de metaclass Property isID als het gaat om het modelelement attribuutsoort. De
-waarde van isID kan zijn: true of false.
-
-stereotype \<\> als het gaat om het modelelement relatiesoort.
-
-Toelichting
-
-Als er sprake is van een objecttype die meerdere eigenschappen kent met deze
-aanduiding isID met waarde true , dan betekent dit dat deze eigenschappen als
-combinatie uniek identificerend zijn (en niet, of niet altijd, op zichzelf).
-
-**22. Identificerend** – De UML-representatie van een identificerend kenmerk,
-uitgedrukt bij een UML-property (metaclass) met de metaclass property *isId* als
-het een *«*attribuutsoort*»* betreft en met het *stereotype «id»*<a href="#fn2-4" id="fn2-4ref"><sup>2-4</sup></a> *bij target
-role van de «relatiesoort»* als het een *«relatiesoort»* betreft:
+**22. Identificerend** 
 
 >   **Definitie Identificerend**
 
@@ -750,27 +682,28 @@ uniek. De WIJK zelf heeft een unieke identificatie. De unieke identificatie van
 BUURT is daarom samengesteld uit het attribuut Buurtcode van BUURT en de
 verwijzing naar de WIJK (de identificatie van WIJK).*
 
-**23. Constraint** - Voor Constraint is geen stereotype gespecificeerd. In het
-metamodel maken we gebruik van de bestaande UML-Constraint (metaclass).
+**23. Constraint** 
 
 >   **Definitie Constraint**
 
 >   Een constraint is een conditie of een beperking, die over een of meerdere
 >   modelelementen uit het informatiemodel geldt.
 
-*Toelichting:* Een constraint kan vastgelegd worden bij alle modelelementen die
-als basis een UML-metaclass hebben waarvan UML aangeeft dat hier een
-UML-constraint op gedefinieerd mag worden. Aanbeveling is om dit waar mogelijk
-op een *«Objecttype»* te doen of eventueel (indien van toepassing) op een
-*«Gegevensgroeptype»* of *«Relatieklasse».*
+*Toelichting:* 
+
+Een constraint kan vastgelegd worden bij alle modelelementen. Echter, meestal komt een constraint voor bij een objecttype, om te aan te geven dat de constraint geldt voor 2 (of meer) kenmerken van een objecttype:
+
+*Bijvoorbeeld: een conditionele afhankelijkheid ‘als (optioneel) attribuut 1
+leeg is, dan is (optioneel) attribuut 2 verplicht* 
+
+, of om een bijzondere specificatie toe te voegen die niet via de bestaande modelelementen gelegd kan worden. 
+
+*Bijvoorbeeld: ‘de 11-proef is van toepassing op dit attribuut’.*
 
 Een constraint wordt altijd in gewone tekst omschreven en optioneel als formele
 specificatie in de Object Constraint Language (OCL). Dit is verder uitgewerkt in
 Hoofdstuk 3.
 
-*Bijvoorbeeld: een conditionele afhankelijkheid ‘als (optioneel) attribuut 1
-leeg is, dan is (optioneel) attribuut 2 verplicht’, of een bijzondere regel,
-zoals ‘11-proef is van toepassing op dit attribuut’.*
 
 Specificatie metagegevens
 -------------------------
@@ -781,19 +714,18 @@ het objecttype met als *naam* Pan den een bijbehorende *definitie*, of de *Datum
 opname* van het modelelement in het informatiemodel, bijvoorbeeld *Datum opname*
 1-1-2012.
 
-Een aantal van deze metagegevens worden gemodelleerd in de modelleertaal UML.
-Deze zijn in onderstaande tabellen herkenbaar aan de rode tekst en worden met de
-modelleerconstructies de die de modelleertaal biedt vastgelegd. Bijvoorbeeld het
-objecttype met de naam Pand wordt gemodelleerd als ‘*Named element’* met als
-‘*Name’* Pand (in UML 1.4 heette dit nog UML-Class). Het metagegeven *definitie*
-wordt gemodelleerd door tekst op te nemen in de UML-‘*Notes’* van het betrokken
-UML-‘*Named element*’.
+Merk op dat een aantal van deze metagegevens al meegenomen worden in een specificatie taal. 
+
+Bijvoorbeeld het objecttype met de naam Pand wordt in UML gemodelleerd als ‘*Named element’* met als
+‘*Name’* Pand (in UML 1.4 heette dit nog UML-Class, met een propery ‘*Name’*). 
 
 Een aantal andere metagegevens, zoals de eerder genoemde *Datum opname* met
-waarde 1-1-2012. worden als aparte data vastgelegd, in een ‘*Tagged value*’.
+waarde 1-1-2012. worden als aparte data vastgelegd, in UML gebeurd dit in een ‘*Tagged value*’.
 
-Merk op, deze tagged values zijn specifiek voor elk modelelement apart. Dus als
-er in H2.2 sprake is van een generalisatie, dan worden deze tagged values niet
+TODO: voorbeeld ook opnemen voor W3C. 
+
+Merk op, de metadata aspecten zijn specifiek voor elk modelelement apart. Dus als
+er in H2.2 sprake is van een generalisatie, dan worden deze metadata niet
 overerft (en de ingevulde waardes worden uiteraard zeker niet overerft). De MIM
 metaclass Union erft dus geen metagegevens, zoals patroon, van MIM metaclass
 Datatype.
@@ -862,14 +794,6 @@ spaties is geschreven, dan kan in de alias de naam in natuurlijke taal worden
 opgenomen. Bijvoorbeeld: OnroerendeZaak heeft als alias Onroerende zaak. De
 alias is bedoeld als alternatieve schrijfwijze, en heeft verder geen andere
 betekenis. De alias is optioneel (zie verder ook 3.16).
-
-Verdere toelichting voor UML modellen:
-
--   De alias is te specificeren voor NamedElements (zoals UML-Class,
-    UML-association, UML-UML-Datatype en UML-property). De alias is in UML
-    gespecificeerd bij de metaclass Element Import.<a href="#fn2-10" id="fn2-10ref"><sup>2-10</sup></a>
-    In Enterprise Architect is de alternatieve weergave aan te zetten in de
-    properties van een Diagram, via: use alias if available.
 
 Bijvoorbeeld: OnroerendeZaak heeft als alias Onroerende zaak.
 
@@ -1239,7 +1163,161 @@ betreft, zoals een CharacterString.
 
 *Toepassing*: de modelelementen uit de groep datatype en attribuutsoort.
 
-### Specificatie metagegevens voor objecten en attributen
+
+#### Tagged values en waardenbereik tagged values
+
+Tagged values, zoals genoemd in de UML-extensie kolom zijn altijd van het
+datatype CharacterString. Aanvullend geldt:
+
+-   Voor lengtes geldt dat er alleen getallen in mogen (van het datatype
+    Integer).
+
+-   Voor datums geldt dat deze het volgende patroon volgen: jjjjmmdd
+
+| **Tagged value**             | **Waardenbereik**                                                                     |
+|------------------------------|---------------------------------------------------------------------------------------|
+| Indicatie materiële historie | Ja, Nee, zie Groep                                                                    |
+| Indicatie formele historie   | Ja, Nee, zie Groep                                                                    |
+| Mogelijk geen waarde         | Ja, Nee                                                                               |
+| Type aggregratie             | composite, aggregate, of geen/leeg/niet gebruikt                                      |
+| Authentiek<a href="#fn2-11" id="fn2-11ref"><sup>2-11</sup></a>               | Authentiek, Basisgegeven, Landelijk kerngegeven, Gemeentelijk kerngegeven, Overig<a href="#fn2-12" id="fn2-12ref"><sup>2-12</sup></a> |
+
+
+========================================
+@Jan: APART HOOFDSTUK en MD file maken 
+========================================
+
+
+Structuur metamodel in UML 
+--------------------------
+
+De eerste paragraaf bevat diagrammen, in UML; elk biedt een eigen view op een gedeelte van
+het model. Het geheel van diagrammen, in samenhang, is opgenomen in bijlage 3.
+
+Uitgangspunten voor het metamodel in UML zijn: 
+- UML 2.5 vormt de basis voor de conceptuele beschrijving. 
+- Gebruik te maken van de bestaande UML-modelelementen conform UML van OMG. OMG noemt dit een UML metaclass. Een
+voorbeeld hiervan is UML-Class. 
+- Daar waar (semantisch) nodig extensiemechanismen toe te passen met behoud van de betekenis van de
+UML-metaclasses. Er ontstaat dan een MIM metaclass. Hoe deze zich verhouden tot UML is weergegeven in de bijlage. 
+- Modelelementen hebben één stereotype. Daarnaast hebben twee verschillende stereotypen nooit dezelfde betekenis.
+Stereotypes worden toegepast als er een verbijzondering van een UML constructie 
+nodig is met behoud van de betekenis van de UML-metaclass. 
+
+Elk modelelement heeft een MIM metaclass. Deze wordt in UML in een
+informatiemodel gemodelleerd als een Metaclass van UML 2.5 en een bijbehorende
+stereotype. Bijvoorbeeld: de MIM metaclass Objecttype wordt gemodelleerd als een
+UML-Class met stereotype «Objecttype». In Sparx EA wordt dit gemodelleerd met
+een Class. Niet alle MIM metaclasses hebben een stereotype (nodig). In de kolom
+staat dan ‘-‘.
+
+| **MIM metaclass** | **Stereotype** | **Metaclass UML 2.5z** | **In Sparx EA** |
+|-------------------|----------------|------------------------|-----------------|
+| Objecttype        | «Objecttype»   | (UML) Class            | Class           |
+
+In de diagrammen zijn de UML metaclasses conform UML 2.5 aangeduid als UML
+metaclass. Deze in opgenomen in het diagram als ‘blauw gekleurde’ metaclasses.
+
+### Kern
+
+![](media/f12fbb3dc2e205d26a1d0d27cbd325b3.png)
+
+Kern zonder Metagegevens
+
+| **MIM metaclass** | **Stereotype**      | **Metaclass UML 2.5**            | **In Sparx EA**  |
+|-------------------|---------------------|----------------------------------|------------------|
+| Objecttype        | «Objecttype»        | (UML) Class                      | Class            |
+| Attribuutsoort    | «Attribuutsoort»    | (UML) Property                   | Attribute        |
+| Gegevensgroep     | «Gegevensgroep»     | (UML) Property                   | Attribute        |
+| Gegevensgroeptype | «Gegevensgroeptype» | (UML) Class                      | Class            |
+| Generalisatie     | «Generalisatie»     | (UML) Generalization             | Generalization   |
+| Relatiesoort      | «Relatiesoort»      | (UML) Association                | Association      |
+| Relatieklasse     | «Relatieklasse»     | (UML) Association én (UML) Class | Associationclass |
+
+### Datatypen
+
+![](media/e529a1c0a1d6183d686d5aa57d0d0c63.png)
+
+Datatypen zonder Metagegevens
+
+View 2: Datatypen
+
+| **MIM metaclass**       | **Stereotype**          | **Metaclass UML 2.5**    | **In Sparx EA**    |
+|-------------------------|-------------------------|--------------------------|--------------------|
+| Primitief datatype      | «Primitief datatype»    | (UML) Primitive Type     | Datatype           |
+| Gestructureerd datatype | «Gestructuurd datatype» | (UML) Datatype           | Datatype           |
+| Data element            | «Data element»          | (UML) Property           | Attribute          |
+| Union                   | «Union»                 | (UML) Datatype           | Datatype           |
+| Union element           | «Union element»         | (UML) Property           | Attribute          |
+| Enumeratie              | \-                      | (UML) Enumeration        | Enumeration        |
+| Enumeratiewaarde        | \-                      | (UML) EnumerationLiteral | EnumerationLiteral |
+| Referentielijst         | «Referentielijst»       | (UML) Datatype           | Datatype           |
+| Referentie element      | «Referentie element»    | (UML) Property           | Attribute          |
+| Codelist                | «Codelist               | (UML) Datatype           | Datatype           |
+
+### Overige
+
+![](media/505b92a05134fb38d9aec81f23a66bad.png)
+
+Constraint
+
+View 3: Constraint
+
+| **MIM metaclass** | **Stereotype** | **Metaclass UML 2.5** | **In Sparx EA** |
+|-------------------|----------------|-----------------------|-----------------|
+| Constraint        | \-             | (UML) Constraint      | Constraint      |
+
+*Relatierol*
+
+![](media/240ca39c688efb06f70b34b8ec0b36d0.png)
+
+Relatierol
+
+View 4: Relatiesoort en relatierol
+
+| **MIM metaclass**     | **Stereotype** | **Metaclass UML 2.5** | **In Sparx EA** |
+|-----------------------|----------------|-----------------------|-----------------|
+| Relatierol (abstract) | «Relatierol»   | Property              | AssociationEnd  |
+| Relatierol source     | «Relatierol»   | Property              | AssociationEnd  |
+| Relatierol target     | «Relatierol»   | Property              | AssociationEnd  |
+
+*Externe koppeling*
+
+| **MIM metaclass** | **Stereotype**      | **Metaclass UML 2.5** | **In Sparx EA** |
+|-------------------|---------------------|-----------------------|-----------------|
+| Externe koppeling | «Externe koppeling» | (UML) Association     | Association     |
+
+View 5: Groepering
+
+*Packages*
+
+| **MIM metaclass**     | **Stereotype**    | **Metaclass UML 2.5** | **In Sparx EA** |
+|-----------------------|-------------------|-----------------------|-----------------|
+| Informatiemodel       | «Informatiemodel» | (UML) Package         | Package         |
+| Domein (het eigen IM) | «Domein»          | (UML) Package         | Package         |
+| Extern                | «Extern»          | (UML) Package         | Package         |
+| View                  | «View»            | (UML) Package         | Package         |
+
+
+Nadere specificatie metagegevens in UML 
+---------------------------------------
+Deze paragraaf is een aanvulling op de paragraaf *'Specificatie metagegevens'* in hoofdstuk 2. 
+
+>   **Definitie Alias**
+
+De alternatieve weergave van de naam.
+
+*Toelichting*
+
+Verdere toelichting voor UML modellen:
+
+-   De alias is te specificeren voor NamedElements (zoals UML-Class,
+    UML-association, UML-UML-Datatype en UML-property). De alias is in UML
+    gespecificeerd bij de metaclass Element Import.<a href="#fn2-10" id="fn2-10ref"><sup>2-10</sup></a>
+    In Enterprise Architect is de alternatieve weergave aan te zetten in de
+    properties van een Diagram, via: use alias if available.
+    
+### Modellering metagegevens voor objecten en attributen in UML 
 
 **Specificatie voor «Objecttype»**
 
@@ -1633,22 +1711,6 @@ aspecten gespecificeerd:
 | **Specificatie tekst**   | 0..1              | De specificatie van de constraint in normale tekst.                       |                                       | *Notes (type = invariant)* |
 | **Specificatie formeel** | 0..1              | De beschrijving van de constraint in een formele specificatietaal, in OCL |                                       | *Notes (type =OCL)*        |
 
-#### Tagged values en waardenbereik tagged values
-
-Tagged values, zoals genoemd in de UML-extensie kolom zijn altijd van het
-datatype CharacterString. Aanvullend geldt:
-
--   Voor lengtes geldt dat er alleen getallen in mogen (van het datatype
-    Integer).
-
--   Voor datums geldt dat deze het volgende patroon volgen: jjjjmmdd
-
-| **Tagged value**             | **Waardenbereik**                                                                     |
-|------------------------------|---------------------------------------------------------------------------------------|
-| Indicatie materiële historie | Ja, Nee, zie Groep                                                                    |
-| Indicatie formele historie   | Ja, Nee, zie Groep                                                                    |
-| Mogelijk geen waarde         | Ja, Nee                                                                               |
-| Authentiek<a href="#fn2-11" id="fn2-11ref"><sup>2-11</sup></a>               | Authentiek, Basisgegeven, Landelijk kerngegeven, Gemeentelijk kerngegeven, Overig<a href="#fn2-12" id="fn2-12ref"><sup>2-12</sup></a> |
 
 Metamodel Tooling
 -----------------
