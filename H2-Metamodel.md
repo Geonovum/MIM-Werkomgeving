@@ -122,9 +122,7 @@ Betekenis modelelementen
 ------------------------
 
 In deze paragraaf staan alle modelelementen opgesomd, die gebruikt worden bij
-het maken van een informatiemodel. Bijna alle hebben een UML-metaclass als
-basis, deze is dan aangegeven. Dit is ook opgenomen in diagram vorm, in bijlage
-3.
+het maken van een informatiemodel. 
 
 ### Objecten en attributen
 
@@ -1218,6 +1216,10 @@ staat dan ‘-‘.
 
 In de diagrammen zijn de UML metaclasses conform UML 2.5 aangeduid als UML
 metaclass. Deze in opgenomen in het diagram als ‘blauw gekleurde’ metaclasses.
+
+Bijna alle hebben een UML-metaclass als basis, deze is dan aangegeven. Dit is ook opgenomen in diagram vorm, in bijlage
+3.
+
 
 ### Kern
 
