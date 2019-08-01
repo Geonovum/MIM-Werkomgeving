@@ -277,8 +277,7 @@ Gegevensgroep.
 
 ### Relaties
 
-Verbanden met betekenis, die gelegd zijn tussen modelelementen van het type
-UML-Class.
+Verbanden met betekenis, die gelegd zijn tussen modelelementen van het type objecttype naar het type objecttype, of van een gegevensgroeptype naar een objecttype. 
 
 **5. Generalisatie:**
 
@@ -339,9 +338,7 @@ Voorbeeld: relatiesoorten “VERBLIJFSOBJECT is gelegen in een PAND” en “SUB
 heeft als correspondentieadres WOONPLAATS”, of korter, “gelegen in”,
 “postadres”.
 
-Wanneer een relatie (UML-assocation) gebruikt wordt om objecten aan elkaar te
-verbinden, zonder dat er eigenschappen over deze relatie worden vastgelegd, dan
-heeft deze het stereotype «Relatiesoort».
+Wanneer een relatie gebruikt wordt om objecten aan elkaar te verbinden, zonder dat er eigenschappen over deze relatie worden vastgelegd, dan betreft dit de MIM-metaclass «Relatiesoort».
 
 **7. Relatieklasse**
 
@@ -383,7 +380,7 @@ wanneer één van de SUBJECTen niet meer bestaat.
 >   De benaming van de manier waarop een object deelneemt aan een relatie met
 >   een ander object.
 
-*Toelichting:* Met relatie wordt in deze elke relatie bedoeld een
+*Toelichting:* Met relatie wordt in deze de volgende bedoeld:
 *«Relatiesoort»*, *«Relatieklasse»* of *«Externe koppeling»*. Voor
 *«*Generalisatie*»* speelt het niet. Een relatie heeft een source kant, die de
 eigenaar is van de relatie, en is gericht naar de target kant. De relatierol kan
@@ -448,9 +445,7 @@ Een referentie element kan uniek zijn, zoals een code, en is dan op zichzelf
 geschikt om gebruikt te worden als referentie (zoals bedoeld in de definitie van
 Referentielijst).
 
-**12. Enumeratie** Voor enumeraties is geen stereotype gespecificeerd. In het
-metamodel maken we gebruik van de bestaande UML-enumeration (metaclass) voor de
-specificaties van een enumeratie.
+**12. Enumeratie** 
 
 >   **Definitie Enumeratie**
 
@@ -464,10 +459,7 @@ referentielijst, zijn nooit aan de orde).
 *Bijvoorbeeld: geslacht (man, vrouw, overig), de typering van een openbare
 ruimte (spoorbaan, plein, straat).*
 
-**13. Enumeratiewaarde** Voor enumeratiewaarde is geen stereotype
-gespecificeerd. In het metamodel maken we gebruik van de bestaande
-UML-enumerationLiteral (metaclass) voor de specificaties van een
-enumeratiewaarde.
+**13. Enumeratiewaarde** 
 
 >   **Definitie Enumeratiewaarde**
 
@@ -539,9 +531,7 @@ eigen model een modelelement is gemaakt in de vorm van het datatype
 Postcode*.<a href="#fn2-3" id="fn2-3ref"><sup>2-3</sup></a>
 
 *Toelichting:* Een primitief datatype is een datatype zonder verdere
-specificatie over de structuur. Dit datatype kent geen UML-property en dus ook
-geen elementen met stereotype «Data element». Dit datatype is enkelvoudig,
-oftewel niet samengesteld, en wordt ook wel simpel datatype genoemd.
+specificatie over de structuur. Dit datatype is enkelvoudig, oftewel niet samengesteld, en wordt ook wel simpel datatype genoemd. Dit datatype kent daarom zelf geen eigen modelelementen zoals een «Data element». 
 
 Wanneer een Primitief datatype wordt gespecificeerd, dan heeft deze standaard
 als primitive datatype een CharacterString.
@@ -666,8 +656,7 @@ gezien als een view.*
 >   objecttype.
 
 *Toelichting:* objecten hebben, of krijgen, in een administatie of
-gegevensvoorziening vaak één identificerend kenmerk. Dit kenmerk krijgt dan in
-UML isId = true. Het kan ook zijn dat een aantal kenmerken in combinatie
+gegevensvoorziening vaak één identificerend kenmerk. Het kan ook zijn dat een aantal kenmerken in combinatie
 identificerend zijn, zoals twee attibuutsoorten of een attribuutsoort en een
 relatiesoort. De combinatie met een relatiesoort wordt alleen gedaan voor
 objecttypes die zelf geen unieke aanduiding hebben en daarom deze moeten
@@ -1163,10 +1152,9 @@ betreft, zoals een CharacterString.
 *Toepassing*: de modelelementen uit de groep datatype en attribuutsoort.
 
 
-#### Tagged values en waardenbereik tagged values
+#### Toegestane waarden voor (bepaalde) metadata gegevens 
 
-Tagged values, zoals genoemd in de UML-extensie kolom zijn altijd van het
-datatype CharacterString. Aanvullend geldt:
+Tagged values zijn altijd van het datatype CharacterString. Aanvullend geldt:
 
 -   Voor lengtes geldt dat er alleen getallen in mogen (van het datatype
     Integer).
@@ -1258,13 +1246,19 @@ View 2: Datatypen
 | Referentie element      | «Referentie element»    | (UML) Property           | Attribute          |
 | Codelist                | «Codelist               | (UML) Datatype           | Datatype           |
 
+* Nadere specificaties voor datatypen * 
+
+Voor enumeraties is geen stereotype gespecificeerd. In het metamodel maken we gebruik van de bestaande UML-enumeration (metaclass) voor de specificaties van een enumeratie.
+
+Voor enumeratiewaarde is geen stereotype gespecificeerd. In het metamodel maken we gebruik van de bestaande UML-enumerationLiteral (metaclass) voor de specificaties van een enumeratiewaarde.
+
 ### Overige
 
 ![](media/505b92a05134fb38d9aec81f23a66bad.png)
 
 Constraint
 
-View 3: Constraint
+View 3a: Constraint
 
 | **MIM metaclass** | **Stereotype** | **Metaclass UML 2.5** | **In Sparx EA** |
 |-------------------|----------------|-----------------------|-----------------|
@@ -1276,7 +1270,7 @@ View 3: Constraint
 
 Relatierol
 
-View 4: Relatiesoort en relatierol
+View 3b: Relatiesoort en relatierol
 
 | **MIM metaclass**     | **Stereotype** | **Metaclass UML 2.5** | **In Sparx EA** |
 |-----------------------|----------------|-----------------------|-----------------|
@@ -1290,7 +1284,7 @@ View 4: Relatiesoort en relatierol
 |-------------------|---------------------|-----------------------|-----------------|
 | Externe koppeling | «Externe koppeling» | (UML) Association     | Association     |
 
-View 5: Groepering
+View 3c: Groepering
 
 *Packages*
 
@@ -1306,7 +1300,7 @@ Nadere specificatie metagegevens in UML
 ---------------------------------------
 Deze paragraaf is een aanvulling op de paragraaf *'Specificatie metagegevens'* in hoofdstuk 2. 
 
->   **Definitie Alias**
+>   **Alias**
 
 De alternatieve weergave van de naam.
 
@@ -1319,6 +1313,12 @@ Verdere toelichting voor UML modellen:
     gespecificeerd bij de metaclass Element Import.<a href="#fn2-10" id="fn2-10ref"><sup>2-10</sup></a>
     In Enterprise Architect is de alternatieve weergave aan te zetten in de
     properties van een Diagram, via: use alias if available.
+    
+>   **Identificerend **
+
+Als een attribuutsoort identificerend is, dan krijgt dit kenmerk in UML isId = true. 
+
+Als een relatiesoort identificerend is, dan krijgt dit kenmerk in UML een stereotype «id»
     
 ### Modellering metagegevens voor objecten en attributen in UML 
 
