@@ -113,7 +113,7 @@ View 3c: Groepering
 | **MIM metaclass**     |
 |-----------------------|
 | Informatiemodel       | 
-| Domein (het eigen IM) |
+| Domein                |
 | Extern                | 
 | View                  | 
 
