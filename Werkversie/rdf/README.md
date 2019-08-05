@@ -32,18 +32,18 @@ vb:Pakjesboot12 a vbo:Schip.
 
 ## Het model
 
-Het RDF model is opgesplitst in twee delen:
-a. de [RDF vocabulaire](model/mim.ttl), met de (meta)klassen en (meta)eigenschappen;
-b. de [RDF Shapesgraph](model/mim-shapes.ttl), met "shapes", de gegevensconstraints die gelden op het gebruik van de klassen en eigenschappen.
+Het RDF model is opgesplitst in twee delen (klik op het linkje om het daadwerkelijk modelonderdeel te openen):
+
+1. de [RDF vocabulaire](model/mim.ttl), met de (meta)klassen en (meta)eigenschappen;
+2. de [RDF Shapesgraph](model/mim-shapes.ttl), met "shapes", de gegevensconstraints die gelden op het gebruik van de klassen en eigenschappen.
 
 ## Status
 
 De huidige status van deze beschrijving is *concept*. Op de volgende hoofdpunten zijn vervolgacties nodig:
 
-- Er staan nog enkele issues open op de manier waarop de huidige standaard geinterpreteerd moet worden. De vervolgacties daarvoor staan beschreven in de afzonderlijke issues
-- Er zijn issues gevonden die opgelost dienen te zijn voordat sprake kan zijn van een correcte representatie;
+- Er staan nog enkele issues open op de manier waarop de huidige standaard geinterpreteerd moet worden. De vervolgacties daarvoor staan beschreven in de afzonderlijke issues.
 - Een handreiking is gewenst hoe vanuit een MiM RDF informatiemodel een RDF ontologie gemaakt kan worden. Hierbij kan aangesloten worden bij de ontwikkelingen rondom [NEN3610 en Linked data](https://github.com/Geonovum/NEN3610-Linkeddata). Dit komt overeen met [issue #72](https://github.com/Geonovum/MIM-Werkomgeving/issues/72).
-- Het MiM in RDF dient opgenomen te worden als onderdeel van de MiM standaard. Dit komt overeen met [issue #71](https://github.com/Geonovum/MIM-Werkomgeving/issues/71)
+- Het MiM in RDF dient opgenomen te worden als onderdeel van de MiM standaard. Dit komt overeen met [issue #71](https://github.com/Geonovum/MIM-Werkomgeving/issues/71).
 
 ## Interpretatie
 
