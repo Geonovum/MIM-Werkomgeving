@@ -1,13 +1,10 @@
-Bijlagen
-========
+# Bijlagen
 
-Bijlage I: Overzicht toegepaste UML metaclasses
------------------------------------------------
+## Overzicht toegepaste UML metaclasses
 
 ![](media/db713545374d78b1070c439199543dc4.png)
 
-Bijlage II: Modelelementen en metagegevens als diagram
-------------------------------------------------------
+## Modelelementen en metagegevens als diagram
 
 Deze bijlage bevat alle modelelementen en metagegevens in één diagram.
 
@@ -23,8 +20,7 @@ Deze bijlage bevat alle modelelementen en metagegevens in één diagram.
 
 ![](media/1a48dec7e8b3c7a17434abb212b2c123.png)
 
-Bijlage III: Template naamgeving conventies
--------------------------------------------
+## Template naamgeving conventies
 
 | **Modelelement**               | **Naamgevingsconventie**  |   | **Voorbeeld** |
 |--------------------------------|---------------------------|---|---------------|
@@ -62,8 +58,7 @@ Bijlage III: Template naamgeving conventies
 | Code enumeratiewaarde          |                           |   |               |
 | Naam enumeratiewaarde          |                           |   |               |
 
-Bijlage IV: Versielog
----------------------
+## Versielog
 
 In deze versie zijn de volgende issues verwerkt:
 

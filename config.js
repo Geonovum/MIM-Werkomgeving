@@ -37,17 +37,12 @@ var respecConfig =
   editors: 
   [
     {
-      name:       "Ellen Debats",
-      company:    "VNG Realisatie (voorheen KING)",
-      companyURL: "https://www.vng.nl"
+      name:       "Dick Krijtenburg",
+      company:    "Geonovum",
+      companyURL: "https://www.geonovum.nl"
     }, 
     {
-      name:       "Lennart van Bergen",
-      company:    "Kadaster",
-      companyURL: "https://www.kadaster.nl"
-    }, 
-    {
-      name:       "Paul Janssen",
+      name:       "Jan van Gelder",
       company:    "Geonovum",
       companyURL: "https://www.geonovum.nl"
     },
@@ -57,12 +52,12 @@ var respecConfig =
   authors: 
   [
     {
-      name:       "Ellen Debats",
-      company:    "VNG Realisatie",
-      companyURL: "https://www.vng.nl"
+      name:       "Lennart van Bergen",
+      company:    "Kadaster",
+      companyURL: "https://www.kadaster.nl"
     }, 
     {
-      name:       "Lennart van Bergen",
+      name:       "Thies Mesdag",
       company:    "Kadaster",
       companyURL: "https://www.kadaster.nl"
     }, 
@@ -70,21 +65,6 @@ var respecConfig =
       name:       "Paul Janssen",
       company:    "Geonovum",
       companyURL: "https://www.geonovum.nl"
-    },
-    {
-      name:       "Arjan C. Kloosterboer",
-      company:    "VNG Realisatie (voorheen KING)",
-      companyURL: "https://www.vng.nl"
-    },
-    {
-      name:       "Peter Lentjens",
-      company:    "Kadaster",
-      companyURL: "https://www.kadaster.nl"
-    },
-    {
-      name:       "Wilko Quak",
-      company:    "TU Delft",
-      companyURL: "https://www.tudelft.nl"
     },
     {
       name:       "Linda van den Brink",
@@ -123,16 +103,95 @@ var respecConfig =
   //-- NB: kijk eerst naar de beschikbare www.specref.org voor verwijziging 
   localBiblio: 
   {
-    "CITAAT":
-      {
-        title:      "Titel van het Citaat",
-        href:       "http://url van de publicatie",
-        status:     "versie van de publicatie",
-        publisher:  "naam van de publiceerder",
-        company:    "eventueel naam van bedrijf",
-    }
+    "MDA":
+    {
+      title:      "Model Driven Architecture (MDA) Guide",
+      href:       "",
+      status:     "rev. 2.0, 1-6-2014",
+      publisher:  "",
+      company:    "Object Management Group",
+    },
+    "UML":
+    {
+      title:      "Unified Modeling Language (UML)",
+      href:       "http://uml.org",
+      status:     "",
+      publisher:  "",
+      company:    "",
+    },
+    "OMG":
+    {
+      title:      "OMG Unified Modeling Language TM",
+      href:       "http://www.omg.org/spec/UML/2.5",
+      status:     "versie 2.5",
+      publisher:  "",
+      company:    "",
+    },
+    "STELSELCAT":
+    {
+      title:      "Stelselcatalogus",
+      href:       "http://www.stelselcatalogus.nl/over-de-stelselcatalogus/metadata/",
+      status:     "",
+      publisher:  "",
+      company:    "",
+    },
+    "GAB":
+    {
+      title:      "GAB",
+      href:       "http://www.noraonline.nl/images/noraonline/c/c3/GAB_mogelijk_onvolledige_datum_1.0.pdf",
+      status:     "",
+      publisher:  "",
+      company:    "",
+    },
+    "iso-8601":
+    {
+      title:      "Representation of dates and times. ISO 8601:2004.",
+      href:       "http://www.iso.org/iso/catalogue_detail?csnumber=40874",
+      publisher:  "International Organization for Standardization (ISO)",
+      date:       "2004",
+      status:     "ISO 8601:2004",
+    },
+    "NORA":
+    {
+      title:      "Handreiking gegevensbeschrijving (NORA)",
+      href:       "http://noraonline.nl/wiki/Gegevensbeschrijvingen/Handreiking",
+      status:     "",
+      publisher:  "",
+      company:    "",
+    },
+    "iso-11404":
+    {
+      title:      "11404:2008 Information technology – General Purpose Datatypes (GPD)",
+      href:       "http://noraonline.nl/wiki/Gegevensbeschrijvingen/Handreiking",
+      status:     "",
+      publisher:  "",
+      company:    "NEN-ISO/IEC",
+    },
+    "REGEXP":
+    {
+      title:      "Formeel patroon (Reguliere Expressies)",
+      href:       "http://perldoc.perl.org/perlre.html",
+      status:     "",
+      publisher:  "",
+      company:    "",
+    },
+    "OCL":
+    {
+      title:      "OCL",
+      href:       "http://www.omg.org/spec/OCL/2.4/",
+      status:     "",
+      publisher:  "",
+      company:    "",
+    },
+    "NEN3610":
+    {
+      title:      "NEN-3610 Basismodel geo-informatie",
+      href:       "https://www.nen.nl/NEN-Shop/Norm/NEN-36102011-nl.htm",
+      status:     "2016",
+      publisher:  "",
+      company:    "",
+    },
   },
-
   //-- Voor dit blok geldt: alleen als er eerdere versies zijn en altijd beiden aan/uit! 
   previousPublishDate: "2019-06-19",    	    // Format is "YYY-MM-DD"
   previousMaturity: "GN-DEF",                 // kies 1 van deze 3 regels

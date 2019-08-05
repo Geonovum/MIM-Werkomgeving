@@ -9,7 +9,6 @@ NEN3610-informatiemodellen en recente ontwikkelingen zoals onder andere het
 Digitaal Stelsel Omgevingswet, maken de noodzaak om te komen tot één
 modelleertaal urgent.
 
-
 Afspreken dat we UML als modelleertaal gebruiken is hierbij niet voldoende. Een
 metamodel is nodig. Dit is een verzameling van de bouwstenen c.q. de
 modelelementen die gebruikt mogen worden om een informatiemodel mee op te
@@ -27,7 +26,7 @@ Het metamodel biedt de modelleringstaal waarmee een informatiemodel gemaakt,
 gelezen en begrepen kan worden. Het doel hiervan is:
 -   de leesbaarheid en eenduidigheid van informatiemodellen te vergroten;
 -   informatiemodellen op zowel conceptueel als op logisch niveau te kunnen
-    opstellen (zie par. 1.4);
+    opstellen (zie [Wat is een informatiemodel](#wat-is-een-informatiemodel)) <!-- (zie par. 1.4); -->
 -   informatiemodellen goed aan elkaar te kunnen koppelen op conceptueel en
     logisch niveau;
 -   tooling te kunnen ontwikkelen en (her)gebruiken voor resp. door alle
@@ -43,7 +42,7 @@ Voor informatiemodellen die op basis van dit metamodel zijn beschreven geldt:
     voor publicatie;
 -   ze kunnen als basis gebruikt worden voor (bij voorkeur model-driven
     generatie van) afgeleide modellen en producten voor een specifiek
-    toepassingsgebied/domein zoals bijvoorbeeld NEN3610 of het gemeentelijke
+    toepassingsgebied/domein zoals bijvoorbeeld NEN3610 [[!NEN3610]] of het gemeentelijke
     domein;
 -   ze kunnen als basis gebruikt worden voor (bij voorkeur model-driven
     generatie van) afgeleide modellen voor specifieke services en
@@ -55,7 +54,7 @@ Dit document is primair bestemd voor informatiearchitecten die deze
 informatiemodellen maken; informatieanalisten die willen weten wat de betekenis
 en definitie van informatieobjecten is, en mensen die model-driven verder werken
 op basis van het informatiemodel en er implementaties van maken. Kennis van
-informatiemodellering is een vereiste. Enige kennis van UML is een pré maar niet
+informatiemodellering is een vereiste. Enige kennis van UML [[!UML]] is een pré maar niet
 noodzakelijk. Dit metamodel richt zich in het bijzonder op de
 informatievoorziening binnen het overheidsdomein, al is het ook in bredere
 context inzetbaar.
@@ -63,25 +62,28 @@ context inzetbaar.
 ## Leeswijzer
 Het metamodel beschrijven we in drie hoofdstukken en een bijlage.
 
-Lees dit hoofdstuk (1 – Inleiding) verder voor inzicht in wat we onder een
+Lees de [Inleiding](#inleiding) verder voor inzicht in wat we onder een
 informatiemodel en onder een metamodel verstaan, hoe deze de modellen zich
 verhouden tot UML en de vier lagen metamodel architectuur van de Object
-Management Group (OMG), en welke standaarden worden toegepast.
+Management Group [[!OMG]], en welke standaarden worden toegepast.
 
-Hoofstuk 2 – Metamodel bevat de beschrijving van alle bouwstenen c.q. de
-modelelementen van het metamodel, in de vorm van definities en specificaties.
+Het hoofdstuk [Metamodel Algemeen](#metamodel-algemeen) bevat de beschrijving van alle 
+bouwstenen c.q. de modelelementen van het metamodel, in de vorm van definities en specificaties.
 Ook beschrijft dit hoofdstuk hoe het metamodel zich verhoudt tot het UML
 metamodel, welke uitbreidingen c.q. verbijzonderingen van het UML metamodel zijn
 aangebracht. De betekenis en toelichting van de modelelementen van het metamodel
 vormt het materiaal waarmee een uitputtende modelspecificatie kan worden
 opgesteld.
 
-In hoofdstuk 3 – ‘Overige afspraken en regels’ gaan we in detail in op een
-aantal aspecten. Het is een uitgebreidere toelichting, in aanvulling op
-hoofdstuk 2, bestaande uit nadere afspraken, regels, richtlijnen en
+Het hoofdstuk [Metamodel in UML](#metamodel-in-uml) beschrijft hoe de implementatie van MIM in
+[[!UML]] er uit ziet.
+
+In het hoofdstuk [Afspraken & Regels](#afspraken-regels) gaan we in detail in op een
+aantal aspecten. Het is een uitgebreidere toelichting, in aanvulling op het 
+hoofdstuk [Metamodel Algemeen](#metamodel-algemeen), bestaande uit nadere afspraken, regels, richtlijnen en
 aanbevelingen bij het toepassen van het metamodel.
 
-Bijlage 3 verschaft een overzicht van alle bouwstenen en metadata-elementen en
+De bijlage [Template naamgeving conventies](#template-naamgeving-conventies) verschaft een overzicht van alle bouwstenen en metadata-elementen en
 het al dan niet van toepassing zijn daarvan in een conceptueel dan wel een
 logisch informatiemodel.
 
@@ -95,9 +97,16 @@ opgeslagen, beheerd en uitgewisseld worden. Die beschrijving heeft de vorm van
 een model dat een gestructureerde weergave is van die werkelijkheid. Een
 dergelijk model is noodzakelijk om deze informatie te kunnen beheren en
 gebruiken (door mensen en machines) bij het communiceren over deze
-werkelijkheid, in registraties<a href="#fn1-1" id="fn1-1ref"><sup>1-1</sup></a>of anderszins, zoals het specificeren van de
+werkelijkheid, in *registraties* <!-- <a href="#fn1-1" id="fn1-1ref"><sup>1-1</sup></a> --> of anderszins, zoals het specificeren van de
 tussen registraties uit te wisselen gegevens of van de te bevragen informatie
 uit een registratie.
+
+<aside class='note'>
+    De opname in een *registratie* kent vaak een inwinningsproces, om
+    gegevenswaarden over de feitelijke dingen in de werkelijkheid conform het
+    informatiemodel in de registratie op te nemen. Dit is een belangrijk proces,
+    maar valt buiten scope van het informatiemodel.
+</aside>
 
 Het beschrijven vindt plaats door de informatie te modelleren naar objecttypen
 en de kenmerken daarvan naar attribuutsoorten van die objecttypen en relaties
@@ -117,10 +126,12 @@ er een, van het informatiemodel afgeleide, registratie is.
 
 ![](media/informatiemodel.png)
 
-Jan en Katrien zijn bijvoorbeeld ‘dingen in de werkelijkheid’. Zij hebben
-bepaalde kenmerken, zoals een naam en een geboortedatum. In een informatiemodel
-komen Jan en Piet niet voor. Ook hun gegevens, zoals het feit dat 10-10-1970 de
-geboortedatum van Jan is, komt niet voor.
+<aside class='example'>
+    Jan en Katrien zijn bijvoorbeeld ‘dingen in de werkelijkheid’. Zij hebben
+    bepaalde kenmerken, zoals een naam en een geboortedatum. In een informatiemodel
+    komen Jan en Piet niet voor. Ook hun gegevens, zoals het feit dat 10-10-1970 de
+    geboortedatum van Jan is, komt niet voor.
+</aside>
 
 In de context van het informatiemodel worden Jan en Katrien gezien als
 *objecten* binnen een domein. In het informatiemodel is het *objecttype* Persoon
@@ -148,9 +159,9 @@ Zoals hiervoor uiteengezet beschrijft een informatiemodel de werkelijkheid. In
 de praktijk blijken hier niveaus in te bestaan, variërend van een zo getrouw
 mogelijke beschrijving van die werkelijkheid tot een specificatie van de wijze
 van vastlegging van die werkelijkheid in een database of uitwisselformaat.
-Veelal worden vier niveaus onderscheiden<a href="#fn1-2" id="fn1-2ref"><sup>1-2</sup></a>:
+Veelal worden vier niveaus onderscheiden [[!MDA]]<!-- <a href="#fn1-2" id="fn1-2ref"><sup>1-2</sup></a>: -->
 
-**1. Model van begrippen**
+### 1. Model van begrippen
 Beschrijft de werkelijkheid binnen het beschouwde domein (de ‘universe of
 discourse’) d.m.v. de daarin gehanteerde begrippen en hun relaties tot elkaar.
 Doel is dat de actoren daarbinnen elkaar begrijpen en één taal spreken. Een
@@ -159,7 +170,7 @@ business’. De begrippen worden beschreven in een formele taal, een vocabulaire
 Een vocabulaire is geen informatiemodel. Begrippen kunnen in meerdere
 informatiemodellen gebruikt worden.
 
-**2. Conceptueel informatiemodel**
+### 2. Conceptueel informatiemodel
 Modellering van de werkelijkheid binnen het beschouwde domein, v.w.b. informatie
 daarvan, onafhankelijk van ontwerp van en implementatie in systemen. Het geeft
 een zo getrouw mogelijke beschrijving van die werkelijkheid en is in natuurlijke
@@ -172,7 +183,7 @@ werkelijkheid ten behoeve van deze communicatie. Een conceptueel informatiemodel
 wordt dan ook opgesteld voor gebruik door mensen, zodat ‘de business’ en de
 ICT-specialisten elkaar gaan begrijpen.
 
-**3. Logisch informatie- of gegevensmodel**
+### 3. Logisch informatie- of gegevensmodel
 Beschrijft hoe de, in het conceptuele model onderscheiden, concepten gebruikt
 worden bij de interactie tussen systemen en hun gebruikers en tussen systemen
 onderling. Anders gezegd, een model van de representatie van informatie over de
@@ -184,11 +195,11 @@ taal beschreven en wordt waar mogelijk gegenereerd vanuit het conceptueel model.
 Het logisch model wordt opgesteld voor ICT-interoperabiliteit, voor gebruik door
 met name de ontwerpers, bouwers en beheerders van ICT-voorzieningen.
 
-**4. Fysiek of technisch gegevens- of datamodel**
+### 4. Fysiek of technisch gegevens- of datamodel
 Specificeert de structuur en eigenschappen van de technologie waarin de
 informatie wordt vastgelegd of uitgewisseld. Dit is sterk afhankelijk van de
 gebruikte opslagtechnologie zoals een specifieke database of de
-servicetechnologie zoals XML, GML, SOAP, REST, (Geo)JSON, LinkedData e.d. Het
+servicetechnologie zoals [[!xml]], [[!gml]], SOAP, REST, (Geo)JSON, LinkedData e.d. Het
 kan tevens informatie bevatten over de manier waarop berichten ‘verpakt’ worden,
 het (internet)protocol en de logistiek van het berichtenverkeer. De technische
 specificaties worden over het algemeen zoveel als mogelijk gegenereerd uit het
@@ -303,8 +314,7 @@ aan het onderhavige document.
 De spelregel bij een extensie is dat deze geen onderwerpen *vervangt* die in dit
 metamodel beschreven zijn, maar alleen echte uitbreidingen behelst. Indien
 meerdere organisaties hierin geïnteresseerd zijn, kan zo’n extensie ook
-toegevoegd worden aan dit metamodel. Neem dan contact op met de beheerders (zie
-voorwoord).
+toegevoegd worden aan dit metamodel. Neem dan contact op met de helpdesk (zie [voorwoord](#voorwoord)).
 
 Het is ook mogelijk om in de extensie aan te geven welke elementen uit dit
 metamodel *niet* ingezet (mogen) worden in uw informatiemodellen. Denk hierbij
@@ -329,49 +339,34 @@ Welke je kiest geef je aan bij je eigen informatiemodel, in je eigen extensie
 (zoals bedoeld in de vorige paragraaf).
 
 Dit betreft: Relatiesoort en relatierol, beide te gebruiken, maar welke is
-verplicht/leidend (paragraaf 2.3.2.1 en 2.3.2.2).
+verplicht/leidend (zie [Specificatie metagegevens voor relaties](#specificatie-metagegevens-voor-relaties)). <!-- (paragraaf 2.3.2.1 en 2.3.2.2) -->
 
 Indien gewenst kunt u hier vragen over stellen aan de beheerders van dit
 metamodel voordat u een keuze maakt.
 
 ## Beheer
-Het beheer van dit metamodel vindt plaats als samenwerking tussen VNG Realisatie, het
-Kadaster modellenbureau en Geonovum. Voor vragen, suggesties of opmerkingen kunt
-u contact opnemen met:
+Het beheer van dit metamodel vindt plaats door Geonovum met ondersteuning van het Kadaster. Voor vragen, suggesties of opmerkingen kunt
+u contact opnemen met de MIM helpdesk van Geonovum: mim@geonovum.nl
 
-| **Naam**               | **e-mailadres**               |
-|------------------------|-------------------------------|
-| Ellen Debats           | ellen.debats@vng.nl           |
-| Lennart van Bergen     | lennart.vanBergen@kadaster.nl |
-| Paul Janssen           | p.janssen@geonovum.nl         |
+<todo>TODO: Deze kan weg zodra alle referenties gerefereerd zijn</todo>
 
 ## Normreferenties
-| \#  | Naam                                         | **Referentie**                                                                                                                                                                                |
-|-----|----------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 1.  | Unified Modeling Language (UML)              | http://uml.org                                                                                                                                                                                |
-| 2.  | OMG Unified Modeling Language TM versie 2.5  | http://www.omg.org/spec/UML/2.5                                                                                                                                                               |
-| 3.  | Stelselcatalogus                             | http://www.stelselcatalogus.nl/over-de-stelselcatalogus/metadata/                                                                                                                             |
-| 4.  | GAB                                          | http://www.noraonline.nl/images/noraonline/c/c3/GAB_mogelijk_onvolledige_datum_1.0.pdf                                                                                                        |
-| 5.  | Handreiking gegevensbeschrijving (NORA)      | http://noraonline.nl/wiki/Gegevensbeschrijvingen/Handreiking                                                                                                                                  |
-| 6.  | ISO 11404                                    | NEN-ISO/IEC 11404:2008 Information technology – General Purpose Datatypes (GPD)                                                                                                               |
-| 7.  | ISO 8601                                     | https://en.wikipedia.org/wiki/ISO_8601                                                                                                                                                        |
-| 8.  | Formeel patroon (Reguliere Expressies)       | Zoals beschreven in Perl 5: http://perldoc.perl.org/perlre.html                                                                                                                               |
-| 9.  | OCL                                          | http://www.omg.org/spec/OCL/2.4/                                                                                                                                                              |
-| 10. | NEN 3610/A1:2016 Basismodel Geo- informatie. | NEN 3610:2011/A1:2016 nl. Basismodel geo-informatie - Termen, definities, relaties en algemene regels voor de uitwisseling van informatie over aan de aarde gerelateerde ruimtelijke objecten |
 
-De Stelselcatalogus, het GAB en de Handreiking gegevensbeschrijving raken elkaar
-op een aantal vlakken maar er kunnen op deze raakvlaken verschillen zijn in de
-gemaakte afspraken. Voor het metamodel hanteren we daarom de volgende spelregel:
+| \#  | Naam                                         | **Referentie** |
+|-----|----------------------------------------------|----------------|
+| 1.  | Unified Modeling Language (UML)              | [[!UML]]       |
+| 2.  | OMG Unified Modeling Language TM versie 2.5  | [[!OMG]]       |
+| 3.  | Stelselcatalogus                             | [[!STELSELCAT]]|
+| 4.  | GAB                                          | [[!GAB]]       | 
+| 5.  | Handreiking gegevensbeschrijving (NORA)      | [[!NORA]]      |
+| 6.  | ISO 11404                                    | [[!iso-11404]]       |
+| 7.  | ISO 8601                                     | [[!iso-8601]]   |
+| 8.  | Formeel patroon (Reguliere Expressies)       | [[!REGEXP]]    |
+| 9.  | OCL                                          | [[!OCL]]       |
+| 10. | NEN 3610/A1:2016 Basismodel Geo-informatie   | [[!NEN3610]]   |
+
+De Stelselcatalogus [[!STELSELCAT]], het GAB [[!GAB]] en de Handreiking gegevensbeschrijving 
+[[!NORA]] raken elkaar op een aantal vlakken maar er kunnen op deze raakvlaken verschillen zijn 
+in de gemaakte afspraken. Voor het metamodel hanteren we daarom de volgende spelregel:
 de Stelselcatalogus is zoveel als mogelijk leidend, vervolgens het GAB en als
 laatste de handreiking.
-
-
-**Voetnoten**
-
-<a id="fn1-1" href="#fn1-1ref"><sup>1-1</sup></a>:De opname in een registratie kent vaak een inwinningsproces, om
-gegevenswaarden over de feitelijke dingen in de werkelijkheid conform het
-informatiemodel in de registratie op te nemen. Dit is een belangrijk proces,
-maar valt buiten scope van het informatiemodel.
-
-<a id="fn1-2" href="#fn1-2ref"><sup>1-2</sup></a>: Ontleend aan: Model Driven Architecture (MDA) Guide; Object Management
-Group, rev. 2.0, 1-6-2014
