@@ -1,15 +1,19 @@
 # Metamodel Algemeen
 
-Dit hoofdstuk beschrijft het metamodel in diagramvorm en in tekst. De eerste paragraaf bevat een diagram, die het overzicht van de modelelementen aangeeft, en hun onderlinge verhouding. Hierna worden alle modelelementen beschreven en toegelicht.
+Dit hoofdstuk beschrijft het metamodel in diagramvorm en in tekst. De eerste paragraaf bevat een diagram, die het overzicht van de 
+modelelementen aangeeft, en hun onderlinge verhouding. Hierna worden alle modelelementen beschreven en toegelicht.
 Deze modelelementen worden gebruikt bij het maken van een informatiemodel. 
 
 Uitgangspunten voor het metamodel zijn: 
 - Elk modelelement heeft een naam en een eigen MIM metaclass, waaraan je het modelelement overal kan herkennen. 
-- De modelelementen worden eerst uitgelegt zonder een specifieke specificatie taal te gebruiken. Dit is zodat we hierna kunnen aangeven hoe je het modelelement uitdrukt per specifieke specificatie taal, te weten in UML of in w3C specificatie technieken.
-- Toolonafhankelijke beschrijving van het metamodel. Omdat VNG Realisatie, Kadaster en Geonovum en veel andere organisaties Sparx EA gebruiken is er aanvullend aangegeven hoe het metamodel in Enterprise Architect toegepast wordt. Hierdoor borgen we deze relatie.
-- Uniforme toepassing van het metamodel in informatiemodellen. Anders gezegd, uitbreiden mag, afwijken
-niet, maak voor hetzelfde doel geen alternatieve constructies. 
-- Datatypen zijn onderdeel van het metamodel en beschrijven de structuur van de data, maar niet de semantiek/betekenis. De aanbeveling is dan ook om eerst een informatiemodel te maken zonder datatypen. De regel is dat als alle datatypen uit het model worden weggelaten, er geen semantische betekenis verloren mag gaan. 
+- De modelelementen worden eerst uitgelegt zonder een specifieke specificatie taal te gebruiken. Dit is zodat we hierna kunnen aangeven 
+hoe je het modelelement uitdrukt per specifieke specificatie taal, te weten in UML of in w3C specificatie technieken.
+- Toolonafhankelijke beschrijving van het metamodel. Omdat VNG Realisatie, Kadaster en Geonovum en veel andere organisaties Sparx EA 
+gebruiken is er aanvullend aangegeven hoe het metamodel in Enterprise Architect toegepast wordt. Hierdoor borgen we deze relatie.
+- Uniforme toepassing van het metamodel in informatiemodellen. Anders gezegd, uitbreiden mag, afwijkenniet, maak voor hetzelfde doel 
+geen alternatieve constructies. 
+- Datatypen zijn onderdeel van het metamodel en beschrijven de structuur van de data, maar niet de semantiek/betekenis. De aanbeveling is 
+dan ook om eerst een informatiemodel te maken zonder datatypen. De regel is dat als alle datatypen uit het model worden weggelaten, er geen semantische betekenis verloren mag gaan. 
 
 
 ## Structuur metamodel
@@ -557,7 +561,7 @@ gecreëerd en hebben daarom geen MIM metaclass.
     Postcode niet meer in het eigen model opgenomen te worden.
 </aside>
 
-    <!-- voetnoot opgenomen heirboven  <a href="#fn2-3" id="fn2-3ref"><sup>2-3</sup></a> -->
+<!-- <a href="#fn2-3" id="fn2-3ref"><sup>2-3</sup></a> (voetnoot staat hierboven in de tekst) -->
 
 *Toelichting:* Een primitief datatype is een datatype zonder verdere
 specificatie over de structuur. Dit datatype is enkelvoudig, oftewel niet samengesteld, en wordt
@@ -826,8 +830,7 @@ betekenis. De alias is optioneel (zie verder ook [Naamgevingsconventies](#naamge
 
 Bijvoorbeeld: OnroerendeZaak heeft als alias Onroerende zaak.
 
-*Toepassing*: alle modelelementen die een naam hebben, uitgezonderd de
-Enumeratiewaarde.<a href="#fn2-13" id="fn2-13ref"><sup>2-13</sup></a>
+*Toepassing*: alle modelelementen die een naam hebben, uitgezonderd de [Enumeratiewaarde](#n2-13). <!-- <a href="#fn2-13" id="fn2-13ref"><sup>2-13</sup></a> -->
 
 Metagegeven: **Definitie**
 
@@ -1203,25 +1206,29 @@ Tagged values zijn altijd van het datatype CharacterString. Aanvullend geldt:
 
 -   Voor datums geldt dat deze het volgende patroon volgen: jjjjmmdd
 
-| **Tagged value**             | **Waardenbereik**                                                                     |
-|------------------------------|---------------------------------------------------------------------------------------|
-| Indicatie materiële historie | Ja, Nee, zie Groep                                                                    |
-| Indicatie formele historie   | Ja, Nee, zie Groep                                                                    |
-| Mogelijk geen waarde         | Ja, Nee                                                                               |
-| Type aggregratie             | composite, aggregate, of geen/leeg/niet gebruikt                                      |
-| Authentiek<a href="#fn2-11" id="fn2-11ref"><sup>2-11</sup></a>               | Authentiek, Basisgegeven, Landelijk kerngegeven, Gemeentelijk kerngegeven, Overig<a href="#fn2-12" id="fn2-12ref"><sup>2-12</sup></a> |
+| **Tagged value**             | **Waardenbereik**                                                                          |
+|------------------------------|--------------------------------------------------------------------------------------------|
+| Indicatie materiële historie | Ja, Nee, zie Groep                                                                         |
+| Indicatie formele historie   | Ja, Nee, zie Groep                                                                         |
+| Mogelijk geen waarde         | Ja, Nee                                                                                    |
+| Type aggregratie             | composite, aggregate, of geen/leeg/niet gebruikt                                           |
+| [Authentiek](#n2-11)         | Authentiek, Basisgegeven, Landelijk kerngegeven, Gemeentelijk kerngegeven, [Overig](#n2-12)|
 
-<todo>TODO: Voetnoten moeten in de tekst hierboven als "note" worden opgenomen</todo>
 
 **Voetnoten**
 
-<a id="fn2-11" href="#fn2-11ref"><sup>2-11</sup></a>: Voor toelichting, zie paragraaf 3.11
+<aside id='n2-11' class='note'>
+    Voor toelichting, zie paragraaf over [Authentieke gegevens](#authentieke-gegevens).
+</aside>
 
-<a id="fn2-12" href="#fn2-12ref"><sup>2-12</sup></a>: Geef bij overig in uw eigen informatiemodel aan wat u er onder verstaat.
+<aside id='n2-12' class='note'>
+    Geef bij overig in uw eigen informatiemodel aan wat u er onder verstaat.
+</aside>
 
-<a id="fn2-13" href="#fn2-13ref"><sup>2-13</sup></a>: Een uitzondering is gemaakt voor UML modellen voor de
-UML-EnumerationLiteral. De ‘naam’ betreft hier een daadwerkelijk waarde, waarin
-de naam gelijk staat aan de waarde. Het is daarom expliciet ongewenst om
-hiervoor een alternatieve naamgeving te gebruiken. De alias wordt hier, mede
-daarom, gebruikt voor (alleen) de modellering van het metadata aspect Code,
-welke aanvullend is op naam (niet een alternatief van naam).
+<aside id='n2-12' class='note'>
+    Een uitzondering is gemaakt voor UML modellen voor de UML-EnumerationLiteral. 
+    De ‘naam’ betreft hier een daadwerkelijk waarde, waarin de naam gelijk staat aan de waarde. 
+    Het is daarom expliciet ongewenst om hiervoor een alternatieve naamgeving te gebruiken. De alias wordt hier, mede 
+    daarom, gebruikt voor (alleen) de modellering van het metadata aspect Code,
+    welke aanvullend is op naam (niet een alternatief van naam).
+</aside>

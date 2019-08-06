@@ -199,7 +199,7 @@ met name de ontwerpers, bouwers en beheerders van ICT-voorzieningen.
 Specificeert de structuur en eigenschappen van de technologie waarin de
 informatie wordt vastgelegd of uitgewisseld. Dit is sterk afhankelijk van de
 gebruikte opslagtechnologie zoals een specifieke database of de
-servicetechnologie zoals [[!xml]], [[!gml]], SOAP, REST, (Geo)JSON, LinkedData e.d. Het
+servicetechnologie zoals [[!xml]], [[!gml]], [[!SOAP]], REST, (Geo)JSON, LinkedData e.d. Het
 kan tevens informatie bevatten over de manier waarop berichten ‘verpakt’ worden,
 het (internet)protocol en de logistiek van het berichtenverkeer. De technische
 specificaties worden over het algemeen zoveel als mogelijk gegenereerd uit het
@@ -241,7 +241,7 @@ basis daarvan gegevens uit te wisselen. Beschrijving van het metamodel is daarom
 een randvoorwaarde indien er sprake is van een stelsel van samenhangende
 informatiemodellen. Anders gezegd, met (alleen) de in het metamodel opgenomen
 set van modelleerconstructies worden informatiemodellen gemaakt. Door het
-schrijven van modelleertalen (zoals UML) in een metataal (zoals MOF) wordt
+schrijven van modelleertalen (zoals [[!UML]]) in een metataal (zoals MOF) wordt
 gegarandeerd dat alle toepassingen van die talen op een standaard manier zijn
 opgebouwd en daardoor alom te begrijpen zijn. De metataal beschrijft als het
 ware de grammatica van de modelleertaal. Het metamodel in dit document is
@@ -254,7 +254,7 @@ hun situatiespecifieke gegevenshuishouding. Belangrijk is dat de lezer eerst
 begrijpt wat we onder een informatiemodel en een metamodel verstaan en verder is
 het van belang de modellen in de juiste context te plaatsen. Dit laatste doen we
 aan de hand van de vier lagen metamodel architectuur van de Object Management
-Group (OMG). In deze paragaaf gaan we op deze concepten in.
+Group [[!OMG]]. In deze paragaaf gaan we op deze concepten in.
 
 **Vier lagen metamodel architectuur OMG**
 Voor de specificatie van het metamodel is gebruik gemaakt van dezelfde formele
@@ -356,7 +356,7 @@ u contact opnemen met de MIM helpdesk van Geonovum: mim@geonovum.nl
 |-----|----------------------------------------------|----------------|
 | 1.  | Unified Modeling Language (UML)              | [[!UML]]       |
 | 2.  | OMG Unified Modeling Language TM versie 2.5  | [[!OMG]]       |
-| 3.  | Stelselcatalogus                             | [[!STELSELCAT]]|
+| 3.  | Stelselcatalogus                             | [[!SCAT]]|
 | 4.  | GAB                                          | [[!GAB]]       | 
 | 5.  | Handreiking gegevensbeschrijving (NORA)      | [[!NORA]]      |
 | 6.  | ISO 11404                                    | [[!iso-11404]]       |
@@ -365,7 +365,7 @@ u contact opnemen met de MIM helpdesk van Geonovum: mim@geonovum.nl
 | 9.  | OCL                                          | [[!OCL]]       |
 | 10. | NEN 3610/A1:2016 Basismodel Geo-informatie   | [[!NEN3610]]   |
 
-De Stelselcatalogus [[!STELSELCAT]], het GAB [[!GAB]] en de Handreiking gegevensbeschrijving 
+De Stelselcatalogus [[!SCAT]], het GAB [[!GAB]] en de Handreiking gegevensbeschrijving 
 [[!NORA]] raken elkaar op een aantal vlakken maar er kunnen op deze raakvlaken verschillen zijn 
 in de gemaakte afspraken. Voor het metamodel hanteren we daarom de volgende spelregel:
 de Stelselcatalogus is zoveel als mogelijk leidend, vervolgens het GAB en als

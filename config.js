@@ -127,10 +127,10 @@ var respecConfig =
       publisher:  "",
       company:    "",
     },
-    "STELSELCAT":
+    "SCAT":
     {
       title:      "Stelselcatalogus",
-      href:       "http://www.stelselcatalogus.nl/over-de-stelselcatalogus/metadata/",
+      href:       "http://www.stelselcatalogus.nl",
       status:     "",
       publisher:  "",
       company:    "",
@@ -190,6 +190,13 @@ var respecConfig =
       status:     "2016",
       publisher:  "",
       company:    "",
+    },
+    "SOAP":
+    {
+      "title": "SOAP Specifications",
+      "href": "https://www.w3.org/TR/SOAP/",
+      "publisher": "W3C",
+      "status": "NOTE",
     },
   },
   //-- Voor dit blok geldt: alleen als er eerdere versies zijn en altijd beiden aan/uit! 
