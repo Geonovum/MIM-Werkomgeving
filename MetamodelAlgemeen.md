@@ -15,7 +15,6 @@ geen alternatieve constructies.
 - Datatypen zijn onderdeel van het metamodel en beschrijven de structuur van de data, maar niet de semantiek/betekenis. De aanbeveling is 
 dan ook om eerst een informatiemodel te maken zonder datatypen. De regel is dat als alle datatypen uit het model worden weggelaten, er geen semantische betekenis verloren mag gaan. 
 
-
 ## Structuur metamodel
 
 Deze paragraaf bevat een overzicht van het metamodel en geeft alle
@@ -127,7 +126,8 @@ het maken van een informatiemodel.
 
 ### Objecten en attributen
 
-**1. Objecttype** *
+#### Objecttype * 
+<!-- **1. Objecttype** * -->
 
 Een objecttype is een groep van gelijksoortige objecten. Om duidelijk te
 maken wat wordt bedoeld kijken we eerst naar het begrip ‘object’.
@@ -167,7 +167,8 @@ registratie. Daartoe is veelal een interpretatie nodig (van die werkelijkheid
 cq. die objecttypen) naar eenheden die in een registratie vastgelegd kunnen
 worden (records, entiteiten e.d.) op basis van andere overwegingen.
 
-**2. Attribuutsoort**
+#### Attribuutsoort
+<!-- **2. Attribuutsoort** -->
 
 Een attribuutsoort is een type van gelijksoortige attributen of gegevens.
 Daartoe kijken we eerst naar het begrip ‘gegeven’.
@@ -209,7 +210,8 @@ opgenomen bij een objecttype.
     gemodelleerd.
 </aside>
 
-**3. Gegevensgroep**
+#### Gegevensgroep
+<!-- **3. Gegevensgroep** -->
 
 >   **Definitie Gegevensgroep**
 
@@ -236,7 +238,9 @@ een gegevensgroeptype.
     sterkte leggen we waardes vast).
 </aside>
 
-**4. Gegevensgroeptype**
+
+#### Gegevensgroeptype
+<!-- **4. Gegevensgroeptype** -->
 
 >   **Definitie Gegevensgroeptype**
 
@@ -284,7 +288,8 @@ Gegevensgroep.
 
 Verbanden met betekenis, die gelegd zijn tussen modelelementen van het type objecttype naar het type objecttype, of van een gegevensgroeptype naar een objecttype. 
 
-**5. Generalisatie:**
+#### Generalisatie
+<!-- **5. Generalisatie:** -->
 
 >   **Definitie Generalisatie tussen objecttypes**
 
@@ -324,7 +329,8 @@ deze generalisatie is van toepassing op de volgende datatypes:
 «Primitief datatype», «Gestructureerd datatype», «Referentielijst», «Codelist»,
 «Enumeratie».
 
-**6. Relatiesoort**
+#### Relatiesoort
+<!-- **6. Relatiesoort** -->
 
 >   **Definitie Relatiesoort**
 
@@ -350,7 +356,8 @@ van SCHIP en MOTOR.
 
 Wanneer een relatie gebruikt wordt om objecten aan elkaar te verbinden, zonder dat er eigenschappen over deze relatie worden vastgelegd, dan betreft dit de MIM-metaclass «Relatiesoort».
 
-**7. Relatieklasse**
+#### Relatieklasse
+<!-- **7. Relatieklasse** -->
 
 >   **Definitie Relatieklasse**
 
@@ -376,7 +383,8 @@ relatie voor alle betrokken objecten hetzelfde zijn. CONTRACT wordt dan
 gemodelleerd als objecttype, waarbij beschreven wordt wat er moet gebeuren
 wanneer één van de SUBJECTen niet meer bestaat.
 
-**8. Externe koppeling** 
+#### Externe Koppeling
+<!-- **8. Externe koppeling** --> 
 
 >   **Definitie Externe koppeling**
 
@@ -385,7 +393,8 @@ wanneer één van de SUBJECTen niet meer bestaat.
 >   objecttype van een extern informatiemodel. De relatie zelf hoort bij het
 >   ‘eigen’ objecttype. (zie ([Koppelen met ander informatiemodel](# koppelen-met-ander-informatiemodel-(externe-koppeling))). <!-- Zie ook 3.14 -->
 
-**9. Relatierol**
+#### Relatierol
+<!-- **9. Relatierol** -->
 
 >   **Definitie Relatierol**
 
@@ -412,7 +421,8 @@ Een datatype waarvan de mogelijke waarden zijn opgesomd in een lijst. De waarde
 van een attribuutsoort moet één van de waarden zijn uit de gespecificeerde
 waardenlijst.
 
-**10. Referentielijst** 
+#### Referentielijst
+<!-- **10. Referentielijst** --> 
 
 >   **Definitie Referentielijst**
 
@@ -446,7 +456,8 @@ de referentielijst en er is bewust gekozen om een referentielijst te modelleren.
 Het attribuut van een objecttype dat als type een referentielijst heeft bevat in
 de registratie daarom (vaak) alleen een referentie naar een object uit de lijst.
 
-**11. Referentie element** 
+#### Referentie element
+<!-- **11. Referentie element** -->
 
 >   **Definitie Referentie element**
 
@@ -463,7 +474,8 @@ Een referentie element kan uniek zijn, zoals een code, en is dan op zichzelf
 geschikt om gebruikt te worden als referentie (zoals bedoeld in de definitie van
 Referentielijst).
 
-**12. Enumeratie** 
+#### Enumeratie
+<!-- **12. Enumeratie** --> 
 
 >   **Definitie Enumeratie**
 
@@ -479,7 +491,8 @@ referentielijst, zijn nooit aan de orde).
     ruimte (spoorbaan, plein, straat).
 </aside>
 
-**13. Enumeratiewaarde** 
+#### Enumeratiewaarde
+<!-- **13. Enumeratiewaarde** --> 
 
 >   **Definitie Enumeratiewaarde**
 
@@ -489,7 +502,8 @@ referentielijst, zijn nooit aan de orde).
     Geslacht: man, vrouw, overig, type openbare ruimte: spoorbaan, plein, straat.
 </aside>
 
-**14. Stereotype** «**Codelist**
+#### Stereotype Codelist
+<!-- **14. Stereotype** «**Codelist** -->
 
 >   **Definitie Codelist**
 
@@ -530,7 +544,8 @@ als type van een attribuutsoort.
 Anders gezegd, Datatypes zijn veelal herbruikbaar en kunnen gespecificeerd
 worden bij diverse «Attribuutsoort»-en.
 
-**15. Primitief datatype** 
+####  Primitief datatype
+<!-- **15. Primitief datatype** --> 
 
 **PrimitiveType** Een standaard datatype, zoals bekend in vele
 specificatietalen, dat de structuur van een gegeven beschrijft. Het metamodel
@@ -552,17 +567,9 @@ gecreëerd en hebben daarom geen MIM metaclass.
 <aside class='example'>
     Documentnummer, Postcode. In het geval van Postcode is de landelijke
     definitie in tekst vastgelegd buiten het informatiemodel zelf, waarbij in het
-    eigen model een modelelement is gemaakt in de vorm van het datatype Postcode.
+    eigen model een modelelement is gemaakt in de vorm van het datatype <span class='note'>[Postcode](#alg-n-1)</span>.
 </aside>    
     
-<aside class='note'>
-    Wanneer het datatype Postcode landelijk zodanig beschikbaar is
-    gemaakt zodat hier gebruik van gemaakt kan worden in het model, dan hoeft
-    Postcode niet meer in het eigen model opgenomen te worden.
-</aside>
-
-<!-- <a href="#fn2-3" id="fn2-3ref"><sup>2-3</sup></a> (voetnoot staat hierboven in de tekst) -->
-
 *Toelichting:* Een primitief datatype is een datatype zonder verdere
 specificatie over de structuur. Dit datatype is enkelvoudig, oftewel niet samengesteld, en wordt
 ook wel simpel datatype genoemd. Dit datatype kent daarom zelf geen eigen modelelementen 
@@ -577,7 +584,8 @@ kunnen worden met altijd exact dezelfde structuur en waardenbereik (zie ook
 ‘patroon’ in [Domeinwaarden of lijsten](#domeinwaarden-of-lijsten)<!-- 3.5 -->). 
 Dit datatype, met een eigen naam, wordt vervolgens gebruikt als type van een attribuutsoort.
 
-**16. Gestructureerd datatype** 
+#### Gestructureerd datatype
+<!-- **16. Gestructureerd datatype** -->
 
 >   **Definitie Gestructureerd datatype**
 
@@ -611,7 +619,8 @@ geen Gestructureerd datatype).
     Gestructureerd datatype Bedrag bestaat uit de data-elementen som en valuta.
 </aside>
 
-**17. Data element** 
+#### Data element
+<!-- **17. Data element** --> 
 
 >   **Definitie Data element**
 
@@ -626,7 +635,8 @@ Het data element beschrijft in combinatie met andere data-elementen de structuur
 van een gegeven en heeft zelf een datatype. Dit datatype is meestal een
 primitief datatype.
 
-**18. Union** 
+#### Union
+<!-- **18. Union** --> 
 
 >   **Definitie Union**
 
@@ -639,7 +649,8 @@ primitief datatype.
     Union LineOrPolygon. Deze biedt een keuze uit Union element Line of Union element Polygon.
 </aside>
 
-**19. Union element** 
+#### Union element
+<!-- **19. Union element** --> 
 
 >   **Definitie Union element**
 
@@ -657,7 +668,8 @@ primitief datatype.
 Een package is een benoemde en begrensde verzameling/groepering van
 modelelementen.
 
-**20. Extern** 
+#### Extern
+<!-- **20. Extern** -->
 
 >   **Definitie Extern**
 
@@ -671,7 +683,8 @@ modelelementen.
     NEN3610ID zoals opgenomen in het Externe package.
 </div>
 
-**21. View** 
+#### View
+<!-- **21. View** --> 
 
 >   **Definitie View**
 
@@ -689,7 +702,8 @@ modelelementen.
 
 ### Overig
 
-**22. Identificerend** 
+#### Identificerend
+<!-- **22. Identificerend** --> 
 
 >   **Definitie Identificerend**
 
@@ -714,7 +728,8 @@ samenstellen met de unieke aanduiding van een gerelateerde objecttype.
     verwijzing naar de WIJK (de identificatie van WIJK).
 </aside>
 
-**23. Constraint** 
+#### Constraint
+<!-- **23. Constraint** --> 
 
 >   **Definitie Constraint**
 
@@ -786,7 +801,7 @@ De naam van een modelelement.
 
 Bijvoorbeeld: Pand is de naam van het modelelement objecttype, bouwjaar is de
 naam van het modelelement attribuutsoort. De modelelementen zijn limitatief
-opgesomd in H2.2.  
+opgesomd in het hoofdstuk [Betekenis modelelementen](#betekenis-modelelementen).  
 (en eventueel zijn in een uitbreiding extra modelelementen limitatief opgesomd).
 
 *Toepassing*: alle modelelementen.
@@ -808,7 +823,8 @@ De definitie volgt, indien aanwezig, de catalogus van de desbetreffende
 vanuit een informatie en informatiemodel perspectief (er zijn ook andere
 definities mogelijk vanuit andere perspectieven, zoals vanuit een juridisch
 perspectief, of vanuit het perspectief van een model van begrippen, zoals
-genoemd in paragraaf 1.5. Dergelijke definities kunnen hetzelfde zijn, of op het
+genoemd in de paragraaf [Typen informatiemodellen](#typen-informatiemodellen). 
+Dergelijke definities kunnen hetzelfde zijn, of op het
 moment hetzelfde, of verschillend, of aanvullend op elkaar. Het is aan de
 beheerder van het informatiemodel om hier zorgvuldig mee om te gaan).
 
@@ -830,7 +846,7 @@ betekenis. De alias is optioneel (zie verder ook [Naamgevingsconventies](#naamge
 
 Bijvoorbeeld: OnroerendeZaak heeft als alias Onroerende zaak.
 
-*Toepassing*: alle modelelementen die een naam hebben, uitgezonderd de [Enumeratiewaarde](#n2-13). <!-- <a href="#fn2-13" id="fn2-13ref"><sup>2-13</sup></a> -->
+*Toepassing*: alle modelelementen die een naam hebben, uitgezonderd de <span class='note'>[Enumeratiewaarde](#alg-n-4)</span>.
 
 Metagegeven: **Definitie**
 
@@ -918,7 +934,7 @@ samengesteld.
 
 *Toelichting*
 
-Meestal staat in dit metagegeven aangegeven ‘\<mijn IM\>’, bijvoorbeeld BRK als
+Meestal staat in dit metagegeven aangegeven '\<mijn IM\>', bijvoorbeeld BRK als
 het om het informatiemodel van de BRK gaat.
 
 Maar de herkomst van de definitie van het kenmerk *adres* kan ook als waarde
@@ -1212,20 +1228,26 @@ Tagged values zijn altijd van het datatype CharacterString. Aanvullend geldt:
 | Indicatie formele historie   | Ja, Nee, zie Groep                                                                         |
 | Mogelijk geen waarde         | Ja, Nee                                                                                    |
 | Type aggregratie             | composite, aggregate, of geen/leeg/niet gebruikt                                           |
-| [Authentiek](#n2-11)         | Authentiek, Basisgegeven, Landelijk kerngegeven, Gemeentelijk kerngegeven, [Overig](#n2-12)|
+| <span class='note'>[Authentiek](#alg-n-2)</span>| Authentiek, Basisgegeven, Landelijk kerngegeven, Gemeentelijk kerngegeven, <span class='note'>[Overig](#alg-n-3)</span>|
 
 
-**Voetnoten**
+** Voetnoten **
 
-<aside id='n2-11' class='note'>
+<aside id='alg-n-1' class='note'>
+    Wanneer het datatype Postcode landelijk zodanig beschikbaar is
+    gemaakt zodat hier gebruik van gemaakt kan worden in het model, dan hoeft
+    Postcode niet meer in het eigen model opgenomen te worden.
+</aside>
+
+<aside id='alg-n-2' class='note'>
     Voor toelichting, zie paragraaf over [Authentieke gegevens](#authentieke-gegevens).
 </aside>
 
-<aside id='n2-12' class='note'>
+<aside id='alg-n-3' class='note'>
     Geef bij overig in uw eigen informatiemodel aan wat u er onder verstaat.
 </aside>
 
-<aside id='n2-12' class='note'>
+<aside id='alg-n-4' class='note'>
     Een uitzondering is gemaakt voor UML modellen voor de UML-EnumerationLiteral. 
     De ‘naam’ betreft hier een daadwerkelijk waarde, waarin de naam gelijk staat aan de waarde. 
     Het is daarom expliciet ongewenst om hiervoor een alternatieve naamgeving te gebruiken. De alias wordt hier, mede 

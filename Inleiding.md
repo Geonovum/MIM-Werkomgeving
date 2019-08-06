@@ -1,4 +1,4 @@
-# Inleiding
+## Inleiding
 
 Voor u ligt het metamodel voor het beschrijven van informatiemodellen.
 Aanleiding was oorspronkelijk het adviesrapport ‘Rapportage harmonisatie StUF en
@@ -21,7 +21,7 @@ Dit document is opgesteld door VNG Realisatie (voorheen KING), Kadaster en Geono
 die deze organisaties hebben opgedaan in de jarenlange praktijk van het
 opstellen van informatiemodellen, is hierin samengebracht.
 
-## Toepassingsgebied
+### Toepassingsgebied
 Het metamodel biedt de modelleringstaal waarmee een informatiemodel gemaakt,
 gelezen en begrepen kan worden. Het doel hiervan is:
 -   de leesbaarheid en eenduidigheid van informatiemodellen te vergroten;
@@ -49,7 +49,7 @@ Voor informatiemodellen die op basis van dit metamodel zijn beschreven geldt:
     informatieproducten (implementatieschema’s, registers, validatieservices
     e.d.).
 
-## Doelgroep
+### Doelgroep
 Dit document is primair bestemd voor informatiearchitecten die deze
 informatiemodellen maken; informatieanalisten die willen weten wat de betekenis
 en definitie van informatieobjecten is, en mensen die model-driven verder werken
@@ -59,7 +59,7 @@ noodzakelijk. Dit metamodel richt zich in het bijzonder op de
 informatievoorziening binnen het overheidsdomein, al is het ook in bredere
 context inzetbaar.
 
-## Leeswijzer
+### Leeswijzer
 Het metamodel beschrijven we in drie hoofdstukken en een bijlage.
 
 Lees de [Inleiding](#inleiding) verder voor inzicht in wat we onder een
@@ -87,7 +87,7 @@ De bijlage [Template naamgeving conventies](#template-naamgeving-conventies) ver
 het al dan niet van toepassing zijn daarvan in een conceptueel dan wel een
 logisch informatiemodel.
 
-## Wat is een informatiemodel
+### Wat is een informatiemodel
 Een informatiemodel beschrijft de structuur, semantiek en de eigenschappen van
 informatie over dingen in de werkelijkheid. Met semantiek wordt de betekenis en
 definitie van de informatie over ‘het ding’ bedoeld, onafhankelijk van een
@@ -97,16 +97,9 @@ opgeslagen, beheerd en uitgewisseld worden. Die beschrijving heeft de vorm van
 een model dat een gestructureerde weergave is van die werkelijkheid. Een
 dergelijk model is noodzakelijk om deze informatie te kunnen beheren en
 gebruiken (door mensen en machines) bij het communiceren over deze
-werkelijkheid, in *registraties* <!-- <a href="#fn1-1" id="fn1-1ref"><sup>1-1</sup></a> --> of anderszins, zoals het specificeren van de
+werkelijkheid, in <span class='note'>[registraties](#inl-n-1)</span> of anderszins, zoals het specificeren van de
 tussen registraties uit te wisselen gegevens of van de te bevragen informatie
 uit een registratie.
-
-<aside class='note'>
-    De opname in een *registratie* kent vaak een inwinningsproces, om
-    gegevenswaarden over de feitelijke dingen in de werkelijkheid conform het
-    informatiemodel in de registratie op te nemen. Dit is een belangrijk proces,
-    maar valt buiten scope van het informatiemodel.
-</aside>
 
 Het beschrijven vindt plaats door de informatie te modelleren naar objecttypen
 en de kenmerken daarvan naar attribuutsoorten van die objecttypen en relaties
@@ -154,14 +147,14 @@ voor Jan aanwezig en Jan kan in dit (eigen, apart) informatiemodel anders
 gemodelleerd zijn. Beide objecten Jan representeren natuurlijk dezelfde ‘Jan uit
 de werkelijkheid’, vanuit het perspectief van het eigen domein bekeken.
 
-## Typen informatiemodellen
+### Typen informatiemodellen
 Zoals hiervoor uiteengezet beschrijft een informatiemodel de werkelijkheid. In
 de praktijk blijken hier niveaus in te bestaan, variërend van een zo getrouw
 mogelijke beschrijving van die werkelijkheid tot een specificatie van de wijze
 van vastlegging van die werkelijkheid in een database of uitwisselformaat.
-Veelal worden vier niveaus onderscheiden [[!MDA]]<!-- <a href="#fn1-2" id="fn1-2ref"><sup>1-2</sup></a>: -->
+Veelal worden vier niveaus onderscheiden [[!MDA]]
 
-### 1. Model van begrippen
+#### Niveau 1: Model van begrippen
 Beschrijft de werkelijkheid binnen het beschouwde domein (de ‘universe of
 discourse’) d.m.v. de daarin gehanteerde begrippen en hun relaties tot elkaar.
 Doel is dat de actoren daarbinnen elkaar begrijpen en één taal spreken. Een
@@ -170,7 +163,7 @@ business’. De begrippen worden beschreven in een formele taal, een vocabulaire
 Een vocabulaire is geen informatiemodel. Begrippen kunnen in meerdere
 informatiemodellen gebruikt worden.
 
-### 2. Conceptueel informatiemodel
+#### Niveau 2: Conceptueel informatiemodel
 Modellering van de werkelijkheid binnen het beschouwde domein, v.w.b. informatie
 daarvan, onafhankelijk van ontwerp van en implementatie in systemen. Het geeft
 een zo getrouw mogelijke beschrijving van die werkelijkheid en is in natuurlijke
@@ -183,7 +176,7 @@ werkelijkheid ten behoeve van deze communicatie. Een conceptueel informatiemodel
 wordt dan ook opgesteld voor gebruik door mensen, zodat ‘de business’ en de
 ICT-specialisten elkaar gaan begrijpen.
 
-### 3. Logisch informatie- of gegevensmodel
+#### Niveau 3: Logisch informatie- of gegevensmodel
 Beschrijft hoe de, in het conceptuele model onderscheiden, concepten gebruikt
 worden bij de interactie tussen systemen en hun gebruikers en tussen systemen
 onderling. Anders gezegd, een model van de representatie van informatie over de
@@ -195,7 +188,7 @@ taal beschreven en wordt waar mogelijk gegenereerd vanuit het conceptueel model.
 Het logisch model wordt opgesteld voor ICT-interoperabiliteit, voor gebruik door
 met name de ontwerpers, bouwers en beheerders van ICT-voorzieningen.
 
-### 4. Fysiek of technisch gegevens- of datamodel
+#### Niveau 4: Fysiek of technisch gegevens- of datamodel
 Specificeert de structuur en eigenschappen van de technologie waarin de
 informatie wordt vastgelegd of uitgewisseld. Dit is sterk afhankelijk van de
 gebruikte opslagtechnologie zoals een specifieke database of de
@@ -226,7 +219,7 @@ informatiemodel moet vermeld worden om welk van beide typen het gaat. Aan te
 bevelen is om eerst een conceptueel model op te stellen en dit vervolgens uit te
 werken naar een logisch model.
 
-## Wat is het metamodel voor informatiemodellen
+### Wat is het metamodel voor informatiemodellen
 Een metamodel is een model van een model. Het definieert een verzameling van
 modelleerconstructies in de vorm van bouwstenen oftewel modelelementen, met
 bijbehorende betekenis en bijbehorende afspraken omtrent hoe deze toe te passen.
@@ -247,7 +240,7 @@ opgebouwd en daardoor alom te begrijpen zijn. De metataal beschrijft als het
 ware de grammatica van de modelleertaal. Het metamodel in dit document is
 gebaseerd op UML.
 
-## UML
+### UML
 Voor zowel het metamodel als informatiemodellen wordt uitgegaan van UML.
 Registraties en afnemers hiervan kunnen deze gebruiken voor de inrichting van
 hun situatiespecifieke gegevenshuishouding. Belangrijk is dat de lezer eerst
@@ -305,7 +298,7 @@ er nieuwe metaclasses gedefinieerd hoeven te worden en dus zonder aanpassing van
 het basale UML-metamodel (M2). De extensiemechanismen hiervoor zijn stereotypes,
 tagged values en constraints.
 
-## Een eigen extensie op het metamodel
+### Een eigen extensie op het metamodel
 Indien er extra metamodelconstructies nodig zijn voor een informatiemodel, dan
 kan dit metamodel uitgebreid worden met een aanvulling oftewel extensie (in de
 vorm van een extra bijlage) die door de betreffende organisatie toegevoegd wordt
@@ -332,25 +325,25 @@ vallen buiten scope van dit metamodel en ook buiten scope van extensies hierop.
 Wel is het mogelijk en toegestaan om het metamodel, of delen ervan, hiervoor te
 gebruiken.
 
-## Alternatieven
+### Alternatieven
 In dit metamodel is op één punt sprake van een keuze tussen twee alternatieven,
 waarvan de modelleur van een informatiemodel één van beide alternatieven kiest.
 Welke je kiest geef je aan bij je eigen informatiemodel, in je eigen extensie
 (zoals bedoeld in de vorige paragraaf).
 
 Dit betreft: Relatiesoort en relatierol, beide te gebruiken, maar welke is
-verplicht/leidend (zie [Specificatie metagegevens voor relaties](#specificatie-metagegevens-voor-relaties)). <!-- (paragraaf 2.3.2.1 en 2.3.2.2) -->
+verplicht/leidend (zie [Specificatie metagegevens voor relaties](#specificatie-metagegevens-voor-relaties)).
 
 Indien gewenst kunt u hier vragen over stellen aan de beheerders van dit
 metamodel voordat u een keuze maakt.
 
-## Beheer
+### Beheer
 Het beheer van dit metamodel vindt plaats door Geonovum met ondersteuning van het Kadaster. Voor vragen, suggesties of opmerkingen kunt
 u contact opnemen met de MIM helpdesk van Geonovum: mim@geonovum.nl
 
 <todo>TODO: Deze kan weg zodra alle referenties gerefereerd zijn</todo>
 
-## Normreferenties
+### Normreferenties
 
 | \#  | Naam                                         | **Referentie** |
 |-----|----------------------------------------------|----------------|
@@ -370,3 +363,12 @@ De Stelselcatalogus [[!SCAT]], het GAB [[!GAB]] en de Handreiking gegevensbeschr
 in de gemaakte afspraken. Voor het metamodel hanteren we daarom de volgende spelregel:
 de Stelselcatalogus is zoveel als mogelijk leidend, vervolgens het GAB en als
 laatste de handreiking.
+
+**Voetnoten**
+
+<aside id='inl-n-1' class='note'>
+    De opname in een *registratie* kent vaak een inwinningsproces, om
+    gegevenswaarden over de feitelijke dingen in de werkelijkheid conform het
+    informatiemodel in de registratie op te nemen. Dit is een belangrijk proces,
+    maar valt buiten scope van het informatiemodel.
+</aside>

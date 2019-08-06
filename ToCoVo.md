@@ -1,4 +1,6 @@
-*Colofon*   <!-- ### Colofon -->
+# Colofon en Voorwoord
+
+## Colofon
 
 Aan de totstandkoming van dit metamodel hebben de volgende inhoudelijke experts
 op het gebied van informatiemodellering meegewerkt:
@@ -12,7 +14,7 @@ op het gebied van informatiemodellering meegewerkt:
 | Dick Krijtenburg          | Geonovum       | Coördinator beheer MIM.                                              |
 | Jan van Gelder            | Geonovum       | Redactie MIM.                        	                            |
 
-*Voorwoord*     <!-- ### Voorwoord -->
+## Voorwoord
 
 Informatie is een belangrijke motor voor het functioneren van de overheid in
 Nederland. Steeds meer wordt er samengewerkt en uitgewisseld tussen

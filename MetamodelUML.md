@@ -1,9 +1,9 @@
-# Metamodel in UML
+# Metamodel in UML 
 
 ## Structuur metamodel in UML 
 
 De eerste paragraaf bevat diagrammen, in UML; elk biedt een eigen view op een gedeelte van
-het model. Het geheel van diagrammen, in samenhang, is opgenomen in bijlage 3.
+het model. Het geheel van diagrammen, in samenhang, is opgenomen in de bijlage [Template naamgeving conventies](#template-naamgeving-conventies).
 
 Uitgangspunten voor het metamodel in UML zijn: 
 - UML 2.5 vormt de basis voor de conceptuele beschrijving. 
@@ -17,10 +17,14 @@ nodig is met behoud van de betekenis van de UML-metaclass.
 
 Elk modelelement heeft een MIM metaclass. Deze wordt in UML in een
 informatiemodel gemodelleerd als een Metaclass van UML 2.5 en een bijbehorende
-stereotype. Bijvoorbeeld: de MIM metaclass Objecttype wordt gemodelleerd als een
-UML-Class met stereotype «Objecttype». In Sparx EA wordt dit gemodelleerd met
-een Class. Niet alle MIM metaclasses hebben een stereotype (nodig). In de kolom
-staat dan ‘-‘.
+stereotype.
+
+<aside class='example'> 
+    De MIM metaclass Objecttype wordt gemodelleerd als een
+    UML-Class met stereotype «Objecttype». In Sparx EA wordt dit gemodelleerd met
+    een Class. Niet alle MIM metaclasses hebben een stereotype (nodig). In de kolom
+    staat dan ‘-‘.
+</aside>
 
 | **MIM metaclass** | **Stereotype** | **Metaclass UML 2.5z** | **In Sparx EA** |
 |-------------------|----------------|------------------------|-----------------|
@@ -29,9 +33,8 @@ staat dan ‘-‘.
 In de diagrammen zijn de UML metaclasses conform UML 2.5 aangeduid als UML
 metaclass. Deze in opgenomen in het diagram als ‘blauw gekleurde’ metaclasses.
 
-Bijna alle hebben een UML-metaclass als basis, deze is dan aangegeven. Dit is ook opgenomen in diagram vorm, in bijlage
-3.
-
+Bijna alle hebben een UML-metaclass als basis, deze is dan aangegeven. Dit is ook opgenomen in diagram vorm, 
+in de bijlage [Template naamgeving conventies](#template-naamgeving-conventies).
 
 ### Kern
 
@@ -70,7 +73,7 @@ View 2: Datatypen
 | Referentie element      | «Referentie element»    | (UML) Property           | Attribute          |
 | Codelist                | «Codelist               | (UML) Datatype           | Datatype           |
 
-* Nadere specificaties voor datatypen * 
+*Nadere specificaties voor datatypen* 
 
 Voor enumeraties is geen stereotype gespecificeerd. In het metamodel maken we gebruik van de bestaande UML-enumeration (metaclass) voor de specificaties van een enumeratie.
 
@@ -120,8 +123,8 @@ View 3c: Groepering
 | View                  | «View»            | (UML) Package         | Package         |
 
 
-Nadere specificatie metagegevens in UML 
----------------------------------------
+## Nadere specificatie metagegevens in UML 
+
 Deze paragraaf is een aanvulling op de paragraaf *'Specificatie metagegevens'* in het hoofdstuk [Metamodel Algemeen](#metamodel-algemeen). 
 
 >   **Alias**
@@ -134,11 +137,11 @@ Verdere toelichting voor UML modellen:
 
 -   De alias is te specificeren voor NamedElements (zoals UML-Class,
     UML-association, UML-UML-Datatype en UML-property). De alias is in UML
-    gespecificeerd bij de metaclass Element Import.<a href="#fn2-10" id="fn2-10ref"><sup>2-10</sup></a>
+    gespecificeerd bij de metaclass <span class='note'>[Element Import](#uml-n-6)</span>.
     In Enterprise Architect is de alternatieve weergave aan te zetten in de
     properties van een Diagram, via: use alias if available.
     
->   **Identificerend **
+>   **Identificerend**
 
 Als een attribuutsoort identificerend is, dan krijgt dit kenmerk in UML isId = true. 
 
@@ -146,25 +149,20 @@ Als een relatiesoort identificerend is, dan krijgt dit kenmerk in UML een stereo
     
 ### Modellering metagegevens voor objecten en attributen in UML 
 
-<todo>TODO: Let op</todo>
-<aside class='note'>
-    hier moeten de voetnoten 5, 6, 7, 8 komen te staan met verwijzingen naar de hierna komende tabellen
-</aside> 
-
 **Specificatie voor «Objecttype»**
 
 De objecttypen worden naar de volgende aspecten gespecificeerd:
 
-| **Aspect**<a href="#fn2-6" id="fn2-6ref"><sup>2-6</sup></a>                 | **Kardinaliteit** | **Toelichting**                                                                                                                                                                                                                                                                                                                          | **In UML 2.5**<a href="#fn2-5" id="fn2-5ref"><sup>2-5</sup></a>                        | **In EA**<a href="#fn2-7" id="fn2-7ref"><sup>2-7</sup></a>                                                                                                                                                    |
+| **Aspect** <span class='note'>[Zie noot](#uml-n-1)</span> | **Kardinaliteit** | **Toelichting**                                                                                                                                                                                                                                                                                                                          | **In UML 2.5**  <span class='note'>[Zie noot](#uml-n-2)</span> | **In EA** <span class='note'>[Zie noot](#uml-n-3)</span>                                                      |
 |-------------------------------|-------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Naam√**                     | 1                 | Algemeen metagegeven.<a href="#fn2-8" id="fn2-8ref"><sup>2-8</sup></a>                                                                                                                                                                                                                                                                                                               | *name van de metaclass Named element*    | *Name*                                                                                                                                                          |
+| **Naam√**                     | 1                 | ALgemeen metagegeven <span class='note'>[Zie noot](#uml-n-4)</span>.                                                                                                                                                                                                                                                                     | *name van de metaclass Named element*    | *Name*                                                                                                                                                          |
 | **Alias**                     | 0..1              | Algemeen metagegeven.                                                                                                                                                                                                                                                                                                                    |                                          | *Alias*                                                                                                                                                         |
 | **Herkomst**                  | 1                 | Algemeen metagegeven.                                                                                                                                                                                                                                                                                                                    |                                          | *Tagged value*                                                                                                                                                  |
 | **Definitie√**                | 1                 | Algemeen metagegeven.                                                                                                                                                                                                                                                                                                                    | *Body van de metaclass Comment*          | *Notes*                                                                                                                                                         |
 | **Herkomst definitie√**       | 1                 | Algemeen metagegeven.                                                                                                                                                                                                                                                                                                                    |                                          | *Tagged value*                                                                                                                                                  |
 | **Datum opname**              | 1                 | Algemeen metagegeven.                                                                                                                                                                                                                                                                                                                    |                                          | *Tagged value*                                                                                                                                                  |
 | **Unieke aanduiding√**        | 1                 | Voor objecttypen die deel uitmaken van een (basis)registratie of informatiemodel betreft dit de wijze waarop daarin voorkomende objecten (van dit type) uniek in de registratie worden aangeduid.                                                                                                                                        | *-*                                      | *isId bij attribuutsoort, --- of --- stereotype «isId» bij target role relatiesoort --- of --- een combinatie van deze twee, elk hiervan meer keren toepasbaar* |
-| **Populatie√**                | 0..1              | Voor objecttypen die deel uitmaken van een (basis)registratie betreft dit de beschrijving van de exemplaren van het gedefinieerde objecttype die in de desbetreffende (basis)­registratie voorhanden zijn.                                                                                                                               |                                          | *Tagged value*                                                                                                                                                  |
+| **Populatie√**                | 0..1              | Voor objecttypen die deel uitmaken van een (basis)registratie betreft dit de beschrijving van de exemplaren van het gedefinieerde objecttype die in de desbetreffende (basis)­registratie voorhanden zijn.                                                                                                                                |                                          | *Tagged value*                                                                                                                                                  |
 | **Kwaliteit√**                | 0..1              | Voor objecttypen die deel uitmaken van een registratie betreft dit de waarborgen voor de juistheid van de in de registratie opgenomen objecten van het desbetreffende type.                                                                                                                                                              |                                          | *Tagged value*                                                                                                                                                  |
 | **Toelichting√**              | 0..1              | Algemeen metagegeven.                                                                                                                                                                                                                                                                                                                    |                                          | *Tagged value*                                                                                                                                                  |
 | **Indicatie abstract object** | 1                 | Conceptueel model: indicatie dat het objecttype een generalisatie is, waarvan een object als specialisatie altijd voorkomt in de hoedanigheid van een (en slechts één) van de specialisaties van het betreffende objecttype. Logisch model: Indicatie dat er geen instanties (objecten) voor het betreffende objecttype mogen voorkomen. | *isAbstract bij de metaclass Classifier* | *Abstract*                                                                                                                                                      |
@@ -372,7 +370,7 @@ Voor referentielijsten worden de volgende aspecten gespecificeerd:
 |------------------|-------------------|---------------------------|--------------------------------------|----------------|
 | **Naam**         | 1                 | Algemeen metagegeven.     | *name van de metaclass Namedelement* | *Name*         |
 | **Alias**        | 0..1              | Algemeen metagegeven.     |                                      | *Alias*        |
-| **Herkomst**     | 1                 | Algemeen metagegeven. <a href="#fn2-9" id="fn2-9ref"><sup>2-9</sup></a> |                                      | *Tagged value* |
+| **Herkomst**     | 1                 | Algemeen metagegeven. <span class='note'>[Zie noot](#uml-n-5)</span> |            | *Tagged value* |
 | **Definitie**    | 1                 | Algemeen metagegeven.     | *Body van de metaclass Comment*      | *Notes*        |
 | **Datum opname** | 1                 | Algemeen metagegeven.     |                                      | *Tagged value* |
 | **Toelichting**  | 0..1              | Algemeen metagegeven.     |                                      | *Tagged value* |
@@ -559,30 +557,39 @@ Er is een tool *Imvertor*, die kan controleren of een informatiemodel voldoet
 aan dit metamodel en zo niet, wat de reden daarvan is. Deze tool is open source
 en is te vinden op [www.imvertor.org](http://www.imvertor.org).
 
-<todo>TODO: Voetnoten moeten in de tekst hierboven als "note" worden opgenomen</todo>
-
 **Voetnoten**
 
-<a id="fn2-5" href="#fn2-5ref"><sup>2-5</sup></a>: In deze kolom is opgenomen hoe het element in UML2.5 is benoemd. Het
-betreft veelal overerving van een gegeven van een UML metaclass die niet in dit
-document is benoemd.
+<aside id='uml-n-1' class='note'>
+    In de kolom **UML2.5** is opgenomen hoe het element in UML2.5 is benoemd. Het
+    betreft veelal overerving van een gegeven van een UML metaclass die niet in dit
+    document is benoemd.
+</aside>
 
-<a id="fn2-6" href="#fn2-6ref"><sup>2-6</sup></a>: Aspect met aanduiding √ is conform stelselafspraken voor basisregistraties.
-Een \* is conform de stelselcatalogus. Die ook de paragraaf in H3 hierover.
+<aside id='uml-n-2' class='note'>
+    **Aspect** met aanduiding √ is conform stelselafspraken voor basisregistraties.
+    Een \* is conform de stelselcatalogus. Die ook de paragraaf in H3 hierover.
+</aside>
 
-<a id="fn2-7" href="#fn2-7ref"><sup>2-7</sup></a>: Rode tekst in de kolom ‘In EA’ betreft een standaard element binnen Sparx
-EA. Zwarte tekst in de kolom ‘in EA’ betreft uitbreiding op UML Metamodel, via
-tagged values of aanvullende stereotypes.
+<aside id='uml-n-3' class='note'>
+    Rode tekst in de kolom ‘In EA’ betreft een standaard element binnen Sparx
+    EA. Zwarte tekst in de kolom ‘in EA’ betreft uitbreiding op UML Metamodel, via
+    tagged values of aanvullende stereotypes.
+</aside>
 
-<a id="fn2-8" href="#fn2-8ref"><sup>2-8</sup></a>: In (basis) registraties is dit meestal gespecificeerd in een catalogus van
-objecten en begrippen. Deze opmerking geldt voor elk metadata aspect naam van de
-andere modelelementen. Indien het modelelement niet voorkomt in een dergelijke
-catalogus is dan kiest u uiteraard een eigen naam.
+<aside id='uml-n-4' class='note'>
+    In (basis) registraties is dit meestal gespecificeerd in een catalogus van
+    objecten en begrippen. Deze opmerking geldt voor elk metadata aspect naam van de
+    andere modelelementen. Indien het modelelement niet voorkomt in een dergelijke
+    catalogus is dan kiest u uiteraard een eigen naam.
+</aside>
 
-<a id="fn2-9" href="#fn2-9ref"><sup>2-9</sup></a>: Deze specificatie is toegevoegd t.o.v. de registratiecatalogus aangezien
-het hier niet om een registratie gaat maar wel duidelijk moet zijn in welke
-registratie de (verwijzing naar de) lijst voorkomt (indien van toepassing).
+<aside id='uml-n-5' class='note'>
+    Deze specificatie is toegevoegd t.o.v. de registratiecatalogus aangezien
+    het hier niet om een registratie gaat maar wel duidelijk moet zijn in welke
+    registratie de (verwijzing naar de) lijst voorkomt (indien van toepassing).
+</aside>
 
-<a id="fn2-10" href="#fn2-10ref"><sup>2-10</sup></a>: Element import wordt in UML ingezet voor het importeren van een
-NamedElement uit een ander package. In dit metamodel wordt de alias (nog) niet
-zo gebruikt.
+<aside id='uml-n-6' class='note'>
+    Element import wordt in UML ingezet voor het importeren van een NamedElement uit een ander package. 
+    In dit metamodel wordt de alias (nog) niet zo gebruikt.
+</aside>

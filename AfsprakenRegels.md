@@ -244,8 +244,7 @@ hergebruikt voor alle objecttypes.*
 
 Metamodel: het gegevensgroeptype kan dus het type zijn van meerdere
 gegevensgroepen. Vanwege dit hergebruik is daarom de kardinaliteit van de
-relatie van gegevensgroep naar gegevensgroeptype aan de source kant 1..\*. Zie
-2.1.1.
+relatie van gegevensgroep naar gegevensgroeptype aan de source kant 1..\*. Zie [Kern](#kern).
 
 ### Gegevensgroep versus Gestructureerd datatype
 
@@ -410,7 +409,7 @@ daarmee dus ook in de hoedanigheid van de generalisatie(s) van het concrete
 objecttype.
 
 Richtlijnen - Een abstract object is een onderwerp van gesprek binnen het
-beschouwde gebied. Het heeft dus echt een betekenis <a href="#fn3-1" id="fn3-1ref"><sup>3-1</sup></a> in het beschouwde
+beschouwde gebied. Het heeft dus echt een <span class='note'>[betekenis](#afs-n-1)</span> in het beschouwde
 gebied. Net als een concreet object, specialisatie of generalisatie. - De
 definitie van elk objecttype (dus ook een abstract objecttype) is zodanig dat
 ondubbelzinnig bepaald kan worden dat een object wel of niet tot het
@@ -601,7 +600,7 @@ en dus géén bij de tijdslijnen behorende attributen die gebruikt moeten worden
 voor het vastleggen van historie. Deze bij de tijdslijn behorende attributen
 worden op het logische niveau vastgelegd.
 
-**Historie op logisch niveau** MIM schrijft<a href="#fn3-2" id="fn3-2ref"><sup>3-2</sup></a> geen implementatie van het
+**Historie op logisch niveau** MIM schrijft <span class='note'>[zie noot](#afs-n-2)</span> geen implementatie van het
 conceptuele niveau voor. Wel worden er aandachtspunten gegeven om rekening mee
 te houden. Denk bij de uitwerking o.a. aan de volgende aspecten:
 
@@ -650,10 +649,12 @@ gegeven en ten tweede het gegeven niet eenvoudig af te leiden is (er moet sprake
 zijn van enige mate van complexiteit). Dit wordt in UML weergegeven via
 isDerived. Zie ook Attribuutsoort, §2.4.2 – is afleidbaar.
 
-*Voorbeeld is de 'Datum vestiging in Nederland' van een Ingeschreven persoon. De
-afleiding van dit gegeven is niet triviaal. Door het als afleidbaar gegeven op
-te nemen kan het opgevraagd worden zonder dat de historie of andere gegevens van
-het object opgevraagd hoeven te worden om daaruit dit gegeven af te leiden.*
+<aside class='example'>
+    Voorbeeld is de 'Datum vestiging in Nederland' van een Ingeschreven persoon. De
+    afleiding van dit gegeven is niet triviaal. Door het als afleidbaar gegeven op
+    te nemen kan het opgevraagd worden zonder dat de historie of andere gegevens van
+    het object opgevraagd hoeven te worden om daaruit dit gegeven af te leiden.
+</aside>
 
 ## Authentieke gegevens
 
@@ -749,9 +750,11 @@ ook de XML) schema’s beheert en beschikbaar stelt waarnaar vanuit deze
 specificaties wordt gerefereerd. De packages bevatten alleen de constructies die
 ook daadwerkelijk binnen het ‘eigen’ informatiemodel wordt gebruikt.
 
-*Voorbeeld: voor het uitwisselen van geografische informatie op basis van
-NEN3610 is een tweetal externe packages onderkend waarnaar vanuit de ‘eigen’
-informatiemodellen kan worden verwezen: NEN3610, of GML3.2*
+<aside class='example'>
+    Voorbeeld: voor het uitwisselen van geografische informatie op basis van
+    NEN3610 is een tweetal externe packages onderkend waarnaar vanuit de ‘eigen’
+    informatiemodellen kan worden verwezen: [[!NEN3610]], of GML3.2
+</aside>
 
 Het is ook mogelijk om binnen een domein of binnen een organisatie een eigen
 «extern» package te definiëren voor datatypen, om over meerdere
@@ -904,7 +907,7 @@ Regel: voor logische informatiemodellen wordt altijd alternatief 2 gehanteerd.
 
 Neem aanvullend een verwijzing op naar het betreffende modelelement in het
 conceptuele model. Dit kan bijvoorbeeld met een trace of door opname van de naam
-in de alias (zie 3.16.20), zodat lezers goed de overgang van conceptueel naar
+in de alias <todo>(zie 3.16.20)</todo>, zodat lezers goed de overgang van conceptueel naar
 logisch kunnen volgen.
 
 ### Naamgeving voor metamodel elementen
@@ -923,7 +926,10 @@ specificeren. Dit is een hulptabel, die u over kunt nemen naar uw eigen extensie
 
 **Voetnoten**
 
-<a id="fn3-1" href="#fn3-1ref"><sup>3-1</sup></a>: nb
+<aside id='afs-n-1' class='note'>
+    nb
+</aside>
 
-<a id="fn3-2" href="#fn3-2ref"><sup>3-2</sup></a>: Hoewel het goed zou zijn om tot een standaard te komen in Nederland is MIM
-niet de plek hiervoor.
+<aside id='afs-n-2' class='note'>
+    Hoewel het goed zou zijn om tot een standaard te komen in Nederland is MIM niet de plek hiervoor.
+</aside>
