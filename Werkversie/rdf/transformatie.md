@@ -288,6 +288,26 @@ Een externe koppeling wordt op dezelfde wijze omgezet als een `mim:Relatiesoort`
 >
 > Verder uitzoeken hoe met relatierol omgegaan moet worden. Feitelijk is de relatierol de daadwerkelijk "naam" van de property, en dus niet de naam van de relatiesoort... Dit lijkt dan dus niet helemaal goed te gaan.
 
+### Referentielijst
+
+> Een lijst met een opsomming van de mogelijke domeinwaarden van een attribuutsoort, die buiten het model in een externe waardenlijst worden beheerd. De domeinwaarden in de lijst kunnen in de loop van de tijd aangepast, uitgebreid, of verwijderd worden, zonder dat het informatiemodel aangepast wordt (in tegenstelling tot bij een enumeratie).
+
+### Referentie element
+
+> Een eigenschap van een object in een referentielijst in de vorm van een gegeven.
+
+### Enumeratie
+
+> Een datatype waarvan de mogelijke waarden limitatief zijn opgesomd in een statische lijst.
+
+### Enumeratiewaarde
+
+> Een gedefinieerde waarde, in de vorm van een eenmalig vastgesteld constant gegeven.
+
+### Codelist
+
+> Een referentielijst die extern wordt beheerd, en geen onderdeel is van het informatiemodel
+
 ## Datatypen
 
 ### Primitief datatype
@@ -332,9 +352,41 @@ Voor standaard datatypen maakt RDF gebruik van de XSD datatypen. Onderstaande ta
 |`mim:Month`|`xsd:gMonth`|
 |`mim:URI`|`xsd:anyURI`|
 
+### Gestructureerd datatype
+
+> Specifiek benoemd gestructureerd datatype dat de structuur van een gegeven beschrijft, samengesteld uit minimaal twee elementen.
+
+### Data element
+
+> Een onderdeel/element van een Gestructureerd datatype die als type een datatype heeft.
+
+### Union
+
+> Gestructureerd datatype, waarmee wordt aangegeven dat er meer dan één mogelijkheid is voor het datatype van een attribuut. Het attribuut zelf krijgt als datatype de union. De union biedt een keuze uit verschillende datatypes, elk afzonderlijk beschreven in een union element.
+
+### Union element
+
+> Een type dat gebruikt kan worden voor het attribuut zoals beschreven in de definitie van Union. Het union element is een onderdeel van een Union, uitgedrukt in een eigenschap (attribute) van een union, die als keuze binnen de Union is gerepresenteerd.
+
+## Packages
+
+### Domein
+
+> **UITZOEKEN**
+>
+> Het domein betreft het eigen IM. Transformatie naar `owl:Ontology` lijkt voor de hand te liggen.
+
+### Extern
+
+### View
+
+## Overig
+
+### Constraint
+
 ## Properties
 
-### mim:naam
+### naam
 
 > De naam van een modelelement
 
@@ -366,7 +418,7 @@ WHERE {
 }
 ```
 
-### mim:alias
+### alias
 
 > De alternatieve weergave van de naam.
 
@@ -390,7 +442,7 @@ WHERE {
 }
 ```
 
-### mim:definitie
+### definitie
 
 > De beschrijving van de betekenis van dit modelelement.
 
@@ -402,7 +454,7 @@ Een `mim:definitie` wordt vertaald naar een `skos:comment`
 >
 > Ik meende dat het mogelijk was om in het MiM op te geven dat een modelelement *ook* een begrip is. In dat geval zou je dus een andere vertaling kunnen maken, dwz: *wel* naar een `skos:definition`. Dit zou wel beter zijn.
 
-### mim:toelichting
+### toelichting
 
 > Een inhoudelijke toelichting op de definitie, ter verheldering of nadere duiding.
 
@@ -420,7 +472,7 @@ WHERE {
 }
 ```
 
-### mim:herkomst
+### herkomst
 
 > De registratie of het informatiemodel waaraan het modelelement ontleend is dan wel de eigen organisatie indien het door de eigen organisatie toegevoegd is.
 
@@ -436,7 +488,7 @@ WHERE {
 }
 ```
 
-### mim:herkomstDefinitie
+### herkomstDefinitie
 
 > De registratie of het informatiemodel waaruit de definitie is overgenomen dan wel een aanduiding die aangeeft uit welke bronnen de definitie is samengesteld.
 
@@ -454,7 +506,7 @@ WHERE {
 }
 ```
 
-### mim:datumOpname
+### datumOpname
 
 > De datum waarop het modelelement is opgenomen in het informatiemodel.
 
@@ -474,7 +526,7 @@ WHERE {
 }
 ```
 
-### mim:indicatieMaterieleHistorie
+### indicatieMaterieleHistorie
 
 > Indicatie of de materiële historie van het kenmerk van het object te bevragen is.
 
@@ -482,7 +534,7 @@ WHERE {
 >
 > Hoe gaan we dit doen? Feitelijk moet je deze indicatie omzetten naar daadwerkelijke properties.
 
-### mim:indicatieFormeleHistorie
+### indicatieFormeleHistorie
 
 > Indicatie of de formele historie van het kenmerk van het object bijgehouden wordt en te bevragen is.
 
@@ -490,7 +542,7 @@ WHERE {
 >
 > Hoe gaan we dit doen? Feitelijk moet je deze indicatie omzetten naar daadwerkelijke properties. Meestal doen we daarbij formele historie als onderdeel van de volledige klasse, maar niet de afzonderlijke elementen.
 
-### mim:kardinaliteit
+### kardinaliteit
 
 De mim:kardinaliteit wordt vertaald naar `sh:minCount` en `sh:maxCount`. Daarbij wordt de volgende tabel gebruikt om de string-waarde van mim:kardinaliteit om te zetten. Een `-` betekent dat de betreffende triple niet wordt opgenomen in het model.
 
@@ -518,3 +570,59 @@ WHERE {
   BIND (t:maxcount(?kardinaliteit) as ?maxcount)
 }
 ```
+
+### authentiek
+
+### indicatieAfleidbaar
+
+### mogelijkGeenWaarde
+
+### locatie
+
+### type
+
+### lengte
+
+### patroon
+
+### formeelPatroon
+
+### uniekeAanduiding
+
+### populatie
+
+### kwaliteit
+
+### indicatieAbstractObject
+
+### identificerend
+
+### gegevensgroeptype
+
+### unidirectioneel
+
+### objecttype
+
+### gerelateerdDatatype
+
+### typeAggregatie
+
+### subtype
+
+### supertype
+
+### code
+
+### specificatieTekst
+
+### specificatieFormeel
+
+### attribuut
+
+### gegevensgroep
+
+### waarde
+
+### constraint
+
+### element
