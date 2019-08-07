@@ -340,7 +340,7 @@ Voor standaard datatypen maakt RDF gebruik van de XSD datatypen. Onderstaande ta
 
 Een `mim:naam` wordt vertaald naar een `rdfs:label`
 
-> **ISSUE 7**
+> **ISSUE 8**
 >
 > In UML wil het nog wel eens gebruikelijk zijn om voor de naam van een modelelement een technische vorm te kiezen. Bijvoorbeeld "KadastraalObject" in plaats van "Kadastraal object". In Linked Data is het gebruikelijk dat het rdfs:label een voor mensen leesbaar label is, dus *met* spaties. De shacl `sh:name` property leent zich wat meer voor een technische naam. Het is echter niet duidelijk in het MiM wat wordt bedoeld.
 >
@@ -348,7 +348,7 @@ Een `mim:naam` wordt vertaald naar een `rdfs:label`
 >
 > Voorlopige aanname: de naam voldoet aan de gebruikelijke spellingsregels.
 
-> **ISSUE 8**
+> **ISSUE 9**
 >
 > In UML is het niet gebruikelijk om taal toe te voegen aan een eigenschap. In Linked Data is het prima mogelijk om meerdere talen te ondersteunen en ook aan te geven om welke taal het gaat.
 >
@@ -372,11 +372,11 @@ WHERE {
 
 Een `mim:alias` wordt vertaald naar een `skos:altLabel`
 
-> **ISSUE 9**
+> **ISSUE 10**
 >
 > Aangezien in UML er niet direct een mogelijkheid is om taal te ondersteunen, wordt het alias nog wel eens gebruikt om een andere taal aan te duiden. Ook wordt het alias wel eens gebruikt om het onderscheid te maken tussen een meer technische naam (bv in CamelCase) en een functionele naam (met spaties enzo). Indien dit het geval is, dan klopt de vertaling naar `skos:altLabel` niet.
 >
-> Mogelijke oplossing: zie de oplossing bij issue 4
+> Mogelijke oplossing: zie de oplossing bij issue 9
 >
 > Voorlopige aanname: dat een mim:alias daadwerkelijk een alternatieve weergave van de naam is.
 
