@@ -1,25 +1,25 @@
-# Metamodel in UML 
+# Metamodel in UML
 
-## Structuur metamodel in UML 
+## Structuur metamodel in UML
 
 De eerste paragraaf bevat diagrammen, in UML; elk biedt een eigen view op een gedeelte van
 het model. Het geheel van diagrammen, in samenhang, is opgenomen in de bijlage [Template naamgeving conventies](#template-naamgeving-conventies).
 
-Uitgangspunten voor het metamodel in UML zijn: 
-- UML 2.5 vormt de basis voor de conceptuele beschrijving. 
+Uitgangspunten voor het metamodel in UML zijn:
+- UML 2.5 vormt de basis voor de conceptuele beschrijving.
 - Gebruik te maken van de bestaande UML-modelelementen conform UML van OMG. OMG noemt dit een UML metaclass. Een
-voorbeeld hiervan is UML-Class. 
+voorbeeld hiervan is UML-Class.
 - Daar waar (semantisch) nodig extensiemechanismen toe te passen met behoud van de betekenis van de
-UML-metaclasses. Er ontstaat dan een MIM metaclass. Hoe deze zich verhouden tot UML is weergegeven in de bijlage. 
+UML-metaclasses. Er ontstaat dan een MIM metaclass. Hoe deze zich verhouden tot UML is weergegeven in de bijlage.
 - Modelelementen hebben één stereotype. Daarnaast hebben twee verschillende stereotypen nooit dezelfde betekenis.
-Stereotypes worden toegepast als er een verbijzondering van een UML constructie 
-nodig is met behoud van de betekenis van de UML-metaclass. 
+Stereotypes worden toegepast als er een verbijzondering van een UML constructie
+nodig is met behoud van de betekenis van de UML-metaclass.
 
 Elk modelelement heeft een MIM metaclass. Deze wordt in UML in een
 informatiemodel gemodelleerd als een Metaclass van UML 2.5 en een bijbehorende
 stereotype.
 
-<aside class='example'> 
+<aside class='example'>
     De MIM metaclass Objecttype wordt gemodelleerd als een
     UML-Class met stereotype «Objecttype». In Sparx EA wordt dit gemodelleerd met
     een Class. Niet alle MIM metaclasses hebben een stereotype (nodig). In de kolom
@@ -33,7 +33,7 @@ stereotype.
 In de diagrammen zijn de UML metaclasses conform UML 2.5 aangeduid als UML
 metaclass. Deze in opgenomen in het diagram als ‘blauw gekleurde’ metaclasses.
 
-Bijna alle hebben een UML-metaclass als basis, deze is dan aangegeven. Dit is ook opgenomen in diagram vorm, 
+Bijna alle hebben een UML-metaclass als basis, deze is dan aangegeven. Dit is ook opgenomen in diagram vorm,
 in de bijlage [Template naamgeving conventies](#template-naamgeving-conventies).
 
 ### Kern
@@ -73,7 +73,7 @@ View 2: Datatypen
 | Referentie element      | «Referentie element»    | (UML) Property           | Attribute          |
 | Codelist                | «Codelist               | (UML) Datatype           | Datatype           |
 
-*Nadere specificaties voor datatypen* 
+*Nadere specificaties voor datatypen*
 
 Voor enumeraties is geen stereotype gespecificeerd. In het metamodel maken we gebruik van de bestaande UML-enumeration (metaclass) voor de specificaties van een enumeratie.
 
@@ -123,9 +123,9 @@ View 3c: Groepering
 | View                  | «View»            | (UML) Package         | Package         |
 
 
-## Nadere specificatie metagegevens in UML 
+## Nadere specificatie metagegevens in UML
 
-Deze paragraaf is een aanvulling op de paragraaf *'Specificatie metagegevens'* in het hoofdstuk [Metamodel Algemeen](#metamodel-algemeen). 
+Deze paragraaf is een aanvulling op de paragraaf *'Specificatie metagegevens'* in het hoofdstuk [Metamodel Algemeen](#metamodel-algemeen).
 
 >   **Alias**
 
@@ -140,14 +140,14 @@ Verdere toelichting voor UML modellen:
     gespecificeerd bij de metaclass <span class='note'>[Element Import](#uml-n-6)</span>.
     In Enterprise Architect is de alternatieve weergave aan te zetten in de
     properties van een Diagram, via: use alias if available.
-    
+
 >   **Identificerend**
 
-Als een attribuutsoort identificerend is, dan krijgt dit kenmerk in UML isId = true. 
+Als een attribuutsoort identificerend is, dan krijgt dit kenmerk in UML isId = true.
 
 Als een relatiesoort identificerend is, dan krijgt dit kenmerk in UML een stereotype «id»
-    
-### Modellering metagegevens voor objecten en attributen in UML 
+
+### Modellering metagegevens voor objecten en attributen in UML
 
 **Specificatie voor «Objecttype»**
 
@@ -322,8 +322,8 @@ De generalisaties worden naar het volgende aspect gespecificeerd:
 |----------------------------|--------------------|---------------------------------------------------------------------|-----------------------------------------------------|-----------|
 | **Naam**                   | 0..1               | Algemeen metagegeven. *Standaard ‘is specialisatie van’.*           | *name van de etaclass Named element*                | *Name*    |
 | **Alias**                  | 0..1               | Algemeen metagegeven.                                               |                                                     | *Alias*   |
-| **Objecttype**             | 1                  | Het objecttype dat een specialisatie is van een (ander) objecttype. | */source: related Element bij Relationship Element* | *Source*  |
-| **Gerelateerd objecttype** | 1                  | Het objecttype dat de generalisatie is van een (ander) objecttype.  | */target: related Element bij Relationship Element* | *Target*  |
+| **Subtype**             | 1                  | Het objecttype dat een specialisatie is van een (ander) objecttype. | */source: related Element bij Relationship Element* | *Source*  |
+| **Supertype** | 1                  | Het objecttype dat de generalisatie is van een (ander) objecttype.  | */target: related Element bij Relationship Element* | *Target*  |
 
 **Specificatie voor «Generalisatie» tussen datatypes**
 
@@ -590,6 +590,6 @@ en is te vinden op [www.imvertor.org](http://www.imvertor.org).
 </aside>
 
 <aside id='uml-n-6' class='note'>
-    Element import wordt in UML ingezet voor het importeren van een NamedElement uit een ander package. 
+    Element import wordt in UML ingezet voor het importeren van een NamedElement uit een ander package.
     In dit metamodel wordt de alias (nog) niet zo gebruikt.
 </aside>
