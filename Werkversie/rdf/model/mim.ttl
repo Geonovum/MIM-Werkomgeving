@@ -241,7 +241,7 @@ mim:indicatieFormeleHistorie a owl:DatatypeProperty;
   rdfs:comment "Indicatie of de formele historie van het kenmerk van het object bijgehouden wordt en te bevragen is."@nl;
   dct:source mimdoc:sectie2.3-IndicatieFormeleHistorie;
 .
-mim:kardinaliteit a owl:ObjectProperty;
+mim:kardinaliteit a owl:DatatypeProperty;
   rdfs:label "kardinaliteit"@nl;
   rdfs:comment "De kardinaliteit geeft aan hoeveel keer waarden van dit kenmerk van een object kunnen voorkomen bij een object van het betreffende objecttype."@nl;
   dct:source mimdoc:sectie2.3-Kardinaliteit;
