@@ -140,8 +140,8 @@ shape:Generalisatie a sh:NodeShape;
   sh:property shape:naam;
   sh:property shape:alias;
   # Eigenschappen alleen in de specificatietabel
-  sh:property shape:objecttype;
-  sh:property shape:gerelateerdObjecttype;
+  sh:property shape:subtype;
+  sh:property shape:supertype;
   # ISSUE: De shape van Generalisatie zou eigenlijk in twee stukken moeten (net als de klasse)
   sh:property shape:datatype;
   sh:property shape:gerelateerdDatatype;
@@ -611,9 +611,25 @@ shape:objecttype a sh:PropertyShape;
   sh:maxCount 1;
   sh:class mim:Objecttype;
 .
+shape:subtype a sh:PropertyShape;
+  sh:path mim:subtype;
+  sh:name "mim:subtype";
+  sh:order 26;
+  sh:minCount 1;
+  sh:maxCount 1;
+  sh:class mim:Objecttype;
+.
 shape:gerelateerdObjecttype a sh:PropertyShape;
   sh:path mim:gerelateerdObjecttype;
   sh:name "mim:gerelateerdObjecttype";
+  sh:order 27;
+  sh:minCount 1;
+  sh:maxCount 1;
+  sh:class mim:Objecttype;
+.
+shape:supertype a sh:PropertyShape;
+  sh:path mim:supertype;
+  sh:name "mim:supertype";
   sh:order 27;
   sh:minCount 1;
   sh:maxCount 1;

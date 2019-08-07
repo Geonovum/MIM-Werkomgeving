@@ -238,7 +238,7 @@ mim:indicatieMaterieleHistorie a owl:DatatypeProperty;
 .
 mim:indicatieFormeleHistorie a owl:DatatypeProperty;
   rdfs:label "Indicatie formele historie"@nl;
-  rdfs:comment "Indicatie of de materiële historie van het kenmerk van het object bijgehouden wordt en te bevragen is."@nl;
+  rdfs:comment "Indicatie of de formele historie van het kenmerk van het object bijgehouden wordt en te bevragen is."@nl;
   dct:source mimdoc:sectie2.3-IndicatieFormeleHistorie;
 .
 mim:kardinaliteit a owl:DatatypeProperty;
@@ -323,7 +323,7 @@ mim:gegevensgroeptype a owl:ObjectProperty;
   rdfs:comment "De verwijzing naar het bijbehorende gegevensgroeptype"@nl;
 .
 
-# Bij Relatiesoort, Generalisatie en/of Externe koppeling
+# Bij Relatiesoort en/of Externe koppeling
 mim:unidirectioneel a owl:DatatypeProperty;
   rdfs:label "uni-directioneel"@nl;
   # Relatiesoort
@@ -335,8 +335,6 @@ mim:objecttype a owl:ObjectProperty;
   rdfs:label "objecttype";
   # Relatiesoort
   rdfs:comment "Het objecttype waarvan de relatie een eigenschap is."@nl;
-  # Generalisatie (objecttype)
-  rdfs:comment "Het objecttype dat een specialisatie is van een (ander) objecttype."@nl;
   # Externe koppeling
   rdfs:comment "Het objecttype waarvan de relatie een eigenschap is."@nl;
 .
@@ -366,6 +364,16 @@ mim:typeAggregatie a owl:ObjectProperty;
   # Externe koppeling
   # Eigenlijk geen definitie, maar dit is wat er in het brondocument staat...
   rdfs:comment "Aanduiding dat het een compositie relatie is. Waarde is altijd Composite bij externe koppeling."@nl;
+.
+
+# Generalisatie
+mim:subtype a owl:ObjectProperty;
+  rdfs:label "subtype";
+  rdfs:comment "Het objecttype dat een specialisatie is van een (ander) objecttype."@nl;
+.
+mim:supertype a owl:ObjectProperty;
+  rdfs:label "supertype";
+  rdfs:comment "Het objecttype dat de generalisatie is van een (ander) objecttype."@nl;
 .
 
 # Enumeratiewaarde
