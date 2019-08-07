@@ -1,19 +1,19 @@
 # Metamodel Algemeen
 
-Dit hoofdstuk beschrijft het metamodel in diagramvorm en in tekst. De eerste paragraaf bevat een diagram, die het overzicht van de 
+Dit hoofdstuk beschrijft het metamodel in diagramvorm en in tekst. De eerste paragraaf bevat een diagram, die het overzicht van de
 modelelementen aangeeft, en hun onderlinge verhouding. Hierna worden alle modelelementen beschreven en toegelicht.
-Deze modelelementen worden gebruikt bij het maken van een informatiemodel. 
+Deze modelelementen worden gebruikt bij het maken van een informatiemodel.
 
-Uitgangspunten voor het metamodel zijn: 
-- Elk modelelement heeft een naam en een eigen MIM metaclass, waaraan je het modelelement overal kan herkennen. 
-- De modelelementen worden eerst uitgelegt zonder een specifieke specificatie taal te gebruiken. Dit is zodat we hierna kunnen aangeven 
+Uitgangspunten voor het metamodel zijn:
+- Elk modelelement heeft een naam en een eigen MIM metaclass, waaraan je het modelelement overal kan herkennen.
+- De modelelementen worden eerst uitgelegt zonder een specifieke specificatie taal te gebruiken. Dit is zodat we hierna kunnen aangeven
 hoe je het modelelement uitdrukt per specifieke specificatie taal, te weten in UML of in w3C specificatie technieken.
-- Toolonafhankelijke beschrijving van het metamodel. Omdat VNG Realisatie, Kadaster en Geonovum en veel andere organisaties Sparx EA 
+- Toolonafhankelijke beschrijving van het metamodel. Omdat VNG Realisatie, Kadaster en Geonovum en veel andere organisaties Sparx EA
 gebruiken is er aanvullend aangegeven hoe het metamodel in Enterprise Architect toegepast wordt. Hierdoor borgen we deze relatie.
-- Uniforme toepassing van het metamodel in informatiemodellen. Anders gezegd, uitbreiden mag, afwijkenniet, maak voor hetzelfde doel 
-geen alternatieve constructies. 
-- Datatypen zijn onderdeel van het metamodel en beschrijven de structuur van de data, maar niet de semantiek/betekenis. De aanbeveling is 
-dan ook om eerst een informatiemodel te maken zonder datatypen. De regel is dat als alle datatypen uit het model worden weggelaten, er geen semantische betekenis verloren mag gaan. 
+- Uniforme toepassing van het metamodel in informatiemodellen. Anders gezegd, uitbreiden mag, afwijkenniet, maak voor hetzelfde doel
+geen alternatieve constructies.
+- Datatypen zijn onderdeel van het metamodel en beschrijven de structuur van de data, maar niet de semantiek/betekenis. De aanbeveling is
+dan ook om eerst een informatiemodel te maken zonder datatypen. De regel is dat als alle datatypen uit het model worden weggelaten, er geen semantische betekenis verloren mag gaan.
 
 ## Structuur metamodel
 
@@ -23,19 +23,19 @@ tekst vorm staan in de volgende paragraaf.
 
 De modelelementen zijn verdeeld over een diagrammen, die elk een eigen view op
 een deel van het metamodel tonen. Elk view toont een aantal van de
-modelelementen, inclusief hun onderlinge samenhang. 
+modelelementen, inclusief hun onderlinge samenhang.
 
-Alle views samen vormen het metamodel als geheel: 
+Alle views samen vormen het metamodel als geheel:
 - KERN, met de belangrijkste modelelementen in onderlinge
-samenhang. 
-- DATATYPEN, met de in het model te onderkennen soorten datatypen. 
+samenhang.
+- DATATYPEN, met de in het model te onderkennen soorten datatypen.
 - OVERIGE modelelementen, die niet altijd aan de orde zijn.
 
-Elk modelelement heeft een MIM metaclass met een naam. Hieraan is elk modelelement te herkennen in alle diagrammen en in de tekst en in elke specificatie taal die een uitdrukking is van dit metamodel. 
+Elk modelelement heeft een MIM metaclass met een naam. Hieraan is elk modelelement te herkennen in alle diagrammen en in de tekst en in elke specificatie taal die een uitdrukking is van dit metamodel.
 
 ### Kern
 
-<todo>TODO: nieuw diagram zonder UML erin.</todo> 
+<todo>TODO: nieuw diagram zonder UML erin.</todo>
 
 ![](media/f12fbb3dc2e205d26a1d0d27cbd325b3.png)
 
@@ -43,13 +43,13 @@ Kern zonder Metagegevens
 
 | **MIM metaclass** |
 |-------------------|
-| Objecttype        | 
-| Attribuutsoort    | 
-| Gegevensgroep     | 
-| Gegevensgroeptype | 
-| Generalisatie     | 
-| Relatiesoort      | 
-| Relatieklasse     | 
+| Objecttype        |
+| Attribuutsoort    |
+| Gegevensgroep     |
+| Gegevensgroeptype |
+| Generalisatie     |
+| Relatiesoort      |
+| Relatieklasse     |
 
 ### Datatypen
 
@@ -61,7 +61,7 @@ Datatypen zonder Metagegevens
 
 View 2: Datatypen
 
-| **MIM metaclass**       | 
+| **MIM metaclass**       |
 |-------------------------|
 | Primitief datatype      |
 | Gestructureerd datatype |
@@ -69,10 +69,10 @@ View 2: Datatypen
 | Union                   |
 | Union element           |
 | Enumeratie              |
-| Enumeratiewaarde        | 
-| Referentielijst         | 
-| Referentie element      | 
-| Codelist                | 
+| Enumeratiewaarde        |
+| Referentielijst         |
+| Referentie element      |
+| Codelist                |
 
 ### Overige
 
@@ -82,7 +82,7 @@ Constraint
 
 View 3a: Constraint
 
-| **MIM metaclass** | 
+| **MIM metaclass** |
 |-------------------|
 | Constraint        |
 
@@ -95,7 +95,7 @@ Relatierol
 
 View 3b: Relatiesoort en relatierol
 
-| **MIM metaclass**     | 
+| **MIM metaclass**     |
 |-----------------------|
 | Relatierol (abstract) |
 | Relatierol source     |
@@ -113,20 +113,20 @@ View 3c: Groepering
 
 | **MIM metaclass**     |
 |-----------------------|
-| Informatiemodel       | 
+| Informatiemodel       |
 | Domein                |
-| Extern                | 
-| View                  | 
+| Extern                |
+| View                  |
 
 
 ## Betekenis modelelementen
 
 In deze paragraaf staan alle modelelementen opgesomd, die gebruikt worden bij
-het maken van een informatiemodel. 
+het maken van een informatiemodel.
 
 ### Objecten en attributen
 
-#### Objecttype * 
+#### Objecttype *
 <!-- **1. Objecttype** * -->
 
 Een objecttype is een groep van gelijksoortige objecten. Om duidelijk te
@@ -286,7 +286,7 @@ Gegevensgroep.
 
 ### Relaties
 
-Verbanden met betekenis, die gelegd zijn tussen modelelementen van het type objecttype naar het type objecttype, of van een gegevensgroeptype naar een objecttype. 
+Verbanden met betekenis, die gelegd zijn tussen modelelementen van het type objecttype naar het type objecttype, of van een gegevensgroeptype naar een objecttype.
 
 #### Generalisatie
 <!-- **5. Generalisatie:** -->
@@ -323,8 +323,8 @@ relatie legt naar dit generieke objecttype.
 >   restrictieve definitie, of een meer restrictief patroon/formeel patroon.
 
 *Toelichting:* Het andere datatype is bijvoorbeeld een CharacterString, Integer,
-GM Surface of DMO en dient als basis voor een zelf te definiëren datatype 
-(zie [Datatype zelf definiëren](#datatype-zelf-definieren)). <!-- (zie 3.1.2.) --> 
+GM Surface of DMO en dient als basis voor een zelf te definiëren datatype
+(zie [Datatype zelf definiëren](#datatype-zelf-definieren)). <!-- (zie 3.1.2.) -->
 deze generalisatie is van toepassing op de volgende datatypes:
 «Primitief datatype», «Gestructureerd datatype», «Referentielijst», «Codelist»,
 «Enumeratie».
@@ -384,14 +384,16 @@ gemodelleerd als objecttype, waarbij beschreven wordt wat er moet gebeuren
 wanneer één van de SUBJECTen niet meer bestaat.
 
 #### Externe Koppeling
-<!-- **8. Externe koppeling** --> 
+<!-- **8. Externe koppeling** -->
 
 >   **Definitie Externe koppeling**
 
 >   Een associatie waarmee vanuit het perspectief van het eigen informatiemodel
 >   een objecttype uit het ‘eigen’ informatiemodel gekoppeld wordt aan een
 >   objecttype van een extern informatiemodel. De relatie zelf hoort bij het
->   ‘eigen’ objecttype. (zie ([Koppelen met ander informatiemodel](# koppelen-met-ander-informatiemodel-(externe-koppeling))). <!-- Zie ook 3.14 -->
+>   ‘eigen’ objecttype.
+
+In [Koppelen met ander informatiemodel](#koppelen-met-ander-informatiemodel-externe-koppeling) wordt beschreven hoe een externe koppeling kan worden gemodelleerd.
 
 #### Relatierol
 <!-- **9. Relatierol** -->
@@ -422,7 +424,7 @@ van een attribuutsoort moet één van de waarden zijn uit de gespecificeerde
 waardenlijst.
 
 #### Referentielijst
-<!-- **10. Referentielijst** --> 
+<!-- **10. Referentielijst** -->
 
 >   **Definitie Referentielijst**
 
@@ -475,7 +477,7 @@ geschikt om gebruikt te worden als referentie (zoals bedoeld in de definitie van
 Referentielijst).
 
 #### Enumeratie
-<!-- **12. Enumeratie** --> 
+<!-- **12. Enumeratie** -->
 
 >   **Definitie Enumeratie**
 
@@ -492,7 +494,7 @@ referentielijst, zijn nooit aan de orde).
 </aside>
 
 #### Enumeratiewaarde
-<!-- **13. Enumeratiewaarde** --> 
+<!-- **13. Enumeratiewaarde** -->
 
 >   **Definitie Enumeratiewaarde**
 
@@ -545,7 +547,7 @@ Anders gezegd, Datatypes zijn veelal herbruikbaar en kunnen gespecificeerd
 worden bij diverse «Attribuutsoort»-en.
 
 ####  Primitief datatype
-<!-- **15. Primitief datatype** --> 
+<!-- **15. Primitief datatype** -->
 
 **PrimitiveType** Een standaard datatype, zoals bekend in vele
 specificatietalen, dat de structuur van een gegeven beschrijft. Het metamodel
@@ -569,11 +571,11 @@ gecreëerd en hebben daarom geen MIM metaclass.
     definitie in tekst vastgelegd buiten het informatiemodel zelf, waarbij in het
     eigen model een modelelement is gemaakt in de vorm van het datatype <span class='note'>[Postcode](#alg-n-1)</span>.
 </aside>    
-    
+
 *Toelichting:* Een primitief datatype is een datatype zonder verdere
 specificatie over de structuur. Dit datatype is enkelvoudig, oftewel niet samengesteld, en wordt
-ook wel simpel datatype genoemd. Dit datatype kent daarom zelf geen eigen modelelementen 
-zoals een «Data element». 
+ook wel simpel datatype genoemd. Dit datatype kent daarom zelf geen eigen modelelementen
+zoals een «Data element».
 
 Wanneer een Primitief datatype wordt gespecificeerd, dan heeft deze standaard
 als primitive datatype een CharacterString.
@@ -581,7 +583,7 @@ als primitive datatype een CharacterString.
 Een informatiemodel definieert datatypes als er behoefte is aan een datatype dat
 eenmalig gedefinieerd wordt en op meerdere plekken in het model gebruikt moet
 kunnen worden met altijd exact dezelfde structuur en waardenbereik (zie ook
-‘patroon’ in [Domeinwaarden of lijsten](#domeinwaarden-of-lijsten)<!-- 3.5 -->). 
+‘patroon’ in [Domeinwaarden of lijsten](#domeinwaarden-of-lijsten)<!-- 3.5 -->).
 Dit datatype, met een eigen naam, wordt vervolgens gebruikt als type van een attribuutsoort.
 
 #### Gestructureerd datatype
@@ -592,7 +594,7 @@ Dit datatype, met een eigen naam, wordt vervolgens gebruikt als type van een att
 >   Specifiek benoemd gestructureerd datatype dat de structuur van een gegeven
 >   beschrijft, samengesteld uit minimaal twee elementen.
 
-*Toelichting:* 
+*Toelichting:*
 
 De waarde van het attribuutsoort verkoopprijs met datatype bedrag is uitgedrukt
 in een combinatie van een som en valuta zoals 35 euro. De introductie van één
@@ -620,7 +622,7 @@ geen Gestructureerd datatype).
 </aside>
 
 #### Data element
-<!-- **17. Data element** --> 
+<!-- **17. Data element** -->
 
 >   **Definitie Data element**
 
@@ -636,7 +638,7 @@ van een gegeven en heeft zelf een datatype. Dit datatype is meestal een
 primitief datatype.
 
 #### Union
-<!-- **18. Union** --> 
+<!-- **18. Union** -->
 
 >   **Definitie Union**
 
@@ -650,7 +652,7 @@ primitief datatype.
 </aside>
 
 #### Union element
-<!-- **19. Union element** --> 
+<!-- **19. Union element** -->
 
 >   **Definitie Union element**
 
@@ -684,7 +686,7 @@ modelelementen.
 </div>
 
 #### View
-<!-- **21. View** --> 
+<!-- **21. View** -->
 
 >   **Definitie View**
 
@@ -703,7 +705,7 @@ modelelementen.
 ### Overig
 
 #### Identificerend
-<!-- **22. Identificerend** --> 
+<!-- **22. Identificerend** -->
 
 >   **Definitie Identificerend**
 
@@ -729,14 +731,14 @@ samenstellen met de unieke aanduiding van een gerelateerde objecttype.
 </aside>
 
 #### Constraint
-<!-- **23. Constraint** --> 
+<!-- **23. Constraint** -->
 
 >   **Definitie Constraint**
 
 >   Een constraint is een conditie of een beperking, die over een of meerdere
 >   modelelementen uit het informatiemodel geldt.
 
-*Toelichting:* 
+*Toelichting:*
 
 Een constraint kan vastgelegd worden bij alle modelelementen. Echter, meestal komt een constraint voor bij een objecttype, om te aan te geven dat de constraint geldt voor 2 (of meer) kenmerken van een objecttype:
 
@@ -745,7 +747,7 @@ Een constraint kan vastgelegd worden bij alle modelelementen. Echter, meestal ko
     leeg is, dan is (optioneel) attribuut 2 verplicht.
 </aside>
 
-, of om een bijzondere specificatie toe te voegen die niet via de bestaande modelelementen gelegd kan worden. 
+, of om een bijzondere specificatie toe te voegen die niet via de bestaande modelelementen gelegd kan worden.
 
 <aside class='example'>
     ‘de 11-proef is van toepassing op dit attribuut’.
@@ -762,10 +764,10 @@ het objecttype met als *naam* Pan den een bijbehorende *definitie*, of de *Datum
 opname* van het modelelement in het informatiemodel, bijvoorbeeld *Datum opname*
 1-1-2012.
 
-Merk op dat een aantal van deze metagegevens al meegenomen worden in een specificatie taal. 
+Merk op dat een aantal van deze metagegevens al meegenomen worden in een specificatie taal.
 
 Bijvoorbeeld het objecttype met de naam Pand wordt in UML gemodelleerd als ‘*Named element’* met als
-‘*Name’* Pand (in UML 1.4 heette dit nog UML-Class, met een propery ‘*Name’*). 
+‘*Name’* Pand (in UML 1.4 heette dit nog UML-Class, met een propery ‘*Name’*).
 
 Een aantal andere metagegevens, zoals de eerder genoemde *Datum opname* met
 waarde 1-1-2012. worden als aparte data vastgelegd, in UML gebeurd dit in een ‘*Tagged value*’.
@@ -823,7 +825,7 @@ De definitie volgt, indien aanwezig, de catalogus van de desbetreffende
 vanuit een informatie en informatiemodel perspectief (er zijn ook andere
 definities mogelijk vanuit andere perspectieven, zoals vanuit een juridisch
 perspectief, of vanuit het perspectief van een model van begrippen, zoals
-genoemd in de paragraaf [Typen informatiemodellen](#typen-informatiemodellen). 
+genoemd in de paragraaf [Typen informatiemodellen](#typen-informatiemodellen).
 Dergelijke definities kunnen hetzelfde zijn, of op het
 moment hetzelfde, of verschillend, of aanvullend op elkaar. Het is aan de
 beheerder van het informatiemodel om hier zorgvuldig mee om te gaan).
@@ -1162,7 +1164,7 @@ De aanduiding van de lengte van een gegeven.
 
 *Toelichting*
 
-Getallen kunnen altijd positief of negatief zijn. 
+Getallen kunnen altijd positief of negatief zijn.
 
 <aside class='example'>
     ‘1’ als de lengte exact 1 is; ‘1..2’ als de lengte 1 tot en met 2 lang kan zijn;  
@@ -1213,7 +1215,7 @@ betreft, zoals een CharacterString.
 *Toepassing*: de modelelementen uit de groep datatype en attribuutsoort.
 
 
-#### Toegestane waarden voor (bepaalde) metadata gegevens 
+#### Toegestane waarden voor (bepaalde) metadata gegevens
 
 Tagged values zijn altijd van het datatype CharacterString. Aanvullend geldt:
 
@@ -1248,9 +1250,9 @@ Tagged values zijn altijd van het datatype CharacterString. Aanvullend geldt:
 </aside>
 
 <aside id='alg-n-4' class='note'>
-    Een uitzondering is gemaakt voor UML modellen voor de UML-EnumerationLiteral. 
-    De ‘naam’ betreft hier een daadwerkelijk waarde, waarin de naam gelijk staat aan de waarde. 
-    Het is daarom expliciet ongewenst om hiervoor een alternatieve naamgeving te gebruiken. De alias wordt hier, mede 
+    Een uitzondering is gemaakt voor UML modellen voor de UML-EnumerationLiteral.
+    De ‘naam’ betreft hier een daadwerkelijk waarde, waarin de naam gelijk staat aan de waarde.
+    Het is daarom expliciet ongewenst om hiervoor een alternatieve naamgeving te gebruiken. De alias wordt hier, mede
     daarom, gebruikt voor (alleen) de modellering van het metadata aspect Code,
     welke aanvullend is op naam (niet een alternatief van naam).
 </aside>
