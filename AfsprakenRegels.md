@@ -64,7 +64,7 @@ datatypes. Deze zijn allemaal gebaseerd op [[!GAB]]:
 | URI                | Unieke identificatie op internet conform RFC3986 en de URI-strategie Linked Open Data. Gestandaardiseerde manier om op het internet dingen (pagina's met informatie, objecten, datasets) uniek te identificeren.                                                                                                                                                                                                                                                                                   |
 
 Het is mogelijk om in de eigen extensie extra primitive datatypes op te nemen,
-zodat deze ok beschikbaar komen voor het informatiemodel.
+zodat deze ook beschikbaar komen voor het informatiemodel.
 
 **Getallen en negatieve getallen**
 
