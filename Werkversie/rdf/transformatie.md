@@ -57,7 +57,7 @@ In de SPARQL rules wordt gebruik gemaakt van een aantal SPARQL functies. In onde
 
 Omdat het getransformeerde model daadwerkelijk een nieuw model is, zullen de elementen in het getransformeerde model ook eigen URI's krijgen. Om de relatie tussen het originele MiM-model het het getransformeerde model op basis van RDFS te behouden, wordt de eigenschap `rdfs:seeAlso` gebruikt.
 
-> **ISSUE 1**
+> **ISSUE**
 >
 > Gebruik van `rdfs:seeAlso` is niet erg sterk. Een dergelijke eigenschap kan voor heel veel dingen gebruikt worden. Gekeken moet worden of er niet een betere property beschikbaar is voor dergelijke vocabulaires, of dat we een eigen property moeten introduceren binnen de mim vocabulaire, bv: `mim:equivalent`.
 
@@ -67,7 +67,7 @@ Omdat het getransformeerde model daadwerkelijk een nieuw model is, zullen de ele
 
 Een `mim:Objecttype` wordt vertaald naar een `owl:Class` in combinatie met een `sh:NodeShape`.
 
-> **ISSUE 2**
+> **ISSUE**
 >
 > De identificatie van een objecttype is afgeleid van de naam van het objecttype. Het kan zijn dat deze niet uniek is. Bijvoorbeeld als er gebruik wordt gemaakt van packages en in meerdere packages komen dezelfde namen voor.
 >
@@ -99,7 +99,7 @@ Een `mim:Attribuutsoort` wordt vertaald naar een `sh:PropertyShape` in combinati
 
 In OWL is een property anders dan in het MiM een *first class citizen*. Dit betekent dat als in twee objecttypen gebruik wordt gemaakt van een attribuutsoort die dezelfde naam heeft, dit leidt tot twee verschillende attribuutsoorten. In OWL zou dit echter leiden tot maar één attribuutsoort, tenzij daadwerkelijk sprake is van verschil in betekenis.
 
-> **ISSUE 3**
+> **ISSUE**
 >
 > Het is niet mogelijk om automatisch vast te stellen wanneer sprake is van één property of wanneer sprake is van meerdere properties. Veilig is om een property te maken per objecttype. Maar dit leidt niet tot een goed OWL model. Beter is om een property te maken op basis van de naam van de attribuutsoort, maar dan krijg je problemen als twee namen hetzelfde zijn (!).
 > Dit probleem speelt overigens niet alleen bij een mim:Attribuutsoort, maar ook bij een mim:Gegevensgroep en een mim:Relatie.
@@ -108,7 +108,7 @@ In OWL is een property anders dan in het MiM een *first class citizen*. Dit bete
 >
 > Voorlopige aanname: alle namen van attribuutsoorten zijn uniek.
 
-> **ISSUE 4**
+> **ISSUE**
 >
 > De transformatie houdt nog niet rekening met het feit dat sommige datatypen in RDF juist geen literals zijn, maar resources. In die gevallen zou dus niet gesproken moeten worden over een `owl:DatatypeProperty`, maar een `owl:ObjectProperty`. Alleen de datatypes enumeratie (klopt dat?) en primitief datatype zouden naar een literal gaan, de overigen naar resources.
 
@@ -166,7 +166,7 @@ WHERE {
 
 Een `mim:Gegevensgroeptype` wordt vertaald naar een `sh:NodeShape`.
 
-> **ISSUE 5**
+> **ISSUE**
 >
 > De manier waarop de URI van een gegevensgroeptype tot stand komt, betekent dat de naam van het gegevensgroeptype uniek moet zijn, inclusief de naam van het objecttype (en mogelijk ook datatype?). Dit wordt op dit moment binnen het MIM niet afgedwongen.
 >
@@ -196,7 +196,7 @@ Generalisatie kan gebruikt worden tussen objecttypen, maar ook tussen datatypes.
 
 Een `mim:Generalisatie` wordt vertaald naar een `rdfs:subClassOf`.
 
-> **ISSUE 6**
+> **ISSUE**
 >
 > Vertaling van een mim:Generalisatie naar een rdfs:subClassOf betekent dat wat in het MiM een metaklasse is, in Linked Data een eigenschap is geworden en geen (meta)class. Hierdoor is het niet mogelijk om extra kenmerken te verbinden aan een generalisatie. Dit betekent dat het niet mogelijk is om de generalisatie een naam of een alias te geven.
 >
@@ -222,7 +222,7 @@ WHERE {
 
 > De typering van het structurele verband tussen een object van een objecttype en een (ander) object van een ander (of hetzelfde) objecttype.
 
-> **ISSUE 7**
+> **ISSUE**
 >
 > In het MiM is het toegestaan om te kiezen tussen gebruik van `mim:Relatiesoort` OF `mim:Relatierol`. 
 >
@@ -307,6 +307,10 @@ Een externe koppeling wordt op dezelfde wijze omgezet als een `mim:Relatiesoort`
 
 > Een lijst met een opsomming van de mogelijke domeinwaarden van een attribuutsoort, die buiten het model in een externe waardenlijst worden beheerd. De domeinwaarden in de lijst kunnen in de loop van de tijd aangepast, uitgebreid, of verwijderd worden, zonder dat het informatiemodel aangepast wordt (in tegenstelling tot bij een enumeratie).
 
+> **ISSUE**
+> 
+> Een referentielijst heeft een `MiM:locatie` waarin is gespecificeerd waar de externe bron gevonden kan worden waar de mogelijke waarden zijn opgesomd. Dit KAN een URI of URL zijn en deze bron ZOU bijvoorbeeld een SKOS vocabulaire kunnen zijn. Maar omdat dit niet met zekerheid te zeggen is kunnen we niets met deze externe vocabulaires doen. Dit hoewel een referentielijst wel degelijk onderdeel kan uitmaken van het model in conceptuele zin, hoewel het om beheer- of technische redenen buiten het UML model is geplaatst.
+
 ### Referentie element
 
 > Een eigenschap van een object in een referentielijst in de vorm van een gegeven.
@@ -323,6 +327,10 @@ Een externe koppeling wordt op dezelfde wijze omgezet als een `mim:Relatiesoort`
 
 > Een referentielijst die extern wordt beheerd, en geen onderdeel is van het informatiemodel.
 
+> **ISSUE**
+> 
+> Een codelist heeft een `MiM:locatie` waarin is gespecificeerd waar de externe bron gevonden kan worden waar de mogelijke waarden zijn opgesomd. Dit KAN een URI of URL zijn en deze bron ZOU bijvoorbeeld een SKOS vocabulaire kunnen zijn. Maar omdat dit niet met zekerheid te zeggen is kunnen we niets met deze externe vocabulaires doen. Dit hoewel een codelist wel degelijk onderdeel kan uitmaken van het model in conceptuele zin, hoewel het om beheer- of technische redenen buiten het UML model is geplaatst.
+
 ## Datatypen
 
 ### Primitief datatype
@@ -331,7 +339,7 @@ Een externe koppeling wordt op dezelfde wijze omgezet als een `mim:Relatiesoort`
 
 Een primitief datatype wordt vertaald naar een `rdfs:Datatype` en een subklasse van xsd:string.
 
-> **ISSUE 7**
+> **ISSUE**
 >
 > In de tekst staat "Wanneer een Primitief datatype wordt gespecificeerd, dan heeft deze standaard als primitive datatype een CharacterString". Op basis hiervan is de subklasse met xsd:string aangemerkt. De vraag is echter of je deze "standaard" ook kunt veranderen. In het model is echter (nog) niet iets dergelijks opgenomen. Mogelijk zit dit in de generalisatie-relatie? In dat geval zou "standaard" betekenen dat het toevoegen van de xsd:string alleen gebeurt op het moment dat er geen andere subklasserelatie ontstaat.
 >
@@ -409,7 +417,7 @@ Voor standaard datatypen maakt RDF gebruik van de XSD datatypen. Onderstaande ta
 
 Een `mim:naam` wordt vertaald naar een `rdfs:label`
 
-> **ISSUE 8**
+> **ISSUE**
 >
 > In UML wil het nog wel eens gebruikelijk zijn om voor de naam van een modelelement een technische vorm te kiezen. Bijvoorbeeld "KadastraalObject" in plaats van "Kadastraal object". In Linked Data is het gebruikelijk dat het rdfs:label een voor mensen leesbaar label is, dus *met* spaties. De shacl `sh:name` property leent zich wat meer voor een technische naam. Het is echter niet duidelijk in het MiM wat wordt bedoeld.
 >
@@ -419,7 +427,7 @@ Een `mim:naam` wordt vertaald naar een `rdfs:label`
 > 
 > Aanvulling LvdB: MiM heeft een paragraaf over naamgevingsconventies, echter is er een keuzevrijheid tussen naamgeving in of natuurlijke taal, of machineleesbare taal. Zie MiM [3.16 Naamgevingsconventies](https://docs.geostandaarden.nl/mim/mim10/#naamgevingsconventies). 
 
-> **ISSUE 9**
+> **ISSUE**
 >
 > In UML is het niet gebruikelijk om taal toe te voegen aan een eigenschap. In Linked Data is het prima mogelijk om meerdere talen te ondersteunen en ook aan te geven om welke taal het gaat.
 >
@@ -443,7 +451,7 @@ WHERE {
 
 Een `mim:alias` wordt vertaald naar een `skos:altLabel`
 
-> **ISSUE 10**
+> **ISSUE**
 >
 > Aangezien in UML er niet direct een mogelijkheid is om taal te ondersteunen, wordt het alias nog wel eens gebruikt om een andere taal aan te duiden. Ook wordt het alias wel eens gebruikt om het onderscheid te maken tussen een meer technische naam (bv in CamelCase) en een functionele naam (met spaties enzo). Indien dit het geval is, dan klopt de vertaling naar `skos:altLabel` niet.
 >
@@ -467,9 +475,9 @@ WHERE {
 
 Een `mim:definitie` wordt vertaald naar een `skos:comment`
 
-> **ISSUE 10**
+> **ISSUE**
 >
-> Waarom geen `rdfs:comment`? 
+> Waarom geen `rdfs:comment`? Is hierboven `rdfs:comment` bedoeld?
 
 Rationale om niet te kiezen voor `skos:definition`: in de meeste Linked Data vocabulaires is het gebruikelijk om de beschrijving van een klasse op te nemen door middel van een `rdfs:comment`, wat ook de intentie is in het MiM. Het MiM is niet beoogd als een volledig begrippenkader. Het MiM biedt daarnaast de mogelijkheid om expliciet te verwijzen vanuit een modelelement naar een `skos:Concept`. Het ligt dan ook voor de hand om bij dit `skos:Concept` de werkelijke `skos:definition` op te nemen.
 
@@ -599,22 +607,59 @@ WHERE {
 ```
 
 ### authentiek
+> Aanduiding of het kenmerk een authentiek gegeven betreft.
+
+Een `mim:authentiek` wordt niet vertaald en blijft in het vertaalde model als zodanig aanwezig.
+
+> **UITZOEKEN**
+> 
+> Wellicht net als bij `mim:datumOpname` te overwegen om hiervoor prov te gebruiken. 
 
 ### indicatieAfleidbaar
+> Aanduiding dat gegeven afleidbaar is uit andere attribuut- en/of relatiesoorten.
+
+Een `mim:indicatieAfleidbaar` wordt niet vertaald en blijft in het vertaalde model als zodanig aanwezig.
 
 ### mogelijkGeenWaarde
+> Aanduiding dat van een aspect geen waarde is geregistreerd, maar dat onduidelijk is of de waarde er werkelijk ook niet is.
+
+Een `mim:mogelijkGeenWaarde` wordt niet vertaald en blijft in het vertaalde model als zodanig aanwezig.
+
+> **ISSUE**
+> 
+> Hoe gaan we om met attributen en relaties die mim:mogelijkGeenWaarde='ja' hebben? Dit heeft mogelijk impact op de transformatieregel voor `mim:Attribuutsoort`, `mim:Relatiesoort` en de transformatieregel voor `mim:kardinaliteit`. 
+
+> Het NEN3610 Linked Data Profiel [7.3.4.2.3 Attribuut met stereotype «voidable»](https://geonovum.github.io/NEN3610-Linkeddata/#regels-attributen-voidable) is hiervoor relevant.
 
 ### locatie
+> Als het type van het attribuutsoort een waardenlijst is, dan wordt hier de locatie waar deze te vinden is opgegeven.
+
+Een `mim:locatie` wordt niet vertaald en blijft in het vertaalde model als zodanig aanwezig.
 
 ### type
+> Het datatype waarmee waarden van deze attribuutsoort worden vastgelegd.
+
+Het datatype, indien dit een literal betreft, wordt beschreven met `sh:datatype`.
 
 ### lengte
+> De aanduiding van de lengte van een gegeven.
+
+De lengte wordt beschreven met `sh:maxLength`.
 
 ### patroon
+> De verzameling van waarden die gegevens van deze attribuutsoort kunnen hebben, oftewel het waardenbereik, uitgedrukt in een specifieke structuur. 
+
+De structuur van `mim:patroon` is in woorden beschreven. Deze wordt niet vertaald en blijft in het vertaalde model als zodanig aanwezig.
 
 ### formeelPatroon
+> Zoals patroon, formeel vastgelegd, uitgedrukt in een formele taal die door de computer wordt herkend.
+
+`mim:formeelPatroon` wordt beschreven met `sh:pattern`. 
 
 ### uniekeAanduiding
+> Voor objecttypen die deel uitmaken van een (basis)registratie of informatiemodel betreft dit de wijze waarop daarin voorkomende objecten (van dit type) uniek in de registratie worden aangeduid.
+
+Een `mim:uniekeAanduiding` wordt niet vertaald en blijft in het vertaalde model als zodanig aanwezig. 
 
 ### populatie
 
