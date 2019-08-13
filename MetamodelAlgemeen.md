@@ -126,7 +126,7 @@ het maken van een informatiemodel.
 
 ### Objecten en attributen
 
-#### Objecttype * 
+#### Objecttype
 <!-- **1. Objecttype** * -->
 
 Een objecttype is een groep van gelijksoortige objecten. Om duidelijk te
