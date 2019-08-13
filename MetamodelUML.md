@@ -334,7 +334,7 @@ De generalisaties worden naar het volgende aspect gespecificeerd:
 | **Naam**                   | 0..1              | Algemeen metagegeven.                                           | *name van de metaclass Named element*               | *Name*    |
 | **Alias**                  | 0..1              | Algemeen metagegeven.                                           |                                                     | *Alias*   |
 | **Datatype**               | 1                 | Het datatype dat een specialisatie is van een (ander) datatype. | */source: related Element bij Relationship Element* | *Source*  |
-| **Gerelateerd objecttype** | 1                 | Het datatype dat de generalisatie is van een (ander) datatype.  | */target: related Element bij Relationship Element* | *Target*  |
+| **Gerelateerd datatype** | 1                 | Het datatype dat de generalisatie is van een (ander) datatype.  | */target: related Element bij Relationship Element* | *Target*  |
 
 **Specificatie voor «Relatieklasse»**
 
