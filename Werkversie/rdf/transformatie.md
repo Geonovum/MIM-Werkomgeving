@@ -389,6 +389,10 @@ Voor standaard datatypen maakt RDF gebruik van de XSD datatypen. Onderstaande ta
 
 > Specifiek benoemd gestructureerd datatype dat de structuur van een gegeven beschrijft, samengesteld uit minimaal twee elementen.
 
+> **Voorstel:**
+
+Wordt getransformeerd naar een normale klasse met eigenschappen, zoals in het NEN 3610 Linked Data profiel.
+
 ### Data element
 
 > Een onderdeel/element van een Gestructureerd datatype die als type een datatype heeft.
@@ -396,6 +400,9 @@ Voor standaard datatypen maakt RDF gebruik van de XSD datatypen. Onderstaande ta
 ### Union
 
 > Gestructureerd datatype, waarmee wordt aangegeven dat er meer dan één mogelijkheid is voor het datatype van een attribuut. Het attribuut zelf krijgt als datatype de union. De union biedt een keuze uit verschillende datatypes, elk afzonderlijk beschreven in een union element.
+
+> **Voorstel:**
+Wordt getransformeerd zoals beschreven in https://geonovum.github.io/NEN3610-Linkeddata/#regels-klassen-union.
 
 ### Union element
 
