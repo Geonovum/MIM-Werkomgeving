@@ -319,6 +319,14 @@ Een externe koppeling wordt op dezelfde wijze omgezet als een `mim:Relatiesoort`
 
 > Een datatype waarvan de mogelijke waarden limitatief zijn opgesomd in een statische lijst.
 
+> **Voorstel**
+
+We vertalen een enumeratie zoals beschreven in het NEN 3610 Linked Data profiel: 
+
+> Een enumeratie kan verschillende soorten dingen opsommen. Een lijst met waardes, bijv. een opsomming van nummers, maar ook een lijst met concepten, datatypes, of objecten. Het is dan ook niet triviaal om een goede automatische vertaling te bepalen die een enumeratie kan vertalen naar Linked Data. Om deze reden kiezen we voor een standaardtransformatie naar een klasse gelijknamig aan de enumeratieklasse, en instanties van deze klasse voor elk van de geënumereerde waardes. De geënumereeerde waardes worden ook met een `owl:oneOf` constructie begrensd door de enumeratieklasse. De SHACL gegevensregel maakt gebruikt van het `sh:in` construct om de enumeratie uit te drukken.
+
+> In de Inspire RDF Guidelines wordt voorgeschreven om een enumeratie te modelleren als rdfs:Datatype in plaats van als klasse. Dit leidt tot enumeratiewaardes die een literal zijn, met het datatype van de enumeratie. Bijvoorbeeld `"hoog"^^imgolf:NatuurwaardeValue`. De reden om hiervan af te wijken is omdat enumeraties vaker waardelijsten zijn die een object of concept modelleren, dan een lijst van letterlijke waardes. Door deze waardes als objecten te modelleren blijft het mogelijk om nieuwe uitdrukkingen te doen over de waardes.
+
 ### Enumeratiewaarde
 
 > Een gedefinieerde waarde, in de vorm van een eenmalig vastgesteld constant gegeven.
