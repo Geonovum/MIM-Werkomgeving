@@ -231,7 +231,7 @@ WHERE {
 
 Een `mim:Relatiesoort` wordt vertaald naar een `sh:PropertyShape` in combinatie met een `owl:ObjectProperty`. De nodekind van de propertyshape is een `sh:IRI`.
 
-De URI van de propertyshape wordt afgeleid van de naam van het modelelement dat de relatiesoort "bezit" en de naam van de relatiesoort. De URI van de datatypeproperty wordt afgeleid van de naam van de relatiesoort.
+De URI van de propertyshape wordt afgeleid van de naam van het modelelement dat de relatiesoort "bezit" en de naam van de relatiesoort. De URI van de objectproperty wordt afgeleid van de naam van de relatiesoort.
 
 ```
 CONSTRUCT {
@@ -394,20 +394,43 @@ Voor standaard datatypen maakt RDF gebruik van de XSD datatypen. Onderstaande ta
 > Een type dat gebruikt kan worden voor het attribuut zoals beschreven in de definitie van Union. Het union element is een onderdeel van een Union, uitgedrukt in een eigenschap (attribute) van een union, die als keuze binnen de Union is gerepresenteerd.
 
 ## Packages
+> Een package is een benoemde en begrensde verzameling/groepering van modelelementen.
 
 ### Domein
+> Het eigen IM.
 
 > **UITZOEKEN**
 >
 > Het domein betreft het eigen IM. Transformatie naar `owl:Ontology` lijkt voor de hand te liggen.
 
 ### Extern
+> Een groepering van constructies die een externe instantie beheert en beschikbaar stelt aan een informatiemodel en die in het informatiemodel ongewijzigd gebruikt worden.
+
+> **UITZOEKEN**
+>
+> Het lijkt logisch om een extern package niet te transformeren. De aanname is dat dit al door de externe instantie is gedaan. Mits er voldoende informatie in de UML aanwezig is, kan er een owl:import statement gegenereerd worden. 
 
 ### View
+> Een groepering van objecttypen die gespecificeerd zijn in een extern informatiemodel en vanuit het perspectief van het eigen informatiemodel inzicht geeft welke gegevens van deze objecttypen relevant zijn binnen het eigen informatiemodel.
+
+> **UITZOEKEN**
+>
+> LvdB: ik weet niet precies wat het verschil is tussen `<<Extern>>` en `<<View>>`. Het lijkt in beide gevallen logisch om een extern package niet te transformeren. De aanname is dat dit al door de externe instantie is gedaan. Mits er voldoende informatie in de UML aanwezig is, kan er een owl:import statement gegenereerd worden. Maar voor een `<<View>>` package is dat wellicht overbodig.
 
 ## Overig
 
 ### Constraint
+> Een constraint is een conditie of een beperking, die over een of meerdere modelelementen uit het informatiemodel geldt.
+
+We hebben nog niet gespecificeerd hoe we constraints vertalen. In het NEN3610 Linked Data profiel ook niet. Daar zeggen we over dit onderwerp: 
+
+> Een RDF-Ontologie is goed in het uitdrukken van semantiek en semantische relaties maar niet zo goed in het formuleren van constraints op die relaties. De constraints horen ook niet thuis in de open world assumption.
+
+> SHACL voegt de mogelijkheid toe om constraints eenvoudig te formuleren en toe te passen op een ontologie. De afstand tussen UML-XML en een ontologie is daarmee kleiner geworden.
+
+> Een modelleur moet zich wel afvragen of de constraints van belang zijn in de LD toepassing.
+
+Voorstel: alleen vertalen naar documentatie in het MiM model in RDF. Zie bv de [INSPIRE RDF Guidelines](http://inspire-eu-rdf.github.io/inspire-rdf-guidelines/#ref_cr_constraint) waar ze dit ook zo doen. In de toekomst wellicht vertalen naar SHACL.
 
 ## Properties
 
@@ -415,7 +438,7 @@ Voor standaard datatypen maakt RDF gebruik van de XSD datatypen. Onderstaande ta
 
 > De naam van een modelelement
 
-Een `mim:naam` wordt vertaald naar een `rdfs:label`
+Een `mim:naam` wordt vertaald naar een `rdfs:label`.
 
 > **ISSUE**
 >
@@ -662,39 +685,115 @@ De structuur van `mim:patroon` is in woorden beschreven. Deze wordt niet vertaal
 Een `mim:uniekeAanduiding` wordt niet vertaald en blijft in het vertaalde model als zodanig aanwezig. 
 
 ### populatie
+> Voor objecttypen die deel uitmaken van een (basis)registratie betreft dit de beschrijving van de exemplaren van het gedefinieerde objecttype die in de desbetreffende (basis)­registratie voorhanden zijn.
+
+Een `mim:populatie` wordt niet vertaald en blijft in het vertaalde model als zodanig aanwezig. 
 
 ### kwaliteit
+> Voor objecttypen die deel uitmaken van een registratie betreft dit de waarborgen voor de juistheid van de in de registratie opgenomen objecten van het desbetreffende type.
+
+Een `mim:kwaliteit` wordt niet vertaald en blijft in het vertaalde model als zodanig aanwezig. 
 
 ### indicatieAbstractObject
+> Conceptueel model: indicatie dat het objecttype een generalisatie is, waarvan een object als specialisatie altijd voorkomt in de hoedanigheid van een (en slechts één) van de specialisaties van het betreffende objecttype. Logisch model: Indicatie dat er geen instanties (objecten) voor het betreffende objecttype mogen voorkomen.
+
+In een MiM conform informatiemodel kunnen zowel abstracte als concrete klassen voorkomen. In UML kun je daarvan afleiden dat je geen instanties mag hebben van abstracte klassen, maar alleen van concrete klassen. In RDF wordt geen onderscheid gemaakt tussen het abstract of concreet zijn van klassen. In RDF worden klassen beschouwd als sets van dingen. Als je een set kunt beschrijven, dan kunnen er ook dingen zijn die tot die set behoren.
+
+Een `mim:indicatieAbstractObject` wordt niet vertaald en blijft in het vertaalde model als zodanig aanwezig. 
 
 ### identificerend
+> Een kenmerk van een objecttype die aangeeft of deze eigenschap uniek identificerend is voor alle objecten in de populatie van objecten van dit objecttype.
+
+Een `mim:identificerend` wordt niet vertaald en blijft in het vertaalde model als zodanig aanwezig. 
 
 ### gegevensgroeptype
+(Hier bedoeld als eigenschap van een `<<gegevensgroep>>`). 
+
+> De verwijzing naar het bijbehorende gegevensgroeptype.
+
+Een `mim:gegevensgroeptype` property wordt vertaald naar de URI van de objectproperty die het bijbehorende gegevensgroeptype representeert. Zie [Gegevensgroep](#gegevensgroep) voor meer uitleg.
 
 ### unidirectioneel
+> **ISSUE**
+>
+> LvdB: ik begrijp niet goed wat de betekenis is van het aspect 'unidirectioneel' in MiM. Het lijkt te gaan over de richting van de relatie.
+
+Bij `<<relatiesoort>>`: 
+
+> Het gerelateerde objecttype (de target) waarvan het objecttype, die de eigenaar is van deze relatie (de source), kennis heeft. Alle relaties zijn altijd gericht van het objecttype (source) naar het gerelateerde objecttype (target).
+
+Bij `<<Externe koppeling>>`:
+> Het gerelateerde objecttype uit een extern informatiemodel (de target) waarvan het objecttype die de eigenaar van deze relatie is (de source) kennis heeft. Het aggregation type van de source is altijd ‘composition’. Alle relaties zijn altijd gericht van het objecttype (source) naar het gerelateerde objecttype (target).
 
 ### objecttype
+Bij `<<Relatiesoort>>` en `<<Externe koppeling>>`: 
+> Het objecttype waarvan de relatie een eigenschap is.
+
+Bij `<<Generalisatie>>`:
+> Het objecttype dat een specialisatie is van een (ander) objecttype.
+
+In beide gevallen gaat het om het objecttype waar de relatie vandaan komt (de source). 
+
+Een `mim:objecttype` is in UML het source objecttype en in linked data de subject class waarbij de relatie of generalisatie wordt gedefinieerd. 
+
+Zie voor meer informatie over hoe relaties tussen objecttypen worden vertaald de paragrafen [Relatiesoort](#relatiesoort), [Generalisatie](#generalisatie) en [Externe koppeling](#externe-koppeling).
+
+### gerelateerdObjecttype
+Bij `<<Relatiesoort>>` 
+> Het objecttype waarmee een objecttype een logisch verband heeft
+
+Bij `<<Generalisatie>>`:
+> Het objecttype dat de generalisatie is van een (ander) objecttype.
+
+Bij `<<Externe koppeling>>`: 
+> Het objecttype uit een extern informatiemodel waarmee een objecttype een logische verbinding heeft.
+
+In elk van deze gevallen gaat het om het objecttype waar de relatie naartoe gaat (de target). 
+
+Een `mim:gerelateerdObjecttype` is in UML het target objecttype van een relatie en in linked data de object class van de objectproperty waarmee de relatie of generalisatie wordt gedefinieerd. 
+
+Zie voor meer informatie over hoe relaties tussen objecttypen worden vertaald de paragrafen [Relatiesoort](#relatiesoort), [Generalisatie](#generalisatie) en [Externe koppeling](#externe-koppeling).
+
+### datatype
+> Het datatype dat een specialisatie is van een (ander) datatype.
+
+ Een `mim:datatype` is in UML het source datatype van een generalisatie tussen datatypen. Net als bij een generalisatie tussen objecttypen wordt dit vertaald naar een `rdfs:subclassOf` waarbij `mim:datatype` wordt vertaald naar de subject class waarbij de generalisatie wordt gedefinieerd. 
+
+Zie ook [Generalisatie](#generalisatie).
 
 ### gerelateerdDatatype
+> Het datatype dat de generalisatie is van een (ander) datatype.
+
+Een `mim:gerelateerdDatatype` is in UML het target datatype van een generalisatie tussen datatypen. Net als bij een generalisatie tussen objecttypen wordt dit vertaald naar een `rdfs:subclassOf` waarbij `mim:gerelateerdDatatype` wordt vertaald naar de object class van de `rdfs:subclassOf`. 
+
+Zie ook [Generalisatie](#generalisatie).
 
 ### typeAggregatie
+> Standaard betreft het geen aggregatie (None). Het type aggregatie mag ‘composite’ zijn. Dit wordt gedaan als er een afhankelijkheid is in die zin dat de target niet kan bestaan zonder de source: de target vervalt als de source vervalt.
 
-### subtype
-
-### supertype
+Aggregatie- en compositie-associaties worden gemodelleerd zoals simpele relatiesoorten, gebruikmakend van de specifieke naam die de associatie in het oorspronkelijke model heeft. Een `mim:typeAggregatie` wordt niet vertaald en blijft in het vertaalde model als zodanig aanwezig. 
 
 ### code
+> De in een registratie of informatiemodel aan de enumeratiewaarde toegekend unieke code (niet te verwarren met alias, zoals bedoeld in 2.6.1).
+
+> ** ISSUE
+> 
+> We hebben nog niet gespecificeerd hoe we enumeraties vertalen. In NEN3610-LD is standaardtransformatie een transformatie naar een klasse gelijknamig aan de enumeratieklasse, en instanties van deze klasse voor elk van de geënumereerde waardes. Als we dit volgen zouden we de `mim:code` kunnen vertalen naar een `rdfs:label` of `skos:altLabel`. 
 
 ### specificatieTekst
+> De specificatie van de constraint in normale tekst.
+
+> ** ISSUE
+> 
+> We hebben nog niet gespecificeerd hoe we constraints vertalen. Voorstel: alleen vertalen naar documentatie in het MiM model in RDF. In de toekomst wellicht vertalen naar SHACL.
+
+Een `mim:specificatieTekst` wordt niet vertaald en blijft in het vertaalde model als zodanig aanwezig. 
 
 ### specificatieFormeel
+> De beschrijving van de constraint in een formele specificatietaal, in OCL.
 
-### attribuut
+> ** ISSUE
+> 
+> We hebben nog niet gespecificeerd hoe we constraints vertalen. Voorstel: alleen vertalen naar documentatie in het MiM model in RDF. In de toekomst wellicht vertalen naar SHACL.
 
-### gegevensgroep
-
-### waarde
-
-### constraint
-
-### element
+Een `mim:specificatieFormeel` wordt niet vertaald en blijft in het vertaalde model als zodanig aanwezig. 
