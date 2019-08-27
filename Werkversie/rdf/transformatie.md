@@ -2,9 +2,9 @@
 
 ## Inleiding
 
-Het MiM is een *metamodel*. Dit betekent dat in termen van het MiM een concreet informatiemodel kan worden uitgewerkt, bijvoorbeeld het informatiemodel Basisregistratie Adressen en Gebouwen. Het MiM is niet bedoeld om vervolgens in termen van dit informatiemodel een concrete dataset te vormen. Hiervoor is een transformatie nodig naar een (technisch) uitwisselings- of opslagmodel.
+Het MiM is een *metamodel*. Dit betekent dat in termen van het MiM een concreet informatiemodel kan worden uitgewerkt, bijvoorbeeld het informatiemodel Basisregistratie Adressen en Gebouwen. Het MiM is niet bedoeld om vervolgens in termen van dit informatiemodel een concrete dataset te vormen. Hiervoor is een transformatie nodig naar een (technisch) uitwisselings- of opslagmodel, bijvoorbeeld een XSD schema of een RDMS database definitie.
 
-Op diezelfde manier levert het toepassen van het MiM in RDF geen ontologie of vocabulaire waarin RDF (i.e. een concrete linked data dataset) kan worden uitgedrukt: slechts het informatiemodel zelf is op deze manier in RDF uitgedrukt. Voor de vertaalslag naar een ontologie is een afzonderlijke transformatie nodig.
+Op diezelfde manier levert het toepassen van het MiM in RDF geen ontologie of vocabulaire waarin RDF kan worden uitgedrukt in een concrete Linked Data dataset. Slechts het informatiemodel zelf is op deze manier in RDF uitgedrukt. Een afzonderlijke transformatie is nodig voor de vertaalslag naar een ontologie voor een concrete Linked Data.
 
 Zo leidt een MiM objecttype "Schip" tot de volgende weergave in RDF:
 
@@ -17,13 +17,13 @@ vb:Schip a mim:Objecttype;
 .
 ```
 
-`vb:Schip` is in dit voorbeeld een voorkomen van de klasse `mim:Objecttype`. Dit voorkomen, `vb:Schip`, kent zelf geen voorkomens. Het is niet mogelijk om te zeggen: 
+`vb:Schip` is in dit voorbeeld een voorkomen van de klasse `mim:Objecttype`. Dit voorkomen, `vb:Schip`, kent zelf geen voorkomens. Het is dan ook niet mogelijk om te stellen:
 
 ```
 vb:depakjesboot a vb:Schip.
 ```
 
-`vb:Schip` is immers geen klasse maar zelf een voorkomen! Om te kunnen uitdrukken dat de pakjesboot een voorkomen van de klasse Schip is, is een vertaling nodig naar (minimaal) een `rdfs:Class`, bijvoorbeeld door:
+`vb:Schip` is immers geen klasse maar zelf een voorkomen! Om te kunnen uitdrukken dat de pakjesboot een voorkomen van de klasse Schip is, is een vertaling nodig naar een `rdfs:Class` of `owl:Class`, bijvoorbeeld door:
 
 ```
 @prefix vbo: <http://bp4mc2.org/voorbeeld/def#>.
@@ -34,7 +34,7 @@ vbo:Schip a rdfs:Class;
 vb:Pakjesboot12 a vbo:Schip.
 ```
 
-Dit document beschrijft hoe deze vertaling van het MiM model in RDF naar een RDFS-gebaseerde ontologie plaatsvindt. Daarbij zal niet alleen gebruik worden gemaakt van RDFS, maar ook van de OWL, SHACL en SKOS vocabulaires. De vertaling wordt zo veel mogelijk als SPARQL rules beschreven, zodat een machinale vertaling mogelijk is. De vertaling is beoogd als omkeerbaar. De SPARQL rules die vanuit een RDFS-gebaseerde ontologie de vertaling maken naar een MiM model in RDF, zijn daarom ook beschreven.
+Dit document beschrijft hoe deze vertaling van het MiM model in RDF naar een RDFS-gebaseerde ontologie plaatsvindt. Daarbij zal niet alleen gebruik worden gemaakt van RDFS, maar ook van de OWL, SHACL en SKOS vocabulaires. De vertaling wordt zo veel mogelijk als SPARQL rules beschreven, zodat een machinale vertaling mogelijk is. De vertaling is beoogd als omkeerbaar. De SPARQL rules die vanuit een RDFS-gebaseerde ontologie de vertaling maken naar een MiM model in RDF, zullen daarom ook worden beschreven (in deze versie van het document zijn deze nog niet opgenomen).
 
 ## Gebruikte functies
 
@@ -173,7 +173,7 @@ Een `mim:Gegevensgroeptype` wordt vertaald naar een `sh:NodeShape`.
 > Mogelijke oplossing is om een dergelijke regel wel op te nemen in het MIM.
 >
 > Voorlopige aanname is dat sprake is van uniciteit over alle elementen die nodeshape kunnen zijn.
-
+>
 > NB de naam van een gegevensgroeptype is net als die van een objecttype wel uniek binnen een package.
 
 ```
@@ -224,7 +224,7 @@ WHERE {
 
 > **ISSUE**
 >
-> In het MiM is het toegestaan om te kiezen tussen gebruik van `mim:Relatiesoort` OF `mim:Relatierol`. 
+> In het MiM is het toegestaan om te kiezen tussen gebruik van `mim:Relatiesoort` OF `mim:Relatierol`.
 >
 > Voorlopige aanname: `mim:Relatiesoort` wordt gebruikt.
 
@@ -308,7 +308,7 @@ Een externe koppeling wordt op dezelfde wijze omgezet als een `mim:Relatiesoort`
 > Een lijst met een opsomming van de mogelijke domeinwaarden van een attribuutsoort, die buiten het model in een externe waardenlijst worden beheerd. De domeinwaarden in de lijst kunnen in de loop van de tijd aangepast, uitgebreid, of verwijderd worden, zonder dat het informatiemodel aangepast wordt (in tegenstelling tot bij een enumeratie).
 
 > **ISSUE**
-> 
+>
 > Een referentielijst heeft een `MiM:locatie` waarin is gespecificeerd waar de externe bron gevonden kan worden waar de mogelijke waarden zijn opgesomd. Dit KAN een URI of URL zijn en deze bron ZOU bijvoorbeeld een SKOS vocabulaire kunnen zijn. Maar omdat dit niet met zekerheid te zeggen is kunnen we niets met deze externe vocabulaires doen. Dit hoewel een referentielijst wel degelijk onderdeel kan uitmaken van het model in conceptuele zin, hoewel het om beheer- of technische redenen buiten het UML model is geplaatst.
 
 ### Referentie element
@@ -321,7 +321,7 @@ Een externe koppeling wordt op dezelfde wijze omgezet als een `mim:Relatiesoort`
 
 > **Voorstel**
 
-We vertalen een enumeratie zoals beschreven in het NEN 3610 Linked Data profiel: 
+We vertalen een enumeratie zoals beschreven in het NEN 3610 Linked Data profiel:
 
 > Een enumeratie kan verschillende soorten dingen opsommen. Een lijst met waardes, bijv. een opsomming van nummers, maar ook een lijst met concepten, datatypes, of objecten. Het is dan ook niet triviaal om een goede automatische vertaling te bepalen die een enumeratie kan vertalen naar Linked Data. Om deze reden kiezen we voor een standaardtransformatie naar een klasse gelijknamig aan de enumeratieklasse, en instanties van deze klasse voor elk van de geënumereerde waardes. De geënumereeerde waardes worden ook met een `owl:oneOf` constructie begrensd door de enumeratieklasse. De SHACL gegevensregel maakt gebruikt van het `sh:in` construct om de enumeratie uit te drukken.
 
@@ -336,7 +336,7 @@ We vertalen een enumeratie zoals beschreven in het NEN 3610 Linked Data profiel:
 > Een referentielijst die extern wordt beheerd, en geen onderdeel is van het informatiemodel.
 
 > **ISSUE**
-> 
+>
 > Een codelist heeft een `MiM:locatie` waarin is gespecificeerd waar de externe bron gevonden kan worden waar de mogelijke waarden zijn opgesomd. Dit KAN een URI of URL zijn en deze bron ZOU bijvoorbeeld een SKOS vocabulaire kunnen zijn. Maar omdat dit niet met zekerheid te zeggen is kunnen we niets met deze externe vocabulaires doen. Dit hoewel een codelist wel degelijk onderdeel kan uitmaken van het model in conceptuele zin, hoewel het om beheer- of technische redenen buiten het UML model is geplaatst.
 
 ## Datatypen
@@ -352,7 +352,7 @@ Een primitief datatype wordt vertaald naar een `rdfs:Datatype` en een subklasse 
 > In de tekst staat "Wanneer een Primitief datatype wordt gespecificeerd, dan heeft deze standaard als primitive datatype een CharacterString". Op basis hiervan is de subklasse met xsd:string aangemerkt. De vraag is echter of je deze "standaard" ook kunt veranderen. In het model is echter (nog) niet iets dergelijks opgenomen. Mogelijk zit dit in de generalisatie-relatie? In dat geval zou "standaard" betekenen dat het toevoegen van de xsd:string alleen gebeurt op het moment dat er geen andere subklasserelatie ontstaat.
 >
 > Voorlopige aanname is dat dit los van elkaar staat.
-> 
+>
 > NB: In MiM 1.0.1 is aangepast dat een Primitief datatype een generalisatie relatie kan hebben met een MiM datatype. Dit is relevant voor dit issue. Zie MiM [3.1.2 Datatype zelf definiëren](https://docs.geostandaarden.nl/mim/mim10/#datatype-zelf-definieren).
 
 ```
@@ -423,7 +423,7 @@ Wordt getransformeerd zoals beschreven in https://geonovum.github.io/NEN3610-Lin
 
 > **UITZOEKEN**
 >
-> Het lijkt logisch om een extern package niet te transformeren. De aanname is dat dit al door de externe instantie is gedaan. Mits er voldoende informatie in de UML aanwezig is, kan er een owl:import statement gegenereerd worden. 
+> Het lijkt logisch om een extern package niet te transformeren. De aanname is dat dit al door de externe instantie is gedaan. Mits er voldoende informatie in de UML aanwezig is, kan er een owl:import statement gegenereerd worden.
 
 ### View
 > Een groepering van objecttypen die gespecificeerd zijn in een extern informatiemodel en vanuit het perspectief van het eigen informatiemodel inzicht geeft welke gegevens van deze objecttypen relevant zijn binnen het eigen informatiemodel.
@@ -437,7 +437,7 @@ Wordt getransformeerd zoals beschreven in https://geonovum.github.io/NEN3610-Lin
 ### Constraint
 > Een constraint is een conditie of een beperking, die over een of meerdere modelelementen uit het informatiemodel geldt.
 
-We hebben nog niet gespecificeerd hoe we constraints vertalen. In het NEN3610 Linked Data profiel ook niet. Daar zeggen we over dit onderwerp: 
+We hebben nog niet gespecificeerd hoe we constraints vertalen. In het NEN3610 Linked Data profiel ook niet. Daar zeggen we over dit onderwerp:
 
 > Een RDF-Ontologie is goed in het uitdrukken van semantiek en semantische relaties maar niet zo goed in het formuleren van constraints op die relaties. De constraints horen ook niet thuis in de open world assumption.
 
@@ -462,8 +462,8 @@ Een `mim:naam` wordt vertaald naar een `rdfs:label`.
 > Mogelijke oplossing: een "naamgevingsconventie" toevoegen aan het totale MiM model, waaruit blijkt of sprake is van technische namen of van namen die voldoen aan de gebruikelijke spellingsregels.
 >
 > Voorlopige aanname: de naam voldoet aan de gebruikelijke spellingsregels.
-> 
-> Aanvulling LvdB: MiM heeft een paragraaf over naamgevingsconventies, echter is er een keuzevrijheid tussen naamgeving in of natuurlijke taal, of machineleesbare taal. Zie MiM [3.16 Naamgevingsconventies](https://docs.geostandaarden.nl/mim/mim10/#naamgevingsconventies). 
+>
+> Aanvulling LvdB: MiM heeft een paragraaf over naamgevingsconventies, echter is er een keuzevrijheid tussen naamgeving in of natuurlijke taal, of machineleesbare taal. Zie MiM [3.16 Naamgevingsconventies](https://docs.geostandaarden.nl/mim/mim10/#naamgevingsconventies).
 
 > **ISSUE**
 >
@@ -527,7 +527,7 @@ Rationale om niet te kiezen voor `skos:definition`: in de meeste Linked Data voc
 
 > Een inhoudelijke toelichting op de definitie, ter verheldering of nadere duiding.
 
-Een `mim:toelichting` wordt niet vertaald en blijft in het vertaalde model als zodanig aanwezig.
+Een `mim:toelichting` wordt direct, zonder aanpassing, overgenomen in het vertaalde model.
 
 *Aanbevolen wordt om geen gebruik te maken van mim:toelichting, maar gebruik te maken van de verwijzing naar expliciet gedefinieerde begrippen, waarbij de toelichting bij het begrip zelf wordt opgenomen*.
 
@@ -545,7 +545,7 @@ WHERE {
 
 > De registratie of het informatiemodel waaraan het modelelement ontleend is dan wel de eigen organisatie indien het door de eigen organisatie toegevoegd is.
 
-Een `mim:herkomst` wordt niet vertaald en blijft in het vertaalde model als zodanig aanwezig.
+Een `mim:herkomst` wordt direct, zonder aanpassing, overgenomen in het vertaalde model.
 
 ```
 CONSTRUCT {
@@ -561,7 +561,7 @@ WHERE {
 
 > De registratie of het informatiemodel waaruit de definitie is overgenomen dan wel een aanduiding die aangeeft uit welke bronnen de definitie is samengesteld.
 
-Een `mim:herkomstDefinitie` wordt niet vertaald en blijft in het vertaalde model als zodanig aanwezig.
+Een `mim:herkomstDefinitie` wordt direct, zonder aanpassing, overgenomen in het vertaalde model.
 
 *Aanbevolen wordt om geen gebruik te maken van mim:herkomstDefinitie, maar gebruik te maken van de verwijzing naar expliciet gedefinieerde begrippen, waarbij de herkomst van de definitie bij het begrip zelf wordt opgenomen*.
 
@@ -579,7 +579,7 @@ WHERE {
 
 > De datum waarop het modelelement is opgenomen in het informatiemodel.
 
-Een `mim:datumOpname` wordt niet vertaald en blijft in het vertaalde model als zodanig aanwezig.
+Een `mim:datumOpname` wordt direct, zonder aanpassing, overgenomen in het vertaalde model.
 
 > **UITZOEKEN**
 >
@@ -602,7 +602,7 @@ WHERE {
 > **UITZOEKEN**
 >
 > Hoe gaan we dit doen? Feitelijk moet je deze indicatie omzetten naar daadwerkelijke properties.
-> 
+>
 > Zie voor input het NEN3610 Linked Data Profiel [7.3.4.2.4 Attribuut met stereotype «materieleHistorie»](https://geonovum.github.io/NEN3610-Linkeddata/#regels-attributen-materieleHistorie).
 
 ### indicatieFormeleHistorie
@@ -612,7 +612,7 @@ WHERE {
 > **UITZOEKEN**
 >
 > Hoe gaan we dit doen? Feitelijk moet je deze indicatie omzetten naar daadwerkelijke properties. Meestal doen we daarbij formele historie als onderdeel van de volledige klasse, maar niet de afzonderlijke elementen.
-> 
+>
 > Zie voor input het NEN3610 Linked Data Profiel [7.3.4.2.5 Attribuut met stereotype «formeleHistorie»](https://geonovum.github.io/NEN3610-Linkeddata/#regels-attributen-formeleHistorie).
 
 ### kardinaliteit
@@ -647,32 +647,32 @@ WHERE {
 ### authentiek
 > Aanduiding of het kenmerk een authentiek gegeven betreft.
 
-Een `mim:authentiek` wordt niet vertaald en blijft in het vertaalde model als zodanig aanwezig.
+Een `mim:authentiek` wordt direct, zonder aanpassing, overgenomen in het vertaalde model.
 
 > **UITZOEKEN**
-> 
-> Wellicht net als bij `mim:datumOpname` te overwegen om hiervoor prov te gebruiken. 
+>
+> Wellicht net als bij `mim:datumOpname` te overwegen om hiervoor prov te gebruiken.
 
 ### indicatieAfleidbaar
 > Aanduiding dat gegeven afleidbaar is uit andere attribuut- en/of relatiesoorten.
 
-Een `mim:indicatieAfleidbaar` wordt niet vertaald en blijft in het vertaalde model als zodanig aanwezig.
+Een `mim:indicatieAfleidbaar` wordt direct, zonder aanpassing, overgenomen in het vertaalde model.
 
 ### mogelijkGeenWaarde
 > Aanduiding dat van een aspect geen waarde is geregistreerd, maar dat onduidelijk is of de waarde er werkelijk ook niet is.
 
-Een `mim:mogelijkGeenWaarde` wordt niet vertaald en blijft in het vertaalde model als zodanig aanwezig.
+Een `mim:mogelijkGeenWaarde` wordt direct, zonder aanpassing, overgenomen in het vertaalde model.
 
 > **ISSUE**
-> 
-> Hoe gaan we om met attributen en relaties die mim:mogelijkGeenWaarde='ja' hebben? Dit heeft mogelijk impact op de transformatieregel voor `mim:Attribuutsoort`, `mim:Relatiesoort` en de transformatieregel voor `mim:kardinaliteit`. 
+>
+> Hoe gaan we om met attributen en relaties die mim:mogelijkGeenWaarde='ja' hebben? Dit heeft mogelijk impact op de transformatieregel voor `mim:Attribuutsoort`, `mim:Relatiesoort` en de transformatieregel voor `mim:kardinaliteit`.
 
 > Het NEN3610 Linked Data Profiel [7.3.4.2.3 Attribuut met stereotype «voidable»](https://geonovum.github.io/NEN3610-Linkeddata/#regels-attributen-voidable) is hiervoor relevant.
 
 ### locatie
 > Als het type van het attribuutsoort een waardenlijst is, dan wordt hier de locatie waar deze te vinden is opgegeven.
 
-Een `mim:locatie` wordt niet vertaald en blijft in het vertaalde model als zodanig aanwezig.
+Een `mim:locatie` wordt direct, zonder aanpassing, overgenomen in het vertaalde model.
 
 ### type
 > Het datatype waarmee waarden van deze attribuutsoort worden vastgelegd.
@@ -685,44 +685,44 @@ Het datatype, indien dit een literal betreft, wordt beschreven met `sh:datatype`
 De lengte wordt beschreven met `sh:maxLength`.
 
 ### patroon
-> De verzameling van waarden die gegevens van deze attribuutsoort kunnen hebben, oftewel het waardenbereik, uitgedrukt in een specifieke structuur. 
+> De verzameling van waarden die gegevens van deze attribuutsoort kunnen hebben, oftewel het waardenbereik, uitgedrukt in een specifieke structuur.
 
-De structuur van `mim:patroon` is in woorden beschreven. Deze wordt niet vertaald en blijft in het vertaalde model als zodanig aanwezig.
+De structuur van `mim:patroon` is in woorden beschreven. Deze wordt direct, zonder aanpassing, overgenomen in het vertaalde model.
 
 ### formeelPatroon
 > Zoals patroon, formeel vastgelegd, uitgedrukt in een formele taal die door de computer wordt herkend.
 
-`mim:formeelPatroon` wordt beschreven met `sh:pattern`. 
+`mim:formeelPatroon` wordt beschreven met `sh:pattern`.
 
 ### uniekeAanduiding
 > Voor objecttypen die deel uitmaken van een (basis)registratie of informatiemodel betreft dit de wijze waarop daarin voorkomende objecten (van dit type) uniek in de registratie worden aangeduid.
 
-Een `mim:uniekeAanduiding` wordt niet vertaald en blijft in het vertaalde model als zodanig aanwezig. 
+Een `mim:uniekeAanduiding` wordt direct, zonder aanpassing, overgenomen in het vertaalde model.
 
 ### populatie
 > Voor objecttypen die deel uitmaken van een (basis)registratie betreft dit de beschrijving van de exemplaren van het gedefinieerde objecttype die in de desbetreffende (basis)­registratie voorhanden zijn.
 
-Een `mim:populatie` wordt niet vertaald en blijft in het vertaalde model als zodanig aanwezig. 
+Een `mim:populatie` wordt direct, zonder aanpassing, overgenomen in het vertaalde model.
 
 ### kwaliteit
 > Voor objecttypen die deel uitmaken van een registratie betreft dit de waarborgen voor de juistheid van de in de registratie opgenomen objecten van het desbetreffende type.
 
-Een `mim:kwaliteit` wordt niet vertaald en blijft in het vertaalde model als zodanig aanwezig. 
+Een `mim:kwaliteit` wordt direct, zonder aanpassing, overgenomen in het vertaalde model.
 
 ### indicatieAbstractObject
 > Conceptueel model: indicatie dat het objecttype een generalisatie is, waarvan een object als specialisatie altijd voorkomt in de hoedanigheid van een (en slechts één) van de specialisaties van het betreffende objecttype. Logisch model: Indicatie dat er geen instanties (objecten) voor het betreffende objecttype mogen voorkomen.
 
 In een MiM conform informatiemodel kunnen zowel abstracte als concrete klassen voorkomen. In UML kun je daarvan afleiden dat je geen instanties mag hebben van abstracte klassen, maar alleen van concrete klassen. In RDF wordt geen onderscheid gemaakt tussen het abstract of concreet zijn van klassen. In RDF worden klassen beschouwd als sets van dingen. Als je een set kunt beschrijven, dan kunnen er ook dingen zijn die tot die set behoren.
 
-Een `mim:indicatieAbstractObject` wordt niet vertaald en blijft in het vertaalde model als zodanig aanwezig. 
+Een `mim:indicatieAbstractObject` wordt direct, zonder aanpassing, overgenomen in het vertaalde model.
 
 ### identificerend
 > Een kenmerk van een objecttype die aangeeft of deze eigenschap uniek identificerend is voor alle objecten in de populatie van objecten van dit objecttype.
 
-Een `mim:identificerend` wordt niet vertaald en blijft in het vertaalde model als zodanig aanwezig. 
+Een `mim:identificerend` wordt direct, zonder aanpassing, overgenomen in het vertaalde model.
 
 ### gegevensgroeptype
-(Hier bedoeld als eigenschap van een `<<gegevensgroep>>`). 
+(Hier bedoeld als eigenschap van een `<<gegevensgroep>>`).
 
 > De verwijzing naar het bijbehorende gegevensgroeptype.
 
@@ -733,7 +733,7 @@ Een `mim:gegevensgroeptype` property wordt vertaald naar de URI van de objectpro
 >
 > LvdB: ik begrijp niet goed wat de betekenis is van het aspect 'unidirectioneel' in MiM. Het lijkt te gaan over de richting van de relatie.
 
-Bij `<<relatiesoort>>`: 
+Bij `<<relatiesoort>>`:
 
 > Het gerelateerde objecttype (de target) waarvan het objecttype, die de eigenaar is van deze relatie (de source), kennis heeft. Alle relaties zijn altijd gericht van het objecttype (source) naar het gerelateerde objecttype (target).
 
@@ -741,74 +741,74 @@ Bij `<<Externe koppeling>>`:
 > Het gerelateerde objecttype uit een extern informatiemodel (de target) waarvan het objecttype die de eigenaar van deze relatie is (de source) kennis heeft. Het aggregation type van de source is altijd ‘composition’. Alle relaties zijn altijd gericht van het objecttype (source) naar het gerelateerde objecttype (target).
 
 ### objecttype
-Bij `<<Relatiesoort>>` en `<<Externe koppeling>>`: 
+Bij `<<Relatiesoort>>` en `<<Externe koppeling>>`:
 > Het objecttype waarvan de relatie een eigenschap is.
 
 Bij `<<Generalisatie>>`:
 > Het objecttype dat een specialisatie is van een (ander) objecttype.
 
-In beide gevallen gaat het om het objecttype waar de relatie vandaan komt (de source). 
+In beide gevallen gaat het om het objecttype waar de relatie vandaan komt (de source).
 
-Een `mim:objecttype` is in UML het source objecttype en in linked data de subject class waarbij de relatie of generalisatie wordt gedefinieerd. 
+Een `mim:objecttype` is in UML het source objecttype en in linked data de subject class waarbij de relatie of generalisatie wordt gedefinieerd.
 
 Zie voor meer informatie over hoe relaties tussen objecttypen worden vertaald de paragrafen [Relatiesoort](#relatiesoort), [Generalisatie](#generalisatie) en [Externe koppeling](#externe-koppeling).
 
 ### gerelateerdObjecttype
-Bij `<<Relatiesoort>>` 
+Bij `<<Relatiesoort>>`
 > Het objecttype waarmee een objecttype een logisch verband heeft
 
 Bij `<<Generalisatie>>`:
 > Het objecttype dat de generalisatie is van een (ander) objecttype.
 
-Bij `<<Externe koppeling>>`: 
+Bij `<<Externe koppeling>>`:
 > Het objecttype uit een extern informatiemodel waarmee een objecttype een logische verbinding heeft.
 
-In elk van deze gevallen gaat het om het objecttype waar de relatie naartoe gaat (de target). 
+In elk van deze gevallen gaat het om het objecttype waar de relatie naartoe gaat (de target).
 
-Een `mim:gerelateerdObjecttype` is in UML het target objecttype van een relatie en in linked data de object class van de objectproperty waarmee de relatie of generalisatie wordt gedefinieerd. 
+Een `mim:gerelateerdObjecttype` is in UML het target objecttype van een relatie en in linked data de object class van de objectproperty waarmee de relatie of generalisatie wordt gedefinieerd.
 
 Zie voor meer informatie over hoe relaties tussen objecttypen worden vertaald de paragrafen [Relatiesoort](#relatiesoort), [Generalisatie](#generalisatie) en [Externe koppeling](#externe-koppeling).
 
 ### datatype
 > Het datatype dat een specialisatie is van een (ander) datatype.
 
- Een `mim:datatype` is in UML het source datatype van een generalisatie tussen datatypen. Net als bij een generalisatie tussen objecttypen wordt dit vertaald naar een `rdfs:subclassOf` waarbij `mim:datatype` wordt vertaald naar de subject class waarbij de generalisatie wordt gedefinieerd. 
+ Een `mim:datatype` is in UML het source datatype van een generalisatie tussen datatypen. Net als bij een generalisatie tussen objecttypen wordt dit vertaald naar een `rdfs:subclassOf` waarbij `mim:datatype` wordt vertaald naar de subject class waarbij de generalisatie wordt gedefinieerd.
 
 Zie ook [Generalisatie](#generalisatie).
 
 ### gerelateerdDatatype
 > Het datatype dat de generalisatie is van een (ander) datatype.
 
-Een `mim:gerelateerdDatatype` is in UML het target datatype van een generalisatie tussen datatypen. Net als bij een generalisatie tussen objecttypen wordt dit vertaald naar een `rdfs:subclassOf` waarbij `mim:gerelateerdDatatype` wordt vertaald naar de object class van de `rdfs:subclassOf`. 
+Een `mim:gerelateerdDatatype` is in UML het target datatype van een generalisatie tussen datatypen. Net als bij een generalisatie tussen objecttypen wordt dit vertaald naar een `rdfs:subclassOf` waarbij `mim:gerelateerdDatatype` wordt vertaald naar de object class van de `rdfs:subclassOf`.
 
 Zie ook [Generalisatie](#generalisatie).
 
 ### typeAggregatie
 > Standaard betreft het geen aggregatie (None). Het type aggregatie mag ‘composite’ zijn. Dit wordt gedaan als er een afhankelijkheid is in die zin dat de target niet kan bestaan zonder de source: de target vervalt als de source vervalt.
 
-Aggregatie- en compositie-associaties worden gemodelleerd zoals simpele relatiesoorten, gebruikmakend van de specifieke naam die de associatie in het oorspronkelijke model heeft. Een `mim:typeAggregatie` wordt niet vertaald en blijft in het vertaalde model als zodanig aanwezig. 
+Aggregatie- en compositie-associaties worden gemodelleerd zoals simpele relatiesoorten, gebruikmakend van de specifieke naam die de associatie in het oorspronkelijke model heeft. Een `mim:typeAggregatie` wordt direct, zonder aanpassing, overgenomen in het vertaalde model.
 
 ### code
 > De in een registratie of informatiemodel aan de enumeratiewaarde toegekend unieke code (niet te verwarren met alias, zoals bedoeld in 2.6.1).
 
 > ** ISSUE
-> 
-> We hebben nog niet gespecificeerd hoe we enumeraties vertalen. In NEN3610-LD is standaardtransformatie een transformatie naar een klasse gelijknamig aan de enumeratieklasse, en instanties van deze klasse voor elk van de geënumereerde waardes. Als we dit volgen zouden we de `mim:code` kunnen vertalen naar een `rdfs:label` of `skos:altLabel`. 
+>
+> We hebben nog niet gespecificeerd hoe we enumeraties vertalen. In NEN3610-LD is standaardtransformatie een transformatie naar een klasse gelijknamig aan de enumeratieklasse, en instanties van deze klasse voor elk van de geënumereerde waardes. Als we dit volgen zouden we de `mim:code` kunnen vertalen naar een `rdfs:label` of `skos:altLabel`.
 
 ### specificatieTekst
 > De specificatie van de constraint in normale tekst.
 
 > ** ISSUE
-> 
+>
 > We hebben nog niet gespecificeerd hoe we constraints vertalen. Voorstel: alleen vertalen naar documentatie in het MiM model in RDF. In de toekomst wellicht vertalen naar SHACL.
 
-Een `mim:specificatieTekst` wordt niet vertaald en blijft in het vertaalde model als zodanig aanwezig. 
+Een `mim:specificatieTekst` wordt direct, zonder aanpassing, overgenomen in het vertaalde model.
 
 ### specificatieFormeel
 > De beschrijving van de constraint in een formele specificatietaal, in OCL.
 
 > ** ISSUE
-> 
+>
 > We hebben nog niet gespecificeerd hoe we constraints vertalen. Voorstel: alleen vertalen naar documentatie in het MiM model in RDF. In de toekomst wellicht vertalen naar SHACL.
 
-Een `mim:specificatieFormeel` wordt niet vertaald en blijft in het vertaalde model als zodanig aanwezig. 
+Een `mim:specificatieFormeel` wordt direct, zonder aanpassing, overgenomen in het vertaalde model.
