@@ -183,6 +183,10 @@ Een `mim:Gegevensgroeptype` wordt vertaald naar een `sh:NodeShape`.
 >
 > NB de naam van een gegevensgroeptype is net als die van een objecttype wel uniek binnen een package.
 
+> **ISSUE**
+>
+> Als je kijkt naar de beschrijving van Gegevensgroeptype versus Gestructureerd Datatype, dan lijkt een Gegevensgroeptype veel meer iets te zijn dat (ook) een klasse zou moeten krijgen, er is immers sprake van iets "semantisch". Zeker het voorbeeld van het MiM (waar gesproken wordt over "Ogen"), ligt een klasse voor de hand. Daar staat tegenover dat in de uitleg ook wordt gesproken over "De attribuutsoorten blijven bij het objecttype horen". Dit lijkt echter voor ogen niet op te gaan. Immers: stel je hebt een blauw oog met sterkte -2 en een groen oog met sterkte -1, dan verlies je informatie als je de attribuutsoorten aan het objecttype hangt. Of wordt hier iets anders bedoeld?
+
 ```
 CONSTRUCT {
   ?nodeshape a sh:NodeShape.
@@ -409,13 +413,11 @@ Voor standaard datatypen maakt RDF gebruik van de XSD datatypen. Onderstaande ta
 
 > Specifiek benoemd gestructureerd datatype dat de structuur van een gegeven beschrijft, samengesteld uit minimaal twee elementen.
 
-> **Voorstel:**
+Een `mim:GestructureerdDatatype` wordt vertaald naar een `owl:Class` in combinatie met een `sh:NodeShape`, net zoals een `mim:Objecttype`.
 
-Wordt getransformeerd naar een normale klasse met eigenschappen, zoals in het NEN 3610 Linked Data profiel.
-
-[MB] Ik zou in het geval van het MiM alleen converteren naar een shacl NodeShape, en geen klasse toevoegen. Bovendien zou ik er een blank node van maken. Eigenlijk zoals het origineel voor Gegevengroeptype was neergezet. Bij nadere bestudering van Gegevensgroeptype en Gegevensgroep lijkt het erop dat hier geen shape wordt bedoeld, maar simpelweg een groepering van enkele attributen. Hiervoor kent shacl de sh:PropertyGroup. De beschrijving van gegevensgroep is hierop aangepast, en gestructureerdatatype wordt dan:
-
-Een `mim:Gegevensgroeptype` wordt vertaald naar een `sh:NodeShape`.
+> **ONDERZOEKEN**
+>
+> Er is nu geen verschil meer tussen een gestructureerd datatype en een objecttype, aangezien we ook het data element op vergelijkbare wijze converteren als een attribuutsoort. Het MiM maakt echter wel onderscheid. Het MiM stelt dat een gestructureerd datatype alleen structuur biedt, terwijl een gegevensgroeptype juist semantiek. Het lijkt dan logischer om bij gestructureerd datatype alleen een nodeshape aan te maken en geen klasse, ook al omdat de elementen op zichzelf geen bestaansrecht hebben.
 
 > **ISSUE**
 >
@@ -427,12 +429,16 @@ Een `mim:Gegevensgroeptype` wordt vertaald naar een `sh:NodeShape`.
 
 ```
 CONSTRUCT {
+  ?class a owl:Class.
+  ?class rdfs:seeAlso ?gestructureerddatatype.
   ?nodeshape a sh:NodeShape.
-  ?nodeshape rdfs:seeAlso ?objecttype.
+  ?nodeshape rdfs:seeAlso ?gestructureerddatatype.
+  ?nodeshape sh:targetClass ?class.
 }
 WHERE {
   ?gestructureerddatatype a mim:GestructureerdDatatype.
   ?gestructureerddatatype mim:naam ?gestructureerddatatypenaam.
+  BIND (t:classuri(?gestructureerddatatypenaam) as ?class)
   BIND (t:nodeshapeuri(?gestructureerddatatypenaam) as ?nodeshape)
 }
 ```
@@ -806,13 +812,14 @@ Een `mim:locatie` wordt direct, zonder aanpassing, overgenomen in het vertaalde 
 ### type
 > Het datatype waarmee waarden van deze attribuutsoort worden vastgelegd.
 
-Een `mim:datatype` wordt vertaald naar een `sh:datatype`.
+De vertaling van een `mim:datatype` hangt af van de vertaling van het datatype waar naar wordt verwezen:
 
-> **ISSUE**
->
-> Bepaalde attribuutsoorten kennen wel een `mim:datatype`, maar zullen vertaald worden naar een resource. De vertaling naar een `sh:datatype` is dan niet correct. Feitelijk is het datatype in de Linked Data situatie dan niet meer relevant.
->
-> Voorlopig wordt het veld in alle gevallen overgenomen. Beter is om in de gevallen dat geen sprake is van een literal om het veld ook niet mee te nemen (of te laten als `mim:datatype`).
+- Voor primitieve datatypes wordt vertaald naar een `sh:datatype`;
+- Voor gestructureerde datatypes wordt vertaald naar een `sh:node`;
+- Voor een enumeratie wordt vertaald naar een `sh:node`;
+- Voor een referentielijst wordt vertaald naar een `sh:node`;
+- Voor een codelijst wordt vertaald naar een `sh:node`;
+- In geval van zelfgespecificeerde datatypen wordt vertaald conform het betreffende supertype.
 
 ```
 CONSTRUCT {
@@ -820,8 +827,25 @@ CONSTRUCT {
 }
 WHERE {
   ?modelelement mim:type ?type.
+  ?type rdfs:subClassOf*/rdf:type mim:PrimitiefDatatype.
   ?subject rdfs:seeAlso ?modelelement.
 }
+
+CONSTRUCT {
+  ?subject sh:node ?type
+}
+WHERE {
+  ?modelelement mim:type ?type.
+  ?type rdfs:subClassOf*/rdf:type ?mimtype.
+  ?subject rdfs:seeAlso ?modelelement.
+  ?subject a sh:NodeShape.
+  FILTER (?mimtype = mim:GestructureerdDatatype
+       || ?mimtype = mim:Enumeratie
+       || ?mimtype = mim:Referentielijst
+       || ?mimtype = mim:Codelijst
+  )
+}
+
 ```
 
 ### lengte
