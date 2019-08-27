@@ -48,7 +48,8 @@ In de SPARQL rules wordt gebruik gemaakt van een aantal SPARQL functies. In onde
 |t:classuri|Formuleert de uri voor een klasse op basis van de naam van een MiM resource. De class URI is opgebouwd als `{namespace}#{t:CamelCase(naam)}`. De `{namespace}` is een vooraf vastgestelde waarde die gelijk is aan de te maken ontologie.|
 |t:nodeshapeuri|Formuleert de uri voor een nodeshape op basis van de naam van een MiM resource. De nodeshape URI is opgebouwd als `{shape-namespace}#{t:CamelCase(term)}`. De `{shape-namespace}` is een vooraf vastgestelde waarde die gelijk is aan de te maken shapesgraph.|
 |t:propertyuri|Formuleert de uri voor een property op basis van de naam van een MiM resource. De property URI is opgebouwd als `{namespace}#{t:camelCase(naam)}`. Zie ook `t:classuri`.|
-|t:propertyshapeuri|Formuleert de uri voor een propertyshape op basis van de naam van een MiM resource en de naam van de MIM resource die hiervan de "bezitter" is. De propertyshape URI is opgebouwd als `{namespace}#{t:CamelCase(bezittersnaam)}-{t:camelCase(naam)}`. Zie ook `t:nodeshapeuri`.|
+|t:propertyshapeuri|Formuleert de uri voor een propertyshape op basis van de naam van een MiM resource en de naam van de MIM resource die hiervan de "bezitter" is. De propertyshape URI is opgebouwd als `{shape-namespace}#{t:CamelCase(bezittersnaam)}-{t:camelCase(naam)}`. Zie ook `t:nodeshapeuri`.|
+|t:nodepropertyuri|Formuleert de uri voor een property op basis van de naam van een MiM resource en de naam van de MIM resource die hiervan de "bezitter" is. De property URI is opgebouwd als `{namespace}#{t:CamelCase(bezittersnaam)}-{t:camelCase(naam)}`. Zie ook `t:classuri`.|
 |t:statementuri|Formuleert de uri voor een rdf:Statement op basis van zijn afzonderlijke elementen. Mogelijke invulling kan het maken van een hash zijn op basis van de aaneenschakeling van subject, predicate en object.|
 |t:mincount|Formuleert de minimum kardinaliteit op basis van een kardinaliteitsaanduiding (zie bij mim:kardinaliteit). De waarde kan ook unbound zijn, in dat geval wordt ook de variable niet gebound en daardoor de betreffende triple niet opgevoerd.|
 |t:maxcount|Formuleert de maximum kardinaliteit op basis van een kardinaliteitsaanduiding (zie bij mim:kardinaliteit). De waarde kan ook unbound zijn, in dat geval wordt ook de variable niet gebound en daardoor de betreffende triple niet opgevoerd.|
@@ -344,6 +345,8 @@ We vertalen een enumeratie zoals beschreven in het NEN 3610 Linked Data profiel:
 
 > In de Inspire RDF Guidelines wordt voorgeschreven om een enumeratie te modelleren als rdfs:Datatype in plaats van als klasse. Dit leidt tot enumeratiewaardes die een literal zijn, met het datatype van de enumeratie. Bijvoorbeeld `"hoog"^^imgolf:NatuurwaardeValue`. De reden om hiervan af te wijken is omdat enumeraties vaker waardelijsten zijn die een object of concept modelleren, dan een lijst van letterlijke waardes. Door deze waardes als objecten te modelleren blijft het mogelijk om nieuwe uitdrukkingen te doen over de waardes.
 
+[MB] Eens met de richting. Daarbij wel de opmerking dat we, anders dan bij NEN 3610, juist nu wel tot de juiste vertaling willen komen. Zie ook de uitwerking bij referentielijst. Als we die volgen, kunnen we op basis van het type de juiste vertaalvorm selecteren.
+
 ### Enumeratiewaarde
 
 > Een gedefinieerde waarde, in de vorm van een eenmalig vastgesteld constant gegeven.
@@ -410,9 +413,65 @@ Voor standaard datatypen maakt RDF gebruik van de XSD datatypen. Onderstaande ta
 
 Wordt getransformeerd naar een normale klasse met eigenschappen, zoals in het NEN 3610 Linked Data profiel.
 
+[MB] Ik zou in het geval van het MiM alleen converteren naar een shacl NodeShape, en geen klasse toevoegen. Bovendien zou ik er een blank node van maken. Eigenlijk zoals het origineel voor Gegevengroeptype was neergezet. Bij nadere bestudering van Gegevensgroeptype en Gegevensgroep lijkt het erop dat hier geen shape wordt bedoeld, maar simpelweg een groepering van enkele attributen. Hiervoor kent shacl de sh:PropertyGroup. De beschrijving van gegevensgroep is hierop aangepast, en gestructureerdatatype wordt dan:
+
+Een `mim:Gegevensgroeptype` wordt vertaald naar een `sh:NodeShape`.
+
+> **ISSUE**
+>
+> De manier waarop de URI van een gestructureerdDatatype tot stand komt, betekent dat de naam van het gestructureerdDatatype uniek moet zijn, inclusief de naam van het objecttype. Dit wordt op dit moment binnen het MIM alleen afgedwongen binnen een package, maar niet overstijgend aan packages.
+>
+> Mogelijke oplossing is om een dergelijke regel wel op te nemen in het MIM.
+>
+> Voorlopige aanname is dat sprake is van uniciteit over alle elementen die nodeshape kunnen zijn.
+
+```
+CONSTRUCT {
+  ?nodeshape a sh:NodeShape.
+  ?nodeshape rdfs:seeAlso ?objecttype.
+}
+WHERE {
+  ?gestructureerddatatype a mim:GestructureerdDatatype.
+  ?gestructureerddatatype mim:naam ?gestructureerddatatypenaam.
+  BIND (t:nodeshapeuri(?gestructureerddatatypenaam) as ?nodeshape)
+}
+```
+
 ### Data element
 
 > Een onderdeel/element van een Gestructureerd datatype die als type een datatype heeft.
+
+Een `mim:DataElement` wordt op dezelfde wijze omgezet als een `mim:Attribuutsoort`, waarbij het gestructureerd datatype de "bezitter" is van het data element. De relatie tussen het gestructureerd datatype en het data element wordt direct meegenomen in de transformatie.
+
+De URI van de propertyshape wordt afgeleid van de naam van het gestructureerde datatype dat het data element "bezit" en de naam van het data element. De URI van de datatypeproperty wordt ook op die manier afgeleid. Dit in afwijking van de wijze waarop dit bij een attribuutsoort gebeurt. Reden is het feit dat een data element echt uniek bij een gestructureerd datatype hoort, conform het metamodel (er is sprake van een compositie-aggregatie).
+
+> **ISSUE**
+>
+> Een data element hoort uniek bij een gestructureerd datatype. In Linked Data zijn properties "first class citizens" en kan de property wel los bestaan. Ook bij data elementen kan dit voorkomen. Bijvoorbeeld als generieke eigenschappen als `rdf:value` of `rdfs:label` wordt gebruikt als data elementen. Zie ook het issue bij [Attribuutsoort](#attribuutsoort).
+>
+> Conform het metamodel, ligt het voor de hand om bij data elementen juist wel te kiezen voor properties die uniek zijn voor een gestructureerd datatype. Dit maakt hergebruik van bestaande properties niet mogelijk. De oplossing hiervoor zou eventueel kunnen liggen in het ondersteunen van `mim:identificatie` (zie ook het eerste issue), waarbij de `mim:identificatie` de geconstrueerde issue zou overriden.
+
+```
+CONSTRUCT {
+  ?nodeshape sh:property ?propertyshape.
+  ?propertyshape a sh:PropertyShape.
+  ?propertyshape sh:path ?datatypeproperty.
+  ?propertyshape sh:nodekind sh:Literal.
+  ?propertyshape rdfs:seeAlso ?attribuutsoort.
+  ?datatypeproperty a owl:DatatypeProperty.
+  ?datatypeproperty rdfs:seeAlso ?attribuutsoort.
+}
+WHERE {
+  ?dataelement a mim:DataElement.
+  ?dataelement mim:naam ?dataelementnaam.
+  ?bezitter mim:bezit ?dataelement.
+  ?bezitter mim:naam ?bezittersnaam
+  BIND (t:nodeshapeuri(?bezittersnaam) as ?nodeshape)
+  BIND (t:propertyshapeuri(?bezittersnaam,?dataelementnaam) as ?propertyshape)
+  BIND (t:nodepropertyuri(?dataelementnaam) as ?datatypeproperty)
+}
+```
+
 
 ### Union
 
@@ -950,6 +1009,16 @@ WHERE {
 > Standaard betreft het geen aggregatie (None). Het type aggregatie mag ‘composite’ zijn. Dit wordt gedaan als er een afhankelijkheid is in die zin dat de target niet kan bestaan zonder de source: de target vervalt als de source vervalt.
 
 Aggregatie- en compositie-associaties worden gemodelleerd zoals simpele relatiesoorten, gebruikmakend van de specifieke naam die de associatie in het oorspronkelijke model heeft. Een `mim:typeAggregatie` wordt direct, zonder aanpassing, overgenomen in het vertaalde model.
+
+```
+CONSTRUCT {
+  ?subject mim:typeAggregatie ?typeaggregatie
+}
+WHERE {
+  ?modelelement mim:typeAggregatie ?typeaggregatie.
+  ?subject rdfs:seeAlso ?modelelement.
+}
+```
 
 ### code
 > De in een registratie of informatiemodel aan de enumeratiewaarde toegekend unieke code (niet te verwarren met alias, zoals bedoeld in 2.6.1).
