@@ -53,6 +53,12 @@ In de SPARQL rules wordt gebruik gemaakt van een aantal SPARQL functies. In onde
 |t:mincount|Formuleert de minimum kardinaliteit op basis van een kardinaliteitsaanduiding (zie bij mim:kardinaliteit). De waarde kan ook unbound zijn, in dat geval wordt ook de variable niet gebound en daardoor de betreffende triple niet opgevoerd.|
 |t:maxcount|Formuleert de maximum kardinaliteit op basis van een kardinaliteitsaanduiding (zie bij mim:kardinaliteit). De waarde kan ook unbound zijn, in dat geval wordt ook de variable niet gebound en daardoor de betreffende triple niet opgevoerd.|
 
+> **ISSUE**
+>
+> Er is, behalve `mim:naam`, geen formeel identificerend gegeven voor de modelelementen. Dit maakt het noodzakelijk om de URI op te bouwen uit de naam van het modelelement, eventueel aangevuld met gegevens van de package. In bepaalde gevallen is het echter veel logischer om te verwijzen naar elementen buiten het eigen model, zoals in Linked Data gebruikelijk is. Bijvoorbeeld bij externe koppelingen, referentielijsten en elementen in de "view" en "extern" packages.
+>
+> Mogelijke oplossing is het toevoegen van het aspect `mim:identificatie` dat als waarde een URI heeft. Indien dit veld aanwezig is, dan wordt dit veld gebruikt als identificatie i.p.v. de `mim:naam`.
+
 ## Klassen
 
 Omdat het getransformeerde model daadwerkelijk een nieuw model is, zullen de elementen in het getransformeerde model ook eigen URI's krijgen. Om de relatie tussen het originele MiM-model het het getransformeerde model op basis van RDFS te behouden, wordt de eigenschap `rdfs:seeAlso` gebruikt.
@@ -295,7 +301,13 @@ WHERE {
 
 > Een associatie waarmee vanuit het perspectief van het eigen informatiemodel een objecttype uit het 'eigen' informatiemodel gekoppeld wordt aan een objecttype van een extern informatiemodel. De relatie zelf hoort bij het 'eigen' objecttype.
 
-Een externe koppeling wordt op dezelfde wijze omgezet als een `mim:Relatiesoort`. Het verschil is zichtbaar doordat de betreffende objecttypes uit verschillende modellen komen. Anders dan bij UML is het daarbij niet gebruikelijk om het andere objecttype "in" het eigen model te plaatsen, maar juist om direct naar het andere objecttype te verwijzen. Eventueel kan daarbij ook nog gebruik worden gemaakt van een `owl:imports` om expliciet aan te geven dat een ander model wordt gebruikt.
+Een externe koppeling wordt op dezelfde wijze omgezet als een `mim:Relatiesoort` (zie [Relatiesoort](#relatiesoort)). Het verschil is zichtbaar doordat de betreffende objecttypes uit verschillende modellen komen. Anders dan bij UML is het daarbij niet gebruikelijk om het andere objecttype "in" het eigen model te plaatsen, maar juist om direct naar het andere objecttype te verwijzen. Eventueel kan daarbij ook nog gebruik worden gemaakt van een `owl:imports` om expliciet aan te geven dat een ander model wordt gebruikt.
+
+> **ISSUE**
+>
+> Hoe kun je aangeven dat sprake is van een ander model? Nu bieden we daar geen ondersteuning voor. Ook het toevoegen van `owl:imports` klinkt als een handmatige stap.
+>
+> Mogelijke oplossing is het toevoegen van mim:identificatie, waarbij dan de URI expliciet wordt aangegeven als de externe bron. Punt is dan wel dat dit veld niet per sé verplicht is, en het ook zonder dit veld moet werken. Mogelijke oplossing is dan om gebruik te maken van de stereotypen van de packages?
 
 ### Relatierol
 
@@ -309,7 +321,12 @@ Een externe koppeling wordt op dezelfde wijze omgezet als een `mim:Relatiesoort`
 
 > **ISSUE**
 >
-> Een referentielijst heeft een `MiM:locatie` waarin is gespecificeerd waar de externe bron gevonden kan worden waar de mogelijke waarden zijn opgesomd. Dit KAN een URI of URL zijn en deze bron ZOU bijvoorbeeld een SKOS vocabulaire kunnen zijn. Maar omdat dit niet met zekerheid te zeggen is kunnen we niets met deze externe vocabulaires doen. Dit hoewel een referentielijst wel degelijk onderdeel kan uitmaken van het model in conceptuele zin, hoewel het om beheer- of technische redenen buiten het UML model is geplaatst.
+> Een referentielijst heeft een `mim:locatie` waarin is gespecificeerd waar de externe bron gevonden kan worden waar de mogelijke waarden zijn opgesomd. Dit KAN een URI of URL zijn en deze bron ZOU bijvoorbeeld een SKOS vocabulaire kunnen zijn. Maar omdat dit niet met zekerheid te zeggen is kunnen we niets met deze externe vocabulaires doen. Dit hoewel een referentielijst wel degelijk onderdeel kan uitmaken van het model in conceptuele zin, hoewel het om beheer- of technische redenen buiten het UML model is geplaatst.
+>
+> Daarbij komt dat er een verschil is tussen de URI van het conceptschema en de URI waar de concepten zelf zijn op te vragen. Bovendien zijn er ook dan nog meerdere implementaties denkbaar. Alle waardelijsten kunnen in 1 bestand staan, maar ook is het mogelijk dat alle waarden in afzonderlijke bestanden staan. Bovendien zald de URI van de waardelijst en de URI van de waarden niet gelijk aan elkaar zijn.
+>
+> Zie ook het eerste issue (algemeen): naar `mim:naam` en `mim:alias` lijkt het toevoegen van een `mim:identificatie` wenselijk, wat we kunnen vertalen naar een concrete URI. Daarmee kunnen we de URI van de waardelijst onderscheid van de plaats waar de inhoud van de waardelijst zelf te vinden is (dat zit dan in `mim:locatie`).
+> Vervolgens is het toevoegen van een "typering" wenselijk. Deze typering geeft aan wat voor "soort" waardelijst het betreft. Drie waarden zijn denkbaar: (1) Conceptschema, (2) Collectie en (3) Klasse. Geen waarde betekent dat er sprake is van een ander soort typering, of dat de typering onbekend is. In geval van een typering wordt verwacht dat de `mim:locatie` een URL is en dat het veld `mim:identificatie` in ingevuld en een URI is. Bij (1) is deze URI de identificatie van een skos:ConceptScheme, bij (2) is de URI de identificatie van een skos:Collection en bij (3) is de URI de identificatie van een rdfs:Class.
 
 ### Referentie element
 
@@ -337,7 +354,7 @@ We vertalen een enumeratie zoals beschreven in het NEN 3610 Linked Data profiel:
 
 > **ISSUE**
 >
-> Een codelist heeft een `MiM:locatie` waarin is gespecificeerd waar de externe bron gevonden kan worden waar de mogelijke waarden zijn opgesomd. Dit KAN een URI of URL zijn en deze bron ZOU bijvoorbeeld een SKOS vocabulaire kunnen zijn. Maar omdat dit niet met zekerheid te zeggen is kunnen we niets met deze externe vocabulaires doen. Dit hoewel een codelist wel degelijk onderdeel kan uitmaken van het model in conceptuele zin, hoewel het om beheer- of technische redenen buiten het UML model is geplaatst.
+> Een codelist heeft een `mim:locatie` waarin is gespecificeerd waar de externe bron gevonden kan worden waar de mogelijke waarden zijn opgesomd. Dit KAN een URI of URL zijn en deze bron ZOU bijvoorbeeld een SKOS vocabulaire kunnen zijn. Maar omdat dit niet met zekerheid te zeggen is kunnen we niets met deze externe vocabulaires doen. Dit hoewel een codelist wel degelijk onderdeel kan uitmaken van het model in conceptuele zin, hoewel het om beheer- of technische redenen buiten het UML model is geplaatst. Zie ook het overeenkomstige issue bij [Referentielijst](#referentielijst).
 
 ## Datatypen
 
@@ -511,11 +528,7 @@ WHERE {
 
 > De beschrijving van de betekenis van dit modelelement.
 
-Een `mim:definitie` wordt vertaald naar een `skos:comment`
-
-> **ISSUE**
->
-> Waarom geen `rdfs:comment`? Is hierboven `rdfs:comment` bedoeld?
+Een `mim:definitie` wordt vertaald naar een `rdfs:comment`
 
 Rationale om niet te kiezen voor `skos:definition`: in de meeste Linked Data vocabulaires is het gebruikelijk om de beschrijving van een klasse op te nemen door middel van een `rdfs:comment`, wat ook de intentie is in het MiM. Het MiM is niet beoogd als een volledig begrippenkader. Het MiM biedt daarnaast de mogelijkheid om expliciet te verwijzen vanuit een modelelement naar een `skos:Concept`. Het ligt dan ook voor de hand om bij dit `skos:Concept` de werkelijke `skos:definition` op te nemen.
 
@@ -584,6 +597,8 @@ Een `mim:datumOpname` wordt direct, zonder aanpassing, overgenomen in het vertaa
 > **UITZOEKEN**
 >
 > Wellicht is het beter om gebruik te maken van prov om de datum opname in te verwerken?
+>
+> [MB] Daarmee zou een modelelement een prov:Entity worden. Dit is wel mogelijk, maar minder gebruikelijk. Vaak wordt het gehele model als prov:Entity gezien. Ik heb zelf nog niet gezien dat modelelementen afzonderlijke provenance informatie krijgen. Dit is nog best wel een "dingetje", omdat de meeste Linked Data vocabulaires juist niet zoveel wijzigen, maar voor MiM informatiemodellen zou dat wel eens wat anders kunnen zijn. Als we prov willen gaan gebruiken, vereist dat m.i. nog best wat uitzoekwerk hoe je dit zou moeten toepassen, en ontbreekt op dit moment een (best) practice.
 
 ```
 CONSTRUCT {
@@ -617,7 +632,9 @@ WHERE {
 
 ### kardinaliteit
 
-De mim:kardinaliteit wordt vertaald naar `sh:minCount` en `sh:maxCount`. Daarbij wordt de volgende tabel gebruikt om de string-waarde van mim:kardinaliteit om te zetten. Een `-` betekent dat de betreffende triple niet wordt opgenomen in het model.
+De `mim:kardinaliteit` wordt vertaald naar `sh:minCount` en `sh:maxCount`. Daarbij wordt de volgende tabel gebruikt om de string-waarde van mim:kardinaliteit om te zetten. Een `-` betekent dat de betreffende triple niet wordt opgenomen in het model.
+
+Daarnaast wordt `min:kardinaliteit` ook direct overgenomen in het vertaalde model. De reden hiervoor is tweeledig. Enerzijds maakt het daarmee eenvoudiger om de originele kardinaliteit weer te geven. Voor niet-SHACL experts kan het verwarrend zijn dat het ontbreken van zowel sh:minCount als sh:maxCount betekent dat sprake is van een 0..* kardinaliteit. Anderzijds maakt het de terugvertaling in geval van een `min:mogelijkGeenWaarde` mogelijk, aangezien dit veld invloed kan hebben op de sh:minCount (zie ook [mogelijk-geen-waarde](#mogelijkgeenwaarde)).
 
 |mim:kardinaliteit|sh:minCount|sh:maxCount|
 |-----------------|-----------|-----------|
@@ -634,12 +651,21 @@ In de laatste regel moet voor a en z een geheel getal vanaf 1 worden gelezen.
 ```
 CONSTRUCT {
   ?propertyshape sh:minCount ?mincount.
+}
+WHERE {
+  ?modelelement mim:kardinaliteit ?kardinaliteit.
+  ?modelelement mim:mogelijkGeenWaarde ?mogelijkgeenwaarde.
+  ?propertyshape rdfs:seeAlso ?modelelement.
+  BIND (t:mincount(?kardinaliteit) as ?mincount)
+  FILTER(NOT(?mogelijkgeenwaarde))
+}
+
+CONSTRUCT {
   ?propertyshape sh:maxCount ?maxcount.
 }
 WHERE {
   ?modelelement mim:kardinaliteit ?kardinaliteit.
   ?propertyshape rdfs:seeAlso ?modelelement.
-  BIND (t:mincount(?kardinaliteit) as ?mincount)
   BIND (t:maxcount(?kardinaliteit) as ?maxcount)
 }
 ```
@@ -649,65 +675,189 @@ WHERE {
 
 Een `mim:authentiek` wordt direct, zonder aanpassing, overgenomen in het vertaalde model.
 
+```
+CONSTRUCT {
+  ?subject mim:authentiek ?authentiek
+}
+WHERE {
+  ?modelelement mim:authentiek ?authentiek.
+  ?subject rdfs:seeAlso ?modelelement.
+}
+```
+
 > **UITZOEKEN**
 >
 > Wellicht net als bij `mim:datumOpname` te overwegen om hiervoor prov te gebruiken.
+>
+> [MB] Welke eigenschap zou hiervoor geschikt zijn? Ik vind deze lastig, omdat mim:authentiek heel dicht tegen de wet- en regelgeving aanzit, en dus specifiek MiM is.
 
 ### indicatieAfleidbaar
 > Aanduiding dat gegeven afleidbaar is uit andere attribuut- en/of relatiesoorten.
 
 Een `mim:indicatieAfleidbaar` wordt direct, zonder aanpassing, overgenomen in het vertaalde model.
 
+```
+CONSTRUCT {
+  ?subject mim:indicatieAfleidbaar ?indicatieafleidbaar
+}
+WHERE {
+  ?modelelement mim:indicatieAfleidbaar ?indicatieafleidbaar.
+  ?subject rdfs:seeAlso ?modelelement.
+}
+```
+
 ### mogelijkGeenWaarde
 > Aanduiding dat van een aspect geen waarde is geregistreerd, maar dat onduidelijk is of de waarde er werkelijk ook niet is.
 
-Een `mim:mogelijkGeenWaarde` wordt direct, zonder aanpassing, overgenomen in het vertaalde model.
+Een `mim:mogelijkGeenWaarde` wordt direct, zonder aanpassing, overgenomen in het vertaalde model, waarbij in een enkel geval een aanpassing wordt gedaan aan de manier waarop `mim:kardinaliteit` wordt getransformeerd.
 
-> **ISSUE**
->
-> Hoe gaan we om met attributen en relaties die mim:mogelijkGeenWaarde='ja' hebben? Dit heeft mogelijk impact op de transformatieregel voor `mim:Attribuutsoort`, `mim:Relatiesoort` en de transformatieregel voor `mim:kardinaliteit`.
+Linked Data gaat in beginsel uit van een "open word assumptie". Dit houdt onder andere in dat Linked Data er van uitgaat dat elk aspect mogelijk geen waarde kan hebben. Met SHACL kan deze assumptie worden beperkt. Zo zal bij een verplicht veld (zoals kardinaliteit 1..* of 1..1) daadwerkelijk ook een waarde aanwezig moeten zijn. Het MiM gaat in beginsel  uit van een "closed world assumptie", het veld `mim:mogelijkGeenWaarde` is juist bedoeld om deze assumptie te verruimen. Doordat het veld `mim:mogelijkGeenWaarde` altijd een waarde heeft ("Ja" of "Nee"), kan het veld ook worden gelezen als *als de waarde in de werkelijkheid bestaat, dan is deze ook aanwezig*. Dit maakt dat het veld `mim:mogelijkGeenWaarde` feitelijk in de context van Linked Data het model in vele gevallen een gesloten model maakt, vandaar ook het gebruik van SHACL waarmee we deze beperkingen kunnen opleggen. Indien sprake is van een "mogelijk geen waarde" dan is het wel noodzakelijk om de transformatieregel voor `mim:kardinaliteit` aan te passen, conform onderstaande tabel:
 
-> Het NEN3610 Linked Data Profiel [7.3.4.2.3 Attribuut met stereotype «voidable»](https://geonovum.github.io/NEN3610-Linkeddata/#regels-attributen-voidable) is hiervoor relevant.
+|`mim:mogelijkGeenWaarde`|`mim:kardinaliteit`|Aanpassing             |
+|------------------------|-------------------|-----------------------|
+| Nee                    | 0..x              |geen                   |
+| Nee                    | 1..x              |geen                   |
+| Ja                     | 0..x              |geen                   |
+| Ja                     | 1..x              |sh:minCount verwijderd |
+| Ja                     | n..x (met n>1)    |sh:minCount verwijderd |
+
+"sh:minCount verwijderd" houdt in dat de kardinaliteit 0..x wordt. Deze aanpassing is opgenomen in de transformatieregel van [kardinaliteit](#kardinaliteit).
+
+Zie ook het NEN3610 Linked Data Profiel [7.3.4.2.3 Attribuut met stereotype «voidable»](https://geonovum.github.io/NEN3610-Linkeddata/#regels-attributen-voidable) voor meer achtergrondinformatie.
+
+```
+CONSTRUCT {
+  ?subject mim:mogelijkGeenWaarde ?mogelijkgeenwaarde
+}
+WHERE {
+  ?modelelement mim:mogelijkGeenWaarde ?mogelijkgeenwaarde.
+  ?subject rdfs:seeAlso ?modelelement.
+}
+```
 
 ### locatie
 > Als het type van het attribuutsoort een waardenlijst is, dan wordt hier de locatie waar deze te vinden is opgegeven.
 
 Een `mim:locatie` wordt direct, zonder aanpassing, overgenomen in het vertaalde model.
 
+> **ISSUE**
+>
+> `mim:locatie` wordt zowel gebruikt op het niveau van het datatype, maar ook bij een attribuutsoort. Het lijkt meer voor de hand te liggen om dit allen bij het datatype toe te staan. De vertaling wordt dan ook bij het datatype zelf opgenomen, en zou vertaald kunnen worden naar `rdfs:isDefinedBy`, `wdrs:describeby` of iets dergelijks.
+
 ### type
 > Het datatype waarmee waarden van deze attribuutsoort worden vastgelegd.
 
-Het datatype, indien dit een literal betreft, wordt beschreven met `sh:datatype`.
+Een `mim:datatype` wordt vertaald naar een `sh:datatype`.
+
+> **ISSUE**
+>
+> Bepaalde attribuutsoorten kennen wel een `mim:datatype`, maar zullen vertaald worden naar een resource. De vertaling naar een `sh:datatype` is dan niet correct. Feitelijk is het datatype in de Linked Data situatie dan niet meer relevant.
+>
+> Voorlopig wordt het veld in alle gevallen overgenomen. Beter is om in de gevallen dat geen sprake is van een literal om het veld ook niet mee te nemen (of te laten als `mim:datatype`).
+
+```
+CONSTRUCT {
+  ?subject sh:datatype ?type
+}
+WHERE {
+  ?modelelement mim:type ?type.
+  ?subject rdfs:seeAlso ?modelelement.
+}
+```
 
 ### lengte
 > De aanduiding van de lengte van een gegeven.
 
-De lengte wordt beschreven met `sh:maxLength`.
+Een `mim:lengte` wordt vertaald naar een `sh:maxLength`.
+
+```
+CONSTRUCT {
+  ?subject sh:maxLength ?lengte
+}
+WHERE {
+  ?modelelement mim:lengte ?lengte.
+  ?subject rdfs:seeAlso ?modelelement.
+}
+```
 
 ### patroon
 > De verzameling van waarden die gegevens van deze attribuutsoort kunnen hebben, oftewel het waardenbereik, uitgedrukt in een specifieke structuur.
 
 De structuur van `mim:patroon` is in woorden beschreven. Deze wordt direct, zonder aanpassing, overgenomen in het vertaalde model.
 
+```
+CONSTRUCT {
+  ?subject mim:patroon ?patroon
+}
+WHERE {
+  ?modelelement mim:patroon ?patroon.
+  ?subject rdfs:seeAlso ?modelelement.
+}
+```
+
 ### formeelPatroon
 > Zoals patroon, formeel vastgelegd, uitgedrukt in een formele taal die door de computer wordt herkend.
 
 `mim:formeelPatroon` wordt beschreven met `sh:pattern`.
+
+> **ISUE**
+>
+> Het MiM stelt dat het formeelPatroon door de computer moet worden herkend, zonder specifiek te zijn op welke manier. `sh:pattern` vereist dat dit voldoet aan een reguliere expressie. Voorstel is om dit toe tevoegen aan het MiM.
+
+```
+CONSTRUCT {
+  ?subject sh:pattern ?formeelpatroon
+}
+WHERE {
+  ?modelelement mim:formeelPatroon ?formeelpatroon.
+  ?subject rdfs:seeAlso ?modelelement.
+}
+```
 
 ### uniekeAanduiding
 > Voor objecttypen die deel uitmaken van een (basis)registratie of informatiemodel betreft dit de wijze waarop daarin voorkomende objecten (van dit type) uniek in de registratie worden aangeduid.
 
 Een `mim:uniekeAanduiding` wordt direct, zonder aanpassing, overgenomen in het vertaalde model.
 
+```
+CONSTRUCT {
+  ?subject mim:uniekeAanduiding ?uniekeaanduiding
+}
+WHERE {
+  ?modelelement mim:uniekeAanduiding ?uniekeaanduiding.
+  ?subject rdfs:seeAlso ?modelelement.
+}
+```
+
 ### populatie
 > Voor objecttypen die deel uitmaken van een (basis)registratie betreft dit de beschrijving van de exemplaren van het gedefinieerde objecttype die in de desbetreffende (basis)­registratie voorhanden zijn.
 
 Een `mim:populatie` wordt direct, zonder aanpassing, overgenomen in het vertaalde model.
 
+```
+CONSTRUCT {
+  ?subject mim:populatie ?populatie
+}
+WHERE {
+  ?modelelement mim:populatie ?populatie.
+  ?subject rdfs:seeAlso ?modelelement.
+}
+```
+
 ### kwaliteit
 > Voor objecttypen die deel uitmaken van een registratie betreft dit de waarborgen voor de juistheid van de in de registratie opgenomen objecten van het desbetreffende type.
 
 Een `mim:kwaliteit` wordt direct, zonder aanpassing, overgenomen in het vertaalde model.
+
+```
+CONSTRUCT {
+  ?subject mim:kwaliteit ?kwaliteit
+}
+WHERE {
+  ?modelelement mim:kwaliteit ?kwaliteit.
+  ?subject rdfs:seeAlso ?modelelement.
+}
+```
 
 ### indicatieAbstractObject
 > Conceptueel model: indicatie dat het objecttype een generalisatie is, waarvan een object als specialisatie altijd voorkomt in de hoedanigheid van een (en slechts één) van de specialisaties van het betreffende objecttype. Logisch model: Indicatie dat er geen instanties (objecten) voor het betreffende objecttype mogen voorkomen.
@@ -716,17 +866,47 @@ In een MiM conform informatiemodel kunnen zowel abstracte als concrete klassen v
 
 Een `mim:indicatieAbstractObject` wordt direct, zonder aanpassing, overgenomen in het vertaalde model.
 
+```
+CONSTRUCT {
+  ?subject mim:indicatieAbstractObject ?indicatieabstractobject
+}
+WHERE {
+  ?modelelement mim:indicatieAbstractObject ?indicatieabstractobject.
+  ?subject rdfs:seeAlso ?modelelement.
+}
+```
+
 ### identificerend
 > Een kenmerk van een objecttype die aangeeft of deze eigenschap uniek identificerend is voor alle objecten in de populatie van objecten van dit objecttype.
 
 Een `mim:identificerend` wordt direct, zonder aanpassing, overgenomen in het vertaalde model.
 
-### gegevensgroeptype
-(Hier bedoeld als eigenschap van een `<<gegevensgroep>>`).
+```
+CONSTRUCT {
+  ?subject mim:identificerend ?identificerend
+}
+WHERE {
+  ?modelelement mim:identificerend ?identificerend.
+  ?subject rdfs:seeAlso ?modelelement.
+}
+```
+
+### gegevensgroeptype-eigenschap
 
 > De verwijzing naar het bijbehorende gegevensgroeptype.
 
-Een `mim:gegevensgroeptype` property wordt vertaald naar de URI van de objectproperty die het bijbehorende gegevensgroeptype representeert. Zie [Gegevensgroep](#gegevensgroep) voor meer uitleg.
+Een `mim:gegevensgroeptype` wordt vertaald naar een `sh:node` met als waarde de URI van de NodeShape die het bijbehorende gegevensgroeptype representeert. Zie [Gegevensgroep](#gegevensgroep) en [Gegevensgroeptype](#gegevensgroeptype) voor meer uitleg.
+
+```
+CONSTRUCT {
+  ?subject sh:node ?object
+}
+WHERE {
+  ?modelelement mim:gegevensgroeptype ?gegevensgroeptype.
+  ?subject rdfs:seeAlso ?modelelement.
+  ?object rdfs:seeAlso ?gegevensgroeptype.
+}
+```
 
 ### unidirectioneel
 > **ISSUE**
@@ -744,35 +924,32 @@ Bij `<<Externe koppeling>>`:
 Bij `<<Relatiesoort>>` en `<<Externe koppeling>>`:
 > Het objecttype waarvan de relatie een eigenschap is.
 
-Bij `<<Generalisatie>>`:
-> Het objecttype dat een specialisatie is van een (ander) objecttype.
-
-In beide gevallen gaat het om het objecttype waar de relatie vandaan komt (de source).
-
-Een `mim:objecttype` is in UML het source objecttype en in linked data de subject class waarbij de relatie of generalisatie wordt gedefinieerd.
-
-Zie voor meer informatie over hoe relaties tussen objecttypen worden vertaald de paragrafen [Relatiesoort](#relatiesoort), [Generalisatie](#generalisatie) en [Externe koppeling](#externe-koppeling).
+Een `mim:objecttype` wordt vertaald als onderdeel van de vertaling van [Relatiesoort](#relatiesoort) of [Externe koppeling](#externe-koppeling).
 
 ### gerelateerdObjecttype
 Bij `<<Relatiesoort>>`
 > Het objecttype waarmee een objecttype een logisch verband heeft
 
-Bij `<<Generalisatie>>`:
-> Het objecttype dat de generalisatie is van een (ander) objecttype.
-
 Bij `<<Externe koppeling>>`:
 > Het objecttype uit een extern informatiemodel waarmee een objecttype een logische verbinding heeft.
 
-In elk van deze gevallen gaat het om het objecttype waar de relatie naartoe gaat (de target).
+Een `mim:gerelateerdObjecttype` wordt vertaald naar een `sh:class` met als waarde de URI van de Class die het gerelateerde objecttype representeert. Zie voor meer informatie over hoe relaties tussen objecttypen worden vertaald de paragrafen [Relatiesoort](#relatiesoort) en [Externe koppeling](#externe-koppeling).
 
-Een `mim:gerelateerdObjecttype` is in UML het target objecttype van een relatie en in linked data de object class van de objectproperty waarmee de relatie of generalisatie wordt gedefinieerd.
-
-Zie voor meer informatie over hoe relaties tussen objecttypen worden vertaald de paragrafen [Relatiesoort](#relatiesoort), [Generalisatie](#generalisatie) en [Externe koppeling](#externe-koppeling).
+```
+CONSTRUCT {
+  ?subject sh:class ?object
+}
+WHERE {
+  ?modelelement mim:gerelateerdObjecttype ?gerelateerdobjecttype.
+  ?subject rdfs:seeAlso ?modelelement.
+  ?object rdfs:seeAlso ?gerelateerdobjecttype.
+}
+```
 
 ### datatype
 > Het datatype dat een specialisatie is van een (ander) datatype.
 
- Een `mim:datatype` is in UML het source datatype van een generalisatie tussen datatypen. Net als bij een generalisatie tussen objecttypen wordt dit vertaald naar een `rdfs:subclassOf` waarbij `mim:datatype` wordt vertaald naar de subject class waarbij de generalisatie wordt gedefinieerd.
+Een `mim:datatype` is in UML het source datatype van een generalisatie tussen datatypen. Net als bij een generalisatie tussen objecttypen wordt dit vertaald naar een `rdfs:subclassOf` waarbij `mim:datatype` wordt vertaald naar de subject class waarbij de generalisatie wordt gedefinieerd.
 
 Zie ook [Generalisatie](#generalisatie).
 
