@@ -946,20 +946,6 @@ WHERE {
 }
 ```
 
-### datatype
-> Het datatype dat een specialisatie is van een (ander) datatype.
-
-Een `mim:datatype` is in UML het source datatype van een generalisatie tussen datatypen. Net als bij een generalisatie tussen objecttypen wordt dit vertaald naar een `rdfs:subclassOf` waarbij `mim:datatype` wordt vertaald naar de subject class waarbij de generalisatie wordt gedefinieerd.
-
-Zie ook [Generalisatie](#generalisatie).
-
-### gerelateerdDatatype
-> Het datatype dat de generalisatie is van een (ander) datatype.
-
-Een `mim:gerelateerdDatatype` is in UML het target datatype van een generalisatie tussen datatypen. Net als bij een generalisatie tussen objecttypen wordt dit vertaald naar een `rdfs:subclassOf` waarbij `mim:gerelateerdDatatype` wordt vertaald naar de object class van de `rdfs:subclassOf`.
-
-Zie ook [Generalisatie](#generalisatie).
-
 ### typeAggregatie
 > Standaard betreft het geen aggregatie (None). Het type aggregatie mag ‘composite’ zijn. Dit wordt gedaan als er een afhankelijkheid is in die zin dat de target niet kan bestaan zonder de source: de target vervalt als de source vervalt.
 
