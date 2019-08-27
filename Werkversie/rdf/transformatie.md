@@ -215,16 +215,21 @@ Een `mim:Generalisatie` wordt vertaald naar een `rdfs:subClassOf`.
 
 ```
 CONSTRUCT {
-  ?subtype rdfs:subClassOf ?supertype.
-  ?statement rdf:subject ?subtype.
+  ?subject rdfs:subClassOf ?object.
+  ?statement rdf:subject ?subject.
   ?statement rdf:predicate ?rdfs:subClassOf.
-  ?statement rdf:object ?supertype.
+  ?statement rdf:object ?object.
   ?statement rdfs:seeAlso ?generalisatie.
 }
 WHERE {
   ?generalisatie a mim:Generalisatie.
   ?generalisatie mim:subtype ?subtype.
   ?generalisatie mim:supertype ?supertype.
+  ?subject rdfs:seeAlso ?subtype.
+  ?object rdfs:seeAlso ?supertype.
+  ?subject a ?type.
+  ?object a ?type.
+  FILTER (?type != sh:NodeShape)
   BIND (t:statementuri(?subtype,rdfs:subClasOf,?supertype) as ?statement)
 }
 ```
@@ -369,15 +374,7 @@ We vertalen een enumeratie zoals beschreven in het NEN 3610 Linked Data profiel:
 
 > Een in het eigen model gedefinieerd primitieve datatype. Deze worden wel door de modelleur gecreëerd, met een eigen naam en een eigen definitie (en eigen metagegevens).
 
-Een primitief datatype wordt vertaald naar een `rdfs:Datatype` en een subklasse van xsd:string.
-
-> **ISSUE**
->
-> In de tekst staat "Wanneer een Primitief datatype wordt gespecificeerd, dan heeft deze standaard als primitive datatype een CharacterString". Op basis hiervan is de subklasse met xsd:string aangemerkt. De vraag is echter of je deze "standaard" ook kunt veranderen. In het model is echter (nog) niet iets dergelijks opgenomen. Mogelijk zit dit in de generalisatie-relatie? In dat geval zou "standaard" betekenen dat het toevoegen van de xsd:string alleen gebeurt op het moment dat er geen andere subklasserelatie ontstaat.
->
-> Voorlopige aanname is dat dit los van elkaar staat.
->
-> NB: In MiM 1.0.1 is aangepast dat een Primitief datatype een generalisatie relatie kan hebben met een MiM datatype. Dit is relevant voor dit issue. Zie MiM [3.1.2 Datatype zelf definiëren](https://docs.geostandaarden.nl/mim/mim10/#datatype-zelf-definieren).
+Een primitief datatype wordt vertaald naar een `rdfs:Datatype`. Indien er geen subklasse aanwezig is naar een andere datatype, dan wordt per default een subklasse van xsd:string toegevoegd.
 
 ```
 CONSTRUCT {
@@ -388,6 +385,20 @@ CONSTRUCT {
 WHERE {
   ?primitiefdatatype a mim:PrimitiefDatatype.
   ?primitiefdatatype mim:naam ?primitiefdatatypenaam.
+  FILTER NOT EXISTS {
+    ?generalisatie mim:subtype ?primitiefdatatype
+  }
+  BIND (t:classuri(?primitiefdatatypenaam) as ?datatype)
+}
+
+CONSTRUCT {
+  ?datatype a rdfs:Datatype.
+  ?datatype rdfs:seeAlso ?primitiefdatatype.
+}
+WHERE {
+  ?primitiefdatatype a mim:PrimitiefDatatype.
+  ?primitiefdatatype mim:naam ?primitiefdatatypenaam.
+  ?generalisatie mim:subtype ?primitiefdatatype
   BIND (t:classuri(?primitiefdatatypenaam) as ?datatype)
 }
 ```
@@ -408,6 +419,34 @@ Voor standaard datatypen maakt RDF gebruik van de XSD datatypen. Onderstaande ta
 |`mim:Day`|`xsd:gDay`|
 |`mim:Month`|`xsd:gMonth`|
 |`mim:URI`|`xsd:anyURI`|
+
+Deze vertaaltabel kan worden doorgevoerd via `rdfs:seeAlso` statements, aangezien deze vervolgens gebruikt wordt in de transformatieregel voor generalisatie en in de transformatieregel voor het aspect `mim:type`.
+
+```
+CONSTRUCT {
+  mim:CharacterString a mim:PrimitiefDatatype.
+  mim:Integer a mim:PrimitiefDatatype.
+  mim:Real a mim:PrimitiefDatatype.
+  mim:Boolean a mim:PrimitiefDatatype.
+  mim:Date a mim:PrimitiefDatatype.
+  mim:DateTime a mim:PrimitiefDatatype.
+  mim:Year a mim:PrimitiefDatatype.
+  mim:Day a mim:PrimitiefDatatype.
+  mim:Month a mim:PrimitiefDatatype.
+  mim:URI a mim:PrimitiefDatatype.
+  xsd:string rdfs:seeAlso mim:CharacterString.
+  xsd:integer rdfs:seeAlso mim:Integer.
+  xsd:decimal rdfs:seeAlso mim:Real.
+  xsd:boolean rdfs:seeAlso mim:Boolean.
+  xsd:date rdfs:seeAlso mim:Date.
+  xsd:dateTime rdfs:seeAlso mim:DateTime.
+  xsd:gYear rdfs:seeAlso mim:Year.
+  xsd:gDay rdfs:seeAlso mim:Day.
+  xsd:gMonth rdfs:seeAlso mim:Month.
+  xsd:anyURI rdfs:seeAlso mim:URI.
+}
+WHERE {}
+```
 
 ### Gestructureerd datatype
 
@@ -812,7 +851,7 @@ Een `mim:locatie` wordt direct, zonder aanpassing, overgenomen in het vertaalde 
 ### type
 > Het datatype waarmee waarden van deze attribuutsoort worden vastgelegd.
 
-De vertaling van een `mim:datatype` hangt af van de vertaling van het datatype waar naar wordt verwezen:
+De vertaling van een `mim:type` hangt af van de vertaling van het datatype waar naar wordt verwezen:
 
 - Voor primitieve datatypes wordt vertaald naar een `sh:datatype`;
 - Voor gestructureerde datatypes wordt vertaald naar een `sh:node`;
@@ -823,22 +862,24 @@ De vertaling van een `mim:datatype` hangt af van de vertaling van het datatype w
 
 ```
 CONSTRUCT {
-  ?subject sh:datatype ?type
+  ?subject sh:datatype ?datatype
 }
 WHERE {
   ?modelelement mim:type ?type.
   ?type rdfs:subClassOf*/rdf:type mim:PrimitiefDatatype.
   ?subject rdfs:seeAlso ?modelelement.
+  ?datatype rdfs:seeAlso ?type.
 }
 
 CONSTRUCT {
-  ?subject sh:node ?type
+  ?subject sh:node ?datatype
 }
 WHERE {
   ?modelelement mim:type ?type.
   ?type rdfs:subClassOf*/rdf:type ?mimtype.
   ?subject rdfs:seeAlso ?modelelement.
   ?subject a sh:NodeShape.
+  ?datatype rdfs:seeAlso ?type.
   FILTER (?mimtype = mim:GestructureerdDatatype
        || ?mimtype = mim:Enumeratie
        || ?mimtype = mim:Referentielijst
