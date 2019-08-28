@@ -60,6 +60,12 @@ In de SPARQL rules wordt gebruik gemaakt van een aantal SPARQL functies. In onde
 >
 > Mogelijke oplossing is het toevoegen van het aspect `mim:identificatie` dat als waarde een URI heeft. Indien dit veld aanwezig is, dan wordt dit veld gebruikt als identificatie i.p.v. de `mim:naam`.
 
+> **ISSUE**
+>
+> Hoewel nergens expliciet geformuleerd, kent een MiM model in zijn representatie volgorde: attribuutsoorten worden in een bepaalde volgorde getoond binnen een objecttype, referentiewaarden worden in een bepaalde volgorde getoond in een referentielijst. Het MiM kent echter geen aspect waarin deze volgorde is opgenomen. Hierdoor zal de volgorde verdwijnen in het getransformeerde model en zal sprake zijn van een willekeurige volgorde.
+>
+> Mogelijke oplossing is het toevoegen van het aspect `mim:volgnummer`, waarmee een volgorde kan worden opgegeven.
+
 ## Klassen
 
 Omdat het getransformeerde model daadwerkelijk een nieuw model is, zullen de elementen in het getransformeerde model ook eigen URI's krijgen. Om de relatie tussen het originele MiM-model het het getransformeerde model op basis van RDFS te behouden, wordt de eigenschap `rdfs:seeAlso` gebruikt.
@@ -525,9 +531,136 @@ WHERE {
 > **Voorstel:**
 Wordt getransformeerd zoals beschreven in https://geonovum.github.io/NEN3610-Linkeddata/#regels-klassen-union.
 
+[MB] Het lijkt erop dat in het MiM een union veel beperkter is dan in standaard UML. Daardoor kan de transformatie ook eenvoudiger plaatsvinden. Daarnaast is het handig om de rdf:List afzonderlijk te modelleren, conform het MiM.
+
+Een union is feitelijk een onderdeel van de specificatiek van een attribuutsoort. In het MiM wordt deze als afzonderlijk modelelement opgenomen en kan daardoor ook hergebruikt of worden voorzien van extra meta-informatie. Een `min:Union`, in combinatie met het `mim:type` wordt vertaald naar een `sh:or` waarbij de Union zelf een rdf:List is. In deze transformatieregel wordt ook de transformatie van `mim:type` meegenomen. Deze wordt hiermee niet opgenomen bij de transformatie van `mim:type` zelf (zie ook [Type](#type)). Merk op dat een empty list normaal gesproken wordt gerepresenteerd met `rdf:nil`. Dat is in ons geval niet handig, aangezien we expliciet een instantie willen aanmaken van het type `rdf:List`. Aangezien het MiM vereist dat minimaal twee union elementen aanwezig zijn, ontstaat altijd een correcte lijst.
+
+```
+CONSTRUCT {
+  ?list a rdf:List.
+  ?list rdf:rest rdf:nil.
+  ?list rdfs:seeAlso ?union.
+}
+WHERE {
+  ?union a mim:Union.
+  ?union mim:naam ?unionnaam.
+  BIND (t:nodeshapeuri(?unionnaam) as ?list)
+}
+
+CONSTRUCT {
+  ?subject sh:or ?union
+}
+WHERE {
+  ?modelelement mim:type ?type.
+  ?type rdfs:subClassOf*/rdf:type mim:Union.
+  ?subject rdfs:seeAlso ?modelelement.
+  ?union rdfs:seeAlso ?type.
+}
+```
+
 ### Union element
 
 > Een type dat gebruikt kan worden voor het attribuut zoals beschreven in de definitie van Union. Het union element is een onderdeel van een Union, uitgedrukt in een eigenschap (attribute) van een union, die als keuze binnen de Union is gerepresenteerd.
+
+Een `mim:unionElement` wordt vertaald naar een element in de lijst van de Union.
+
+Anders dan andere voorbeelden, wordt hier geen CONSTRUCT query gebruikt, omdat de lijst recursief wordt opgebouwd, in combinaties van DELETE en INSERT queries. Nieuwe elementen worden aan het begin van de lijst toegevoegd (er wordt geen volgorde verondersteld, zie ook het algemene issue over volgorde bovenaan). Het union element wordt zelf als blank node toegevoegd.
+
+Onderstaand voorbeeld geeft aan hoe de conversie uiteindelijk plaatsvindt:
+
+```
+ex:GeometrischObject a mim:Objecttype;
+  mim:naam "Geometrisch object";
+  mim:attribuut ex:geometrie;
+.
+ex:geometrie a mim:Attribuutsoort;
+  mim:naam "geometrie";
+  mim:datatype ex:LineOrPolygon;
+.
+ex:LineOrPolygon a mim:Union;
+  mim:naam "Line or polygon";
+  mim:bezit ex:Line;
+  mim:bezit ex:Polygon;
+.
+ex:Line a mim:UnionElement;
+  mim:naam "Line";
+  mim:type gml:Line;
+.
+ex:Polygon a mim:UnionElement;
+  mim:naam "Polygon";
+  mim:type gml:Polygon;
+.
+
+shape:GeometrischObject-geometrie a sh:PropertyShape;
+  rdfs:label "geometrie";
+  rdfs:seeAlso ex:geometrie;
+  sh:or shape:LineOrPolygon;
+.
+shape:LineOrPolygon a rdf:List;
+  rdfs:label "Line or polygon";
+  rdfs:seeAlso ex:LineOrPolygon;
+  rdf:first [
+    rdfs:label "Line";
+    rdfs:seeAlso ex:Line;
+    sh:datatype gml:Line
+  ];
+  rdf:rest (
+    [
+      rdfs:label "Polygon";
+      rdfs:seeAlso ex:Polygon;
+      sh:datatype gml:Polygon
+    ]
+  );
+.
+```
+
+De list in bovenstaand voorbeeld is niet geheel in de `()` vorm neergezet, zodat ook de extra eigenschappen zichtbaar kunnen worden gemaakt. Feitelijk is bovenstaande formeel gezien gelijk aan:
+
+```
+shape:GeometrischObject-geometrie a sh:PropertyShape;
+  rdfs:label "geometrie";
+  rdfs:seeAlso ex:geometrie;
+  sh:or (
+    [ sh:datatype gml:Line ]
+    [ sh:datatype gml:Polygon ]  
+  )
+.
+```
+
+De meer uitgebreide vorm is gekozen om ook de aanvullende informatie over Union en Unionelement kwijt te kunnen.
+
+```
+DELETE {
+  ?endoflist rdf:rest rdf:nil
+}
+INSERT {
+  ?list rdf:first [ rdfs:seeAlso ?unionelement ];
+  ?list rdf:rest ?endoflist.
+}
+WHERE {
+  ?unionelement a mim:UnionElement.
+  ?union mim:bezit ?unionelement.
+  ?list rdfs:seeAlso ?union.
+  ?list rdf:rest* ?endoflist.
+  ?endoflist rdf:rest rdf:nil.
+}
+
+DELETE {
+  ?endoflist rdf:rest rdf:nil.
+  ?realendoflist rdf:rest ?endoflist.
+}
+INSERT {
+  ?realendoflist rdf:rest rdf:nil
+}
+WHERE {
+  ?list a rdf:List.
+  ?list rdf:rest* ?realendoflist.
+  ?realendoflist rdf:rest ?endoflist.
+  ?endoflist rdf:rest rdf:nil.
+}
+```
+
+De tweede delete-insert query is een "opruimquery": aangezien we zijn begonnen met een rdf:List in plaats van een rdf:nil, moeten we het einde van de lijst er nog weer afknippen.
 
 ## Packages
 > Een package is een benoemde en begrensde verzameling/groepering van modelelementen.
@@ -537,14 +670,14 @@ Wordt getransformeerd zoals beschreven in https://geonovum.github.io/NEN3610-Lin
 
 > **UITZOEKEN**
 >
-> Het domein betreft het eigen IM. Transformatie naar `owl:Ontology` lijkt voor de hand te liggen.
+> Het domein betreft het eigen IM. Transformatie naar `owl:Ontology` lijkt voor de hand te liggen. In het MiM lijkt dit stereotype niet formeel beschreven. Hoe achterhalen we deze? En kunnen er meerdere packages met stereotype domein zijn binnen een model? Mogelijk moeten we dan meerdere owl:Ontologies aanmaken? Dit is gerelateerd aan het issue over dubbele namen bij bv [Objecttype](#objecttype).
 
 ### Extern
 > Een groepering van constructies die een externe instantie beheert en beschikbaar stelt aan een informatiemodel en die in het informatiemodel ongewijzigd gebruikt worden.
 
 > **UITZOEKEN**
 >
-> Het lijkt logisch om een extern package niet te transformeren. De aanname is dat dit al door de externe instantie is gedaan. Mits er voldoende informatie in de UML aanwezig is, kan er een owl:import statement gegenereerd worden.
+> Het lijkt logisch om een extern package niet te transformeren. De aanname is dat dit al door de externe instantie is gedaan. Mits er voldoende informatie in de UML aanwezig is, kan er een owl:import statement gegenereerd worden. Hiervoor lijkt minimaal noodzakelijk dat een locatie opgegeven kan worden. Wellicht dat het element `mim:locatie` dan ook toegepast zou kunnen worden op package niveau?
 
 ### View
 > Een groepering van objecttypen die gespecificeerd zijn in een extern informatiemodel en vanuit het perspectief van het eigen informatiemodel inzicht geeft welke gegevens van deze objecttypen relevant zijn binnen het eigen informatiemodel.
@@ -558,15 +691,19 @@ Wordt getransformeerd zoals beschreven in https://geonovum.github.io/NEN3610-Lin
 ### Constraint
 > Een constraint is een conditie of een beperking, die over een of meerdere modelelementen uit het informatiemodel geldt.
 
-We hebben nog niet gespecificeerd hoe we constraints vertalen. In het NEN3610 Linked Data profiel ook niet. Daar zeggen we over dit onderwerp:
+Een constraint (en bijbehorende gegevens) worden direct overgenomen in het vertaalde model als blank node. Het MiM kent voor een constraint twee aspecten: tekstueel en formeel. Het MiM doet daarbij geen uitspraak over de taal die voor het formele model moet worden gehanteerd. Daarmee is een transformatie niet op zijn plaats. Zie ook de [INSPIRE RDF Guidelines](http://inspire-eu-rdf.github.io/inspire-rdf-guidelines/#ref_cr_constraint) waar een vergelijkbare redenatie wordt gevolgd.
 
-> Een RDF-Ontologie is goed in het uitdrukken van semantiek en semantische relaties maar niet zo goed in het formuleren van constraints op die relaties. De constraints horen ook niet thuis in de open world assumption.
-
-> SHACL voegt de mogelijkheid toe om constraints eenvoudig te formuleren en toe te passen op een ontologie. De afstand tussen UML-XML en een ontologie is daarmee kleiner geworden.
-
-> Een modelleur moet zich wel afvragen of de constraints van belang zijn in de LD toepassing.
-
-Voorstel: alleen vertalen naar documentatie in het MiM model in RDF. Zie bv de [INSPIRE RDF Guidelines](http://inspire-eu-rdf.github.io/inspire-rdf-guidelines/#ref_cr_constraint) waar ze dit ook zo doen. In de toekomst wellicht vertalen naar SHACL.
+```
+CONSTRUCT {
+  ?subject mim:constraint ?constraint.
+  ?constraint ?prop ?obj.
+}
+WHERE {
+  ?modelelement mim:constraint ?constraint.
+  ?subject rdfs:seeAlso ?modelelement.
+  ?constraint ?prop ?obj.
+}
+```
 
 ## Properties
 
@@ -858,6 +995,7 @@ De vertaling van een `mim:type` hangt af van de vertaling van het datatype waar 
 - Voor een enumeratie wordt vertaald naar een `sh:node`;
 - Voor een referentielijst wordt vertaald naar een `sh:node`;
 - Voor een codelijst wordt vertaald naar een `sh:node`;
+- Voor een union wordt de vertaling opgepakt bij de transformatieregel van union zelf (zie ook [Union](#union))
 - In geval van zelfgespecificeerde datatypen wordt vertaald conform het betreffende supertype.
 
 ```
@@ -1099,7 +1237,7 @@ WHERE {
 >
 > We hebben nog niet gespecificeerd hoe we constraints vertalen. Voorstel: alleen vertalen naar documentatie in het MiM model in RDF. In de toekomst wellicht vertalen naar SHACL.
 
-Een `mim:specificatieTekst` wordt direct, zonder aanpassing, overgenomen in het vertaalde model.
+Een `mim:specificatieTekst` wordt direct, zonder aanpassing, overgenomen in het vertaalde model, als onderdeel van de [transformatieregel voor constraints](#constraint).
 
 ### specificatieFormeel
 > De beschrijving van de constraint in een formele specificatietaal, in OCL.
@@ -1108,4 +1246,4 @@ Een `mim:specificatieTekst` wordt direct, zonder aanpassing, overgenomen in het 
 >
 > We hebben nog niet gespecificeerd hoe we constraints vertalen. Voorstel: alleen vertalen naar documentatie in het MiM model in RDF. In de toekomst wellicht vertalen naar SHACL.
 
-Een `mim:specificatieFormeel` wordt direct, zonder aanpassing, overgenomen in het vertaalde model.
+Een `mim:specificatieFormeel` wordt direct, zonder aanpassing, overgenomen in het vertaalde model, als onderdeel van de [transformatieregel voor constraints](#constraint).
