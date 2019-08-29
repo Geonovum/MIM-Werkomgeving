@@ -83,8 +83,8 @@ Onderstaande tabellen geven een overzicht van alle transformaties en een referen
 |`mim:Relatieklasse`|`rdf:Statement`|[Relatieklasse](#relatieklasse)|
 |`mim:ExterneKoppeling`|`sh:PropertyShape`, `owl:ObjectProperty`|[Externe koppeling](#externe-koppeling)|
 |`mim:Relatierol`|n.n.b.|[Relatierol](#relatierol)|
-|`mim:Referentielijst`|n.n.b.|[Relatielijst](#relatielijst)|
-|`mim:ReferentieElement`|n.n.b.|[Relatie-element](#relatieelement)|
+|`mim:Referentielijst`|n.n.b.|[Referentielijst](#referentielijst)|
+|`mim:ReferentieElement`|n.n.b.|[Referentie-element](#referentie-element)|
 |`mim:Enumeratie`|n.n.b.|[Enumeratie](#enumeratie)|
 |`mim:Enumeratiewaarde`|n.n.b.|[Enumeratiewaarde](#enumeratiewaarde)|
 |`mim:Codelist`|n.n.b.|[Codelist](#codelist)|
@@ -122,8 +122,8 @@ Onderstaande tabellen geven een overzicht van alle transformaties en een referen
 |`mim:mogelijkGeenWaarde`|`mim:mogelijkGeenWaarde`, `sh:minCount`|[mogelijk geen waarde](#mogelijk-geen-waarde)
 |`mim:locatie`|`mim:locatie`|[locatie](#locatie)|
 |`mim:type`|`sh:datatype`, `sh:node`|[type](#type)|
-|`mim:lengte`|`sh:maxLength`|[Lengte](#lengte)|
-|`mim:patroon`|`mim:patroon`|[Patroon](#patroon)|
+|`mim:lengte`|`sh:maxLength`|[lengte](#lengte)|
+|`mim:patroon`|`mim:patroon`|[patroon](#patroon)|
 |`mim:formeelPatroon`|`sh:pattern`|[formeel patroon](#formeel-patroon)|
 |`mim:uniekeAanduiding`|`mim:uniekeAanduiding`|[unieke aanduiding](#uniekeaanduiding)
 |`mim:populatie`|`mim:populatie`|[populatie](#populatie)|
