@@ -150,16 +150,16 @@ Onderstaande tabellen geven een overzicht van alle transformaties en een referen
 
 |MIM datatype|Vertaling|Referentie|
 |------------|---------|----------|
-|`mim:CharacterString`|`xsd:string`|[Primitief datatype - standaard datatypen](#primitief-datatype-standaard-datatypen)|
-|`mim:Integer`|`xsd:integer`|[Primitief datatype - standaard datatypen](#primitief-datatype-standaard-datatypen)|
-|`mim:Real`|`xsd:decimal`|[Primitief datatype - standaard datatypen](#primitief-datatype-standaard-datatypen)|
-|`mim:Boolean`|`xsd:boolean`|[Primitief datatype - standaard datatypen](#primitief-datatype-standaard-datatypen)|
-|`mim:Date`|`xsd:date`|[Primitief datatype - standaard datatypen](#primitief-datatype-standaard-datatypen)|
-|`mim:DateTime`|`xsd:dateTime`|[Primitief datatype - standaard datatypen](#primitief-datatype-standaard-datatypen)|
-|`mim:Year`|`xsd:gYear`|[Primitief datatype - standaard datatypen](#primitief-datatype-standaard-datatypen)|
-|`mim:Day`|`xsd:gDay`|[Primitief datatype - standaard datatypen](#primitief-datatype-standaard-datatypen)|
-|`mim:Month`|`xsd:gMonth`|[Primitief datatype - standaard datatypen](#primitief-datatype-standaard-datatypen)|
-|`mim:URI`|`xsd:anyURI`|[Primitief datatype - standaard datatypen](#primitief-datatype-standaard-datatypen)|
+|`mim:CharacterString`|`xsd:string`|[Primitief datatype - standaard datatypen](#primitief-datatype---standaard-datatypen)|
+|`mim:Integer`|`xsd:integer`|[Primitief datatype - standaard datatypen](#primitief-datatype---standaard-datatypen)|
+|`mim:Real`|`xsd:decimal`|[Primitief datatype - standaard datatypen](#primitief-datatype---standaard-datatypen)|
+|`mim:Boolean`|`xsd:boolean`|[Primitief datatype - standaard datatypen](#primitief-datatype---standaard-datatypen)|
+|`mim:Date`|`xsd:date`|[Primitief datatype - standaard datatypen](#primitief-datatype---standaard-datatypen)|
+|`mim:DateTime`|`xsd:dateTime`|[Primitief datatype - standaard datatypen](#primitief-datatype---standaard-datatypen)|
+|`mim:Year`|`xsd:gYear`|[Primitief datatype - standaard datatypen](#primitief-datatype---standaard-datatypen)|
+|`mim:Day`|`xsd:gDay`|[Primitief datatype - standaard datatypen](#primitief-datatype---standaard-datatypen)|
+|`mim:Month`|`xsd:gMonth`|[Primitief datatype - standaard datatypen](#primitief-datatype---standaard-datatypen)|
+|`mim:URI`|`xsd:anyURI`|[Primitief datatype - standaard datatypen](#primitief-datatype---standaard-datatypen)|
 
 ## Klassen
 
