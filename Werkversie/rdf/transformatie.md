@@ -92,7 +92,7 @@ Onderstaande tabellen geven een overzicht van alle transformaties en een referen
 |`mim:PrimitiefDatatype`|`rdfs:Datatype`|[Primitief datatype](#primitief-datatype)|
 |`mim:GestructureerdDatatype`|`owl:Class`, `sh:NodeShape`|[Gestructureerd datatype](#gestructureerd-datatype)|
 |`mim:DataElement`|`owl:ObjectProperty`, `owl:DatatypeProperty`, `sh:PropertyShape`|[Data element](#data-element)|
-|`mim:Union`|`sh:or`, `rdf:List`|[Union](#union)|
+|`mim:Union`|`sh:xone`, `rdf:List`|[Union](#union)|
 |`mim:UnionElement`|Blank node binnen de `rdf:List`|[Union element](#union-element)|
 |`mim:Domein`|`owl:Ontology`|[Domein](#domein)|
 |`mim:Extern`|`owl:imports`|[Extern](#extern)|
@@ -628,7 +628,7 @@ Wordt getransformeerd zoals beschreven in https://geonovum.github.io/NEN3610-Lin
 
 [MB] Het lijkt erop dat in het MiM een union veel beperkter is dan in standaard UML. Daardoor kan de transformatie ook eenvoudiger plaatsvinden. Daarnaast is het handig om de rdf:List afzonderlijk te modelleren, conform het MiM.
 
-Een union is feitelijk een onderdeel van de specificatiek van een attribuutsoort. In het MiM wordt deze als afzonderlijk modelelement opgenomen en kan daardoor ook hergebruikt of worden voorzien van extra meta-informatie. Een `min:Union`, in combinatie met het `mim:type` wordt vertaald naar een `sh:or` waarbij de Union zelf een rdf:List is. In deze transformatieregel wordt ook de transformatie van `mim:type` meegenomen. Deze wordt hiermee niet opgenomen bij de transformatie van `mim:type` zelf (zie ook [Type](#type)). Merk op dat een empty list normaal gesproken wordt gerepresenteerd met `rdf:nil`. Dat is in ons geval niet handig, aangezien we expliciet een instantie willen aanmaken van het type `rdf:List`. Aangezien het MiM vereist dat minimaal twee union elementen aanwezig zijn, ontstaat altijd een correcte lijst.
+Een union is feitelijk een onderdeel van de specificatiek van een attribuutsoort. In het MiM wordt deze als afzonderlijk modelelement opgenomen en kan daardoor ook hergebruikt of worden voorzien van extra meta-informatie. Een `min:Union`, in combinatie met het `mim:type` wordt vertaald naar een `sh:xone` waarbij de Union zelf een rdf:List is. In deze transformatieregel wordt ook de transformatie van `mim:type` meegenomen. Deze wordt hiermee niet opgenomen bij de transformatie van `mim:type` zelf (zie ook [Type](#type)). Merk op dat een empty list normaal gesproken wordt gerepresenteerd met `rdf:nil`. Dat is in ons geval niet handig, aangezien we expliciet een instantie willen aanmaken van het type `rdf:List`. Aangezien het MiM vereist dat minimaal twee union elementen aanwezig zijn, ontstaat altijd een correcte lijst.
 
 ```
 CONSTRUCT {
@@ -643,7 +643,7 @@ WHERE {
 }
 
 CONSTRUCT {
-  ?subject sh:or ?union
+  ?subject sh:xone ?union
 }
 WHERE {
   ?modelelement mim:type ?type.
@@ -689,7 +689,7 @@ ex:Polygon a mim:UnionElement;
 shape:GeometrischObject-geometrie a sh:PropertyShape;
   rdfs:label "geometrie";
   rdfs:seeAlso ex:geometrie;
-  sh:or shape:LineOrPolygon;
+  sh:xone shape:LineOrPolygon;
 .
 shape:LineOrPolygon a rdf:List;
   rdfs:label "Line or polygon";
@@ -715,7 +715,7 @@ De list in bovenstaand voorbeeld is niet geheel in de `()` vorm neergezet, zodat
 shape:GeometrischObject-geometrie a sh:PropertyShape;
   rdfs:label "geometrie";
   rdfs:seeAlso ex:geometrie;
-  sh:or (
+  sh:xone (
     [ sh:datatype gml:Line ]
     [ sh:datatype gml:Polygon ]  
   )
