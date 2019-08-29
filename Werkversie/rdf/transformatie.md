@@ -114,7 +114,7 @@ Onderstaande tabellen geven een overzicht van alle transformaties en een referen
 |`mim:herkomst`|`mim:herkomst`|[herkomst](#herkomst)|
 |`mim:herkomstDefinitie`|`mim:herkomstDefinitie`|[herkomst definitie](#herkomst-definitie)|
 |`mim:datumOpname`|`mim:datumOpname`|[datum opname](#datum-opname)|
-|`mim:indicatieMaterieleHistorie`|n.n.b.|[indicatie materiële historie](#indicatie-materiele-historie)|
+|`mim:indicatieMaterieleHistorie`|n.n.b.|[indicatie materiële historie](#indicatie-materi%C3%ABle-historie)|
 |`mim:indicatieFormeleHistorie`|n.n.b.|[indicatie formele historie](#indicatie-formele-historie)|
 |`mim:kardinaliteit`|`sh:minCount`, `sh:maxCount`|[kardinaliteit](#kardinaliteit)|
 |`mim:authentiek`|`mim:authentiek`|[authentiek](#authentiek)|
@@ -122,7 +122,7 @@ Onderstaande tabellen geven een overzicht van alle transformaties en een referen
 |`mim:mogelijkGeenWaarde`|`mim:mogelijkGeenWaarde`, `sh:minCount`|[mogelijk geen waarde](#mogelijk-geen-waarde)
 |`mim:locatie`|`mim:locatie`|[locatie](#locatie)|
 |`mim:type`|`sh:datatype`, `sh:node`|[type](#type)|
-|`mim:lengte`|`mim:lengte`|`sh:maxLength`|[Lengte](#lengte)|
+|`mim:lengte`|`sh:maxLength`|[Lengte](#lengte)|
 |`mim:patroon`|`mim:patroon`|[Patroon](#patroon)|
 |`mim:formeelPatroon`|`sh:pattern`|[formeel patroon](#formeel-patroon)|
 |`mim:uniekeAanduiding`|`mim:uniekeAanduiding`|[unieke aanduiding](#uniekeaanduiding)
@@ -147,6 +147,19 @@ Onderstaande tabellen geven een overzicht van alle transformaties en een referen
 |`mim:element`|`sh:property`|[Data element](#data-element)|
 
 ### Instanties (datatypen)
+
+|MIM datatype|Vertaling|Referentie|
+|------------|---------|----------|
+|`mim:CharacterString`|`xsd:string`|[Primitief datatype - standaard datatypen](#primitief-datatype-standaard-datatypen)|
+|`mim:Integer`|`xsd:integer`|[Primitief datatype - standaard datatypen](#primitief-datatype-standaard-datatypen)|
+|`mim:Real`|`xsd:decimal`|[Primitief datatype - standaard datatypen](#primitief-datatype-standaard-datatypen)|
+|`mim:Boolean`|`xsd:boolean`|[Primitief datatype - standaard datatypen](#primitief-datatype-standaard-datatypen)|
+|`mim:Date`|`xsd:date`|[Primitief datatype - standaard datatypen](#primitief-datatype-standaard-datatypen)|
+|`mim:DateTime`|`xsd:dateTime`|[Primitief datatype - standaard datatypen](#primitief-datatype-standaard-datatypen)|
+|`mim:Year`|`xsd:gYear`|[Primitief datatype - standaard datatypen](#primitief-datatype-standaard-datatypen)|
+|`mim:Day`|`xsd:gDay`|[Primitief datatype - standaard datatypen](#primitief-datatype-standaard-datatypen)|
+|`mim:Month`|`xsd:gMonth`|[Primitief datatype - standaard datatypen](#primitief-datatype-standaard-datatypen)|
+|`mim:URI`|`xsd:anyURI`|[Primitief datatype - standaard datatypen](#primitief-datatype-standaard-datatypen)|
 
 ## Klassen
 
