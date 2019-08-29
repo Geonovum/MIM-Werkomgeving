@@ -27,22 +27,22 @@
 mim:Objecttype a owl:Class;
   rdfs:label "Objecttype"@nl;
   rdfs:comment "De typering van een groep objecten (in de werkelijkheid) die binnen een domein relevant zijn en als gelijksoortig worden beschouwd."@nl;
-  dct:source mimdoc:sectie2.2.1-1-Objecttype;
+  dct:source mimdoc:sectie2.2.1.1-Objecttype;
 .
 mim:Attribuutsoort a owl:Class;
   rdfs:label "Attribuutsoort"@nl;
   rdfs:comment "De typering van gelijksoortige gegevens die voor een objecttype van toepassing is."@nl;
-  dct:source mimdoc:sectie2.2.1-2-Attribuutsoort;
+  dct:source mimdoc:sectie2.2.1.2-Attribuutsoort;
 .
 mim:Gegevensgroep a owl:Class;
   rdfs:label "Gegevensgroep"@nl;
   rdfs:comment "Een typering van een groep van gelijksoortige gegevens die voor een objecttype van toepassing is."@nl;
-  dct:source mimdoc:sectie2.2.1-3-Gegevensgroep;
+  dct:source mimdoc:sectie2.2.1.3-Gegevensgroep;
 .
 mim:Gegevensgroeptype a owl:Class;
   rdfs:label "Gegevensgroeptype"@nl;
   rdfs:comment "Een groep van met elkaar samenhangende attribuutsoorten. Een gegevensgroeptype is altijd een type van een gegevensgroep."@nl;
-  dct:source mimdoc:sectie2.2.1-4-Gegevensgroeptype;
+  dct:source mimdoc:sectie2.2.1.4-Gegevensgroeptype;
 .
 
 # Relaties
@@ -338,11 +338,6 @@ mim:objecttype a owl:ObjectProperty;
   # Externe koppeling
   rdfs:comment "Het objecttype waarvan de relatie een eigenschap is."@nl;
 .
-mim:datatype a owl:ObjectProperty;
-  rdfs:label "datatype";
-  # Generalisatie (datatype)
-  rdfs:comment "Het datatype dat een specialisatie is van een (ander) datatype.";
-.
 mim:gerelateerdObjecttype a owl:ObjectProperty;
   rdfs:label "gerelateerd objecttype";
   # Relatiesoort
@@ -351,11 +346,6 @@ mim:gerelateerdObjecttype a owl:ObjectProperty;
   rdfs:comment "Het objecttype dat de generalisatie is van een (ander) objecttype."@nl;
   # Externe koppeling
   rdfs:comment "Het objecttype uit een extern informatiemodel waarmee een objecttype een logische verbinding heeft."@nl;
-.
-mim:gerelateerdDatatype a owl:ObjectProperty;
-  rdfs:label "gerelateerd datatype";
-  # Generalisatie (datatype)
-  rdfs:comment "Het datatype dat de generalisatie is van een (ander) datatype.";
 .
 mim:typeAggregatie a owl:ObjectProperty;
   rdfs:label "type aggregatie";

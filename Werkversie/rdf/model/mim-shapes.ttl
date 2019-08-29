@@ -22,7 +22,7 @@
 shape:Objecttype a sh:NodeShape;
   sh:targetClass mim:Objecttype;
   sh:name "mim:Objecttype";
-  dct:source mimdoc:sectie2.3.1-Objecttype;
+  dct:source mimdoc:sectie3.2.1-Objecttype;
   # Metagegevens
   sh:property shape:naam;
   sh:property shape:alias;
@@ -44,7 +44,7 @@ shape:Objecttype a sh:NodeShape;
 shape:Attribuutsoort a sh:NodeShape;
   sh:targetClass mim:Attribuutsoort;
   sh:name "mim:Attribuutsoort";
-  dct:source mimdoc:sectie2.3.1-Attribuutsoort;
+  dct:source mimdoc:sectie3.2.1-Attribuutsoort;
   # Metagegevens
   sh:property shape:naam;
   sh:property shape:alias;
