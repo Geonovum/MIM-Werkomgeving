@@ -1332,14 +1332,14 @@ WHERE {
 ### code
 > De in een registratie of informatiemodel aan de enumeratiewaarde toegekend unieke code (niet te verwarren met alias, zoals bedoeld in 2.6.1).
 
-> ** ISSUE
+> **ISSUE**
 >
 > We hebben nog niet gespecificeerd hoe we enumeraties vertalen. In NEN3610-LD is standaardtransformatie een transformatie naar een klasse gelijknamig aan de enumeratieklasse, en instanties van deze klasse voor elk van de geënumereerde waardes. Als we dit volgen zouden we de `mim:code` kunnen vertalen naar een `rdfs:label` of `skos:altLabel`.
 
 ### specificatie-tekst
 > De specificatie van de constraint in normale tekst.
 
-> ** ISSUE
+> **ISSUE**
 >
 > We hebben nog niet gespecificeerd hoe we constraints vertalen. Voorstel: alleen vertalen naar documentatie in het MiM model in RDF. In de toekomst wellicht vertalen naar SHACL.
 
@@ -1348,7 +1348,7 @@ Een `mim:specificatieTekst` wordt direct, zonder aanpassing, overgenomen in het 
 ### specificatie-formeel
 > De beschrijving van de constraint in een formele specificatietaal, in OCL.
 
-> ** ISSUE
+> **ISSUE**
 >
 > We hebben nog niet gespecificeerd hoe we constraints vertalen. Voorstel: alleen vertalen naar documentatie in het MiM model in RDF. In de toekomst wellicht vertalen naar SHACL.
 
