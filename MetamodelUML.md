@@ -322,8 +322,8 @@ De generalisaties worden naar het volgende aspect gespecificeerd:
 |----------------------------|--------------------|---------------------------------------------------------------------|-----------------------------------------------------|-----------|
 | **Naam**                   | 0..1               | Algemeen metagegeven. *Standaard ‘is specialisatie van’.*           | *name van de etaclass Named element*                | *Name*    |
 | **Alias**                  | 0..1               | Algemeen metagegeven.                                               |                                                     | *Alias*   |
-| **Objecttype**             | 1                  | Het objecttype dat een specialisatie is van een (ander) objecttype. | */source: related Element bij Relationship Element* | *Source*  |
-| **Gerelateerd objecttype** | 1                  | Het objecttype dat de generalisatie is van een (ander) objecttype.  | */target: related Element bij Relationship Element* | *Target*  |
+| **Subtype**             | 1                  | Het objecttype dat een specialisatie is van een (ander) objecttype. | */source: related Element bij Relationship Element* | *Source*  |
+| **Supertype** | 1                  | Het objecttype dat de generalisatie is van een (ander) objecttype.  | */target: related Element bij Relationship Element* | *Target*  |
 
 **Specificatie voor «Generalisatie» tussen datatypes**
 
