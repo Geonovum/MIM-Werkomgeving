@@ -1,6 +1,8 @@
 # Metamodel voor informatiemodellen in RDF
 
-Deze repository bevat de formele definitie en besschrijving van het Metamodel voor informatiemodellen in RDF. Het betreft de RDF representatie van het metamodel beschreven in https://docs.geostandaarden.nl/mim/mim10. (zie ook [overige documentatie](https://www.geonovum.nl/geo-standaarden/metamodel-informatiemodellering/nationaal-metamodel-voor-informatiemodellering)).
+Op deze pagina vindt u de formele definitie en beschrijving van het Metamodel voor Informatiemodellen in RDF. Het betreft de RDF representatie van het metamodel beschreven in deze Github repository (op dit moment de Werkversie van 17 juli 2019).
+
+Deze werkversie is de opvolger van de MiM 1.0 versie, beschreven in https://docs.geostandaarden.nl/mim/mim10. (zie ook [overige documentatie](https://www.geonovum.nl/geo-standaarden/metamodel-informatiemodellering/nationaal-metamodel-voor-informatiemodellering)).
 
 Het MiM is een *metamodel*. Dit betekent dat in termen van het MiM een concreet informatiemodel kan worden uitgewerkt, bijvoorbeeld het informatiemodel Basisregistratie Adressen en Gebouwen. Het MiM is niet bedoeld om vervolgens in termen van dit informatiemodel een concrete dataset te vormen. Hiervoor is een transformatie nodig naar een (technisch) uitwisselings- of opslagmodel nodig.
 
@@ -28,13 +30,20 @@ vbo:Schip a rdfs:Class;
 vb:Pakjesboot12 a vbo:Schip.
 ```
 
+## Het model
+
+Het RDF model is opgesplitst in twee delen (klik op het linkje om het daadwerkelijk modelonderdeel te openen):
+
+1. de [RDF vocabulaire](model/mim.ttl), met de (meta)klassen en (meta)eigenschappen;
+2. de [RDF Shapesgraph](model/mim-shapes.ttl), met "shapes", de gegevensconstraints die gelden op het gebruik van de klassen en eigenschappen.
+
 ## Status
 
 De huidige status van deze beschrijving is *concept*. Op de volgende hoofdpunten zijn vervolgacties nodig:
 
-- Er zijn issues gevonden die opgelost dienen te zijn voordat sprake kan zijn van een correcte representatie;
-- Een handreiking is gewenst hoe vanuit een MiM RDF informatiemodel een RDF ontologie gemaakt kan worden. Hierbij kan aangesloten worden bij de ontwikkelingen rondom [NEN3610 en Linked data](https://github.com/Geonovum/NEN3610-Linkeddata).
-- Het MiM in RDF dient opgenomen te worden als onderdeel van de MiM standaard.
+- Er staan nog enkele issues open op de manier waarop de huidige standaard geinterpreteerd moet worden. De vervolgacties daarvoor staan beschreven in de afzonderlijke issues.
+- Een handreiking is gewenst hoe vanuit een MiM RDF informatiemodel een RDF ontologie gemaakt kan worden. Hierbij kan aangesloten worden bij de ontwikkelingen rondom [NEN3610 en Linked data](https://github.com/Geonovum/NEN3610-Linkeddata). Dit komt overeen met [issue #72](https://github.com/Geonovum/MIM-Werkomgeving/issues/72).
+- Het MiM in RDF dient opgenomen te worden als onderdeel van de MiM standaard. Dit komt overeen met [issue #71](https://github.com/Geonovum/MIM-Werkomgeving/issues/71).
 
 ## Interpretatie
 
