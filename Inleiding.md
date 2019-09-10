@@ -69,14 +69,14 @@ Management Group [[!OMG]], en welke standaarden worden toegepast.
 
 Het hoofdstuk [Metamodel Algemeen](#metamodel-algemeen) bevat de beschrijving van alle 
 bouwstenen c.q. de modelelementen van het metamodel, in de vorm van definities en specificaties.
-Ook beschrijft dit hoofdstuk hoe het metamodel zich verhoudt tot het UML
-metamodel, welke uitbreidingen c.q. verbijzonderingen van het UML metamodel zijn
-aangebracht. De betekenis en toelichting van de modelelementen van het metamodel
-vormt het materiaal waarmee een uitputtende modelspecificatie kan worden
-opgesteld.
+De betekenis en toelichting van de modelelementen van het metamodel vormt het materiaal waarmee een uitputtende 
+modelspecificatie kan worden opgesteld. De afbeeldingen in dit algemene hoofdstuk zijn weliswaar gemaakt in UML, maar het metamodel beperkt 
+zich zeker niet tot UML. Er zijn aparte hoofdstukken voor de implementatie van MIM in UML en Linked Data.
 
 Het hoofdstuk [Metamodel in UML](#metamodel-in-uml) beschrijft hoe de implementatie van MIM in
-[[!UML]] er uit ziet.
+[[!UML]] er uit ziet. In dit hoofdstuk wordt beschreven hoe het metamodel zich verhoudt tot het UML
+metamodel, welke uitbreidingen c.q. verbijzonderingen van het UML metamodel zijn
+aangebracht. 
 
 In het hoofdstuk [Afspraken & Regels](#afspraken-regels) gaan we in detail in op een
 aantal aspecten. Het is een uitgebreidere toelichting, in aanvulling op het 
