@@ -322,8 +322,8 @@ De generalisaties worden naar het volgende aspect gespecificeerd:
 |----------------------------|--------------------|---------------------------------------------------------------------|-----------------------------------------------------|-----------|
 | **Naam**                   | 0..1               | Algemeen metagegeven. *Standaard ‘is specialisatie van’.*           | *name van de etaclass Named element*                | *Name*    |
 | **Alias**                  | 0..1               | Algemeen metagegeven.                                               |                                                     | *Alias*   |
-| **Objecttype**             | 1                  | Het objecttype dat een specialisatie is van een (ander) objecttype. | */source: related Element bij Relationship Element* | *Source*  |
-| **Gerelateerd objecttype** | 1                  | Het objecttype dat de generalisatie is van een (ander) objecttype.  | */target: related Element bij Relationship Element* | *Target*  |
+| **Subtype**             | 1                  | Het objecttype dat een specialisatie is van een (ander) objecttype. | */source: related Element bij Relationship Element* | *Source*  |
+| **Supertype** | 1                  | Het objecttype dat de generalisatie is van een (ander) objecttype.  | */target: related Element bij Relationship Element* | *Target*  |
 
 **Specificatie voor «Generalisatie» tussen datatypes**
 
@@ -333,8 +333,8 @@ De generalisaties worden naar het volgende aspect gespecificeerd:
 |----------------------------|-------------------|-----------------------------------------------------------------|-----------------------------------------------------|-----------|
 | **Naam**                   | 0..1              | Algemeen metagegeven.                                           | *name van de metaclass Named element*               | *Name*    |
 | **Alias**                  | 0..1              | Algemeen metagegeven.                                           |                                                     | *Alias*   |
-| **Datatype**               | 1                 | Het datatype dat een specialisatie is van een (ander) datatype. | */source: related Element bij Relationship Element* | *Source*  |
-| **Gerelateerd datatype** | 1                 | Het datatype dat de generalisatie is van een (ander) datatype.  | */target: related Element bij Relationship Element* | *Target*  |
+| **Suptype**               | 1                 | Het datatype dat een specialisatie is van een (ander) datatype. | */source: related Element bij Relationship Element* | *Source*  |
+| **Supertype** | 1                 | Het datatype dat de generalisatie is van een (ander) datatype.  | */target: related Element bij Relationship Element* | *Target*  |
 
 **Specificatie voor «Relatieklasse»**
 
