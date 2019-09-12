@@ -673,7 +673,8 @@ modelelementen.
 >   vallen.
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Voorbeeld: Het informatiemodel topografie heeft als hoogste inhoudelijk groeperend package ‘<<informatiemodel>>’IMTopo.
+Voorbeeld: Het informatiemodel topografie heeft als hoogste groeperend package 
+<<informatiemodel>> IMTopo.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 #### Domein
@@ -684,7 +685,8 @@ Voorbeeld: Het informatiemodel topografie heeft als hoogste inhoudelijk groepere
 >   een informatiemodel beschrijven.
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Voorbeeld: Het informatiemodel topografie heeft als hoogste inhoudelijk groeperend package ‘<<informatiemodel>>’IMTopo met daaronder domeinpackages ‘<<domein>>’weg, ‘<<domein>>gebouw, ‘<<locatie>>’, 
+Voorbeeld: Het informatiemodel topografie heeft als hoogste inhoudelijk groeperend package 
+<<informatiemodel>> IMTopo met daaronder domeinpackages <<domein>> weg, <<domein>> gebouw, <<locatie>> 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 #### Extern
