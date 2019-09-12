@@ -1,30 +1,34 @@
-# Metamodel in UML 
+Metamodel in UML
+================
 
-## Structuur metamodel in UML 
+Structuur metamodel in UML
+--------------------------
 
-De eerste paragraaf bevat diagrammen, in UML; elk biedt een eigen view op een gedeelte van
-het model. Het geheel van diagrammen, in samenhang, is opgenomen in de bijlage [Template naamgeving conventies](#template-naamgeving-conventies).
+De eerste paragraaf bevat diagrammen, in UML; elk biedt een eigen view op een
+gedeelte van het model. Het geheel van diagrammen, in samenhang, is opgenomen in
+de bijlage [Template naamgeving conventies](#template-naamgeving-conventies).
 
-Uitgangspunten voor het metamodel in UML zijn: 
-- UML 2.5 vormt de basis voor de conceptuele beschrijving. 
-- Gebruik te maken van de bestaande UML-modelelementen conform UML van OMG. OMG noemt dit een UML metaclass. Een
-voorbeeld hiervan is UML-Class. 
-- Daar waar (semantisch) nodig extensiemechanismen toe te passen met behoud van de betekenis van de
-UML-metaclasses. Er ontstaat dan een MIM metaclass. Hoe deze zich verhouden tot UML is weergegeven in de bijlage. 
-- Modelelementen hebben één stereotype. Daarnaast hebben twee verschillende stereotypen nooit dezelfde betekenis.
-Stereotypes worden toegepast als er een verbijzondering van een UML constructie 
-nodig is met behoud van de betekenis van de UML-metaclass. 
+Uitgangspunten voor het metamodel in UML zijn: - UML 2.5 vormt de basis voor de
+conceptuele beschrijving. - Gebruik te maken van de bestaande UML-modelelementen
+conform UML van OMG. OMG noemt dit een UML metaclass. Een voorbeeld hiervan is
+UML-Class. - Daar waar (semantisch) nodig extensiemechanismen toe te passen met
+behoud van de betekenis van de UML-metaclasses. Er ontstaat dan een MIM
+metaclass. Hoe deze zich verhouden tot UML is weergegeven in de bijlage. -
+Modelelementen hebben één stereotype. Daarnaast hebben twee verschillende
+stereotypen nooit dezelfde betekenis. Stereotypes worden toegepast als er een
+verbijzondering van een UML constructie nodig is met behoud van de betekenis van
+de UML-metaclass.
 
 Elk modelelement heeft een MIM metaclass. Deze wordt in UML in een
 informatiemodel gemodelleerd als een Metaclass van UML 2.5 en een bijbehorende
 stereotype.
 
-<aside class='example'> 
-    De MIM metaclass Objecttype wordt gemodelleerd als een
-    UML-Class met stereotype «Objecttype». In Sparx EA wordt dit gemodelleerd met
-    een Class. Niet alle MIM metaclasses hebben een stereotype (nodig). In de kolom
-    staat dan ‘-‘.
-</aside>
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+De MIM metaclass Objecttype wordt gemodelleerd als een
+UML-Class met stereotype «Objecttype». In Sparx EA wordt dit gemodelleerd met
+een Class. Niet alle MIM metaclasses hebben een stereotype (nodig). In de kolom
+staat dan ‘-‘.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 | **MIM metaclass** | **Stereotype** | **Metaclass UML 2.5z** | **In Sparx EA** |
 |-------------------|----------------|------------------------|-----------------|
@@ -33,8 +37,9 @@ stereotype.
 In de diagrammen zijn de UML metaclasses conform UML 2.5 aangeduid als UML
 metaclass. Deze in opgenomen in het diagram als ‘blauw gekleurde’ metaclasses.
 
-Bijna alle hebben een UML-metaclass als basis, deze is dan aangegeven. Dit is ook opgenomen in diagram vorm, 
-in de bijlage [Template naamgeving conventies](#template-naamgeving-conventies).
+Bijna alle hebben een UML-metaclass als basis, deze is dan aangegeven. Dit is
+ook opgenomen in diagram vorm, in de bijlage [Template naamgeving
+conventies](#template-naamgeving-conventies).
 
 ### Kern
 
@@ -73,11 +78,15 @@ View 2: Datatypen
 | Referentie element      | «Referentie element»    | (UML) Property           | Attribute          |
 | Codelist                | «Codelist               | (UML) Datatype           | Datatype           |
 
-*Nadere specificaties voor datatypen* 
+*Nadere specificaties voor datatypen*
 
-Voor enumeraties is geen stereotype gespecificeerd. In het metamodel maken we gebruik van de bestaande UML-enumeration (metaclass) voor de specificaties van een enumeratie.
+Voor enumeraties is geen stereotype gespecificeerd. In het metamodel maken we
+gebruik van de bestaande UML-enumeration (metaclass) voor de specificaties van
+een enumeratie.
 
-Voor enumeratiewaarde is geen stereotype gespecificeerd. In het metamodel maken we gebruik van de bestaande UML-enumerationLiteral (metaclass) voor de specificaties van een enumeratiewaarde.
+Voor enumeratiewaarde is geen stereotype gespecificeerd. In het metamodel maken
+we gebruik van de bestaande UML-enumerationLiteral (metaclass) voor de
+specificaties van een enumeratiewaarde.
 
 ### Overige
 
@@ -122,10 +131,11 @@ View 3c: Groepering
 | Extern                | «Extern»          | (UML) Package         | Package         |
 | View                  | «View»            | (UML) Package         | Package         |
 
+Nadere specificatie metagegevens in UML
+---------------------------------------
 
-## Nadere specificatie metagegevens in UML 
-
-Deze paragraaf is een aanvulling op de paragraaf *'Specificatie metagegevens'* in het hoofdstuk [Metamodel Algemeen](#metamodel-algemeen). 
+Deze paragraaf is een aanvulling op de paragraaf *'Specificatie metagegevens'*
+in het hoofdstuk [Metamodel Algemeen](#metamodel-algemeen).
 
 >   **Alias**
 
@@ -137,62 +147,63 @@ Verdere toelichting voor UML modellen:
 
 -   De alias is te specificeren voor NamedElements (zoals UML-Class,
     UML-association, UML-UML-Datatype en UML-property). De alias is in UML
-    gespecificeerd bij de metaclass <span class='note'>[Element Import](#uml-n-6)</span>.
-    In Enterprise Architect is de alternatieve weergave aan te zetten in de
-    properties van een Diagram, via: use alias if available.
-    
+    gespecificeerd bij de metaclass [Element Import](#uml-n-6). In Enterprise
+    Architect is de alternatieve weergave aan te zetten in de properties van een
+    Diagram, via: use alias if available.
+
 >   **Identificerend**
 
-Als een attribuutsoort identificerend is, dan krijgt dit kenmerk in UML isId = true. 
+Als een attribuutsoort identificerend is, dan krijgt dit kenmerk in UML isId =
+true.
 
-Als een relatiesoort identificerend is, dan krijgt dit kenmerk in UML een stereotype «id»
-    
-### Modellering metagegevens voor objecten en attributen in UML 
+Als een relatiesoort identificerend is, dan krijgt dit kenmerk in UML een
+stereotype «id»
+
+### Modellering metagegevens voor objecten en attributen in UML
 
 **Specificatie voor «Objecttype»**
 
 De objecttypen worden naar de volgende aspecten gespecificeerd:
 
-| **Aspect** <span class='note'>[Zie noot](#uml-n-1)</span> | **Kardinaliteit** | **Toelichting**                                                                                                                                                                                                                                                                                                                          | **In UML 2.5**  <span class='note'>[Zie noot](#uml-n-2)</span> | **In EA** <span class='note'>[Zie noot](#uml-n-3)</span>                                                      |
-|-------------------------------|-------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Naam√**                     | 1                 | ALgemeen metagegeven <span class='note'>[Zie noot](#uml-n-4)</span>.                                                                                                                                                                                                                                                                     | *name van de metaclass Named element*    | *Name*                                                                                                                                                          |
-| **Alias**                     | 0..1              | Algemeen metagegeven.                                                                                                                                                                                                                                                                                                                    |                                          | *Alias*                                                                                                                                                         |
-| **Herkomst**                  | 1                 | Algemeen metagegeven.                                                                                                                                                                                                                                                                                                                    |                                          | *Tagged value*                                                                                                                                                  |
-| **Definitie√**                | 1                 | Algemeen metagegeven.                                                                                                                                                                                                                                                                                                                    | *Body van de metaclass Comment*          | *Notes*                                                                                                                                                         |
-| **Herkomst definitie√**       | 1                 | Algemeen metagegeven.                                                                                                                                                                                                                                                                                                                    |                                          | *Tagged value*                                                                                                                                                  |
-| **Datum opname**              | 1                 | Algemeen metagegeven.                                                                                                                                                                                                                                                                                                                    |                                          | *Tagged value*                                                                                                                                                  |
-| **Unieke aanduiding√**        | 1                 | Voor objecttypen die deel uitmaken van een (basis)registratie of informatiemodel betreft dit de wijze waarop daarin voorkomende objecten (van dit type) uniek in de registratie worden aangeduid.                                                                                                                                        | *-*                                      | *isId bij attribuutsoort, --- of --- stereotype «isId» bij target role relatiesoort --- of --- een combinatie van deze twee, elk hiervan meer keren toepasbaar* |
-| **Populatie√**                | 0..1              | Voor objecttypen die deel uitmaken van een (basis)registratie betreft dit de beschrijving van de exemplaren van het gedefinieerde objecttype die in de desbetreffende (basis)­registratie voorhanden zijn.                                                                                                                                |                                          | *Tagged value*                                                                                                                                                  |
-| **Kwaliteit√**                | 0..1              | Voor objecttypen die deel uitmaken van een registratie betreft dit de waarborgen voor de juistheid van de in de registratie opgenomen objecten van het desbetreffende type.                                                                                                                                                              |                                          | *Tagged value*                                                                                                                                                  |
-| **Toelichting√**              | 0..1              | Algemeen metagegeven.                                                                                                                                                                                                                                                                                                                    |                                          | *Tagged value*                                                                                                                                                  |
-| **Indicatie abstract object** | 1                 | Conceptueel model: indicatie dat het objecttype een generalisatie is, waarvan een object als specialisatie altijd voorkomt in de hoedanigheid van een (en slechts één) van de specialisaties van het betreffende objecttype. Logisch model: Indicatie dat er geen instanties (objecten) voor het betreffende objecttype mogen voorkomen. | *isAbstract bij de metaclass Classifier* | *Abstract*                                                                                                                                                      |
+| **Aspect** [Zie noot](#uml-n-1) | **Kardinaliteit** | **Toelichting**                                                                                                                                                                                                                                                                                                                          | **In UML 2.5** [Zie noot](#uml-n-2)      | **In EA** [Zie noot](#uml-n-3)                                                                                                                                  |
+|---------------------------------|-------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Naam√**                       | 1                 | ALgemeen metagegeven [Zie noot](#uml-n-4).                                                                                                                                                                                                                                                                                               | *name van de metaclass Named element*    | *Name*                                                                                                                                                          |
+| **Alias**                       | 0..1              | Algemeen metagegeven.                                                                                                                                                                                                                                                                                                                    |                                          | *Alias*                                                                                                                                                         |
+| **Herkomst**                    | 1                 | Algemeen metagegeven.                                                                                                                                                                                                                                                                                                                    |                                          | *Tagged value*                                                                                                                                                  |
+| **Definitie√**                  | 1                 | Algemeen metagegeven.                                                                                                                                                                                                                                                                                                                    | *Body van de metaclass Comment*          | *Notes*                                                                                                                                                         |
+| **Herkomst definitie√**         | 1                 | Algemeen metagegeven.                                                                                                                                                                                                                                                                                                                    |                                          | *Tagged value*                                                                                                                                                  |
+| **Datum opname**                | 1                 | Algemeen metagegeven.                                                                                                                                                                                                                                                                                                                    |                                          | *Tagged value*                                                                                                                                                  |
+| **Unieke aanduiding√**          | 1                 | Voor objecttypen die deel uitmaken van een (basis)registratie of informatiemodel betreft dit de wijze waarop daarin voorkomende objecten (van dit type) uniek in de registratie worden aangeduid.                                                                                                                                        | *-*                                      | *isId bij attribuutsoort, --- of --- stereotype «isId» bij target role relatiesoort --- of --- een combinatie van deze twee, elk hiervan meer keren toepasbaar* |
+| **Populatie√**                  | 0..1              | Voor objecttypen die deel uitmaken van een (basis)registratie betreft dit de beschrijving van de exemplaren van het gedefinieerde objecttype die in de desbetreffende (basis)­registratie voorhanden zijn.                                                                                                                               |                                          | *Tagged value*                                                                                                                                                  |
+| **Kwaliteit√**                  | 0..1              | Voor objecttypen die deel uitmaken van een registratie betreft dit de waarborgen voor de juistheid van de in de registratie opgenomen objecten van het desbetreffende type.                                                                                                                                                              |                                          | *Tagged value*                                                                                                                                                  |
+| **Toelichting√**                | 0..1              | Algemeen metagegeven.                                                                                                                                                                                                                                                                                                                    |                                          | *Tagged value*                                                                                                                                                  |
+| **Indicatie abstract object**   | 1                 | Conceptueel model: indicatie dat het objecttype een generalisatie is, waarvan een object als specialisatie altijd voorkomt in de hoedanigheid van een (en slechts één) van de specialisaties van het betreffende objecttype. Logisch model: Indicatie dat er geen instanties (objecten) voor het betreffende objecttype mogen voorkomen. | *isAbstract bij de metaclass Classifier* | *Abstract*                                                                                                                                                      |
 
 **Specificatie voor «Attribuutsoort»**
 
 De attribuutsoorten worden naar de volgende aspecten gespecificeerd:
 
-| **Aspect**                                  | **Kardinaliteit** | **Toelichting**                                                                                                                                                                                          | **In UML 2.5**                                                   | **In EA**       |
-|---------------------------------------------|-------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------|-----------------|
-| **Naam √**                                  | 1                 | Algemeen metagegeven.                                                                                                                                                                                    | *name van de metaclass Named element*                            | *Name*          |
-| **Alias**                                   | 0..1              | Algemeen metagegeven.                                                                                                                                                                                    |                                                                  | *Alias*         |
-| **Herkomst**                                | 1                 | Algemeen metagegeven.                                                                                                                                                                                    |                                                                  | *Tagged value*  |
-| **Definitie √**                             | 1                 | Algemeen metagegeven.                                                                                                                                                                                    | *Body van de metaclass Comment*                                  | *Notes*         |
-| **Herkomst definitie √**                    | 1                 | Algemeen metagegeven.                                                                                                                                                                                    |                                                                  | *Tagged value*  |
-| **Datum opname**                            | 1                 | Algemeen metagegeven.                                                                                                                                                                                    |                                                                  | *Tagged value*  |
-| **Domein** *(aspecten van een waarde/data)* |                   | *Domein is zelf geen metadata aspect. Onder het kopje ‘domein’ vallen een aantal metadata aspecten die gelden voor een waarde, oftewel de eisen waaraan een waarde van een attribuutsoort moet voldoen.* |                                                                  |                 |
-| **- Type**                                  | 1                 | Algemeen metagegeven.                                                                                                                                                                                    |                                                                  | *Tagged value*  |
-| **- Lengte**                                | 0..1              | Algemeen metagegeven.                                                                                                                                                                                    |                                                                  | *Tagged value*  |
-| **- Patroon**                               | 0..1              | Algemeen metagegeven.                                                                                                                                                                                    |                                                                  | *Tagged value*  |
-| **- Formeel Patroon**                       | 0..1              | Algemeen metagegeven.                                                                                                                                                                                    |                                                                  | *Tagged value*  |
-| **Indicatie materiële historie √**          | 1                 | Algemeen metagegeven.                                                                                                                                                                                    |                                                                  | *Tagged value*  |
-| **Indicatie formele historie √**            | 1                 | Algemeen metagegeven.                                                                                                                                                                                    |                                                                  | *Tagged value*  |
-| **Locatie**                                 | 0..1              | Algemeen metagegeven.                                                                                                                                                                                    |                                                                  | *taggged value* |
-| **Kardinaliteit √**                         | 1                 | Algemeen metagegeven.                                                                                                                                                                                    | *lowerValue en upperValue van de metaclass Multiplicity Element* | *Multiplicity*  |
-| **Authentiek √**                            | 1                 | Algemeen metagegeven.                                                                                                                                                                                    |                                                                  | *Tagged value*  |
-| **Toelichting √**                           | 0..1              | Algemeen metagegeven.                                                                                                                                                                                    |                                                                  | *Tagged value*  |
-| **Indicatie afleidbaar**                    | 1                 | Algemeen metagegeven.                                                                                                                                                                                    | *isDerived bij metaclass Property*                               | *isDerived*     |
-| **Mogelijk geen waarde**                    | 1                 | Algemeen metagegeven.                                                                                                                                                                                    |                                                                  | *Tagged value*  |
-| **Identificerend**                          | 0..1              | Algemeen metagegeven.                                                                                                                                                                                    | *isID bij de metaclass Property*                                 | *isID*          |
+| **Aspect**                                  | **Kardinaliteit** | **Toelichting**                                                                                                                                                                                          | **In UML 2.5**                                                   | **In EA**      |
+|---------------------------------------------|-------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------|----------------|
+| **Naam √**                                  | 1                 | Algemeen metagegeven.                                                                                                                                                                                    | *name van de metaclass Named element*                            | *Name*         |
+| **Alias**                                   | 0..1              | Algemeen metagegeven.                                                                                                                                                                                    |                                                                  | *Alias*        |
+| **Herkomst**                                | 1                 | Algemeen metagegeven.                                                                                                                                                                                    |                                                                  | *Tagged value* |
+| **Definitie √**                             | 1                 | Algemeen metagegeven.                                                                                                                                                                                    | *Body van de metaclass Comment*                                  | *Notes*        |
+| **Herkomst definitie √**                    | 1                 | Algemeen metagegeven.                                                                                                                                                                                    |                                                                  | *Tagged value* |
+| **Datum opname**                            | 1                 | Algemeen metagegeven.                                                                                                                                                                                    |                                                                  | *Tagged value* |
+| **Domein** *(aspecten van een waarde/data)* |                   | *Domein is zelf geen metadata aspect. Onder het kopje ‘domein’ vallen een aantal metadata aspecten die gelden voor een waarde, oftewel de eisen waaraan een waarde van een attribuutsoort moet voldoen.* |                                                                  |                |
+| **- Type**                                  | 1                 | Algemeen metagegeven.                                                                                                                                                                                    |                                                                  | *Tagged value* |
+| **- Lengte**                                | 0..1              | Algemeen metagegeven.                                                                                                                                                                                    |                                                                  | *Tagged value* |
+| **- Patroon**                               | 0..1              | Algemeen metagegeven.                                                                                                                                                                                    |                                                                  | *Tagged value* |
+| **- Formeel Patroon**                       | 0..1              | Algemeen metagegeven.                                                                                                                                                                                    |                                                                  | *Tagged value* |
+| **Indicatie materiële historie √**          | 1                 | Algemeen metagegeven.                                                                                                                                                                                    |                                                                  | *Tagged value* |
+| **Indicatie formele historie √**            | 1                 | Algemeen metagegeven.                                                                                                                                                                                    |                                                                  | *Tagged value* |
+| **Kardinaliteit √**                         | 1                 | Algemeen metagegeven.                                                                                                                                                                                    | *lowerValue en upperValue van de metaclass Multiplicity Element* | *Multiplicity* |
+| **Authentiek √**                            | 1                 | Algemeen metagegeven.                                                                                                                                                                                    |                                                                  | *Tagged value* |
+| **Toelichting √**                           | 0..1              | Algemeen metagegeven.                                                                                                                                                                                    |                                                                  | *Tagged value* |
+| **Indicatie afleidbaar**                    | 1                 | Algemeen metagegeven.                                                                                                                                                                                    | *isDerived bij metaclass Property*                               | *isDerived*    |
+| **Mogelijk geen waarde**                    | 1                 | Algemeen metagegeven.                                                                                                                                                                                    |                                                                  | *Tagged value* |
+| **Identificerend**                          | 0..1              | Algemeen metagegeven.                                                                                                                                                                                    | *isID bij de metaclass Property*                                 | *isID*         |
 
 **Specificatie voor «Gegevensgroep»**
 
@@ -318,22 +329,22 @@ aspecten gespecificeerd.
 
 De generalisaties worden naar het volgende aspect gespecificeerd:
 
-| **Aspect**                 | **Kardina liteit** | **Toelichting**                                                     | **In UML 2.5**                                      | **In EA** |
-|----------------------------|--------------------|---------------------------------------------------------------------|-----------------------------------------------------|-----------|
-| **Naam**                   | 0..1               | Algemeen metagegeven. *Standaard ‘is specialisatie van’.*           | *name van de etaclass Named element*                | *Name*    |
-| **Alias**                  | 0..1               | Algemeen metagegeven.                                               |                                                     | *Alias*   |
-| **Subtype**             | 1                  | Het objecttype dat een specialisatie is van een (ander) objecttype. | */source: related Element bij Relationship Element* | *Source*  |
+| **Aspect**    | **Kardina liteit** | **Toelichting**                                                     | **In UML 2.5**                                      | **In EA** |
+|---------------|--------------------|---------------------------------------------------------------------|-----------------------------------------------------|-----------|
+| **Naam**      | 0..1               | Algemeen metagegeven. *Standaard ‘is specialisatie van’.*           | *name van de etaclass Named element*                | *Name*    |
+| **Alias**     | 0..1               | Algemeen metagegeven.                                               |                                                     | *Alias*   |
+| **Subtype**   | 1                  | Het objecttype dat een specialisatie is van een (ander) objecttype. | */source: related Element bij Relationship Element* | *Source*  |
 | **Supertype** | 1                  | Het objecttype dat de generalisatie is van een (ander) objecttype.  | */target: related Element bij Relationship Element* | *Target*  |
 
 **Specificatie voor «Generalisatie» tussen datatypes**
 
 De generalisaties worden naar het volgende aspect gespecificeerd:
 
-| **Aspect**                 | **Kardinaliteit** | **Toelichting**                                                 | **In UML 2.5**                                      | **In EA** |
-|----------------------------|-------------------|-----------------------------------------------------------------|-----------------------------------------------------|-----------|
-| **Naam**                   | 0..1              | Algemeen metagegeven.                                           | *name van de metaclass Named element*               | *Name*    |
-| **Alias**                  | 0..1              | Algemeen metagegeven.                                           |                                                     | *Alias*   |
-| **Suptype**               | 1                 | Het datatype dat een specialisatie is van een (ander) datatype. | */source: related Element bij Relationship Element* | *Source*  |
+| **Aspect**    | **Kardinaliteit** | **Toelichting**                                                 | **In UML 2.5**                                      | **In EA** |
+|---------------|-------------------|-----------------------------------------------------------------|-----------------------------------------------------|-----------|
+| **Naam**      | 0..1              | Algemeen metagegeven.                                           | *name van de metaclass Named element*               | *Name*    |
+| **Alias**     | 0..1              | Algemeen metagegeven.                                           |                                                     | *Alias*   |
+| **Suptype**   | 1                 | Het datatype dat een specialisatie is van een (ander) datatype. | */source: related Element bij Relationship Element* | *Source*  |
 | **Supertype** | 1                 | Het datatype dat de generalisatie is van een (ander) datatype.  | */target: related Element bij Relationship Element* | *Target*  |
 
 **Specificatie voor «Relatieklasse»**
@@ -366,15 +377,15 @@ Externe koppelingen worden naar de volgende aspecten gespecificeerd.
 
 Voor referentielijsten worden de volgende aspecten gespecificeerd:
 
-| **Aspect**       | **Kardinaliteit** | **Toelichting**           | **In UML 2.5**                       | **In EA**      |
-|------------------|-------------------|---------------------------|--------------------------------------|----------------|
-| **Naam**         | 1                 | Algemeen metagegeven.     | *name van de metaclass Namedelement* | *Name*         |
-| **Alias**        | 0..1              | Algemeen metagegeven.     |                                      | *Alias*        |
-| **Herkomst**     | 1                 | Algemeen metagegeven. <span class='note'>[Zie noot](#uml-n-5)</span> |            | *Tagged value* |
-| **Definitie**    | 1                 | Algemeen metagegeven.     | *Body van de metaclass Comment*      | *Notes*        |
-| **Datum opname** | 1                 | Algemeen metagegeven.     |                                      | *Tagged value* |
-| **Toelichting**  | 0..1              | Algemeen metagegeven.     |                                      | *Tagged value* |
-| **Locatie**      | 1..1              | Algemeen metagegeven.     |                                      | *Tagged value* |
+| **Aspect**       | **Kardinaliteit** | **Toelichting**                            | **In UML 2.5**                       | **In EA**      |
+|------------------|-------------------|--------------------------------------------|--------------------------------------|----------------|
+| **Naam**         | 1                 | Algemeen metagegeven.                      | *name van de metaclass Namedelement* | *Name*         |
+| **Alias**        | 0..1              | Algemeen metagegeven.                      |                                      | *Alias*        |
+| **Herkomst**     | 1                 | Algemeen metagegeven. [Zie noot](#uml-n-5) |                                      | *Tagged value* |
+| **Definitie**    | 1                 | Algemeen metagegeven.                      | *Body van de metaclass Comment*      | *Notes*        |
+| **Datum opname** | 1                 | Algemeen metagegeven.                      |                                      | *Tagged value* |
+| **Toelichting**  | 0..1              | Algemeen metagegeven.                      |                                      | *Tagged value* |
+| **Locatie**      | 1..1              | Algemeen metagegeven.                      |                                      | *Tagged value* |
 
 **Specificatie voor «Referentie element»**
 
@@ -541,8 +552,8 @@ aspecten gespecificeerd:
 | **Specificatie tekst**   | 0..1              | De specificatie van de constraint in normale tekst.                       |                                       | *Notes (type = invariant)* |
 | **Specificatie formeel** | 0..1              | De beschrijving van de constraint in een formele specificatietaal, in OCL |                                       | *Notes (type =OCL)*        |
 
-
-# UML Tooling
+UML Tooling
+===========
 
 Er is een metamodel *profiel* gemaakt in Sparx Enterprise Architect, dat
 gebruikt kan worden bij het modelleren van een informatiemodel. Dit profiel kan
@@ -559,37 +570,37 @@ en is te vinden op [www.imvertor.org](http://www.imvertor.org).
 
 **Voetnoten**
 
-<aside id='uml-n-1' class='note'>
-    In de kolom **UML2.5** is opgenomen hoe het element in UML2.5 is benoemd. Het
-    betreft veelal overerving van een gegeven van een UML metaclass die niet in dit
-    document is benoemd.
-</aside>
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In de kolom **UML2.5** is opgenomen hoe het element in UML2.5 is benoemd. Het
+betreft veelal overerving van een gegeven van een UML metaclass die niet in dit
+document is benoemd.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-<aside id='uml-n-2' class='note'>
-    **Aspect** met aanduiding √ is conform stelselafspraken voor basisregistraties.
-    Een \* is conform de stelselcatalogus. Die ook de paragraaf in H3 hierover.
-</aside>
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+**Aspect** met aanduiding √ is conform stelselafspraken voor basisregistraties.
+Een \* is conform de stelselcatalogus. Die ook de paragraaf in H3 hierover.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-<aside id='uml-n-3' class='note'>
-    Rode tekst in de kolom ‘In EA’ betreft een standaard element binnen Sparx
-    EA. Zwarte tekst in de kolom ‘in EA’ betreft uitbreiding op UML Metamodel, via
-    tagged values of aanvullende stereotypes.
-</aside>
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Rode tekst in de kolom ‘In EA’ betreft een standaard element binnen Sparx
+EA. Zwarte tekst in de kolom ‘in EA’ betreft uitbreiding op UML Metamodel, via
+tagged values of aanvullende stereotypes.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-<aside id='uml-n-4' class='note'>
-    In (basis) registraties is dit meestal gespecificeerd in een catalogus van
-    objecten en begrippen. Deze opmerking geldt voor elk metadata aspect naam van de
-    andere modelelementen. Indien het modelelement niet voorkomt in een dergelijke
-    catalogus is dan kiest u uiteraard een eigen naam.
-</aside>
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In (basis) registraties is dit meestal gespecificeerd in een catalogus van
+objecten en begrippen. Deze opmerking geldt voor elk metadata aspect naam van de
+andere modelelementen. Indien het modelelement niet voorkomt in een dergelijke
+catalogus is dan kiest u uiteraard een eigen naam.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-<aside id='uml-n-5' class='note'>
-    Deze specificatie is toegevoegd t.o.v. de registratiecatalogus aangezien
-    het hier niet om een registratie gaat maar wel duidelijk moet zijn in welke
-    registratie de (verwijzing naar de) lijst voorkomt (indien van toepassing).
-</aside>
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Deze specificatie is toegevoegd t.o.v. de registratiecatalogus aangezien
+het hier niet om een registratie gaat maar wel duidelijk moet zijn in welke
+registratie de (verwijzing naar de) lijst voorkomt (indien van toepassing).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-<aside id='uml-n-6' class='note'>
-    Element import wordt in UML ingezet voor het importeren van een NamedElement uit een ander package. 
-    In dit metamodel wordt de alias (nog) niet zo gebruikt.
-</aside>
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Element import wordt in UML ingezet voor het importeren van een NamedElement uit een ander package. 
+In dit metamodel wordt de alias (nog) niet zo gebruikt.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
