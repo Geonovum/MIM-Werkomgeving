@@ -67,7 +67,7 @@ Alle drie hebben een eigenwaarde voor een tagged value ‘keuzetype’ bij
 anders. Encoding regels moeten hier rekening mee houden.
 
 **1) Keuze uit attributen die onder één hoofdattribuut vallen**: (tagged value
-‘keuzetype”= attribuut
+‘keuzetype”= attribuut)
 
 Voorbeeld:
 
@@ -81,7 +81,7 @@ belang deze zullen daarom ook in een technische omgeving geimplementeerd moeten
 worden.
 
 **2) Keuze uit datatypen bij één attribuut:** (tagged value ‘keuzetype’=
-datatype
+datatype)
 
 Voorbeeld:
 
@@ -97,7 +97,8 @@ betekenis en zijn alleen om de datatype GM_Surface en GM_Point te koppelen aan
 het attribuut geometrie. In een technische omgeving moeten ze daarom niet
 geimplementeerd worden.
 
-**3) Keuze uit verschillende target objecttypen met één relatie.**
+**3) Keuze uit verschillende target objecttypen met één relatie.** (tagged value
+‘keuzetype”= relatietarget)
 
 Voorbeeld:
 
