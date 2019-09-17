@@ -344,7 +344,7 @@ De generalisaties worden naar het volgende aspect gespecificeerd:
 |---------------|-------------------|-----------------------------------------------------------------|-----------------------------------------------------|-----------|
 | **Naam**      | 0..1              | Algemeen metagegeven.                                           | *name van de metaclass Named element*               | *Name*    |
 | **Alias**     | 0..1              | Algemeen metagegeven.                                           |                                                     | *Alias*   |
-| **Suptype**   | 1                 | Het datatype dat een specialisatie is van een (ander) datatype. | */source: related Element bij Relationship Element* | *Source*  |
+| **Subtype**   | 1                 | Het datatype dat een specialisatie is van een (ander) datatype. | */source: related Element bij Relationship Element* | *Source*  |
 | **Supertype** | 1                 | Het datatype dat de generalisatie is van een (ander) datatype.  | */target: related Element bij Relationship Element* | *Target*  |
 
 **Specificatie voor «Relatieklasse»**
@@ -625,6 +625,6 @@ registratie de (verwijzing naar de) lijst voorkomt (indien van toepassing).
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Element import wordt in UML ingezet voor het importeren van een NamedElement uit een ander package. 
+Element import wordt in UML ingezet voor het importeren van een NamedElement uit een ander package.
 In dit metamodel wordt de alias (nog) niet zo gebruikt.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
