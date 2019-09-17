@@ -120,27 +120,20 @@ Precisering = De naam maakt de aard van het stereotype preciezer.
 
 | **Aard**| **MIM 1.1**      				| **MIM benaming  ISO**  			| **Reden** 	|
 |---------|---------------------------------|-----------------------------------|---------------|
-|  ST     |	Objecttype       				|	*FeatureType* 					|  Vertaling	|
-|   	  |									|   (ISO 19109) GF_FeatureType		|				|
-|  ST     |	Attribuutsoort 					|	*AttributeType*					|  Vertaling	|
-|   	  |									|   (ISO 19109) GF_AttributeType	| 				|	
-|  ST     |	Gegevensgroeptype 				|	AttributeGroupType				|  Vertaling en |
-|		  |									|									|  precisering	|
-|  ST     |	Gegevensgroep  					|	AttributeGroup 					| Vertaling en  |
-|		  |									|									|  precisering	|
-|  ST     |	Relatiesoort  					|	*AssociationType*				|  Vertaling	|
-|         |									|   (ISO 19109) GF_AssociationType	|				|
+|  ST     |	Objecttype       				|	*FeatureType* (ISO 19109) GF_FeatureType					|  Vertaling	|
+|  ST     |	Attribuutsoort 					|	*AttributeType*	(ISO 19109) GF_AttributeType				|  Vertaling	|
+|  ST     |	Gegevensgroeptype 				|	AttributeGroupType				|  Vertaling en precisering |
+|  ST     |	Gegevensgroep  					|	AttributeGroup 					| Vertaling en precisering |
+|  ST     |	Relatiesoort  					|	*AssociationType* (ISO 19109) GF_AssociationType				|  Vertaling	|
 |  ST     |	Relatieklasse  					|	AssociationClass				|  Vertaling	|
 |  ST     |	Externe koppeling	  			|   ExternalLink					|  Vertaling	|
-|  ST     |	Relatierol  					|	*AssociationRole*				|  Vertaling	|
-|         |									|   (ISO 19109) GF_AssociationRole	|				|
+|  ST     |	Relatierol  					|	*AssociationRole* (ISO 19109) GF_AssociationRole			|  Vertaling	|
 |  ST     |	Referentielijst  				|	ReferenceList					|  Vertaling	|
 |  ST     |	Referentie element  			|	ReferenceElement				|  Vertaling	|
 |  ST     |	Enumeratie  					|	Enumeration						|  Vertaling	|
 |  ST     |	Enumeratiewaarde  				|	Enum							|  Vertaling	|
 |  ST     |	CodeList  						|	*CodeList*  (ISO 19103)     	|   	-		|
-|  ST     |	Datatype	  					|   SimpleType						|  Vertaling en |
-|		  |									|									|  precisering	|
+|  ST     |	Datatype	  					|   SimpleType						|  Vertaling en precisering |
 |  ST     |	Complex datatype  				|	ComplexType					  	|  Vertaling	|
 |  ST     |	Data element  					|	DataElement						|  Vertaling	|
 |  ST     |	Keuze  							|	Union Defines a union data type.|	    -		|
