@@ -234,8 +234,8 @@ opgebouwd en daardoor alom te begrijpen zijn. De metataal beschrijft als het
 ware de grammatica van de modelleertaal. Het metamodel in dit document is
 gebaseerd op UML.
 
-### UML
-Voor zowel het metamodel als informatiemodellen wordt uitgegaan van UML.
+### Uitdrukken in UML
+Zowel het metamodel als informatiemodellen kan woren uitgedrukt in UML.
 Registraties en afnemers hiervan kunnen deze gebruiken voor de inrichting van
 hun situatiespecifieke gegevenshuishouding. Belangrijk is dat de lezer eerst
 begrijpt wat we onder een informatiemodel en een metamodel verstaan en verder is
@@ -291,6 +291,13 @@ InfrastructureLibrary) kunnen bestaande metaclasses uitgebreid worden zonder dat
 er nieuwe metaclasses gedefinieerd hoeven te worden en dus zonder aanpassing van
 het basale UML-metamodel (M2). De extensiemechanismen hiervoor zijn stereotypes,
 tagged values en constraints.
+
+### Uitdrukken in Linked Data
+
+*HIER NOG EEN BESCHRIJVING TOEVOEGEN*
+*HIER NOG EEN BESCHRIJVING TOEVOEGEN*
+*HIER NOG EEN BESCHRIJVING TOEVOEGEN*
+*HIER NOG EEN BESCHRIJVING TOEVOEGEN*
 
 ### Een eigen extensie op het metamodel
 Indien er extra metamodelconstructies nodig zijn voor een informatiemodel, dan
