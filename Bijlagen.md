@@ -98,12 +98,19 @@ MIM is een specificatie die is ontstaan vanuit de behoeften van enkele basisregi
 Met name de relatie met de modelleertechnieken van de ISO 19100 serie is van belang. Deze ISO standaarden vormen de ondergrond voor o.a. Inspire en NEN3610. 
 
 In het volgende overzicht geldt het volgende
+
 Kolom Aard waarden:
+
 ST 	Stereotype
+
 TV Tagged value naam
+
 VAL tagged value waarde
 
 Kolom MIM  benaming ISO waarden:
+
+
+
 Als *schuin gedrukt*, dan is de naam overgenomen voor dezelfde constructie uit het General Feature Model [ISO 19109].
 
 
@@ -166,4 +173,3 @@ Precisering = De naam maakt de aard van het stereotype preciezer.
 |  VAL    |	Landelijk kerngegeven  			|	National base data				|  Vertaling	|
 |  VAL    |	Gemeentelijk kerngegeven  		|	Municipal base data				|  Vertaling	|
 |  VAL    |	Overig	  						|   Other							|  Vertaling	|
-|---------|---------------------------------|-----------------------------------|---------------|
