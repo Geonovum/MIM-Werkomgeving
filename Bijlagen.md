@@ -92,7 +92,7 @@ In deze versie zijn de volgende issues verwerkt:
 | [Issue #60](https://github.com/Geonovum/MIM-Werkomgeving/issues/60)  | Type fout constraint bij referentie element |
 
 
-## Vertaling naar engels’ 
+## Vertaling naar engels 
 
 MIM is een specificatie die is ontstaan vanuit de behoeften van enkele basisregistraties en afnemers daarvan. Daarbij is de aansluiting bij internationale (geo)normen gewaarborgd. Echter de precieze aansluiting bij die normen is niet altijd expliciet gemaakt in MIM. 
 Met name de relatie met de modelleertechnieken van de ISO 19100 serie is van belang. Deze ISO standaarden vormen de ondergrond voor o.a. Inspire en NEN3610. 
