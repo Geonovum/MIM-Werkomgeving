@@ -112,7 +112,7 @@ Vertaling = Hetzelfde ding, vertaald in het Engels. De aansluiting bij ISO 19100
 Precisering = De naam maakt de aard van het stereotype preciezer.
 
 | **Aard**| **MIM 1.1**      				| **MIM benaming  ISO**  			| **Reden** 	|
-|---------|---------------------------------|--============================-	|---------------|
+|---------|---------------------------------|-----------------------------------|---------------|
 |  ST     |	Objecttype       				|	*FeatureType* 					|  Vertaling	|
 |   	  |									|   (ISO 19109) GF_FeatureType		|				|
 |  ST     |	Attribuutsoort 					|	*AttributeType*					|  Vertaling	|
@@ -166,3 +166,4 @@ Precisering = De naam maakt de aard van het stereotype preciezer.
 |  VAL    |	Landelijk kerngegeven  			|	National base data				|  Vertaling	|
 |  VAL    |	Gemeentelijk kerngegeven  		|	Municipal base data				|  Vertaling	|
 |  VAL    |	Overig	  						|   Other							|  Vertaling	|
+|---------|---------------------------------|-----------------------------------|---------------|
