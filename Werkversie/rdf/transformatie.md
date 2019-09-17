@@ -58,13 +58,17 @@ In de SPARQL rules wordt gebruik gemaakt van een aantal SPARQL functies. In onde
 >
 > Er is, behalve `mim:naam`, geen formeel identificerend gegeven voor de modelelementen. Dit maakt het noodzakelijk om de URI op te bouwen uit de naam van het modelelement, eventueel aangevuld met gegevens van de package. In bepaalde gevallen is het echter veel logischer om te verwijzen naar elementen buiten het eigen model, zoals in Linked Data gebruikelijk is. Bijvoorbeeld bij externe koppelingen, referentielijsten en elementen in de "view" en "extern" packages.
 >
-> Mogelijke oplossing is het toevoegen van het aspect `mim:identificatie` dat als waarde een URI heeft. Indien dit veld aanwezig is, dan wordt dit veld gebruikt als identificatie i.p.v. de `mim:naam`.
+> Mogelijke oplossing is het toevoegen van het aspect `mim:identificatie` dat als waarde een URI heeft. Indien dit veld aanwezig is, dan wordt dit veld gebruikt als identificatie i.p.v. de `mim:naam`. Mogelijk alternatief is de mogelijkheid om namespace te ondersteunen bij de package (voorkeur). Uitdaging is ook dat de naam mogelijk natuurlijke taal kan zijn, wat je dan nog moet vertalen. Andere uitdaging is dat elk modelelement in één package ook in die namespace komt. En soms wil je attribuutsoorten hergebruiken en daar dus iets uit een andere namespace wilt gebruiken. Mogelijk kan het veld `mim:locatie` hier nog een rol spelen, aangezien dit een vergelijkbare rol heeft.
 
 > **ISSUE**
 >
 > Hoewel nergens expliciet geformuleerd, kent een MiM model in zijn representatie volgorde: attribuutsoorten worden in een bepaalde volgorde getoond binnen een objecttype, referentiewaarden worden in een bepaalde volgorde getoond in een referentielijst. Het MiM kent echter geen aspect waarin deze volgorde is opgenomen. Hierdoor zal de volgorde verdwijnen in het getransformeerde model en zal sprake zijn van een willekeurige volgorde.
 >
 > Mogelijke oplossing is het toevoegen van het aspect `mim:volgnummer`, waarmee een volgorde kan worden opgegeven.
+
+> **ISSUE**
+>
+> Er zit nog een foutje in de transformatie: `rdfs:seeAlso` wordt in sommige gevallen gebruikt om meerdere resources. Bijvoorbeeld `mim:Objecttype` leidt tot zowel een `owl:Class` als een `sh:NodeShape`. Gevolg is dat bij de transformatie aspecten als `mim:naam`, `mim:definitie`, `mim:constraint` bij beide resources terecht komen. Beter zou zijn als het maar bij één van de twee terecht komt.
 
 ## Overzicht
 
@@ -77,7 +81,7 @@ Onderstaande tabellen geven een overzicht van alle transformaties en een referen
 |`mim:Objecttype`|`owl:Class`, `sh:NodeShape`|[Objecttype](#objecttype)|
 |`mim:Attribuutsoort`|`owl:ObjectProperty`, `owl:DatatypeProperty`, `sh:PropertyShape`|[Attribuutsoort](#attribuutsoort)|
 |`mim:Gegevensgroep`|`sh:PropertyShape`, `owl:ObjectProperty`|[Gegevensgroep](#gegevensgroep)|
-|`mim:Gegevensgroeptype`|`sh:NodeShape`|[Gegevensgroeptype](#gegevensgroeptype)|
+|`mim:Gegevensgroeptype`|`owl:Class`, `sh:NodeShape`|[Gegevensgroeptype](#gegevensgroeptype)|
 |`mim:Generalisatie`|`rdfs:subClassOf` `rdf:Statement`|[Generalisatie](#generalisatie)|
 |`mim:Relatiesoort`|`sh:PropertyeShape`, `owl:ObjectProperty`|[Relatiesoort](#relatiesoort)|
 |`mim:Relatieklasse`|`rdf:Statement`|[Relatieklasse](#relatieklasse)|
@@ -90,7 +94,7 @@ Onderstaande tabellen geven een overzicht van alle transformaties en een referen
 |`mim:Codelist`|n.n.b.|[Codelist](#codelist)|
 |`mim:Datatype`|n.v.t.|Abstracte klasse|
 |`mim:PrimitiefDatatype`|`rdfs:Datatype`|[Primitief datatype](#primitief-datatype)|
-|`mim:GestructureerdDatatype`|`owl:Class`, `sh:NodeShape`|[Gestructureerd datatype](#gestructureerd-datatype)|
+|`mim:GestructureerdDatatype`|`sh:NodeShape`|[Gestructureerd datatype](#gestructureerd-datatype)|
 |`mim:DataElement`|`owl:ObjectProperty`, `owl:DatatypeProperty`, `sh:PropertyShape`|[Data element](#data-element)|
 |`mim:Union`|`sh:xone`, `rdf:List`|[Union](#union)|
 |`mim:UnionElement`|Blank node binnen de `rdf:List`|[Union element](#union-element)|
@@ -181,7 +185,9 @@ Een `mim:Objecttype` wordt vertaald naar een `owl:Class` in combinatie met een `
 >
 > Mogelijke oplossing: er zijn meerdere oplossingen denkbaar: (a) in het MiM opnemen dat de naam uniek moet zijn, ook over packages heen. (b) afzonderlijke ontologieën (namespaces) maken per package. (c) package naam opnemen waar het mis gaat.
 >
-> Voorlopige aanname is dat sprake is van (a)
+> Dit is gerelateerd aan de issue over packages. MiM zegt niet zoveel over packages, maar dit zou wel beter moeten zijn. De standaarden waar NEN 3610 op gebaseerd zijn, zeggen hier wel wat over: hier nog naar kijken. Zie ook issue over `mim:naam`, mogelijk `mim:namespace` ondersteunen en dan dat alles uniek is binnen de package die een namespace heeft. Binnen UML is de klassenaam wel uniek binnen een package, maar MiM zegt hier formeel niet iets over.
+>
+> Voorlopige aanname is dat sprake is van (a).
 
 ```
 CONSTRUCT {
@@ -214,11 +220,11 @@ In OWL is een property anders dan in het MiM een *first class citizen*. Dit bete
 >
 > Mogelijke oplossing: toevoegen van een kenmerk bij een attribuutsoort waarin je de scope van de attribuutsoort kunt opgeven: algemeen of klasse-specifiek. In het geval van een klasse-specifiek atribuutsoort, dan wordt in OWL de naam afgeleid van zowel de attribuutsoort als het objecttype (of gegevensgroeptype). Of er zou een extra kenmerk bij kunnen met daar de "globale naam" van het attribuutsoort. Dat is mogelijk wat makkelijker. Vervolgens zou de globale naam uniek moeten zijn voor het gehele model, waarbij standaard de globale naam gelijk is aan de naam van de attribuutsoort (en anders moet je een foutmelding krijgen)
 >
-> Voorlopige aanname: alle namen van attribuutsoorten zijn uniek.
+> Voorlopige aanname: alle namen van attribuutsoorten zijn uniek. De kardinaliteit in het MiM model ondersteunt alleen dat een attribuutsoort uniek bij (bv) een objecttype hoort, maar dit is op zich ook juist want de PropertyShape hoort wel uniek bij de NodeShape, alleen (semantisch) kan de rdf:Property loshangen. Het is wel een discussie wat je zou willen. Op zich is het goed als er bij het MiM al over wordt nagedacht, en dat hier extra eisen aan worden gesteld (bv in het meest extreme geval: alle attribuutsoortnamen moeten unieke zijn..)
 
 > **ISSUE**
 >
-> De transformatie houdt nog niet rekening met het feit dat sommige datatypen in RDF juist geen literals zijn, maar resources. In die gevallen zou dus niet gesproken moeten worden over een `owl:DatatypeProperty`, maar een `owl:ObjectProperty`. Alleen de datatypes enumeratie (klopt dat?) en primitief datatype zouden naar een literal gaan, de overigen naar resources.
+>De transformatie houdt nog niet rekening met het feit dat sommige datatypen in RDF juist geen literals zijn, maar resources. In die gevallen zou dus niet gesproken moeten worden over een `owl:DatatypeProperty`, maar een `owl:ObjectProperty`. Alleen de datatypes enumeratie (klopt dat?) en primitief datatype zouden naar een literal gaan, de overigen naar resources.
 
 De URI van de propertyshape wordt afgeleid van de naam van het modelelement dat de attribuutsoort "bezit" en de naam van de attribuutsoort. De URI van de datatypeproperty wordt afgeleid van de naam van de attribuutsoort.
 
@@ -245,7 +251,7 @@ WHERE {
 
 > Een typering van een groep van gelijksoortige gegevens die voor een objecttype van toepassing is.
 
-Een `mim:Gegevensgroep` wordt vertaald naar een `sh:PropertyShape` in combinatie met een `owl:ObjectProperty`. De nodekind van de propertyshape is een `sh:BlankNode`. Gedachte hierachter is dat de gegevensgroep de verbinding is tussen een objecttype en een gegevensgroeptype. Een gegevensgroeptype is vervolgens een groep van samenhangende attribuutsoorten, wat overeen komt met een nodeshape (zie ook gegevensgroeptype). Omdat een gegevensgroeptype geen eigen identiteit heeft, zal dit gemodelleerd worden als blank node.
+Een `mim:Gegevensgroep` wordt vertaald naar een `sh:PropertyShape` in combinatie met een `owl:ObjectProperty`. De nodekind van de propertyshape is een `sh:BlankNode`. Gedachte hierachter is dat de gegevensgroep de verbinding is tussen een objecttype en een gegevensgroeptype. Een gegevensgroeptype is vervolgens een groep van samenhangende attribuutsoorten, wat overeen komt met een class en een nodeshape (zie ook gegevensgroeptype). Omdat een gegevensgroeptype geen eigen identiteit heeft, zal dit gemodelleerd worden als blank node.
 
 De URI van de propertyshape wordt afgeleid van de naam van het modelelement dat de gegevensgroep "bezit" en de naam van de gegevensgroep. De URI van de objectproperty wordt afgeleid van de naam van de gegevensgroep.
 
@@ -272,7 +278,7 @@ WHERE {
 
 > Een groep van met elkaar samenhangende attribuutsoorten. Een gegevensgroeptype is altijd een type van een gegevensgroep.
 
-Een `mim:Gegevensgroeptype` wordt vertaald naar een `sh:NodeShape`.
+Een `mim:Gegevensgroeptype` wordt vertaald naar een `owl:Class` en een `sh:NodeShape`, net zoals een `mim:Objecttype`.
 
 > **ISSUE**
 >
@@ -284,19 +290,23 @@ Een `mim:Gegevensgroeptype` wordt vertaald naar een `sh:NodeShape`.
 >
 > NB de naam van een gegevensgroeptype is net als die van een objecttype wel uniek binnen een package.
 
-> **ISSUE**
+> **ONDERZOEKEN**
 >
-> Als je kijkt naar de beschrijving van Gegevensgroeptype versus Gestructureerd Datatype, dan lijkt een Gegevensgroeptype veel meer iets te zijn dat (ook) een klasse zou moeten krijgen, er is immers sprake van iets "semantisch". Zeker het voorbeeld van het MiM (waar gesproken wordt over "Ogen"), ligt een klasse voor de hand. Daar staat tegenover dat in de uitleg ook wordt gesproken over "De attribuutsoorten blijven bij het objecttype horen". Dit lijkt echter voor ogen niet op te gaan. Immers: stel je hebt een blauw oog met sterkte -2 en een groen oog met sterkte -1, dan verlies je informatie als je de attribuutsoorten aan het objecttype hangt. Of wordt hier iets anders bedoeld?
+> Er is nu geen verschil meer tussen een gegevensgroeptype en een objecttype. Het MiM maakt echter wel onderscheid. Het verschil is alleen zichtbaar doordat een gegevensgroeptype als blank node verbonden is (zie ook [Gegevensgroep](#gegevensgroep)).
 
 ```
 CONSTRUCT {
+  ?class a owl:Class.
+  ?class rdfs:seeAlso ?gegevensgroeptype.
   ?nodeshape a sh:NodeShape.
-  ?nodeshape rdfs:seeAlso ?objecttype.
+  ?nodeshape rdfs:seeAlso ?gegevensgroeptype.
+  ?nodeshape sh:targetClass ?class.
 }
 WHERE {
-  ?objecttype a mim:Objecttype.
-  ?objecttype mim:naam ?objecttypenaam.
-  BIND (t:nodeshapeuri(?objecttypenaam) as ?nodeshape)
+  ?gegevensgroeptype a mim:Gegevensgroeptype.
+  ?gegevensgroeptype mim:naam ?gegevensgroeptypenaam.
+  BIND (t:classuri(?gegevensgroeptypenaam) as ?class)
+  BIND (t:nodeshapeuri(?gegevensgroeptypenaam) as ?nodeshape)
 }
 ```
 
@@ -310,15 +320,21 @@ Een `mim:Generalisatie` wordt vertaald naar een `rdfs:subClassOf`.
 
 > **ISSUE**
 >
+> Generalisatie is in Linked Data ook mogelijk op properties, en daar ook wel gebruikelijk. Dit wordt nu niet door het MiM ondersteunt. Het is handig als dit wordt toegevoegd.
+
+> **ISSUE**
+>
 > Vertaling van een mim:Generalisatie naar een rdfs:subClassOf betekent dat wat in het MiM een metaklasse is, in Linked Data een eigenschap is geworden en geen (meta)class. Hierdoor is het niet mogelijk om extra kenmerken te verbinden aan een generalisatie. Dit betekent dat het niet mogelijk is om de generalisatie een naam of een alias te geven.
 >
 > Voorlopige oplossing is om een rdf:Statement toe te voegen. Alternatief zou zijn om een subklassen te maken van `rdfs:subClassOf`.
+> We beschouwen dit issue als opgelost, wel even rationale toevoegen.
 
 ```
 CONSTRUCT {
   ?subject rdfs:subClassOf ?object.
+  ?statement a rdf:Statement.
   ?statement rdf:subject ?subject.
-  ?statement rdf:predicate ?rdfs:subClassOf.
+  ?statement rdf:predicate rdfs:subClassOf.
   ?statement rdf:object ?object.
   ?statement rdfs:seeAlso ?generalisatie.
 }
@@ -430,7 +446,7 @@ Een externe koppeling wordt op dezelfde wijze omgezet als een `mim:Relatiesoort`
 
 > Een lijst met een opsomming van de mogelijke domeinwaarden van een attribuutsoort, die buiten het model in een externe waardenlijst worden beheerd. De domeinwaarden in de lijst kunnen in de loop van de tijd aangepast, uitgebreid, of verwijderd worden, zonder dat het informatiemodel aangepast wordt (in tegenstelling tot bij een enumeratie).
 
-> **ISSUE**
+> **ISSUE (blocking)**
 >
 > Een referentielijst heeft een `mim:locatie` waarin is gespecificeerd waar de externe bron gevonden kan worden waar de mogelijke waarden zijn opgesomd. Dit KAN een URI of URL zijn en deze bron ZOU bijvoorbeeld een SKOS vocabulaire kunnen zijn. Maar omdat dit niet met zekerheid te zeggen is kunnen we niets met deze externe vocabulaires doen. Dit hoewel een referentielijst wel degelijk onderdeel kan uitmaken van het model in conceptuele zin, hoewel het om beheer- of technische redenen buiten het UML model is geplaatst.
 >
@@ -553,11 +569,7 @@ WHERE {}
 
 > Specifiek benoemd gestructureerd datatype dat de structuur van een gegeven beschrijft, samengesteld uit minimaal twee elementen.
 
-Een `mim:GestructureerdDatatype` wordt vertaald naar een `owl:Class` in combinatie met een `sh:NodeShape`, net zoals een `mim:Objecttype`.
-
-> **ONDERZOEKEN**
->
-> Er is nu geen verschil meer tussen een gestructureerd datatype en een objecttype, aangezien we ook het data element op vergelijkbare wijze converteren als een attribuutsoort. Het MiM maakt echter wel onderscheid. Het MiM stelt dat een gestructureerd datatype alleen structuur biedt, terwijl een gegevensgroeptype juist semantiek. Het lijkt dan logischer om bij gestructureerd datatype alleen een nodeshape aan te maken en geen klasse, ook al omdat de elementen op zichzelf geen bestaansrecht hebben.
+Een `mim:GestructureerdDatatype` wordt vertaald naar een `sh:NodeShape`. Er wordt geen `sh:Class` aangemaakt zoals bij een `mim:Objecttype`, aangezien conform het MiM een gestructureerd datatype slechts een structuur schetst en geen semantiek.
 
 > **ISSUE**
 >
@@ -569,16 +581,12 @@ Een `mim:GestructureerdDatatype` wordt vertaald naar een `owl:Class` in combinat
 
 ```
 CONSTRUCT {
-  ?class a owl:Class.
-  ?class rdfs:seeAlso ?gestructureerddatatype.
   ?nodeshape a sh:NodeShape.
   ?nodeshape rdfs:seeAlso ?gestructureerddatatype.
-  ?nodeshape sh:targetClass ?class.
 }
 WHERE {
   ?gestructureerddatatype a mim:GestructureerdDatatype.
   ?gestructureerddatatype mim:naam ?gestructureerddatatypenaam.
-  BIND (t:classuri(?gestructureerddatatypenaam) as ?class)
   BIND (t:nodeshapeuri(?gestructureerddatatypenaam) as ?nodeshape)
 }
 ```
@@ -662,6 +670,10 @@ Een `mim:unionElement` wordt vertaald naar een element in de lijst van de Union.
 Anders dan andere voorbeelden, wordt hier geen CONSTRUCT query gebruikt, omdat de lijst recursief wordt opgebouwd, in combinaties van DELETE en INSERT queries. Nieuwe elementen worden aan het begin van de lijst toegevoegd (er wordt geen volgorde verondersteld, zie ook het algemene issue over volgorde bovenaan). Het union element wordt zelf als blank node toegevoegd.
 
 Onderstaand voorbeeld geeft aan hoe de conversie uiteindelijk plaatsvindt:
+
+> **ISSUE**
+>
+> Eigenlijk is het helemaal niet mooi dat het zo ingewikkeld wordt. Maar DAT het zo gebeurt is een beperking van UML. We kunnen het ook eenvoudiger maken door het weg te laten, en in MiM expliciet op te nemen dat voor dit element deze waarden niet gelden.
 
 ```
 ex:GeometrischObject a mim:Objecttype;
@@ -929,12 +941,6 @@ WHERE {
 > De datum waarop het modelelement is opgenomen in het informatiemodel.
 
 Een `mim:datumOpname` wordt direct, zonder aanpassing, overgenomen in het vertaalde model.
-
-> **UITZOEKEN**
->
-> Wellicht is het beter om gebruik te maken van prov om de datum opname in te verwerken?
->
-> [MB] Daarmee zou een modelelement een prov:Entity worden. Dit is wel mogelijk, maar minder gebruikelijk. Vaak wordt het gehele model als prov:Entity gezien. Ik heb zelf nog niet gezien dat modelelementen afzonderlijke provenance informatie krijgen. Dit is nog best wel een "dingetje", omdat de meeste Linked Data vocabulaires juist niet zoveel wijzigen, maar voor MiM informatiemodellen zou dat wel eens wat anders kunnen zijn. Als we prov willen gaan gebruiken, vereist dat m.i. nog best wat uitzoekwerk hoe je dit zou moeten toepassen, en ontbreekt op dit moment een (best) practice.
 
 ```
 CONSTRUCT {
@@ -1252,16 +1258,18 @@ WHERE {
 
 > De verwijzing naar het bijbehorende gegevensgroeptype.
 
-Een `mim:gegevensgroeptype` wordt vertaald naar een `sh:node` met als waarde de URI van de NodeShape die het bijbehorende gegevensgroeptype representeert. Zie [Gegevensgroep](#gegevensgroep) en [Gegevensgroeptype](#gegevensgroeptype) voor meer uitleg.
+Een `mim:gegevensgroeptype` wordt vertaald naar een `sh:class` met als waarde de URI van de class die het bijbehorende gegevensgroeptype representeert. Zie [Gegevensgroep](#gegevensgroep) en [Gegevensgroeptype](#gegevensgroeptype) voor meer uitleg.
 
 ```
 CONSTRUCT {
-  ?subject sh:node ?object
+  ?subject sh:class ?object
 }
 WHERE {
   ?modelelement mim:gegevensgroeptype ?gegevensgroeptype.
   ?subject rdfs:seeAlso ?modelelement.
+  ?subject a sh:NodeShape.
   ?object rdfs:seeAlso ?gegevensgroeptype.
+  ?object a owl:Class.
 }
 ```
 
