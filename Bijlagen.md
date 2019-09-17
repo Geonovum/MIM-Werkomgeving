@@ -126,7 +126,7 @@ Precisering = De naam maakt de aard van het stereotype preciezer.
 |   	  |									|   (ISO 19109) GF_AttributeType	| 				|	
 |  ST     |	Gegevensgroeptype 				|	AttributeGroupType				|  Vertaling en |
 |		  |									|									|  precisering	|
-|  ST     |	Gegevensgroep  					|	AttributeGroup 					| Vertaling en  
+|  ST     |	Gegevensgroep  					|	AttributeGroup 					| Vertaling en  |
 |		  |									|									|  precisering	|
 |  ST     |	Relatiesoort  					|	*AssociationType*				|  Vertaling	|
 |         |									|   (ISO 19109) GF_AssociationType	|				|
