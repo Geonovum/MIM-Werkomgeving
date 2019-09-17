@@ -1,25 +1,14 @@
 ## Inleiding
 
 Voor u ligt het metamodel voor het beschrijven van informatiemodellen.
-Aanleiding was oorspronkelijk het adviesrapport ‘Rapportage harmonisatie StUF en
-NEN 3610’ (KING/Geonovum, 2010) waarin één van de aanbevelingen was om één
-modelleertaal, UML, te gebruiken voor informatiemodellen. Het belang van
-afstemming tussen het Stelsel van Basisregistraties en de
-NEN3610-informatiemodellen en recente ontwikkelingen zoals onder andere het
-Digitaal Stelsel Omgevingswet, maken de noodzaak om te komen tot één
-modelleertaal urgent.
+Met het metamodel voor informatiemodellen (MIM) hebben we een gemeenschappelijk 
+vertrekpunt opgesteld voor het maken van informatiemodellen. Het model bevat 
+duidelijke afspraken over het vastleggen van gegevensspecificaties en biedt 
+tegelijkertijd ruimte aan de verschillende niveaus van modellering. Bijzonder 
+aan het model is dat de afspraken over meerdere bestuurslagen heen gaan.
 
-Afspreken dat we UML als modelleertaal gebruiken is hierbij niet voldoende. Een
-metamodel is nodig. Dit is een verzameling van de bouwstenen c.q. de
-modelelementen die gebruikt mogen worden om een informatiemodel mee op te
-stellen. Het is de modelleertaal waarin een informatiemodel is uitgedrukt.
-Toepassing van het metamodel leidt tot eenduidige interpretatie van de
-informatiemodellen en bevordert de uitwisselbaarheid van deze modellen binnen de
-eigen organisatie en – vooral - daarbuiten.
-
-Dit document is opgesteld door VNG Realisatie (voorheen KING), Kadaster en Geonovum. De kennis en kunde
-die deze organisaties hebben opgedaan in de jarenlange praktijk van het
-opstellen van informatiemodellen, is hierin samengebracht.
+Dit document is opgesteld met kennis die is aangedragen door de MIM-communty.
+Kadaster, Geonovum, VNG Realisatie en andere partijen hebben hun visie gedeeld.
 
 ### Toepassingsgebied
 Het metamodel biedt de modelleringstaal waarmee een informatiemodel gemaakt,
@@ -54,13 +43,13 @@ Dit document is primair bestemd voor informatiearchitecten die deze
 informatiemodellen maken; informatieanalisten die willen weten wat de betekenis
 en definitie van informatieobjecten is, en mensen die model-driven verder werken
 op basis van het informatiemodel en er implementaties van maken. Kennis van
-informatiemodellering is een vereiste. Enige kennis van UML [[!UML]] is een pré maar niet
+informatiemodellering is een vereiste. Enige kennis van UML [[!UML]] of [[!Linked Data]] is een pré maar niet
 noodzakelijk. Dit metamodel richt zich in het bijzonder op de
 informatievoorziening binnen het overheidsdomein, al is het ook in bredere
 context inzetbaar.
 
 ### Leeswijzer
-Het metamodel beschrijven we in drie hoofdstukken en een bijlage.
+Het metamodel beschrijven we in vijf hoofdstukken en een bijlage.
 
 Lees de [Inleiding](#inleiding) verder voor inzicht in wat we onder een
 informatiemodel en onder een metamodel verstaan, hoe deze de modellen zich
@@ -76,6 +65,11 @@ zich zeker niet tot UML. Er zijn aparte hoofdstukken voor de implementatie van M
 Het hoofdstuk [Metamodel in UML](#metamodel-in-uml) beschrijft hoe de implementatie van MIM in
 [[!UML]] er uit ziet. In dit hoofdstuk wordt beschreven hoe het metamodel zich verhoudt tot het UML
 metamodel, welke uitbreidingen c.q. verbijzonderingen van het UML metamodel zijn
+aangebracht. 
+
+Het hoofdstuk [Metamodel in Linked Data (LD)](#metamodel-in-linked-data) beschrijft hoe de implementatie van MIM in
+[[!Linked Data]] er uit ziet. In dit hoofdstuk wordt beschreven hoe het metamodel zich verhoudt tot het Linked Data
+metamodel, welke uitbreidingen c.q. verbijzonderingen van het Linked Data metamodel zijn
 aangebracht. 
 
 In het hoofdstuk [Afspraken & Regels](#afspraken-regels) gaan we in detail in op een
