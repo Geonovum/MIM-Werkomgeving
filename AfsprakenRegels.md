@@ -1,4 +1,4 @@
-# Afspraken & Regels
+﻿# Afspraken & Regels
 
 In deze paragraaf gaan we in op een aantal aspecten van het zojuist beschreven
 metamodel en afspraken en regels die van toepassing zijn voor een
