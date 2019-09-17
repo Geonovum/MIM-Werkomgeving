@@ -40,5 +40,5 @@ We hebben de afgelopen tijd gezien dat MIM breed wordt omarmd binnen de overheid
 veroverd binnen de NORA. Met de uitbreidingen en aanpassingen in deze versie wordt het 
 toepassingsbereik van MIM aanzienlijk verbreed.
 
-Dick Krijtenburg (Geonovum)
+Dick Krijtenburg (Geonovum)  
 Oktober 2019
