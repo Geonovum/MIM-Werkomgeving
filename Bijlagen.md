@@ -101,9 +101,9 @@ In het volgende overzicht geldt het volgende
 
 Kolom Aard waarden:
 
-- ST 	Stereotype
-- TV 	Tagged value naam
-- VAL 	Tagged value waarde
+- ST = Stereotype
+- TV = Tagged value naam
+- VAL =	Tagged value waarde
 
 Kolom MIM  benaming ISO waarden:
 
