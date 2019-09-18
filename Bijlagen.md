@@ -101,22 +101,17 @@ In het volgende overzicht geldt het volgende
 
 Kolom Aard waarden:
 
-ST 	Stereotype
-
-TV Tagged value naam
-
-VAL tagged value waarde
+- ST 	Stereotype
+- TV 	Tagged value naam
+- VAL 	Tagged value waarde
 
 Kolom MIM  benaming ISO waarden:
 
-
-
-Als *schuin gedrukt*, dan is de naam overgenomen voor dezelfde constructie uit het General Feature Model [ISO 19109].
-
+- Als *schuin gedrukt*, dan is de naam overgenomen voor dezelfde constructie uit het General Feature Model [ISO 19109].
 
 Kolom Reden waarden:
-Vertaling = Hetzelfde ding, vertaald in het Engels. De aansluiting bij ISO 19100 serie wordt daarbij expliciet gezocht.
-Precisering = De naam maakt de aard van het stereotype preciezer.
+- Vertaling 	= Hetzelfde ding, vertaald in het Engels. De aansluiting bij ISO 19100 serie wordt daarbij expliciet gezocht.
+- Precisering 	= De naam maakt de aard van het stereotype preciezer.
 
 | **Aard**| **MIM 1.1**      				| **MIM benaming  ISO**  			| **Reden** 	|
 |---------|---------------------------------|-----------------------------------|---------------|
