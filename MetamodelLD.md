@@ -112,17 +112,18 @@ Als prefix wordt voor de vocabulaire gebruik gemaakt van `mim`, met de namespace
 
 *Externe koppeling*
 
-| **MIM metaclass** | **Stereotype**      | **Metaclass UML 2.5** | **In Sparx EA** |
-|-------------------|---------------------|-----------------------|-----------------|
-| Externe koppeling | «Externe koppeling» | (UML) Association     | Association     |
+| **MIM metaclass** | **Metaclass in RDF** | **Shape in RDF** |
+|-------------------|----------------------|------------------|
+| Externe koppeling | [`mim:ExterneKoppeling`](http://bp4mc2.org/def/mim#ExterneKoppeling) | shape:ExterneKoppeling |
 
 *Packages*
 
-| **MIM metaclass** | **Metaclass in RDF** | **Shape in RDF** |
-|-------------------|----------------------|------------------|
-
-
-
+| **MIM metaclass**     | **Metaclass in RDF** | **Shape in RDF** |
+|-----------------------|----------------------|------------------|
+| Informatiemodel       | [`mim:Informatiemodel`](http://bp4mc2.org/def/mim#Informatiemodel) | shape:Informatiemodel |
+| Domein (het eigen IM) | [`mim:Domein`](http://bp4mc2.org/def/mim#Domein) | shape:Domein |
+| Extern                | [`mim:Extern`](http://bp4mc2.org/def/mim#Extern) | shape:Extern |
+| View                  | [`mim:View`](http://bp4mc2.org/def/mim#View) | shape:View |
 
 ## Nadere specificatie metagegevens in LD
 
@@ -133,6 +134,7 @@ De betekenis van de metagegevens worden in LD gespecificeerd los van de klasse w
 De gegevensregels (structuur) voor de metagegevens zijn wel specifiek per klasse, en worden in de betreffende paragraaf behandeld.
 
 | **MIM metagegeven** | **Meta-eigenschap in RDF** | **RDF type** | **Definitie ** |
+|---------------------|----------------------------|--------------|----------------|
 | alias | [`mim:naam`](http://bp4mc2.org/def/mim#naam) | owl:DatatypeProperty | De alternatieve weergave van de naam. |
 | attribuut | [`mim:attribuut`](http://bp4mc2.org/def/mim#attribuut) | owl:ObjectProperty | \- |
 | authentiek | [`mim:authentiek`](http://bp4mc2.org/def/mim#authentiek) | owl:ObjectProperty | Indien het een authentiek (landelijk) basisgegeven of een als relatiesoort gemodelleerd authentiek (landelijk) basisgegeven is. Basisgegevens zijn altijd gegevens afkomstig uit de landelijke registraties. |
