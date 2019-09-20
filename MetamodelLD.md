@@ -133,14 +133,14 @@ De betekenis van de metagegevens worden in LD gespecificeerd los van de klasse w
 
 De gegevensregels (structuur) voor de metagegevens zijn wel specifiek per klasse, en worden in de betreffende paragraaf behandeld.
 
-| **MIM metagegeven** | **Meta-eigenschap in RDF** | **RDF type** | **Definitie ** |
+| **MIM metagegeven** | **Meta-eigenschap in RDF** | **RDF type** | **Definitie** |
 |---------------------|----------------------------|--------------|----------------|
 | alias | [`mim:naam`](http://bp4mc2.org/def/mim#naam) | owl:DatatypeProperty | De alternatieve weergave van de naam. |
 | attribuut | [`mim:attribuut`](http://bp4mc2.org/def/mim#attribuut) | owl:ObjectProperty | \- |
 | authentiek | [`mim:authentiek`](http://bp4mc2.org/def/mim#authentiek) | owl:ObjectProperty | Indien het een authentiek (landelijk) basisgegeven of een als relatiesoort gemodelleerd authentiek (landelijk) basisgegeven is. Basisgegevens zijn altijd gegevens afkomstig uit de landelijke registraties. |
 | code | [`mim:code`](http://bp4mc2.org/def/mim#code) | owl:DatatypeProperty | De in een registratie of informatiemodel aan de enumeratiewaarde toegekend unieke code |
 | constraint | [`mim:constraint`](http://bp4mc2.org/def/mim#constraint) | owl:ObjectProperty | \- |
-| datum opname | mim:datumOpname`](http://bp4mc2.org/def/mim#datumOpname) | owl:DatatypeProperty | De datum waarop het modelelement is opgenomen in het informatiemodel.
+| datum opname | [`mim:datumOpname`](http://bp4mc2.org/def/mim#datumOpname) | owl:DatatypeProperty | De datum waarop het modelelement is opgenomen in het informatiemodel.
 | definitie | [`mim:definitie`](http://bp4mc2.org/def/mim#definitie) | owl:DatatypeProperty | Zie ISO 19103. Vrij vertaald: alle alfanumerieke tekens en speciale tekens die horen bij de gekozen characterset (standaard UTF-8), dus met diakrieten, white spaces, \-teken en newlines of HTML opmaak e.d. Mag starten met spatie. De maximale lengte is onbepaald. |
 | element | [`mim:element`](http://bp4mc2.org/def/mim#element) | owl:ObjectProperty | \- |
 | formeel patroon | [`mim:formeelPatroon`](http://bp4mc2.org/def/mim#formeelPatroon) | owl:DatatypeProperty | Zoals patroon, formeel vastgelegd, uitgedrukt in een formele taal die door de computer wordt herkend. |
