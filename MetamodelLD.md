@@ -167,7 +167,7 @@ De gegevensregels (structuur) voor de metagegevens zijn wel specifiek per klasse
 | specificatie tekst | [`mim:specificatieTekst`](http://bp4mc2.org/def/mim#specificatieTekst) | owl:DatatypeProperty | De specificatie van de constraint in normale tekst.
 | subtype | [`mim:subtype`](http://bp4mc2.org/def/mim#subtype) | owl:ObjectProperty | \- |
 | supertype | [`mim:supertype`](http://bp4mc2.org/def/mim#supertype) | owl:ObjectProperty | \- |
-| toelichting | [`mim:toelichting`](http://bp4mc2.org/def/mim#toelichting) | Een inhoudelijke toelichting op de definitie, ter verheldering of nadere duiding. |
+| toelichting | [`mim:toelichting`](http://bp4mc2.org/def/mim#toelichting) | owl:DatatypeProperty | Een inhoudelijke toelichting op de definitie, ter verheldering of nadere duiding. |
 | type | [`mim:type`](http://bp4mc2.org/def/mim#type) | owl:ObjectProperty | Het datatype waarmee waarden van deze attribuutsoort worden vastgelegd. |
 | type aggregatie | [`mim:typeAggregatie`](http://bp4mc2.org/def/mim#typeAggregatie) | owl:ObjectProperty | Standaard betreft het geen aggregatie (None). Het type aggregatie mag 'composite' zijn. Dit wordt gedaan als er een afhankelijkheid is in die zin dat de target niet kan bestaan zonder de source: de target vervalt als de source vervalt. |
 | unidirectioneel | [`mim:unidirectioneel`](http://bp4mc2.org/def/mim#unidirectioneel) | owl:DatatypeProperty | Het gerelateerde objecttype (de target) waarvan het objecttype, die de eigenaar is van deze relatie (de source), kennis heeft. |
@@ -176,6 +176,26 @@ De gegevensregels (structuur) voor de metagegevens zijn wel specifiek per klasse
 
 ### Modellering metagegevens voor objecten en attributen in LD
 
+**Specificatie voor «Objecttype»**
+
+De objecttypen worden naar de volgende aspecten gespecificeerd:
+
+| **Aspect**                | **Eigenschap** | **Kardinaliteit** | **Datatype of klasse ** |
+|---------------------------|----------------|-------------------|--------------|
+| Naam                      | [`mim:naam`](http://bp4mc2.org/def/mim#naam) | 1 | tekst |
+| Alias                     | [`mim:alias`](http://bp4mc2.org/def/mim#alias) | 0..1 | tekst |
+| Herkomst                  | [`mim:herkomst`](http://bp4mc2.org/def/mim#herkomst) | 1 | tekst |
+| Definitie                 | [`mim:definitie`](http://bp4mc2.org/def/mim#definitie) | 1 | tekst |
+| Herkomst definitie        | [`mim:herkomstDefinitie`](http://bp4mc2.org/def/mim#herkomstDefinitie) | 1 | tekst |
+| Datum opname              | [`mim:datumOpname`](http://bp4mc2.org/def/mim#datumOpname) | 1 | datum |
+| Unieke aanduiding         | [`mim:uniekeAanduiding`](http://bp4mc2.org/def/mim#uniekeAanduiding) | 1 | tekst |
+| Populatie                 | [`mim:populatie`](http://bp4mc2.org/def/mim#populatie) | 0..1 | tekst |
+| Kwaliteit                 | [`mim:kwaliteit`](http://bp4mc2.org/def/mim#kwaliteit) | 0..1 | tekst |
+| Toelichting               | [`mim:toelichting`](http://bp4mc2.org/def/mim#toelichting) | 0..1 | tekst |
+| Indicatie abstract object | [`mim:indicatieAbstractObject`](http://bp4mc2.org/def/mim#indicatieAbstractObject) | 1 | boolean |
+| Attribuut | [`mim:attribuut`](http://bp4mc2.org/def/mim#attribuut | 0..n | [`mim:Attribuutsoort`](http://bp4mc2.org/def/mim#Attribuutsoort) |
+| Gegevensgroep | [`mim:gegevensgroep`](http://bp4mc2.org/def/mim#gegevensgroep | 0..n | [`mim:Gegevensgroep`](http://bp4mc2.org/def/mim#Gegevensgroep) |
+| Constraint | [`mim:constraint`](http://bp4mc2.org/def/mim#constraint | 0..n | [`mim:Constraint`](http://bp4mc2.org/def/mim#Constraint) |
 
 ### Specificatie metagegevens voor relaties
 
