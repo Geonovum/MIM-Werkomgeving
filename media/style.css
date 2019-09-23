@@ -98,6 +98,14 @@ div#remark
   color: darkblue;
 }
 
+.ldex
+{
+  border-color: darkkhaki;
+  border-style: solid;
+  background-color:  khaki;
+  color: darkred;
+}
+
 todo
 {
   background-color:  yellow;
