@@ -58,7 +58,6 @@ shape:Attribuutsoort a sh:NodeShape;
   sh:property shape:formeelPatroon;
   sh:property shape:indicatieMaterieleHistorie;
   sh:property shape:indicatieFormeleHistorie;
-  sh:property shape:locatie_optioneel;
   sh:property shape:kardinaliteit;
   sh:property shape:authentiek;
   sh:property shape:toelichting;
@@ -528,13 +527,6 @@ shape:locatie a sh:PropertyShape;
   sh:name "mim:locatie";
   sh:order 18;
   sh:minCount 1;
-  sh:maxCount 1;
-  sh:datatype xsd:string;
-.
-shape:locatie_optioneel a sh:PropertyShape;
-  sh:path mim:locatie;
-  sh:name "mim:locatie";
-  sh:order 18;
   sh:maxCount 1;
   sh:datatype xsd:string;
 .
