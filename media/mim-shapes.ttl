@@ -224,6 +224,7 @@ shape:PrimitiefDatatype a sh:NodeShape;
   sh:property shape:naam;
   sh:property shape:alias;
   sh:property shape:definitie;
+  sh:property shape:type;
   sh:property shape:lengte;
   sh:property shape:patroon;
   sh:property shape:formeelPatroon;
@@ -286,6 +287,23 @@ shape:UnionElement a sh:NodeShape;
   sh:property shape:formeelPatroon;
   sh:property shape:kardinaliteit;
 .
+shape:Informatiemodel a sh:NodeShape;
+  sh:targetClass mim:Informatiemodel;
+  sh:name "mim:Domein";
+  sh:property shape:naam;
+  sh:property shape:alias;
+  sh:property shape:definitie;
+  sh:property shape:herkomst;
+  sh:property shape:versie;
+  sh:property shape:extensie;
+  sh:property shape:taal;
+.
+shape:Domein a sh:NodeShape;
+  sh:targetClass mim:Domein;
+  sh:name "mim:Domein";
+  sh:property shape:naam;
+  sh:property shape:alias;
+.
 shape:Extern a sh:NodeShape;
   sh:targetClass mim:Extern;
   sh:name "mim:Extern";
@@ -336,12 +354,6 @@ shape:Constraint a sh:NodeShape;
 .
 
 # De volgende shapes zijn niet expliciet aangegeven, maar bestaan wel
-shape:Domein a sh:NodeShape;
-  sh:targetClass mim:Domein;
-  sh:name "mim:Domein";
-  sh:property shape:naam;
-  sh:property shape:alias;
-.
 shape:PrimitiefDatatype a sh:NodeShape;
   sh:targetClass mim:PrimitiefDatatype;
   sh:name "mim:PrimitiefDatatype";
@@ -628,7 +640,7 @@ shape:supertype a sh:PropertyShape;
   sh:xone (
     [sh:class mim:Objecttype]
     [sh:class mim:Datatype]
-  );  
+  );
 .
 shape:typeAggregatie a sh:PropertyShape;
   sh:path mim:typeAggregatie;
@@ -663,6 +675,28 @@ shape:specificatieFormeel a sh:PropertyShape;
   sh:path mim:specificatieFormeel;
   sh:name "mim:specificatieFormeel";
   sh:order 33;
+  sh:maxCount 1;
+  sh:datatype xsd:string;
+.
+shape:versie a sh:PropertyShape;
+  sh:path mim:versie;
+  sh:name "mim:versie";
+  sh:order 34;
+  sh:minCount 1;
+  sh:maxCount 1;
+  sh:datatype xsd:string;
+.
+shape:extensie a sh:PropertyShape;
+  sh:path mim:extensie;
+  sh:name "mim:extensie";
+  sh:order 35;
+  sh:maxCount 1;
+  sh:datatype xsd:string;
+.
+shape:taal a sh:PropertyShape;
+  sh:path mim:taal;
+  sh:name "mim:taal";
+  sh:order 36;
   sh:maxCount 1;
   sh:datatype xsd:string;
 .
