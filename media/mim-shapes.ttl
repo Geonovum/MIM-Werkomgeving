@@ -606,7 +606,10 @@ shape:subtype a sh:PropertyShape;
   sh:order 26;
   sh:minCount 1;
   sh:maxCount 1;
-  sh:class mim:Objecttype;
+  sh:xone (
+    [sh:class mim:Objecttype]
+    [sh:class mim:Datatype]
+  );
 .
 shape:gerelateerdObjecttype a sh:PropertyShape;
   sh:path mim:gerelateerdObjecttype;
@@ -622,7 +625,10 @@ shape:supertype a sh:PropertyShape;
   sh:order 27;
   sh:minCount 1;
   sh:maxCount 1;
-  sh:class mim:Objecttype;
+  sh:xone (
+    [sh:class mim:Objecttype]
+    [sh:class mim:Datatype]
+  );  
 .
 shape:typeAggregatie a sh:PropertyShape;
   sh:path mim:typeAggregatie;
