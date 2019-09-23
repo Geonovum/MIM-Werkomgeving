@@ -20,8 +20,8 @@ vb:Schip a mim:Objecttype;
 </pre>
 
 <div class='ldex'>
-@prefix vb: <http://bp4mc2.org/voorbeeld/>.  
-@prefix mim: <http://bp4mc2.org/def/mim#>.  
+@prefix vb: &lt;http://bp4mc2.org/voorbeeld/>.  
+@prefix mim: &lt;http://bp4mc2.org/def/mim#>.  
 
 vb:Schip a mim:Objecttype;  
 &nbsp;&nbsp;rdfs:label "Schip"@nl;  
@@ -29,9 +29,9 @@ vb:Schip a mim:Objecttype;
 </div>
 
 ```
-@prefix vb: <http://bp4mc2.org/voorbeeld/>.  
-@prefix mim: <http://bp4mc2.org/def/mim#>.  
-  
+@prefix vb: &lt;http://bp4mc2.org/voorbeeld/>.  
+@prefix mim: &lt;http://bp4mc2.org/def/mim#>.  
+
 vb:Schip a mim:Objecttype;  
   rdfs:label "Schip"@nl;  
 .
@@ -40,7 +40,7 @@ vb:Schip a mim:Objecttype;
 `vb:Schip` is in dit voorbeeld een voorkomen van de klasse `mim:Objecttype`. dit voorkomen kent zelf geen voorkomens. Hiervoor is een vertaling nodig naar een `rdfs:Class`, bijvoorbeeld door:
 
 ```
-@prefix vbo: <http://bp4mc2.org/voorbeeld/def#>.
+@prefix vbo: &lt;http://bp4mc2.org/voorbeeld/def#>.
 
 vbo:Schip a rdfs:Class;
   rdfs:seeAlso vb:Schip;  
@@ -194,11 +194,11 @@ De gegevensregels (structuur) voor de metagegevens zijn wel specifiek per klasse
 
 ### Modellering metagegevens voor objecten en attributen in LD
 
-**Specificatie voor «Objecttype»**
+**Specificatie voor mim:Objecttype**
 
 De objecttypen worden naar de volgende aspecten gespecificeerd:
 
-| **Aspect**                | **Eigenschap** | **Kardinaliteit** | **Datatype of klasse ** |
+| **Aspect**                | **Eigenschap** | **Kardinaliteit** | **Datatype of klasse** |
 |---------------------------|----------------|-------------------|--------------|
 | Naam                      | [`mim:naam`](http://bp4mc2.org/def/mim#naam) | 1 | tekst |
 | Alias                     | [`mim:alias`](http://bp4mc2.org/def/mim#alias) | 0..1 | tekst |
@@ -211,17 +211,166 @@ De objecttypen worden naar de volgende aspecten gespecificeerd:
 | Kwaliteit                 | [`mim:kwaliteit`](http://bp4mc2.org/def/mim#kwaliteit) | 0..1 | tekst |
 | Toelichting               | [`mim:toelichting`](http://bp4mc2.org/def/mim#toelichting) | 0..1 | tekst |
 | Indicatie abstract object | [`mim:indicatieAbstractObject`](http://bp4mc2.org/def/mim#indicatieAbstractObject) | 1 | boolean |
-| Attribuut | [`mim:attribuut`](http://bp4mc2.org/def/mim#attribuut) | 0..n | [`mim:Attribuutsoort`](http://bp4mc2.org/def/mim#Attribuutsoort) |
-| Gegevensgroep | [`mim:gegevensgroep`](http://bp4mc2.org/def/mim#gegevensgroep) | 0..n | [`mim:Gegevensgroep`](http://bp4mc2.org/def/mim#Gegevensgroep) |
-| Constraint | [`mim:constraint`](http://bp4mc2.org/def/mim#constraint) | 0..n | [`mim:Constraint`](http://bp4mc2.org/def/mim#Constraint) |
+| Attribuut                 | [`mim:attribuut`](http://bp4mc2.org/def/mim#attribuut) | 0..n | [`mim:Attribuutsoort`](http://bp4mc2.org/def/mim#Attribuutsoort) |
+| Gegevensgroep             | [`mim:gegevensgroep`](http://bp4mc2.org/def/mim#gegevensgroep) | 0..n | [`mim:Gegevensgroep`](http://bp4mc2.org/def/mim#Gegevensgroep) |
+| Constraint                | [`mim:constraint`](http://bp4mc2.org/def/mim#constraint) | 0..n | [`mim:Constraint`](http://bp4mc2.org/def/mim#Constraint) |
+
+**Specificatie voor mim:Attribuutsoort**
+
+De attribuutsoorten worden naar de volgende aspecten gespecificeerd:
+
+| **Aspect**                   | **Eigenschap** | **Kardinaliteit** | **Datatype of klasse** |
+|------------------------------|----------------|-------------------|--------------|
+| Naam                         | [`mim:naam`](http://bp4mc2.org/def/mim#naam) | 1 | tekst |
+| Alias                        | [`mim:alias`](http://bp4mc2.org/def/mim#alias) | 0..1 | tekst |
+| Herkomst                     | [`mim:herkomst`](http://bp4mc2.org/def/mim#herkomst) | 1 | tekst |
+| Definitie                    | [`mim:definitie`](http://bp4mc2.org/def/mim#definitie) | 1 | tekst |
+| Herkomst definitie           | [`mim:herkomstDefinitie`](http://bp4mc2.org/def/mim#herkomstDefinitie) | 1 | tekst |
+| Datum opname                 | [`mim:datumOpname`](http://bp4mc2.org/def/mim#datumOpname) | 1 | datum |
+| Type                         | [`mim:type`](http://bp4mc2.org/def/mim#type) | 1 | [`mim:Datatype`](http://bp4mc2.org/def/mim#Datatype) |
+| Lengte                       | [`mim:lengte`](http://bp4mc2.org/def/mim#lengte) | 0..1 | tekst |
+| Patroon                      | [`mim:patroon`](http://bp4mc2.org/def/mim#patroon) | 0..1 | tekst |
+| Formeel patroon              | [`mim:formeelPatroon`](http://bp4mc2.org/def/mim#formeelPatroon) | 0..1 | tekst |
+| Indicatie materiële historie | [`mim:indicatieMaterieleHistorie`](http://bp4mc2.org/def/mim#indicatieMaterieleHistorie) | 1 | boolean |
+| Indicatie formele historie   | [`mim:indicatieFormeleHistorie`](http://bp4mc2.org/def/mim#indicatieFormeleHistorie) | 1 | boolean |
+| Kardinaliteit                | [`mim:kardinaliteit`](http://bp4mc2.org/def/mim#kardinaliteit) | 1 | tekst |
+| Authentiek                   | [`mim:authentiek`](http://bp4mc2.org/def/mim#authentiek) | 1 | Authenticiteit |
+| Toelichting                  | [`mim:toelichting`](http://bp4mc2.org/def/mim#toelichting) | 0..1 | tekst |
+| Indicatie afleidbaar         | [`mim:indicatieAfleidbaar`](http://bp4mc2.org/def/mim#indicatieAfleidbaar) | 1 | boolean |
+| Mogelijk geen waarde         | [`mim:mogelijkGeenWaarde`](http://bp4mc2.org/def/mim#mogelijkGeenWaarde) | 1 | boolean |
+| Identificerend               | [`mim:identificerend`](http://bp4mc2.org/def/mim#identificerend) | 0..1 | tekst |
+
+Het veld `mim:authentiek` verwijst naar één van de volgende mogelijke waarden:
+
+| **Authenticiteit** | **Definitie** |
+|--------------------|---------------|
+| [`mim:Authentiek`](http://bp4mc2.org/def/mim#Authentiek) | Indien het een authentiek (landelijk) basisgegeven of een als relatiesoort gemodelleerd authentiek (landelijk) basisgegeven is. Basisgegevens zijn altijd gegevens afkomstig uit de landelijke registraties. |
+| [`mim:Basisgegeven`](http://bp4mc2.org/def/mim#Basisgegeven) | Indien het een landelijk basisgegeven of een als relatiesoort gemodelleerd (landelijk) basisgegeven is in een landelijke registratie, maar in die registratie géén authentiek gegeven is. |
+| [`mim:LandelijkKerngegeven`](http://bp4mc2.org/def/mim#LandelijkKerngegeven) | Indien het een gegeven of een als relatiesoort gemodelleerd gegeven is in een landelijk sector- en domein-overstijgend informatiemodel en geen authentiek gegeven en geen basisgegeven is. |
+| [`mim:GemeentelijkKerngegeven`](http://bp4mc2.org/def/mim#GemeentelijkKerngegeven) | \- |
+| [`mim:OverigeAuthenticiteit`](http://bp4mc2.org/def/mim#OverigeAuthenticiteit) | Indien het géén van de voorgaande categorieën betreft. Veelal gaat het dan om proces-, taakveld- of domeinspecifieke gegevens. |
+
+**Specificatie voor mim:Gegevensgroep**
+
+De gegevensgroepen worden naar de volgende aspecten gespecificeerd:
+
+| **Aspect**                   | **Eigenschap** | **Kardinaliteit** | **Datatype of klasse** |
+|------------------------------|----------------|-------------------|--------------|
+| Naam                         | [`mim:naam`](http://bp4mc2.org/def/mim#naam) | 1 | tekst |
+| Alias                        | [`mim:alias`](http://bp4mc2.org/def/mim#alias) | 0..1 | tekst |
+| Definitie                    | [`mim:definitie`](http://bp4mc2.org/def/mim#definitie) | 1 | tekst |
+| Toelichting                  | [`mim:toelichting`](http://bp4mc2.org/def/mim#toelichting) | 0..1 | tekst |
+| Gegevensgroeptype            | [`mim:gegevensgroeptype`](http://bp4mc2.org/def/mim#gegevensgroeptype) | 1 | [`mim:Gegevensgroeptype`](http://bp4mc2.org/def/mim#Gegevensgroeptype) |
+| Herkomst                     | [`mim:herkomst`](http://bp4mc2.org/def/mim#herkomst) | 1 | tekst |
+| Herkomst definitie           | [`mim:herkomstDefinitie`](http://bp4mc2.org/def/mim#herkomstDefinitie) | 1 | tekst |
+| Datum opname                 | [`mim:datumOpname`](http://bp4mc2.org/def/mim#datumOpname) | 1 | datum |
+| Indicatie materiële historie | [`mim:indicatieMaterieleHistorie`](http://bp4mc2.org/def/mim#indicatieMaterieleHistorie) | 1 | boolean |
+| Indicatie formele historie   | [`mim:indicatieFormeleHistorie`](http://bp4mc2.org/def/mim#indicatieFormeleHistorie) | 1 | boolean |
+| Kardinaliteit                | [`mim:kardinaliteit`](http://bp4mc2.org/def/mim#kardinaliteit) | 1 | tekst |
+| Authentiek                   | [`mim:authentiek`](http://bp4mc2.org/def/mim#authentiek) | 1 | Authenticiteit |
+
+**Specificatie voor mim:Gegevensgroeptype**
+
+De gegevensgroeptypen worden naar de volgende aspecten gespecificeerd:
+
+| **Aspect**                   | **Eigenschap** | **Kardinaliteit** | **Datatype of klasse** |
+|------------------------------|----------------|-------------------|--------------|
+| Naam                         | [`mim:naam`](http://bp4mc2.org/def/mim#naam) | 1 | tekst |
+| Alias                        | [`mim:alias`](http://bp4mc2.org/def/mim#alias) | 0..1 | tekst |
+| Datum opname                 | [`mim:datumOpname`](http://bp4mc2.org/def/mim#datumOpname) | 1 | datum |
+| Attribuut                 | [`mim:attribuut`](http://bp4mc2.org/def/mim#attribuut) | 0..n | [`mim:Attribuutsoort`](http://bp4mc2.org/def/mim#Attribuutsoort) |
+| Gegevensgroep             | [`mim:gegevensgroep`](http://bp4mc2.org/def/mim#gegevensgroep) | 0..n | [`mim:Gegevensgroep`](http://bp4mc2.org/def/mim#Gegevensgroep) |
+| Constraint                | [`mim:constraint`](http://bp4mc2.org/def/mim#constraint) | 0..n | [`mim:Constraint`](http://bp4mc2.org/def/mim#Constraint) |
 
 ### Specificatie metagegevens voor relaties
 
 **Relatiesoort en relatierol**
 
+Het metamodel heeft twee manieren om een relatie tussen twee objecttypen te
+beschrijven. Deze keuze wordt aangegeven in de eigen extensie, zoals beschreven
+in paragraaf 1.8. Alleen het gekozen alternatief is relevant voor de modellering
+in uw informatiemodel. - Alternatief 1: Verplichte benoeming van de naam van de
+relatie met de bijbehorende metagegevens\*\* - Alternatief 2: Verplichte
+benoeming van de rol van de target in een relatie met de bijbehorende
+metagegevens en optioneel de benoeming van de naam van de relatie.
+
+Beide alternatieven gebruiken relatiesoort en relatierol, maar met andere regels
+voor gebruik.
+
 #### Relatiesoort leidend (alternatief 1)
 
+Relatiesoort is verplicht, met een naam en met een definitie en deze is leidend.
+Metadata aspecten worden hierbij altijd vastgelegd. Het gebruik van relatierol
+is optioneel (zowel bij source en target). Áls er een relatierol target wordt
+vastgelegd, dan is de metadata hierbij wel verplicht.
+
+**Specificatie voor «Relatiesoort»**
+
+De relatiesoorten worden naar de volgende aspecten gespecificeerd.
+
+| **Aspect**                   | **Eigenschap** | **Kardinaliteit** | **Datatype of klasse** |
+|------------------------------|----------------|-------------------|--------------|
+| Naam                         | [`mim:naam`](http://bp4mc2.org/def/mim#naam) | 1 | tekst |
+| Alias                        | [`mim:alias`](http://bp4mc2.org/def/mim#alias) | 0..1 | tekst |
+| Unidirectioneel              | [`mim:unidirectioneel`](http://bp4mc2.org/def/mim#unidirectioneel) | 1 | boolean |
+| Objecttype                   | [`mim:objecttype`](http://bp4mc2.org/def/mim#objecttype) | 1 | [`mim:Objecttype`](http://bp4mc2.org/def/mim#Objecttype) |
+| Gerelateerd objecttype       | [`mim:gerelateerdObjecttype`](http://bp4mc2.org/def/mim#gerelateerdObjecttype) | 1 | [`mim:Objecttype`](http://bp4mc2.org/def/mim#Objecttype) |
+| Type aggregatie              | [`mim:typeAggregatie`](http://bp4mc2.org/def/mim#typeAggregatie) | 1 | Aggregatietype |
+| Kardinaliteit                | [`mim:kardinaliteit`](http://bp4mc2.org/def/mim#kardinaliteit) | 1 | tekst |
+| Herkomst                     | [`mim:herkomst`](http://bp4mc2.org/def/mim#herkomst) | 1 | tekst |
+| Definitie                    | [`mim:definitie`](http://bp4mc2.org/def/mim#definitie) | 1 | tekst |
+| Toelichting                  | [`mim:toelichting`](http://bp4mc2.org/def/mim#toelichting) | 0..1 | tekst |
+| Herkomst definitie           | [`mim:herkomstDefinitie`](http://bp4mc2.org/def/mim#herkomstDefinitie) | 1 | tekst |
+| Datum opname                 | [`mim:datumOpname`](http://bp4mc2.org/def/mim#datumOpname) | 1 | datum |
+| Indicatie materiële historie | [`mim:indicatieMaterieleHistorie`](http://bp4mc2.org/def/mim#indicatieMaterieleHistorie) | 1 | boolean |
+| Indicatie formele historie   | [`mim:indicatieFormeleHistorie`](http://bp4mc2.org/def/mim#indicatieFormeleHistorie) | 1 | boolean |
+| Authentiek                   | [`mim:authentiek`](http://bp4mc2.org/def/mim#authentiek) | 1 | Authenticiteit |
+| Indicatie afleidbaar         | [`mim:indicatieAfleidbaar`](http://bp4mc2.org/def/mim#indicatieAfleidbaar) | 1 | boolean |
+| Mogelijk geen waarde         | [`mim:mogelijkGeenWaarde`](http://bp4mc2.org/def/mim#mogelijkGeenWaarde) | 1 | boolean |
+
+Het veld `mim:typeAggregatie` verwijst naar één van de volgende mogelijke waarden:
+
+| **Aggregatietype** | **Definitie** |
+|--------------------|---------------|
+| [`mim:None`](http://bp4mc2.org/def/mim#None) | Er is geen sprake van een aggregate |
+| [`mim:Composite`](http://bp4mc2.org/def/mim#Composite) | Compositie (gesloten wiebertje) |
+| [`mim:Aggregate`](http://bp4mc2.org/def/mim#Aggregate) | Aggregatie (open wiebertje) |
+
+**Specificatie voor mim:Relatierol**
+
+Voor relatierollen worden naar de volgende aspecten gespecificeerd.
+
+| **Aspect**                   | **Eigenschap** | **Kardinaliteit** | **Datatype of klasse** |
+|------------------------------|----------------|-------------------|--------------|
+| Naam                         | [`mim:naam`](http://bp4mc2.org/def/mim#naam) | 0..1 | tekst |
+| Alias                        | [`mim:alias`](http://bp4mc2.org/def/mim#alias) | 0..1 | tekst |
+| Definitie                    | [`mim:definitie`](http://bp4mc2.org/def/mim#definitie) | 0..1 | tekst |
+
 #### Relatierol is leidend (alternatief 2)
+
+### Specificatie metagegevens voor overige relaties
+
+**Specificatie voor mim:Generalisatie bij objecttypen**
+
+De generalisaties worden naar het volgende aspect gespecificeerd:
+
+| **Aspect**                   | **Eigenschap** | **Kardinaliteit** | **Datatype of klasse** |
+|------------------------------|----------------|-------------------|--------------|
+| Naam                         | [`mim:naam`](http://bp4mc2.org/def/mim#naam) | 0..1 | tekst |
+| Alias                        | [`mim:alias`](http://bp4mc2.org/def/mim#alias) | 0..1 | tekst |
+| Subtype                      | [`mim:definitie`](http://bp4mc2.org/def/mim#subtype) | 1 | [`mim:Objecttype`](http://bp4mc2.org/def/mim#Objecttype) |
+| Supertype                      | [`mim:definitie`](http://bp4mc2.org/def/mim#supertype) | 1 | [`mim:Objecttype`](http://bp4mc2.org/def/mim#Objecttype) |
+
+**Specificatie voor mim:Generalisatie bij datatypen**
+
+De generalisaties worden naar het volgende aspect gespecificeerd:
+
+| **Aspect**                   | **Eigenschap** | **Kardinaliteit** | **Datatype of klasse** |
+|------------------------------|----------------|-------------------|--------------|
+| Naam                         | [`mim:naam`](http://bp4mc2.org/def/mim#naam) | 0..1 | tekst |
+| Alias                        | [`mim:alias`](http://bp4mc2.org/def/mim#alias) | 0..1 | tekst |
+| Subtype                      | [`mim:definitie`](http://bp4mc2.org/def/mim#subtype) | 1 | [`mim:Datatype`](http://bp4mc2.org/def/mim#Datatype) |
+| Supertype                      | [`mim:definitie`](http://bp4mc2.org/def/mim#supertype) | 1 | [`mim:Datatype`](http://bp4mc2.org/def/mim#Datatype) |
 
 ### Specificatie metagegevens voor waardenlijsten
 
