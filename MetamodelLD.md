@@ -363,7 +363,48 @@ De generalisaties worden naar het volgende aspect gespecificeerd:
 | Subtype                      | [`mim:definitie`](http://bp4mc2.org/def/mim#subtype) | 1 | [`mim:Datatype`](http://bp4mc2.org/def/mim#Datatype) |
 | Supertype                      | [`mim:definitie`](http://bp4mc2.org/def/mim#supertype) | 1 | [`mim:Datatype`](http://bp4mc2.org/def/mim#Datatype) |
 
+**Specificatie voor mim:Relatieklasse**
+
+De relatieklassen worden naar de volgende aspecten gespecificeerd:
+
+| **Aspect**                   | **Eigenschap** | **Kardinaliteit** | **Datatype of klasse** |
+|------------------------------|----------------|-------------------|--------------|
+| Naam                         | [`mim:naam`](http://bp4mc2.org/def/mim#naam) | 0..1 | tekst |
+| Alias                        | [`mim:alias`](http://bp4mc2.org/def/mim#alias) | 0..1 | tekst |
+| Definitie                    | [`mim:definitie`](http://bp4mc2.org/def/mim#definitie) | 0..1 | tekst |
+| Constraint                   | [`mim:constraint`](http://bp4mc2.org/def/mim#constraint) | 0..n | [`mim:Constraint`](http://bp4mc2.org/def/mim#Constraint) |
+
+**Specificatie voor mim:Externe koppeling**
+
+Externe koppelingen worden naar de volgende aspecten gespecificeerd.
+
+| **Aspect**                   | **Eigenschap** | **Kardinaliteit** | **Datatype of klasse** |
+|------------------------------|----------------|-------------------|--------------|
+| Naam                         | [`mim:naam`](http://bp4mc2.org/def/mim#naam) | 1 | tekst |
+| Alias                        | [`mim:alias`](http://bp4mc2.org/def/mim#alias) | 0..1 | tekst |
+| Datum opname                 | [`mim:datumOpname`](http://bp4mc2.org/def/mim#datumOpname) | 1 | datum |
+| Objecttype                   | [`mim:objecttype`](http://bp4mc2.org/def/mim#objecttype) | 1 | [`mim:Objecttype`](http://bp4mc2.org/def/mim#Objecttype) |
+| Gerelateerd objecttype       | [`mim:gerelateerdObjecttype`](http://bp4mc2.org/def/mim#gerelateerdObjecttype) | 1 | [`mim:Objecttype`](http://bp4mc2.org/def/mim#Objecttype) |
+| Type aggregatie              | [`mim:typeAggregatie`](http://bp4mc2.org/def/mim#typeAggregatie) | 1 | Aggregatietype |
+| Unidirectioneel              | [`mim:unidirectioneel`](http://bp4mc2.org/def/mim#unidirectioneel) | 1 | boolean |
+
 ### Specificatie metagegevens voor waardenlijsten
+
+**Specificatie voor mim:Referentielijst**
+
+Voor referentielijsten worden de volgende aspecten gespecificeerd:
+
+| **Aspect**                   | **Eigenschap** | **Kardinaliteit** | **Datatype of klasse** |
+|------------------------------|----------------|-------------------|--------------|
+| Naam                         | [`mim:naam`](http://bp4mc2.org/def/mim#naam) | 1 | tekst |
+| Alias                        | [`mim:alias`](http://bp4mc2.org/def/mim#alias) | 0..1 | tekst |
+| Herkomst                     | [`mim:herkomst`](http://bp4mc2.org/def/mim#herkomst) | 1 | tekst |
+| Definitie                    | [`mim:definitie`](http://bp4mc2.org/def/mim#definitie) | 1 | tekst |
+| Herkomst definitie           | [`mim:herkomstDefinitie`](http://bp4mc2.org/def/mim#herkomstDefinitie) | 1 | tekst |
+| Datum opname                 | [`mim:datumOpname`](http://bp4mc2.org/def/mim#datumOpname) | 1 | datum |
+| Toelichting                  | [`mim:toelichting`](http://bp4mc2.org/def/mim#toelichting) | 0..1 | tekst |
+| Locatie                      | [`mim:locatie`](http://bp4mc2.org/def/mim#locatie) | 1 | tekst |
+| Referentie-element           | [`mim:referentieElement`](http://bp4mc2.org/def/mim#referentieElement) | 1..* | [`mim:ReferentieElement`](http://bp4mc2.org/def/mim#ReferentieElement) |
 
 ### Specificatie metagegevens voor datatypen
 
