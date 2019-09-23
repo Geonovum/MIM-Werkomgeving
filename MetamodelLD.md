@@ -11,8 +11,8 @@ Op diezelfde manier levert het toepassen van het MiM in RDF geen ontologie of vo
 Zo leidt een MiM objecttype "Schip" tot de volgende weergave in RDF:
 
 <pre class='ex-turtle'>
-@prefix vb: &lt;http://bp4mc2.org/voorbeeld/&gt; .
-@prefix mim: &lt;http://bp4mc2.org/def/mim#&gt; .
+@prefix vb: &lt;http://bp4mc2.org/voorbeeld/> .
+@prefix mim: &lt;http://bp4mc2.org/def/mim#> .
 
 vb:Schip a mim:Objecttype;
   rdfs:label "Schip"@nl;
@@ -21,14 +21,14 @@ vb:Schip a mim:Objecttype;
 
 `vb:Schip` is in dit voorbeeld een voorkomen van de klasse `mim:Objecttype`. dit voorkomen kent zelf geen voorkomens. Hiervoor is een vertaling nodig naar een `rdfs:Class`, bijvoorbeeld door:
 
-```
+<pre class='ex-turtle'>
 @prefix vbo: &lt;http://bp4mc2.org/voorbeeld/def#>.
 
 vbo:Schip a rdfs:Class;
   rdfs:seeAlso vb:Schip;  
 .
 vb:Pakjesboot12 a vbo:Schip.
-```
+</pre>
 
 ## Structuur metamodel in LD
 
