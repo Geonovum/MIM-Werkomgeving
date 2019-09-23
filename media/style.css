@@ -98,6 +98,37 @@ div#remark
   color: darkblue;
 }
 
+/*-- Definite turtle exampele ------------------------------------------------------*/
+pre.ex-turtle {
+  margin-left: 0;
+  padding: 0 2em;
+  margin-top: 1.5em;
+  padding: 1em 1em 0 1em;
+}
+pre.ex-turtle:before 
+{
+  background: white;
+  display: block;
+  font-family: sans-serif;
+  font-size: 90%;
+  margin: -1em 0 0.4em -1em;
+  padding: 0.2em 1em;
+}
+pre.ex-turtle 
+{
+  background: #eeb;
+}
+pre.ex-turtle, pre.ex-turtle:before 
+{
+  border: 1px solid #cc9;
+}
+pre.ex-turtle:before 
+{
+  color: #996;
+  content: "voorbeeld RDF representatie";
+  width: 13em;
+}
+
 .ldex
 {
   border-color: darkkhaki;
