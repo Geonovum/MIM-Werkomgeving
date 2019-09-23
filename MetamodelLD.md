@@ -565,9 +565,39 @@ Externe packages worden naar de volgende aspecten gespecificeerd:
 
 #### Specificatie voor Enumeratie
 
+Enumeraties betreffen de metaclass Enumeration en worden naar de volgende
+aspecten gespecificeerd:
+
+| **Aspect**                   | **Eigenschap** | **Kardinaliteit** | **Datatype of klasse** |
+|------------------------------|----------------|-------------------|--------------|
+| Naam                         | [`mim:naam`](http://bp4mc2.org/def/mim#naam) | 1 | tekst |
+| Alias                        | [`mim:alias`](http://bp4mc2.org/def/mim#alias) | 0..1 | tekst |
+| Definitie                    | [`mim:definitie`](http://bp4mc2.org/def/mim#definitie) | 1 | tekst |
+| Waarde                       | [`mim:waarde`](http://bp4mc2.org/def/mim#Enumeratiewaarde) | 1..* | [`mim:Waarde`](http://bp4mc2.org/def/mim#Enumeratiewaarde)
+
 #### Specificatie voor Enumeratiewaarde
 
+De enumeratiewaarde zelf betreft de metaclass UML-EnumerationLiteral en kent
+volgende aspecten:
+
+| **Aspect**                   | **Eigenschap** | **Kardinaliteit** | **Datatype of klasse** |
+|------------------------------|----------------|-------------------|--------------|
+| Naam                         | [`mim:naam`](http://bp4mc2.org/def/mim#naam) | 1 | tekst |
+| Definitie                    | [`mim:definitie`](http://bp4mc2.org/def/mim#definitie) | 0..1 | tekst |
+| Code                         | [`mim:code`](http://bp4mc2.org/def/mim#code) | 0..1 | tekst |
+
+Een enumeratiewaarde mag geen alias hebben, omdat in UML het alias-veld wordt gebruikt voor de mim:code. Mocht toch een `mim:alias` zijn opgegeven voor een enumeratiewaarde, dan dient deze gelezen te worden als een `mim:code`. In het RDF model is `mim:code` een subproperty van een `mim:alias`.
+
 #### Specificatie voor een Constraint
+
+De enumeratiewaarde zelf betreft de metaclass UML-EnumerationLiteral en kent
+volgende aspecten:
+
+| **Aspect**                   | **Eigenschap** | **Kardinaliteit** | **Datatype of klasse** |
+|------------------------------|----------------|-------------------|--------------|
+| Naam                         | [`mim:naam`](http://bp4mc2.org/def/mim#naam) | 1 | tekst |
+| Specificatie-tekst           | [`mim:specificatieTekst`](http://bp4mc2.org/def/mim#specificatieTekst) | 0..1 | tekst |
+| Specificatie-formeel         | [`mim:specificatieFormeel`](http://bp4mc2.org/def/mim#specificatieFormeel) | 0..1 | tekst |
 
 # Linked Data Tooling
 

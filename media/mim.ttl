@@ -386,6 +386,7 @@ mim:supertype a owl:ObjectProperty;
 
 # Enumeratiewaarde
 mim:code a owl:DatatypeProperty;
+  rdfs:subPropertyOf mim:alias;
   rdfs:label "code"@nl;
   rdfs:comment "De in een registratie of informatiemodel aan de enumeratiewaarde toegekend unieke code"@nl;
 .
