@@ -10,10 +10,19 @@ Op diezelfde manier levert het toepassen van het MiM in RDF geen ontologie of vo
 
 Zo leidt een MiM objecttype "Schip" tot de volgende weergave in RDF:
 
+<pre class='ex-turtle'>
+@prefix vb: &lt;http://bp4mc2.org/voorbeeld/&gt; .
+@prefix mim: &lt; http://bp4mc2.org/def/mim#&gt; .
+
+vb:Schip a mim:Objecttype;
+  rdfs:label "Schip"@nl;
+.
+</pre>
+
 <div class='ldex'>
 @prefix vb: <http://bp4mc2.org/voorbeeld/>.  
 @prefix mim: <http://bp4mc2.org/def/mim#>.  
-  
+
 vb:Schip a mim:Objecttype;  
 &nbsp;&nbsp;rdfs:label "Schip"@nl;  
 .
