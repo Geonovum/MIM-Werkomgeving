@@ -12,7 +12,7 @@ Zo leidt een MiM objecttype "Schip" tot de volgende weergave in RDF:
 
 <div class='ldex'>
 @prefix vb: &lt;http://bp4mc2.org/voorbeeld/>.  
-@prefix mim: <http://bp4mc2.org/def/mim#>.  
+@prefix mim: &lt;http://bp4mc2.org/def/mim#>.  
 
 vb:Schip a mim:Objecttype;  
 &nbsp;&nbsp;rdfs:label "Schip"@nl;  
@@ -20,8 +20,8 @@ vb:Schip a mim:Objecttype;
 </div>
 
 ```
-@prefix vb: <http://bp4mc2.org/voorbeeld/>.  
-@prefix mim: <http://bp4mc2.org/def/mim#>.  
+@prefix vb: &lt;http://bp4mc2.org/voorbeeld/>.  
+@prefix mim: &lt;http://bp4mc2.org/def/mim#>.  
 
 vb:Schip a mim:Objecttype;  
   rdfs:label "Schip"@nl;  
@@ -31,7 +31,7 @@ vb:Schip a mim:Objecttype;
 `vb:Schip` is in dit voorbeeld een voorkomen van de klasse `mim:Objecttype`. dit voorkomen kent zelf geen voorkomens. Hiervoor is een vertaling nodig naar een `rdfs:Class`, bijvoorbeeld door:
 
 ```
-@prefix vbo: <http://bp4mc2.org/voorbeeld/def#>.
+@prefix vbo: &lt;http://bp4mc2.org/voorbeeld/def#>.
 
 vbo:Schip a rdfs:Class;
   rdfs:seeAlso vb:Schip;  
