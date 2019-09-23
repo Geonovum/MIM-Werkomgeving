@@ -12,7 +12,7 @@ Zo leidt een MiM objecttype "Schip" tot de volgende weergave in RDF:
 
 <pre class='ex-turtle'>
 @prefix vb: &lt;http://bp4mc2.org/voorbeeld/&gt; .
-@prefix mim: <http://bp4mc2.org/def/mim#&gt; .
+@prefix mim: &lt;http://bp4mc2.org/def/mim#&gt; .
 
 vb:Schip a mim:Objecttype;
   rdfs:label "Schip"@nl;
