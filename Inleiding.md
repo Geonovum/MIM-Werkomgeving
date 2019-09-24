@@ -66,7 +66,7 @@ Het hoofdstuk [Metamodel in UML](#metamodel-in-uml) beschrijft hoe de implementa
 metamodel, welke uitbreidingen c.q. verbijzonderingen van het UML metamodel zijn
 aangebracht. 
 
-Het hoofdstuk [Metamodel in Linked Data (LD)](#metamodel-in-linked-data) beschrijft hoe de implementatie van MIM in
+Het hoofdstuk [Metamodel in Linked Data (LD)](#metamodel-in-linked-data-(ld)) beschrijft hoe de implementatie van MIM in
 [[!Linked-Data]] er uit ziet. In dit hoofdstuk wordt beschreven hoe het metamodel zich verhoudt tot het Linked Data
 metamodel, welke uitbreidingen c.q. verbijzonderingen van het Linked Data metamodel zijn
 aangebracht. 
@@ -293,10 +293,12 @@ tagged values en constraints.
 
 ### Uitdrukken in Linked Data
 
-*HIER NOG EEN BESCHRIJVING TOEVOEGEN*
-*HIER NOG EEN BESCHRIJVING TOEVOEGEN*
-*HIER NOG EEN BESCHRIJVING TOEVOEGEN*
-*HIER NOG EEN BESCHRIJVING TOEVOEGEN*
+<todo>
+*HIER NOG EEN BESCHRIJVING TOEVOEGEN*  
+*HIER NOG EEN BESCHRIJVING TOEVOEGEN*  
+*HIER NOG EEN BESCHRIJVING TOEVOEGEN*  
+*HIER NOG EEN BESCHRIJVING TOEVOEGEN*  
+</todo>
 
 ### Een eigen extensie op het metamodel
 Indien er extra metamodelconstructies nodig zijn voor een informatiemodel, dan
@@ -307,7 +309,8 @@ aan het onderhavige document.
 De spelregel bij een extensie is dat deze geen onderwerpen *vervangt* die in dit
 metamodel beschreven zijn, maar alleen echte uitbreidingen behelst. Indien
 meerdere organisaties hierin geïnteresseerd zijn, kan zo’n extensie ook
-toegevoegd worden aan dit metamodel. Neem dan contact op met de helpdesk (zie [voorwoord](#voorwoord)).
+toegevoegd worden aan dit metamodel.
+<todo>Neem dan contact op met de helpdesk (zie [voorwoord](#voorwoord)).</todo>
 
 Het is ook mogelijk om in de extensie aan te geven welke elementen uit dit
 metamodel *niet* ingezet (mogen) worden in uw informatiemodellen. Denk hierbij
@@ -349,11 +352,11 @@ u contact opnemen met de MIM helpdesk van Geonovum: mim@geonovum.nl
 |-----|----------------------------------------------|----------------|
 | 1.  | Unified Modeling Language (UML)              | [[!UML]]       |
 | 2.  | OMG Unified Modeling Language TM versie 2.5  | [[!OMG]]       |
-| 3.  | Stelselcatalogus                             | [[!SCAT]]|
+| 3.  | Stelselcatalogus                             | [[!SCAT]]      |
 | 4.  | GAB                                          | [[!GAB]]       | 
 | 5.  | Handreiking gegevensbeschrijving (NORA)      | [[!NORA]]      |
-| 6.  | ISO 11404                                    | [[!iso-11404]]       |
-| 7.  | ISO 8601                                     | [[!iso-8601]]   |
+| 6.  | ISO 11404                                    | [[!iso-11404]] |
+| 7.  | ISO 8601                                     | [[!iso-8601]]  |
 | 8.  | Formeel patroon (Reguliere Expressies)       | [[!REGEXP]]    |
 | 9.  | OCL                                          | [[!OCL]]       |
 | 10. | NEN 3610/A1:2016 Basismodel Geo-informatie   | [[!NEN3610]]   |
