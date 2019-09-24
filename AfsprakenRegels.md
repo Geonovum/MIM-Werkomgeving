@@ -1,10 +1,12 @@
-﻿# Afspraken & Regels
+Afspraken & Regels
+==================
 
 In deze paragraaf gaan we in op een aantal aspecten van het zojuist beschreven
 metamodel en afspraken en regels die van toepassing zijn voor een
 informatiemodel.
 
-## Datatype(n)
+Datatype(n)
+-----------
 
 Een datatype is een typering van een eigenschap. Datatypen in een
 informatiemodel beschrijven de structuur waaraan de data van objecten moet
@@ -48,20 +50,20 @@ in het datatype zelf vastgelegd.
 Dit metamodel onderkend (momenteel) de volgende extern gedefinieerde primitive
 datatypes. Deze zijn allemaal gebaseerd op [[!GAB]]:
 
-| **Primitive type** | **Betekenis**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
-|--------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Primitive type** | **Betekenis**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+|--------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | CharacterString    | Zie [[!iso-19103]]. Vrij vertaald: alle alfanumerieke tekens en speciale tekens die horen bij de gekozen characterset (standaard UTF-8), dus met diakrieten, white spaces, \\-teken en newlines of HTML opmaak e.d. Mag starten met spatie. De maximale lengte is onbepaald. *Opmerking*: getallen (ISO Numbers) met voorloopnullen worden opgenomen als CharacterString, met een patroon of formeel patroon. Bij het metagegeven Waardenverzameling attribuutsoort wordt dit dan (ook) gespecificeerd. |
-| Integer            | Zie [[!iso-11404]] (subtype van ISO Number). Vrij vertaald: geheel getal, lengte is minimaal 1 en maximale lengte is onbepaald, zonder voorloopnullen. *Opmerking*: t.a.v. positieve en negatieve getalen en + en – tekens: bijvoorbeeld -2,0 Het (formeel) patroon geeft aan of een + en/of - teken gebruikt mag worden in het gegeven.                                                                                                                                                                 |
-| Real               | Zie [[!iso-11404]] (subtype van ISO Number). Vrij vertaald: een reëel getal, oftewel een rationeel getal zoals een Integer of een Decimal, of niet rationeel getal, zoals pi of de wortel van 2. Deze bestaat uit een (oneindig) aantal getallen, al dan niet achter de komma (floating point). *Opmerking:* t.a.v. positieve en negatieve getalen en + en – tekens: zie Integer.                                                                                                                        |
-| Boolean            | Indicatie met mogelijke waarden True, false, 1 of 0. True en 1 hebben een identieke betekenis: Ja. False en 0 hebben een identieke betekenis: Nee. *Opmerking*: t.a.v. Ja of Nee. Wanneer u de Ja of Nee wilt gebruiken, gebruik dan bv. een Enumeratie genaamd Indicatie, of gebruik AN met een lengte en een (formeel) patroon.                                                                                                                                                                  |
-|                    |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| Date               | 4-cijferig jaar, 2-cijferig maand, 2-cijferig dag uitgedrukt in yyyy-mm-dd conform https://en.wikipedia.org/wiki/ISO_8601                                                                                                                                                                                                                                                                                                                                                                          |
-| DateTime           | yyyy-mm-ddThh:mm:ss conform https://en.wikipedia.org/wiki/ISO_8601                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| Year               | 4-cijferig jaar uitgedrukt in yyyy conform https://en.wikipedia.org/wiki/ISO_8601                                                                                                                                                                                                                                                                                                                                                                                                                  |
-| Day                | 2-cijferige dag uitgedrukt in dd conform https://en.wikipedia.org/wiki/ISO_8601                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| Month              | 2-cijferige maand uitgedrukt in mm conform https://en.wikipedia.org/wiki/ISO_8601                                                                                                                                                                                                                                                                                                                                                                                                                  |
-|                    |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| URI                | Unieke identificatie op internet conform RFC3986 en de URI-strategie Linked Open Data. Gestandaardiseerde manier om op het internet dingen (pagina's met informatie, objecten, datasets) uniek te identificeren.                                                                                                                                                                                                                                                                                   |
+| Integer            | Zie [[!iso-11404]] (subtype van ISO Number). Vrij vertaald: geheel getal, lengte is minimaal 1 en maximale lengte is onbepaald, zonder voorloopnullen. *Opmerking*: t.a.v. positieve en negatieve getalen en + en – tekens: bijvoorbeeld -2,0 Het (formeel) patroon geeft aan of een + en/of - teken gebruikt mag worden in het gegeven.                                                                                                                                                                |
+| Real               | Zie [[!iso-11404]] (subtype van ISO Number). Vrij vertaald: een reëel getal, oftewel een rationeel getal zoals een Integer of een Decimal, of niet rationeel getal, zoals pi of de wortel van 2. Deze bestaat uit een (oneindig) aantal getallen, al dan niet achter de komma (floating point). *Opmerking:* t.a.v. positieve en negatieve getalen en + en – tekens: zie Integer.                                                                                                                       |
+| Boolean            | Indicatie met mogelijke waarden True, false, 1 of 0. True en 1 hebben een identieke betekenis: Ja. False en 0 hebben een identieke betekenis: Nee. *Opmerking*: t.a.v. Ja of Nee. Wanneer u de Ja of Nee wilt gebruiken, gebruik dan bv. een Enumeratie genaamd Indicatie, of gebruik AN met een lengte en een (formeel) patroon.                                                                                                                                                                       |
+|                    |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| Date               | 4-cijferig jaar, 2-cijferig maand, 2-cijferig dag uitgedrukt in yyyy-mm-dd conform https://en.wikipedia.org/wiki/ISO_8601                                                                                                                                                                                                                                                                                                                                                                               |
+| DateTime           | yyyy-mm-ddThh:mm:ss conform https://en.wikipedia.org/wiki/ISO_8601                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| Year               | 4-cijferig jaar uitgedrukt in yyyy conform https://en.wikipedia.org/wiki/ISO_8601                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| Day                | 2-cijferige dag uitgedrukt in dd conform https://en.wikipedia.org/wiki/ISO_8601                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| Month              | 2-cijferige maand uitgedrukt in mm conform https://en.wikipedia.org/wiki/ISO_8601                                                                                                                                                                                                                                                                                                                                                                                                                       |
+|                    |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| URI                | Unieke identificatie op internet conform RFC3986 en de URI-strategie Linked Open Data. Gestandaardiseerde manier om op het internet dingen (pagina's met informatie, objecten, datasets) uniek te identificeren.                                                                                                                                                                                                                                                                                        |
 
 Het is mogelijk om in de eigen extensie extra primitive datatypes op te nemen,
 zodat deze ook beschikbaar komen voor het informatiemodel.
@@ -127,8 +129,9 @@ mag géén spatie bevatten. - Een Vlak: een verbijzondering van een GM Surface,
 met een eigen definitie, die bijvoorbeeld aangeeft dat het om een 2 dimensionale
 geometrie gaat.
 
-<!-- ![](media/99cc4266ebd831de6477ef7de382f0c4.emf) -->
-![Datatypen Generalisatie](media/datatypen_generalisatie.png)
+![Datatypen Generalisatie](media/47002e9ebd60742cec8111996ea22fbc.png)
+
+Datatypen Generalisatie
 
 De gele datatypes zijn extern aan het model.
 
@@ -155,12 +158,13 @@ ter illustratie zijn opgenomen:
 
 | Postcode | De in Nederland gangbare postcode voor een Nederlands postadres, bestaande uit een numeriek deel en een alfabetisch deel. Het numerieke deel van de postcode bestaat uit vier cijfers, het alfabetische deel van de postcode bestaat uit twee hoofdletters. Conform [GAB Postcodes].                                                        |
 |----------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| DMO      | Datum mogelijk onvolledig. De keuze («union») van een periode in de Gregoriaanse kalender, al naar gelang de beschikbare datumelementen, uit de onderliggende subformaten alleen Year, Year en Month of Year, Month en Day. Dit is (nog steeds) overeenkomstig met https://en.wikipedia.org/wiki/ISO_8601 en [GAB DatumMogelijkOnvolledig]. |
+| DMO      | Datum mogelijk onvolledig. De keuze («Keuze») van een periode in de Gregoriaanse kalender, al naar gelang de beschikbare datumelementen, uit de onderliggende subformaten alleen Year, Year en Month of Year, Month en Day. Dit is (nog steeds) overeenkomstig met https://en.wikipedia.org/wiki/ISO_8601 en [GAB DatumMogelijkOnvolledig]. |
 | DTMO     | Een volledige datum waarbij (alleen) de tijd mogelijk ontbreekt. De tijd wordt, zover bekend, ingevuld. Dus alleen de uren als de minuten onbekend zijn.                                                                                                                                                                                    |
 |          | \- DateTime, als de tijd wel volledig bekend is                                                                                                                                                                                                                                                                                             |
 |          | \- Date, als alleen de Date bekend is                                                                                                                                                                                                                                                                                                       |
 
-## Gestructureerd datatype
+Gestructureerd datatype
+-----------------------
 
 Een «Gestructureerd datatype» is veelal specifiek binnen een informatiemodel.
 Indien mogelijk wordt zoveel mogelijk hergebruik gemaakt van elders
@@ -204,7 +208,8 @@ Gemeentecode (AN, lengte 4) - Objecttypecode (AN, lengte 2) - Nummer (AN, lengte
 10) met daarbij een formeel patroon: [0-9]{4}\\.[0-9]{2}\\.[ 0-9]{10} of een
 (tekst) patroon Gemeentecode.Objecttypecode.Nummer
 
-## Gegevensgroeptype
+Gegevensgroeptype
+-----------------
 
 Bij het modelleren van een objecttype worden attribuutsoorten toegekend aan een
 objecttype. Wanneer er geconstateerd wordt dat een aantal attribuutsoorten
@@ -244,7 +249,8 @@ hergebruikt voor alle objecttypes.*
 
 Metamodel: het gegevensgroeptype kan dus het type zijn van meerdere
 gegevensgroepen. Vanwege dit hergebruik is daarom de kardinaliteit van de
-relatie van gegevensgroep naar gegevensgroeptype aan de source kant 1..\*. Zie [Kern](#kern).
+relatie van gegevensgroep naar gegevensgroeptype aan de source kant 1..\*. Zie
+[Kern](#kern).
 
 ### Gegevensgroep versus Gestructureerd datatype
 
@@ -271,32 +277,33 @@ semantiek.
     informatiemodel. Een gegevensgroep in een conceptueel model is en blijft dus
     altijd ook een gegevensgroep in een logisch informatiemodel.
 
-## Keuze tussen datatypes (Union)
+Keuze tussen datatypes (Keuze)
+------------------------------
 
 Wanneer het datatype van een attribuutsoort een keuze uit twee of meer datatypen
-is, dan wordt dit gemodelleerd met het datatype Union. Elk union element van de
-union heeft dan één datatype, de waarde van de attribuutsoort moet aan één van
+is, dan wordt dit gemodelleerd met het datatype Keuze. Elk keuze element van de
+keuze heeft dan één datatype, de waarde van de attribuutsoort moet aan één van
 deze datatypen voldoen.
 
-*Voorbeeld: Attribuutsoort geometrie met als type de Union PuntOfVlak.
-PuntOfVlak is daarbij een Union met union element: punt, met als type het
-datatype GM_Point en union element vlak met als type het datatype GM_Surface.*
+*Voorbeeld: Attribuutsoort geometrie met als type de Keuze PuntOfVlak.
+PuntOfVlak is daarbij een Keuze met keuze element: punt, met als type het
+datatype GM_Point en keuze element vlak met als type het datatype GM_Surface.*
 
-In dit voorbeeld is er enkel een keuze tussen verschillende union elementen die
+In dit voorbeeld is er enkel een keuze tussen verschillende keuze elementen die
 zelf geen betekenisvolle context geven aan het te kiezen datatype. Er wordt in
-dit geval geen definitie gespecificeerd bij het union element (de definitie is
+dit geval geen definitie gespecificeerd bij het keuze element (de definitie is
 optioneel).
 
-In onderstaande voorbeelden is er wel sprake van een keuze tussen union
+In onderstaande voorbeelden is er wel sprake van een keuze tussen keuze
 elementen die een betekenisvolle context geven aan het te kiezen datatype. Er
-wordt in dit geval wel een definitie gespecificeerd bij het union element.
+wordt in dit geval wel een definitie gespecificeerd bij het keuze element.
 
-*Voorbeeld: Attribuutsoort hoogte met als type de Union BereikOfWaarde.
-BereikOfWaarde is daarbij een Union met union element ‘bereik’, met als type het
-datatype Interval en union element ‘waarde’ met als type het datatype Real.*
+*Voorbeeld: Attribuutsoort hoogte met als type de Keuze BereikOfWaarde.
+BereikOfWaarde is daarbij een Keuze met keuze element ‘bereik’, met als type het
+datatype Interval en keuze element ‘waarde’ met als type het datatype Real.*
 
-Regel: het is niet toegestaan dat union elementen binnen één en dezelfde union
-identiek zijn. De naam van elk union element moet verschillend zijn én de
+Regel: het is niet toegestaan dat keuze elementen binnen één en dezelfde keuze
+identiek zijn. De naam van elk keuze element moet verschillend zijn én de
 datatypen moeten op zijn minst verschillend zijn. Dus ofwel een ander datatype,
 ofwel hetzelfde datatype met een verschil in het metadata aspect patroon en/of
 formeel patroon hebben. Bijvoorbeeld: een keuze tussen een datatype
@@ -304,7 +311,7 @@ CharacterString en een datatype CharacterString is alleen toegestaan als er een
 verschillend (formeel) patroon is gespecificeerd.
 
 Merk op dat het mogelijk is om een eigen datatype te maken met een eigen naam en
-deze te gebruiken in een union element.
+deze te gebruiken in een keuze element.
 
 Wanneer een beoogd datatype uit een extern model komt en daar geen metamodel
 stereotype heeft, zoals bijvoorbeeld het geval is bij het GM package waarin een
@@ -314,7 +321,8 @@ modelleur van het informatiemodel om te beoordelen of het type dan als datatype
 gebruikt kan worden. Het is niet gewenst om aan het externe model een stereotype
 toe te voegen, noch om in het externe model de UML-metaclass aan te passen.
 
-## Domeinwaarden of lijsten
+Domeinwaarden of lijsten
+------------------------
 
 In veel registraties wordt gewerkt met codetabellen om de mogelijke waarden van
 een attribuutsoort te specificeren. Deze mogelijke waarden kunnen op
@@ -365,17 +373,18 @@ worden.
 zoals bij een referentielijst, niet relevant zijn en je voor de definitie alleen
 wilt verwijzen naar de externe waardelijst.
 
-## Abstracte objecttypes en concrete objecten
+Abstracte objecttypes en concrete objecten
+------------------------------------------
 
-Een objecttype kan aangeduid worden als een abstract objecttype (zie paragraaf 
-[Specificatie metagegevens](#specificatie-metagegevens))
-<!-- 2.3.1 --> . door middel van indAbstract = J). Het betreft dan altijd een
-generalisatie waarbij de specialisaties van dit objecttype op het laagste niveau
-concrete objecttypen worden genoemd. Het is belangrijk te weten wanneer een
-objecttype als abstract objecttype in een informatiemodel is te onderkennen.
-Omdat een abstract objecttype altijd een generalisatie is, beantwoorden we in
-deze paragraaf ook de vraag wanneer we specialisaties / generalisaties
-onderkennen in een conceptueel informatiemodel en in een logisch informatiemodel
+Een objecttype kan aangeduid worden als een abstract objecttype (zie paragraaf
+[Specificatie metagegevens](#specificatie-metagegevens)) . door middel van
+indAbstract = J). Het betreft dan altijd een generalisatie waarbij de
+specialisaties van dit objecttype op het laagste niveau concrete objecttypen
+worden genoemd. Het is belangrijk te weten wanneer een objecttype als abstract
+objecttype in een informatiemodel is te onderkennen. Omdat een abstract
+objecttype altijd een generalisatie is, beantwoorden we in deze paragraaf ook de
+vraag wanneer we specialisaties / generalisaties onderkennen in een conceptueel
+informatiemodel en in een logisch informatiemodel
 
 **Conceptueel informatiemodel**
 
@@ -409,10 +418,10 @@ daarmee dus ook in de hoedanigheid van de generalisatie(s) van het concrete
 objecttype.
 
 Richtlijnen - Een abstract object is een onderwerp van gesprek binnen het
-beschouwde gebied. Het heeft dus echt een <span class='note'>[betekenis](#afs-n-1)</span> in het beschouwde
-gebied. Net als een concreet object, specialisatie of generalisatie. - De
-definitie van elk objecttype (dus ook een abstract objecttype) is zodanig dat
-ondubbelzinnig bepaald kan worden dat een object wel of niet tot het
+beschouwde gebied. Het heeft dus echt een [betekenis](#afs-n-1) in het
+beschouwde gebied. Net als een concreet object, specialisatie of generalisatie.
+- De definitie van elk objecttype (dus ook een abstract objecttype) is zodanig
+dat ondubbelzinnig bepaald kan worden dat een object wel of niet tot het
 gedefinieerde type behoort. Dus niet een objecttype met een definitie als ‘De
 gemeenschappelijke eigenschappen van een object…’ Deze definitie is op elk
 objecttype van toepassing. - Houd er rekening mee dat afhankelijk van het te
@@ -451,7 +460,8 @@ object is met identificatie ‘1’ en een leidingnetwerk met identificatie ‘1
 dat wel het geval is, dan moet op beide concrete objecttypes een eigen unieke
 aanduiding gedefinieerd worden.
 
-## Relatieklasse (uitzonderingen)
+Relatieklasse (uitzonderingen)
+------------------------------
 
 De gegevens van de relatiesoort worden altijd voor één relatiesoort vastgelegd.
 Het is echter mogelijk dat dezelfde gegevens voor meerdere relaties tegelijk
@@ -474,7 +484,8 @@ objecten hetzelfde zijn. CONTRACT wordt dan gemodelleerd als objecttype, waarbij
 beschreven wordt wat er moet gebeuren wanneer één van de SUBJECTen niet meer
 bestaat.*
 
-## Constraint
+Constraint
+----------
 
 Deze paragraaf gaat dieper in op hoe een Constraint toegepast wordt.
 
@@ -531,7 +542,8 @@ waardoor er (te) vaak nieuwe versies moeten worden uitgebracht. De aanbeveling
 is om de specificatie van dergelijke constraints buiten het informatiemodel te
 specificeren, bijvoorbeeld als validatieregel.
 
-## Historie
+Historie
+--------
 
 Deze paragraaf geeft in meer detail aan wat we onder de metagegevens *Indicatie
 materiële historie en Indicatie formele historie* verstaan.
@@ -600,9 +612,10 @@ en dus géén bij de tijdslijnen behorende attributen die gebruikt moeten worden
 voor het vastleggen van historie. Deze bij de tijdslijn behorende attributen
 worden op het logische niveau vastgelegd.
 
-**Historie op logisch niveau** MIM schrijft <span class='note'>[zie noot](#afs-n-2)</span> geen implementatie van het
-conceptuele niveau voor. Wel worden er aandachtspunten gegeven om rekening mee
-te houden. Denk bij de uitwerking o.a. aan de volgende aspecten:
+**Historie op logisch niveau** MIM schrijft [zie noot](#afs-n-2) geen
+implementatie van het conceptuele niveau voor. Wel worden er aandachtspunten
+gegeven om rekening mee te houden. Denk bij de uitwerking o.a. aan de volgende
+aspecten:
 
 -   Het bijhouden van historie met specifieke attributen per objecttype, zoals
     bijvoorbeeld: bouwjaar pand, of met generieke tijdslijnattributen attributen
@@ -639,7 +652,8 @@ Opmerking: de metagegevens Indicatie materiële historie en Indicatie formele
 mogen worden opgenomen in een logisch model (of worden overgenomen van het
 conceptuele naar het logische informatiemodel).
 
-## Afleidbare gegevens
+Afleidbare gegevens
+-------------------
 
 In een informatiemodel kan de behoefte bestaan om afgeleide gegevens op te
 nemen: dit zijn gegevens die afleidbaar zijn uit andere attribuut- en/of
@@ -649,14 +663,15 @@ gegeven en ten tweede het gegeven niet eenvoudig af te leiden is (er moet sprake
 zijn van enige mate van complexiteit). Dit wordt in UML weergegeven via
 isDerived. Zie ook Attribuutsoort, §2.4.2 – is afleidbaar.
 
-<aside class='example'>
-    Voorbeeld is de 'Datum vestiging in Nederland' van een Ingeschreven persoon. De
-    afleiding van dit gegeven is niet triviaal. Door het als afleidbaar gegeven op
-    te nemen kan het opgevraagd worden zonder dat de historie of andere gegevens van
-    het object opgevraagd hoeven te worden om daaruit dit gegeven af te leiden.
-</aside>
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Voorbeeld is de 'Datum vestiging in Nederland' van een Ingeschreven persoon. De
+afleiding van dit gegeven is niet triviaal. Door het als afleidbaar gegeven op
+te nemen kan het opgevraagd worden zonder dat de historie of andere gegevens van
+het object opgevraagd hoeven te worden om daaruit dit gegeven af te leiden.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-## Authentieke gegevens
+Authentieke gegevens
+--------------------
 
 Bij een attribuutsoort of relatiesoort wordt als metagegeven ‘Authentiek’
 opgenomen. Het is een aanduiding of een attribuutsoort of een als relatiesoort
@@ -680,7 +695,8 @@ ZTC); - Sector- en domein-specifieke informatiemodellen (LV-WOZ, IMRO e.d.).
 |                             |                                                                                                                                                                                                                |
 |  Overig                     | Indien het géén van de voorgaande categorieën betreft. Veelal gaat het dan om proces-, taakveld- of domeinspecifieke gegevens.                                                                                 |
 
-## Mogelijk geen waarde
+Mogelijk geen waarde
+--------------------
 
 Een attribuut kan geen waarde hebben, omdat de waarde optioneel is en er niet
 is. Bijvoorbeeld bij een tussenvoegsel van een achternaam. Maar een attribuut
@@ -730,7 +746,8 @@ wanneer het een situatie betreft waarin gegevens worden overgenomen uit een
 registratie die wel de waarde ‘onbekend’ gebruikt. Dan kan er ook gekozen worden
 voor het 1:1 overgenomen van de gegevensdefinitie uit deze andere registratie.
 
-## Externe schema’s (her) gebruiken
+Externe schema’s (her) gebruiken
+--------------------------------
 
 In bepaalde situaties is het mogelijk dat een ander informatiemodel al één op
 één de specificaties in UML bevat die relevant zijn voor het eigen
@@ -750,11 +767,11 @@ ook de XML) schema’s beheert en beschikbaar stelt waarnaar vanuit deze
 specificaties wordt gerefereerd. De packages bevatten alleen de constructies die
 ook daadwerkelijk binnen het ‘eigen’ informatiemodel wordt gebruikt.
 
-<aside class='example'>
-    Voorbeeld: voor het uitwisselen van geografische informatie op basis van
-    NEN3610 is een tweetal externe packages onderkend waarnaar vanuit de ‘eigen’
-    informatiemodellen kan worden verwezen: [[!NEN3610]], of GML3.2
-</aside>
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Voorbeeld: voor het uitwisselen van geografische informatie op basis van
+NEN3610 is een tweetal externe packages onderkend waarnaar vanuit de ‘eigen’
+informatiemodellen kan worden verwezen: [[!NEN3610]], of GML3.2
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Het is ook mogelijk om binnen een domein of binnen een organisatie een eigen
 «extern» package te definiëren voor datatypen, om over meerdere
@@ -765,7 +782,8 @@ externe package gebruikt worden als datatype, maar er kan ook naar verwezen
 worden via een relatie. Dit laatst wordt nader uitgelegd in de volgende
 paragraaf.
 
-## Koppelen met ander informatiemodel (externe koppeling)
+Koppelen met ander informatiemodel (externe koppeling)
+------------------------------------------------------
 
 Bij registraties is het regelmatig noodzakelijk om te verwijzen vanuit het eigen
 model naar gegevens uit een andere informatiemodel. Denk aan het opnemen van de
@@ -804,7 +822,8 @@ eigen registratie. Er kan dan volstaan worden met alleen de unieke aanduiding
 van GeregistreerdPersoon. Dit is de BSN. Dit wordt niet gezien als een «externe
 koppeling» maar als een referentie.
 
-## Stelselcatalogus en stelselafspraken voor basisregistraties
+Stelselcatalogus en stelselafspraken voor basisregistraties
+-----------------------------------------------------------
 
 Dit metamodel ondersteunt de metadata die voorgeschreven wordt voor de
 stelselcatalogus [H1.11, referentie 3]. Deze paragraaf geeft aan hoe de metadata
@@ -850,18 +869,19 @@ het wellicht dus soms nodig deze waardes om te zetten.
 | *Toegankelijkheid*           | N                       | n.v.t.                             |
 | *Gebruiksvoorwaarden*        | N                       | n.v.t.                             |
 
-Waardenbereik afspraken
--   *Authentiek:* als in dit metamodel ‘Authentiek’ (zie 2.4.21) dan ‘Ja’ in
-    stelselcatalogus, anders Nee.
--   *Herkomst:* Zelf in te vullen. Afspraken hierbij:  
-    Als zelf ingewonnen: noem de inwinnende organisatie. Bijvoorbeeld: VNG Realisatie of
-    Gemeentes.  
-    Als overgenomen uit andere bron, noem de directe bron. Bijvoorbeeld: BAG.
--   *Relatie:* dit is geen metagegeven in dit metamodel, maar een stereotype.
-    Deze is wel af te leiden uit het metagegeven van relatiesoort: gerelateerd
-    objecttype (de target van de relatie).
+Waardenbereik afspraken - *Authentiek:* als in dit metamodel ‘Authentiek’ (zie
+2.4.21) dan ‘Ja’ in stelselcatalogus, anders Nee. - *Herkomst:* Zelf in te
+vullen. Afspraken hierbij:  
+Als zelf ingewonnen: noem de inwinnende organisatie. Bijvoorbeeld: VNG
+Realisatie of Gemeentes.  
+Als overgenomen uit andere bron, noem de directe bron. Bijvoorbeeld: BAG. -
+*Relatie:* dit is geen metagegeven in dit metamodel, maar een stereotype. Deze
+is wel af te leiden uit het metagegeven van relatiesoort: gerelateerd objecttype
+(de target van de relatie).
 
-## Naamgevingsconventies
+Naamgevingsconventies
+---------------------
+
 Naamgevingsconventies zijn belangrijk om te specificeren. Onderstaande
 beschrijft enkele punten die op het niveau van dit metamodel zijn afgesproken.
 De verdere invulling van de naamgevingsconventies is aan de opsteller van het
@@ -900,14 +920,14 @@ Als er gekozen wordt voor CamelCase, volg hierin dan hoe deze in UML ook
 toegepast wordt (deze komt overeen met ISO19103): maak van de beginletter van
 ieder deelwoord van namen van attribuutsoorten, relatierollen een hoofdletter,
 behalve de beginletter van het eerste woord. Bij namen van objecttypen,
-gegevensattributen, union, datatypen, en relaties wordt ook de beginletter een
+gegevensattributen, keuze, datatypen, en relaties wordt ook de beginletter een
 hoofdletter.
 
 Regel: voor logische informatiemodellen wordt altijd alternatief 2 gehanteerd.
 
 Neem aanvullend een verwijzing op naar het betreffende modelelement in het
 conceptuele model. Dit kan bijvoorbeeld met een trace of door opname van de naam
-in de alias <todo>(zie 3.16.20)</todo>, zodat lezers goed de overgang van conceptueel naar
+in de alias (zie 3.16.20), zodat lezers goed de overgang van conceptueel naar
 logisch kunnen volgen.
 
 ### Naamgeving voor metamodel elementen
@@ -924,37 +944,125 @@ specificeren. Dit is een hulptabel, die u over kunt nemen naar uw eigen extensie
 (zoals bedoeld in paragraaf 1.8) en in kunt vullen voor uw eigen informatiemodel
 (of organisatie).
 
-## Verwijzing van een modelelement naar een begrip uit het begrippenkader
+Verwijzing van een modelelement naar een begrip uit het begrippenkader
+----------------------------------------------------------------------
 
-Het metadata element “begrip” uit paragraaf 2.3 (**Verwijzing opnemen, TODO**) is bedoeld om de traceability tussen een modelelement in een informatiemodel en een begrip uit een model van begrippen (zoals bedoeld in paragraaf 1.5 (**Verwijzing opnemen, TODO**)) te borgen. Anders gezegd, om aan te geven dát een modelelement een weergave is van het betreffende begrip op IM niveau. Anders gezegd, het is niet de bedoeling om te verwijzen naar een begrip als het modellement hier slechts een beetje mee te maken heeft. De verwijzing geeft aan dat het model element op informatiemodel niveau een invulling geeft aan het begrip. Het begrip zelf is opgenomen in een model van begrippen. Aldaar is meer informatie te vinden over het begrip zelf. 
+Het metadata element “begrip” uit paragraaf 2.3 (**Verwijzing opnemen, TODO**)
+is bedoeld om de traceability tussen een modelelement in een informatiemodel en
+een begrip uit een model van begrippen (zoals bedoeld in paragraaf 1.5
+(**Verwijzing opnemen, TODO**)) te borgen. Anders gezegd, om aan te geven dát
+een modelelement een weergave is van het betreffende begrip op IM niveau. Anders
+gezegd, het is niet de bedoeling om te verwijzen naar een begrip als het
+modellement hier slechts een beetje mee te maken heeft. De verwijzing geeft aan
+dat het model element op informatiemodel niveau een invulling geeft aan het
+begrip. Het begrip zelf is opgenomen in een model van begrippen. Aldaar is meer
+informatie te vinden over het begrip zelf.
 
-*Aanbeveling*: de verwijzing vanuit het eigen informatiemodel naar een begrip is altijd een verwijzing naar een begrip dat behoort tot het eigen model van begrippen. Voor begrippen die domein specifiek zijn is dit altijd zo en zal de aan URI van het begrip ook te herkennen zijn dat dit zo is. Er zijn echter situaties denkbaar waarin een begrip een URI heeft die extern is aan het eigen model van begrippen. Het begrip is dan klaarblijkelijk wel relevant voor het eigen domein, en behoort daarom dan ook tot het eigen model van begrippen, ondanks dat de URI extern is. Een externe URI kan bijvoorbeeld wel voorkomen als het eigen informatiemodel modelelementen uit een ander informatiemodel heeft overgenomen, zoals bedoeld bij het stereotype «view» of «extern». Of bijvoorbeeld omdat het begrip weliswaar in gebruik is binnen het eigen domein, maar ontleent is aan een ander domein c.q. een ander model van begrippen, met als doel om aan te geven dat de betekenis gelijk is. Dit is mogelijk en toegestaan. In de praktijk wordt een begrip dat ontleend is van een ander model van begrippen echter veelal met een eigen URI en een eigen beschrijving opgenomen in het eigen model van begrippen. Dit komt doordat in het eigen domein meestal op een eigen manier tegen het begrip wordt aangekeken, of omdat het niet de bedoeling is dat het eigen model van begrippen automatisch meebeweegt zodra de definitie uit het andere domein verandert. Merk op dat het MIM niet gaat over hoe een model van begrippen wordt gemodelleerd.
+*Aanbeveling*: de verwijzing vanuit het eigen informatiemodel naar een begrip is
+altijd een verwijzing naar een begrip dat behoort tot het eigen model van
+begrippen. Voor begrippen die domein specifiek zijn is dit altijd zo en zal de
+aan URI van het begrip ook te herkennen zijn dat dit zo is. Er zijn echter
+situaties denkbaar waarin een begrip een URI heeft die extern is aan het eigen
+model van begrippen. Het begrip is dan klaarblijkelijk wel relevant voor het
+eigen domein, en behoort daarom dan ook tot het eigen model van begrippen,
+ondanks dat de URI extern is. Een externe URI kan bijvoorbeeld wel voorkomen als
+het eigen informatiemodel modelelementen uit een ander informatiemodel heeft
+overgenomen, zoals bedoeld bij het stereotype «view» of «extern». Of
+bijvoorbeeld omdat het begrip weliswaar in gebruik is binnen het eigen domein,
+maar ontleent is aan een ander domein c.q. een ander model van begrippen, met
+als doel om aan te geven dat de betekenis gelijk is. Dit is mogelijk en
+toegestaan. In de praktijk wordt een begrip dat ontleend is van een ander model
+van begrippen echter veelal met een eigen URI en een eigen beschrijving
+opgenomen in het eigen model van begrippen. Dit komt doordat in het eigen domein
+meestal op een eigen manier tegen het begrip wordt aangekeken, of omdat het niet
+de bedoeling is dat het eigen model van begrippen automatisch meebeweegt zodra
+de definitie uit het andere domein verandert. Merk op dat het MIM niet gaat over
+hoe een model van begrippen wordt gemodelleerd.
 
-Het metadata element begrip mag achteraf toegevoegd worden. Het is immers mogelijk dat bijvoorbeeld het informatiemodel eerder opgesteld wordt dan het model van begrippen, of dat het initieel niet bekend is wat van een modelelement het bijbehorende begrip is, of dat een model van begrippen uitgebreid wordt met een extra begrip. Het criterium om een begrip op te nemen in een model van begrippen is geen onderdeel van dit metamodel. Het is zelfs mogelijk dat een modelelement initieel niet als een begrip gezien wordt, maar dat het modelelement op een gegeven moment zodanig een begrip wordt, dat deze wordt opgenomen in het model van begrippen. In alle gevallen geldt, neem de metadata op zodra dit mogelijk is. Als het metadata element begrip wordt weggelaten, of de metadata die erin op genomen kan worden wordt leeggelaten c.q. de verwijzing naar het begrip (nog) niet gemaakt kan worden, dan is de betekenis hiervan dat het niet bekend is of er sprake is van een begrip. Merk op dat het achteraf toevoegen van de verwijzing naar een begrip in principe niet iets veranderd aan het informatiemodel zelf (afgezien van deze metadata), al kan dit wel aanleiding geven tot het verbeteren of verhelderen van definities. 
- 
-### Term of URI 
-In de definitie van metadata begrip staat dat de verwijzing de vorm heeft van een term of van een URI.
--   Als je kiest voor een term, vul dan de naam in van het begrip. Bijvoorbeeld: Natuurlijk persoon. Geef indien mogelijk ook deze naam een goede plek in de definitie en/of toelichting van het modelelement.
--   Als je kiest voor een URI, kies dan voor de URI dat dit begrip identificeert. Deze zal verwijzen naar een skos:Concept . Dit houdt in dat als iemand naar deze URI gaat (bijvoorbeeld met een browser, dit wordt “het resolven van een URI” genoemd), deze persoon informatie krijgt over het betreffende begrip. Bijvoorbeeld: http://brk.basisregistraties.overheid.nl/id/begrip/Perceel
+Het metadata element begrip mag achteraf toegevoegd worden. Het is immers
+mogelijk dat bijvoorbeeld het informatiemodel eerder opgesteld wordt dan het
+model van begrippen, of dat het initieel niet bekend is wat van een modelelement
+het bijbehorende begrip is, of dat een model van begrippen uitgebreid wordt met
+een extra begrip. Het criterium om een begrip op te nemen in een model van
+begrippen is geen onderdeel van dit metamodel. Het is zelfs mogelijk dat een
+modelelement initieel niet als een begrip gezien wordt, maar dat het
+modelelement op een gegeven moment zodanig een begrip wordt, dat deze wordt
+opgenomen in het model van begrippen. In alle gevallen geldt, neem de metadata
+op zodra dit mogelijk is. Als het metadata element begrip wordt weggelaten, of
+de metadata die erin op genomen kan worden wordt leeggelaten c.q. de verwijzing
+naar het begrip (nog) niet gemaakt kan worden, dan is de betekenis hiervan dat
+het niet bekend is of er sprake is van een begrip. Merk op dat het achteraf
+toevoegen van de verwijzing naar een begrip in principe niet iets veranderd aan
+het informatiemodel zelf (afgezien van deze metadata), al kan dit wel aanleiding
+geven tot het verbeteren of verhelderen van definities.
+
+### Term of URI
+
+In de definitie van metadata begrip staat dat de verwijzing de vorm heeft van
+een term of van een URI. - Als je kiest voor een term, vul dan de naam in van
+het begrip. Bijvoorbeeld: Natuurlijk persoon. Geef indien mogelijk ook deze naam
+een goede plek in de definitie en/of toelichting van het modelelement. - Als je
+kiest voor een URI, kies dan voor de URI dat dit begrip identificeert. Deze zal
+verwijzen naar een skos:Concept . Dit houdt in dat als iemand naar deze URI gaat
+(bijvoorbeeld met een browser, dit wordt “het resolven van een URI” genoemd),
+deze persoon informatie krijgt over het betreffende begrip. Bijvoorbeeld:
+http://brk.basisregistraties.overheid.nl/id/begrip/Perceel
 
 ### Verwijzen naar 0, 1 of meer begrippen
-Veelal betreft één modelelement één begrip . De verwijzing naar dit begrip wordt dan opgenomen in deze metadata.
 
-Het is echter zeker niet zo dat elk modelelement een begrip is in het model van begrippen. Het metadata element mag daarom weggelaten worden en de metadata mag leeggelaten worden. Vaak kan bij objecttypes, gegevensgroepen en attribuutsoorten wel een verwijzing opgenomen naar een begrip en is dit niet zinvol bij datatypen, maar dit is geen harde regel. Bijvoorbeeld: een koopsom van een huis wordt uitgedrukt met een bedrag. In het domein is de koopsom wel een begrip, maar het modelelement bedrag bijvoorbeeld niet (en als bedrag al geen begrip is, dan is valuta dit vermoedelijk ook niet, evenals euro, aantal en Decimaalm). In het geval dat bijvoorbeeld bedrag niet een begrip is, wordt het metadata element begrip weggelaten. 
+Veelal betreft één modelelement één begrip . De verwijzing naar dit begrip wordt
+dan opgenomen in deze metadata.
 
-Bij het opnemen van het begrip streven we ernaar om, waar mogelijk, precies te zijn. Bijvoorbeeld: het kan zijn dat in het model van begrippen een Natuurlijk persoon en een Niet natuurlijk persoon zijn opgenomen, terwijl in het informatiemodel alleen het modelelement Persoon is opgenomen, alsmede een attribuutsoort ‘type persoon’. De verwijzing naar het begrip Natuurlijk persoon hoort in dit geval gelegd te worden vanuit het attribuutsoort 'type persoon' en niet vanuit het objecttype Persoon. Het kan ook zo zijn dat het datatype van 'type persoon' een codelijst is, met als mogelijke waarden ‘NP’ en ‘NNP’ en ‘overig’. Het is dan preciezer om de verwijzing te leggen vanuit de waarde ‘NP’. 
+Het is echter zeker niet zo dat elk modelelement een begrip is in het model van
+begrippen. Het metadata element mag daarom weggelaten worden en de metadata mag
+leeggelaten worden. Vaak kan bij objecttypes, gegevensgroepen en
+attribuutsoorten wel een verwijzing opgenomen naar een begrip en is dit niet
+zinvol bij datatypen, maar dit is geen harde regel. Bijvoorbeeld: een koopsom
+van een huis wordt uitgedrukt met een bedrag. In het domein is de koopsom wel
+een begrip, maar het modelelement bedrag bijvoorbeeld niet (en als bedrag al
+geen begrip is, dan is valuta dit vermoedelijk ook niet, evenals euro, aantal en
+Decimaalm). In het geval dat bijvoorbeeld bedrag niet een begrip is, wordt het
+metadata element begrip weggelaten.
 
-### Definitie van een modelelement en de definitie van een begrip 
-De definitie van het modelement is niet hetzelfde bedoeld als de definitie van een begrip. De definitie van een begrip in het begrippenkader is buiten scope van het informatiemodel, enerzijds omdat deze definitie anders kan zijn dan de definitie van het modelelement, en anderzijds omdat de definitie van het begrip aangepast kan worden, terwijl de informatievoorziening die het informatiemodel implementeert automatisch meebeweegt met deze definitie. Dit gezegd hebbende, wanneer er sprake is van een 1 op 1 relatie tussen begrip en modelelement, dan is dit een duidelijke aanleiding om te zorgen dat deze definities goed met elkaar overeenstemmen, of zelfs hetzelfde gehouden worden, waar mogelijk. 
+Bij het opnemen van het begrip streven we ernaar om, waar mogelijk, precies te
+zijn. Bijvoorbeeld: het kan zijn dat in het model van begrippen een Natuurlijk
+persoon en een Niet natuurlijk persoon zijn opgenomen, terwijl in het
+informatiemodel alleen het modelelement Persoon is opgenomen, alsmede een
+attribuutsoort ‘type persoon’. De verwijzing naar het begrip Natuurlijk persoon
+hoort in dit geval gelegd te worden vanuit het attribuutsoort 'type persoon' en
+niet vanuit het objecttype Persoon. Het kan ook zo zijn dat het datatype van
+'type persoon' een codelijst is, met als mogelijke waarden ‘NP’ en ‘NNP’ en
+‘overig’. Het is dan preciezer om de verwijzing te leggen vanuit de waarde ‘NP’.
 
-Bij het metadata element definitie van een modelelement mag in de beschrijving gebruik gemaakt worden van een URI, om te verwijzen naar de nationaal of internationaal gepubliceerde definitie. Deze kan van een begrip zijn, maar dit hoeft niet. Let hiermee op wanneer u als beheerder van het informatiemodel deze definitie niet zelf beheert, want lezers van het informatiemodel en gebruikers van de informatie baseren zich wel op deze definitie. Het kan dan gebeuren dat de definitie veranderd, en de informatievoorziening hier niet mee in overeensteming is. De aanbeveliging is daarom een goede definitie voor het modelelement te kiezen, en in de metadata een verwijzing op te nemen naar het begrip en hierna handmatig de overeenstemming tussen de definities te beheren.  
+### Definitie van een modelelement en de definitie van een begrip
+
+De definitie van het modelement is niet hetzelfde bedoeld als de definitie van
+een begrip. De definitie van een begrip in het begrippenkader is buiten scope
+van het informatiemodel, enerzijds omdat deze definitie anders kan zijn dan de
+definitie van het modelelement, en anderzijds omdat de definitie van het begrip
+aangepast kan worden, terwijl de informatievoorziening die het informatiemodel
+implementeert automatisch meebeweegt met deze definitie. Dit gezegd hebbende,
+wanneer er sprake is van een 1 op 1 relatie tussen begrip en modelelement, dan
+is dit een duidelijke aanleiding om te zorgen dat deze definities goed met
+elkaar overeenstemmen, of zelfs hetzelfde gehouden worden, waar mogelijk.
+
+Bij het metadata element definitie van een modelelement mag in de beschrijving
+gebruik gemaakt worden van een URI, om te verwijzen naar de nationaal of
+internationaal gepubliceerde definitie. Deze kan van een begrip zijn, maar dit
+hoeft niet. Let hiermee op wanneer u als beheerder van het informatiemodel deze
+definitie niet zelf beheert, want lezers van het informatiemodel en gebruikers
+van de informatie baseren zich wel op deze definitie. Het kan dan gebeuren dat
+de definitie veranderd, en de informatievoorziening hier niet mee in
+overeensteming is. De aanbeveliging is daarom een goede definitie voor het
+modelelement te kiezen, en in de metadata een verwijzing op te nemen naar het
+begrip en hierna handmatig de overeenstemming tussen de definities te beheren.
 
 **Voetnoten**
 
-<aside id='afs-n-1' class='note'>
-    nb
-</aside>
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+nb
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-<aside id='afs-n-2' class='note'>
-    Hoewel het goed zou zijn om tot een standaard te komen in Nederland is MIM niet de plek hiervoor.
-</aside>
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Hoewel het goed zou zijn om tot een standaard te komen in Nederland is MIM niet de plek hiervoor.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
