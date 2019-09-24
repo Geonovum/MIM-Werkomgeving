@@ -34,10 +34,10 @@ De modelelementen zijn verdeeld over een diagrammen, die elk een eigen view op
 een deel van het metamodel tonen. Elk view toont een aantal van de
 modelelementen, inclusief hun onderlinge samenhang.
 
-Alle views samen vormen het metamodel als geheel: 
-- KERN, met de belangrijkste modelelementen in onderlinge samenhang. 
-- DATATYPEN, met de in het model te onderkennen soorten datatypen. 
-- OVERIGE modelelementen, die niet altijd aan de orde zijn.
+Alle views samen vormen het metamodel als geheel: - KERN, met de belangrijkste
+modelelementen in onderlinge samenhang. - DATATYPEN, met de in het model te
+onderkennen soorten datatypen. - OVERIGE modelelementen, die niet altijd aan de
+orde zijn.
 
 Elk modelelement heeft een MIM metaclass met een naam. Hieraan is elk
 modelelement te herkennen in alle diagrammen en in de tekst en in elke
@@ -45,7 +45,7 @@ specificatie taal die een uitdrukking is van dit metamodel.
 
 ### Kern
 
-<todo>TODO: nieuw diagram zonder UML erin.</todo>
+TODO: nieuw diagram zonder UML erin.
 
 ![](media/f12fbb3dc2e205d26a1d0d27cbd325b3.png)
 
@@ -76,8 +76,8 @@ View 2: Datatypen
 | Primitief datatype      |
 | Gestructureerd datatype |
 | Data element            |
-| Union                   |
-| Union element           |
+| Keuze                   |
+| Keuze element           |
 | Enumeratie              |
 | Enumeratiewaarde        |
 | Referentielijst         |
@@ -634,30 +634,30 @@ Het data element beschrijft in combinatie met andere data-elementen de structuur
 van een gegeven en heeft zelf een datatype. Dit datatype is meestal een
 primitief datatype.
 
-#### Union
+#### Keuze
 
->   **Definitie Union**
+>   **Definitie Keuze**
 
 >   Gestructureerd datatype, waarmee wordt aangegeven dat er meer dan één
 >   mogelijkheid is voor het datatype van een attribuut. Het attribuut zelf
->   krijgt als datatype de union. De union biedt een keuze uit verschillende
->   datatypes, elk afzonderlijk beschreven in een union element.
+>   krijgt als datatype het stereotype keuze. Het type keuze biedt een keuze uit
+>   verschillende datatypes, elk afzonderlijk beschreven in een keuze element.
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Union LineOrPolygon. Deze biedt een keuze uit Union element Line of Union element Polygon.
+keuze LineOrPolygon. Deze biedt een keuze uit Keuze element Line of Keuze element Polygon.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#### Union element
+#### Keuze element
 
->   **Definitie Union element**
+>   **Definitie Keuze element**
 
 >   Een type dat gebruikt kan worden voor het attribuut zoals beschreven in de
->   definitie van Union. Het union element is een onderdeel van een Union,
->   uitgedrukt in een eigenschap (attribute) van een union, die als keuze binnen
->   de Union is gerepresenteerd..
+>   definitie van het stereotype Keuze. Het keuze element is een onderdeel van
+>   een Keuze, uitgedrukt in een eigenschap (attribute) van een klasse met
+>   stereotype Keuze.
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Union element Line en union element Polygon zijn beiden onderdeel van Union LineOrPolygon.
+Keuze element Line en keuze element Polygon zijn beiden onderdeel van Keuze LineOrPolygon.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ### Packages
@@ -799,7 +799,7 @@ TODO: voorbeeld ook opnemen voor W3C.
 Merk op, de metadata aspecten zijn specifiek voor elk modelelement apart. Dus
 als er in H2.2 sprake is van een generalisatie, dan worden deze metadata niet
 overerft (en de ingevulde waardes worden uiteraard zeker niet overerft). De MIM
-metaclass Union erft dus geen metagegevens, zoals patroon, van MIM metaclass
+metaclass Keuze erft dus geen metagegevens, zoals patroon, van MIM metaclass
 Datatype.
 
 Voor de duidelijkheid zijn een aantal metagegevens verplicht gemaakt, om te
@@ -915,15 +915,22 @@ Metagegeven: **Begrip**
 
 >   **Definitie Begrip**
 
-Verwijzing naar een begrip, vanuit een modelelement, waarmee wordt aangegeven op welk begrip, of begrippen, het informatiemodel element is gebaseerd. De verwijzing heeft de vorm van een term of een URI.
+Verwijzing naar een begrip, vanuit een modelelement, waarmee wordt aangegeven op
+welk begrip, of begrippen, het informatiemodel element is gebaseerd. De
+verwijzing heeft de vorm van een term of een URI.
 
 *Toelichting*
 
-Hiermee wordt aangegeven hoe een informatiemodel element zich verhoudt tot de begrippen uit het begrippenkader, zoals genoemd in paragraaf 1.5 (**verwijzing, TODO**). Dit is niet een 1 op 1 relatie. Voor meer informatie hierover, zie hoofdstuk 5 (**verwijzing, TODO**). 
+Hiermee wordt aangegeven hoe een informatiemodel element zich verhoudt tot de
+begrippen uit het begrippenkader, zoals genoemd in paragraaf 1.5 (**verwijzing,
+TODO**). Dit is niet een 1 op 1 relatie. Voor meer informatie hierover, zie
+hoofdstuk 5 (**verwijzing, TODO**).
 
-Bij voorbeeld: Perceel of http://brk.basisregistraties.overheid.nl/id/begrip/Perceel 
+Bij voorbeeld: Perceel of
+http://brk.basisregistraties.overheid.nl/id/begrip/Perceel
 
-*Toepassing*: alle modelelementen met een naam, met uitzondering van packages en constraint.
+*Toepassing*: alle modelelementen met een naam, met uitzondering van packages en
+constraint.
 
 Metagegeven: **Herkomst**
 
@@ -1195,7 +1202,7 @@ enumeratie als type vermeld.
 Bijvoorbeeld: VlakOfMultivlak, CharacterString
 
 *Toepassing*: attribuutsoort, primitief datatype (in het IM gedefinieerd), data
-element, union element, referentie element.
+element, keuze element, referentie element.
 
 Metagegeven: **Lengte** (domein van een waarde van een gegeven)
 
@@ -1214,7 +1221,7 @@ tot +9,99; Dit is verder toegelicht in het hoofdstuk [Afspraken & Regels](#afspr
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 *Toepassing*: attribuutsoort, primitief datatype (in het IM gedefinieerd), data
-element, union element, referentie element.
+element, keuze element, referentie element.
 
 Metagegeven: **Patroon**
 
