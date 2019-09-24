@@ -70,8 +70,8 @@ View 2: Datatypen
 | Primitief datatype      | «Primitief datatype»    | (UML) Primitive Type     | Datatype           |
 | Gestructureerd datatype | «Gestructuurd datatype» | (UML) Datatype           | Datatype           |
 | Data element            | «Data element»          | (UML) Property           | Attribute          |
-| Union                   | «Union»                 | (UML) Datatype           | Datatype           |
-| Union element           | «Union element»         | (UML) Property           | Attribute          |
+| Keuze                   | «Keuze»                 | (UML) Datatype           | Datatype           |
+| Keuze element           | «Keuze element»         | (UML) Property           | Attribute          |
 | Enumeratie              | \-                      | (UML) Enumeration        | Enumeration        |
 | Enumeratiewaarde        | \-                      | (UML) EnumerationLiteral | EnumerationLiteral |
 | Referentielijst         | «Referentielijst»       | (UML) Datatype           | Datatype           |
@@ -490,9 +490,9 @@ De data-elementen worden naar de volgende aspecten gespecificeerd:
 | **- Formeel patroon**                       | 0..1              | Algemeen metagegeven. |                                                                 | *Tagged value* |
 | **Kardinaliteit**                           | 1                 | Algemeen metagegeven. | *lowerValue en upperValue van de metaclass MultiplicityElement* | *Multiplicity* |
 
-**Specificatie voor «Union»**
+**Specificatie voor «Keuze»**
 
-De unions worden naar de volgende aspecten gespecificeerd:
+Een Keuze worden naar de volgende aspecten gespecificeerd:
 
 | **Aspect**       | **Kardinaliteit** | **Toelichting**       | **In UML 2.5**                       | **InEA**       |
 |------------------|-------------------|-----------------------|--------------------------------------|----------------|
@@ -502,19 +502,19 @@ De unions worden naar de volgende aspecten gespecificeerd:
 | **Definitie**    | 1                 | Algemeen metagegeven. | *Body van de metaclass Comment*      | *Notes*        |
 | **Datum opname** | 1                 | Algemeen metagegeven. |                                      | *Tagged value* |
 
-**Specificatie voor «Union element»**
+**Specificatie voor «Keuze element»**
 
-De unionelementen worden naar de volgende aspecten gespecificeerd:
+De keuze elementen worden naar de volgende aspecten gespecificeerd:
 
-| **Aspect**            | **Kardinaliteit** | **Toelichting**                                                            | **In UML 2.5**                                                  | **In EA**      |
-|-----------------------|-------------------|----------------------------------------------------------------------------|-----------------------------------------------------------------|----------------|
-| **Naam**              | 1                 | Algemeen metagegeven.                                                      | *name van de metaclass Named element*                           | *Name*         |
-| **Begrip**            | 0..\*             | Algemeen metagegeven.                                                      | *UML-Property*                                                  | *Tagged value* |
-| **Definitie**         | 0..1              | Algemeen metagegeven.                                                      | *Body van de metaclass Comment*                                 | *Notes*        |
-| **- Type**            | 1                 | Algemeen metagegeven.                                                      |                                                                 | *Type*         |
-| **- Patroon**         | 0..1              | Algemeen metagegeven.                                                      |                                                                 | *Tagged value* |
-| **- Formeel patroon** | 0..1              | Algemeen metagegeven.                                                      |                                                                 | *Tagged value* |
-| **Kardinaliteit**     | 1                 | Algemeen metagegeven. *De kardinaliteit van een unionelement is altijd 1.* | *lowerValue en upperValue van de metaclass MultiplicityElement* | *Multiplicity* |
+| **Aspect**            | **Kardinaliteit** | **Toelichting**                                                             | **In UML 2.5**                                                  | **In EA**      |
+|-----------------------|-------------------|-----------------------------------------------------------------------------|-----------------------------------------------------------------|----------------|
+| **Naam**              | 1                 | Algemeen metagegeven.                                                       | *name van de metaclass Named element*                           | *Name*         |
+| **Begrip**            | 0..\*             | Algemeen metagegeven.                                                       | *UML-Property*                                                  | *Tagged value* |
+| **Definitie**         | 0..1              | Algemeen metagegeven.                                                       | *Body van de metaclass Comment*                                 | *Notes*        |
+| **- Type**            | 1                 | Algemeen metagegeven.                                                       |                                                                 | *Type*         |
+| **- Patroon**         | 0..1              | Algemeen metagegeven.                                                       |                                                                 | *Tagged value* |
+| **- Formeel patroon** | 0..1              | Algemeen metagegeven.                                                       |                                                                 | *Tagged value* |
+| **Kardinaliteit**     | 1                 | Algemeen metagegeven. *De kardinaliteit van een keuze element is altijd 1.* | *lowerValue en upperValue van de metaclass MultiplicityElement* | *Multiplicity* |
 
 ### Specificatie metagegevens voor packages
 
