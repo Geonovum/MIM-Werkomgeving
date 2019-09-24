@@ -34,10 +34,10 @@ De modelelementen zijn verdeeld over een diagrammen, die elk een eigen view op
 een deel van het metamodel tonen. Elk view toont een aantal van de
 modelelementen, inclusief hun onderlinge samenhang.
 
-Alle views samen vormen het metamodel als geheel: - KERN, met de belangrijkste
-modelelementen in onderlinge samenhang. - DATATYPEN, met de in het model te
-onderkennen soorten datatypen. - OVERIGE modelelementen, die niet altijd aan de
-orde zijn.
+Alle views samen vormen het metamodel als geheel: 
+- KERN, met de belangrijkste modelelementen in onderlinge samenhang. 
+- DATATYPEN, met de in het model te onderkennen soorten datatypen. 
+- OVERIGE modelelementen, die niet altijd aan de orde zijn.
 
 Elk modelelement heeft een MIM metaclass met een naam. Hieraan is elk
 modelelement te herkennen in alle diagrammen en in de tekst en in elke
@@ -45,7 +45,7 @@ specificatie taal die een uitdrukking is van dit metamodel.
 
 ### Kern
 
-TODO: nieuw diagram zonder UML erin.
+<todo>TODO: nieuw diagram zonder UML erin.</todo>
 
 ![](media/f12fbb3dc2e205d26a1d0d27cbd325b3.png)
 
@@ -76,8 +76,8 @@ View 2: Datatypen
 | Primitief datatype      |
 | Gestructureerd datatype |
 | Data element            |
-| Keuze                   |
-| Keuze element           |
+| Union                   |
+| Union element           |
 | Enumeratie              |
 | Enumeratiewaarde        |
 | Referentielijst         |
@@ -634,30 +634,30 @@ Het data element beschrijft in combinatie met andere data-elementen de structuur
 van een gegeven en heeft zelf een datatype. Dit datatype is meestal een
 primitief datatype.
 
-#### Keuze
+#### Union
 
->   **Definitie Keuze**
+>   **Definitie Union**
 
 >   Gestructureerd datatype, waarmee wordt aangegeven dat er meer dan één
 >   mogelijkheid is voor het datatype van een attribuut. Het attribuut zelf
->   krijgt als datatype het stereotype keuze. Het type keuze biedt een keuze uit
->   verschillende datatypes, elk afzonderlijk beschreven in een keuze element.
+>   krijgt als datatype de union. De union biedt een keuze uit verschillende
+>   datatypes, elk afzonderlijk beschreven in een union element.
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-keuze LineOrPolygon. Deze biedt een keuze uit Keuze element Line of Keuze element Polygon.
+Union LineOrPolygon. Deze biedt een keuze uit Union element Line of Union element Polygon.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#### Keuze element
+#### Union element
 
->   **Definitie Keuze element**
+>   **Definitie Union element**
 
 >   Een type dat gebruikt kan worden voor het attribuut zoals beschreven in de
->   definitie van het stereotype Keuze. Het keuze element is een onderdeel van
->   een Keuze, uitgedrukt in een eigenschap (attribute) van een klasse met
->   stereotype Keuze.
+>   definitie van Union. Het union element is een onderdeel van een Union,
+>   uitgedrukt in een eigenschap (attribute) van een union, die als keuze binnen
+>   de Union is gerepresenteerd..
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Keuze element Line en keuze element Polygon zijn beiden onderdeel van Keuze LineOrPolygon.
+Union element Line en union element Polygon zijn beiden onderdeel van Union LineOrPolygon.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ### Packages
@@ -799,7 +799,7 @@ TODO: voorbeeld ook opnemen voor W3C.
 Merk op, de metadata aspecten zijn specifiek voor elk modelelement apart. Dus
 als er in H2.2 sprake is van een generalisatie, dan worden deze metadata niet
 overerft (en de ingevulde waardes worden uiteraard zeker niet overerft). De MIM
-metaclass Keuze erft dus geen metagegevens, zoals patroon, van MIM metaclass
+metaclass Union erft dus geen metagegevens, zoals patroon, van MIM metaclass
 Datatype.
 
 Voor de duidelijkheid zijn een aantal metagegevens verplicht gemaakt, om te
@@ -915,22 +915,15 @@ Metagegeven: **Begrip**
 
 >   **Definitie Begrip**
 
-Verwijzing naar een begrip, vanuit een modelelement, waarmee wordt aangegeven op
-welk begrip, of begrippen, het informatiemodel element is gebaseerd. De
-verwijzing heeft de vorm van een term of een URI.
+Verwijzing naar een begrip, vanuit een modelelement, waarmee wordt aangegeven op welk begrip, of begrippen, het informatiemodel element is gebaseerd. De verwijzing heeft de vorm van een term of een URI.
 
 *Toelichting*
 
-Hiermee wordt aangegeven hoe een informatiemodel element zich verhoudt tot de
-begrippen uit het begrippenkader, zoals genoemd in paragraaf 1.5 (**verwijzing,
-TODO**). Dit is niet een 1 op 1 relatie. Voor meer informatie hierover, zie
-hoofdstuk 5 (**verwijzing, TODO**).
+Hiermee wordt aangegeven hoe een informatiemodel element zich verhoudt tot de begrippen uit het begrippenkader, zoals genoemd in paragraaf 1.5 (**verwijzing, TODO**). Dit is niet een 1 op 1 relatie. Voor meer informatie hierover, zie hoofdstuk 5 (**verwijzing, TODO**). 
 
-Bij voorbeeld: Perceel of
-http://brk.basisregistraties.overheid.nl/id/begrip/Perceel
+Bij voorbeeld: Perceel of http://brk.basisregistraties.overheid.nl/id/begrip/Perceel 
 
-*Toepassing*: alle modelelementen met een naam, met uitzondering van packages en
-constraint.
+*Toepassing*: alle modelelementen met een naam, met uitzondering van packages en constraint.
 
 Metagegeven: **Herkomst**
 
@@ -1167,6 +1160,78 @@ voorwaarden, met een opgaaf van reden.
 *Toepassing*: de modelelementen waarvoor een waarde ingevuld kan worden, te
 weten de modelelementen attribuutsoort en relatiesoort.
 
+Metagegeven: **Relatie eigenaar**
+
+>   **Definitie Relatie eigenaar**
+
+Aanduiding van de eigenaar van een relatie tussen objecten, die het startpunt van de relatie aangeeft. Objecten van het objecttype van de eigenaar, hebben als kenmerk deze relatie. 
+
+*Toelichting*
+
+Bijvoorbeeld: een persoon heeft een postadres. Het postadres is een kenmerk van een persoon. De persoon is in deze de eigenaar van de relatie. Het postadres is de naam van het kenmerk c.q. de relatie tussen een persoon en een adres en geeft betekenis aan deze relatie. Het adres is er gewoon en wie hem allemaal gebruikt als adres en of dit als postadres is of als woonadres of nog iets anders is voor het adres niet van belang. 
+
+*Toepassing*: relaties, oftewel de modelelementen Relatiesoort en Externe koppeling. 
+
+**UML TODO: /source: related Element bij Relationship Element	Source** 
+
+Metagegeven: **Relatie doel**
+
+>   **Definitie Relatie doel**
+
+Aanduiding van het gerelateerde objecttype, die het eindpunt van de relatie aangeeft. Naar objecten van dit objecttype wordt verwezen. 
+
+*Toelichting*
+
+Bijvoorbeeld: een persoon heeft een postadres. Het postadres is de naam van de relatie tussen een persoon en een adres. Het adres is het doel van deze relatie. 
+
+*Toepassing*: relaties, oftewel de modelelementen Relatiesoort en Externe koppeling. 
+
+**UML TODO: Het objecttype waarmee een objecttype een logisch verband heeft	/target: related Element bij Relationship Element	Target** 
+
+Metagegeven: **Uni-directioneel**
+
+>   **Definitie Uni-directioneel**
+
+De richting van een relatie, welke betekenis geeft aan de relatie vanuit het perspectief van de eigenaar van de relatie. 
+
+*Toelichting*
+
+Bijvoorbeeld: een persoon heeft een postadres. De richting van de relatie is van persoon naar adres. De eigenaar van de relatie (de source) heeft kennis van de het gerelateerde objecttype (de target). In een modelleertaal wordt dit vaak aangegeven met een pijl. De pijl heeft als vertrekpunt de eigenaar en heeft als pijlpunt, waar de relatrie naar wijst, het gerelateerde objecttype. Alle relaties zijn altijd gericht van het objecttype (source) naar het gerelateerde objecttype (target). 
+
+Per informatiemodel kan er anders gedacht worden over wie de eigenaar van het kenmerk is, oftewel de richting. Het is erg gebruikelijk om een richting aan te geven, enerzijds omdat de betekenis van A naar B een andere is dan van B naar A, anderzijds omdat het van belang is bij welke objecttype het kenmerk wordt bijgehouden, oftewel wie de eigenaar is. 
+
+**TODO UML: Direction van de betreffende assiciation (van source naar target). TODO: verplaatsen naar UML hoofdstuk.** 
+
+*Toepassing*: relaties, oftewel de modelelementen Relatiesoort en Externe koppeling. 
+
+Metagegeven: **Aggregatie type**
+
+>   **Definitie Aggregatie type**
+
+Aanduiding of het objecttype die de eigenaar is van een relatie het doel van relatie ziet als een samen te voegen onderdeel.
+
+*Toelichting*
+Bijvoorbeeld: een auto heeft verschillende onderdelen, waaronder een motor. In het informatiemodel gaat het vooral om de auto en is de motor alleen relevant vanuit het perspectief van dat het een onderdeel is van de auto. 
+
+Standaard is er bij een relatie geen sprake van een aggregatie, ofdat het aggregatie type is 'none'. Als er wel sprake is van een aggregatie, dan geeft dit aan dat het objecttype die doel is van de relatie een onderdeel is van het objecttype die de eigenaar is van de relatie. De eigenaar geeft aan hoe de aggregatie in gezien moet worden. Dit kan zijn: 
+- 'composite': de eigenaar is volledig verantwoordelijk voor het beheer van het onderdeel. Als de eigenaar vervalt, dan vervallen automatisch ook de onderdelen mee. De target kan niet bestaan zonder de source: de target vervalt als de source vervalt.
+- 'shared': het onderdeel kan gebruikt en gedeeld worden door meerdere eigenaren. Bijvoorbeeld: een betaalrekening. 
+
+**UML 2.5: aggregationKind** 
+
+**EA: isComposite bij metaclass Property	Aggregation van de source role met waarde composite.**
+
+*Toepassing*: relaties, oftewel de modelelementen Relatiesoort en Externe koppeling. 
+
+**TODO: verplaatsen naar UML hoofdstuk. 
+1	
+Objecttype	1	Het objecttype waarvan de relatie een eigenschap is.	/source: related Element bij Relationship Element	Source
+Gerelateerd objecttype	1	Het objecttype waarmee een objecttype een logisch verband heeft	/target: related Element bij Relationship Element	Target
+Type aggregatie	1	S
+**
+
+
+
 Metagegeven: **Locatie**
 
 >   **Definitie Locatie**
@@ -1202,7 +1267,7 @@ enumeratie als type vermeld.
 Bijvoorbeeld: VlakOfMultivlak, CharacterString
 
 *Toepassing*: attribuutsoort, primitief datatype (in het IM gedefinieerd), data
-element, keuze element, referentie element.
+element, union element, referentie element.
 
 Metagegeven: **Lengte** (domein van een waarde van een gegeven)
 
@@ -1221,7 +1286,7 @@ tot +9,99; Dit is verder toegelicht in het hoofdstuk [Afspraken & Regels](#afspr
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 *Toepassing*: attribuutsoort, primitief datatype (in het IM gedefinieerd), data
-element, keuze element, referentie element.
+element, union element, referentie element.
 
 Metagegeven: **Patroon**
 
