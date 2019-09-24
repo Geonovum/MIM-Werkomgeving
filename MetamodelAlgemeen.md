@@ -34,10 +34,10 @@ De modelelementen zijn verdeeld over een diagrammen, die elk een eigen view op
 een deel van het metamodel tonen. Elk view toont een aantal van de
 modelelementen, inclusief hun onderlinge samenhang.
 
-Alle views samen vormen het metamodel als geheel: - KERN, met de belangrijkste
-modelelementen in onderlinge samenhang. - DATATYPEN, met de in het model te
-onderkennen soorten datatypen. - OVERIGE modelelementen, die niet altijd aan de
-orde zijn.
+Alle views samen vormen het metamodel als geheel: 
+- KERN, met de belangrijkste modelelementen in onderlinge samenhang. 
+- DATATYPEN, met de in het model te onderkennen soorten datatypen. 
+- OVERIGE modelelementen, die niet altijd aan de orde zijn.
 
 Elk modelelement heeft een MIM metaclass met een naam. Hieraan is elk
 modelelement te herkennen in alle diagrammen en in de tekst en in elke
@@ -45,7 +45,7 @@ specificatie taal die een uitdrukking is van dit metamodel.
 
 ### Kern
 
-TODO: nieuw diagram zonder UML erin.
+<todo>TODO: nieuw diagram zonder UML erin.</todo>
 
 ![](media/f12fbb3dc2e205d26a1d0d27cbd325b3.png)
 

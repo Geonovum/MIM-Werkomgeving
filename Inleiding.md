@@ -7,8 +7,8 @@ duidelijke afspraken over het vastleggen van gegevensspecificaties en biedt
 tegelijkertijd ruimte aan de verschillende niveaus van modellering. Bijzonder 
 aan het model is dat de afspraken over meerdere bestuurslagen heen gaan.
 
-Dit document is opgesteld met kennis die is aangedragen door de MIM-communty.
-Kadaster, Geonovum, VNG Realisatie, DUO, Ordina en andere partijen hebben hun visie gedeeld.
+Dit document is opgesteld met kennis die is aangedragen door de MIM-community.
+Kadaster, Geonovum, VNG Realisatie, DUO, Ordina en andere partijen hebben hun bijdrage geleverd.
 
 ### Toepassingsgebied
 Het metamodel biedt de modelleringstaal waarmee een informatiemodel gemaakt,
@@ -44,9 +44,8 @@ informatiemodellen maken; informatieanalisten die willen weten wat de betekenis
 en definitie van informatieobjecten is, en mensen die model-driven verder werken
 op basis van het informatiemodel en er implementaties van maken. Kennis van
 informatiemodellering is een vereiste. Enige kennis van UML [[!UML]] of [[!Linked-Data]] is een pré maar niet
-noodzakelijk. Dit metamodel richt zich in het bijzonder op de
-informatievoorziening binnen het overheidsdomein, al is het ook in bredere
-context inzetbaar.
+noodzakelijk. Dit metamodel richt zich in het bijzonder op de informatievoorziening binnen 
+het overheidsdomein, al is het ook in bredere context inzetbaar.
 
 ### Leeswijzer
 Het metamodel beschrijven we in vijf hoofdstukken en een bijlage.
