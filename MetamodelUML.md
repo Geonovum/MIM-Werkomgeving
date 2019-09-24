@@ -619,37 +619,37 @@ en is te vinden op [www.imvertor.org](http://www.imvertor.org).
 
 **Voetnoten**
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-In de kolom **UML2.5** is opgenomen hoe het element in UML2.5 is benoemd. Het
-betreft veelal overerving van een gegeven van een UML metaclass die niet in dit
-document is benoemd.
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+<aside id='uml-n-1' class='note'>
+    In de kolom **UML2.5** is opgenomen hoe het element in UML2.5 is benoemd. Het
+    betreft veelal overerving van een gegeven van een UML metaclass die niet in dit
+    document is benoemd.
+</aside>
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-**Aspect** met aanduiding √ is conform stelselafspraken voor basisregistraties.
-Een \* is conform de stelselcatalogus. Die ook de paragraaf in H3 hierover.
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+<aside id='uml-n-2' class='note'>
+    **Aspect** met aanduiding √ is conform stelselafspraken voor basisregistraties.
+    Een \* is conform de stelselcatalogus. Die ook de paragraaf in H3 hierover.
+</aside>
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Rode tekst in de kolom ‘In EA’ betreft een standaard element binnen Sparx
-EA. Zwarte tekst in de kolom ‘in EA’ betreft uitbreiding op UML Metamodel, via
-tagged values of aanvullende stereotypes.
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+<aside id='uml-n-3' class='note'>
+    Rode tekst in de kolom ‘In EA’ betreft een standaard element binnen Sparx
+    EA. Zwarte tekst in de kolom ‘in EA’ betreft uitbreiding op UML Metamodel, via
+    tagged values of aanvullende stereotypes.
+</aside>
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-In (basis) registraties is dit meestal gespecificeerd in een catalogus van
-objecten en begrippen. Deze opmerking geldt voor elk metadata aspect naam van de
-andere modelelementen. Indien het modelelement niet voorkomt in een dergelijke
-catalogus is dan kiest u uiteraard een eigen naam.
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+<aside id='uml-n-4' class='note'>
+    In (basis) registraties is dit meestal gespecificeerd in een catalogus van
+    objecten en begrippen. Deze opmerking geldt voor elk metadata aspect naam van de
+    andere modelelementen. Indien het modelelement niet voorkomt in een dergelijke
+    catalogus is dan kiest u uiteraard een eigen naam.
+</aside>
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Deze specificatie is toegevoegd t.o.v. de registratiecatalogus aangezien
-het hier niet om een registratie gaat maar wel duidelijk moet zijn in welke
-registratie de (verwijzing naar de) lijst voorkomt (indien van toepassing).
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+<aside id='uml-n-5' class='note'>
+    Deze specificatie is toegevoegd t.o.v. de registratiecatalogus aangezien
+    het hier niet om een registratie gaat maar wel duidelijk moet zijn in welke
+    registratie de (verwijzing naar de) lijst voorkomt (indien van toepassing).
+</aside>
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Element import wordt in UML ingezet voor het importeren van een NamedElement uit een ander package.
-In dit metamodel wordt de alias (nog) niet zo gebruikt.
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+<aside id='uml-n-6' class='note'>
+    Element import wordt in UML ingezet voor het importeren van een NamedElement uit een ander package.
+    In dit metamodel wordt de alias (nog) niet zo gebruikt.
+</aside>
