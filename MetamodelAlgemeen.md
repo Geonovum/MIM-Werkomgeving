@@ -1,5 +1,4 @@
-Metamodel Algemeen
-==================
+## Metamodel Algemeen
 
 Dit hoofdstuk beschrijft het metamodel in diagramvorm en in tekst. De eerste
 paragraaf bevat een diagram, die het overzicht van de modelelementen aangeeft,
@@ -7,24 +6,23 @@ en hun onderlinge verhouding. Hierna worden alle modelelementen beschreven en
 toegelicht. Deze modelelementen worden gebruikt bij het maken van een
 informatiemodel.
 
-Uitgangspunten voor het metamodel zijn: - Elk modelelement heeft een naam en een
-eigen MIM metaclass, waaraan je het modelelement overal kan herkennen. - De
-modelelementen worden eerst uitgelegt zonder een specifieke specificatie taal te
-gebruiken. Dit is zodat we hierna kunnen aangeven hoe je het modelelement
-uitdrukt per specifieke specificatie taal, te weten in UML of in w3C
-specificatie technieken. - Toolonafhankelijke beschrijving van het metamodel.
-Omdat VNG Realisatie, Kadaster en Geonovum en veel andere organisaties Sparx EA
+Uitgangspunten voor het metamodel zijn: 
+- Elk modelelement heeft een naam en een eigen MIM metaclass, waaraan je het modelelement overal kan herkennen. 
+- De modelelementen worden eerst uitgelegt zonder een specifieke specificatie taal te gebruiken. 
+Dit is zodat we hierna kunnen aangeven hoe je het modelelement uitdrukt per specifieke specificatie taal, te weten in UML of in w3C
+specificatie technieken. 
+- Toolonafhankelijke beschrijving van het metamodel. Omdat VNG Realisatie, Kadaster en Geonovum en veel andere organisaties Sparx EA
 gebruiken is er aanvullend aangegeven hoe het metamodel in Enterprise Architect
-toegepast wordt. Hierdoor borgen we deze relatie. - Uniforme toepassing van het
+toegepast wordt. Hierdoor borgen we deze relatie. 
+- Uniforme toepassing van het
 metamodel in informatiemodellen. Anders gezegd, uitbreiden mag, afwijkenniet,
-maak voor hetzelfde doel geen alternatieve constructies. - Datatypen zijn
-onderdeel van het metamodel en beschrijven de structuur van de data, maar niet
-de semantiek/betekenis. De aanbeveling is dan ook om eerst een informatiemodel
+maak voor hetzelfde doel geen alternatieve constructies. 
+- Datatypen zijn onderdeel van het metamodel en beschrijven de structuur van de data, 
+maar niet de semantiek/betekenis. De aanbeveling is dan ook om eerst een informatiemodel
 te maken zonder datatypen. De regel is dat als alle datatypen uit het model
 worden weggelaten, er geen semantische betekenis verloren mag gaan.
 
-Structuur metamodel
--------------------
+### Structuur metamodel
 
 Deze paragraaf bevat een overzicht van het metamodel en geeft alle
 modelelementen weer in diagram vorm. De beschrijving van de modelelementen in
@@ -129,8 +127,7 @@ View 3c: Groepering
 | Extern            |
 | View              |
 
-Betekenis modelelementen
-------------------------
+### Betekenis modelelementen
 
 In deze paragraaf staan alle modelelementen opgesomd, die gebruikt worden bij
 het maken van een informatiemodel.
