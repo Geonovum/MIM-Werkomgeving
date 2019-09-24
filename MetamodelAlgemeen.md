@@ -1172,8 +1172,6 @@ Bijvoorbeeld: een persoon heeft een postadres. Het postadres is een kenmerk van 
 
 *Toepassing*: relaties, oftewel de modelelementen Relatiesoort en Externe koppeling. 
 
-**UML TODO: /source: related Element bij Relationship Element	Source** 
-
 Metagegeven: **Relatie doel**
 
 >   **Definitie Relatie doel**
@@ -1186,8 +1184,6 @@ Bijvoorbeeld: een persoon heeft een postadres. Het postadres is de naam van de r
 
 *Toepassing*: relaties, oftewel de modelelementen Relatiesoort en Externe koppeling. 
 
-**UML TODO: Het objecttype waarmee een objecttype een logisch verband heeft	/target: related Element bij Relationship Element	Target** 
-
 Metagegeven: **Uni-directioneel**
 
 >   **Definitie Uni-directioneel**
@@ -1199,8 +1195,6 @@ De richting van een relatie, welke betekenis geeft aan de relatie vanuit het per
 Bijvoorbeeld: een persoon heeft een postadres. De richting van de relatie is van persoon naar adres. De eigenaar van de relatie (de source) heeft kennis van de het gerelateerde objecttype (de target). In een modelleertaal wordt dit vaak aangegeven met een pijl. De pijl heeft als vertrekpunt de eigenaar en heeft als pijlpunt, waar de relatrie naar wijst, het gerelateerde objecttype. Alle relaties zijn altijd gericht van het objecttype (source) naar het gerelateerde objecttype (target). 
 
 Per informatiemodel kan er anders gedacht worden over wie de eigenaar van het kenmerk is, oftewel de richting. Het is erg gebruikelijk om een richting aan te geven, enerzijds omdat de betekenis van A naar B een andere is dan van B naar A, anderzijds omdat het van belang is bij welke objecttype het kenmerk wordt bijgehouden, oftewel wie de eigenaar is. 
-
-**TODO UML: Direction van de betreffende assiciation (van source naar target). TODO: verplaatsen naar UML hoofdstuk.** 
 
 *Toepassing*: relaties, oftewel de modelelementen Relatiesoort en Externe koppeling. 
 
@@ -1217,20 +1211,7 @@ Standaard is er bij een relatie geen sprake van een aggregatie, ofdat het aggreg
 - 'composite': de eigenaar is volledig verantwoordelijk voor het beheer van het onderdeel. Als de eigenaar vervalt, dan vervallen automatisch ook de onderdelen mee. De target kan niet bestaan zonder de source: de target vervalt als de source vervalt.
 - 'shared': het onderdeel kan gebruikt en gedeeld worden door meerdere eigenaren. Bijvoorbeeld: een betaalrekening. 
 
-**UML 2.5: aggregationKind** 
-
-**EA: isComposite bij metaclass Property	Aggregation van de source role met waarde composite.**
-
 *Toepassing*: relaties, oftewel de modelelementen Relatiesoort en Externe koppeling. 
-
-**TODO: verplaatsen naar UML hoofdstuk. 
-1	
-Objecttype	1	Het objecttype waarvan de relatie een eigenschap is.	/source: related Element bij Relationship Element	Source
-Gerelateerd objecttype	1	Het objecttype waarmee een objecttype een logisch verband heeft	/target: related Element bij Relationship Element	Target
-Type aggregatie	1	S
-**
-
-
 
 Metagegeven: **Locatie**
 
