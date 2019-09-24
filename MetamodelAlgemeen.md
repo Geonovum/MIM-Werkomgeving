@@ -911,6 +911,20 @@ object.
 
 *Toepassing*: alle modelelementen met een definitie.
 
+Metagegeven: **Begrip**
+
+>   **Definitie Begrip**
+
+Verwijzing naar een begrip, vanuit een modelelement, waarmee wordt aangegeven op welk begrip, of begrippen, het informatiemodel element is gebaseerd. De verwijzing heeft de vorm van een term of een URI.
+
+*Toelichting*
+
+Hiermee wordt aangegeven hoe een informatiemodel element zich verhoudt tot de begrippen uit het begrippenkader, zoals genoemd in paragraaf 1.5 (**verwijzing, TODO**). Dit is niet een 1 op 1 relatie. Voor meer informatie hierover, zie hoofdstuk 5. 
+
+Bij voorbeeld: Perceel of http://brk.basisregistraties.overheid.nl/id/begrip/Perceel 
+
+*Toepassing*: alle modelelementen met een naam.
+
 Metagegeven: **Herkomst**
 
 >   **Definitie Herkomst**
