@@ -138,7 +138,15 @@ var respecConfig =
     "GAB":
     {
       title:      "GAB",
-      href:       "http://www.noraonline.nl/images/noraonline/c/c3/GAB_mogelijk_onvolledige_datum_1.0.pdf",
+      href:       "https://www.noraonline.nl/wiki/Gemeenschappelijke_Afspraken_Berichten",
+      status:     "",
+      publisher:  "",
+      company:    "",
+    },
+	"Linked-Data":
+    {
+      title:      "Linked Data",
+      href:       "https://www.noraonline.nl/wiki/Linked_Data",
       status:     "",
       publisher:  "",
       company:    "",
