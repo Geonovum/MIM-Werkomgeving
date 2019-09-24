@@ -8,7 +8,7 @@ tegelijkertijd ruimte aan de verschillende niveaus van modellering. Bijzonder
 aan het model is dat de afspraken over meerdere bestuurslagen heen gaan.
 
 Dit document is opgesteld met kennis die is aangedragen door de MIM-communty.
-Kadaster, Geonovum, VNG Realisatie en andere partijen hebben hun visie gedeeld.
+Kadaster, Geonovum, VNG Realisatie, DUO, Ordina en andere partijen hebben hun visie gedeeld.
 
 ### Toepassingsgebied
 Het metamodel biedt de modelleringstaal waarmee een informatiemodel gemaakt,
