@@ -43,7 +43,7 @@ Dit document is primair bestemd voor informatiearchitecten die deze
 informatiemodellen maken; informatieanalisten die willen weten wat de betekenis
 en definitie van informatieobjecten is, en mensen die model-driven verder werken
 op basis van het informatiemodel en er implementaties van maken. Kennis van
-informatiemodellering is een vereiste. Enige kennis van UML [[!UML]] of [[!Linked Data]] is een pré maar niet
+informatiemodellering is een vereiste. Enige kennis van UML [[!UML]] of [[!Linked-Data]] is een pré maar niet
 noodzakelijk. Dit metamodel richt zich in het bijzonder op de
 informatievoorziening binnen het overheidsdomein, al is het ook in bredere
 context inzetbaar.
@@ -68,7 +68,7 @@ metamodel, welke uitbreidingen c.q. verbijzonderingen van het UML metamodel zijn
 aangebracht. 
 
 Het hoofdstuk [Metamodel in Linked Data (LD)](#metamodel-in-linked-data) beschrijft hoe de implementatie van MIM in
-[[!Linked Data]] er uit ziet. In dit hoofdstuk wordt beschreven hoe het metamodel zich verhoudt tot het Linked Data
+[[!Linked-Data]] er uit ziet. In dit hoofdstuk wordt beschreven hoe het metamodel zich verhoudt tot het Linked Data
 metamodel, welke uitbreidingen c.q. verbijzonderingen van het Linked Data metamodel zijn
 aangebracht. 
 
