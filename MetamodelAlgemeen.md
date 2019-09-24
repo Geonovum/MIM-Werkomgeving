@@ -919,11 +919,11 @@ Verwijzing naar een begrip, vanuit een modelelement, waarmee wordt aangegeven op
 
 *Toelichting*
 
-Hiermee wordt aangegeven hoe een informatiemodel element zich verhoudt tot de begrippen uit het begrippenkader, zoals genoemd in paragraaf 1.5 (**verwijzing, TODO**). Dit is niet een 1 op 1 relatie. Voor meer informatie hierover, zie hoofdstuk 5. 
+Hiermee wordt aangegeven hoe een informatiemodel element zich verhoudt tot de begrippen uit het begrippenkader, zoals genoemd in paragraaf 1.5 (**verwijzing, TODO**). Dit is niet een 1 op 1 relatie. Voor meer informatie hierover, zie hoofdstuk 5 (**verwijzing, TODO**). 
 
 Bij voorbeeld: Perceel of http://brk.basisregistraties.overheid.nl/id/begrip/Perceel 
 
-*Toepassing*: alle modelelementen met een naam.
+*Toepassing*: alle modelelementen met een naam, met uitzondering van packages en constraint.
 
 Metagegeven: **Herkomst**
 
