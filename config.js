@@ -199,27 +199,20 @@ var respecConfig =
       publisher:  "",
       company:    "",
     },
-	 "(Geo-JSON)":
+	 "(Geo)JSON":
     {
       "title": "GeoJSON",
       "href": "https://geojson.org/",
-      "publisher": "W3C",
-      "status": "NOTE",
-    },
-	{
-      "title": "JSON",
-      "href": "https://json.org/",
       "publisher": "",
       "status": "",
     },
-    "SOAP":
+	 "SOAP":
     {
       "title": "SOAP Specifications",
       "href": "https://www.w3.org/TR/SOAP/",
       "publisher": "",
       "status": "",
     },
-	
   },
   //-- Voor dit blok geldt: alleen als er eerdere versies zijn en altijd beiden aan/uit! 
   previousPublishDate: "2019-06-19",    	    // Format is "YYY-MM-DD"
