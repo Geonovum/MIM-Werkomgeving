@@ -185,12 +185,12 @@ met name de ontwerpers, bouwers en beheerders van ICT-voorzieningen.
 Specificeert de structuur en eigenschappen van de technologie waarin de
 informatie wordt vastgelegd of uitgewisseld. Dit is sterk afhankelijk van de
 gebruikte opslagtechnologie zoals een specifieke database of de
-servicetechnologie zoals [[!xml]], [[!gml]], [[!SOAP]], REST, (Geo)JSON, [[!Linked-Data]] e.d. Het
-kan tevens informatie bevatten over de manier waarop berichten ‘verpakt’ worden,
-het (internet)protocol en de logistiek van het berichtenverkeer. De technische
-specificaties worden over het algemeen zoveel als mogelijk gegenereerd uit het
-logisch informatiemodel. Deze specificaties worden opgesteld voor ‘machines’, te
-gebruiken door software-ontwikkelaars.
+servicetechnologie zoals [[!xml]], [[!gml]], [[!SOAP]], REST, [[!(Geo)JSON]],
+[[!Linked-Data]] e.d. Het kan tevens informatie bevatten over de manier waarop 
+berichten ‘verpakt’ worden, het (internet)protocol en de logistiek van het 
+berichtenverkeer. De technische specificaties worden over het algemeen zoveel 
+als mogelijk gegenereerd uit het logisch informatiemodel. Deze specificaties 
+worden opgesteld voor ‘machines’, te gebruiken door software-ontwikkelaars.
 
 Het voorliggende metamodel kan toegepast worden op twee niveaus, niveau 2 en
 niveau 3: t.b.v. een zuiver conceptueel informatiemodel (2) en t.b.v. een
