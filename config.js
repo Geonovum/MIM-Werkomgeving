@@ -199,13 +199,13 @@ var respecConfig =
       publisher:  "",
       company:    "",
     },
-	 "(Geo)JSON":
-    {
-      "title": "GeoJSON",
-      "href": "https://geojson.org/",
-      "publisher": "",
-      "status": "",
-    },
+//	 "(Geo)JSON":
+//   {
+//      "title": "GeoJSON",
+//      "href": "https://geojson.org/",
+//      "publisher": "",
+//      "status": "",
+//    },
 	 "SOAP":
     {
       "title": "SOAP Specifications",
