@@ -4,17 +4,19 @@ Metamodel in UML
 Structuur metamodel in UML
 --------------------------
 
-De eerste paragraaf bevat diagrammen, in UML; elk biedt een eigen view op een
-gedeelte van het model. Het geheel van diagrammen, in samenhang, is opgenomen in
-de bijlage [Template naamgeving conventies](#template-naamgeving-conventies).
+Dit hoofdstuk beschrijft hoe de modelelementen worden uitgedrukt in UML. 
 
-Uitgangspunten voor het metamodel in UML zijn: - UML 2.5 vormt de basis voor de
-conceptuele beschrijving. - Gebruik te maken van de bestaande UML-modelelementen
-conform UML van OMG. OMG noemt dit een UML metaclass. Een voorbeeld hiervan is
-UML-Class. - Daar waar (semantisch) nodig extensiemechanismen toe te passen met
-behoud van de betekenis van de UML-metaclasses. Er ontstaat dan een MIM
-metaclass. Hoe deze zich verhouden tot UML is weergegeven in de bijlage. -
-Modelelementen hebben één stereotype. Daarnaast hebben twee verschillende
+De eerste paragraaf bevat diagrammen, in UML. Elk diagram geeft een aantal modelelementen weer. 
+Het geheel van diagrammen, in samenhang, is opgenomen in de bijlage [Template naamgeving conventies](#template-naamgeving-conventies).
+
+Uitgangspunten voor het metamodel in UML zijn: 
+- UML 2.5 vormt de basis voor de conceptuele beschrijving. 
+- Gebruik te maken van de bestaande UML-modelelementen conform UML van OMG. OMG noemt dit een UML metaclass. Een voorbeeld hiervan is
+UML-Class. 
+- Daar waar (semantisch) nodig extensiemechanismen toe te passen met
+behoud van de betekenis van de UML-metaclasses. Het modelelement is dan een MIM
+metaclass. Hoe deze zich verhouden tot UML is weergegeven in de bijlage. 
+- Modelelementen hebben één stereotype. Daarnaast hebben twee verschillende
 stereotypen nooit dezelfde betekenis. Stereotypes worden toegepast als er een
 verbijzondering van een UML constructie nodig is met behoud van de betekenis van
 de UML-metaclass.
@@ -24,9 +26,10 @@ informatiemodel gemodelleerd als een Metaclass van UML 2.5 en een bijbehorende
 stereotype.
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-De MIM metaclass Objecttype wordt gemodelleerd als een
+Voorbeeld: het MIM modelelement Objecttype wordt gemodelleerd als een
 UML-Class met stereotype «Objecttype». In Sparx EA wordt dit gemodelleerd met
-een Class. Niet alle MIM metaclasses hebben een stereotype (nodig). In de kolom
+een Class met stereotype «Objecttype». 
+Niet alle MIM metaclasses hebben een stereotype (nodig). In de kolom
 staat dan ‘-‘.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
