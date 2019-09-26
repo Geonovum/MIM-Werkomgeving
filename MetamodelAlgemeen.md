@@ -1097,16 +1097,13 @@ Aanduiding of het kenmerk een authentiek gegeven betreft.
 
 *Toelichting*
 
-Bijvoorbeeld: authentiek.
+Bijvoorbeeld: Authentiek, Basisgegeven, Landelijk kerngegeven, Gemeentelijk kerngegeven, Overig. 
 
-Dit is zo voor bijvoorbeeld het burger service nummer van een natuurlijk
-persoon. In de wet van bijvoorbeeld een basisregistratie ligt vast welke
-gegevens authentiek zijn.
-
-Een kenmerk is authentiek indien de juistheid (hoogwaardige kwaliteit) van het
-gegeven gewaarborgd wordt via formele inwinningsprocessen en wettelijk
-regelingen. Authentieke gegevens moeten door alle overheidsinstellingen
-verplicht en zonder nader onderzoek, worden gebruikt bij de uitvoering van
+Authentiek is van toepassing voor bijvoorbeeld het burger service nummer van een natuurlijk
+persoon. In de wet van bijvoorbeeld een basisregistratie ligt vast welke gegevens authentiek zijn. 
+Een kenmerk is authentiek indien de juistheid (hoogwaardige kwaliteit) van het gegeven gewaarborgd 
+wordt via formele inwinningsprocessen en wettelijk regelingen. Authentieke gegevens moeten 
+door alle overheidsinstellingen verplicht en zonder nader onderzoek, worden gebruikt bij de uitvoering van
 publiekrechtelijke taken.
 
 De in te vullen waarde komt uit: zie Tagged values en waardenbereik tagged
