@@ -559,9 +559,8 @@ CharacterString, Integer, DateTime.
 
 >   **Definitie Primitief datatype**
 
->   Een in het eigen model gedefinieerd primitieve datatype. Deze worden wel
->   door de modelleur gecreëerd, met een eigen naam en een eigen definitie (en
->   eigen metagegevens).
+>   Een in het eigen model gedefinieerd datatype die gebaseerd is op een PrimitiveType,
+>   met een eigen naam en definitie. 
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Documentnummer, Postcode. In het geval van Postcode is de landelijke
