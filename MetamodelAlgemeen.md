@@ -1315,8 +1315,8 @@ Tagged values zijn altijd van het datatype CharacterString. Aanvullend geldt:
 
 | **Tagged value**             | **Waardenbereik**                                                                             |
 |------------------------------|-----------------------------------------------------------------------------------------------|
-| Indicatie materiële historie | Ja, Nee, zie Groep                                                                            |
-| Indicatie formele historie   | Ja, Nee, zie Groep                                                                            |
+| Indicatie materiële historie | Ja, Nee                                                                                       |
+| Indicatie formele historie   | Ja, Nee                                                                                       |
 | Mogelijk geen waarde         | Ja, Nee                                                                                       |
 | Type aggregratie             | composite, aggregate, of geen/leeg/niet gebruikt                                              |
 | [Authentiek](#alg-n-2)       | Authentiek, Basisgegeven, Landelijk kerngegeven, Gemeentelijk kerngegeven, [Overig](#alg-n-3) |
