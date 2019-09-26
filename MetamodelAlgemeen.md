@@ -534,8 +534,8 @@ in de codelist zelf gedefinieerd.
 
 ### Datatypen
 
-Een datatype die de structuur beschrijft waaraan een waarde (zie [Objecten en
-attributen](#objecten-en-attributen)) en attributen) moet voldoen.
+Een datatype die de structuur beschrijft waaraan een waarde moet voldoen (zie [Objecten en
+attributen](#objecten-en-attributen)). 
 
 Bij elke «Attribuutsoort» wordt gespecificeerd aan welk datatype de data c.q. de
 waarde die hiervoor vastgelegd wordt moet voldoen. Het datatype wordt gebruikt
