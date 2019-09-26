@@ -1,12 +1,10 @@
-Afspraken & Regels
-==================
+## Afspraken & Regels
 
 In deze paragraaf gaan we in op een aantal aspecten van het zojuist beschreven
 metamodel en afspraken en regels die van toepassing zijn voor een
 informatiemodel.
 
-Datatype(n)
------------
+### Datatype(n)
 
 Een datatype is een typering van een eigenschap. Datatypen in een
 informatiemodel beschrijven de structuur waaraan de data van objecten moet
@@ -45,7 +43,7 @@ Dit wordt gedaan in een metagegeven lengte. De data van het attribuut moet dan
 voldoen aan het datatype én aan het metagegeven lengte. De lengte wordt dus niet
 in het datatype zelf vastgelegd.
 
-### Primitive datatypes
+#### Primitive datatypes
 
 Dit metamodel onderkend (momenteel) de volgende extern gedefinieerde primitive
 datatypes. Deze zijn allemaal gebaseerd op [[!GAB]]:
@@ -89,15 +87,15 @@ van een primitieve en een patroon dat als restrictie is opgenomen. Bijvoorbeeld
 bij een postcode, of een gemeentecode die moet bestaan uit precies 4 getallen,
 waarbij het eerste getal een 0 mag zijn.
 
-We onderkennen twee soorten patronen: - *Patroon*: het metagegeven (de tagged
-value) ‘Patroon’ in *tekst* vorm. Deze wordt als aanvulling op het datatype
-(bijvoorbeeld Integer ) van het attribuut gespecificeerd. Het patroon bevat een
-specificatie waaraan een waarde moet voldoen. Bijvoorbeeld een postcode, met als
-aanduiding van het patroon: Postcode. De toegestane waarden voor deze patroon
-aanduiding worden dan vastgelegd in documentatie behorende bij het type: alle
-postcodes van 1000AA tot en met 9999ZZ. - Formeel patroon: het metagegeven (de
-tagged value) ‘Formeel patroon’ in *formele specificatie* vorm [H1.11,
-referentie 6], te weten in een reguliere expressie. Bijvoorbeeld een postcode,
+We onderkennen twee soorten patronen: 
+- *Patroon*: het metagegeven (de taggedvalue) ‘Patroon’ in *tekst* vorm. Deze 
+wordt als aanvulling op het datatype (bijvoorbeeld Integer ) van het attribuut gespecificeerd. 
+Het patroon bevat een specificatie waaraan een waarde moet voldoen. Bijvoorbeeld een 
+postcode, met als aanduiding van het patroon: Postcode. De toegestane waarden voor 
+deze patroon aanduiding worden dan vastgelegd in documentatie behorende bij het type: alle
+postcodes van 1000AA tot en met 9999ZZ. 
+- Formeel patroon: het metagegeven (de tagged value) ‘Formeel patroon’ in 
+*formele specificatie* vorm [H1.11,referentie 6], te weten in een reguliere expressie. Bijvoorbeeld een postcode,
 met de expressie: \\d{4}[A-Z]{2}
 
 Een voorbeeld waar een patroon nodig is, is een attribuut waarvan het
@@ -108,7 +106,7 @@ attribuut wordt in dat geval een CharacterString, met lengte (exact) =4 en het
 patroon voor het attribuut specificeert dat alleen numerieke getallen zijn
 toegestaan: [0-9]{4}.
 
-### Datatype zelf definiëren
+#### Datatype zelf definiëren
 
 Het is ook mogelijk om in het eigen informatiemodel een eigen datatype te
 definiëren in de vorm van een «Primitief datatype», «Codelist» of
@@ -146,7 +144,7 @@ gespecificeerd. Maak dan zelf een inschatting. Let hierbij op bij een
 «Gestructureerd datatype». Deze hoort altijd twee of meer data elementen te
 hebben.
 
-### Datatypen landelijk
+#### Datatypen landelijk
 
 Wanneer op landelijk niveau afspraken zijn gemaakt (bijvoorbeeld in GAB), voor
 algemene datatypen, die niet primitief zijn, zoals Postcode, dan worden deze
@@ -163,8 +161,7 @@ ter illustratie zijn opgenomen:
 |          | \- DateTime, als de tijd wel volledig bekend is                                                                                                                                                                                                                                                                                             |
 |          | \- Date, als alleen de Date bekend is                                                                                                                                                                                                                                                                                                       |
 
-Gestructureerd datatype
------------------------
+### Gestructureerd datatype
 
 Een «Gestructureerd datatype» is veelal specifiek binnen een informatiemodel.
 Indien mogelijk wordt zoveel mogelijk hergebruik gemaakt van elders
@@ -208,8 +205,7 @@ Gemeentecode (AN, lengte 4) - Objecttypecode (AN, lengte 2) - Nummer (AN, lengte
 10) met daarbij een formeel patroon: [0-9]{4}\\.[0-9]{2}\\.[ 0-9]{10} of een
 (tekst) patroon Gemeentecode.Objecttypecode.Nummer
 
-Gegevensgroeptype
------------------
+### Gegevensgroeptype
 
 Bij het modelleren van een objecttype worden attribuutsoorten toegekend aan een
 objecttype. Wanneer er geconstateerd wordt dat een aantal attribuutsoorten
@@ -224,7 +220,7 @@ gegevensgroep gezien als een apart te beheren object. Er wordt dan een apart
 «Objecttype» gemaakt. Het is wel mogelijk, hoewel uitzonderlijk, om binnen een
 gegevensgroeptype nog een ander gegevensgroeptype te modelleren.
 
-### Hergebruik
+#### Hergebruik
 
 Het kan voorkomen dat meerdere objecttypes gebruik maken van dezelfde
 gegevensgroeptype, omdat de definitie voor alle objecttypes gelijk is of moet
@@ -252,20 +248,21 @@ gegevensgroepen. Vanwege dit hergebruik is daarom de kardinaliteit van de
 relatie van gegevensgroep naar gegevensgroeptype aan de source kant 1..\*. Zie
 [Kern](#kern).
 
-### Gegevensgroep versus Gestructureerd datatype
+#### Gegevensgroep versus Gestructureerd datatype
 
-Een gegevensgroep is niet hetzelfde als een Gestructureerd datatype. - Een
-datatype beschrijft de structuur van data, een gegevensgroep beschrijft de
-semantiek van een kenmerk van een object. - Als één kenmerk van een object uit
-verschillende stukjes data bestaat, dan wordt een Gestructureerd datatype
-gebruikt. Dit is bijvoorbeeld het geval bij het gestructureerde datatype Bedrag.
-Deze bestaat uit een ‘hoeveelheid’ en ‘muntsoort. - Als een object meerdere
-kenmerken heeft, gemodelleerd als afzonderlijke attribuutsoorten, dan heeft elk
-kenmerk op zichzelf betekenis. Als één kenmerk wordt weggelaten, of niet bekend
+Een gegevensgroep is niet hetzelfde als een Gestructureerd datatype. 
+- Eendatatype beschrijft de structuur van data, een gegevensgroep beschrijft de
+semantiek van een kenmerk van een object. 
+- Als één kenmerk van een object uitverschillende stukjes data bestaat, dan wordt 
+een Gestructureerd datatypegebruikt. Dit is bijvoorbeeld het geval bij het gestructureerde 
+datatype Bedrag. Deze bestaat uit een ‘hoeveelheid’ en ‘muntsoort. 
+- Als een object meerdere kenmerken heeft, gemodelleerd als afzonderlijke attribuutsoorten, 
+dan heeft elk kenmerk op zichzelf betekenis. Als één kenmerk wordt weggelaten, of niet bekend
 of ingewonnen is, dan verandert er niets aan de betekenis van de andere
-attribuutsoorten. - Een ander goed criterium is: als het datatype wordt
-weggelaten uit het informatiemodel, dan verliest het informatiemodel geen
-semantiek. Alleen de structuur van een gegeven is dan niet meer bekend.
+attribuutsoorten. 
+- Een ander goed criterium is: als het datatype wordt weggelaten uit het informatiemodel, dan 
+verliest het informatiemodel geen semantiek. Alleen de structuur van een gegeven is dan 
+niet meer bekend.
 
 Regel: het is niet de bedoeling dat eenzelfde kenmerk van een object in het ene
 model als een gegevensgroep gemodelleerd wordt en in het andere model als een
@@ -277,8 +274,7 @@ semantiek.
     informatiemodel. Een gegevensgroep in een conceptueel model is en blijft dus
     altijd ook een gegevensgroep in een logisch informatiemodel.
 
-Keuze tussen datatypes (Keuze)
-------------------------------
+### Keuze tussen datatypes (Keuze)
 
 Wanneer het datatype van een attribuutsoort een keuze uit twee of meer datatypen
 is, dan wordt dit gemodelleerd met het datatype Keuze. Elk keuze element van de
@@ -321,8 +317,7 @@ modelleur van het informatiemodel om te beoordelen of het type dan als datatype
 gebruikt kan worden. Het is niet gewenst om aan het externe model een stereotype
 toe te voegen, noch om in het externe model de UML-metaclass aan te passen.
 
-Domeinwaarden of lijsten
-------------------------
+### Domeinwaarden of lijsten
 
 In veel registraties wordt gewerkt met codetabellen om de mogelijke waarden van
 een attribuutsoort te specificeren. Deze mogelijke waarden kunnen op
@@ -373,8 +368,7 @@ worden.
 zoals bij een referentielijst, niet relevant zijn en je voor de definitie alleen
 wilt verwijzen naar de externe waardelijst.
 
-Abstracte objecttypes en concrete objecten
-------------------------------------------
+### Abstracte objecttypes en concrete objecten
 
 Een objecttype kan aangeduid worden als een abstract objecttype (zie paragraaf
 [Specificatie metagegevens](#specificatie-metagegevens)) . door middel van
@@ -460,8 +454,7 @@ object is met identificatie ‘1’ en een leidingnetwerk met identificatie ‘1
 dat wel het geval is, dan moet op beide concrete objecttypes een eigen unieke
 aanduiding gedefinieerd worden.
 
-Relatieklasse (uitzonderingen)
-------------------------------
+### Relatieklasse (uitzonderingen)
 
 De gegevens van de relatiesoort worden altijd voor één relatiesoort vastgelegd.
 Het is echter mogelijk dat dezelfde gegevens voor meerdere relaties tegelijk
@@ -484,8 +477,7 @@ objecten hetzelfde zijn. CONTRACT wordt dan gemodelleerd als objecttype, waarbij
 beschreven wordt wat er moet gebeuren wanneer één van de SUBJECTen niet meer
 bestaat.*
 
-Constraint
-----------
+### Constraint
 
 Deze paragraaf gaat dieper in op hoe een Constraint toegepast wordt.
 
@@ -542,8 +534,7 @@ waardoor er (te) vaak nieuwe versies moeten worden uitgebracht. De aanbeveling
 is om de specificatie van dergelijke constraints buiten het informatiemodel te
 specificeren, bijvoorbeeld als validatieregel.
 
-Historie
---------
+### Historie
 
 Deze paragraaf geeft in meer detail aan wat we onder de metagegevens *Indicatie
 materiële historie en Indicatie formele historie* verstaan.
@@ -652,8 +643,7 @@ Opmerking: de metagegevens Indicatie materiële historie en Indicatie formele
 mogen worden opgenomen in een logisch model (of worden overgenomen van het
 conceptuele naar het logische informatiemodel).
 
-Afleidbare gegevens
--------------------
+### Afleidbare gegevens
 
 In een informatiemodel kan de behoefte bestaan om afgeleide gegevens op te
 nemen: dit zijn gegevens die afleidbaar zijn uit andere attribuut- en/of
@@ -670,8 +660,7 @@ te nemen kan het opgevraagd worden zonder dat de historie of andere gegevens van
 het object opgevraagd hoeven te worden om daaruit dit gegeven af te leiden.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Authentieke gegevens
---------------------
+### Authentieke gegevens
 
 Bij een attribuutsoort of relatiesoort wordt als metagegeven ‘Authentiek’
 opgenomen. Het is een aanduiding of een attribuutsoort of een als relatiesoort
@@ -681,11 +670,12 @@ hoogwaardige kwaliteit en kan zonder nader onderzoek bij de uitvoering van
 publiekrechtelijke taken worden gebruikt.
 
 De specificatie van de waarde van het metagegeven is gebaseerd op het
-onderscheid in de volgende groepen van gegevens: - Landelijke registraties met
-authentieke en niet-authentieke basisgegevens (BAG, BRK, BRP, BGT e.d.); -
-Landelijke sector- en domein-overstijgende informatiemodellen (IMGeo e.d.); -
-Gemeentelijke sector- en domein-overstijgende informatiemodellen (RSGB, RGBZ,
-ZTC); - Sector- en domein-specifieke informatiemodellen (LV-WOZ, IMRO e.d.).
+onderscheid in de volgende groepen van gegevens: 
+- Landelijke registraties met authentieke en niet-authentieke basisgegevens 
+(BAG, BRK, BRP, BGT e.d.); 
+- Landelijke sector- en domein-overstijgende informatiemodellen (IMGeo e.d.); 
+- Gemeentelijke sector- en domein-overstijgende informatiemodellen (RSGB, RGBZ, ZTC); 
+- Sector- en domein-specifieke informatiemodellen (LV-WOZ, IMRO e.d.).
 
 | **Waardebereik authentiek** | **Betekenis**                                                                                                                                                                                                  |
 |-----------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -695,8 +685,7 @@ ZTC); - Sector- en domein-specifieke informatiemodellen (LV-WOZ, IMRO e.d.).
 |                             |                                                                                                                                                                                                                |
 |  Overig                     | Indien het géén van de voorgaande categorieën betreft. Veelal gaat het dan om proces-, taakveld- of domeinspecifieke gegevens.                                                                                 |
 
-Mogelijk geen waarde
---------------------
+### Mogelijk geen waarde
 
 Een attribuut kan geen waarde hebben, omdat de waarde optioneel is en er niet
 is. Bijvoorbeeld bij een tussenvoegsel van een achternaam. Maar een attribuut
@@ -746,8 +735,7 @@ wanneer het een situatie betreft waarin gegevens worden overgenomen uit een
 registratie die wel de waarde ‘onbekend’ gebruikt. Dan kan er ook gekozen worden
 voor het 1:1 overgenomen van de gegevensdefinitie uit deze andere registratie.
 
-Externe schema’s (her) gebruiken
---------------------------------
+### Externe schema’s (her) gebruiken
 
 In bepaalde situaties is het mogelijk dat een ander informatiemodel al één op
 één de specificaties in UML bevat die relevant zijn voor het eigen
@@ -782,8 +770,7 @@ externe package gebruikt worden als datatype, maar er kan ook naar verwezen
 worden via een relatie. Dit laatst wordt nader uitgelegd in de volgende
 paragraaf.
 
-Koppelen met ander informatiemodel (externe koppeling)
-------------------------------------------------------
+### Koppelen met ander informatiemodel (externe koppeling)
 
 Bij registraties is het regelmatig noodzakelijk om te verwijzen vanuit het eigen
 model naar gegevens uit een andere informatiemodel. Denk aan het opnemen van de
@@ -822,8 +809,7 @@ eigen registratie. Er kan dan volstaan worden met alleen de unieke aanduiding
 van GeregistreerdPersoon. Dit is de BSN. Dit wordt niet gezien als een «externe
 koppeling» maar als een referentie.
 
-Stelselcatalogus en stelselafspraken voor basisregistraties
------------------------------------------------------------
+### Stelselcatalogus en stelselafspraken voor basisregistraties
 
 Dit metamodel ondersteunt de metadata die voorgeschreven wordt voor de
 stelselcatalogus [H1.11, referentie 3]. Deze paragraaf geeft aan hoe de metadata
@@ -879,15 +865,14 @@ Als overgenomen uit andere bron, noem de directe bron. Bijvoorbeeld: BAG. -
 is wel af te leiden uit het metagegeven van relatiesoort: gerelateerd objecttype
 (de target van de relatie).
 
-Naamgevingsconventies
----------------------
+### Naamgevingsconventies
 
 Naamgevingsconventies zijn belangrijk om te specificeren. Onderstaande
 beschrijft enkele punten die op het niveau van dit metamodel zijn afgesproken.
 De verdere invulling van de naamgevingsconventies is aan de opsteller van het
 informatiemodel zelf (zie ook bijlage 1).
 
-### Alternatief 1: natuurlijke taal, die dichtbij de gebruiker staat
+#### Alternatief 1: natuurlijke taal, die dichtbij de gebruiker staat
 
 Met natuurlijke taal wordt bedoeld, zoals de gebruikers erover praten, in
 normaal Nederlands. Veelal zijn dit alleen letters en cijfers, met spaties.
@@ -902,7 +887,7 @@ e.d. Bijvoorbeeld: ‘Natuurlijk persoon’ en ‘naam’ met type CharacterStri
 Regel: voor conceptuele informatiemodellen wordt altijd alternatief 1
 gehanteerd.
 
-### Alternatief 2: (ook) leesbaar door systemen
+#### Alternatief 2: (ook) leesbaar door systemen
 
 Met machine leesbare taal wordt bedoeld dat deze eenvoudig door systemen te
 verwerken is. Veelal zijn dit alleen letters en cijfers, zonder spaties, zonder
@@ -930,7 +915,7 @@ conceptuele model. Dit kan bijvoorbeeld met een trace of door opname van de naam
 in de alias (zie 3.16.20), zodat lezers goed de overgang van conceptueel naar
 logisch kunnen volgen.
 
-### Naamgeving voor metamodel elementen
+#### Naamgeving voor metamodel elementen
 
 Voor stereotypes en metagegevens worden dezelfde naamgevingsconventies toegepast
 als in alternatief 1 waarbij de eerste letter een hoofdletter is voor alle
@@ -944,8 +929,7 @@ specificeren. Dit is een hulptabel, die u over kunt nemen naar uw eigen extensie
 (zoals bedoeld in paragraaf 1.8) en in kunt vullen voor uw eigen informatiemodel
 (of organisatie).
 
-Verwijzing van een modelelement naar een begrip uit het begrippenkader
-----------------------------------------------------------------------
+### Verwijzing van een modelelement naar een begrip uit het begrippenkader
 
 Het metadata element “begrip” uit paragraaf 2.3 (**Verwijzing opnemen, TODO**)
 is bedoeld om de traceability tussen een modelelement in een informatiemodel en
@@ -996,7 +980,7 @@ toevoegen van de verwijzing naar een begrip in principe niet iets veranderd aan
 het informatiemodel zelf (afgezien van deze metadata), al kan dit wel aanleiding
 geven tot het verbeteren of verhelderen van definities.
 
-### Term of URI
+#### Term of URI
 
 In de definitie van metadata begrip staat dat de verwijzing de vorm heeft van
 een term of van een URI. - Als je kiest voor een term, vul dan de naam in van
@@ -1008,7 +992,7 @@ verwijzen naar een skos:Concept . Dit houdt in dat als iemand naar deze URI gaat
 deze persoon informatie krijgt over het betreffende begrip. Bijvoorbeeld:
 http://brk.basisregistraties.overheid.nl/id/begrip/Perceel
 
-### Verwijzen naar 0, 1 of meer begrippen
+#### Verwijzen naar 0, 1 of meer begrippen
 
 Veelal betreft één modelelement één begrip . De verwijzing naar dit begrip wordt
 dan opgenomen in deze metadata.
@@ -1034,7 +1018,7 @@ niet vanuit het objecttype Persoon. Het kan ook zo zijn dat het datatype van
 'type persoon' een codelijst is, met als mogelijke waarden ‘NP’ en ‘NNP’ en
 ‘overig’. Het is dan preciezer om de verwijzing te leggen vanuit de waarde ‘NP’.
 
-### Definitie van een modelelement en de definitie van een begrip
+#### Definitie van een modelelement en de definitie van een begrip
 
 De definitie van het modelement is niet hetzelfde bedoeld als de definitie van
 een begrip. De definitie van een begrip in het begrippenkader is buiten scope

@@ -1,5 +1,4 @@
-Metamodel Algemeen
-==================
+## Metamodel Algemeen
 
 Dit hoofdstuk beschrijft het metamodel in diagramvorm en in tekst. De eerste
 paragraaf bevat een diagram, die het overzicht van de modelelementen aangeeft,
@@ -7,24 +6,23 @@ en hun onderlinge verhouding. Hierna worden alle modelelementen beschreven en
 toegelicht. Deze modelelementen worden gebruikt bij het maken van een
 informatiemodel.
 
-Uitgangspunten voor het metamodel zijn: - Elk modelelement heeft een naam en een
-eigen MIM metaclass, waaraan je het modelelement overal kan herkennen. - De
-modelelementen worden eerst uitgelegt zonder een specifieke specificatie taal te
-gebruiken. Dit is zodat we hierna kunnen aangeven hoe je het modelelement
-uitdrukt per specifieke specificatie taal, te weten in UML of in w3C
-specificatie technieken. - Toolonafhankelijke beschrijving van het metamodel.
-Omdat VNG Realisatie, Kadaster en Geonovum en veel andere organisaties Sparx EA
+Uitgangspunten voor het metamodel zijn: 
+- Elk modelelement heeft een naam en een eigen MIM metaclass, waaraan je het modelelement overal kan herkennen. 
+- De modelelementen worden eerst uitgelegt zonder een specifieke specificatie taal te gebruiken. 
+Dit is zodat we hierna kunnen aangeven hoe je het modelelement uitdrukt per specifieke specificatie taal, te weten in UML of in w3C
+specificatie technieken. 
+- Toolonafhankelijke beschrijving van het metamodel. Omdat VNG Realisatie, Kadaster en Geonovum en veel andere organisaties Sparx EA
 gebruiken is er aanvullend aangegeven hoe het metamodel in Enterprise Architect
-toegepast wordt. Hierdoor borgen we deze relatie. - Uniforme toepassing van het
+toegepast wordt. Hierdoor borgen we deze relatie. 
+- Uniforme toepassing van het
 metamodel in informatiemodellen. Anders gezegd, uitbreiden mag, afwijkenniet,
-maak voor hetzelfde doel geen alternatieve constructies. - Datatypen zijn
-onderdeel van het metamodel en beschrijven de structuur van de data, maar niet
-de semantiek/betekenis. De aanbeveling is dan ook om eerst een informatiemodel
+maak voor hetzelfde doel geen alternatieve constructies. 
+- Datatypen zijn onderdeel van het metamodel en beschrijven de structuur van de data, 
+maar niet de semantiek/betekenis. De aanbeveling is dan ook om eerst een informatiemodel
 te maken zonder datatypen. De regel is dat als alle datatypen uit het model
 worden weggelaten, er geen semantische betekenis verloren mag gaan.
 
-Structuur metamodel
--------------------
+### Structuur metamodel
 
 Deze paragraaf bevat een overzicht van het metamodel en geeft alle
 modelelementen weer in diagram vorm. De beschrijving van de modelelementen in
@@ -34,10 +32,10 @@ De modelelementen zijn verdeeld over een diagrammen, die elk een eigen view op
 een deel van het metamodel tonen. Elk view toont een aantal van de
 modelelementen, inclusief hun onderlinge samenhang.
 
-Alle views samen vormen het metamodel als geheel: - KERN, met de belangrijkste
-modelelementen in onderlinge samenhang. - DATATYPEN, met de in het model te
-onderkennen soorten datatypen. - OVERIGE modelelementen, die niet altijd aan de
-orde zijn.
+Alle views samen vormen het metamodel als geheel: 
+- KERN, met de belangrijkste modelelementen in onderlinge samenhang. 
+- DATATYPEN, met de in het model te onderkennen soorten datatypen. 
+- OVERIGE modelelementen, die niet altijd aan de orde zijn.
 
 Elk modelelement heeft een MIM metaclass met een naam. Hieraan is elk
 modelelement te herkennen in alle diagrammen en in de tekst en in elke
@@ -45,7 +43,7 @@ specificatie taal die een uitdrukking is van dit metamodel.
 
 ### Kern
 
-TODO: nieuw diagram zonder UML erin.
+<todo>TODO: nieuw diagram zonder UML erin.</todo>
 
 ![](media/f12fbb3dc2e205d26a1d0d27cbd325b3.png)
 
@@ -76,8 +74,8 @@ View 2: Datatypen
 | Primitief datatype      |
 | Gestructureerd datatype |
 | Data element            |
-| Keuze                   |
-| Keuze element           |
+| Union                   |
+| Union element           |
 | Enumeratie              |
 | Enumeratiewaarde        |
 | Referentielijst         |
@@ -129,8 +127,7 @@ View 3c: Groepering
 | Extern            |
 | View              |
 
-Betekenis modelelementen
-------------------------
+### Betekenis modelelementen
 
 In deze paragraaf staan alle modelelementen opgesomd, die gebruikt worden bij
 het maken van een informatiemodel.
@@ -300,12 +297,16 @@ objecttype.
 
 >   **Definitie Generalisatie tussen objecttypes**
 
->   De typering van het hiërarchische verband tussen een meer generiek object
->   van een objecttype en een meer specifiek object van een ander objecttype
->   waarbij het laatstgenoemde object eigenschappen van het eerstgenoemde object
->   overerft.
+>   De typering van het hiërarchische verband tussen een meer generiek en een 
+>   meer specifiek modelelement van hetzelfde soort, waarbij het meer specifieke  
+>   modelelement eigenschappen van het meer generieke modelelement overerf. 
+>   Dit verband is alleen gedefinieerd voor objecttypen en datatypen.
 
-*Toelichting:* Een generalisatierelatie geeft aan dat bepaalde eigenschappen van
+*Toelichting:* Deze toelichting is tweeledig. 
+
+Generalisatie tussen objecttypes: 
+
+Een generalisatierelatie geeft aan dat bepaalde eigenschappen van
 een objecttype (vaak attribuutsoorten en/of relatiesoorten) ook gelden voor de
 gerelateerde objecttypen, én dat deze qua semantiek, structuur en syntax gelijk
 zijn. We spreken dan van een supertype met subtypen. De modelelementen die
@@ -320,20 +321,18 @@ APPARTEMENTSRECHT hebben beide ‘Kadastrale aanduiding’ en een ‘relatie met
 ONROERENDE ZAAK FILIATIE’.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
->   **Definitie Generalisatie tussen datatypes**
+Generalisatie tussen datatypes:
 
->   De typering van het hiërarchische verband tussen een meer generieke
->   structuur van data in de vorm van een datatype, en een meer specifieke
->   structuur van data in de vorm van een ander datatype, waarbij het
->   laatstgenoemde datatype de eigenschappen van het eerstgenoemde datatype
->   overerft, én een verbijzondering hierin aanbrengt in de vorm van een meer
->   restrictieve definitie, of een meer restrictief patroon/formeel patroon.
+Het meer specifieke datatype brengt een verbijzondering aan in de vorm van een meer 
+restrictieve definitie, of een meer restrictief patroon/formeel patroon.
 
-*Toelichting:* Het andere datatype is bijvoorbeeld een CharacterString, Integer,
+Het andere datatype is bijvoorbeeld een CharacterString, Integer,
 GM Surface of DMO en dient als basis voor een zelf te definiëren datatype (zie
-[Datatype zelf definiëren](#datatype-zelf-definieren)). deze generalisatie is
-van toepassing op de volgende datatypes: «Primitief datatype», «Gestructureerd
-datatype», «Referentielijst», «Codelist», «Enumeratie».
+[Datatype zelf definiëren](#datatype-zelf-definieren)), zoals een CharacterString 
+Postcode, of een NietNegatiefGetal. 
+
+Deze generalisatie is van toepassing op de volgende datatypes: 
+«Primitief datatype», «Gestructureerd datatype», «Referentielijst», «Codelist», «Enumeratie».
 
 #### Relatiesoort
 
@@ -535,8 +534,8 @@ in de codelist zelf gedefinieerd.
 
 ### Datatypen
 
-Een datatype die de structuur beschrijft waaraan een waarde (zie [Objecten en
-attributen](#objecten-en-attributen)) en attributen) moet voldoen.
+Een datatype die de structuur beschrijft waaraan een waarde moet voldoen (zie [Objecten en
+attributen](#objecten-en-attributen)). 
 
 Bij elke «Attribuutsoort» wordt gespecificeerd aan welk datatype de data c.q. de
 waarde die hiervoor vastgelegd wordt moet voldoen. Het datatype wordt gebruikt
@@ -634,30 +633,30 @@ Het data element beschrijft in combinatie met andere data-elementen de structuur
 van een gegeven en heeft zelf een datatype. Dit datatype is meestal een
 primitief datatype.
 
-#### Keuze
+#### Union
 
->   **Definitie Keuze**
+>   **Definitie Union**
 
 >   Gestructureerd datatype, waarmee wordt aangegeven dat er meer dan één
 >   mogelijkheid is voor het datatype van een attribuut. Het attribuut zelf
->   krijgt als datatype het stereotype keuze. Het type keuze biedt een keuze uit
->   verschillende datatypes, elk afzonderlijk beschreven in een keuze element.
+>   krijgt als datatype de union. De union biedt een keuze uit verschillende
+>   datatypes, elk afzonderlijk beschreven in een union element.
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-keuze LineOrPolygon. Deze biedt een keuze uit Keuze element Line of Keuze element Polygon.
+Union LineOrPolygon. Deze biedt een keuze uit Union element Line of Union element Polygon.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#### Keuze element
+#### Union element
 
->   **Definitie Keuze element**
+>   **Definitie Union element**
 
 >   Een type dat gebruikt kan worden voor het attribuut zoals beschreven in de
->   definitie van het stereotype Keuze. Het keuze element is een onderdeel van
->   een Keuze, uitgedrukt in een eigenschap (attribute) van een klasse met
->   stereotype Keuze.
+>   definitie van Union. Het union element is een onderdeel van een Union,
+>   uitgedrukt in een eigenschap (attribute) van een union, die als keuze binnen
+>   de Union is gerepresenteerd..
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Keuze element Line en keuze element Polygon zijn beiden onderdeel van Keuze LineOrPolygon.
+Union element Line en union element Polygon zijn beiden onderdeel van Union LineOrPolygon.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ### Packages
@@ -799,7 +798,7 @@ TODO: voorbeeld ook opnemen voor W3C.
 Merk op, de metadata aspecten zijn specifiek voor elk modelelement apart. Dus
 als er in H2.2 sprake is van een generalisatie, dan worden deze metadata niet
 overerft (en de ingevulde waardes worden uiteraard zeker niet overerft). De MIM
-metaclass Keuze erft dus geen metagegevens, zoals patroon, van MIM metaclass
+metaclass Union erft dus geen metagegevens, zoals patroon, van MIM metaclass
 Datatype.
 
 Voor de duidelijkheid zijn een aantal metagegevens verplicht gemaakt, om te
@@ -915,22 +914,15 @@ Metagegeven: **Begrip**
 
 >   **Definitie Begrip**
 
-Verwijzing naar een begrip, vanuit een modelelement, waarmee wordt aangegeven op
-welk begrip, of begrippen, het informatiemodel element is gebaseerd. De
-verwijzing heeft de vorm van een term of een URI.
+Verwijzing naar een begrip, vanuit een modelelement, waarmee wordt aangegeven op welk begrip, of begrippen, het informatiemodel element is gebaseerd. De verwijzing heeft de vorm van een term of een URI.
 
 *Toelichting*
 
-Hiermee wordt aangegeven hoe een informatiemodel element zich verhoudt tot de
-begrippen uit het begrippenkader, zoals genoemd in paragraaf 1.5 (**verwijzing,
-TODO**). Dit is niet een 1 op 1 relatie. Voor meer informatie hierover, zie
-hoofdstuk 5 (**verwijzing, TODO**).
+Hiermee wordt aangegeven hoe een informatiemodel element zich verhoudt tot de begrippen uit het begrippenkader, zoals genoemd in paragraaf 1.5 (**verwijzing, TODO**). Dit is niet een 1 op 1 relatie. Voor meer informatie hierover, zie hoofdstuk 5 (**verwijzing, TODO**). 
 
-Bij voorbeeld: Perceel of
-http://brk.basisregistraties.overheid.nl/id/begrip/Perceel
+Bij voorbeeld: Perceel of http://brk.basisregistraties.overheid.nl/id/begrip/Perceel 
 
-*Toepassing*: alle modelelementen met een naam, met uitzondering van packages en
-constraint.
+*Toepassing*: alle modelelementen met een naam, met uitzondering van packages en constraint.
 
 Metagegeven: **Herkomst**
 
@@ -1105,16 +1097,13 @@ Aanduiding of het kenmerk een authentiek gegeven betreft.
 
 *Toelichting*
 
-Bijvoorbeeld: authentiek.
+Bijvoorbeeld: Authentiek, Basisgegeven, Landelijk kerngegeven, Gemeentelijk kerngegeven, Overig. 
 
-Dit is zo voor bijvoorbeeld het burger service nummer van een natuurlijk
-persoon. In de wet van bijvoorbeeld een basisregistratie ligt vast welke
-gegevens authentiek zijn.
-
-Een kenmerk is authentiek indien de juistheid (hoogwaardige kwaliteit) van het
-gegeven gewaarborgd wordt via formele inwinningsprocessen en wettelijk
-regelingen. Authentieke gegevens moeten door alle overheidsinstellingen
-verplicht en zonder nader onderzoek, worden gebruikt bij de uitvoering van
+Authentiek is van toepassing voor bijvoorbeeld het burger service nummer van een natuurlijk
+persoon. In de wet van bijvoorbeeld een basisregistratie ligt vast welke gegevens authentiek zijn. 
+Een kenmerk is authentiek indien de juistheid (hoogwaardige kwaliteit) van het gegeven gewaarborgd 
+wordt via formele inwinningsprocessen en wettelijk regelingen. Authentieke gegevens moeten 
+door alle overheidsinstellingen verplicht en zonder nader onderzoek, worden gebruikt bij de uitvoering van
 publiekrechtelijke taken.
 
 De in te vullen waarde komt uit: zie Tagged values en waardenbereik tagged
@@ -1167,6 +1156,59 @@ voorwaarden, met een opgaaf van reden.
 *Toepassing*: de modelelementen waarvoor een waarde ingevuld kan worden, te
 weten de modelelementen attribuutsoort en relatiesoort.
 
+Metagegeven: **Relatie eigenaar**
+
+>   **Definitie Relatie eigenaar**
+
+Aanduiding van de eigenaar van een relatie tussen objecten, die het startpunt van de relatie aangeeft. Objecten van het objecttype van de eigenaar, hebben als kenmerk deze relatie. 
+
+*Toelichting*
+
+Bijvoorbeeld: een persoon heeft een postadres. Het postadres is een kenmerk van een persoon. De persoon is in deze de eigenaar van de relatie. Het postadres is de naam van het kenmerk c.q. de relatie tussen een persoon en een adres en geeft betekenis aan deze relatie. Het adres is er gewoon en wie hem allemaal gebruikt als adres en of dit als postadres is of als woonadres of nog iets anders is voor het adres niet van belang. 
+
+*Toepassing*: relaties, oftewel de modelelementen Relatiesoort en Externe koppeling. 
+
+Metagegeven: **Relatie doel**
+
+>   **Definitie Relatie doel**
+
+Aanduiding van het gerelateerde objecttype, die het eindpunt van de relatie aangeeft. Naar objecten van dit objecttype wordt verwezen. 
+
+*Toelichting*
+
+Bijvoorbeeld: een persoon heeft een postadres. Het postadres is de naam van de relatie tussen een persoon en een adres. Het adres is het doel van deze relatie. 
+
+*Toepassing*: relaties, oftewel de modelelementen Relatiesoort en Externe koppeling. 
+
+Metagegeven: **Uni-directioneel**
+
+>   **Definitie Uni-directioneel**
+
+De richting van een relatie, welke betekenis geeft aan de relatie vanuit het perspectief van de eigenaar van de relatie. 
+
+*Toelichting*
+
+Bijvoorbeeld: een persoon heeft een postadres. De richting van de relatie is van persoon naar adres. De eigenaar van de relatie (de source) heeft kennis van de het gerelateerde objecttype (de target). In een modelleertaal wordt dit vaak aangegeven met een pijl. De pijl heeft als vertrekpunt de eigenaar en heeft als pijlpunt, waar de relatrie naar wijst, het gerelateerde objecttype. Alle relaties zijn altijd gericht van het objecttype (source) naar het gerelateerde objecttype (target). 
+
+Per informatiemodel kan er anders gedacht worden over wie de eigenaar van het kenmerk is, oftewel de richting. Het is erg gebruikelijk om een richting aan te geven, enerzijds omdat de betekenis van A naar B een andere is dan van B naar A, anderzijds omdat het van belang is bij welke objecttype het kenmerk wordt bijgehouden, oftewel wie de eigenaar is. 
+
+*Toepassing*: relaties, oftewel de modelelementen Relatiesoort en Externe koppeling. 
+
+Metagegeven: **Aggregatie type**
+
+>   **Definitie Aggregatie type**
+
+Aanduiding of het objecttype die de eigenaar is van een relatie het doel van relatie ziet als een samen te voegen onderdeel.
+
+*Toelichting*
+Bijvoorbeeld: een auto heeft verschillende onderdelen, waaronder een motor. In het informatiemodel gaat het vooral om de auto en is de motor alleen relevant vanuit het perspectief van dat het een onderdeel is van de auto. 
+
+Standaard is er bij een relatie geen sprake van een aggregatie, ofdat het aggregatie type is 'none'. Als er wel sprake is van een aggregatie, dan geeft dit aan dat het objecttype die doel is van de relatie een onderdeel is van het objecttype die de eigenaar is van de relatie. De eigenaar geeft aan hoe de aggregatie in gezien moet worden. Dit kan zijn: 
+- 'composite': de eigenaar is volledig verantwoordelijk voor het beheer van het onderdeel. Als de eigenaar vervalt, dan vervallen automatisch ook de onderdelen mee. De target kan niet bestaan zonder de source: de target vervalt als de source vervalt.
+- 'shared': het onderdeel kan gebruikt en gedeeld worden door meerdere eigenaren. Bijvoorbeeld: een betaalrekening. 
+
+*Toepassing*: relaties, oftewel de modelelementen Relatiesoort en Externe koppeling. 
+
 Metagegeven: **Locatie**
 
 >   **Definitie Locatie**
@@ -1202,7 +1244,7 @@ enumeratie als type vermeld.
 Bijvoorbeeld: VlakOfMultivlak, CharacterString
 
 *Toepassing*: attribuutsoort, primitief datatype (in het IM gedefinieerd), data
-element, keuze element, referentie element.
+element, union element, referentie element.
 
 Metagegeven: **Lengte** (domein van een waarde van een gegeven)
 
@@ -1221,7 +1263,7 @@ tot +9,99; Dit is verder toegelicht in het hoofdstuk [Afspraken & Regels](#afspr
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 *Toepassing*: attribuutsoort, primitief datatype (in het IM gedefinieerd), data
-element, keuze element, referentie element.
+element, union element, referentie element.
 
 Metagegeven: **Patroon**
 
