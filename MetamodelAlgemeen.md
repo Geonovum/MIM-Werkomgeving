@@ -588,12 +588,12 @@ attribuutsoort.
 
 >   **Definitie Gestructureerd datatype**
 
->   Specifiek benoemd datatype dat de structuur van een gegeven
->   beschrijft, samengesteld uit minimaal twee elementen.
+>   Specifiek benoemd datatype dat de structuur van een gegeven beschrijft,
+>   samengesteld uit minimaal twee elementen die in samenhang betekenisvol zijn.
 
 *Toelichting:*
 
-De waarde van het attribuutsoort verkoopprijs met datatype bedrag is uitgedrukt
+De waarde van het attribuutsoort verkoopprijs met gestructureerd datatype bedrag is uitgedrukt
 in een combinatie van een som en valuta zoals 35 euro. De introductie van één
 datatype Bedrag, uitgedrukt in som en valuta, legt dus vast dat som en valuta
 onlosmakelijk met elkaar zijn verbonden.
