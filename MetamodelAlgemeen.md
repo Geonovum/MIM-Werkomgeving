@@ -588,7 +588,7 @@ attribuutsoort.
 
 >   **Definitie Gestructureerd datatype**
 
->   Specifiek benoemd gestructureerd datatype dat de structuur van een gegeven
+>   Specifiek benoemd datatype dat de structuur van een gegeven
 >   beschrijft, samengesteld uit minimaal twee elementen.
 
 *Toelichting:*
