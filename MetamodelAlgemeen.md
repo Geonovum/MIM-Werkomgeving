@@ -297,12 +297,16 @@ objecttype.
 
 >   **Definitie Generalisatie tussen objecttypes**
 
->   De typering van het hiërarchische verband tussen een meer generiek object
->   van een objecttype en een meer specifiek object van een ander objecttype
->   waarbij het laatstgenoemde object eigenschappen van het eerstgenoemde object
->   overerft.
+>   De typering van het hiërarchische verband tussen een meer generiek en een 
+>   meer specifiek modelelement van hetzelfde soort, waarbij het meer specifieke  
+>   modelelement eigenschappen van het meer generieke modelelement overerf. 
+>   Dit verband is alleen gedefinieerd voor objecttypen en datatypen.
 
-*Toelichting:* Een generalisatierelatie geeft aan dat bepaalde eigenschappen van
+*Toelichting:* Deze toelichting is tweeledig. 
+
+Generalisatie tussen objecttypes: 
+
+Een generalisatierelatie geeft aan dat bepaalde eigenschappen van
 een objecttype (vaak attribuutsoorten en/of relatiesoorten) ook gelden voor de
 gerelateerde objecttypen, én dat deze qua semantiek, structuur en syntax gelijk
 zijn. We spreken dan van een supertype met subtypen. De modelelementen die
@@ -317,20 +321,18 @@ APPARTEMENTSRECHT hebben beide ‘Kadastrale aanduiding’ en een ‘relatie met
 ONROERENDE ZAAK FILIATIE’.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
->   **Definitie Generalisatie tussen datatypes**
+Generalisatie tussen datatypes:
 
->   De typering van het hiërarchische verband tussen een meer generieke
->   structuur van data in de vorm van een datatype, en een meer specifieke
->   structuur van data in de vorm van een ander datatype, waarbij het
->   laatstgenoemde datatype de eigenschappen van het eerstgenoemde datatype
->   overerft, én een verbijzondering hierin aanbrengt in de vorm van een meer
->   restrictieve definitie, of een meer restrictief patroon/formeel patroon.
+Het meer specifieke datatype brengt een verbijzondering aan in de vorm van een meer 
+restrictieve definitie, of een meer restrictief patroon/formeel patroon.
 
-*Toelichting:* Het andere datatype is bijvoorbeeld een CharacterString, Integer,
+Het andere datatype is bijvoorbeeld een CharacterString, Integer,
 GM Surface of DMO en dient als basis voor een zelf te definiëren datatype (zie
-[Datatype zelf definiëren](#datatype-zelf-definieren)). deze generalisatie is
-van toepassing op de volgende datatypes: «Primitief datatype», «Gestructureerd
-datatype», «Referentielijst», «Codelist», «Enumeratie».
+[Datatype zelf definiëren](#datatype-zelf-definieren)), zoals een CharacterString 
+Postcode, of een NietNegatiefGetal. 
+
+Deze generalisatie is van toepassing op de volgende datatypes: 
+«Primitief datatype», «Gestructureerd datatype», «Referentielijst», «Codelist», «Enumeratie».
 
 #### Relatiesoort
 
