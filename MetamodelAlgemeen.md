@@ -1322,7 +1322,7 @@ Tagged values zijn altijd van het datatype CharacterString. Aanvullend geldt:
 | [Authentiek](#alg-n-2)       | Authentiek, Basisgegeven, Landelijk kerngegeven, Gemeentelijk kerngegeven, [Overig](#alg-n-3) |
 
 \*\* Voetnoten \*\*
-
+<todo>
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Wanneer het datatype Postcode landelijk zodanig beschikbaar is
 gemaakt zodat hier gebruik van gemaakt kan worden in het model, dan hoeft
@@ -1344,3 +1344,4 @@ Het is daarom expliciet ongewenst om hiervoor een alternatieve naamgeving te geb
 daarom, gebruikt voor (alleen) de modellering van het metadata aspect Code,
 welke aanvullend is op naam (niet een alternatief van naam).
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+</todo>
