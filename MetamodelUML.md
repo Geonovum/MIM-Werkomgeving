@@ -29,8 +29,7 @@ stereotype.
 Voorbeeld: het MIM modelelement Objecttype wordt gemodelleerd als een
 UML-Class met stereotype «Objecttype». In Sparx EA wordt dit gemodelleerd met
 een Class met stereotype «Objecttype». 
-Niet alle MIM metaclasses hebben een stereotype (nodig). In de kolom
-staat dan ‘-‘.
+Niet alle MIM metaclasses hebben een stereotype (nodig). In de kolom staat dan ‘-‘.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 | **MIM metaclass** | **Stereotype** | **Metaclass UML 2.5z** | **In Sparx EA** |
