@@ -643,6 +643,13 @@ Opmerking: de metagegevens Indicatie materiële historie en Indicatie formele
 mogen worden opgenomen in een logisch model (of worden overgenomen van het
 conceptuele naar het logische informatiemodel).
 
+**Beheer** 
+De enige waarden die mogelijk zijn, zijn 'Ja' of 'Nee'. Voor beheer kan 
+het prettig zijn om in algemeenheid deze waarden aan te geven, bijvoorbeeld: 
+voor alle eigenschappen van een modelelement, zoals van een objecttype, geldt Ja. 
+De conventie hiervoor wordt opgenomen in de eigen extensie. Bijvoorbeeld: 
+'zie modelelement naam' (zie gegevensgroep, zie domein, zie view, zie informatiemodel). 
+
 ### Afleidbare gegevens
 
 In een informatiemodel kan de behoefte bestaan om afgeleide gegevens op te
