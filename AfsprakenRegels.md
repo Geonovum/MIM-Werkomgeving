@@ -412,7 +412,7 @@ daarmee dus ook in de hoedanigheid van de generalisatie(s) van het concrete
 objecttype.
 
 Richtlijnen - Een abstract object is een onderwerp van gesprek binnen het
-beschouwde gebied. Het heeft dus echt een [betekenis](#afs-n-1) in het
+beschouwde gebied. Het heeft dus echt een <span class='note'>[betekenis](#afs-n-1)</span> in het
 beschouwde gebied. Net als een concreet object, specialisatie of generalisatie.
 - De definitie van elk objecttype (dus ook een abstract objecttype) is zodanig
 dat ondubbelzinnig bepaald kan worden dat een object wel of niet tot het
@@ -603,7 +603,7 @@ en dus géén bij de tijdslijnen behorende attributen die gebruikt moeten worden
 voor het vastleggen van historie. Deze bij de tijdslijn behorende attributen
 worden op het logische niveau vastgelegd.
 
-**Historie op logisch niveau** MIM schrijft [zie noot](#afs-n-2) geen
+**Historie op logisch niveau** MIM schrijft <span class='note'>[zie noot](#afs-n-2)</span> geen
 implementatie van het conceptuele niveau voor. Wel worden er aandachtspunten
 gegeven om rekening mee te houden. Denk bij de uitwerking o.a. aan de volgende
 aspecten:
@@ -1050,10 +1050,10 @@ begrip en hierna handmatig de overeenstemming tussen de definities te beheren.
 
 **Voetnoten**
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+<aside id='afs-n-1' class='note'>
 nb
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+</aside>
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+<aside id='afs-n-2' class='note'>
 Hoewel het goed zou zijn om tot een standaard te komen in Nederland is MIM niet de plek hiervoor.
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+</aside>
