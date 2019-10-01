@@ -114,18 +114,19 @@ definiëren in de vorm van een «Primitief datatype», «Codelist» of
 definitie en optioneel een eigen patroon of formeel patroon.
 
 **Voorbeelden** hiervan, die niet tot MIM behoren, maar ter illustratie zijn
-opgenomen, zijn: - NietNegatieve*Integer*: een Integer die alleen de waarde 0 of
+opgenomen, zijn: 
+- NietNegatieve*Integer*: een Integer die alleen de waarde 0 of
 groter mag hebben. Laat de naam van het primitieve type dan wel terugkomen in de
-naam (dus niet NietNegatiefGetal*)*. - Een beperking op een Real te specificeren
-door Decimal op te nemen (een gebroken getal, met (één of meer) cijfers voor de
-komma en cijfers achter de komma, conform ISO11404). - AN. Deze is gebruikelijk
-bij een aantal basisregistraties. Datatype met een eigen naam, analoog aan
-CharacterString, maar met alleen ‘normale’ tekens. Dit zijn alle alfanumerieke
+naam (dus niet NietNegatiefGetal*)*. 
+- Een beperking op een Real te specificeren door Decimal op te nemen (een gebroken getal, 
+met (één of meer) cijfers voor de komma en cijfers achter de komma, conform ISO11404). 
+- AN. Deze is gebruikelijk bij een aantal basisregistraties. Datatype met een eigen naam, 
+analoog aan CharacterString, maar met alleen ‘normale’ tekens. Dit zijn alle alfanumerieke
 tekens (dus inclusief diakrieten), de koppeltekens – en \_ en spaties. De
 minimale lengte is tenminste 1, de maximale lengte is onbepaald. De 1e positie
-mag géén spatie bevatten. - Een Vlak: een verbijzondering van een GM Surface,
-met een eigen definitie, die bijvoorbeeld aangeeft dat het om een 2 dimensionale
-geometrie gaat.
+mag géén spatie bevatten. 
+- Een Vlak: een verbijzondering van een GM Surface, met een eigen definitie, die bijvoorbeeld \
+aangeeft dat het om een 2 dimensionale geometrie gaat.
 
 ![Datatypen Generalisatie](media/47002e9ebd60742cec8111996ea22fbc.png)
 
@@ -418,10 +419,10 @@ beschouwde gebied. Net als een concreet object, specialisatie of generalisatie.
 dat ondubbelzinnig bepaald kan worden dat een object wel of niet tot het
 gedefinieerde type behoort. Dus niet een objecttype met een definitie als ‘De
 gemeenschappelijke eigenschappen van een object…’ Deze definitie is op elk
-objecttype van toepassing. - Houd er rekening mee dat afhankelijk van het te
-beschouwen gebied een object uit de werkelijkheid in het ene informatiemodel een
-concreet objecttype kan zijn en in het andere informatiemodel een abstract
-objecttype.
+objecttype van toepassing. 
+- Houd er rekening mee dat afhankelijk van het te beschouwen gebied een object uit de 
+werkelijkheid in het ene informatiemodel een concreet objecttype kan zijn en in het andere 
+informatiemodel een abstract objecttype.
 
 **Logisch informatiemodel** In een logisch model gelden in principe dezelfde
 regels voor abstracte of concrete objecttypen. De abstracte objecten worden
@@ -433,17 +434,18 @@ van (extra) hiërarchie,zowel in semantiek als in ordening van eigenschappen. De
 enige regel die geldt is dat een abstract objecttype niet geïnstantieerd kan
 worden. Elk object is altijd een instantie van een concreet objecttype.
 
-*Algemeen* - In UML wordt een abstract objecttype aangeduid door indAbstract met
+*Algemeen* 
+- In UML wordt een abstract objecttype aangeduid door indAbstract met
 waarde “J” en wordt de naam van het abstracte objecttype cursief geschreven
-(voorbeeld: *Persoon*). - Een objecttype dat een generalisatie-relatie heeft
-naar een al dan niet abstract objecttype noemen we een specialisatie (van dat
-objecttype). Wanneer de generalisatie een abstract objecttype is, kan de
-specialisatie zelf ook abstract zijn en specialisaties hebben. De ‘onderste’
-specialisaties zijn dan altijd concreet (niet abstract) - Modelleer een abstract
-objecttype pas wanneer er sprake is van twee of meer specialisaties - De unieke
-aanduiding kan opgenomen worden in het abstracte objecttype. De unieke
-aanduiding geldt dan voor elke specialisatie van het abstract objecttype. Dit
-betekent dat de unieke aanduiding uniek is binnen de verzameling van alle
+(voorbeeld: *Persoon*). 
+- Een objecttype dat een generalisatie-relatie heeft naar een al dan niet abstract objecttype 
+noemen we een specialisatie (van dat objecttype). Wanneer de generalisatie een abstract 
+objecttype is, kan de specialisatie zelf ook abstract zijn en specialisaties hebben. De 
+‘onderste’ specialisaties zijn dan altijd concreet (niet abstract) 
+- Modelleer een abstract objecttype pas wanneer er sprake is van twee of meer specialisaties 
+- De unieke aanduiding kan opgenomen worden in het abstracte objecttype. De unieke
+aanduiding geldt dan voor elke specialisatie van het abstract objecttype. Dit betekent dat 
+de unieke aanduiding uniek is binnen de verzameling van alle
 objecten die als specialisatie onder het abstracte objecttype vallen. Anders
 gezegd, de unieke aanduiding geldt voor alle concrete objecten die als
 objecttype de unieke aanduiding erven van het abstracte objecttype.
@@ -481,12 +483,13 @@ bestaat.*
 
 Deze paragraaf gaat dieper in op hoe een Constraint toegepast wordt.
 
-Een Constraint wordt beschreven met een: - Naam (UML-constraint name): een naam
-c.q. label, vaak in steekwoorden. - Specificatie in tekst (UML-Constraint Notes,
-type invariant): een uitgebreide heldere beschrijving van de constraint in
-gewone tekst.
+Een Constraint wordt beschreven met een: 
+- Naam (UML-constraint name): een naam c.q. label, vaak in steekwoorden. 
+- Specificatie in tekst (UML-Constraint Notes, type invariant): een uitgebreide heldere 
+beschrijving van de constraint in gewone tekst.
 
-en optioneel: - Specificatie formeel (UML-Constraint Notes, type OCL): formele
+en optioneel: 
+- Specificatie formeel (UML-Constraint Notes, type OCL): formele
 specificatie in de Object Constraint Language. De formele specificatie bevat dus
 de uitgebreide heldere beschrijving van de constraint in gewone tekst EN de
 formele specificatie in OCL.
@@ -504,14 +507,16 @@ constraints, 1 met tekst en 1 met OCL, met verplicht ook een andere naam.
 Vandaar onderstaande aanpak:
 
 Als de modelleur kiest om de constraint alleen in gewone taal te beschrijven,
-dan als volgt: - Naam (UML-constraint name): een naam c.q. label, vaak in
-steekwoorden. - Specificatie in tekst (UML-Constraint Notes, type invariant):
+dan als volgt: 
+- Naam (UML-constraint name): een naam c.q. label, vaak in
+steekwoorden. 
+- Specificatie in tekst (UML-Constraint Notes, type invariant):
 een uitgebreide heldere beschrijving van de constraint in gewone tekst.
 
 Als de modelleur kiest om de constraint niet alleen in gewone taal te
-beschrijven, maar ook in een formele taal (OCL), dan als volgt: - Naam
-(UML-constraint name): een naam c.q. label, vaak in steekwoorden. - Specificatie
-formeel (UML-Constraint Notes, type OCL): formele specificatie in de object
+beschrijven, maar ook in een formele taal (OCL), dan als volgt: 
+- Naam (UML-constraint name): een naam c.q. label, vaak in steekwoorden. 
+- Specificatie formeel (UML-Constraint Notes, type OCL): formele specificatie in de object
 constraint language (OCL). De uitgebreide heldere beschrijving van de constraint
 in gewone tekst wordt opgenomen als commentaar, tussen /\* \*/.
 
@@ -560,11 +565,12 @@ Dit betekent dus dat bekend moet zijn wat de waarde van een attribuut op een
 bepaald moment is.
 
 *Tijdslijnen* Er spelen twee tijdslijnen een rol bij het herleiden van
-attribuutwaarden: - Wanneer is iets gebeurd, in de werkelijkheid of volgens
+attribuutwaarden: 
+- Wanneer is iets gebeurd, in de werkelijkheid of volgens
 opgave (wanneer zijn de opgenomen gegevens geldig)? Dit valt binnen de tijdlijn
-van de aangehouden werkelijkheid. - Vanaf wanneer wist de overheid (als
-collectief van organisaties) dat de gegevens bekend waren? Dit valt binnen de
-tijdlijn van het administratieproces of de administratieve werkelijkheid.
+van de aangehouden werkelijkheid. 
+- Vanaf wanneer wist de overheid (als collectief van organisaties) dat de gegevens bekend 
+waren? Dit valt binnen de tijdlijn van het administratieproces of de administratieve werkelijkheid.
 
 In de rapportage 'Architectuur van het stelsel' (Stroomlijning BasisGegevens,
 2006) wordt geadviseerd om beide tijdslijnen te registreren, om de

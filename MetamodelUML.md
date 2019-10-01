@@ -1,8 +1,6 @@
-Metamodel in UML
-================
+# Metamodel in UML
 
-Structuur metamodel in UML
---------------------------
+## Structuur metamodel in UML
 
 Dit hoofdstuk beschrijft hoe de modelelementen worden uitgedrukt in UML. 
 
@@ -25,12 +23,11 @@ Elk modelelement heeft een MIM metaclass. Deze wordt in UML in een
 informatiemodel gemodelleerd als een Metaclass van UML 2.5 en een bijbehorende
 stereotype.
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Voorbeeld: het MIM modelelement Objecttype wordt gemodelleerd als een
-UML-Class met stereotype «Objecttype». In Sparx EA wordt dit gemodelleerd met
-een Class met stereotype «Objecttype». 
+<pre class='ex-generic'>
+Voorbeeld: het MIM modelelement Objecttype wordt gemodelleerd als een UML-Class met stereotype 
+«Objecttype». In Sparx EA wordt dit gemodelleerd met een Class met stereotype «Objecttype». 
 Niet alle MIM metaclasses hebben een stereotype (nodig). In de kolom staat dan ‘-‘.
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+</pre>
 
 | **MIM metaclass** | **Stereotype** | **Metaclass UML 2.5z** | **In Sparx EA** |
 |-------------------|----------------|------------------------|-----------------|
@@ -133,8 +130,7 @@ View 3c: Groepering
 | Extern                | «Extern»          | (UML) Package         | Package         |
 | View                  | «View»            | (UML) Package         | Package         |
 
-Nadere specificatie metagegevens in UML
----------------------------------------
+## Nadere specificatie metagegevens in UML
 
 Deze paragraaf is een aanvulling op de paragraaf *'Specificatie metagegevens'*
 in het hoofdstuk [Metamodel Algemeen](#metamodel-algemeen).
@@ -146,12 +142,12 @@ De alternatieve weergave van de naam.
 *Toelichting*
 
 Verdere toelichting voor UML modellen:
-
--   De alias is te specificeren voor NamedElements (zoals UML-Class,
-    UML-association, UML-UML-Datatype en UML-property). De alias is in UML
-    gespecificeerd bij de metaclass [Element Import](#uml-n-6). In Enterprise
+-   De alias is te specificeren voor NamedElements (zoals UML-Class, ML-association, 
+UML-UML-Datatype en UML-property). De alias is in UML gespecificeerd bij de metaclass 
+[Element Import](#uml-n-6). In Enterprise
     Architect is de alternatieve weergave aan te zetten in de properties van een
     Diagram, via: use alias if available.
+
 
 >   **Identificerend**
 
