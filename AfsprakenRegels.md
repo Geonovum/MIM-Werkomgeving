@@ -282,9 +282,11 @@ is, dan wordt dit gemodelleerd met het datatype Keuze. Elk keuze element van de
 keuze heeft dan één datatype, de waarde van de attribuutsoort moet aan één van
 deze datatypen voldoen.
 
-*Voorbeeld: Attribuutsoort geometrie met als type de Keuze PuntOfVlak.
+<pre class='ex-generic'>
+Attribuutsoort geometrie met als type de Keuze PuntOfVlak.
 PuntOfVlak is daarbij een Keuze met keuze element: punt, met als type het
-datatype GM_Point en keuze element vlak met als type het datatype GM_Surface.*
+datatype GM_Point en keuze element vlak met als type het datatype GM_Surface.
+</pre>
 
 In dit voorbeeld is er enkel een keuze tussen verschillende keuze elementen die
 zelf geen betekenisvolle context geven aan het te kiezen datatype. Er wordt in
@@ -295,9 +297,11 @@ In onderstaande voorbeelden is er wel sprake van een keuze tussen keuze
 elementen die een betekenisvolle context geven aan het te kiezen datatype. Er
 wordt in dit geval wel een definitie gespecificeerd bij het keuze element.
 
-*Voorbeeld: Attribuutsoort hoogte met als type de Keuze BereikOfWaarde.
+<pre class='ex-generic'>
+Attribuutsoort hoogte met als type de Keuze BereikOfWaarde.
 BereikOfWaarde is daarbij een Keuze met keuze element ‘bereik’, met als type het
-datatype Interval en keuze element ‘waarde’ met als type het datatype Real.*
+datatype Interval en keuze element ‘waarde’ met als type het datatype Real.
+</pre>
 
 Regel: het is niet toegestaan dat keuze elementen binnen één en dezelfde keuze
 identiek zijn. De naam van elk keuze element moet verschillend zijn én de
@@ -383,10 +387,12 @@ informatiemodel en in een logisch informatiemodel
 
 **Conceptueel informatiemodel**
 
-*Specialisatie / generalisatie* Bovenstaande vragen beantwoorden we aan de hand
-van een voorbeeld: het opleidingsinstituut.  In de beschouwde werkelijkheid
-onderscheiden we onder meer als gespreksonderwerp personen. Deze personen kunnen
-docenten en leerlingen zijn. Over al deze gespreksonderwerpen willen we gegevens
+<pre class='ex-generic'>
+*Specialisatie / generalisatie*
+Bovenstaande vragen beantwoorden we aan de hand van het voorbeeld van een het 
+opleidingsinstituut.  In de beschouwde werkelijkheid onderscheiden we onder 
+meer als gespreksonderwerp personen. Deze personen kunnen docenten en 
+leerlingen zijn. Over al deze gespreksonderwerpen willen we gegevens
 communiceren. Een docent heeft als kenmerk dat deze een arbeidscontract met het
 opleidingsinstituut heeft afgesloten en een lesbevoegdheid heeft, terwijl een
 leerling kenbaar heeft gemaakt lessen te willen gaan volgen bij het instituut en
@@ -401,11 +407,12 @@ Docent en Leerling. Op onderdelen vertonen de onderscheiden objecttypen Docent
 en Leerling hetzelfde gedrag waarbij dat gedrag essentieel van belang is voor
 het te beschouwen domein en daarmee het conceptuele informatiemodel.
 
-*Abstract / concreet* Wanneer er vanuit wordt gegaan dat binnen het te
-beschouwen gebied een persoon altijd ofwel een docent ofwel leerling kan zijn
-(en nooit beide tegelijk) dan definiëren we een Persoon als een abstract
-objecttype. Docent en Leerling zijn dan concrete objecttypen in het conceptueel
-informatiemodel.
+*Abstract / concreet* 
+Wanneer er vanuit wordt gegaan dat binnen het te beschouwen gebied een persoon 
+altijd ofwel een docent ofwel leerling kan zijn (en nooit beide tegelijk) dan 
+definiëren we een Persoon als een abstract objecttype. Docent en Leerling 
+zijn dan concrete objecttypen in het conceptueel informatiemodel.
+</pre>
 
 Een concreet object kan zich alleen in de hoedanigheid als één van de
 specialisaties van het abstracte objecttype op het laagste niveau voordoen. En
@@ -466,18 +473,22 @@ geval is, dan worden de relatieklasses gemodelleerd als «Objecttype», met éé
 inkomende relatie en één uitgaande relatie. De oorspronkelijke kardinaliteit van
 de beoogde relatieklasse wordt hierbij behouden.
 
-*Een Perceel kan vanwege een Perceel splitsing overgaan in twee of meerdere
+<pre class='ex-generic'>
+Een Perceel kan vanwege een Perceel splitsing overgaan in twee of meerdere
 andere Percelen. De ‘overgegaan in’ relatie wordt bijgehouden in een
-relatieklasse. Gegevens over de splitsing zijn voor al deze relaties gelijk.*
+relatieklasse. Gegevens over de splitsing zijn voor al deze relaties gelijk.
+</pre>
 
 Het metamodel ondersteunt (nog) geen relatieklassen tussen drie of meer
 objecttypen. Dit kan in uw eigen extensie toegevoegd worden.
 
-*Bijvoorbeeld: een CONTRACT kan bijvoorbeeld ook een afspraak zijn tussen twee
+<pre class='ex-generic'>
+Een CONTRACT kan bijvoorbeeld ook een afspraak zijn tussen twee
 óf méér SUBJECTen, waarbij de gegevens van de relatie voor alle betrokken
 objecten hetzelfde zijn. CONTRACT wordt dan gemodelleerd als objecttype, waarbij
 beschreven wordt wat er moet gebeuren wanneer één van de SUBJECTen niet meer
-bestaat.*
+bestaat.
+</pre>
 
 ### Constraint
 
@@ -593,15 +604,20 @@ is. Formele historie geeft aan wanneer in de administratie een verandering is
 verwerkt van de attribuutwaarde (wanneer was de verandering bekend en is deze
 verwerkt).
 
-*Voorbeelden: ‘bouwjaar pand’ heeft al materiële historie in zich: het bouwjaar
-is het moment waarop de wijziging in de werkelijkheid zich voordeed en wijzigt
-niet. De ‘indicatie materiële historie’ ervan is daarom Nee. BSN van een Persoon
-geldt voor de persoon vanaf het moment dat de persoon in de BRP is opgenomen en
-wijzigt niet: ‘indicatie materiële historie’ Nee. De Achternaam van een persoon
-kan wijzigen: ‘indicatie materiële historie’ Ja. Als je niet toeziet op het
-daadwerkelijk kappen van een boom maar het gekapt zijn wel in een registratie
-wil opnemen: ‘indicatie materiële historie’ Nee en ‘indicatie formele historie’
-Ja.*
+<pre class='ex-generic'>
+‘bouwjaar pand’ heeft al materiële historie in zich: het bouwjaar is het moment 
+waarop de wijziging in de werkelijkheid zich voordeed en wijzigt niet. 
+De ‘indicatie materiële historie’ ervan is daarom Nee. 
+
+BSN van een Persoon geldt voor de persoon vanaf het moment dat de persoon in de 
+BRP is opgenomen en wijzigt niet: ‘indicatie materiële historie’ Nee. 
+
+De Achternaam van een persoon kan wijzigen: ‘indicatie materiële historie’ Ja. 
+
+Als je niet toeziet op het daadwerkelijk kappen van een boom maar het gekapt zijn 
+wel in een registratie wil opnemen: ‘indicatie materiële historie’ Nee en 
+‘indicatie formele historie’ Ja.
+</pre>
 
 Richtlijn: op conceptueel niveau worden voor historie alléén indicatie materiële
 historie en indicatie formele historie bij een attribuut of relatie vastgelegd,
@@ -666,12 +682,12 @@ gegeven en ten tweede het gegeven niet eenvoudig af te leiden is (er moet sprake
 zijn van enige mate van complexiteit). Dit wordt in UML weergegeven via
 isDerived. Zie ook Attribuutsoort, §2.4.2 – is afleidbaar.
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Voorbeeld is de 'Datum vestiging in Nederland' van een Ingeschreven persoon. De
-afleiding van dit gegeven is niet triviaal. Door het als afleidbaar gegeven op
-te nemen kan het opgevraagd worden zonder dat de historie of andere gegevens van
-het object opgevraagd hoeven te worden om daaruit dit gegeven af te leiden.
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+<pre class='ex-generic'>
+'Datum vestiging in Nederland' van een Ingeschreven persoon. De afleiding van 
+dit gegeven is niet triviaal. Door het als afleidbaar gegeven op te nemen kan 
+het opgevraagd worden zonder dat de historie of andere gegevens van het object
+opgevraagd hoeven te worden om daaruit dit gegeven af te leiden.
+</pre>
 
 ### Authentieke gegevens
 
@@ -768,11 +784,11 @@ ook de XML) schema’s beheert en beschikbaar stelt waarnaar vanuit deze
 specificaties wordt gerefereerd. De packages bevatten alleen de constructies die
 ook daadwerkelijk binnen het ‘eigen’ informatiemodel wordt gebruikt.
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Voorbeeld: voor het uitwisselen van geografische informatie op basis van
-NEN3610 is een tweetal externe packages onderkend waarnaar vanuit de ‘eigen’
-informatiemodellen kan worden verwezen: [[!NEN3610]], of GML3.2
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+<pre class='ex-generic'>
+Voor het uitwisselen van geografische informatie op basis van NEN3610 is een 
+tweetal externe packages onderkend waarnaar vanuit de ‘eigen’ informatiemodellen 
+kan worden verwezen: [[!NEN3610]], of GML3.2
+</pre>
 
 Het is ook mogelijk om binnen een domein of binnen een organisatie een eigen
 «extern» package te definiëren voor datatypen, om over meerdere
@@ -800,16 +816,15 @@ het andere informatiemodel één op één overgenomen wordt, waarbij expliciet
 gemaakt wordt welke gegevens tot het eigen model behoren en welke tot het andere
 model.
 
-Bijvoorbeeld:
-
-*In IMKAD zit het objecttype: «Objecttype» Persoon. Hierin zitten de attributen
+<pre class='ex-generic'>
+In IMKAD zit het objecttype: «Objecttype» Persoon. Hierin zitten de attributen
 waarvan de basisregistratie Kadaster de gegevens zelf inwint. In IMKAD zit het
 package: «view» BRP en hierin zit het «Objecttype» GeregistreerdPersoon. Hierin
 zitten de attributen die de basisregistratie BRP inwint en die het Kadaster
 overneemt. De relatie overstijgt de registratie, máár het blijft in het eigen
 informatiemodel. De aard van de relatie is echter anders dan bij een
 «relatiesoort». Daarom kennen we deze relatie het stereotype «externe koppeling»
-toe.*
+toe.
 
 Het betreft in de werkelijkheid dezelfde persoon. Zowel Persoon als
 GeregistreerdPersoon worden als «Objecttype» gezien. Beide objecten zijn sterk
@@ -821,6 +836,7 @@ worden. Er is dan geen sprake van gegevens uit de BRP die overgenomen zijn in de
 eigen registratie. Er kan dan volstaan worden met alleen de unieke aanduiding
 van GeregistreerdPersoon. Dit is de BSN. Dit wordt niet gezien als een «externe
 koppeling» maar als een referentie.
+</pre>
 
 ### Stelselcatalogus en stelselafspraken voor basisregistraties
 
