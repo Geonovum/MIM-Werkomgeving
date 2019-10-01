@@ -560,10 +560,13 @@ CharacterString, Integer, DateTime.
 >   met een eigen naam en definitie. 
 
 <pre class='ex-generic'>
-Documentnummer, Postcode. In het geval van Postcode is de landelijkedefinitie in tekst vastgelegd
-buiten het informatiemodel zelf, waarbij in heteigen model een modelelement is gemaakt in de vorm
-van het datatype <span class='note'>[Postcode](#alg-n-1)</span>.
+Documentnummer, Postcode. In het geval van Postcode is de landelijkedefinitie in tekst 
+vastgelegd buiten het informatiemodel zelf, waarbij in heteigen model een modelelement is 
+gemaakt in de vorm van het datatype Postcode]</span>.
 </pre>
+
+NB: Wanneer het datatype Postcode landelijk zodanig beschikbaar is gemaakt zodat hier gebruik van gemaakt kan worden in het model, 
+dan hoeft Postcode niet meer in het eigen model opgenomen te worden.
 
 *Toelichting:* Een primitief datatype is een datatype zonder verdere
 specificatie over de structuur. Dit datatype is enkelvoudig, oftewel niet
@@ -862,8 +865,12 @@ betekenis. De alias is optioneel (zie verder ook
 
 Bijvoorbeeld: OnroerendeZaak heeft als alias Onroerende zaak.
 
-*Toepassing*: alle modelelementen die een naam hebben, uitgezonderd de
-[Enumeratiewaarde](#alg-n-4).
+*Toepassing*: alle modelelementen die een naam hebben, uitgezonderd de **Enumeratiewaarde**.
+NB: Een uitzondering is gemaakt voor UML modellen voor de UML-EnumerationLiteral. 
+De ‘naam’ betreft hier een daadwerkelijk waarde, waarin de naam gelijk staat aan de waarde. 
+Het is daarom expliciet ongewenst om hiervoor een alternatieve naamgeving te gebruiken. De alias wordt hier, mede 
+daarom, gebruikt voor (alleen) de modellering van het metadata aspect Code,
+welke aanvullend is op naam (niet een alternatief van naam).
 
 Metagegeven: **Definitie**
 
@@ -1311,31 +1318,6 @@ Tagged values zijn altijd van het datatype CharacterString. Aanvullend geldt:
 | Indicatie formele historie   | Ja, Nee                                                                                       |
 | Mogelijk geen waarde         | Ja, Nee                                                                                       |
 | Type aggregratie             | composite, aggregate, of geen/leeg/niet gebruikt                                              |
-| [Authentiek](#alg-n-2)       | Authentiek, Basisgegeven, Landelijk kerngegeven, Gemeentelijk kerngegeven, [Overig](#alg-n-3) |
+| [Authentiek](#authentieke-gegevens)  | Authentiek, Basisgegeven, Landelijk kerngegeven, Gemeentelijk kerngegeven, **Overig** |
 
-\*\* Voetnoten \*\*
-<todo>
-
-<aside id='alg-n-1' class='note'>
-Wanneer het datatype Postcode landelijk zodanig beschikbaar is
-gemaakt zodat hier gebruik van gemaakt kan worden in het model, dan hoeft
-Postcode niet meer in het eigen model opgenomen te worden.
-</aside>
-
-<aside id='alg-n-2' class='note'>
-Voor toelichting, zie paragraaf over [Authentieke gegevens](#authentieke-gegevens).
-</aside>
-
-<aside id='alg-n-3' class='note'>
-Geef bij overig in uw eigen informatiemodel aan wat u er onder verstaat.
-</aside>
-
-<aside id='alg-n-4' class='note'>
-Een uitzondering is gemaakt voor UML modellen voor de UML-EnumerationLiteral. 
-De ‘naam’ betreft hier een daadwerkelijk waarde, waarin de naam gelijk staat aan de waarde. 
-Het is daarom expliciet ongewenst om hiervoor een alternatieve naamgeving te gebruiken. De alias wordt hier, mede 
-daarom, gebruikt voor (alleen) de modellering van het metadata aspect Code,
-welke aanvullend is op naam (niet een alternatief van naam).
-</aside>
-
-</todo>
+NB: Geef bij overig in uw eigen informatiemodel aan wat u er onder verstaat.
