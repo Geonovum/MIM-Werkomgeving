@@ -66,7 +66,7 @@ Het hoofdstuk [Metamodel in UML](#metamodel-in-uml) beschrijft hoe de implementa
 metamodel, welke uitbreidingen c.q. verbijzonderingen van het UML metamodel zijn
 aangebracht. 
 
-Het hoofdstuk [Metamodel in Linked Data (LD)](#metamodel-in-linked-data-(ld)) beschrijft hoe de implementatie van MIM in
+Het hoofdstuk [Metamodel in Linked Data (LD)](#metamodel-in-linked-data-ld) beschrijft hoe de implementatie van MIM in
 [[!Linked-Data]] er uit ziet. In dit hoofdstuk wordt beschreven hoe het metamodel zich verhoudt tot het Linked Data
 metamodel, welke uitbreidingen c.q. verbijzonderingen van het Linked Data metamodel zijn
 aangebracht. 
@@ -185,7 +185,7 @@ met name de ontwerpers, bouwers en beheerders van ICT-voorzieningen.
 Specificeert de structuur en eigenschappen van de technologie waarin de
 informatie wordt vastgelegd of uitgewisseld. Dit is sterk afhankelijk van de
 gebruikte opslagtechnologie zoals een specifieke database of de
-servicetechnologie zoals [[!xml]], [[!gml]], [[!SOAP]], REST, [[!(Geo)JSON]],
+servicetechnologie zoals [[!xml]], [[!gml]], [[!SOAP]], REST, [[!GeoJSON]],
 [[!Linked-Data]] e.d. Het kan tevens informatie bevatten over de manier waarop 
 berichten ‘verpakt’ worden, het (internet)protocol en de logistiek van het 
 berichtenverkeer. De technische specificaties worden over het algemeen zoveel 

@@ -199,19 +199,21 @@ var respecConfig =
       publisher:  "",
       company:    "",
     },
-//	 "(Geo)JSON":
-//   {
-//      "title": "GeoJSON",
-//      "href": "https://geojson.org/",
-//      "publisher": "",
-//      "status": "",
-//    },
+	 "GeoJSON":
+    {
+      title:      "GeoJSON",
+      href:       "https://geojson.org/",
+      publisher:  "",
+      status:     "",
+      company:    "",
+    },
 	 "SOAP":
     {
-      "title": "SOAP Specifications",
-      "href": "https://www.w3.org/TR/SOAP/",
-      "publisher": "",
-      "status": "",
+      title:      "SOAP Specifications",
+      href:       "https://www.w3.org/TR/SOAP/",
+      publisher:  "",
+      status:     "",
+      company:    "",
     },
   },
   //-- Voor dit blok geldt: alleen als er eerdere versies zijn en altijd beiden aan/uit! 
