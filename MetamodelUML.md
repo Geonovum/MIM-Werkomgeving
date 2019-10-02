@@ -76,7 +76,7 @@ View 2: Datatypen
 | Enumeratiewaarde        | \-                      | (UML) EnumerationLiteral | EnumerationLiteral |
 | Referentielijst         | «Referentielijst»       | (UML) Datatype           | Datatype           |
 | Referentie element      | «Referentie element»    | (UML) Property           | Attribute          |
-| Codelist                | «Codelist               | (UML) Datatype           | Datatype           |
+| Codelist                | «Codelist»              | (UML) Datatype           | Datatype           |
 
 *Nadere specificaties voor datatypen*
 
@@ -519,25 +519,28 @@ De keuze elementen worden naar de volgende aspecten gespecificeerd:
 
 Informatiemodel packages worden naar de volgende aspecten gespecificeerd:
 
-| **Aspect**       | **Kardinaliteit** | **Toelichting**                                                                                                                                                   | **In UML 2.5**                       | **In EA**      |
-|------------------|-------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------|----------------|
-| **Naam**         | 1                 | Algemeen metagegeven. *De naam van het informatiemodel package.*                                                                                                  | *name van de metaclass Namedelement* | *Name*         |
-| **Definitie**    | 1                 | Algemeen metagegeven. *De beschrijving van betekenis en inhoud van het informatiemodel. Bijvoorbeeld: informatiemodel van het geografisch domein luchtkwaliteit.* | *Body van de metaclass Comment*      | *Notes*        |
-| **Herkomst \***  | 1                 | Algemeen metagegeven. *De beheerorganisatie, registratie of andere referentie die herleidt tot de bron van het informatiemodel.*                                  |                                      | *Tagged value* |
-| **MIM versie**   | 1                 | *De versie van de MIM specificatie die gebruikt is om het informatiemodel in uit te drukken.*                                                                     |                                      | *Tagged value* |
-|                  |                   | *Bijvoorbeeld: 1.0.1 of 1.1*                                                                                                                                      |                                      |                |
-| **MIM extensie** | 0..1              | *De aanduiding van een extensie op MIM.*                                                                                                                          |                                      | *Tagged value* |
-|                  |                   | *Bijvoorbeeld: Kadaster of NEN3610:2020*                                                                                                                          |                                      |                |
-| **MIM taal**     | 0..1              | *De aanduiding van de taal die gebruikt is voor de modelelementen.*                                                                                               |                                      | *Tagged value* |
-|                  |                   | *Bijvoorbeeld: EN of NL*                                                                                                                                          |                                      |                |
+| **Aspect**                 | **Kardinaliteit** | **Toelichting**                                                                                                                                                   | **In UML 2.5**                       | **In EA**      |
+|----------------------------|-------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------|----------------|
+| **Naam**                   | 1                 | Algemeen metagegeven. *De naam van het informatiemodel package.*                                                                                                  | *name van de metaclass Namedelement* | *Name*         |
+| **Definitie**              | 1                 | Algemeen metagegeven. *De beschrijving van betekenis en inhoud van het informatiemodel. Bijvoorbeeld: informatiemodel van het geografisch domein luchtkwaliteit.* | *Body van de metaclass Comment*      | *Notes*        |
+| **Herkomst \***            | 1                 | Algemeen metagegeven. *De beheerorganisatie, registratie of andere referentie die herleidt tot de bron van het informatiemodel.*                                  |                                      | *Tagged value* |
+| **Type informatiemodel**   | 1                 | Algemeen metagegeven. *De beschrijving van de aard van het informatiemodel: conceptueel, logisch, technisch.*                                                     |                                      | *Tagged value* |
+| **MIM versie**             | 1                 | *De versie van de MIM specificatie die gebruikt is om het informatiemodel in uit te drukken.*                                                                     |                                      | *Tagged value* |
+|                            |                   | *Bijvoorbeeld: 1.0.1 of 1.1*                                                                                                                                      |                                      |                |
+| **MIM extensie**           | 0..1              | *De aanduiding van een extensie op MIM.*                                                                                                                          |                                      | *Tagged value* |
+|                            |                   | *Bijvoorbeeld: Kadaster of NEN3610:2020*                                                                                                                          |                                      |                |
+| **MIM taal**               | 0..1              | *De aanduiding van de taal die gebruikt is voor de modelelementen.*                                                                                               |                                      | *Tagged value* |
+|                            |                   | *Bijvoorbeeld: EN of NL*                                                                                                                                          |                                      |                |
+
+Toelichting Type informatiemodel: zoals bedoeld in paragraaf 1.5. Alle packages, oftewel «Domein» en «View», binnen het informatiemodel hebben hetzelfde type als het informatiemodel zelf. 
 
 **Specificatie voor «Domein»**
 
 Domein packages worden naar de volgende aspecten gespecificeerd:
 
-| **Aspect** | **Kardinaliteit** | **Toelichting**                                         | **In UML 2.5**                       | **In EA** |
-|------------|-------------------|---------------------------------------------------------|--------------------------------------|-----------|
-| **Naam**   | 1                 | Algemeen metagegeven. *De naam van het domein package.* | *name van de metaclass Namedelement* | *Name*    |
+| **Aspect**        | **Kardinaliteit** | **Toelichting**                                         | **In UML 2.5**                       | **In EA**      |
+|-------------------|-------------------|---------------------------------------------------------|--------------------------------------|----------------|
+| **Naam**          | 1                 | Algemeen metagegeven. *De naam van het domein package.* | *name van de metaclass Namedelement* | *Name*         |
 
 **Specificatie voor «Extern»**
 
