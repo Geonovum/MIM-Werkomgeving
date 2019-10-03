@@ -709,11 +709,11 @@ onderscheid in de volgende groepen van gegevens:
 
 | **Waardebereik authentiek** | **Betekenis**                                                                                                                                                                                                  |
 |-----------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Authentiek                  | Indien het een authentiek (landelijk) basisgegeven of een als relatiesoort gemodelleerd authentiek (landelijk) basisgegeven is. Basisgegevens zijn altijd gegevens afkomstig uit de landelijke *registraties*. |
-| Basisgegeven                | Indien het een landelijk basisgegeven of een als relatiesoort gemodelleerd (landelijk) basisgegeven is in een landelijke *registratie*, maar in die registratie géén authentiek gegeven is.                    |
-| Landelijk kerngegeven       | Indien het een gegeven of een als relatiesoort gemodelleerd gegeven is in een landelijk sector- en domein-overstijgend informatiemodel en geen authentiek gegeven en geen basisgegeven is.                     |
-|                             |                                                                                                                                                                                                                |
-|  Overig                     | Indien het géén van de voorgaande categorieën betreft. Veelal gaat het dan om proces-, taakveld- of domeinspecifieke gegevens.                                                                                 |
+| Authentiek                  | https://www.noraonline.nl/wiki/Authentiek_gegeven. |
+| Basisgegeven                | https://www.noraonline.nl/wiki/Basisgegeven |
+| Wettelijk gegeven           | Gegeven behorende bij een wettelijke registratie, niet zijnde een basisregistratie |
+| Landelijk kerngegeven       | Indien het een gegeven of een als relatiesoort gemodelleerd gegeven is in een landelijk sector- en domein-overstijgend informatiemodel en geen authentiek gegeven en geen basisgegeven en geen wettelijk gegeven is.|
+|  Overig                     | Indien het géén van de voorgaande categorieën betreft. Veelal gaat het dan om proces-, taakveld- of domeinspecifieke gegevens.   |
 
 ### Mogelijk geen waarde
 
