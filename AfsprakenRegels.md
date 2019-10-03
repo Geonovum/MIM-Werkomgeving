@@ -1091,6 +1091,11 @@ overeensteming is. De aanbeveliging is daarom een goede definitie voor het
 modelelement te kiezen, en in de metadata een verwijzing op te nemen naar het
 begrip en hierna handmatig de overeenstemming tussen de definities te beheren.
 
+### Overig 
+
+#### Volgorde van kenmerken
+De volgorde van kenmerken in een objecttype, gegevensgroeptype, gestructureerd datatype in een visueel diagram van een informatiemodel kan voor de leesbaarheid van het diagram worden aangebracht, maar heeft in principe, buiten het diagram, geen betekenis.
+
 **Voetnoten**
 
 <aside id='afs-n-1' class='note'>
