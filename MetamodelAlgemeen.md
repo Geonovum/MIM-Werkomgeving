@@ -1223,6 +1223,6 @@ Tagged values zijn altijd van het datatype CharacterString. Aanvullend geldt:
 | Indicatie formele historie          | Ja, Nee                                                                               |
 | Mogelijk geen waarde                | Ja, Nee                                                                               |
 | Type aggregratie                    | composite, aggregate, of geen/leeg/niet gebruikt                                      |
-| [Authentiek](#authentieke-gegevens) | Authentiek, Basisgegeven, Landelijk kerngegeven, Gemeentelijk kerngegeven, **Overig** |
+| [Authentiek](#authentieke-gegevens) | Authentiek, Basisgegeven, Landelijk kerngegeven, Overig |
 
 NB: Geef bij overig in uw eigen informatiemodel aan wat u er onder verstaat.
