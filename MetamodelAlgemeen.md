@@ -636,8 +636,23 @@ modelelementen gelegd kan worden.
 
 Een constraint wordt altijd in gewone tekst omschreven en optioneel als formele
 
-Specificatie metagegevens
--------------------------
+Specificatie metagegevens informatiemodel
+-----------------------------------
+
+Metagegeven: **Relatiemodelleringtype**
+
+>   **Definitie Naam**
+
+Aanduiding van een in MIM gedefinieerd alternatief voor een modelleringswijze, en welke keuze hierbij is gemaakt.
+
+*Toelichting*
+Bijvoorbeeld: "Relatiesoort leidend" of "Relatierol leidend". Dit betreft de keuze die je maakt voor het in TODO: ref paragraaf 1.X gekozen alternatief. Er moet een keuze gemaakt worden.
+
+*Toepassing*: informatiemodel 
+
+
+Specificatie metagegevens kenmerken
+-----------------------------------
 
 Elk modelelement kent een aantal metagegevens, die bepaalde aspecten van het
 modelelement specificeren. Zo is er de *naam* van het modelelement, bijvoorbeeld
@@ -740,29 +755,6 @@ de naam gelijk staat aan de waarde. Het is daarom expliciet ongewenst om
 hiervoor een alternatieve naamgeving te gebruiken. De alias wordt hier, mede
 daarom, gebruikt voor (alleen) de modellering van het metadata aspect Code,
 welke aanvullend is op naam (niet een alternatief van naam).
-
-Metagegeven: **Definitie**
-
->   **Definitie Definitie**
-
-De beschrijving van de betekenis van dit modelelement.
-
-*Toelichting*
-
-Bijvoorbeeld: Een Pand is de kleinste, bij de totstandkoming functioneel en
-bouwkundig-constructief zelfstandige eenheid die direct en duurzaam met de aarde
-is verbonden en betreedbaar en afsluitbaar is.
-
-De definitie volgt, indien aanwezig, de catalogus van de desbetreffende
-(basis)registratie of informatiemodel, mits deze het modelelement definieert
-vanuit een informatie en informatiemodel perspectief (er zijn ook andere
-definities mogelijk vanuit andere perspectieven, zoals vanuit een juridisch
-perspectief, of vanuit het perspectief van een model van begrippen, zoals
-genoemd in paragraaf 1.5. Dergelijke definities kunnen hetzelfde zijn, of op het
-moment hetzelfde, of verschillend, of aanvullend op elkaar. Het is aan de
-beheerder van het informatiemodel om hier zorgvuldig mee om te gaan).
-
-*Toepassing*: alle modelelementen.
 
 Metagegeven: **Toelichting**
 
