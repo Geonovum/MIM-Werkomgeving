@@ -37,37 +37,46 @@ Union element Line en union element Polygon zijn beiden onderdeel van Union Line
 >   **Definitie Keuze**
 
 Gestructureerd data type zonder identiteit waarvan precies één van de
-eigenschappen aanwezig is in elke instantie. De union kent drie verschillende
-keuze typen: een keuze uit verschillende attributen, uit verschillende datatypes
-of keuze uit verschillende target objectypen die met één relatie gerelateerd
-worden. Elk keuze-element is afzonderlijk beschreven in een union-element.
+eigenschappen aanwezig is in elke instantie. Elke eigenschap representeert een
+keuze optie. Een keuze kent vier verschillende keuzetypen: een keuze uit
+verschillende attributen, keuze uit verschillende datatypes, keuze uit
+verschillende relaties en een keuze uit verschillende relatietargets.
 
 #### Keuze element
 
 >   **Definitie Keuze element**
 
->   Een type dat gebruikt kan worden voor het attribuut zoals beschreven in de
+>   Het attribuut dat gebruikt wordt voor de eigenschap zoals beschreven in de
 >   definitie van Keuze. Het keuze element is een onderdeel van een klasse met
->   het stereotype Keuze, uitgedrukt in een eigenschap (attribute) van die
->   klasse.
+>   het stereotype Keuze, uitgedrukt in een attribute van die klasse.
 
-Toelichting:
+Toelichting op het gebruik van Keuze:
 
-Het stereotype \<\<Keuze\>\> wordt gebruikt voor drie verschillende keuze
-opties:
+Het stereotype \<\<Keuze\>\> wordt gebruikt voor het modelleren van keuze opties
+op het niveau van attributen en relaties van een objectype. Deze keuze opties
+kunnen ook met constraints gemodelleerd worden. Het gebruik van het stereotype
+\<\<Keuze\>\> als alternatief voor constraints maakt de keuze optie leesbaarder
+in het model en specifieke keuzes worden herbruikbaar in het model. Tevens
+kunnen er gestandaardiseerde encodingregels voor het stereotype opgesteld en
+toegepast worden.
 
-1.  keuze tussen: attributen die onder één hoofdattribuut vallen
+Het stereotype \<\<Keuze\>\> kent vier keuzetypen. Elk keuzetype betekent
+conceptueel iets anders.
 
-2.  keuze tussen: datatypen die bij één attribuut horen
+1.  keuze tussen twee of meer attributen die onder één hoofdattribuut vallen
 
-3.  keuze tussen: relatietargets die bij één relatie horen
+2.  keuze tussen twee of meer datatypen die bij één attribuut horen
 
-Alle drie hebben een eigenwaarde voor een tagged value ‘keuzetype’ bij
-\<\<Keuze\>\>. Afhankelijk van de toepassing betekent het conceptueel iets
-anders. Encoding regels moeten hier rekening mee houden.
+3.  keuze tussen twee of meer relaties die bij één objecttype horen
 
-**1) Keuze uit attributen die onder één hoofdattribuut vallen**: (tagged value
-‘keuzetype”= attribuut)
+4.  keuze tussen twee of meer relatietargets die bij één relatie horen.
+
+De vier keuzetypen worden gespecificeerd met een specifieke waarde voor een
+tagged value ‘keuzetype’. Encodingregels moeten hier rekening mee houden.
+
+**1) Keuze tussen twee of meer attributen die onder één hoofdattribuut vallen.**
+
+(tagged value ‘keuzetype”= attribuut)
 
 Voorbeeld:
 
@@ -80,8 +89,9 @@ Conceptueel zijn de attributen telefoonnummer, privenummer en werknummer van
 belang deze zullen daarom ook in een technische omgeving geimplementeerd moeten
 worden.
 
-**2) Keuze uit datatypen bij één attribuut:** (tagged value ‘keuzetype’=
-datatype)
+**2) Keuze tussen twee of meer datatypen die bij één attribuut horen**
+
+(tagged value ‘keuzetype’= datatype)
 
 Voorbeeld:
 
@@ -97,8 +107,15 @@ betekenis en zijn alleen om de datatype GM_Surface en GM_Point te koppelen aan
 het attribuut geometrie. In een technische omgeving moeten ze daarom niet
 geimplementeerd worden.
 
-**3) Keuze uit verschillende target objecttypen met één relatie.** (tagged value
-‘keuzetype”= relatietarget)
+**3) Keuze tussen twee of meer relaties die bij één objecttype horen.**
+
+(tagged value ‘keuzetype’= relatie)
+
+Voorbeeld:
+
+**4) Keuze tussen twee of meer relatietargets die bij één relatie horen.**
+
+(tagged value ‘keuzetype”= relatietarget)
 
 Voorbeeld:
 
