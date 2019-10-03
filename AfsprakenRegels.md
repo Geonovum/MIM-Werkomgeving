@@ -959,6 +959,18 @@ specificeren. Dit is een hulptabel, die u over kunt nemen naar uw eigen extensie
 (zoals bedoeld in paragraaf 1.8) en in kunt vullen voor uw eigen informatiemodel
 (of organisatie).
 
+##### Dezelfde naam en/of definitie gebruiken voor meerdere modelelementen
+
+Er kan sprake zijn van 1 naam en/of definitie die voor meerdere modelelementen gelijk moeten zijn, omdat er inherent hetzelfde bedoeld wordt. Generalisatie is gedefinieerd voor Datatypen en Objecttypen en Datatypen en gegevensgroeptypen kunnen op meerdere plekken gebruikt worden.
+
+Echter, voor bijvoorbeeld voor een relatiesoort of een attribuutsoort kan het ook nodig zijn om dezelfde naam en/of definitie te specificeren. Dit is mogelijk, maar het is dan niet geheel duidelijk of er hetzelfde bedoeld wordt, of dat de (exacte) overeenkomt in een informatiemodel (zoals bv. in een UML informatiemodel) een toevalligheid is. Daarom gelden de volgende afspraken: 
+
+* Als de **definitie** van twee of meer modelelementen EXACT hetzelfde is, dan wordt hiermee bedoeld dat het dezelfde definitie is. Bijvoorbeeld: attribuutsoort overboeking met _definitie_ "Het bedrag in euro's" en attribuutsoort koopsom met _definitie_ "Het bedrag in euro's".
+
+* Als de **naam** _en_ de **definitie** van twee of meer modelelementen EXACT hetzelfde is, dan wordt hiermee bedoeld dat het hetzelfde kenmerk is. Bijvoorbeeld bij objecttype Huis met attribuutsoort oppervlakte: : "De oppervlakte in hele vierkante meters" en objecttype Appartement met attribuutsoort oppervlakte : "De oppervlakte in hele vierkante meters".
+
+Dit betekent expliciet niet dat kernmerken van verschillende objecten, met dezelfde naam, ook dezelfde definitie moeten hebben. Een andere definitie of een andere naam betekent: niet hetzelfde. 
+
 ### Verwijzing van een modelelement naar een begrip uit het begrippenkader
 
 Het metadata element “begrip” uit paragraaf 2.3 (**Verwijzing opnemen, TODO**)
