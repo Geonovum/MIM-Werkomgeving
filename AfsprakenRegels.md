@@ -895,14 +895,34 @@ Als overgenomen uit andere bron, noem de directe bron. Bijvoorbeeld: BAG. -
 is wel af te leiden uit het metagegeven van relatiesoort: gerelateerd objecttype
 (de target van de relatie).
 
-### Naamgevingsconventies
+### Afspraken rondom naamgeving en definities
 
 Naamgevingsconventies zijn belangrijk om te specificeren. Onderstaande
 beschrijft enkele punten die op het niveau van dit metamodel zijn afgesproken.
 De verdere invulling van de naamgevingsconventies is aan de opsteller van het
 informatiemodel zelf (zie ook bijlage 1).
 
-#### Alternatief 1: natuurlijke taal, die dichtbij de gebruiker staat
+#### Uniekheid van namen van modelelementen 
+
+* Objecttypes hebben een unieke naam binnen het hele informatiemodel
+* Datatypes hebben een unieke naam binnen het informatiemodel 
+* Kenmerken van een objecttype hebben een unieke naam binnen het objecttype (attribuutsoort, gegevensgroep, relatiesoort et cetera)
+* De naam van kenmerken van een objecttype hoeven niet uniek te zijn over objecttypen heen.
+* De naam van elementen van een datatype hoeven niet uniek te zijn over datatypen heen.
+
+#### Dezelfde naam en/of definitie gebruiken voor meerdere modelelementen
+
+Er kan sprake zijn van 1 naam en/of definitie die voor meerdere modelelementen gelijk moeten zijn, omdat er inherent hetzelfde bedoeld wordt. Generalisatie is gedefinieerd voor Datatypen en Objecttypen en Datatypen en gegevensgroeptypen kunnen op meerdere plekken gebruikt worden.
+
+Echter, voor bijvoorbeeld voor een relatiesoort of een attribuutsoort kan het ook nodig zijn om dezelfde naam en/of definitie te specificeren. Dit is mogelijk, maar het is dan niet geheel duidelijk of er hetzelfde bedoeld wordt, of dat de (exacte) overeenkomt in een informatiemodel (zoals bv. in een UML informatiemodel) een toevalligheid is. Daarom gelden de volgende afspraken: 
+
+* Als de **definitie** van twee of meer modelelementen EXACT hetzelfde is, dan wordt hiermee bedoeld dat het dezelfde definitie is. Bijvoorbeeld: attribuutsoort overboeking met _definitie_ "Het bedrag in euro's" en attribuutsoort koopsom met _definitie_ "Het bedrag in euro's".
+
+* Als de **naam** _en_ de **definitie** van twee of meer modelelementen EXACT hetzelfde is, dan wordt hiermee bedoeld dat het hetzelfde kenmerk is. Bijvoorbeeld bij objecttype Huis met attribuutsoort oppervlakte: : "De oppervlakte in hele vierkante meters" en objecttype Appartement met attribuutsoort oppervlakte : "De oppervlakte in hele vierkante meters".
+
+Dit betekent expliciet niet dat kernmerken van verschillende objecten, met dezelfde naam, ook dezelfde definitie moeten hebben. Een andere definitie of een andere naam betekent: niet hetzelfde. 
+
+#### Naamgeving voor Alternatief 1: natuurlijke taal, die dichtbij de gebruiker staat
 
 Met natuurlijke taal wordt bedoeld, zoals de gebruikers erover praten, in
 normaal Nederlands. Veelal zijn dit alleen letters en cijfers, met spaties.
@@ -917,7 +937,7 @@ e.d. Bijvoorbeeld: ‘Natuurlijk persoon’ en ‘naam’ met type CharacterStri
 Regel: voor conceptuele informatiemodellen wordt altijd alternatief 1
 gehanteerd.
 
-#### Alternatief 2: (ook) leesbaar door systemen
+#### Naamgeving voor Alternatief 2: (ook) leesbaar door systemen
 
 Met machine leesbare taal wordt bedoeld dat deze eenvoudig door systemen te
 verwerken is. Veelal zijn dit alleen letters en cijfers, zonder spaties, zonder
@@ -927,7 +947,7 @@ veelal vermeden.
 Zo kan bijvoorbeeld gekozen worden voor UpperCamelCase voor namen van
 Objecttypen, Gegevensgroeptypen en Datatypen en lowerCamelCase voor
 attribuutsoorten, relatiesoorten, relatierollen, data-elementen e.d.
-Bijvoorbeeld: **n**aam in een NatuurlijkPersoon. Combineer indien nodig
+Bijvoorbeeld: naam in een NatuurlijkPersoon. Combineer indien nodig
 verschillende woorden (uit bijvoorbeeld een begrippenkader of uit een
 conceptueel informatiemodel) om precieze en begrijpelijke namen te vormen.
 
@@ -958,18 +978,6 @@ In de bijlage is een template opgenomen om de naamgevingsconventies in te
 specificeren. Dit is een hulptabel, die u over kunt nemen naar uw eigen extensie
 (zoals bedoeld in paragraaf 1.8) en in kunt vullen voor uw eigen informatiemodel
 (of organisatie).
-
-#### Dezelfde naam en/of definitie gebruiken voor meerdere modelelementen
-
-Er kan sprake zijn van 1 naam en/of definitie die voor meerdere modelelementen gelijk moeten zijn, omdat er inherent hetzelfde bedoeld wordt. Generalisatie is gedefinieerd voor Datatypen en Objecttypen en Datatypen en gegevensgroeptypen kunnen op meerdere plekken gebruikt worden.
-
-Echter, voor bijvoorbeeld voor een relatiesoort of een attribuutsoort kan het ook nodig zijn om dezelfde naam en/of definitie te specificeren. Dit is mogelijk, maar het is dan niet geheel duidelijk of er hetzelfde bedoeld wordt, of dat de (exacte) overeenkomt in een informatiemodel (zoals bv. in een UML informatiemodel) een toevalligheid is. Daarom gelden de volgende afspraken: 
-
-* Als de **definitie** van twee of meer modelelementen EXACT hetzelfde is, dan wordt hiermee bedoeld dat het dezelfde definitie is. Bijvoorbeeld: attribuutsoort overboeking met _definitie_ "Het bedrag in euro's" en attribuutsoort koopsom met _definitie_ "Het bedrag in euro's".
-
-* Als de **naam** _en_ de **definitie** van twee of meer modelelementen EXACT hetzelfde is, dan wordt hiermee bedoeld dat het hetzelfde kenmerk is. Bijvoorbeeld bij objecttype Huis met attribuutsoort oppervlakte: : "De oppervlakte in hele vierkante meters" en objecttype Appartement met attribuutsoort oppervlakte : "De oppervlakte in hele vierkante meters".
-
-Dit betekent expliciet niet dat kernmerken van verschillende objecten, met dezelfde naam, ook dezelfde definitie moeten hebben. Een andere definitie of een andere naam betekent: niet hetzelfde. 
 
 ### Verwijzing van een modelelement naar een begrip uit het begrippenkader
 
