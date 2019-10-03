@@ -641,7 +641,7 @@ Specificatie metagegevens informatiemodel
 
 Metagegeven: **Relatiemodelleringtype**
 
->   **Definitie Naam**
+>   **Definitie Relatiemodelleringtype**
 
 Aanduiding van een in MIM gedefinieerd alternatief voor een modelleringswijze, en welke keuze hierbij is gemaakt.
 
@@ -650,6 +650,16 @@ Bijvoorbeeld: "Relatiesoort leidend" of "Relatierol leidend". Dit betreft de keu
 
 *Toepassing*: informatiemodel 
 
+Metagegeven: ** Domein **
+
+>   **Definitie Domein **
+
+Aanduiding van het functionele domein waartoe het informatiemodel behoort
+
+*Toelichting*
+Bijvoorbeeld: brk 
+
+*Toepassing*: informatiemodel 
 
 Specificatie metagegevens kenmerken
 -----------------------------------
