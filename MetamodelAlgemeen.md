@@ -637,29 +637,30 @@ modelelementen gelegd kan worden.
 Een constraint wordt altijd in gewone tekst omschreven en optioneel als formele
 
 Specificatie metagegevens informatiemodel
------------------------------------
+-----------------------------------------
 
 Metagegeven: **Relatiemodelleringtype**
 
 >   **Definitie Relatiemodelleringtype**
 
-Aanduiding van een in MIM gedefinieerd alternatief voor een modelleringswijze, en welke keuze hierbij is gemaakt.
+Aanduiding van een in MIM gedefinieerd alternatief voor een modelleringswijze,
+en welke keuze hierbij is gemaakt.
 
-*Toelichting*
-Bijvoorbeeld: "Relatiesoort leidend" of "Relatierol leidend". Dit betreft de keuze die je maakt voor het in TODO: ref paragraaf 1.X gekozen alternatief. Er moet een keuze gemaakt worden.
+*Toelichting* Bijvoorbeeld: "Relatiesoort leidend" of "Relatierol leidend". Dit
+betreft de keuze die je maakt voor het in TODO: ref paragraaf 1.X gekozen
+alternatief. Er moet een keuze gemaakt worden.
 
-*Toepassing*: informatiemodel 
+*Toepassing*: informatiemodel
 
-Metagegeven: ** Domein **
+Metagegeven: \*\* Domein \*\*
 
 >   **Definitie Informatiedomein**
 
 Aanduiding van het functionele domein waartoe het informatiemodel behoort.
 
-*Toelichting*
-Bijvoorbeeld: brk 
+*Toelichting* Bijvoorbeeld: brk
 
-*Toepassing*: informatiemodel 
+*Toepassing*: informatiemodel
 
 Specificatie metagegevens kenmerken
 -----------------------------------
@@ -1035,31 +1036,30 @@ voorwaarden, met een opgaaf van reden.
 *Toepassing*: de modelelementen waarvoor een waarde ingevuld kan worden, te
 weten de modelelementen attribuutsoort en relatiesoort.
 
-Metagegeven: **Relatie eigenaar**
+Metagegeven: **bron**
 
->   **Definitie Relatie eigenaar**
+>   **Definitie bron**
 
-Aanduiding van de eigenaar van een relatie tussen objecten, die het startpunt
-van de relatie aangeeft. Objecten van het objecttype van de eigenaar, hebben als
-kenmerk deze relatie.
+Aanduiding van het bronobject in een relatie tussen objecten. Een bronoject
+heeft middels een relatiesoort een relatie met een doelobject.
 
 *Toelichting*
 
 Bijvoorbeeld: een persoon heeft een postadres. Het postadres is een kenmerk van
-een persoon. De persoon is in deze de eigenaar van de relatie. Het postadres is
-de naam van het kenmerk c.q. de relatie tussen een persoon en een adres en geeft
-betekenis aan deze relatie. Het adres is er gewoon en wie hem allemaal gebruikt
-als adres en of dit als postadres is of als woonadres of nog iets anders is voor
-het adres niet van belang.
+een persoon. De persoon is in deze het bronobject van de relatie. Het postadres
+is de naam van het kenmerk c.q. de relatie tussen een persoon en een adres en
+geeft betekenis aan deze relatie. Het adres is er gewoon en wie hem allemaal
+gebruikt als adres en of dit als postadres is of als woonadres of nog iets
+anders is voor het adres niet van belang.
 
 *Toepassing*: relaties, oftewel de modelelementen Relatiesoort en Externe
 koppeling.
 
-Metagegeven: **Relatie doel**
+Metagegeven: **doel**
 
->   **Definitie Relatie doel**
+>   **Definitie doel**
 
-Aanduiding van het gerelateerde objecttype, die het eindpunt van de relatie
+Aanduiding van het gerelateerde objecttype die het eindpunt van de relatie
 aangeeft. Naar objecten van dit objecttype wordt verwezen.
 
 *Toelichting*
@@ -1081,17 +1081,15 @@ perspectief van de eigenaar van de relatie.
 
 Bijvoorbeeld: een persoon heeft een postadres. De richting van de relatie is van
 persoon naar adres. De eigenaar van de relatie (de source) heeft kennis van de
-het gerelateerde objecttype (de target). In een modelleertaal wordt dit vaak
-aangegeven met een pijl. De pijl heeft als vertrekpunt de eigenaar en heeft als
-pijlpunt, waar de relatrie naar wijst, het gerelateerde objecttype. Alle
-relaties zijn altijd gericht van het objecttype (source) naar het gerelateerde
-objecttype (target).
+het gerelateerde objecttype (het doel). In een modelleertaal wordt dit vaak
+aangegeven met een pijl. De pijl heeft als vertrekpunt de bron en heeft als
+pijlpunt, waar de relatie naar wijst, het gerelateerde objecttype. Alle relaties
+zijn altijd gericht van het objecttype (bron) naar het gerelateerde objecttype
+(doel).
 
-Per informatiemodel kan er anders gedacht worden over wie de eigenaar van het
-kenmerk is, oftewel de richting. Het is erg gebruikelijk om een richting aan te
-geven, enerzijds omdat de betekenis van A naar B een andere is dan van B naar A,
-anderzijds omdat het van belang is bij welke objecttype het kenmerk wordt
-bijgehouden, oftewel wie de eigenaar is.
+Het is gebruikelijk om een richting aan te geven, enerzijds omdat de betekenis
+van A naar B een andere is dan van B naar A, anderzijds omdat het van belang is
+bij welke objecttype het kenmerk wordt bijgehouden, oftewel wie de eigenaar is.
 
 *Toepassing*: relaties, oftewel de modelelementen Relatiesoort en Externe
 koppeling.
