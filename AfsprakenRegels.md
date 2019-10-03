@@ -959,7 +959,7 @@ specificeren. Dit is een hulptabel, die u over kunt nemen naar uw eigen extensie
 (zoals bedoeld in paragraaf 1.8) en in kunt vullen voor uw eigen informatiemodel
 (of organisatie).
 
-##### Dezelfde naam en/of definitie gebruiken voor meerdere modelelementen
+#### Dezelfde naam en/of definitie gebruiken voor meerdere modelelementen
 
 Er kan sprake zijn van 1 naam en/of definitie die voor meerdere modelelementen gelijk moeten zijn, omdat er inherent hetzelfde bedoeld wordt. Generalisatie is gedefinieerd voor Datatypen en Objecttypen en Datatypen en gegevensgroeptypen kunnen op meerdere plekken gebruikt worden.
 
