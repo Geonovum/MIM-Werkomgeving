@@ -711,9 +711,9 @@ onderscheid in de volgende groepen van gegevens:
 |-----------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Authentiek                  | https://www.noraonline.nl/wiki/Authentiek_gegeven. |
 | Basisgegeven                | https://www.noraonline.nl/wiki/Basisgegeven |
-| Landelijk kerngegeven       | Indien het een gegeven of een als relatiesoort gemodelleerd gegeven is in een landelijk sector- en domein-overstijgend informatiemodel en geen authentiek gegeven en geen basisgegeven is.                     |
-|                             |                                                                                                                                                                                                                |
-|  Overig                     | Indien het géén van de voorgaande categorieën betreft. Veelal gaat het dan om proces-, taakveld- of domeinspecifieke gegevens.                                                                                 |
+| Wettelijk gegeven           | Gegeven behorende bij een wettelijke registratie, niet zijnde een basisregistratie |
+| Landelijk kerngegeven       | Indien het een gegeven of een als relatiesoort gemodelleerd gegeven is in een landelijk sector- en domein-overstijgend informatiemodel en geen authentiek gegeven en geen basisgegeven en geen wettelijk gegeven is.|
+|  Overig                     | Indien het géén van de voorgaande categorieën betreft. Veelal gaat het dan om proces-, taakveld- of domeinspecifieke gegevens.   |
 
 ### Mogelijk geen waarde
 
