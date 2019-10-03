@@ -652,9 +652,9 @@ Bijvoorbeeld: "Relatiesoort leidend" of "Relatierol leidend". Dit betreft de keu
 
 Metagegeven: ** Domein **
 
->   **Definitie Domein **
+>   **Definitie Informatie domein**
 
-Aanduiding van het functionele domein waartoe het informatiemodel behoort
+Aanduiding van het functionele domein waartoe het informatiemodel behoort.
 
 *Toelichting*
 Bijvoorbeeld: brk 
