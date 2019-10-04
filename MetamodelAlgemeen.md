@@ -656,7 +656,7 @@ Metagegeven: \*\* Domein \*\*
 
 >   **Definitie Informatiedomein**
 
-Aanduiding van het functionele domein waartoe het informatiemodel behoort.
+>   Aanduiding van het functionele domein waartoe het informatiemodel behoort.
 
 *Toelichting* Bijvoorbeeld: brk
 
