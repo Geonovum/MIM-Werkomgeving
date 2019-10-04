@@ -643,8 +643,8 @@ Metagegeven: **Relatiemodelleringtype**
 
 >   **Definitie Relatiemodelleringtype**
 
-Aanduiding van een in MIM gedefinieerd alternatief voor een modelleringswijze,
-en welke keuze hierbij is gemaakt.
+>   Aanduiding van een in MIM gedefinieerd alternatief voor een modelleringswijze,
+>   en welke keuze hierbij is gemaakt.
 
 *Toelichting* Bijvoorbeeld: "Relatiesoort leidend" of "Relatierol leidend". Dit
 betreft de keuze die je maakt voor het in TODO: ref paragraaf 1.X gekozen
@@ -703,11 +703,12 @@ gespecificeerd. In de paragrafen hierna wordt vervolgens naar deze paragraaf
 verwezen. Specifieke metagegevens die maar één keer voorkomen zijn bij het
 modelelement zelf beschreven.
 
+
 Metagegeven: **Naam**
 
 >   **Definitie Naam**
 
-De naam van een modelelement.
+>   De naam van een modelelement.
 
 *Toelichting*
 
@@ -718,11 +719,12 @@ opgesomd in het hoofdstuk [Betekenis modelelementen](#betekenis-modelelementen).
 
 *Toepassing*: alle modelelementen.
 
+
 Metagegeven: **Definitie**
 
 >   **Definitie Definitie**
 
-De beschrijving van de betekenis van dit modelelement.
+>   De beschrijving van de betekenis van dit modelelement.
 
 *Toelichting*
 
@@ -742,11 +744,12 @@ informatiemodel om hier zorgvuldig mee om te gaan).
 
 *Toepassing*: alle modelelementen.
 
+
 Metagegeven: **Alias**
 
 >   **Definitie Alias**
 
-De alternatieve weergave van de naam.
+>   De alternatieve weergave van de naam.
 
 *Toelichting*
 
@@ -767,12 +770,13 @@ hiervoor een alternatieve naamgeving te gebruiken. De alias wordt hier, mede
 daarom, gebruikt voor (alleen) de modellering van het metadata aspect Code,
 welke aanvullend is op naam (niet een alternatief van naam).
 
+
 Metagegeven: **Toelichting**
 
 >   **Definitie Toelichting**
 
-Een inhoudelijke toelichting op de definitie, ter verheldering of nadere
-duiding.
+>   Een inhoudelijke toelichting op de definitie, ter verheldering of nadere
+>   duiding.
 
 *Toelichting*
 
@@ -781,13 +785,14 @@ object.
 
 *Toepassing*: alle modelelementen met een definitie.
 
+
 Metagegeven: **Begrip**
 
 >   **Definitie Begrip**
 
-Verwijzing naar een begrip, vanuit een modelelement, waarmee wordt aangegeven op
-welk begrip, of begrippen, het informatiemodel element is gebaseerd. De
-verwijzing heeft de vorm van een term of een URI.
+>   Verwijzing naar een begrip, vanuit een modelelement, waarmee wordt aangegeven op
+>   welk begrip, of begrippen, het informatiemodel element is gebaseerd. De
+>   verwijzing heeft de vorm van een term of een URI.
 
 *Toelichting*
 
@@ -802,12 +807,13 @@ http://brk.basisregistraties.overheid.nl/id/begrip/Perceel
 *Toepassing*: alle modelelementen met een naam, met uitzondering van packages en
 constraint.
 
+
 Metagegeven: **Herkomst**
 
 >   **Definitie Herkomst**
 
-De registratie of het informatiemodel waaraan het modelelement ontleend is dan
-wel de eigen organisatie indien het door de eigen organisatie toegevoegd is.
+>   De registratie of het informatiemodel waaraan het modelelement ontleend is dan
+>   wel de eigen organisatie indien het door de eigen organisatie toegevoegd is.
 
 *Toelichting*
 
@@ -841,13 +847,14 @@ informatiemodel het objecttype).
 (objecttype zelf heeft een eigen definitie van herkomst) en in het
 informatiemodel gedefinieerde datatypes (maar niet bij elementen van datatypes).
 
+
 Metagegeven: **Herkomst definitie**
 
 >   **Definitie Herkomst definitie**
 
-De registratie of het informatiemodel waaruit de **definitie** is overgenomen
-dan wel een aanduiding die aangeeft uit welke bronnen de definitie is
-samengesteld.
+>   De registratie of het informatiemodel waaruit de **definitie** is overgenomen
+>   dan wel een aanduiding die aangeeft uit welke bronnen de definitie is
+>   samengesteld.
 
 *Toelichting*
 
@@ -872,11 +879,12 @@ duidelijkheid in.
 
 *Toepassing*: alle modelelementen die het metagegeven **definitie** kennen.
 
+
 Metagegeven: **Datum opname**
 
 >   **Definitie Datum opname**
 
-De datum waarop het modelelement is opgenomen in het informatiemodel.
+>   De datum waarop het modelelement is opgenomen in het informatiemodel.
 
 *Toelichting*
 
@@ -885,12 +893,13 @@ Bijvoorbeeld: 1-1-2012.
 *Toepassing*: alle modelelementen, uitgezonderd datatype elementen, packages en
 overig.
 
+
 Metagegeven: **Indicatie materiële historie**
 
 >   **Definitie Indicatie materiele historie**
 
-Indicatie of de materiële historie van het kenmerk van het object te bevragen
-is.
+>   Indicatie of de materiële historie van het kenmerk van het object te bevragen
+>   is.
 
 *Toelichting*
 
@@ -907,12 +916,13 @@ Regels](#afspraken-regels)
 *Toepassing*: alle modelelementen die een kenmerk (kunnen) zijn van een
 objecttype.
 
+
 Metagegeven: **Indicatie formele historie**
 
 >   **Definitie Indicatie formele historie**
 
-Indicatie of de materiële historie van het kenmerk van het object bijgehouden
-wordt en te bevragen is.
+>   Indicatie of de materiële historie van het kenmerk van het object bijgehouden
+>   wordt en te bevragen is.
 
 *Toelichting*
 
@@ -929,12 +939,13 @@ Regels](#afspraken-regels).
 *Toepassing*: alle modelelementen die een kenmerk (kunnen) zijn van een
 objecttype.
 
+
 Metagegeven: **Kardinaliteit**
 
 >   **Definitie Kardinaliteit**
 
-De kardinaliteit geeft aan hoeveel keer waarden van dit kenmerk van een object
-kunnen voorkomen bij een object van het betreffende objecttype.
+>   De kardinaliteit geeft aan hoeveel keer waarden van dit kenmerk van een object
+>   kunnen voorkomen bij een object van het betreffende objecttype.
 
 *Toelichting*
 
@@ -967,11 +978,12 @@ Regels](#afspraken-regels).
 *Toepassing*: alle modelelementen die een kenmerk (kunnen) zijn van een
 objecttype.
 
+
 Metagegeven: **Authentiek**
 
 >   **Definitie Authentiek**
 
-Aanduiding of het kenmerk een authentiek gegeven betreft.
+>   Aanduiding of het kenmerk een authentiek gegeven betreft.
 
 *Toelichting*
 
@@ -992,11 +1004,12 @@ values.
 *Toepassing*: alle modelelementen die een kenmerk (kunnen) zijn van een
 objecttype.
 
+
 Metagegeven: **indicatie afleidbaar**
 
 >   **Definitie indicatie afleidbaar**
 
-Aanduiding dat gegeven afleidbaar is uit andere attribuut- en/of relatiesoorten.
+>   Aanduiding dat gegeven afleidbaar is uit andere attribuut- en/of relatiesoorten.
 
 *Toelichting*
 
@@ -1012,12 +1025,13 @@ en eventueel hoe de afleiding plaatsvindt.
 *Toepassing*: de modelelementen waarvoor een waarde ingevuld kan worden, te
 weten de modelelementen attribuutsoort en relatiesoort.
 
+
 Metagegeven: **mogelijk geen waarde**
 
 >   **Definitie indicatie afleidbaar**
 
-Aanduiding dat van een aspect geen waarde is geregistreerd, maar dat onduidelijk
-is of de waarde er werkelijk ook niet is.
+>   Aanduiding dat van een aspect geen waarde is geregistreerd, maar dat onduidelijk
+>   is of de waarde er werkelijk ook niet is.
 
 *Toelichting*
 
@@ -1036,12 +1050,13 @@ voorwaarden, met een opgaaf van reden.
 *Toepassing*: de modelelementen waarvoor een waarde ingevuld kan worden, te
 weten de modelelementen attribuutsoort en relatiesoort.
 
+
 Metagegeven: **bron**
 
 >   **Definitie bron**
 
-Aanduiding van het bronobject in een relatie tussen objecten. Een bronoject
-heeft middels een relatiesoort een relatie met een doelobject.
+>   Aanduiding van het bronobject in een relatie tussen objecten. Een bronoject
+>   heeft middels een relatiesoort een relatie met een doelobject.
 
 *Toelichting*
 
@@ -1055,12 +1070,13 @@ anders is voor het adres niet van belang.
 *Toepassing*: relaties, oftewel de modelelementen Relatiesoort en Externe
 koppeling.
 
+
 Metagegeven: **doel**
 
 >   **Definitie doel**
 
-Aanduiding van het gerelateerde objecttype die het eindpunt van de relatie
-aangeeft. Naar objecten van dit objecttype wordt verwezen.
+>   Aanduiding van het gerelateerde objecttype die het eindpunt van de relatie
+>   aangeeft. Naar objecten van dit objecttype wordt verwezen.
 
 *Toelichting*
 
@@ -1070,12 +1086,13 @@ relatie tussen een persoon en een adres. Het adres is het doel van deze relatie.
 *Toepassing*: relaties, oftewel de modelelementen Relatiesoort en Externe
 koppeling.
 
+
 Metagegeven: **Uni-directioneel**
 
 >   **Definitie Uni-directioneel**
 
-De richting van een relatie, welke betekenis geeft aan de relatie vanuit het
-perspectief van de eigenaar van de relatie.
+>   De richting van een relatie, welke betekenis geeft aan de relatie vanuit het
+>   perspectief van de eigenaar van de relatie.
 
 *Toelichting*
 
@@ -1094,12 +1111,13 @@ bij welke objecttype het kenmerk wordt bijgehouden, oftewel wie de eigenaar is.
 *Toepassing*: relaties, oftewel de modelelementen Relatiesoort en Externe
 koppeling.
 
+
 Metagegeven: **Aggregatie type**
 
 >   **Definitie Aggregatie type**
 
-Aanduiding of het objecttype die de eigenaar is van een relatie het doel van
-relatie ziet als een samen te voegen onderdeel.
+>   Aanduiding of het objecttype die de eigenaar is van een relatie het doel van
+>   relatie ziet als een samen te voegen onderdeel.
 
 *Toelichting* Bijvoorbeeld: een auto heeft verschillende onderdelen, waaronder
 een motor. In het informatiemodel gaat het vooral om de auto en is de motor
@@ -1119,12 +1137,13 @@ Bijvoorbeeld: een betaalrekening.
 *Toepassing*: relaties, oftewel de modelelementen Relatiesoort en Externe
 koppeling.
 
+
 Metagegeven: **Locatie**
 
 >   **Definitie Locatie**
 
-Als het type van het attribuutsoort een waardenlijst is, dan wordt hier de
-locatie waar deze te vinden is opgegeven.
+>   Als het type van het attribuutsoort een waardenlijst is, dan wordt hier de
+>   locatie waar deze te vinden is opgegeven.
 
 *Toelichting*
 
@@ -1138,9 +1157,10 @@ Bijvoorbeeld: <http://www.organisatie.nl/schemas/waardelijsten/NaamWaardelijst>
 
 Metagegeven: **Type** (domein van een waarde een gegeven)
 
+
 >   **Definitie Type**
 
-Het datatype waarmee waarden van deze attribuutsoort worden vastgelegd.
+>   Het datatype waarmee waarden van deze attribuutsoort worden vastgelegd.
 
 *Toelichting*
 
@@ -1158,9 +1178,10 @@ element, union element, referentie element.
 
 Metagegeven: **Lengte** (domein van een waarde van een gegeven)
 
+
 >   **Definitie Lengte**
 
-De aanduiding van de lengte van een gegeven.
+>   De aanduiding van de lengte van een gegeven.
 
 *Toelichting*
 
@@ -1169,12 +1190,13 @@ Getallen kunnen altijd positief of negatief zijn.
 *Toepassing*: attribuutsoort, primitief datatype (in het IM gedefinieerd), data
 element, union element, referentie element.
 
+
 Metagegeven: **Patroon**
 
 >   **Definitie Patroon**
 
-De verzameling van waarden die gegevens van deze attribuutsoort kunnen hebben,
-oftewel het waardenbereik, uitgedrukt in een specifieke structuur.
+>   De verzameling van waarden die gegevens van deze attribuutsoort kunnen hebben,
+>   oftewel het waardenbereik, uitgedrukt in een specifieke structuur.
 
 *Toelichting*
 
@@ -1187,14 +1209,15 @@ Het specificeren van een patroon is alleen van toepassing wanneer de
 specificatie aangeeft dat de waarde (direct of indirect) een primitief datatype
 betreft, zoals een CharacterString.
 
-| *Toepassing*: de modelelementen uit de groep datatype en attribuutsoort. Metagegeven: **Formeel patroon** |
+| *Toepassing*: de modelelementen uit de groep datatype en attribuutsoort. 
+Metagegeven: **Formeel patroon** |
 |-----------------------------------------------------------------------------------------------------------|
 
 
 >   **Definitie Formeel patroon**
 
-Zoals patroon, formeel vastgelegd, uitgedrukt in een formele taal die door de
-computer wordt herkend.
+>   Zoals patroon, formeel vastgelegd, uitgedrukt in een formele taal die door de
+>   computer wordt herkend.
 
 *Toelichting*
 
@@ -1208,11 +1231,12 @@ betreft, zoals een CharacterString.
 
 *Toepassing*: de modelelementen uit de groep datatype en attribuutsoort.
 
+
 Metagegeven: **attribuut**
 
 >   **Definitie attribuut**
 
-De binding van een attribuutsoort als eigenschap aan een objecttype.
+>   De binding van een attribuutsoort als eigenschap aan een objecttype.
 
 *Toelichting*
 
@@ -1220,11 +1244,12 @@ Een objecttype gebruikt attributen voor het specificeren van eigenschappen.
 
 *Toepassing*: objecttypen met attributen.
 
+
 Metagegeven: **gegevensgroep**
 
 >   **Definitie gegevensgroep**
 
-De binding van een gegevensgroep als groep van eigenschappen aan een objecttype.
+>   De binding van een gegevensgroep als groep van eigenschappen aan een objecttype.
 
 *Toelichting*
 
@@ -1233,11 +1258,12 @@ eigenschappen.
 
 *Toepassing*: objecttypen met gegevensgroepen.
 
-Metagegeven: **type**
+
+etagegeven: **type**
 
 >   **Definitie type**
 
-De binding van datatype aan een attribuut.
+>   De binding van datatype aan een attribuut.
 
 *Toelichting*
 
@@ -1248,11 +1274,12 @@ keuze elementen.
 *Toepassing*: Alle informatie elementen die een attribuut modelleren:
 attribuutsoort, data element, referentie element, datatypekeuze, doelkeuze.
 
+
 Metagegeven: **groeptype**
 
 >   **Definitie groeptype**
 
-De binding van een gegevensgroeptype als waardetype aan een gegevensgroep.
+>   De binding van een gegevensgroeptype als waardetype aan een gegevensgroep.
 
 *Toelichting*
 
@@ -1261,12 +1288,13 @@ gegevensgroeptype.
 
 *Toepassing*: gegevensgroep.
 
+
 Metagegeven: **gegevensgroep**
 
 >   **Definitie gegevensgroep**
 
-De binding van een gegevensgroep als groep van eigenschappen aan een
-gegevensgroeptype.
+>   De binding van een gegevensgroep als groep van eigenschappen aan een
+>   gegevensgroeptype.
 
 *Toelichting*
 
@@ -1274,11 +1302,12 @@ Een gegevensgroeptype kan zelf ook weer een gegevensgroeptype bevatten.
 
 *Toepassing*: gegevensgroeptype.
 
+
 Metagegeven: **data element**
 
 >   **Definitie data element**
 
-De binding van een data element aan een gestructureerd datatype.
+>   De binding van een data element aan een gestructureerd datatype.
 
 *Toelichting*
 
@@ -1286,11 +1315,12 @@ Een gestructutreerd datatype bevat meerdere data elementen.
 
 *Toepassing*: gestructereerd datatype.
 
+
 Metagegeven: **waarde**
 
 >   **Definitie waarde**
 
-De binding van een waarde aan een enumeratie.
+>   De binding van een waarde aan een enumeratie.
 
 *Toelichting*
 
@@ -1298,11 +1328,12 @@ Een enumeratie bevat enumeratiewaarden.
 
 *Toepassing*: enumeratie.
 
+
 Metagegeven: **referentie element**
 
 >   **Definitie referentie element**
 
-De binding van een referentie element aan een referentielijst.
+>   De binding van een referentie element aan een referentielijst.
 
 *Toelichting*
 
@@ -1310,11 +1341,12 @@ Een referentie lijst bevat bevat referentie elementen.
 
 *Toepassing*: referentielijst.
 
+
 Metagegeven: **datatypekeuze**
 
 >   **Definitie datatype keuze**
 
-De binding van een datatype als keuze element aan een keuze.
+>   De binding van een datatype als keuze element aan een keuze.
 
 *Toelichting*
 
@@ -1323,11 +1355,12 @@ modelleert.
 
 *Toepassing*: keuze object.
 
+
 Metagegeven: **doelkeuze**
 
 >   **Definitie doelkeuze**
 
-De binding van een doeleinde van een relatie als keuze element aan een keuze.
+>   De binding van een doeleinde van een relatie als keuze element aan een keuze.
 
 *Toelichting*
 
@@ -1336,11 +1369,12 @@ modelleert.
 
 *Toepassing*: keuze object.
 
+
 Metagegeven: **attribuutkeuze**
 
 >   **Definitie attribuutkeuze**
 
-De binding van een attribuutsoort als keuze element aan een keuze.
+>   De binding van een attribuutsoort als keuze element aan een keuze.
 
 *Toelichting*
 
@@ -1349,11 +1383,12 @@ modeleert.
 
 *Toepassing*: keuze object.
 
+
 Metagegeven: **constraint**
 
->   **Definitie attribuutkeuze**
+>   **Definitie constraint**
 
-De binding van een constraint aan een klasse.
+>   De binding van een constraint aan een klasse.
 
 *Toelichting*
 
@@ -1361,15 +1396,8 @@ Een constraint is gekoppeld aan een klasse waarop ze van toepassing is.
 
 *Toepassing*: objecttype, gegevensgroeptype, relatieklasse.
 
-Metagegeven: **constraint**
 
->   **Definitie attribuutkeuze**
 
-De binding van een constraint aan een klasse.
-
-*Toelichting*
-
-Een constraint is gekoppeld aan een klasse waarop ze van toepassing is.
 
 *Toepassing*: objecttype, gegevensgroeptype, relatieklasse.
 
