@@ -1208,6 +1208,171 @@ betreft, zoals een CharacterString.
 
 *Toepassing*: de modelelementen uit de groep datatype en attribuutsoort.
 
+Metagegeven: **attribuut**
+
+>   **Definitie attribuut**
+
+De binding van een attribuutsoort als eigenschap aan een objecttype.
+
+*Toelichting*
+
+Een objecttype gebruikt attributen voor het specificeren van eigenschappen.
+
+*Toepassing*: objecttypen met attributen.
+
+Metagegeven: **gegevensgroep**
+
+>   **Definitie gegevensgroep**
+
+De binding van een gegevensgroep als groep van eigenschappen aan een objecttype.
+
+*Toelichting*
+
+Een objecttype gebruikt gegensgroepen voor het specificeren van groepen van
+eigenschappen.
+
+*Toepassing*: objecttypen met gegevensgroepen.
+
+Metagegeven: **type**
+
+>   **Definitie type**
+
+De binding van datatype aan een attribuut.
+
+*Toelichting*
+
+Een attribuutsoort heeft een datatype voor de specificatie van het toegestane
+waardetype. Hetzelfde geldt voor een data element, een referentie element en
+keuze elementen.
+
+*Toepassing*: Alle informatie elementen die een attribuut modelleren:
+attribuutsoort, data element, referentie element, datatypekeuze, doelkeuze.
+
+Metagegeven: **groeptype**
+
+>   **Definitie groeptype**
+
+De binding van een gegevensgroeptype als waardetype aan een gegevensgroep.
+
+*Toelichting*
+
+Een attribuut met het stereotype gegevensgroep heeft als waardetype een
+gegevensgroeptype.
+
+*Toepassing*: gegevensgroep.
+
+Metagegeven: **gegevensgroep**
+
+>   **Definitie gegevensgroep**
+
+De binding van een gegevensgroep als groep van eigenschappen aan een
+gegevensgroeptype.
+
+*Toelichting*
+
+Een gegevensgroeptype kan zelf ook weer een gegevensgroeptype bevatten.
+
+*Toepassing*: gegevensgroeptype.
+
+Metagegeven: **data element**
+
+>   **Definitie data element**
+
+De binding van een data element aan een gestructureerd datatype.
+
+*Toelichting*
+
+Een gestructutreerd datatype bevat meerdere data elementen.
+
+*Toepassing*: gestructereerd datatype.
+
+Metagegeven: **waarde**
+
+>   **Definitie waarde**
+
+De binding van een waarde aan een enumeratie.
+
+*Toelichting*
+
+Een enumeratie bevat enumeratiewaarden.
+
+*Toepassing*: enumeratie.
+
+Metagegeven: **referentie element**
+
+>   **Definitie referentie element**
+
+De binding van een referentie element aan een referentielijst.
+
+*Toelichting*
+
+Een referentie lijst bevat bevat referentie elementen.
+
+*Toepassing*: referentielijst.
+
+Metagegeven: **datatypekeuze**
+
+>   **Definitie datatype keuze**
+
+De binding van een datatype als keuze element aan een keuze.
+
+*Toelichting*
+
+Een keuze kan keuze elementen bevatten die een keuze tussen datatypen
+modelleert.
+
+*Toepassing*: keuze object.
+
+Metagegeven: **doelkeuze**
+
+>   **Definitie doelkeuze**
+
+De binding van een doeleinde van een relatie als keuze element aan een keuze.
+
+*Toelichting*
+
+Een keuze kan keuze elementen bevatten die een keuze tussen relatie doelen
+modelleert.
+
+*Toepassing*: keuze object.
+
+Metagegeven: **attribuutkeuze**
+
+>   **Definitie attribuutkeuze**
+
+De binding van een attribuutsoort als keuze element aan een keuze.
+
+*Toelichting*
+
+Een keuze kan keuze elementen bevatten die een keuze tussen attribuutsoort
+modeleert.
+
+*Toepassing*: keuze object.
+
+Metagegeven: **constraint**
+
+>   **Definitie attribuutkeuze**
+
+De binding van een constraint aan een klasse.
+
+*Toelichting*
+
+Een constraint is gekoppeld aan een klasse waarop ze van toepassing is.
+
+*Toepassing*: objecttype, gegevensgroeptype, relatieklasse.
+
+Metagegeven: **constraint**
+
+>   **Definitie attribuutkeuze**
+
+De binding van een constraint aan een klasse.
+
+*Toelichting*
+
+Een constraint is gekoppeld aan een klasse waarop ze van toepassing is.
+
+*Toepassing*: objecttype, gegevensgroeptype, relatieklasse.
+
 #### Toegestane waarden voor (bepaalde) metadata gegevens
 
 Tagged values zijn altijd van het datatype CharacterString. Aanvullend geldt:
@@ -1217,12 +1382,12 @@ Tagged values zijn altijd van het datatype CharacterString. Aanvullend geldt:
 
 -   Voor datums geldt dat deze het volgende patroon volgen: jjjjmmdd
 
-| **Tagged value**                    | **Waardenbereik**                                                                     |
-|-------------------------------------|---------------------------------------------------------------------------------------|
-| Indicatie materiële historie        | Ja, Nee                                                                               |
-| Indicatie formele historie          | Ja, Nee                                                                               |
-| Mogelijk geen waarde                | Ja, Nee                                                                               |
-| Type aggregratie                    | composite, aggregate, of geen/leeg/niet gebruikt                                      |
+| **Tagged value**                    | **Waardenbereik**                                                          |
+|-------------------------------------|----------------------------------------------------------------------------|
+| Indicatie materiële historie        | Ja, Nee                                                                    |
+| Indicatie formele historie          | Ja, Nee                                                                    |
+| Mogelijk geen waarde                | Ja, Nee                                                                    |
+| Type aggregratie                    | composite, aggregate, of geen/leeg/niet gebruikt                           |
 | [Authentiek](#authentieke-gegevens) | Authentiek, Basisgegeven, Wettelijk gegeven, Landelijk kerngegeven, Overig |
 
 NB: Geef bij overig in uw eigen informatiemodel aan wat u er onder verstaat.
