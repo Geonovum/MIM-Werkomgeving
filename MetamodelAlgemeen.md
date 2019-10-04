@@ -1379,7 +1379,7 @@ Metagegeven: **attribuutkeuze**
 *Toelichting*
 
 Een keuze kan keuze elementen bevatten die een keuze tussen attribuutsoort
-modeleert.
+modelleert.
 
 *Toepassing*: keuze object.
 
