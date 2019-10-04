@@ -53,7 +53,7 @@ opgenomen.
 
 ### Kern
 
-![](media/Kern zonder metagegevens.png)
+![](media/KernZonderMetagegevens.png)
 
 Kern zonder Metagegevens
 
@@ -69,7 +69,7 @@ Kern zonder Metagegevens
 
 ### Datatypen
 
-![](media/Datatypen zonder metagegevens.png)
+![](media/DatatypenZonderMetagegevens.png)
 
 Datatypen zonder Metagegevens
 
@@ -90,7 +90,7 @@ View 2: Datatypen
 
 ### Overige
 
-![](media/Constraints zonder metagegevens.png)
+![](media/ConstraintsZonderMetagegevens.png)
 
 Constraint
 
@@ -102,7 +102,7 @@ View 3a: Constraint
 
 *Relatierol*
 
-![](media/Relatierollen zonder metagegevens.png)
+![](media/RelatierollenZonderMetagegevens.png)
 
 Relatierol
 
