@@ -26,6 +26,8 @@ shape:Objecttype a sh:NodeShape;
   # Metagegevens
   sh:property shape:naam;
   sh:property shape:alias;
+  sh:property shape:begrip;
+  sh:property shape:begripsterm;
   sh:property shape:herkomst;
   sh:property shape:definitie;
   sh:property shape:herkomstDefinitie;
@@ -48,6 +50,8 @@ shape:Attribuutsoort a sh:NodeShape;
   # Metagegevens
   sh:property shape:naam;
   sh:property shape:alias;
+  sh:property shape:begrip;
+  sh:property shape:begripsterm;
   sh:property shape:herkomst;
   sh:property shape:definitie;
   sh:property shape:herkomstDefinitie;
@@ -74,6 +78,8 @@ shape:Gegevensgroep a sh:NodeShape;
   # Metagegevens
   sh:property shape:naam;
   sh:property shape:alias;
+  sh:property shape:begrip;
+  sh:property shape:begripsterm;
   sh:property shape:definitie;
   sh:property shape:toelichting;
   sh:property shape:gegevensgroeptype;
@@ -92,6 +98,8 @@ shape:Gegevensgroeptype a sh:NodeShape;
   # Metagegevens
   sh:property shape:naam;
   sh:property shape:alias;
+  sh:property shape:begrip;
+  sh:property shape:begripsterm;
   sh:property shape:datumOpname;
   #ISSUE: Elementen hieronder komen niet in de tabel voor
   sh:property shape:attribuut;
@@ -105,6 +113,8 @@ shape:Relatiesoort a sh:NodeShape;
   # Metagegevens
   sh:property shape:naam;
   sh:property shape:alias;
+  sh:property shape:begrip;
+  sh:property shape:begripsterm;
   # Eigenschappen alleen in de specificatietabel
   sh:property shape:unidirectioneel;
   sh:property shape:objecttype;
@@ -130,6 +140,8 @@ shape:Relatierol a sh:NodeShape;
   # Metagegevens
   sh:property shape:naam_optioneel;
   sh:property shape:alias;
+  sh:property shape:begrip;
+  sh:property shape:begripsterm;
   sh:property shape:definitie_optioneel;
 .
 shape:Generalisatie a sh:NodeShape;
@@ -139,6 +151,8 @@ shape:Generalisatie a sh:NodeShape;
   # Metagegevens
   sh:property shape:naam;
   sh:property shape:alias;
+  sh:property shape:begrip;
+  sh:property shape:begripsterm;
   # Eigenschappen alleen in de specificatietabel
   sh:property shape:subtype;
   sh:property shape:supertype;
@@ -150,6 +164,8 @@ shape:Relatieklasse a sh:NodeShape;
   # Metagegevens
   sh:property shape:naam;
   sh:property shape:alias;
+  sh:property shape:begrip;
+  sh:property shape:begripsterm;
   sh:property shape:definitie;
   #ISSUE: Elementen hieronder komen niet in de tabel voor
   sh:property shape:constraint;
@@ -160,6 +176,8 @@ shape:ExterneKoppeling a sh:NodeShape;
   dct:source mimdoc:sectie2.3.2.2-ExterneKoppeling;
   sh:property shape:naam_optioneel;
   sh:property shape:alias;
+  sh:property shape:begrip;
+  sh:property shape:begripsterm;
   sh:property shape:datumOpname;
   # Eigenschappen alleen in de specificatietabel
   sh:property shape:objecttype;
@@ -174,6 +192,8 @@ shape:Referentielijst a sh:NodeShape;
   # Metagegevens
   sh:property shape:naam;
   sh:property shape:alias;
+  sh:property shape:begrip;
+  sh:property shape:begripsterm;
   sh:property shape:herkomst;
   sh:property shape:definitie;
   sh:property shape:datumOpname;
@@ -189,6 +209,8 @@ shape:ReferentieElement a sh:NodeShape;
   # Metagegevens
   sh:property shape:naam;
   sh:property shape:alias;
+  sh:property shape:begrip;
+  sh:property shape:begripsterm;
   sh:property shape:definitie;
   sh:property shape:datumOpname;
   sh:property shape:type;
@@ -206,6 +228,8 @@ shape:Codelist a sh:NodeShape;
   # Metagegevens
   sh:property shape:naam_codelist;
   sh:property shape:alias;
+  sh:property shape:begrip;
+  sh:property shape:begripsterm;
   sh:property shape:herkomst;
   sh:property shape:definitie;
   sh:property shape:datumOpname;
@@ -224,6 +248,8 @@ shape:PrimitiefDatatype a sh:NodeShape;
   # Metagegevens
   sh:property shape:naam;
   sh:property shape:alias;
+  sh:property shape:begrip;
+  sh:property shape:begripsterm;
   sh:property shape:definitie;
   sh:property shape:lengte;
   sh:property shape:patroon;
@@ -238,6 +264,8 @@ shape:GestructureerdDatatype a sh:NodeShape;
   # Metagegevens
   sh:property shape:naam;
   sh:property shape:alias;
+  sh:property shape:begrip;
+  sh:property shape:begripsterm;
   sh:property shape:herkomst;
   sh:property shape:definitie;
   sh:property shape:patroon;
@@ -253,6 +281,8 @@ shape:DataElement a sh:NodeShape;
   # Metagegevens
   sh:property shape:naam;
   sh:property shape:alias;
+  sh:property shape:begrip;
+  sh:property shape:begripsterm;
   sh:property shape:definitie;
   sh:property shape:type;
   sh:property shape:lengte;
@@ -267,6 +297,8 @@ shape:Union a sh:NodeShape;
   # Metagegevens
   sh:property shape:naam;
   sh:property shape:alias;
+  sh:property shape:begrip;
+  sh:property shape:begripsterm;
   sh:property shape:herkomst;
   sh:property shape:definitie;
   sh:property shape:datumOpname;
@@ -326,6 +358,8 @@ shape:Enumeratiewaarde a sh:NodeShape;
   sh:property shape:naam;
   sh:property shape:definitie_optioneel;
   sh:property shape:code;
+  sh:property shape:begrip;
+  sh:property shape:begripsterm;
 .
 shape:Constraint a sh:NodeShape;
   sh:targetClass mim:Constraint;
@@ -401,10 +435,22 @@ shape:alias a sh:PropertyShape;
   sh:maxCount 1;
   sh:datatype xsd:string;
 .
+shape:begrip a sh:PropertyShape;
+  sh:path mim:begrip;
+  sh:name "mim:begrip";
+  sh:order 3;
+  sh:class skos:Concept;
+.
+shape:begripsterm a sh:PropertyShape;
+  sh:path mim:begripsterm;
+  sh:name "mim:begripsterm";
+  sh:order 3;
+  sh:datatype xsd:string;
+.
 shape:herkomst a sh:PropertyShape;
   sh:path mim:herkomst;
   sh:name "mim:herkomst";
-  sh:order 3;
+  sh:order 4;
   sh:minCount 1;
   sh:maxCount 1;
   sh:datatype xsd:string;
@@ -412,7 +458,7 @@ shape:herkomst a sh:PropertyShape;
 shape:definitie a sh:PropertyShape;
   sh:path mim:definitie;
   sh:name "mim:definitie";
-  sh:order 4;
+  sh:order 5;
   sh:minCount 1;
   sh:maxCount 1;
   sh:datatype xsd:string;
@@ -421,14 +467,14 @@ shape:definitie a sh:PropertyShape;
 shape:definitie_optioneel a sh:PropertyShape;
   sh:path mim:definitie;
   sh:name "mim:definitie";
-  sh:order 4;
+  sh:order 5;
   sh:maxCount 1;
   sh:datatype xsd:string;
 .
 shape:herkomstDefinitie a sh:PropertyShape;
   sh:path mim:herkomstDefinitie;
   sh:name "mim:herkomstDefinitie";
-  sh:order 5;
+  sh:order 6;
   sh:minCount 1;
   sh:maxCount 1;
   sh:datatype xsd:string;

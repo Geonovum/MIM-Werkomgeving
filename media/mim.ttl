@@ -142,25 +142,19 @@ mim:UnionElement a owl:Class;
 .
 
 # Packages
-mim:Informatiemodel a owl:Class;
-  rdfs:label "Informatiemodel"@nl;
-  rdfs:comment "Hoofdpackage waar alle subpackages die een informatiemodel beschrijven onder vallen."@nl;
-  dct:source mimdoc:sectie2.2.5.1;
-.
 mim:Domein a owl:Class;
-  rdfs:label "Domein"@nl;
-  rdfs:comment "Een groepering van constructies die een semantisch samenhangend gedeelte van een informatiemodel beschrijven."@nl;
-  dct:source mimdoc:sectie2.2.5.2;
+  rdfs:label "Domein (het eigen IM)"@nl;
+  #ISSUE: Niet gedefinieerd
 .
 mim:Extern a owl:Class;
   rdfs:label "Extern"@nl;
   rdfs:comment "Een groepering van constructies die een externe instantie beheert en beschikbaar stelt aan een informatiemodel en die in het informatiemodel ongewijzigd gebruikt worden."@nl;
-  dct:source mimdoc:sectie2.2.5-3;
+  dct:source mimdoc:sectie2.2.5-20-Extern;
 .
 mim:View a owl:Class;
   rdfs:label "View"@nl;
   rdfs:comment "Een groepering van objecttypen die gespecificeerd zijn in een extern informatiemodel en vanuit het perspectief van het eigen informatiemodel inzicht geeft welke gegevens van deze objecttypen relevant zijn binnen het eigen informatiemodel."@nl;
-  dct:source mimdoc:sectie2.2.5-4;
+  dct:source mimdoc:sectie2.2.5-21-View;
 .
 
 # Overige
@@ -211,6 +205,14 @@ mim:alias a owl:DatatypeProperty;
   rdfs:label "alias"@nl;
   rdfs:comment "De alternatieve weergave van de naam."@nl;
   dct:source mimdoc:sectie2.4-Alias;
+.
+mim:begrip a owl:ObjectProperty;
+  rdfs:label "begrip"@nl;
+  rdfs:comment "Verwijzing naar een begrip, vanuit een modelelement, waarmee wordt aangegeven op welk begrip, of begrippen, het informatiemodel element is gebaseerd.";
+.
+mim:begripsterm a owl:DatatypeProperty;
+  rdfs:label "begripsterm"@nl;
+  rdfs:comment "Verwijzing naar een begrip in de vorm van de term, vanuit een modelelement, waarmee wordt aangegeven op welk begrip, of begrippen, het informatiemodel element is gebaseerd.";
 .
 mim:definitie a owl:DatatypeProperty;
   rdfs:label "definitie"@nl;
@@ -291,18 +293,6 @@ mim:formeelPatroon a owl:DatatypeProperty;
   rdfs:label "formeel patroon"@nl;
   rdfs:comment "Zoals patroon, formeel vastgelegd, uitgedrukt in een formele taal die door de computer wordt herkend."@nl;
   dct:source mimdoc:sectie2.3-FormeelPatroon;
-.
-mim:mimVersie a owl:DatatypeProperty;
-  rdfs:label "mim versie"@nl;
-  rdfs:comment "De versie van de MIM specificatie die gebruikt is om het informatiemodel in uit te drukken."@nl;
-.
-mim:mimExtensie a owl:DatatypeProperty;
-  rdfs:label "mim extensie"@nl;
-  rdfs:comment "De aanduiding van een extensie op MIM."@nl;
-.
-mim:mimTaal a owl:DatatypeProperty;
-  rdfs:label "mim taal"@nl;
-  rdfs:comment "De aanduiding van de taal die gebruikt is voor de modelelementen."@nl;
 .
 
 # Properties die in de tabel voorkomen (maar niet afzonderlijk zijn gedefinieerd)
@@ -386,7 +376,6 @@ mim:supertype a owl:ObjectProperty;
 
 # Enumeratiewaarde
 mim:code a owl:DatatypeProperty;
-  rdfs:subPropertyOf mim:alias;
   rdfs:label "code"@nl;
   rdfs:comment "De in een registratie of informatiemodel aan de enumeratiewaarde toegekend unieke code"@nl;
 .

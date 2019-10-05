@@ -206,6 +206,14 @@ mim:alias a owl:DatatypeProperty;
   rdfs:comment "De alternatieve weergave van de naam."@nl;
   dct:source mimdoc:sectie2.4-Alias;
 .
+mim:begrip a owl:ObjectProperty;
+  rdfs:label "begrip"@nl;
+  rdfs:comment "Verwijzing naar een begrip, vanuit een modelelement, waarmee wordt aangegeven op welk begrip, of begrippen, het informatiemodel element is gebaseerd.";
+.
+mim:begripsterm a owl:DatatypeProperty;
+  rdfs:label "begripsterm"@nl;
+  rdfs:comment "Verwijzing naar een begrip in de vorm van de term, vanuit een modelelement, waarmee wordt aangegeven op welk begrip, of begrippen, het informatiemodel element is gebaseerd.";
+.
 mim:definitie a owl:DatatypeProperty;
   rdfs:label "definitie"@nl;
   rdfs:comment "De beschrijving van de betekenis van dit modelelement."@nl;

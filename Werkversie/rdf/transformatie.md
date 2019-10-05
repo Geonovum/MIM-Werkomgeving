@@ -113,6 +113,8 @@ Onderstaande tabellen geven een overzicht van alle transformaties en een referen
 |--------------|---------|----------|
 |`mim:naam`|`rdfs:label`|[naam](#naam)|
 |`mim:alias`|`skos:altLabel`|[alias](#alias)|
+|`mim:begrip`|`dct:source`|[begrip](#begrip)|
+|`mim:begripsterm`|`dc:source`|[begripsterm](#begripsterm)|
 |`mim:definitie`|`rdfs:comment`|[definitie](#definitie)|
 |`mim:toelichting`|`mim:toelichting`|[toelichting](#toelichting)|
 |`mim:herkomst`|`mim:herkomst`|[herkomst](#herkomst)|
@@ -869,6 +871,38 @@ CONSTRUCT {
 WHERE {
   ?modelelement mim:alias ?alias.
   ?subject rdfs:seeAlso ?modelelement.
+}
+```
+
+### begrip
+
+> Verwijzing naar een begrip, vanuit een modelelement, waarmee wordt aangegeven op welk begrip, of begrippen, het informatiemodel element is gebaseerd.
+
+Een `mim:begrip` wordt vertaald naar een `dct:source`
+
+```
+CONSTRUCT {
+  ?subject dct:source ?begrip
+}
+WHERE {
+  ?modelelement mim:begrip ?begrip.
+  ?subject rdfs:seeAlso ?modelelement
+}
+```
+
+### begripsterm
+
+> Verwijzing naar een begrip in de vorm van de term, vanuit een modelelement, waarmee wordt aangegeven op welk begrip, of begrippen, het informatiemodel element is gebaseerd.
+
+Een `mim:begripsterm` wordt vertaald naar een `dc:source`. Het heeft de voorkeur om geen gebruik te maken van dit aspect, maar om gebruik te maken van het aspect `mim:begrip`, waarmee een directe verwijzing kan worden gemaakt naar het begrip zelf.
+
+```
+CONSTRUCT {
+  ?subject dc:source ?begrip
+}
+WHERE {
+  ?modelelement mim:begripsterm ?begripsterm.
+  ?subject rdfs:seeAlso ?modelelement
 }
 ```
 
