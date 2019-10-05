@@ -1,10 +1,10 @@
 ## Inleiding
 
 Voor u ligt het metamodel voor het beschrijven van informatiemodellen.
-Met het metamodel voor informatiemodellen (MIM) hebben we een gemeenschappelijk 
-vertrekpunt opgesteld voor het maken van informatiemodellen. Het model bevat 
-duidelijke afspraken over het vastleggen van gegevensspecificaties en biedt 
-tegelijkertijd ruimte aan de verschillende niveaus van modellering. Bijzonder 
+Met het metamodel voor informatiemodellen (MIM) hebben we een gemeenschappelijk
+vertrekpunt opgesteld voor het maken van informatiemodellen. Het model bevat
+duidelijke afspraken over het vastleggen van gegevensspecificaties en biedt
+tegelijkertijd ruimte aan de verschillende niveaus van modellering. Bijzonder
 aan het model is dat de afspraken over meerdere bestuurslagen heen gaan.
 
 Dit document is opgesteld met kennis die is aangedragen door de MIM-community.
@@ -44,7 +44,7 @@ informatiemodellen maken; informatieanalisten die willen weten wat de betekenis
 en definitie van informatieobjecten is, en mensen die model-driven verder werken
 op basis van het informatiemodel en er implementaties van maken. Kennis van
 informatiemodellering is een vereiste. Enige kennis van UML [[!UML]] of [[!Linked-Data]] is een pré maar niet
-noodzakelijk. Dit metamodel richt zich in het bijzonder op de informatievoorziening binnen 
+noodzakelijk. Dit metamodel richt zich in het bijzonder op de informatievoorziening binnen
 het overheidsdomein, al is het ook in bredere context inzetbaar.
 
 ### Leeswijzer
@@ -55,30 +55,31 @@ informatiemodel en onder een metamodel verstaan, hoe deze de modellen zich
 verhouden tot UML en de vier lagen metamodel architectuur van de Object
 Management Group [[!OMG]], en welke standaarden worden toegepast.
 
-Het hoofdstuk [Metamodel Algemeen](#metamodel-algemeen) bevat de beschrijving van alle 
+Het hoofdstuk [Metamodel Algemeen](#metamodel-algemeen) bevat de beschrijving van alle
 bouwstenen c.q. de modelelementen van het metamodel, in de vorm van definities en specificaties.
-De betekenis en toelichting van de modelelementen van het metamodel vormt het materiaal waarmee een uitputtende 
-modelspecificatie kan worden opgesteld. De afbeeldingen in dit algemene hoofdstuk zijn weliswaar gemaakt in UML, maar het metamodel beperkt 
+De betekenis en toelichting van de modelelementen van het metamodel vormt het materiaal waarmee een uitputtende
+modelspecificatie kan worden opgesteld. De afbeeldingen in dit algemene hoofdstuk zijn weliswaar gemaakt in UML, maar het metamodel beperkt
 zich zeker niet tot UML. Er zijn aparte hoofdstukken voor de implementatie van MIM in UML en Linked Data.
 
 Het hoofdstuk [Metamodel in UML](#metamodel-in-uml) beschrijft hoe de implementatie van MIM in
 [[!UML]] er uit ziet. In dit hoofdstuk wordt beschreven hoe het metamodel zich verhoudt tot het UML
 metamodel, welke uitbreidingen c.q. verbijzonderingen van het UML metamodel zijn
-aangebracht. 
+aangebracht.
 
 Het hoofdstuk [Metamodel in Linked Data (LD)](#metamodel-in-linked-data-ld) beschrijft hoe de implementatie van MIM in
 [[!Linked-Data]] er uit ziet. In dit hoofdstuk wordt beschreven hoe het metamodel zich verhoudt tot het Linked Data
-metamodel, welke uitbreidingen c.q. verbijzonderingen van het Linked Data metamodel zijn
-aangebracht. 
+metamodel. Daarbij is een strikte vertaling gemaakt. Dit betekent dat het betreffende Linked Data model alleen als MIM model te gebruiken is. Voor een model dat gebruikt kan worden om daadwerkelijk Linked Data in uit te drukken, is een vertaalslag nodig die beschreven is in de bijlage [Transformatie van een MIM model naar een RDF model](#transformatie-van-een-mim-model-naar-een-rdf-model).
 
 In het hoofdstuk [Afspraken & Regels](#afspraken-regels) gaan we in detail in op een
-aantal aspecten. Het is een uitgebreidere toelichting, in aanvulling op het 
+aantal aspecten. Het is een uitgebreidere toelichting, in aanvulling op het
 hoofdstuk [Metamodel Algemeen](#metamodel-algemeen), bestaande uit nadere afspraken, regels, richtlijnen en
 aanbevelingen bij het toepassen van het metamodel.
 
 De bijlage [Template naamgeving conventies](#template-naamgeving-conventies) verschaft een overzicht van alle bouwstenen en metadata-elementen en
 het al dan niet van toepassing zijn daarvan in een conceptueel dan wel een
 logisch informatiemodel.
+
+De bijlage [Transformatie van een MIM model naar een RDF model](#transformatie-van-een-mim-model-naar-een-rdf-model) beschrijft hoe een MIM model getransformeerd kan worden naar een RDF model dat gebruikt kan worden om daadwerkelijk Linked Data in uit te drukken.
 
 ### Wat is een informatiemodel
 Een informatiemodel beschrijft de structuur, semantiek en de eigenschappen van
@@ -186,10 +187,10 @@ Specificeert de structuur en eigenschappen van de technologie waarin de
 informatie wordt vastgelegd of uitgewisseld. Dit is sterk afhankelijk van de
 gebruikte opslagtechnologie zoals een specifieke database of de
 servicetechnologie zoals [[!xml]], [[!gml]], [[!SOAP]], REST, [[!GeoJSON]],
-[[!Linked-Data]] e.d. Het kan tevens informatie bevatten over de manier waarop 
-berichten ‘verpakt’ worden, het (internet)protocol en de logistiek van het 
-berichtenverkeer. De technische specificaties worden over het algemeen zoveel 
-als mogelijk gegenereerd uit het logisch informatiemodel. Deze specificaties 
+[[!Linked-Data]] e.d. Het kan tevens informatie bevatten over de manier waarop
+berichten ‘verpakt’ worden, het (internet)protocol en de logistiek van het
+berichtenverkeer. De technische specificaties worden over het algemeen zoveel
+als mogelijk gegenereerd uit het logisch informatiemodel. Deze specificaties
 worden opgesteld voor ‘machines’, te gebruiken door software-ontwikkelaars.
 
 Het voorliggende metamodel kan toegepast worden op twee niveaus, niveau 2 en
@@ -293,12 +294,56 @@ tagged values en constraints.
 
 ### Uitdrukken in Linked Data
 
-<todo>
-*HIER NOG EEN BESCHRIJVING TOEVOEGEN*  
-*HIER NOG EEN BESCHRIJVING TOEVOEGEN*  
-*HIER NOG EEN BESCHRIJVING TOEVOEGEN*  
-*HIER NOG EEN BESCHRIJVING TOEVOEGEN*  
-</todo>
+Zowel het metamodel als informatiemodellen kan woren uitgedrukt in Linked Data.
+Registraties en afnemers hiervan kunnen deze gebruiken voor de inrichting van
+hun situatiespecifieke gegevenshuishouding. Belangrijk is dat de lezer eerst
+begrijpt wat we onder een informatiemodel en een metamodel verstaan en verder is
+het van belang de modellen in de juiste context te plaatsen. Dit laatste doen we
+aan de hand van de W3c open standaarden voor het specificeren van een ontologie.
+
+**Een ontologie voor het metamodel**
+Met een ontologie bedoelen we een model waarin we betekenis geven aan de termen die
+in een specifiek domein worden gebruikt. In geval van het MIM metamodel betreft dit het MIM-domein zelf.
+
+We geven betekenis aan de termen door enerzijds een voor mensen leesbare definitie
+koppelen aan een term (de "zachte semantiek") en anderzijds door relaties te leggen
+naar eerder gedefinieerde termen of relaties tussen termen in onze ontologie (de
+"harde semantiek"). We maken hierbij vooral gebruik van de bestaande wereldwijd
+geaccepteerde internetstandaarden [RDF](), [RDFS](), [SKOS]() en [OWL](). Daarnaast beschrijven we
+ook welke constructies we wel en niet willen toestaan op het moment dat een modelleur
+een MIM model in Linked Data opsteld. Hiervoor maken we gebruik van de wereldwijd
+geaccepteerde internetstandaard [SHACL]().
+
+**Een informatiemodel**
+Het informatiemodel zien we als een invulling van de MIM ontologie. Dit betekent dat
+de elemente in het informatiemodel exemplaren zijn van de klassen die in de MIM ontologie
+zijn gedefinieerd. Zo is onderstaand voorbeeld een voorbeeld waarin het modelelement
+`vb:Schip` wordt gedefinieerd als exemplaar van de klasse `mim:Objecttype`. Een `vb:Schip`
+*is* dus een `mim:Objecttype`.
+
+```
+vb:Schip a mim:Objecttype;
+  rdfs:label "Schip"@nl;
+.
+```
+
+**Een ontologie voor een informatiemodel**
+Omdat een informatiemodel zelf al exemplaren betreft, is het niet direct mogelijk om
+op basis van dit informatiemodel ook daadwerkelijk Linked Data in uit te drukken. Hiervoor
+is het nodig om de exemplaren uit het MIM informatiemodel zelf te transformeren, te "promoveren",
+naar klassen. Zo is onderstaand voorbeeld een voorbeeld van de transformatie van het exeplaar `vb:Schip` naar
+de klasse `vbo:Schip`, en vervolgens kan hier een exemplaar van worden beschreven, bijvoorbeeld de
+pakjesboot van Sinterklaas, `ex:Pakjesboot12`.
+
+```
+vbo:Schip a rdfs:Class;
+  rdfs:seeAlso vb:Schip;
+.
+
+vb:Pakjesboot12 a vbo:Schip.
+```
+
+
 
 ### Een eigen extensie op het metamodel
 Indien er extra metamodelconstructies nodig zijn voor een informatiemodel, dan
@@ -353,7 +398,7 @@ u contact opnemen met de MIM helpdesk van Geonovum: mim@geonovum.nl
 | 1.  | Unified Modeling Language (UML)              | [[!UML]]       |
 | 2.  | OMG Unified Modeling Language TM versie 2.5  | [[!OMG]]       |
 | 3.  | Stelselcatalogus                             | [[!SCAT]]      |
-| 4.  | GAB                                          | [[!GAB]]       | 
+| 4.  | GAB                                          | [[!GAB]]       |
 | 5.  | Handreiking gegevensbeschrijving (NORA)      | [[!NORA]]      |
 | 6.  | ISO 11404                                    | [[!iso-11404]] |
 | 7.  | ISO 8601                                     | [[!iso-8601]]  |
@@ -361,8 +406,8 @@ u contact opnemen met de MIM helpdesk van Geonovum: mim@geonovum.nl
 | 9.  | OCL                                          | [[!OCL]]       |
 | 10. | NEN 3610/A1:2016 Basismodel Geo-informatie   | [[!NEN3610]]   |
 
-De Stelselcatalogus [[!SCAT]], het GAB [[!GAB]] en de Handreiking gegevensbeschrijving 
-[[!NORA]] raken elkaar op een aantal vlakken maar er kunnen op deze raakvlaken verschillen zijn 
+De Stelselcatalogus [[!SCAT]], het GAB [[!GAB]] en de Handreiking gegevensbeschrijving
+[[!NORA]] raken elkaar op een aantal vlakken maar er kunnen op deze raakvlaken verschillen zijn
 in de gemaakte afspraken. Voor het metamodel hanteren we daarom de volgende spelregel:
 de Stelselcatalogus is zoveel als mogelijk leidend, vervolgens het GAB en als
 laatste de handreiking.

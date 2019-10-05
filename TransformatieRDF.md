@@ -1,4 +1,4 @@
-## Transformeren van een MIM model naar een RDFS/OWL/SHACL/SKOS model
+## Transformatie van een MIM model naar een RDF model
 
 ### Inleiding
 
@@ -20,7 +20,7 @@ vb:Schip a mim:Objecttype;
 `vb:Schip` is in dit voorbeeld een voorkomen van de klasse `mim:Objecttype`. Dit voorkomen, `vb:Schip`, kent zelf geen voorkomens. Het is dan ook niet mogelijk om te stellen:
 
 ```
-vb:depakjesboot a vb:Schip.
+vb:Pakjesboot12 a vb:Schip.
 ```
 
 `vb:Schip` is immers geen klasse maar zelf een voorkomen! Om te kunnen uitdrukken dat de pakjesboot een voorkomen van de klasse Schip is, is een vertaling nodig naar een `rdfs:Class` of `owl:Class`, bijvoorbeeld door:
