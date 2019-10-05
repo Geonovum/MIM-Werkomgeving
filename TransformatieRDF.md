@@ -2,11 +2,11 @@
 
 ### Inleiding
 
-Het MiM is een *metamodel*. Dit betekent dat in termen van het MiM een concreet informatiemodel kan worden uitgewerkt, bijvoorbeeld het informatiemodel Basisregistratie Adressen en Gebouwen. Het MiM is niet bedoeld om vervolgens in termen van dit informatiemodel een concrete dataset te vormen. Hiervoor is een transformatie nodig naar een (technisch) uitwisselings- of opslagmodel, bijvoorbeeld een XSD schema of een RDMS database definitie.
+Het MIM is een *metamodel*. Dit betekent dat in termen van het MIM een concreet informatiemodel kan worden uitgewerkt, bijvoorbeeld het informatiemodel Basisregistratie Adressen en Gebouwen. Het MIM is niet bedoeld om vervolgens in termen van dit informatiemodel een concrete dataset te vormen. Hiervoor is een transformatie nodig naar een (technisch) uitwisselings- of opslagmodel, bijvoorbeeld een XSD schema of een RDMS database definitie.
 
-Op diezelfde manier levert het toepassen van het MiM in RDF geen ontologie of vocabulaire waarin RDF kan worden uitgedrukt in een concrete Linked Data dataset. Slechts het informatiemodel zelf is op deze manier in RDF uitgedrukt. Een afzonderlijke transformatie is nodig voor de vertaalslag naar een ontologie voor een concrete Linked Data.
+Op diezelfde manier levert het toepassen van het MIM in RDF geen ontologie of vocabulaire waarin RDF kan worden uitgedrukt in een concrete Linked Data dataset. Slechts het informatiemodel zelf is op deze manier in RDF uitgedrukt. Een afzonderlijke transformatie is nodig voor de vertaalslag naar een ontologie voor een concrete Linked Data.
 
-Zo leidt een MiM objecttype "Schip" tot de volgende weergave in RDF:
+Zo leidt een MIM objecttype "Schip" tot de volgende weergave in RDF:
 
 ```
 @prefix vb: <http://bp4mc2.org/voorbeeld/>.
@@ -34,7 +34,7 @@ vbo:Schip a rdfs:Class;
 vb:Pakjesboot12 a vbo:Schip.
 ```
 
-Dit document beschrijft hoe deze vertaling van het MiM model in RDF naar een RDFS-gebaseerde ontologie plaatsvindt. Daarbij zal niet alleen gebruik worden gemaakt van RDFS, maar ook van de OWL, SHACL en SKOS vocabulaires. De vertaling wordt zo veel mogelijk als SPARQL rules beschreven, zodat een machinale vertaling mogelijk is. De vertaling is beoogd als omkeerbaar. De SPARQL rules die vanuit een RDFS-gebaseerde ontologie de vertaling maken naar een MiM model in RDF, zullen daarom ook worden beschreven (in deze versie van het document zijn deze nog niet opgenomen).
+Dit document beschrijft hoe deze vertaling van het MIM model in RDF naar een RDFS-gebaseerde ontologie plaatsvindt. Daarbij zal niet alleen gebruik worden gemaakt van RDFS, maar ook van de OWL, SHACL en SKOS vocabulaires. De vertaling wordt zo veel mogelijk als SPARQL rules beschreven, zodat een machinale vertaling mogelijk is. De vertaling is beoogd als omkeerbaar. De SPARQL rules die vanuit een RDFS-gebaseerde ontologie de vertaling maken naar een MIM model in RDF, zullen daarom ook worden beschreven (in deze versie van het document zijn deze nog niet opgenomen).
 
 ### Gebruikte functies
 
@@ -45,11 +45,11 @@ In de SPARQL rules wordt gebruik gemaakt van een aantal SPARQL functies. In onde
 |t:CamelCase|Codeert een tekstveld naar een URI-vorm op basis van (upper) CamelCase regels|
 |t:camelCase|Codeert een tekstveld naar een URI-vorm op basis van (lower) camelCase regels|
 |t:kebabcase|Codeert een tekstveld naar een URI-vorm op basis van kebabcase regels (een `-` voor spaties)|
-|t:classuri|Formuleert de uri voor een klasse op basis van de naam van een MiM resource. De class URI is opgebouwd als `{namespace}#{t:CamelCase(naam)}`. De `{namespace}` is een vooraf vastgestelde waarde die gelijk is aan de te maken ontologie.|
-|t:nodeshapeuri|Formuleert de uri voor een nodeshape op basis van de naam van een MiM resource. De nodeshape URI is opgebouwd als `{shape-namespace}#{t:CamelCase(term)}`. De `{shape-namespace}` is een vooraf vastgestelde waarde die gelijk is aan de te maken shapesgraph.|
-|t:propertyuri|Formuleert de uri voor een property op basis van de naam van een MiM resource. De property URI is opgebouwd als `{namespace}#{t:camelCase(naam)}`. Zie ook `t:classuri`.|
-|t:propertyshapeuri|Formuleert de uri voor een propertyshape op basis van de naam van een MiM resource en de naam van de MIM resource die hiervan de "bezitter" is. De propertyshape URI is opgebouwd als `{shape-namespace}#{t:CamelCase(bezittersnaam)}-{t:camelCase(naam)}`. Zie ook `t:nodeshapeuri`.|
-|t:nodepropertyuri|Formuleert de uri voor een property op basis van de naam van een MiM resource en de naam van de MIM resource die hiervan de "bezitter" is. De property URI is opgebouwd als `{namespace}#{t:CamelCase(bezittersnaam)}-{t:camelCase(naam)}`. Zie ook `t:classuri`.|
+|t:classuri|Formuleert de uri voor een klasse op basis van de naam van een MIM resource. De class URI is opgebouwd als `{namespace}#{t:CamelCase(naam)}`. De `{namespace}` is een vooraf vastgestelde waarde die gelijk is aan de te maken ontologie.|
+|t:nodeshapeuri|Formuleert de uri voor een nodeshape op basis van de naam van een MIM resource. De nodeshape URI is opgebouwd als `{shape-namespace}#{t:CamelCase(term)}`. De `{shape-namespace}` is een vooraf vastgestelde waarde die gelijk is aan de te maken shapesgraph.|
+|t:propertyuri|Formuleert de uri voor een property op basis van de naam van een MIM resource. De property URI is opgebouwd als `{namespace}#{t:camelCase(naam)}`. Zie ook `t:classuri`.|
+|t:propertyshapeuri|Formuleert de uri voor een propertyshape op basis van de naam van een MIM resource en de naam van de MIM resource die hiervan de "bezitter" is. De propertyshape URI is opgebouwd als `{shape-namespace}#{t:CamelCase(bezittersnaam)}-{t:camelCase(naam)}`. Zie ook `t:nodeshapeuri`.|
+|t:nodepropertyuri|Formuleert de uri voor een property op basis van de naam van een MIM resource en de naam van de MIM resource die hiervan de "bezitter" is. De property URI is opgebouwd als `{namespace}#{t:CamelCase(bezittersnaam)}-{t:camelCase(naam)}`. Zie ook `t:classuri`.|
 |t:statementuri|Formuleert de uri voor een rdf:Statement op basis van zijn afzonderlijke elementen. Mogelijke invulling kan het maken van een hash zijn op basis van de aaneenschakeling van subject, predicate en object.|
 |t:mincount|Formuleert de minimum kardinaliteit op basis van een kardinaliteitsaanduiding (zie bij mim:kardinaliteit). De waarde kan ook unbound zijn, in dat geval wordt ook de variable niet gebound en daardoor de betreffende triple niet opgevoerd.|
 |t:maxcount|Formuleert de maximum kardinaliteit op basis van een kardinaliteitsaanduiding (zie bij mim:kardinaliteit). De waarde kan ook unbound zijn, in dat geval wordt ook de variable niet gebound en daardoor de betreffende triple niet opgevoerd.|
@@ -62,7 +62,7 @@ In de SPARQL rules wordt gebruik gemaakt van een aantal SPARQL functies. In onde
 
 > **ISSUE**
 >
-> Hoewel nergens expliciet geformuleerd, kent een MiM model in zijn representatie volgorde: attribuutsoorten worden in een bepaalde volgorde getoond binnen een objecttype, referentiewaarden worden in een bepaalde volgorde getoond in een referentielijst. Het MiM kent echter geen aspect waarin deze volgorde is opgenomen. Hierdoor zal de volgorde verdwijnen in het getransformeerde model en zal sprake zijn van een willekeurige volgorde.
+> Hoewel nergens expliciet geformuleerd, kent een MIM model in zijn representatie volgorde: attribuutsoorten worden in een bepaalde volgorde getoond binnen een objecttype, referentiewaarden worden in een bepaalde volgorde getoond in een referentielijst. Het MIM kent echter geen aspect waarin deze volgorde is opgenomen. Hierdoor zal de volgorde verdwijnen in het getransformeerde model en zal sprake zijn van een willekeurige volgorde.
 >
 > Mogelijke oplossing is het toevoegen van het aspect `mim:volgnummer`, waarmee een volgorde kan worden opgegeven.
 
@@ -76,7 +76,7 @@ Onderstaande tabellen geven een overzicht van alle transformaties en een referen
 
 #### Klassen
 
-|MiM-klasse|Vertaling|Referentie|
+|MIM-klasse|Vertaling|Referentie|
 |----------|---------|----------|
 |`mim:Objecttype`|`owl:Class`, `sh:NodeShape`|[Objecttype](#objecttype)|
 |`mim:Attribuutsoort`|`owl:ObjectProperty`, `owl:DatatypeProperty`, `sh:PropertyShape`|[Attribuutsoort](#attribuutsoort)|
@@ -109,7 +109,7 @@ Onderstaande tabellen geven een overzicht van alle transformaties en een referen
 
 #### Eigenschappen
 
-|MiM-eigenschap|Vertaling|Referentie|
+|MIM-eigenschap|Vertaling|Referentie|
 |--------------|---------|----------|
 |`mim:naam`|`rdfs:label`|[naam](#naam)|
 |`mim:alias`|`skos:altLabel`|[alias](#alias)|
@@ -169,7 +169,7 @@ Onderstaande tabellen geven een overzicht van alle transformaties en een referen
 
 ### Klassen
 
-Omdat het getransformeerde model daadwerkelijk een nieuw model is, zullen de elementen in het getransformeerde model ook eigen URI's krijgen. Om de relatie tussen het originele MiM-model het het getransformeerde model op basis van RDFS te behouden, wordt de eigenschap `rdfs:seeAlso` gebruikt.
+Omdat het getransformeerde model daadwerkelijk een nieuw model is, zullen de elementen in het getransformeerde model ook eigen URI's krijgen. Om de relatie tussen het originele MIM-model het het getransformeerde model op basis van RDFS te behouden, wordt de eigenschap `rdfs:seeAlso` gebruikt.
 
 > **ISSUE**
 >
@@ -185,9 +185,9 @@ Een `mim:Objecttype` wordt vertaald naar een `owl:Class` in combinatie met een `
 >
 > De identificatie van een objecttype is afgeleid van de naam van het objecttype. Het kan zijn dat deze niet uniek is. Bijvoorbeeld als er gebruik wordt gemaakt van packages en in meerdere packages komen dezelfde namen voor.
 >
-> Mogelijke oplossing: er zijn meerdere oplossingen denkbaar: (a) in het MiM opnemen dat de naam uniek moet zijn, ook over packages heen. (b) afzonderlijke ontologieën (namespaces) maken per package. (c) package naam opnemen waar het mis gaat.
+> Mogelijke oplossing: er zijn meerdere oplossingen denkbaar: (a) in het MIM opnemen dat de naam uniek moet zijn, ook over packages heen. (b) afzonderlijke ontologieën (namespaces) maken per package. (c) package naam opnemen waar het mis gaat.
 >
-> Dit is gerelateerd aan de issue over packages. MiM zegt niet zoveel over packages, maar dit zou wel beter moeten zijn. De standaarden waar NEN 3610 op gebaseerd zijn, zeggen hier wel wat over: hier nog naar kijken. Zie ook issue over `mim:naam`, mogelijk `mim:namespace` ondersteunen en dan dat alles uniek is binnen de package die een namespace heeft. Binnen UML is de klassenaam wel uniek binnen een package, maar MiM zegt hier formeel niet iets over.
+> Dit is gerelateerd aan de issue over packages. MIM zegt niet zoveel over packages, maar dit zou wel beter moeten zijn. De standaarden waar NEN 3610 op gebaseerd zijn, zeggen hier wel wat over: hier nog naar kijken. Zie ook issue over `mim:naam`, mogelijk `mim:namespace` ondersteunen en dan dat alles uniek is binnen de package die een namespace heeft. Binnen UML is de klassenaam wel uniek binnen een package, maar MIM zegt hier formeel niet iets over.
 >
 > Voorlopige aanname is dat sprake is van (a).
 
@@ -213,7 +213,7 @@ WHERE {
 
 Een `mim:Attribuutsoort` wordt vertaald naar een `sh:PropertyShape` in combinatie met een `owl:DatatypeProperty`. De nodekind van de propertyshape is een `sh:Literal`.
 
-In OWL is een property anders dan in het MiM een *first class citizen*. Dit betekent dat als in twee objecttypen gebruik wordt gemaakt van een attribuutsoort die dezelfde naam heeft, dit leidt tot twee verschillende attribuutsoorten. In OWL zou dit echter leiden tot maar één attribuutsoort, tenzij daadwerkelijk sprake is van verschil in betekenis.
+In OWL is een property anders dan in het MIM een *first class citizen*. Dit betekent dat als in twee objecttypen gebruik wordt gemaakt van een attribuutsoort die dezelfde naam heeft, dit leidt tot twee verschillende attribuutsoorten. In OWL zou dit echter leiden tot maar één attribuutsoort, tenzij daadwerkelijk sprake is van verschil in betekenis.
 
 > **ISSUE**
 >
@@ -222,7 +222,7 @@ In OWL is een property anders dan in het MiM een *first class citizen*. Dit bete
 >
 > Mogelijke oplossing: toevoegen van een kenmerk bij een attribuutsoort waarin je de scope van de attribuutsoort kunt opgeven: algemeen of klasse-specifiek. In het geval van een klasse-specifiek atribuutsoort, dan wordt in OWL de naam afgeleid van zowel de attribuutsoort als het objecttype (of gegevensgroeptype). Of er zou een extra kenmerk bij kunnen met daar de "globale naam" van het attribuutsoort. Dat is mogelijk wat makkelijker. Vervolgens zou de globale naam uniek moeten zijn voor het gehele model, waarbij standaard de globale naam gelijk is aan de naam van de attribuutsoort (en anders moet je een foutmelding krijgen)
 >
-> Voorlopige aanname: alle namen van attribuutsoorten zijn uniek. De kardinaliteit in het MiM model ondersteunt alleen dat een attribuutsoort uniek bij (bv) een objecttype hoort, maar dit is op zich ook juist want de PropertyShape hoort wel uniek bij de NodeShape, alleen (semantisch) kan de rdf:Property loshangen. Het is wel een discussie wat je zou willen. Op zich is het goed als er bij het MiM al over wordt nagedacht, en dat hier extra eisen aan worden gesteld (bv in het meest extreme geval: alle attribuutsoortnamen moeten unieke zijn..)
+> Voorlopige aanname: alle namen van attribuutsoorten zijn uniek. De kardinaliteit in het MIM model ondersteunt alleen dat een attribuutsoort uniek bij (bv) een objecttype hoort, maar dit is op zich ook juist want de PropertyShape hoort wel uniek bij de NodeShape, alleen (semantisch) kan de rdf:Property loshangen. Het is wel een discussie wat je zou willen. Op zich is het goed als er bij het MIM al over wordt nagedacht, en dat hier extra eisen aan worden gesteld (bv in het meest extreme geval: alle attribuutsoortnamen moeten unieke zijn..)
 
 > **ISSUE**
 >
@@ -294,7 +294,7 @@ Een `mim:Gegevensgroeptype` wordt vertaald naar een `owl:Class` en een `sh:NodeS
 
 > **ONDERZOEKEN**
 >
-> Er is nu geen verschil meer tussen een gegevensgroeptype en een objecttype. Het MiM maakt echter wel onderscheid. Het verschil is alleen zichtbaar doordat een gegevensgroeptype als blank node verbonden is (zie ook [Gegevensgroep](#gegevensgroep)).
+> Er is nu geen verschil meer tussen een gegevensgroeptype en een objecttype. Het MIM maakt echter wel onderscheid. Het verschil is alleen zichtbaar doordat een gegevensgroeptype als blank node verbonden is (zie ook [Gegevensgroep](#gegevensgroep)).
 
 ```
 CONSTRUCT {
@@ -322,11 +322,11 @@ Een `mim:Generalisatie` wordt vertaald naar een `rdfs:subClassOf`.
 
 > **ISSUE**
 >
-> Generalisatie is in Linked Data ook mogelijk op properties, en daar ook wel gebruikelijk. Dit wordt nu niet door het MiM ondersteunt. Het is handig als dit wordt toegevoegd.
+> Generalisatie is in Linked Data ook mogelijk op properties, en daar ook wel gebruikelijk. Dit wordt nu niet door het MIM ondersteunt. Het is handig als dit wordt toegevoegd.
 
 > **ISSUE**
 >
-> Vertaling van een mim:Generalisatie naar een rdfs:subClassOf betekent dat wat in het MiM een metaklasse is, in Linked Data een eigenschap is geworden en geen (meta)class. Hierdoor is het niet mogelijk om extra kenmerken te verbinden aan een generalisatie. Dit betekent dat het niet mogelijk is om de generalisatie een naam of een alias te geven.
+> Vertaling van een mim:Generalisatie naar een rdfs:subClassOf betekent dat wat in het MIM een metaklasse is, in Linked Data een eigenschap is geworden en geen (meta)class. Hierdoor is het niet mogelijk om extra kenmerken te verbinden aan een generalisatie. Dit betekent dat het niet mogelijk is om de generalisatie een naam of een alias te geven.
 >
 > Voorlopige oplossing is om een rdf:Statement toe te voegen. Alternatief zou zijn om een subklassen te maken van `rdfs:subClassOf`.
 > We beschouwen dit issue als opgelost, wel even rationale toevoegen.
@@ -359,7 +359,7 @@ WHERE {
 
 > **ISSUE**
 >
-> In het MiM is het toegestaan om te kiezen tussen gebruik van `mim:Relatiesoort` OF `mim:Relatierol`.
+> In het MIM is het toegestaan om te kiezen tussen gebruik van `mim:Relatiesoort` OF `mim:Relatierol`.
 >
 > Voorlopige aanname: `mim:Relatiesoort` wordt gebruikt.
 
@@ -524,7 +524,7 @@ WHERE {
 
 #### Primitief datatype - standaard datatypen
 
-Voor standaard datatypen maakt RDF gebruik van de XSD datatypen. Onderstaande tabel geeft de mapping weer vanuit de datatypen die in het MiM zijn gespecificeerd.
+Voor standaard datatypen maakt RDF gebruik van de XSD datatypen. Onderstaande tabel geeft de mapping weer vanuit de datatypen die in het MIM zijn gespecificeerd.
 
 |MIM datatype|XSD Datatype|
 |------------|------------|
@@ -571,7 +571,7 @@ WHERE {}
 
 > Specifiek benoemd gestructureerd datatype dat de structuur van een gegeven beschrijft, samengesteld uit minimaal twee elementen.
 
-Een `mim:GestructureerdDatatype` wordt vertaald naar een `sh:NodeShape`. Er wordt geen `sh:Class` aangemaakt zoals bij een `mim:Objecttype`, aangezien conform het MiM een gestructureerd datatype slechts een structuur schetst en geen semantiek.
+Een `mim:GestructureerdDatatype` wordt vertaald naar een `sh:NodeShape`. Er wordt geen `sh:Class` aangemaakt zoals bij een `mim:Objecttype`, aangezien conform het MIM een gestructureerd datatype slechts een structuur schetst en geen semantiek.
 
 > **ISSUE**
 >
@@ -636,9 +636,9 @@ WHERE {
 > **Voorstel:**
 Wordt getransformeerd zoals beschreven in https://geonovum.github.io/NEN3610-Linkeddata/#regels-klassen-union.
 
-[MB] Het lijkt erop dat in het MiM een union veel beperkter is dan in standaard UML. Daardoor kan de transformatie ook eenvoudiger plaatsvinden. Daarnaast is het handig om de rdf:List afzonderlijk te modelleren, conform het MiM.
+[MB] Het lijkt erop dat in het MIM een union veel beperkter is dan in standaard UML. Daardoor kan de transformatie ook eenvoudiger plaatsvinden. Daarnaast is het handig om de rdf:List afzonderlijk te modelleren, conform het MIM.
 
-Een union is feitelijk een onderdeel van de specificatiek van een attribuutsoort. In het MiM wordt deze als afzonderlijk modelelement opgenomen en kan daardoor ook hergebruikt of worden voorzien van extra meta-informatie. Een `min:Union`, in combinatie met het `mim:type` wordt vertaald naar een `sh:xone` waarbij de Union zelf een rdf:List is. In deze transformatieregel wordt ook de transformatie van `mim:type` meegenomen. Deze wordt hiermee niet opgenomen bij de transformatie van `mim:type` zelf (zie ook [Type](#type)). Merk op dat een empty list normaal gesproken wordt gerepresenteerd met `rdf:nil`. Dat is in ons geval niet handig, aangezien we expliciet een instantie willen aanmaken van het type `rdf:List`. Aangezien het MiM vereist dat minimaal twee union elementen aanwezig zijn, ontstaat altijd een correcte lijst.
+Een union is feitelijk een onderdeel van de specificatiek van een attribuutsoort. In het MIM wordt deze als afzonderlijk modelelement opgenomen en kan daardoor ook hergebruikt of worden voorzien van extra meta-informatie. Een `min:Union`, in combinatie met het `mim:type` wordt vertaald naar een `sh:xone` waarbij de Union zelf een rdf:List is. In deze transformatieregel wordt ook de transformatie van `mim:type` meegenomen. Deze wordt hiermee niet opgenomen bij de transformatie van `mim:type` zelf (zie ook [Type](#type)). Merk op dat een empty list normaal gesproken wordt gerepresenteerd met `rdf:nil`. Dat is in ons geval niet handig, aangezien we expliciet een instantie willen aanmaken van het type `rdf:List`. Aangezien het MIM vereist dat minimaal twee union elementen aanwezig zijn, ontstaat altijd een correcte lijst.
 
 ```
 CONSTRUCT {
@@ -675,7 +675,7 @@ Onderstaand voorbeeld geeft aan hoe de conversie uiteindelijk plaatsvindt:
 
 > **ISSUE**
 >
-> Eigenlijk is het helemaal niet mooi dat het zo ingewikkeld wordt. Maar DAT het zo gebeurt is een beperking van UML. We kunnen het ook eenvoudiger maken door het weg te laten, en in MiM expliciet op te nemen dat voor dit element deze waarden niet gelden.
+> Eigenlijk is het helemaal niet mooi dat het zo ingewikkeld wordt. Maar DAT het zo gebeurt is een beperking van UML. We kunnen het ook eenvoudiger maken door het weg te laten, en in MIM expliciet op te nemen dat voor dit element deze waarden niet gelden.
 
 ```
 ex:GeometrischObject a mim:Objecttype;
@@ -779,7 +779,7 @@ De tweede delete-insert query is een "opruimquery": aangezien we zijn begonnen m
 
 > **UITZOEKEN**
 >
-> Het domein betreft het eigen IM. Transformatie naar `owl:Ontology` lijkt voor de hand te liggen. In het MiM lijkt dit stereotype niet formeel beschreven. Hoe achterhalen we deze? En kunnen er meerdere packages met stereotype domein zijn binnen een model? Mogelijk moeten we dan meerdere owl:Ontologies aanmaken? Dit is gerelateerd aan het issue over dubbele namen bij bv [Objecttype](#objecttype).
+> Het domein betreft het eigen IM. Transformatie naar `owl:Ontology` lijkt voor de hand te liggen. In het MIM lijkt dit stereotype niet formeel beschreven. Hoe achterhalen we deze? En kunnen er meerdere packages met stereotype domein zijn binnen een model? Mogelijk moeten we dan meerdere owl:Ontologies aanmaken? Dit is gerelateerd aan het issue over dubbele namen bij bv [Objecttype](#objecttype).
 
 #### Extern
 > Een groepering van constructies die een externe instantie beheert en beschikbaar stelt aan een informatiemodel en die in het informatiemodel ongewijzigd gebruikt worden.
@@ -800,7 +800,7 @@ De tweede delete-insert query is een "opruimquery": aangezien we zijn begonnen m
 #### Constraint
 > Een constraint is een conditie of een beperking, die over een of meerdere modelelementen uit het informatiemodel geldt.
 
-Een constraint (en bijbehorende gegevens) worden direct overgenomen in het vertaalde model als blank node. Het MiM kent voor een constraint twee aspecten: tekstueel en formeel. Het MiM doet daarbij geen uitspraak over de taal die voor het formele model moet worden gehanteerd. Daarmee is een transformatie niet op zijn plaats. Zie ook de [INSPIRE RDF Guidelines](http://inspire-eu-rdf.github.io/inspire-rdf-guidelines/#ref_cr_constraint) waar een vergelijkbare redenatie wordt gevolgd.
+Een constraint (en bijbehorende gegevens) worden direct overgenomen in het vertaalde model als blank node. Het MIM kent voor een constraint twee aspecten: tekstueel en formeel. Het MIM doet daarbij geen uitspraak over de taal die voor het formele model moet worden gehanteerd. Daarmee is een transformatie niet op zijn plaats. Zie ook de [INSPIRE RDF Guidelines](http://inspire-eu-rdf.github.io/inspire-rdf-guidelines/#ref_cr_constraint) waar een vergelijkbare redenatie wordt gevolgd.
 
 ```
 CONSTRUCT {
@@ -824,13 +824,13 @@ Een `mim:naam` wordt vertaald naar een `rdfs:label`.
 
 > **ISSUE**
 >
-> In UML wil het nog wel eens gebruikelijk zijn om voor de naam van een modelelement een technische vorm te kiezen. Bijvoorbeeld "KadastraalObject" in plaats van "Kadastraal object". In Linked Data is het gebruikelijk dat het rdfs:label een voor mensen leesbaar label is, dus *met* spaties. De shacl `sh:name` property leent zich wat meer voor een technische naam. Het is echter niet duidelijk in het MiM wat wordt bedoeld.
+> In UML wil het nog wel eens gebruikelijk zijn om voor de naam van een modelelement een technische vorm te kiezen. Bijvoorbeeld "KadastraalObject" in plaats van "Kadastraal object". In Linked Data is het gebruikelijk dat het rdfs:label een voor mensen leesbaar label is, dus *met* spaties. De shacl `sh:name` property leent zich wat meer voor een technische naam. Het is echter niet duidelijk in het MIM wat wordt bedoeld.
 >
-> Mogelijke oplossing: een "naamgevingsconventie" toevoegen aan het totale MiM model, waaruit blijkt of sprake is van technische namen of van namen die voldoen aan de gebruikelijke spellingsregels.
+> Mogelijke oplossing: een "naamgevingsconventie" toevoegen aan het totale MIM model, waaruit blijkt of sprake is van technische namen of van namen die voldoen aan de gebruikelijke spellingsregels.
 >
 > Voorlopige aanname: de naam voldoet aan de gebruikelijke spellingsregels.
 >
-> Aanvulling LvdB: MiM heeft een paragraaf over naamgevingsconventies, echter is er een keuzevrijheid tussen naamgeving in of natuurlijke taal, of machineleesbare taal. Zie MiM [3.16 Naamgevingsconventies](https://docs.geostandaarden.nl/mim/mim10/#naamgevingsconventies).
+> Aanvulling LvdB: MIM heeft een paragraaf over naamgevingsconventies, echter is er een keuzevrijheid tussen naamgeving in of natuurlijke taal, of machineleesbare taal. Zie MIM [3.16 Naamgevingsconventies](https://docs.geostandaarden.nl/mim/mim10/#naamgevingsconventies).
 
 > **ISSUE**
 >
@@ -912,11 +912,11 @@ WHERE {
 
 Een `mim:definitie` wordt vertaald naar een `rdfs:comment`
 
-Rationale om niet te kiezen voor `skos:definition`: in de meeste Linked Data vocabulaires is het gebruikelijk om de beschrijving van een klasse op te nemen door middel van een `rdfs:comment`, wat ook de intentie is in het MiM. Het MiM is niet beoogd als een volledig begrippenkader. Het MiM biedt daarnaast de mogelijkheid om expliciet te verwijzen vanuit een modelelement naar een `skos:Concept`. Het ligt dan ook voor de hand om bij dit `skos:Concept` de werkelijke `skos:definition` op te nemen.
+Rationale om niet te kiezen voor `skos:definition`: in de meeste Linked Data vocabulaires is het gebruikelijk om de beschrijving van een klasse op te nemen door middel van een `rdfs:comment`, wat ook de intentie is in het MIM. Het MIM is niet beoogd als een volledig begrippenkader. Het MIM biedt daarnaast de mogelijkheid om expliciet te verwijzen vanuit een modelelement naar een `skos:Concept`. Het ligt dan ook voor de hand om bij dit `skos:Concept` de werkelijke `skos:definition` op te nemen.
 
 > **UITZOEKPUNT**
 >
-> Ik meende dat het mogelijk was om in het MiM op te geven dat een modelelement *ook* een begrip is. In dat geval zou je dus een andere vertaling kunnen maken, dwz: *wel* naar een `skos:definition`. Dit zou wel beter zijn.
+> Ik meende dat het mogelijk was om in het MIM op te geven dat een modelelement *ook* een begrip is. In dat geval zou je dus een andere vertaling kunnen maken, dwz: *wel* naar een `skos:definition`. Dit zou wel beter zijn.
 
 #### toelichting
 
@@ -1065,7 +1065,7 @@ WHERE {
 >
 > Wellicht net als bij `mim:datumOpname` te overwegen om hiervoor prov te gebruiken.
 >
-> [MB] Welke eigenschap zou hiervoor geschikt zijn? Ik vind deze lastig, omdat mim:authentiek heel dicht tegen de wet- en regelgeving aanzit, en dus specifiek MiM is.
+> [MB] Welke eigenschap zou hiervoor geschikt zijn? Ik vind deze lastig, omdat mim:authentiek heel dicht tegen de wet- en regelgeving aanzit, en dus specifiek MIM is.
 
 #### indicatie afleidbaar
 > Aanduiding dat gegeven afleidbaar is uit andere attribuut- en/of relatiesoorten.
@@ -1087,7 +1087,7 @@ WHERE {
 
 Een `mim:mogelijkGeenWaarde` wordt direct, zonder aanpassing, overgenomen in het vertaalde model, waarbij in een enkel geval een aanpassing wordt gedaan aan de manier waarop `mim:kardinaliteit` wordt getransformeerd.
 
-Linked Data gaat in beginsel uit van een "open word assumptie". Dit houdt onder andere in dat Linked Data er van uitgaat dat elk aspect mogelijk geen waarde kan hebben. Met SHACL kan deze assumptie worden beperkt. Zo zal bij een verplicht veld (zoals kardinaliteit 1..* of 1..1) daadwerkelijk ook een waarde aanwezig moeten zijn. Het MiM gaat in beginsel  uit van een "closed world assumptie", het veld `mim:mogelijkGeenWaarde` is juist bedoeld om deze assumptie te verruimen. Doordat het veld `mim:mogelijkGeenWaarde` altijd een waarde heeft ("Ja" of "Nee"), kan het veld ook worden gelezen als *als de waarde in de werkelijkheid bestaat, dan is deze ook aanwezig*. Dit maakt dat het veld `mim:mogelijkGeenWaarde` feitelijk in de context van Linked Data het model in vele gevallen een gesloten model maakt, vandaar ook het gebruik van SHACL waarmee we deze beperkingen kunnen opleggen. Indien sprake is van een "mogelijk geen waarde" dan is het wel noodzakelijk om de transformatieregel voor `mim:kardinaliteit` aan te passen, conform onderstaande tabel:
+Linked Data gaat in beginsel uit van een "open word assumptie". Dit houdt onder andere in dat Linked Data er van uitgaat dat elk aspect mogelijk geen waarde kan hebben. Met SHACL kan deze assumptie worden beperkt. Zo zal bij een verplicht veld (zoals kardinaliteit 1..* of 1..1) daadwerkelijk ook een waarde aanwezig moeten zijn. Het MIM gaat in beginsel  uit van een "closed world assumptie", het veld `mim:mogelijkGeenWaarde` is juist bedoeld om deze assumptie te verruimen. Doordat het veld `mim:mogelijkGeenWaarde` altijd een waarde heeft ("Ja" of "Nee"), kan het veld ook worden gelezen als *als de waarde in de werkelijkheid bestaat, dan is deze ook aanwezig*. Dit maakt dat het veld `mim:mogelijkGeenWaarde` feitelijk in de context van Linked Data het model in vele gevallen een gesloten model maakt, vandaar ook het gebruik van SHACL waarmee we deze beperkingen kunnen opleggen. Indien sprake is van een "mogelijk geen waarde" dan is het wel noodzakelijk om de transformatieregel voor `mim:kardinaliteit` aan te passen, conform onderstaande tabel:
 
 |`mim:mogelijkGeenWaarde`|`mim:kardinaliteit`|Aanpassing             |
 |------------------------|-------------------|-----------------------|
@@ -1199,7 +1199,7 @@ WHERE {
 
 > **ISUE**
 >
-> Het MiM stelt dat het formeelPatroon door de computer moet worden herkend, zonder specifiek te zijn op welke manier. `sh:pattern` vereist dat dit voldoet aan een reguliere expressie. Voorstel is om dit toe tevoegen aan het MiM.
+> Het MIM stelt dat het formeelPatroon door de computer moet worden herkend, zonder specifiek te zijn op welke manier. `sh:pattern` vereist dat dit voldoet aan een reguliere expressie. Voorstel is om dit toe tevoegen aan het MIM.
 
 ```
 CONSTRUCT {
@@ -1259,7 +1259,7 @@ WHERE {
 #### indicatie abstract object
 > Conceptueel model: indicatie dat het objecttype een generalisatie is, waarvan een object als specialisatie altijd voorkomt in de hoedanigheid van een (en slechts één) van de specialisaties van het betreffende objecttype. Logisch model: Indicatie dat er geen instanties (objecten) voor het betreffende objecttype mogen voorkomen.
 
-In een MiM conform informatiemodel kunnen zowel abstracte als concrete klassen voorkomen. In UML kun je daarvan afleiden dat je geen instanties mag hebben van abstracte klassen, maar alleen van concrete klassen. In RDF wordt geen onderscheid gemaakt tussen het abstract of concreet zijn van klassen. In RDF worden klassen beschouwd als sets van dingen. Als je een set kunt beschrijven, dan kunnen er ook dingen zijn die tot die set behoren.
+In een MIM conform informatiemodel kunnen zowel abstracte als concrete klassen voorkomen. In UML kun je daarvan afleiden dat je geen instanties mag hebben van abstracte klassen, maar alleen van concrete klassen. In RDF wordt geen onderscheid gemaakt tussen het abstract of concreet zijn van klassen. In RDF worden klassen beschouwd als sets van dingen. Als je een set kunt beschrijven, dan kunnen er ook dingen zijn die tot die set behoren.
 
 Een `mim:indicatieAbstractObject` wordt direct, zonder aanpassing, overgenomen in het vertaalde model.
 
@@ -1310,7 +1310,7 @@ WHERE {
 #### unidirectioneel
 > **ISSUE**
 >
-> LvdB: ik begrijp niet goed wat de betekenis is van het aspect 'unidirectioneel' in MiM. Het lijkt te gaan over de richting van de relatie.
+> LvdB: ik begrijp niet goed wat de betekenis is van het aspect 'unidirectioneel' in MIM. Het lijkt te gaan over de richting van de relatie.
 
 Bij `<<relatiesoort>>`:
 
@@ -1383,7 +1383,7 @@ WHERE {
 
 > **ISSUE**
 >
-> We hebben nog niet gespecificeerd hoe we constraints vertalen. Voorstel: alleen vertalen naar documentatie in het MiM model in RDF. In de toekomst wellicht vertalen naar SHACL.
+> We hebben nog niet gespecificeerd hoe we constraints vertalen. Voorstel: alleen vertalen naar documentatie in het MIM model in RDF. In de toekomst wellicht vertalen naar SHACL.
 
 Een `mim:specificatieTekst` wordt direct, zonder aanpassing, overgenomen in het vertaalde model, als onderdeel van de [transformatieregel voor constraints](#constraint).
 
@@ -1392,7 +1392,7 @@ Een `mim:specificatieTekst` wordt direct, zonder aanpassing, overgenomen in het 
 
 > **ISSUE**
 >
-> We hebben nog niet gespecificeerd hoe we constraints vertalen. Voorstel: alleen vertalen naar documentatie in het MiM model in RDF. In de toekomst wellicht vertalen naar SHACL.
+> We hebben nog niet gespecificeerd hoe we constraints vertalen. Voorstel: alleen vertalen naar documentatie in het MIM model in RDF. In de toekomst wellicht vertalen naar SHACL.
 
 Een `mim:specificatieFormeel` wordt direct, zonder aanpassing, overgenomen in het vertaalde model, als onderdeel van de [transformatieregel voor constraints](#constraint).
 

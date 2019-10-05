@@ -192,7 +192,7 @@ mim:RelatierolTarget a owl:Class;
 #
 
 #
-# Properties worden in het MiM (nu) metagegevens genoemd: "Elk modelelement kent een aantal metagegevens, die bepaalde aspecten van het modelelement specificeren."
+# Properties worden in het MIM (nu) metagegevens genoemd: "Elk modelelement kent een aantal metagegevens, die bepaalde aspecten van het modelelement specificeren."
 #
 
 # Gedefinieerde metagegevens
@@ -490,7 +490,7 @@ mim:Aggregate a mim:Enumeratiewaarde;
 # authenticiteit
 mim:Authenticiteit a skos:ConceptScheme;
   rdfs:label "Authenticiteit";
-  rdfs:comment "Authenticiteit zoals gedefinieerd in MiM";
+  rdfs:comment "Authenticiteit zoals gedefinieerd in MIM";
 .
 mim:Authentiek a skos:Concept;
   skos:inScheme mim:Authenticiteit;
