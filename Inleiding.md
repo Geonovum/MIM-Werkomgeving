@@ -309,23 +309,23 @@ We geven betekenis aan de termen door enerzijds een voor mensen leesbare definit
 koppelen aan een term (de "zachte semantiek") en anderzijds door relaties te leggen
 naar eerder gedefinieerde termen of relaties tussen termen in onze ontologie (de
 "harde semantiek"). We maken hierbij vooral gebruik van de bestaande wereldwijd
-geaccepteerde internetstandaarden [RDF](), [RDFS](), [SKOS]() en [OWL](). Daarnaast beschrijven we
+geaccepteerde internetstandaarden [RDF](https://www.w3.org/TR/rdf11-primer), [RDFS](https://www.w3.org/TR/rdf-schema), [SKOS](https://www.w3.org/TR/skos-reference) en [OWL](https://www.w3.org/TR/owl2-primer). Daarnaast beschrijven we
 ook welke constructies we wel en niet willen toestaan op het moment dat een modelleur
 een MIM model in Linked Data opsteld. Hiervoor maken we gebruik van de wereldwijd
-geaccepteerde internetstandaard [SHACL]().
+geaccepteerde internetstandaard [SHACL](https://www.w3.org/TR/shacl).
 
 **Een informatiemodel**
 Het informatiemodel zien we als een invulling van de MIM ontologie. Dit betekent dat
-de elemente in het informatiemodel exemplaren zijn van de klassen die in de MIM ontologie
+de elementen in het informatiemodel exemplaren zijn van de klassen die in de MIM ontologie
 zijn gedefinieerd. Zo is onderstaand voorbeeld een voorbeeld waarin het modelelement
 `vb:Schip` wordt gedefinieerd als exemplaar van de klasse `mim:Objecttype`. Een `vb:Schip`
 *is* dus een `mim:Objecttype`.
 
-```
+<pre class='ex-turtle'>
 vb:Schip a mim:Objecttype;
   rdfs:label "Schip"@nl;
 .
-```
+</pre>
 
 **Een ontologie voor een informatiemodel**
 Omdat een informatiemodel zelf al exemplaren betreft, is het niet direct mogelijk om
@@ -335,13 +335,13 @@ naar klassen. Zo is onderstaand voorbeeld een voorbeeld van de transformatie van
 de klasse `vbo:Schip`, en vervolgens kan hier een exemplaar van worden beschreven, bijvoorbeeld de
 pakjesboot van Sinterklaas, `ex:Pakjesboot12`.
 
-```
+<pre class='ex-turtle'>
 vbo:Schip a rdfs:Class;
   rdfs:seeAlso vb:Schip;
 .
 
 vb:Pakjesboot12 a vbo:Schip.
-```
+</pre>
 
 
 
