@@ -136,7 +136,7 @@ pre.ex-sparql {
   margin-top: 1.5em;
   padding: 1em 1em 0 1em;
 }
-pre.ex-turtle:before
+pre.ex-sparql:before
 {
   background: white;
   display: block;
@@ -145,15 +145,15 @@ pre.ex-turtle:before
   margin: -1em 0 0.4em -1em;
   padding: 0.2em 1em;
 }
-pre.ex-turtle
+pre.ex-sparql
 {
   background: #eeb;
 }
-pre.ex-turtle, pre.ex-turtle:before
+pre.ex-sparql, pre.ex-sparql:before
 {
   border: 1px solid #cc9;
 }
-pre.ex-turtle:before
+pre.ex-sparql:before
 {
   color: #996;
   content: "SPARQL";
