@@ -331,9 +331,9 @@ vb:Schip a mim:Objecttype;
 Omdat een informatiemodel zelf al exemplaren betreft, is het niet direct mogelijk om
 op basis van dit informatiemodel ook daadwerkelijk Linked Data in uit te drukken. Hiervoor
 is het nodig om de exemplaren uit het MIM informatiemodel zelf te transformeren, te "promoveren",
-naar klassen. Zo is onderstaand voorbeeld een voorbeeld van de transformatie van het exeplaar `vb:Schip` naar
-de klasse `vbo:Schip`, en vervolgens kan hier een exemplaar van worden beschreven, bijvoorbeeld de
-pakjesboot van Sinterklaas, `ex:Pakjesboot12`.
+naar klassen. Zo is onderstaand voorbeeld een voorbeeld van de transformatie van het exemplaar `vb:Schip` naar
+de klasse `vbo:Schip`. Vervolgens is het mogelijk om exemplaren van deze klasse te specificeren, zoals bijvoorbeeld de
+pakjesboot van Sinterklaas.
 
 <pre class='ex-turtle'>
 vbo:Schip a rdfs:Class;

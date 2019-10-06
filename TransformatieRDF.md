@@ -8,31 +8,31 @@ Op diezelfde manier levert het toepassen van het MIM in RDF geen ontologie of vo
 
 Zo leidt een MIM objecttype "Schip" tot de volgende weergave in RDF:
 
-```
-@prefix vb: <http://bp4mc2.org/voorbeeld/>.
-@prefix mim: <http://bp4mc2.org/def/mim#>.
+<pre class='ex-turtle'>
+@prefix vb: &lt;http://bp4mc2.org/voorbeeld/>.
+@prefix mim: &lt;http://bp4mc2.org/def/mim#>.
 
 vb:Schip a mim:Objecttype;
   rdfs:label "Schip"@nl;
 .
-```
+</pre>
 
 `vb:Schip` is in dit voorbeeld een voorkomen van de klasse `mim:Objecttype`. Dit voorkomen, `vb:Schip`, kent zelf geen voorkomens. Het is dan ook niet mogelijk om te stellen:
 
-```
+<pre class='ex-turtle'>
 vb:Pakjesboot12 a vb:Schip.
-```
+</pre>
 
 `vb:Schip` is immers geen klasse maar zelf een voorkomen! Om te kunnen uitdrukken dat de pakjesboot een voorkomen van de klasse Schip is, is een vertaling nodig naar een `rdfs:Class` of `owl:Class`, bijvoorbeeld door:
 
-```
-@prefix vbo: <http://bp4mc2.org/voorbeeld/def#>.
+<pre class='ex-turtle'>
+@prefix vbo: &lt;http://bp4mc2.org/voorbeeld/def#>.
 
 vbo:Schip a rdfs:Class;
   rdfs:seeAlso vb:Schip;
 .
 vb:Pakjesboot12 a vbo:Schip.
-```
+</pre>
 
 Dit document beschrijft hoe deze vertaling van het MIM model in RDF naar een RDFS-gebaseerde ontologie plaatsvindt. Daarbij zal niet alleen gebruik worden gemaakt van RDFS, maar ook van de OWL, SHACL en SKOS vocabulaires. De vertaling wordt zo veel mogelijk als SPARQL rules beschreven, zodat een machinale vertaling mogelijk is. De vertaling is beoogd als omkeerbaar. De SPARQL rules die vanuit een RDFS-gebaseerde ontologie de vertaling maken naar een MIM model in RDF, zullen daarom ook worden beschreven (in deze versie van het document zijn deze nog niet opgenomen).
 
@@ -191,7 +191,7 @@ Een `mim:Objecttype` wordt vertaald naar een `owl:Class` in combinatie met een `
 >
 > Voorlopige aanname is dat sprake is van (a).
 
-```
+<pre class='ex-sparql'>
 CONSTRUCT {
   ?class a owl:Class.
   ?class rdfs:seeAlso ?objecttype.
@@ -205,7 +205,7 @@ WHERE {
   BIND (t:classuri(?objecttypenaam) as ?class)
   BIND (t:nodeshapeuri(?objecttypenaam) as ?nodeshape)
 }
-```
+</pre>
 
 #### Attribuutsoort
 
