@@ -2,18 +2,18 @@
 
 ## Structuur metamodel in UML
 
-Dit hoofdstuk beschrijft hoe de modelelementen worden uitgedrukt in UML. 
+Dit hoofdstuk beschrijft hoe de modelelementen worden uitgedrukt in UML.
 
-De eerste paragraaf bevat diagrammen, in UML. Elk diagram geeft een aantal modelelementen weer. 
+De eerste paragraaf bevat diagrammen, in UML. Elk diagram geeft een aantal modelelementen weer.
 Het geheel van diagrammen, in samenhang, is opgenomen in de bijlage [Template naamgeving conventies](#template-naamgeving-conventies).
 
-Uitgangspunten voor het metamodel in UML zijn: 
-- UML 2.5 vormt de basis voor de conceptuele beschrijving. 
+Uitgangspunten voor het metamodel in UML zijn:
+- UML 2.5 vormt de basis voor de conceptuele beschrijving.
 - Gebruik te maken van de bestaande UML-modelelementen conform UML van OMG. OMG noemt dit een UML metaclass. Een voorbeeld hiervan is
-UML-Class. 
+UML-Class.
 - Daar waar (semantisch) nodig extensiemechanismen toe te passen met
 behoud van de betekenis van de UML-metaclasses. Het modelelement is dan een MIM
-metaclass. Hoe deze zich verhouden tot UML is weergegeven in de bijlage. 
+metaclass. Hoe deze zich verhouden tot UML is weergegeven in de bijlage.
 - Modelelementen hebben één stereotype. Daarnaast hebben twee verschillende
 stereotypen nooit dezelfde betekenis. Stereotypes worden toegepast als er een
 verbijzondering van een UML constructie nodig is met behoud van de betekenis van
@@ -26,7 +26,7 @@ stereotype.
 <pre class='ex-generic'>
 Voorbeeld: het MIM modelelement Objecttype wordt gemodelleerd als een
 UML-Class met stereotype «Objecttype». In Sparx EA wordt dit gemodelleerd met
-een Class met stereotype «Objecttype». 
+een Class met stereotype «Objecttype».
 Niet alle MIM metaclasses hebben een stereotype (nodig). In de kolom staat dan ‘-‘.
 </pre>
 
@@ -143,7 +143,7 @@ De alternatieve weergave van de naam.
 *Toelichting*
 
 Verdere toelichting voor UML modellen:
--   De alias is te specificeren voor NamedElements (zoals UML-Class, ML-association, UML-UML-Datatype en UML-property). De alias is in UML gespecificeerd bij de metaclass 
+-   De alias is te specificeren voor NamedElements (zoals UML-Class, ML-association, UML-UML-Datatype en UML-property). De alias is in UML gespecificeerd bij de metaclass
 [Element Import](#uml-n-6). In Enterprise Architect is de alternatieve weergave aan te zetten in de properties van een Diagram, via: use alias if available.
 
 
@@ -268,7 +268,7 @@ De relatiesoorten worden naar de volgende aspecten gespecificeerd.
 | **Naam√**                         | 1                 | Algemeen metagegeven.  | *name van metaclass Named element*                              | *Name*                                                              |
 | **Begrip**                        | 0..\*             | Algemeen metagegeven.  |                                                                 | *Tagged value*                                                      |
 | **Alias**                         | 0..1              | Algemeen metagegeven.  |                                                                 | *Alias*                                                             |
-| **Uni-directioneel**              | 1                 | Algemeen metagegeven.  |                                                                 | *Direction van de betreffende assiciation (van source naar target)* |
+| **Unidirectioneel**               | 1                 | Algemeen metagegeven.  |                                                                 | *Direction van de betreffende assiciation (van source naar target)* |
 | **Relatie eigenaar**              | 1                 | Algemeen metagegeven.  | */source: related Element bij Relationship Element*             | *Source*                                                            |
 | **Relatie doel**                  | 1                 | Algemeen metagegeven.  | */target: related Element bij Relationship Element*             | *Target*                                                            |
 | **Aggregatie type**               | 1                 | Algemeen metagegeven.  | *AggregationKind bij metaclass Property*                        | *Aggregation van de source role met waarde composite of shared*     |
@@ -377,7 +377,7 @@ Externe koppelingen worden naar de volgende aspecten gespecificeerd.
 | **Begrip**                 | 0..\*              | Algemeen metagegeven.                                     |                                                     | *Tagged value*                                                      |
 | **Alias**                  | 0..1               | Algemeen metagegeven.                                     | *UML-Property*                                      | *Alias*                                                             |
 | **Datum opname**           | 1                  | Algemeen metagegeven.                                     |                                                     | *Tagged value*                                                      |
-| **Uni-directioneel**       | 1                  | Algemeen metagegeven.                                     |                                                     | *Direction van de betreffende assiciation (van source naar target)* |
+| **Unidirectioneel**        | 1                  | Algemeen metagegeven.                                     |                                                     | *Direction van de betreffende assiciation (van source naar target)* |
 | **Relatie eigenaar**       | 1                  | Algemeen metagegeven.                                     | */source: related Element bij Relationship Element* | *Source*                                                            |
 | **Relatie doel**           | 1                  | Algemeen metagegeven.                                     | */target: related Element bij Relationship Element* | *Target*                                                            |
 | **Aggregatie type**        | 1                  | Algemeen metagegeven.                                     | *AggregationKind bij metaclass Property*            | *Aggregation van de source role met waarde composite of shared*     |
@@ -533,7 +533,7 @@ Informatiemodel packages worden naar de volgende aspecten gespecificeerd:
 | **MIM taal**               | 0..1              | *De aanduiding van de taal die gebruikt is voor de modelelementen.*                                                                                               |                                      | *Tagged value* |
 |                            |                   | *Bijvoorbeeld: EN of NL*                                                             | **Relatiemodelleringtype**   | 1                 | Algemeen metagegeven.                                                     |                                      | *Tagged value* |                                                                             |                                      |                |
 
-Toelichting Type informatiemodel: zoals bedoeld in paragraaf 1.5. Alle packages, oftewel «Domein» en «View», binnen het informatiemodel hebben hetzelfde type als het informatiemodel zelf. 
+Toelichting Type informatiemodel: zoals bedoeld in paragraaf 1.5. Alle packages, oftewel «Domein» en «View», binnen het informatiemodel hebben hetzelfde type als het informatiemodel zelf.
 
 **Specificatie voor «Domein»**
 

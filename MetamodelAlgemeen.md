@@ -1087,9 +1087,9 @@ relatie tussen een persoon en een adres. Het adres is het doel van deze relatie.
 koppeling.
 
 
-Metagegeven: **Uni-directioneel**
+Metagegeven: **Unidirectioneel**
 
->   **Definitie Uni-directioneel**
+>   **Definitie Unidirectioneel**
 
 >   De richting van een relatie, welke betekenis geeft aan de relatie vanuit het
 >   perspectief van de eigenaar van de relatie.

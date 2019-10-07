@@ -175,7 +175,7 @@ De gegevensregels (structuur) voor de metagegevens zijn wel specifiek per klasse
 | toelichting | [`mim:toelichting`](http://bp4mc2.org/def/mim#toelichting) | owl:DatatypeProperty | Een inhoudelijke toelichting op de definitie, ter verheldering of nadere duiding. |
 | type | [`mim:type`](http://bp4mc2.org/def/mim#type) | owl:ObjectProperty | Het datatype waarmee waarden van deze attribuutsoort worden vastgelegd. |
 | type aggregatie | [`mim:typeAggregatie`](http://bp4mc2.org/def/mim#typeAggregatie) | owl:ObjectProperty | Standaard betreft het geen aggregatie (None). Het type aggregatie mag 'composite' zijn. Dit wordt gedaan als er een afhankelijkheid is in die zin dat de target niet kan bestaan zonder de source: de target vervalt als de source vervalt. |
-| unidirectioneel | [`mim:unidirectioneel`](http://bp4mc2.org/def/mim#unidirectioneel) | owl:DatatypeProperty | Het gerelateerde objecttype (de target) waarvan het objecttype, die de eigenaar is van deze relatie (de source), kennis heeft. |
+| unidirectioneel | [`mim:unidirectioneel`](http://bp4mc2.org/def/mim#unidirectioneel) | owl:DatatypeProperty | De richting van een relatie, welke betekenis geeft aan de relatie vanuit het perspectief van de eigenaar van de relatie. |
 | uniekeAanduiding | [`mim:uniekeAanduiding`](http://bp4mc2.org/def/mim#uniekeAanduiding) | owl:DatatypeProperty | Voor objecttypen die deel uitmaken van een (basis)registratie of informatiemodel betreft dit de wijze waarop daarin voorkomende objecten (van dit type) uniek in de registratie worden aangeduid. |
 | waarde | [`mim:waarde`](http://bp4mc2.org/def/mim#waarde) | owl:ObjectProperty | \- |
 

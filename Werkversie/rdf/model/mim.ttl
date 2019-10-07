@@ -345,11 +345,8 @@ mim:gegevensgroeptype a owl:ObjectProperty;
 
 # Bij Relatiesoort en/of Externe koppeling
 mim:unidirectioneel a owl:DatatypeProperty;
-  rdfs:label "uni-directioneel"@nl;
-  # Relatiesoort
-  rdfs:comment "Het gerelateerde objecttype (de target) waarvan het objecttype, die de eigenaar is van deze relatie (de source), kennis heeft."@nl;
-  # Externe koppeling
-  rdfs:comment "Het gerelateerde objecttype uit een extern informatiemodel (de target) waarvan het objecttype die de eigenaar van deze relatie is (de source) kennis heeft. Het aggregation type van de source is altijd 'composition'. Alle relaties zijn altijd gericht van het objecttype (source) naar het gerelateerde objecttype (target)."@nl;
+  rdfs:label "unidirectioneel"@nl;
+  rdfs:comment "De richting van een relatie, welke betekenis geeft aan de relatie vanuit het perspectief van de eigenaar van de relatie."@nl;
 .
 mim:bron a owl:ObjectProperty;
   rdfs:label "bron";
