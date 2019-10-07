@@ -1253,13 +1253,13 @@ Metagegeven: **gegevensgroep**
 
 *Toelichting*
 
-Een objecttype gebruikt gegensgroepen voor het specificeren van groepen van
+Een objecttype gebruikt gegevensgroepen voor het specificeren van groepen van
 eigenschappen.
 
 *Toepassing*: objecttypen met gegevensgroepen.
 
 
-etagegeven: **type**
+Metagegeven: **type**
 
 >   **Definitie type**
 
