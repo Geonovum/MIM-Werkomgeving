@@ -134,7 +134,7 @@ Onderstaande tabellen geven een overzicht van alle transformaties en een referen
 |`mim:identificerend`|`mim:identificerend`|[identificerend](#identificerend)|
 |`mim:gegevensgroeptype`|`sh:node`|[gegevensgroeptype](#gegevensgroeptype-eigenschap)|
 |`mim:unidirectioneel`|n.n.b.|[unidirectioneel](#unidirectioneel)|
-|`mim:bron`|`sh:property`|[bron](#bron-eigenschap)|
+|`mim:bron`|`sh:property`|[bron](#bron)|
 |`mim:doel`|`sh:class`|[doel](#doel)|
 |`mim:typeAggregatie`|`mim:typeAggregatie`|[type aggregatie](#type-aggregatie)|
 |`mim:subtype`|`rdfs:subClassOf`|[Generalisatie](#generalisatie)|
@@ -1252,9 +1252,8 @@ Bij `<<relatiesoort>>`:
 Bij `<<Externe koppeling>>`:
 > Het gerelateerde objecttype uit een extern informatiemodel (de target) waarvan het objecttype die de eigenaar van deze relatie is (de source) kennis heeft. Het aggregation type van de source is altijd ‘composition’. Alle relaties zijn altijd gericht van het objecttype (source) naar het gerelateerde objecttype (target).
 
-#### bron (eigenschap)
-Bij `<<Relatiesoort>>` en `<<Externe koppeling>>`:
-> Het objecttype waarvan de relatie een eigenschap is.
+#### bron
+> Aanduiding van het bronobject in een relatie tussen objecten. Een bronoject heeft middels een relatiesoort een relatie met een doelobject.
 
 Een `mim:bron` wordt vertaald naar een `sh:property` die hoort bij de de NodeShape van het objecttype. Zie voor meer informatie over hoe relaties tussen objecttypen worden vertaald de paragrafen [Relatiesoort](#relatiesoort) en [Externe koppeling](#externe-koppeling).
 
@@ -1270,11 +1269,7 @@ WHERE {
 ```
 
 #### doel
-Bij `<<Relatiesoort>>`
-> Het objecttype waarmee een objecttype een logisch verband heeft
-
-Bij `<<Externe koppeling>>`:
-> Het objecttype uit een extern informatiemodel waarmee een objecttype een logische verbinding heeft.
+> Aanduiding van het gerelateerde objecttype die het eindpunt van de relatie aangeeft. Naar objecten van dit objecttype wordt verwezen.
 
 Een `mim:doel` wordt vertaald naar een `sh:class` met als waarde de URI van de Class die het gerelateerde objecttype representeert. Zie voor meer informatie over hoe relaties tussen objecttypen worden vertaald de paragrafen [Relatiesoort](#relatiesoort) en [Externe koppeling](#externe-koppeling).
 

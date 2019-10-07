@@ -148,7 +148,7 @@ De gegevensregels (structuur) voor de metagegevens zijn wel specifiek per klasse
 | formeel patroon | [`mim:formeelPatroon`](http://bp4mc2.org/def/mim#formeelPatroon) | owl:DatatypeProperty | Zoals patroon, formeel vastgelegd, uitgedrukt in een formele taal die door de computer wordt herkend. |
 | gegevensgroep | [`mim:gegevensgroep`](http://bp4mc2.org/def/mim#gegevensgroep) | owl:ObjectProperty | \- |
 | gegevensgroeptype | [`mim:gegevensgroeptype`](http://bp4mc2.org/def/mim#gegevensgroeptype) | owl:ObjectProperty | De verwijzing naar het bijbehorende gegevensgroeptype |
-| doel | [`mim:doel`](http://bp4mc2.org/def/mim#doel) | owl:ObjectProperty | Het objecttype waarmee een objecttype een logisch verband heeft, het doel van de relatie |
+| doel | [`mim:doel`](http://bp4mc2.org/def/mim#doel) | owl:ObjectProperty | Aanduiding van het gerelateerde objecttype die het eindpunt van de relatie aangeeft. Naar objecten van dit objecttype wordt verwezen. |
 | herkomst | [`mim:herkomst`](http://bp4mc2.org/def/mim#herkomst) | owl:DatatypeProperty | De registratie of het informatiemodel waaraan het modelelement ontleend is dan wel de eigen organisatie indien het door de eigen organisatie toegevoegd is. |
 | herkomst definitie | [`mim:herkomstDefinitie`](http://bp4mc2.org/def/mim#herkomstDefinitie) | owl:DatatypeProperty | De registratie of het informatiemodel waaruit de definitie is overgenomen dan wel een aanduiding die aangeeft uit welke bronnen de definitie is samengesteld. |
 | identificerend | [`mim:identificerend`](http://bp4mc2.org/def/mim#identificerend) | owl:DatatypeProperty | Aanduiding dat attribuutsoort onderdeel uitmaakt van de unieke aanduiding van een object |
@@ -165,7 +165,7 @@ De gegevensregels (structuur) voor de metagegevens zijn wel specifiek per klasse
 | mim versie | [`mim:versie`](http://bp4mc2.org/def/mim#versie) | owl:DatatypeProperty | De versie van de MIM specificatie die gebruikt is om het informatiemodel in uit te drukken. |
 | mogelijk geen waarde | [`mim:mogelijkGeenWaarde`](http://bp4mc2.org/def/mim#mogelijkGeenWaarde) | owl:DatatypeProperty | Aanduiding dat van een aspect geen waarde is geregistreerd, maar dat onduidelijk is of de waarde er werkelijk ook niet is. |
 | naam | [`mim:naam`](http://bp4mc2.org/def/mim#naam) | owl:DatatypeProperty | De naam van een modelelement |
-| bron | [`mim:bron`](http://bp4mc2.org/def/mim#bron) | owl:ObjectProperty | Het objecttype waarvan de relatie een eigenschap is. |
+| bron | [`mim:bron`](http://bp4mc2.org/def/mim#bron) | owl:ObjectProperty | Aanduiding van het bronobject in een relatie tussen objecten. Een bronoject heeft middels een relatiesoort een relatie met een doelobject. |
 | patroon | [`mim:patroon`](http://bp4mc2.org/def/mim#patroon) | owl:DatatypeProperty | De verzameling van waarden die gegevens van deze attribuutsoort kunnen hebben, oftewel het waardenbereik, uitgedrukt in een specifieke structuur. |
 | populatie | [`mim:populatie`](http://bp4mc2.org/def/mim#populatie) | owl:DatatypeProperty | Voor objecttypen die deel uitmaken van een (basis)registratie betreft dit de beschrijving van de exemplaren van het gedefinieerde objecttype die in de desbetreffende (basis)- registratie voorhanden zijn. |
 | specificatie formeel | [`mim:specificatieFormeel`](http://bp4mc2.org/def/mim#specificatieFormeel) | owl:DatatypeProperty | De beschrijving van de constraint in een formele specificatietaal, in OCL |

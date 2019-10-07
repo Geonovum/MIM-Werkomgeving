@@ -350,19 +350,11 @@ mim:unidirectioneel a owl:DatatypeProperty;
 .
 mim:bron a owl:ObjectProperty;
   rdfs:label "bron";
-  # Relatiesoort
-  rdfs:comment "Het objecttype waarvan de relatie een eigenschap is."@nl;
-  # Externe koppeling
-  rdfs:comment "Het objecttype waarvan de relatie een eigenschap is."@nl;
+  rdfs:comment "Aanduiding van het bronobject in een relatie tussen objecten. Een bronoject heeft middels een relatiesoort een relatie met een doelobject."@nl;
 .
-mim:gerelateerdObjecttype a owl:ObjectProperty;
-  rdfs:label "gerelateerd objecttype";
-  # Relatiesoort
-  rdfs:comment "Het objecttype waarmee een objecttype een logisch verband heeft"@nl;
-  # Generalisatie (objecttype)
-  rdfs:comment "Het objecttype dat de generalisatie is van een (ander) objecttype."@nl;
-  # Externe koppeling
-  rdfs:comment "Het objecttype uit een extern informatiemodel waarmee een objecttype een logische verbinding heeft."@nl;
+mim:doel a owl:ObjectProperty;
+  rdfs:label "doel";
+  rdfs:comment "Aanduiding van het gerelateerde objecttype die het eindpunt van de relatie aangeeft. Naar objecten van dit objecttype wordt verwezen."@nl;
 .
 mim:typeAggregatie a owl:ObjectProperty;
   rdfs:label "type aggregatie";
