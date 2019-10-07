@@ -1112,9 +1112,9 @@ bij welke objecttype het kenmerk wordt bijgehouden, oftewel wie de eigenaar is.
 koppeling.
 
 
-Metagegeven: **Aggregatie type**
+Metagegeven: **Aggregatietype**
 
->   **Definitie Aggregatie type**
+>   **Definitie Aggregatietype**
 
 >   Aanduiding of het objecttype die de eigenaar is van een relatie het doel van
 >   relatie ziet als een samen te voegen onderdeel.
@@ -1124,7 +1124,7 @@ een motor. In het informatiemodel gaat het vooral om de auto en is de motor
 alleen relevant vanuit het perspectief van dat het een onderdeel is van de auto.
 
 Standaard is er bij een relatie geen sprake van een aggregatie, ofdat het
-aggregatie type is 'none'. Als er wel sprake is van een aggregatie, dan geeft
+aggregatietype is 'none'. Als er wel sprake is van een aggregatie, dan geeft
 dit aan dat het objecttype die doel is van de relatie een onderdeel is van het
 objecttype die de eigenaar is van de relatie. De eigenaar geeft aan hoe de
 aggregatie in gezien moet worden. Dit kan zijn: - 'composite': de eigenaar is

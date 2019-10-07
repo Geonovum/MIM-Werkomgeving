@@ -118,7 +118,7 @@ shape:Relatiesoort a sh:NodeShape;
   sh:property shape:unidirectioneel;
   sh:property shape:bron;
   sh:property shape:doel;
-  sh:property shape:typeAggregatie;
+  sh:property shape:aggregatietype;
   # Metagegevens
   sh:property shape:kardinaliteit;
   sh:property shape:herkomst;
@@ -180,7 +180,7 @@ shape:ExterneKoppeling a sh:NodeShape;
   sh:property shape:datumOpname;
   # Eigenschappen alleen in de specificatietabel
   sh:property shape:bron;
-  sh:property shape:typeAggregatie;
+  sh:property shape:aggregatietype;
   sh:property shape:doel;
   sh:property shape:unidirectioneel;
 .
@@ -694,9 +694,9 @@ shape:supertype a sh:PropertyShape;
   sh:maxCount 1;
   sh:class mim:Objecttype;
 .
-shape:typeAggregatie a sh:PropertyShape;
-  sh:path mim:typeAggregatie;
-  sh:name "mim:typeAggregatie";
+shape:aggregatietype a sh:PropertyShape;
+  sh:path mim:aggregatietype;
+  sh:name "mim:aggregatietype";
   sh:order 30;
   sh:minCount 1;
   sh:maxCount 1;

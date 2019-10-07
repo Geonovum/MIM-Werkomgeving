@@ -271,7 +271,7 @@ De relatiesoorten worden naar de volgende aspecten gespecificeerd.
 | **Unidirectioneel**               | 1                 | Algemeen metagegeven.  |                                                                 | *Direction van de betreffende assiciation (van source naar target)* |
 | **Relatie eigenaar**              | 1                 | Algemeen metagegeven.  | */source: related Element bij Relationship Element*             | *Source*                                                            |
 | **Relatie doel**                  | 1                 | Algemeen metagegeven.  | */target: related Element bij Relationship Element*             | *Target*                                                            |
-| **Aggregatie type**               | 1                 | Algemeen metagegeven.  | *AggregationKind bij metaclass Property*                        | *Aggregation van de source role met waarde composite of shared*     |
+| **Aggregatietype**                | 1                 | Algemeen metagegeven.  | *AggregationKind bij metaclass Property*                        | *Aggregation van de source role met waarde composite of shared*     |
 | **Kardinaliteit√**                | 1                 | Algemeen metagegeven.  | *lowerValue en upperValue van de metaclass MultiplicityElement* | *Multiplicity van de target role*                                   |
 | **Herkomst**                      | 1                 | Algemeen metagegeven.  |                                                                 | *Tagged value*                                                      |
 | **Definitie√**                    | 1                 | Algemeen metagegeven.  | *Body van de metaclass Comment*                                 | *Notes*                                                             |
@@ -380,7 +380,7 @@ Externe koppelingen worden naar de volgende aspecten gespecificeerd.
 | **Unidirectioneel**        | 1                  | Algemeen metagegeven.                                     |                                                     | *Direction van de betreffende assiciation (van source naar target)* |
 | **Relatie eigenaar**       | 1                  | Algemeen metagegeven.                                     | */source: related Element bij Relationship Element* | *Source*                                                            |
 | **Relatie doel**           | 1                  | Algemeen metagegeven.                                     | */target: related Element bij Relationship Element* | *Target*                                                            |
-| **Aggregatie type**        | 1                  | Algemeen metagegeven.                                     | *AggregationKind bij metaclass Property*            | *Aggregation van de source role met waarde composite of shared*     |
+| **Aggregatietype**         | 1                  | Algemeen metagegeven.                                     | *AggregationKind bij metaclass Property*            | *Aggregation van de source role met waarde composite of shared*     |
 
 
 ### Specificatie metagegevens voor waardenlijsten

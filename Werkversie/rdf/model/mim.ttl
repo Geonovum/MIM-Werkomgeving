@@ -356,13 +356,9 @@ mim:doel a owl:ObjectProperty;
   rdfs:label "doel";
   rdfs:comment "Aanduiding van het gerelateerde objecttype die het eindpunt van de relatie aangeeft. Naar objecten van dit objecttype wordt verwezen."@nl;
 .
-mim:typeAggregatie a owl:ObjectProperty;
-  rdfs:label "type aggregatie";
-  # Relatiesoort
-  rdfs:comment "Standaard betreft het geen aggregatie (None). Het type aggregatie mag 'composite' zijn. Dit wordt gedaan als er een afhankelijkheid is in die zin dat de target niet kan bestaan zonder de source: de target vervalt als de source vervalt."@nl;
-  # Externe koppeling
-  # Eigenlijk geen definitie, maar dit is wat er in het brondocument staat...
-  rdfs:comment "Aanduiding dat het een compositie relatie is. Waarde is altijd Composite bij externe koppeling."@nl;
+mim:Aggregatietype a owl:ObjectProperty;
+  rdfs:label "aggregatietype"@nl;
+  rdfs:comment "Aanduiding of het objecttype die de eigenaar is van een relatie het doel van relatie ziet als een samen te voegen onderdeel."@nl;
 .
 
 # Generalisatie
@@ -464,7 +460,7 @@ mim:URI a mim:PrimitiefDatatype;
   mim:definitie "Unieke identificatie op internet conform RFC3986 en de URI-strategie Linked Open Data. Gestandaardiseerde manier om op het internet dingen (pagina's met informatie, objecten, datasets) uniek te identificeren."@nl;
 .
 
-# type aggregaties
+# Aggregatietypen
 mim:Aggregatietypen a skos:ConceptScheme;
   rdfs:label "Aggregatietypen";
   rdfs:comment "Aggregatietypen conform UML";

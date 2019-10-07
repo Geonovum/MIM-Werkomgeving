@@ -136,7 +136,7 @@ Onderstaande tabellen geven een overzicht van alle transformaties en een referen
 |`mim:unidirectioneel`|n.n.b.|[unidirectioneel](#unidirectioneel)|
 |`mim:bron`|`sh:property`|[bron](#bron)|
 |`mim:doel`|`sh:class`|[doel](#doel)|
-|`mim:typeAggregatie`|`mim:typeAggregatie`|[type aggregatie](#type-aggregatie)|
+|`mim:aggregatietype`|`mim:aggregatietype`|[aggregatietype](#aggregatietype)|
 |`mim:subtype`|`rdfs:subClassOf`|[Generalisatie](#generalisatie)|
 |`mim:supertype`|`rdfs:subClassOf`|[Generalisatie](#generalisatie)|
 |`mim:code`|n.n.b.|[code](#code)|
@@ -1284,17 +1284,17 @@ WHERE {
 }
 ```
 
-#### type aggregatie
-> Standaard betreft het geen aggregatie (None). Het type aggregatie mag ‘composite’ zijn. Dit wordt gedaan als er een afhankelijkheid is in die zin dat de target niet kan bestaan zonder de source: de target vervalt als de source vervalt.
+#### aggregatietype
+> Aanduiding of het objecttype die de eigenaar is van een relatie het doel van relatie ziet als een samen te voegen onderdeel.
 
-Aggregatie- en compositie-associaties worden gemodelleerd zoals simpele relatiesoorten, gebruikmakend van de specifieke naam die de associatie in het oorspronkelijke model heeft. Een `mim:typeAggregatie` wordt direct, zonder aanpassing, overgenomen in het vertaalde model.
+Aggregatie- en compositie-associaties worden gemodelleerd zoals simpele relatiesoorten, gebruikmakend van de specifieke naam die de associatie in het oorspronkelijke model heeft. Een `mim:aggregatietype` wordt direct, zonder aanpassing, overgenomen in het vertaalde model.
 
 ```
 CONSTRUCT {
-  ?subject mim:typeAggregatie ?typeaggregatie
+  ?subject mim:aggregatietype ?aggregatietype
 }
 WHERE {
-  ?modelelement mim:typeAggregatie ?typeaggregatie.
+  ?modelelement mim:aggregatietype ?aggregatietype.
   ?subject rdfs:seeAlso ?modelelement.
 }
 ```
