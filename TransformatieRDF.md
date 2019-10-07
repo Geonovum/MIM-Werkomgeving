@@ -54,19 +54,15 @@ In de SPARQL rules wordt gebruik gemaakt van een aantal SPARQL functies. In onde
 |t:mincount|Formuleert de minimum kardinaliteit op basis van een kardinaliteitsaanduiding (zie bij mim:kardinaliteit). De waarde kan ook unbound zijn, in dat geval wordt ook de variable niet gebound en daardoor de betreffende triple niet opgevoerd.|
 |t:maxcount|Formuleert de maximum kardinaliteit op basis van een kardinaliteitsaanduiding (zie bij mim:kardinaliteit). De waarde kan ook unbound zijn, in dat geval wordt ook de variable niet gebound en daardoor de betreffende triple niet opgevoerd.|
 
-> **ISSUE**
->
-> Er is, behalve `mim:naam`, geen formeel identificerend gegeven voor de modelelementen. Dit maakt het noodzakelijk om de URI op te bouwen uit de naam van het modelelement, eventueel aangevuld met gegevens van de package. In bepaalde gevallen is het echter veel logischer om te verwijzen naar elementen buiten het eigen model, zoals in Linked Data gebruikelijk is. Bijvoorbeeld bij externe koppelingen, referentielijsten en elementen in de "view" en "extern" packages.
->
-> Mogelijke oplossing is het toevoegen van het aspect `mim:identificatie` dat als waarde een URI heeft. Indien dit veld aanwezig is, dan wordt dit veld gebruikt als identificatie i.p.v. de `mim:naam`. Mogelijk alternatief is de mogelijkheid om namespace te ondersteunen bij de package (voorkeur). Uitdaging is ook dat de naam mogelijk natuurlijke taal kan zijn, wat je dan nog moet vertalen. Andere uitdaging is dat elk modelelement in één package ook in die namespace komt. En soms wil je attribuutsoorten hergebruiken en daar dus iets uit een andere namespace wilt gebruiken. Mogelijk kan het veld `mim:locatie` hier nog een rol spelen, aangezien dit een vergelijkbare rol heeft.
+<aside id='trans-1' class='note'>
+Om een unieke URI op te bouwen, is naast de naam van een modelelement, `mim:naam`, ook een namespace noodzakelijk. Deze namespace wordt afgeleid van het veld `mim:locatie` van de package waartoe het modelelement behoord. Deze namespace kan gelijk zijn aan de naam van deze package. Een vertaling is ook denkbaar, bijvoorbeeld als hetzelfde veld ook gebruikt wordt voor het bepalen van de namespace van een XSD, die vaak anders zal zijn dan de URI namespace.
+</aside>
 
-> **ISSUE**
->
-> Hoewel nergens expliciet geformuleerd, kent een MIM model in zijn representatie volgorde: attribuutsoorten worden in een bepaalde volgorde getoond binnen een objecttype, referentiewaarden worden in een bepaalde volgorde getoond in een referentielijst. Het MIM kent echter geen aspect waarin deze volgorde is opgenomen. Hierdoor zal de volgorde verdwijnen in het getransformeerde model en zal sprake zijn van een willekeurige volgorde.
->
-> Mogelijke oplossing is het toevoegen van het aspect `mim:volgnummer`, waarmee een volgorde kan worden opgegeven.
+<aside id='trans-2' class='note'>
+Het MIM model kent geen volgorde. Ondanks dat in de weergave attribuutsoorten in een bepaalde volgorde getoond worden binnen een objecttype en ook referentiewaarden in een bepaalde volgorde getoond worden in een referentielijst, is er in het MIM geen aspect waarin deze volgorde is opgenomen. In het getransformeerde model is het mogelijk om een volgorde te specificeren met behulp van de eigenschap `sh:index`. Deze eigenschap komt echter niet terug in het MIM model zelf. Twee MIM modellen die alleen qua volgorde verschillen moeten gezien worden als equivalent.
+</aside>
 
-> **ISSUE**
+> **VERDER UITWERKEN**
 >
 > Er zit nog een foutje in de transformatie: `rdfs:seeAlso` wordt in sommige gevallen gebruikt om meerdere resources. Bijvoorbeeld `mim:Objecttype` leidt tot zowel een `owl:Class` als een `sh:NodeShape`. Gevolg is dat bij de transformatie aspecten als `mim:naam`, `mim:definitie`, `mim:constraint` bij beide resources terecht komen. Beter zou zijn als het maar bij één van de twee terecht komt.
 
@@ -171,7 +167,7 @@ Onderstaande tabellen geven een overzicht van alle transformaties en een referen
 
 Omdat het getransformeerde model daadwerkelijk een nieuw model is, zullen de elementen in het getransformeerde model ook eigen URI's krijgen. Om de relatie tussen het originele MIM-model het het getransformeerde model op basis van RDFS te behouden, wordt de eigenschap `rdfs:seeAlso` gebruikt.
 
-> **ISSUE**
+> **VERDER UITWERKEN**
 >
 > Gebruik van `rdfs:seeAlso` is niet erg sterk. Een dergelijke eigenschap kan voor heel veel dingen gebruikt worden. Gekeken moet worden of er niet een betere property beschikbaar is voor dergelijke vocabulaires, of dat we een eigen property moeten introduceren binnen de mim vocabulaire, bv: `mim:equivalent`.
 
@@ -181,15 +177,9 @@ Omdat het getransformeerde model daadwerkelijk een nieuw model is, zullen de ele
 
 Een `mim:Objecttype` wordt vertaald naar een `owl:Class` in combinatie met een `sh:NodeShape`.
 
-> **ISSUE**
->
-> De identificatie van een objecttype is afgeleid van de naam van het objecttype. Het kan zijn dat deze niet uniek is. Bijvoorbeeld als er gebruik wordt gemaakt van packages en in meerdere packages komen dezelfde namen voor.
->
-> Mogelijke oplossing: er zijn meerdere oplossingen denkbaar: (a) in het MIM opnemen dat de naam uniek moet zijn, ook over packages heen. (b) afzonderlijke ontologieën (namespaces) maken per package. (c) package naam opnemen waar het mis gaat.
->
-> Dit is gerelateerd aan de issue over packages. MIM zegt niet zoveel over packages, maar dit zou wel beter moeten zijn. De standaarden waar NEN 3610 op gebaseerd zijn, zeggen hier wel wat over: hier nog naar kijken. Zie ook issue over `mim:naam`, mogelijk `mim:namespace` ondersteunen en dan dat alles uniek is binnen de package die een namespace heeft. Binnen UML is de klassenaam wel uniek binnen een package, maar MIM zegt hier formeel niet iets over.
->
-> Voorlopige aanname is dat sprake is van (a).
+<aside id='trans-3' class='note'>
+De identificatie van een objecttype is afgeleid van de naam van het objecttype en de namespace die afgeleid is van aspecten van de package waartoe het objecttype behoord. Aangezien een objecttype binnen een package uniek behoord te zijn conform het MIM, zal hiermee ook een unieke identificatie worden verkregen. Indien in meerdere packages dezelfde namespace wordt gehanteerd, dan dienen over al deze packages ook de namen van objecttypen uniek te zijn. Een dergelijke regel geldt ook voor andere modelelementen die binnen een package vallen.
+</aside>
 
 <pre class='ex-sparql'>
 CONSTRUCT {
@@ -215,18 +205,23 @@ Een `mim:Attribuutsoort` wordt vertaald naar een `sh:PropertyShape` in combinati
 
 In OWL is een property anders dan in het MIM een *first class citizen*. Dit betekent dat als in twee objecttypen gebruik wordt gemaakt van een attribuutsoort die dezelfde naam heeft, dit leidt tot twee verschillende attribuutsoorten. In OWL zou dit echter leiden tot maar één attribuutsoort, tenzij daadwerkelijk sprake is van verschil in betekenis.
 
-> **ISSUE**
->
-> Het is niet mogelijk om automatisch vast te stellen wanneer sprake is van één property of wanneer sprake is van meerdere properties. Veilig is om een property te maken per objecttype. Maar dit leidt niet tot een goed OWL model. Beter is om een property te maken op basis van de naam van de attribuutsoort, maar dan krijg je problemen als twee namen hetzelfde zijn (!).
-> Dit probleem speelt overigens niet alleen bij een mim:Attribuutsoort, maar ook bij een mim:Gegevensgroep en een mim:Relatie.
->
-> Mogelijke oplossing: toevoegen van een kenmerk bij een attribuutsoort waarin je de scope van de attribuutsoort kunt opgeven: algemeen of klasse-specifiek. In het geval van een klasse-specifiek atribuutsoort, dan wordt in OWL de naam afgeleid van zowel de attribuutsoort als het objecttype (of gegevensgroeptype). Of er zou een extra kenmerk bij kunnen met daar de "globale naam" van het attribuutsoort. Dat is mogelijk wat makkelijker. Vervolgens zou de globale naam uniek moeten zijn voor het gehele model, waarbij standaard de globale naam gelijk is aan de naam van de attribuutsoort (en anders moet je een foutmelding krijgen)
->
-> Voorlopige aanname: alle namen van attribuutsoorten zijn uniek. De kardinaliteit in het MIM model ondersteunt alleen dat een attribuutsoort uniek bij (bv) een objecttype hoort, maar dit is op zich ook juist want de PropertyShape hoort wel uniek bij de NodeShape, alleen (semantisch) kan de rdf:Property loshangen. Het is wel een discussie wat je zou willen. Op zich is het goed als er bij het MIM al over wordt nagedacht, en dat hier extra eisen aan worden gesteld (bv in het meest extreme geval: alle attribuutsoortnamen moeten unieke zijn..)
+<aside id='trans-4' class='note'>
+In een goed RDF model bestaat de mogelijkheid dat de properties worden hergebruikt over meerdere klassen. Er is nog steeds sprake van één unieke propertyshape bij één objecttype, maar in het RDF model kan vervolgens expliciet worden aangegeven dat de *betekenis* van de attribuutsoort dezelfde is als een attribuutsoort van een andere klasse. Dit is niet expliciet in het MIM uit te drukken.
 
-> **ISSUE**
+De oplossing hiervoor is om naar het veld `mim:begrip` te kijken. Indien bij twee attribuutsoorten verwezen wordt naar hetzelfde `mim:begrip`, dan wordt ook verondersteld dat de betekenis van deze attribuutsoorten hetzelfde is, en sprake is van dezelfde property.
+</aside>
+
+<aside id='trans-5' class='note'>
+De identificatie van een attribuutsoort is afgeleid van de naam van het attribuutsoort en de namespace die afgeleid is van aspecten van de package waartoe het objecttype behoord. Voor de propertyshape geldt dat deze laatste ook nog afhankelijk is van de naam van het objecttype waartoe de attribuutsoort behoord. Aangezien een attribuutsoort binnen zijn objecttype uniek behoord te zijn conform het MIM, zal hiermee ook een unieke identificatie worden verkregen. Voor de identificatie van de propertyshape geldt dat deze uniek moet zijn binnen de package als sprake is van hetzelfde begrip. Een dergelijke regel geldt ook voor andere modelelementen die binnen een objecttype vallen.
+</aside>
+
+> **VERDER UITWERKEN**
 >
 >De transformatie houdt nog niet rekening met het feit dat sommige datatypen in RDF juist geen literals zijn, maar resources. In die gevallen zou dus niet gesproken moeten worden over een `owl:DatatypeProperty`, maar een `owl:ObjectProperty`. Alleen de datatypes enumeratie (klopt dat?) en primitief datatype zouden naar een literal gaan, de overigen naar resources.
+
+>> **VERDER UITWERKEN**
+>
+> In een RDF model wordt soms ook gebruik gemaakt van attribuutsoorten die afkomstig zijn uit andere modellen. De URI-generatie ondersteunt dit nu niet (een attribuutsoort krijgt altijd de namespace die ook zijn bijbehorend objecttype heeft).
 
 De URI van de propertyshape wordt afgeleid van de naam van het modelelement dat de attribuutsoort "bezit" en de naam van de attribuutsoort. De URI van de datatypeproperty wordt afgeleid van de naam van de attribuutsoort.
 
@@ -282,17 +277,7 @@ WHERE {
 
 Een `mim:Gegevensgroeptype` wordt vertaald naar een `owl:Class` en een `sh:NodeShape`, net zoals een `mim:Objecttype`.
 
-> **ISSUE**
->
-> De manier waarop de URI van een gegevensgroeptype tot stand komt, betekent dat de naam van het gegevensgroeptype uniek moet zijn, inclusief de naam van het objecttype (en mogelijk ook datatype?). Dit wordt op dit moment binnen het MIM niet afgedwongen.
->
-> Mogelijke oplossing is om een dergelijke regel wel op te nemen in het MIM.
->
-> Voorlopige aanname is dat sprake is van uniciteit over alle elementen die nodeshape kunnen zijn.
->
-> NB de naam van een gegevensgroeptype is net als die van een objecttype wel uniek binnen een package.
-
-> **ONDERZOEKEN**
+> **VERDER UITWERKEN**
 >
 > Er is nu geen verschil meer tussen een gegevensgroeptype en een objecttype. Het MIM maakt echter wel onderscheid. Het verschil is alleen zichtbaar doordat een gegevensgroeptype als blank node verbonden is (zie ook [Gegevensgroep](#gegevensgroep)).
 
@@ -320,16 +305,13 @@ Generalisatie kan gebruikt worden tussen objecttypen, maar ook tussen datatypes.
 
 Een `mim:Generalisatie` wordt vertaald naar een `rdfs:subClassOf`.
 
-> **ISSUE**
->
-> Generalisatie is in Linked Data ook mogelijk op properties, en daar ook wel gebruikelijk. Dit wordt nu niet door het MIM ondersteunt. Het is handig als dit wordt toegevoegd.
+<aside id='trans-5' class='note'>
+Generalisatie is in Linked Data ook mogelijk op properties, en daar ook wel gebruikelijk. Dit wordt nu formeel niet door het MIM ondersteunt. Indien in een RDF model een dergelijke situatie zich voordoet, kan dit vertaald worden naar een MIM model waarbij de aspecten `mim:subtype` en `mim:supertype` verwijzen naar een attribuutsoort of relatieklasse.
+</aside>
 
-> **ISSUE**
->
-> Vertaling van een mim:Generalisatie naar een rdfs:subClassOf betekent dat wat in het MIM een metaklasse is, in Linked Data een eigenschap is geworden en geen (meta)class. Hierdoor is het niet mogelijk om extra kenmerken te verbinden aan een generalisatie. Dit betekent dat het niet mogelijk is om de generalisatie een naam of een alias te geven.
->
-> Voorlopige oplossing is om een rdf:Statement toe te voegen. Alternatief zou zijn om een subklassen te maken van `rdfs:subClassOf`.
-> We beschouwen dit issue als opgelost, wel even rationale toevoegen.
+<aside id='trans-6' class='note'>
+Vertaling van een mim:Generalisatie naar een rdfs:subClassOf betekent dat wat in het MIM een metaklasse is, in Linked Data een eigenschap is geworden en geen (meta)class. Hierdoor is het niet mogelijk om extra kenmerken te verbinden aan een generalisatie. Dit betekent dat het niet mogelijk is om de generalisatie een naam of een alias te geven. Dit wordt opgelost in de transformatie door middel van reificatie met rdf:Statement. Een alternatief zou kunnen zijn om subklassen te maken van `rdfs:subClassOf`. Hiervoor is niet gekozen omdat de reificatie oplossen leidt tot een meer gebruikelijk RDF model, waarbij de reificatie kan worden gezien als een aanvullende annotatie die ook weggelaten zou kunnen worden.
+</aside>
 
 ```
 CONSTRUCT {
@@ -357,7 +339,7 @@ WHERE {
 
 > De typering van het structurele verband tussen een object van een objecttype en een (ander) object van een ander (of hetzelfde) objecttype.
 
-> **ISSUE**
+> **VERDER UITWERKEN**
 >
 > In het MIM is het toegestaan om te kiezen tussen gebruik van `mim:Relatiesoort` OF `mim:Relatierol`.
 >
@@ -432,15 +414,13 @@ WHERE {
 
 Een externe koppeling wordt op dezelfde wijze omgezet als een `mim:Relatiesoort` (zie [Relatiesoort](#relatiesoort)). Het verschil is zichtbaar doordat de betreffende objecttypes uit verschillende modellen komen. Anders dan bij UML is het daarbij niet gebruikelijk om het andere objecttype "in" het eigen model te plaatsen, maar juist om direct naar het andere objecttype te verwijzen. Eventueel kan daarbij ook nog gebruik worden gemaakt van een `owl:imports` om expliciet aan te geven dat een ander model wordt gebruikt.
 
-> **ISSUE**
->
-> Hoe kun je aangeven dat sprake is van een ander model? Nu bieden we daar geen ondersteuning voor. Ook het toevoegen van `owl:imports` klinkt als een handmatige stap.
->
-> Mogelijke oplossing is het toevoegen van mim:identificatie, waarbij dan de URI expliciet wordt aangegeven als de externe bron. Punt is dan wel dat dit veld niet per sé verplicht is, en het ook zonder dit veld moet werken. Mogelijke oplossing is dan om gebruik te maken van de stereotypen van de packages?
+<aside id='trans-7' class='note'>
+Een externe koppeling gedraagd zich in een RDF model exact als een relatiesoort. Het verschil wordt zichtbaar doordat het gerelateerde objecttype in een andere package zitten met de aanduiding `mim:view` of `mim:extern`. De objecttypen in deze packages zullen dan ook niet worden omgezet. Wel wordt een extra `owl:imports` statement toegevoegd. Dit gebeurt bij de vertaling van de betreffende packages.
+</aside>
 
 #### Relatierol
 
-> **UITZOEKEN**
+> **VERDER UITWERKEN**
 >
 > Verder uitzoeken hoe met relatierol omgegaan moet worden. Feitelijk is de relatierol de daadwerkelijke "naam" van de property, en dus niet de naam van de relatiesoort... Dit lijkt dan dus niet helemaal goed te gaan. Zie ook [Relatiesoort](#relatiesoort).
 
@@ -448,14 +428,15 @@ Een externe koppeling wordt op dezelfde wijze omgezet als een `mim:Relatiesoort`
 
 > Een lijst met een opsomming van de mogelijke domeinwaarden van een attribuutsoort, die buiten het model in een externe waardenlijst worden beheerd. De domeinwaarden in de lijst kunnen in de loop van de tijd aangepast, uitgebreid, of verwijderd worden, zonder dat het informatiemodel aangepast wordt (in tegenstelling tot bij een enumeratie).
 
-> **ISSUE (blocking)**
+<aside id='trans-8' class='note'>
+Het MIM doet geen uitspraak hoe een referentielijst op de externe locatie wordt gepubliceerd. Voor de transformatie wordt de aanname gedaan dat de externe locatie overeen komt met een verzameling van uitspraken van `skos:Concept`, en dat op de URL aangeduid met het aspect `mim:locatie` van de referentielijst deze verzameling is te vinden. Bovendien wordt daarbij uitgegaan dat deze referentielijst zelf een `skos:ConceptScheme` is, waarbij de identificatie van dit `skos:ConceptScheme` gelijk is aan de URL van de locatie. Wel kan in een concrete transformatie deze regels getuned worden naar de specifieke behoefte.
+
+Deze constructie wordt ook toegepast bij enumeraties en codelijsten.
+</aside>
+
+> **VERDER UITWERKEN**
 >
-> Een referentielijst heeft een `mim:locatie` waarin is gespecificeerd waar de externe bron gevonden kan worden waar de mogelijke waarden zijn opgesomd. Dit KAN een URI of URL zijn en deze bron ZOU bijvoorbeeld een SKOS vocabulaire kunnen zijn. Maar omdat dit niet met zekerheid te zeggen is kunnen we niets met deze externe vocabulaires doen. Dit hoewel een referentielijst wel degelijk onderdeel kan uitmaken van het model in conceptuele zin, hoewel het om beheer- of technische redenen buiten het UML model is geplaatst.
->
-> Daarbij komt dat er een verschil is tussen de URI van het conceptschema en de URI waar de concepten zelf zijn op te vragen. Bovendien zijn er ook dan nog meerdere implementaties denkbaar. Alle waardelijsten kunnen in 1 bestand staan, maar ook is het mogelijk dat alle waarden in afzonderlijke bestanden staan. Bovendien zald de URI van de waardelijst en de URI van de waarden niet gelijk aan elkaar zijn.
->
-> Zie ook het eerste issue (algemeen): naar `mim:naam` en `mim:alias` lijkt het toevoegen van een `mim:identificatie` wenselijk, wat we kunnen vertalen naar een concrete URI. Daarmee kunnen we de URI van de waardelijst onderscheid van de plaats waar de inhoud van de waardelijst zelf te vinden is (dat zit dan in `mim:locatie`).
-> Vervolgens is het toevoegen van een "typering" wenselijk. Deze typering geeft aan wat voor "soort" waardelijst het betreft. Drie waarden zijn denkbaar: (1) Conceptschema, (2) Collectie en (3) Klasse. Geen waarde betekent dat er sprake is van een ander soort typering, of dat de typering onbekend is. In geval van een typering wordt verwacht dat de `mim:locatie` een URL is en dat het veld `mim:identificatie` in ingevuld en een URI is. Bij (1) is deze URI de identificatie van een skos:ConceptScheme, bij (2) is de URI de identificatie van een skos:Collection en bij (3) is de URI de identificatie van een rdfs:Class.
+>  Er zijn drie waardelijstconstructies gebruikelijk in RDF: (1) Conceptschema, (2) Collectie en (3) Klasse. Bovenstaande invulling gaat uit van de eerste situatie. Maar ook de andere twee situaties komen voor. Hier zal nog een oplossing voor gezocht moeten worden.
 
 #### Referentie element
 
@@ -465,15 +446,11 @@ Een externe koppeling wordt op dezelfde wijze omgezet als een `mim:Relatiesoort`
 
 > Een datatype waarvan de mogelijke waarden limitatief zijn opgesomd in een statische lijst.
 
-> **Voorstel**
+<aside id='trans-9' class='note'>
+Een enumeratie kan verschillende soorten dingen opsommen. Een lijst met waardes, bijv. een opsomming van nummers, maar ook een lijst met concepten, datatypes, of objecten. Het is dan ook niet triviaal om een goede automatische vertaling te bepalen die een enumeratie kan vertalen naar Linked Data. Om deze reden kiezen we voor een standaardtransformatie naar een klasse gelijknamig aan de enumeratieklasse, en instanties van deze klasse voor elk van de geënumereerde waardes. De geënumereeerde waardes worden ook met een `owl:oneOf` constructie begrensd door de enumeratieklasse. De SHACL gegevensregel maakt gebruikt van het `sh:in` construct om de enumeratie uit te drukken.
 
-We vertalen een enumeratie zoals beschreven in het NEN 3610 Linked Data profiel:
-
-> Een enumeratie kan verschillende soorten dingen opsommen. Een lijst met waardes, bijv. een opsomming van nummers, maar ook een lijst met concepten, datatypes, of objecten. Het is dan ook niet triviaal om een goede automatische vertaling te bepalen die een enumeratie kan vertalen naar Linked Data. Om deze reden kiezen we voor een standaardtransformatie naar een klasse gelijknamig aan de enumeratieklasse, en instanties van deze klasse voor elk van de geënumereerde waardes. De geënumereeerde waardes worden ook met een `owl:oneOf` constructie begrensd door de enumeratieklasse. De SHACL gegevensregel maakt gebruikt van het `sh:in` construct om de enumeratie uit te drukken.
-
-> In de Inspire RDF Guidelines wordt voorgeschreven om een enumeratie te modelleren als rdfs:Datatype in plaats van als klasse. Dit leidt tot enumeratiewaardes die een literal zijn, met het datatype van de enumeratie. Bijvoorbeeld `"hoog"^^imgolf:NatuurwaardeValue`. De reden om hiervan af te wijken is omdat enumeraties vaker waardelijsten zijn die een object of concept modelleren, dan een lijst van letterlijke waardes. Door deze waardes als objecten te modelleren blijft het mogelijk om nieuwe uitdrukkingen te doen over de waardes.
-
-[MB] Eens met de richting. Daarbij wel de opmerking dat we, anders dan bij NEN 3610, juist nu wel tot de juiste vertaling willen komen. Zie ook de uitwerking bij referentielijst. Als we die volgen, kunnen we op basis van het type de juiste vertaalvorm selecteren.
+In de Inspire RDF Guidelines wordt voorgeschreven om een enumeratie te modelleren als rdfs:Datatype in plaats van als klasse. Dit leidt tot enumeratiewaardes die een literal zijn, met het datatype van de enumeratie. Bijvoorbeeld `"hoog"^^imgolf:NatuurwaardeValue`. De reden om hiervan af te wijken is omdat enumeraties vaker waardelijsten zijn die een object of concept modelleren, dan een lijst van letterlijke waardes. Door deze waardes als objecten te modelleren blijft het mogelijk om nieuwe uitdrukkingen te doen over de waardes.
+</aside>
 
 #### Enumeratiewaarde
 
@@ -482,10 +459,6 @@ We vertalen een enumeratie zoals beschreven in het NEN 3610 Linked Data profiel:
 #### Codelist
 
 > Een referentielijst die extern wordt beheerd, en geen onderdeel is van het informatiemodel.
-
-> **ISSUE**
->
-> Een codelist heeft een `mim:locatie` waarin is gespecificeerd waar de externe bron gevonden kan worden waar de mogelijke waarden zijn opgesomd. Dit KAN een URI of URL zijn en deze bron ZOU bijvoorbeeld een SKOS vocabulaire kunnen zijn. Maar omdat dit niet met zekerheid te zeggen is kunnen we niets met deze externe vocabulaires doen. Dit hoewel een codelist wel degelijk onderdeel kan uitmaken van het model in conceptuele zin, hoewel het om beheer- of technische redenen buiten het UML model is geplaatst. Zie ook het overeenkomstige issue bij [Referentielijst](#referentielijst).
 
 ### Datatypen
 
@@ -573,14 +546,6 @@ WHERE {}
 
 Een `mim:GestructureerdDatatype` wordt vertaald naar een `sh:NodeShape`. Er wordt geen `sh:Class` aangemaakt zoals bij een `mim:Objecttype`, aangezien conform het MIM een gestructureerd datatype slechts een structuur schetst en geen semantiek.
 
-> **ISSUE**
->
-> De manier waarop de URI van een gestructureerdDatatype tot stand komt, betekent dat de naam van het gestructureerdDatatype uniek moet zijn, inclusief de naam van het objecttype. Dit wordt op dit moment binnen het MIM alleen afgedwongen binnen een package, maar niet overstijgend aan packages.
->
-> Mogelijke oplossing is om een dergelijke regel wel op te nemen in het MIM.
->
-> Voorlopige aanname is dat sprake is van uniciteit over alle elementen die nodeshape kunnen zijn.
-
 ```
 CONSTRUCT {
   ?nodeshape a sh:NodeShape.
@@ -600,12 +565,6 @@ WHERE {
 Een `mim:DataElement` wordt op dezelfde wijze omgezet als een `mim:Attribuutsoort`, waarbij het gestructureerd datatype de "bezitter" is van het data element. De relatie tussen het gestructureerd datatype en het data element wordt direct meegenomen in de transformatie.
 
 De URI van de propertyshape wordt afgeleid van de naam van het gestructureerde datatype dat het data element "bezit" en de naam van het data element. De URI van de datatypeproperty wordt ook op die manier afgeleid. Dit in afwijking van de wijze waarop dit bij een attribuutsoort gebeurt. Reden is het feit dat een data element echt uniek bij een gestructureerd datatype hoort, conform het metamodel (er is sprake van een compositie-aggregatie).
-
-> **ISSUE**
->
-> Een data element hoort uniek bij een gestructureerd datatype. In Linked Data zijn properties "first class citizens" en kan de property wel los bestaan. Ook bij data elementen kan dit voorkomen. Bijvoorbeeld als generieke eigenschappen als `rdf:value` of `rdfs:label` wordt gebruikt als data elementen. Zie ook het issue bij [Attribuutsoort](#attribuutsoort).
->
-> Conform het metamodel, ligt het voor de hand om bij data elementen juist wel te kiezen voor properties die uniek zijn voor een gestructureerd datatype. Dit maakt hergebruik van bestaande properties niet mogelijk. De oplossing hiervoor zou eventueel kunnen liggen in het ondersteunen van `mim:identificatie` (zie ook het eerste issue), waarbij de `mim:identificatie` de geconstrueerde issue zou overriden.
 
 ```
 CONSTRUCT {
@@ -633,12 +592,10 @@ WHERE {
 
 > Gestructureerd datatype, waarmee wordt aangegeven dat er meer dan één mogelijkheid is voor het datatype van een attribuut. Het attribuut zelf krijgt als datatype de union. De union biedt een keuze uit verschillende datatypes, elk afzonderlijk beschreven in een union element.
 
-> **Voorstel:**
-Wordt getransformeerd zoals beschreven in https://geonovum.github.io/NEN3610-Linkeddata/#regels-klassen-union.
-
-[MB] Het lijkt erop dat in het MIM een union veel beperkter is dan in standaard UML. Daardoor kan de transformatie ook eenvoudiger plaatsvinden. Daarnaast is het handig om de rdf:List afzonderlijk te modelleren, conform het MIM.
-
-Een union is feitelijk een onderdeel van de specificatiek van een attribuutsoort. In het MIM wordt deze als afzonderlijk modelelement opgenomen en kan daardoor ook hergebruikt of worden voorzien van extra meta-informatie. Een `min:Union`, in combinatie met het `mim:type` wordt vertaald naar een `sh:xone` waarbij de Union zelf een rdf:List is. In deze transformatieregel wordt ook de transformatie van `mim:type` meegenomen. Deze wordt hiermee niet opgenomen bij de transformatie van `mim:type` zelf (zie ook [Type](#type)). Merk op dat een empty list normaal gesproken wordt gerepresenteerd met `rdf:nil`. Dat is in ons geval niet handig, aangezien we expliciet een instantie willen aanmaken van het type `rdf:List`. Aangezien het MIM vereist dat minimaal twee union elementen aanwezig zijn, ontstaat altijd een correcte lijst.
+> **VERDER UITWERKEN**
+Het lijkt erop dat in het MIM een union veel beperkter is dan in standaard UML. Daardoor kan de transformatie ook eenvoudiger plaatsvinden. Daarnaast is het handig om de rdf:List afzonderlijk te modelleren, conform het MIM. Op dit moment wordt opnieuw gekeken naar de Union, om deze mogelijk toch breder in te zetten. Daarbij kan mogelijk ook gekeken worden of een eenvoudigere vertaling mogelijk is.
+>
+> Een union is feitelijk een onderdeel van de specificatiek van een attribuutsoort. In het MIM wordt deze als afzonderlijk modelelement opgenomen en kan daardoor ook hergebruikt of worden voorzien van extra meta-informatie. Een `min:Union`, in combinatie met het `mim:type` wordt vertaald naar een `sh:xone` waarbij de Union zelf een rdf:List is. In deze transformatieregel wordt ook de transformatie van `mim:type` meegenomen. Deze wordt hiermee niet opgenomen bij de transformatie van `mim:type` zelf (zie ook [Type](#type)). Merk op dat een empty list normaal gesproken wordt gerepresenteerd met `rdf:nil`. Dat is in ons geval niet handig, aangezien we expliciet een instantie willen aanmaken van het type `rdf:List`. Aangezien het MIM vereist dat minimaal twee union elementen aanwezig zijn, ontstaat altijd een correcte lijst.
 
 ```
 CONSTRUCT {
@@ -673,7 +630,7 @@ Anders dan andere voorbeelden, wordt hier geen CONSTRUCT query gebruikt, omdat d
 
 Onderstaand voorbeeld geeft aan hoe de conversie uiteindelijk plaatsvindt:
 
-> **ISSUE**
+> **VERDER UITWERKEN**
 >
 > Eigenlijk is het helemaal niet mooi dat het zo ingewikkeld wordt. Maar DAT het zo gebeurt is een beperking van UML. We kunnen het ook eenvoudiger maken door het weg te laten, en in MIM expliciet op te nemen dat voor dit element deze waarden niet gelden.
 
@@ -777,23 +734,23 @@ De tweede delete-insert query is een "opruimquery": aangezien we zijn begonnen m
 #### Domein
 > Het eigen IM.
 
-> **UITZOEKEN**
+> **VERDER UITWERKEN**
 >
 > Het domein betreft het eigen IM. Transformatie naar `owl:Ontology` lijkt voor de hand te liggen. In het MIM lijkt dit stereotype niet formeel beschreven. Hoe achterhalen we deze? En kunnen er meerdere packages met stereotype domein zijn binnen een model? Mogelijk moeten we dan meerdere owl:Ontologies aanmaken? Dit is gerelateerd aan het issue over dubbele namen bij bv [Objecttype](#objecttype).
 
 #### Extern
 > Een groepering van constructies die een externe instantie beheert en beschikbaar stelt aan een informatiemodel en die in het informatiemodel ongewijzigd gebruikt worden.
 
-> **UITZOEKEN**
+> **VERDER UITWERKEN**
 >
 > Het lijkt logisch om een extern package niet te transformeren. De aanname is dat dit al door de externe instantie is gedaan. Mits er voldoende informatie in de UML aanwezig is, kan er een owl:import statement gegenereerd worden. Hiervoor lijkt minimaal noodzakelijk dat een locatie opgegeven kan worden. Wellicht dat het element `mim:locatie` dan ook toegepast zou kunnen worden op package niveau?
 
 #### View
 > Een groepering van objecttypen die gespecificeerd zijn in een extern informatiemodel en vanuit het perspectief van het eigen informatiemodel inzicht geeft welke gegevens van deze objecttypen relevant zijn binnen het eigen informatiemodel.
 
-> **UITZOEKEN**
+> **VERDER UITWERKEN**
 >
-> LvdB: ik weet niet precies wat het verschil is tussen `<<Extern>>` en `<<View>>`. Het lijkt in beide gevallen logisch om een extern package niet te transformeren. De aanname is dat dit al door de externe instantie is gedaan. Mits er voldoende informatie in de UML aanwezig is, kan er een owl:import statement gegenereerd worden. Maar voor een `<<View>>` package is dat wellicht overbodig.
+> In geval van een view, wordt - anders dan bij extern - wel een eigen invulling gegeven aan de structuur van het objecttype. Dit betekent dat de betekenis uit het andere model wordt overgenomen, maar niet per sé alle eigenschappen en relaties. Dit betekent concreet voor de transformatie dat er wel shapes worden aangemaakt voor view-packages, maar geen classes of properties.
 
 ### Overig
 
