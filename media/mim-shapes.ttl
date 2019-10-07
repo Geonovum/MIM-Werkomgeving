@@ -62,7 +62,6 @@ shape:Attribuutsoort a sh:NodeShape;
   sh:property shape:formeelPatroon;
   sh:property shape:indicatieMaterieleHistorie;
   sh:property shape:indicatieFormeleHistorie;
-  sh:property shape:locatie_optioneel;
   sh:property shape:kardinaliteit;
   sh:property shape:authentiek;
   sh:property shape:toelichting;
@@ -117,8 +116,8 @@ shape:Relatiesoort a sh:NodeShape;
   sh:property shape:begripsterm;
   # Eigenschappen alleen in de specificatietabel
   sh:property shape:unidirectioneel;
-  sh:property shape:objecttype;
-  sh:property shape:gerelateerdObjecttype;
+  sh:property shape:bron;
+  sh:property shape:doel;
   sh:property shape:typeAggregatie;
   # Metagegevens
   sh:property shape:kardinaliteit;
@@ -180,9 +179,9 @@ shape:ExterneKoppeling a sh:NodeShape;
   sh:property shape:begripsterm;
   sh:property shape:datumOpname;
   # Eigenschappen alleen in de specificatietabel
-  sh:property shape:objecttype;
+  sh:property shape:bron;
   sh:property shape:typeAggregatie;
-  sh:property shape:gerelateerdObjecttype;
+  sh:property shape:doel;
   sh:property shape:unidirectioneel;
 .
 shape:Referentielijst a sh:NodeShape;
@@ -319,6 +318,24 @@ shape:UnionElement a sh:NodeShape;
   sh:property shape:formeelPatroon;
   sh:property shape:kardinaliteit;
 .
+shape:Package a sh:NodeShape;
+  sh:targetClass mim:Package;
+  sh:name "mim:Package";
+  sh:property shape:naam;
+  sh:property shape:alias;
+.
+shape:Informatiemodel a sh:NodeShape;
+  sh:targetClass mim:Informatiemodel;
+  sh:name "mim:Informatiemodel";
+  sh:property shape:naam;
+  sh:property shape:alias;
+.
+shape:Domein a sh:NodeShape;
+  sh:targetClass mim:Domein;
+  sh:name "mim:Domein";
+  sh:property shape:naam;
+  sh:property shape:alias;
+.
 shape:Extern a sh:NodeShape;
   sh:targetClass mim:Extern;
   sh:name "mim:Extern";
@@ -371,12 +388,6 @@ shape:Constraint a sh:NodeShape;
 .
 
 # De volgende shapes zijn niet expliciet aangegeven, maar bestaan wel
-shape:Domein a sh:NodeShape;
-  sh:targetClass mim:Domein;
-  sh:name "mim:Domein";
-  sh:property shape:naam;
-  sh:property shape:alias;
-.
 shape:PrimitiefDatatype a sh:NodeShape;
   sh:targetClass mim:PrimitiefDatatype;
   sh:name "mim:PrimitiefDatatype";
@@ -384,12 +395,12 @@ shape:PrimitiefDatatype a sh:NodeShape;
 shape:RelatierolSource a sh:NodeShape;
   sh:targetClass mim:RelatierolSource;
   sh:name "mim:RelatierolSource";
-  sh:property shape:objecttype;
+  sh:property shape:bron;
 .
 shape:RelatierolTarget a sh:NodeShape;
   sh:targetClass mim:RelatierolTarget;
   sh:name "mim:RelatierolTarget";
-  sh:property shape:gerelateerdObjecttype;
+  sh:property shape:doel;
 .
 shape:Id a sh:NodeShape;
   sh:targetClass mim:Id;
@@ -441,6 +452,11 @@ shape:begrip a sh:PropertyShape;
   sh:order 3;
   sh:class skos:Concept;
 .
+shape:Begrip a sh:NodeShape;
+  sh:targetClass skos:Concept;
+  sh:name "skos:Concept";
+.
+
 shape:begripsterm a sh:PropertyShape;
   sh:path mim:begripsterm;
   sh:name "mim:begripsterm";
@@ -646,9 +662,9 @@ shape:unidirectioneel a sh:PropertyShape;
   sh:maxCount 1;
   sh:datatype xsd:boolean;
 .
-shape:objecttype a sh:PropertyShape;
-  sh:path mim:objecttype;
-  sh:name "mim:objecttype";
+shape:bron a sh:PropertyShape;
+  sh:path mim:bron;
+  sh:name "mim:bron";
   sh:order 26;
   sh:minCount 1;
   sh:maxCount 1;
@@ -662,9 +678,9 @@ shape:subtype a sh:PropertyShape;
   sh:maxCount 1;
   sh:class mim:Objecttype;
 .
-shape:gerelateerdObjecttype a sh:PropertyShape;
-  sh:path mim:gerelateerdObjecttype;
-  sh:name "mim:gerelateerdObjecttype";
+shape:doel a sh:PropertyShape;
+  sh:path mim:doel;
+  sh:name "mim:doel";
   sh:order 27;
   sh:minCount 1;
   sh:maxCount 1;

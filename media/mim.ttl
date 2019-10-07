@@ -142,16 +142,28 @@ mim:UnionElement a owl:Class;
 .
 
 # Packages
+mim:Package a owl:Class;
+  rdfs:label "Package"@nl;
+  rdfs:comment "Een package is een benoemde en begrensde verzameling/groepering van modelelementen."@nl;
+.
+mim:Informatiemodel a owl:Class;
+  rdfs:subClassOf mim:Package;
+  rdfs:label "Informatiemodel"@nl;
+  rdfs:comment "Hoofdpackage waar alle subpackages die een informatiemodel beschrijven onder vallen."@nl;
+.
 mim:Domein a owl:Class;
-  rdfs:label "Domein (het eigen IM)"@nl;
-  #ISSUE: Niet gedefinieerd
+  rdfs:subClassOf mim:Package;
+  rdfs:label "Domein"@nl;
+  rdfs:comment "Een groepering van constructies die een semantisch samenhangend gedeelte van een informatiemodel beschrijven."@nl;
 .
 mim:Extern a owl:Class;
+  rdfs:subClassOf mim:Package;
   rdfs:label "Extern"@nl;
   rdfs:comment "Een groepering van constructies die een externe instantie beheert en beschikbaar stelt aan een informatiemodel en die in het informatiemodel ongewijzigd gebruikt worden."@nl;
   dct:source mimdoc:sectie2.2.5-20-Extern;
 .
 mim:View a owl:Class;
+  rdfs:subClassOf mim:Package;
   rdfs:label "View"@nl;
   rdfs:comment "Een groepering van objecttypen die gespecificeerd zijn in een extern informatiemodel en vanuit het perspectief van het eigen informatiemodel inzicht geeft welke gegevens van deze objecttypen relevant zijn binnen het eigen informatiemodel."@nl;
   dct:source mimdoc:sectie2.2.5-21-View;
@@ -339,8 +351,8 @@ mim:unidirectioneel a owl:DatatypeProperty;
   # Externe koppeling
   rdfs:comment "Het gerelateerde objecttype uit een extern informatiemodel (de target) waarvan het objecttype die de eigenaar van deze relatie is (de source) kennis heeft. Het aggregation type van de source is altijd 'composition'. Alle relaties zijn altijd gericht van het objecttype (source) naar het gerelateerde objecttype (target)."@nl;
 .
-mim:objecttype a owl:ObjectProperty;
-  rdfs:label "objecttype";
+mim:bron a owl:ObjectProperty;
+  rdfs:label "bron";
   # Relatiesoort
   rdfs:comment "Het objecttype waarvan de relatie een eigenschap is."@nl;
   # Externe koppeling
@@ -468,23 +480,26 @@ mim:Aggregatietypen a skos:ConceptScheme;
   rdfs:label "Aggregatietypen";
   rdfs:comment "Aggregatietypen conform UML";
 .
-mim:None a skos:Concept;
+mim:Geen a skos:Concept;
   skos:inScheme mim:Aggregatietypen;
-  rdfs:label "None"@nl;
-  skos:prefLabel "None"@nl;
+  rdfs:label "Geen"@nl;
+  skos:prefLabel "Geen"@nl;
+  skos:altLabel "None"@en;
   skos:definitie "Er is geen sprake van een aggregate"@nl;
 .
-mim:Composite a mim:Enumeratiewaarde;
+mim:Compositie a mim:Enumeratiewaarde;
   skos:inScheme mim:Aggregatietypen;
-  rdfs:label "Composite"@nl;
-  skos:prefLabel "Composite"@nl;
+  rdfs:label "Compositie"@nl;
+  skos:prefLabel "Compositie"@nl;
+  skos:altLabel "Composition"@en;
   skos:definitie "Compositie (gesloten wiebertje)"@nl;
 .
-mim:Aggregate a mim:Enumeratiewaarde;
+mim:Gedeeld a mim:Enumeratiewaarde;
   skos:inScheme mim:Aggregatietypen;
-  rdfs:label "Aggregate"@nl;
-  mim:naam "Aggregate"@nl;
-  skos:definitie "Aggregatie (open wiebertje)"@nl;
+  rdfs:label "Gedeeld"@nl;
+  skos:prefLabel "Gedeeld"@nl;
+  skos:altLabel "Shared"@en;
+  skos:definitie "Gedeeld (open wiebertje)"@nl;
 .
 
 # authenticiteit

@@ -134,8 +134,8 @@ Onderstaande tabellen geven een overzicht van alle transformaties en een referen
 |`mim:identificerend`|`mim:identificerend`|[identificerend](#identificerend)|
 |`mim:gegevensgroeptype`|`sh:node`|[gegevensgroeptype](#gegevensgroeptype-eigenschap)|
 |`mim:unidirectioneel`|n.n.b.|[unidirectioneel](#unidirectioneel)|
-|`mim:objecttype`|`sh:property`|[objecttype](#objecttype-eigenschap)|
-|`mim:gerelateerdObjecttype`|`sh:class`|[gerelateerd objecttype](#gerelateerd-objecttype)|
+|`mim:bron`|`sh:property`|[bron](#bron-eigenschap)|
+|`mim:doel`|`sh:class`|[doel](#doel)|
 |`mim:typeAggregatie`|`mim:typeAggregatie`|[type aggregatie](#type-aggregatie)|
 |`mim:subtype`|`rdfs:subClassOf`|[Generalisatie](#generalisatie)|
 |`mim:supertype`|`rdfs:subClassOf`|[Generalisatie](#generalisatie)|
@@ -362,7 +362,7 @@ CONSTRUCT {
 WHERE {
   ?relatiesoort a mim:Relatiesoort.
   ?relatiesoort mim:naam ?relatiesoortnaam.
-  ?bezitter mim:objecttype ?relatiesoort.
+  ?bezitter mim:bron ?relatiesoort.
   ?bezitter mim:naam ?bezittersnaam
   BIND (t:propertyshapeuri(?bezittersnaam,?relatiesoortnaam) as ?propertyshape)
   BIND (t:propertyuri(?relatiesoortnaam) as ?objectproperty)
@@ -399,7 +399,7 @@ CONSTRUCT {
 WHERE {
   ?relatieklasse a mim:Relatiesoort.
   ?relatieklasse mim:naam ?relatieklassenaam.
-  ?bezitter mim:objecttype ?relatieklasse.
+  ?bezitter mim:bron ?relatieklasse.
   ?bezitter mim:naam ?bezittersnaam
   BIND (t:classuri(?relatieklassenaam) as ?class)
   BIND (t:nodeshapeuri(?relatieklassenaam) as ?nodeshape)
@@ -1252,38 +1252,38 @@ Bij `<<relatiesoort>>`:
 Bij `<<Externe koppeling>>`:
 > Het gerelateerde objecttype uit een extern informatiemodel (de target) waarvan het objecttype die de eigenaar van deze relatie is (de source) kennis heeft. Het aggregation type van de source is altijd ‘composition’. Alle relaties zijn altijd gericht van het objecttype (source) naar het gerelateerde objecttype (target).
 
-#### objecttype (eigenschap)
+#### bron (eigenschap)
 Bij `<<Relatiesoort>>` en `<<Externe koppeling>>`:
 > Het objecttype waarvan de relatie een eigenschap is.
 
-Een `mim:objecttype` wordt vertaald naar een `sh:property` die hoort bij de de NodeShape van het objecttype. Zie voor meer informatie over hoe relaties tussen objecttypen worden vertaald de paragrafen [Relatiesoort](#relatiesoort) en [Externe koppeling](#externe-koppeling).
+Een `mim:bron` wordt vertaald naar een `sh:property` die hoort bij de de NodeShape van het objecttype. Zie voor meer informatie over hoe relaties tussen objecttypen worden vertaald de paragrafen [Relatiesoort](#relatiesoort) en [Externe koppeling](#externe-koppeling).
 
 ```
 CONSTRUCT {
   ?objecttype sh:property ?modelelement
 }
 WHERE {
-  ?modelelement mim:objecttype ?objecttype.
+  ?modelelement mim:bron ?objecttype.
   ?subject rdfs:seeAlso ?modelelement.
   ?object rdfs:seeAlso ?objecttype.
 }
 ```
 
-#### gerelateerd objecttype
+#### doel
 Bij `<<Relatiesoort>>`
 > Het objecttype waarmee een objecttype een logisch verband heeft
 
 Bij `<<Externe koppeling>>`:
 > Het objecttype uit een extern informatiemodel waarmee een objecttype een logische verbinding heeft.
 
-Een `mim:gerelateerdObjecttype` wordt vertaald naar een `sh:class` met als waarde de URI van de Class die het gerelateerde objecttype representeert. Zie voor meer informatie over hoe relaties tussen objecttypen worden vertaald de paragrafen [Relatiesoort](#relatiesoort) en [Externe koppeling](#externe-koppeling).
+Een `mim:doel` wordt vertaald naar een `sh:class` met als waarde de URI van de Class die het gerelateerde objecttype representeert. Zie voor meer informatie over hoe relaties tussen objecttypen worden vertaald de paragrafen [Relatiesoort](#relatiesoort) en [Externe koppeling](#externe-koppeling).
 
 ```
 CONSTRUCT {
   ?subject sh:class ?object
 }
 WHERE {
-  ?modelelement mim:gerelateerdObjecttype ?gerelateerdobjecttype.
+  ?modelelement mim:doel ?gerelateerdobjecttype.
   ?subject rdfs:seeAlso ?modelelement.
   ?object rdfs:seeAlso ?gerelateerdobjecttype.
 }
