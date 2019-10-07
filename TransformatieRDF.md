@@ -305,11 +305,11 @@ Generalisatie kan gebruikt worden tussen objecttypen, maar ook tussen datatypes.
 
 Een `mim:Generalisatie` wordt vertaald naar een `rdfs:subClassOf`.
 
-<aside id='trans-5' class='note'>
+<aside id='trans-6' class='note'>
 Generalisatie is in Linked Data ook mogelijk op properties, en daar ook wel gebruikelijk. Dit wordt nu formeel niet door het MIM ondersteunt. Indien in een RDF model een dergelijke situatie zich voordoet, kan dit vertaald worden naar een MIM model waarbij de aspecten `mim:subtype` en `mim:supertype` verwijzen naar een attribuutsoort of relatieklasse.
 </aside>
 
-<aside id='trans-6' class='note'>
+<aside id='trans-7' class='note'>
 Vertaling van een mim:Generalisatie naar een rdfs:subClassOf betekent dat wat in het MIM een metaklasse is, in Linked Data een eigenschap is geworden en geen (meta)class. Hierdoor is het niet mogelijk om extra kenmerken te verbinden aan een generalisatie. Dit betekent dat het niet mogelijk is om de generalisatie een naam of een alias te geven. Dit wordt opgelost in de transformatie door middel van reificatie met rdf:Statement. Een alternatief zou kunnen zijn om subklassen te maken van `rdfs:subClassOf`. Hiervoor is niet gekozen omdat de reificatie oplossen leidt tot een meer gebruikelijk RDF model, waarbij de reificatie kan worden gezien als een aanvullende annotatie die ook weggelaten zou kunnen worden.
 </aside>
 
@@ -414,7 +414,7 @@ WHERE {
 
 Een externe koppeling wordt op dezelfde wijze omgezet als een `mim:Relatiesoort` (zie [Relatiesoort](#relatiesoort)). Het verschil is zichtbaar doordat de betreffende objecttypes uit verschillende modellen komen. Anders dan bij UML is het daarbij niet gebruikelijk om het andere objecttype "in" het eigen model te plaatsen, maar juist om direct naar het andere objecttype te verwijzen. Eventueel kan daarbij ook nog gebruik worden gemaakt van een `owl:imports` om expliciet aan te geven dat een ander model wordt gebruikt.
 
-<aside id='trans-7' class='note'>
+<aside id='trans-8' class='note'>
 Een externe koppeling gedraagd zich in een RDF model exact als een relatiesoort. Het verschil wordt zichtbaar doordat het gerelateerde objecttype in een andere package zitten met de aanduiding `mim:view` of `mim:extern`. De objecttypen in deze packages zullen dan ook niet worden omgezet. Wel wordt een extra `owl:imports` statement toegevoegd. Dit gebeurt bij de vertaling van de betreffende packages.
 </aside>
 
@@ -428,7 +428,7 @@ Een externe koppeling gedraagd zich in een RDF model exact als een relatiesoort.
 
 > Een lijst met een opsomming van de mogelijke domeinwaarden van een attribuutsoort, die buiten het model in een externe waardenlijst worden beheerd. De domeinwaarden in de lijst kunnen in de loop van de tijd aangepast, uitgebreid, of verwijderd worden, zonder dat het informatiemodel aangepast wordt (in tegenstelling tot bij een enumeratie).
 
-<aside id='trans-8' class='note'>
+<aside id='trans-9' class='note'>
 Het MIM doet geen uitspraak hoe een referentielijst op de externe locatie wordt gepubliceerd. Voor de transformatie wordt de aanname gedaan dat de externe locatie overeen komt met een verzameling van uitspraken van `skos:Concept`, en dat op de URL aangeduid met het aspect `mim:locatie` van de referentielijst deze verzameling is te vinden. Bovendien wordt daarbij uitgegaan dat deze referentielijst zelf een `skos:ConceptScheme` is, waarbij de identificatie van dit `skos:ConceptScheme` gelijk is aan de URL van de locatie. Wel kan in een concrete transformatie deze regels getuned worden naar de specifieke behoefte.
 
 Deze constructie wordt ook toegepast bij enumeraties en codelijsten.
@@ -446,7 +446,7 @@ Deze constructie wordt ook toegepast bij enumeraties en codelijsten.
 
 > Een datatype waarvan de mogelijke waarden limitatief zijn opgesomd in een statische lijst.
 
-<aside id='trans-9' class='note'>
+<aside id='trans-10' class='note'>
 Een enumeratie kan verschillende soorten dingen opsommen. Een lijst met waardes, bijv. een opsomming van nummers, maar ook een lijst met concepten, datatypes, of objecten. Het is dan ook niet triviaal om een goede automatische vertaling te bepalen die een enumeratie kan vertalen naar Linked Data. Om deze reden kiezen we voor een standaardtransformatie naar een klasse gelijknamig aan de enumeratieklasse, en instanties van deze klasse voor elk van de geënumereerde waardes. De geënumereeerde waardes worden ook met een `owl:oneOf` constructie begrensd door de enumeratieklasse. De SHACL gegevensregel maakt gebruikt van het `sh:in` construct om de enumeratie uit te drukken.
 
 In de Inspire RDF Guidelines wordt voorgeschreven om een enumeratie te modelleren als rdfs:Datatype in plaats van als klasse. Dit leidt tot enumeratiewaardes die een literal zijn, met het datatype van de enumeratie. Bijvoorbeeld `"hoog"^^imgolf:NatuurwaardeValue`. De reden om hiervan af te wijken is omdat enumeraties vaker waardelijsten zijn die een object of concept modelleren, dan een lijst van letterlijke waardes. Door deze waardes als objecten te modelleren blijft het mogelijk om nieuwe uitdrukkingen te doen over de waardes.
@@ -779,23 +779,13 @@ WHERE {
 
 Een `mim:naam` wordt vertaald naar een `rdfs:label`.
 
-> **ISSUE**
->
-> In UML wil het nog wel eens gebruikelijk zijn om voor de naam van een modelelement een technische vorm te kiezen. Bijvoorbeeld "KadastraalObject" in plaats van "Kadastraal object". In Linked Data is het gebruikelijk dat het rdfs:label een voor mensen leesbaar label is, dus *met* spaties. De shacl `sh:name` property leent zich wat meer voor een technische naam. Het is echter niet duidelijk in het MIM wat wordt bedoeld.
->
-> Mogelijke oplossing: een "naamgevingsconventie" toevoegen aan het totale MIM model, waaruit blijkt of sprake is van technische namen of van namen die voldoen aan de gebruikelijke spellingsregels.
->
-> Voorlopige aanname: de naam voldoet aan de gebruikelijke spellingsregels.
->
-> Aanvulling LvdB: MIM heeft een paragraaf over naamgevingsconventies, echter is er een keuzevrijheid tussen naamgeving in of natuurlijke taal, of machineleesbare taal. Zie MIM [3.16 Naamgevingsconventies](https://docs.geostandaarden.nl/mim/mim10/#naamgevingsconventies).
+<aside id='trans-11' class='note'>
+Het MIM geeft de mogelijkheid voor naamgevingsconventies. Zie MIM [3.16 Naamgevingsconventies](https://docs.geostandaarden.nl/mim/mim10/#naamgevingsconventies). Dit is op dit moment niet in het MIM zelf als gestructureerd aspect beschikbaar. Voor een RDF model wordt uitgegaan dat de `mim:naam` de voor mensen leesbare naam bevat. Hier wordt dus **geen** technische naam verondersteld en dit veld mag dus ook spaties bevatten.
+</aside>
 
-> **ISSUE**
->
-> In UML is het niet gebruikelijk om taal toe te voegen aan een eigenschap. In Linked Data is het prima mogelijk om meerdere talen te ondersteunen en ook aan te geven om welke taal het gaat.
->
-> Mogelijke oplossing: op het metaniveau van het model aangeven om welke taal het gaat, wat vervolgens in het gehele model wordt gebruikt.
->
-> Voorlopige aanname: we veronderstellen geen taal.
+<aside id='trans-12' class='note'>
+Het MIM in Linked Data ondersteunt, zoals elk Linked Data model, de mogelijkheid om specifiek een taal aan te geven. Indien een taal aanwezig is, dan wordt dit veld overgenomen. Ook kent het MIM de mogelijkheid om expliciet een taal op het niveau van een package aan te geven. Dit is mede gedaan omdat in UML het niet zo eenvoudig is om een taal per aspect aan te geven. Indien er in een MIM model geen taal is aangegeven, dan wordt deze taal op package niveau gebruikt op elke plek waar een aspect een string is en geen expliciete taalvermelding heeft.
+</aside>
 
 ```
 CONSTRUCT {
@@ -813,13 +803,9 @@ WHERE {
 
 Een `mim:alias` wordt vertaald naar een `skos:altLabel`
 
-> **ISSUE**
->
-> Aangezien in UML er niet direct een mogelijkheid is om taal te ondersteunen, wordt het alias nog wel eens gebruikt om een andere taal aan te duiden. Ook wordt het alias wel eens gebruikt om het onderscheid te maken tussen een meer technische naam (bv in CamelCase) en een functionele naam (met spaties enzo). Indien dit het geval is, dan klopt de vertaling naar `skos:altLabel` niet.
->
-> Mogelijke oplossing: zie de oplossing bij issue 9
->
-> Voorlopige aanname: dat een mim:alias daadwerkelijk een alternatieve weergave van de naam is.
+<aside id='trans-13' class='note'>
+Het MIM geeft de mogelijkheid voor naamgevingsconventies. Zie MIM [3.16 Naamgevingsconventies](https://docs.geostandaarden.nl/mim/mim10/#naamgevingsconventies). Dit is op dit moment niet in het MIM zelf als gestructureerd aspect beschikbaar. Voor een RDF model wordt uitgegaan dat de `mim:alias` een voor mensen alternatieve weergave biedt. Hier wordt dus **geen** technische naam verondersteld en dit veld mag dus ook spaties bevatten.
+</aside>
 
 ```
 CONSTRUCT {
@@ -871,7 +857,7 @@ Een `mim:definitie` wordt vertaald naar een `rdfs:comment`
 
 Rationale om niet te kiezen voor `skos:definition`: in de meeste Linked Data vocabulaires is het gebruikelijk om de beschrijving van een klasse op te nemen door middel van een `rdfs:comment`, wat ook de intentie is in het MIM. Het MIM is niet beoogd als een volledig begrippenkader. Het MIM biedt daarnaast de mogelijkheid om expliciet te verwijzen vanuit een modelelement naar een `skos:Concept`. Het ligt dan ook voor de hand om bij dit `skos:Concept` de werkelijke `skos:definition` op te nemen.
 
-> **UITZOEKPUNT**
+> **VERDER UITWERKEN**
 >
 > Ik meende dat het mogelijk was om in het MIM op te geven dat een modelelement *ook* een begrip is. In dat geval zou je dus een andere vertaling kunnen maken, dwz: *wel* naar een `skos:definition`. Dit zou wel beter zijn.
 
@@ -947,7 +933,7 @@ WHERE {
 
 > Indicatie of de materiële historie van het kenmerk van het object te bevragen is.
 
-> **UITZOEKEN**
+> **VERDER UITWERKEN**
 >
 > Hoe gaan we dit doen? Feitelijk moet je deze indicatie omzetten naar daadwerkelijke properties.
 >
@@ -957,7 +943,7 @@ WHERE {
 
 > Indicatie of de formele historie van het kenmerk van het object bijgehouden wordt en te bevragen is.
 
-> **UITZOEKEN**
+> **VERDER UITWERKEN**
 >
 > Hoe gaan we dit doen? Feitelijk moet je deze indicatie omzetten naar daadwerkelijke properties. Meestal doen we daarbij formele historie als onderdeel van de volledige klasse, maar niet de afzonderlijke elementen.
 >
@@ -1018,12 +1004,6 @@ WHERE {
 }
 ```
 
-> **UITZOEKEN**
->
-> Wellicht net als bij `mim:datumOpname` te overwegen om hiervoor prov te gebruiken.
->
-> [MB] Welke eigenschap zou hiervoor geschikt zijn? Ik vind deze lastig, omdat mim:authentiek heel dicht tegen de wet- en regelgeving aanzit, en dus specifiek MIM is.
-
 #### indicatie afleidbaar
 > Aanduiding dat gegeven afleidbaar is uit andere attribuut- en/of relatiesoorten.
 
@@ -1071,11 +1051,7 @@ WHERE {
 #### locatie
 > Als het type van het attribuutsoort een waardenlijst is, dan wordt hier de locatie waar deze te vinden is opgegeven.
 
-Een `mim:locatie` wordt direct, zonder aanpassing, overgenomen in het vertaalde model.
-
-> **ISSUE**
->
-> `mim:locatie` wordt zowel gebruikt op het niveau van het datatype, maar ook bij een attribuutsoort. Het lijkt meer voor de hand te liggen om dit allen bij het datatype toe te staan. De vertaling wordt dan ook bij het datatype zelf opgenomen, en zou vertaald kunnen worden naar `rdfs:isDefinedBy`, `wdrs:describeby` of iets dergelijks.
+Een `mim:locatie` wordt direct, zonder aanpassing, overgenomen in het vertaalde model. Daarnaast wordt dit veld gebruikt bij het munten van de URI's van de verschillende modelelementen.
 
 #### type
 > Het datatype waarmee waarden van deze attribuutsoort worden vastgelegd.
@@ -1154,9 +1130,9 @@ WHERE {
 
 `mim:formeelPatroon` wordt beschreven met `sh:pattern`.
 
-> **ISUE**
->
-> Het MIM stelt dat het formeelPatroon door de computer moet worden herkend, zonder specifiek te zijn op welke manier. `sh:pattern` vereist dat dit voldoet aan een reguliere expressie. Voorstel is om dit toe tevoegen aan het MIM.
+<aside id='trans-13' class='note'>
+Het MIM stelt dat het formeelPatroon door de computer moet worden herkend, zonder specifiek te zijn op welke manier. In het geval van een MIM in Linked Data model wordt uitgegaan dat hier sprake is van een reguliere expressie.
+</aside>
 
 ```
 CONSTRUCT {
@@ -1265,9 +1241,9 @@ WHERE {
 ```
 
 #### unidirectioneel
-> **ISSUE**
->
-> LvdB: ik begrijp niet goed wat de betekenis is van het aspect 'unidirectioneel' in MIM. Het lijkt te gaan over de richting van de relatie.
+
+> **VERDER UITWERKEN**
+> Betreft het automatisch opnemen van een inverse relatie. Daarbij dient de rolnaam gebruikt te worden voor deze inverse relatie.
 
 Bij `<<relatiesoort>>`:
 
@@ -1331,14 +1307,14 @@ WHERE {
 #### code
 > De in een registratie of informatiemodel aan de enumeratiewaarde toegekend unieke code (niet te verwarren met alias, zoals bedoeld in 2.6.1).
 
-> **ISSUE**
+> **VERDER UITWERKEN**
 >
 > We hebben nog niet gespecificeerd hoe we enumeraties vertalen. In NEN3610-LD is standaardtransformatie een transformatie naar een klasse gelijknamig aan de enumeratieklasse, en instanties van deze klasse voor elk van de geënumereerde waardes. Als we dit volgen zouden we de `mim:code` kunnen vertalen naar een `rdfs:label` of `skos:altLabel`.
 
 #### specificatie-tekst
 > De specificatie van de constraint in normale tekst.
 
-> **ISSUE**
+> **VERDER UITWERKEN**
 >
 > We hebben nog niet gespecificeerd hoe we constraints vertalen. Voorstel: alleen vertalen naar documentatie in het MIM model in RDF. In de toekomst wellicht vertalen naar SHACL.
 
@@ -1347,7 +1323,7 @@ Een `mim:specificatieTekst` wordt direct, zonder aanpassing, overgenomen in het 
 #### specificatie-formeel
 > De beschrijving van de constraint in een formele specificatietaal, in OCL.
 
-> **ISSUE**
+> **VERDER UITWERKEN**
 >
 > We hebben nog niet gespecificeerd hoe we constraints vertalen. Voorstel: alleen vertalen naar documentatie in het MIM model in RDF. In de toekomst wellicht vertalen naar SHACL.
 
