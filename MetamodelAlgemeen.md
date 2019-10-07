@@ -1209,7 +1209,7 @@ Het specificeren van een patroon is alleen van toepassing wanneer de
 specificatie aangeeft dat de waarde (direct of indirect) een primitief datatype
 betreft, zoals een CharacterString.
 
-| *Toepassing*: de modelelementen uit de groep datatype en attribuutsoort. 
+| *Toepassing*: de modelelementen uit de groep datatype en attribuutsoort.
 Metagegeven: **Formeel patroon** |
 |-----------------------------------------------------------------------------------------------------------|
 
@@ -1415,7 +1415,7 @@ Tagged values zijn altijd van het datatype CharacterString. Aanvullend geldt:
 | Indicatie materiële historie        | Ja, Nee                                                                    |
 | Indicatie formele historie          | Ja, Nee                                                                    |
 | Mogelijk geen waarde                | Ja, Nee                                                                    |
-| Type aggregratie                    | composite, aggregate, of geen/leeg/niet gebruikt                           |
+| Type aggregratie                    | Compositie, Gedeeld, Geen                                                  |
 | [Authentiek](#authentieke-gegevens) | Authentiek, Basisgegeven, Wettelijk gegeven, Landelijk kerngegeven, Overig |
 
 NB: Geef bij overig in uw eigen informatiemodel aan wat u er onder verstaat.
