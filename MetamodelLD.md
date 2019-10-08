@@ -406,6 +406,8 @@ Externe koppelingen worden naar de volgende aspecten gespecificeerd.
 
 ### Specificatie metagegevens voor waardenlijsten
 
+Waar in onderstaande specificaties sprake is van een locatie, wordt in Linked Data termen veronderstelt dat op deze locatie de waardenlijst te vinden is. Concreet betekent dit dat via content negotiation de waardenlijst in een specifieke serialisatie van Linked Data is op te halen (zoals: JSON-LD, RDF/XML, Turtle). Vervolgens wordt verondersteld dat de resources in dit bestand de afzonderlijke waarden van de waardenlijst zijn, of andere metagegevens van de waardenlijst. Zo ligt voor de hand dat het bestand een resource bevat met dezelfde URL als opgegeven in de locatie, waarmee nadere informatie kan worden aangegeven.
+
 **Specificatie voor mim:Referentielijst**
 
 Voor referentielijsten worden de volgende aspecten gespecificeerd:

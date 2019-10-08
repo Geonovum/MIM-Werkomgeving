@@ -208,7 +208,9 @@ In OWL is een property anders dan in het MIM een *first class citizen*. Dit bete
 <aside id='trans-4' class='note'>
 In een goed RDF model bestaat de mogelijkheid dat de properties worden hergebruikt over meerdere klassen. Er is nog steeds sprake van één unieke propertyshape bij één objecttype, maar in het RDF model kan vervolgens expliciet worden aangegeven dat de *betekenis* van de attribuutsoort dezelfde is als een attribuutsoort van een andere klasse. Dit is niet expliciet in het MIM uit te drukken.
 
-De oplossing hiervoor is om naar het veld `mim:begrip` te kijken. Indien bij twee attribuutsoorten verwezen wordt naar hetzelfde `mim:begrip`, dan wordt ook verondersteld dat de betekenis van deze attribuutsoorten hetzelfde is, en sprake is van dezelfde property.
+De oplossing hiervoor is om naar het veld `mim:begrip` te kijken. Indien bij twee attribuutsoorten verwezen wordt naar hetzelfde `mim:begrip` en ook hun `mim:naam` hetzelfde is, dan wordt ook verondersteld dat de betekenis van deze attribuutsoorten hetzelfde is, en sprake is van dezelfde property.
+
+Mocht het veld `mim:begrip` niet gebruikt zijn, dan wordt gekeken naar het veld `mim:definitie` in combinatie met het veld `mim:naam`. Indien twee attribuutsoorten dezelfde definitie hebben EN dezelfde naam, dan wordt ook verondersteld dat de betekenis van deze attribuutsoorten hetzelfde is, en sprake is van dezelfde property.
 </aside>
 
 <aside id='trans-5' class='note'>
@@ -429,7 +431,7 @@ Een externe koppeling gedraagd zich in een RDF model exact als een relatiesoort.
 > Een lijst met een opsomming van de mogelijke domeinwaarden van een attribuutsoort, die buiten het model in een externe waardenlijst worden beheerd. De domeinwaarden in de lijst kunnen in de loop van de tijd aangepast, uitgebreid, of verwijderd worden, zonder dat het informatiemodel aangepast wordt (in tegenstelling tot bij een enumeratie).
 
 <aside id='trans-9' class='note'>
-Het MIM doet geen uitspraak hoe een referentielijst op de externe locatie wordt gepubliceerd. Voor de transformatie wordt de aanname gedaan dat de externe locatie overeen komt met een verzameling van uitspraken van `skos:Concept`, en dat op de URL aangeduid met het aspect `mim:locatie` van de referentielijst deze verzameling is te vinden. Bovendien wordt daarbij uitgegaan dat deze referentielijst zelf een `skos:ConceptScheme` is, waarbij de identificatie van dit `skos:ConceptScheme` gelijk is aan de URL van de locatie. Wel kan in een concrete transformatie deze regels getuned worden naar de specifieke behoefte.
+Het MIM doet geen uitspraak hoe een referentielijst op de externe locatie wordt gepubliceerd. Voor de transformatie wordt de aanname gedaan dat de externe locatie overeen komt met een verzameling van uitspraken van (een subklasse van) `skos:Concept`, en dat op de URL aangeduid met het aspect `mim:locatie` van de referentielijst deze verzameling is te vinden. Bovendien wordt daarbij uitgegaan dat deze referentielijst zelf een `skos:ConceptScheme` is, waarbij de identificatie van dit `skos:ConceptScheme` gelijk is aan de URL van de locatie. Wel kan in een concrete transformatie deze regels getuned worden naar de specifieke behoefte.
 
 Deze constructie wordt ook toegepast bij enumeraties en codelijsten.
 </aside>
@@ -1051,7 +1053,7 @@ WHERE {
 #### locatie
 > Als het type van het attribuutsoort een waardenlijst is, dan wordt hier de locatie waar deze te vinden is opgegeven.
 
-Een `mim:locatie` wordt direct, zonder aanpassing, overgenomen in het vertaalde model. Daarnaast wordt dit veld gebruikt bij het munten van de URI's van de verschillende modelelementen.
+Een `mim:locatie` wordt direct, zonder aanpassing, overgenomen in het vertaalde model. Daarnaast wordt dit veld gebruikt bij het munten van de URI's van de verschillende modelelementen en het achterhalen van de inhoud van een waardenlijst.
 
 #### type
 > Het datatype waarmee waarden van deze attribuutsoort worden vastgelegd.
