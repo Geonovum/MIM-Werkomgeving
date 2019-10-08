@@ -294,12 +294,20 @@ tagged values en constraints.
 
 ### Uitdrukken in Linked Data
 
-Zowel het metamodel als informatiemodellen kan woren uitgedrukt in Linked Data.
+Zowel het metamodel als informatiemodellen kan worden uitgedrukt in Linked Data.
 Registraties en afnemers hiervan kunnen deze gebruiken voor de inrichting van
 hun situatiespecifieke gegevenshuishouding. Belangrijk is dat de lezer eerst
 begrijpt wat we onder een informatiemodel en een metamodel verstaan en verder is
 het van belang de modellen in de juiste context te plaatsen. Dit laatste doen we
 aan de hand van de W3c open standaarden voor het specificeren van een ontologie.
+
+Ook geeft Linked Data een specifieke invulling aan de niveau's waarin we informatiemodellen beschrijven:
+
+1. **Niveau 1: model van begrippen** wordt in Linked Data uitgedrukt met behulp van vooral de SKOS vocabulaire.
+2. **Niveau 2: conceptueel informatiemodel** wordt in Linked Data uitgedrukt met behulp van een metamodel vocabulaire. Deze vocabulaire, het metamodel van het informatiemodel, kan een eigen vocabulaire zijn (zoals de MIM-vocabulaire) of uitgaan van de bestaande vocabularies. In deze laatste situatie, is het conceptueel informatiemodel ook direct een logisch informatiemodel.
+3. **Niveau 3: logisch informatiemodel** wordt in Linked Data uitgedrukt met behulp van de standaard vocabulaires RDF, RDFS, OWL en SHACL. Daarbij geldt dat dit logisch informatiemodel OOK een conceptueel informatiemodel is. Doordat in Linked Data de representatie van informatie is gestandaardiseerd op basis van het RDF model, is er feitelijk geen of nauwelijks verschil tussen het conceptueel of logisch informatiemodel.
+
+Indien een MIM model wordt getypeerd als "logisch informatiemodel" dan kan dit model slechts zinvol in Linked Data worden uitgedrukt indien bij de opzet van dit model rekening gehouden is met de betekenis die dergelijke modelelementen in de standaard Linked Data vocabularies hebben. Zie hiervoor de bijlage Transformatie van MIM modellen. Voor modellen die zowel een UML als een Linked Data implementatie vereisen, dan kan beter gekozen worden voor het type "conceptueel informatiemodel".
 
 **Een ontologie voor het metamodel**
 Met een ontologie bedoelen we een model waarin we betekenis geven aan de termen die
@@ -315,7 +323,7 @@ een MIM model in Linked Data opsteld. Hiervoor maken we gebruik van de wereldwij
 geaccepteerde internetstandaard [SHACL](https://www.w3.org/TR/shacl).
 
 **Een informatiemodel**
-Het informatiemodel zien we als een invulling van de MIM ontologie. Dit betekent dat
+Het (conceptueel) informatiemodel zien we als een invulling van de MIM ontologie. Dit betekent dat
 de elementen in het informatiemodel exemplaren zijn van de klassen die in de MIM ontologie
 zijn gedefinieerd. Zo is onderstaand voorbeeld een voorbeeld waarin het modelelement
 `vb:Schip` wordt gedefinieerd als exemplaar van de klasse `mim:Objecttype`. Een `vb:Schip`
@@ -328,7 +336,7 @@ vb:Schip a mim:Objecttype;
 </pre>
 
 **Een ontologie voor een informatiemodel**
-Omdat een informatiemodel zelf al exemplaren betreft, is het niet direct mogelijk om
+Omdat een informatiemodel als invulling van de MIM ontologie zelf al exemplaren betreft, is het niet direct mogelijk om
 op basis van dit informatiemodel ook daadwerkelijk Linked Data in uit te drukken. Hiervoor
 is het nodig om de exemplaren uit het MIM informatiemodel zelf te transformeren, te "promoveren",
 naar klassen. Zo is onderstaand voorbeeld een voorbeeld van de transformatie van het exemplaar `vb:Schip` naar
@@ -342,8 +350,6 @@ vbo:Schip a rdfs:Class;
 
 vb:Pakjesboot12 a vbo:Schip.
 </pre>
-
-
 
 ### Een eigen extensie op het metamodel
 Indien er extra metamodelconstructies nodig zijn voor een informatiemodel, dan
