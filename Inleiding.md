@@ -146,7 +146,7 @@ Zoals hiervoor uiteengezet beschrijft een informatiemodel de werkelijkheid. In
 de praktijk blijken hier niveaus in te bestaan, variërend van een zo getrouw
 mogelijke beschrijving van die werkelijkheid tot een specificatie van de wijze
 van vastlegging van die werkelijkheid in een database of uitwisselformaat.
-Veelal worden vier niveaus onderscheiden [[!MDA]]
+Veelal worden vier niveaus onderscheiden, waarbij niveau 1 niet als een informatiemodel wordt gezien en waarbij MIM zich (alleen) richt op niveau 2 en 3 [[!MDA]]
 
 #### Niveau 1: Model van begrippen
 Beschrijft de werkelijkheid binnen het beschouwde domein (de ‘universe of
@@ -156,6 +156,11 @@ model van begrippen wordt opgesteld voor gebruik door mensen, met name ‘de
 business’. De begrippen worden beschreven in een formele taal, een vocabulaire.
 Een vocabulaire is geen informatiemodel. Begrippen kunnen in meerdere
 informatiemodellen gebruikt worden.
+
+Ten aanzien van begrippen en informatiemodellen: 
+- Van een aantal begrippen wordt informatie bijgehouden, niet van alle.   
+- Voor het bijhouden van informatie wordt een gedetailleerde eenduidige structuur aangebracht. 
+- De samenhang tussen informatie is vaak (bewust) beperkter dan de samenhang tussen begrippen.
 
 #### Niveau 2: Conceptueel informatiemodel
 Modellering van de werkelijkheid binnen het beschouwde domein, v.w.b. informatie
@@ -170,6 +175,12 @@ werkelijkheid ten behoeve van deze communicatie. Een conceptueel informatiemodel
 wordt dan ook opgesteld voor gebruik door mensen, zodat ‘de business’ en de
 ICT-specialisten elkaar gaan begrijpen.
 
+Ten aanzien van logische informatiemodellen: 
+- Een conceptueel informatiemodel is onafhankelijk van standaarden voor gegevensuitwisseling.
+  Een logisch informatiemodel past deze wel toe (denk aan identificaties, geometrie versies, tijdslijnen van historie)  
+- Een conceptueel informatiemodel is onafhankelijk van een koppelvlak of keten, oftewel is keten overstijgend.  
+  Een logisch informatiemodel is specifiek voor een koppelvlak of keten. 
+
 #### Niveau 3: Logisch informatie- of gegevensmodel
 Beschrijft hoe de, in het conceptuele model onderscheiden, concepten gebruikt
 worden bij de interactie tussen systemen en hun gebruikers en tussen systemen
@@ -182,6 +193,10 @@ taal beschreven en wordt waar mogelijk gegenereerd vanuit het conceptueel model.
 Het logisch model wordt opgesteld voor ICT-interoperabiliteit, voor gebruik door
 met name de ontwerpers, bouwers en beheerders van ICT-voorzieningen.
 
+Ten aanzien van fysieke of technische datamodellen: 
+- Een logisch informatiemodel is implementatie onafhankelijk en kan in naar meerdere technische modellen worden geimplementeerd. 
+  Een fysiek of technisch datamodel is afhankelijk van de gekozen techniek of tooling die wordt gebruikt. 
+  
 #### Niveau 4: Fysiek of technisch gegevens- of datamodel
 Specificeert de structuur en eigenschappen van de technologie waarin de
 informatie wordt vastgelegd of uitgewisseld. Dit is sterk afhankelijk van de

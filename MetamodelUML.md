@@ -25,8 +25,7 @@ stereotype.
 
 <pre class='ex-generic'>
 Voorbeeld: het MIM modelelement Objecttype wordt gemodelleerd als een
-UML-Class met stereotype «Objecttype». In Sparx EA wordt dit gemodelleerd met
-een Class met stereotype «Objecttype».
+UML-Class met stereotype «Objecttype». In Sparx EA wordt dit gemodelleerd met een Class met stereotype «Objecttype».
 Niet alle MIM metaclasses hebben een stereotype (nodig). In de kolom staat dan ‘-‘.
 </pre>
 

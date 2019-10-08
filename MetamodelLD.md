@@ -563,6 +563,9 @@ Informatiemodel packages worden naar de volgende aspecten gespecificeerd:
 | MIM versie                   | [`mim:versie`](http://bp4mc2.org/def/mim#versie) | 1 | tekst |
 | MIM extensie                 | [`mim:extensie`](http://bp4mc2.org/def/mim#extensie) | 0..1 | tekst |
 | MIM taal                     | [`mim:taal`](http://bp4mc2.org/def/mim#taal) | 0..1 | tekst |
+| Informatiedomein             | TODO | 1..1 | tekst |
+| Informatiemodel type         | TODO | 1..1 | tekst |
+| Relatiemodelleringtype       | TODO | 1..1 | tekst |
 
 **Specificatie voor mim:Domein**
 
