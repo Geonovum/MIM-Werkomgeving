@@ -1094,7 +1094,7 @@ Metagegeven: **bron**
 
 >   **Definitie bron**
 
->   Aanduiding van het bronobject in een relatie tussen objecten. Een bronoject
+>   Aanduiding van het bronobject in een relatie tussen objecten. Een bronobject
 >   heeft middels een relatiesoort een relatie met een doelobject.
 
 *Toelichting*
