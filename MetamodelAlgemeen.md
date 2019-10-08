@@ -639,6 +639,26 @@ Een constraint wordt altijd in gewone tekst omschreven en optioneel als formele
 Specificatie metagegevens informatiemodel
 -----------------------------------------
 
+Metagegeven: \*\* Domein \*\*
+
+>   **Definitie Informatiedomein**
+
+>   Aanduiding van het functionele domein waartoe het informatiemodel behoort.
+
+*Toelichting* Bijvoorbeeld: brk
+
+*Toepassing*: informatiemodel (verplicht)
+
+Metagegeven: \*\* Informatiemodel type \*\*
+
+>   **Definitie Informatiemodel type**
+
+>   De beschrijving van de aard van het informatiemodel, hoe het geinterpreteerd moet worden.
+
+*Toelichting* Bijvoorbeeld: conceptueel, logisch, technisch. Zoals bedoeld in: TODO, referentie naar 1.5 
+
+*Toepassing*: informatiemodel (verplicht)
+
 Metagegeven: **Relatiemodelleringtype**
 
 >   **Definitie Relatiemodelleringtype**
@@ -650,17 +670,36 @@ Metagegeven: **Relatiemodelleringtype**
 betreft de keuze die je maakt voor het in TODO: ref paragraaf 1.X gekozen
 alternatief. Er moet een keuze gemaakt worden.
 
-*Toepassing*: informatiemodel
+*Toepassing*: informatiemodel (verplicht) 
 
-Metagegeven: \*\* Domein \*\*
+Metagegeven: \*\* MIM versie \*\*
 
->   **Definitie Informatiedomein**
+>   **Definitie MIM versie**
 
->   Aanduiding van het functionele domein waartoe het informatiemodel behoort.
+>   De versie van de MIM specificatie die gebruikt is om het informatiemodel in uit te drukken.
 
-*Toelichting* Bijvoorbeeld: brk
+*Toelichting* Bijvoorbeeld: 1.0.1 of 1.1 
 
-*Toepassing*: informatiemodel
+*Toepassing*: informatiemodel (verplicht)
+
+Metagegeven: \*\* MIM extensie \*\*
+
+>   **Definitie MIM extensie**
+
+>   De aanduiding van een extensie op MIM.
+
+*Toelichting* Bijvoorbeeld: Kadaster of NEN3610:2020
+
+*Toepassing*: informatiemodel (optioneel)
+
+>   **Definitie MIM taal**
+
+>   De aanduiding van de taal die gebruikt is voor de modelelementen.
+
+*Toelichting* Bijvoorbeeld: NL, EN
+
+*Toepassing*: informatiemodel (optioneel)
+
 
 Specificatie metagegevens kenmerken
 -----------------------------------
