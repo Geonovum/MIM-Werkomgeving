@@ -48,10 +48,8 @@ mim:Gegevensgroeptype a owl:Class;
 # Relaties
 mim:Generalisatie a owl:Class;
   rdfs:label "Generalisatie"@nl;
-  rdfs:comment "De typering van het hiërarchische verband tussen een meer generiek object van een objecttype en een meer specifiek object van een ander objecttype waarbij het laatstgenoemde object eigenschappen van het eerstgenoemde object overerft."@nl;
-  rdfs:comment "De typering van het hiërarchische verband tussen een meer generieke structuur van data in de vorm van een datatype, en een meer specifieke structuur van data in de vorm van een ander datatype, waarbij het laatstgenoemde datatype de eigenschappen van het eerstgenoemde datatype overerft, én een verbijzondering hierin aanbrengt in de vorm van een meer restrictieve definitie, of een meer restrictief patroon/formeel patroon.";
+  rdfs:comment "De typering van het hiërarchische verband tussen een meer generiek en een meer specifiek modelelement van hetzelfde soort, waarbij het meer specifieke modelelement eigenschappen van het meer generieke modelelement overerft. Generalisatie is gedefinieerd voor de modelelementen ObjectType en Datatype."@nl;
   dct:source mimdoc:sectie2.2.2-5-Generalisatie;
-  #ISSUE: Meerdere definities
 .
 mim:Relatiesoort a owl:Class;
   rdfs:label "Relatiesoort"@nl;
@@ -109,8 +107,7 @@ mim:Codelist a owl:Class;
 # Datatypen
 mim:Datatype a owl:Class;
   rdfs:label "Datatype"@nl;
-  rdfs:comment "Een datatype"; #In het brondocument wordt geen definitieve gegeven van het abstracte datatype
-  #ISSUE: Niet gedefinieerd
+  rdfs:comment "Een datatype is een modelelement die de structuur beschrijft waaraan een waarde moet voldoen";
 .
 mim:PrimitiefDatatype a owl:Class;
   rdfs:subClassOf mim:Datatype;
@@ -324,10 +321,7 @@ mim:kwaliteit a owl:DatatypeProperty;
 .
 mim:indicatieAbstractObject a owl:DatatypeProperty;
   rdfs:label "indicatie abstract object"@nl;
-  rdfs:comment "Conceptueel model: indicatie dat het objecttype een generalisatie is, waarvan een object als specialisatie altijd voorkomt in de hoedanigheid van een (en slechts één) van de specialisaties van het betreffende objecttype."@nl;
-  rdfs:comment "Logisch model: Indicatie dat er geen instanties (objecten) voor het betreffende objecttype mogen voorkomen."@nl;
-  # ISSUE: Twee definities, dan zijn het andere dingen?
-  # ISSUE: Er is een afhankelijkheid met "Identificerend"
+  rdfs:comment "Indicatie dat het objecttype een generalisatie is, waarvan een object als specialisatie altijd voorkomt in de hoedanigheid van een (en slechts één) van de specialisaties van het betreffende objecttype."@nl;
 .
 
 # Bij Attribuutsoort (komt ook terug bij referentie-element)
