@@ -65,12 +65,7 @@ var respecConfig =
       name:       "Paul Janssen",
       company:    "Geonovum",
       companyURL: "https://www.geonovum.nl"
-    },
-    {
-      name:       "Marco Brattinga",
-      company:    "Kadaster",
-      companyURL: "https://www.kadaster.nl"
-    },
+    },    
   ],
   //-- shortName is verplicht! (komt in de URL: kies logische naam) --------------------
   shortName: "mim10", 	            // Wordt gebruikt in de document URL
