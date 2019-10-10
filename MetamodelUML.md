@@ -42,7 +42,7 @@ conventies](#template-naamgeving-conventies).
 
 ### Kern
 
-![](media/f12fbb3dc2e205d26a1d0d27cbd325b3.png)
+![](media/KernZonderMetagegevens.png)
 
 Kern zonder Metagegevens
 
@@ -58,7 +58,7 @@ Kern zonder Metagegevens
 
 ### Datatypen
 
-![](media/e529a1c0a1d6183d686d5aa57d0d0c63.png)
+![](media/DatatypenZonderMetagegevens.png)
 
 Datatypen zonder Metagegevens
 
@@ -89,7 +89,7 @@ specificaties van een enumeratiewaarde.
 
 ### Overige
 
-![](media/505b92a05134fb38d9aec81f23a66bad.png)
+![](media/ConstraintsZonderMetagegevens.png)
 
 Constraint
 
@@ -101,7 +101,7 @@ View 3a: Constraint
 
 *Relatierol*
 
-![](media/240ca39c688efb06f70b34b8ec0b36d0.png)
+![](media/RelatierollenZonderMetagegevens.png)
 
 Relatierol
 
