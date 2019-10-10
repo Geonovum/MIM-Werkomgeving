@@ -217,13 +217,13 @@ Mocht het veld `mim:begrip` niet gebruikt zijn, dan wordt gekeken naar het veld 
 De identificatie van een attribuutsoort is afgeleid van de naam van het attribuutsoort en de namespace die afgeleid is van aspecten van de package waartoe het objecttype behoord. Voor de propertyshape geldt dat deze laatste ook nog afhankelijk is van de naam van het objecttype waartoe de attribuutsoort behoord. Aangezien een attribuutsoort binnen zijn objecttype uniek behoord te zijn conform het MIM, zal hiermee ook een unieke identificatie worden verkregen. Voor de identificatie van de propertyshape geldt dat deze uniek moet zijn binnen de package als sprake is van hetzelfde begrip. Een dergelijke regel geldt ook voor andere modelelementen die binnen een objecttype vallen.
 </aside>
 
-> **VERDER UITWERKEN**
->
->De transformatie houdt nog niet rekening met het feit dat sommige datatypen in RDF juist geen literals zijn, maar resources. In die gevallen zou dus niet gesproken moeten worden over een `owl:DatatypeProperty`, maar een `owl:ObjectProperty`. Alleen de datatypes enumeratie (klopt dat?) en primitief datatype zouden naar een literal gaan, de overigen naar resources.
+Indien het datatype van een attribuutsoort gelijk is aan PrimitiefDatatype (of een daarvan afgeleid datatype), dan is sprake van een `owl:DatatypeProperty`. In alle andere gevallen is sprake van een `owl:Objecttype`. Zie ook de transformatie van de eigenschape `mim:type`.
 
 >> **VERDER UITWERKEN**
 >
 > In een RDF model wordt soms ook gebruik gemaakt van attribuutsoorten die afkomstig zijn uit andere modellen. De URI-generatie ondersteunt dit nu niet (een attribuutsoort krijgt altijd de namespace die ook zijn bijbehorend objecttype heeft).
+>
+> Een mogelijk oplossing hiervoor is een afzonderlijk primitief datatype te ondersteunen. Een voorstel is gedaan om een primitief datatype van het type xsd:anyURI te gebruiken. Punt is echter wel dat een xsd:anyURI formeel gezien een literal is en geen URI verwijzing naar een resource.
 
 De URI van de propertyshape wordt afgeleid van de naam van het modelelement dat de attribuutsoort "bezit" en de naam van de attribuutsoort. De URI van de datatypeproperty wordt afgeleid van de naam van de attribuutsoort.
 
@@ -243,6 +243,19 @@ WHERE {
   ?bezitter mim:naam ?bezittersnaam
   BIND (t:propertyshapeuri(?bezittersnaam,?attribuutsoortnaam) as ?propertyshape)
   BIND (t:propertyuri(?attribuutsoortnaam) as ?datatypeproperty)
+  {
+    {
+      ?attribuutsoort mim:datatype/rdfs:subClassOf* mim:PrimitiefDatatype.
+      BIND (owl:DatatypeProperty as ?type)
+    }
+    UNION
+    {
+      ?attribuutsoort mim:datatype ?datatype.
+      FILTER NOT EXISTS {
+        ?attribuutsoort mim:datatype/rdfs:subClassOf* mim:PrimitiefDatatype.
+      }
+      BIND (owl:ObjectProperty as ?type)
+    }
 }
 ```
 
@@ -391,6 +404,14 @@ CONSTRUCT {
     sh:minCount 1;
     sh:maxCount 1;
   ];
+  ?nodeshape sh:property [
+    sh:path rdf:subject;
+    sh:class ?subject;
+  ];
+  ?nodeshape sh:property [
+    sh:path rdf:object;
+    sh:class ?object;
+  ];
   ?propertyshape a sh:PropertyShape.
   ?propertyshape sh:path ?objectproperty.
   ?propertyshape sh:nodekind sh:IRI.
@@ -401,8 +422,11 @@ CONSTRUCT {
 WHERE {
   ?relatieklasse a mim:Relatiesoort.
   ?relatieklasse mim:naam ?relatieklassenaam.
-  ?bezitter mim:bron ?relatieklasse.
-  ?bezitter mim:naam ?bezittersnaam
+  ?relatieklasse mim:bron ?bezitter.
+  ?bezitter mim:naam ?bezittersnaam.
+  ?bezitter mim:seeAlso ?subject.
+  ?relatieklasse mim:doel ?doelklasse.
+  ?doelklasse mim:seeAlso ?object.
   BIND (t:classuri(?relatieklassenaam) as ?class)
   BIND (t:nodeshapeuri(?relatieklassenaam) as ?nodeshape)
   BIND (t:propertyshapeuri(?bezittersnaam,?relatieklassenaam) as ?propertyshape)
