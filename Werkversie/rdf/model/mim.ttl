@@ -397,6 +397,9 @@ mim:constraint a owl:ObjectProperty;
 mim:element a owl:ObjectProperty;
   rdfs:label "element"@nl;
 .
+mim:relatierol a owl:ObjectProperty;
+  rdfs:label "relatierol"@nl;
+.
 
 #
 # Instanties

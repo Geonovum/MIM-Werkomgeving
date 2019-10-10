@@ -1,11 +1,8 @@
 # MIM vocabulary
-# Currently based on mim 1.0
+# Currently based on mim 1.1
 #
 # Source: https://www.geonovum.nl/geo-standaarden/metamodel-informatiemodellering/nationaal-metamodel-voor-informatiemodellering
-#
-# Hierbij is variant-1 (Relatiesoort centraal) uitgewerkt, variant-2 vereist eigenlijk een ander shacl model
-# Aanname, hoewel niet als zodanig beschreven, alias overal waar ook naam voorkomt, behalve als er een code voorkomt
-#
+##
 
 @prefix mim: <http://bp4mc2.org/def/mim#>.
 @prefix mimdoc: <http://bp4mc2.org/def/mimdoc#>.
@@ -105,6 +102,7 @@ shape:Gegevensgroeptype a sh:NodeShape;
   sh:property shape:gegevensgroep;
   sh:property shape:constraint;
 .
+# Eigenschappen zowel voor alternatief 1 als 2
 shape:Relatiesoort a sh:NodeShape;
   sh:targetClass mim:Relatiesoort;
   sh:name "mim:Relatiesoort";
@@ -131,17 +129,29 @@ shape:Relatiesoort a sh:NodeShape;
   sh:property shape:authentiek;
   sh:property shape:indicatieAfleidbaar;
   sh:property shape:mogelijkGeenWaarde;
+  # Niet benoemed
+  sh:property shape:relatierol;
 .
 shape:Relatierol a sh:NodeShape;
   sh:targetClass mim:Relatierol;
   sh:name "mim:Relatierol";
   dct:source mimdoc:sectie2.3.2.1-Relatierol;
   # Metagegevens
-  sh:property shape:naam_optioneel;
+  sh:property shape:naam;
   sh:property shape:alias;
   sh:property shape:begrip;
   sh:property shape:begripsterm;
   sh:property shape:definitie_optioneel;
+  # Aanvullend in geval van alternatief 2
+  sh:property shape:kardinaliteit;
+  sh:property shape:herkomst;
+  sh:property shape:toelichting;
+  sh:property shape:herkomstDefinitie;
+  sh:property shape:datumOpname;
+  sh:property shape:indicatieMaterieleHistorie;
+  sh:property shape:indicatieFormeleHistorie;
+  sh:property shape:authentiek;
+  sh:property shape:mogelijkGeenWaarde;
 .
 shape:Generalisatie a sh:NodeShape;
   sh:targetClass mim:Generalisatie;
@@ -771,4 +781,9 @@ shape:unionElement a sh:PropertyShape;
   sh:name "mim:element";
   sh:class mim:UnionElement;
   sh:minCount 2;
+.
+shape:relatierol a sh:PropertyShape;
+  sh:path mim:relatierol;
+  sh:name "mim:relatierol";
+  sh:class mim:Relatierol;
 .

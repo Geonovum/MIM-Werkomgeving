@@ -354,12 +354,7 @@ WHERE {
 
 > De typering van het structurele verband tussen een object van een objecttype en een (ander) object van een ander (of hetzelfde) objecttype.
 
-> **VERDER UITWERKEN**
->
-> In het MIM is het toegestaan om te kiezen tussen gebruik van `mim:Relatiesoort` OF `mim:Relatierol`.
->
-> Voorlopige aanname: `mim:Relatiesoort` wordt gebruikt.
-
+In het MIM zijn er twee specificatievormen voor relaties: op basis van `mim:Relatiesoort` of op basis van `mim:Relatierol`. Indien gekozen wordt voor `mim:Relatiesoort` dan geldt onderstaande uitwerking. Indien gekozen wordt voor `mim:Relatierol`, dan geldt de uitwerking zoals beschreven bij Relatierol. De keuze wordt bepaald door de aanwezigheid van het attribuut `mim:relatierol`.
 
 Een `mim:Relatiesoort` wordt vertaald naar een `sh:PropertyShape` in combinatie met een `owl:ObjectProperty`. De nodekind van de propertyshape is een `sh:IRI`.
 
@@ -381,6 +376,9 @@ WHERE {
   ?bezitter mim:naam ?bezittersnaam
   BIND (t:propertyshapeuri(?bezittersnaam,?relatiesoortnaam) as ?propertyshape)
   BIND (t:propertyuri(?relatiesoortnaam) as ?objectproperty)
+  FILTER NOT EXISTS {
+    ?relatiesoort mim:relatierol ?rol
+  }
 }
 ```
 
@@ -446,9 +444,46 @@ Een externe koppeling gedraagd zich in een RDF model exact als een relatiesoort.
 
 #### Relatierol
 
-> **VERDER UITWERKEN**
->
-> Verder uitzoeken hoe met relatierol omgegaan moet worden. Feitelijk is de relatierol de daadwerkelijke "naam" van de property, en dus niet de naam van de relatiesoort... Dit lijkt dan dus niet helemaal goed te gaan. Zie ook [Relatiesoort](#relatiesoort).
+In het MIM zijn er twee specificatievormen voor relaties: op basis van `mim:Relatiesoort` of op basis van `mim:Relatierol`. Indien gekozen wordt voor `mim:Relatierol` dan geldt onderstaande uitwerking. Indien gekozen wordt voor `mim:Relatiesoort`, dan geldt de uitwerking zoals beschreven bij Relatiesoort.
+
+Een `mim:Relatiesoort` wordt vertaald naar een `sh:PropertyShape` in combinatie met een `owl:ObjectProperty`. De nodekind van de propertyshape is een `sh:IRI`.
+
+De URI van de propertyshape wordt afgeleid van de naam van het modelelement dat de relatierol "bezit" en de naam van de relatierol. De URI van de objectproperty wordt afgeleid van de naam van de relatiesoort. Aangezien er twee relatierollen gedefinieerd kunnen worden, kan ook sprake zijn van twee properties. In dat geval zijn deze twee properties elkaars inverse.
+
+```
+CONSTRUCT {
+  ?propertyshape a sh:PropertyShape.
+  ?propertyshape sh:path ?objectproperty.
+  ?propertyshape sh:nodekind sh:IRI.
+  ?propertyshape rdfs:seeAlso ?relatierol.
+  ?objectproperty a owl:ObjectProperty.
+  ?objectproperty rdfs:seeAlso ?relatierol.
+}
+WHERE {
+  ?relatierol a ?type.
+  ?relatierol mim:naam ?relatiesoortnaam.
+  ?relatiesoort mim:relatierol ?relatierol.
+  ?bezitter mim:bron ?relatiesoort.
+  ?bezitter mim:naam ?bezittersnaam
+  BIND (t:propertyshapeuri(?bezittersnaam,?relatiesoortnaam) as ?propertyshape)
+  BIND (t:propertyuri(?relatiesoortnaam) as ?objectproperty)
+  FILTER (?type = mim:RelatierolSource || ?type = mim:RelatierolTarget)
+}
+
+CONSTRUCT {
+  ?sourceproperty owl:inverseOf ?targetproperty
+}
+WHERE {
+  ?sourceproperty a owl:ObjectProperty.
+  ?sourceproperty rdfs:seeAlso ?relatierolsource.
+  ?relatierolsource a mim:RelatierolSource.
+  ?targetproperty a owl:ObjectProperty.
+  ?targetproperty rdfs:seeAlso ?relatieroltarget.
+  ?relatieroltarget a mim:RelatierolTarget.
+  ?relatiesoort mim:relatierol ?relatierolsource,
+                               ?relatieroltarget.
+}
+```
 
 #### Referentielijst
 
