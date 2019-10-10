@@ -10,7 +10,7 @@ op het gebied van informatiemodellering meegewerkt:
 | Lennart van Bergen        | Kadaster       | MIM kerngroep. Expert informatiemodellering. Modellenbureau Kadaster |
 | Thies Mesdag              | Kadaster       | MIM kerngroep. Expert informatiemodellering. Modellenbureau Kadaster |
 | Paul Janssen              | Geonovum       | MIM kerngroep. Expert informatiemodellering. Geostandaarden          |
-| Marco Brattinga           | Kadaster       | MIM kerngroep. Expert semantisch modelleren                          |
+| Marco Brattinga           | Kadaster       | Expert semantisch modelleren                                         |
 | Dick Krijtenburg          | Geonovum       | Coördinator beheer MIM.                                              |
 | Jan van Gelder            | Geonovum       | Redactie MIM.                        	                            |
 
