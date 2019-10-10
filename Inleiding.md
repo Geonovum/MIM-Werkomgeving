@@ -1,14 +1,14 @@
 ## Inleiding
 
 Voor u ligt het metamodel voor het beschrijven van informatiemodellen.
-Met het metamodel voor informatiemodellen (MIM) hebben we een gemeenschappelijk
+Met het metamodel voor informatiemodellering (MIM) hebben we een gemeenschappelijk
 vertrekpunt opgesteld voor het maken van informatiemodellen. Het model bevat
 duidelijke afspraken over het vastleggen van gegevensspecificaties en biedt
 tegelijkertijd ruimte aan de verschillende niveaus van modellering. Bijzonder
 aan het model is dat de afspraken over meerdere bestuurslagen heen gaan.
 
 Dit document is opgesteld met kennis die is aangedragen door de MIM-community.
-Kadaster, Geonovum, VNG Realisatie, DUO, Ordina en andere partijen hebben hun bijdrage geleverd.
+Kadaster, Geonovum, VNG Realisatie, DUO en andere partijen hebben hun bijdrage geleverd.
 
 ### Toepassingsgebied
 Het metamodel biedt de modelleringstaal waarmee een informatiemodel gemaakt,
@@ -228,7 +228,7 @@ informatiemodel moet vermeld worden om welk van beide typen het gaat. Aan te
 bevelen is om eerst een conceptueel model op te stellen en dit vervolgens uit te
 werken naar een logisch model.
 
-### Wat is het metamodel voor informatiemodellen
+### Wat is het metamodel voor informatiemodellering
 Een metamodel is een model van een model. Het definieert een verzameling van
 modelleerconstructies in de vorm van bouwstenen oftewel modelelementen, met
 bijbehorende betekenis en bijbehorende afspraken omtrent hoe deze toe te passen.
