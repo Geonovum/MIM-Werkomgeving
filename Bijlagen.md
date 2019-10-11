@@ -10,15 +10,23 @@ Deze bijlage bevat alle modelelementen en metagegevens in één diagram.
 
 *Kern - Relatiesoort is leidend (zie 2.3.2.1)*
 
-![](media/e24da7f54d6326697cb4c519b5503ab4.png)
+![](media/KernMetMetagegevens-alt1.png)
 
 *Kern - Relatierol is leidend (zie 2.3.2.2)*
 
-![](media/e56ff96ff3a05853b3b9272aac18739e.png)
+![](media/KernMetMetagegevens-alt2.png)
 
 *Datatypen*
 
-![](media/1a48dec7e8b3c7a17434abb212b2c123.png)
+![](media/DatatypenMetMetagegevens.png)
+
+*Constraints*
+
+![](media/ConstraintsMetMetagegevens.png)
+
+*Packages*
+
+![](media/PackagesMetMetagegevens.png)
 
 ## Template naamgeving conventies
 

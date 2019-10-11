@@ -123,6 +123,8 @@ View 3c: Groepering
 
 *Packages*
 
+![](media/PackagesZonderMetagegevens.png)
+
 | **MIM metaclass**     | **Stereotype**    | **Metaclass UML 2.5** | **In Sparx EA** |
 |-----------------------|-------------------|-----------------------|-----------------|
 | Informatiemodel       | «Informatiemodel» | (UML) Package         | Package         |

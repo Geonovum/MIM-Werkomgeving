@@ -53,7 +53,7 @@ opgenomen.
 
 ### Kern
 
-![](media/661f54b310fda77c42ee9a55ec4b20fc.png)
+![](media/KernZonderMetagegevens.png)
 
 Kern zonder Metagegevens
 
@@ -69,7 +69,7 @@ Kern zonder Metagegevens
 
 ### Datatypen
 
-![](media/ee1daa1627b63d4cba4b63bf63197238.png)
+![](media/DatatypenZonderMetagegevens.png)
 
 Datatypen zonder Metagegevens
 
@@ -90,7 +90,7 @@ View 2: Datatypen
 
 ### Overige
 
-![](media/d30e6097c8ef6bec9c947b6d268335e2.png)
+![](media/ConstraintsZonderMetagegevens.png)
 
 Constraint
 
@@ -102,7 +102,7 @@ View 3a: Constraint
 
 *Relatierol*
 
-![](media/7bfe6064cce80ef69519c29097c24c9d.png)
+![](media/RelatierollenZonderMetagegevens.png)
 
 Relatierol
 
@@ -123,6 +123,8 @@ View 3b: Relatiesoort en relatierol
 View 3c: Groepering
 
 *Packages*
+
+![](media/PackagesZonderMetagegevens.png)
 
 | **MIM metaclass** |
 |-------------------|
