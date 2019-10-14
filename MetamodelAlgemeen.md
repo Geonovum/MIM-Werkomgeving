@@ -30,7 +30,7 @@ worden weggelaten, er geen semantische betekenis verloren mag gaan.
 ### Structuur metamodel
 
 Deze paragraaf bevat een overzicht van het metamodel en geeft alle
-modelelementen weer in diagram vorm. De beschrijving van de modelelementen in
+modelelementen weer in diagramvorm. De beschrijving van de modelelementen in
 tekstvorm staan in de volgende paragraaf.
 
 Alle klassen zijn metaklassen. De metaklassen zijn in deze diagrammen
@@ -42,9 +42,12 @@ De modelelementen zijn verdeeld over een aantal diagrammen, die elk een eigen
 view op een deel van het metamodel tonen. Elk view toont een aantal van de
 modelelementen, inclusief hun onderlinge samenhang.
 
-Alle views samen vormen het metamodel als geheel: - KERN, met de belangrijkste
-modelelementen in onderlinge samenhang. - DATATYPEN, met de in het model te
-onderkennen soorten datatypen. - OVERIGE modelelementen, die niet altijd aan de
+Alle views samen vormen het metamodel als geheel:
+- KERN, met de belangrijkste
+modelelementen in onderlinge samenhang.
+- DATATYPEN, met de in het model te
+onderkennen soorten datatypen.
+- OVERIGE modelelementen, die niet altijd aan de
 orde zijn.
 
 Elk modelelement heeft een MIM metaclass met een naam. Hieraan is elk
