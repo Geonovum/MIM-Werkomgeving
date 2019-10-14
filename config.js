@@ -60,7 +60,12 @@ var respecConfig =
       name:       "Thies Mesdag",
       company:    "Kadaster",
       companyURL: "https://www.kadaster.nl"
-    }, 
+    },
+    {
+      name:       "Marco Brattinga",
+      company:    "Kadaster",
+      companyURL: "https://www.kadaster.nl"
+    },
     {
       name:       "Paul Janssen",
       company:    "Geonovum",
