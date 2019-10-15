@@ -97,8 +97,6 @@ uit een registratie. De opname in een *registratie* kent vaak een inwinningsproc
 gegevenswaarden over de feitelijke dingen in de werkelijkheid conform het
 informatiemodel in de registratie op te nemen. Dit is een belangrijk proces, maar valt buiten scope 
 van het informatiemodel.
-<!-- aside id='inl-n-1' class='note' -->
-<!-- /aside -->
 
 Het beschrijven vindt plaats door de informatie te modelleren naar objecttypen
 en de kenmerken daarvan naar attribuutsoorten van die objecttypen en relaties
