@@ -93,10 +93,10 @@ dergelijk model is noodzakelijk om deze informatie te kunnen beheren en
 gebruiken (door mensen en machines) bij het communiceren over deze
 werkelijkheid, in registraties of anderszins, zoals het specificeren van de
 tussen registraties uit te wisselen gegevens of van de te bevragen informatie
-uit een registratie. De opname in een *registratie* kent vaak een inwinningsproces, om
+uit een registratie. De opname in een registratie kent vaak een inwinningsproces om
 gegevenswaarden over de feitelijke dingen in de werkelijkheid conform het
-informatiemodel in de registratie op te nemen. Dit is een belangrijk proces, maar valt buiten scope 
-van het informatiemodel.
+informatiemodel in de registratie op te nemen. Dit is een belangrijk proces, 
+maar valt buiten scope van het informatiemodel.
 
 Het beschrijven vindt plaats door de informatie te modelleren naar objecttypen
 en de kenmerken daarvan naar attribuutsoorten van die objecttypen en relaties
@@ -109,23 +109,22 @@ beheersmatige redenen geïdentificeerd en georganiseerd zijn. Voorbeelden:
 ruimtelijke ordening, grootschalige topografie, kadastrale informatie of
 gemeentelijk domein.
 
-Objecttypen in een informatiemodel representeren dingen in de werkelijkheid. De
-volgende tekst beschrijft hoe dingen in de werkelijkheid zich verhouden tot het
-informatiemodel. We visualiseren dat in onderstaande figuur voor de situatie dat
-er een, van het informatiemodel afgeleide, registratie is.
+Objecttypen in een informatiemodel representeren dingen in de werkelijkheid. 
+We visualiseren dat in onderstaande figuur voor de situatie dat er een, 
+van het informatiemodel afgeleide, registratie is.
 
 ![](media/informatiemodel.png)
 
 <aside class='example'>
     Jan en Katrien zijn bijvoorbeeld ‘dingen in de werkelijkheid’. Zij hebben
     bepaalde kenmerken, zoals een naam en een geboortedatum. In een informatiemodel
-    komen Jan en Piet niet voor. Ook hun gegevens, zoals het feit dat 10-10-1970 de
-    geboortedatum van Jan is, komt niet voor.
+    komen Jan en Katrien niet voor. Ook hun gegevens, zoals het feit dat 10-10-1970 
+    de geboortedatum van Jan is, komen niet voor.
 </aside>
 
 In de context van het informatiemodel worden Jan en Katrien gezien als
 *objecten* binnen een domein. In het informatiemodel is het *objecttype* Persoon
-gedefinieerd en Jan en Piet zijn dus objecten van het objecttype Persoon.
+gedefinieerd en Jan en Katrien zijn dus objecten van het objecttype Persoon.
 
 De *kenmerken* zoals de naam en geboortedatum maar bijvoorbeeld ook
 identificatie en registratietijdstip worden gezien als attributen van dit
@@ -140,7 +139,7 @@ worden vastgelegd.
 
 Als een andere registratie op haar eigen manier tegen dezelfde ‘Jan uit de
 werkelijkheid’ aankijkt, dan is ook in die registratie een (eigen, apart) object
-voor Jan aanwezig en Jan kan in dit (eigen, apart) informatiemodel anders
+voor Jan aanwezig en Jan kan in dit (eigen, aparte) informatiemodel anders
 gemodelleerd zijn. Beide objecten Jan representeren natuurlijk dezelfde ‘Jan uit
 de werkelijkheid’, vanuit het perspectief van het eigen domein bekeken.
 
@@ -149,7 +148,10 @@ Zoals hiervoor uiteengezet beschrijft een informatiemodel de werkelijkheid. In
 de praktijk blijken hier niveaus in te bestaan, variërend van een zo getrouw
 mogelijke beschrijving van die werkelijkheid tot een specificatie van de wijze
 van vastlegging van die werkelijkheid in een database of uitwisselformaat.
-Veelal worden vier niveaus onderscheiden, waarbij niveau 1 niet als een informatiemodel wordt gezien en waarbij MIM zich (alleen) richt op niveau 2 en 3 [[!MDA]]
+Veelal worden vier niveaus onderscheiden, waarbij niveau 1 niet als een 
+informatiemodel wordt gezien en waarbij MIM zich primair richt op niveau 2 en 3 
+(Het uitdrukken in UML richt zich op niveau 2 en 3,, het uitdrukken in Linked Data
+richt zich op alle niveaus)[[!MDA]]
 
 #### Niveau 1: Model van begrippen
 Beschrijft de werkelijkheid binnen het beschouwde domein (de ‘universe of
@@ -167,16 +169,16 @@ Ten aanzien van begrippen en informatiemodellen:
 
 #### Niveau 2: Conceptueel informatiemodel
 Modellering van de werkelijkheid binnen het beschouwde domein, v.w.b. informatie
-daarvan, onafhankelijk van ontwerp van en implementatie in systemen. Het geeft
+daarvan, en is onafhankelijk van ontwerp van en implementatie in systemen. Het geeft
 een zo getrouw mogelijke beschrijving van die werkelijkheid en is in natuurlijke
-taal geformuleerd. Een dergelijk model definieert het ‘wat’: welke ‘concepten’
+taal geformuleerd. Een dergelijk model definieert het **‘wat’**: welke ‘concepten’
 (‘dingen’) worden onderscheiden (in de beschouwde werkelijkheid), wat betekenen
 zij, hoe verhouden ze zich tot elkaar en welke informatie (eigenschappen) is
 daarvan relevant. Het dient als taal waarmee domeinexperts kunnen communiceren
 met informatie-analisten en verschaft een eenduidige interpretatie van die
-werkelijkheid ten behoeve van deze communicatie. Een conceptueel informatiemodel
-wordt dan ook opgesteld voor gebruik door mensen, zodat ‘de business’ en de
-ICT-specialisten elkaar gaan begrijpen.
+werkelijkheid ten behoeve van deze communicatie.  
+*Een conceptueel informatiemodel wordt dan ook opgesteld voor gebruik door mensen,  
+zodat ‘de business’ en de ICT-specialisten elkaar gaan begrijpen.*
 
 Ten aanzien van logische informatiemodellen: 
 - Een conceptueel informatiemodel is onafhankelijk van standaarden voor gegevensuitwisseling.
@@ -190,11 +192,11 @@ worden bij de interactie tussen systemen en hun gebruikers en tussen systemen
 onderling. Anders gezegd, een model van de representatie van informatie over de
 werkelijkheid in digitale registraties en in de uitwisseling daartussen. Het
 gaat hierbij, in tegenstelling tot een conceptueel model, dus veel meer om het
-‘hoe’. Het slaat de brug tussen werkelijkheid en systemen maar beschrijft nog
+**‘hoe’**. Het slaat de brug tussen werkelijkheid en systemen maar beschrijft nog
 niet de implementatie in die systemen. Een dergelijk model wordt in een formele
 taal beschreven en wordt waar mogelijk gegenereerd vanuit het conceptueel model.
-Het logisch model wordt opgesteld voor ICT-interoperabiliteit, voor gebruik door
-met name de ontwerpers, bouwers en beheerders van ICT-voorzieningen.
+*Het logisch model wordt opgesteld voor ICT-interoperabiliteit, voor gebruik door
+met name de ontwerpers, bouwers en beheerders van ICT-voorzieningen.*
 
 Ten aanzien van fysieke of technische datamodellen: 
 - Een logisch informatiemodel is implementatie onafhankelijk en kan in naar meerdere technische modellen worden geimplementeerd. 
@@ -208,8 +210,8 @@ servicetechnologie zoals [[!xml]], [[!gml]], [[!SOAP]], REST, [[!GeoJSON]],
 [[!Linked-Data]] e.d. Het kan tevens informatie bevatten over de manier waarop
 berichten ‘verpakt’ worden, het (internet)protocol en de logistiek van het
 berichtenverkeer. De technische specificaties worden over het algemeen zoveel
-als mogelijk gegenereerd uit het logisch informatiemodel. Deze specificaties
-worden opgesteld voor ‘machines’, te gebruiken door software-ontwikkelaars.
+als mogelijk gegenereerd uit het logisch informatiemodel. 
+*Deze specificaties worden opgesteld voor ‘machines’, te gebruiken door software-ontwikkelaars.*
 
 Het voorliggende metamodel kan toegepast worden op twee niveaus, niveau 2 en
 niveau 3: t.b.v. een zuiver conceptueel informatiemodel (2) en t.b.v. een
