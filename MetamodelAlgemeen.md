@@ -188,8 +188,8 @@ worden (records, entiteiten e.d.) op basis van andere overwegingen.
 
 #### Attribuutsoort
 
-Een attribuutsoort is een type van gelijksoortige attributen of gegevens.
-Daartoe kijken we eerst naar het begrip ‘gegeven’.
+Een attribuutsoort is een kenmerk van een objecttype, waarvoor gegevens worden bijgehouden.  
+Voordat we attribuutsoort definieren kijken we eerst naar het begrip ‘gegeven’.
 
 >   **Definitie Gegeven**  
 >   De betekenisvolle formulering van een waargenomen feit, waaraan een waarde
@@ -202,22 +202,26 @@ cetera. Met deze gegevens wordt een model (een selectief deel dus) van de
 werkelijkheid vastgelegd in de tijd. Ofschoon de werkelijkheid nooit stilstaat,
 kan deze door het vastleggen van de gegevens toch worden bevroren.
 
-Voorbeelden van gegevens zijn de waardes ‘Jan’ en ‘man’ betreffende de naam en
-het geslacht van een object van het type Persoon. Merk op dat een gegeven zonder
-duidelijkheid over het type gegeven (naam, geslacht e.d.) geen informatie biedt.
-Een gegeven wordt ook wel attribuut genoemd.
+Voorbeelden van gegevens zijn de waardes ‘Jan’ en ‘1-1-1970’ betreffende de naam en
+de geboortedatum van een object van het type Persoon. Merk op dat een gegeven zonder
+duidelijkheid over het soort gegeven c.q. de attribuutsoort 'naam' geen informatie biedt.
+
+Een informatiemodel specificeert niet de gegevens zelf. Een gegeven zoals '1-1-1970' noemen we een 
+attribuut van Jan. In het informatiemodel wordt dit het attribuutsoort 'naam' van een objecttype Persoon. 
 
 >   **Definitie Attribuutsoort**  
 >   De typering van gelijksoortige gegevens die voor een objecttype van
 >   toepassing is.
 
-*Toelichting* Een gegeven met stereotype attribuutsoort is een kenmerk van een
-object.
+*Toelichting* 
+De gegevens Jan en Katrien worden als gelijksoortig gezien en worden daarom ondergebracht in attribuutsoort 'naam'. 
+Je kan ook zeggen, het objecttype Persoon heeft een attribuutsoort 'naam' en deze is geschikt om gegevens in te plaatsen. 
 
-Attribuutsoorten worden ook wel kenmerken of eigenschappen genoemd. Aan elk
-objecttype worden nul, één of meer *«*Attribuutsoort*»*en toegekend. In een
-informatiemodel worden alleen voor het domein relevante attribuutsoorten
-opgenomen bij een objecttype.
+Aan elk objecttype worden nul, één of meer *«*Attribuutsoort*»*en toegekend. In een informatiemodel 
+worden alleen voor het domein relevante attribuutsoorten opgenomen bij een objecttype. 
+
+Attribuutsoorten worden ook wel kenmerken of eigenschappen genoemd. Dit zijn het ook, maar er zijn 
+andere kenmerken, zo is een relatiesoort ook een kenmerk of eigenschap.  
 
 #### Gegevensgroep
 
