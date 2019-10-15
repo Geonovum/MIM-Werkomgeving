@@ -556,18 +556,35 @@ modelelementen.
 #### Informatiemodel
 
 >   **Definitie Informatiemodel**  
->   Hoofdpackage waar alle subpackages die een informatiemodel beschrijven onder
->   vallen.
+>   De groepering van alle modelelementen waaruit het informatiemodel is opgebouwd. Het informatiemodel als geheel. 
 
-<todo>TODO: Tekst toevoegen</todo>
+*Toelichting:*
+Het informatiemodel is een package, te weten het hoofdpackage van het informatiemodel, waar alle 
+subpackages die een informatiemodel beschrijven onder vallen, zoals Domein en View en extern. 
+Het informatiemodel wordt verder beschreven met metadata, zoals de aanduidig van het domein wat in het informatiemodel is gemodelleerd. Het is gangbaar om de naam van het informatiemodel te beginnen met IM, maar dit is niet verplicht.    
+
+<aside class='example'>
+    Voorbeeld: IMKAD, of IMBAGLV.
+</aside>
+
+Het domein wat hier gemodelleerd is, is het domein adressen en gebouwen, oftewel de BAG. 
 
 #### Domein
+Een informatiemodel kan onderverdeeld worden in meerdere packages, waarbij aangegeven wordt dat 
+deze de modellering van de informatie van het domein bevatten.
 
 >   **Definitie Domein**  
 >   Een groepering van constructies die een semantisch samenhangend gedeelte van
 >   een informatiemodel beschrijven.
 
-<todo>TODO: Tekst toevoegen</todo>
+*Toelichting:*
+Waar het informatiemodel het hoofdpackage is, zijn dit de subpackages.  
+Er zijn meerdere soorten packages. Om onderscheid te maken tussen packages waarin het domein gemodelleerd is, en andere opackages, heeft dit modelelement de naam Domein gekregen. Je zou ook kunnen zeggen, het informatiemodel bestaat uit de volgende subdomeinen. 
+
+<aside class='example'>
+    Voorbeeld: Recht, of Stukken. De BRK houdt deze domein informatie in aparte packages apart bij, voor het overzicht, en om de packages afzonderlijke te kunnen aanpassen, zonder impact op de andere packages.     
+</aside>
+
 
 #### Extern
 
