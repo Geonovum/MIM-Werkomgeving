@@ -147,12 +147,14 @@ View 3c: Groepering
 In deze paragraaf staan alle modelelementen opgesomd, die gebruikt worden bij
 het maken van een informatiemodel.
 
-### Objecten en attributen
+#### Objecten en objecttype  
 
-#### Objecttype
+Een objecttype is een groep van gelijksoortige objecten. Zo zijn Jan en Katrien 
+allebei objecten die gelijksoortig zijn. Het zijn allebei personen, oftewel het 
+objecttype van beide is Persoon. In het informatiemodel nemen we Persoon op met 
+behulp van het modelelement Objecttype.  
 
-Een objecttype is een groep van gelijksoortige objecten. Om duidelijk te maken
-wat wordt bedoeld kijken we eerst naar het begrip ‘object’.
+Om duidelijk(er) te maken wat wordt bedoeld kijken we eerst naar het begrip ‘object’.
 
 >   **Definitie Object**  
 >   Een ding, een tastbaar iets, in de werkelijkheid, zoals daarnaar gekeken
@@ -187,7 +189,7 @@ registratie. Daartoe is veelal een interpretatie nodig (van die werkelijkheid
 cq. die objecttypen) naar eenheden die in een registratie vastgelegd kunnen
 worden (records, entiteiten e.d.) op basis van andere overwegingen.
 
-#### Attribuutsoort
+#### Attribuutsoort en een groepering ervan   
 
 Een attribuutsoort is een kenmerk van een objecttype, waarvoor gegevens worden bijgehouden.  
 Voordat we attribuutsoort definieren kijken we eerst naar het begrip ‘gegeven’.
@@ -358,7 +360,16 @@ wanneer één van de SUBJECTen niet meer bestaat.
 >   Een associatie waarmee vanuit het perspectief van het eigen informatiemodel
 >   een objecttype uit het ‘eigen’ informatiemodel gekoppeld wordt aan een
 >   objecttype van een extern informatiemodel. De relatie zelf hoort bij het
->   ‘eigen’ objecttype. (zie [Koppelen met een ander informatiemodel](#koppelen-met-een-ander-informatiemodel-externe-koppeling)).
+>   ‘eigen’ objecttype. 
+
+*Toelichting:*  
+Hiermee wordt aangegeven dat er een relatie ligt naar een informatiemodel van een ander domein. 
+Dit kan rechtstreeks zijn, maar het is ook mogelijk om het objecttype van een ander domein 
+over te nemen naar het eigen domein, en specifiek te maken voor hoe je deze informatie ziet 
+vanuit je eigen domein (dit laatste noemen we ook wel een [View](#Packages). 
+
+Zie [Koppelen met een ander informatiemodel](#koppelen-met-een-ander-informatiemodel-externe-koppeling).
+
 
 #### Relatierol
 
