@@ -653,6 +653,12 @@ modelelementen.
 >   beschikbaar stelt aan een informatiemodel en die in het informatiemodel
 >   ongewijzigd gebruikt worden.
 
+<div class='example'>
+    Voorbeeld: het Externe package NEN3610 met datatype NEN3610ID. Het datatype van
+    attribuutsoort Identificatie wegdeel in RSGB verwijst naar het datatype
+    NEN3610ID zoals opgenomen in het Externe package.
+</div>
+
 #### View
 
 >   **Definitie View**  
@@ -660,6 +666,13 @@ modelelementen.
 >   informatiemodel en vanuit het perspectief van het eigen informatiemodel
 >   inzicht geeft welke gegevens van deze objecttypen relevant zijn binnen het
 >   eigen informatiemodel.
+
+<aside class='example'>
+    IMKAD-BRP. Een aantal van de gegevens uit BAG objecten uit de
+    basisregistratie BAG zijn relevant voor de basisregistratie Kadaster. De
+    definities van de BAG worden gevolgd. Vanuit modelleringsperspectief wordt dit
+    gezien als een view.
+</aside>
 
 ### Overig
 
