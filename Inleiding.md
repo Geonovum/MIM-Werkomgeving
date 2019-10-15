@@ -91,9 +91,14 @@ opgeslagen, beheerd en uitgewisseld worden. Die beschrijving heeft de vorm van
 een model dat een gestructureerde weergave is van die werkelijkheid. Een
 dergelijk model is noodzakelijk om deze informatie te kunnen beheren en
 gebruiken (door mensen en machines) bij het communiceren over deze
-werkelijkheid, in <span class='note'>[registraties](#inl-n-1)</span> of anderszins, zoals het specificeren van de
+werkelijkheid, in registraties of anderszins, zoals het specificeren van de
 tussen registraties uit te wisselen gegevens of van de te bevragen informatie
-uit een registratie.
+uit een registratie. De opname in een *registratie* kent vaak een inwinningsproces, om
+gegevenswaarden over de feitelijke dingen in de werkelijkheid conform het
+informatiemodel in de registratie op te nemen. Dit is een belangrijk proces, maar valt buiten scope 
+van het informatiemodel.
+<!-- aside id='inl-n-1' class='note' -->
+<!-- /aside -->
 
 Het beschrijven vindt plaats door de informatie te modelleren naar objecttypen
 en de kenmerken daarvan naar attribuutsoorten van die objecttypen en relaties
@@ -432,12 +437,3 @@ De Stelselcatalogus [[!SCAT]], het GAB [[!GAB]] en de Handreiking gegevensbeschr
 in de gemaakte afspraken. Voor het metamodel hanteren we daarom de volgende spelregel:
 de Stelselcatalogus is zoveel als mogelijk leidend, vervolgens het GAB en als
 laatste de handreiking.
-
-**Voetnoten**
-
-<aside id='inl-n-1' class='note'>
-    De opname in een *registratie* kent vaak een inwinningsproces, om
-    gegevenswaarden over de feitelijke dingen in de werkelijkheid conform het
-    informatiemodel in de registratie op te nemen. Dit is een belangrijk proces,
-    maar valt buiten scope van het informatiemodel.
-</aside>
