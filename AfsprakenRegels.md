@@ -800,7 +800,7 @@ externe package gebruikt worden als datatype, maar er kan ook naar verwezen
 worden via een relatie. Dit laatst wordt nader uitgelegd in de volgende
 paragraaf.
 
-### Koppelen met ander informatiemodel (externe koppeling)
+### Koppelen met een ander informatiemodel (externe koppeling)
 
 Bij registraties is het regelmatig noodzakelijk om te verwijzen vanuit het eigen
 model naar gegevens uit een andere informatiemodel. Denk aan het opnemen van de
