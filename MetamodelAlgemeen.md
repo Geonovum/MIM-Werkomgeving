@@ -543,11 +543,15 @@ modelelementen.
 >   Hoofdpackage waar alle subpackages die een informatiemodel beschrijven onder
 >   vallen.
 
+<todo>TODO: Tekst toevoegen</todo>
+
 #### Domein
 
 >   **Definitie Domein**  
 >   Een groepering van constructies die een semantisch samenhangend gedeelte van
 >   een informatiemodel beschrijven.
+
+<todo>TODO: Tekst toevoegen</todo>
 
 #### Extern
 
@@ -1119,7 +1123,7 @@ Indien mogelijk is de verwijzing een URI of een URL (als er geen URI is, dan kan
 dit een URL zijn, waar de waardenlijst op basis van de naam van de waardenlijst
 te vinden is).
 
-Bijvoorbeeld: <http://www.organisatie.nl/schemas/waardelijsten/NaamWaardelijst>
+Bijvoorbeeld: 'http://www.organisatie.nl/schemas/waardelijsten/NaamWaardelijst'
 
 *Toepassing*: de modelelementen die een waardelijst zijn.
 
