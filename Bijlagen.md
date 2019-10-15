@@ -51,15 +51,15 @@ Deze bijlage bevat alle modelelementen en metagegevens in één diagram.
 |                                | *Referentie elemen*t      |   |               |
 | Naam referentie element        |                           |   |               |
 |                                | *Gestructureerd datatype* |   |               |
-| *Naam Gestructureerd datatype* |                           |   |               |
+| Naam Gestructureerd datatype   |                           |   |               |
 |                                | *Data element*            |   |               |
 | Naam data element              |                           |   |               |
 |                                | *Datatype*                |   |               |
-| *Naam datatype*                |                           |   |               |
+| Naam datatype                  |                           |   |               |
 |                                | *Union*                   |   |               |
-| *Naam Union*                   |                           |   |               |
+| Naam Union                     |                           |   |               |
 |                                | *Union element*           |   |               |
-| *Naam union element*           |                           |   |               |
+| Naam union element             |                           |   |               |
 |                                | *Enumeratie*              |   |               |
 | Naam enumeratie                |                           |   |               |
 |                                | *Enumeratiewaarde*        |   |               |
@@ -68,7 +68,7 @@ Deze bijlage bevat alle modelelementen en metagegevens in één diagram.
 
 ## Versielog
 
-In versie 1.1 zijn de volgende issues verwerkt:
+In deze versie 1.1 zijn de volgende issues verwerkt:
 
 | Issue                                                                 | Omschrijving | 
 |-----------------------------------------------------------------------|--------------|
