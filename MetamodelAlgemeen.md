@@ -24,9 +24,9 @@ worden weggelaten, er geen semantische betekenis verloren mag gaan.
 - Elk modelelement heeft een naam en een eigen MIM metaclass, waaraan je het modelelement overal kan herkennen. 
 
 *Toelichting metaclass*   
-Alle modelelementen zjn wat in metamodel een metaklasse wordt genoemd. Hiermee wordt aangegeven dat het 
-om de classificatie gaat dat een Persoon een Objecttype is, en niet om bijvoorbeeld een classificatie 
-dat Jan een Persoon is. Vandaar de term metaclass. 
+Alle modelelementen zijn een metaklasse in het metamodel. Hiermee wordt aangegeven dat het niet een klasse betreft 
+in een informatiemodel, zoals de klasse Persoon, maar dat het om de classificatie gaat dat de Persoon een Objecttype is, 
+oftewel dat de klasse Persoon van de metaklasse Objecttype is. Vandaar de term metaclass. 
 
 De metaklassen worden ook gebruikt om aan te geven hoe deze zich verhouden tot de metaklassen
 van UML en W3C, in de volgende hoofdstukken. 
