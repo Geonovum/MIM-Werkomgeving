@@ -177,7 +177,7 @@ zij, hoe verhouden ze zich tot elkaar en welke informatie (eigenschappen) is
 daarvan relevant. Het dient als taal waarmee domeinexperts kunnen communiceren
 met informatie-analisten en verschaft een eenduidige interpretatie van die
 werkelijkheid ten behoeve van deze communicatie.  
-*Een conceptueel informatiemodel wordt dan ook opgesteld voor gebruik door mensen,  
+*Een conceptueel informatiemodel wordt dan ook opgesteld voor gebruik door mensen, 
 zodat ‘de business’ en de ICT-specialisten elkaar gaan begrijpen.*
 
 Ten aanzien van logische informatiemodellen: 
@@ -194,7 +194,7 @@ werkelijkheid in digitale registraties en in de uitwisseling daartussen. Het
 gaat hierbij, in tegenstelling tot een conceptueel model, dus veel meer om het
 **‘hoe’**. Het slaat de brug tussen werkelijkheid en systemen maar beschrijft nog
 niet de implementatie in die systemen. Een dergelijk model wordt in een formele
-taal beschreven en wordt waar mogelijk gegenereerd vanuit het conceptueel model.
+taal beschreven en wordt waar mogelijk gegenereerd vanuit het conceptueel model.  
 *Het logisch model wordt opgesteld voor ICT-interoperabiliteit, voor gebruik door
 met name de ontwerpers, bouwers en beheerders van ICT-voorzieningen.*
 
@@ -210,10 +210,10 @@ servicetechnologie zoals [[!xml]], [[!gml]], [[!SOAP]], REST, [[!GeoJSON]],
 [[!Linked-Data]] e.d. Het kan tevens informatie bevatten over de manier waarop
 berichten ‘verpakt’ worden, het (internet)protocol en de logistiek van het
 berichtenverkeer. De technische specificaties worden over het algemeen zoveel
-als mogelijk gegenereerd uit het logisch informatiemodel. 
+als mogelijk gegenereerd uit het logisch informatiemodel.  
 *Deze specificaties worden opgesteld voor ‘machines’, te gebruiken door software-ontwikkelaars.*
 
-Het voorliggende metamodel kan toegepast worden op twee niveaus, niveau 2 en
+Het voorliggende metamodel kan primair toegepast worden op twee niveaus, niveau 2 en
 niveau 3: t.b.v. een zuiver conceptueel informatiemodel (2) en t.b.v. een
 logisch informatiemodel (3). Het moge duidelijk zijn dat het altijd het één of
 het ander is. Een combinatie van beide in één model leidt tot verwarring. Voor
