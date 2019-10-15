@@ -440,6 +440,11 @@ referentielijst, zijn nooit aan de orde).
 >   **Definitie Enumeratiewaarde**  
 >   Een gedefinieerde waarde, in de vorm van een eenmalig vastgesteld constant gegeven.
 
+*Toelichting:*
+De waarde van de data zelf. Bijvoorbeeld: Plein, Brug, Spoor, M (man).  
+Alleen deze waarde mag gebruiken worden. 
+
+
 #### Stereotype Codelist
 
 >   **Definitie Codelist**  
@@ -463,7 +468,7 @@ in de codelist zelf gedefinieerd.
 
 ### Datatypen
 
-Een datatype die de structuur beschrijft waaraan een waarde moet voldoen (zie
+Een datatype die de structuur beschrijft waaraan een waarde, oftewel de data zelf, moet voldoen (zie
 [Objecten en attributen](#objecten-en-attributen)).
 
 Bij elke «Attribuutsoort» wordt gespecificeerd aan welk datatype de data c.q. de
@@ -641,12 +646,10 @@ objecttype.
 
 Een constraint kan vastgelegd worden bij alle modelelementen. Echter, meestal
 komt een constraint voor bij een objecttype, om te aan te geven dat de
-constraint geldt voor 2 (of meer) kenmerken van een objecttype:
+constraint geldt voor 2 (of meer) kenmerken van een objecttype, of om een 
+bijzondere specificatie toe te voegen die niet via de bestaande modelelementen gelegd kan worden.
 
-, of om een bijzondere specificatie toe te voegen die niet via de bestaande
-modelelementen gelegd kan worden.
-
-Een constraint wordt altijd in gewone tekst omschreven en optioneel als formele
+Een constraint wordt altijd in gewone tekst omschreven en kan optioneel als formele specificatie worden aangegeven. 
 
 Specificatie metagegevens informatiemodel
 -----------------------------------------
