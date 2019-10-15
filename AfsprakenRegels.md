@@ -626,9 +626,8 @@ en dus géén bij de tijdslijnen behorende attributen die gebruikt moeten worden
 voor het vastleggen van historie. Deze bij de tijdslijn behorende attributen
 worden op het logische niveau vastgelegd.
 
-**Historie op logisch niveau** MIM schrijft <span class='note'>[zie noot](#afs-n-2)</span> geen
-implementatie van het conceptuele niveau voor. Wel worden er aandachtspunten
-gegeven om rekening mee te houden. Denk bij de uitwerking o.a. aan de volgende
+**Historie op logisch niveau** MIM schrijft geen implementatie van het conceptuele niveau voor. 
+Wel worden er aandachtspunten gegeven om rekening mee te houden. Denk bij de uitwerking o.a. aan de volgende
 aspecten:
 
 -   Het bijhouden van historie met specifieke attributen per objecttype, zoals
