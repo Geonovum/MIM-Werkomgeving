@@ -980,12 +980,12 @@ specificeren. Dit is een hulptabel, die u over kunt nemen naar uw eigen extensie
 
 ### Verwijzing van een modelelement naar een begrip uit het begrippenkader
 
-Het metadata element “begrip” uit paragraaf 2.3 (**Verwijzing opnemen, TODO**)
+Het metadata element “begrip” uit paragraaf [Datatypen](#datatypen)
 is bedoeld om de traceability tussen een modelelement in een informatiemodel en
-een begrip uit een model van begrippen (zoals bedoeld in paragraaf 1.5
-(**Verwijzing opnemen, TODO**)) te borgen. Anders gezegd, om aan te geven dát
-een modelelement een weergave is van het betreffende begrip op IM niveau. Anders
-gezegd, het is niet de bedoeling om te verwijzen naar een begrip als het
+een begrip uit een model van begrippen (zoals bedoeld in paragraaf 
+[Typen Informatiemodellen](#typen-informatiemodellen)) te borgen. Anders gezegd, 
+om aan te geven dát een modelelement een weergave is van het betreffende begrip op 
+IM niveau. Anders gezegd, het is niet de bedoeling om te verwijzen naar een begrip als het
 modellement hier slechts een beetje mee te maken heeft. De verwijzing geeft aan
 dat het model element op informatiemodel niveau een invulling geeft aan het
 begrip. Het begrip zelf is opgenomen in een model van begrippen. Aldaar is meer

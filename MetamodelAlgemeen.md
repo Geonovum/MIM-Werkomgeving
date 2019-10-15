@@ -795,9 +795,8 @@ Metagegeven: **Begrip**
 *Toelichting*
 
 Hiermee wordt aangegeven hoe een informatiemodel element zich verhoudt tot de
-begrippen uit het begrippenkader, zoals genoemd in paragraaf 1.5 (**verwijzing,
-TODO**). Dit is niet een 1 op 1 relatie. Voor meer informatie hierover, zie
-hoofdstuk 5 (**verwijzing, TODO**).
+begrippen uit het begrippenkader, zoals genoemd in paragraaf [Typen Informatiemodellen](#typen-informatiemodellen). 
+Dit is niet een 1 op 1 relatie. Voor meer informatie hierover, zie hoofdstuk [Afspraken & Regels](#afspraken-regels).
 
 Bij voorbeeld: Perceel of
 http://brk.basisregistraties.overheid.nl/id/begrip/Perceel
@@ -899,7 +898,9 @@ op enerlei wijze, welke op enerlei wijze te bevragen is.
 De in te vullen waarde komt uit: zie Tagged values en waardenbereik tagged
 values.
 
-Materiële historie geeft aan wanneer een verandering is opgetreden in de werkelijkheid die heeft geleid tot verandering van de attribuutwaarde. Verdere toelichting, zie het hoofdstuk [Afspraken & Regels](#afspraken-regels)
+Materiële historie geeft aan wanneer een verandering is opgetreden in de werkelijkheid die heeft
+geleid tot verandering van de attribuutwaarde. Verdere toelichting, 
+zie het hoofdstuk [Afspraken & Regels](#afspraken-regels)
 
 *Toepassing*: alle modelelementen die een kenmerk (kunnen) zijn van een
 objecttype.
@@ -919,8 +920,7 @@ De in te vullen waarde komt uit: zie Tagged values en waardenbereik tagged
 values.
 
 Formele historie geeft aan wanneer in de administratie een verandering bekend
-is, en is verwerkt. Verdere toelichting, zie het hoofdstuk [Afspraken &
-Regels](#afspraken-regels).
+is, en is verwerkt. Verdere toelichting, zie het hoofdstuk [Afspraken &Regels](#afspraken-regels).
 
 *Toepassing*: alle modelelementen die een kenmerk (kunnen) zijn van een
 objecttype.
@@ -956,8 +956,7 @@ moeten hebben, maar dat het vooralsnog niet gelukt is om dit gegeven in te
 winnen of te achterhalen. Het is dan bekend dat het object dit kenmerk wel
 degelijk heeft, maar de waarde ervan is onbekend. De kardinaliteit wordt dan
 niet van 1 naar 0 gezet, maar er wordt aangegeven dat er sprake is van mogelijk
-geen waarde. Meer hierover is beschreven in het hoofdstuk [Afspraken &
-Regels](#afspraken-regels).
+geen waarde. Meer hierover is beschreven in het hoofdstuk [Afspraken & Regels](#afspraken-regels).
 
 *Toepassing*: alle modelelementen die een kenmerk (kunnen) zijn van een
 objecttype.
