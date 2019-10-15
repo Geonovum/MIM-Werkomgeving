@@ -1040,9 +1040,7 @@ op enerlei wijze, welke op enerlei wijze te bevragen is.
 De in te vullen waarde komt uit: zie Tagged values en waardenbereik tagged
 values.
 
-Materiele historie geeft aan wanneer in de administratie een verandering bekend
-is, en is verwerkt. Verdere toelichting, zie het hoofdstuk [Afspraken &
-Regels](#afspraken-regels)
+Materiële historie geeft aan wanneer een verandering is opgetreden in de werkelijkheid die heeft geleid tot verandering van de attribuutwaarde. Verdere toelichting, zie het hoofdstuk [Afspraken & Regels](#afspraken-regels)
 
 *Toepassing*: alle modelelementen die een kenmerk (kunnen) zijn van een
 objecttype.
