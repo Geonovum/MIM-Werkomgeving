@@ -68,36 +68,40 @@ Deze bijlage bevat alle modelelementen en metagegevens in één diagram.
 
 ## Versielog
 
-In deze versie zijn de volgende issues verwerkt:
+In versie 1.1 zijn de volgende issues verwerkt:
 
-| Issue                                                      | Omschrijving | 
-|------------------------------------------------------------|--------------|
-| [Issue #4](https://github.com/Geonovum/MIM-Werkomgeving/issues/4)    | EA type van Relatierol dient AssociationEnd te zijn. |
-| [Issue #5](https://github.com/Geonovum/MIM-Werkomgeving/issues/5)    | UML metaclass aanpassen van Gegevensgroep |
-| [Issue #6](https://github.com/Geonovum/MIM-Werkomgeving/issues/6)    | Kopjes "Specificatie voor Enumeratie(waarden)" aanpassen in par 2.3.6 |
-| [Issue #8](https://github.com/Geonovum/MIM-Werkomgeving/issues/8)    | In Bijlage 1 staat nog "Complex datatype". |
-| [Issue #9](https://github.com/Geonovum/MIM-Werkomgeving/issues/9)    | Eigen primitief datatype gebaseerd op een standaard primitief datatype (anders dan CharacterString) |
-| [Issue #14](https://github.com/Geonovum/MIM-Werkomgeving/issues/14)  | Definities van dezelfde metadata aspecten verschillen soms (onbedoeld) |
-| [Issue #15](https://github.com/Geonovum/MIM-Werkomgeving/issues/15)  | Informatie over eenheid opnemen |
-| [Issue #25](https://github.com/Geonovum/MIM-Werkomgeving/issues/25)  | Interne referentie naar 3.5 formeel patroon klopt niet |
-| [Issue #28](https://github.com/Geonovum/MIM-Werkomgeving/issues/28)  | Toepassing isId kan beter worden beschreven |
-| [Issue #37](https://github.com/Geonovum/MIM-Werkomgeving/issues/37)  | Aspect "Identificerend" bij ReferentieElement abusievelijk "Identificatie" genoemd |
-| [Issue #41](https://github.com/Geonovum/MIM-Werkomgeving/issues/41)  | Aspect "mogelijk geen waarde" heeft meerdere definities |
-| [Issue #42](https://github.com/Geonovum/MIM-Werkomgeving/issues/42)  | Aspect "indicatie afleidbaar" heeft meerdere definities |
-| [Issue #43](https://github.com/Geonovum/MIM-Werkomgeving/issues/43)  | Aspect "authentiek" heeft meerdere definities |
-| [Issue #44](https://github.com/Geonovum/MIM-Werkomgeving/issues/44)  | Aspect "kardinaliteit" heeft meerdere definities |
-| [Issue #45](https://github.com/Geonovum/MIM-Werkomgeving/issues/45)  | Aspect "indicatie formele historie" heeft meerdere definities |
-| [Issue #46](https://github.com/Geonovum/MIM-Werkomgeving/issues/46)  | Aspect "indicatie materiële historie" heeft meerdere definities |
-| [Issue #47](https://github.com/Geonovum/MIM-Werkomgeving/issues/47)  | Aspect "toelichting" heeft meerdere definities |
-| [Issue #48](https://github.com/Geonovum/MIM-Werkomgeving/issues/48)  | Aspect "herkomst definitie" heeft meerdere definities |
-| [Issue #49](https://github.com/Geonovum/MIM-Werkomgeving/issues/49)  | Aspect "definitie" heeft meerdere definities |
-| [Issue #50](https://github.com/Geonovum/MIM-Werkomgeving/issues/50)  | Aspect "herkomst" heeft meerdere definities |
-| [Issue #52](https://github.com/Geonovum/MIM-Werkomgeving/issues/52)  | Aspect "datum opname" heeft meerdere definities |
-| [Issue #53](https://github.com/Geonovum/MIM-Werkomgeving/issues/53)  | Aspect "naam" heeft meerdere definities |
-| [Issue #54](https://github.com/Geonovum/MIM-Werkomgeving/issues/54)  | Aspect per meta class of aspect als unieke properties |
-| [Issue #55](https://github.com/Geonovum/MIM-Werkomgeving/issues/55)  | Aspect "constraint" ontbreekt in de tekst |
-| [Issue #58](https://github.com/Geonovum/MIM-Werkomgeving/issues/58)  | Aspect "alias" ontbreekt in de tekst en komt ook niet voor in het UML bestand |
-| [Issue #60](https://github.com/Geonovum/MIM-Werkomgeving/issues/60)  | Type fout constraint bij referentie element |
+| Issue                                                                 | Omschrijving | 
+|-----------------------------------------------------------------------|--------------|
+| [Issue #3](https://github.com/Geonovum/MIM-Werkomgeving/issues/3)     | Toevoegen Decimal aan primaire types in MIM |
+| [Issue #12](https://github.com/Geonovum/MIM-Werkomgeving/issues/12)   | Metadata van het informatiemodel zelf en van de packages/subgroepen hierbinnen |
+| [Issue #17](https://github.com/Geonovum/MIM-Werkomgeving/issues/17)   | Vertaling naar engels opnemen in een bijlage |
+| [Issue #18](https://github.com/Geonovum/MIM-Werkomgeving/issues/18)   | Opnemen van een tagged value voor versies/varianten van metamodel  |
+| [Issue #21](https://github.com/Geonovum/MIM-Werkomgeving/issues/21)   | Verwijzen van informatiemodel naar model van begrippen  |
+| [Issue #22](https://github.com/Geonovum/MIM-Werkomgeving/issues/22)   | GegevensgroepType onderbeschreven  |
+| [Issue #24](https://github.com/Geonovum/MIM-Werkomgeving/issues/24)   | hoe toevoegen locatie bij/van waardelijst (bij attribuutsoort union-element en data-element)?  |
+| [Issue #38](https://github.com/Geonovum/MIM-Werkomgeving/issues/38)   | Modelaspecten versus meta-aspecten  |
+| [Issue #53](https://github.com/Geonovum/MIM-Werkomgeving/issues/53)   | Aspect "naam" heeft meerdere definities |
+| [Issue #57](https://github.com/Geonovum/MIM-Werkomgeving/issues/57)   | Aspect "attribuut" ontbreekt in de tekst |
+| [Issue #59](https://github.com/Geonovum/MIM-Werkomgeving/issues/59)   | Waarden voor typeAggregatie c.q. subklassen |
+| [Issue #61](https://github.com/Geonovum/MIM-Werkomgeving/issues/61)   | hoe modelleer je een keuze tussen attribuutsoorten en/of relatiesoorten? |
+| [Issue #66](https://github.com/Geonovum/MIM-Werkomgeving/issues/66)   | herschrijven hoofdstuk 2 en 3 |
+| [Issue #69](https://github.com/Geonovum/MIM-Werkomgeving/issues/69)   | MIM document implementatie neutraal maken, met hoofdstuk voor MIM-UML |
+| [Issue #70](https://github.com/Geonovum/MIM-Werkomgeving/issues/70)   | MIM-LD vocabulaire maken |
+| [Issue #71](https://github.com/Geonovum/MIM-Werkomgeving/issues/71)   | MIM-LD - MIM document, hoofdstuk MIM-LD toevoegen |
+| [Issue #72](https://github.com/Geonovum/MIM-Werkomgeving/issues/72)   | MIM-LD - bestaand informatiemodel transformeren naar een instantieerbaar LD model |
+| [Issue #74](https://github.com/Geonovum/MIM-Werkomgeving/issues/74)   | Generalisatie heeft twee definities |
+| [Issue #80](https://github.com/Geonovum/MIM-Werkomgeving/issues/80)   | De definitie van "Primitief datatype" is recursief |
+| [Issue #81](https://github.com/Geonovum/MIM-Werkomgeving/issues/81)   | De definitie van "Gestructureerd datatype" is recursief |
+| [Issue #85](https://github.com/Geonovum/MIM-Werkomgeving/issues/85)   | Ontbreken van de waarde "Niet authentiek" |
+| [Issue #86](https://github.com/Geonovum/MIM-Werkomgeving/issues/86)   | Datatype van Indicatie materiele/formele historie irt groepen |
+| [Issue #87](https://github.com/Geonovum/MIM-Werkomgeving/issues/87)   | MIM document web-friendly maken |
+| [Issue #90](https://github.com/Geonovum/MIM-Werkomgeving/issues/90)   | Meerdere definities voor aspecten "unidirectioneel", "objecttype", "gerelateerdObjecttype" en "typeAggregatie" |
+| [Issue #96](https://github.com/Geonovum/MIM-Werkomgeving/issues/96)   | Algemeen: UML diagrammen bijwerken voor versie 1.1 |
+| [Issue #97](https://github.com/Geonovum/MIM-Werkomgeving/issues/97)   | herschrijven voorwoord |
+| [Issue #100](https://github.com/Geonovum/MIM-Werkomgeving/issues/100) | Aanduiding van een volgorde van kenmerken? |
+| [Issue #101](https://github.com/Geonovum/MIM-Werkomgeving/issues/101) | Namen van objectentypen of kenmerken uniek binnen IM? |
+| [Issue #102](https://github.com/Geonovum/MIM-Werkomgeving/issues/102) | Hoe hergebruiken van kenmerken of definities |
+| [Issue #107](https://github.com/Geonovum/MIM-Werkomgeving/issues/107) | Alias en naam, of naam en alias? Wat staat er in? |
 
 
 ## Vertaling naar engels 
