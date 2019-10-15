@@ -60,7 +60,7 @@ opgenomen.
 
 ### Kern
 
-![](media/KernZonderMetagegevens.png)
+![](media/KernZonderUML.png)
 
 Kern zonder Metagegevens
 
@@ -76,7 +76,7 @@ Kern zonder Metagegevens
 
 ### Datatypen
 
-![](media/DatatypenZonderMetagegevens.png)
+![](media/DatatypenZonderUML.png)
 
 Datatypen zonder Metagegevens
 
@@ -806,12 +806,12 @@ Specificatie metagegevens kenmerken
 
 Elk modelelement kent een aantal metagegevens, die bepaalde aspecten van het
 modelelement specificeren. Zo is er de *naam* van het modelelement, bijvoorbeeld
-het objecttype met als *naam* Pan den een bijbehorende *definitie*, of de *Datum
+het objecttype met als *naam* Pand en een bijbehorende *definitie*, of de *Datum
 opname* van het modelelement in het informatiemodel, bijvoorbeeld *Datum opname*
 1-1-2012.
 
 Merk op dat een aantal van deze metagegevens al meegenomen worden in een
-specificatie taal.
+specificatietaal.
 
 Bijvoorbeeld het objecttype met de naam Pand wordt in UML gemodelleerd als
 ‘*Named element’* met als ‘*Name’* Pand (in UML 1.4 heette dit nog UML-Class,

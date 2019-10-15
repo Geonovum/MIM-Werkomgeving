@@ -20,7 +20,7 @@ verbijzondering van een UML constructie nodig is met behoud van de betekenis van
 de UML-metaclass.
 
 Elk modelelement heeft een MIM metaclass. Deze wordt in UML in een
-informatiemodel gemodelleerd als een Metaclass van UML 2.5 en een bijbehorende
+informatiemodel gemodelleerd als een extensie van een Metaclass van UML 2.5 en een bijbehorende
 stereotype.
 
 <pre class='ex-generic'>
@@ -33,12 +33,13 @@ Niet alle MIM metaclasses hebben een stereotype (nodig). In de kolom staat dan �
 |-------------------|----------------|------------------------|-----------------|
 | Objecttype        | «Objecttype»   | (UML) Class            | Class           |
 
-In de diagrammen zijn de UML metaclasses conform UML 2.5 aangeduid als UML
-metaclass. Deze in opgenomen in het diagram als ‘blauw gekleurde’ metaclasses.
 
-Bijna alle hebben een UML-metaclass als basis, deze is dan aangegeven. Dit is
-ook opgenomen in diagram vorm, in de bijlage [Template naamgeving
+
+Bijna alle hebben een UML-metaclass (UML 2.5) als basis, deze is dan aangegeven als ‘blauw gekleurde’ metaclasse. Dit is
+ook opgenomen in diagramvorm, in de bijlage [Template naamgeving
 conventies](#template-naamgeving-conventies).
+
+De ten opzichte van MIM versie 1.0.1 gewijzigde modelelementen zijn in rood aangegeven.
 
 ### Kern
 
