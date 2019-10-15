@@ -339,7 +339,7 @@ naar eerder gedefinieerde termen of relaties tussen termen in onze ontologie (de
 "harde semantiek"). We maken hierbij vooral gebruik van de bestaande wereldwijd
 geaccepteerde internetstandaarden [RDF](https://www.w3.org/TR/rdf11-primer), [RDFS](https://www.w3.org/TR/rdf-schema), [SKOS](https://www.w3.org/TR/skos-reference) en [OWL](https://www.w3.org/TR/owl2-primer). Daarnaast beschrijven we
 ook welke constructies we wel en niet willen toestaan op het moment dat een modelleur
-een MIM model in Linked Data opsteld. Hiervoor maken we gebruik van de wereldwijd
+een MIM model in Linked Data opstelt. Hiervoor maken we gebruik van de wereldwijd
 geaccepteerde internetstandaard [SHACL](https://www.w3.org/TR/shacl).
 
 **Een informatiemodel**
@@ -377,25 +377,25 @@ kan dit metamodel uitgebreid worden met een aanvulling oftewel extensie (in de
 vorm van een extra bijlage) die door de betreffende organisatie toegevoegd wordt
 aan het onderhavige document.
 
-De spelregel bij een extensie is dat deze geen onderwerpen *vervangt* die in dit
+De spelregel bij een extensie is dat deze geen onderwerpen vervangt die in dit
 metamodel beschreven zijn, maar alleen echte uitbreidingen behelst. Indien
 meerdere organisaties hierin geïnteresseerd zijn, kan zo’n extensie ook
 toegevoegd worden aan dit metamodel.
-<todo>Neem dan contact op met de helpdesk (zie [voorwoord](#voorwoord)).</todo>
 
 Het is ook mogelijk om in de extensie aan te geven welke elementen uit dit
-metamodel *niet* ingezet (mogen) worden in uw informatiemodellen. Denk hierbij
+metamodel *niet* ingezet (mogen) worden in informatiemodellen. Denk hierbij
 bijvoorbeeld aan een bepaald modelelement. Of aan bepaalde metadata aspecten die
-niet ingewonnen worden in uw informatiemodellen en daarom buiten scope worden
+niet ingewonnen worden in informatiemodellen en daarom buiten scope worden
 geplaatst (ongeacht of deze optioneel of verplicht zijn).
 
 Voor meer informatie over een specifieke extensie kan contact opgenomen worden
 met de beheerder van deze extensie.
 
-Nota bene: een metamodel extensie is expliciet niet bedoeld voor aanvullende
-constructies die alleen spelen op het niveau van implementatie, of op het niveau
-van afgeleide modellen t.b.v. specifieke koppelvlakken en interfaces. Deze
-vallen buiten scope van dit metamodel en ook buiten scope van extensies hierop.
+Nota bene:  
+Een metamodel extensie is expliciet niet bedoeld voor aanvullende constructies 
+die alleen spelen op het niveau van implementatie, of op het niveau van afgeleide 
+t.b.v. specifieke koppelvlakken en interfaces. Deze vallen buiten scope van dit 
+metamodel en ook buiten scope van extensies hierop. 
 Wel is het mogelijk en toegestaan om het metamodel, of delen ervan, hiervoor te
 gebruiken.
 
@@ -408,14 +408,12 @@ Welke je kiest geef je aan bij je eigen informatiemodel, in je eigen extensie
 Dit betreft: Relatiesoort en relatierol, beide te gebruiken, maar welke is
 verplicht/leidend (zie [Specificatie metagegevens voor relaties](#specificatie-metagegevens-voor-relaties)).
 
-Indien gewenst kunt u hier vragen over stellen aan de beheerders van dit
-metamodel voordat u een keuze maakt.
+Indien gewenst kun je hier vragen over stellen aan de beheerders van dit
+metamodel voordat je een keuze maakt.
 
 ### Beheer
 Het beheer van dit metamodel vindt plaats door Geonovum met ondersteuning van het Kadaster. Voor vragen, suggesties of opmerkingen kunt
 u contact opnemen met de MIM helpdesk van Geonovum: mim@geonovum.nl
-
-<todo>TODO: Deze kan weg zodra alle referenties gerefereerd zijn</todo>
 
 ### Normreferenties
 
