@@ -64,11 +64,15 @@ Kern zonder Metagegevens
 |-------------------|
 | Objecttype        |
 | Attribuutsoort    |
+| Datatype          |
 | Gegevensgroep     |
 | Gegevensgroeptype |
 | Generalisatie     |
 | Relatiesoort      |
 | Relatieklasse     |
+| Relatierol        |
+| Relatierol doel   |
+| Externe koppeling |
 
 ### Datatypen
 
@@ -83,8 +87,9 @@ View 2: Datatypen
 | Primitief datatype      |
 | Gestructureerd datatype |
 | Data element            |
-| Union                   |
-| Union element           |
+| Keuze                   |
+| Datatypekeuze           |
+| Doelkeuze               |
 | Enumeratie              |
 | Enumeratiewaarde        |
 | Referentielijst         |
@@ -93,7 +98,7 @@ View 2: Datatypen
 
 ### Overige
 
-![](media/ConstraintsZonderMetagegevens.png)
+![](media/ConstraintsZonderUML.png)
 
 Constraint
 
@@ -105,7 +110,7 @@ View 3a: Constraint
 
 *Relatierol*
 
-![](media/RelatierollenZonderMetagegevens.png)
+![](media/AssociatierollenZonderUML.png)
 
 Relatierol
 
@@ -114,8 +119,8 @@ View 3b: Relatiesoort en relatierol
 | **MIM metaclass**     |
 |-----------------------|
 | Relatierol (abstract) |
-| Relatierol source     |
-| Relatierol target     |
+| Relatierol bron       |
+| Relatierol doel       |
 
 *Externe koppeling*
 
