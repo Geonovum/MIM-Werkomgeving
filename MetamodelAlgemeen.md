@@ -711,7 +711,7 @@ Een constraint wordt altijd in gewone tekst omschreven en optioneel als formele
 Specificatie metagegevens informatiemodel
 -----------------------------------------
 
-Metagegeven: \*\* Domein \*\*
+Metagegeven: **Domein**
 
 >   **Definitie Informatiedomein**  
 >   Aanduiding van het functionele domein waartoe het informatiemodel behoort.
@@ -720,14 +720,13 @@ Metagegeven: \*\* Domein \*\*
 
 *Toepassing*: informatiemodel (verplicht)
 
-Metagegeven: \*\* Informatiemodel type \*\*
+Metagegeven: **Informatiemodel type**
 
 >   **Definitie Informatiemodel type**  
 >   De beschrijving van de aard van het informatiemodel, hoe het geinterpreteerd
 >   moet worden.
 
-*Toelichting* Bijvoorbeeld: conceptueel, logisch, technisch. Zoals bedoeld in:
-TODO, referentie naar 1.5
+*Toelichting* Bijvoorbeeld: conceptueel, logisch, technisch. Zoals bedoeld in: [Typen Informatiemodellen](#typen-informatiemodellen)
 
 *Toepassing*: informatiemodel (verplicht)
 
@@ -738,12 +737,12 @@ Metagegeven: **Relatiemodelleringtype**
 >   modelleringswijze, en welke keuze hierbij is gemaakt.
 
 *Toelichting* Bijvoorbeeld: "Relatiesoort leidend" of "Relatierol leidend". Dit
-betreft de keuze die je maakt voor het in TODO: ref paragraaf 1.X gekozen
+betreft de keuze die je maakt voor het in paragraaf [Alternatieven](#alternatieven) gekozen
 alternatief. Er moet een keuze gemaakt worden.
 
 *Toepassing*: informatiemodel (verplicht)
 
-Metagegeven: \*\* MIM versie \*\*
+Metagegeven: **MIM versie**
 
 >   **Definitie MIM versie**  
 >   De versie van de MIM specificatie die gebruikt is om het informatiemodel in
@@ -753,7 +752,7 @@ Metagegeven: \*\* MIM versie \*\*
 
 *Toepassing*: informatiemodel (verplicht)
 
-Metagegeven: \*\* MIM extensie \*\*
+Metagegeven: **MIM extensie**
 
 >   **Definitie MIM extensie**  
 >   De aanduiding van een extensie op MIM.
@@ -789,7 +788,7 @@ Een aantal andere metagegevens, zoals de eerder genoemde *Datum opname* met
 waarde 1-1-2012. worden als aparte data vastgelegd, in UML gebeurd dit in een
 ‘*Tagged value*’.
 
-TODO: voorbeeld ook opnemen voor W3C.
+<todo>TODO: voorbeeld ook opnemen voor W3C.</todo>
 
 Merk op, de metadata aspecten zijn specifiek voor elk modelelement apart. Dus
 als er in H2.2 sprake is van een generalisatie, dan worden deze metadata niet
@@ -950,7 +949,7 @@ Metagegeven: **Herkomst definitie**
 
 *Toelichting*
 
-Meestal staat in dit metagegeven aangegeven '\<mijn IM\>', bijvoorbeeld BRK als
+Meestal staat in dit metagegeven aangegeven 'mijn IM', bijvoorbeeld BRK als
 het om het informatiemodel van de BRK gaat.
 
 Maar de herkomst van de definitie van het kenmerk *adres* kan ook als waarde
