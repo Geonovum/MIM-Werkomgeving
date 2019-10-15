@@ -23,7 +23,7 @@ te maken zonder datatypen. De regel is dat als alle datatypen uit het model
 worden weggelaten, er geen semantische betekenis verloren mag gaan.
 - Elk modelelement heeft een naam en een eigen MIM metaclass, waaraan je het modelelement overal kan herkennen. 
 
-*Toelichting metaclass* 
+*Toelichting metaclass*   
 Alle modelelementen zjn wat in metamodel een metaklasse wordt genoemd. Hiermee wordt aangegeven dat het 
 om de classificatie gaat dat een Persoon een Objecttype is, en niet om bijvoorbeeld een classificatie 
 dat Jan een Persoon is. Vandaar de term metaclass. 
