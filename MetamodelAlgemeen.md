@@ -653,11 +653,11 @@ modelelementen.
 >   beschikbaar stelt aan een informatiemodel en die in het informatiemodel
 >   ongewijzigd gebruikt worden.
 
-<div class='example'>
+<aside class='example'>
     Voorbeeld: het Externe package NEN3610 met datatype NEN3610ID. Het datatype van
     attribuutsoort Identificatie wegdeel in RSGB verwijst naar het datatype
     NEN3610ID zoals opgenomen in het Externe package.
-</div>
+</aside>
 
 #### View
 
