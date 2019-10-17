@@ -235,7 +235,8 @@ voor zijn bestaan afhankelijk is van een ander objecttype (en daarom via een
 «Relatiesoort» met aggregatietype ‘composite’ (het gesloten wiebertje) gekoppeld
 moet worden). Het is aan de modelleur om deze beoordeling te maken.
 
-*Voorbeeld: de specificatie voor het Brondocument in de basisregistratie BAG is
+<aside class='example'>
+de specificatie voor het Brondocument in de basisregistratie BAG is
 qua betekenis en structuur voor alle objecttypes gelijk. Het speelt een
 belangrijke rol in het totstandkomingsproces van objecten en behoort daarom in
 het conceptuele model. Het wordt ingezet als een audittrail, zodat het duidelijk
@@ -244,6 +245,7 @@ brondocument onderscheidt twee relevante attribuutsoorten, maar het brondocument
 wordt binnen de BAG niet gezien als een gespreksonderwerp waarover men gegevens
 wilt communiceren. Daarom is er gekozen voor een gegevensgroeptype. Deze wordt
 hergebruikt voor alle objecttypes.*
+</aside>
 
 Metamodel: het gegevensgroeptype kan dus het type zijn van meerdere
 gegevensgroepen. Vanwege dit hergebruik is daarom de kardinaliteit van de
@@ -377,7 +379,7 @@ wilt verwijzen naar de externe waardelijst.
 ### Abstracte objecttypes en concrete objecten
 
 Een objecttype kan aangeduid worden als een abstract objecttype (zie paragraaf
-[Specificatie metagegevens](#specificatie-metagegevens)) . door middel van
+[Specificatie metagegevens](#specificatie-metagegevens)) door middel van
 indAbstract = J). Het betreft dan altijd een generalisatie waarbij de
 specialisaties van dit objecttype op het laagste niveau concrete objecttypen
 worden genoemd. Het is belangrijk te weten wanneer een objecttype als abstract
