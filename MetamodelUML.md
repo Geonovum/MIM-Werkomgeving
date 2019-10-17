@@ -24,8 +24,9 @@ informatiemodel gemodelleerd als een extensie van een Metaclass van UML 2.5 en e
 stereotype.
 
 <pre class='ex-generic'>
-Voorbeeld: het MIM modelelement Objecttype wordt gemodelleerd als een
-UML-Class met stereotype «Objecttype». In Sparx EA wordt dit gemodelleerd met een Class met stereotype «Objecttype».
+Het MIM modelelement Objecttype wordt gemodelleerd als een UML-Class met 
+stereotype «Objecttype». In Sparx EA wordt dit gemodelleerd met een 
+Class met stereotype «Objecttype».
 Niet alle MIM metaclasses hebben een stereotype (nodig). In de kolom staat dan ‘-‘.
 </pre>
 
