@@ -35,7 +35,7 @@ vb:Pakjesboot12 a vbo:Schip.
 
 Dit document beschrijft hoe deze vertaling van het MIM model in RDF naar een RDFS-gebaseerde ontologie plaatsvindt. Daarbij zal niet alleen gebruik worden gemaakt van RDFS, maar ook van de OWL, SHACL en SKOS vocabulaires. De vertaling wordt zo veel mogelijk als SPARQL rules beschreven, zodat een machinale vertaling mogelijk is. De vertaling is beoogd als omkeerbaar. De SPARQL rules die vanuit een RDFS-gebaseerde ontologie de vertaling maken naar een MIM model in RDF, zullen daarom ook worden beschreven (in deze versie van het document zijn deze nog niet opgenomen).
 
-### Gebruikte functies
+## Gebruikte functies
 
 In de SPARQL rules wordt gebruik gemaakt van een aantal SPARQL functies. In onderstaande tabel staan deze opgesomd met de specificatie van de werking.
 
@@ -65,11 +65,11 @@ Het MIM model kent geen volgorde. Ondanks dat in de weergave attribuutsoorten in
 >
 > Er zit nog een foutje in de transformatie: `rdfs:seeAlso` wordt in sommige gevallen gebruikt om meerdere resources. Bijvoorbeeld `mim:Objecttype` leidt tot zowel een `owl:Class` als een `sh:NodeShape`. Gevolg is dat bij de transformatie aspecten als `mim:naam`, `mim:definitie`, `mim:constraint` bij beide resources terecht komen. Beter zou zijn als het maar bij één van de twee terecht komt.
 
-### Overzicht
+## Overzicht
 
 Onderstaande tabellen geven een overzicht van alle transformaties en een referentie naar de betreffende transformatieregel
 
-#### Klassen
+### Klassen
 
 |MIM-klasse|Vertaling|Referentie|
 |----------|---------|----------|
@@ -102,7 +102,7 @@ Onderstaande tabellen geven een overzicht van alle transformaties en een referen
 |`mim:RelatierolSource`|n.n.b.|[Relatierol](#relatierol)|
 |`mim:RelatierolTarget`|n.n.b.|[Relatierol](#relatierol)|
 
-#### Eigenschappen
+### Eigenschappen
 
 |MIM-eigenschap|Vertaling|Referentie|
 |--------------|---------|----------|
@@ -147,7 +147,7 @@ Onderstaande tabellen geven een overzicht van alle transformaties en een referen
 |`mim:constraint`|`mim:constraint`|[Constraint](#constraint)|
 |`mim:element`|`sh:property`|[Data element](#data-element)|
 
-#### Instanties (datatypen)
+### Instanties (datatypen)
 
 |MIM datatype|Vertaling|Referentie|
 |------------|---------|----------|
@@ -162,7 +162,7 @@ Onderstaande tabellen geven een overzicht van alle transformaties en een referen
 |`mim:Month`|`xsd:gMonth`|[Primitief datatype - standaard datatypen](#primitief-datatype---standaard-datatypen)|
 |`mim:URI`|`xsd:anyURI`|[Primitief datatype - standaard datatypen](#primitief-datatype---standaard-datatypen)|
 
-### Klassen
+## Klassen
 
 Omdat het getransformeerde model daadwerkelijk een nieuw model is, zullen de elementen in het getransformeerde model ook eigen URI's krijgen. Om de relatie tussen het originele MIM-model het het getransformeerde model op basis van RDFS te behouden, wordt de eigenschap `rdfs:seeAlso` gebruikt.
 
@@ -170,7 +170,7 @@ Omdat het getransformeerde model daadwerkelijk een nieuw model is, zullen de ele
 >
 > Gebruik van `rdfs:seeAlso` is niet erg sterk. Een dergelijke eigenschap kan voor heel veel dingen gebruikt worden. Gekeken moet worden of er niet een betere property beschikbaar is voor dergelijke vocabulaires, of dat we een eigen property moeten introduceren binnen de mim vocabulaire, bv: `mim:equivalent`.
 
-#### Objecttype
+### Objecttype
 
 > De typering van een groep objecten (in de werkelijkheid) die binnen een domein relevant zijn en als gelijksoortig worden beschouwd.
 
@@ -196,7 +196,7 @@ WHERE {
 }
 </pre>
 
-#### Attribuutsoort
+### Attribuutsoort
 
 > De typering van gelijksoortige gegevens die voor een objecttype van toepassing is.
 
@@ -258,7 +258,7 @@ WHERE {
 }
 ```
 
-#### Gegevensgroep
+### Gegevensgroep
 
 > Een typering van een groep van gelijksoortige gegevens die voor een objecttype van toepassing is.
 
@@ -285,7 +285,7 @@ WHERE {
 }
 ```
 
-#### Gegevensgroeptype
+### Gegevensgroeptype
 
 > Een groep van met elkaar samenhangende attribuutsoorten. Een gegevensgroeptype is altijd een type van een gegevensgroep.
 
@@ -311,7 +311,7 @@ WHERE {
 }
 ```
 
-#### Generalisatie
+### Generalisatie
 
 > De typering van het hiërarchische verband tussen een meer generiek en een meer specifiek modelelement van hetzelfde soort, waarbij het meer specifieke modelelement eigenschappen van het meer generieke modelelement overerft.
 
@@ -349,7 +349,7 @@ WHERE {
 }
 ```
 
-#### Relatiesoort
+### Relatiesoort
 
 > De typering van het structurele verband tussen een object van een objecttype en een (ander) object van een ander (of hetzelfde) objecttype.
 
@@ -381,7 +381,7 @@ WHERE {
 }
 ```
 
-#### Relatieklasse
+### Relatieklasse
 
 > Een relatiesoort met eigenschappen.
 
@@ -431,7 +431,7 @@ WHERE {
 }
 ```
 
-#### Externe koppeling
+### Externe koppeling
 
 > Een associatie waarmee vanuit het perspectief van het eigen informatiemodel een objecttype uit het 'eigen' informatiemodel gekoppeld wordt aan een objecttype van een extern informatiemodel. De relatie zelf hoort bij het 'eigen' objecttype.
 
@@ -484,7 +484,7 @@ WHERE {
 }
 ```
 
-#### Referentielijst
+### Referentielijst
 
 > Een lijst met een opsomming van de mogelijke domeinwaarden van een attribuutsoort, die buiten het model in een externe waardenlijst worden beheerd. De domeinwaarden in de lijst kunnen in de loop van de tijd aangepast, uitgebreid, of verwijderd worden, zonder dat het informatiemodel aangepast wordt (in tegenstelling tot bij een enumeratie).
 
@@ -498,11 +498,11 @@ Deze constructie wordt ook toegepast bij enumeraties en codelijsten.
 >
 >  Er zijn drie waardelijstconstructies gebruikelijk in RDF: (1) Conceptschema, (2) Collectie en (3) Klasse. Bovenstaande invulling gaat uit van de eerste situatie. Maar ook de andere twee situaties komen voor. Hier zal nog een oplossing voor gezocht moeten worden.
 
-#### Referentie element
+### Referentie element
 
 > Een eigenschap van een object in een referentielijst in de vorm van een gegeven.
 
-#### Enumeratie
+### Enumeratie
 
 > Een datatype waarvan de mogelijke waarden limitatief zijn opgesomd in een statische lijst.
 
@@ -512,17 +512,17 @@ Een enumeratie kan verschillende soorten dingen opsommen. Een lijst met waardes,
 In de Inspire RDF Guidelines wordt voorgeschreven om een enumeratie te modelleren als rdfs:Datatype in plaats van als klasse. Dit leidt tot enumeratiewaardes die een literal zijn, met het datatype van de enumeratie. Bijvoorbeeld `"hoog"^^imgolf:NatuurwaardeValue`. De reden om hiervan af te wijken is omdat enumeraties vaker waardelijsten zijn die een object of concept modelleren, dan een lijst van letterlijke waardes. Door deze waardes als objecten te modelleren blijft het mogelijk om nieuwe uitdrukkingen te doen over de waardes.
 </aside>
 
-#### Enumeratiewaarde
+### Enumeratiewaarde
 
 > Een gedefinieerde waarde, in de vorm van een eenmalig vastgesteld constant gegeven.
 
-#### Codelist
+### Codelist
 
 > Een referentielijst die extern wordt beheerd, en geen onderdeel is van het informatiemodel.
 
-### Datatypen
+## Datatypen
 
-#### Primitief datatype
+### Primitief datatype
 
 > Een in het eigen model gedefinieerd primitieve datatype. Deze worden wel door de modelleur gecreëerd, met een eigen naam en een eigen definitie (en eigen metagegevens).
 
@@ -555,7 +555,7 @@ WHERE {
 }
 ```
 
-#### Primitief datatype - standaard datatypen
+### Primitief datatype - standaard datatypen
 
 Voor standaard datatypen maakt RDF gebruik van de XSD datatypen. Onderstaande tabel geeft de mapping weer vanuit de datatypen die in het MIM zijn gespecificeerd.
 
@@ -600,7 +600,7 @@ CONSTRUCT {
 WHERE {}
 ```
 
-#### Gestructureerd datatype
+### Gestructureerd datatype
 
 > Specifiek benoemd gestructureerd datatype dat de structuur van een gegeven beschrijft, samengesteld uit minimaal twee elementen.
 
@@ -618,7 +618,7 @@ WHERE {
 }
 ```
 
-#### Data element
+### Data element
 
 > Een onderdeel/element van een Gestructureerd datatype die als type een datatype heeft.
 
@@ -648,7 +648,7 @@ WHERE {
 ```
 
 
-#### Union
+### Union
 
 > Gestructureerd datatype, waarmee wordt aangegeven dat er meer dan één mogelijkheid is voor het datatype van een attribuut. Het attribuut zelf krijgt als datatype de union. De union biedt een keuze uit verschillende datatypes, elk afzonderlijk beschreven in een union element.
 
@@ -680,7 +680,7 @@ WHERE {
 }
 ```
 
-#### Union element
+### Union element
 
 > Een type dat gebruikt kan worden voor het attribuut zoals beschreven in de definitie van Union. Het union element is een onderdeel van een Union, uitgedrukt in een eigenschap (attribute) van een union, die als keuze binnen de Union is gerepresenteerd.
 
@@ -788,33 +788,33 @@ WHERE {
 
 De tweede delete-insert query is een "opruimquery": aangezien we zijn begonnen met een rdf:List in plaats van een rdf:nil, moeten we het einde van de lijst er nog weer afknippen.
 
-### Packages
+## Packages
 > Een package is een benoemde en begrensde verzameling/groepering van modelelementen.
 
-#### Domein
+### Domein
 > Het eigen IM.
 
 > **VERDER UITWERKEN**
 >
 > Het domein betreft het eigen IM. Transformatie naar `owl:Ontology` lijkt voor de hand te liggen. In het MIM lijkt dit stereotype niet formeel beschreven. Hoe achterhalen we deze? En kunnen er meerdere packages met stereotype domein zijn binnen een model? Mogelijk moeten we dan meerdere owl:Ontologies aanmaken? Dit is gerelateerd aan het issue over dubbele namen bij bv [Objecttype](#objecttype).
 
-#### Extern
+### Extern
 > Een groepering van constructies die een externe instantie beheert en beschikbaar stelt aan een informatiemodel en die in het informatiemodel ongewijzigd gebruikt worden.
 
 > **VERDER UITWERKEN**
 >
 > Het lijkt logisch om een extern package niet te transformeren. De aanname is dat dit al door de externe instantie is gedaan. Mits er voldoende informatie in de UML aanwezig is, kan er een owl:import statement gegenereerd worden. Hiervoor lijkt minimaal noodzakelijk dat een locatie opgegeven kan worden. Wellicht dat het element `mim:locatie` dan ook toegepast zou kunnen worden op package niveau?
 
-#### View
+### View
 > Een groepering van objecttypen die gespecificeerd zijn in een extern informatiemodel en vanuit het perspectief van het eigen informatiemodel inzicht geeft welke gegevens van deze objecttypen relevant zijn binnen het eigen informatiemodel.
 
 > **VERDER UITWERKEN**
 >
 > In geval van een view, wordt - anders dan bij extern - wel een eigen invulling gegeven aan de structuur van het objecttype. Dit betekent dat de betekenis uit het andere model wordt overgenomen, maar niet per sé alle eigenschappen en relaties. Dit betekent concreet voor de transformatie dat er wel shapes worden aangemaakt voor view-packages, maar geen classes of properties.
 
-### Overig
+## Overig
 
-#### Constraint
+### Constraint
 > Een constraint is een conditie of een beperking, die over een of meerdere modelelementen uit het informatiemodel geldt.
 
 Een constraint (en bijbehorende gegevens) worden direct overgenomen in het vertaalde model als blank node. Het MIM kent voor een constraint twee aspecten: tekstueel en formeel. Het MIM doet daarbij geen uitspraak over de taal die voor het formele model moet worden gehanteerd. Daarmee is een transformatie niet op zijn plaats. Zie ook de [INSPIRE RDF Guidelines](http://inspire-eu-rdf.github.io/inspire-rdf-guidelines/#ref_cr_constraint) waar een vergelijkbare redenatie wordt gevolgd.
@@ -831,9 +831,9 @@ WHERE {
 }
 ```
 
-### Properties
+## Properties
 
-#### naam
+### naam
 
 > De naam van een modelelement
 
@@ -857,7 +857,7 @@ WHERE {
 }
 ```
 
-#### alias
+### alias
 
 > De alternatieve weergave van de naam.
 
@@ -877,7 +877,7 @@ WHERE {
 }
 ```
 
-#### begrip
+### begrip
 
 > Verwijzing naar een begrip, vanuit een modelelement, waarmee wordt aangegeven op welk begrip, of begrippen, het informatiemodel element is gebaseerd.
 
@@ -893,7 +893,7 @@ WHERE {
 }
 ```
 
-#### begripsterm
+### begripsterm
 
 > Verwijzing naar een begrip in de vorm van de term, vanuit een modelelement, waarmee wordt aangegeven op welk begrip, of begrippen, het informatiemodel element is gebaseerd.
 
@@ -909,7 +909,7 @@ WHERE {
 }
 ```
 
-#### definitie
+### definitie
 
 > De beschrijving van de betekenis van dit modelelement.
 
@@ -921,7 +921,7 @@ Rationale om niet te kiezen voor `skos:definition`: in de meeste Linked Data voc
 >
 > Ik meende dat het mogelijk was om in het MIM op te geven dat een modelelement *ook* een begrip is. In dat geval zou je dus een andere vertaling kunnen maken, dwz: *wel* naar een `skos:definition`. Dit zou wel beter zijn.
 
-#### toelichting
+### toelichting
 
 > Een inhoudelijke toelichting op de definitie, ter verheldering of nadere duiding.
 
@@ -939,7 +939,7 @@ WHERE {
 }
 ```
 
-#### herkomst
+### herkomst
 
 > De registratie of het informatiemodel waaraan het modelelement ontleend is dan wel de eigen organisatie indien het door de eigen organisatie toegevoegd is.
 
@@ -955,7 +955,7 @@ WHERE {
 }
 ```
 
-#### herkomst definitie
+### herkomst definitie
 
 > De registratie of het informatiemodel waaruit de definitie is overgenomen dan wel een aanduiding die aangeeft uit welke bronnen de definitie is samengesteld.
 
@@ -973,7 +973,7 @@ WHERE {
 }
 ```
 
-#### datum opname
+### datum opname
 
 > De datum waarop het modelelement is opgenomen in het informatiemodel.
 
@@ -989,7 +989,7 @@ WHERE {
 }
 ```
 
-#### indicatie materiële historie
+### indicatie materiële historie
 
 > Indicatie of de materiële historie van het kenmerk van het object te bevragen is.
 
@@ -999,7 +999,7 @@ WHERE {
 >
 > Zie voor input het NEN3610 Linked Data Profiel [7.3.4.2.4 Attribuut met stereotype «materieleHistorie»](https://geonovum.github.io/NEN3610-Linkeddata/#regels-attributen-materieleHistorie).
 
-#### indicatie formele historie
+### indicatie formele historie
 
 > Indicatie of de formele historie van het kenmerk van het object bijgehouden wordt en te bevragen is.
 
@@ -1009,7 +1009,7 @@ WHERE {
 >
 > Zie voor input het NEN3610 Linked Data Profiel [7.3.4.2.5 Attribuut met stereotype «formeleHistorie»](https://geonovum.github.io/NEN3610-Linkeddata/#regels-attributen-formeleHistorie).
 
-#### kardinaliteit
+### kardinaliteit
 
 De `mim:kardinaliteit` wordt vertaald naar `sh:minCount` en `sh:maxCount`. Daarbij wordt de volgende tabel gebruikt om de string-waarde van mim:kardinaliteit om te zetten. Een `-` betekent dat de betreffende triple niet wordt opgenomen in het model.
 
@@ -1049,7 +1049,7 @@ WHERE {
 }
 ```
 
-#### authentiek
+### authentiek
 > Aanduiding of het kenmerk een authentiek gegeven betreft.
 
 Een `mim:authentiek` wordt direct, zonder aanpassing, overgenomen in het vertaalde model.
@@ -1064,7 +1064,7 @@ WHERE {
 }
 ```
 
-#### indicatie afleidbaar
+### indicatie afleidbaar
 > Aanduiding dat gegeven afleidbaar is uit andere attribuut- en/of relatiesoorten.
 
 Een `mim:indicatieAfleidbaar` wordt direct, zonder aanpassing, overgenomen in het vertaalde model.
@@ -1079,7 +1079,7 @@ WHERE {
 }
 ```
 
-#### mogelijk geen waarde
+### mogelijk geen waarde
 > Aanduiding dat van een aspect geen waarde is geregistreerd, maar dat onduidelijk is of de waarde er werkelijk ook niet is.
 
 Een `mim:mogelijkGeenWaarde` wordt direct, zonder aanpassing, overgenomen in het vertaalde model, waarbij in een enkel geval een aanpassing wordt gedaan aan de manier waarop `mim:kardinaliteit` wordt getransformeerd.
@@ -1108,12 +1108,12 @@ WHERE {
 }
 ```
 
-#### locatie
+### locatie
 > Als het type van het attribuutsoort een waardenlijst is, dan wordt hier de locatie waar deze te vinden is opgegeven.
 
 Een `mim:locatie` wordt direct, zonder aanpassing, overgenomen in het vertaalde model. Daarnaast wordt dit veld gebruikt bij het munten van de URI's van de verschillende modelelementen en het achterhalen van de inhoud van een waardenlijst.
 
-#### type
+### type
 > Het datatype waarmee waarden van deze attribuutsoort worden vastgelegd.
 
 De vertaling van een `mim:type` hangt af van de vertaling van het datatype waar naar wordt verwezen:
@@ -1155,7 +1155,7 @@ WHERE {
 
 ```
 
-#### lengte
+### lengte
 > De aanduiding van de lengte van een gegeven.
 
 Een `mim:lengte` wordt vertaald naar een `sh:maxLength`.
@@ -1170,7 +1170,7 @@ WHERE {
 }
 ```
 
-#### patroon
+### patroon
 > De verzameling van waarden die gegevens van deze attribuutsoort kunnen hebben, oftewel het waardenbereik, uitgedrukt in een specifieke structuur.
 
 De structuur van `mim:patroon` is in woorden beschreven. Deze wordt direct, zonder aanpassing, overgenomen in het vertaalde model.
@@ -1185,7 +1185,7 @@ WHERE {
 }
 ```
 
-#### formeel patroon
+### formeel patroon
 > Zoals patroon, formeel vastgelegd, uitgedrukt in een formele taal die door de computer wordt herkend.
 
 `mim:formeelPatroon` wordt beschreven met `sh:pattern`.
@@ -1204,7 +1204,7 @@ WHERE {
 }
 ```
 
-#### unieke aanduiding
+### unieke aanduiding
 > Voor objecttypen die deel uitmaken van een (basis)registratie of informatiemodel betreft dit de wijze waarop daarin voorkomende objecten (van dit type) uniek in de registratie worden aangeduid.
 
 Een `mim:uniekeAanduiding` wordt direct, zonder aanpassing, overgenomen in het vertaalde model.
@@ -1219,7 +1219,7 @@ WHERE {
 }
 ```
 
-#### populatie
+### populatie
 > Voor objecttypen die deel uitmaken van een (basis)registratie betreft dit de beschrijving van de exemplaren van het gedefinieerde objecttype die in de desbetreffende (basis)­registratie voorhanden zijn.
 
 Een `mim:populatie` wordt direct, zonder aanpassing, overgenomen in het vertaalde model.
@@ -1234,7 +1234,7 @@ WHERE {
 }
 ```
 
-#### kwaliteit
+### kwaliteit
 > Voor objecttypen die deel uitmaken van een registratie betreft dit de waarborgen voor de juistheid van de in de registratie opgenomen objecten van het desbetreffende type.
 
 Een `mim:kwaliteit` wordt direct, zonder aanpassing, overgenomen in het vertaalde model.
@@ -1249,7 +1249,7 @@ WHERE {
 }
 ```
 
-#### indicatie abstract object
+### indicatie abstract object
 > Indicatie dat het objecttype een generalisatie is, waarvan een object als specialisatie altijd voorkomt in de hoedanigheid van een (en slechts één) van de specialisaties van het betreffende objecttype.
 
 In een MIM conform informatiemodel kunnen zowel abstracte als concrete klassen voorkomen. In UML kun je daarvan afleiden dat je geen instanties mag hebben van abstracte klassen, maar alleen van concrete klassen. In RDF wordt geen onderscheid gemaakt tussen het abstract of concreet zijn van klassen. In RDF worden klassen beschouwd als sets van dingen. Als je een set kunt beschrijven, dan kunnen er ook dingen zijn die tot die set behoren.
@@ -1266,7 +1266,7 @@ WHERE {
 }
 ```
 
-#### identificerend
+### identificerend
 > Een kenmerk van een objecttype die aangeeft of deze eigenschap uniek identificerend is voor alle objecten in de populatie van objecten van dit objecttype.
 
 Een `mim:identificerend` wordt direct, zonder aanpassing, overgenomen in het vertaalde model.
@@ -1281,7 +1281,7 @@ WHERE {
 }
 ```
 
-#### gegevensgroeptype (eigenschap)
+### gegevensgroeptype (eigenschap)
 
 > De verwijzing naar het bijbehorende gegevensgroeptype.
 
@@ -1300,7 +1300,7 @@ WHERE {
 }
 ```
 
-#### unidirectioneel
+### unidirectioneel
 
 > **VERDER UITWERKEN**
 > Betreft het automatisch opnemen van een inverse relatie. Daarbij dient de rolnaam gebruikt te worden voor deze inverse relatie.
@@ -1312,7 +1312,7 @@ Bij `<<relatiesoort>>`:
 Bij `<<Externe koppeling>>`:
 > Het gerelateerde objecttype uit een extern informatiemodel (de target) waarvan het objecttype die de eigenaar van deze relatie is (de source) kennis heeft. Het aggregation type van de source is altijd ‘composition’. Alle relaties zijn altijd gericht van het objecttype (source) naar het gerelateerde objecttype (target).
 
-#### bron
+### bron
 > Aanduiding van het bronobject in een relatie tussen objecten. Een bronoject heeft middels een relatiesoort een relatie met een doelobject.
 
 Een `mim:bron` wordt vertaald naar een `sh:property` die hoort bij de de NodeShape van het objecttype. Zie voor meer informatie over hoe relaties tussen objecttypen worden vertaald de paragrafen [Relatiesoort](#relatiesoort) en [Externe koppeling](#externe-koppeling).
@@ -1328,7 +1328,7 @@ WHERE {
 }
 ```
 
-#### doel
+### doel
 > Aanduiding van het gerelateerde objecttype die het eindpunt van de relatie aangeeft. Naar objecten van dit objecttype wordt verwezen.
 
 Een `mim:doel` wordt vertaald naar een `sh:class` met als waarde de URI van de Class die het gerelateerde objecttype representeert. Zie voor meer informatie over hoe relaties tussen objecttypen worden vertaald de paragrafen [Relatiesoort](#relatiesoort) en [Externe koppeling](#externe-koppeling).
@@ -1344,7 +1344,7 @@ WHERE {
 }
 ```
 
-#### aggregatietype
+### aggregatietype
 > Aanduiding of het objecttype die de eigenaar is van een relatie het doel van relatie ziet als een samen te voegen onderdeel.
 
 Aggregatie- en compositie-associaties worden gemodelleerd zoals simpele relatiesoorten, gebruikmakend van de specifieke naam die de associatie in het oorspronkelijke model heeft. Een `mim:aggregatietype` wordt direct, zonder aanpassing, overgenomen in het vertaalde model.
@@ -1359,14 +1359,14 @@ WHERE {
 }
 ```
 
-#### code
+### code
 > De in een registratie of informatiemodel aan de enumeratiewaarde toegekend unieke code (niet te verwarren met alias, zoals bedoeld in 2.6.1).
 
 > **VERDER UITWERKEN**
 >
 > We hebben nog niet gespecificeerd hoe we enumeraties vertalen. In NEN3610-LD is standaardtransformatie een transformatie naar een klasse gelijknamig aan de enumeratieklasse, en instanties van deze klasse voor elk van de geënumereerde waardes. Als we dit volgen zouden we de `mim:code` kunnen vertalen naar een `rdfs:label` of `skos:altLabel`.
 
-#### specificatie-tekst
+### specificatie-tekst
 > De specificatie van de constraint in normale tekst.
 
 > **VERDER UITWERKEN**
@@ -1375,7 +1375,7 @@ WHERE {
 
 Een `mim:specificatieTekst` wordt direct, zonder aanpassing, overgenomen in het vertaalde model, als onderdeel van de [transformatieregel voor constraints](#constraint).
 
-#### specificatie-formeel
+### specificatie-formeel
 > De beschrijving van de constraint in een formele specificatietaal, in OCL.
 
 > **VERDER UITWERKEN**
@@ -1384,7 +1384,7 @@ Een `mim:specificatieTekst` wordt direct, zonder aanpassing, overgenomen in het 
 
 Een `mim:specificatieFormeel` wordt direct, zonder aanpassing, overgenomen in het vertaalde model, als onderdeel van de [transformatieregel voor constraints](#constraint).
 
-#### attribuut
+### attribuut
 
 Een `mim:attribuut` wordt vertaald naar een `sh:property` die hoort bij de de NodeShape van de bezitter van het attribuut. Zie ook [Attribuutsoort](#attribuutsoort).
 
@@ -1402,7 +1402,7 @@ WHERE {
 }
 ```
 
-#### gegevensgroep (eigenschap)
+### gegevensgroep (eigenschap)
 
 Een `mim:gegevensgroep` wordt vertaald naar een `sh:property` die hoort bij de de NodeShape van de bezitter van het attribuut. Zie ook [Gegevensgroep](#gegevensgroep).
 
