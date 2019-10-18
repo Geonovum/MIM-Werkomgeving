@@ -1373,7 +1373,7 @@ Een constraint is gekoppeld aan een klasse waarop ze van toepassing is.
 
 *Toepassing*: objecttype, gegevensgroeptype, relatieklasse.
 
-#### Toegestane waarden voor (bepaalde) metadata gegevens
+### Toegestane waarden voor (bepaalde) metadata gegevens
 
 Tagged values zijn altijd van het datatype CharacterString. Aanvullend geldt:
 
