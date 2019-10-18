@@ -160,14 +160,19 @@ stereotype «id»
 
 In de hierna volgende paragrafen worden de metagegevens per modelelement gespecificeerd in tabellen.
 Per metagegeven zijn de volgdende onderdelen gespecificeerd:
+
 Aspect: Het benoemde metagegeven. Met aanduiding √ is conform stelselafspraken voor basisregistraties.
-    Een \* is conform de stelselcatalogus. Die ook de paragraaf in H3 hierover.
-Kardinaliteit: Aantal maal dat een metagegeven opgenomen kan worden bij dit modelelement
-Toelichting: Nadere uitleg over het metagegeven
+    Een \* is conform de stelselcatalogus. Zie ook de paragraaf in H3 hierover.
+	
+Kardinaliteit: Aantal maal dat een metagegeven opgenomen kan worden bij dit modelelement.
+
+Toelichting: Nadere uitleg over het metagegeven.
+
 In UML 2.5:     De naam waarmee het het metagegeven in UML2.5 is benoemd. Het
     betreft veelal overerving van een metagegeven van een UML metaclass die niet in dit
     document is benoemd.
-In AE:     Aanduiding hoe het metagegeven in Sparx Enterprise Architect (EA) is aangegeven. Rode tekst betreft een standaard element binnen
+	
+In AE:     Aanduiding hoe het metagegeven in Sparx Enterprise Architect (EA) is aangegeven. Rode tekst betreft een standaardelement binnen
     EA. Zwarte tekst in de kolom betreft uitbreiding op het UML Metamodel, via
     tagged values of aanvullende stereotypes.
 
@@ -179,9 +184,9 @@ In AE:     Aanduiding hoe het metagegeven in Sparx Enterprise Architect (EA) is 
 
 De objecttypen worden naar de volgende aspecten gespecificeerd:
 
-| **Aspect** [Zie noot](#uml-n-1) | **Kardinaliteit** | **Toelichting**                                                                                                                                                                                                                                                                                                                          | **In UML 2.5** [Zie noot](#uml-n-2)      | **In EA** [Zie noot](#uml-n-3)                                                                                                                                  |
+| **Aspect**  | **Kardinaliteit** | **Toelichting**                                                                                                                                                                                                                                                                                                                          | **In UML 2.5** [Zie noot](#uml-n-2)      | **In EA**                                                                                                                                   |
 |---------------------------------|-------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Naam√**                       | 1                 | ALgemeen metagegeven [Zie noot](#uml-n-4).                                                                                                                                                                                                                                                                                               | *name van de metaclass Named element*    | *Name*                                                                                                                                                          |
+| **Naam√**                       | 1                 | ALgemeen metagegeven .                                                                                                                                                                                                                                                                                               | *name van de metaclass Named element*    | *Name*                                                                                                                                                          |
 | **Begrip**                      | 0..\*             | Algemeen metagegeven.                                                                                                                                                                                                                                                                                                                    |                            | *Tagged value*                                                                                                                                                  |
 | **Alias**                       | 0..1              | Algemeen metagegeven.                                                                                                                                                                                                                                                                                                                    |                                          | *Alias*                                                                                                                                                         |
 | **Herkomst**                    | 1                 | Algemeen metagegeven.                                                                                                                                                                                                                                                                                                                    |                                          | *Tagged value*                                                                                                                                                  |
@@ -636,22 +641,9 @@ en is te vinden op [www.imvertor.org](http://www.imvertor.org).
 
 **Voetnoten**
 
-<aside id='uml-n-1' class='note'>
-    In de kolom **UML2.5** is opgenomen hoe het element in UML2.5 is benoemd. Het
-    betreft veelal overerving van een gegeven van een UML metaclass die niet in dit
-    document is benoemd.
-</aside>
 
-<aside id='uml-n-2' class='note'>
-    **Aspect** met aanduiding √ is conform stelselafspraken voor basisregistraties.
-    Een \* is conform de stelselcatalogus. Die ook de paragraaf in H3 hierover.
-</aside>
 
-<aside id='uml-n-3' class='note'>
-    Rode tekst in de kolom ‘In EA’ betreft een standaard element binnen Sparx
-    EA. Zwarte tekst in de kolom ‘in EA’ betreft uitbreiding op UML Metamodel, via
-    tagged values of aanvullende stereotypes.
-</aside>
+
 
 <aside id='uml-n-4' class='note'>
     In (basis) registraties is dit meestal gespecificeerd in een catalogus van
