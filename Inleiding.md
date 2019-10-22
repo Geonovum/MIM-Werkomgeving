@@ -94,27 +94,31 @@ Het beschrijven vindt plaats door de informatie van de objecten die we beschouwd
 <aside class='example'>
     Jan en Katrien zijn bijvoorbeeld ‘dingen in de werkelijkheid’. Zij hebben
     bepaalde kenmerken, zoals een naam en een geboortedatum. In een informatiemodel
-    komen Jan en Katrien niet voor. Ook hun gegevens, zoals het feit dat 10-10-1970 
-    de geboortedatum van Jan is, komen niet voor.  
-      
+    komen Jan en Katrien zelf niet zelf voor. Zij worden in het informatiemodel gemodelleerd als een Persoon. 
+    Ook hun gegevens, zoals het feit dat 10-10-1970 de geboortedatum van Jan is, komen niet voor. 
+    In het informatiemodel is alleen het kenmerk geboortedatum gemodelleerd, als een kenmerk van een Persoon. 
 </aside>
 
-In de context van het informatiemodel worden Jan en Katrien gezien als een weergave van de 'dingen in de werkelijkheid', vanuit het perspectief van het informatiedomein van waaruit we Jan en Katrien beschouwen. We bekijken Jan en Katrien dan ook wel als een van de *objecten* binnen een domein. In het informatiemodel is het *objecttype* Persoon gedefinieerd en Jan en Katrien zijn dus objecten van het objecttype Persoon. De objecten Domtoren en Paleis Het Loo typeren we tot het objecttype Gebouw. 
+De Persoon in het informatiemodel is ene beschrijving vanuit het perspectief van het informatiedomein van waaruit we Jan en Katrien beschouwen. We bekijken Jan en Katrien dan ook wel als een van de *objecten* binnen een domein. 
 
-De *kenmerken* zoals de naam en geboortedatum, maar bijvoorbeeld ook identificatie en registratietijdstip, worden gezien als attributen van dit objecttype. We noemen een dergelijk kenmerk een *attribuutsoort*. Sommige kenmerken geven relaties tussen obiecten weer, zoals het gegeven dat Jan getrouwd is met Katrien. Deze modelleren we door middel van een relatiesoort tussen objecttypen, in dit geval van Persoon met zichzelf.
+In het informatiemodel is hiervoor het *objecttype* Persoon gedefinieerd en Jan en Katrien zijn dus objecten van het objecttype Persoon. De objecten Domtoren en Paleis Het Loo typeren we tot het objecttype Gebouw. Objecttypen in een informatiemodel representeren dus de dingen in de werkelijkheid. 
 
-In de van het informatiemodel afgeleide registratie kunnen vervolgens de objecten Jan en Katrien en de gegevens ervan, zoals de geboortedatum 10-10-1970, worden vastgelegd.
+De kenmerken zoals de naam en geboortedatum, maar bijvoorbeeld ook identificatie en registratietijdstip, worden gezien als attributen van dit objecttype. We noemen een dergelijk kenmerk een *attribuutsoort*. 
 
-Alle objecten die we als gelijksoortig beschouwen typeren we in het informatiemodel tot een objecttype, de relaties tussen de objecten typeren we in het informatiemodel als een relatiesoort en de kenmerken van de de objecten typeren we in het informatiemodel als attribuutsoorten. Op deze manier ontstaat een informatiemodel. 
+Sommige kenmerken geven relaties tussen obiecten weer, zoals het gegeven dat Jan in Paleis Het Loo woont. Deze modelleren we door middel van een *relatiesoort*, tussen *objecttypen*, in dit geval tussen Persoon en Gebouw.
 
-Objecttypen in een informatiemodel representeren dingen in de werkelijkheid. We visualiseren dat in onderstaande figuur voor de situatie dat er een, van het informatiemodel afgeleide, registratie is.
+Alle objecten die we als gelijksoortig beschouwen typeren we in het informatiemodel tot een objecttype, de relaties tussen de objecten typeren we in het informatiemodel als een relatiesoort en de kenmerken van de de objecten typeren we in het informatiemodel als attribuutsoorten. Op deze manier ontstaat een informatiemodel. In de van het informatiemodel afgeleide registratie kunnen vervolgens de objecten Jan en Katrien en de gegevens ervan, zoals de geboortedatum 10-10-1970, worden vastgelegd, en vervolgens uitgewisseld.
+
+We visualiseren het voorgaande in onderstaande figuur, voor de situatie dat er een, van het informatiemodel afgeleide, registratie is.
 
 ![](media/informatiemodel.png)
 
 Als een andere registratie op haar eigen manier tegen dezelfde ‘Jan uit de werkelijkheid’ aankijkt, dan is ook in die registratie een (eigen, apart) object voor Jan aanwezig en Jan kan in dit (eigen, aparte) informatiemodel anders gemodelleerd zijn. Bijvoorbeeld in het ene domein als werknemer en in het andere domein als persoon of parter. Beide objecten Jan representeren natuurlijk dezelfde ‘Jan uit
-de werkelijkheid’, vanuit het perspectief van het eigen domein bekeken.
+de werkelijkheid’, vanuit het perspectief van het eigen domein bekeken. 
 
 *Belangrijke aandachtspunten*  
+Merk op dat we hier veelal spreken over een registratie, omdat dit vaak zo is. Er zijn echter ook toepassingen van een informatiemodel waarin er alleen gegevens worden uitgewisseld, of waarbij er sprake is van gewoon de beschrijving van informatie, ongeacht of deze wel of niet in een registratie is opgenomen. 
+
 Alleen dingen en kenmerken die relevant zijn voor een bepaald domein worden in het informatiemodel beschreven, zoals gebouwen binnen
 het domein Basisregistratie Topografie en personen binnen het domein Basisregistratie Personen. Een domein kan van alles zijn maar in het kader van dit metamodel gaat het om (beleids)sectoren die omwille van bestuurlijke en beheersmatige redenen geïdentificeerd en georganiseerd zijn. Voorbeelden: ruimtelijke ordening, grootschalige topografie, kadastrale informatie of gemeentelijk domein.
 
