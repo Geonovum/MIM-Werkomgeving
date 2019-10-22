@@ -89,8 +89,7 @@ View 2: Datatypen
 | Gestructureerd datatype |
 | Data element            |
 | Keuze                   |
-| Datatypekeuze           |
-| Doelkeuze               |
+| Keuze element           |
 | Enumeratie              |
 | Enumeratiewaarde        |
 | Referentielijst         |
@@ -552,6 +551,24 @@ Het data element beschrijft in combinatie met andere data-elementen de structuur
 van een gegeven en heeft zelf een datatype. Dit datatype is meestal een
 primitief datatype.
 
+#### Keuze 
+
+>   **Definitie Keuze** 
+>   Een datatype, waarmee wordt aangegeven dat er meer dan één mogelijkheid is voor het datatype van een attribuut. Het attribuut zelf krijgt als datatype de Keuze. De union biedt een keuze uit verschillende datatypes, elk afzonderlijk beschreven in een union element.
+
+Voorbeeld: Keuze LineOrPolygon. Deze biedt een keuze uit Union element Line of Union element Polygon.
+
+#### Keuze element 
+
+>   **Definitie Keuze element** 
+>   Een keuze mogelijkheid van een Keuze, waaruit gekozen kan worden. 
+
+*Toelichting:*
+
+Toelichting 
+Het Keuze element is een onderdeel van een Keuze, en is op zichzelf te kiezen. Bij een Keuze tussen datatypes representeert het keuze element precies 1 datatype (een op zichzelf staand valide datatype). 
+
+Voorbeeld: keuze element Line en keuze element Polygon zijn beiden onderdelen c.q. keuze elementen van de Keuze LineOrPolygon.
 
 ### Packages
 
