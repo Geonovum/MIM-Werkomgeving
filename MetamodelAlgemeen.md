@@ -665,11 +665,15 @@ Dit zijn keuzes waarbij er sprake is van twee (of meer) modelelementen, waarbij 
 
 Use case 1, er is bij één attribuutsoort sprake sprake van een XOR tussen datatypen: datatype is ofwel datatype A ofwel datatype B.
 
+![](media/datatypekeuze.png)
+
 Voorbeeld: *Attribuutsoort* geometrie. Dit is een keuze uit *Datatype* Line of *Datatype* Polygon. De opsomming van beide keuzemogelijkheden noemen we de *Keuze* LineOrPolygon. Het maken van deze keuze is verplicht.
 
 Merk op dat er geen nieuw Datatype is bijgekomen als gevolg van deze modellering t.a.v. een modellering met een constraint. 
 
 Use case 2, er is bij één objecttype sprake van een XOR tussen attribuutsoorten: ofwel attribuutsoort A ofwel attribuutsoort B is aan de orde en verplicht. 
+
+![](media/attribuutkeuze.png)
 
 Voorbeeld: *Objecttype* Normwaarde heeft ofwel *Attribuutsoort* 'kwalitatieve waarde' ofwel *Attribuutsoort*  'kwantitatieve waarde', beide tegelijk mag niet voorkomen. De opsomming van beide keuzemogelijkheden noemen we de *Keuze* 'Waardetype keuze'. Het maken van deze keuze is verplicht.
 
@@ -686,6 +690,8 @@ Merk op dat er geen nieuwe Relatiesoorten zijn bijgekomen als gevolg van deze mo
 ##### één modelelement waarbij er sprake is van een keuze ##### 
 
 Use case 4, er is bij één objecttype sprake van één kenmerk, te weten een relatiesoort, die kan wijzen naar ofwel Objecttype A ofwel naar objecttype B. 
+
+![](media/relatiedoelkeuze.png)
 
 Voorbeeld: *Objecttype* Vervoersmiddel heeft als *Relatiesoort* eigenaar ofwel een *Objecttype* Natuurlijk persoon, ofwel een *Objecttype* Niet natuurlijk persoon. We modelleren de verwijzing naar deze objecttypes als een *Keuze* 'Eigenaar keuze'. Het maken van deze keuze is verplicht.
 
