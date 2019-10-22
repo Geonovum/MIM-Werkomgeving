@@ -6,13 +6,19 @@ In deze versie 1.1 zijn de volgende issues verwerkt:
 |-----------------------------------------------------------------------|--------------|
 | [Issue #3](https://github.com/Geonovum/MIM-Werkomgeving/issues/3)     | Toevoegen Decimal aan primaire types in MIM |
 | [Issue #12](https://github.com/Geonovum/MIM-Werkomgeving/issues/12)   | Metadata van het informatiemodel zelf en van de packages/subgroepen hierbinnen |
+| [Issue #16](https://github.com/Geonovum/MIM-Werkomgeving/issues/16)   | alle constructies een nederlandstalig stereotype: MIM-ISO |
 | [Issue #17](https://github.com/Geonovum/MIM-Werkomgeving/issues/17)   | Vertaling naar engels opnemen in een bijlage |
 | [Issue #18](https://github.com/Geonovum/MIM-Werkomgeving/issues/18)   | Opnemen van een tagged value voor versies/varianten van metamodel  |
 | [Issue #21](https://github.com/Geonovum/MIM-Werkomgeving/issues/21)   | Verwijzen van informatiemodel naar model van begrippen  |
 | [Issue #22](https://github.com/Geonovum/MIM-Werkomgeving/issues/22)   | GegevensgroepType onderbeschreven  |
 | [Issue #24](https://github.com/Geonovum/MIM-Werkomgeving/issues/24)   | hoe toevoegen locatie bij/van waardelijst (bij attribuutsoort union-element en data-element)?  |
+| [Issue #33](https://github.com/Geonovum/MIM-Werkomgeving/issues/33)   | Aspect "waarde" ontbreekt in de tekst  |
+| [Issue #34](https://github.com/Geonovum/MIM-Werkomgeving/issues/34)   | Aspect "union element" ontbreekt in de tekst |
+| [Issue #35](https://github.com/Geonovum/MIM-Werkomgeving/issues/35)   | Aspect "data element" ontbreekt in de tekst |
+| [Issue #36](https://github.com/Geonovum/MIM-Werkomgeving/issues/36)   | Aspect "referentie element" ontbreekt in de tekst |
 | [Issue #38](https://github.com/Geonovum/MIM-Werkomgeving/issues/38)   | Modelaspecten versus meta-aspecten  |
 | [Issue #53](https://github.com/Geonovum/MIM-Werkomgeving/issues/53)   | Aspect "naam" heeft meerdere definities |
+| [Issue #56](https://github.com/Geonovum/MIM-Werkomgeving/issues/56)   | Aspect "gegevensgroep" ontbreekt in de tekst |
 | [Issue #57](https://github.com/Geonovum/MIM-Werkomgeving/issues/57)   | Aspect "attribuut" ontbreekt in de tekst |
 | [Issue #59](https://github.com/Geonovum/MIM-Werkomgeving/issues/59)   | Waarden voor typeAggregatie c.q. subklassen |
 | [Issue #61](https://github.com/Geonovum/MIM-Werkomgeving/issues/61)   | hoe modelleer je een keuze tussen attribuutsoorten en/of relatiesoorten? |
