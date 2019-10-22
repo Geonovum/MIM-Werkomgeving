@@ -75,11 +75,9 @@ aantal aspecten. Het is een uitgebreidere toelichting, in aanvulling op het
 hoofdstuk [Metamodel Algemeen](#metamodel-algemeen), bestaande uit nadere afspraken, regels, richtlijnen en
 aanbevelingen bij het toepassen van het metamodel.
 
-De bijlage [Template naamgeving conventies](#template-naamgeving-conventies) verschaft een overzicht van alle bouwstenen en metadata-elementen en
-het al dan niet van toepassing zijn daarvan in een conceptueel dan wel een
-logisch informatiemodel.
-
-De bijlage [Transformatie van een MIM model naar een RDF model](#transformatie-van-een-mim-model-naar-een-rdf-model) beschrijft hoe een MIM model getransformeerd kan worden naar een RDF model dat gebruikt kan worden om daadwerkelijk Linked Data in uit te drukken.
+Er zijn een aantal bijlages, dit zijn hulpmiddelen of aanvullingen op MIM. 
+- De bijlage [Template naamgeving conventies](#template-naamgeving-conventies) verschaft een invulmogelijkheid om eigen naamgevingsconventies te documenteren, per in dit metamodel genoemd modelelement. 
+- De bijlage [Transformatie van een MIM model naar een RDF model](#transformatie-van-een-mim-model-naar-een-rdf-model) beschrijft hoe een MIM model getransformeerd kan worden naar een RDF model dat gebruikt kan worden om daadwerkelijk Linked Data in uit te drukken (op instantie niveau, waarbij dit in overeenstemming is met de specificatie op informatiemodel niveau). 
 
 ### Wat is een informatiemodel
 Een informatiemodel beschrijft de structuur, semantiek en de eigenschappen van
