@@ -80,38 +80,16 @@ Er zijn een aantal bijlages, dit zijn hulpmiddelen of aanvullingen op MIM.
 - De bijlage [Transformatie van een MIM model naar een RDF model](#transformatie-van-een-mim-model-naar-een-rdf-model) beschrijft hoe een MIM model getransformeerd kan worden naar een RDF model dat gebruikt kan worden om daadwerkelijk Linked Data in uit te drukken (op instantie niveau, waarbij dit in overeenstemming is met de specificatie op informatiemodel niveau). 
 
 ### Wat is een informatiemodel
-Een informatiemodel beschrijft de structuur, semantiek en de eigenschappen van
-informatie over dingen in de werkelijkheid. Met semantiek wordt de betekenis en
-definitie van de informatie over ‘het ding’ bedoeld, onafhankelijk van een
-mogelijke implementatie of toepassingsomgeving. Er worden dus geen regels
-toegepast die gerelateerd zijn aan de manier waarop de gegevens ingewonnen,
-opgeslagen, beheerd en uitgewisseld worden. Die beschrijving heeft de vorm van
-een model dat een gestructureerde weergave is van die werkelijkheid. Een
-dergelijk model is noodzakelijk om deze informatie te kunnen beheren en
-gebruiken (door mensen en machines) bij het communiceren over deze
-werkelijkheid, in registraties of anderszins, zoals het specificeren van de
-tussen registraties uit te wisselen gegevens of van de te bevragen informatie
-uit een registratie. De opname in een registratie kent vaak een inwinningsproces om
-gegevenswaarden over de feitelijke dingen in de werkelijkheid conform het
-informatiemodel in de registratie op te nemen. Dit is een belangrijk proces, 
-maar valt buiten scope van het informatiemodel.
+Wanneer we informatie over bepaalde onderwerpen willen inwinnen, registreren of uitwisselen, dan is het van belang om deze informatie  eerst goed te beschrijven. We doen dit zodat het voor eenieder die met de informatie aan de slag gaat helder en eenduidig is:
+- waarover de informatie gaat, bv. informatie over een persoon of een gebouw, we noemen dit de objecten, de onderwerpen van gesprek
+- de eigenschappen/kenmerken zelf, waarvan we informatie bijhouden, bv. de naam van een persoon of het bouwjaar van een gebouw 
+- wat de betekenis is van die informatie, de semantiek
+- hoe deze informatie qua structuur in elkaar zit, qua onderlinge relaties en qua interne structuur van de data 
 
-Het beschrijven vindt plaats door de informatie te modelleren naar objecttypen
-en de kenmerken daarvan naar attribuutsoorten van die objecttypen en relaties
-tussen die objecttypen. Alleen dingen en kenmerken die relevant zijn voor een
-bepaald domein worden in het informatiemodel beschreven, zoals gebouwen binnen
-het domein Basisregistratie Topografie en personen binnen het domein
-Basisregistratie Personen. Een domein kan van alles zijn maar in het kader van
-dit metamodel gaat het om (beleids)sectoren die omwille van bestuurlijke en
-beheersmatige redenen geïdentificeerd en georganiseerd zijn. Voorbeelden:
-ruimtelijke ordening, grootschalige topografie, kadastrale informatie of
-gemeentelijk domein.
+We doen dit door een model te maken van de informatie. Een informatiemodel beschrijft daarom de structuur, semantiek en de eigenschappen van informatie over dingen in de werkelijkheid. De beschrijving van de informatie heeft de vorm van een model dat een gestructureerde weergave is van die werkelijkheid. Een dergelijk model is noodzakelijk om deze informatie te kunnen beheren en
+gebruiken (door mensen en machines) bij het communiceren over deze werkelijkheid, in registraties of anderszins, zoals het specificeren van de tussen registraties uit te wisselen gegevens of van de te bevragen informatie uit een registratie. 
 
-Objecttypen in een informatiemodel representeren dingen in de werkelijkheid. 
-We visualiseren dat in onderstaande figuur voor de situatie dat er een, 
-van het informatiemodel afgeleide, registratie is.
-
-![](media/informatiemodel.png)
+Het beschrijven vindt plaats door de informatie van de objecten die we beschouwden te modelleren, met hun kenmerken en hun onderlinge relaties. De objecten die we als gelijksoortig beschouwen typeren we in het informatiemodel tot een objecttype, de relaties tussen de objecten typeren we in het informatiemodel als een relatiesoort en de kenmerken van de de objecten typeren we in het informatiemodel als attribuutsoorten. Op deze manier ontstaat een informatiemodel. 
 
 <aside class='example'>
     Jan en Katrien zijn bijvoorbeeld ‘dingen in de werkelijkheid’. Zij hebben
@@ -120,26 +98,30 @@ van het informatiemodel afgeleide, registratie is.
     de geboortedatum van Jan is, komen niet voor.
 </aside>
 
-In de context van het informatiemodel worden Jan en Katrien gezien als
-*objecten* binnen een domein. In het informatiemodel is het *objecttype* Persoon
-gedefinieerd en Jan en Katrien zijn dus objecten van het objecttype Persoon.
+In de context van het informatiemodel worden Jan en Katrien gezien als *objecten* binnen een domein. In het informatiemodel is het *objecttype* Persoon gedefinieerd en Jan en Katrien zijn dus objecten van het objecttype Persoon.
 
-De *kenmerken* zoals de naam en geboortedatum maar bijvoorbeeld ook
-identificatie en registratietijdstip worden gezien als attributen van dit
-objecttype. We noemen een dergelijk kenmerk een *attribuutsoort*. Sommige
-kenmerken, zoals het gegeven dat Jan getrouwd is met Katrien, modelleren we door
-middel van een relatiesoort tussen objecttypen, in dit geval van Persoon met
-zichzelf.
+De *kenmerken* zoals de naam en geboortedatum maar bijvoorbeeld ook identificatie en registratietijdstip worden gezien als attributen van dit objecttype. We noemen een dergelijk kenmerk een *attribuutsoort*. Sommige kenmerken, zoals het gegeven dat Jan getrouwd is met Katrien, modelleren we door middel van een relatiesoort tussen objecttypen, in dit geval van Persoon met zichzelf.
 
-In de van het informatiemodel afgeleide registratie kunnen vervolgens de
-objecten Jan en Katrien en de gegevens ervan, zoals de geboortedatum 10-10-1970,
-worden vastgelegd.
+In de van het informatiemodel afgeleide registratie kunnen vervolgens de objecten Jan en Katrien en de gegevens ervan, zoals de geboortedatum 10-10-1970, worden vastgelegd.
 
-Als een andere registratie op haar eigen manier tegen dezelfde ‘Jan uit de
-werkelijkheid’ aankijkt, dan is ook in die registratie een (eigen, apart) object
-voor Jan aanwezig en Jan kan in dit (eigen, aparte) informatiemodel anders
-gemodelleerd zijn. Beide objecten Jan representeren natuurlijk dezelfde ‘Jan uit
+Objecttypen in een informatiemodel representeren dingen in de werkelijkheid. We visualiseren dat in onderstaande figuur voor de situatie dat er een, van het informatiemodel afgeleide, registratie is.
+
+![](media/informatiemodel.png)
+
+Als een andere registratie op haar eigen manier tegen dezelfde ‘Jan uit de werkelijkheid’ aankijkt, dan is ook in die registratie een (eigen, apart) object voor Jan aanwezig en Jan kan in dit (eigen, aparte) informatiemodel anders gemodelleerd zijn. Bijvoorbeeld in het ene domein als werknemer en in het andere domein als persoon of parter. Beide objecten Jan representeren natuurlijk dezelfde ‘Jan uit
 de werkelijkheid’, vanuit het perspectief van het eigen domein bekeken.
+
+*Belangrijke aandachtspunten*  
+Alleen dingen en kenmerken die relevant zijn voor een bepaald domein worden in het informatiemodel beschreven, zoals gebouwen binnen
+het domein Basisregistratie Topografie en personen binnen het domein Basisregistratie Personen. Een domein kan van alles zijn maar in het kader van dit metamodel gaat het om (beleids)sectoren die omwille van bestuurlijke en beheersmatige redenen geïdentificeerd en georganiseerd zijn. Voorbeelden: ruimtelijke ordening, grootschalige topografie, kadastrale informatie of gemeentelijk domein.
+
+Het is hierbij de bedoeling dat een informatiemodel de betekenis en definitie van de informatie zelf beschrijft, onafhankelijk van een
+mogelijke (technische) implementatie of toepassingsomgeving. Zodat het primair helder is wat de informatie betekent, ongeacht waar je deze informatie tegenkomt en ongeacht de gebruikte techniek. Anders gezegd, in koppelvlakken, ketens en implementaties is het vrij om de elk technisch uitwisselingsformaat of bijvoorbeeld database technologie te kiezen, door het informatiemodel daarin uit te drukken. 
+Er worden geen regels toegepast die gerelateerd zijn aan de manier waarop de gegevens ingewonnen,
+opgeslagen, beheerd en uitgewisseld worden. 
+
+De opname in een registratie kent vaak een inwinningsproces om gegevenswaarden over de feitelijke dingen in de werkelijkheid conform het
+informatiemodel in de registratie op te nemen. Dit is een belangrijk proces, maar valt buiten scope van het informatiemodel.
 
 ### Typen informatiemodellen
 Zoals hiervoor uiteengezet beschrijft een informatiemodel de werkelijkheid. In
