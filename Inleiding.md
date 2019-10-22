@@ -89,7 +89,7 @@ Wanneer we informatie over bepaalde onderwerpen willen inwinnen, registreren of 
 We doen dit door een model te maken van de informatie. Een informatiemodel beschrijft daarom de structuur, semantiek en de eigenschappen van informatie over dingen in de werkelijkheid. De beschrijving van de informatie heeft de vorm van een model dat een gestructureerde weergave is van die werkelijkheid. Een dergelijk model is noodzakelijk om deze informatie te kunnen beheren en
 gebruiken (door mensen en machines) bij het communiceren over deze werkelijkheid, in registraties of anderszins, zoals het specificeren van de tussen registraties uit te wisselen gegevens of van de te bevragen informatie uit een registratie. 
 
-Het beschrijven vindt plaats door de informatie van de objecten die we beschouwden te modelleren, met hun kenmerken en hun onderlinge relaties. De objecten die we als gelijksoortig beschouwen typeren we in het informatiemodel tot een objecttype, de relaties tussen de objecten typeren we in het informatiemodel als een relatiesoort en de kenmerken van de de objecten typeren we in het informatiemodel als attribuutsoorten. Op deze manier ontstaat een informatiemodel. 
+Het beschrijven vindt plaats door de informatie van de objecten die we beschouwden te modelleren, met hun kenmerken en hun onderlinge relaties. 
 
 <aside class='example'>
     Jan en Katrien zijn bijvoorbeeld ‘dingen in de werkelijkheid’. Zij hebben
@@ -98,11 +98,13 @@ Het beschrijven vindt plaats door de informatie van de objecten die we beschouwd
     de geboortedatum van Jan is, komen niet voor.
 </aside>
 
-In de context van het informatiemodel worden Jan en Katrien gezien als *objecten* binnen een domein. In het informatiemodel is het *objecttype* Persoon gedefinieerd en Jan en Katrien zijn dus objecten van het objecttype Persoon.
+In de context van het informatiemodel worden Jan en Katrien gezien als een weergave van de 'dingen in de werkelijkheid', vanuit het perspectief van het informatiedomein van waaruit we Jan en Katrien beschouwen. We bekijken Jan en Katrien dan ook wel als een van de *objecten* binnen een domein. In het informatiemodel is het *objecttype* Persoon gedefinieerd en Jan en Katrien zijn dus objecten van het objecttype Persoon. De objecten Domtoren en Paleis Het Loo typeren we tot het objecttype Gebouw. 
 
-De *kenmerken* zoals de naam en geboortedatum maar bijvoorbeeld ook identificatie en registratietijdstip worden gezien als attributen van dit objecttype. We noemen een dergelijk kenmerk een *attribuutsoort*. Sommige kenmerken, zoals het gegeven dat Jan getrouwd is met Katrien, modelleren we door middel van een relatiesoort tussen objecttypen, in dit geval van Persoon met zichzelf.
+De *kenmerken* zoals de naam en geboortedatum, maar bijvoorbeeld ook identificatie en registratietijdstip, worden gezien als attributen van dit objecttype. We noemen een dergelijk kenmerk een *attribuutsoort*. Sommige kenmerken geven relaties tussen obiecten weer, zoals het gegeven dat Jan getrouwd is met Katrien. Deze modelleren we door middel van een relatiesoort tussen objecttypen, in dit geval van Persoon met zichzelf.
 
 In de van het informatiemodel afgeleide registratie kunnen vervolgens de objecten Jan en Katrien en de gegevens ervan, zoals de geboortedatum 10-10-1970, worden vastgelegd.
+
+Alle objecten die we als gelijksoortig beschouwen typeren we in het informatiemodel tot een objecttype, de relaties tussen de objecten typeren we in het informatiemodel als een relatiesoort en de kenmerken van de de objecten typeren we in het informatiemodel als attribuutsoorten. Op deze manier ontstaat een informatiemodel. 
 
 Objecttypen in een informatiemodel representeren dingen in de werkelijkheid. We visualiseren dat in onderstaande figuur voor de situatie dat er een, van het informatiemodel afgeleide, registratie is.
 
@@ -215,8 +217,8 @@ werken naar een logisch model.
 
 ### Wat is het metamodel voor informatiemodellering
 Een metamodel is een model van een model. Het definieert een verzameling van
-modelleerconstructies in de vorm van bouwstenen oftewel modelelementen, met
-bijbehorende betekenis en bijbehorende afspraken omtrent hoe deze toe te passen.
+modelleerconstructies in de vorm van bouwstenen, oftewel modelelementen zoals een objecttype, relatiesoort en attribuutsoort, met
+bijbehorende betekenis en met bijbehorende afspraken omtrent hoe deze toe te passen. 
 Een informatiemodel kan vervolgens hiermee gemaakt worden. Het metamodel is
 daarmee de modelleertaal waarin een informatiemodel is uitgedrukt. Deze metataal
 beschrijft als het ware de grammatica en de syntax van de modelleertaal.
@@ -232,7 +234,7 @@ schrijven van modelleertalen (zoals [[!UML]]) in een metataal (zoals MOF) wordt
 gegarandeerd dat alle toepassingen van die talen op een standaard manier zijn
 opgebouwd en daardoor alom te begrijpen zijn. De metataal beschrijft als het
 ware de grammatica van de modelleertaal. Het metamodel in dit document is
-gebaseerd op UML.
+uitgewerkt voor modellering met UML en voor modellering met linked data. 
 
 ### Uitdrukken in UML
 Zowel het metamodel als informatiemodellen kan woren uitgedrukt in UML.
