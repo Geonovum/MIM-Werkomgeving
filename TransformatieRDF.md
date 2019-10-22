@@ -1,6 +1,11 @@
 ## Transformatie van een MIM model naar een RDF model
 ## Inleiding
 
+<aside class='ednote'>
+  Let op: deze bjilage bevat nog delen die "under-construction" zijn. Deze delen zijn te herkennen aan 
+  de woorden **"VERDER UITWERKEN"** die in de bettreffende paragrafen zijn opgenomen.
+</aside>
+
 Het MIM is een *metamodel*. Dit betekent dat in termen van het MIM een concreet informatiemodel kan worden uitgewerkt, bijvoorbeeld het informatiemodel Basisregistratie Adressen en Gebouwen. Het MIM is niet bedoeld om vervolgens in termen van dit informatiemodel een concrete dataset te vormen. Hiervoor is een transformatie nodig naar een (technisch) uitwisselings- of opslagmodel, bijvoorbeeld een XSD schema of een RDMS database definitie.
 
 Op diezelfde manier levert het toepassen van het MIM in RDF geen ontologie of vocabulaire waarin RDF kan worden uitgedrukt in een concrete Linked Data dataset. Slechts het informatiemodel zelf is op deze manier in RDF uitgedrukt. Een afzonderlijke transformatie is nodig voor de vertaalslag naar een ontologie voor een concrete Linked Data.
