@@ -88,8 +88,6 @@ View 2: Datatypen
 | Primitief datatype      |
 | Gestructureerd datatype |
 | Data element            |
-| Keuze                   |
-| Keuze element           |
 | Enumeratie              |
 | Enumeratiewaarde        |
 | Referentielijst         |
@@ -107,6 +105,7 @@ View 3a: Constraint
 | **MIM metaclass** |
 |-------------------|
 | Constraint        |
+| Keuze             |
 
 *Relatierol*
 
@@ -551,25 +550,6 @@ Het data element beschrijft in combinatie met andere data-elementen de structuur
 van een gegeven en heeft zelf een datatype. Dit datatype is meestal een
 primitief datatype.
 
-#### Keuze 
-
->   **Definitie Keuze** 
->   Een datatype, waarmee wordt aangegeven dat er meer dan één mogelijkheid is voor het datatype van een attribuut. Het attribuut zelf krijgt als datatype de Keuze. De keuze biedt een keuze uit verschillende datatypes, elk afzonderlijk beschreven in een keuze element.
-
-Voorbeeld: Keuze LineOrPolygon. Deze biedt een keuze uit Keuze element Line of Keuze element Polygon.
-
-#### Keuze element 
-
->   **Definitie Keuze element** 
->   Een keuze mogelijkheid van een Keuze, waaruit gekozen kan worden. 
-
-*Toelichting:*
-
-Toelichting 
-Het Keuze element is een onderdeel van een Keuze, en is op zichzelf te kiezen. Bij een Keuze tussen datatypes representeert het keuze element precies 1 datatype (een op zichzelf staand valide datatype). 
-
-Voorbeeld: keuze element Line en keuze element Polygon zijn beiden onderdelen c.q. keuze elementen van de Keuze LineOrPolygon.
-
 ### Packages
 
 Een package is een benoemde en begrensde verzameling/groepering van
@@ -667,6 +647,55 @@ constraint geldt voor 2 (of meer) kenmerken van een objecttype, of om een
 bijzondere specificatie toe te voegen die niet via de bestaande modelelementen gelegd kan worden.
 
 Een constraint wordt altijd in gewone tekst omschreven en kan optioneel als formele specificatie worden aangegeven. 
+
+#### Keuze 
+
+>   **Definitie Keuze** 
+>   Een opsomming van meerdere modelelementen, waarbij er maar van één tegelijkertijd sprake kan zijn.
+
+*Toelichting:*
+De keuze is een alternatieve manier voor het modelleren van een constraint. 
+
+Een belangrijk voordeel van deze modellering is dat de kardinaliteiten zuiver gehouden kunnen worden. Anders gezegd, er kan mee voorkomen worden dat de kardinaliteit eerst optioneel gemaakt moet worden en hierna via een constraint weer verplicht gemaakt moeten worden, maar slechts voor één van de mogelijkheden. Het is aan de modelleur om te kiezen voor een constraint of een *Keuze*.  
+
+De intentie hierbij is om duidelijk aan te geven wat de eigenschappen van het object zijn, zonder hierbij nieuwe eigenschappen te introduceren als gevolg van de modellering. Hiervoor zijn een aantal gebruikstoepassingen. 
+
+##### Meerdere modelelementen waartussen een keuze gemaakt moet worden ##### 
+Dit zijn keuzes waarbij er sprake is van twee (of meer) modelelementen, waarbij *of* de ene, *of* de andere ingevuld moet worden oftewel verplicht is. Dit heeft in de verzamelingenleer een XOR constraint. 
+
+Use case 1, er is bij één attribuutsoort sprake sprake van een XOR tussen datatypen: datatype is ofwel datatype A ofwel datatype B.
+
+Voorbeeld: *Attribuutsoort* geometrie. Dit is een keuze uit *Datatype* Line of *Datatype* Polygon. De opsomming van beide keuzemogelijkheden noemen we de *Keuze* LineOrPolygon. Het maken van deze keuze is verplicht.
+
+Merk op dat er geen nieuw Datatype is bijgekomen als gevolg van deze modellering t.a.v. een modellering met een constraint. 
+
+Use case 2, er is bij één objecttype sprake van een XOR tussen attribuutsoorten: ofwel attribuutsoort A ofwel attribuutsoort B is aan de orde en verplicht. 
+
+Voorbeeld: *Objecttype* Normwaarde heeft ofwel *Attribuutsoort* 'kwalitatieve waarde' ofwel *Attribuutsoort*  'kwantitatieve waarde', beide tegelijk mag niet voorkomen. De opsomming van beide keuzemogelijkheden noemen we de *Keuze* 'Waardetype keuze'. Het maken van deze keuze is verplicht.
+
+Merk op dat er geen nieuwe Attribuutsoort is bijgekomen als gevolg van deze modellering t.a.v. een modellering met een constraint. 
+
+Use case 3, er is bij één objecttype sprake van een XOR tussen relatiesoorten: ofwel Relatiesoort A ofwel attribuutsoort B is aan de orde en verplicht. 
+
+Voorbeeld: *Objecttype* Juridische regel beschrijft ofwel een Activiteit, ofwel een Omgevingsnorm. Beide relaties hebben bestaansrecht en hebben op zichzelf betekenis, maar een Juridische regel kan maar over 1 van beide gaan (in dit voorbeeld). 
+
+De *Relatiesoort* 'beschrijft een activiteit' wijst naar *Objecttype* Activiteit, de *Relatiesoort* 'beschrijft een omgevingsnorm' wijst naar *Objecttype* Omgevingsnorm. De opsomming van beide keuzemogelijkheden noemen we de *Keuze* 'Regelbeschrijving keuze'. Het maken van deze keuze is verplicht.
+
+Merk op dat er geen nieuwe Relatiesoorten zijn bijgekomen als gevolg van deze modellering t.a.v. een modellering met een constraint. 
+
+##### één modelelement waarbij er sprake is van een keuze ##### 
+
+Use case 4, er is bij één objecttype sprake van één kenmerk, te weten een relatiesoort, die kan wijzen naar ofwel Objecttype A ofwel naar objecttype B. 
+
+Voorbeeld: *Objecttype* Vervoersmiddel heeft als *Relatiesoort* eigenaar ofwel een *Objecttype* Natuurlijk persoon, ofwel een *Objecttype* Niet natuurlijk persoon. We modelleren de verwijzing naar deze objecttypes als een *Keuze* 'Eigenaar keuze'. Het maken van deze keuze is verplicht.
+
+Merk op dat er geen nieuwe Relatiesoort is bijgekomen als gevolg van deze modellering t.a.v. een modellering met een constraint. Er is maar sprake van één Relatiesoort.
+
+Use case 5, er is bij één objecttype sprake van één kenmerk, te weten een *Attribuutsoort* A, die zelf als verschijningsvorm ofwel *Attribuutsoort* A1 kan zijn, ofwel *Attribuutsoort* A2 kan zijn.
+
+Voorbeeld: het *Attribuutsoort* telefoonnummer van een Natuurlijk Persoon. Dit is ofwel een privenummer ofwel een werknummer. De opsomming van beide keuzemogelijkheden noemen we de *Keuze* TelefoonnummerSelectie. 
+
+Merk op dat er geen nieuwe Attribuutsoort is bijgekomen als gevolg van deze modellering t.a.v. een modellering met een constraint. Er is maar sprake van één Attribuutsoort.
 
 ## Specificatie metagegevens informatiemodel
 
