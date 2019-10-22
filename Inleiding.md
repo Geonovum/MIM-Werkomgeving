@@ -96,8 +96,8 @@ Het beschrijven vindt plaats door de informatie van de objecten die we beschouwd
     bepaalde kenmerken, zoals een naam en een geboortedatum. In een informatiemodel
     komen Jan en Katrien niet voor. Ook hun gegevens, zoals het feit dat 10-10-1970 
     de geboortedatum van Jan is, komen niet voor.
+    
 </aside>
-
 
 In de context van het informatiemodel worden Jan en Katrien gezien als een weergave van de 'dingen in de werkelijkheid', vanuit het perspectief van het informatiedomein van waaruit we Jan en Katrien beschouwen. We bekijken Jan en Katrien dan ook wel als een van de *objecten* binnen een domein. In het informatiemodel is het *objecttype* Persoon gedefinieerd en Jan en Katrien zijn dus objecten van het objecttype Persoon. De objecten Domtoren en Paleis Het Loo typeren we tot het objecttype Gebouw. 
 
