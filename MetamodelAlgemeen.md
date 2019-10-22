@@ -554,9 +554,9 @@ primitief datatype.
 #### Keuze 
 
 >   **Definitie Keuze** 
->   Een datatype, waarmee wordt aangegeven dat er meer dan één mogelijkheid is voor het datatype van een attribuut. Het attribuut zelf krijgt als datatype de Keuze. De union biedt een keuze uit verschillende datatypes, elk afzonderlijk beschreven in een union element.
+>   Een datatype, waarmee wordt aangegeven dat er meer dan één mogelijkheid is voor het datatype van een attribuut. Het attribuut zelf krijgt als datatype de Keuze. De keuze biedt een keuze uit verschillende datatypes, elk afzonderlijk beschreven in een keuze element.
 
-Voorbeeld: Keuze LineOrPolygon. Deze biedt een keuze uit Union element Line of Union element Polygon.
+Voorbeeld: Keuze LineOrPolygon. Deze biedt een keuze uit Keuze element Line of Keuze element Polygon.
 
 #### Keuze element 
 
