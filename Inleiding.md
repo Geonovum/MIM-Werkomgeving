@@ -98,6 +98,7 @@ Het beschrijven vindt plaats door de informatie van de objecten die we beschouwd
     de geboortedatum van Jan is, komen niet voor.
 </aside>
 
+
 In de context van het informatiemodel worden Jan en Katrien gezien als een weergave van de 'dingen in de werkelijkheid', vanuit het perspectief van het informatiedomein van waaruit we Jan en Katrien beschouwen. We bekijken Jan en Katrien dan ook wel als een van de *objecten* binnen een domein. In het informatiemodel is het *objecttype* Persoon gedefinieerd en Jan en Katrien zijn dus objecten van het objecttype Persoon. De objecten Domtoren en Paleis Het Loo typeren we tot het objecttype Gebouw. 
 
 De *kenmerken* zoals de naam en geboortedatum, maar bijvoorbeeld ook identificatie en registratietijdstip, worden gezien als attributen van dit objecttype. We noemen een dergelijk kenmerk een *attribuutsoort*. Sommige kenmerken geven relaties tussen obiecten weer, zoals het gegeven dat Jan getrouwd is met Katrien. Deze modelleren we door middel van een relatiesoort tussen objecttypen, in dit geval van Persoon met zichzelf.
