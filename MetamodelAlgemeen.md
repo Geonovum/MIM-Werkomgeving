@@ -727,9 +727,7 @@ met een propery ‘*Name’*).
 
 Een aantal andere metagegevens, zoals de eerder genoemde *Datum opname* met
 waarde 1-1-2012. worden als aparte data vastgelegd, in UML gebeurd dit in een
-‘*Tagged value*’.
-
-<todo>TODO: voorbeeld ook opnemen voor W3C.</todo>
+‘*Tagged value*’. In Linked data gebeurd dit met een ‘*owl:DatatypeProperty*’. 
 
 Merk op, de metadata aspecten zijn specifiek voor elk modelelement apart. Dus
 als er in H2.2 sprake is van een generalisatie, dan worden deze metadata niet
