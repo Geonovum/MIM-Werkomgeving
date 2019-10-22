@@ -146,8 +146,13 @@ De alternatieve weergave van de naam.
 *Toelichting*
 
 Verdere toelichting voor UML modellen:
--   De alias is te specificeren voor NamedElements (zoals UML-Class, ML-association, UML-UML-Datatype en UML-property). De alias is in UML gespecificeerd bij de metaclass
-[Element Import](#uml-n-6). In Enterprise Architect is de alternatieve weergave aan te zetten in de properties van een Diagram, via: use alias if available.
+-   De alias is te specificeren voor NamedElements (zoals UML-Class, ML-association, UML-UML-Datatype en
+UML-property). De alias is in UML gespecificeerd bij de metaclass **Element Import]**. 
+Element import wordt in UML ingezet voor het importeren van een NamedElement uit een ander package. 
+In dit metamodel wordt de alias (nog) niet zo gebruikt.  
+
+In Enterprise Architect is de alternatieve weergave aan te zetten in de properties van een Diagram, 
+via: use alias if available.
 
 
 >   **Identificerend**
@@ -158,35 +163,33 @@ true.
 Als een relatiesoort identificerend is, dan krijgt dit kenmerk in UML een
 stereotype «id»
 
-In de hierna volgende paragrafen worden de metagegevens per modelelement gespecificeerd in tabellen.
-Per metagegeven zijn de volgdende onderdelen gespecificeerd:
+**In de hierna volgende paragrafen worden de metagegevens per modelelement gespecificeerd in tabellen.**
+**Per metagegeven zijn de volgdende onderdelen gespecificeerd:**
 
-Aspect: Het benoemde metagegeven. Met aanduiding √ is conform stelselafspraken voor basisregistraties.
-    Een \* is conform de stelselcatalogus. Zie ook de paragraaf in H3 hierover.
+**Aspect:** Het benoemde metagegeven. Met aanduiding √ is conform stelselafspraken voor basisregistraties.  
+Een \* is conform de stelselcatalogus. Zie ook de paragraaf in H3 hierover.
 	
-Kardinaliteit: Aantal maal dat een metagegeven opgenomen kan worden bij dit modelelement.
+**Kardinaliteit:** Aantal maal dat een metagegeven opgenomen kan worden bij dit modelelement.
 
-Toelichting: Nadere uitleg over het metagegeven.
+**Toelichting:** Nadere uitleg over het metagegeven.
 
-In UML 2.5:     De naam waarmee het het metagegeven in UML2.5 is benoemd. Het
-    betreft veelal overerving van een metagegeven van een UML metaclass die niet in dit
-    document is benoemd.
+*In UML 2.5:* De naam waarmee het het metagegeven in UML2.5 is benoemd. Het betreft veelal overerving
+van een metagegeven van een UML metaclass die niet in dit document is benoemd.
 	
-In AE:     Aanduiding hoe het metagegeven in Sparx Enterprise Architect (EA) is aangegeven. Rode tekst betreft een standaardelement binnen
-    EA. Zwarte tekst in de kolom betreft uitbreiding op het UML Metamodel, via
-    tagged values of aanvullende stereotypes.
+*In EA:* Aanduiding hoe het metagegeven in Sparx Enterprise Architect (EA) is aangegeven. Rode tekst 
+betreft een standaardelement binnen EA. Zwarte tekst in de kolom betreft uitbreiding op het UML Metamodel,
+via tagged values of aanvullende stereotypes.
 
 ### Modellering metagegevens voor objecten en attributen in UML
-
  
 
 **Specificatie voor «Objecttype»**
 
 De objecttypen worden naar de volgende aspecten gespecificeerd:
 
-| **Aspect**  | **Kardinaliteit** | **Toelichting**                                                                                                                                                                                                                                                                                                                          | **In UML 2.5** [Zie noot](#uml-n-2)      | **In EA**                                                                                                                                   |
+| **Aspect**  | **Kardinaliteit** | **Toelichting**                                                                                                                                                                                                                                                                                                                          | **In UML 2.5**    | **In EA**                                                                                                                                   |
 |---------------------------------|-------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Naam√**                       | 1                 | ALgemeen metagegeven .                                                                                                                                                                                                                                                                                               | *name van de metaclass Named element*    | *Name*                                                                                                                                                          |
+| **Naam√**                       | 1                 | Algemeen metagegeven .                                                                                                                                                                                                                                                                                               | *name van de metaclass Named element*    | *Name*                                                                                                                                                          |
 | **Begrip**                      | 0..\*             | Algemeen metagegeven.                                                                                                                                                                                                                                                                                                                    |                            | *Tagged value*                                                                                                                                                  |
 | **Alias**                       | 0..1              | Algemeen metagegeven.                                                                                                                                                                                                                                                                                                                    |                                          | *Alias*                                                                                                                                                         |
 | **Herkomst**                    | 1                 | Algemeen metagegeven.                                                                                                                                                                                                                                                                                                                    |                                          | *Tagged value*                                                                                                                                                  |
@@ -266,7 +269,7 @@ De gegevensgroeptypen worden naar de volgende aspecten gespecificeerd:
 
 Het metamodel heeft twee manieren om een relatie tussen twee objecttypen te
 beschrijven. Deze keuze wordt aangegeven in de eigen extensie, zoals beschreven
-in paragraaf <todo>1.8. link van maken!</todo> Alleen het gekozen alternatief is relevant voor de modellering
+in paragraaf [alternatieven](#alternatieven). Alleen het gekozen alternatief is relevant voor de modellering
 in uw informatiemodel. - Alternatief 1: Verplichte benoeming van de naam van de
 relatie met de bijbehorende metagegevens\*\* - Alternatief 2: Verplichte
 benoeming van de rol van de target in een relatie met de bijbehorende
@@ -417,7 +420,7 @@ Voor referentielijsten worden de volgende aspecten gespecificeerd:
 | **Naam**         | 1                 | Algemeen metagegeven.                      | *name van de metaclass Namedelement* | *Name*         |
 | **Begrip**       | 0..\*             | Algemeen metagegeven.                      |                                      | *Tagged value* |
 | **Alias**        | 0..1              | Algemeen metagegeven.                      |                                      | *Alias*        |
-| **Herkomst**     | 1                 | Algemeen metagegeven. [Zie noot](#uml-n-5) |                                      | *Tagged value* |
+| **Herkomst**     | 1                 | Algemeen metagegeven.                      |                                      | *Tagged value* |
 | **Definitie**    | 1                 | Algemeen metagegeven.                      | *Body van de metaclass Comment*      | *Notes*        |
 | **Datum opname** | 1                 | Algemeen metagegeven.                      |                                      | *Tagged value* |
 | **Toelichting**  | 0..1              | Algemeen metagegeven.                      |                                      | *Tagged value* |
@@ -638,27 +641,3 @@ organisatie.
 Er is een tool *Imvertor*, die kan controleren of een informatiemodel voldoet
 aan dit metamodel en zo niet, wat de reden daarvan is. Deze tool is open source
 en is te vinden op [www.imvertor.org](http://www.imvertor.org).
-
-**Voetnoten**
-
-
-
-
-
-<aside id='uml-n-4' class='note'>
-    In (basis) registraties is dit meestal gespecificeerd in een catalogus van
-    objecten en begrippen. Deze opmerking geldt voor elk metadata aspect naam van de
-    andere modelelementen. Indien het modelelement niet voorkomt in een dergelijke
-    catalogus is dan kiest u uiteraard een eigen naam.
-</aside>
-
-<aside id='uml-n-5' class='note'>
-    Deze specificatie is toegevoegd t.o.v. de registratiecatalogus aangezien
-    het hier niet om een registratie gaat maar wel duidelijk moet zijn in welke
-    registratie de (verwijzing naar de) lijst voorkomt (indien van toepassing).
-</aside>
-
-<aside id='uml-n-6' class='note'>
-    Element import wordt in UML ingezet voor het importeren van een NamedElement uit een ander package.
-    In dit metamodel wordt de alias (nog) niet zo gebruikt.
-</aside>
