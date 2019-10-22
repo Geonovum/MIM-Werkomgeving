@@ -1,6 +1,11 @@
 ## Transformatie van een MIM model naar een RDF model
 ## Inleiding
 
+<aside class='ednote'>
+  Let op: deze bjilage bevat nog delen die "under-construction" zijn. Deze delen zijn te herkennen aan 
+  de woorden **"VERDER UITWERKEN"** die in de bettreffende paragrafen zijn opgenomen.
+</aside>
+
 Het MIM is een *metamodel*. Dit betekent dat in termen van het MIM een concreet informatiemodel kan worden uitgewerkt, bijvoorbeeld het informatiemodel Basisregistratie Adressen en Gebouwen. Het MIM is niet bedoeld om vervolgens in termen van dit informatiemodel een concrete dataset te vormen. Hiervoor is een transformatie nodig naar een (technisch) uitwisselings- of opslagmodel, bijvoorbeeld een XSD schema of een RDMS database definitie.
 
 Op diezelfde manier levert het toepassen van het MIM in RDF geen ontologie of vocabulaire waarin RDF kan worden uitgedrukt in een concrete Linked Data dataset. Slechts het informatiemodel zelf is op deze manier in RDF uitgedrukt. Een afzonderlijke transformatie is nodig voor de vertaalslag naar een ontologie voor een concrete Linked Data.
@@ -226,7 +231,7 @@ Indien het datatype van een attribuutsoort gelijk is aan PrimitiefDatatype (of e
 
 De URI van de propertyshape wordt afgeleid van de naam van het modelelement dat de attribuutsoort "bezit" en de naam van de attribuutsoort. De URI van de datatypeproperty wordt afgeleid van de naam van de attribuutsoort.
 
-```
+<pre class='ex-sparql'>
 CONSTRUCT {
   ?propertyshape a sh:PropertyShape.
   ?propertyshape sh:path ?datatypeproperty.
@@ -256,7 +261,7 @@ WHERE {
       BIND (owl:ObjectProperty as ?type)
     }
 }
-```
+</pre>
 
 ### Gegevensgroep
 
@@ -266,7 +271,7 @@ Een `mim:Gegevensgroep` wordt vertaald naar een `sh:PropertyShape` in combinatie
 
 De URI van de propertyshape wordt afgeleid van de naam van het modelelement dat de gegevensgroep "bezit" en de naam van de gegevensgroep. De URI van de objectproperty wordt afgeleid van de naam van de gegevensgroep.
 
-```
+<pre class='ex-sparql'>
 CONSTRUCT {
   ?propertyshape a sh:PropertyShape.
   ?propertyshape sh:path ?objectproperty.
@@ -283,7 +288,7 @@ WHERE {
   BIND (t:propertyshapeuri(?bezittersnaam,?gegevensgroepnaam) as ?propertyshape)
   BIND (t:propertyuri(?gegevensgroepnaam) as ?objectproperty)
 }
-```
+</pre>
 
 ### Gegevensgroeptype
 
@@ -295,7 +300,7 @@ Een `mim:Gegevensgroeptype` wordt vertaald naar een `owl:Class` en een `sh:NodeS
 >
 > Er is nu geen verschil meer tussen een gegevensgroeptype en een objecttype. Het MIM maakt echter wel onderscheid. Het verschil is alleen zichtbaar doordat een gegevensgroeptype als blank node verbonden is (zie ook [Gegevensgroep](#gegevensgroep)).
 
-```
+<pre class='ex-sparql'>
 CONSTRUCT {
   ?class a owl:Class.
   ?class rdfs:seeAlso ?gegevensgroeptype.
@@ -309,7 +314,7 @@ WHERE {
   BIND (t:classuri(?gegevensgroeptypenaam) as ?class)
   BIND (t:nodeshapeuri(?gegevensgroeptypenaam) as ?nodeshape)
 }
-```
+</pre>
 
 ### Generalisatie
 
@@ -327,7 +332,8 @@ Generalisatie is in Linked Data ook mogelijk op properties, en daar ook wel gebr
 Vertaling van een mim:Generalisatie naar een rdfs:subClassOf betekent dat wat in het MIM een metaklasse is, in Linked Data een eigenschap is geworden en geen (meta)class. Hierdoor is het niet mogelijk om extra kenmerken te verbinden aan een generalisatie. Dit betekent dat het niet mogelijk is om de generalisatie een naam of een alias te geven. Dit wordt opgelost in de transformatie door middel van reificatie met rdf:Statement. Een alternatief zou kunnen zijn om subklassen te maken van `rdfs:subClassOf`. Hiervoor is niet gekozen omdat de reificatie oplossen leidt tot een meer gebruikelijk RDF model, waarbij de reificatie kan worden gezien als een aanvullende annotatie die ook weggelaten zou kunnen worden.
 </aside>
 
-```
+<pre class='ex-sparql'>
+
 CONSTRUCT {
   ?subject rdfs:subClassOf ?object.
   ?statement a rdf:Statement.
@@ -347,7 +353,7 @@ WHERE {
   FILTER (?type != sh:NodeShape)
   BIND (t:statementuri(?subtype,rdfs:subClasOf,?supertype) as ?statement)
 }
-```
+</pre>
 
 ### Relatiesoort
 
@@ -359,7 +365,7 @@ Een `mim:Relatiesoort` wordt vertaald naar een `sh:PropertyShape` in combinatie 
 
 De URI van de propertyshape wordt afgeleid van de naam van het modelelement dat de relatiesoort "bezit" en de naam van de relatiesoort. De URI van de objectproperty wordt afgeleid van de naam van de relatiesoort.
 
-```
+<pre class='ex-sparql'>
 CONSTRUCT {
   ?propertyshape a sh:PropertyShape.
   ?propertyshape sh:path ?objectproperty.
@@ -379,7 +385,7 @@ WHERE {
     ?relatiesoort mim:relatierol ?rol
   }
 }
-```
+</pre>
 
 ### Relatieklasse
 
@@ -387,7 +393,7 @@ WHERE {
 
 Een `mim:Relatieklasse` wordt vertaald naar een subklasse van `rdf:Statement`, waarbij bovendien ook de transformatieregels voor een `mim:Objecttype` en een `mim:Relatiesoort` worden gevolgd.
 
-```
+<pre class='ex-sparql'>
 CONSTRUCT {
   ?class a owl:Class.
   ?class rdfs:subClassOf rdf:Statement.
@@ -429,7 +435,7 @@ WHERE {
   BIND (t:propertyshapeuri(?bezittersnaam,?relatieklassenaam) as ?propertyshape)
   BIND (t:propertyuri(?relatieklassenaam) as ?objectproperty)
 }
-```
+</pre>
 
 ### Externe koppeling
 
@@ -449,7 +455,7 @@ Een `mim:Relatiesoort` wordt vertaald naar een `sh:PropertyShape` in combinatie 
 
 De URI van de propertyshape wordt afgeleid van de naam van het modelelement dat de relatierol "bezit" en de naam van de relatierol. De URI van de objectproperty wordt afgeleid van de naam van de relatiesoort. Aangezien er twee relatierollen gedefinieerd kunnen worden, kan ook sprake zijn van twee properties. In dat geval zijn deze twee properties elkaars inverse.
 
-```
+<pre class='ex-sparql'>
 CONSTRUCT {
   ?propertyshape a sh:PropertyShape.
   ?propertyshape sh:path ?objectproperty.
@@ -482,7 +488,7 @@ WHERE {
   ?relatiesoort mim:relatierol ?relatierolsource,
                                ?relatieroltarget.
 }
-```
+</pre>
 
 ### Referentielijst
 
@@ -528,7 +534,7 @@ In de Inspire RDF Guidelines wordt voorgeschreven om een enumeratie te modellere
 
 Een primitief datatype wordt vertaald naar een `rdfs:Datatype`. Indien er geen subklasse aanwezig is naar een andere datatype, dan wordt per default een subklasse van xsd:string toegevoegd.
 
-```
+<pre class='ex-sparql'>
 CONSTRUCT {
   ?datatype a rdfs:Datatype.
   ?datatype rdfs:subClassOf xsd:string.
@@ -553,7 +559,7 @@ WHERE {
   ?generalisatie mim:subtype ?primitiefdatatype
   BIND (t:classuri(?primitiefdatatypenaam) as ?datatype)
 }
-```
+</pre>
 
 ### Primitief datatype - standaard datatypen
 
@@ -574,7 +580,7 @@ Voor standaard datatypen maakt RDF gebruik van de XSD datatypen. Onderstaande ta
 
 Deze vertaaltabel kan worden doorgevoerd via `rdfs:seeAlso` statements, aangezien deze vervolgens gebruikt wordt in de transformatieregel voor generalisatie en in de transformatieregel voor het aspect `mim:type`.
 
-```
+<pre class='ex-sparql'>
 CONSTRUCT {
   mim:CharacterString a mim:PrimitiefDatatype.
   mim:Integer a mim:PrimitiefDatatype.
@@ -598,7 +604,7 @@ CONSTRUCT {
   xsd:anyURI rdfs:seeAlso mim:URI.
 }
 WHERE {}
-```
+</pre>
 
 ### Gestructureerd datatype
 
@@ -606,7 +612,7 @@ WHERE {}
 
 Een `mim:GestructureerdDatatype` wordt vertaald naar een `sh:NodeShape`. Er wordt geen `sh:Class` aangemaakt zoals bij een `mim:Objecttype`, aangezien conform het MIM een gestructureerd datatype slechts een structuur schetst en geen semantiek.
 
-```
+<pre class='ex-sparql'>
 CONSTRUCT {
   ?nodeshape a sh:NodeShape.
   ?nodeshape rdfs:seeAlso ?gestructureerddatatype.
@@ -616,7 +622,7 @@ WHERE {
   ?gestructureerddatatype mim:naam ?gestructureerddatatypenaam.
   BIND (t:nodeshapeuri(?gestructureerddatatypenaam) as ?nodeshape)
 }
-```
+</pre>
 
 ### Data element
 
@@ -626,7 +632,7 @@ Een `mim:DataElement` wordt op dezelfde wijze omgezet als een `mim:Attribuutsoor
 
 De URI van de propertyshape wordt afgeleid van de naam van het gestructureerde datatype dat het data element "bezit" en de naam van het data element. De URI van de datatypeproperty wordt ook op die manier afgeleid. Dit in afwijking van de wijze waarop dit bij een attribuutsoort gebeurt. Reden is het feit dat een data element echt uniek bij een gestructureerd datatype hoort, conform het metamodel (er is sprake van een compositie-aggregatie).
 
-```
+<pre class='ex-sparql'>
 CONSTRUCT {
   ?nodeshape sh:property ?propertyshape.
   ?propertyshape a sh:PropertyShape.
@@ -645,8 +651,7 @@ WHERE {
   BIND (t:propertyshapeuri(?bezittersnaam,?dataelementnaam) as ?propertyshape)
   BIND (t:nodepropertyuri(?dataelementnaam) as ?datatypeproperty)
 }
-```
-
+</pre>
 
 ### Union
 
@@ -657,7 +662,7 @@ Het lijkt erop dat in het MIM een union veel beperkter is dan in standaard UML. 
 >
 > Een union is feitelijk een onderdeel van de specificatiek van een attribuutsoort. In het MIM wordt deze als afzonderlijk modelelement opgenomen en kan daardoor ook hergebruikt of worden voorzien van extra meta-informatie. Een `min:Union`, in combinatie met het `mim:type` wordt vertaald naar een `sh:xone` waarbij de Union zelf een rdf:List is. In deze transformatieregel wordt ook de transformatie van `mim:type` meegenomen. Deze wordt hiermee niet opgenomen bij de transformatie van `mim:type` zelf (zie ook [Type](#type)). Merk op dat een empty list normaal gesproken wordt gerepresenteerd met `rdf:nil`. Dat is in ons geval niet handig, aangezien we expliciet een instantie willen aanmaken van het type `rdf:List`. Aangezien het MIM vereist dat minimaal twee union elementen aanwezig zijn, ontstaat altijd een correcte lijst.
 
-```
+<pre class='ex-sparql'>
 CONSTRUCT {
   ?list a rdf:List.
   ?list rdf:rest rdf:nil.
@@ -678,7 +683,7 @@ WHERE {
   ?subject rdfs:seeAlso ?modelelement.
   ?union rdfs:seeAlso ?type.
 }
-```
+</pre>
 
 ### Union element
 
@@ -819,7 +824,7 @@ De tweede delete-insert query is een "opruimquery": aangezien we zijn begonnen m
 
 Een constraint (en bijbehorende gegevens) worden direct overgenomen in het vertaalde model als blank node. Het MIM kent voor een constraint twee aspecten: tekstueel en formeel. Het MIM doet daarbij geen uitspraak over de taal die voor het formele model moet worden gehanteerd. Daarmee is een transformatie niet op zijn plaats. Zie ook de [INSPIRE RDF Guidelines](http://inspire-eu-rdf.github.io/inspire-rdf-guidelines/#ref_cr_constraint) waar een vergelijkbare redenatie wordt gevolgd.
 
-```
+<pre class='ex-sparql'>
 CONSTRUCT {
   ?subject mim:constraint ?constraint.
   ?constraint ?prop ?obj.
@@ -829,7 +834,7 @@ WHERE {
   ?subject rdfs:seeAlso ?modelelement.
   ?constraint ?prop ?obj.
 }
-```
+</pre>
 
 ## Properties
 
@@ -847,7 +852,7 @@ Het MIM geeft de mogelijkheid voor naamgevingsconventies. Zie MIM [3.16 Naamgevi
 Het MIM in Linked Data ondersteunt, zoals elk Linked Data model, de mogelijkheid om specifiek een taal aan te geven. Indien een taal aanwezig is, dan wordt dit veld overgenomen. Ook kent het MIM de mogelijkheid om expliciet een taal op het niveau van een package aan te geven. Dit is mede gedaan omdat in UML het niet zo eenvoudig is om een taal per aspect aan te geven. Indien er in een MIM model geen taal is aangegeven, dan wordt deze taal op package niveau gebruikt op elke plek waar een aspect een string is en geen expliciete taalvermelding heeft.
 </aside>
 
-```
+<pre class='ex-sparql'>
 CONSTRUCT {
   ?subject rdfs:label ?naam
 }
@@ -855,7 +860,7 @@ WHERE {
   ?modelelement mim:naam ?naam.
   ?subject rdfs:seeAlso ?modelelement.
 }
-```
+</pre>
 
 ### alias
 
@@ -867,7 +872,7 @@ Een `mim:alias` wordt vertaald naar een `skos:altLabel`
 Het MIM geeft de mogelijkheid voor naamgevingsconventies. Zie MIM [3.16 Naamgevingsconventies](https://docs.geostandaarden.nl/mim/mim10/#naamgevingsconventies). Dit is op dit moment niet in het MIM zelf als gestructureerd aspect beschikbaar. Voor een RDF model wordt uitgegaan dat de `mim:alias` een voor mensen alternatieve weergave biedt. Hier wordt dus **geen** technische naam verondersteld en dit veld mag dus ook spaties bevatten.
 </aside>
 
-```
+<pre class='ex-sparql'>
 CONSTRUCT {
   ?subject skos:altLabel ?alias
 }
@@ -875,7 +880,7 @@ WHERE {
   ?modelelement mim:alias ?alias.
   ?subject rdfs:seeAlso ?modelelement.
 }
-```
+</pre>
 
 ### begrip
 
@@ -883,7 +888,7 @@ WHERE {
 
 Een `mim:begrip` wordt vertaald naar een `dct:source`
 
-```
+<pre class='ex-sparql'>
 CONSTRUCT {
   ?subject dct:source ?begrip
 }
@@ -891,7 +896,7 @@ WHERE {
   ?modelelement mim:begrip ?begrip.
   ?subject rdfs:seeAlso ?modelelement
 }
-```
+</pre>
 
 ### begripsterm
 
@@ -899,7 +904,7 @@ WHERE {
 
 Een `mim:begripsterm` wordt vertaald naar een `dc:source`. Het heeft de voorkeur om geen gebruik te maken van dit aspect, maar om gebruik te maken van het aspect `mim:begrip`, waarmee een directe verwijzing kan worden gemaakt naar het begrip zelf.
 
-```
+<pre class='ex-sparql'>
 CONSTRUCT {
   ?subject dc:source ?begrip
 }
@@ -907,7 +912,7 @@ WHERE {
   ?modelelement mim:begripsterm ?begripsterm.
   ?subject rdfs:seeAlso ?modelelement
 }
-```
+</pre>
 
 ### definitie
 
@@ -929,7 +934,7 @@ Een `mim:toelichting` wordt direct, zonder aanpassing, overgenomen in het vertaa
 
 *Aanbevolen wordt om geen gebruik te maken van mim:toelichting, maar gebruik te maken van de verwijzing naar expliciet gedefinieerde begrippen, waarbij de toelichting bij het begrip zelf wordt opgenomen*.
 
-```
+<pre class='ex-sparql'>
 CONSTRUCT {
   ?subject mim:toelichting ?toelichting
 }
@@ -937,7 +942,7 @@ WHERE {
   ?modelelement mim:toelichting ?toelichting.
   ?subject rdfs:seeAlso ?modelelement.
 }
-```
+</pre>
 
 ### herkomst
 
@@ -945,7 +950,7 @@ WHERE {
 
 Een `mim:herkomst` wordt direct, zonder aanpassing, overgenomen in het vertaalde model.
 
-```
+<pre class='ex-sparql'>
 CONSTRUCT {
   ?subject mim:herkomst ?herkomst
 }
@@ -953,7 +958,7 @@ WHERE {
   ?modelelement mim:herkomst ?herkomst.
   ?subject rdfs:seeAlso ?modelelement.
 }
-```
+</pre>
 
 ### herkomst definitie
 
@@ -963,7 +968,7 @@ Een `mim:herkomstDefinitie` wordt direct, zonder aanpassing, overgenomen in het 
 
 *Aanbevolen wordt om geen gebruik te maken van mim:herkomstDefinitie, maar gebruik te maken van de verwijzing naar expliciet gedefinieerde begrippen, waarbij de herkomst van de definitie bij het begrip zelf wordt opgenomen*.
 
-```
+<pre class='ex-sparql'>
 CONSTRUCT {
   ?subject mim:herkomstDefinitie ?herkomstdefinitie
 }
@@ -971,7 +976,7 @@ WHERE {
   ?modelelement mim:herkomstDefinitie ?herkomstdefinitie.
   ?subject rdfs:seeAlso ?modelelement.
 }
-```
+</pre>
 
 ### datum opname
 
@@ -979,7 +984,7 @@ WHERE {
 
 Een `mim:datumOpname` wordt direct, zonder aanpassing, overgenomen in het vertaalde model.
 
-```
+<pre class='ex-sparql'>
 CONSTRUCT {
   ?subject mim:datumOpname ?datumopname
 }
@@ -987,7 +992,7 @@ WHERE {
   ?modelelement mim:datumOpname ?datumopname.
   ?subject rdfs:seeAlso ?modelelement.
 }
-```
+</pre>
 
 ### indicatie materiële historie
 
@@ -1027,7 +1032,7 @@ Daarnaast wordt `min:kardinaliteit` ook direct overgenomen in het vertaalde mode
 
 In de laatste regel moet voor a en z een geheel getal vanaf 1 worden gelezen.
 
-```
+<pre class='ex-sparql'>
 CONSTRUCT {
   ?propertyshape sh:minCount ?mincount.
 }
@@ -1047,14 +1052,14 @@ WHERE {
   ?propertyshape rdfs:seeAlso ?modelelement.
   BIND (t:maxcount(?kardinaliteit) as ?maxcount)
 }
-```
+</pre>
 
 ### authentiek
 > Aanduiding of het kenmerk een authentiek gegeven betreft.
 
 Een `mim:authentiek` wordt direct, zonder aanpassing, overgenomen in het vertaalde model.
 
-```
+<pre class='ex-sparql'>
 CONSTRUCT {
   ?subject mim:authentiek ?authentiek
 }
@@ -1062,14 +1067,14 @@ WHERE {
   ?modelelement mim:authentiek ?authentiek.
   ?subject rdfs:seeAlso ?modelelement.
 }
-```
+</pre>
 
 ### indicatie afleidbaar
 > Aanduiding dat gegeven afleidbaar is uit andere attribuut- en/of relatiesoorten.
 
 Een `mim:indicatieAfleidbaar` wordt direct, zonder aanpassing, overgenomen in het vertaalde model.
 
-```
+<pre class='ex-sparql'>
 CONSTRUCT {
   ?subject mim:indicatieAfleidbaar ?indicatieafleidbaar
 }
@@ -1077,7 +1082,7 @@ WHERE {
   ?modelelement mim:indicatieAfleidbaar ?indicatieafleidbaar.
   ?subject rdfs:seeAlso ?modelelement.
 }
-```
+</pre>
 
 ### mogelijk geen waarde
 > Aanduiding dat van een aspect geen waarde is geregistreerd, maar dat onduidelijk is of de waarde er werkelijk ook niet is.
@@ -1098,7 +1103,7 @@ Linked Data gaat in beginsel uit van een "open word assumptie". Dit houdt onder 
 
 Zie ook het NEN3610 Linked Data Profiel [7.3.4.2.3 Attribuut met stereotype «voidable»](https://geonovum.github.io/NEN3610-Linkeddata/#regels-attributen-voidable) voor meer achtergrondinformatie.
 
-```
+<pre class='ex-sparql'>
 CONSTRUCT {
   ?subject mim:mogelijkGeenWaarde ?mogelijkgeenwaarde
 }
@@ -1106,7 +1111,7 @@ WHERE {
   ?modelelement mim:mogelijkGeenWaarde ?mogelijkgeenwaarde.
   ?subject rdfs:seeAlso ?modelelement.
 }
-```
+</pre>
 
 ### locatie
 > Als het type van het attribuutsoort een waardenlijst is, dan wordt hier de locatie waar deze te vinden is opgegeven.
@@ -1126,7 +1131,7 @@ De vertaling van een `mim:type` hangt af van de vertaling van het datatype waar 
 - Voor een union wordt de vertaling opgepakt bij de transformatieregel van union zelf (zie ook [Union](#union))
 - In geval van zelfgespecificeerde datatypen wordt vertaald conform het betreffende supertype.
 
-```
+<pre class='ex-sparql'>
 CONSTRUCT {
   ?subject sh:datatype ?datatype
 }
@@ -1152,15 +1157,14 @@ WHERE {
        || ?mimtype = mim:Codelijst
   )
 }
-
-```
+</pre>
 
 ### lengte
 > De aanduiding van de lengte van een gegeven.
 
 Een `mim:lengte` wordt vertaald naar een `sh:maxLength`.
 
-```
+<pre class='ex-sparql'>
 CONSTRUCT {
   ?subject sh:maxLength ?lengte
 }
@@ -1168,14 +1172,14 @@ WHERE {
   ?modelelement mim:lengte ?lengte.
   ?subject rdfs:seeAlso ?modelelement.
 }
-```
+</pre>
 
 ### patroon
 > De verzameling van waarden die gegevens van deze attribuutsoort kunnen hebben, oftewel het waardenbereik, uitgedrukt in een specifieke structuur.
 
 De structuur van `mim:patroon` is in woorden beschreven. Deze wordt direct, zonder aanpassing, overgenomen in het vertaalde model.
 
-```
+<pre class='ex-sparql'>
 CONSTRUCT {
   ?subject mim:patroon ?patroon
 }
@@ -1183,7 +1187,7 @@ WHERE {
   ?modelelement mim:patroon ?patroon.
   ?subject rdfs:seeAlso ?modelelement.
 }
-```
+</pre>
 
 ### formeel patroon
 > Zoals patroon, formeel vastgelegd, uitgedrukt in een formele taal die door de computer wordt herkend.
@@ -1194,7 +1198,7 @@ WHERE {
 Het MIM stelt dat het formeelPatroon door de computer moet worden herkend, zonder specifiek te zijn op welke manier. In het geval van een MIM in Linked Data model wordt uitgegaan dat hier sprake is van een reguliere expressie.
 </aside>
 
-```
+<pre class='ex-sparql'>
 CONSTRUCT {
   ?subject sh:pattern ?formeelpatroon
 }
@@ -1202,14 +1206,14 @@ WHERE {
   ?modelelement mim:formeelPatroon ?formeelpatroon.
   ?subject rdfs:seeAlso ?modelelement.
 }
-```
+</pre>
 
 ### unieke aanduiding
 > Voor objecttypen die deel uitmaken van een (basis)registratie of informatiemodel betreft dit de wijze waarop daarin voorkomende objecten (van dit type) uniek in de registratie worden aangeduid.
 
 Een `mim:uniekeAanduiding` wordt direct, zonder aanpassing, overgenomen in het vertaalde model.
 
-```
+<pre class='ex-sparql'>
 CONSTRUCT {
   ?subject mim:uniekeAanduiding ?uniekeaanduiding
 }
@@ -1217,14 +1221,14 @@ WHERE {
   ?modelelement mim:uniekeAanduiding ?uniekeaanduiding.
   ?subject rdfs:seeAlso ?modelelement.
 }
-```
+</pre>
 
 ### populatie
 > Voor objecttypen die deel uitmaken van een (basis)registratie betreft dit de beschrijving van de exemplaren van het gedefinieerde objecttype die in de desbetreffende (basis)­registratie voorhanden zijn.
 
 Een `mim:populatie` wordt direct, zonder aanpassing, overgenomen in het vertaalde model.
 
-```
+<pre class='ex-sparql'>
 CONSTRUCT {
   ?subject mim:populatie ?populatie
 }
@@ -1232,14 +1236,14 @@ WHERE {
   ?modelelement mim:populatie ?populatie.
   ?subject rdfs:seeAlso ?modelelement.
 }
-```
+</pre>
 
 ### kwaliteit
 > Voor objecttypen die deel uitmaken van een registratie betreft dit de waarborgen voor de juistheid van de in de registratie opgenomen objecten van het desbetreffende type.
 
 Een `mim:kwaliteit` wordt direct, zonder aanpassing, overgenomen in het vertaalde model.
 
-```
+<pre class='ex-sparql'>
 CONSTRUCT {
   ?subject mim:kwaliteit ?kwaliteit
 }
@@ -1247,7 +1251,7 @@ WHERE {
   ?modelelement mim:kwaliteit ?kwaliteit.
   ?subject rdfs:seeAlso ?modelelement.
 }
-```
+</pre>
 
 ### indicatie abstract object
 > Indicatie dat het objecttype een generalisatie is, waarvan een object als specialisatie altijd voorkomt in de hoedanigheid van een (en slechts één) van de specialisaties van het betreffende objecttype.
@@ -1256,7 +1260,7 @@ In een MIM conform informatiemodel kunnen zowel abstracte als concrete klassen v
 
 Een `mim:indicatieAbstractObject` wordt direct, zonder aanpassing, overgenomen in het vertaalde model.
 
-```
+<pre class='ex-sparql'>
 CONSTRUCT {
   ?subject mim:indicatieAbstractObject ?indicatieabstractobject
 }
@@ -1264,14 +1268,14 @@ WHERE {
   ?modelelement mim:indicatieAbstractObject ?indicatieabstractobject.
   ?subject rdfs:seeAlso ?modelelement.
 }
-```
+</pre>
 
 ### identificerend
 > Een kenmerk van een objecttype die aangeeft of deze eigenschap uniek identificerend is voor alle objecten in de populatie van objecten van dit objecttype.
 
 Een `mim:identificerend` wordt direct, zonder aanpassing, overgenomen in het vertaalde model.
 
-```
+<pre class='ex-sparql'>
 CONSTRUCT {
   ?subject mim:identificerend ?identificerend
 }
@@ -1279,7 +1283,7 @@ WHERE {
   ?modelelement mim:identificerend ?identificerend.
   ?subject rdfs:seeAlso ?modelelement.
 }
-```
+</pre>
 
 ### gegevensgroeptype (eigenschap)
 
@@ -1287,7 +1291,7 @@ WHERE {
 
 Een `mim:gegevensgroeptype` wordt vertaald naar een `sh:class` met als waarde de URI van de class die het bijbehorende gegevensgroeptype representeert. Zie [Gegevensgroep](#gegevensgroep) en [Gegevensgroeptype](#gegevensgroeptype) voor meer uitleg.
 
-```
+<pre class='ex-sparql'>
 CONSTRUCT {
   ?subject sh:class ?object
 }
@@ -1298,7 +1302,7 @@ WHERE {
   ?object rdfs:seeAlso ?gegevensgroeptype.
   ?object a owl:Class.
 }
-```
+</pre>
 
 ### unidirectioneel
 
@@ -1317,7 +1321,7 @@ Bij `<<Externe koppeling>>`:
 
 Een `mim:bron` wordt vertaald naar een `sh:property` die hoort bij de de NodeShape van het objecttype. Zie voor meer informatie over hoe relaties tussen objecttypen worden vertaald de paragrafen [Relatiesoort](#relatiesoort) en [Externe koppeling](#externe-koppeling).
 
-```
+<pre class='ex-sparql'>
 CONSTRUCT {
   ?objecttype sh:property ?modelelement
 }
@@ -1326,14 +1330,14 @@ WHERE {
   ?subject rdfs:seeAlso ?modelelement.
   ?object rdfs:seeAlso ?objecttype.
 }
-```
+</pre>
 
 ### doel
 > Aanduiding van het gerelateerde objecttype die het eindpunt van de relatie aangeeft. Naar objecten van dit objecttype wordt verwezen.
 
 Een `mim:doel` wordt vertaald naar een `sh:class` met als waarde de URI van de Class die het gerelateerde objecttype representeert. Zie voor meer informatie over hoe relaties tussen objecttypen worden vertaald de paragrafen [Relatiesoort](#relatiesoort) en [Externe koppeling](#externe-koppeling).
 
-```
+<pre class='ex-sparql'>
 CONSTRUCT {
   ?subject sh:class ?object
 }
@@ -1342,14 +1346,14 @@ WHERE {
   ?subject rdfs:seeAlso ?modelelement.
   ?object rdfs:seeAlso ?gerelateerdobjecttype.
 }
-```
+</pre>
 
 ### aggregatietype
 > Aanduiding of het objecttype die de eigenaar is van een relatie het doel van relatie ziet als een samen te voegen onderdeel.
 
 Aggregatie- en compositie-associaties worden gemodelleerd zoals simpele relatiesoorten, gebruikmakend van de specifieke naam die de associatie in het oorspronkelijke model heeft. Een `mim:aggregatietype` wordt direct, zonder aanpassing, overgenomen in het vertaalde model.
 
-```
+<pre class='ex-sparql'>
 CONSTRUCT {
   ?subject mim:aggregatietype ?aggregatietype
 }
@@ -1357,7 +1361,7 @@ WHERE {
   ?modelelement mim:aggregatietype ?aggregatietype.
   ?subject rdfs:seeAlso ?modelelement.
 }
-```
+</pre>
 
 ### code
 > De in een registratie of informatiemodel aan de enumeratiewaarde toegekend unieke code (niet te verwarren met alias, zoals bedoeld in 2.6.1).
@@ -1388,7 +1392,7 @@ Een `mim:specificatieFormeel` wordt direct, zonder aanpassing, overgenomen in he
 
 Een `mim:attribuut` wordt vertaald naar een `sh:property` die hoort bij de de NodeShape van de bezitter van het attribuut. Zie ook [Attribuutsoort](#attribuutsoort).
 
-```
+<pre class='ex-sparql'>
 CONSTRUCT {
   ?nodeshape sh:property ?propertyshape
 }
@@ -1400,13 +1404,13 @@ WHERE {
   ?propertyshape a sh:PropertyShape.
 
 }
-```
+</pre>
 
 ### gegevensgroep (eigenschap)
 
 Een `mim:gegevensgroep` wordt vertaald naar een `sh:property` die hoort bij de de NodeShape van de bezitter van het attribuut. Zie ook [Gegevensgroep](#gegevensgroep).
 
-```
+<pre class='ex-sparql'>
 CONSTRUCT {
   ?nodeshape sh:property ?propertyshape
 }
@@ -1418,4 +1422,4 @@ WHERE {
   ?propertyshape a sh:PropertyShape.
 
 }
-```
+</pre>
