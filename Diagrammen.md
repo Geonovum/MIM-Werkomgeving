@@ -2,7 +2,7 @@
 
 ### Overzicht toegepaste UML metaclasses
 
-![](media/db713545374d78b1070c439199543dc4.png)
+![](media/OverzichtToegepasteUMLmetaclasses.png)
 
 
 ### Modelelementen en metagegevens als diagram
@@ -11,11 +11,11 @@ Deze bijlage bevat alle modelelementen en metagegevens in één diagram.
 
 *Kern - [Relatiesoort is leidend](#relatiesoort-leidend-alternatief-1)*
 
-![](media/KernMetMetagegevens-alt1.png)
+![](media/KernMetMetagegevens_Alt1.png)
 
 *Kern - [Relatierol is leidend](#relatierol-is-leidend-alternatief-2)*
 
-![](media/KernMetMetagegevens-alt2.png)
+![](media/KernMetMetagegevens_Alt2.png)
 
 *Datatypen*
 
@@ -24,6 +24,10 @@ Deze bijlage bevat alle modelelementen en metagegevens in één diagram.
 *Constraints*
 
 ![](media/ConstraintsMetMetagegevens.png)
+
+*Keuze*
+
+![](media/KeuzeMetMetagegevens.png)
 
 *Packages*
 

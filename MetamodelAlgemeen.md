@@ -117,7 +117,11 @@ View 3a: constraint en keuze.
 
 ![](media/ConstraintsZonderUML.png)
 
-Constraint en Keuze 
+Constraint
+
+![](media/KeuzeZonderUML.png)
+
+Keuze
 
 *Relatierol*
 

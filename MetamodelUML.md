@@ -101,6 +101,24 @@ View 3a: Constraint
 |-------------------|----------------|-----------------------|-----------------|
 | Constraint        | \-             | (UML) Constraint      | Constraint      |
 
+
+Keuze
+
+
+![](media/KeuzeMetUML.png)
+
+
+De 'keuze constructie' maakt een keuze mogelijk tussen meerdere attribuutsoorten, datatypen en relatiedoelen. Er zijn drie metaklassen met de naam Keuze maar elke keer als extensie van een andere UML metaklasse. Ook is er de metaklasse datatype als extensie van de uml metaklasse property. Een attribuut kan hiermee als keuze attribuut getypeerd worden.
+
+| **MIM metaclass** | **Stereotype** | **Metaclass UML 2.5** | **In Sparx EA** |
+|-------------------|----------------|-----------------------|-----------------|
+| Keuze             | Keuze          | (UML) Datatype        | Datatype        |
+| Keuze             | Keuze          | (UML) Property        | Attribute       |
+| Keuze             | Keuze          | (UML) Association     | Association     |
+| Datatype          | Datatype       | (UML) Property        | Attribute       |
+
+
+
 *Relatierol*
 
 ![](media/AssociatierollenZonderMetagegevens.png)
