@@ -130,7 +130,7 @@ View 3b: Relatiesoort en relatierol
 | Relatierol doel       |
 
 
-![](media/AssociatierollenZonderUML.png)
+![](media/AssociatierollenZonderUml.png)
 
 Relatierol
 
