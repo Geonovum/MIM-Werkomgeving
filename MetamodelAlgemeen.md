@@ -70,7 +70,6 @@ View 1: De kern van een informatiemodel. Deze bestaat uit de volgende modeleleme
 | Relatieklasse     |
 | Relatierol        |
 | Relatierol doel   |
-| Externe koppeling |
 
 De betekenis van deze modelelementen en de beschrijvingen ervan staat in [Betekenis modelelementen](#Betekenis-modelelementen). 
 
@@ -155,7 +154,6 @@ View 3d: Groepering. Deze bestaat uit de volgende modelelementen:
 | Domein            |
 | Extern            |
 | View              |
-| Externe koppeling | 
 
 De betekenis van deze modelelementen en de beschrijvingen ervan staat in [Betekenis modelelementen](#Betekenis-modelelementen). 
 
