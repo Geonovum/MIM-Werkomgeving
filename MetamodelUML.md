@@ -91,9 +91,11 @@ specificaties van een enumeratiewaarde.
 
 ### Overige
 
+Constraint
+
 ![](media/ConstraintsZonderMetagegevens.png)
 
-Constraint
+*Constraint*
 
 View 3a: Constraint
 
@@ -102,7 +104,7 @@ View 3a: Constraint
 | Constraint        | \-             | (UML) Constraint      | Constraint      |
 
 
-Keuze
+*Keuze*
 
 
 ![](media/KeuzeMetUML.png)
@@ -116,6 +118,9 @@ De 'keuze constructie' maakt een keuze mogelijk tussen meerdere attribuutsoorten
 | Keuze             | Keuze          | (UML) Property        | Attribute       |
 | Keuze             | Keuze          | (UML) Association     | Association     |
 | Datatype          | Datatype       | (UML) Property        | Attribute       |
+
+
+
 
 
 
@@ -133,11 +138,15 @@ View 3b: Relatiesoort en relatierol
 | Relatierol source     | «Relatierol»   | Property              | AssociationEnd  |
 | Relatierol target     | «Relatierol»   | Property              | AssociationEnd  |
 
+
+
 *Externe koppeling*
 
 | **MIM metaclass** | **Stereotype**      | **Metaclass UML 2.5** | **In Sparx EA** |
 |-------------------|---------------------|-----------------------|-----------------|
 | Externe koppeling | «Externe koppeling» | (UML) Association     | Association     |
+
+
 
 View 3c: Groepering
 

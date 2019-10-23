@@ -102,6 +102,8 @@ View 2: Datatypen. Deze bestaat uit de volgende modelelementen:
 
 De betekenis van deze modelelementen en de beschrijvingen ervan staat in [Betekenis modelelementen](#Betekenis-modelelementen). 
 
+In diagramvorm: 
+
 ![](media/DatatypenZonderUML.png)
 
 Datatypen zonder Metagegevens
@@ -119,9 +121,15 @@ View 3a: constraint en keuze.
 
 Constraint
 
+
+
+
 ![](media/KeuzeZonderUML.png)
 
 Keuze
+
+
+
 
 *Relatierol*
 
@@ -138,6 +146,8 @@ View 3b: Relatiesoort en relatierol
 
 Relatierol
 
+
+
 *Externe koppeling*
 
 View 3c: Externe koppelingen. Deze bestaat uit de volgende modelelementen:
@@ -150,7 +160,6 @@ View 3c: Externe koppelingen. Deze bestaat uit de volgende modelelementen:
 
 View 3d: Groepering. Deze bestaat uit de volgende modelelementen:
 
-![](media/PackageZonderUML.png)
 
 | **MIM metaclass** |
 |-------------------|
@@ -160,6 +169,9 @@ View 3d: Groepering. Deze bestaat uit de volgende modelelementen:
 | View              |
 
 De betekenis van deze modelelementen en de beschrijvingen ervan staat in [Betekenis modelelementen](#Betekenis-modelelementen). 
+
+![](media/PackageZonderUml.png)
+
 
 ### Betekenis modelelementen
 
