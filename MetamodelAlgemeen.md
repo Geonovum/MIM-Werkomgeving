@@ -72,7 +72,7 @@ View 1: De kern van een informatiemodel. Deze bestaat uit de volgende modeleleme
 | Relatierol doel   |
 | Externe koppeling |
 
-De betekenis van deze modelelementen en de beschrijvingen ervan staat na deze paragraaf. 
+De betekenis van deze modelelementen en de beschrijvingen ervan staat in [Betekenis modelelementen](#Betekenis-modelelementen). 
 
 In diagramvorm zijn de onderlinge relaties aangegeven, deze combinaties kunnen voorkomen. Zo kan een objecttype bijvoorbeeld wel (rechtstreeks) gekoppeld worden met een attribuutsoort, maar niet rechtstreeks gekoppeld worden met een gegevensgroeptype. 
 
