@@ -678,10 +678,12 @@ Een belangrijk voordeel van deze modellering is dat de kardinaliteiten zuiver ge
 
 De intentie hierbij is om duidelijk aan te geven wat de eigenschappen van het object zijn, zonder hierbij nieuwe eigenschappen te introduceren als gevolg van de modellering. Hiervoor zijn een aantal gebruikstoepassingen. 
 
-##### Meerdere modelelementen waartussen een keuze gemaakt moet worden ##### 
+**Meerdere modelelementen waartussen een keuze gemaakt moet worden** 
+
 Dit zijn keuzes waarbij er sprake is van twee (of meer) modelelementen, waarbij *of* de ene, *of* de andere ingevuld moet worden oftewel verplicht is. Dit heeft in de verzamelingenleer een XOR constraint. 
 
-Use case 1, er is bij één attribuutsoort sprake sprake van een XOR tussen datatypen: datatype is ofwel datatype A ofwel datatype B.
+*Use case 1, één attribuutsoort met een XOR tussen datatypen*
+Oftewel datatype A ofwel datatype B is aan de orde en verplicht.
 
 ![](media/datatypekeuze.png)
 
@@ -689,7 +691,8 @@ Voorbeeld: *Attribuutsoort* geometrie. Dit is een keuze uit *Datatype* Line of *
 
 Merk op dat er geen nieuw Datatype is bijgekomen als gevolg van deze modellering t.a.v. een modellering met een constraint. 
 
-Use case 2, er is bij één objecttype sprake van een XOR tussen attribuutsoorten: ofwel attribuutsoort A ofwel attribuutsoort B is aan de orde en verplicht. 
+*Use case 2, één objecttype met een XOR tussen attribuutsoorten*
+Ofwel attribuutsoort A ofwel attribuutsoort B is aan de orde en verplicht. 
 
 ![](media/attribuutkeuze.png)
 
@@ -697,7 +700,8 @@ Voorbeeld: *Objecttype* Normwaarde heeft ofwel *Attribuutsoort* 'kwalitatieve wa
 
 Merk op dat er geen nieuwe Attribuutsoort is bijgekomen als gevolg van deze modellering t.a.v. een modellering met een constraint. 
 
-Use case 3, er is bij één objecttype sprake van een XOR tussen relatiesoorten: ofwel Relatiesoort A ofwel attribuutsoort B is aan de orde en verplicht. 
+*Use case 3, één objecttype met een XOR tussen relatiesoorten*
+Ofwel Relatiesoort A ofwel attribuutsoort B is aan de orde en verplicht. 
 
 Voorbeeld: *Objecttype* Juridische regel beschrijft ofwel een Activiteit, ofwel een Omgevingsnorm. Beide relaties hebben bestaansrecht en hebben op zichzelf betekenis, maar een Juridische regel kan maar over 1 van beide gaan (in dit voorbeeld). 
 
@@ -705,9 +709,10 @@ De *Relatiesoort* 'beschrijft een activiteit' wijst naar *Objecttype* Activiteit
 
 Merk op dat er geen nieuwe Relatiesoorten zijn bijgekomen als gevolg van deze modellering t.a.v. een modellering met een constraint. 
 
-##### één modelelement waarbij er sprake is van een keuze ##### 
+**Eén modelelement waarbij er sprake is van een keuze** 
 
-Use case 4, er is bij één objecttype sprake van één kenmerk, te weten een relatiesoort, die kan wijzen naar ofwel Objecttype A ofwel naar objecttype B. 
+*Use case 4, een objecttype met één kenmerk, te weten een relatiesoort*
+De relatiesoort kan wijzen naar ofwel Objecttype A ofwel naar objecttype B. 
 
 ![](media/relatiedoelkeuzeRelatiesoort.png)
 
@@ -715,7 +720,8 @@ Voorbeeld: *Objecttype* Vervoersmiddel heeft als *Relatiesoort* eigenaar ofwel e
 
 Merk op dat er geen nieuwe Relatiesoort is bijgekomen als gevolg van deze modellering t.a.v. een modellering met een constraint. Er is maar sprake van één Relatiesoort.
 
-Use case 5, er is bij één objecttype sprake van één kenmerk, te weten een *Attribuutsoort* A, die zelf als verschijningsvorm ofwel *Attribuutsoort* A1 kan zijn, ofwel *Attribuutsoort* A2 kan zijn.
+*Use case 5, één objecttype met één kenmerk, te weten een Attribuutsoort* 
+Het attribuutsootr heeft als verschijningsvorm ofwel *Attribuutsoort* A1 ofwel *Attribuutsoort* A2.
 
 Voorbeeld: het *Attribuutsoort* telefoonnummer van een Natuurlijk Persoon. Dit is ofwel een privenummer ofwel een werknummer. De opsomming van beide keuzemogelijkheden noemen we de *Keuze* TelefoonnummerSelectie. 
 
