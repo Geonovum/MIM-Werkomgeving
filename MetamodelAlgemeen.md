@@ -95,6 +95,8 @@ View 2: Datatypen. Deze bestaat uit de volgende modelelementen:
 | Referentie element      |
 | Codelist                |
 
+De betekenis van deze modelelementen en de beschrijvingen ervan staat in [Betekenis modelelementen](#Betekenis-modelelementen). 
+
 ![](media/DatatypenZonderUML.png)
 
 Datatypen zonder Metagegevens
@@ -149,9 +151,11 @@ View 3d: Groepering. Deze bestaat uit de volgende modelelementen:
 | View              |
 | Externe koppeling | 
 
+De betekenis van deze modelelementen en de beschrijvingen ervan staat in [Betekenis modelelementen](#Betekenis-modelelementen). 
 
 ### Betekenis modelelementen
 
+### Objecttypen en attribuutsoorten  
 In deze paragraaf staan alle modelelementen opgesomd, die gebruikt worden bij
 het maken van een informatiemodel.
 
