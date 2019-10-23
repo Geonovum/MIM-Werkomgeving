@@ -691,7 +691,7 @@ Merk op dat er geen nieuwe Relatiesoorten zijn bijgekomen als gevolg van deze mo
 
 Use case 4, er is bij één objecttype sprake van één kenmerk, te weten een relatiesoort, die kan wijzen naar ofwel Objecttype A ofwel naar objecttype B. 
 
-![](media/relatiedoelkeuze.png)
+![](media/relatiedoelkeuzeRelatiesoort.png)
 
 Voorbeeld: *Objecttype* Vervoersmiddel heeft als *Relatiesoort* eigenaar ofwel een *Objecttype* Natuurlijk persoon, ofwel een *Objecttype* Niet natuurlijk persoon. We modelleren de verwijzing naar deze objecttypes als een *Keuze* 'Eigenaar keuze'. Het maken van deze keuze is verplicht.
 

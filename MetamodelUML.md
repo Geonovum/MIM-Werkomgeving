@@ -103,7 +103,7 @@ View 3a: Constraint
 
 *Relatierol*
 
-![](media/RelatierollenZonderMetagegevens.png)
+![](media/AssociatierollenZonderMetagegevens.png)
 
 Relatierol
 
