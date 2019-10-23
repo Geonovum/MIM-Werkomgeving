@@ -57,15 +57,12 @@ opgenomen.
 
 ### Kern
 
-![](media/KernZonderUML.png)
-
-Kern zonder Metagegevens
+View 1: De kern van een informatiemodel. Deze bestaat uit de volgende modelelementen: 
 
 | **MIM metaclass** |
 |-------------------|
 | Objecttype        |
 | Attribuutsoort    |
-| Datatype          |
 | Gegevensgroep     |
 | Gegevensgroeptype |
 | Generalisatie     |
@@ -75,13 +72,17 @@ Kern zonder Metagegevens
 | Relatierol doel   |
 | Externe koppeling |
 
+De betekenis van deze modelelementen en de beschrijvingen ervan staat na deze paragraaf. 
+
+In diagramvorm zijn de onderlinge relaties aangegeven, deze combinaties kunnen voorkomen. Zo kan een objecttype bijvoorbeeld wel (rechtstreeks) gekoppeld worden met een attribuutsoort, maar niet rechtstreeks gekoppeld worden met een gegevensgroeptype. 
+
+![](media/KernZonderUML.png)
+
+Kern zonder Metagegevens
+
 ### Datatypen
 
-![](media/DatatypenZonderUML.png)
-
-Datatypen zonder Metagegevens
-
-View 2: Datatypen
+View 2: Datatypen. Deze bestaat uit de volgende modelelementen: 
 
 | **MIM metaclass**       |
 |-------------------------|
@@ -94,24 +95,24 @@ View 2: Datatypen
 | Referentie element      |
 | Codelist                |
 
+![](media/DatatypenZonderUML.png)
+
+Datatypen zonder Metagegevens
+
 ### Overige
 
-![](media/ConstraintsZonderUML.png)
-
-Constraint
-
-View 3a: Constraint
+View 3a: constraint en keuze. 
 
 | **MIM metaclass** |
 |-------------------|
 | Constraint        |
 | Keuze             |
 
+![](media/ConstraintsZonderUML.png)
+
+Constraint en Keuze 
+
 *Relatierol*
-
-![](media/AssociatierollenZonderUML.png)
-
-Relatierol
 
 View 3b: Relatiesoort en relatierol
 
@@ -121,15 +122,22 @@ View 3b: Relatiesoort en relatierol
 | Relatierol bron       |
 | Relatierol doel       |
 
+
+![](media/AssociatierollenZonderUML.png)
+
+Relatierol
+
 *Externe koppeling*
+
+View 3c: Externe koppelingen. Deze bestaat uit de volgende modelelementen:
 
 | **MIM metaclass** |
 |-------------------|
 | Externe koppeling |
 
-View 3c: Groepering
+*Groepering*
 
-*Packages*
+View 3d: Groepering. Deze bestaat uit de volgende modelelementen:
 
 ![](media/PackageZonderUML.png)
 
@@ -139,6 +147,8 @@ View 3c: Groepering
 | Domein            |
 | Extern            |
 | View              |
+| Externe koppeling | 
+
 
 ### Betekenis modelelementen
 
