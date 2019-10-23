@@ -131,7 +131,7 @@ View 3c: Groepering
 
 *Packages*
 
-![](media/PackagesZonderMetagegevens.png)
+![](media/PackageZonderUML.png)
 
 | **MIM metaclass** |
 |-------------------|
