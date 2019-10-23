@@ -724,9 +724,9 @@ Merk op dat er geen nieuwe Attribuutsoort is bijgekomen als gevolg van deze mode
 
 *Toepassing*: informatiemodel (verplicht)
 
-### Metagegeven: **Relatiemodelleringtype**
+### Metagegeven: **Relatiemodelleringstype**
 
->   **Definitie Relatiemodelleringtype**  
+>   **Definitie Relatiemodelleringstype**  
 >   Aanduiding van een in MIM gedefinieerd alternatief voor een
 >   modelleringswijze, en welke keuze hierbij is gemaakt.
 
