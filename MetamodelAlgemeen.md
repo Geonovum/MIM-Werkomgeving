@@ -74,11 +74,17 @@ View 1: De kern van een informatiemodel. Deze bestaat uit de volgende modeleleme
 
 De betekenis van deze modelelementen en de beschrijvingen ervan staat in [Betekenis modelelementen](#Betekenis-modelelementen). 
 
-In diagramvorm zijn de onderlinge relaties aangegeven, deze combinaties kunnen voorkomen. Zo kan een objecttype bijvoorbeeld wel (rechtstreeks) gekoppeld worden met een attribuutsoort, maar niet rechtstreeks gekoppeld worden met een gegevensgroeptype. 
+In diagramvorm: 
 
 ![](media/KernZonderUML.png)
 
 Kern zonder Metagegevens
+
+De verbindingen tussen de modelelementen geven aan welke combinaties kunnen voorkomen op metamodel niveau. Bijvoorbeeld: 
+- Een objecttype kan verbonden worden met een attribuutsoort. In een informatiemodel kan je dus attribuutsoorten dus aan een objecttype toekennen. 
+- Een objecttype kan *niet* verbonden worden met een gegevensgroeptype. In een informatiemodel kan je dus niet rechtstreeks een gegevensgroeptype aan een object toekennen. In het diagram is te zien dat dit via een gegevensgroep gaat. 
+- Een objecttype kan verbonden worden met een relatiesoort en deze relatiesoort kan weer verbonden worden met een objecttype. Dit geeft aan dat de relatiesoort een modelelement is die twee objecttypen met elkaar verbindt. 
+
 
 ### Datatypen
 
