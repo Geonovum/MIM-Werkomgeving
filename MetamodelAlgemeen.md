@@ -71,7 +71,7 @@ View 1: De kern van een informatiemodel. Deze bestaat uit de volgende modeleleme
 | Relatierol        |
 | Relatierol doel   |
 
-De betekenis van deze modelelementen en de beschrijvingen ervan staat in [Betekenis modelelementen](#Betekenis-modelelementen). 
+De betekenis van deze modelelementen en de beschrijvingen ervan staat in [Betekenis modelelementen](#betekenis-modelelementen). 
 
 In diagramvorm: 
 
@@ -100,7 +100,7 @@ View 2: Datatypen. Deze bestaat uit de volgende modelelementen:
 | Referentie element      |
 | Codelist                |
 
-De betekenis van deze modelelementen en de beschrijvingen ervan staat in [Betekenis modelelementen](#Betekenis-modelelementen). 
+De betekenis van deze modelelementen en de beschrijvingen ervan staat in [Datatypen](#datatypen-0). 
 
 In diagramvorm: 
 
@@ -168,14 +168,14 @@ View 3d: Groepering. Deze bestaat uit de volgende modelelementen:
 | Extern            |
 | View              |
 
-De betekenis van deze modelelementen en de beschrijvingen ervan staat in [Betekenis modelelementen](#Betekenis-modelelementen). 
+De betekenis van deze modelelementen en de beschrijvingen ervan staat in [Packages](#packages). 
 
 ![](media/PackageZonderUml.png)
 
 
 ### Betekenis modelelementen
 
-### Objecttypen en attribuutsoorten  
+#### Objecttypen en attribuutsoorten  
 In deze paragraaf staan alle modelelementen opgesomd, die gebruikt worden bij
 het maken van een informatiemodel.
 
@@ -398,7 +398,7 @@ wanneer één van de SUBJECTen niet meer bestaat.
 Hiermee wordt aangegeven dat er een relatie ligt naar een informatiemodel van een ander domein. 
 Dit kan rechtstreeks zijn, maar het is ook mogelijk om het objecttype van een ander domein 
 over te nemen naar het eigen domein, en specifiek te maken voor hoe je deze informatie ziet 
-vanuit je eigen domein (dit laatste noemen we ook wel een [View](#Packages). 
+vanuit je eigen domein (dit laatste noemen we ook wel een [View](#view). 
 
 Zie [Koppelen met een ander informatiemodel](#koppelen-met-een-ander-informatiemodel-externe-koppeling).
 
@@ -889,7 +889,7 @@ spaties is geschreven, dan kan in de alias de naam in natuurlijke taal worden
 opgenomen. Bijvoorbeeld: OnroerendeZaak heeft als alias Onroerende zaak. De
 alias is bedoeld als alternatieve schrijfwijze, en heeft verder geen andere
 betekenis. De alias is optioneel (zie verder ook
-[Naamgevingsconventies](#naamgevingsconventies)).
+[Naamgevingsconventies](#afspraken-rondom-naamgeving-en-definities)).
 
 Bijvoorbeeld: OnroerendeZaak heeft als alias Onroerende zaak.
 

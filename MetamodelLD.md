@@ -683,3 +683,5 @@ volgende aspecten:
 | Specificatie-formeel         | [`mim:specificatieFormeel`](http://bp4mc2.org/def/mim#specificatieFormeel) | 0..1 | tekst |
 
 # Linked Data Tooling
+
+volgt

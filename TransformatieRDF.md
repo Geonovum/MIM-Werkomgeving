@@ -845,7 +845,7 @@ WHERE {
 Een `mim:naam` wordt vertaald naar een `rdfs:label`.
 
 <aside id='trans-11' class='note'>
-Het MIM geeft de mogelijkheid voor naamgevingsconventies. Zie MIM [3.16 Naamgevingsconventies](https://docs.geostandaarden.nl/mim/mim10/#naamgevingsconventies). Dit is op dit moment niet in het MIM zelf als gestructureerd aspect beschikbaar. Voor een RDF model wordt uitgegaan dat de `mim:naam` de voor mensen leesbare naam bevat. Hier wordt dus **geen** technische naam verondersteld en dit veld mag dus ook spaties bevatten.
+Het MIM geeft de mogelijkheid voor naamgevingsconventies. Zie MIM [Naamgevingsconventies](#afspraken-rondom-naamgeving-en-definities). Dit is op dit moment niet in het MIM zelf als gestructureerd aspect beschikbaar. Voor een RDF model wordt uitgegaan dat de `mim:naam` de voor mensen leesbare naam bevat. Hier wordt dus **geen** technische naam verondersteld en dit veld mag dus ook spaties bevatten.
 </aside>
 
 <aside id='trans-12' class='note'>
@@ -869,7 +869,7 @@ WHERE {
 Een `mim:alias` wordt vertaald naar een `skos:altLabel`
 
 <aside id='trans-13' class='note'>
-Het MIM geeft de mogelijkheid voor naamgevingsconventies. Zie MIM [3.16 Naamgevingsconventies](https://docs.geostandaarden.nl/mim/mim10/#naamgevingsconventies). Dit is op dit moment niet in het MIM zelf als gestructureerd aspect beschikbaar. Voor een RDF model wordt uitgegaan dat de `mim:alias` een voor mensen alternatieve weergave biedt. Hier wordt dus **geen** technische naam verondersteld en dit veld mag dus ook spaties bevatten.
+Het MIM geeft de mogelijkheid voor naamgevingsconventies. Zie MIM [Naamgevingsconventies](#afspraken-rondom-naamgeving-en-definities). Dit is op dit moment niet in het MIM zelf als gestructureerd aspect beschikbaar. Voor een RDF model wordt uitgegaan dat de `mim:alias` een voor mensen alternatieve weergave biedt. Hier wordt dus **geen** technische naam verondersteld en dit veld mag dus ook spaties bevatten.
 </aside>
 
 <pre class='ex-sparql'>
@@ -1018,7 +1018,7 @@ WHERE {
 
 De `mim:kardinaliteit` wordt vertaald naar `sh:minCount` en `sh:maxCount`. Daarbij wordt de volgende tabel gebruikt om de string-waarde van mim:kardinaliteit om te zetten. Een `-` betekent dat de betreffende triple niet wordt opgenomen in het model.
 
-Daarnaast wordt `min:kardinaliteit` ook direct overgenomen in het vertaalde model. De reden hiervoor is tweeledig. Enerzijds maakt het daarmee eenvoudiger om de originele kardinaliteit weer te geven. Voor niet-SHACL experts kan het verwarrend zijn dat het ontbreken van zowel sh:minCount als sh:maxCount betekent dat sprake is van een 0..* kardinaliteit. Anderzijds maakt het de terugvertaling in geval van een `min:mogelijkGeenWaarde` mogelijk, aangezien dit veld invloed kan hebben op de sh:minCount (zie ook [mogelijk-geen-waarde](#mogelijkgeenwaarde)).
+Daarnaast wordt `min:kardinaliteit` ook direct overgenomen in het vertaalde model. De reden hiervoor is tweeledig. Enerzijds maakt het daarmee eenvoudiger om de originele kardinaliteit weer te geven. Voor niet-SHACL experts kan het verwarrend zijn dat het ontbreken van zowel sh:minCount als sh:maxCount betekent dat sprake is van een 0..* kardinaliteit. Anderzijds maakt het de terugvertaling in geval van een `min:mogelijkGeenWaarde` mogelijk, aangezien dit veld invloed kan hebben op de sh:minCount (zie ook [mogelijk-geen-waarde](#mogelijk-geen-waarde)).
 
 |mim:kardinaliteit|sh:minCount|sh:maxCount|
 |-----------------|-----------|-----------|

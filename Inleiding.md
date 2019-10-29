@@ -378,13 +378,14 @@ geplaatst (ongeacht of deze optioneel of verplicht zijn).
 Voor meer informatie over een specifieke extensie kan contact opgenomen worden
 met de beheerder van deze extensie.
 
-Nota bene:  
-Een metamodel extensie is expliciet niet bedoeld voor aanvullende constructies 
-die alleen spelen op het niveau van implementatie, of op het niveau van afgeleide 
-t.b.v. specifieke koppelvlakken en interfaces. Deze vallen buiten scope van dit 
-metamodel en ook buiten scope van extensies hierop. 
-Wel is het mogelijk en toegestaan om het metamodel, of delen ervan, hiervoor te
-gebruiken.
+<aside class='note'> 
+    Een metamodel extensie is expliciet niet bedoeld voor aanvullende constructies 
+    die alleen spelen op het niveau van implementatie, of op het niveau van afgeleide 
+    t.b.v. specifieke koppelvlakken en interfaces. Deze vallen buiten scope van dit 
+    metamodel en ook buiten scope van extensies hierop. 
+    Wel is het mogelijk en toegestaan om het metamodel, of delen ervan, hiervoor te
+    gebruiken.
+</aside>
 
 ### Alternatieven
 In dit metamodel is op één punt sprake van een keuze tussen twee alternatieven,

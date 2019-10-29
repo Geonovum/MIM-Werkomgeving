@@ -285,7 +285,7 @@ is, dan wordt dit gemodelleerd met het datatype Keuze. Elk keuze element van de
 keuze heeft dan één datatype, de waarde van de attribuutsoort moet aan één van
 deze datatypen voldoen.
 
-<pre class='ex-generic'>
+<pre class='example'>
 Attribuutsoort geometrie met als type de Keuze PuntOfVlak.
 PuntOfVlak is daarbij een Keuze met keuze element: punt, met als type het
 datatype GM_Point en keuze element vlak met als type het datatype GM_Surface.
@@ -300,7 +300,7 @@ In onderstaande voorbeelden is er wel sprake van een keuze tussen keuze
 elementen die een betekenisvolle context geven aan het te kiezen datatype. Er
 wordt in dit geval wel een definitie gespecificeerd bij het keuze element.
 
-<pre class='ex-generic'>
+<pre class='example'>
 Attribuutsoort hoogte met als type de Keuze BereikOfWaarde.
 BereikOfWaarde is daarbij een Keuze met keuze element ‘bereik’, met als type het
 datatype Interval en keuze element ‘waarde’ met als type het datatype Real.
@@ -379,7 +379,7 @@ wilt verwijzen naar de externe waardelijst.
 ### Abstracte objecttypes en concrete objecten
 
 Een objecttype kan aangeduid worden als een abstract objecttype (zie paragraaf
-[Specificatie metagegevens](#specificatie-metagegevens)) door middel van
+[Modellering metagegevens voor objecten en attributen in UML](#modellering-metagegevens-voor-objecten-en-attributen-in-uml)) door middel van
 indAbstract = J). Het betreft dan altijd een generalisatie waarbij de
 specialisaties van dit objecttype op het laagste niveau concrete objecttypen
 worden genoemd. Het is belangrijk te weten wanneer een objecttype als abstract
@@ -390,7 +390,7 @@ informatiemodel en in een logisch informatiemodel
 
 **Conceptueel informatiemodel**
 
-<pre class='ex-generic'>
+<pre class='example'>
 *Specialisatie / generalisatie*
 Bovenstaande vragen beantwoorden we aan de hand van het voorbeeld van een het 
 opleidingsinstituut.  In de beschouwde werkelijkheid onderscheiden we onder 
@@ -423,7 +423,7 @@ daarmee dus ook in de hoedanigheid van de generalisatie(s) van het concrete
 objecttype.
 
 Richtlijnen - Een abstract object is een onderwerp van gesprek binnen het
-beschouwde gebied. Het heeft dus echt een <span class='note'>[betekenis](#afs-n-1)</span> in het
+beschouwde gebied. Het heeft dus echt een *betekenis* in het
 beschouwde gebied. Net als een concreet object, specialisatie of generalisatie.
 - De definitie van elk objecttype (dus ook een abstract objecttype) is zodanig
 dat ondubbelzinnig bepaald kan worden dat een object wel of niet tot het
@@ -476,7 +476,7 @@ geval is, dan worden de relatieklasses gemodelleerd als «Objecttype», met éé
 inkomende relatie en één uitgaande relatie. De oorspronkelijke kardinaliteit van
 de beoogde relatieklasse wordt hierbij behouden.
 
-<pre class='ex-generic'>
+<pre class='example'>
 Een Perceel kan vanwege een Perceel splitsing overgaan in twee of meerdere
 andere Percelen. De ‘overgegaan in’ relatie wordt bijgehouden in een
 relatieklasse. Gegevens over de splitsing zijn voor al deze relaties gelijk.
@@ -607,7 +607,7 @@ is. Formele historie geeft aan wanneer in de administratie een verandering is
 verwerkt van de attribuutwaarde (wanneer was de verandering bekend en is deze
 verwerkt).
 
-<pre class='ex-generic'>
+<pre class='example'>
 ‘bouwjaar pand’ heeft al materiële historie in zich: het bouwjaar is het moment 
 waarop de wijziging in de werkelijkheid zich voordeed en wijzigt niet. 
 De ‘indicatie materiële historie’ ervan is daarom Nee. 
@@ -684,7 +684,7 @@ gegeven en ten tweede het gegeven niet eenvoudig af te leiden is (er moet sprake
 zijn van enige mate van complexiteit). Dit wordt in UML weergegeven via
 isDerived. Zie ook Attribuutsoort, §2.4.2 – is afleidbaar.
 
-<pre class='ex-generic'>
+<pre class='example'>
 'Datum vestiging in Nederland' van een Ingeschreven persoon. De afleiding van 
 dit gegeven is niet triviaal. Door het als afleidbaar gegeven op te nemen kan 
 het opgevraagd worden zonder dat de historie of andere gegevens van het object
@@ -786,7 +786,7 @@ ook de XML) schema’s beheert en beschikbaar stelt waarnaar vanuit deze
 specificaties wordt gerefereerd. De packages bevatten alleen de constructies die
 ook daadwerkelijk binnen het ‘eigen’ informatiemodel wordt gebruikt.
 
-<pre class='ex-generic'>
+<pre class='example'>
 Voor het uitwisselen van geografische informatie op basis van NEN3610 is een 
 tweetal externe packages onderkend waarnaar vanuit de ‘eigen’ informatiemodellen 
 kan worden verwezen: [[!NEN3610]], of GML3.2
@@ -818,7 +818,7 @@ het andere informatiemodel één op één overgenomen wordt, waarbij expliciet
 gemaakt wordt welke gegevens tot het eigen model behoren en welke tot het andere
 model.
 
-<pre class='ex-generic'>
+<pre class='example'>
 In IMKAD zit het objecttype: «Objecttype» Persoon. Hierin zitten de attributen
 waarvan de basisregistratie Kadaster de gegevens zelf inwint. In IMKAD zit het
 package: «view» BRP en hierin zit het «Objecttype» GeregistreerdPersoon. Hierin
@@ -1096,13 +1096,3 @@ begrip en hierna handmatig de overeenstemming tussen de definities te beheren.
 
 #### Volgorde van kenmerken
 De volgorde van kenmerken in een objecttype, gegevensgroeptype, gestructureerd datatype in een visueel diagram van een informatiemodel kan voor de leesbaarheid van het diagram worden aangebracht, maar heeft in principe, buiten het diagram, geen betekenis.
-
-**Voetnoten**
-
-<aside id='afs-n-1' class='note'>
-nb
-</aside>
-
-<aside id='afs-n-2' class='note'>
-Hoewel het goed zou zijn om tot een standaard te komen in Nederland is MIM niet de plek hiervoor.
-</aside>
