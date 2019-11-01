@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<UMLProfile profiletype="uml2">
+	<Documentation id="AEC3F119-8" name="MIM_alt2" version="1.1" notes="Alt 2 versie 1.1"/>
+	<Content>
+		<Stereotypes>
+			<Stereotype name="MIM: Objecten en attributen" alias="Objecten en attributen" notes="Selecteer en klik ergens op het diagram om te plaatsen" cx="0" cy="0" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+				<AppliesTo>
+					<Apply type="ToolboxPage"/>
+				</AppliesTo>
+				<TaggedValues>
+					<Tag name="MIM::Objecttype(UML::Class)" type="" description="" unit="" values="" default="Objecttype"/>
+					<Tag name="MIM::Attribuutsoort(UML::Attribute)" type="" description="" unit="" values="" default="Attribuutsoort"/>
+					<Tag name="MIM::Keuzeattribuut(UML::Attribute)" type="" description="" unit="" values="" default="Keuze attribuut"/>
+					<Tag name="MIM::Gegevensgroeptype(UML::Class" type="" description="" unit="" values="" default="Gegevensgroeptype"/>
+					<Tag name="MIM::Gegevensgroep(UML::Attribute)" type="" description="" unit="" values="" default="Gegevensgroep"/>
+				</TaggedValues>
+			</Stereotype>
+			<Stereotype name="MIM: Relaties" notes="Selecteer en trek van type naar type om te plaatsen" cx="0" cy="0" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+				<AppliesTo>
+					<Apply type="ToolboxPage"/>
+				</AppliesTo>
+				<TaggedValues>
+					<Tag name="MIM::Generalisatie(UML::Generalization)" type="" description="" unit="" values="" default="Generalisatie"/>
+					<Tag name="MIM::Relatiesoort(UML::Association)" type="" description="" unit="" values="" default="Relatiesoort"/>
+					<Tag name="MIM::Relatierol(UML::AssociationEnd)" type="" description="" unit="" values="" default="Relatierol"/>
+					<Tag name="MIM::Relatieklasse(UML::AssociationClass)" type="" description="" unit="" values="" default="Relatieklasse"/>
+					<Tag name="MIM::Externe koppeling(UML::Association)" type="" description="" unit="" values="" default="Externe koppeling"/>
+					<Tag name="MIM::Keuzerelatie(UML::Association)" type="" description="" unit="" values="" default="Keuzerelatie"/>
+				</TaggedValues>
+			</Stereotype>
+			<Stereotype name="MIM: Datatypen" notes="Selecteer en klik in het diagram om te plaatsen" cx="0" cy="0" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+				<AppliesTo>
+					<Apply type="ToolboxPage"/>
+				</AppliesTo>
+				<TaggedValues>
+					<Tag name="MIM::Primitief datatype(UML::PrimitiveType)" type="" description="" unit="" values="" default="Primitief datatype"/>
+					<Tag name="MIM::Gestructureerd datatype(UML::Datatype)" type="" description="" unit="" values="" default="Gestructureerd datatype"/>
+					<Tag name="MIM::Data element(UML::Attribute)" type="" description="" unit="" values="" default="Data element"/>
+					<Tag name="MIM::Keuze(UML::DataType)" type="" description="" unit="" values="" default="Keuze"/>
+					<Tag name="MIM::Keuzedatatype(UML::Attribute)" type="" description="" unit="" values="" default="keuze datatype"/>
+				</TaggedValues>
+			</Stereotype>
+			<Stereotype name="MIM: Waardelijsten" notes="Selecteer en klik ergens op het diagram om te plaatsen" cx="0" cy="0" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+				<AppliesTo>
+					<Apply type="ToolboxPage"/>
+				</AppliesTo>
+				<TaggedValues>
+					<Tag name="MIM::Enumeratie(UML::Enumeration)" type="" description="" unit="" values="" default="Enumeratie"/>
+					<Tag name="MIM::Enumeratiewaarde(UML::Enumerationliteral)" type="" description="" unit="" values="" default="Enumeratiewaarde"/>
+					<Tag name="MIM::CodeList(UML::Datatype)" type="" description="" unit="" values="" default="CodeList"/>
+					<Tag name="MIM::Referentielijst(UML::Datatype)" type="" description="" unit="" values="" default="Referentielijst"/>
+					<Tag name="MIM::Referentie element(UML::Attribute)" type="" description="" unit="" values="" default="Referentie element"/>
+				</TaggedValues>
+			</Stereotype>
+			<Stereotype name="MIM: Package" notes="Selecteer en klik ergens in het diagram om te plaatsen" cx="0" cy="0" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+				<AppliesTo>
+					<Apply type="ToolboxPage"/>
+				</AppliesTo>
+				<TaggedValues>
+					<Tag name="MIM::Extern(UML::Package)" type="" description="" unit="" values="" default="Extern"/>
+					<Tag name="MIM::View(UML::Package)" type="" description="" unit="" values="" default="View"/>
+					<Tag name="MIM::Informatiemodel(UML::Package)" type="" description="" unit="" values="" default="Informatiemodel"/>
+					<Tag name="MIM::Domein(UML::Package)" type="" description="" unit="" values="" default="Domein"/>
+				</TaggedValues>
+			</Stereotype>
+		</Stereotypes>
+		<TaggedValueTypes/>
+		<ViewDefinitions/>
+		<Metamodel/>
+	</Content>
+</UMLProfile>

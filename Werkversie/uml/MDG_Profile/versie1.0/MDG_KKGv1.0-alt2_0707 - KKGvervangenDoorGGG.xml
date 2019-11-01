@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<MDG.Technology version="1.0"><Documentation id="GGG-alt2" name="GGG-alt2" version="1.0" notes="versie 1.0"/><UMLProfiles><UMLProfile profiletype="uml2">
+			<Documentation id="EDFDE9C6-3" name="GGG" version="1.0" notes="GGG"/>
+			<Content>
+				<Stereotypes>
+					<Stereotype name="Attribuutsoort" notes="" cx="100" cy="80" bgcolor="16777164" fontcolor="0" bordercolor="0" borderwidth="1" hideicon="0">
+						<AppliesTo>
+							<Apply type="Attribute"/>
+						</AppliesTo>
+						<TaggedValues>
+							<Tag name="Herkomst" type="" description="" unit="" values="" default=""/>
+							<Tag name="Herkomst definitie" type="" description="" unit="" values="" default=""/>
+							<Tag name="Datum opname" type="" description="" unit="" values="" default=""/>
+							<Tag name="Lengte" type="" description="" unit="" values="" default=""/>
+							<Tag name="Patroon" type="" description="" unit="" values="" default="&lt;memo&gt;"/>
+							<Tag name="Formeel patroon" type="" description="" unit="" values="" default=""/>
+							<Tag name="Indicatie materiële historie" type="enumeration" description="" unit="" values="Ja,Nee,Zie groep" default=""/>
+							<Tag name="Indicatie formele historie" type="enumeration" description="" unit="" values="Ja,Nee,Zie groep" default=""/>
+							<Tag name="Locatie" type="" description="" unit="" values="" default=""/>
+							<Tag name="Authentiek" type="enumeration" description="" unit="" values="Authentiek,Basisgegeven,Landelijk kerngegeven,Gemeentelijk kerngegeven,Overig" default=""/>
+							<Tag name="Toelichting" type="" description="" unit="" values="" default="&lt;memo&gt;"/>
+							<Tag name="Mogelijk geen waarde" type="enumeration" description="" unit="" values="Ja,Nee" default="Nee"/>
+						</TaggedValues>
+					</Stereotype>
+					<Stereotype name="CodeList" notes="" cx="100" cy="80" bgcolor="16777164" fontcolor="0" bordercolor="0" borderwidth="1" hideicon="0">
+						<AppliesTo>
+							<Apply type="DataType"/>
+						</AppliesTo>
+						<TaggedValues>
+							<Tag name="Herkomst" type="" description="" unit="" values="" default=""/>
+							<Tag name="Datum opname" type="" description="" unit="" values="" default=""/>
+							<Tag name="Toelichting" type="" description="" unit="" values="" default="&lt;memo&gt;"/>
+							<Tag name="Locatie" type="" description="" unit="" values="" default=""/>
+						</TaggedValues>
+					</Stereotype>
+					<Stereotype name="Data element" notes="" cx="100" cy="80" bgcolor="16777164" fontcolor="0" bordercolor="0" borderwidth="1" hideicon="0">
+						<AppliesTo>
+							<Apply type="Attribute"/>
+						</AppliesTo>
+						<TaggedValues>
+							<Tag name="Herkomst" type="" description="" unit="" values="" default=""/>
+							<Tag name="Lengte" type="" description="" unit="" values="" default=""/>
+							<Tag name="Patroon" type="" description="" unit="" values="" default="&lt;memo&gt;"/>
+							<Tag name="Formeel patroon" type="" description="" unit="" values="" default=""/>
+						</TaggedValues>
+					</Stereotype>
+					<Stereotype name="Extern" notes="" cx="100" cy="80" bgcolor="16777164" fontcolor="0" bordercolor="0" borderwidth="1" hideicon="0">
+						<AppliesTo>
+							<Apply type="Package">
+								<Property name="URI" value=""/>
+							</Apply>
+						</AppliesTo>
+						<TaggedValues>
+							<Tag name="Locatie" type="" description="" unit="" values="" default=""/>
+							<Tag name="Herkomst" type="" description="" unit="" values="" default=""/>
+						</TaggedValues>
+					</Stereotype>
+					<Stereotype name="Externe koppeling" notes="" cx="100" cy="80" bgcolor="16777164" fontcolor="0" bordercolor="0" borderwidth="1" hideicon="0">
+						<AppliesTo>
+							<Apply type="Association">
+								<Property name="compositionKind" value="none"/>
+								<Property name="direction" value="Source -&gt; Destination"/>
+							</Apply>
+						</AppliesTo>
+						<TaggedValues>
+							<Tag name="Datum opname" type="" description="" unit="" values="" default=""/>
+						</TaggedValues>
+					</Stereotype>
+					<Stereotype name="Gegevensgroep" notes="" cx="100" cy="80" bgcolor="16777164" fontcolor="0" bordercolor="0" borderwidth="1" hideicon="0">
+						<AppliesTo>
+							<Apply type="Attribute"/>
+						</AppliesTo>
+						<TaggedValues>
+							<Tag name="Toelichting" type="" description="" unit="" values="" default="&lt;memo&gt;"/>
+							<Tag name="Herkomst" type="" description="" unit="" values="" default=""/>
+							<Tag name="Herkomst definitie" type="" description="" unit="" values="" default=""/>
+							<Tag name="Datum opname" type="" description="" unit="" values="" default=""/>
+							<Tag name="Indicatie materiële historie" type="enumeration" description="" unit="" values="Ja,Nee,Zie groep" default=""/>
+							<Tag name="Indicatie formele historie" type="enumeration" description="" unit="" values="Ja,Nee,Zie groep" default=""/>
+							<Tag name="Authentiek" type="enumeration" description="" unit="" values="Authentiek,Basisgegeven,Landelijk kerngegeven,Gemeentelijk kerngegeven,Overig" default=""/>
+						</TaggedValues>
+					</Stereotype>
+					<Stereotype name="Gegevensgroeptype" notes="" cx="100" cy="80" bgcolor="16777164" fontcolor="0" bordercolor="0" borderwidth="1" hideicon="0">
+						<AppliesTo>
+							<Apply type="Class">
+								<Property name="isActive" value=""/>
+							</Apply>
+						</AppliesTo>
+						<TaggedValues>
+							<Tag name="Datum opname" type="" description="" unit="" values="" default=""/>
+						</TaggedValues>
+					</Stereotype>
+					<Stereotype name="Generalisatie" notes="" cx="100" cy="80" bgcolor="16777164" fontcolor="0" bordercolor="0" borderwidth="1" hideicon="0">
+						<AppliesTo>
+							<Apply type="Generalization">
+								<Property name="direction" value="Source -&gt; Destination"/>
+								<Property name="isSubstitutable" value=""/>
+							</Apply>
+						</AppliesTo>
+					</Stereotype>
+					<Stereotype name="Gestructureerd datatype" notes="" cx="100" cy="80" bgcolor="16777164" fontcolor="0" bordercolor="0" borderwidth="1" hideicon="0">
+						<AppliesTo>
+							<Apply type="DataType"/>
+						</AppliesTo>
+						<TaggedValues>
+							<Tag name="Herkomst" type="" description="" unit="" values="" default=""/>
+							<Tag name="Patroon" type="" description="" unit="" values="" default="&lt;memo&gt;"/>
+							<Tag name="Formeel patroon" type="" description="" unit="" values="" default=""/>
+							<Tag name="Datum opname" type="" description="" unit="" values="" default=""/>
+						</TaggedValues>
+					</Stereotype>
+					<Stereotype name="Objecttype" notes="" cx="100" cy="80" bgcolor="16777164" fontcolor="0" bordercolor="0" borderwidth="1" hideicon="0">
+						<AppliesTo>
+							<Apply type="Class">
+								<Property name="isActive" value=""/>
+							</Apply>
+						</AppliesTo>
+						<TaggedValues>
+							<Tag name="Herkomst" type="" description=" " unit="" values="" default=""/>
+							<Tag name="Herkomst definitie" type="" description="" unit="" values="" default=""/>
+							<Tag name="Datum opname" type="" description="" unit="" values="" default=""/>
+							<Tag name="Populatie" type="" description="" unit="" values="" default="&lt;memo&gt;"/>
+							<Tag name="Kwaliteit" type="" description="" unit="" values="" default=""/>
+							<Tag name="Toelichting" type="" description="" unit="" values="" default="&lt;memo&gt;"/>
+						</TaggedValues>
+					</Stereotype>
+					<Stereotype name="Primitief datatype" notes="" cx="100" cy="80" bgcolor="16777164" fontcolor="0" bordercolor="0" borderwidth="1" hideicon="0">
+						<AppliesTo>
+							<Apply type="PrimitiveType"/>
+						</AppliesTo>
+						<TaggedValues>
+							<Tag name="Herkomst" type="" description="De registratie of het informatiemodel waaraan de complex datatype ontleend is dan wel de eigen organisatie indien het door de eigen organisatie toegevoegd is." unit="" values="" default=""/>
+							<Tag name="Lengte" type="" description="" unit="" values="" default=""/>
+							<Tag name="Patroon" type="" description="De samenstelling van het complex datatype bestaande uit twee of meer data elementenmoet voldoen aan een specifiek patroon." unit="" values="" default="&lt;memo&gt;"/>
+							<Tag name="Formeel patroon" type="" description="Zoals patroon , formeel vastgelegd (met een reguliere expressie)" unit="" values="" default=""/>
+							<Tag name="Datum opname" type="" description="De datum waarop het complex datatype is opgenomen in het informatiemodel." unit="" values="" default=""/>
+						</TaggedValues>
+					</Stereotype>
+					<Stereotype name="Referentie element" notes="" cx="100" cy="80" bgcolor="16777164" fontcolor="0" bordercolor="0" borderwidth="1" hideicon="0">
+						<AppliesTo>
+							<Apply type="Attribute"/>
+						</AppliesTo>
+						<TaggedValues>
+							<Tag name="Datum opname" type="" description="" unit="" values="" default=""/>
+							<Tag name="Lengte" type="" description="" unit="" values="" default=""/>
+							<Tag name="Patroon" type="" description="" unit="" values="" default="&lt;memo&gt;"/>
+							<Tag name="Formeel patroon" type="" description="" unit="" values="" default=""/>
+							<Tag name="Toelichting" type="" description="" unit="" values="" default="&lt;memo&gt;"/>
+						</TaggedValues>
+					</Stereotype>
+					<Stereotype name="Referentielijst" notes="" cx="100" cy="80" bgcolor="16777164" fontcolor="0" bordercolor="0" borderwidth="1" hideicon="0">
+						<AppliesTo>
+							<Apply type="DataType"/>
+						</AppliesTo>
+						<TaggedValues>
+							<Tag name="Herkomst" type="" description="" unit="" values="" default=""/>
+							<Tag name="Datum opname" type="" description="" unit="" values="" default=""/>
+							<Tag name="Toelichting" type="" description="" unit="" values="" default="&lt;memo&gt;"/>
+							<Tag name="Locatie" type="" description="" unit="" values="" default=""/>
+						</TaggedValues>
+					</Stereotype>
+					<Stereotype name="Relatieklasse" notes="" cx="100" cy="80" bgcolor="16777164" fontcolor="0" bordercolor="0" borderwidth="1" hideicon="0">
+						<AppliesTo>
+							<Apply type="AssociationClass">
+								<Property name="direction" value="Source -&gt; Destination"/>
+							</Apply>
+						</AppliesTo>
+					</Stereotype>
+					<Stereotype name="Relatierol" notes="" cx="100" cy="80" bgcolor="16777164" fontcolor="0" bordercolor="0" borderwidth="1" hideicon="0">
+						<AppliesTo>
+							<Apply type="AssociationEnd"/>
+						</AppliesTo>
+						<TaggedValues>
+							<Tag name="Herkomst" type="" description="" unit="" values="" default=""/>
+							<Tag name="Herkomst defintie" type="" description="" unit="" values="" default=""/>
+							<Tag name="Datum opname" type="" description="" unit="" values="" default=""/>
+							<Tag name="Indicatie materiële historie" type="enumeration" description="" unit="" values="Ja,Nee,Zie groep" default=""/>
+							<Tag name="Indicatie formele historie" type="enumeration" description="" unit="" values="Ja,Nee,Zie groep" default="&lt;memo&gt;"/>
+							<Tag name="Authentiek" type="enumeration" description="" unit="" values="Authentiek,Basisgegeven,Landelijk kerngegeven,Gemeentelijk kerngegeven,Overig" default=""/>
+							<Tag name="Mogelijk geen waarde" type="enumeration" description="" unit="" values="Ja,Nee" default="Nee"/>
+							<Tag name="Toelichting" type="" description="" unit="" values="" default=""/>
+						</TaggedValues>
+					</Stereotype>
+					<Stereotype name="Relatiesoort" notes="" cx="100" cy="80" bgcolor="16777164" fontcolor="0" bordercolor="0" borderwidth="1" hideicon="0">
+						<AppliesTo>
+							<Apply type="Association">
+								<Property name="compositionKind" value="none"/>
+								<Property name="direction" value="Source -&gt; Destination"/>
+							</Apply>
+						</AppliesTo>
+					</Stereotype>
+					<Stereotype name="Union" notes="" cx="100" cy="80" bgcolor="16777164" fontcolor="0" bordercolor="0" borderwidth="1" hideicon="0">
+						<AppliesTo>
+							<Apply type="DataType"/>
+						</AppliesTo>
+						<TaggedValues>
+							<Tag name="Herkomst" type="" description="" unit="" values="" default=""/>
+							<Tag name="Datum opname" type="" description="" unit="" values="" default=""/>
+							<Tag name="Toelichting" type="" description="Voor objecttypen die deel uitmaken van een (basis)registratie of informatiemodel betreft dit de daarin opgenomen toelichting." unit="" values="" default="&lt;memo&gt;"/>
+						</TaggedValues>
+					</Stereotype>
+					<Stereotype name="Union element" notes="" cx="100" cy="80" bgcolor="16777164" fontcolor="0" bordercolor="0" borderwidth="1" hideicon="0">
+						<AppliesTo>
+							<Apply type="Attribute"/>
+						</AppliesTo>
+						<TaggedValues>
+							<Tag name="Herkomst" type="" description="" unit="" values="" default=""/>
+							<Tag name="Lengte" type="" description="" unit="" values="" default=""/>
+							<Tag name="Patroon" type="" description="" unit="" values="" default="&lt;memo&gt;"/>
+							<Tag name="Formeel patroon" type="" description="" unit="" values="" default=""/>
+						</TaggedValues>
+					</Stereotype>
+					<Stereotype name="View" notes="" cx="100" cy="80" bgcolor="16777164" fontcolor="0" bordercolor="0" borderwidth="1" hideicon="0">
+						<AppliesTo>
+							<Apply type="Package">
+								<Property name="URI" value=""/>
+							</Apply>
+						</AppliesTo>
+						<TaggedValues>
+							<Tag name="Locatie" type="" description="" unit="" values="" default=""/>
+							<Tag name="Herkomst" type="" description="" unit="" values="" default=""/>
+						</TaggedValues>
+					</Stereotype>
+				</Stereotypes>
+				<TaggedValueTypes/>
+			</Content>
+		</UMLProfile>
+	</UMLProfiles><UIToolboxes><UMLProfile profiletype="uml2">
+			<Documentation id="AEC3F119-8" name="GGG-alt2" version="1.0" notes="GGG-alt2"/>
+			<Content>
+				<Stereotypes>
+					<Stereotype name="Objecten en attributen" notes="Selecteer en klik ergens op het diagram op te plaatsen" cx="100" cy="80" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+						<AppliesTo>
+							<Apply type="ToolboxPage"/>
+						</AppliesTo>
+						<TaggedValues>
+							<Tag name="GGG::Objecttype(UML::Class)" type="" description="" unit="" values="" default="Objecttype"/>
+							<Tag name="GGG::Attribuutsoort(UML::Attribute)" type="" description="" unit="" values="" default="Attribuutsoort"/>
+							<Tag name="GGG::Gegevensgroeptype(UML::Class" type="" description="" unit="" values="" default="Gegevensgroeptype"/>
+							<Tag name="GGG::Gegevensgroep(UML::Attribute)" type="" description="" unit="" values="" default="Gegevensgroep"/>
+						</TaggedValues>
+					</Stereotype>
+					<Stereotype name="Relaties" notes="Selecteer en trek van type naar type om te plaatsen" cx="100" cy="80" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+						<AppliesTo>
+							<Apply type="ToolboxPage"/>
+						</AppliesTo>
+						<TaggedValues>
+							<Tag name="GGG::Generalisatie(UML::Generalization)" type="" description="" unit="" values="" default="Generalisatie"/>
+							<Tag name="GGG::Relatiesoort(UML::Association)" type="" description="" unit="" values="" default="Relatiesoort"/>
+							<Tag name="GGG::Relatieklasse(UML::AssociationClass)" type="" description="" unit="" values="" default="Relatieklasse"/>
+							<Tag name="GGG::Externe koppeling(UML::Association)" type="" description="" unit="" values="" default="Externe koppeling"/>
+						</TaggedValues>
+					</Stereotype>
+					<Stereotype name="Datatypen" notes="" cx="100" cy="80" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+						<AppliesTo>
+							<Apply type="ToolboxPage"/>
+						</AppliesTo>
+						<TaggedValues>
+							<Tag name="GGG::Primitief datatype(UML::PrimitiveType)" type="" description="" unit="" values="" default="Primitief datatype"/>
+							<Tag name="GGG::Gestructureerd datatype(UML::Datatype)" type="" description="" unit="" values="" default="Gestructureerd datatype"/>
+							<Tag name="GGG::Data element(UML::Attribute)" type="" description="" unit="" values="" default="Data element"/>
+							<Tag name="GGG::Union(UML::DataType)" type="" description="" unit="" values="" default="Union"/>
+							<Tag name="GGG::Union element(UML::Attribute)" type="" description="" unit="" values="" default="Union element"/>
+						</TaggedValues>
+					</Stereotype>
+					<Stereotype name="Waardelijsten" notes="" cx="100" cy="80" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+						<AppliesTo>
+							<Apply type="ToolboxPage"/>
+						</AppliesTo>
+						<TaggedValues>
+							<Tag name="UML::Enumeration" type="" description="" unit="" values="" default="Enumeratie"/>
+							<Tag name="GGG::CodeList(UML::Datatype)" type="" description="" unit="" values="" default="CodeList"/>
+							<Tag name="GGG::Referentielijst(UML::Datatype)" type="" description="" unit="" values="" default="Referentielijst"/>
+							<Tag name="GGG::Referentie element(UML::Attribute)" type="" description="" unit="" values="" default="Referentie element"/>
+						</TaggedValues>
+					</Stereotype>
+					<Stereotype name="Package" notes="Selecteer en klik ergens in het diagram om te plaatsen" cx="100" cy="80" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+						<AppliesTo>
+							<Apply type="ToolboxPage"/>
+						</AppliesTo>
+						<TaggedValues>
+							<Tag name="GGG::Extern(UML::Package)" type="" description="" unit="" values="" default="Extern"/>
+							<Tag name="GGG::View(UML::Package)" type="" description="" unit="" values="" default="View"/>
+						</TaggedValues>
+					</Stereotype>
+					<Stereotype name="Proxies" notes="Proxy elementen afkomstig uit eeen ander model" cx="100" cy="80" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+						<TaggedValues>
+							<Tag name="MIG::Objecttype_proxy(UML::Class)" type="" description="" unit="" values="" default="Objecttype_proxy"/>
+							<Tag name="MIG::Gegevensgroeptype_proxy(UML::Class)" type="" description="" unit="" values="" default="Gegevensgroeptype_proxy"/>
+							<Tag name="MIG::Attribuutsoort_proxy(UML::Attribute)" type="" description="" unit="" values="" default="Attribuutsoort_proxy"/>
+						</TaggedValues>
+					</Stereotype>
+				</Stereotypes>
+				<TaggedValueTypes/>
+			</Content>
+		</UMLProfile>
+	</UIToolboxes></MDG.Technology>

@@ -1,4 +1,10 @@
-
+2019-11-01
+in mdg
+- name moet MIM zijn
+- richting voor relatie proberen
+- keuze typen zijn nu specifiek benoemd
+- restrict keuzetypen tot context
+- kijk of profiel wel met keuze kan werken
 2019-03-21
 
 MDG, profiel en toolbox aangepast van KKG naar MIM. Alles op basis van zoek/vervang KKG -> MIM
