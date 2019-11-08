@@ -1,7 +1,14 @@
+2019-11-08
+actie: test dit in een andere EA
+MDG MIM Toolbox v1.1io_alt2_build01_keuzeaccent.xml: MDG met keuz, keuze', keuze'' enz
+MDG MIM Toolbox v1.1io_alt2_build01.xml: MDG met keuzeattribuut, keuzedatatype enz
+MIM_Profile_1.1io_alt2.xml: profile met keuzeattribuut etc
+MIM_Profile_1.1io_alt2_keuze.xml: profile met alleen keuze
+
 2019-11-01
 in mdg
 - name moet MIM zijn
-- richting voor relatie proberen
+- richting voor relatie proberen: werkt al
 - keuze typen zijn nu specifiek benoemd
 - restrict keuzetypen tot context
 - kijk of profiel wel met keuze kan werken
