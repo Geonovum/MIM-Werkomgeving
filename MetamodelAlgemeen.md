@@ -7,7 +7,7 @@ informatiemodel. Voorbeelden van modelelementen zijn: objecttype, attribuutsoort
 maar denk ook datatypen of aan metadata. In de paragrafen hierna worden alle modelelementen beschreven en toegelicht. 
 
 Uitgangspunten voor het metamodel zijn: 
-- De modelelementen worden eerst uitgelegt zonder een specifieke specificatie taal te
+- De modelelementen worden eerst uitgelegd zonder een specifieke specificatie taal te
 gebruiken. Dit is zodat we hierna kunnen aangeven hoe je het modelelement
 uitdrukt per specifieke specificatie taal, te weten in UML of in W3C
 specificatie technieken.
