@@ -7,9 +7,9 @@ informatiemodel. Voorbeelden van modelelementen zijn: objecttype, attribuutsoort
 maar denk ook datatypen of aan metadata. In de paragrafen hierna worden alle modelelementen beschreven en toegelicht. 
 
 Uitgangspunten voor het metamodel zijn: 
-- De modelelementen worden eerst uitgelegd zonder een specifieke specificatie taal te
+- De modelelementen worden eerst uitgelegd zonder een specifieke specificatietaal te
 gebruiken. Dit is zodat we hierna kunnen aangeven hoe je het modelelement
-uitdrukt per specifieke specificatie taal, te weten in UML of in W3C
+uitdrukt per specifieke specificatietaal, te weten in UML of in W3C
 specificatie technieken.
 - Een toolonafhankelijke beschrijving van het metamodel.
 Verder zal, omdat VNG Realisatie, Kadaster en Geonovum en veel andere organisaties Sparx EA
@@ -49,7 +49,7 @@ Alle views samen vormen het metamodel als geheel:
 
 Elk modelelement heeft een MIM metaclass met een naam. Hieraan is elk
 modelelement te herkennen in alle diagrammen en in de tekst en in elke
-specificatie taal die een uitdrukking is van dit metamodel.
+specificatietaal die een uitdrukking is van dit metamodel.
 
 Bij de modelelementen zijn in deze diagrammen geen beschrijvende kenmerken, de
 metageggevens, opgenomen zoals naam, definitie enz. In de bijlage zijn deze wel
