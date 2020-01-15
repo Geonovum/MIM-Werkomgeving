@@ -1,0 +1,108 @@
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX mim: <http://bp4mc2.org/def/mim#>
+PREFIX sh: <http://www.w3.org/ns/shacl#>
+
+
+#
+# Eerst alle modelelementen aanmaken
+#
+
+# Elke sh:Nodeshape wordt een mim:Objecttype
+# Merk op: een class die geen nodeshape kent, wordt niet gezien als een mim:Objecttype, maar puur als een ontologisch construct
+INSERT {
+  GRAPH <urn:model:mim> {
+    ?objecttype a mim:Objecttype.
+    ?objecttype rdfs:seeAlso ?nodeshape.
+  }
+}
+WHERE {
+  GRAPH <urn:model:rdf> {
+    SELECT (iri(concat(strbefore(str(?nodeshape),"#"),"-mim#",strafter(str(?nodeshape),"#"))) as ?objecttype) ?nodeshape
+    WHERE {
+      ?nodeshape a sh:NodeShape.
+      FILTER isIRI(?nodeshape)
+    }
+  }
+}
+
+# Elke sh:Propertyshape wordt een mim:Attribuutsoort
+INSERT {
+  GRAPH <urn:model:mim> {
+    ?objecttype mim:attribuut ?attribuutsoort.
+    ?attribuutsoort a mim:Attribuutsoort.
+    ?attribuutsoort rdfs:seeAlso ?propertyshape.
+  }
+}
+WHERE {
+  GRAPH <urn:model:mim> {
+    ?objecttype a mim:Objecttype.
+    ?objecttype rdfs:seeAlso ?shape
+  }
+  GRAPH <urn:model:rdf> {
+    {
+      select (iri(concat(strbefore(str(?propertyshape),"#"),"-mim#",strafter(str(?propertyshape),"#"))) as ?attribuutsoort) ?shape ?propertyshape
+      where {
+        ?shape a sh:NodeShape.
+        ?shape sh:property ?propertyshape.
+        FILTER isIRI(?propertyshape)
+      }
+    }
+    UNION
+    {
+      select (iri(concat(strbefore(str(?shape),"#"),"-mim#",strafter(str(?shape),"#"),".",?pname)) as ?attribuutsoort) ?shape ?propertyshape
+      where {
+        ?shape a sh:NodeShape.
+        ?shape sh:property ?propertyshape.
+        ?propertyshape sh:name ?pname.
+        FILTER isBlank(?propertyshape)
+      }
+    }
+  }
+}
+
+#
+# Dan alle eigenschappen (gekoppeld aan de modelelementen)
+#
+
+# Een rdfs:label, sh:name of de localname van de URI is een mim:naam
+INSERT {
+  GRAPH <urn:model:mim> {
+    ?element mim:naam ?naam
+  }
+}
+WHERE {
+  GRAPH <urn:model:mim> {
+    ?element rdfs:seeAlso ?item
+  }
+  GRAPH <urn:model:rdf> {
+    {
+      ?item rdfs:label ?naam
+    }
+    UNION
+    {
+      ?item sh:name ?naam
+      FILTER NOT EXISTS {?item rdfs:label ?naam}
+    }
+  }
+}
+
+#
+# Mim-specifieke eigenschappen die al aanwezig waren overnemen
+#
+INSERT {
+  GRAPH <urn:model:mim> {
+    ?element ?mimproperty ?mimvalue
+  }
+}
+where {
+  GRAPH <urn:model:mim> {
+    ?element rdfs:seeAlso ?item
+  }
+  GRAPH <urn:model:rdf> {
+    ?item ?mimproperty ?mimvalue
+    FILTER (?mimproperty = mim:toelichting)
+      ||  ?mimproperty = mim:herkomst
+    )
+  }
+}
