@@ -2,7 +2,7 @@
 
 <!-- Lijkt erop dat dit helemaal werkt
 onderverderling in toolbox nog een item 
-kan tagged value ribbon van keuze ook mim heten?-->
+is dit mogelijk?:keuzetype restricten tot type waarop keuze mogelijk is. Bijvoorbeeld Keuze voor attributen alleen op objecttype en Gegevenstype-->
 <MDG.Technology version="1.0"><Documentation id="MIM" name="MIM" version="1.1" notes="Keuze in aparte profielen"/><UMLProfiles><UMLProfile profiletype="uml2">
 			<Documentation id="EDFDE9C6-3" name="MIM" version="1.1(io)" notes="Alt 2 variant Relatierol"/>
 			<Content>
