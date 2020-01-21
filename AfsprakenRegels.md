@@ -235,7 +235,9 @@ voor zijn bestaan afhankelijk is van een ander objecttype (en daarom via een
 moet worden). Het is aan de modelleur om deze beoordeling te maken.
 
 <aside class='example'>
-Een  voorbeeld van het hergebruik van een gegevensgroeptype door meerdere objecttypen is de specificatie voor het Brondocument in de basisregistratie BAG. Het gegevensgroeptype Brondocument is qua betekenis en structuur voor alle objecttypes gelijk. De definitie en specificatie ervan wordt daarom hergebruikt bij alle objecttypes. Het brondocument wordt binnen de BAG niet gezien als een van de typen objecten van de BAG, en daarom is het geen objecttype maar een gegevensgroeptype. 
+    
+Een voorbeeld van het hergebruik van een gegevensgroeptype door meerdere objecttypen is de specificatie voor het Brondocument in de basisregistratie BAG. Het gegevensgroeptype Brondocument is qua betekenis en structuur voor alle objecttypes gelijk. De definitie en specificatie ervan wordt daarom hergebruikt bij alle objecttypes. Het brondocument wordt binnen de BAG niet gezien als een van de typen objecten van de BAG, en daarom is het geen objecttype maar een gegevensgroeptype. 
+    
 </aside>
 
 Metamodel: het gegevensgroeptype kan dus het type zijn van meer dan 1 gegevensgroep. Vanwege dit hergebruik is daarom de kardinaliteit van de relatie van gegevensgroep naar gegevensgroeptype aan de source kant 1..\*. Zie
