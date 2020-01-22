@@ -953,7 +953,7 @@ hoofdletter.
 Regel: voor logische informatiemodellen wordt altijd alternatief 2 gehanteerd.
 
 Neem aanvullend een verwijzing op naar het betreffende modelelement in het
-conceptuele model. Dit kan bijvoorbeeld met een trace of door opname van de naam
+conceptuele informatiemodel. Dit kan bijvoorbeeld met een trace of door opname van de naam
 in de alias (zie 3.16.20), zodat lezers goed de overgang van conceptueel naar
 logisch kunnen volgen.
 
