@@ -1,11 +1,8 @@
 # MIM vocabulary
-# Currently based on mim 1.0
+# Currently based on mim 1.1
 #
 # Source: https://www.geonovum.nl/geo-standaarden/metamodel-informatiemodellering/nationaal-metamodel-voor-informatiemodellering
-#
-# Hierbij is variant-1 (Relatiesoort centraal) uitgewerkt, variant-2 vereist eigenlijk een ander shacl model
-# Aanname, hoewel niet als zodanig beschreven, alias overal waar ook naam voorkomt, behalve als er een code voorkomt
-#
+##
 
 @prefix mim: <http://bp4mc2.org/def/mim#>.
 @prefix mimdoc: <http://bp4mc2.org/def/mimdoc#>.
@@ -105,6 +102,7 @@ shape:Gegevensgroeptype a sh:NodeShape;
   sh:property shape:gegevensgroep;
   sh:property shape:constraint;
 .
+# Eigenschappen zowel voor alternatief 1 als 2
 shape:Relatiesoort a sh:NodeShape;
   sh:targetClass mim:Relatiesoort;
   sh:name "mim:Relatiesoort";
@@ -118,7 +116,7 @@ shape:Relatiesoort a sh:NodeShape;
   sh:property shape:unidirectioneel;
   sh:property shape:bron;
   sh:property shape:doel;
-  sh:property shape:typeAggregatie;
+  sh:property shape:aggregatietype;
   # Metagegevens
   sh:property shape:kardinaliteit;
   sh:property shape:herkomst;
@@ -131,17 +129,29 @@ shape:Relatiesoort a sh:NodeShape;
   sh:property shape:authentiek;
   sh:property shape:indicatieAfleidbaar;
   sh:property shape:mogelijkGeenWaarde;
+  # Niet benoemed
+  sh:property shape:relatierol;
 .
 shape:Relatierol a sh:NodeShape;
   sh:targetClass mim:Relatierol;
   sh:name "mim:Relatierol";
   dct:source mimdoc:sectie2.3.2.1-Relatierol;
   # Metagegevens
-  sh:property shape:naam_optioneel;
+  sh:property shape:naam;
   sh:property shape:alias;
   sh:property shape:begrip;
   sh:property shape:begripsterm;
   sh:property shape:definitie_optioneel;
+  # Aanvullend in geval van alternatief 2
+  sh:property shape:kardinaliteit;
+  sh:property shape:herkomst;
+  sh:property shape:toelichting;
+  sh:property shape:herkomstDefinitie;
+  sh:property shape:datumOpname;
+  sh:property shape:indicatieMaterieleHistorie;
+  sh:property shape:indicatieFormeleHistorie;
+  sh:property shape:authentiek;
+  sh:property shape:mogelijkGeenWaarde;
 .
 shape:Generalisatie a sh:NodeShape;
   sh:targetClass mim:Generalisatie;
@@ -180,7 +190,7 @@ shape:ExterneKoppeling a sh:NodeShape;
   sh:property shape:datumOpname;
   # Eigenschappen alleen in de specificatietabel
   sh:property shape:bron;
-  sh:property shape:typeAggregatie;
+  sh:property shape:aggregatietype;
   sh:property shape:doel;
   sh:property shape:unidirectioneel;
 .
@@ -220,12 +230,12 @@ shape:ReferentieElement a sh:NodeShape;
   sh:property shape:identificerend;
   sh:property shape:toelichting;
 .
-shape:Codelist a sh:NodeShape;
-  sh:targetClass mim:Codelist;
-  sh:name "mim:Codelist";
-  dct:source mimdoc:sectie2.3.3-Codelist;
+shape:Codelijst a sh:NodeShape;
+  sh:targetClass mim:Codelijst;
+  sh:name "mim:Codelijst";
+  dct:source mimdoc:sectie2.3.3-Codelijst;
   # Metagegevens
-  sh:property shape:naam_codelist;
+  sh:property shape:naam_codelijst;
   sh:property shape:alias;
   sh:property shape:begrip;
   sh:property shape:begripsterm;
@@ -429,8 +439,8 @@ shape:naam_optioneel a sh:PropertyShape;
   sh:maxCount 1;
   sh:datatype xsd:string;
 .
-# Voor codelist is er een specifieke toelichting gegeven, die hierbij opgenomen
-shape:naam_codelist a sh:PropertyShape;
+# Voor codelijst is er een specifieke toelichting gegeven, die hierbij opgenomen
+shape:naam_codelijst a sh:PropertyShape;
   sh:path mim:naam;
   sh:name "mim:naam";
   sh:order 1;
@@ -694,9 +704,9 @@ shape:supertype a sh:PropertyShape;
   sh:maxCount 1;
   sh:class mim:Objecttype;
 .
-shape:typeAggregatie a sh:PropertyShape;
-  sh:path mim:typeAggregatie;
-  sh:name "mim:typeAggregatie";
+shape:aggregatietype a sh:PropertyShape;
+  sh:path mim:aggregatietype;
+  sh:name "mim:aggregatietype";
   sh:order 30;
   sh:minCount 1;
   sh:maxCount 1;
@@ -771,4 +781,9 @@ shape:unionElement a sh:PropertyShape;
   sh:name "mim:element";
   sh:class mim:UnionElement;
   sh:minCount 2;
+.
+shape:relatierol a sh:PropertyShape;
+  sh:path mim:relatierol;
+  sh:name "mim:relatierol";
+  sh:class mim:Relatierol;
 .

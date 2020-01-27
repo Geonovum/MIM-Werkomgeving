@@ -68,7 +68,7 @@ aangebracht.
 
 Het hoofdstuk [Metamodel in Linked Data (LD)](#metamodel-in-linked-data-ld) beschrijft hoe de implementatie van MIM in
 [[!Linked-Data]] er uit ziet. In dit hoofdstuk wordt beschreven hoe het metamodel zich verhoudt tot het Linked Data
-metamodel. Daarbij is een strikte vertaling gemaakt. Dit betekent dat het betreffende Linked Data model alleen als MIM model te gebruiken is. Voor een model dat gebruikt kan worden om daadwerkelijk Linked Data in uit te drukken, is een vertaalslag nodig die beschreven is in de bijlage [Transformatie van een MIM model naar een RDF model](#transformatie-van-een-mim-model-naar-een-rdf-model).
+metamodel. Daarbij is een strikte vertaling gemaakt. Dit betekent dat het betreffende Linked Data model alleen als MIM model te gebruiken is. Voor een model dat gebruikt kan worden om daadwerkelijk Linked Data in uit te drukken, is een vertaalslag nodig die beschreven is in de bijlage [Transformatie van een MIM model naar een RDF model](#transformatie-mim-rdfs-owl-shacl).
 
 In het hoofdstuk [Afspraken & Regels](#afspraken-regels) gaan we in detail in op een
 aantal aspecten. Het is een uitgebreidere toelichting, in aanvulling op het
@@ -77,7 +77,7 @@ aanbevelingen bij het toepassen van het metamodel.
 
 Er zijn een aantal bijlages, dit zijn hulpmiddelen of aanvullingen op MIM.
 - De bijlage [Template naamgeving conventies](#template-naamgeving-conventies) verschaft een invulmogelijkheid om eigen naamgevingsconventies te documenteren, per in dit metamodel genoemd modelelement.
-- De bijlage [Transformatie van een MIM model naar een RDF model](#transformatie-van-een-mim-model-naar-een-rdf-model) beschrijft hoe een MIM model getransformeerd kan worden naar een RDF model dat gebruikt kan worden om daadwerkelijk Linked Data in uit te drukken (op instantie niveau, waarbij dit in overeenstemming is met de specificatie op informatiemodel niveau).
+- De bijlage [Transformatie van een MIM model naar een RDF model](#transformatie-mim-rdfs-owl-shacl) beschrijft hoe een MIM model getransformeerd kan worden naar een RDF model dat gebruikt kan worden om daadwerkelijk Linked Data in uit te drukken (op instantie niveau, waarbij dit in overeenstemming is met de specificatie op informatiemodel niveau).
 
 ### Wat is een informatiemodel
 Wanneer we informatie over bepaalde onderwerpen willen inwinnen, registreren of uitwisselen, dan is het van belang om deze informatie  eerst goed te beschrijven. We doen dit zodat het voor eenieder die met de informatie aan de slag gaat helder en eenduidig is:
@@ -285,7 +285,7 @@ werkelijkheid op een specifiek tijdsmoment vormen.
 De informatiemodellen waarover we het hier in dit document hebben bevinden zich
 op de M1-laag.
 
-Dit metamodel is een uitbreiding op het UML metamodel (M2). Het UML metamodel is
+Dit metamodel is een UML profiel op basis van het UML metamodel (M2). Het UML metamodel is
 daarbij uitgebreid met speciale elementen, die geen onderdeel uitmaken van het
 basale UML-metamodel (M2). Deze nieuwe elementen zijn noodzakelijk voor het
 definiëren van de semantiek en syntax van de modelconstructies zoals we die in
@@ -298,6 +298,12 @@ InfrastructureLibrary) kunnen bestaande metaclasses uitgebreid worden zonder dat
 er nieuwe metaclasses gedefinieerd hoeven te worden en dus zonder aanpassing van
 het basale UML-metamodel (M2). De extensiemechanismen hiervoor zijn stereotypes,
 tagged values en constraints.
+
+Nadrukkelijk moet daarbij worden vermeld dat het MIM metamodel **geen** semantiek overneemt van UML.
+Met het uitdrukken van het MIM metamodel in een UML profiel wordt het alleen mogelijk
+gemaakt om, zonder verlies van de originele semantiek van het MIM, een MIM model uit
+te drukken in UML. Met dit gebruik van een UML profiel volgen wij het gebruik van een UML profiel
+zoals de OMG zelf heeft op gesteld voor het Ontology Definition Metamodel [[!ODM]]: "*The goal of a UML profile from the ODM perspective is to provide a bridge between the UML and knowledge representation communities on a well-grounded, semantic basis, with a broader goal of relating software and logical approaches to representing information. Profiles facilitate implementation using common notation on existing UML tools. They support renaming and specializing UML model elements in consistent ways, so that an instance of a UML model can be seen as an extended metamodel. Profiles allow a developer to leverage UML experience and tools while moving to integrating with an ontology represented in another metamodel.*" (sectie 8.4.2).
 
 ### Uitdrukken in Linked Data
 
@@ -361,7 +367,7 @@ vb:Pakjesboot12 a vbo:Schip.
 Een informatiemodel uitgedrukt in Linked Data wordt geacht te voldoen aan het MIM als sprake is van één of beide van onderstaande criteria:
 
 1. Het informatiemodel is uitgedrukt in de MIM vocabulaire, zoals beschreven in het hoofdstuk [Metamodel in Linked Data (LD)](#metamodel-in-linked-data-ld);
-2. Het informatiemodel is uitgedrukt in RDF, RDFS, OWL en SHACL en is te transformeren naar de MIM vocabulaire op basis van de transformatieregels beschreven in de bijlage, [sectie 6.4](#transformatie-van-een-mim-model-naar-een-rdf-model).
+2. Het informatiemodel is uitgedrukt in RDF, RDFS, OWL en SHACL en is te transformeren naar de MIM vocabulaire op basis van de transformatieregels beschreven in de bijlage, [Transformatie MIM - RDFS/OWL/SHACL](#transformatie-mim-rdfs-owl-shacl).
 
 ### Een eigen extensie op het metamodel
 Indien er extra metamodelconstructies nodig zijn voor een informatiemodel, dan
