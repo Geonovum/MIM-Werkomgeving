@@ -223,7 +223,7 @@ worden (records, entiteiten e.d.) op basis van andere overwegingen.
 
 #### Attribuutsoort en een groepering ervan   
 
-Een attribuutsoort is een kenmerk van een objecttype, waarvoor gegevens worden bijgehouden.  
+Een attribuutsoort is de metaklasse waarmee kenmerken van een objecttype worden vastgelegd. Het zijn de kenmerken waarvoor gegevens worden bijgehouden.  
 Voordat we attribuutsoort definieren kijken we eerst naar het begrip ‘gegeven’.
 
 >   **Definitie Gegeven**  
@@ -353,7 +353,7 @@ datatype», «Gestructureerd datatype», «Referentielijst», «Codelist»,
 >   en een (ander) object van een ander (of hetzelfde) objecttype.
 
 *Toelichting:* Objecten hebben eigenschappen die gemodelleerd kunnen worden met
-attribuutsoorten maar ook met relatiesoorten naar andere objecttypen. Als het
+attribuutsoorten maar ook met relatiesoorten naar andere objecttypen. Relatiesoort is de metaklasse waarmee deze eigenschappen worden beschreven. Als het
 voor het desbetreffende domein van belang is om die eigenschap te modelleren als
 onderdeel van een ander objecttype, dan maakt de relatiesoort die eigenschap
 beschikbaar voor het eerstgenoemde objecttype. Bijvoorbeeld, een attribuutsoort
