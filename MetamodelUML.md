@@ -25,8 +25,8 @@ stereotype.
 
 <aside class='note'>
 Het MIM modelelement Objecttype wordt gemodelleerd als een UML-Class met 
-stereotype «Objecttype». In Sparx EA wordt dit gemodelleerd met een 
-Class met stereotype «Objecttype».
+stereotype «Objecttype». 
+ 
 Niet alle MIM metaclasses hebben een stereotype (nodig). In de kolom staat dan ‘-‘.
 </aside>
 
@@ -34,7 +34,9 @@ Niet alle MIM metaclasses hebben een stereotype (nodig). In de kolom staat dan �
 |-------------------|----------------|------------------------|-----------------|
 | Objecttype        | «Objecttype»   | (UML) Class            | Class           |
 
-
+De links kolom bevat het MIM modelelement, zoals bedoeld in het hoofdstuk [Metamodel Algemeen].
+De 2e en 3e kolom bevatten de uitdrukking van het MIM in UML, versie 2.5. 
+De 2e en 4e kolom bevatten de uitdrukking van het MIM in Sparx Enterprise Architect. Deze gebruikt Class (i.p.v. UML-Class). Deze UML tool is (uiteraard) geen onderdeel van de MIM specificatie. Het is zeker niet verplicht om deze te gebruiken, u kunt uw eigen tool gebruiken. Deze kolom staat erbij om illustratief aan te geven dat het soms nodig kan zijn om, afhankelijk van de tool, net iets specifieker aan te geven hoe het MIM in de tool exact uitgedrukt wordt. 
 
 Bijna alle hebben een UML-metaclass (UML 2.5) als basis, deze is dan aangegeven als ‘blauw gekleurde’ metaclasse. Dit is
 ook opgenomen in diagramvorm, in de bijlage [Template naamgeving

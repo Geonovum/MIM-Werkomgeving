@@ -19,7 +19,6 @@ We onderscheiden de volgende soorten gedefinieerde categorieën voor datatypen:
     datatypen.
 
 2.  Datatypen (met een naam), landelijk volgens het GAB: datatypen zoals
-    Postcode “1234AB”.
 
 3.  Gestructureerde datatypen: een combinatie van data, zoals een bedrag “5
     euro”, of een GM_Surface. Deze volgen ook internationale of nationale
@@ -236,20 +235,12 @@ voor zijn bestaan afhankelijk is van een ander objecttype (en daarom via een
 moet worden). Het is aan de modelleur om deze beoordeling te maken.
 
 <aside class='example'>
-de specificatie voor het Brondocument in de basisregistratie BAG is
-qua betekenis en structuur voor alle objecttypes gelijk. Het speelt een
-belangrijke rol in het totstandkomingsproces van objecten en behoort daarom in
-het conceptuele model. Het wordt ingezet als een audittrail, zodat het duidelijk
-op basis van welk brondocument een wijziging is doorgevoerd op een object. Het
-brondocument onderscheidt twee relevante attribuutsoorten, maar het brondocument
-wordt binnen de BAG niet gezien als een gespreksonderwerp waarover men gegevens
-wilt communiceren. Daarom is er gekozen voor een gegevensgroeptype. Deze wordt
-hergebruikt voor alle objecttypes.*
+    
+Een voorbeeld van het hergebruik van een gegevensgroeptype door meerdere objecttypen is de specificatie voor het Brondocument in de basisregistratie BAG. Het gegevensgroeptype Brondocument is qua betekenis en structuur voor alle objecttypes gelijk. De definitie en specificatie ervan wordt daarom hergebruikt bij alle objecttypes. Het brondocument wordt binnen de BAG niet gezien als een van de typen objecten van de BAG, en daarom is het geen objecttype maar een gegevensgroeptype. 
+    
 </aside>
 
-Metamodel: het gegevensgroeptype kan dus het type zijn van meerdere
-gegevensgroepen. Vanwege dit hergebruik is daarom de kardinaliteit van de
-relatie van gegevensgroep naar gegevensgroeptype aan de source kant 1..\*. Zie
+Metamodel: het gegevensgroeptype kan dus het type zijn van meer dan 1 gegevensgroep. Vanwege dit hergebruik is daarom de kardinaliteit van de relatie van gegevensgroep naar gegevensgroeptype aan de source kant 1..\*. Zie
 [Kern](#kern).
 
 #### Gegevensgroep versus Gestructureerd datatype
@@ -962,7 +953,7 @@ hoofdletter.
 Regel: voor logische informatiemodellen wordt altijd alternatief 2 gehanteerd.
 
 Neem aanvullend een verwijzing op naar het betreffende modelelement in het
-conceptuele model. Dit kan bijvoorbeeld met een trace of door opname van de naam
+conceptuele informatiemodel. Dit kan bijvoorbeeld met een trace of door opname van de naam
 in de alias (zie 3.16.20), zodat lezers goed de overgang van conceptueel naar
 logisch kunnen volgen.
 
