@@ -381,6 +381,17 @@ mim:specificatieFormeel a owl:DatatypeProperty;
   rdfs:comment "De beschrijving van de constraint in een formele specificatietaal, in OCL"@nl;
 .
 
+# Keuze
+mim:keuzedatatype a owl:ObjectProperty;
+  rdfs:label "keuzedatatype"@nl;
+.
+mim:keuzeattribuutsoort a owl:ObjectProperty;
+  rdfs:label "keuzeattribuutsoort"@nl;
+.
+mim:keuzerelatiedoel a owl:ObjectProperty;
+  rdfs:label "keuzerelatiedoel"@nl;
+.
+
 # Properties uit het model die niet gedefinieerd zijn
 mim:attribuut a owl:ObjectProperty;
   rdfs:label "attribuut"@nl;

@@ -301,7 +301,7 @@ shape:DataElement a sh:NodeShape;
 .
 shape:Union a sh:NodeShape;
   sh:targetClass mim:Union;
-  sh:name "mim:Union";
+  sh:name "mim:Keuze";
   dct:source mimdoc:sectie2.3.5-Union;
   # Metagegevens
   sh:property shape:naam;
@@ -311,22 +311,9 @@ shape:Union a sh:NodeShape;
   sh:property shape:herkomst;
   sh:property shape:definitie;
   sh:property shape:datumOpname;
-  #ISSUE: Elementen hieronder komen niet in de tabel voor
-  sh:property shape:unionElement;
-.
-shape:UnionElement a sh:NodeShape;
-  sh:targetClass mim:UnionElement;
-  sh:name "mim:UnionElement";
-  dct:source mimdoc:sectie2.3.5-UnionElement;
-  # Metagegevens
-  sh:property shape:naam;
-  # ISSUE: bij UnionElement geen alias? sh:property shape:alias;
-  sh:property shape:definitie;
-  sh:property shape:type;
-  sh:property shape:lengte;
-  sh:property shape:patroon;
-  sh:property shape:formeelPatroon;
-  sh:property shape:kardinaliteit;
+  sh:property shape:keuzedatatype;
+  sh:property shape:keuzeattribuutsoort;
+  sh:property shape:keuzerelatiedoel;
 .
 shape:Package a sh:NodeShape;
   sh:targetClass mim:Package;
@@ -680,14 +667,6 @@ shape:bron a sh:PropertyShape;
   sh:maxCount 1;
   sh:class mim:Objecttype;
 .
-shape:subtype a sh:PropertyShape;
-  sh:path mim:subtype;
-  sh:name "mim:subtype";
-  sh:order 26;
-  sh:minCount 1;
-  sh:maxCount 1;
-  sh:class mim:Objecttype;
-.
 shape:doel a sh:PropertyShape;
   sh:path mim:doel;
   sh:name "mim:doel";
@@ -696,13 +675,30 @@ shape:doel a sh:PropertyShape;
   sh:maxCount 1;
   sh:class mim:Objecttype;
 .
+shape:subtype a sh:PropertyShape;
+  sh:path mim:subtype;
+  sh:name "mim:subtype";
+  sh:order 28;
+  sh:minCount 1;
+  sh:maxCount 1;
+#  sh:node shape:ObjecttypeOFGestructureerdDatatype
+  sh:node [ sh:xone (shape:Objecttype shape:Datatype)];
+.
 shape:supertype a sh:PropertyShape;
   sh:path mim:supertype;
   sh:name "mim:supertype";
-  sh:order 27;
+  sh:order 29;
   sh:minCount 1;
   sh:maxCount 1;
-  sh:class mim:Objecttype;
+#  sh:node shape:ObjecttypeOFGestructureerdDatatype;
+  sh:node [ sh:xone (shape:Objecttype shape:Datatype)];
+.
+shape:ObjecttypeOFGestructureerdDatatype a sh:NodeShape;
+  sh:name "1 van";
+  sh:xone (
+    [ sh:class mim:Objecttype ]
+    [ sh:class mim:GestructureerdDatatype ]
+  )
 .
 shape:aggregatietype a sh:PropertyShape;
   sh:path mim:aggregatietype;
@@ -739,6 +735,28 @@ shape:specificatieFormeel a sh:PropertyShape;
   sh:order 33;
   sh:maxCount 1;
   sh:datatype xsd:string;
+.
+
+shape:keuzedatatype a sh:PropertyShape;
+  sh:path mim:keuzedatatype;
+  sh:name "mim:keuzedatatype";
+  sh:order 34;
+  sh:class mim:Datatype;
+  sh:minCount 2;
+.
+shape:keuzeattribuutsoort a sh:PropertyShape;
+  sh:path mim:keuzeattribuutsoort;
+  sh:name "mim:keuzeattribuutsoort";
+  sh:order 34;
+  sh:class mim:Attribuutsoort;
+  sh:minCount 2;
+.
+shape:keuzerelatiedoel a sh:PropertyShape;
+  sh:path mim:keuzerelatiedoel;
+  sh:name "mim:keuzerelatiedoel";
+  sh:order 34;
+  sh:class mim:Relatiesoort;
+  sh:minCount 2;
 .
 
 # De volgende shapes zijn niet expliciet benoemd, maar bestaan wel (bv in diagram)

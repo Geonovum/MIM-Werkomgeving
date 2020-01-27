@@ -97,8 +97,8 @@ Onderstaande tabellen geven een overzicht van alle transformaties en een referen
 |`mim:PrimitiefDatatype`|`rdfs:Datatype`|[Primitief datatype](#primitief-datatype)|
 |`mim:GestructureerdDatatype`|`sh:NodeShape`|[Gestructureerd datatype](#gestructureerd-datatype)|
 |`mim:DataElement`|`owl:ObjectProperty`, `owl:DatatypeProperty`, `sh:PropertyShape`|[Data element](#data-element)|
-|`mim:Union`|`sh:xone`, `rdf:List`|[Union](#union)|
-|`mim:UnionElement`|Blank node binnen de `rdf:List`|[Union element](#union-element)|
+|`mim:Keuze` (datatype en relatiedoel)|`sh:xone`, `rdf:List`|[Keuze (datatype en relatiedoel)](#keuze-datatype-relatiedoel)|
+|`mim:Keuze` (attribuutsoort)|`rdfs:subPropertyOf`|[Keuze (attribuutsoort)](#keuze-attribuutsoort)|
 |`mim:Domein`|`owl:Ontology`|[Domein](#domein)|
 |`mim:Extern`|`owl:imports`|[Extern](#extern)|
 |`mim:View`|`owl:imports`|[View](#view)|
@@ -654,51 +654,32 @@ WHERE {
 }
 </pre>
 
-### Union
+### Keuze (datatype en relatiedoel)
 
-> Gestructureerd datatype, waarmee wordt aangegeven dat er meer dan één mogelijkheid is voor het datatype van een attribuut. Het attribuut zelf krijgt als datatype de union. De union biedt een keuze uit verschillende datatypes, elk afzonderlijk beschreven in een union element.
+> Een opsomming van meerdere modelelementen, waarbij er maar van één tegelijkertijd sprake kan zijn.
 
-> **VERDER UITWERKEN**
-Het lijkt erop dat in het MIM een union veel beperkter is dan in standaard UML. Daardoor kan de transformatie ook eenvoudiger plaatsvinden. Daarnaast is het handig om de rdf:List afzonderlijk te modelleren, conform het MIM. Op dit moment wordt opnieuw gekeken naar de Union, om deze mogelijk toch breder in te zetten. Daarbij kan mogelijk ook gekeken worden of een eenvoudigere vertaling mogelijk is.
->
-> Een union is feitelijk een onderdeel van de specificatiek van een attribuutsoort. In het MIM wordt deze als afzonderlijk modelelement opgenomen en kan daardoor ook hergebruikt of worden voorzien van extra meta-informatie. Een `min:Union`, in combinatie met het `mim:type` wordt vertaald naar een `sh:xone` waarbij de Union zelf een rdf:List is. In deze transformatieregel wordt ook de transformatie van `mim:type` meegenomen. Deze wordt hiermee niet opgenomen bij de transformatie van `mim:type` zelf (zie ook [Type](#type)). Merk op dat een empty list normaal gesproken wordt gerepresenteerd met `rdf:nil`. Dat is in ons geval niet handig, aangezien we expliciet een instantie willen aanmaken van het type `rdf:List`. Aangezien het MIM vereist dat minimaal twee union elementen aanwezig zijn, ontstaat altijd een correcte lijst.
+Een keuze tussen datatypen en relatiedoelen wordt gemodelleerd als een speciaal soort NodeShape die zelf een `sh:xone` eigenschap heeft. Deze eigenschap verwijst naar een `rdf:List` waarin de opsomming van de keuze staat uitgewerkt.
 
 <pre class='ex-sparql'>
 CONSTRUCT {
+  ?shape a sh:NodeShape.
+  ?shape sh:xone ?list.
+  ?shape rdfs:seeAlso ?keuze.
   ?list a rdf:List.
   ?list rdf:rest rdf:nil.
-  ?list rdfs:seeAlso ?union.
 }
 WHERE {
-  ?union a mim:Union.
-  ?union mim:naam ?unionnaam.
-  BIND (t:nodeshapeuri(?unionnaam) as ?list)
-}
-
-CONSTRUCT {
-  ?subject sh:xone ?union
-}
-WHERE {
-  ?modelelement mim:type ?type.
-  ?type rdfs:subClassOf*/rdf:type mim:Union.
-  ?subject rdfs:seeAlso ?modelelement.
-  ?union rdfs:seeAlso ?type.
+  ?keuze a mim:Keuze.
+  ?keuze mim:naam ?keuzenaam.
+  ?keuze ?keuzerelatie ?keuzewaarde.
+  BIND (t:nodeshapeuri(?keuzenaam) as ?shape)
+  FILTER (?keuzerelatie = mim:keuzedatatype || ?keuzerelatie = mim:keuzerelatiedoel)
 }
 </pre>
 
-### Union element
-
-> Een type dat gebruikt kan worden voor het attribuut zoals beschreven in de definitie van Union. Het union element is een onderdeel van een Union, uitgedrukt in een eigenschap (attribute) van een union, die als keuze binnen de Union is gerepresenteerd.
-
-Een `mim:unionElement` wordt vertaald naar een element in de lijst van de Union.
-
-Anders dan andere voorbeelden, wordt hier geen CONSTRUCT query gebruikt, omdat de lijst recursief wordt opgebouwd, in combinaties van DELETE en INSERT queries. Nieuwe elementen worden aan het begin van de lijst toegevoegd (er wordt geen volgorde verondersteld, zie ook het algemene issue over volgorde bovenaan). Het union element wordt zelf als blank node toegevoegd.
+Voor het toevoegen van de waarden in de lijst wordt, anders dan andere voorbeelden, geen CONSTRUCT query gebruikt, omdat de lijst recursief wordt opgebouwd, in combinaties van DELETE en INSERT queries. Nieuwe elementen worden aan het begin van de lijst toegevoegd (er wordt geen volgorde verondersteld, zie ook het algemene issue over volgorde bovenaan). Het union element wordt zelf als blank node toegevoegd.
 
 Onderstaand voorbeeld geeft aan hoe de conversie uiteindelijk plaatsvindt:
-
-> **VERDER UITWERKEN**
->
-> Eigenlijk is het helemaal niet mooi dat het zo ingewikkeld wordt. Maar DAT het zo gebeurt is een beperking van UML. We kunnen het ook eenvoudiger maken door het weg te laten, en in MIM expliciet op te nemen dat voor dit element deze waarden niet gelden.
 
 ```
 ex:GeometrischObject a mim:Objecttype;
@@ -709,16 +690,16 @@ ex:geometrie a mim:Attribuutsoort;
   mim:naam "geometrie";
   mim:datatype ex:LineOrPolygon;
 .
-ex:LineOrPolygon a mim:Union;
+ex:LineOrPolygon a mim:Keuze;
   mim:naam "Line or polygon";
-  mim:element ex:Line;
-  mim:element ex:Polygon;
+  mim:keuzedatatype ex:Line;
+  mim:keuzedatatype ex:Polygon;
 .
-ex:Line a mim:UnionElement;
+ex:Line a mim:PrimitiefDatatype;
   mim:naam "Line";
   mim:type gml:Line;
 .
-ex:Polygon a mim:UnionElement;
+ex:Polygon a mim:PrimitiefDatatype;
   mim:naam "Polygon";
   mim:type gml:Polygon;
 .
@@ -726,42 +707,21 @@ ex:Polygon a mim:UnionElement;
 shape:GeometrischObject-geometrie a sh:PropertyShape;
   rdfs:label "geometrie";
   rdfs:seeAlso ex:geometrie;
-  sh:xone shape:LineOrPolygon;
+  sh:node shape:LineOrPolygon;
 .
-shape:LineOrPolygon a rdf:List;
+shape:LineOrPolygon a sh:NodeShape;
   rdfs:label "Line or polygon";
   rdfs:seeAlso ex:LineOrPolygon;
-  rdf:first [
-    rdfs:label "Line";
-    rdfs:seeAlso ex:Line;
-    sh:datatype gml:Line
-  ];
-  rdf:rest (
-    [
-      rdfs:label "Polygon";
-      rdfs:seeAlso ex:Polygon;
-      sh:datatype gml:Polygon
-    ]
-  );
-.
-```
-
-De list in bovenstaand voorbeeld is niet geheel in de `()` vorm neergezet, zodat ook de extra eigenschappen zichtbaar kunnen worden gemaakt. Feitelijk is bovenstaande formeel gezien gelijk aan:
-
-```
-shape:GeometrischObject-geometrie a sh:PropertyShape;
-  rdfs:label "geometrie";
-  rdfs:seeAlso ex:geometrie;
   sh:xone (
-    [ sh:datatype gml:Line ]
-    [ sh:datatype gml:Polygon ]  
+    [sh:datatype gml:Line ]
+    [sh:datatype gml:Polygon ]
   )
 .
 ```
 
-De meer uitgebreide vorm is gekozen om ook de aanvullende informatie over Union en Unionelement kwijt te kunnen.
+De query hiervoor is als volgt:
 
-```
+<pre class='ex-sparql'>
 DELETE {
   ?endoflist rdf:rest rdf:nil
 }
@@ -790,9 +750,29 @@ WHERE {
   ?realendoflist rdf:rest ?endoflist.
   ?endoflist rdf:rest rdf:nil.
 }
-```
+</pre>
 
 De tweede delete-insert query is een "opruimquery": aangezien we zijn begonnen met een rdf:List in plaats van een rdf:nil, moeten we het einde van de lijst er nog weer afknippen.
+
+### Keuze (attribuutsoort)
+
+> Een opsomming van meerdere modelelementen, waarbij er maar van één tegelijkertijd sprake kan zijn.
+
+De keuze bij een attribuutsoort is feitelijk een keuze welke onderliggende attribuutsoorten gebruikt mogen worden op de plaats van de originele attribuutsoort. Semantisch gezien betreft dit een geval waarbij de onderliggende attribuutsoorten specialisaties zijn van het originele attribuutsoort. Dit wordt dan ook als zodanig gemodelleerd.
+
+<pre class='ex-sparql'>
+CONSTRUCT {
+  ?subproperty rdfs:subPropertyOf ?superproperty.
+}
+WHERE {
+  ?attribuutsoort mim:datatype ?keuze.
+  ?keuze a mim:Keuze.
+  ?keuze mim:keuzeattribuutsoort ?attribuutsoortkeuze.
+  ?superproperty rdfs:seeAlso ?attribuutsoort.
+  ?subproperty rdfs:seeAlso ?attribuutsoortkeuze.
+}
+</pre>
+
 
 ## Packages
 > Een package is een benoemde en begrensde verzameling/groepering van modelelementen.
