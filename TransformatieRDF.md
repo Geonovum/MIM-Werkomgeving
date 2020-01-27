@@ -1,4 +1,5 @@
-## Transformatie van een MIM model naar een RDF model
+# Transformatie MIM - RDFS/OWL/SHACL
+
 ## Inleiding
 
 <aside class='ednote'>
@@ -38,7 +39,7 @@ vbo:Schip a rdfs:Class;
 vb:Pakjesboot12 a vbo:Schip.
 </pre>
 
-Dit document beschrijft hoe deze vertaling van het MIM model in RDF naar een RDFS-gebaseerde ontologie plaatsvindt. Daarbij zal niet alleen gebruik worden gemaakt van RDFS, maar ook van de OWL, SHACL en SKOS vocabulaires. De vertaling wordt zo veel mogelijk als SPARQL rules beschreven, zodat een machinale vertaling mogelijk is. De vertaling is beoogd als omkeerbaar. De SPARQL rules die vanuit een RDFS-gebaseerde ontologie de vertaling maken naar een MIM model in RDF, zullen daarom ook worden beschreven (in deze versie van het document zijn deze nog niet opgenomen).
+Dit document beschrijft hoe deze vertaling van het MIM model in RDF naar een RDFS-gebaseerde ontologie plaatsvindt. Daarbij zal niet alleen gebruik worden gemaakt van RDFS, maar ook van de OWL, SHACL en SKOS vocabulaires. De vertaling wordt zo veel mogelijk als SPARQL rules beschreven, zodat een machinale vertaling mogelijk is. De vertaling is omkeerbaar. De SPARQL rules die vanuit een RDFS-gebaseerde ontologie de vertaling maken naar een MIM model in RDF, zijn daarom ook beschreven.
 
 ## Gebruikte functies
 
@@ -134,7 +135,7 @@ Onderstaande tabellen geven een overzicht van alle transformaties en een referen
 |`mim:uniekeAanduiding`|`mim:uniekeAanduiding`|[unieke aanduiding](#uniekeaanduiding)
 |`mim:populatie`|`mim:populatie`|[populatie](#populatie)|
 |`mim:kwaliteit`|`mim:kwaliteit`|[kwaliteit](#kwaliteit)|
-|`mim:indicatieAbstractObject`|`mim:indicatieAbstractObject`|[indicatie abstract object](#indicatie-abstract-object)|
+|`mim:indicatieAbstractObject`|`sh:propertyShape` en `mim:indicatieAbstractObject`|[indicatie abstract object](#indicatie-abstract-object)|
 |`mim:identificerend`|`mim:identificerend`|[identificerend](#identificerend)|
 |`mim:gegevensgroeptype`|`sh:node`|[gegevensgroeptype](#gegevensgroeptype-eigenschap)|
 |`mim:unidirectioneel`|n.n.b.|[unidirectioneel](#unidirectioneel)|
@@ -1258,11 +1259,17 @@ WHERE {
 
 In een MIM conform informatiemodel kunnen zowel abstracte als concrete klassen voorkomen. In UML kun je daarvan afleiden dat je geen instanties mag hebben van abstracte klassen, maar alleen van concrete klassen. In RDF wordt geen onderscheid gemaakt tussen het abstract of concreet zijn van klassen. In RDF worden klassen beschouwd als sets van dingen. Als je een set kunt beschrijven, dan kunnen er ook dingen zijn die tot die set behoren.
 
-Een `mim:indicatieAbstractObject` wordt direct, zonder aanpassing, overgenomen in het vertaalde model.
+Wel kun je aangeven dat indien er sprake is van een triple `<subject> rdf:type <abstract-class>` er minimaal óók een tweede triple moet zijn `<subject> rdf:type <non-abstract-class>`
+
+Een `mim:indicatieAbstractObject` wordt aanvullend direct, zonder aanpassing, overgenomen in het vertaalde model.
 
 <pre class='ex-sparql'>
 CONSTRUCT {
-  ?subject mim:indicatieAbstractObject ?indicatieabstractobject
+  ?subject mim:indicatieAbstractObject ?indicatieabstractobject.
+  ?subject sh:propertyShape [
+    sh:path rdf:type;
+    sh:minCount 2
+  ]
 }
 WHERE {
   ?modelelement mim:indicatieAbstractObject ?indicatieabstractobject.
@@ -1423,3 +1430,55 @@ WHERE {
 
 }
 </pre>
+
+## Transformatie vanuit RDFS/OWL/SHACL
+
+Een Linked Data model dat is uitgedrukt in RDFS/OWL/SHACL kan gelezen worden als een MIM model. Hiervoor dient het model wel eerste getransformeerd te worden naar de MIM vocabulaire. Vervolgens dient het resultaat te voldoen aan de minimale eisen die worden gesteld aan een MIM vocabulaire.
+
+Onderstaande tabel geeft een overzicht van de wijze waarop de vertaling plaatsvindt. Naast deze tabel is ook een set van SPARQL statement beschikbaar gesteld (zie: [rdf2mim.sparql](media/rdf2mim.sparql)) waarmee de transformatie automatisch kan worden uitgevoerd.
+
+|RDFS term | MIM-klasse | Uitleg |
+|----------|-------------|--------|
+| sh:NodeShape met sh:targetClass | mim:Objecttype | Een nodeshape met een targetClass verwijst naar zowel de structuur als de betekenis, zoals ook bij een objecttype |
+| sh:NodeShape zonder sh:targetClass | mim:GestructureerdDatatype | Een nodeshape zonder targetClass is enkel een structuur, dwz: een gestructureerd datatype |
+| sh:PropertyShape met sh:datatype | mim:Attribuutsoort | Een propertyshape met een datatype betreft een attribuutsoort |
+| sh:PropertyShape met sh:node | mim:Attribuutsoort | Een propertyshape met een verwijzing naar een nodeshape betreft een attribuutsoort met een enumeratie of gestructureerd datatype (maar geen relatie naar een objecttype) |
+| sh:PropertyShape met sh:class | mim:Relatiesoort | Een propertyshape met een verwijzing naar een andere klasse betreft een relatiesoort |
+| sh:NodeShape gelinkt aan skos:inScheme of skos:member | mim:Referentielijst | Een nodeshape die gelinkt is aan een skos:ConceptScheme of skos:Collection betreft een referentielijst |
+| rdfs:subClassOf | mim:Generalisatie | De rdfs:subClassOf eigenschap betreft een generalisatie-specialisatie constructie |
+
+|RDFS term | MIM-aspect | Uitleg |
+|----------|-------------|--------|
+| rdfs:label of sh:name als rdfs:label ontbreekt | mim:naam | Het rdfs:label (of sh:name als het label ontbreekt) van een nodeshape of class betreft de naam |
+| skos:altLabel of sh:name | mim:alias | skos:altLabel is letterlijk een alias, sh:name is ook een alias en wordt met name gebruikt voor meer technische namen, terwijl skos:altLabel vaak een meer functionele naam bevat. |
+| dct:subject | mim:begrip | dct:subject geeft dezelfde relatie weer als mim:begrip |
+| rdfs:comment | mim:definitie | rdfs:comment wordt in de praktijk gebruikt op de manier als de mim:definitie. Merk op dat skos:definition hier niet wordt toegepast, omdat vanuit het MIM aanbevolen wordt om hiervoor een afzonderlijk begrippenkader op te stellen (via dct:subject / mim:begrip)|
+| sh:minCount en sh:maxCount | mim:kardinaliteit | De kardinaliteit wordt bepaald door sh:minCount en sh:maxCount |
+| sh:datatype | mim:type | Voor eenvoudige (data)type wordt sh:datatype gebruikt |
+| sh:node | mim:type | Indien het datatype een gestructureerd datatype of enumeratie betreft, dan betreft de sh:node de relatie naar het datatype |
+| sh:maxLength | mim:lengte | Identieke betekenis |
+| sh:pattern | mim:formeelPatroon | Identieke betekenis |
+| sh:class | mim:doel | Indien een propertyshape een relatiesoort voorstelt, dan geeft sh:class het doel van de relatiesoort weer |
+
+Er zijn ook MIM aspecten die niet een overeenkomstige tegenhanger kennen in RDFS/OWL/SHACL. Indien een modelleur deze aspecten wel wil beschrijven in het originele RDFS/OWL/SHACL model, dan kan de modelleur deze direct toepassen. Het gaat daarbij om de volgende aspecten:
+
+| MIM-aspect zonder tegenhanger in RDFS/OWL/SHACL | Opmerking |
+|-------------------------------------------------|-----------|
+| mim:begripsterm | Het wordt afgeraden om dit element te gebruiken, en in plaats daarvan direct te verwijzen naar het begrip zelf |
+| mim:toelichting | Het wordt afgeraden om dit element te gebruiken, en dergelijke toelichtingen op te nemen bij het begrip zelf |
+| mim:herkomst | Het wordt afgeraden om dit element te gebruiken, en dergelijke toelichtingen op te nemen bij het begrip zelf |
+| mim:herkomstDefinitie | Het wordt afgeraden om dit element te gebruiken, en dergelijke toelichtingen op te nemen bij het begrip zelf |
+| mim:datumOpname | Indien de ontologie onder versiebeheer staat, dan kan dit aspect afgeleid worden uit het versiesysteem |
+| mim:authentiek | Specifiek MIM aspect, belangrijk voor stelselcatalogus |
+| mim:identicatieAfleidbaar | |
+| mim:locatie | |
+| mim:patroon | Dit betreft een tekstuele variant van sh:pattern / mim:formeelPatroon |
+| mim:uniekeAanduiding | |
+| mim:populatie | Specifiek MIM aspect, belangrijk voor stelselcatalogus |
+| mim:kwaliteit | Specifiek MIM aspect, belangrijk voor stelselcatalogus |
+| mim:indicatieAbstractObject | Het concept van abstract object is minder scherp in LD dan in het MIM. Hoewel deze indicatie is om te zetten in een expliciete constraint, zal het in de praktijk makkelijker leesbaar zijn om dit aspect expliciet op te nemen |
+| mim:identificerend | In LD is de URI zelf de identificatie. Met dit aspect kan aangegeven worden dat specifieke propertyshapes ook identificerend zijn |
+| mim:aggregatietype | Het aggregatietype zoals beoogd in het MIM is niet direct in RDFS/OWL/SHACL uit te drukken en kan zo alsnog worden toegelicht bij een propertyshape |
+| mim:specificatieTekst | Het gebruik van dit aspect ligt niet voor de hand, zie de opmerking onder deze tabel |
+| mim:specificatieFormeel | Het gebruik van dit aspect ligt niet voor de hand, zie de opmerking onder deze tabel |
+| mim:constraint | Het gebruik van dit aspect ligt niet voor de hand, zie de opmerking onder deze tabel |
