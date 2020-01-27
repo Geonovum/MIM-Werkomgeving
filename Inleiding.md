@@ -285,7 +285,7 @@ werkelijkheid op een specifiek tijdsmoment vormen.
 De informatiemodellen waarover we het hier in dit document hebben bevinden zich
 op de M1-laag.
 
-Dit metamodel is een uitbreiding op het UML metamodel (M2). Het UML metamodel is
+Dit metamodel is een UML profiel op basis van het UML metamodel (M2). Het UML metamodel is
 daarbij uitgebreid met speciale elementen, die geen onderdeel uitmaken van het
 basale UML-metamodel (M2). Deze nieuwe elementen zijn noodzakelijk voor het
 definiëren van de semantiek en syntax van de modelconstructies zoals we die in
@@ -298,6 +298,12 @@ InfrastructureLibrary) kunnen bestaande metaclasses uitgebreid worden zonder dat
 er nieuwe metaclasses gedefinieerd hoeven te worden en dus zonder aanpassing van
 het basale UML-metamodel (M2). De extensiemechanismen hiervoor zijn stereotypes,
 tagged values en constraints.
+
+Nadrukkelijk moet daarbij worden vermeld dat het MIM metamodel **geen** semantiek overneemt van UML.
+Met het uitdrukken van het MIM metamodel in een UML profiel wordt het alleen mogelijk
+gemaakt om, zonder verlies van de originele semantiek van het MIM, een MIM model uit
+te drukken in UML. Met dit gebruik van een UML profiel volgen wij het gebruik van een UML profiel
+zoals de OMG zelf heeft op gesteld voor het Ontology Definition Metamodel [[!ODM]]: "*The goal of a UML profile from the ODM perspective is to provide a bridge between the UML and knowledge representation communities on a well-grounded, semantic basis, with a broader goal of relating software and logical approaches to representing information. Profiles facilitate implementation using common notation on existing UML tools. They support renaming and specializing UML model elements in consistent ways, so that an instance of a UML model can be seen as an extended metamodel. Profiles allow a developer to leverage UML experience and tools while moving to integrating with an ontology represented in another metamodel.*" (sectie 8.4.2).
 
 ### Uitdrukken in Linked Data
 
