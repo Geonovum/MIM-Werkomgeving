@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="windows-1252"?>
 <UMLProfile profiletype="uml2">
-	<Documentation id="4A1612D4-A" name="MIM_Keuzebasis" version="1.0" notes="MIM_Keuzebasis"/>
+	<Documentation id="4A1612D4-A" name="MIM_Keuzebasis" version="1.1" notes="MIM Keuzebasis"/>
 	<Content>
 		<Stereotypes>
 			<Stereotype name="Keuze" notes="Gestructureerd datatype, waarmee wordt aangegeven dat er maar één van de eigenschappen van dit datatype mogelijk is in een instantie van dit datatype." cx="0" cy="0" bgcolor="16777164" fontcolor="0" bordercolor="0" borderwidth="1" hideicon="0">
@@ -8,6 +8,7 @@
 					<Apply type="DataType"/>
 				</AppliesTo>
 				<TaggedValues>
+					<Tag name="Begrip" type="" description="Verwijzing naar een begrip. De verwijzing heeft de vorm van een term of een URI." unit="" values="" default=""/>
 					<Tag name="Herkomst" type="" description="De registratie of het informatiemodel waaraan het informatie-element ontleend is dan wel de eigen organisatie indien het door de eigen organisatie toegevoegd is." unit="" values="" default=""/>
 					<Tag name="Datum opname" type="" description="De datum waarop het informatie-element is opgenomen in het informatiemodel." unit="" values="" default=""/>
 					<Tag name="Toelichting" type="" description="Een inhoudelijke toelichting op het informatie-element." unit="" values="" default="&lt;memo&gt;"/>

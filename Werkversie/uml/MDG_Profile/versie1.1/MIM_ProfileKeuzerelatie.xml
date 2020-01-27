@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="windows-1252"?>
 <UMLProfile profiletype="uml2">
-	<Documentation id="EE6A2E72-5" name="MIM_Keuzerelatie" version="1.0" notes="MIM_Keuzerelatie"/>
+	<Documentation id="EE6A2E72-5" name="MIM_Keuzerelatie" version="1.1" notes="MIM Keuzerelatie"/>
 	<Content>
 		<Stereotypes>
 			<Stereotype name="Keuze" notes="Een element van een Keuze waarmee een keuze uit datatypen wordt gespecificeerd. Alleen toepasbaar bij een klasse met het stereotype Keuze." cx="0" cy="0" bgcolor="14480885" fontcolor="0" bordercolor="0" borderwidth="1" hideicon="0">
