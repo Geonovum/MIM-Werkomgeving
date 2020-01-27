@@ -48,10 +48,8 @@ mim:Gegevensgroeptype a owl:Class;
 # Relaties
 mim:Generalisatie a owl:Class;
   rdfs:label "Generalisatie"@nl;
-  rdfs:comment "De typering van het hiërarchische verband tussen een meer generiek object van een objecttype en een meer specifiek object van een ander objecttype waarbij het laatstgenoemde object eigenschappen van het eerstgenoemde object overerft."@nl;
-  rdfs:comment "De typering van het hiërarchische verband tussen een meer generieke structuur van data in de vorm van een datatype, en een meer specifieke structuur van data in de vorm van een ander datatype, waarbij het laatstgenoemde datatype de eigenschappen van het eerstgenoemde datatype overerft, én een verbijzondering hierin aanbrengt in de vorm van een meer restrictieve definitie, of een meer restrictief patroon/formeel patroon.";
+  rdfs:comment "De typering van het hiërarchische verband tussen een meer generiek en een meer specifiek modelelement van hetzelfde soort, waarbij het meer specifieke modelelement eigenschappen van het meer generieke modelelement overerft. Generalisatie is gedefinieerd voor de modelelementen ObjectType en Datatype."@nl;
   dct:source mimdoc:sectie2.2.2-5-Generalisatie;
-  #ISSUE: Meerdere definities
 .
 mim:Relatiesoort a owl:Class;
   rdfs:label "Relatiesoort"@nl;
@@ -98,19 +96,18 @@ mim:Enumeratiewaarde a owl:Class;
   rdfs:comment "Een gedefinieerde waarde, in de vorm van een eenmalig vastgesteld constant gegeven."@nl;
   dct:source mimdoc:sectie2.2.3-13-Enumeratiewaarde;
 .
-mim:Codelist a owl:Class;
+mim:Codelijst a owl:Class;
   rdfs:subClassOf mim:Datatype;
-  rdfs:label "Codelist"@nl;
+  rdfs:label "Codelijst"@nl;
   rdfs:comment "Een referentielijst die extern wordt beheerd, en geen onderdeel is van het informatiemodel"@nl;
-  rdfs:comment "De definitie van een codelist is gelijk aan de definitie van een referentielijst."@nl;
-  dct:source mimdoc:sectie2.2.3-14-Codelist;
+  rdfs:comment "De definitie van een codelijst is gelijk aan de definitie van een referentielijst."@nl;
+  dct:source mimdoc:sectie2.2.3-14-Codelijst;
 .
 
 # Datatypen
 mim:Datatype a owl:Class;
   rdfs:label "Datatype"@nl;
-  rdfs:comment "Een datatype"; #In het brondocument wordt geen definitieve gegeven van het abstracte datatype
-  #ISSUE: Niet gedefinieerd
+  rdfs:comment "Een datatype is een modelelement die de structuur beschrijft waaraan een waarde moet voldoen";
 .
 mim:PrimitiefDatatype a owl:Class;
   rdfs:subClassOf mim:Datatype;
@@ -324,10 +321,7 @@ mim:kwaliteit a owl:DatatypeProperty;
 .
 mim:indicatieAbstractObject a owl:DatatypeProperty;
   rdfs:label "indicatie abstract object"@nl;
-  rdfs:comment "Conceptueel model: indicatie dat het objecttype een generalisatie is, waarvan een object als specialisatie altijd voorkomt in de hoedanigheid van een (en slechts één) van de specialisaties van het betreffende objecttype."@nl;
-  rdfs:comment "Logisch model: Indicatie dat er geen instanties (objecten) voor het betreffende objecttype mogen voorkomen."@nl;
-  # ISSUE: Twee definities, dan zijn het andere dingen?
-  # ISSUE: Er is een afhankelijkheid met "Identificerend"
+  rdfs:comment "Indicatie dat het objecttype een generalisatie is, waarvan een object als specialisatie altijd voorkomt in de hoedanigheid van een (en slechts één) van de specialisaties van het betreffende objecttype."@nl;
 .
 
 # Bij Attribuutsoort (komt ook terug bij referentie-element)
@@ -345,35 +339,20 @@ mim:gegevensgroeptype a owl:ObjectProperty;
 
 # Bij Relatiesoort en/of Externe koppeling
 mim:unidirectioneel a owl:DatatypeProperty;
-  rdfs:label "uni-directioneel"@nl;
-  # Relatiesoort
-  rdfs:comment "Het gerelateerde objecttype (de target) waarvan het objecttype, die de eigenaar is van deze relatie (de source), kennis heeft."@nl;
-  # Externe koppeling
-  rdfs:comment "Het gerelateerde objecttype uit een extern informatiemodel (de target) waarvan het objecttype die de eigenaar van deze relatie is (de source) kennis heeft. Het aggregation type van de source is altijd 'composition'. Alle relaties zijn altijd gericht van het objecttype (source) naar het gerelateerde objecttype (target)."@nl;
+  rdfs:label "unidirectioneel"@nl;
+  rdfs:comment "De richting van een relatie, welke betekenis geeft aan de relatie vanuit het perspectief van de eigenaar van de relatie."@nl;
 .
 mim:bron a owl:ObjectProperty;
   rdfs:label "bron";
-  # Relatiesoort
-  rdfs:comment "Het objecttype waarvan de relatie een eigenschap is."@nl;
-  # Externe koppeling
-  rdfs:comment "Het objecttype waarvan de relatie een eigenschap is."@nl;
+  rdfs:comment "Aanduiding van het bronobject in een relatie tussen objecten. Een bronoject heeft middels een relatiesoort een relatie met een doelobject."@nl;
 .
-mim:gerelateerdObjecttype a owl:ObjectProperty;
-  rdfs:label "gerelateerd objecttype";
-  # Relatiesoort
-  rdfs:comment "Het objecttype waarmee een objecttype een logisch verband heeft"@nl;
-  # Generalisatie (objecttype)
-  rdfs:comment "Het objecttype dat de generalisatie is van een (ander) objecttype."@nl;
-  # Externe koppeling
-  rdfs:comment "Het objecttype uit een extern informatiemodel waarmee een objecttype een logische verbinding heeft."@nl;
+mim:doel a owl:ObjectProperty;
+  rdfs:label "doel";
+  rdfs:comment "Aanduiding van het gerelateerde objecttype die het eindpunt van de relatie aangeeft. Naar objecten van dit objecttype wordt verwezen."@nl;
 .
-mim:typeAggregatie a owl:ObjectProperty;
-  rdfs:label "type aggregatie";
-  # Relatiesoort
-  rdfs:comment "Standaard betreft het geen aggregatie (None). Het type aggregatie mag 'composite' zijn. Dit wordt gedaan als er een afhankelijkheid is in die zin dat de target niet kan bestaan zonder de source: de target vervalt als de source vervalt."@nl;
-  # Externe koppeling
-  # Eigenlijk geen definitie, maar dit is wat er in het brondocument staat...
-  rdfs:comment "Aanduiding dat het een compositie relatie is. Waarde is altijd Composite bij externe koppeling."@nl;
+mim:Aggregatietype a owl:ObjectProperty;
+  rdfs:label "aggregatietype"@nl;
+  rdfs:comment "Aanduiding of het objecttype die de eigenaar is van een relatie het doel van relatie ziet als een samen te voegen onderdeel."@nl;
 .
 
 # Generalisatie
@@ -417,6 +396,9 @@ mim:constraint a owl:ObjectProperty;
 .
 mim:element a owl:ObjectProperty;
   rdfs:label "element"@nl;
+.
+mim:relatierol a owl:ObjectProperty;
+  rdfs:label "relatierol"@nl;
 .
 
 #
@@ -475,7 +457,7 @@ mim:URI a mim:PrimitiefDatatype;
   mim:definitie "Unieke identificatie op internet conform RFC3986 en de URI-strategie Linked Open Data. Gestandaardiseerde manier om op het internet dingen (pagina's met informatie, objecten, datasets) uniek te identificeren."@nl;
 .
 
-# type aggregaties
+# Aggregatietypen
 mim:Aggregatietypen a skos:ConceptScheme;
   rdfs:label "Aggregatietypen";
   rdfs:comment "Aggregatietypen conform UML";
