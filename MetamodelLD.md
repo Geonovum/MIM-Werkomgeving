@@ -32,7 +32,7 @@ vbo:Schip a rdfs:Class;
 vb:Pakjesboot12 a vbo:Schip.
 </pre>
 
-De transformatie van het MIM model naar deze RDF ontologie is opgenomen in [sectie 6.4](#transformatie-van-een-mim-model-naar-een-rdf-model).
+De transformatie van het MIM model naar deze RDF ontologie is opgenomen in [sectie 6.4](#transformatie-mim-rdfs-owl-shacl).
 
 ## Structuur metamodel in LD
 
@@ -692,4 +692,4 @@ Het metamodel van MIM is specifiek voor het MIM opgesteld. Hiervoor zijn niet di
 
 1. Modelleurs kunnen een MIM model met behulp van Enterprise Architect opstellen. Er is een tool *Imvertor*, waarmee het mogelijk is om een MIM Model opgesteld in Enterprise Architect te transformeren naar een Linked Data model. Deze tool is open source en is te vinden op [www.imvertor.org](http://www.imvertor.org).
 
-2. Modelleurs kunnen ook direct in een Linked Data model (in OWL en SHACL) opstellen. Een dergelijk model kan, indien het voldoet aan de transformatieregels, gezien worden als een MIM informatiemodel. Om expliciet de link naar het MIM duidelijk te maken, kan gebruik worden gemaakt van deze [SPARQL constructieregels](media/mim2rdf.sparql), die feitelijk de terugvertaling uitvoeren zoals beschreven in [sectie 6.4](#transformatie-van-een-mim-model-naar-een-rdf-model). Er zijn diverse tools beschikbaar om een dergelijk model op te stellen. De meest bekende tools zijn [Protege](https://protege.stanford.edu) (open source), [Topbraid Composer](https://www.topquadrant.com/topbraid-composer-install/) en [Poolparty](https://www.poolparty.biz) (de laatste twee zijn commerciële producten). Daarnaast zijn er ook veel modelleurs die gebruik maken van generieke IDE's voor het maken van Linked Data modellen, vaak op basis van de voor mensen leesbare [Turtle syntax](https://www.w3.org/TR/turtle).
+2. Modelleurs kunnen ook direct in een Linked Data model (in OWL en SHACL) opstellen. Een dergelijk model kan, indien het voldoet aan de transformatieregels, gezien worden als een MIM informatiemodel. Om expliciet de link naar het MIM duidelijk te maken, kan gebruik worden gemaakt van deze [SPARQL constructieregels](media/rdf2mim.sparql), die feitelijk de terugvertaling uitvoeren zoals beschreven in [sectie 6.4](#transformatie-mim-rdfs-owl-shacl). Er zijn diverse tools beschikbaar om een dergelijk model op te stellen. De meest bekende tools zijn [Protege](https://protege.stanford.edu) (open source), [Topbraid Composer](https://www.topquadrant.com/topbraid-composer-install/) en [Poolparty](https://www.poolparty.biz) (de laatste twee zijn commerciële producten). Daarnaast zijn er ook veel modelleurs die gebruik maken van generieke IDE's voor het maken van Linked Data modellen, vaak op basis van de voor mensen leesbare [Turtle syntax](https://www.w3.org/TR/turtle).

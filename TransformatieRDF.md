@@ -1435,7 +1435,7 @@ WHERE {
 
 Een Linked Data model dat is uitgedrukt in RDFS/OWL/SHACL kan gelezen worden als een MIM model. Hiervoor dient het model wel eerste getransformeerd te worden naar de MIM vocabulaire. Vervolgens dient het resultaat te voldoen aan de minimale eisen die worden gesteld aan een MIM vocabulaire.
 
-Onderstaande tabel geeft een overzicht van de wijze waarop de vertaling plaatsvindt. Naast deze tabel is ook een set van SPARQL statement beschikbaar gesteld (zie: [rdf2mim.sparql](media/rdf2mim.sparql)) waarmee de transformatie automatisch kan worden uitgevoerd.
+Onderstaande tabellen geeft een overzicht van de wijze waarop de vertaling plaatsvindt. Naast deze tabel is ook een set van SPARQL statement beschikbaar gesteld (zie: [rdf2mim.sparql](media/rdf2mim.sparql)) waarmee de transformatie automatisch kan worden uitgevoerd.
 
 |RDFS term | MIM-klasse | Uitleg |
 |----------|-------------|--------|
@@ -1446,6 +1446,8 @@ Onderstaande tabel geeft een overzicht van de wijze waarop de vertaling plaatsvi
 | sh:PropertyShape met sh:class | mim:Relatiesoort | Een propertyshape met een verwijzing naar een andere klasse betreft een relatiesoort |
 | sh:NodeShape gelinkt aan skos:inScheme of skos:member | mim:Referentielijst | Een nodeshape die gelinkt is aan een skos:ConceptScheme of skos:Collection betreft een referentielijst |
 | rdfs:subClassOf | mim:Generalisatie | De rdfs:subClassOf eigenschap betreft een generalisatie-specialisatie constructie |
+
+Aspecten:
 
 |RDFS term | MIM-aspect | Uitleg |
 |----------|-------------|--------|
@@ -1470,7 +1472,7 @@ Er zijn ook MIM aspecten die niet een overeenkomstige tegenhanger kennen in RDFS
 | mim:herkomstDefinitie | Het wordt afgeraden om dit element te gebruiken, en dergelijke toelichtingen op te nemen bij het begrip zelf |
 | mim:datumOpname | Indien de ontologie onder versiebeheer staat, dan kan dit aspect afgeleid worden uit het versiesysteem |
 | mim:authentiek | Specifiek MIM aspect, belangrijk voor stelselcatalogus |
-| mim:identicatieAfleidbaar | |
+| mim:identificatieAfleidbaar | |
 | mim:locatie | |
 | mim:patroon | Dit betreft een tekstuele variant van sh:pattern / mim:formeelPatroon |
 | mim:uniekeAanduiding | |
