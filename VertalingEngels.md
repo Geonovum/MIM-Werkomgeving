@@ -33,7 +33,7 @@ Kolom Reden waarden:
 |  ST     |	Referentie element  			|	ReferenceElement				|  Vertaling	|
 |  ST     |	Enumeratie  					|	Enumeration						|  Vertaling	|
 |  ST     |	Enumeratiewaarde  				|	Enum							|  Vertaling	|
-|  ST     |	CodeList  						|	*CodeList*  (ISO 19103)     	|   	-		|
+|  ST     |	CodeLijst  						|	*CodeList*  (ISO 19103)     	|   	-		|
 |  ST     |	Datatype	  					|   SimpleType						|  Vertaling en precisering |
 |  ST     |	Complex datatype  				|	ComplexType					  	|  Vertaling	|
 |  ST     |	Data element  					|	DataElement						|  Vertaling	|
