@@ -98,7 +98,7 @@ View 2: Datatypen. Deze bestaat uit de volgende modelelementen:
 | Enumeratiewaarde        |
 | Referentielijst         |
 | Referentie element      |
-| Codelist                |
+| Codelijst                |
 
 De betekenis van deze modelelementen en de beschrijvingen ervan staat in [Datatypen](#datatypen-0). 
 
@@ -346,7 +346,7 @@ definiëren](#datatype-zelf-definieren)), zoals een CharacterString Postcode, of
 een NietNegatiefGetal.
 
 Deze generalisatie is van toepassing op de volgende datatypes: «Primitief
-datatype», «Gestructureerd datatype», «Referentielijst», «Codelist»,
+datatype», «Gestructureerd datatype», «Referentielijst», «Codelijst»,
 «Enumeratie».
 
 #### Relatiesoort
@@ -480,26 +480,26 @@ De waarde van de data zelf. Bijvoorbeeld: Plein, Brug, Spoor, M (man).
 Alleen deze waarde mag gebruiken worden. 
 
 
-#### Stereotype Codelist
+#### Stereotype Codelijst
 
->   **Definitie Codelist**  
->   De definitie van een codelist is gelijk aan de definitie van een referentielijst.
+>   **Definitie Codelijst**  
+>   De definitie van een codelijst is gelijk aan de definitie van een referentielijst.
 
 Er is wel een verschil in modellering; zie hiervoor de toelichting.
 
-*Toelichting:* Zowel referentielijsten als codelists zijn in feite
+*Toelichting:* Zowel referentielijsten als codelijsten zijn in feite
 waardenlijsten. In tegenstelling echter tot de referentielijst wordt een
-codelist *niet* in het informatiemodel beschreven, omdat de definitie en
+codelijst *niet* in het informatiemodel beschreven, omdat de definitie en
 semantiek geheel in de externe waardenlijst staat en niet (nader) geduid hoeft
-te worden in het informatiemodel zelf. Een codelist heeft in het informatiemodel
+te worden in het informatiemodel zelf. Een codelijst heeft in het informatiemodel
 daarom geen attributen (en zou voor de definitie alleen hoeven te refereren naar
 de definitie bij de extern gepubliceerde waardenlijst, maar voor het gemak is de
 definitie wel opgenomen als metagegeven in dit metamodel). De extern
 gepubliceerde waardenlijst bevat, naast gewone attributen, ook altijd één
 specifiek attribuut, met daarin de domeinwaarden die gebruikt mogen/moeten
-worden in de registratie. In het gebruik is een Codelist daarom analoog aan een
+worden in de registratie. In het gebruik is een Codelijst daarom analoog aan een
 Enumeratie. Welk specifiek attribuut dit is en wat de betekenis daarvan is staat
-in de codelist zelf gedefinieerd.
+in de codelijst zelf gedefinieerd.
 
 ### Datatypen
 
@@ -1264,7 +1264,7 @@ Bijvoorbeeld: 'http://www.organisatie.nl/schemas/waardelijsten/NaamWaardelijst'
 Dit is altijd conform een datatype uit dit metamodel (of een extensie ervan) of
 een primitief datatype die extern is aan dit model. Betreft het een waarde uit
 een dynamische waardentabel, dan wordt de naam van de desbetreffende
-referentielijst of codelist als type vermeld. Indien het een waarde uit een
+referentielijst of codelijst als type vermeld. Indien het een waarde uit een
 statische opsomming van waarden betreft, dan wordt de naam van de desbetreffende
 enumeratie als type vermeld.
 

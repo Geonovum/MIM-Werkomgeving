@@ -79,7 +79,7 @@ View 2: Datatypen
 | Enumeratiewaarde        | \-                      | (UML) EnumerationLiteral | EnumerationLiteral |
 | Referentielijst         | «Referentielijst»       | (UML) Datatype           | Datatype           |
 | Referentie element      | «Referentie element»    | (UML) Property           | Attribute          |
-| Codelist                | «Codelist»              | (UML) Datatype           | Datatype           |
+| Codelijst               | «Codelijst»             | (UML) Datatype           | Datatype           |
 
 *Nadere specificaties voor datatypen*
 
@@ -477,7 +477,7 @@ De referentie-elementen worden naar de volgende aspecten gespecificeerd:
 
 **Specificatie voor «codeList»**
 
-Voor codelist worden de volgende aspecten gespecificeerd:
+Voor codelijst worden de volgende aspecten gespecificeerd:
 
 | **Aspect**       | **Kardinaliteit** | **Toelichting**                                                                                                                                                                                                                                  | **In UML 2.5**                        | **In EA**      |
 |------------------|-------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------|----------------|

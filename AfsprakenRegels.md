@@ -109,7 +109,7 @@ toegestaan: [0-9]{4}.
 #### Datatype zelf definiëren
 
 Het is ook mogelijk om in het eigen informatiemodel een eigen datatype te
-definiëren in de vorm van een «Primitief datatype», «Codelist» of
+definiëren in de vorm van een «Primitief datatype», «Codelijst» of
 «Referentielijst». Zelf gedefinieerde datatypes hebben altijd een eigen
 definitie en optioneel een eigen patroon of formeel patroon.
 
@@ -332,7 +332,7 @@ een enumeratie naamgebruik opgenomen met als waarden onder meer ‘eigen’ en
 ‘eigen, partner’.
 
 Als sprake is van dynamiek in de domeinwaarden wordt een **Referentielijst** of
-**Codelist** gebruikt. Dit betreft de situaties waarin domeinwaarden kunnen
+**Codelijst** gebruikt. Dit betreft de situaties waarin domeinwaarden kunnen
 veranderen en/of het aantal domeinwaarden kan toe- of afnemen. De registratie en
 bijbehorende koppelvlakken worden dan ingericht om hier mee om te gaan. Dit
 wordt vooral toegepast bij lijsten die vaker aan verandering onderhevig zijn.
@@ -363,7 +363,7 @@ waarvan de specifieke waardelijsten overerven. Het metagegeven locatie is immers
 specifiek voor één waardelijst en moet per individuele waardelijst vastgelegd
 worden.
 
-**CodeList** Gebruik een codelist als in het informatiemodel de attributen,
+**CodeList** Gebruik een codelijst als in het informatiemodel de attributen,
 zoals bij een referentielijst, niet relevant zijn en je voor de definitie alleen
 wilt verwijzen naar de externe waardelijst.
 
