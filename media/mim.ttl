@@ -317,7 +317,7 @@ mim:populatie a owl:DatatypeProperty;
 .
 mim:kwaliteit a owl:DatatypeProperty;
   rdfs:label "kwaliteit"@nl;
-  rdfs:comment "Voor objecttypen die deel uitmaken van een registratie betreft dit de waarborgen voor de juistheid van de in de registratie opgenomen objecten van het desbetreffende type."@nl;
+  rdfs:comment "Beschrijving van de mate waarin in de registratie opgenomen objecten van het desbetreffende type volledig, juist, actueel, nauwkeurig en betrouwbaar zijn."@nl;
 .
 mim:indicatieAbstractObject a owl:DatatypeProperty;
   rdfs:label "indicatie abstract object"@nl;

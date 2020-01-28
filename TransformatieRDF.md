@@ -1220,7 +1220,7 @@ WHERE {
 </pre>
 
 ### kwaliteit
-> Voor objecttypen die deel uitmaken van een registratie betreft dit de waarborgen voor de juistheid van de in de registratie opgenomen objecten van het desbetreffende type.
+> Beschrijving van de mate waarin in de registratie opgenomen objecten van het desbetreffende type volledig, juist, actueel, nauwkeurig en betrouwbaar zijn.
 
 Een `mim:kwaliteit` wordt direct, zonder aanpassing, overgenomen in het vertaalde model.
 

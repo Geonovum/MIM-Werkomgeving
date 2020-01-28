@@ -24,9 +24,9 @@ informatiemodel gemodelleerd als een extensie van een Metaclass van UML 2.5 en e
 stereotype.
 
 <aside class='note'>
-Het MIM modelelement Objecttype wordt gemodelleerd als een UML-Class met 
-stereotype «Objecttype». 
- 
+Het MIM modelelement Objecttype wordt gemodelleerd als een UML-Class met
+stereotype «Objecttype».
+
 Niet alle MIM metaclasses hebben een stereotype (nodig). In de kolom staat dan ‘-‘.
 </aside>
 
@@ -35,8 +35,8 @@ Niet alle MIM metaclasses hebben een stereotype (nodig). In de kolom staat dan �
 | Objecttype        | «Objecttype»   | (UML) Class            | Class           |
 
 De links kolom bevat het MIM modelelement, zoals bedoeld in het hoofdstuk [Metamodel Algemeen].
-De 2e en 3e kolom bevatten de uitdrukking van het MIM in UML, versie 2.5. 
-De 2e en 4e kolom bevatten de uitdrukking van het MIM in Sparx Enterprise Architect. Deze gebruikt Class (i.p.v. UML-Class). Deze UML tool is (uiteraard) geen onderdeel van de MIM specificatie. Het is zeker niet verplicht om deze te gebruiken, u kunt uw eigen tool gebruiken. Deze kolom staat erbij om illustratief aan te geven dat het soms nodig kan zijn om, afhankelijk van de tool, net iets specifieker aan te geven hoe het MIM in de tool exact uitgedrukt wordt. 
+De 2e en 3e kolom bevatten de uitdrukking van het MIM in UML, versie 2.5.
+De 2e en 4e kolom bevatten de uitdrukking van het MIM in Sparx Enterprise Architect. Deze gebruikt Class (i.p.v. UML-Class). Deze UML tool is (uiteraard) geen onderdeel van de MIM specificatie. Het is zeker niet verplicht om deze te gebruiken, u kunt uw eigen tool gebruiken. Deze kolom staat erbij om illustratief aan te geven dat het soms nodig kan zijn om, afhankelijk van de tool, net iets specifieker aan te geven hoe het MIM in de tool exact uitgedrukt wordt.
 
 Bijna alle hebben een UML-metaclass (UML 2.5) als basis, deze is dan aangegeven als ‘blauw gekleurde’ metaclasse. Dit is
 ook opgenomen in diagramvorm, in de bijlage [Template naamgeving
@@ -176,11 +176,11 @@ De alternatieve weergave van de naam.
 
 Verdere toelichting voor UML modellen:
 -   De alias is te specificeren voor NamedElements (zoals UML-Class, ML-association, UML-UML-Datatype en
-UML-property). De alias is in UML gespecificeerd bij de metaclass **Element Import]**. 
-Element import wordt in UML ingezet voor het importeren van een NamedElement uit een ander package. 
+UML-property). De alias is in UML gespecificeerd bij de metaclass **Element Import]**.
+Element import wordt in UML ingezet voor het importeren van een NamedElement uit een ander package.
 In dit metamodel wordt de alias (nog) niet zo gebruikt.  
 
-In Enterprise Architect is de alternatieve weergave aan te zetten in de properties van een Diagram, 
+In Enterprise Architect is de alternatieve weergave aan te zetten in de properties van een Diagram,
 via: use alias if available.
 
 
@@ -193,24 +193,24 @@ Als een relatiesoort identificerend is, dan krijgt dit kenmerk in UML een
 stereotype «id»
 
 <pre class='note'>
-In de hierna volgende paragrafen worden de metagegevens per modelelement gespecificeerd 
+In de hierna volgende paragrafen worden de metagegevens per modelelement gespecificeerd
 in tabellen. Per metagegeven zijn de volgdende onderdelen gespecificeerd:
 - Aspect: Het benoemde metagegeven. Met aanduiding √ is conform stelselafspraken voor
-basisregistraties. Een \* is conform de stelselcatalogus. Zie ook de paragraaf in H3 
+basisregistraties. Een \* is conform de stelselcatalogus. Zie ook de paragraaf in H3
 hierover.  
-- Kardinaliteit: Aantal maal dat een metagegeven opgenomen kan worden bij dit 
+- Kardinaliteit: Aantal maal dat een metagegeven opgenomen kan worden bij dit
 modelelement.
 - Toelichting:*Nadere uitleg over het metagegeven.
-- In UML 2.5: De naam waarmee het het metagegeven in UML2.5 is benoemd. Het betreft 
-veelal overerving van een metagegeven van een UML metaclass die niet in dit document 
+- In UML 2.5: De naam waarmee het het metagegeven in UML2.5 is benoemd. Het betreft
+veelal overerving van een metagegeven van een UML metaclass die niet in dit document
 is benoemd.
 - In EA: Aanduiding hoe het metagegeven in Sparx Enterprise Architect (EA) is aangegeven.
-Rode tekst betreft een standaardelement binnen EA. Zwarte tekst in de kolom betreft 
+Rode tekst betreft een standaardelement binnen EA. Zwarte tekst in de kolom betreft
 een uitbreiding op het UML Metamodel, via tagged values of aanvullende stereotypes.
 </pre>
 
 ### Modellering metagegevens voor objecten en attributen in UML
- 
+
 
 **Specificatie voor «Objecttype»**
 
@@ -227,7 +227,7 @@ De objecttypen worden naar de volgende aspecten gespecificeerd:
 | **Datum opname**                | 1                 | Algemeen metagegeven.                                                                                                                                                                                                                                                                                                                    |                                          | *Tagged value*                                                                                                                                                  |
 | **Unieke aanduiding√**          | 1                 | Voor objecttypen die deel uitmaken van een (basis)registratie of informatiemodel betreft dit de wijze waarop daarin voorkomende objecten (van dit type) uniek in de registratie worden aangeduid.                                                                                                                                        | *-*                                      | *isId bij attribuutsoort, --- of --- stereotype «isId» bij target role relatiesoort --- of --- een combinatie van deze twee, elk hiervan meer keren toepasbaar* |
 | **Populatie√**                  | 0..1              | Voor objecttypen die deel uitmaken van een (basis)registratie betreft dit de beschrijving van de exemplaren van het gedefinieerde objecttype die in de desbetreffende (basis)­registratie voorhanden zijn.                                                                                                                               |                                          | *Tagged value*                                                                                                                                                  |
-| **Kwaliteit√**                  | 0..1              | Voor objecttypen die deel uitmaken van een registratie betreft dit de waarborgen voor de juistheid van de in de registratie opgenomen objecten van het desbetreffende type.                                                                                                                                                              |                                          | *Tagged value*                                                                                                                                                  |
+| **Kwaliteit√**                  | 0..1              | Beschrijving van de mate waarin in de registratie opgenomen objecten van het desbetreffende type volledig, juist, actueel, nauwkeurig en betrouwbaar zijn.                                                                                                                                                              |                                          | *Tagged value*                                                                                                                                                  |
 | **Toelichting√**                | 0..1              | Algemeen metagegeven.                                                                                                                                                                                                                                                                                                                    |                                          | *Tagged value*                                                                                                                                                  |
 | **Indicatie abstract object**   | 1                 | Conceptueel model: indicatie dat het objecttype een generalisatie is, waarvan een object als specialisatie altijd voorkomt in de hoedanigheid van een (en slechts één) van de specialisaties van het betreffende objecttype. Logisch model: Indicatie dat er geen instanties (objecten) voor het betreffende objecttype mogen voorkomen. | *isAbstract bij de metaclass Classifier* | *Abstract*                                                                                                                                                      |
 
