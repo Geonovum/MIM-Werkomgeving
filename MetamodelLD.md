@@ -334,7 +334,7 @@ De relatiesoorten worden naar de volgende aspecten gespecificeerd.
 | Unidirectioneel              | [`mim:unidirectioneel`](http://bp4mc2.org/def/mim#unidirectioneel) | 1 | boolean |
 | Bron                         | [`mim:bron`](http://bp4mc2.org/def/mim#bron) | 1 | [`mim:Objecttype`](http://bp4mc2.org/def/mim#Objecttype) |
 | Doel                         | [`mim:doel`](http://bp4mc2.org/def/mim#doel) | 1 | [`mim:Objecttype`](http://bp4mc2.org/def/mim#Objecttype) |
-| Type aggregatie              | [`mim:typeAggregatie`](http://bp4mc2.org/def/mim#typeAggregatie) | 1 | Aggregatietype |
+| Aggregatietype               | [`mim:aggregatietype`](http://bp4mc2.org/def/mim#aggregatietype) | 1 | Aggregatietype |
 | Kardinaliteit                | [`mim:kardinaliteit`](http://bp4mc2.org/def/mim#kardinaliteit) | 1 | tekst |
 | Herkomst                     | [`mim:herkomst`](http://bp4mc2.org/def/mim#herkomst) | 1 | tekst |
 | Definitie                    | [`mim:definitie`](http://bp4mc2.org/def/mim#definitie) | 1 | tekst |
@@ -347,7 +347,7 @@ De relatiesoorten worden naar de volgende aspecten gespecificeerd.
 | Indicatie afleidbaar         | [`mim:indicatieAfleidbaar`](http://bp4mc2.org/def/mim#indicatieAfleidbaar) | 1 | boolean |
 | Mogelijk geen waarde         | [`mim:mogelijkGeenWaarde`](http://bp4mc2.org/def/mim#mogelijkGeenWaarde) | 1 | boolean |
 
-Het veld `mim:typeAggregatie` verwijst naar één van de volgende mogelijke waarden:
+Het veld `mim:aggregatietype` verwijst naar één van de volgende mogelijke waarden:
 
 | **Aggregatietype** | **Definitie** |
 |--------------------|---------------|
@@ -461,7 +461,7 @@ Externe koppelingen worden naar de volgende aspecten gespecificeerd.
 | Datum opname                 | [`mim:datumOpname`](http://bp4mc2.org/def/mim#datumOpname) | 1 | datum |
 | Bron                         | [`mim:bron`](http://bp4mc2.org/def/mim#bron) | 1 | [`mim:Objecttype`](http://bp4mc2.org/def/mim#Objecttype) |
 | Doel                         | [`mim:doel`](http://bp4mc2.org/def/mim#doel) | 1 | [`mim:Objecttype`](http://bp4mc2.org/def/mim#Objecttype) |
-| Type aggregatie              | [`mim:typeAggregatie`](http://bp4mc2.org/def/mim#typeAggregatie) | 1 | Aggregatietype |
+| Aggregatietype               | [`mim:aggregatietype`](http://bp4mc2.org/def/mim#aggregatietype) | 1 | Aggregatietype |
 | Unidirectioneel              | [`mim:unidirectioneel`](http://bp4mc2.org/def/mim#unidirectioneel) | 1 | boolean |
 
 ### Specificatie metagegevens voor waardenlijsten
