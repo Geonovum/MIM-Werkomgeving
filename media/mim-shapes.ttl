@@ -96,6 +96,9 @@ shape:Gegevensgroeptype a sh:NodeShape;
   sh:property shape:alias;
   sh:property shape:begrip;
   sh:property shape:begripsterm;
+  sh:property shape:definitie_optioneel;
+  sh:property shape:herkomstDefinitie_optioneel;
+  sh:property shape:toelichting;
   sh:property shape:datumOpname;
   #ISSUE: Elementen hieronder komen niet in de tabel voor
   sh:property shape:attribuut;
@@ -489,6 +492,14 @@ shape:herkomstDefinitie a sh:PropertyShape;
   sh:name "mim:herkomstDefinitie";
   sh:order 6;
   sh:minCount 1;
+  sh:maxCount 1;
+  sh:datatype xsd:string;
+.
+# In enkele gevallen wordt de herkomstDefinitie-property ook optioneel gebruikt
+shape:herkomstDefinitie_optioneel a sh:PropertyShape;
+  sh:path mim:herkomstDefinitie;
+  sh:name "mim:herkomstDefinitie";
+  sh:order 6;
   sh:maxCount 1;
   sh:datatype xsd:string;
 .
