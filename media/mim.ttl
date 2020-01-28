@@ -518,11 +518,6 @@ mim:LandelijkKerngegeven a skos:Concept;
   skos:prefLabel "Landelijk kerngegeven";
   skos:definition "Indien het een gegeven of een als relatiesoort gemodelleerd gegeven is in een landelijk sector- en domein-overstijgend informatiemodel en geen authentiek gegeven en geen basisgegeven is."@nl;
 .
-mim:GemeentelijkKerngegeven a skos:Concept;
-  skos:inScheme mim:Authenticiteit;
-  rdfs:label "Gemeentelijk kerngegeven";
-  skos:prefLabel "Gemeentelijk kerngegeven";
-.
 mim:OverigeAuthenticiteit a skos:Concept;
   skos:inScheme mim:Authenticiteit;
   rdfs:label "Overige authenticiteit";
