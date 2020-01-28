@@ -91,7 +91,7 @@ Als prefix wordt voor de vocabulaire gebruik gemaakt van `mim`, met de namespace
 | Enumeratiewaarde        | [`mim:Enumeratiewaarde`](http://bp4mc2.org/def/mim#Enumeratiewaarde) | shape:Enumeratiewaarde |
 | Referentielijst         | [`mim:Referentielijst`](http://bp4mc2.org/def/mim#Referentielijst) | shape:Referentielijst |
 | Referentie element      | [`mim:ReferentieElement`](http://bp4mc2.org/def/mim#ReferentieElement) | shape:ReferentieElement |
-| Codelist                | [`mim:Codelist`](http://bp4mc2.org/def/mim#Codelist) | shape:Codelist |
+| Codelijst                | [`mim:Codelijst`](http://bp4mc2.org/def/mim#Codelijst) | shape:Codelijst |
 
 ### Overige
 
@@ -504,9 +504,9 @@ De referentie-elementen worden naar de volgende aspecten gespecificeerd:
 | Identificerend               | [`mim:identificerend`](http://bp4mc2.org/def/mim#identificerend) | 0..1 | tekst |
 | Toelichting                  | [`mim:toelichting`](http://bp4mc2.org/def/mim#toelichting) | 0..1 | tekst |
 
-**Specificatie voor mim:codeList**
+**Specificatie voor mim:codeLijst**
 
-Voor codelist worden de volgende aspecten gespecificeerd:
+Voor codelijst worden de volgende aspecten gespecificeerd:
 
 | **Aspect**                   | **Eigenschap** | **Kardinaliteit** | **Datatype of klasse** |
 |------------------------------|----------------|-------------------|--------------|

@@ -92,7 +92,7 @@ Onderstaande tabellen geven een overzicht van alle transformaties en een referen
 |`mim:ReferentieElement`|n.n.b.|[Referentie-element](#referentie-element)|
 |`mim:Enumeratie`|n.n.b.|[Enumeratie](#enumeratie)|
 |`mim:Enumeratiewaarde`|n.n.b.|[Enumeratiewaarde](#enumeratiewaarde)|
-|`mim:Codelist`|n.n.b.|[Codelist](#codelist)|
+|`mim:Codelijst`|n.n.b.|[Codelijst](#codelijst)|
 |`mim:Datatype`|n.v.t.|Abstracte klasse|
 |`mim:PrimitiefDatatype`|`rdfs:Datatype`|[Primitief datatype](#primitief-datatype)|
 |`mim:GestructureerdDatatype`|`sh:NodeShape`|[Gestructureerd datatype](#gestructureerd-datatype)|
@@ -523,7 +523,7 @@ In de Inspire RDF Guidelines wordt voorgeschreven om een enumeratie te modellere
 
 > Een gedefinieerde waarde, in de vorm van een eenmalig vastgesteld constant gegeven.
 
-### Codelist
+### Codelijst
 
 > Een referentielijst die extern wordt beheerd, en geen onderdeel is van het informatiemodel.
 
