@@ -416,21 +416,26 @@ u contact opnemen met de MIM helpdesk van Geonovum: mim@geonovum.nl
 
 ### Normreferenties
 
-| \#  | Naam                                         | **Referentie** |
-|-----|----------------------------------------------|----------------|
-| 1.  | Unified Modeling Language (UML)              | [[!UML]]       |
-| 2.  | OMG Unified Modeling Language TM versie 2.5  | [[!OMG]]       |
-| 3.  | Stelselcatalogus                             | [[!SCAT]]      |
-| 4.  | GAB                                          | [[!GAB]]       |
-| 5.  | Handreiking gegevensbeschrijving (NORA)      | [[!NORA]]      |
-| 6.  | ISO 11404                                    | [[!iso-11404]] |
-| 7.  | ISO 8601                                     | [[!iso-8601]]  |
-| 8.  | Formeel patroon (Reguliere Expressies)       | [[!REGEXP]]    |
-| 9.  | OCL                                          | [[!OCL]]       |
-| 10. | NEN 3610/A1:2016 Basismodel Geo-informatie   | [[!NEN3610]]   |
+| \#  | Naam                                                | **Referentie** |
+|-----|-----------------------------------------------------|----------------|
+| 1.  | Unified Modeling Language (UML)                     | [[!UML]]       |
+| 2.  | OMG Unified Modeling Language TM versie 2.5         | [[!OMG]]       |
+| 3.  | Stelselcatalogus                                    | [[!SCAT]]      |
+| 4.  | GAB                                                 | [[!GAB]]       |
+| 5.  | Handreiking gegevensbeschrijving (NORA)             | [[!NORA]]      |
+| 6.  | ISO 11404                                           | [[!iso-11404]] |
+| 7.  | ISO 8601                                            | [[!iso-8601]]  |
+| 8.  | Formeel patroon (Reguliere Expressies)              | [[!REGEXP]]    |
+| 9.  | OCL                                                 | [[!OCL]]       |
+| 10. | NEN 3610 Basismodel Geo-informatie (vanaf /A1:2016) | [[!NEN3610]]   |
 
 De Stelselcatalogus [[!SCAT]], het GAB [[!GAB]] en de Handreiking gegevensbeschrijving
 [[!NORA]] raken elkaar op een aantal vlakken maar er kunnen op deze raakvlaken verschillen zijn
 in de gemaakte afspraken. Voor het metamodel hanteren we daarom de volgende spelregel:
 de Stelselcatalogus is zoveel als mogelijk leidend, vervolgens het GAB en als
 laatste de handreiking.
+
+<aside class='note'>
+    Als er nieuwe versies uitkomen van de genoemde normreferenties wordt gecheckt of er impact is op het MIM
+    die impact wordt verwerkt in MIM zodat MIM 'upward compatible' is en blijft. 
+</aside>
