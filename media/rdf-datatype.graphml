@@ -48,6 +48,30 @@ mim:identificerend (boolean) [0,1]<y:LabelModel><y:ErdAttributesNodeLabelModel/>
       </data>
     </node>
     <node id="n1">
+      <data key="d3" xml:space="preserve"><![CDATA[http://bp4mc2.org/def/mim-shapes#Codelijst]]></data>
+      <data key="d4"/>
+      <data key="d5">
+        <y:GenericNode configuration="com.yworks.entityRelationship.big_entity">
+          <y:Geometry height="157.0" width="200.0" x="611.7300146848278" y="1118.6448598130842"/>
+          <y:Fill color="#E8EEF7" color2="#B7C9E3" transparent="false"/>
+          <y:BorderStyle color="#000000" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="node_width" configuration="CroppingLabel" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="20.1328125" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="t" textColor="#000000" verticalTextPosition="bottom" visible="true" width="200.0" x="0.0" xml:space="preserve" y="4.0">mim:Codelijst</y:NodeLabel>
+          <y:NodeLabel alignment="left" autoSizePolicy="node_width" fontFamily="Dialog" fontSize="10" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="109.99609375" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="200.0" x="2.0" xml:space="preserve" y="32.1328125">mim:naam (string) [1,1]
+mim:alias (string) [0,1]
+mim:begrip → skos:Concept [0,n]
+mim:begripsterm (string) [0,n]
+mim:herkomst (string) [1,1]
+mim:definitie (string) [1,1]
+mim:datumOpname (date) [1,1]
+mim:toelichting (string) [0,1]
+mim:locatie (string) [1,1]<y:LabelModel><y:ErdAttributesNodeLabelModel/></y:LabelModel><y:ModelParameter><y:ErdAttributesNodeLabelModelParameter/></y:ModelParameter></y:NodeLabel>
+          <y:StyleProperties>
+            <y:Property class="java.lang.Boolean" name="y.view.ShadowNodePainter.SHADOW_PAINTING" value="true"/>
+          </y:StyleProperties>
+        </y:GenericNode>
+      </data>
+    </node>
+    <node id="n2">
       <data key="d3" xml:space="preserve"><![CDATA[http://bp4mc2.org/def/mim-shapes#DataElement]]></data>
       <data key="d4"/>
       <data key="d5">
@@ -71,7 +95,7 @@ mim:kardinaliteit (string) [1,1]<y:LabelModel><y:ErdAttributesNodeLabelModel/></
         </y:GenericNode>
       </data>
     </node>
-    <node id="n2">
+    <node id="n3">
       <data key="d3" xml:space="preserve"><![CDATA[http://bp4mc2.org/def/mim-shapes#Datatype]]></data>
       <data key="d4"/>
       <data key="d5">
@@ -94,7 +118,30 @@ mim:kardinaliteit (string) [1,1]<y:LabelModel><y:ErdAttributesNodeLabelModel/></
         </y:GenericNode>
       </data>
     </node>
-    <node id="n3">
+    <node id="n4">
+      <data key="d3" xml:space="preserve"><![CDATA[http://bp4mc2.org/def/mim-shapes#Datatype]]></data>
+      <data key="d4"/>
+      <data key="d5">
+        <y:GenericNode configuration="com.yworks.entityRelationship.big_entity">
+          <y:Geometry height="144.0" width="200.0" x="641.8544094258194" y="1401.0801068090786"/>
+          <y:Fill color="#E8EEF7" color2="#B7C9E3" transparent="false"/>
+          <y:BorderStyle color="#000000" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="node_width" configuration="CroppingLabel" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="20.1328125" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="t" textColor="#000000" verticalTextPosition="bottom" visible="true" width="200.0" x="0.0" xml:space="preserve" y="4.0">mim:Datatype</y:NodeLabel>
+          <y:NodeLabel alignment="left" autoSizePolicy="node_width" fontFamily="Dialog" fontSize="10" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" hasText="false" height="4.0" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="200.0" x="2.0" y="32.1328125">
+            <y:LabelModel>
+              <y:ErdAttributesNodeLabelModel/>
+            </y:LabelModel>
+            <y:ModelParameter>
+              <y:ErdAttributesNodeLabelModelParameter/>
+            </y:ModelParameter>
+          </y:NodeLabel>
+          <y:StyleProperties>
+            <y:Property class="java.lang.Boolean" name="y.view.ShadowNodePainter.SHADOW_PAINTING" value="true"/>
+          </y:StyleProperties>
+        </y:GenericNode>
+      </data>
+    </node>
+    <node id="n5">
       <data key="d3" xml:space="preserve"><![CDATA[http://bp4mc2.org/def/mim-shapes#Enumeratie]]></data>
       <data key="d4"/>
       <data key="d5">
@@ -111,7 +158,7 @@ mim:definitie (string) [1,1]<y:LabelModel><y:ErdAttributesNodeLabelModel/></y:La
         </y:GenericNode>
       </data>
     </node>
-    <node id="n4">
+    <node id="n6">
       <data key="d3" xml:space="preserve"><![CDATA[http://bp4mc2.org/def/mim-shapes#Enumeratiewaarde]]></data>
       <data key="d4"/>
       <data key="d5">
@@ -131,7 +178,7 @@ mim:code (string) [0,1]<y:LabelModel><y:ErdAttributesNodeLabelModel/></y:LabelMo
         </y:GenericNode>
       </data>
     </node>
-    <node id="n5">
+    <node id="n7">
       <data key="d3" xml:space="preserve"><![CDATA[http://bp4mc2.org/def/mim-shapes#Generalisatie]]></data>
       <data key="d4"/>
       <data key="d5">
@@ -150,7 +197,7 @@ mim:begripsterm (string) [0,n]<y:LabelModel><y:ErdAttributesNodeLabelModel/></y:
         </y:GenericNode>
       </data>
     </node>
-    <node id="n6">
+    <node id="n8">
       <data key="d3" xml:space="preserve"><![CDATA[http://bp4mc2.org/def/mim-shapes#GestructureerdDatatype]]></data>
       <data key="d4"/>
       <data key="d5">
@@ -174,7 +221,35 @@ mim:formeelPatroon (string) [0,1]<y:LabelModel><y:ErdAttributesNodeLabelModel/><
         </y:GenericNode>
       </data>
     </node>
-    <node id="n7">
+    <node id="n9">
+      <data key="d3" xml:space="preserve"><![CDATA[http://bp4mc2.org/def/mim-shapes#Objecttype]]></data>
+      <data key="d4"/>
+      <data key="d5">
+        <y:GenericNode configuration="com.yworks.entityRelationship.big_entity">
+          <y:Geometry height="209.0" width="221.2386776035521" x="1113.62725119902" y="1401.0801068090786"/>
+          <y:Fill color="#E8EEF7" color2="#B7C9E3" transparent="false"/>
+          <y:BorderStyle color="#000000" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="node_width" configuration="CroppingLabel" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="20.1328125" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="t" textColor="#000000" verticalTextPosition="bottom" visible="true" width="221.2386776035521" x="0.0" xml:space="preserve" y="4.0">mim:Objecttype</y:NodeLabel>
+          <y:NodeLabel alignment="left" autoSizePolicy="node_width" fontFamily="Dialog" fontSize="10" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="157.10546875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="221.2386776035521" x="2.0" xml:space="preserve" y="32.1328125">mim:naam (string) [1,1]
+mim:alias (string) [0,1]
+mim:begrip → skos:Concept [0,n]
+mim:begripsterm (string) [0,n]
+mim:herkomst (string) [1,1]
+mim:definitie (string) [1,1]
+mim:herkomstDefinitie (string) [1,1]
+mim:datumOpname (date) [1,1]
+mim:uniekeAanduiding (string) [1,1]
+mim:populatie (string) [0,1]
+mim:kwaliteit (string) [0,1]
+mim:toelichting (string) [0,1]
+mim:indicatieAbstractObject (boolean) [1,1]<y:LabelModel><y:ErdAttributesNodeLabelModel/></y:LabelModel><y:ModelParameter><y:ErdAttributesNodeLabelModelParameter/></y:ModelParameter></y:NodeLabel>
+          <y:StyleProperties>
+            <y:Property class="java.lang.Boolean" name="y.view.ShadowNodePainter.SHADOW_PAINTING" value="true"/>
+          </y:StyleProperties>
+        </y:GenericNode>
+      </data>
+    </node>
+    <node id="n10">
       <data key="d3" xml:space="preserve"><![CDATA[http://bp4mc2.org/def/mim-shapes#PrimitiefDatatype]]></data>
       <data key="d4"/>
       <data key="d5">
@@ -199,7 +274,7 @@ mim:formeelPatroon (string) [0,1]<y:LabelModel><y:ErdAttributesNodeLabelModel/><
         </y:GenericNode>
       </data>
     </node>
-    <node id="n8">
+    <node id="n11">
       <data key="d3" xml:space="preserve"><![CDATA[http://bp4mc2.org/def/mim-shapes#ReferentieElement]]></data>
       <data key="d4"/>
       <data key="d5">
@@ -226,7 +301,7 @@ mim:identificerend (boolean) [0,1]<y:LabelModel><y:ErdAttributesNodeLabelModel/>
         </y:GenericNode>
       </data>
     </node>
-    <node id="n9">
+    <node id="n12">
       <data key="d3" xml:space="preserve"><![CDATA[http://bp4mc2.org/def/mim-shapes#Referentielijst]]></data>
       <data key="d4"/>
       <data key="d5">
@@ -250,37 +325,7 @@ mim:locatie (string) [1,1]<y:LabelModel><y:ErdAttributesNodeLabelModel/></y:Labe
         </y:GenericNode>
       </data>
     </node>
-    <node id="n10">
-      <data key="d3" xml:space="preserve"><![CDATA[http://bp4mc2.org/def/mim-shapes#Relatiesoort]]></data>
-      <data key="d4"/>
-      <data key="d5">
-        <y:GenericNode configuration="com.yworks.entityRelationship.big_entity">
-          <y:Geometry height="235.0" width="232.10790401942654" x="1113.62725119902" y="1401.0801068090786"/>
-          <y:Fill color="#E8EEF7" color2="#B7C9E3" transparent="false"/>
-          <y:BorderStyle color="#000000" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="node_width" configuration="CroppingLabel" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="20.1328125" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="t" textColor="#000000" verticalTextPosition="bottom" visible="true" width="232.10790401942654" x="0.0" xml:space="preserve" y="4.0">mim:Relatiesoort</y:NodeLabel>
-          <y:NodeLabel alignment="left" autoSizePolicy="node_width" fontFamily="Dialog" fontSize="10" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="180.66015625" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="232.10790401942654" x="2.0" xml:space="preserve" y="32.1328125">mim:naam (string) [1,1]
-mim:alias (string) [0,1]
-mim:begrip → skos:Concept [0,n]
-mim:begripsterm (string) [0,n]
-mim:herkomst (string) [1,1]
-mim:definitie (string) [1,1]
-mim:herkomstDefinitie (string) [1,1]
-mim:datumOpname (date) [1,1]
-mim:toelichting (string) [0,1]
-mim:indicatieMaterieleHistorie (boolean) [1,1]
-mim:indicatieFormeleHistorie (boolean) [1,1]
-mim:kardinaliteit (string) [1,1]
-mim:indicatieAfleidbaar (boolean) [1,1]
-mim:mogelijkGeenWaarde (boolean) [1,1]
-mim:unidirectioneel (boolean) [1,1]<y:LabelModel><y:ErdAttributesNodeLabelModel/></y:LabelModel><y:ModelParameter><y:ErdAttributesNodeLabelModelParameter/></y:ModelParameter></y:NodeLabel>
-          <y:StyleProperties>
-            <y:Property class="java.lang.Boolean" name="y.view.ShadowNodePainter.SHADOW_PAINTING" value="true"/>
-          </y:StyleProperties>
-        </y:GenericNode>
-      </data>
-    </node>
-    <node id="n11">
+    <node id="n13">
       <data key="d3" xml:space="preserve"><![CDATA[http://bp4mc2.org/def/mim-shapes#Union]]></data>
       <data key="d4"/>
       <data key="d5">
@@ -302,7 +347,7 @@ mim:datumOpname (date) [1,1]<y:LabelModel><y:ErdAttributesNodeLabelModel/></y:La
         </y:GenericNode>
       </data>
     </node>
-    <node id="n12">
+    <node id="n14">
       <data key="d3" xml:space="preserve"><![CDATA[http://bp4mc2.org/def/mim#supertype?shape=http%3A%2F%2Fbp4mc2.org%2Fdef%2Fmim-shapes%23supertype&logic=xone]]></data>
       <data key="d4"/>
       <data key="d5">
@@ -315,7 +360,7 @@ mim:datumOpname (date) [1,1]<y:LabelModel><y:ErdAttributesNodeLabelModel/></y:La
         </y:ShapeNode>
       </data>
     </node>
-    <node id="n13">
+    <node id="n15">
       <data key="d3" xml:space="preserve"><![CDATA[http://bp4mc2.org/def/mim#subtype?shape=http%3A%2F%2Fbp4mc2.org%2Fdef%2Fmim-shapes%23subtype&logic=xone]]></data>
       <data key="d4"/>
       <data key="d5">
@@ -328,54 +373,7 @@ mim:datumOpname (date) [1,1]<y:LabelModel><y:ErdAttributesNodeLabelModel/></y:La
         </y:ShapeNode>
       </data>
     </node>
-    <node id="n14">
-      <data key="d3" xml:space="preserve"><![CDATA[http://bp4mc2.org/def/mim-shapes#Codelijst]]></data>
-      <data key="d4"/>
-      <data key="d5">
-        <y:GenericNode configuration="com.yworks.entityRelationship.big_entity">
-          <y:Geometry height="157.0" width="200.0" x="611.7300146848278" y="1118.6448598130842"/>
-          <y:Fill color="#E8EEF7" color2="#B7C9E3" transparent="false"/>
-          <y:BorderStyle color="#000000" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="node_width" configuration="CroppingLabel" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="20.1328125" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="t" textColor="#000000" verticalTextPosition="bottom" visible="true" width="200.0" x="0.0" xml:space="preserve" y="4.0">mim:Codelijst</y:NodeLabel>
-          <y:NodeLabel alignment="left" autoSizePolicy="node_width" fontFamily="Dialog" fontSize="10" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="109.99609375" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="200.0" x="2.0" xml:space="preserve" y="32.1328125">mim:naam (string) [1,1]
-mim:alias (string) [0,1]
-mim:begrip → skos:Concept [0,n]
-mim:begripsterm (string) [0,n]
-mim:herkomst (string) [1,1]
-mim:definitie (string) [1,1]
-mim:datumOpname (date) [1,1]
-mim:toelichting (string) [0,1]
-mim:locatie (string) [1,1]<y:LabelModel><y:ErdAttributesNodeLabelModel/></y:LabelModel><y:ModelParameter><y:ErdAttributesNodeLabelModelParameter/></y:ModelParameter></y:NodeLabel>
-          <y:StyleProperties>
-            <y:Property class="java.lang.Boolean" name="y.view.ShadowNodePainter.SHADOW_PAINTING" value="true"/>
-          </y:StyleProperties>
-        </y:GenericNode>
-      </data>
-    </node>
-    <node id="n15">
-      <data key="d3" xml:space="preserve"><![CDATA[http://bp4mc2.org/def/mim-shapes#Datatype]]></data>
-      <data key="d4"/>
-      <data key="d5">
-        <y:GenericNode configuration="com.yworks.entityRelationship.big_entity">
-          <y:Geometry height="144.0" width="200.0" x="641.8544094258193" y="1401.0801068090786"/>
-          <y:Fill color="#E8EEF7" color2="#B7C9E3" transparent="false"/>
-          <y:BorderStyle color="#000000" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="node_width" configuration="CroppingLabel" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="20.1328125" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="t" textColor="#000000" verticalTextPosition="bottom" visible="true" width="200.0" x="0.0" xml:space="preserve" y="4.0">mim:Datatype</y:NodeLabel>
-          <y:NodeLabel alignment="left" autoSizePolicy="node_width" fontFamily="Dialog" fontSize="10" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" hasText="false" height="4.0" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="200.0" x="2.0" y="32.1328125">
-            <y:LabelModel>
-              <y:ErdAttributesNodeLabelModel/>
-            </y:LabelModel>
-            <y:ModelParameter>
-              <y:ErdAttributesNodeLabelModelParameter/>
-            </y:ModelParameter>
-          </y:NodeLabel>
-          <y:StyleProperties>
-            <y:Property class="java.lang.Boolean" name="y.view.ShadowNodePainter.SHADOW_PAINTING" value="true"/>
-          </y:StyleProperties>
-        </y:GenericNode>
-      </data>
-    </node>
-    <edge id="e0" source="n12" target="n2">
+    <edge id="e0" source="n14" target="n3">
       <data key="d7" xml:space="preserve"><![CDATA[http://bp4mc2.org/def/mim#supertype?shape=http%3A%2F%2Fbp4mc2.org%2Fdef%2Fmim-shapes%23supertype&logic=xone]]></data>
       <data key="d8" xml:space="preserve"><![CDATA[http://bp4mc2.org/def/mim-shapes#Datatype]]></data>
       <data key="d10"/>
@@ -388,7 +386,7 @@ mim:locatie (string) [1,1]<y:LabelModel><y:ErdAttributesNodeLabelModel/></y:Labe
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e1" source="n13" target="n2">
+    <edge id="e1" source="n15" target="n3">
       <data key="d7" xml:space="preserve"><![CDATA[http://bp4mc2.org/def/mim#subtype?shape=http%3A%2F%2Fbp4mc2.org%2Fdef%2Fmim-shapes%23subtype&logic=xone]]></data>
       <data key="d8" xml:space="preserve"><![CDATA[http://bp4mc2.org/def/mim-shapes#Datatype]]></data>
       <data key="d10"/>
@@ -401,7 +399,7 @@ mim:locatie (string) [1,1]<y:LabelModel><y:ErdAttributesNodeLabelModel/></y:Labe
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e2" source="n1" target="n2">
+    <edge id="e2" source="n2" target="n3">
       <data key="d7" xml:space="preserve"><![CDATA[http://bp4mc2.org/def/mim-shapes#DataElement]]></data>
       <data key="d8" xml:space="preserve"><![CDATA[http://bp4mc2.org/def/mim-shapes#Datatype]]></data>
       <data key="d9" xml:space="preserve"><![CDATA[http://bp4mc2.org/def/mim#type]]></data>
@@ -419,7 +417,7 @@ mim:locatie (string) [1,1]<y:LabelModel><y:ErdAttributesNodeLabelModel/></y:Labe
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e3" source="n3" target="n4">
+    <edge id="e3" source="n5" target="n6">
       <data key="d7" xml:space="preserve"><![CDATA[http://bp4mc2.org/def/mim-shapes#Enumeratie]]></data>
       <data key="d8" xml:space="preserve"><![CDATA[http://bp4mc2.org/def/mim-shapes#Enumeratiewaarde]]></data>
       <data key="d9" xml:space="preserve"><![CDATA[http://bp4mc2.org/def/mim#waarde]]></data>
@@ -434,7 +432,7 @@ mim:locatie (string) [1,1]<y:LabelModel><y:ErdAttributesNodeLabelModel/></y:Labe
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e4" source="n5" target="n12">
+    <edge id="e4" source="n7" target="n14">
       <data key="d7" xml:space="preserve"><![CDATA[http://bp4mc2.org/def/mim-shapes#Generalisatie]]></data>
       <data key="d8" xml:space="preserve"><![CDATA[http://bp4mc2.org/def/mim#supertype?shape=http%3A%2F%2Fbp4mc2.org%2Fdef%2Fmim-shapes%23supertype&logic=xone]]></data>
       <data key="d9" xml:space="preserve"><![CDATA[http://bp4mc2.org/def/mim#supertype]]></data>
@@ -449,7 +447,7 @@ mim:locatie (string) [1,1]<y:LabelModel><y:ErdAttributesNodeLabelModel/></y:Labe
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e5" source="n5" target="n13">
+    <edge id="e5" source="n7" target="n15">
       <data key="d7" xml:space="preserve"><![CDATA[http://bp4mc2.org/def/mim-shapes#Generalisatie]]></data>
       <data key="d8" xml:space="preserve"><![CDATA[http://bp4mc2.org/def/mim#subtype?shape=http%3A%2F%2Fbp4mc2.org%2Fdef%2Fmim-shapes%23subtype&logic=xone]]></data>
       <data key="d9" xml:space="preserve"><![CDATA[http://bp4mc2.org/def/mim#subtype]]></data>
@@ -464,7 +462,7 @@ mim:locatie (string) [1,1]<y:LabelModel><y:ErdAttributesNodeLabelModel/></y:Labe
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e6" source="n6" target="n1">
+    <edge id="e6" source="n8" target="n2">
       <data key="d7" xml:space="preserve"><![CDATA[http://bp4mc2.org/def/mim-shapes#GestructureerdDatatype]]></data>
       <data key="d8" xml:space="preserve"><![CDATA[http://bp4mc2.org/def/mim-shapes#DataElement]]></data>
       <data key="d9" xml:space="preserve"><![CDATA[http://bp4mc2.org/def/mim#element]]></data>
@@ -479,7 +477,7 @@ mim:locatie (string) [1,1]<y:LabelModel><y:ErdAttributesNodeLabelModel/></y:Labe
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e7" source="n8" target="n2">
+    <edge id="e7" source="n11" target="n3">
       <data key="d7" xml:space="preserve"><![CDATA[http://bp4mc2.org/def/mim-shapes#ReferentieElement]]></data>
       <data key="d8" xml:space="preserve"><![CDATA[http://bp4mc2.org/def/mim-shapes#Datatype]]></data>
       <data key="d9" xml:space="preserve"><![CDATA[http://bp4mc2.org/def/mim#type]]></data>
@@ -498,7 +496,7 @@ mim:locatie (string) [1,1]<y:LabelModel><y:ErdAttributesNodeLabelModel/></y:Labe
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e8" source="n9" target="n8">
+    <edge id="e8" source="n12" target="n11">
       <data key="d7" xml:space="preserve"><![CDATA[http://bp4mc2.org/def/mim-shapes#Referentielijst]]></data>
       <data key="d8" xml:space="preserve"><![CDATA[http://bp4mc2.org/def/mim-shapes#ReferentieElement]]></data>
       <data key="d9" xml:space="preserve"><![CDATA[http://bp4mc2.org/def/mim#element]]></data>
@@ -513,24 +511,24 @@ mim:locatie (string) [1,1]<y:LabelModel><y:ErdAttributesNodeLabelModel/></y:Labe
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e9" source="n11" target="n15">
+    <edge id="e9" source="n13" target="n4">
       <data key="d7" xml:space="preserve"><![CDATA[http://bp4mc2.org/def/mim-shapes#Union]]></data>
       <data key="d8" xml:space="preserve"><![CDATA[http://bp4mc2.org/def/mim-shapes#Datatype]]></data>
       <data key="d9" xml:space="preserve"><![CDATA[http://bp4mc2.org/def/mim#keuzedatatype]]></data>
       <data key="d10"/>
       <data key="d11">
         <y:PolyLineEdge>
-          <y:Path sx="0.0" sy="0.0" tx="-48.50620343675428" ty="38.35812585480471"/>
+          <y:Path sx="0.0" sy="0.0" tx="-38.84303635791571" ty="1.991646495536429"/>
           <y:LineStyle color="#000000" type="line" width="1.0"/>
           <y:Arrows source="none" target="standard"/>
-          <y:EdgeLabel alignment="center" backgroundColor="#FFFFFF" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasLineColor="false" height="18.1328125" horizontalTextPosition="center" iconTextGap="4" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" width="149.107421875" x="-156.07595132188908" xml:space="preserve" y="99.58182259799923">mim:keuzedatatype [2,n]<y:LabelModel><y:SmartEdgeLabelModel autoRotationEnabled="false" defaultAngle="0.0" defaultDistance="10.0"/></y:LabelModel><y:ModelParameter><y:SmartEdgeLabelModelParameter angle="0.0" distance="30.0" distanceToCenter="true" position="center" ratio="0.7232515870523102" segment="-1"/></y:ModelParameter><y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" frozen="true" placement="anywhere" side="anywhere" sideReference="relative_to_edge_flow"/></y:EdgeLabel>
+          <y:EdgeLabel alignment="center" backgroundColor="#FFFFFF" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasLineColor="false" height="18.1328125" horizontalTextPosition="center" iconTextGap="4" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" width="149.107421875" x="-162.5784264157437" xml:space="preserve" y="99.58694955112423">mim:keuzedatatype [2,n]<y:LabelModel><y:SmartEdgeLabelModel autoRotationEnabled="false" defaultAngle="0.0" defaultDistance="10.0"/></y:LabelModel><y:ModelParameter><y:SmartEdgeLabelModelParameter angle="0.0" distance="30.0" distanceToCenter="true" position="center" ratio="0.7232515870523102" segment="-1"/></y:ModelParameter><y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" frozen="true" placement="anywhere" side="anywhere" sideReference="relative_to_edge_flow"/></y:EdgeLabel>
           <y:BendStyle smoothed="false"/>
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e10" source="n11" target="n10">
+    <edge id="e10" source="n13" target="n9">
       <data key="d7" xml:space="preserve"><![CDATA[http://bp4mc2.org/def/mim-shapes#Union]]></data>
-      <data key="d8" xml:space="preserve"><![CDATA[http://bp4mc2.org/def/mim-shapes#Relatiesoort]]></data>
+      <data key="d8" xml:space="preserve"><![CDATA[http://bp4mc2.org/def/mim-shapes#Objecttype]]></data>
       <data key="d9" xml:space="preserve"><![CDATA[http://bp4mc2.org/def/mim#keuzerelatiedoel]]></data>
       <data key="d10"/>
       <data key="d11">
@@ -538,12 +536,12 @@ mim:locatie (string) [1,1]<y:LabelModel><y:ErdAttributesNodeLabelModel/></y:Labe
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
           <y:LineStyle color="#000000" type="line" width="1.0"/>
           <y:Arrows source="none" target="standard"/>
-          <y:EdgeLabel alignment="center" backgroundColor="#FFFFFF" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasLineColor="false" height="18.1328125" horizontalTextPosition="center" iconTextGap="4" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" width="160.228515625" x="11.785335726380481" xml:space="preserve" y="98.86078969510095">mim:keuzerelatiedoel [2,n]<y:LabelModel><y:SmartEdgeLabelModel autoRotationEnabled="false" defaultAngle="0.0" defaultDistance="10.0"/></y:LabelModel><y:ModelParameter><y:SmartEdgeLabelModelParameter angle="0.0" distance="30.0" distanceToCenter="true" position="center" ratio="0.7178266697551192" segment="-1"/></y:ModelParameter><y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" frozen="true" placement="anywhere" side="anywhere" sideReference="relative_to_edge_flow"/></y:EdgeLabel>
+          <y:EdgeLabel alignment="center" backgroundColor="#FFFFFF" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasLineColor="false" height="18.1328125" horizontalTextPosition="center" iconTextGap="4" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" width="160.228515625" x="14.579121165508013" xml:space="preserve" y="99.92378250780052">mim:keuzerelatiedoel [2,n]<y:LabelModel><y:SmartEdgeLabelModel autoRotationEnabled="false" defaultAngle="0.0" defaultDistance="10.0"/></y:LabelModel><y:ModelParameter><y:SmartEdgeLabelModelParameter angle="0.0" distance="30.0" distanceToCenter="true" position="center" ratio="0.7260074368235425" segment="-1"/></y:ModelParameter><y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" frozen="true" placement="anywhere" side="anywhere" sideReference="relative_to_edge_flow"/></y:EdgeLabel>
           <y:BendStyle smoothed="false"/>
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e11" source="n11" target="n0">
+    <edge id="e11" source="n13" target="n0">
       <data key="d7" xml:space="preserve"><![CDATA[http://bp4mc2.org/def/mim-shapes#Union]]></data>
       <data key="d8" xml:space="preserve"><![CDATA[http://bp4mc2.org/def/mim-shapes#Attribuutsoort]]></data>
       <data key="d9" xml:space="preserve"><![CDATA[http://bp4mc2.org/def/mim#keuzeattribuutsoort]]></data>
@@ -558,7 +556,7 @@ mim:locatie (string) [1,1]<y:LabelModel><y:ErdAttributesNodeLabelModel/></y:Labe
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e12" source="n14" target="n2">
+    <edge id="e12" source="n1" target="n3">
       <data key="d7" xml:space="preserve"><![CDATA[http://bp4mc2.org/def/mim-shapes#Codelijst]]></data>
       <data key="d8" xml:space="preserve"><![CDATA[http://bp4mc2.org/def/mim-shapes#Datatype]]></data>
       <data key="d10"/>
@@ -571,7 +569,7 @@ mim:locatie (string) [1,1]<y:LabelModel><y:ErdAttributesNodeLabelModel/></y:Labe
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e13" source="n3" target="n2">
+    <edge id="e13" source="n5" target="n3">
       <data key="d7" xml:space="preserve"><![CDATA[http://bp4mc2.org/def/mim-shapes#Enumeratie]]></data>
       <data key="d8" xml:space="preserve"><![CDATA[http://bp4mc2.org/def/mim-shapes#Datatype]]></data>
       <data key="d10"/>
@@ -584,7 +582,7 @@ mim:locatie (string) [1,1]<y:LabelModel><y:ErdAttributesNodeLabelModel/></y:Labe
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e14" source="n6" target="n2">
+    <edge id="e14" source="n8" target="n3">
       <data key="d7" xml:space="preserve"><![CDATA[http://bp4mc2.org/def/mim-shapes#GestructureerdDatatype]]></data>
       <data key="d8" xml:space="preserve"><![CDATA[http://bp4mc2.org/def/mim-shapes#Datatype]]></data>
       <data key="d10"/>
@@ -597,7 +595,7 @@ mim:locatie (string) [1,1]<y:LabelModel><y:ErdAttributesNodeLabelModel/></y:Labe
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e15" source="n7" target="n2">
+    <edge id="e15" source="n10" target="n3">
       <data key="d7" xml:space="preserve"><![CDATA[http://bp4mc2.org/def/mim-shapes#PrimitiefDatatype]]></data>
       <data key="d8" xml:space="preserve"><![CDATA[http://bp4mc2.org/def/mim-shapes#Datatype]]></data>
       <data key="d10"/>
@@ -610,7 +608,7 @@ mim:locatie (string) [1,1]<y:LabelModel><y:ErdAttributesNodeLabelModel/></y:Labe
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e16" source="n9" target="n2">
+    <edge id="e16" source="n12" target="n3">
       <data key="d7" xml:space="preserve"><![CDATA[http://bp4mc2.org/def/mim-shapes#Referentielijst]]></data>
       <data key="d8" xml:space="preserve"><![CDATA[http://bp4mc2.org/def/mim-shapes#Datatype]]></data>
       <data key="d10"/>
@@ -623,7 +621,7 @@ mim:locatie (string) [1,1]<y:LabelModel><y:ErdAttributesNodeLabelModel/></y:Labe
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e17" source="n11" target="n2">
+    <edge id="e17" source="n13" target="n3">
       <data key="d7" xml:space="preserve"><![CDATA[http://bp4mc2.org/def/mim-shapes#Union]]></data>
       <data key="d8" xml:space="preserve"><![CDATA[http://bp4mc2.org/def/mim-shapes#Datatype]]></data>
       <data key="d10"/>

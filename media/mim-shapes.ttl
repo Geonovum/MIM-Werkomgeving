@@ -755,7 +755,7 @@ shape:keuzerelatiedoel a sh:PropertyShape;
   sh:path mim:keuzerelatiedoel;
   sh:name "mim:keuzerelatiedoel";
   sh:order 34;
-  sh:class mim:Relatiesoort;
+  sh:class mim:Objecttype;
   sh:minCount 2;
 .
 
