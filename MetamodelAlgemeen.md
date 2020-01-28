@@ -192,7 +192,8 @@ Om duidelijk(er) te maken wat wordt bedoeld kijken we eerst naar het begrip ‘o
 >   Een ding, een tastbaar iets, in de werkelijkheid, zoals daarnaar gekeken
 >   wordt vanuit een bepaald domein.
 
-*Toelichting:* Het wordt veelal als niet politiek correct beschouwd mensen als
+*Toelichting:* Met in de werkelijkheid wordt bedoeld dat het om de daadwerkelijke onderwerpen van gesprek gaat, de verzameling van de concrete tastbare dingen waarover we het hebben. Bijvoorbeeld, de persoon Jan, Paleis 't Loo. 
+Het wordt veelal als niet politiek correct beschouwd mensen als
 objecten te zien. In dit kader, de informatievoorziening, beschouwen we evenwel
 natuurlijke en niet-natuurlijke personen wel als objecten. ‘Tastbaar’ moet
 hierbij ruim geïnterpreteerd worden. Het gaat niet alleen om fysiek herkenbare
@@ -206,7 +207,7 @@ onderscheidt. Een object is voor een domein relevant als eigenschappen
 (kenmerken) daarvan van belang zijn voor het functioneren van dat domein.
 
 >   **Definitie Objecttype**  
->   De typering van een groep objecten (in de werkelijkheid) die binnen een
+>   De typering van een groep objecten die binnen een
 >   domein relevant zijn en als gelijksoortig worden beschouwd.
 
 *Toelichting* Jan, Piet en Marie zijn mensen die vanuit het Burgerzaken-domein
@@ -219,7 +220,9 @@ getrouw mogelijk te beschrijven, binnen de context van het domein. Dit staat
 geheel los van het vastleggen van gegevens over objecten van een type in een
 registratie. Daartoe is veelal een interpretatie nodig (van die werkelijkheid
 cq. die objecttypen) naar eenheden die in een registratie vastgelegd kunnen
-worden (records, entiteiten e.d.) op basis van andere overwegingen.
+worden (records, entiteiten e.d.) op basis van andere overwegingen. 
+
+De objecten die in het beschouwde domein onderkend worden zijn zelf nooit abstract. Ze behoren altijd tot een concreet objecttype, en niet tot een abstract objecttype. Abstracte objecttypes worden wel gebruikt in de modellering, om generalisaties aan te duiden en de definitie. Zo kan bij het objecttype Pand bijvoorbeeld aangegeven worden dat dit een 'Element in de fysieke leefomgeving' is, en dat deze laatste als een abstract objecctype gezien moet worden (in ons domein). Meer over abstracte objecttypes is beschreven in [Abstracte objecttypes en concrete objecten].  
 
 #### Attribuutsoort en een groepering ervan   
 
