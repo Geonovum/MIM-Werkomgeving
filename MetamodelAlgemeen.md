@@ -427,12 +427,14 @@ waardenlijst.
 #### Referentielijst
 
 >   **Definitie Referentielijst**  
->   Een lijst met een opsomming van de mogelijke domeinwaarden van een
+>   De representatie van een lijst met een opsomming van de mogelijke domeinwaarden van een
 >   attribuutsoort, die buiten het model in een externe waardenlijst worden
 >   beheerd. De domeinwaarden in de lijst kunnen in de loop van de tijd
 >   aangepast, uitgebreid, of verwijderd worden, zonder dat het informatiemodel
 >   aangepast wordt (in tegenstelling tot bij een enumeratie).
+>   De representatie bevat een aantal kenmerken, die overgenomen zijn van de specificatie van de externe waardelijst. 
 
+*Toelichting:*
 De referentielijst bevat representaties van objecten, die in het informatiemodel
 niet als een objecttype onderwerp van gesprek zijn. De referentielijst wordt
 gebruikt als type van een attribuut van een object.
@@ -457,9 +459,10 @@ de registratie daarom (vaak) alleen een referentie naar een object uit de lijst.
 >   **Definitie Referentie element**  
 >   Een eigenschap van een object in een referentielijst in de vorm van een gegeven.
 
+*Toelichting:*
 Een referentie element kan uniek zijn, zoals een code, en is dan op zichzelf
 geschikt om gebruikt te worden als referentie (zoals bedoeld in de definitie van
-Referentielijst).
+Referentielijst). Bij het referentie element kan een definitie en toelichting worden opgenomen, die aangeven hoe de externe waardelijst in het eigen informatiemodel gebruikt wordt. 
 
 #### Enumeratie
 
@@ -483,9 +486,12 @@ Alleen deze waarde mag gebruiken worden.
 #### Stereotype Codelijst
 
 >   **Definitie Codelijst**  
->   De definitie van een codelijst is gelijk aan de definitie van een referentielijst.
-
-Er is wel een verschil in modellering; zie hiervoor de toelichting.
+>   De representatie van een lijst met een opsomming van de mogelijke domeinwaarden van een
+>   attribuutsoort, die buiten het model in een externe waardenlijst worden
+>   beheerd. De domeinwaarden in de lijst kunnen in de loop van de tijd
+>   aangepast, uitgebreid, of verwijderd worden, zonder dat het informatiemodel
+>   aangepast wordt (in tegenstelling tot bij een enumeratie).
+>   De representatie bevat geen kenmerken, voor alle kenmerken wordt verwezen naar de specificatie van de externe waardelijst. 
 
 *Toelichting:* Zowel referentielijsten als codelijsten zijn in feite
 waardenlijsten. In tegenstelling echter tot de referentielijst wordt een
