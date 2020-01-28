@@ -82,12 +82,11 @@ Als prefix wordt voor de vocabulaire gebruik gemaakt van `mim`, met de namespace
 
 | **MIM metaclass** | **Metaclass in RDF** | **Shape in RDF** |
 |-------------------|----------------------|------------------|
-| \-                      | [`mim:Datatype`](http://bp4mc2.org/def/mim#Datatype) | shape:Datatype |
+| Datatype                | [`mim:Datatype`](http://bp4mc2.org/def/mim#Datatype) | shape:Datatype |
 | Primitief datatype      | [`mim:PrimitiefDatatype`](http://bp4mc2.org/def/mim#PrimitiefDatatype) |shape:PrimitiefDatatype |
 | Gestructureerd datatype | [`mim:GestructuurdDatatype`](http://bp4mc2.org/def/mim#GestructuurdDatatype) | shape:GestructuurdDatatype |
 | Data element            | [`mim:DataElement`](http://bp4mc2.org/def/mim#DataElement) | shape:DataElement |
-| Union                   | [`mim:Union`](http://bp4mc2.org/def/mim#Union) | shape:Union |
-| Union element           | [`mim:UnionElement`](http://bp4mc2.org/def/mim#UnionElement) | shape:UnionElement |
+| Keuze                   | [`mim:Keuze`](http://bp4mc2.org/def/mim#Keuze) | shape:Keuze |
 | Enumeratie              | [`mim:Enumeratie`](http://bp4mc2.org/def/mim#Enumeratie) | shape:Enumeratie |
 | Enumeratiewaarde        | [`mim:Enumeratiewaarde`](http://bp4mc2.org/def/mim#Enumeratiewaarde) | shape:Enumeratiewaarde |
 | Referentielijst         | [`mim:Referentielijst`](http://bp4mc2.org/def/mim#Referentielijst) | shape:Referentielijst |
@@ -103,6 +102,23 @@ Als prefix wordt voor de vocabulaire gebruik gemaakt van `mim`, met de namespace
 | **MIM metaclass** | **Metaclass in RDF** | **Shape in RDF** |
 |-------------------|----------------------|------------------|
 | Constraint        | [`mim:Constraint`](http://bp4mc2.org/def/mim#Constraint) | shape:Constraint |
+
+*Keuze*
+
+![](media/rdf-keuze.png)
+
+De "keuze constructie" maakt een keuze mogelijk tussen meerdere attribuutsoorten, datatypen en relatiedoelen (objecttypen). Er mag aan één specifieke keuze maar één soort van deze drie worden verbonden. Indien dit datatype gekozen wordt voor een attribuutsoort of relatiedoel, dan heeft dit de volgende betekenis, afhankelijk van de verbonden soort:
+
+- Attribuutsoort: een keuze tussen attribuutsoorten **in plaats van** de attribuutsoort die deze keuze als datatype heeft;
+- Datatype: een keuze tussen datatypen **in plaats van** dit keuze datatype;
+- Relatiedoel: een keuze tussen objecttypen als relatiedoel **in plaats van** het doel van de relatieroltarget
+
+| **MIM metaclass** | **Metaclass in RDF** | **Shape in RDF** |
+|-------------------|----------------------|------------------|
+| Keuze             | [`mim:Keuze`](http://bp4mc2.org/def/mim#Keuze) | shape:Keuze |
+| Datatype          | [`mim:Datatype`](http://bp4mc2.org/def/mim#Datatype) | shape:Datatype |
+| Objecttype        | [`mim:Objecttype`](http://bp4mc2.org/def/mim#Objecttype) | shape:Objecttype |
+| Attribuutsoort    | [`mim:Attribuutsoort`](http://bp4mc2.org/def/mim#Attribuutsoort) | shape:Attribuutsoort |
 
 *Relatierol*
 
