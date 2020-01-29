@@ -436,6 +436,5 @@ de Stelselcatalogus is zoveel als mogelijk leidend, vervolgens het GAB en als
 laatste de handreiking.
 
 <aside class='note'>
-    Als er nieuwe versies uitkomen van de genoemde normreferenties wordt gecheckt of er impact is op het MIM
-    die impact wordt verwerkt in MIM zodat MIM 'upward compatible' is en blijft. 
+    De versies van de genoemde referenties zijn bewust niet opgenomen, zodat het mogelijk is om gebruik te maken van nieuwere versies van deze referenties. Wanneer er nieuwe versies uitkomen van de genoemde normreferenties dan wordt er gecheckt of MIM hier nog mee in lijn is. Wanneer dit niet zo is, dan wordt eraan gewerkt om dit weer met elkaar in lijn te brengen, zoals MIM 'upward compatible' is en blijft. 
 </aside>
