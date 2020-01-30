@@ -155,12 +155,11 @@ informatiemodellen gedefinieerd en gemodelleerd worden.
 *Voorbeelden* hiervan van landelijke datatypen, die niet tot MIM behoren, maar
 ter illustratie zijn opgenomen:
 
+| Datatype | Beschrijving |
+| ------ | ---------------------------------------------------------------------------------- | 
 | Postcode | De in Nederland gangbare postcode voor een Nederlands postadres, bestaande uit een numeriek deel en een alfabetisch deel. Het numerieke deel van de postcode bestaat uit vier cijfers, het alfabetische deel van de postcode bestaat uit twee hoofdletters. Conform [GAB Postcodes].                                                        |
-|----------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | DMO      | Datum mogelijk onvolledig. De keuze («Keuze») van een periode in de Gregoriaanse kalender, al naar gelang de beschikbare datumelementen, uit de onderliggende subformaten alleen Year, Year en Month of Year, Month en Day. Dit is (nog steeds) overeenkomstig met https://en.wikipedia.org/wiki/ISO_8601 en [GAB DatumMogelijkOnvolledig]. |
-| DTMO     | Een volledige datum waarbij (alleen) de tijd mogelijk ontbreekt. De tijd wordt, zover bekend, ingevuld. Dus alleen de uren als de minuten onbekend zijn.                                                                                                                                                                                    |
-|          | \- DateTime, als de tijd wel volledig bekend is                                                                                                                                                                                                                                                                                             |
-|          | \- Date, als alleen de Date bekend is                                                                                                                                                                                                                                                                                                       |
+| DTMO     | Een volledige datum waarbij (alleen) de tijd mogelijk ontbreekt. De tijd wordt, zover bekend, ingevuld. Dus alleen de uren als de minuten onbekend zijn. DateTime, als de tijd wel volledig bekend is. Date, als alleen de Date bekend is |
 
 ### Gestructureerd datatype
 
@@ -709,53 +708,21 @@ onderscheid in de volgende groepen van gegevens:
 
 ### Mogelijk geen waarde
 
-Een attribuut kan geen waarde hebben, omdat de waarde optioneel is en er niet
-is. Bijvoorbeeld bij een tussenvoegsel van een achternaam. Maar een attribuut
-kan ook mogelijk geen waarde hebben, omdat de waarde niet bekend is. Dat er geen
-waarde bij een attribuut geregistreerd is, wil dus niet zeggen dat er geen
-betekenis aan gehecht kan worden. Zo kan het niet hebben van een waarde van de
-overlijdensdatum van een persoon betekenen dat deze persoon nog leeft. Maar het
-kan ook betekenen dat de persoon overleden is maar de datum waarop deze persoon
-overleden is, niet bekend is.
+Bij het inwinnen van gegevens zal het regelmatig voorkomen dat voor een bepaald kenmerk er geen gegeven gevonden kan worden. Dit zal vaak zo zijn bij optionele gegevens. Bijvoorbeeld bij een tussenvoegsel van een achternaam. Maar het is ook mogelijk dat het gegeven er in de werkelijkheid wel is, of zou moeten zijn, maar dat waarde niet bekend is. Bijvoorbeeld omdat het gegeven niet gevonden kan worden, zoals een bouwjaar van een oud gebouw of de geboortedag van een persoon. Zo kan het niet hebben van een waarde van de overlijdensdatum van een persoon betekenen dat deze persoon nog leeft. Maar het kan ook betekenen dat de persoon is overleden, maar dat de datum waarop niet bekend is. Een ander voorbeeld is dat een registratie vroeger een bepaald gegeven niet registreerde, en tegenwoordig verplicht moet registreren. Het gegeven is dan bijvoorbeeld vanaf 1990 beschikbaar, en is daarvoor onbekend. 
+Deze voorbeelden geven aan dat er in de werkelijkheid wel een gegeven kan zijn, maar dat deze onbekend is. Voor deze gevallen is ‘mogelijk geen waarde’ bedoeld. Mogelijk is de waarde er in de werkelijkheid wel, mogelijk is deze er niet. 
 
-Dit verschil is niet vast te leggen zonder onderscheid te maken en vaak is het
-ook van belang om de reden waarom de waarde niet bekend is vast te leggen. Een
-verplicht veld optioneel maken is daarom niet de juiste oplossing. In die
-situaties waarin het hebben van geen waarde van een attribuut een betekenis kan
-hebben maken we gebruik van het metagegeven ‘Mogelijk geen waarde’. Dit
-metagegeven geeft op informatiemodelniveau aan dat het attribuut een gangbare
-waarde kan hebben, maar dat deze waarde ook niet bekend kan zijn.
+In de modellering is het bij mogelijk geen waarde nodig om een modelleringconstructie te gebruiken om aan te geven wat er aan de hand is. Dit wordt in het informatiemodel gemodelleerd door een metagegeven op te nemen bij het desbetreffende modelelement. Er staat dan: mogelijk geen waarde: Ja. Dit is vrijwel altijd is dit bij een attribuutsoort, maar is ook mogelijk om het op te nemen bij een element van een datatype. Een voorbeeld bij een datatype is de geboorte datum van een persoon, als het zo kan zijn dat het jaar en de maand van geboorte wel bekend is, maar de dag niet. Dit datatype is ook gestandaardiseerd, en heet Datum Mogelijk Onvolledig. 
 
-Bij de daadwerkelijke registratie kan het zo zijn dat: - De waarde van het
-attribuut bekend is, te weten een waarde bij een verplicht attribuut, of geen
-waarde bij een optioneel attribuut. - De waarde van het attribuut onbekend is,
-en niet meer kan worden achterhaald. - De waarde van het attribuut onbekend is,
-en mogelijk wel nog kan worden achterhaald.
+Verder, wanneer er sprake is van mogelijk geen waarde dan het is expliciet niet de bedoeling om een verplicht veld optioneel maken. Dit is niet de juiste oplossing en kan bovendien de indruk geven dat het veld niet relevant is. De betekenis van een optioneel veld is daarom dat er inherent sprake is van dat de waarde een attribuutsoort van een objecttype mag ontbreken. Het ontbreken van een optionele waarde heeft daarom de betekenis dat het bekend is dat er in de betreffende situatie in de werkelijkheid geen waarde bestaat. Bij inherent optionele velden kan het immers ook voorkomen dat een waarde onbekend is. Het verschil tussen ‘het is bekend dat er geen waarde is’ en ‘het is onbekend of er een waarde is’ is alleen vast te leggen door onderscheid te maken. Daarom moet er expliciet worden aangegeven dat er sprake is van mogelijk geen waarde, middels het metagegeven Mogelijk geen waarde: Ja. 
 
-Wat de toegestane redenen zijn voor een specifiek attribuut, is aan de beheerder
-van het informatiemodel. Het is nuttig om de redenen te beperken op
-informatiemodelniveau. Dit kan dan vastgelegd worden bij de attribuutsoort of
-bij relatiesoort zelf, bijvoorbeeld in de UML notes. In de registratie mogen dan
-alleen deze redenen worden geregistreerd.
+Het verplicht of optioneel zijn van een waarde en het wel of niet mogen ontbreken van een waarde (die in de werkelijkheid wel bestaat) zijn dus twee verschillende en van elkaar onafhankelijke eigenschappen. In combinatie beschrijven deze eigenschappen vier mogelijkheden:
+- Het attribuut heeft in de werkelijkheid altijd een waarde en die waarde moet zijn gevuld, zoals de identificatie. Waarde is verplicht, mogelijk geen waarde: Nee;
+- Het attribuut heeft in de werkelijkheid altijd een waarde, maar die waarde is mogelijk onbekend, bijvoorbeeld de geboortedatum. Waarde is verplicht, mogelijk geen waarde: Ja;
+- Het attribuut heeft in de werkelijkheid soms een waarde en die waarde moet dan zijn gevuld, bijvoorbeeld de officiële straatnaam. Waarde is optioneel, mogelijk geen waarde: Nee;
+- Het attribuut heeft in de werkelijkheid soms een waarde, maar die waarde en zelfs het bestaan ervan hoeven niet bekend te zijn, zoals de overlijdensdatum van een persoon. Waarde is optioneel, mogelijk geen waarde: ja. 
 
-Een attribuut dat in de werkelijkheid gewoon geen waarde kan hebben en waar
-bovenstaand onderscheid niet van toepassing is duiden we niet aan met dit
-metagegeven. Het betreft dan gewoon een optioneel attribuut dat niet is gevuld.
-Anders gezegd, het is bekend dat het attribuut niet gevuld is en het hebben van
-geen waarde heeft dan geen verdere betekenis .
-
-Ook een relatiesoort of compositie relatie kan mogelijk geen waarde hebben
-waaraan betekenis gehecht kan worden en ook daar maken we gebruik van het
-metagegeven ‘Mogelijk geen waarde’.
-
-In de registraties komen we hier en daar enumeraties tegen waarin de waarde
-‘onbekend’ is opgenomen. Bijvoorbeeld de geslachtsaanduiding van een natuurlijk
-persoon. De enumeratie bestaat uit de waarden man, vrouw en onbekend. In dit
-metamodel stellen we dat dit niet mag c.q. niet de bedoeling is bij de
-modellering van eigen gegevens in een eigen informatiemodel. Uitzondering is
-wanneer het een situatie betreft waarin gegevens worden overgenomen uit een
-registratie die wel de waarde ‘onbekend’ gebruikt. Dan kan er ook gekozen worden
-voor het 1:1 overgenomen van de gegevensdefinitie uit deze andere registratie.
+Verder, wanneer er sprake is van mogelijk geen waarde dan kan het waardevol zijn om de reden waarom de waarde ontbreekt aan te geven. Ie beheerder van het informatiemodel bepaalt welke redenen hij of zij toestaat voor het ontbreken van waarden die in de werkelijkheid wel bestaan. Het is nuttig om deze redenen op informatiemodelniveau te beperken. Dit kan dan vastgelegd worden bij de attribuutsoort of bij relatiesoort, bijvoorbeeld in de toelichting. In de registratie mogen alleen deze redenen worden geregistreerd. Daarbij kan het zinvol zijn om te vermelden of een onbekende waarde mogelijk nog kan worden achterhaald of dat dat niet meer kan.
+Sommige informatiemodellen gebruiken enumeraties met daarin een waarde zoals 'onbekend'. In dit metamodel stellen we dat dit niet de bedoeling is bij de modellering van eigen gegevens in een eigen informatiemodel. Er geldt een uitzondering wanneer het gaat om gegevens die worden overgenomen uit een andere registratie die wel de waarde 'onbekend' gebruikt. Dan kan er worden gekozen voor het een-op-een overnemen van de gegevensdefinitie uit de andere registratie. 
 
 ### Externe schema’s (her) gebruiken
 
