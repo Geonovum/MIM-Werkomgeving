@@ -1488,6 +1488,20 @@ Een constraint is gekoppeld aan een klasse waarop ze van toepassing is.
 
 *Toepassing*: objecttype, gegevensgroeptype, relatieklasse.
 
+### Metagegeven: **Indicatie classificerend**
+
+>   **Definitie Indicatie classificerend**  
+>   Indicatie dat een attribuut het objecttype waar het bijhoort classificeerd in (sub)typen.
+
+*Toelichting*
+
+Een objecttype kan middels een attribuut geclassificeerd worden in subtypen zonder dat er aparte subklassen voor gemaakt worden. Dit metagegeven geeft aan dat dit het geval is.
+
+*Toepassing*: attribuutsoort.
+
+
+
+
 ### Toegestane waarden voor (bepaalde) metadata gegevens
 
 Tagged values zijn altijd van het datatype CharacterString. Aanvullend geldt:
