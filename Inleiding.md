@@ -53,7 +53,7 @@ Het metamodel beschrijven we in vijf hoofdstukken en een bijlage.
 Lees de [Inleiding](#inleiding) verder voor inzicht in wat we onder een
 informatiemodel en onder een metamodel verstaan, hoe deze de modellen zich
 verhouden tot UML en de vier lagen metamodel architectuur van de Object
-Management Group [[!OMG]], en welke standaarden worden toegepast.
+Management Group [[!OMG]], Linked Data en de internetstandaarden van de W3c en welke overige standaarden worden toegepast.
 
 Het hoofdstuk [Metamodel Algemeen](#metamodel-algemeen) bevat de beschrijving van alle
 bouwstenen c.q. de modelelementen van het metamodel, in de vorm van definities en specificaties.
@@ -68,7 +68,7 @@ aangebracht.
 
 Het hoofdstuk [Metamodel in Linked Data (LD)](#metamodel-in-linked-data-ld) beschrijft hoe de implementatie van MIM in
 [[!Linked-Data]] er uit ziet. In dit hoofdstuk wordt beschreven hoe het metamodel zich verhoudt tot het Linked Data
-metamodel. Daarbij is een strikte vertaling gemaakt. Dit betekent dat het betreffende Linked Data model alleen als MIM model te gebruiken is. Voor een model dat gebruikt kan worden om daadwerkelijk Linked Data in uit te drukken, is een vertaalslag nodig die beschreven is in de bijlage [Transformatie van een MIM model naar een RDF model](#transformatie-mim-rdfs-owl-shacl).
+metamodel. Daarbij is een strikte vertaling gemaakt. Dit betekent dat het betreffende Linked Data model alleen als MIM model te gebruiken is. Voor een model dat gebruikt kan worden om daadwerkelijk Linked Data in uit te drukken, is een vertaalslag nodig die beschreven is in de bijlage [Transformatie MIM - RDFS/OWL/SHACL](#transformatie-mim-rdfs-owl-shacl). Op deze wijze kan een dergelijk RDFS/OWL/SHACL model ook gezien worden als een MIM model.
 
 In het hoofdstuk [Afspraken & Regels](#afspraken-regels) gaan we in detail in op een
 aantal aspecten. Het is een uitgebreidere toelichting, in aanvulling op het
@@ -77,7 +77,7 @@ aanbevelingen bij het toepassen van het metamodel.
 
 Er zijn een aantal bijlages, dit zijn hulpmiddelen of aanvullingen op MIM.
 - De bijlage [Template naamgeving conventies](#template-naamgeving-conventies) verschaft een invulmogelijkheid om eigen naamgevingsconventies te documenteren, per in dit metamodel genoemd modelelement.
-- De bijlage [Transformatie van een MIM model naar een RDF model](#transformatie-mim-rdfs-owl-shacl) beschrijft hoe een MIM model getransformeerd kan worden naar een RDF model dat gebruikt kan worden om daadwerkelijk Linked Data in uit te drukken (op instantie niveau, waarbij dit in overeenstemming is met de specificatie op informatiemodel niveau).
+- De bijlage [Transformatie MIM - RDFS/OWL/SHACL](#transformatie-mim-rdfs-owl-shacl) beschrijft hoe een MIM model getransformeerd kan worden naar een RDF model dat gebruikt kan worden om daadwerkelijk Linked Data in uit te drukken en visa-versa (op instantie niveau, waarbij dit in overeenstemming is met de specificatie op informatiemodel niveau).
 
 ### Wat is een informatiemodel
 Wanneer we informatie over bepaalde onderwerpen willen inwinnen, registreren of uitwisselen, dan is het van belang om deze informatie  eerst goed te beschrijven. We doen dit zodat het voor eenieder die met de informatie aan de slag gaat helder en eenduidig is:
@@ -436,5 +436,5 @@ de Stelselcatalogus is zoveel als mogelijk leidend, vervolgens het GAB en als
 laatste de handreiking.
 
 <aside class='note'>
-    De versies van de genoemde referenties zijn bewust niet opgenomen, zodat het mogelijk is om gebruik te maken van nieuwere versies van deze referenties. Wanneer er nieuwe versies uitkomen van de genoemde normreferenties dan wordt er gecheckt of MIM hier nog mee in lijn is. Wanneer dit niet zo is, dan wordt eraan gewerkt om dit weer met elkaar in lijn te brengen, zoals MIM 'upward compatible' is en blijft. 
+    De versies van de genoemde referenties zijn bewust niet opgenomen, zodat het mogelijk is om gebruik te maken van nieuwere versies van deze referenties. Wanneer er nieuwe versies uitkomen van de genoemde normreferenties dan wordt er gecheckt of MIM hier nog mee in lijn is. Wanneer dit niet zo is, dan wordt eraan gewerkt om dit weer met elkaar in lijn te brengen, zoals MIM 'upward compatible' is en blijft.
 </aside>
