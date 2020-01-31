@@ -273,6 +273,11 @@ mim:indicatieAfleidbaar a owl:DatatypeProperty;
   rdfs:comment "Aanduiding dat gegeven afleidbaar is uit andere attribuut- en/of relatiesoorten."@nl;
   dct:source mimdoc:sectie2.3-IndicatieAfleidbaar;
 .
+mim:indicatieClassificerend a owl:DatatypeProperty;
+  rdfs:label "indicatie classificerend"@nl;
+  rdfs:comment "Aanduiding dat een aspect een classificatie betreft van het betreffende objecttype."@nl;
+  dct:source mimdoc:sectie2.12.13-indicatieClassificerend;
+.
 mim:mogelijkGeenWaarde a owl:DatatypeProperty;
   rdfs:label "mogelijk geen waarde"@nl;
   rdfs:comment "Aanduiding dat van een aspect geen waarde is geregistreerd, maar dat onduidelijk is of de waarde er werkelijk ook niet is."@nl;
