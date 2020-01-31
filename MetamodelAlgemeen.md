@@ -7,15 +7,14 @@ informatiemodel. Voorbeelden van modelelementen zijn: objecttype, attribuutsoort
 maar denk ook datatypen of aan metadata. In de paragrafen hierna worden alle modelelementen beschreven en toegelicht. 
 
 Uitgangspunten voor het metamodel zijn: 
-- De modelelementen worden eerst uitgelegt zonder een specifieke specificatie taal te
+- De modelelementen worden eerst uitgelegd zonder een specifieke specificatietaal te
 gebruiken. Dit is zodat we hierna kunnen aangeven hoe je het modelelement
-uitdrukt per specifieke specificatie taal, te weten in UML of in W3C
-specificatie technieken.
+uitdrukt per specifieke specificatietaal, te weten in UML of in W3C-specificatietechnieken.
 - Een toolonafhankelijke beschrijving van het metamodel.
-Verder zal, omdat VNG Realisatie, Kadaster en Geonovum en veel andere organisaties Sparx EA
-gebruiken is er aanvullend aangegeven hoe het metamodel in Enterprise Architect
+Verder is er, omdat VNG Realisatie, Kadaster en Geonovum en veel andere organisaties Sparx EA
+gebruiken, aanvullend aangegeven hoe het metamodel in Enterprise Architect
 toegepast wordt. Hierdoor borgen we deze relatie.
-- Uniforme toepassing van het metamodel in informatiemodellen. Anders gezegd, uitbreiden mag, afwijkenniet,
+- Uniforme toepassing van het metamodel in informatiemodellen. Anders gezegd, uitbreiden mag, afwijken niet,
 maak voor hetzelfde doel geen alternatieve constructies.
 - Datatypen zijn onderdeel van het metamodel en beschrijven de structuur van de data, maar niet
 de semantiek/betekenis. De aanbeveling is dan ook om eerst een informatiemodel
@@ -49,10 +48,10 @@ Alle views samen vormen het metamodel als geheel:
 
 Elk modelelement heeft een MIM metaclass met een naam. Hieraan is elk
 modelelement te herkennen in alle diagrammen en in de tekst en in elke
-specificatie taal die een uitdrukking is van dit metamodel.
+specificatietaal die een uitdrukking is van dit metamodel.
 
 Bij de modelelementen zijn in deze diagrammen geen beschrijvende kenmerken, de
-metageggevens, opgenomen zoals naam, definitie enz. In de bijlage zijn deze wel
+metagegevens, opgenomen zoals naam, definitie enz. In de bijlage zijn deze wel
 opgenomen.
 
 ### Kern
@@ -79,10 +78,10 @@ In diagramvorm:
 
 Kern zonder Metagegevens
 
-De verbindingen tussen de modelelementen geven aan welke combinaties kunnen voorkomen op metamodel niveau. Bijvoorbeeld: 
-- Een objecttype kan verbonden worden met een attribuutsoort. In een informatiemodel kan je dus attribuutsoorten dus aan een objecttype toekennen. 
+De verbindingen tussen de modelelementen geven aan welke combinaties kunnen voorkomen op metamodelniveau. Bijvoorbeeld: 
+- Een objecttype kan verbonden worden met een attribuutsoort. In een informatiemodel kan je attribuutsoorten dus aan een objecttype toekennen. 
 - Een objecttype kan *niet* verbonden worden met een gegevensgroeptype. In een informatiemodel kan je dus niet rechtstreeks een gegevensgroeptype aan een object toekennen. In het diagram is te zien dat dit via een gegevensgroep gaat. 
-- Een objecttype kan verbonden worden met een relatiesoort en deze relatiesoort kan weer verbonden worden met een objecttype. Dit geeft aan dat de relatiesoort een modelelement is die twee objecttypen met elkaar verbindt. 
+- Een objecttype kan verbonden worden met een relatiesoort en deze relatiesoort kan weer verbonden worden met een objecttype. Dit geeft aan dat de relatiesoort een modelelement is dat twee objecttypen met elkaar verbindt. 
 
 
 ### Datatypen
@@ -100,7 +99,7 @@ View 2: Datatypen. Deze bestaat uit de volgende modelelementen:
 | Referentie element      |
 | Codelijst                |
 
-De betekenis van deze modelelementen en de beschrijvingen ervan staat in [Datatypen](#datatypen-0). 
+De betekenis van deze modelelementen en de beschrijvingen ervan staan in [Datatypen](#datatypen-0). 
 
 In diagramvorm: 
 
@@ -168,7 +167,7 @@ View 3d: Groepering. Deze bestaat uit de volgende modelelementen:
 | Extern            |
 | View              |
 
-De betekenis van deze modelelementen en de beschrijvingen ervan staat in [Packages](#packages). 
+De betekenis van deze modelelementen en de beschrijvingen ervan staan in [Packages](#packages). 
 
 ![](media/PackageZonderUml.png)
 
@@ -183,7 +182,7 @@ het maken van een informatiemodel.
 
 Een objecttype is een groep van gelijksoortige objecten. Zo zijn Jan en Katrien 
 allebei objecten die gelijksoortig zijn. Het zijn allebei personen, oftewel het 
-objecttype van beide is Persoon. In het informatiemodel nemen we Persoon op met 
+objecttype van beiden is Persoon. In het informatiemodel nemen we Persoon op met 
 behulp van het modelelement Objecttype.  
 
 Om duidelijk(er) te maken wat wordt bedoeld kijken we eerst naar het begrip ‘object’.
@@ -290,7 +289,7 @@ dus attribuutsoorten van het objecttype, maar dan ondergebracht in een
 gegevensgroeptype. De gegevensgroep als geheel wordt daarom expliciet niet
 gezien als zijnde één attribuutsoort van een object.
 
-*Toelichting:* bij voorbeeld: in de BRK is een persoon eigenaar van een Schip,
+*Toelichting:* bijvoorbeeld: in de BRK is een persoon eigenaar van een Schip,
 niet van een Motor. In de BRK kan het eigendom van een Motor niet worden
 overgedragen aan een ander persoon. In een ander informatiemodel, zoals van een
 motorfabriek, zou de Motor wel een objecttype kunnen zijn, omdat het daar wel
@@ -935,7 +934,7 @@ Hiermee wordt aangegeven hoe een informatiemodel element zich verhoudt tot de
 begrippen uit het begrippenkader, zoals genoemd in paragraaf [Typen Informatiemodellen](#typen-informatiemodellen). 
 Dit is niet een 1 op 1 relatie. Voor meer informatie hierover, zie hoofdstuk [Afspraken & Regels](#afspraken-regels).
 
-Bij voorbeeld: Perceel of
+Bijvoorbeeld: Perceel of
 http://brk.basisregistraties.overheid.nl/id/begrip/Perceel
 
 *Toepassing*: alle modelelementen met een naam, met uitzondering van packages en
