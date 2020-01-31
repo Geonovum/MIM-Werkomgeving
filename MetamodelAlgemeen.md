@@ -3,10 +3,10 @@
 Dit hoofdstuk beschrijft het metamodel in diagramvorm en in tekst. De eerste
 paragraaf bevat een diagram, die het overzicht van de modelelementen aangeeft,
 alsmede hun onderlinge verhouding. Deze modelelementen worden gebruikt bij het maken van een
-informatiemodel. Voorbeelden van modelelementen zijn: objecttype, attribuutsoort, relatiesoort, 
-maar denk ook datatypen of aan metadata. In de paragrafen hierna worden alle modelelementen beschreven en toegelicht. 
+informatiemodel. Voorbeelden van modelelementen zijn: objecttype, attribuutsoort, relatiesoort,
+maar denk ook datatypen of aan metadata. In de paragrafen hierna worden alle modelelementen beschreven en toegelicht.
 
-Uitgangspunten voor het metamodel zijn: 
+Uitgangspunten voor het metamodel zijn:
 - De modelelementen worden eerst uitgelegd zonder een specifieke specificatietaal te
 gebruiken. Dit is zodat we hierna kunnen aangeven hoe je het modelelement
 uitdrukt per specifieke specificatietaal, te weten in UML of in W3C-specificatietechnieken.
@@ -20,22 +20,22 @@ maak voor hetzelfde doel geen alternatieve constructies.
 de semantiek/betekenis. De aanbeveling is dan ook om eerst een informatiemodel
 te maken zonder datatypen. De regel is dat als alle datatypen uit het model
 worden weggelaten, er geen semantische betekenis verloren mag gaan.
-- Elk modelelement heeft een naam en een eigen MIM metaclass, waaraan je het modelelement overal kan herkennen. 
+- Elk modelelement heeft een naam en een eigen MIM metaclass, waaraan je het modelelement overal kan herkennen.
 
 *Toelichting metaclass*   
-Alle modelelementen zijn een metaklasse in het metamodel. Hiermee wordt aangegeven dat het niet een klasse betreft 
-in een informatiemodel, zoals de klasse Persoon, maar dat het om de classificatie gaat dat de Persoon een Objecttype is, 
-oftewel dat de klasse Persoon van de metaklasse Objecttype is. Vandaar de term metaclass. 
+Alle modelelementen zijn een metaklasse in het metamodel. Hiermee wordt aangegeven dat het niet een klasse betreft
+in een informatiemodel, zoals de klasse Persoon, maar dat het om de classificatie gaat dat de Persoon een Objecttype is,
+oftewel dat de klasse Persoon van de metaklasse Objecttype is. Vandaar de term metaclass.
 
 De metaklassen worden ook gebruikt om aan te geven hoe deze zich verhouden tot de metaklassen
-van UML en W3C, in de volgende hoofdstukken. 
+van UML en W3C, in de volgende hoofdstukken.
 
 Bij het maken van een informatiemodel modelleer je in feite gewoon met de modelelementen, en geef je aan dat een Persoon een Objecttype is en een geboortedatum een attribuutsoort.  
 
 ### Structuur metamodel
 
 Deze paragraaf bevat een overzicht van het metamodel voor informatiemodellen, kortweg MIM, en geeft alle
-modelelementen weer in diagramvorm. De beschrijving van de modelelementen staat in de volgende paragraaf. 
+modelelementen weer in diagramvorm. De beschrijving van de modelelementen staat in de volgende paragraaf.
 
 De modelelementen zijn verdeeld over een aantal diagrammen, die elk een eigen
 view op een deel van het metamodel tonen. Elk view toont een aantal van de
@@ -56,7 +56,7 @@ opgenomen.
 
 ### Kern
 
-View 1: De kern van een informatiemodel. Deze bestaat uit de volgende modelelementen: 
+View 1: De kern van een informatiemodel. Deze bestaat uit de volgende modelelementen:
 
 | **MIM metaclass** |
 |-------------------|
@@ -70,23 +70,23 @@ View 1: De kern van een informatiemodel. Deze bestaat uit de volgende modeleleme
 | Relatierol        |
 | Relatierol doel   |
 
-De betekenis van deze modelelementen en de beschrijvingen ervan staat in [Betekenis modelelementen](#betekenis-modelelementen). 
+De betekenis van deze modelelementen en de beschrijvingen ervan staat in [Betekenis modelelementen](#betekenis-modelelementen).
 
-In diagramvorm: 
+In diagramvorm:
 
 ![](media/KernZonderUML.png)
 
 Kern zonder Metagegevens
 
-De verbindingen tussen de modelelementen geven aan welke combinaties kunnen voorkomen op metamodelniveau. Bijvoorbeeld: 
-- Een objecttype kan verbonden worden met een attribuutsoort. In een informatiemodel kan je attribuutsoorten dus aan een objecttype toekennen. 
-- Een objecttype kan *niet* verbonden worden met een gegevensgroeptype. In een informatiemodel kan je dus niet rechtstreeks een gegevensgroeptype aan een object toekennen. In het diagram is te zien dat dit via een gegevensgroep gaat. 
-- Een objecttype kan verbonden worden met een relatiesoort en deze relatiesoort kan weer verbonden worden met een objecttype. Dit geeft aan dat de relatiesoort een modelelement is dat twee objecttypen met elkaar verbindt. 
+De verbindingen tussen de modelelementen geven aan welke combinaties kunnen voorkomen op metamodelniveau. Bijvoorbeeld:
+- Een objecttype kan verbonden worden met een attribuutsoort. In een informatiemodel kan je attribuutsoorten dus aan een objecttype toekennen.
+- Een objecttype kan *niet* verbonden worden met een gegevensgroeptype. In een informatiemodel kan je dus niet rechtstreeks een gegevensgroeptype aan een object toekennen. In het diagram is te zien dat dit via een gegevensgroep gaat.
+- Een objecttype kan verbonden worden met een relatiesoort en deze relatiesoort kan weer verbonden worden met een objecttype. Dit geeft aan dat de relatiesoort een modelelement is dat twee objecttypen met elkaar verbindt.
 
 
 ### Datatypen
 
-View 2: Datatypen. Deze bestaat uit de volgende modelelementen: 
+View 2: Datatypen. Deze bestaat uit de volgende modelelementen:
 
 | **MIM metaclass**       |
 |-------------------------|
@@ -99,9 +99,9 @@ View 2: Datatypen. Deze bestaat uit de volgende modelelementen:
 | Referentie element      |
 | Codelijst                |
 
-De betekenis van deze modelelementen en de beschrijvingen ervan staan in [Datatypen](#datatypen-0). 
+De betekenis van deze modelelementen en de beschrijvingen ervan staan in [Datatypen](#datatypen-0).
 
-In diagramvorm: 
+In diagramvorm:
 
 ![](media/DatatypenZonderUML.png)
 
@@ -109,7 +109,7 @@ Datatypen zonder Metagegevens
 
 ### Overige
 
-View 3a: constraint en keuze. 
+View 3a: constraint en keuze.
 
 | **MIM metaclass** |
 |-------------------|
@@ -167,7 +167,7 @@ View 3d: Groepering. Deze bestaat uit de volgende modelelementen:
 | Extern            |
 | View              |
 
-De betekenis van deze modelelementen en de beschrijvingen ervan staan in [Packages](#packages). 
+De betekenis van deze modelelementen en de beschrijvingen ervan staan in [Packages](#packages).
 
 ![](media/PackageZonderUml.png)
 
@@ -180,9 +180,9 @@ het maken van een informatiemodel.
 
 #### Objecten en objecttype  
 
-Een objecttype is een groep van gelijksoortige objecten. Zo zijn Jan en Katrien 
-allebei objecten die gelijksoortig zijn. Het zijn allebei personen, oftewel het 
-objecttype van beiden is Persoon. In het informatiemodel nemen we Persoon op met 
+Een objecttype is een groep van gelijksoortige objecten. Zo zijn Jan en Katrien
+allebei objecten die gelijksoortig zijn. Het zijn allebei personen, oftewel het
+objecttype van beiden is Persoon. In het informatiemodel nemen we Persoon op met
 behulp van het modelelement Objecttype.  
 
 Om duidelijk(er) te maken wat wordt bedoeld kijken we eerst naar het begrip ‘object’.
@@ -191,7 +191,7 @@ Om duidelijk(er) te maken wat wordt bedoeld kijken we eerst naar het begrip ‘o
 >   Een ding, een tastbaar iets, in de werkelijkheid, zoals daarnaar gekeken
 >   wordt vanuit een bepaald domein.
 
-*Toelichting:* Met in de werkelijkheid wordt bedoeld dat het om de daadwerkelijke onderwerpen van gesprek gaat, de verzameling van de concrete tastbare dingen waarover we het hebben. Bijvoorbeeld, de persoon Jan, Paleis 't Loo. 
+*Toelichting:* Met in de werkelijkheid wordt bedoeld dat het om de daadwerkelijke onderwerpen van gesprek gaat, de verzameling van de concrete tastbare dingen waarover we het hebben. Bijvoorbeeld, de persoon Jan, Paleis 't Loo.
 Het wordt veelal als niet politiek correct beschouwd mensen als
 objecten te zien. In dit kader, de informatievoorziening, beschouwen we evenwel
 natuurlijke en niet-natuurlijke personen wel als objecten. ‘Tastbaar’ moet
@@ -219,7 +219,7 @@ getrouw mogelijk te beschrijven, binnen de context van het domein. Dit staat
 geheel los van het vastleggen van gegevens over objecten van een type in een
 registratie. Daartoe is veelal een interpretatie nodig (van die werkelijkheid
 cq. die objecttypen) naar eenheden die in een registratie vastgelegd kunnen
-worden (records, entiteiten e.d.) op basis van andere overwegingen. 
+worden (records, entiteiten e.d.) op basis van andere overwegingen.
 
 De objecten die in het beschouwde domein onderkend worden zijn zelf nooit abstract. Ze behoren altijd tot een concreet objecttype, en niet tot een abstract objecttype. Abstracte objecttypes worden wel gebruikt in de modellering, om generalisaties aan te duiden en de definitie. Zo kan bij het objecttype Pand bijvoorbeeld aangegeven worden dat dit een 'Element in de fysieke leefomgeving' is, en dat deze laatste als een abstract objecctype gezien moet worden (in ons domein). Meer over abstracte objecttypes is beschreven in [Abstracte objecttypes en concrete objecten].  
 
@@ -243,21 +243,21 @@ Voorbeelden van gegevens zijn de waardes ‘Jan’ en ‘1-1-1970’ betreffende
 de geboortedatum van een object van het type Persoon. Merk op dat een gegeven zonder
 duidelijkheid over het soort gegeven c.q. de attribuutsoort 'naam' geen informatie biedt.
 
-Een informatiemodel specificeert niet de gegevens zelf. Een gegeven zoals '1-1-1970' noemen we een 
-attribuut van Jan. In het informatiemodel wordt dit het attribuutsoort 'naam' van een objecttype Persoon. 
+Een informatiemodel specificeert niet de gegevens zelf. Een gegeven zoals '1-1-1970' noemen we een
+attribuut van Jan. In het informatiemodel wordt dit het attribuutsoort 'naam' van een objecttype Persoon.
 
 >   **Definitie Attribuutsoort**  
 >   De typering van gelijksoortige gegevens die voor een objecttype van
 >   toepassing is.
 
-*Toelichting* 
-De gegevens Jan en Katrien worden als gelijksoortig gezien en worden daarom ondergebracht in attribuutsoort 'naam'. 
-Je kan ook zeggen, het objecttype Persoon heeft een attribuutsoort 'naam' en deze is geschikt om gegevens in te plaatsen. 
+*Toelichting*
+De gegevens Jan en Katrien worden als gelijksoortig gezien en worden daarom ondergebracht in attribuutsoort 'naam'.
+Je kan ook zeggen, het objecttype Persoon heeft een attribuutsoort 'naam' en deze is geschikt om gegevens in te plaatsen.
 
-Aan elk objecttype worden nul, één of meer *«*Attribuutsoort*»*en toegekend. In een informatiemodel 
-worden alleen voor het domein relevante attribuutsoorten opgenomen bij een objecttype. 
+Aan elk objecttype worden nul, één of meer *«*Attribuutsoort*»*en toegekend. In een informatiemodel
+worden alleen voor het domein relevante attribuutsoorten opgenomen bij een objecttype.
 
-Attribuutsoorten worden ook wel kenmerken of eigenschappen genoemd. Dit zijn het ook, maar er zijn 
+Attribuutsoorten worden ook wel kenmerken of eigenschappen genoemd. Dit zijn het ook, maar er zijn
 andere kenmerken, zo is een relatiesoort ook een kenmerk of eigenschap.  
 
 #### Gegevensgroep
@@ -394,13 +394,13 @@ wanneer één van de SUBJECTen niet meer bestaat.
 >   Een associatie waarmee vanuit het perspectief van het eigen informatiemodel
 >   een objecttype uit het ‘eigen’ informatiemodel gekoppeld wordt aan een
 >   objecttype van een extern informatiemodel. De relatie zelf hoort bij het
->   ‘eigen’ objecttype. 
+>   ‘eigen’ objecttype.
 
 *Toelichting:*  
-Hiermee wordt aangegeven dat er een relatie ligt naar een informatiemodel van een ander domein. 
-Dit kan rechtstreeks zijn, maar het is ook mogelijk om het objecttype van een ander domein 
-over te nemen naar het eigen domein, en specifiek te maken voor hoe je deze informatie ziet 
-vanuit je eigen domein (dit laatste noemen we ook wel een [View](#view). 
+Hiermee wordt aangegeven dat er een relatie ligt naar een informatiemodel van een ander domein.
+Dit kan rechtstreeks zijn, maar het is ook mogelijk om het objecttype van een ander domein
+over te nemen naar het eigen domein, en specifiek te maken voor hoe je deze informatie ziet
+vanuit je eigen domein (dit laatste noemen we ook wel een [View](#view).
 
 Zie [Koppelen met een ander informatiemodel](#koppelen-met-een-ander-informatiemodel-externe-koppeling).
 
@@ -431,7 +431,7 @@ waardenlijst.
 >   beheerd. De domeinwaarden in de lijst kunnen in de loop van de tijd
 >   aangepast, uitgebreid, of verwijderd worden, zonder dat het informatiemodel
 >   aangepast wordt (in tegenstelling tot bij een enumeratie).
->   De representatie bevat een aantal kenmerken, die overgenomen zijn van de specificatie van de externe waardelijst. 
+>   De representatie bevat een aantal kenmerken, die overgenomen zijn van de specificatie van de externe waardelijst.
 
 *Toelichting:*
 De referentielijst bevat representaties van objecten, die in het informatiemodel
@@ -461,7 +461,7 @@ de registratie daarom (vaak) alleen een referentie naar een object uit de lijst.
 *Toelichting:*
 Een referentie element kan uniek zijn, zoals een code, en is dan op zichzelf
 geschikt om gebruikt te worden als referentie (zoals bedoeld in de definitie van
-Referentielijst). Bij het referentie element kan een definitie en toelichting worden opgenomen, die aangeven hoe de externe waardelijst in het eigen informatiemodel gebruikt wordt. 
+Referentielijst). Bij het referentie element kan een definitie en toelichting worden opgenomen, die aangeven hoe de externe waardelijst in het eigen informatiemodel gebruikt wordt.
 
 #### Enumeratie
 
@@ -479,7 +479,7 @@ referentielijst, zijn nooit aan de orde).
 
 *Toelichting:*
 De waarde van de data zelf. Bijvoorbeeld: Plein, Brug, Spoor, M (man).  
-Alleen deze waarde mag gebruiken worden. 
+Alleen deze waarde mag gebruiken worden.
 
 
 #### Stereotype Codelijst
@@ -490,7 +490,7 @@ Alleen deze waarde mag gebruiken worden.
 >   beheerd. De domeinwaarden in de lijst kunnen in de loop van de tijd
 >   aangepast, uitgebreid, of verwijderd worden, zonder dat het informatiemodel
 >   aangepast wordt (in tegenstelling tot bij een enumeratie).
->   De representatie bevat geen kenmerken, voor alle kenmerken wordt verwezen naar de specificatie van de externe waardelijst. 
+>   De representatie bevat geen kenmerken, voor alle kenmerken wordt verwezen naar de specificatie van de externe waardelijst.
 
 *Toelichting:* Zowel referentielijsten als codelijsten zijn in feite
 waardenlijsten. In tegenstelling echter tot de referentielijst wordt een
@@ -600,21 +600,21 @@ modelelementen.
 #### Informatiemodel
 
 >   **Definitie Informatiemodel**  
->   De groepering van alle modelelementen waaruit het informatiemodel is opgebouwd. Het informatiemodel als geheel. 
+>   De groepering van alle modelelementen waaruit het informatiemodel is opgebouwd. Het informatiemodel als geheel.
 
 *Toelichting:*
-Het informatiemodel is een package, te weten het hoofdpackage van het informatiemodel, waar alle 
-subpackages die een informatiemodel beschrijven onder vallen, zoals Domein en View en extern. 
+Het informatiemodel is een package, te weten het hoofdpackage van het informatiemodel, waar alle
+subpackages die een informatiemodel beschrijven onder vallen, zoals Domein en View en extern.
 Het informatiemodel wordt verder beschreven met metadata, zoals de aanduidig van het domein wat in het informatiemodel is gemodelleerd. Het is gangbaar om de naam van het informatiemodel te beginnen met IM, maar dit is niet verplicht.    
 
 <aside class='example'>
     Voorbeeld: IMKAD, of IMBAGLV.
 </aside>
 
-Het domein wat hier gemodelleerd is, is het domein adressen en gebouwen, oftewel de BAG. 
+Het domein wat hier gemodelleerd is, is het domein adressen en gebouwen, oftewel de BAG.
 
 #### Domein
-Een informatiemodel kan onderverdeeld worden in meerdere packages, waarbij aangegeven wordt dat 
+Een informatiemodel kan onderverdeeld worden in meerdere packages, waarbij aangegeven wordt dat
 deze de modellering van de informatie van het domein bevatten.
 
 >   **Definitie Domein**  
@@ -623,7 +623,7 @@ deze de modellering van de informatie van het domein bevatten.
 
 *Toelichting:*
 Waar het informatiemodel het hoofdpackage is, zijn dit de subpackages.  
-Er zijn meerdere soorten packages. Om onderscheid te maken tussen packages waarin het domein gemodelleerd is, en andere opackages, heeft dit modelelement de naam Domein gekregen. Je zou ook kunnen zeggen, het informatiemodel bestaat uit de volgende subdomeinen. 
+Er zijn meerdere soorten packages. Om onderscheid te maken tussen packages waarin het domein gemodelleerd is, en andere opackages, heeft dit modelelement de naam Domein gekregen. Je zou ook kunnen zeggen, het informatiemodel bestaat uit de volgende subdomeinen.
 
 <aside class='example'>
     Voorbeeld: Recht, of Stukken. De BRK houdt deze domein informatie in aparte packages apart bij, voor het overzicht, en om de packages afzonderlijke te kunnen aanpassen, zonder impact op de andere packages.     
@@ -685,26 +685,26 @@ objecttype.
 
 Een constraint kan vastgelegd worden bij alle modelelementen. Echter, meestal
 komt een constraint voor bij een objecttype, om te aan te geven dat de
-constraint geldt voor 2 (of meer) kenmerken van een objecttype, of om een 
+constraint geldt voor 2 (of meer) kenmerken van een objecttype, of om een
 bijzondere specificatie toe te voegen die niet via de bestaande modelelementen gelegd kan worden.
 
-Een constraint wordt altijd in gewone tekst omschreven en kan optioneel als formele specificatie worden aangegeven. 
+Een constraint wordt altijd in gewone tekst omschreven en kan optioneel als formele specificatie worden aangegeven.
 
-#### Keuze 
+#### Keuze
 
->   **Definitie Keuze** 
+>   **Definitie Keuze**
 >   Een opsomming van meerdere modelelementen, waarbij er maar van één tegelijkertijd sprake kan zijn.
 
 *Toelichting:*
-De keuze is een alternatieve manier voor het modelleren van een constraint. 
+De keuze is een alternatieve manier voor het modelleren van een constraint.
 
 Een belangrijk voordeel van deze modellering is dat de kardinaliteiten zuiver gehouden kunnen worden. Anders gezegd, er kan mee voorkomen worden dat de kardinaliteit eerst optioneel gemaakt moet worden en hierna via een constraint weer verplicht gemaakt moeten worden, maar slechts voor één van de mogelijkheden. Het is aan de modelleur om te kiezen voor een constraint of een *Keuze*.  
 
-De intentie hierbij is om duidelijk aan te geven wat de eigenschappen van het object zijn, zonder hierbij nieuwe eigenschappen te introduceren als gevolg van de modellering. Hiervoor zijn een aantal gebruikstoepassingen. 
+De intentie hierbij is om duidelijk aan te geven wat de eigenschappen van het object zijn, zonder hierbij nieuwe eigenschappen te introduceren als gevolg van de modellering. Hiervoor zijn een aantal gebruikstoepassingen.
 
-**Meerdere modelelementen waartussen een keuze gemaakt moet worden** 
+**Meerdere modelelementen waartussen een keuze gemaakt moet worden**
 
-Dit zijn keuzes waarbij er sprake is van twee (of meer) modelelementen, waarbij *of* de ene, *of* de andere ingevuld moet worden oftewel verplicht is. Dit heeft in de verzamelingenleer een XOR constraint. 
+Dit zijn keuzes waarbij er sprake is van twee (of meer) modelelementen, waarbij *of* de ene, *of* de andere ingevuld moet worden oftewel verplicht is. Dit heeft in de verzamelingenleer een XOR constraint.
 
 *Use case 1, één attribuutsoort met een XOR tussen datatypen*
 Oftewel datatype A ofwel datatype B is aan de orde en verplicht.
@@ -713,30 +713,30 @@ Oftewel datatype A ofwel datatype B is aan de orde en verplicht.
 
 Voorbeeld: *Attribuutsoort* geometrie. Dit is een keuze uit *Datatype* Line of *Datatype* Polygon. De opsomming van beide keuzemogelijkheden noemen we de *Keuze* LineOrPolygon. Het maken van deze keuze is verplicht.
 
-Merk op dat er geen nieuw Datatype is bijgekomen als gevolg van deze modellering t.a.v. een modellering met een constraint. 
+Merk op dat er geen nieuw Datatype is bijgekomen als gevolg van deze modellering t.a.v. een modellering met een constraint.
 
 *Use case 2, één objecttype met een XOR tussen attribuutsoorten*
-Ofwel attribuutsoort A ofwel attribuutsoort B is aan de orde en verplicht. 
+Ofwel attribuutsoort A ofwel attribuutsoort B is aan de orde en verplicht.
 
 ![](media/attribuutkeuze.png)
 
 Voorbeeld: *Objecttype* Normwaarde heeft ofwel *Attribuutsoort* 'kwalitatieve waarde' ofwel *Attribuutsoort*  'kwantitatieve waarde', beide tegelijk mag niet voorkomen. De opsomming van beide keuzemogelijkheden noemen we de *Keuze* 'Waardetype keuze'. Het maken van deze keuze is verplicht.
 
-Merk op dat er geen nieuwe Attribuutsoort is bijgekomen als gevolg van deze modellering t.a.v. een modellering met een constraint. 
+Merk op dat er geen nieuwe Attribuutsoort is bijgekomen als gevolg van deze modellering t.a.v. een modellering met een constraint.
 
 *Use case 3, één objecttype met een XOR tussen relatiesoorten*
-Ofwel Relatiesoort A ofwel attribuutsoort B is aan de orde en verplicht. 
+Ofwel Relatiesoort A ofwel attribuutsoort B is aan de orde en verplicht.
 
-Voorbeeld: *Objecttype* Juridische regel beschrijft ofwel een Activiteit, ofwel een Omgevingsnorm. Beide relaties hebben bestaansrecht en hebben op zichzelf betekenis, maar een Juridische regel kan maar over 1 van beide gaan (in dit voorbeeld). 
+Voorbeeld: *Objecttype* Juridische regel beschrijft ofwel een Activiteit, ofwel een Omgevingsnorm. Beide relaties hebben bestaansrecht en hebben op zichzelf betekenis, maar een Juridische regel kan maar over 1 van beide gaan (in dit voorbeeld).
 
 De *Relatiesoort* 'beschrijft een activiteit' wijst naar *Objecttype* Activiteit, de *Relatiesoort* 'beschrijft een omgevingsnorm' wijst naar *Objecttype* Omgevingsnorm. De opsomming van beide keuzemogelijkheden noemen we de *Keuze* 'Regelbeschrijving keuze'. Het maken van deze keuze is verplicht.
 
-Merk op dat er geen nieuwe Relatiesoorten zijn bijgekomen als gevolg van deze modellering t.a.v. een modellering met een constraint. 
+Merk op dat er geen nieuwe Relatiesoorten zijn bijgekomen als gevolg van deze modellering t.a.v. een modellering met een constraint.
 
-**Eén modelelement waarbij er sprake is van een keuze** 
+**Eén modelelement waarbij er sprake is van een keuze**
 
 *Use case 4, een objecttype met één kenmerk, te weten een relatiesoort*
-De relatiesoort kan wijzen naar ofwel Objecttype A ofwel naar objecttype B. 
+De relatiesoort kan wijzen naar ofwel Objecttype A ofwel naar objecttype B.
 
 ![](media/relatiedoelkeuzeRelatiesoort.png)
 
@@ -744,10 +744,10 @@ Voorbeeld: *Objecttype* Vervoersmiddel heeft als *Relatiesoort* eigenaar ofwel e
 
 Merk op dat er geen nieuwe Relatiesoort is bijgekomen als gevolg van deze modellering t.a.v. een modellering met een constraint. Er is maar sprake van één Relatiesoort.
 
-*Use case 5, één objecttype met één kenmerk, te weten een Attribuutsoort* 
+*Use case 5, één objecttype met één kenmerk, te weten een Attribuutsoort*
 Het attribuutsootr heeft als verschijningsvorm ofwel *Attribuutsoort* A1 ofwel *Attribuutsoort* A2.
 
-Voorbeeld: het *Attribuutsoort* telefoonnummer van een Natuurlijk Persoon. Dit is ofwel een privenummer ofwel een werknummer. De opsomming van beide keuzemogelijkheden noemen we de *Keuze* TelefoonnummerSelectie. 
+Voorbeeld: het *Attribuutsoort* telefoonnummer van een Natuurlijk Persoon. Dit is ofwel een privenummer ofwel een werknummer. De opsomming van beide keuzemogelijkheden noemen we de *Keuze* TelefoonnummerSelectie.
 
 Merk op dat er geen nieuwe Attribuutsoort is bijgekomen als gevolg van deze modellering t.a.v. een modellering met een constraint. Er is maar sprake van één Attribuutsoort.
 
@@ -827,7 +827,7 @@ met een propery ‘*Name’*).
 
 Een aantal andere metagegevens, zoals de eerder genoemde *Datum opname* met
 waarde 1-1-2012. worden als aparte data vastgelegd, in UML gebeurd dit in een
-‘*Tagged value*’. In Linked data gebeurd dit met een ‘*owl:DatatypeProperty*’. 
+‘*Tagged value*’. In Linked data gebeurd dit met een ‘*owl:DatatypeProperty*’.
 
 Merk op, de metadata aspecten zijn specifiek voor elk modelelement apart. Dus
 als er in H2.2 sprake is van een generalisatie, dan worden deze metadata niet
@@ -931,7 +931,7 @@ object.
 *Toelichting*
 
 Hiermee wordt aangegeven hoe een informatiemodel element zich verhoudt tot de
-begrippen uit het begrippenkader, zoals genoemd in paragraaf [Typen Informatiemodellen](#typen-informatiemodellen). 
+begrippen uit het begrippenkader, zoals genoemd in paragraaf [Typen Informatiemodellen](#typen-informatiemodellen).
 Dit is niet een 1 op 1 relatie. Voor meer informatie hierover, zie hoofdstuk [Afspraken & Regels](#afspraken-regels).
 
 Bijvoorbeeld: Perceel of
@@ -1035,7 +1035,7 @@ De in te vullen waarde komt uit: zie Tagged values en waardenbereik tagged
 values.
 
 Materiële historie geeft aan wanneer een verandering is opgetreden in de werkelijkheid die heeft
-geleid tot verandering van de attribuutwaarde. Verdere toelichting, 
+geleid tot verandering van de attribuutwaarde. Verdere toelichting,
 zie het hoofdstuk [Afspraken & Regels](#afspraken-regels)
 
 *Toepassing*: alle modelelementen die een kenmerk (kunnen) zijn van een
@@ -1140,6 +1140,23 @@ en eventueel hoe de afleiding plaatsvindt.
 
 *Toepassing*: de modelelementen waarvoor een waarde ingevuld kan worden, te
 weten de modelelementen attribuutsoort en relatiesoort.
+
+### Metagegeven: **indicatie classificerend**
+
+>   **Definitie indicatie classificerend**
+>   Aanduiding dat een aspect een classificatie betreft van het betreffende objecttype
+
+*Toelichting*
+
+Bijvoorbeeld: type gebouw. Een toren, kerk, bunker, zwembad zijn allemaal typen gebouwen.
+In een model op niveau 2 kunnen dergelijke typen als objecttypen en specialisaties van het
+objecttype gebouw zijn gemodelleerd. Met name op niveau 3 kan het relevant zijn om deze informatie
+daadwerkelijk te structureren door expliciet een aspect op te nemen waarmee direct
+het type gebouw kan worden vastgelegd, los van de modellering van objecttypen.
+
+Praktisch gezien kan vervolgens gekozen worden om de onderliggende objecttypen niet meer in het model
+op te nemen, en slechts dit aspect op te nemen. Ook kan, in combinatie met **indicatie afleidbaar**
+dit aspect afgeleid worden uit het meest concrete objecttype, indien dergelijke objecttypen wel zijn gemodelleerd.
 
 ### Metagegeven: **mogelijk geen waarde**
 
