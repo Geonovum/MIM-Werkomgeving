@@ -1160,7 +1160,7 @@ dit aspect afgeleid worden uit het meest concrete objecttype, indien dergelijke 
 
 ### Metagegeven: **mogelijk geen waarde**
 
->   **Definitie indicatie afleidbaar**  
+>   **Definitie mogelijk geen waarde**
 >   Aanduiding dat van een aspect geen waarde is geregistreerd, maar dat
 >   onduidelijk is of de waarde er werkelijk ook niet is.
 
