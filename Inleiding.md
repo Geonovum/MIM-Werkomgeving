@@ -420,14 +420,16 @@ u contact opnemen met de MIM helpdesk van Geonovum: mim@geonovum.nl
 |-----|-----------------------------------------------------|----------------|
 | 1.  | Unified Modeling Language (UML)                     | [[!UML]]       |
 | 2.  | OMG Unified Modeling Language TM versie 2.5         | [[!OMG]]       |
-| 3.  | Stelselcatalogus                                    | [[!SCAT]]      |
-| 4.  | GAB                                                 | [[!GAB]]       |
-| 5.  | Handreiking gegevensbeschrijving (NORA)             | [[!NORA]]      |
-| 6.  | ISO 11404                                           | [[!iso-11404]] |
-| 7.  | ISO 8601                                            | [[!iso-8601]]  |
-| 8.  | Formeel patroon (Reguliere Expressies)              | [[!REGEXP]]    |
-| 9.  | OCL                                                 | [[!OCL]]       |
-| 10. | NEN 3610 Basismodel Geo-informatie (vanaf /A1:2016) | [[!NEN3610]]   |
+| 3.  | RDF Concepts and abstract syntax                    | [[RDF11-CONCEPTS ]] |
+| 4.  | Shape Constraint Language                           | [[SHACL]]      |
+| 5.  | Stelselcatalogus                                    | [[!SCAT]]      |
+| 6.  | GAB                                                 | [[!GAB]]       |
+| 7.  | Handreiking gegevensbeschrijving (NORA)             | [[!NORA]]      |
+| 8.  | ISO 11404                                           | [[!iso-11404]] |
+| 9.  | ISO 8601                                            | [[!iso-8601]]  |
+| 10. | Formeel patroon (Reguliere Expressies)              | [[!REGEXP]]    |
+| 11. | OCL                                                 | [[!OCL]]       |
+| 12. | NEN 3610 Basismodel Geo-informatie (vanaf /A1:2016) | [[!NEN3610]]   |
 
 De Stelselcatalogus [[!SCAT]], het GAB [[!GAB]] en de Handreiking gegevensbeschrijving
 [[!NORA]] raken elkaar op een aantal vlakken maar er kunnen op deze raakvlaken verschillen zijn
