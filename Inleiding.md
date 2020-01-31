@@ -420,7 +420,7 @@ u contact opnemen met de MIM helpdesk van Geonovum: mim@geonovum.nl
 |-----|-----------------------------------------------------|----------------|
 | 1.  | Unified Modeling Language (UML)                     | [[!UML]]       |
 | 2.  | OMG Unified Modeling Language TM versie 2.5         | [[!OMG]]       |
-| 3.  | RDF Concepts and abstract syntax                    | [[RDF11-CONCEPTS ]] |
+| 3.  | RDF Concepts and abstract syntax                    | [[RDF11-CONCEPTS]] |
 | 4.  | Shape Constraint Language                           | [[SHACL]]      |
 | 5.  | Stelselcatalogus                                    | [[!SCAT]]      |
 | 6.  | GAB                                                 | [[!GAB]]       |
