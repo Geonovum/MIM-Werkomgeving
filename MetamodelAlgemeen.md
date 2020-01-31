@@ -1144,10 +1144,11 @@ weten de modelelementen attribuutsoort en relatiesoort.
 ### Metagegeven: **indicatie classificerend**
 
 >   **Definitie indicatie classificerend**
->   Aanduiding dat een aspect een classificatie betreft van het betreffende objecttype
+>   Indicatie dat een attribuutsoort het objecttype waar het bijhoort classificeerd in (sub)typen.
 
 *Toelichting*
 
+Een objecttype kan middels een attribuutsoort geclassificeerd worden in subtypen.
 Bijvoorbeeld: type gebouw. Een toren, kerk, bunker, zwembad zijn allemaal typen gebouwen.
 In een model op niveau 2 kunnen dergelijke typen als objecttypen en specialisaties van het
 objecttype gebouw zijn gemodelleerd. Met name op niveau 3 kan het relevant zijn om deze informatie
@@ -1157,6 +1158,8 @@ het type gebouw kan worden vastgelegd, los van de modellering van objecttypen.
 Praktisch gezien kan vervolgens gekozen worden om de onderliggende objecttypen niet meer in het model
 op te nemen, en slechts dit aspect op te nemen. Ook kan, in combinatie met **indicatie afleidbaar**
 dit aspect afgeleid worden uit het meest concrete objecttype, indien dergelijke objecttypen wel zijn gemodelleerd.
+
+*Toepassing*: attribuutsoort.
 
 ### Metagegeven: **mogelijk geen waarde**
 
@@ -1487,20 +1490,6 @@ Een constraint is gekoppeld aan een klasse waarop ze van toepassing is.
 *Toepassing*: objecttype, gegevensgroeptype, relatieklasse.
 
 *Toepassing*: objecttype, gegevensgroeptype, relatieklasse.
-
-### Metagegeven: **Indicatie classificerend**
-
->   **Definitie Indicatie classificerend**  
->   Indicatie dat een attribuut het objecttype waar het bijhoort classificeerd in (sub)typen.
-
-*Toelichting*
-
-Een objecttype kan middels een attribuut geclassificeerd worden in subtypen zonder dat er aparte subklassen voor gemaakt worden. Dit metagegeven geeft aan dat dit het geval is.
-
-*Toepassing*: attribuutsoort.
-
-
-
 
 ### Toegestane waarden voor (bepaalde) metadata gegevens
 
