@@ -1121,7 +1121,7 @@ values.
 *Toepassing*: alle modelelementen die een kenmerk (kunnen) zijn van een
 objecttype.
 
-### Metagegeven: **indicatie afleidbaar**
+### Metagegeven: **Indicatie afleidbaar**
 
 >   **Definitie indicatie afleidbaar**  
 >   Aanduiding dat gegeven afleidbaar is uit andere attribuut- en/of
@@ -1141,10 +1141,10 @@ en eventueel hoe de afleiding plaatsvindt.
 *Toepassing*: de modelelementen waarvoor een waarde ingevuld kan worden, te
 weten de modelelementen attribuutsoort en relatiesoort.
 
-### Metagegeven: **indicatie classificerend**
+### Metagegeven: **Indicatie classificerend**
 
->   **Definitie indicatie classificerend**
->   Indicatie dat een attribuutsoort het objecttype waar het bijhoort classificeerd in (sub)typen.
+>   **Definitie Indicatie classificerend**
+>   Indicatie dat een attribuutsoort het objecttype waar het bijhoort classificeert in (sub)typen.
 
 *Toelichting*
 
@@ -1158,6 +1158,9 @@ het type gebouw kan worden vastgelegd, los van de modellering van objecttypen.
 Praktisch gezien kan vervolgens gekozen worden om de onderliggende objecttypen niet meer in het model
 op te nemen, en slechts dit aspect op te nemen. Ook kan, in combinatie met **indicatie afleidbaar**
 dit aspect afgeleid worden uit het meest concrete objecttype, indien dergelijke objecttypen wel zijn gemodelleerd.
+
+De in te vullen waarde komt uit: zie Tagged values en waardenbereik tagged
+values.
 
 *Toepassing*: attribuutsoort.
 
@@ -1504,6 +1507,7 @@ Tagged values zijn altijd van het datatype CharacterString. Aanvullend geldt:
 |-------------------------------------|----------------------------------------------------------------------------|
 | Indicatie materiële historie        | Ja, Nee                                                                    |
 | Indicatie formele historie          | Ja, Nee                                                                    |
+| Indicatie classificerend            | Ja, Nee                                                                    |
 | Mogelijk geen waarde                | Ja, Nee                                                                    |
 | Type aggregratie                    | Compositie, Gedeeld, Geen                                                  |
 | [Authentiek](#authentieke-gegevens) | Authentiek, Basisgegeven, Wettelijk gegeven, Landelijk kerngegeven, Overig |
