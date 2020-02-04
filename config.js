@@ -71,7 +71,7 @@ var respecConfig =
       company:    "Geonovum",
       companyURL: "https://www.geonovum.nl"
     },
-	    {
+	{
       name:       "Ellen Debats",
       company:    "KING",
       companyURL: "https://www.vng.nl"
