@@ -71,7 +71,12 @@ var respecConfig =
       company:    "Geonovum",
       companyURL: "https://www.geonovum.nl"
     },
-	{
+    {
+      name:       "<br>Aan eerdere versies van MIM werkten mee:",
+      company:    "",
+      companyURL: ""
+    },
+	  {
       name:       "Ellen Debats",
       company:    "KING",
       companyURL: "https://www.vng.nl"
@@ -90,12 +95,12 @@ var respecConfig =
       name:       "Peter Lentjens",
       company:    "Kadaster",
       companyURL: "https://www.kadaster.nl"
-	},
-	 {
+	  },
+	  {
       name:       "Linda van den Brink",
       company:    "Geonovum",
       companyURL: "https://www.geonovum.nl"
-	},
+	  },
   ],
   //-- shortName is verplicht! (komt in de URL: kies logische naam) --------------------
   shortName: "mim11", 	            // Wordt gebruikt in de document URL
@@ -258,5 +263,5 @@ var respecConfig =
   //-- Optionele parameters:
   //emailComments: "mim@geonovum.nl",         // reactie mailadres, alleen bij CV!
   //subtitle: "iets",                         // Subtitel van het document
-  maxTocLevel: 3,                             // Aantal niveau's ToC, default is 0
+  maxTocLevel: 4,                             // Aantal niveau's ToC, default is 0
 };
