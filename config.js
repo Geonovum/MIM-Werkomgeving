@@ -72,7 +72,7 @@ var respecConfig =
       companyURL: "https://www.geonovum.nl"
     },
     {
-      name:       "Aan eerdere versie van MIM werkten mee:",
+      name:       "<br>Aan eerdere versies van MIM werkten mee:",
       company:    "",
       companyURL: ""
     },
