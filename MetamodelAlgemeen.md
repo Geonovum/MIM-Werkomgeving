@@ -725,7 +725,7 @@ Voorbeeld: *Objecttype* Normwaarde heeft ofwel *Attribuutsoort* 'kwalitatieve wa
 Merk op dat er geen nieuwe Attribuutsoort is bijgekomen als gevolg van deze modellering t.a.v. een modellering met een constraint.
 
 *Use case 3, één objecttype met een XOR tussen relatiesoorten*
-Ofwel Relatiesoort A ofwel attribuutsoort B is aan de orde en verplicht.
+Ofwel Relatiesoort A ofwel Relatiesoort B is aan de orde en verplicht.
 
 Voorbeeld: *Objecttype* Juridische regel beschrijft ofwel een Activiteit, ofwel een Omgevingsnorm. Beide relaties hebben bestaansrecht en hebben op zichzelf betekenis, maar een Juridische regel kan maar over 1 van beide gaan (in dit voorbeeld).
 
