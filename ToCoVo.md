@@ -41,4 +41,5 @@ veroverd binnen de NORA. Met de uitbreidingen en aanpassingen in deze versie wor
 toepassingsbereik van MIM aanzienlijk verbreed.
 
 Dick Krijtenburg, Geonovum
+
 Februari 2020
