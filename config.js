@@ -71,7 +71,12 @@ var respecConfig =
       company:    "Geonovum",
       companyURL: "https://www.geonovum.nl"
     },
-	{
+    {
+      name:       "Aan eerdere versie van MIM werkten mee:",
+      company:    "",
+      companyURL: ""
+    },
+	  {
       name:       "Ellen Debats",
       company:    "KING",
       companyURL: "https://www.vng.nl"
@@ -90,12 +95,12 @@ var respecConfig =
       name:       "Peter Lentjens",
       company:    "Kadaster",
       companyURL: "https://www.kadaster.nl"
-	},
-	 {
+	  },
+	  {
       name:       "Linda van den Brink",
       company:    "Geonovum",
       companyURL: "https://www.geonovum.nl"
-	},
+	  },
   ],
   //-- shortName is verplicht! (komt in de URL: kies logische naam) --------------------
   shortName: "mim11", 	            // Wordt gebruikt in de document URL
