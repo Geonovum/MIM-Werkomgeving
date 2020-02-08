@@ -185,3 +185,23 @@ vb:eigenaar a mim:Relatiesoort;
 .
 </pre></td></tr>
 </tbody></table>
+
+Zonder de mogelijkheid van keuze, zou je te maken krijgen met twee relatiesoorten met bijbehorend datatype. Een alternatief zou zijn om gebruik te maken van een relatieklasse (een specialisatie van relatiesoort), waarbij dan toegestaan zou moeten worden dat een relatieklasse meer dan één relatiedoel mag hebben (eigenlijk een soort van tertiare relatie). Dit wordt echter niet ondersteund vanuit het MIM. Ook zou in dat geval de relatiesoorten niet dezelfde naam mogen hebben, aangezien deze hetzelfde objecttype als bron hebben. Ook ozu de kardinaliteit niet kloppen: die zou dan [0..1] moeten worden, maar dat doet geen recht aan het feit dat er één verplicht aanwezig moet zijn, en er ook geen twee naast elkaar mogen zijn. De werkelijke kardinaliteit is [1..1].
+
+Merk op: use case 1 en 4 zijn eigenlijk vergelijkbaar, bij use case 1 gaat het om datatypen, bij use case 4 gaat het om objecttypen, maar vanuit het perspectief van keuze gaat het in beide gevallen om een keuze tussen twee elementen die verbonden zijn met een objecttype.
+
+## Use case 5: Een keuze tussen twee verschijningsvormen van een attribuutsoort
+
+Van een objecttype "Persoon" kan geregistreerd worden wat het telefoonnummer van deze persoon is. Minimaal dient er één telefoonnummer geregistreerd te worden, maar het mogen er ook meerdere zijn. Een dergelijk telefoonnummer kan een privé telefoonnummer zijn, of een zakelijk telefoonnummer.
+
+Deze use case lijkt sterk op use case 2 (waarbij ook sprake was van een keuze tussen attribuutsoorten). Het verschil is dat bij deze use case vanuit een conceptueel perspectief sprake is van een meer algemeen attribuutsoort "telefoonnummer", die verschillende verschijningsvormen kent.
+
+## Use case 6: Een keuze tussen twee verschijningsvormen van een relatiesoort
+
+Een objecttype "Persoon" kan gerelateerd zijn aan een objecttype "Locatie". Een dergelijk adres-relatie kan betrekking hebben op het (formele) woonadres, correspondentieadres of verblijfsadres.
+
+Deze use case lijkt sterk op use case 3 (waarbij ook sprake was van een keuze tussen relatiesoorten). Het verschil is dat bij deze use case vanuit een conceptueel perspectief sprake is van een meer algemene relatiesoort "adres", die verschillende verschijningsvormen kent. Daarnaast lijken use case 5 en 6 op elkaar: het betreft vergelijkbare constructies met als verschil de keuze tussen attribuutsoort dan wel relatiesoort.
+
+(Merk op: er is geen noodzaak voor een keuze tussen datatypen of relatiedoelen op deze wijze, aangezien een datatype-keuze of objecttype-keuze al mogelijk is via een specialisatie van een datatype dan wel objecttype).
+
+**Opmerking MB**: ik vraag me dan ook af of use cases 5 en 6 wel horen bij "Keuze". Ik zou deze eerder plaatsen bij generalisatie/specialisatie, zoals bij datatype en objecttype.
