@@ -118,7 +118,7 @@ Onderstaand figuur geeft in zowel UML als Linked Data weer hoe beide modellen er
 <tr><th>UML</th><th>Linked Data</th></tr>
 <tr><td><img src="use-case-3-keuze-A.png"/></td><td>
 <pre class='ex-turtle'>
-vb:Betalingsopdracht a mim:Objecttype;
+vb:Persoon a mim:Objecttype;
   mim:naam "Persoon";
 .
 vb:echtgenootVan a mim:Relatiesoort;
@@ -130,7 +130,7 @@ vb:echtgenootVan a mim:Relatiesoort;
 </pre></td></tr>
 <tr><td><img src="use-case-3-keuze-B.png"/></td><td>
 <pre class='ex-turtle'>
-vb:Betalingsopdracht a mim:Objecttype;
+vb:Persoon a mim:Objecttype;
   mim:naam "Persoon";
 .
 vb:geregistreerdPartnerVan a mim:Relatiesoort;
@@ -138,6 +138,50 @@ vb:geregistreerdPartnerVan a mim:Relatiesoort;
   mim:doel vb:Persoon;
   mim:bron vb:Persoon;
   mim:kardinaliteit "0..1";
+.
+</pre></td></tr>
+</tbody></table>
+
+Zonder de mogelijkheid van keuze zouden beide relatiesoorten opgenomen zijn bij het objecttype. Hiermee zou niet zichtbaar zijn dat er slechts één van de twee relatiesoorten aanwezig mogen zijn.
+
+Merk op: use case 2 en 3 zijn eigenlijk vergelijkbaar, bij use case 2 gaat het om attribuutsoorten, bij use case 3 gaat het om relatiesoorten, maar vanuit het perspectief van keuze gaat het in beide gevallen om een keuze tussen twee elementen die verbonden zijn met een objecttype.
+
+## Use case 4: Een keuze tussen twee relatiedoelen
+
+Een objecttype "Vervoersmiddel" heeft een eigenaar. Dit kan een persoon zijn, of een bedrijf, maar niet beiden. Er is sprake van één relatiesoort ("eigenaar") en een keuze tussen twee relatiedoelen, de objecttypen "persoon" en "bedrijf".
+
+Onderstaand figuur geeft in zowel UML als Linked Data weer hoe beide modellen er uit zouden zien voor beide afzonderlijke situaties.
+
+<table><tbody>
+<tr><th>UML</th><th>Linked Data</th></tr>
+<tr><td><img src="use-case-4-keuze-A.png"/></td><td>
+<pre class='ex-turtle'>
+vb:Vervoersmiddel a mim:Objecttype;
+  mim:naam "Vervoersmiddel";
+.
+vb:Persoon a mim:Objecttype;
+  mim:naam "Persoon";
+.
+vb:eigenaar a mim:Relatiesoort;
+  mim:naam "eigenaar";
+  mim:doel vb:Vervoersmiddel;
+  mim:bron vb:Persoon;
+  mim:kardinaliteit "1";
+.
+</pre></td></tr>
+<tr><td><img src="use-case-4-keuze-B.png"/></td><td>
+<pre class='ex-turtle'>
+vb:Vervoersmiddel a mim:Objecttype;
+  mim:naam "Vervoersmiddel";
+.
+vb:Persoon a mim:Objecttype;
+  mim:naam "Bedrijf";
+.
+vb:eigenaar a mim:Relatiesoort;
+  mim:naam "eigenaar";
+  mim:doel vb:Vervoersmiddel;
+  mim:bron vb:Bedrijf;
+  mim:kardinaliteit "1";
 .
 </pre></td></tr>
 </tbody></table>
