@@ -14,7 +14,8 @@ Van een objecttype "Persoon" is relevant op welk adres deze persoon woont. Er is
 
 Onderstaand figuur geeft in zowel UML als Linked Data weer hoe beide modellen er uit zouden zien voor beide afzonderlijke situaties.
 
-<table>
+<table><tbody>
+<tr><th>UML</th><th>Linked Data</th></tr>
 <tr><td><img src="use-case-1-keuze-A.png"/></td><td>
 <pre class='ex-turtle'>
 vb:Persoon a mim:Objecttype;
@@ -55,4 +56,4 @@ vb:Adrestype a mim:GestructureerdDatatype;
   ]
 .
 </pre></td></tr>
-</table>
+</tbody></table>
