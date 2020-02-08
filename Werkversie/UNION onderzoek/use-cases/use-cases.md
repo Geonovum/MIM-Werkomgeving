@@ -14,8 +14,7 @@ Van een objecttype "Persoon" is relevant op welk adres deze persoon woont. Er is
 
 Onderstaand figuur geeft in zowel UML als Linked Data weer hoe beide modellen er uit zouden zien voor beide afzonderlijke situaties.
 
-| UML | Linked Data |
-|-----|-------------|
-|![](use-case-1-keuze-A.png)|<div>sdflksjdf
-sldkjfsdf</div>|
-|![](use-case-1-keuze-B.png)||
+<table>
+<tr><td><img src="use-case-1-keuze-A.png"/></td><td><pre class='ex-turtle'>Linked Data</pre></td></tr>
+<tr><td><img src="use-case-1-keuze-B.png"/></td><td>Linked Data</td></tr>
+</table>
