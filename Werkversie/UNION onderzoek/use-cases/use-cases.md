@@ -16,5 +16,6 @@ Onderstaand figuur geeft in zowel UML als Linked Data weer hoe beide modellen er
 
 | UML | Linked Data |
 |-----|-------------|
-|![](use-case-1-keuze-A.png)|![](use-case-1-keuze-A-LD.png)|
+|![](use-case-1-keuze-A.png)|<div>sdflksjdf
+sldkjfsdf</div>|
 |![](use-case-1-keuze-B.png)||
