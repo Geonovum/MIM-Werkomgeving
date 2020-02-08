@@ -4,7 +4,7 @@ Een *Keuze* is een opsomming van meerdere modelelementen, waarbij er maar van é
 
 *Toelichting:* De keuze is een alternatieve manier voor het modelleren van een constraint.
 
-Een *Keuze* kan op meerdere plekken gebruikt worden, en maakt het mogelijk waar in het metamodel normaal gesproken maar één mogelijkheid bestaat, een opsomming te geven van meerdere mogelijkheden, waarbij in een concreet model altijd precies één van deze mogelijkheden wordt gebruikt.
+Een *Keuze* kan op meerdere plekken gebruikt worden, en maakt het mogelijk waar in het metamodel normaal gesproken maar één mogelijkheid bestaat, een opsomming te geven van meerdere mogelijkheden, waarbij in een concreet geval altijd precies één van deze mogelijkheden wordt gebruikt.
 
 Dit document beschrijft zes use cases waarin het modelleren met een *Keuze* van toegevoegde waarde is. Zonder een dergelijke modelconstructie zou het nodig moeten zijn om met een expliciete constraint de keuze aan te geven.
 
@@ -186,7 +186,7 @@ vb:eigenaar a mim:Relatiesoort;
 </pre></td></tr>
 </tbody></table>
 
-Zonder de mogelijkheid van keuze, zou je te maken krijgen met twee relatiesoorten met bijbehorend datatype. Een alternatief zou zijn om gebruik te maken van een relatieklasse (een specialisatie van relatiesoort), waarbij dan toegestaan zou moeten worden dat een relatieklasse meer dan één relatiedoel mag hebben (eigenlijk een soort van tertiare relatie). Dit wordt echter niet ondersteund vanuit het MIM. Ook zou in dat geval de relatiesoorten niet dezelfde naam mogen hebben, aangezien deze hetzelfde objecttype als bron hebben. Ook ozu de kardinaliteit niet kloppen: die zou dan [0..1] moeten worden, maar dat doet geen recht aan het feit dat er één verplicht aanwezig moet zijn, en er ook geen twee naast elkaar mogen zijn. De werkelijke kardinaliteit is [1..1].
+Zonder de mogelijkheid van keuze, zou je te maken krijgen met twee relatiesoorten met bijbehorend objecttype. Een alternatief zou zijn om gebruik te maken van een relatieklasse (een specialisatie van relatiesoort), waarbij dan toegestaan zou moeten worden dat een relatieklasse meer dan één relatiedoel mag hebben (eigenlijk een soort van tertiare relatie). Dit wordt echter niet ondersteund vanuit het MIM. Bij twee relatiesoorten zouden deze niet dezelfde naam mogen hebben, aangezien deze hetzelfde objecttype als bron hebben. Ook zou de kardinaliteit niet kloppen: die zou dan [0..1] moeten worden, maar dat doet geen recht aan het feit dat er één verplicht aanwezig moet zijn, en er ook geen twee naast elkaar mogen zijn. De werkelijke kardinaliteit is [1..1].
 
 Merk op: use case 1 en 4 zijn eigenlijk vergelijkbaar, bij use case 1 gaat het om datatypen, bij use case 4 gaat het om objecttypen, maar vanuit het perspectief van keuze gaat het in beide gevallen om een keuze tussen twee elementen die verbonden zijn met een objecttype.
 
