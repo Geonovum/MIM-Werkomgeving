@@ -2,7 +2,7 @@
 
 ## Colofon
 
-Aan de totstandkoming van dit metamodel hebben de volgende inhoudelijke experts
+Aan de totstandkoming van deze versie van dit metamodel hebben de volgende inhoudelijke experts
 op het gebied van informatiemodellering meegewerkt:
 
 | Naam                      | Organisatie    | Rol en achtergrond                                                   |
@@ -40,5 +40,6 @@ We hebben de afgelopen tijd gezien dat MIM breed wordt omarmd binnen de overheid
 veroverd binnen de NORA. Met de uitbreidingen en aanpassingen in deze versie wordt het 
 toepassingsbereik van MIM aanzienlijk verbreed.
 
-Dick Krijtenburg (Geonovum)  
-Oktober 2019
+Dick Krijtenburg, Geonovum
+
+Februari 2020
