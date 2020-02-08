@@ -1,0 +1,25 @@
+@prefix vb: <http://bp4mc2.org/def/vb#>.
+@prefix mim: <http://bp4mc2.org/def/mim#>.
+
+vb:Vervoersmiddel a mim:Objecttype;
+  mim:naam "Vervoersmiddel";
+.
+
+vb:NatuurlijkPersoon a mim:Objecttype;
+  mim:naam "Natuurlijk persoon";
+.
+
+vb:NietNatuurlijkPersoon a mim:Objecttype;
+  mim:naam "Niet natuurlijk persoon";
+.
+
+vb:Eigenaar a mim:Relatiesoort;
+  mim:naam "eigenaar";
+  mim:bron vb:Vervoersmiddel;
+  mim:doel vb:Eigenaarkeuze;
+.
+
+vb:Eigenaarkeuze a mim:Keuze;
+  mim:naam "Eigenaarkeuze";
+  mim:relatiedoelkeuze vb:NatuurlijkPersoon, vb:NietNatuurlijkPersoon
+.

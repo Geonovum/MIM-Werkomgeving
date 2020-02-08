@@ -1,0 +1,27 @@
+vb:Persoon a mim:Objecttype;
+  mim:naam "Persoon";
+  mim:attribuut [
+    a mim:Attribuutsoort;
+    mim:naam "adres";
+    mim:type vb:Adrestype
+  ]
+.
+
+vb:Adrestype a mim:GestructureerdDatatype;
+  mim:naam "Adrestype";
+  mim:dataElement [
+    a mim:DataElement;
+    mim:naam "huisnummer";
+    mim:type mim:CharacterString;
+  ];
+  mim:dataElement [
+    a mim:DataElement;
+    mim:naam "straatnaam";
+    mim:type mim:CharacterString;
+  ];
+  mim:dataElement [
+    a mim:DataElement;
+    mim:naam "woonplaats";
+    mim:type mim:CharacterString;
+  ]
+.

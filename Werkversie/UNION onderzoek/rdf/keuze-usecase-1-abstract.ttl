@@ -1,0 +1,27 @@
+@prefix vb: <http://bp4mc2.org/def/vb#>.
+@prefix mim: <http://bp4mc2.org/def/mim#>.
+
+vb:EenObjecttype a mim:Objecttype;
+  mim:naam "Naam objecttype";
+  mim:attribuut vb:Attribuutsoort1
+.
+
+vb:Datatype1 a mim:Datatype;
+  mim:naam "Naam datatype1";
+.
+vb:Datatype2 a mim:Datatype;
+  mim:naam "Naam datatype2";
+.
+vb:DatatypeX a mim:Datatype;
+  mim:naam "Naam datatypeX";
+.
+
+vb:Attribuutsoort1 a mim:Attribuutsoort;
+  mim:naam "attribuut1";
+  mim:type vb:EenDatatypeKeuze;
+.
+
+vb:EenDatatypeKeuze a mim:Keuze;
+  mim:naam "Naam keuzeklasse";
+  mim:datatypekeuze vb:Datatype1, vb:Datatype2, vb:DatatypeX
+.

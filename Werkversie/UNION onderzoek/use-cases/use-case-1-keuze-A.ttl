@@ -1,0 +1,8 @@
+vb:Persoon a mim:Objecttype;
+  mim:naam "Persoon";
+  mim:attribuut [
+    a mim:Attribuutsoort;
+    mim:naam "adres";
+    mim:type mim:CharacterString
+  ];
+.

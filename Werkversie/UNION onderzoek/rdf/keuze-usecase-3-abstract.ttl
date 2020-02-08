@@ -1,0 +1,32 @@
+@prefix vb: <http://bp4mc2.org/def/vb#>.
+@prefix mim: <http://bp4mc2.org/def/mim#>.
+
+vb:JuridischeRegel a mim:Objecttype;
+  mim:naam "Juridische regel";
+  mim:relatie vb:Regelbeschrijvingkeuze;
+.
+
+vb:Activiteit a mim:Objecttype;
+  mim:naam "Activiteit";
+.
+
+vb:Omgevingsnorm a mim:Objecttype;
+  mim:naam "Omgevingsnorm";
+.
+
+vb:BeschrijftEenActiviteit a mim:Relatiesoort;
+  mim:naam "Beschrijft een activiteit";
+  mim:bron vb:JuridischeRegel;
+  mim:doel vb:Activiteit;
+.
+
+vb:BeschrijftEenOmgevingsnorm a mim:Relatiesoort;
+  mim:naam "Beschrijft een omgevingsnorm";
+  mim:bron vb:JuridischeRegel;
+  mim:doel vb:Omgevingsnorm;
+.
+
+vb:RegelbeschrijvingKeuze a mim:Keuze;
+  mim:naam "Regelbeschrijving keuze";
+  mim:relatiekeuze vb:BeschrijftEenActiviteit, vb:BeschrijftEenOmgevingsnorm
+.

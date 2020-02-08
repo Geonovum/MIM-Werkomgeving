@@ -1,0 +1,13 @@
+@prefix gml: <http://www.opengis.net/ont/gml#>.
+
+@prefix bag: <http://bag.basisregistraties.overheid.nl/def/bag#>.
+
+@prefix verblijfsobject: <http://bag.basisregistraties.overheid.nl/id/verblijfsobject/>.
+@prefix geometrie: <http://bag.basisregistraties.overheid.nl/id/geometrie/>.
+
+
+# Het BAG voorbeeld is lastig, omdat in het MIM dit als een datatypekeuze wordt neergezet, terwijl het klassen zijn...
+verblijfsobject:1234 a bag:Verblijfsobject;
+.
+geometrie:1234 a gml:Point;
+.

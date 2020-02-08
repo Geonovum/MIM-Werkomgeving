@@ -1,0 +1,74 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
+@prefix dcterms: <http://purl.org/dc/terms/>.
+@prefix dctypes: <http://purl.org/dc/dcmitype/>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix geosparql: <http://www.opengis.net/ont/geosparql#>.
+@prefix prov: <http://www.w3.org/ns/prov#>.
+@prefix sh: <http://www.w3.org/ns/shacl#>.
+@prefix gml: <http://www.opengis.net/ont/gml#>.
+
+@prefix shape: <http://bag.basisregistraties.overheid.nl/def/bag-shape#>.
+@prefix bag: <http://bag.basisregistraties.overheid.nl/def/bag#>.
+
+bag:Verblijfsobject a owl:Class;
+  rdfs:label "Verblijfsobject"@nl;
+.
+shape:Verblijfsobject a sh:NodeShape;
+  sh:name "Verblijfsobject";
+  sh:targetClass bag:Verblijfsobject;
+  sh:property shape:Verblijfsobject_geometrieVerblijfsobject
+.
+
+bag:geometrieVerblijfsobject a owl:ObjectProperty;
+  rdfs:label "geometrie verblijfsobject"@nl;
+.
+shape:Verblijfsobject_geometrieVerblijfsobject a sh:PropertyShape;
+  sh:name "geometrieVerblijfsobject";
+  sh:path bag:geometrieVerblijfsobject;
+  sh:node shape:PointOrSurface ;
+  sh:nodeKind sh:IRI;
+  sh:minCount 1;
+  sh:maxCount 1
+.
+shape:PointOrSurface a sh:NodeShape;
+  sh:xone ( shape:Point shape:Surface )
+.
+
+geosparql:Geometry a owl:Class;
+  rdfs:label "Geometry"@en;
+.
+shape:Geometry a sh:NodeShape;
+  sh:name "geosparql:Geometry"@en;
+  sh:targetClass geosparql:Geometry;
+.
+
+gml:Point a owl:Class;
+  rdfs:label "Point"@en;
+  rdfs:subClassOf geosparql:Geometry;
+.
+shape:Point a sh:NodeShape;
+  sh:name "gml:Point";
+  sh:targetClass gml:Point;
+  sh:property [
+    sh:path rdf:type;
+    sh:hasValue gml:Point;
+    sh:minCount 1;
+  ]
+.
+
+gml:Surface a owl:Class;
+  rdfs:label "Surface"@en;
+  rdfs:subClassOf geosparql:Geometry;
+.
+shape:Surface a sh:NodeShape;
+  sh:name "gml:Surface";
+  sh:targetClass gml:Surface;
+  sh:property [
+    sh:path rdf:type;
+    sh:hasValue gml:Surface;
+    sh:minCount 1;
+  ]
+.
