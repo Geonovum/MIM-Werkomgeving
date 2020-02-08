@@ -107,3 +107,37 @@ vb:Betalingsopdracht a mim:Objecttype;
 </tbody></table>
 
 Zonder de mogelijkheid van keuze zouden beide attribuutsoorten opgenomen zijn bij het objecttype. Dit is in deze use-case geen probleem. Wel is de kardinaliteit ook in dit geval dan niet correct: die zou dan [0..1] moeten worden, maar dat doet geen recht aan het feit dat er één verplicht aanwezig moet zijn, en er ook geen twee naast elkaar mogen zijn. De werkelijke kardinaliteit is [1..1] op de keuze zelf.
+
+## Use case 3: een keuze tussen twee relatiesoorten
+
+Een objecttype "Persoon" kan getrouwd zijn met een ander persoon, of een geregistreerd partnerschap hebben met een ander persoon. Het is niet mogelijk dat een persoon beide relaties heeft. Er is sprake van een keuze tussen OF getrouwd zijn, OF geregistreerd partnerschap.
+
+Onderstaand figuur geeft in zowel UML als Linked Data weer hoe beide modellen er uit zouden zien voor beide afzonderlijke situaties.
+
+<table><tbody>
+<tr><th>UML</th><th>Linked Data</th></tr>
+<tr><td><img src="use-case-3-keuze-A.png"/></td><td>
+<pre class='ex-turtle'>
+vb:Betalingsopdracht a mim:Objecttype;
+  mim:naam "Persoon";
+.
+vb:echtgenootVan a mim:Relatiesoort;
+  mim:naam "echtgenoot van";
+  mim:doel vb:Persoon;
+  mim:bron vb:Persoon;
+  mim:kardinaliteit "0..1";
+.
+</pre></td></tr>
+<tr><td><img src="use-case-3-keuze-B.png"/></td><td>
+<pre class='ex-turtle'>
+vb:Betalingsopdracht a mim:Objecttype;
+  mim:naam "Persoon";
+.
+vb:geregistreerdPartnerVan a mim:Relatiesoort;
+  mim:naam "geregistreerd partner van";
+  mim:doel vb:Persoon;
+  mim:bron vb:Persoon;
+  mim:kardinaliteit "0..1";
+.
+</pre></td></tr>
+</tbody></table>
