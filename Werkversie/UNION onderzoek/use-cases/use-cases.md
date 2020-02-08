@@ -6,7 +6,7 @@ Een *Keuze* is een opsomming van meerdere modelelementen, waarbij er maar van é
 
 Een *Keuze* kan op meerdere plekken gebruikt worden, en maakt het mogelijk waar in het metamodel normaal gesproken maar één mogelijkheid bestaat, een opsomming te geven van meerdere mogelijkheden, waarbij in een concreet model altijd precies één van deze mogelijkheden wordt gebruikt.
 
-Dit document beschrijft vijf use cases waarin het modelleren met een *Keuze* van toegevoegde waarde is. Zonder een dergelijke modelconstructie zou het nodig moeten zijn om met een expliciete constraint de keuze aan te geven.
+Dit document beschrijft zes use cases waarin het modelleren met een *Keuze* van toegevoegde waarde is. Zonder een dergelijke modelconstructie zou het nodig moeten zijn om met een expliciete constraint de keuze aan te geven.
 
 ## Use case 1: een keuze tussen twee datatypen
 
