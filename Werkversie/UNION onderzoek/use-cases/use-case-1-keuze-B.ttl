@@ -6,7 +6,6 @@ vb:Persoon a mim:Objecttype;
     mim:type vb:Adrestype
   ]
 .
-
 vb:Adrestype a mim:GestructureerdDatatype;
   mim:naam "Adrestype";
   mim:dataElement [

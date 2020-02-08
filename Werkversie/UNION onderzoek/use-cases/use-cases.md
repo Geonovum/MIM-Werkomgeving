@@ -15,6 +15,44 @@ Van een objecttype "Persoon" is relevant op welk adres deze persoon woont. Er is
 Onderstaand figuur geeft in zowel UML als Linked Data weer hoe beide modellen er uit zouden zien voor beide afzonderlijke situaties.
 
 <table>
-<tr><td><img src="use-case-1-keuze-A.png"/></td><td><pre class='ex-turtle'>Linked Data</pre></td></tr>
-<tr><td><img src="use-case-1-keuze-B.png"/></td><td>Linked Data</td></tr>
+<tr><td><img src="use-case-1-keuze-A.png"/></td><td>
+<pre class='ex-turtle'>
+vb:Persoon a mim:Objecttype;
+  mim:naam "Persoon";
+  mim:attribuut [
+    a mim:Attribuutsoort;
+    mim:naam "adres";
+    mim:type mim:CharacterString
+  ];
+.
+</pre></td></tr>
+<tr><td><img src="use-case-1-keuze-B.png"/></td><td>
+<pre class='ex-turtle'>
+vb:Persoon a mim:Objecttype;
+  mim:naam "Persoon";
+  mim:attribuut [
+    a mim:Attribuutsoort;
+    mim:naam "adres";
+    mim:type vb:Adrestype
+  ]
+.
+vb:Adrestype a mim:GestructureerdDatatype;
+  mim:naam "Adrestype";
+  mim:dataElement [
+    a mim:DataElement;
+    mim:naam "huisnummer";
+    mim:type mim:CharacterString;
+  ];
+  mim:dataElement [
+    a mim:DataElement;
+    mim:naam "straatnaam";
+    mim:type mim:CharacterString;
+  ];
+  mim:dataElement [
+    a mim:DataElement;
+    mim:naam "woonplaats";
+    mim:type mim:CharacterString;
+  ]
+.
+</pre></td></tr>
 </table>
