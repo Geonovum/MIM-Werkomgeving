@@ -26,82 +26,81 @@
 # Objecten en attributen
 mim:Objecttype a owl:Class;
   rdfs:label "Objecttype"@nl;
-  rdfs:comment "De typering van een groep objecten (in de werkelijkheid) die binnen een domein relevant zijn en als gelijksoortig worden beschouwd."@nl;
-  dct:source mimdoc:sectie2.2.1.1-Objecttype;
+  rdfs:comment "De typering van een groep objecten die binnen een domein relevant zijn en als gelijksoortig worden beschouwd."@nl;
+  dct:source mimdoc:sectie2.5.2;
 .
 mim:Attribuutsoort a owl:Class;
   rdfs:label "Attribuutsoort"@nl;
   rdfs:comment "De typering van gelijksoortige gegevens die voor een objecttype van toepassing is."@nl;
-  dct:source mimdoc:sectie2.2.1.2-Attribuutsoort;
+  dct:source mimdoc:sectie2.5.3;
 .
 mim:Gegevensgroep a owl:Class;
   rdfs:label "Gegevensgroep"@nl;
   rdfs:comment "Een typering van een groep van gelijksoortige gegevens die voor een objecttype van toepassing is."@nl;
-  dct:source mimdoc:sectie2.2.1.3-Gegevensgroep;
+  dct:source mimdoc:sectie2.5.4;
 .
 mim:Gegevensgroeptype a owl:Class;
   rdfs:label "Gegevensgroeptype"@nl;
   rdfs:comment "Een groep van met elkaar samenhangende attribuutsoorten. Een gegevensgroeptype is altijd een type van een gegevensgroep."@nl;
-  dct:source mimdoc:sectie2.2.1.4-Gegevensgroeptype;
+  dct:source mimdoc:sectie2.5.5;
 .
 
 # Relaties
 mim:Generalisatie a owl:Class;
   rdfs:label "Generalisatie"@nl;
-  rdfs:comment "De typering van het hiërarchische verband tussen een meer generiek en een meer specifiek modelelement van hetzelfde soort, waarbij het meer specifieke modelelement eigenschappen van het meer generieke modelelement overerft. Generalisatie is gedefinieerd voor de modelelementen ObjectType en Datatype."@nl;
-  dct:source mimdoc:sectie2.2.2-5-Generalisatie;
+  rdfs:comment "De typering van het hiërarchische verband tussen een meer generiek en een meer specifiek modelelement van hetzelfde soort, waarbij het meer specifieke modelelement eigenschappen van het meer generieke modelelement overerft. Dit verband is alleen gedefinieerd voor objecttypen en datatypen."@nl;
+  dct:source mimdoc:sectie2.6.1;
 .
 mim:Relatiesoort a owl:Class;
   rdfs:label "Relatiesoort"@nl;
   rdfs:comment "De typering van het structurele verband tussen een object van een objecttype en een (ander) object van een ander (of hetzelfde) objecttype."@nl;
-  dct:source mimdoc:sectie2.2.2-6-Relatiesoort;
+  dct:source mimdoc:sectie2.6.2;
 .
 mim:Relatieklasse a owl:Class;
   rdfs:subClassOf mim:Relatiesoort;
   rdfs:label "Relatieklasse"@nl;
   rdfs:comment "Een relatiesoort met eigenschappen."@nl;
-  dct:source mimdoc:sectie2.2.2-7-Relatieklasse;
+  dct:source mimdoc:sectie2.6.3;
 .
 mim:ExterneKoppeling a owl:Class;
   rdfs:label "Externe koppeling"@nl;
-  rdfs:comment "Een associatie waarmee vanuit het perspectief van het eigen informatiemodel een objecttype uit het 'eigen' informatiemodel gekoppeld wordt aan een objecttype van een extern informatiemodel. De relatie zelf hoort bij het 'eigen' objecttype. Zie ook 3.14."@nl;
-  dct:source mimdoc:sectie2.2.2-8-ExterneKoppeling;
+  rdfs:comment "Een associatie waarmee vanuit het perspectief van het eigen informatiemodel een objecttype uit het ‘eigen’ informatiemodel gekoppeld wordt aan een objecttype van een extern informatiemodel. De relatie zelf hoort bij het ‘eigen’ objecttype."@nl;
+  dct:source mimdoc:sectie2.6.4;
 .
 mim:Relatierol a owl:Class;
-  rdfs:label "Relatierol (abstract)"@nl;
+  rdfs:label "Relatierol"@nl;
   rdfs:comment "De benaming van de manier waarop een object deelneemt aan een relatie met een ander object."@nl;
-  dct:source mimdoc:sectie2.2.2-9-Relatierol;
+  dct:source mimdoc:sectie2.6.5;
 .
 
 # Waardelijsten
 mim:Referentielijst a owl:Class;
   rdfs:subClassOf mim:Datatype;
   rdfs:label "Referentielijst"@nl;
-  rdfs:comment "Een lijst met een opsomming van de mogelijke domeinwaarden van een attribuutsoort, die buiten het model in een externe waardenlijst worden beheerd. De domeinwaarden in de lijst kunnen in de loop van de tijd aangepast, uitgebreid, of verwijderd worden, zonder dat het informatiemodel aangepast wordt (in tegenstelling tot bij een enumeratie)."@nl;
-  dct:source mimdoc:sectie2.2.3-10-Referentielijst;
+  rdfs:comment "De representatie van een lijst met een opsomming van de mogelijke domeinwaarden van een attribuutsoort, die buiten het model in een externe waardenlijst worden beheerd. De domeinwaarden in de lijst kunnen in de loop van de tijd aangepast, uitgebreid, of verwijderd worden, zonder dat het informatiemodel aangepast wordt (in tegenstelling tot bij een enumeratie). De representatie bevat een aantal kenmerken, die overgenomen zijn van de specificatie van de externe waardelijst."@nl;
+  dct:source mimdoc:sectie2.7.1;
 .
 mim:ReferentieElement a owl:Class;
   rdfs:label "Referentie element"@nl;
   rdfs:comment "Een eigenschap van een object in een referentielijst in de vorm van een gegeven."@nl;
-  dct:source mimdoc:sectie2.2.3-11-ReferentieElement;
+  dct:source mimdoc:sectie2.7.2;
 .
 mim:Enumeratie a owl:Class;
   rdfs:subClassOf mim:Datatype;
   rdfs:label "Enumeratie"@nl;
   rdfs:comment "Een datatype waarvan de mogelijke waarden limitatief zijn opgesomd in een statische lijst."@nl;
-  dct:source mimdoc:sectie2.2.3-12-Enumeratie;
+  dct:source mimdoc:sectie2.7.3;
 .
 mim:Enumeratiewaarde a owl:Class;
   rdfs:label "Enumeratiewaarde"@nl;
   rdfs:comment "Een gedefinieerde waarde, in de vorm van een eenmalig vastgesteld constant gegeven."@nl;
-  dct:source mimdoc:sectie2.2.3-13-Enumeratiewaarde;
+  dct:source mimdoc:sectie2.7.4;
 .
 mim:Codelijst a owl:Class;
   rdfs:subClassOf mim:Datatype;
   rdfs:label "Codelijst"@nl;
-  rdfs:comment "Een referentielijst die extern wordt beheerd, en geen onderdeel is van het informatiemodel"@nl;
-  rdfs:comment "De definitie van een codelijst is gelijk aan de definitie van een referentielijst."@nl;
-  dct:source mimdoc:sectie2.2.3-14-Codelijst;
+  rdfs:comment "De representatie van een lijst met een opsomming van de mogelijke domeinwaarden van een attribuutsoort, die buiten het model in een externe waardenlijst worden beheerd. De domeinwaarden in de lijst kunnen in de loop van de tijd aangepast, uitgebreid, of verwijderd worden, zonder dat het informatiemodel aangepast wordt (in tegenstelling tot bij een enumeratie). De representatie bevat geen kenmerken, voor alle kenmerken wordt verwezen naar de specificatie van de externe waardelijst."@nl;
+  dct:source mimdoc:sectie2.7.5;
 .
 
 # Datatypen
@@ -112,30 +111,19 @@ mim:Datatype a owl:Class;
 mim:PrimitiefDatatype a owl:Class;
   rdfs:subClassOf mim:Datatype;
   rdfs:label "Primitief datatype"@nl;
-  rdfs:comment "Een in het eigen model gedefinieerd primitieve datatype. Deze worden wel door de modelleur gecreëerd, met een eigen naam en een eigen definitie (en eigen metagegevens)."@nl;
-  dct:source mimdoc:sectie2.2.4-15-PrimitiefDatatype;
+  rdfs:comment "Een in het eigen model gedefinieerd datatype die gebaseerd is op een PrimitiveType, met een eigen naam en definitie."@nl;
+  dct:source mimdoc:sectie2.8.1;
 .
 mim:GestructureerdDatatype a owl:Class;
   rdfs:subClassOf mim:Datatype;
   rdfs:label "Gestructureerd datatype"@nl;
-  rdfs:comment "Specifiek benoemd gestructureerd datatype dat de structuur van een gegeven beschrijft, samengesteld uit minimaal twee elementen."@nl;
-  dct:source mimdoc:sectie2.2.4-16-GestructureerdDatatype;
+  rdfs:comment "Specifiek benoemd datatype dat de structuur van een gegeven beschrijft, samengesteld uit minimaal twee elementen die in samenhang betekenisvol zijn."@nl;
+  dct:source mimdoc:sectie2.8.2;
 .
 mim:DataElement a owl:Class;
   rdfs:label "Data element"@nl;
   rdfs:comment "Een onderdeel/element van een Gestructureerd datatype die als type een datatype heeft."@nl;
-  dct:source mimdoc:sectie2.2.4-17-DataElement;
-.
-mim:Union a owl:Class;
-  rdfs:subClassOf mim:Datatype;
-  rdfs:label "Union"@nl;
-  rdfs:comment "Gestructureerd datatype, waarmee wordt aangegeven dat er meer dan één mogelijkheid is voor het datatype van een attribuut. Het attribuut zelf krijgt als datatype de union. De union biedt een keuze uit verschillende datatypes, elk afzonderlijk beschreven in een union element."@nl;
-  dct:source mimdoc:sectie2.2.4-18-Union;
-.
-mim:UnionElement a owl:Class;
-  rdfs:label "Union element"@nl;
-  rdfs:comment "Een type dat gebruikt kan worden voor het attribuut zoals beschreven in de definitie van Union. Het union element is een onderdeel van een Union, uitgedrukt in een eigenschap (attribute) van een union, die als keuze binnen de Union is gerepresenteerd."@nl;
-  dct:source mimdoc:sectie2.2.4-19-UnionElement;
+  dct:source mimdoc:sectie2.8.3;
 .
 
 # Packages
@@ -146,42 +134,38 @@ mim:Package a owl:Class;
 mim:Informatiemodel a owl:Class;
   rdfs:subClassOf mim:Package;
   rdfs:label "Informatiemodel"@nl;
-  rdfs:comment "Hoofdpackage waar alle subpackages die een informatiemodel beschrijven onder vallen."@nl;
+  rdfs:comment "De groepering van alle modelelementen waaruit het informatiemodel is opgebouwd. Het informatiemodel als geheel."@nl;
+  dct:source mimdoc:sectie2.9.1
 .
 mim:Domein a owl:Class;
   rdfs:subClassOf mim:Package;
   rdfs:label "Domein"@nl;
   rdfs:comment "Een groepering van constructies die een semantisch samenhangend gedeelte van een informatiemodel beschrijven."@nl;
+  dct:source mimdoc:sectie2.9.2
 .
 mim:Extern a owl:Class;
   rdfs:subClassOf mim:Package;
   rdfs:label "Extern"@nl;
   rdfs:comment "Een groepering van constructies die een externe instantie beheert en beschikbaar stelt aan een informatiemodel en die in het informatiemodel ongewijzigd gebruikt worden."@nl;
-  dct:source mimdoc:sectie2.2.5-20-Extern;
+  dct:source mimdoc:sectie2.9.3;
 .
 mim:View a owl:Class;
   rdfs:subClassOf mim:Package;
   rdfs:label "View"@nl;
   rdfs:comment "Een groepering van objecttypen die gespecificeerd zijn in een extern informatiemodel en vanuit het perspectief van het eigen informatiemodel inzicht geeft welke gegevens van deze objecttypen relevant zijn binnen het eigen informatiemodel."@nl;
-  dct:source mimdoc:sectie2.2.5-21-View;
+  dct:source mimdoc:sectie2.9.4;
 .
 
 # Overige
-#mim:Id a owl:Class;
-#  rdfs:subClassOf mim:RelatierolTarget;
-#  rdfs:label "id"@nl;
-#  rdfs:comment "Aanduiding dat de relatiesoort waarop de «id» is gedefinieerd een onderdeel is van de unieke aanduiding van een objecttype."@nl;
-#.
-# ISSUE: Dit nog even nader uitzoeken: lijkt nu identificerend te zijn geworden, maar nu breder ingezet?
-mim:Identificerend a owl:Class;
-  rdfs:label "Identificerend"@nl;
-  rdfs:comment "Een kenmerk van een objecttype die aangeeft of deze eigenschap uniek identificerend is voor alle objecten in de populatie van objecten van dit objecttype."@nl;
-  dct:source mimdoc:sectie2.2.6-22-Identificerend;
-.
 mim:Constraint a owl:Class;
   rdfs:label "Constraint"@nl;
   rdfs:comment "Een constraint is een conditie of een beperking, die over een of meerdere modelelementen uit het informatiemodel geldt."@nl;
-  dct:source mimdoc:sectie2.2.6-23-Constraint;
+  dct:source mimdoc:sectie2.10.1;
+.
+mim:Keuze a owl:Class;
+  rdfs:label "Keuze"@nl;
+  rdfs:comment "Een opsomming van meerdere modelelementen, waarbij er maar van één tegelijkertijd sprake kan zijn."@nl;
+  dct:source mimdoc:sectie2.10.2;
 .
 
 # Relatierol
@@ -204,112 +188,218 @@ mim:RelatierolTarget a owl:Class;
 # Properties worden in het MIM (nu) metagegevens genoemd: "Elk modelelement kent een aantal metagegevens, die bepaalde aspecten van het modelelement specificeren."
 #
 
-# Gedefinieerde metagegevens
+# Metagegevens informatiemodel
+mim:informatiedomein a owl:DatatypeProperty;
+  rdfs:label "informatiedomein"@nl;
+  rdfs:comment "Aanduiding van het functionele domein waartoe het informatiemodel behoort."@nl;
+  dct:source mimdoc:sectie2.11.1;
+.
+mim:informatiemodeltype a owl:DatatypeProperty;
+  rdfs:label "informatiemodeltype"@nl;
+  rdfs:comment "De beschrijving van de aard van het informatiemodel, hoe het geinterpreteerd moet worden."@nl;
+  dct:source mimdoc:sectie2.11.2;
+.
+mim:relatiemodelleringstype a owl:ObjectProperty;
+  rdfs:label "relatiemodelleringstype"@nl;
+  rdfs:comment "Aanduiding van een in MIM gedefinieerd alternatief voor een modelleringswijze, en welke keuze hierbij is gemaakt."@nl;
+  dct:source mimdoc:sectie2.11.3;
+.
+mim:mimversie a owl:DatatypeProperty;
+  rdfs:label "MIM versie"@nl;
+  rdfs:comment "De versie van de MIM specificatie die gebruikt is om het informatiemodel in uit te drukken."@nl;
+  dct:source mimdoc:sectie2.11.4;
+.
+mim:mimextensie a owl:DatatypeProperty;
+  rdfs:label "MIM extensie"@nl;
+  rdfs:comment "De aanduiding van een extensie op MIM."@nl;
+  dct:source mimdoc:sectie2.11.5;
+.
+mim:mimtaal a owl:DatatypeProperty;
+  rdfs:label "MIM taal"@nl;
+  rdfs:comment "De aanduiding van de taal die gebruikt is voor de modelelementen."@nl;
+  dct:source mimdoc:sectie2.11.6  ;
+.
+
 mim:naam a owl:DatatypeProperty;
   rdfs:label "naam"@nl;
-  rdfs:comment "De naam van een modelelement"@nl;
-  dct:source mimdoc:sectie2.3-Naam;
-.
-mim:alias a owl:DatatypeProperty;
-  rdfs:label "alias"@nl;
-  rdfs:comment "De alternatieve weergave van de naam."@nl;
-  dct:source mimdoc:sectie2.4-Alias;
-.
-mim:begrip a owl:ObjectProperty;
-  rdfs:label "begrip"@nl;
-  rdfs:comment "Verwijzing naar een begrip, vanuit een modelelement, waarmee wordt aangegeven op welk begrip, of begrippen, het informatiemodel element is gebaseerd.";
-.
-mim:begripsterm a owl:DatatypeProperty;
-  rdfs:label "begripsterm"@nl;
-  rdfs:comment "Verwijzing naar een begrip in de vorm van de term, vanuit een modelelement, waarmee wordt aangegeven op welk begrip, of begrippen, het informatiemodel element is gebaseerd.";
+  rdfs:comment "De naam van een modelelement."@nl;
+  dct:source mimdoc:sectie2.12.1;
 .
 mim:definitie a owl:DatatypeProperty;
   rdfs:label "definitie"@nl;
   rdfs:comment "De beschrijving van de betekenis van dit modelelement."@nl;
-  dct:source mimdoc:sectie2.3-Definitie;
+  dct:source mimdoc:sectie2.12.2;
+.
+mim:alias a owl:DatatypeProperty;
+  rdfs:label "alias"@nl;
+  rdfs:comment "De alternatieve weergave van de naam."@nl;
+  dct:source mimdoc:sectie2.12.3;
 .
 mim:toelichting a owl:DatatypeProperty;
   rdfs:label "toelichting"@nl;
   rdfs:comment "Een inhoudelijke toelichting op de definitie, ter verheldering of nadere duiding."@nl;
-  dct:source mimdoc:sectie2.3-Toelichting;
+  dct:source mimdoc:sectie2.12.4;
+.
+mim:begrip a owl:ObjectProperty;
+  rdfs:label "begrip"@nl;
+  rdfs:comment "Verwijzing naar een begrip, vanuit een modelelement, waarmee wordt aangegeven op welk begrip, of begrippen, het informatiemodel element is gebaseerd.";
+  dct:source mimdoc:sectie2.12.5;
+.
+mim:begripsterm a owl:DatatypeProperty;
+  rdfs:label "begripsterm"@nl;
+  rdfs:comment "Verwijzing naar een begrip in de vorm van een term, vanuit een modelelement, waarmee wordt aangegeven op welk begrip, of begrippen, het informatiemodel element is gebaseerd.";
+  dct:source mimdoc:sectie2.12.5;
 .
 mim:herkomst a owl:DatatypeProperty;
   rdfs:label "herkomst"@nl;
   rdfs:comment "De registratie of het informatiemodel waaraan het modelelement ontleend is dan wel de eigen organisatie indien het door de eigen organisatie toegevoegd is."@nl;
-  dct:source mimdoc:sectie2.3-Herkomst;
+  dct:source mimdoc:sectie2.12.6;
 .
 mim:herkomstDefinitie a owl:DatatypeProperty;
   rdfs:label "herkomst definitie"@nl;
-  rdfs:comment "De registratie of het informatiemodel waaruit de definitie is overgenomen dan wel een aanduiding die aangeeft uit welke bronnen de definitie is samengesteld."@nl;
-  dct:source mimdoc:sectie2.3-HerkomstDefinitie;
+  rdfs:comment "De registratie of het informatiemodel waaruit de definitie is overgenomen dan wel een aanduiding die aangeeft uit welke bronnen de definitie is samengesteld."@nl;
+  dct:source mimdoc:sectie2.12.7;
 .
 mim:datumOpname a owl:DatatypeProperty;
   rdfs:label "datum opname"@nl;
   rdfs:comment "De datum waarop het modelelement is opgenomen in het informatiemodel."@nl;
-  dct:source mimdoc:sectie2.3-DatumOpname;
+  dct:source mimdoc:sectie2.12.8;
+.
+mim:identificerend a owl:DatatypeProperty;
+  rdfs:label "identificerend"@nl;
+  rdfs:comment "Een kenmerk van een objecttype die aangeeft of deze eigenschap uniek identificerend is voor alle objecten in de populatie van objecten van dit objecttype."@nl;
+  dct:source mimdoc:sectie2.12.9;
 .
 mim:indicatieMaterieleHistorie a owl:DatatypeProperty;
   rdfs:label "Indicatie materiële historie"@nl;
   rdfs:comment "Indicatie of de materiële historie van het kenmerk van het object te bevragen is."@nl;
-  dct:source mimdoc:sectie2.3-IndicatieMaterieleHistorie;
+  dct:source mimdoc:sectie2.12.10;
 .
 mim:indicatieFormeleHistorie a owl:DatatypeProperty;
   rdfs:label "Indicatie formele historie"@nl;
   rdfs:comment "Indicatie of de formele historie van het kenmerk van het object bijgehouden wordt en te bevragen is."@nl;
-  dct:source mimdoc:sectie2.3-IndicatieFormeleHistorie;
+  dct:source mimdoc:sectie2.12.11;
 .
 mim:kardinaliteit a owl:DatatypeProperty;
   rdfs:label "kardinaliteit"@nl;
   rdfs:comment "De kardinaliteit geeft aan hoeveel keer waarden van dit kenmerk van een object kunnen voorkomen bij een object van het betreffende objecttype."@nl;
-  dct:source mimdoc:sectie2.3-Kardinaliteit;
+  dct:source mimdoc:sectie2.12.12;
 .
 mim:authentiek a owl:ObjectProperty;
   rdfs:label "authentiek"@nl;
   rdfs:comment "Aanduiding of het kenmerk een authentiek gegeven betreft."@nl;
-  dct:source mimdoc:sectie2.3-Authentiek;
+  dct:source mimdoc:sectie2.12.13;
 .
 mim:indicatieAfleidbaar a owl:DatatypeProperty;
   rdfs:label "indicatie afleidbaar"@nl;
   rdfs:comment "Aanduiding dat gegeven afleidbaar is uit andere attribuut- en/of relatiesoorten."@nl;
-  dct:source mimdoc:sectie2.3-IndicatieAfleidbaar;
+  dct:source mimdoc:sectie2.12.14;
 .
 mim:indicatieClassificerend a owl:DatatypeProperty;
   rdfs:label "indicatie classificerend"@nl;
-  rdfs:comment "Aanduiding dat een aspect een classificatie betreft van het betreffende objecttype."@nl;
-  dct:source mimdoc:sectie2.12.13-indicatieClassificerend;
+  rdfs:comment "Indicatie dat een attribuutsoort het objecttype waar het bijhoort classificeert in (sub)typen."@nl;
+  dct:source mimdoc:sectie2.12.15;
 .
 mim:mogelijkGeenWaarde a owl:DatatypeProperty;
   rdfs:label "mogelijk geen waarde"@nl;
   rdfs:comment "Aanduiding dat van een aspect geen waarde is geregistreerd, maar dat onduidelijk is of de waarde er werkelijk ook niet is."@nl;
-  dct:source mimdoc:sectie2.3-MogelijkGeenWaarde;
+  dct:source mimdoc:sectie2.12.16;
+.
+mim:bron a owl:ObjectProperty;
+  rdfs:label "bron";
+  rdfs:comment "Aanduiding van het bronobject in een relatie tussen objecten. Een bronobject heeft middels een relatiesoort een relatie met een doelobject."@nl;
+  dct:source mimdoc:sectie2.12.17;
+.
+mim:doel a owl:ObjectProperty;
+  rdfs:label "doel";
+  rdfs:comment "Aanduiding van het gerelateerde objecttype die het eindpunt van de relatie aangeeft. Naar objecten van dit objecttype wordt verwezen."@nl;
+  dct:source mimdoc:sectie2.12.18;
+.
+mim:unidirectioneel a owl:DatatypeProperty;
+  rdfs:label "unidirectioneel"@nl;
+  rdfs:comment "De richting van een relatie, welke betekenis geeft aan de relatie vanuit het perspectief van de eigenaar van de relatie."@nl;
+  dct:source mimdoc:sectie2.12.19;
+.
+mim:aggregatietype a owl:ObjectProperty;
+  rdfs:label "aggregatietype"@nl;
+  rdfs:comment "Aanduiding of het objecttype die de eigenaar is van een relatie het doel van relatie ziet als een samen te voegen onderdeel."@nl;
+  dct:source mimdoc:sectie2.12.20;
 .
 mim:locatie a owl:DatatypeProperty;
   rdfs:label "locatie"@nl;
   rdfs:comment "Als het type van het attribuutsoort een waardenlijst is, dan wordt hier de locatie waar deze te vinden is opgegeven."@nl;
-  dct:source mimdoc:sectie2.3-Locatie;
+  dct:source mimdoc:sectie2.12.21;
 .
 mim:type a owl:ObjectProperty;
   rdfs:label "type"@nl;
   rdfs:comment "Het datatype waarmee waarden van deze attribuutsoort worden vastgelegd."@nl;
-  dct:source mimdoc:sectie2.3-Type;
+  dct:source mimdoc:sectie2.12.22;
 .
 mim:lengte a owl:DatatypeProperty;
   rdfs:label "lengte"@nl;
   rdfs:comment "De aanduiding van de lengte van een gegeven."@nl;
-  dct:source mimdoc:sectie2.3-Lengte;
+  dct:source mimdoc:sectie2.12.23;
 .
 mim:patroon a owl:DatatypeProperty;
   rdfs:label "patroon"@nl;
   rdfs:comment "De verzameling van waarden die gegevens van deze attribuutsoort kunnen hebben, oftewel het waardenbereik, uitgedrukt in een specifieke structuur."@nl;
-  dct:source mimdoc:sectie2.3-Patroon;
+  dct:source mimdoc:sectie2.12.24;
 .
 mim:formeelPatroon a owl:DatatypeProperty;
   rdfs:label "formeel patroon"@nl;
   rdfs:comment "Zoals patroon, formeel vastgelegd, uitgedrukt in een formele taal die door de computer wordt herkend."@nl;
-  dct:source mimdoc:sectie2.3-FormeelPatroon;
+  dct:source mimdoc:sectie2.12.25;
 .
-
-# Properties die in de tabel voorkomen (maar niet afzonderlijk zijn gedefinieerd)
+mim:attribuut a owl:ObjectProperty;
+  rdfs:label "attribuut"@nl;
+  rdfs:comment "De binding van een attribuutsoort als eigenschap aan een objecttype."@nl;
+  dct:source mimdoc:sectie2.12.26;
+.
+mim:gegevensgroep a owl:ObjectProperty;
+  rdfs:label "gegevensgroep"@nl;
+  rdfs:comment "De binding van een gegevensgroep als groep van eigenschappen aan een objecttype of gegevensgroeptype."@nl;
+  dct:source mimdoc:sectie2.12.27;
+.
+mim:groeptype a owl:ObjectProperty;
+  rdfs:label "groeptype"@nl;
+  rdfs:comment "De binding van een gegevensgroeptype als waardetype aan een gegevensgroep."@nl;
+  dct:source mimdoc:sectie2.12.28;
+.
+mim:dataElement a owl:ObjectProperty;
+  rdfs:label "data element"@nl;
+  rdfs:comment "De binding van een data element aan een gestructureerd datatype."@nl;
+  dct:source mimdoc:sectie2.12.29;
+.
+mim:waarde a owl:ObjectProperty;
+  rdfs:label "waarde"@nl;
+  rdfs:comment "De binding van een waarde aan een enumeratie."@nl;
+  dct:source mimdoc:sectie2.12.30;
+.
+mim:referentieElement a owl:ObjectProperty;
+  rdfs:label "referentie element"@nl;
+  rdfs:comment "De binding van een referentie element aan een referentielijst."@nl;
+  dct:source mimdoc:sectie2.12.31;
+.
+mim:datatypekeuze a owl:ObjectProperty;
+  rdfs:label "datatypekeuze"@nl;
+  rdfs:comment "De binding van een datatype als keuze element aan een keuze."@nl;
+  dct:source mimdoc:sectie2.12.32;
+.
+mim:doelkeuze a owl:ObjectProperty;
+  rdfs:label "doelkeuze"@nl;
+  rdfs:comment "De binding van een doeleinde van een relatie als keuze element aan een keuze."@nl;
+  dct:source mimdoc:sectie2.12.33;
+.
+mim:attribuutkeuze a owl:ObjectProperty;
+  rdfs:label "attribuutkeuze"@nl;
+  rdfs:comment "De binding van een attribuutsoort als keuze element aan een keuze."@nl;
+  dct:source mimdoc:sectie2.12.34;
+.
+mim:constraint a owl:ObjectProperty;
+  rdfs:label "constraint"@nl;
+  rdfs:comment "De binding van een constraint aan een klasse."@nl;
+  dct:source mimdoc:sectie2.12.35;
+.
 
 # Bij Objecttype
 mim:uniekeAanduiding a owl:DatatypeProperty;
@@ -327,37 +417,6 @@ mim:kwaliteit a owl:DatatypeProperty;
 mim:indicatieAbstractObject a owl:DatatypeProperty;
   rdfs:label "indicatie abstract object"@nl;
   rdfs:comment "Indicatie dat het objecttype een generalisatie is, waarvan een object als specialisatie altijd voorkomt in de hoedanigheid van een (en slechts één) van de specialisaties van het betreffende objecttype."@nl;
-.
-
-# Bij Attribuutsoort (komt ook terug bij referentie-element)
-mim:identificerend a owl:DatatypeProperty;
-  rdfs:label "identificerend"@nl;
-  rdfs:comment "Aanduiding dat attribuutsoort onderdeel uitmaakt van de unieke aanduiding van een object"@nl;
-  #ISSUE: Dit lijkt nu bij de klasse terecht te zijn gekomen. Mogelijk dat dit kan, maar nog even onderzoeken
-.
-
-# Bij Gegevensgroep
-mim:gegevensgroeptype a owl:ObjectProperty;
-  rdfs:label "gegevensgroeptype"@nl;
-  rdfs:comment "De verwijzing naar het bijbehorende gegevensgroeptype"@nl;
-.
-
-# Bij Relatiesoort en/of Externe koppeling
-mim:unidirectioneel a owl:DatatypeProperty;
-  rdfs:label "unidirectioneel"@nl;
-  rdfs:comment "De richting van een relatie, welke betekenis geeft aan de relatie vanuit het perspectief van de eigenaar van de relatie."@nl;
-.
-mim:bron a owl:ObjectProperty;
-  rdfs:label "bron";
-  rdfs:comment "Aanduiding van het bronobject in een relatie tussen objecten. Een bronoject heeft middels een relatiesoort een relatie met een doelobject."@nl;
-.
-mim:doel a owl:ObjectProperty;
-  rdfs:label "doel";
-  rdfs:comment "Aanduiding van het gerelateerde objecttype die het eindpunt van de relatie aangeeft. Naar objecten van dit objecttype wordt verwezen."@nl;
-.
-mim:Aggregatietype a owl:ObjectProperty;
-  rdfs:label "aggregatietype"@nl;
-  rdfs:comment "Aanduiding of het objecttype die de eigenaar is van een relatie het doel van relatie ziet als een samen te voegen onderdeel."@nl;
 .
 
 # Generalisatie
@@ -398,21 +457,6 @@ mim:keuzerelatiedoel a owl:ObjectProperty;
 .
 
 # Properties uit het model die niet gedefinieerd zijn
-mim:attribuut a owl:ObjectProperty;
-  rdfs:label "attribuut"@nl;
-.
-mim:gegevensgroep a owl:ObjectProperty;
-  rdfs:label "gegevensgroep"@nl;
-.
-mim:waarde a owl:ObjectProperty;
-  rdfs:label "waarde"@nl;
-.
-mim:constraint a owl:ObjectProperty;
-  rdfs:label "constraint"@nl;
-.
-mim:element a owl:ObjectProperty;
-  rdfs:label "element"@nl;
-.
 mim:relatierol a owl:ObjectProperty;
   rdfs:label "relatierol"@nl;
 .
