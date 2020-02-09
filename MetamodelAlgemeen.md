@@ -254,7 +254,7 @@ attribuut van Jan. In het informatiemodel wordt dit het attribuutsoort 'naam' va
 De gegevens Jan en Katrien worden als gelijksoortig gezien en worden daarom ondergebracht in attribuutsoort 'naam'.
 Je kan ook zeggen, het objecttype Persoon heeft een attribuutsoort 'naam' en deze is geschikt om gegevens in te plaatsen.
 
-Aan elk objecttype worden nul, één of meer *«*Attribuutsoort*»*en toegekend. In een informatiemodel
+Aan elk objecttype worden nul, één of meer *«*Attribuutsoort**en toegekend. In een informatiemodel
 worden alleen voor het domein relevante attribuutsoorten opgenomen bij een objecttype.
 
 Attribuutsoorten worden ook wel kenmerken of eigenschappen genoemd. Dit zijn het ook, maar er zijn
@@ -274,7 +274,9 @@ De groep van gegevens is een kenmerk van een object. De gegevensgroep is een
 betekenisvol kenmerk van een objecttype. De gegevensgroep heeft altijd als type
 een gegevensgroeptype.
 
-**Definitie Gegevensgroeptype**  
+#### Gegevensgroeptype
+
+>   **Definitie Gegevensgroeptype**  
 >   Een groep van met elkaar samenhangende attribuutsoorten. Een
 >   gegevensgroeptype is altijd een type van een gegevensgroep.
 
@@ -894,7 +896,7 @@ hiervoor een alternatieve naamgeving te gebruiken. De alias wordt hier, mede
 daarom, gebruikt voor (alleen) de modellering van het metadata aspect Code,
 welke aanvullend is op naam (niet een alternatief van naam).
 
-Metagegeven: **Toelichting**
+### Metagegeven: **Toelichting**
 
 >   **Definitie Toelichting**  
 >   Een inhoudelijke toelichting op de definitie, ter verheldering of nadere duiding.
@@ -1143,7 +1145,7 @@ weten de modelelementen attribuutsoort en relatiesoort.
 
 ### Metagegeven: **Indicatie classificerend**
 
->   **Definitie Indicatie classificerend**
+>   **Definitie Indicatie classificerend**  
 >   Indicatie dat een attribuutsoort het objecttype waar het bijhoort classificeert in (sub)typen.
 
 *Toelichting*
@@ -1166,7 +1168,7 @@ values.
 
 ### Metagegeven: **mogelijk geen waarde**
 
->   **Definitie mogelijk geen waarde**
+>   **Definitie mogelijk geen waarde**  
 >   Aanduiding dat van een aspect geen waarde is geregistreerd, maar dat
 >   onduidelijk is of de waarde er werkelijk ook niet is.
 
@@ -1285,9 +1287,13 @@ Bijvoorbeeld: 'http://www.organisatie.nl/schemas/waardelijsten/NaamWaardelijst'
 ### Metagegeven: **Type** (domein van een waarde een gegeven)
 
 >   **Definitie Type**  
->   Het datatype waarmee waarden van deze attribuutsoort worden vastgelegd.
+>   Het datatype waarmee waarden van dit modelelement worden vastgelegd.
 
 *Toelichting*
+
+Een attribuutsoort heeft een datatype voor de specificatie van het toegestane
+waardetype. Hetzelfde geldt voor een data element, een referentie element en
+keuze elementen.
 
 Dit is altijd conform een datatype uit dit metamodel (of een extensie ervan) of
 een primitief datatype die extern is aan dit model. Betreft het een waarde uit
@@ -1298,10 +1304,10 @@ enumeratie als type vermeld.
 
 Bijvoorbeeld: VlakOfMultivlak, CharacterString
 
-*Toepassing*: attribuutsoort, primitief datatype (in het IM gedefinieerd), data
-element, union element, referentie element.
+*Toepassing*: Alle informatie elementen die een attribuut modelleren:
+attribuutsoort, data element, referentie element, datatypekeuze, doelkeuze.
 
-Metagegeven: **Lengte** (domein van een waarde van een gegeven)
+### Metagegeven: **Lengte** (domein van een waarde van een gegeven)
 
 >   **Definitie Lengte**  
 >   De aanduiding van de lengte van een gegeven.
@@ -1350,9 +1356,9 @@ betreft, zoals een CharacterString.
 
 *Toepassing*: de modelelementen uit de groep datatype en attribuutsoort.
 
-### Metagegeven: **attribuut**
+### Metagegeven: **Attribuut**
 
->   **Definitie attribuut**  
+>   **Definitie Attribuut**  
 >   De binding van een attribuutsoort als eigenschap aan een objecttype.
 
 *Toelichting*
@@ -1361,9 +1367,9 @@ Een objecttype gebruikt attributen voor het specificeren van eigenschappen.
 
 *Toepassing*: objecttypen met attributen.
 
-### Metagegeven: **gegevensgroep**
+### Metagegeven: **Gegevensgroep**
 
->   **Definitie gegevensgroep**  
+>   **Definitie Gegevensgroep**  
 >   De binding van een gegevensgroep als groep van eigenschappen aan een
 >   objecttype.
 
@@ -1374,23 +1380,9 @@ eigenschappen.
 
 *Toepassing*: objecttypen met gegevensgroepen.
 
-### Metagegeven: **type**
+### Metagegeven: **Groeptype**
 
->   **Definitie type**  
->   De binding van datatype aan een attribuut.
-
-*Toelichting*
-
-Een attribuutsoort heeft een datatype voor de specificatie van het toegestane
-waardetype. Hetzelfde geldt voor een data element, een referentie element en
-keuze elementen.
-
-*Toepassing*: Alle informatie elementen die een attribuut modelleren:
-attribuutsoort, data element, referentie element, datatypekeuze, doelkeuze.
-
-### Metagegeven: **groeptype**
-
->   **Definitie groeptype**  
+>   **Definitie Groeptype**  
 >   De binding van een gegevensgroeptype als waardetype aan een gegevensgroep.
 
 *Toelichting*
@@ -1400,9 +1392,9 @@ gegevensgroeptype.
 
 *Toepassing*: gegevensgroep.
 
-### Metagegeven: **gegevensgroep**
+### Metagegeven: **Gegevensgroep**
 
->   **Definitie gegevensgroep**  
+>   **Definitie Gegevensgroep**  
 >   De binding van een gegevensgroep als groep van eigenschappen aan een
 >   gegevensgroeptype.
 
@@ -1412,9 +1404,9 @@ Een gegevensgroeptype kan zelf ook weer een gegevensgroeptype bevatten.
 
 *Toepassing*: gegevensgroeptype.
 
-### Metagegeven: **data element**
+### Metagegeven: **Data element**
 
->   **Definitie data element**  
+>   **Definitie Data element**  
 >   De binding van een data element aan een gestructureerd datatype.
 
 *Toelichting*
@@ -1423,9 +1415,9 @@ Een gestructutreerd datatype bevat meerdere data elementen.
 
 *Toepassing*: gestructereerd datatype.
 
-### Metagegeven: **waarde**
+### Metagegeven: **Waarde**
 
->   **Definitie waarde**  
+>   **Definitie Waarde**  
 >   De binding van een waarde aan een enumeratie.
 
 *Toelichting*
@@ -1434,9 +1426,9 @@ Een enumeratie bevat enumeratiewaarden.
 
 *Toepassing*: enumeratie.
 
-### Metagegeven: **referentie element**
+### Metagegeven: **Referentie element**
 
->   **Definitie referentie element**  
+>   **Definitie Referentie element**  
 >   De binding van een referentie element aan een referentielijst.
 
 *Toelichting*
@@ -1445,9 +1437,9 @@ Een referentie lijst bevat bevat referentie elementen.
 
 *Toepassing*: referentielijst.
 
-### Metagegeven: **datatypekeuze**
+### Metagegeven: **Datatypekeuze**
 
->   **Definitie datatype keuze**  
+>   **Definitie Datatypekeuze**  
 >   De binding van een datatype als keuze element aan een keuze.
 
 *Toelichting*
@@ -1457,9 +1449,9 @@ modelleert.
 
 *Toepassing*: keuze object.
 
-### Metagegeven: **doelkeuze**
+### Metagegeven: **Doelkeuze**
 
->   **Definitie doelkeuze**  
+>   **Definitie Doelkeuze**  
 >   De binding van een doeleinde van een relatie als keuze element aan een keuze.
 
 *Toelichting*
@@ -1469,9 +1461,9 @@ modelleert.
 
 *Toepassing*: keuze object.
 
-### Metagegeven: **attribuutkeuze**
+### Metagegeven: **Attribuutkeuze**
 
->   **Definitie attribuutkeuze**  
+>   **Definitie Attribuutkeuze**  
 >   De binding van een attribuutsoort als keuze element aan een keuze.
 
 *Toelichting*
@@ -1481,9 +1473,9 @@ modelleert.
 
 *Toepassing*: keuze object.
 
-### Metagegeven: **constraint**
+### Metagegeven: **Constraint**
 
->   **Definitie constraint**  
+>   **Definitie Constraint**  
 >   De binding van een constraint aan een klasse.
 
 *Toelichting*
@@ -1492,9 +1484,7 @@ Een constraint is gekoppeld aan een klasse waarop ze van toepassing is.
 
 *Toepassing*: objecttype, gegevensgroeptype, relatieklasse.
 
-*Toepassing*: objecttype, gegevensgroeptype, relatieklasse.
-
-### Toegestane waarden voor (bepaalde) metadata gegevens
+## Toegestane waarden voor (bepaalde) metadata gegevens
 
 Tagged values zijn altijd van het datatype CharacterString. Aanvullend geldt:
 
