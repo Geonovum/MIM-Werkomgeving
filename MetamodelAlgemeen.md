@@ -484,7 +484,7 @@ De waarde van de data zelf. Bijvoorbeeld: Plein, Brug, Spoor, M (man).
 Alleen deze waarde mag gebruiken worden.
 
 
-#### Stereotype Codelijst
+#### Codelijst
 
 >   **Definitie Codelijst**  
 >   De representatie van een lijst met een opsomming van de mogelijke domeinwaarden van een
@@ -1046,7 +1046,7 @@ objecttype.
 ### Metagegeven: **Indicatie formele historie**
 
 >   **Definitie Indicatie formele historie**  
->   Indicatie of de materiële historie van het kenmerk van het object
+>   Indicatie of de formele historie van het kenmerk van het object
 >   bijgehouden wordt en te bevragen is.
 
 *Toelichting*
