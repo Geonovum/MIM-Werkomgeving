@@ -660,21 +660,6 @@ Er zijn meerdere soorten packages. Om onderscheid te maken tussen packages waari
 
 ### Overig
 
-#### Identificerend
-
->   **Definitie Identificerend**  
->   Een kenmerk van een objecttype die aangeeft of deze eigenschap uniek
->   identificerend is voor alle objecten in de populatie van objecten van dit
->   objecttype.
-
-*Toelichting:* objecten hebben, of krijgen, in een administatie of
-gegevensvoorziening vaak één identificerend kenmerk. Het kan ook zijn dat een
-aantal kenmerken in combinatie identificerend zijn, zoals twee attibuutsoorten
-of een attribuutsoort en een relatiesoort. De combinatie met een relatiesoort
-wordt alleen gedaan voor objecttypes die zelf geen unieke aanduiding hebben en
-daarom deze moeten samenstellen met de unieke aanduiding van een gerelateerde
-objecttype.
-
 #### Constraint
 
 >   **Definitie Constraint**  
@@ -1019,6 +1004,21 @@ Bijvoorbeeld: 1-1-2012.
 
 *Toepassing*: alle modelelementen, uitgezonderd datatype elementen, packages en
 overig.
+
+### Metagegeven: **Identificerend**
+
+>   **Definitie Identificerend**  
+>   Een kenmerk van een objecttype die aangeeft of deze eigenschap uniek
+>   identificerend is voor alle objecten in de populatie van objecten van dit
+>   objecttype.
+
+*Toelichting:* objecten hebben, of krijgen, in een administatie of
+gegevensvoorziening vaak één identificerend kenmerk. Het kan ook zijn dat een
+aantal kenmerken in combinatie identificerend zijn, zoals twee attibuutsoorten
+of een attribuutsoort en een relatiesoort. De combinatie met een relatiesoort
+wordt alleen gedaan voor objecttypes die zelf geen unieke aanduiding hebben en
+daarom deze moeten samenstellen met de unieke aanduiding van een gerelateerde
+objecttype.
 
 ### Metagegeven: **Indicatie materiële historie**
 
