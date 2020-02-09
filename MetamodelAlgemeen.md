@@ -1371,14 +1371,15 @@ Een objecttype gebruikt attributen voor het specificeren van eigenschappen.
 
 >   **Definitie Gegevensgroep**  
 >   De binding van een gegevensgroep als groep van eigenschappen aan een
->   objecttype.
+>   objecttype of gegevensgroeptype.
 
 *Toelichting*
 
 Een objecttype gebruikt gegevensgroepen voor het specificeren van groepen van
 eigenschappen.
 
-*Toepassing*: objecttypen met gegevensgroepen.
+*Toepassing*: objecttypen met gegevensgroepen. Of een gegevensgroeptype dat zelf ook
+weer een gegevensgroeptype bevat.
 
 ### Metagegeven: **Groeptype**
 
@@ -1391,18 +1392,6 @@ Een attribuut met het stereotype gegevensgroep heeft als waardetype een
 gegevensgroeptype.
 
 *Toepassing*: gegevensgroep.
-
-### Metagegeven: **Gegevensgroep**
-
->   **Definitie Gegevensgroep**  
->   De binding van een gegevensgroep als groep van eigenschappen aan een
->   gegevensgroeptype.
-
-*Toelichting*
-
-Een gegevensgroeptype kan zelf ook weer een gegevensgroeptype bevatten.
-
-*Toepassing*: gegevensgroeptype.
 
 ### Metagegeven: **Data element**
 
