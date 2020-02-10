@@ -73,31 +73,30 @@ Onderstaande tabellen geven een overzicht van alle transformaties en een referen
 |`mim:Objecttype`|`owl:Class`, `sh:NodeShape`|[Objecttype](#transformatie-objecttype)|
 |`mim:Attribuutsoort`|`owl:ObjectProperty`, `owl:DatatypeProperty`, `sh:PropertyShape`|[Attribuutsoort](#transformatie-attribuutsoort)|
 |`mim:Gegevensgroep`|`sh:PropertyShape`, `owl:ObjectProperty`|[Gegevensgroep](#transformatie-gegevensgroep)|
-|`mim:Gegevensgroeptype`|`owl:Class`, `sh:NodeShape`|[Gegevensgroeptype](#gegevensgroeptype)|
-|`mim:Generalisatie`|`rdfs:subClassOf` `rdf:Statement`|[Generalisatie](#generalisatie)|
-|`mim:Relatiesoort`|`sh:PropertyeShape`, `owl:ObjectProperty`|[Relatiesoort](#relatiesoort)|
-|`mim:Relatieklasse`|`rdf:Statement`|[Relatieklasse](#relatieklasse)|
-|`mim:ExterneKoppeling`|`sh:PropertyShape`, `owl:ObjectProperty`|[Externe koppeling](#externe-koppeling)|
-|`mim:Relatierol`|n.n.b.|[Relatierol](#relatierol)|
-|`mim:Referentielijst`|n.n.b.|[Referentielijst](#referentielijst)|
-|`mim:ReferentieElement`|n.n.b.|[Referentie-element](#referentie-element)|
-|`mim:Enumeratie`|n.n.b.|[Enumeratie](#enumeratie)|
-|`mim:Enumeratiewaarde`|n.n.b.|[Enumeratiewaarde](#enumeratiewaarde)|
-|`mim:Codelijst`|n.n.b.|[Codelijst](#codelijst)|
+|`mim:Gegevensgroeptype`|`owl:Class`, `sh:NodeShape`|[Gegevensgroeptype](#transformatie-gegevensgroeptype)|
+|`mim:Generalisatie`|`rdfs:subClassOf` `rdf:Statement`|[Generalisatie](#transformatie-generalisatie)|
+|`mim:Relatiesoort`|`sh:PropertyeShape`, `owl:ObjectProperty`|[Relatiesoort](#transformatie-relatiesoort)|
+|`mim:Relatieklasse`|`rdf:Statement`|[Relatieklasse](#transformatie-relatieklasse)|
+|`mim:ExterneKoppeling`|`sh:PropertyShape`, `owl:ObjectProperty`|[Externe koppeling](#transformatie-externe-koppeling)|
+|`mim:Relatierol`|n.n.b.|[Relatierol](#transformatie-relatierol)|
+|`mim:Referentielijst`|n.n.b.|[Referentielijst](#transformatie-referentielijst)|
+|`mim:ReferentieElement`|n.n.b.|[Referentie-element](#transformatie-referentie-element)|
+|`mim:Enumeratie`|n.n.b.|[Enumeratie](#transformatie-enumeratie)|
+|`mim:Enumeratiewaarde`|n.n.b.|[Enumeratiewaarde](#transformatie-enumeratiewaarde)|
+|`mim:Codelijst`|n.n.b.|[Codelijst](#transformatie-codelijst)|
 |`mim:Datatype`|n.v.t.|Abstracte klasse|
-|`mim:PrimitiefDatatype`|`rdfs:Datatype`|[Primitief datatype](#primitief-datatype)|
-|`mim:GestructureerdDatatype`|`sh:NodeShape`|[Gestructureerd datatype](#gestructureerd-datatype)|
-|`mim:DataElement`|`owl:ObjectProperty`, `owl:DatatypeProperty`, `sh:PropertyShape`|[Data element](#data-element)|
-|`mim:Keuze` (datatype en relatiedoel)|`sh:xone`, `rdf:List`|[Keuze (datatype en relatiedoel)](#keuze-datatype-relatiedoel)|
-|`mim:Keuze` (attribuutsoort)|`rdfs:subPropertyOf`|[Keuze (attribuutsoort)](#keuze-attribuutsoort)|
-|`mim:Domein`|`owl:Ontology`|[Domein](#domein)|
-|`mim:Extern`|`owl:imports`|[Extern](#extern)|
-|`mim:View`|`owl:imports`|[View](#view)|
-|`mim:Id`|n.n.b.|-|
-|`mim:Identificerend`|n.n.b.|-|
-|`mim:Constraint`|`mim:Constraint`|[Constraint](#constraint)|
-|`mim:RelatierolSource`|n.n.b.|[Relatierol](#relatierol)|
-|`mim:RelatierolTarget`|n.n.b.|[Relatierol](#relatierol)|
+|`mim:PrimitiefDatatype`|`rdfs:Datatype`|[Primitief datatype](#transformatie-primitief-datatype)|
+|`mim:GestructureerdDatatype`|`sh:NodeShape`|[Gestructureerd datatype](#transformatie-gestructureerd-datatype)|
+|`mim:DataElement`|`owl:ObjectProperty`, `owl:DatatypeProperty`, `sh:PropertyShape`|[Data element](#transformatie-data-element)|
+|`mim:Keuze` (datatype en relatiedoel)|`sh:xone`, `rdf:List`|[Keuze (datatype en relatiedoel)](#transformatie-keuze-datatype-relatiedoel)|
+|`mim:Keuze` (attribuutsoort)|`rdfs:subPropertyOf`|[Keuze (attribuutsoort)](#transformatie-keuze-attribuutsoort)|
+|`mim:Package`|n.v.t.|Abstracte klasse|
+|`mim:Domein`|`owl:Ontology`|[Domein](#transformatie-domein)|
+|`mim:Extern`|`owl:imports`|[Extern](#transformatie-extern)|
+|`mim:View`|`owl:imports`|[View](#transformatie-view)|
+|`mim:Constraint`|`mim:Constraint`|[Constraint](#transformatie-constraint)|
+|`mim:RelatierolSource`|n.n.b.|[Relatierol](#transformatie-relatierol)|
+|`mim:RelatierolTarget`|n.n.b.|[Relatierol](#transformatie-relatierol)|
 
 ### Eigenschappen
 
@@ -278,7 +277,7 @@ WHERE {
 }
 </pre>
 
-### Gegevensgroeptype
+### Transformatie: Gegevensgroeptype
 
 > Een groep van met elkaar samenhangende attribuutsoorten. Een gegevensgroeptype is altijd een type van een gegevensgroep.
 
@@ -302,7 +301,7 @@ WHERE {
 }
 </pre>
 
-### Generalisatie
+### Transformatie: Generalisatie
 
 > De typering van het hiërarchische verband tussen een meer generiek en een meer specifiek modelelement van hetzelfde soort, waarbij het meer specifieke modelelement eigenschappen van het meer generieke modelelement overerft.
 
@@ -315,7 +314,7 @@ Generalisatie is in Linked Data ook mogelijk op properties, en daar ook wel gebr
 </aside>
 
 
-### Relatiesoort
+### Transformatie: Relatiesoort
 
 > De typering van het structurele verband tussen een object van een objecttype en een (ander) object van een ander (of hetzelfde) objecttype.
 
@@ -347,7 +346,7 @@ WHERE {
 }
 </pre>
 
-### Relatieklasse
+### Transformatie: Relatieklasse
 
 > Een relatiesoort met eigenschappen.
 
@@ -397,7 +396,7 @@ WHERE {
 }
 </pre>
 
-### Externe koppeling
+### Transformatie: Externe koppeling
 
 > Een associatie waarmee vanuit het perspectief van het eigen informatiemodel een objecttype uit het 'eigen' informatiemodel gekoppeld wordt aan een objecttype van een extern informatiemodel. De relatie zelf hoort bij het 'eigen' objecttype.
 
@@ -407,7 +406,7 @@ Een externe koppeling wordt op dezelfde wijze omgezet als een `mim:Relatiesoort`
 Een externe koppeling gedraagd zich in een RDF model exact als een relatiesoort. Het verschil wordt zichtbaar doordat het gerelateerde objecttype in een andere package zitten met de aanduiding `mim:view` of `mim:extern`. De objecttypen in deze packages zullen dan ook niet worden omgezet. Wel wordt een extra `owl:imports` statement toegevoegd. Dit gebeurt bij de vertaling van de betreffende packages.
 </aside>
 
-#### Relatierol
+#### Transformatie: Relatierol
 
 In het MIM zijn er twee specificatievormen voor relaties: op basis van `mim:Relatiesoort` of op basis van `mim:Relatierol`. Indien gekozen wordt voor `mim:Relatierol` dan geldt onderstaande uitwerking. Indien gekozen wordt voor `mim:Relatiesoort`, dan geldt de uitwerking zoals beschreven bij Relatiesoort.
 
@@ -450,7 +449,7 @@ WHERE {
 }
 </pre>
 
-### Referentielijst
+### Transformatie: Referentielijst
 
 > Een lijst met een opsomming van de mogelijke domeinwaarden van een attribuutsoort, die buiten het model in een externe waardenlijst worden beheerd. De domeinwaarden in de lijst kunnen in de loop van de tijd aangepast, uitgebreid, of verwijderd worden, zonder dat het informatiemodel aangepast wordt (in tegenstelling tot bij een enumeratie).
 
@@ -464,11 +463,11 @@ Deze constructie wordt ook toegepast bij enumeraties en codelijsten.
 >
 >  Er zijn drie waardelijstconstructies gebruikelijk in RDF: (1) Conceptschema, (2) Collectie en (3) Klasse. Bovenstaande invulling gaat uit van de eerste situatie. Maar ook de andere twee situaties komen voor. Hier zal nog een oplossing voor gezocht moeten worden.
 
-### Referentie element
+### Transformatie: Referentie element
 
 > Een eigenschap van een object in een referentielijst in de vorm van een gegeven.
 
-### Enumeratie
+### Transformatie: Enumeratie
 
 > Een datatype waarvan de mogelijke waarden limitatief zijn opgesomd in een statische lijst.
 
@@ -478,17 +477,17 @@ Een enumeratie kan verschillende soorten dingen opsommen. Een lijst met waardes,
 In de Inspire RDF Guidelines wordt voorgeschreven om een enumeratie te modelleren als rdfs:Datatype in plaats van als klasse. Dit leidt tot enumeratiewaardes die een literal zijn, met het datatype van de enumeratie. Bijvoorbeeld `"hoog"^^imgolf:NatuurwaardeValue`. De reden om hiervan af te wijken is omdat enumeraties vaker waardelijsten zijn die een object of concept modelleren, dan een lijst van letterlijke waardes. Door deze waardes als objecten te modelleren blijft het mogelijk om nieuwe uitdrukkingen te doen over de waardes.
 </aside>
 
-### Enumeratiewaarde
+### Transformatie: Enumeratiewaarde
 
 > Een gedefinieerde waarde, in de vorm van een eenmalig vastgesteld constant gegeven.
 
-### Codelijst
+### Transformatie: Codelijst
 
 > Een referentielijst die extern wordt beheerd, en geen onderdeel is van het informatiemodel.
 
 ## Datatypen
 
-### Primitief datatype
+### Transformatie: Primitief datatype
 
 > Een in het eigen model gedefinieerd primitieve datatype. Deze worden wel door de modelleur gecreëerd, met een eigen naam en een eigen definitie (en eigen metagegevens).
 
@@ -521,7 +520,7 @@ WHERE {
 }
 </pre>
 
-### Primitief datatype - standaard datatypen
+### Transformatie: Primitief datatype - standaard datatypen
 
 Voor standaard datatypen maakt RDF gebruik van de XSD datatypen. Onderstaande tabel geeft de mapping weer vanuit de datatypen die in het MIM zijn gespecificeerd.
 
@@ -566,7 +565,7 @@ CONSTRUCT {
 WHERE {}
 </pre>
 
-### Gestructureerd datatype
+### Transformatie: Gestructureerd datatype
 
 > Specifiek benoemd gestructureerd datatype dat de structuur van een gegeven beschrijft, samengesteld uit minimaal twee elementen.
 
@@ -584,7 +583,7 @@ WHERE {
 }
 </pre>
 
-### Data element
+### Transformatie: Data element
 
 > Een onderdeel/element van een Gestructureerd datatype die als type een datatype heeft.
 
@@ -613,7 +612,7 @@ WHERE {
 }
 </pre>
 
-### Keuze (datatype en relatiedoel)
+### Transformatie: Keuze (datatype en relatiedoel)
 
 > Een opsomming van meerdere modelelementen, waarbij er maar van één tegelijkertijd sprake kan zijn.
 
@@ -713,7 +712,7 @@ WHERE {
 
 De tweede delete-insert query is een "opruimquery": aangezien we zijn begonnen met een rdf:List in plaats van een rdf:nil, moeten we het einde van de lijst er nog weer afknippen.
 
-### Keuze (attribuutsoort)
+### Transformatie: Keuze (attribuutsoort)
 
 > Een opsomming van meerdere modelelementen, waarbij er maar van één tegelijkertijd sprake kan zijn.
 
@@ -736,19 +735,19 @@ WHERE {
 ## Packages
 > Een package is een benoemde en begrensde verzameling/groepering van modelelementen.
 
-### Domein
+### Transformatie: Domein
 > Het eigen IM.
 
 Een `mim:Domein` wordt omgezet naar een `owl:Ontology`, waarbij de naam en locatie eigenschappen worden gebruikt om de URI tot stand te brengen.
 
-### Extern
+### Transformatie: Extern
 > Een groepering van constructies die een externe instantie beheert en beschikbaar stelt aan een informatiemodel en die in het informatiemodel ongewijzigd gebruikt worden.
 
 Een `mim:Extern` wordt omgezet naar een `owl:Ontology`, waarbij de naam en locatie eigenschappen worden gebruikt om de URI tot stand te brengen. Bovendien wordt een `owl:imports` aangelegd tussen de package van het type `mim:Domein` en deze externe package.
 
 De gedachte hierachter, is dat een externe package letterlijk is overgenomen vanuit een extern model, en hier aanvullend is meegenomen. Feitelijk zal de inhoud dus identiek moeten zijn aan het model op de betreffende externe locatie.
 
-### View
+### Transformatie: View
 > Een groepering van objecttypen die gespecificeerd zijn in een extern informatiemodel en vanuit het perspectief van het eigen informatiemodel inzicht geeft welke gegevens van deze objecttypen relevant zijn binnen het eigen informatiemodel.
 
 Een `mim:View` wordt omgezet naar een `owl:Ontology`, waarbij de naam wordt gebruikt om de URI tot stand te brengen. Daarbij geldt dat voor de locatie, de locatie wordt overgenomen uit de package van het type `mim:Domein`. Bovendien wordt een `owl:imports` relatie gelegd tussen de package van het type domein en deze view-package, EN er wordt een `owl:imports` gelegd van de view-package naar een externe locatie, op basis van de locatie bij deze view package.
@@ -759,7 +758,7 @@ Deze constructie heeft ook consequenties voor de URI's van de modelelementen in 
 
 ## Overig
 
-### Constraint
+### Transformatie: Constraint
 > Een constraint is een conditie of een beperking, die over een of meerdere modelelementen uit het informatiemodel geldt.
 
 Een constraint (en bijbehorende gegevens) worden direct overgenomen in het vertaalde model als blank node. Het MIM kent voor een constraint twee aspecten: tekstueel en formeel. Het MIM doet daarbij geen uitspraak over de taal die voor het formele model moet worden gehanteerd. Daarmee is een transformatie niet op zijn plaats. Zie ook de [INSPIRE RDF Guidelines](http://inspire-eu-rdf.github.io/inspire-rdf-guidelines/#ref_cr_constraint) waar een vergelijkbare redenatie wordt gevolgd.
