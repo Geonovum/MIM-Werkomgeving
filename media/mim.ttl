@@ -550,13 +550,21 @@ mim:Authentiek a skos:Concept;
   skos:inScheme mim:Authenticiteit;
   rdfs:label "Authentiek";
   skos:prefLabel "Authentiek";
-  skos:definition "Indien het een authentiek (landelijk) basisgegeven of een als relatiesoort gemodelleerd authentiek (landelijk) basisgegeven is. Basisgegevens zijn altijd gegevens afkomstig uit de landelijke registraties."@nl;
+  skos:definition "In een basisregistratie opgenomen gegeven dat bij wettelijk voorschrift als authentiek is aangemerkt."@nl;
+  rdfs:seeAlso <https://www.noraonline.nl/wiki/Authentiek_gegeven>
 .
 mim:Basisgegeven a skos:Concept;
   skos:inScheme mim:Authenticiteit;
   rdfs:label "Basisgegeven";
   skos:prefLabel "Basisgegeven";
-  skos:definition "Indien het een landelijk basisgegeven of een als relatiesoort gemodelleerd (landelijk) basisgegeven is in een landelijke registratie, maar in die registratie géén authentiek gegeven is."@nl;
+  skos:definition "Een in een basisregistratie opgenomen gegeven."@nl;
+  rdfs:seeAlso <https://www.noraonline.nl/wiki/Basisgegeven>
+.
+mim:WettelijkGegeven a skos:Concept;
+  skos:inScheme mim:Authenticiteit;
+  rdfs:label "Wettelijk gegeven";
+  skos:prefLabel "Wettelijk gegeven";
+  skos:definition "Gegeven behorende bij een wettelijke registratie, niet zijnde een basisregistratie"@nl;
 .
 mim:LandelijkKerngegeven a skos:Concept;
   skos:inScheme mim:Authenticiteit;
