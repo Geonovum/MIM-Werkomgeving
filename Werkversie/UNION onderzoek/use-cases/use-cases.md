@@ -18,7 +18,7 @@ Van een objecttype "Persoon" is relevant op welk adres deze persoon woont. Er is
 
 Opmerking: andere modelleringen van een adres zijn ook mogelijk, een adres zou ook een gegevensgroep kunnen zijn en een Adrestype een Gegevensgroeptype, en een adres zou ook als een Objecttype gemodelleerd kunnen worden. In dit voorbeeld is het adres gemodelleerd als een attribuutsoort en het Adrestype als een datatype. 
 
-Onderstaand figuur geeft in zowel UML als Linked Data weer hoe beide modellen er uit zouden zien voor beide afzonderlijke situaties.
+Onderstaand figuur geeft in zowel UML als Linked Data weer hoe beide modellen er uit zouden zien voor beide afzonderlijke situaties, wanneer er nog geen keuze is gemodelleerd. 
 
 <table><tbody>
 <tr><th>UML</th><th>Linked Data</th></tr>
@@ -65,6 +65,10 @@ vb:Adrestype a mim:GestructureerdDatatype;
 </tbody></table>
 
 Zonder de mogelijkheid van keuze, zou je te maken krijgen met twee attribuutsoorten met bijbehorend datatype. Echter, in dat geval mogen de attribuutsoorten niet dezelfde naam hebben, aangezien deze bij hetzelfde objecttype horen. Ook zou de kardinaliteit niet kloppen: die zou dan [0..1] moeten worden, maar dat doet geen recht aan het feit dat er één verplicht aanwezig moet zijn, en er ook geen twee naast elkaar mogen zijn. De werkelijke kardinaliteit is [1..1].
+
+In MIM modelleren we daarom het adres daarom als een attribuutsoort, met als datatype een keuze tussen het datatype CharacterString en het datatype Adrestype. 
+
+TODO: het wel goede voorbeeld graag opnemen als figuur. 
 
 ## Use case 2: een keuze tussen twee attribuutsoorten
 
