@@ -415,9 +415,16 @@ Zie [Koppelen met een ander informatiemodel](#koppelen-met-een-ander-informatiem
 
 *Toelichting:* Met relatie wordt in deze de volgende bedoeld: *«Relatiesoort»*,
 *«Relatieklasse»* of *«Externe koppeling»*. Voor *«*Generalisatie*»* speelt het
-niet. Een relatie heeft een source kant, die de eigenaar is van de relatie, en
-is gericht naar de target kant. De relatierol kan aan beide kanten een naam en
+niet. Een relatie heeft een bron kant, die de eigenaar is van de relatie, en
+is gericht naar de doel kant. De relatierol kan aan beide kanten een naam en
 een definitie krijgen.
+
+>   **Definitie Relatierol bron**  
+>   De relatierol die de rol beschrijft van de bron van de relatie.
+
+>   **Definitie Relatierol doel**  
+>   De relatierol die de rol beschrijft van het doel van de relatie.
+
 
 ### Waardenlijsten
 
@@ -951,7 +958,7 @@ Bijvoorbeeld: de herkomst van het kenmerk *woonadres*, wat bijvoorbeeld een
 «Relatiesoort» is van een Persoon in de basisregistratie Personen naar een
 Nummeraanduiding in de basisregistratie Adressen en Gebouwen (BAG), heeft als
 herkomst: ‘BRP’ (de basisregistratie Kadaster). Dit kenmerk *woonadres* wordt
-bijgehouden in de BRP en de source kant van de relatie zit in de BRP. De
+bijgehouden in de BRP en de bron kant van de relatie zit in de BRP. De
 Nummeraanduiding zelf heeft in de BAG veelal als herkomst: BAG. Mochten echter
 de adresgegevens niet (direct of indirect) uit de BAG komen, maar bijvoorbeeld
 via een eigen inwinningsproces in een eigen registratie worden bijgehouden, dan
@@ -1232,7 +1239,7 @@ koppeling.
 *Toelichting*
 
 Bijvoorbeeld: een persoon heeft een postadres. De richting van de relatie is van
-persoon naar adres. De eigenaar van de relatie (de source) heeft kennis van de
+persoon naar adres. De eigenaar van de relatie (de bron) heeft kennis van de
 het gerelateerde objecttype (het doel). In een modelleertaal wordt dit vaak
 aangegeven met een pijl. De pijl heeft als vertrekpunt de bron en heeft als
 pijlpunt, waar de relatie naar wijst, het gerelateerde objecttype. Alle relaties
@@ -1262,8 +1269,8 @@ aan dat het objecttype die doel is van de relatie een onderdeel is van het
 objecttype die de eigenaar is van de relatie. De eigenaar geeft aan hoe de
 aggregatie in gezien moet worden. Dit kan zijn: - 'composite': de eigenaar is
 volledig verantwoordelijk voor het beheer van het onderdeel. Als de eigenaar
-vervalt, dan vervallen automatisch ook de onderdelen mee. De target kan niet
-bestaan zonder de source: de target vervalt als de source vervalt. - 'shared':
+vervalt, dan vervallen automatisch ook de onderdelen mee. Het doel kan niet
+bestaan zonder de bron: het doel vervalt als de bron vervalt. - 'shared':
 het onderdeel kan gebruikt en gedeeld worden door meerdere eigenaren.
 Bijvoorbeeld: een betaalrekening.
 

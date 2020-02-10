@@ -393,14 +393,14 @@ shape:PrimitiefDatatype a sh:NodeShape;
   sh:targetClass mim:PrimitiefDatatype;
   sh:name "mim:PrimitiefDatatype";
 .
-shape:RelatierolSource a sh:NodeShape;
-  sh:targetClass mim:RelatierolSource;
-  sh:name "mim:RelatierolSource";
+shape:RelatierolBron a sh:NodeShape;
+  sh:targetClass mim:RelatierolBron;
+  sh:name "mim:RelatierolBron";
   sh:property shape:bron;
 .
-shape:RelatierolTarget a sh:NodeShape;
-  sh:targetClass mim:RelatierolTarget;
-  sh:name "mim:RelatierolTarget";
+shape:RelatierolDoel a sh:NodeShape;
+  sh:targetClass mim:RelatierolDoel;
+  sh:name "mim:RelatierolDoel";
   sh:property shape:doel;
 .
 

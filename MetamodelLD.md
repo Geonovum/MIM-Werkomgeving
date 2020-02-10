@@ -109,7 +109,7 @@ De "keuze constructie" maakt een keuze mogelijk tussen meerdere attribuutsoorten
 
 - Attribuutsoort: een keuze tussen attribuutsoorten **in plaats van** de attribuutsoort die deze keuze als datatype heeft;
 - Datatype: een keuze tussen datatypen **in plaats van** dit keuze datatype;
-- Relatiedoel: een keuze tussen objecttypen als relatiedoel **in plaats van** het doel van de relatieroltarget
+- Relatiedoel: een keuze tussen objecttypen als relatiedoel **in plaats van** het doel van de relatieroldoel
 
 | **MIM metaclass** | **Metaclass in RDF** | **Shape in RDF** | **Grondslag** |
 |-------------------|----------------------|------------------|---------------|
@@ -125,8 +125,8 @@ De "keuze constructie" maakt een keuze mogelijk tussen meerdere attribuutsoorten
 | **MIM metaclass** | **Metaclass in RDF** | **Shape in RDF** | **Grondslag** |
 |-------------------|----------------------|------------------|---------------|
 | Relatierol (abstract) | [`Relatierol`](http://bp4mc2.org/def/mim#Relatierol) | shape:Relatierol | [2.6.5](#relatierol) |
-| Relatierol source     | [`RelatierolSource`](http://bp4mc2.org/def/mim#RelatierolSource) | shape:RelatierolSource | |
-| Relatierol target     | [`RelatierolTarget`](http://bp4mc2.org/def/mim#RelatierolTarget) | shape:RelatierolTarget | |
+| Relatierol bron       | [`RelatierolBron`](http://bp4mc2.org/def/mim#RelatierolBron) | shape:RelatierolBron | [2.6.5](#relatierol) |
+| Relatierol doel       | [`RelatierolDoel`](http://bp4mc2.org/def/mim#RelatierolDoel) | shape:RelatierolDoel | [2.6.5](#relatierol) |
 
 *Externe koppeling*
 
@@ -316,7 +316,7 @@ beschrijven. Deze keuze wordt aangegeven in de eigen extensie, zoals beschreven
 in paragraaf 1.8. Alleen het gekozen alternatief is relevant voor de modellering
 in uw informatiemodel. - Alternatief 1: Verplichte benoeming van de naam van de
 relatie met de bijbehorende metagegevens\*\* - Alternatief 2: Verplichte
-benoeming van de rol van de target in een relatie met de bijbehorende
+benoeming van de rol van het doel in een relatie met de bijbehorende
 metagegevens en optioneel de benoeming van de naam van de relatie.
 
 Beide alternatieven gebruiken relatiesoort en relatierol, maar met andere regels
@@ -326,7 +326,7 @@ voor gebruik.
 
 Relatiesoort is verplicht, met een naam en met een definitie en deze is leidend.
 Metadata aspecten worden hierbij altijd vastgelegd. Het gebruik van relatierol
-is optioneel (zowel bij source en target). Áls er een relatierol target wordt
+is optioneel (zowel bij bron en doel). Áls er een relatierol doel wordt
 vastgelegd, dan is de metadata hierbij wel verplicht.
 
 **Specificatie voor «Relatiesoort»**
@@ -377,7 +377,7 @@ Voor relatierollen worden naar de volgende aspecten gespecificeerd.
 
 #### Relatierol is leidend (alternatief 2)
 
-Verplichte benoeming van de rol van de target in een relatie met de bijbehoren
+Verplichte benoeming van de rol van het doel in een relatie met de bijbehoren
 de metagegevens en optioneel de benoeming van de naam van de relatie.
 
 **Specificatie voor «Relatiesoort»**
@@ -394,7 +394,7 @@ De relatiesoorten worden naar de volgende aspecten gespecificeerd.
 
 **Specificatie voor «Relatierol»**
 
-Voor relatierol worden bij de target rol van een relatiesoort de volgende
+Voor relatierol worden bij het doel rol van een relatiesoort de volgende
 aspecten gespecificeerd.
 
 | **Aspect**                   | **Eigenschap** | **Kardinaliteit** | **Datatype of klasse** |

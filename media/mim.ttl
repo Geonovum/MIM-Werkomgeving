@@ -169,15 +169,17 @@ mim:Keuze a owl:Class;
 .
 
 # Relatierol
-mim:RelatierolSource a owl:Class;
+mim:RelatierolBron a owl:Class;
   rdfs:subClassOf mim:Relatierol;
-  rdfs:label "Relatierol source"@nl;
-  #ISSUE: Niet gedefinieerd
+  rdfs:label "Relatierol bron"@nl;
+  rdfs:comment "De relatierol die de rol beschrijft van de bron van de relatie.";
+  dct:source mimdoc:sectie2.6.5;
 .
-mim:RelatierolTarget a owl:Class;
+mim:RelatierolDoel a owl:Class;
   rdfs:subClassOf mim:Relatierol;
-  rdfs:label "Relatierol target"@nl;
-  #ISSUE: Niet gedefinieerd
+  rdfs:label "Relatierol doel"@nl;
+  rdfs:comment "De relatierol die de rol beschrijft van het doel van de relatie.";
+  dct:source mimdoc:sectie2.6.5;
 .
 
 #
