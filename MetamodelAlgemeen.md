@@ -1264,15 +1264,16 @@ koppeling.
 een motor. In het informatiemodel gaat het vooral om de auto en is de motor
 alleen relevant vanuit het perspectief van dat het een onderdeel is van de auto.
 
-Standaard is er bij een relatie geen sprake van een aggregatie, ofdat het
-aggregatietype is 'none'. Als er wel sprake is van een aggregatie, dan geeft dit
+Standaard is er bij een relatie geen sprake van een aggregatie, (aggregatietype "Geen").
+Als er wel sprake is van een aggregatie, dan geeft dit
 aan dat het objecttype die doel is van de relatie een onderdeel is van het
 objecttype die de eigenaar is van de relatie. De eigenaar geeft aan hoe de
-aggregatie in gezien moet worden. Dit kan zijn: - 'composite': de eigenaar is
-volledig verantwoordelijk voor het beheer van het onderdeel. Als de eigenaar
+aggregatie in gezien moet worden. Dit kan zijn:
+
+- 'Compositie': de eigenaar is volledig verantwoordelijk voor het beheer van het onderdeel. Als de eigenaar
 vervalt, dan vervallen automatisch ook de onderdelen mee. Het doel kan niet
-bestaan zonder de bron: het doel vervalt als de bron vervalt. - 'shared':
-het onderdeel kan gebruikt en gedeeld worden door meerdere eigenaren.
+bestaan zonder de bron: het doel vervalt als de bron vervalt.
+- 'Gedeeld': het onderdeel kan gebruikt en gedeeld worden door meerdere eigenaren.
 Bijvoorbeeld: een betaalrekening.
 
 *Toepassing*: relaties, oftewel de modelelementen Relatiesoort en Externe
