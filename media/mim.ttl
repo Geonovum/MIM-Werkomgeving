@@ -407,7 +407,10 @@ mim:code a owl:DatatypeProperty;
   rdfs:comment "De in een registratie of informatiemodel aan de enumeratiewaarde toegekend unieke code"@nl;
   dct:source mimdoc:sectie2.12.36;
 .
-
+mim:indicatieAbstractObject a owl:DatatypeProperty;
+  rdfs:label "indicatie abstract object"@nl;
+  rdfs:comment "Indicatie dat het objecttype een generalisatie is, waarvan een object als specialisatie altijd voorkomt in de hoedanigheid van een (en slechts één) van de specialisaties van het betreffende objecttype."@nl;
+.
 
 # Bij Objecttype
 mim:populatie a owl:DatatypeProperty;
@@ -417,10 +420,6 @@ mim:populatie a owl:DatatypeProperty;
 mim:kwaliteit a owl:DatatypeProperty;
   rdfs:label "kwaliteit"@nl;
   rdfs:comment "Beschrijving van de mate waarin in de registratie opgenomen objecten van het desbetreffende type volledig, juist, actueel, nauwkeurig en betrouwbaar zijn."@nl;
-.
-mim:indicatieAbstractObject a owl:DatatypeProperty;
-  rdfs:label "indicatie abstract object"@nl;
-  rdfs:comment "Indicatie dat het objecttype een generalisatie is, waarvan een object als specialisatie altijd voorkomt in de hoedanigheid van een (en slechts één) van de specialisaties van het betreffende objecttype."@nl;
 .
 
 # Generalisatie

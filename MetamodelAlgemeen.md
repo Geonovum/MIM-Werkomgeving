@@ -1488,6 +1488,20 @@ Een constraint is gekoppeld aan een klasse waarop ze van toepassing is.
 >   **Definitie Code**  
 >   De in een registratie of informatiemodel aan de enumeratiewaarde toegekend unieke code
 
+### Metagegeven: indicatie abstract object
+
+>   **Definitie Indicatie abstract object**  
+>   Indicatie dat het objecttype een generalisatie is, waarvan een object als specialisatie
+>   altijd voorkomt in de hoedanigheid van een (en slechts één) van de specialisaties van het betreffende objecttype.
+
+*Toelichting*
+
+Een abstract objecttype moet altijd de generalisatie zijn van één of meerdere specialisaties.
+Bijvoorbeeld het abstract objecttype "Voertuig", met concrete specialisaties "Auto", "Fiets" en "Bromfiets".
+
+Zie ook sectie [Abstracte objecttypes en concrete objecten](#abstracte-objecttypes-en-concrete-objecten) waar
+een nadere uitleg wordt gegeven van het fenomeen abstract objecttypen.
+
 *Toepassing:* enumeratiewaarde
 
 ## Toegestane waarden voor (bepaalde) metadata gegevens
