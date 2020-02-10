@@ -450,7 +450,7 @@ De relatieklassen worden naar de volgende aspecten gespecificeerd:
 | Definitie                    | [`mim:definitie`](http://bp4mc2.org/def/mim#definitie) | 0..1 | tekst |
 | Constraint                   | [`mim:constraint`](http://bp4mc2.org/def/mim#constraint) | 0..n | [`mim:Constraint`](http://bp4mc2.org/def/mim#Constraint) |
 
-**Specificatie voor mim:Externe koppeling**
+**Specificatie voor mim:ExterneKoppeling**
 
 Externe koppelingen worden naar de volgende aspecten gespecificeerd.
 
@@ -508,7 +508,7 @@ De referentie-elementen worden naar de volgende aspecten gespecificeerd:
 | Identificerend               | [`mim:identificerend`](http://bp4mc2.org/def/mim#identificerend) | 0..1 | tekst |
 | Toelichting                  | [`mim:toelichting`](http://bp4mc2.org/def/mim#toelichting) | 0..1 | tekst |
 
-**Specificatie voor mim:codeLijst**
+**Specificatie voor mim:Codelijst**
 
 Voor codelijst worden de volgende aspecten gespecificeerd:
 
@@ -582,36 +582,6 @@ De data-elementen worden naar de volgende aspecten gespecificeerd:
 | Formeel patroon              | [`mim:formeelPatroon`](http://bp4mc2.org/def/mim#formeelPatroon) | 0..1 | tekst |
 | Kardinaliteit                | [`mim:kardinaliteit`](http://bp4mc2.org/def/mim#kardinaliteit) | 1 | tekst |
 
-**Specificatie voor mim:Union**
-
-De unions worden naar de volgende aspecten gespecificeerd:
-
-| **Aspect**                   | **Eigenschap** | **Kardinaliteit** | **Datatype of klasse** |
-|------------------------------|----------------|-------------------|--------------|
-| Naam                         | [`mim:naam`](http://bp4mc2.org/def/mim#naam) | 1 | tekst |
-| Alias                        | [`mim:alias`](http://bp4mc2.org/def/mim#alias) | 0..1 | tekst |
-| Herkomst                     | [`mim:herkomst`](http://bp4mc2.org/def/mim#herkomst) | 1 | tekst |
-| Definitie                    | [`mim:definitie`](http://bp4mc2.org/def/mim#definitie) | 1 | tekst |
-| Datum opname                 | [`mim:datumOpname`](http://bp4mc2.org/def/mim#datumOpname) | 1 | datum |
-| Union-element                | [`mim:unionElement`](http://bp4mc2.org/def/mim#unionElement) | 2..* | [`mim:UnionElement`](http://bp4mc2.org/def/mim#UnionElement) |
-
-**Specificatie voor mim:UnionElement**
-
-De unionelementen worden naar de volgende aspecten gespecificeerd:
-
-| **Aspect**                   | **Eigenschap** | **Kardinaliteit** | **Datatype of klasse** |
-|------------------------------|----------------|-------------------|--------------|
-| Naam                         | [`mim:naam`](http://bp4mc2.org/def/mim#naam) | 1 | tekst |
-| Alias                        | [`mim:alias`](http://bp4mc2.org/def/mim#alias) | 0..1 | tekst |
-| Begrip                    | [`mim:begrip`](http://bp4mc2.org/def/mim#begrip) | 0..* | [`skos:Concept`](http://www.w3.org/2004/02/skos/core#Concept) |
-| Begripsterm               | [`mim:begripsterm`](http://bp4mc2.org/def/mim#begripsterm) | 0..* | tekst |
-| Definitie                    | [`mim:definitie`](http://bp4mc2.org/def/mim#definitie) | 1 | tekst |
-| Type                         | [`mim:type`](http://bp4mc2.org/def/mim#type) | 1 | [`mim:Datatype`](http://bp4mc2.org/def/mim#Datatype) |
-| Lengte                       | [`mim:lengte`](http://bp4mc2.org/def/mim#lengte) | 0..1 | tekst |
-| Patroon                      | [`mim:patroon`](http://bp4mc2.org/def/mim#patroon) | 0..1 | tekst |
-| Formeel patroon              | [`mim:formeelPatroon`](http://bp4mc2.org/def/mim#formeelPatroon) | 0..1 | tekst |
-| Kardinaliteit                | [`mim:kardinaliteit`](http://bp4mc2.org/def/mim#kardinaliteit) | 1 | tekst |
-
 ### Specificatie metagegevens voor packages
 
 **Specificatie voor mim:Informatiemodel**
@@ -624,12 +594,12 @@ Informatiemodel packages worden naar de volgende aspecten gespecificeerd:
 | Alias                        | [`mim:alias`](http://bp4mc2.org/def/mim#alias) | 0..1 | tekst |
 | Definitie                    | [`mim:definitie`](http://bp4mc2.org/def/mim#definitie) | 1 | tekst |
 | Herkomst                     | [`mim:herkomst`](http://bp4mc2.org/def/mim#herkomst) | 1 | tekst |
-| MIM versie                   | [`mim:versie`](http://bp4mc2.org/def/mim#versie) | 1 | tekst |
-| MIM extensie                 | [`mim:extensie`](http://bp4mc2.org/def/mim#extensie) | 0..1 | tekst |
-| MIM taal                     | [`mim:taal`](http://bp4mc2.org/def/mim#taal) | 0..1 | tekst |
-| Informatiedomein             | TODO | 1..1 | tekst |
-| Informatiemodel type         | TODO | 1..1 | tekst |
-| Relatiemodelleringtype       | TODO | 1..1 | tekst |
+| MIM versie                   | [`mim:mimversie`](http://bp4mc2.org/def/mim#mimversie) | 1 | tekst |
+| MIM extensie                 | [`mim:mimextensie`](http://bp4mc2.org/def/mim#mimextensie) | 0..1 | tekst |
+| MIM taal                     | [`mim:mimtaal`](http://bp4mc2.org/def/mim#mimtaal) | 0..1 | tekst |
+| Informatiedomein             | [`mim:informatiedomein`](http://bp4mc2.org/def/mim#informatiedomein) | 1..1 | tekst |
+| Informatiemodel type         | [`mim:informatiemodeltype`](http://bp4mc2.org/def/mim#informatiemodeltype) | 1..1 | Informatiemodeltypen |
+| Relatiemodelleringtype       | [`mim:relatiemodelleringtype`](http://bp4mc2.org/def/mim#relatiemodelleringtype) | 1..1 | Relatiemodelleringtypen |
 
 **Specificatie voor mim:Domein**
 
