@@ -202,13 +202,7 @@ vb:eigenaar a mim:Relatiesoort;
 
 Zonder de mogelijkheid van keuze zouden de relatiedoelen (de gerelateerde objecttypes) opgenomen zijn bij de relatiesoorten van het objecttype, met elk een optionele kardinaliteit. Hiermee is het echter niet duidelijk zichtbaar dat er slechts één van de twee relatiedoelen aanwezig mogen zijn. Met een constraint is dit op zich wel correct te modelleren, aan te geven dat precies 1 van beide verplicht is, maar met een modellering van een keuze is dit veel duidelijker. 
 
-## Use case 5: Een keuze tussen twee verschijningsvormen van een attribuutsoort
-
-Van een objecttype "Persoon" kan geregistreerd worden wat het telefoonnummer van deze persoon is. Een dergelijk telefoonnummer kan een privé telefoonnummer zijn, of een zakelijk telefoonnummer. 
-
-Deze use case lijkt sterk op use case 2 (waarbij ook sprake was van een keuze tussen attribuutsoorten). Het verschil is dat bij deze use case er vanuit een conceptueel perspectief sprake is van een meer algemeen attribuutsoort "telefoonnummer" c.q. van 1 attribuutsoort die verschillende verschijningsvormen kent.  
-
-## Use case 6: Een keuze tussen twee verschijningsvormen van een relatiesoort
+## Use case 5: Een keuze tussen twee verschijningsvormen van een relatiesoort
 
 Een objecttype "Persoon" kan gerelateerd zijn aan een objecttype "Locatie". Een dergelijk adres-relatie kan betrekking hebben op het (formele) woonadres, correspondentieadres of verblijfsadres.
 
@@ -224,3 +218,13 @@ Einde tekst. Deze opmerkingen moeten nog uit de uiteindelijke tekst.
 
 **Opmerking MB**: ik vraag me dan ook af of use cases 5 en 6 wel horen bij "Keuze". Ik zou deze eerder plaatsen bij generalisatie/specialisatie, zoals bij datatype en objecttype.
 **Opmerking LvB**: Adres als datatype vind ik ongelukkig. in de BAG is dit nooit een datatype. VlakOfMultivlak was een beter voorbeeld voor een conceptueel model, ook al was die ook niet perfect. Graag een beter voorbeeld verzinnen waar geen ruis door kan ontstaan. 
+
+**Opmerking LvB**: Is de volgende gewenst? Door wie, kan dit ook later? 
+
+## Use case 6: Een keuze tussen twee verschijningsvormen van een attribuutsoort
+
+Van een objecttype "Persoon" kan geregistreerd worden wat het telefoonnummer van deze persoon is. Een dergelijk telefoonnummer kan een privé telefoonnummer zijn, of een zakelijk telefoonnummer. 
+
+Deze use case lijkt sterk op use case 2 (waarbij ook sprake was van een keuze tussen attribuutsoorten). Het verschil is dat bij deze use case er vanuit een conceptueel perspectief sprake is van een meer algemeen attribuutsoort "telefoonnummer" c.q. van 1 attribuutsoort die verschillende verschijningsvormen kent.  
+
+
