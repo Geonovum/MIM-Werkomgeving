@@ -1483,6 +1483,13 @@ Een constraint is gekoppeld aan een klasse waarop ze van toepassing is.
 
 *Toepassing*: objecttype, gegevensgroeptype, relatieklasse.
 
+### Metagegeven: **code**
+
+>   **Definitie Code**  
+>   De in een registratie of informatiemodel aan de enumeratiewaarde toegekend unieke code
+
+*Toepassing:* enumeratiewaarde
+
 ## Toegestane waarden voor (bepaalde) metadata gegevens
 
 Tagged values zijn altijd van het datatype CharacterString. Aanvullend geldt:

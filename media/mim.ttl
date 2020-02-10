@@ -402,6 +402,12 @@ mim:constraint a owl:ObjectProperty;
   rdfs:comment "De binding van een constraint aan een klasse."@nl;
   dct:source mimdoc:sectie2.12.35;
 .
+mim:code a owl:DatatypeProperty;
+  rdfs:label "code"@nl;
+  rdfs:comment "De in een registratie of informatiemodel aan de enumeratiewaarde toegekend unieke code"@nl;
+  dct:source mimdoc:sectie2.12.36;
+.
+
 
 # Bij Objecttype
 mim:uniekeAanduiding a owl:DatatypeProperty;
@@ -429,12 +435,6 @@ mim:subtype a owl:ObjectProperty;
 mim:supertype a owl:ObjectProperty;
   rdfs:label "supertype";
   rdfs:comment "Het objecttype dat de generalisatie is van een (ander) objecttype."@nl;
-.
-
-# Enumeratiewaarde
-mim:code a owl:DatatypeProperty;
-  rdfs:label "code"@nl;
-  rdfs:comment "De in een registratie of informatiemodel aan de enumeratiewaarde toegekend unieke code"@nl;
 .
 
 # Constraint

@@ -163,7 +163,7 @@ De gegevensregels (structuur) voor de metagegevens zijn wel specifiek per klasse
 | begrip | [`mim:begrip`](http://bp4mc2.org/def/mim#begrip) | owl:ObjectProperty | [2.12.5](#metagegeven-begrip) |
 | begripsterm | [`mim:begripsterm`](http://bp4mc2.org/def/mim#begripsterm) | owl:DatatypeProperty | [2.12.5](#metagegeven-begrip) |
 | bron | [`mim:bron`](http://bp4mc2.org/def/mim#bron) | owl:ObjectProperty | [2.12.17](#metagegeven-bron) |
-| code | [`mim:code`](http://bp4mc2.org/def/mim#code) | owl:DatatypeProperty | |
+| code | [`mim:code`](http://bp4mc2.org/def/mim#code) | owl:DatatypeProperty | [2.12.36](#metagegeven-code) |
 | constraint | [`mim:constraint`](http://bp4mc2.org/def/mim#constraint) | owl:ObjectProperty | [2.12.35](#metagegeven-constraint) |
 | data element | [`mim:dataElement`](http://bp4mc2.org/def/mim#dataElement) | owl:ObjectProperty | [2.12.29](#metagegeven-data-element) |
 | datum opname | [`mim:datumOpname`](http://bp4mc2.org/def/mim#datumOpname) | owl:DatatypeProperty | [2.12.8](#metagegeven-datum-opname) |
