@@ -68,8 +68,6 @@ Zonder de mogelijkheid van keuze, zou je te maken krijgen met twee attribuutsoor
 
 In MIM modelleren we daarom het attribuutsoort adres als een datatype, welke een keuze betreft tussen het datatype CharacterString en het datatype Adrestype. 
 
-TODO: het goede MIM voorbeeld graag opnemen als figuur. 
-
 ## Use case 2: een keuze tussen twee attribuutsoorten
 
 Bij een objecttype "Betalingsopdracht" moet, naast het bedrag, ook een betalingskenmerk worden opgenomen OF een omschrijving. Eén van beide attribuutsoorten moet worden ingevuld. Het is niet toegestaan dat beide velden worden ingevuld: alleen een betalingskenmerk, of alleen een omschrijving.
