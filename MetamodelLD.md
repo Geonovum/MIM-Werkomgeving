@@ -601,6 +601,21 @@ Informatiemodel packages worden naar de volgende aspecten gespecificeerd:
 | Informatiemodel type         | [`mim:informatiemodeltype`](http://bp4mc2.org/def/mim#informatiemodeltype) | 1..1 | Informatiemodeltypen |
 | Relatiemodelleringtype       | [`mim:relatiemodelleringtype`](http://bp4mc2.org/def/mim#relatiemodelleringtype) | 1..1 | Relatiemodelleringtypen |
 
+Het veld `mim:informatiemodeltype` verwijst naar één van de volgende mogelijke waarden:
+
+| **Informatiemodeltype** | **Definitie** |
+|-------------------------|---------------|
+| [`mim:ConceptueelInformatiemodel`](http://bp4mc2.org/def/mim#ConceptueelInformatiemodel) | Niveau-2 model, conform sectie [1.5.2](#niveau-2-conceptueel-informatiemodel) |
+| [`mim:LogischInformatiemodel`](http://bp4mc2.org/def/mim#LogischInformatiemodel) | Niveau-3 model, conform sectie [1.5.3](#niveau-3-logisch-informatie-of-gegevensmodel) |
+| [`mim:TechnischInformatiemodel`](http://bp4mc2.org/def/mim#TechnischInformatiemodel) | Niveau-4 model, conform sectie [1.5.4](#niveau-4-fysiek-of-technisch-gegevens-of-datamodel) |
+
+Het veld `mim:relatiemodelleringtype` verwijst naar één van de volgende mogelijke waarden:
+
+| **Relatiemodelleringtype** | **Definitie** |
+|----------------------------|---------------|
+| [`mim:RelatiesoortLeidend`](http://bp4mc2.org/def/mim#RelatiesoortLeidend) | Relatiesoort leidend, conform sectie [4.3.2.1](#relatiesoort-leidend-alternatief-1-0) |
+| [`mim:RelatierolLeidend`](http://bp4mc2.org/def/mim#RelatierolLeidend) | Relatierol leidend, conform sectie [4.3.2.2](#relatierol-is-leidend-alternatief-2-0) |
+
 **Specificatie voor mim:Domein**
 
 Domein packages worden naar de volgende aspecten gespecificeerd:
