@@ -116,7 +116,7 @@ vb:Betalingsopdracht a mim:Objecttype;
 </pre></td></tr>
 </tbody></table>
 
-Zonder de mogelijkheid van keuze zouden beide attribuutsoorten opgenomen zijn bij het objecttype. Dit is in deze use-case geen probleem. Wel is de kardinaliteit ook in dit geval dan niet correct: die zou dan [0..1] moeten worden, maar dat doet geen recht aan het feit dat er één verplicht aanwezig moet zijn, en er ook geen twee naast elkaar mogen zijn. De werkelijke kardinaliteit is [1..1] op de keuze zelf.
+Zonder de mogelijkheid van keuze zouden beide attribuutsoorten opgenomen zijn bij het objecttype als optionele velden, met een constraint dat een van beide gevuld moet zijn. Dit is in deze use-case niet echt een probleem. Wel is de kardinaliteit ook in dit geval dan niet erg duidelijk gemodelleerd: die zou dan [0..1] moeten worden, maar dat doet geen recht aan het feit dat er één verplicht aanwezig moet zijn, en er ook geen twee naast elkaar mogen zijn. De werkelijke kardinaliteit is [1..1] op de keuze zelf. Met een constraint is dit op zich wel correct te modelleren, maar met een modellering van een keuze is dit veel duidelijker. 
 
 ## Use case 3: een keuze tussen twee relatiesoorten
 
