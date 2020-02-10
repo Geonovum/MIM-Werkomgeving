@@ -515,11 +515,12 @@ worden in de registratie. In het gebruik is een Codelijst daarom analoog aan een
 Enumeratie. Welk specifiek attribuut dit is en wat de betekenis daarvan is staat
 in de codelijst zelf gedefinieerd.
 
-### Datatypen
+### Datatype
 
-Een datatype die de structuur beschrijft waaraan een waarde, oftewel de data zelf, moet voldoen (zie
-[Objecten en attributen](#objecten-en-attributen)).
+>   **Definitie Datatype**  
+>   Een beschrijving van de structuur waaraan een waarde, oftewel de data zelf, aan moet voldoen.
 
+*Toelichting:* Zie ook [Objecttypen en attribuutsoorten](#objecttypen-en-attribuutsoorten).
 Bij elke «Attribuutsoort» wordt gespecificeerd aan welk datatype de data c.q. de
 waarde die hiervoor vastgelegd wordt moet voldoen. Het datatype wordt gebruikt
 als type van een attribuutsoort.
@@ -529,7 +530,7 @@ worden bij diverse «Attribuutsoort»-en.
 
 #### Primitief datatype
 
-**PrimitiveType** Een standaard datatype, zoals bekend in vele
+Een standaard datatype, zoals bekend in vele
 specificatietalen, dat de structuur van een gegeven beschrijft. Het metamodel
 volgt waar mogelijk de definities zoals beschreven in ISO standaarden (zie
 §3.1). Deze datatypes hebben altijd al een naam en definitie gekregen vanuit

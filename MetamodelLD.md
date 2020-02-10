@@ -80,7 +80,7 @@ Als prefix wordt voor de vocabulaire gebruik gemaakt van `mim`, met de namespace
 
 | **MIM metaclass** | **Metaclass in RDF** | **Shape in RDF** | **Grondslag** |
 |-------------------|----------------------|------------------|---------------|
-| Datatype                | [`mim:Datatype`](http://bp4mc2.org/def/mim#Datatype) | shape:Datatype | |
+| Datatype                | [`mim:Datatype`](http://bp4mc2.org/def/mim#Datatype) | shape:Datatype | [2.8](#datatype) |
 | Primitief datatype      | [`mim:PrimitiefDatatype`](http://bp4mc2.org/def/mim#PrimitiefDatatype) |shape:PrimitiefDatatype | [2.8.1](#primitief-datatype) |
 | Gestructureerd datatype | [`mim:GestructuurdDatatype`](http://bp4mc2.org/def/mim#GestructuurdDatatype) | shape:GestructuurdDatatype | [2.8.2](#gestructureerd-datatype) |
 | Data element            | [`mim:DataElement`](http://bp4mc2.org/def/mim#DataElement) | shape:DataElement | [2.8.3](#data-element) |
@@ -114,7 +114,7 @@ De "keuze constructie" maakt een keuze mogelijk tussen meerdere attribuutsoorten
 | **MIM metaclass** | **Metaclass in RDF** | **Shape in RDF** | **Grondslag** |
 |-------------------|----------------------|------------------|---------------|
 | Keuze             | [`mim:Keuze`](http://bp4mc2.org/def/mim#Keuze) | shape:Keuze | [2.10.2](#keuze) |
-| Datatype          | [`mim:Datatype`](http://bp4mc2.org/def/mim#Datatype) | shape:Datatype | |
+| Datatype          | [`mim:Datatype`](http://bp4mc2.org/def/mim#Datatype) | shape:Datatype | [2.8](#datatype) |
 | Objecttype        | [`mim:Objecttype`](http://bp4mc2.org/def/mim#Objecttype) | shape:Objecttype | [2.5.2](#objecten-en-objecttype) |
 | Attribuutsoort    | [`mim:Attribuutsoort`](http://bp4mc2.org/def/mim#Attribuutsoort) | shape:Attribuutsoort | [2.5.3](#attribuutsoort-en-een-groepering-ervan) |
 
