@@ -214,6 +214,7 @@ Einde tekst. Deze opmerkingen moeten nog uit de uiteindelijke tekst.
 
 **Opmerking MB**: ik vraag me dan ook af of use cases 5 en 6 wel horen bij "Keuze". Ik zou deze eerder plaatsen bij generalisatie/specialisatie, zoals bij datatype en objecttype.
 **Opmerking LvB**: Adres als datatype vind ik ongelukkig. in de BAG is dit nooit een datatype. VlakOfMultivlak was een beter voorbeeld voor een conceptueel model, ook al was die ook niet perfect. Graag een beter voorbeeld verzinnen waar geen ruis door kan ontstaan. 
+**Opmerking LvB**: TODO, diagram en linked data voor use case 5 keuze tussen twee verschijningsvormen van een relatiesoort
 
 **Opmerking LvB**: Is de volgende gewenst? Door wie, kan dit ook later? 
 
