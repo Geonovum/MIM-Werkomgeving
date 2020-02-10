@@ -2,11 +2,6 @@
 
 ## Inleiding
 
-<aside class='ednote'>
-  Let op: deze bjilage bevat nog delen die "under-construction" zijn. Deze delen zijn te herkennen aan
-  de woorden **"VERDER UITWERKEN"** die in de bettreffende paragrafen zijn opgenomen.
-</aside>
-
 Het MIM is een *metamodel*. Dit betekent dat in termen van het MIM een concreet informatiemodel kan worden uitgewerkt, bijvoorbeeld het informatiemodel Basisregistratie Adressen en Gebouwen. Het MIM is niet bedoeld om vervolgens in termen van dit informatiemodel een concrete dataset te vormen. Hiervoor is een transformatie nodig naar een (technisch) uitwisselings- of opslagmodel, bijvoorbeeld een XSD schema of een RDMS database definitie.
 
 Op diezelfde manier levert het toepassen van het MIM in RDF geen ontologie of vocabulaire waarin RDF kan worden uitgedrukt in een concrete Linked Data dataset. Slechts het informatiemodel zelf is op deze manier in RDF uitgedrukt. Een afzonderlijke transformatie is nodig voor de vertaalslag naar een ontologie voor een concrete Linked Data.
@@ -34,7 +29,7 @@ vb:Pakjesboot12 a vb:Schip.
 @prefix vbo: &lt;http://bp4mc2.org/voorbeeld/def#>.
 
 vbo:Schip a rdfs:Class;
-  rdfs:seeAlso vb:Schip;
+  mim:equivalent vb:Schip;
 .
 vb:Pakjesboot12 a vbo:Schip.
 </pre>
@@ -66,10 +61,6 @@ Om een unieke URI op te bouwen, is naast de naam van een modelelement, `mim:naam
 <aside id='trans-2' class='note'>
 Het MIM model kent geen volgorde. Ondanks dat in de weergave attribuutsoorten in een bepaalde volgorde getoond worden binnen een objecttype en ook referentiewaarden in een bepaalde volgorde getoond worden in een referentielijst, is er in het MIM geen aspect waarin deze volgorde is opgenomen. In het getransformeerde model is het mogelijk om een volgorde te specificeren met behulp van de eigenschap `sh:index`. Deze eigenschap komt echter niet terug in het MIM model zelf. Twee MIM modellen die alleen qua volgorde verschillen moeten gezien worden als equivalent.
 </aside>
-
-> **VERDER UITWERKEN**
->
-> Er zit nog een foutje in de transformatie: `rdfs:seeAlso` wordt in sommige gevallen gebruikt om meerdere resources. Bijvoorbeeld `mim:Objecttype` leidt tot zowel een `owl:Class` als een `sh:NodeShape`. Gevolg is dat bij de transformatie aspecten als `mim:naam`, `mim:definitie`, `mim:constraint` bij beide resources terecht komen. Beter zou zijn als het maar bij één van de twee terecht komt.
 
 ## Overzicht
 
@@ -218,7 +209,7 @@ Mocht het veld `mim:begrip` niet gebruikt zijn, dan wordt gekeken naar het veld 
 De identificatie van een attribuutsoort is afgeleid van de naam van het attribuutsoort en de namespace die afgeleid is van aspecten van de package waartoe het objecttype behoord. Voor de propertyshape geldt dat deze laatste ook nog afhankelijk is van de naam van het objecttype waartoe de attribuutsoort behoord. Aangezien een attribuutsoort binnen zijn objecttype uniek behoord te zijn conform het MIM, zal hiermee ook een unieke identificatie worden verkregen. Voor de identificatie van de propertyshape geldt dat deze uniek moet zijn binnen de package als sprake is van hetzelfde begrip. Een dergelijke regel geldt ook voor andere modelelementen die binnen een objecttype vallen.
 </aside>
 
-<aside id='trans-5' class='note'>
+<aside id='trans-6' class='note'>
 In een RDF model wordt soms ook gebruik gemaakt van attribuutsoorten die afkomstig zijn uit andere modellen. Indien door bovenstaande
 werkwijze er een keuze gemaakt kan worden uit meerdere namespaces, dan wordt aangenomen dat het attribuutsoort afkomstig is uit een
 extern model, en zal de namespace overgenomen worden van het externe model.
@@ -293,16 +284,14 @@ WHERE {
 
 Een `mim:Gegevensgroeptype` wordt vertaald naar een `owl:Class` en een `sh:NodeShape`, net zoals een `mim:Objecttype`.
 
-> **VERDER UITWERKEN**
->
-> Er is nu geen verschil meer tussen een gegevensgroeptype en een objecttype. Het MIM maakt echter wel onderscheid. Het verschil is alleen zichtbaar doordat een gegevensgroeptype als blank node verbonden is (zie ook [Gegevensgroep](#gegevensgroep)).
+Merk op dat er in het getransformeerde Linked Data model weinig verschil meer is tussen een gegevensgroeptype en een objecttype. Het verschil is alleen zichtbaar doordat een gegevensgroeptype als blank node verbonden is (zie ook [Gegevensgroep](#gegevensgroep)).
 
 <pre class='ex-sparql'>
 CONSTRUCT {
   ?class a owl:Class.
-  ?class rdfs:seeAlso ?gegevensgroeptype.
+  ?class mim:equivalent ?gegevensgroeptype.
   ?nodeshape a sh:NodeShape.
-  ?nodeshape rdfs:seeAlso ?gegevensgroeptype.
+  ?nodeshape mim:equivalent ?gegevensgroeptype.
   ?nodeshape sh:targetClass ?class.
 }
 WHERE {
@@ -321,36 +310,10 @@ Generalisatie kan gebruikt worden tussen objecttypen, maar ook tussen datatypes.
 
 Een `mim:Generalisatie` wordt vertaald naar een `rdfs:subClassOf`.
 
-<aside id='trans-6' class='note'>
+<aside id='trans-7' class='note'>
 Generalisatie is in Linked Data ook mogelijk op properties, en daar ook wel gebruikelijk. Dit wordt nu formeel niet door het MIM ondersteunt. Indien in een RDF model een dergelijke situatie zich voordoet, kan dit vertaald worden naar een MIM model waarbij de aspecten `mim:subtype` en `mim:supertype` verwijzen naar een attribuutsoort of relatieklasse.
 </aside>
 
-<aside id='trans-7' class='note'>
-Vertaling van een mim:Generalisatie naar een rdfs:subClassOf betekent dat wat in het MIM een metaklasse is, in Linked Data een eigenschap is geworden en geen (meta)class. Hierdoor is het niet mogelijk om extra kenmerken te verbinden aan een generalisatie. Dit betekent dat het niet mogelijk is om de generalisatie een naam of een alias te geven. Dit wordt opgelost in de transformatie door middel van reificatie met rdf:Statement. Een alternatief zou kunnen zijn om subklassen te maken van `rdfs:subClassOf`. Hiervoor is niet gekozen omdat de reificatie oplossen leidt tot een meer gebruikelijk RDF model, waarbij de reificatie kan worden gezien als een aanvullende annotatie die ook weggelaten zou kunnen worden.
-</aside>
-
-<pre class='ex-sparql'>
-
-CONSTRUCT {
-  ?subject rdfs:subClassOf ?object.
-  ?statement a rdf:Statement.
-  ?statement rdf:subject ?subject.
-  ?statement rdf:predicate rdfs:subClassOf.
-  ?statement rdf:object ?object.
-  ?statement rdfs:seeAlso ?generalisatie.
-}
-WHERE {
-  ?generalisatie a mim:Generalisatie.
-  ?generalisatie mim:subtype ?subtype.
-  ?generalisatie mim:supertype ?supertype.
-  ?subject rdfs:seeAlso ?subtype.
-  ?object rdfs:seeAlso ?supertype.
-  ?subject a ?type.
-  ?object a ?type.
-  FILTER (?type != sh:NodeShape)
-  BIND (t:statementuri(?subtype,rdfs:subClasOf,?supertype) as ?statement)
-}
-</pre>
 
 ### Relatiesoort
 
@@ -367,9 +330,9 @@ CONSTRUCT {
   ?propertyshape a sh:PropertyShape.
   ?propertyshape sh:path ?objectproperty.
   ?propertyshape sh:nodekind sh:IRI.
-  ?propertyshape rdfs:seeAlso ?relatiesoort.
+  ?propertyshape mim:equivalent ?relatiesoort.
   ?objectproperty a owl:ObjectProperty.
-  ?objectproperty rdfs:seeAlso ?relatiesoort.
+  ?objectproperty mim:equivalent ?relatiesoort.
 }
 WHERE {
   ?relatiesoort a mim:Relatiesoort.
@@ -394,9 +357,9 @@ Een `mim:Relatieklasse` wordt vertaald naar een subklasse van `rdf:Statement`, w
 CONSTRUCT {
   ?class a owl:Class.
   ?class rdfs:subClassOf rdf:Statement.
-  ?class rdfs:seeAlso ?relatieklasse.
+  ?class mim:equivalent ?relatieklasse.
   ?nodeshape a sh:NodeShape.
-  ?nodeshape rdfs:seeAlso ?relatieklasse.
+  ?nodeshape mim:equivalent ?relatieklasse.
   ?nodeshape sh:targetClass ?class.
   ?nodeshape sh:property [
     sh:path rdf:predicate;
@@ -415,9 +378,9 @@ CONSTRUCT {
   ?propertyshape a sh:PropertyShape.
   ?propertyshape sh:path ?objectproperty.
   ?propertyshape sh:nodekind sh:IRI.
-  ?propertyshape rdfs:seeAlso ?relatieklasse.
+  ?propertyshape mim:equivalent ?relatieklasse.
   ?objectproperty a owl:ObjectProperty.
-  ?objectproperty rdfs:seeAlso ?relatieklasse.
+  ?objectproperty mim:equivalent ?relatieklasse.
 }
 WHERE {
   ?relatieklasse a mim:Relatiesoort.
@@ -457,9 +420,9 @@ CONSTRUCT {
   ?propertyshape a sh:PropertyShape.
   ?propertyshape sh:path ?objectproperty.
   ?propertyshape sh:nodekind sh:IRI.
-  ?propertyshape rdfs:seeAlso ?relatierol.
+  ?propertyshape mim:equivalent ?relatierol.
   ?objectproperty a owl:ObjectProperty.
-  ?objectproperty rdfs:seeAlso ?relatierol.
+  ?objectproperty mim:equivalent ?relatierol.
 }
 WHERE {
   ?relatierol a ?type.
@@ -477,10 +440,10 @@ CONSTRUCT {
 }
 WHERE {
   ?sourceproperty a owl:ObjectProperty.
-  ?sourceproperty rdfs:seeAlso ?relatierolsource.
+  ?sourceproperty mim:equivalent ?relatierolsource.
   ?relatierolsource a mim:RelatierolSource.
   ?targetproperty a owl:ObjectProperty.
-  ?targetproperty rdfs:seeAlso ?relatieroltarget.
+  ?targetproperty mim:equivalent ?relatieroltarget.
   ?relatieroltarget a mim:RelatierolTarget.
   ?relatiesoort mim:relatierol ?relatierolsource,
                                ?relatieroltarget.
@@ -535,7 +498,7 @@ Een primitief datatype wordt vertaald naar een `rdfs:Datatype`. Indien er geen s
 CONSTRUCT {
   ?datatype a rdfs:Datatype.
   ?datatype rdfs:subClassOf xsd:string.
-  ?datatype rdfs:seeAlso ?primitiefdatatype.
+  ?datatype mim:equivalent ?primitiefdatatype.
 }
 WHERE {
   ?primitiefdatatype a mim:PrimitiefDatatype.
@@ -548,7 +511,7 @@ WHERE {
 
 CONSTRUCT {
   ?datatype a rdfs:Datatype.
-  ?datatype rdfs:seeAlso ?primitiefdatatype.
+  ?datatype mim:equivalent ?primitiefdatatype.
 }
 WHERE {
   ?primitiefdatatype a mim:PrimitiefDatatype.
@@ -575,7 +538,7 @@ Voor standaard datatypen maakt RDF gebruik van de XSD datatypen. Onderstaande ta
 |`mim:Month`|`xsd:gMonth`|
 |`mim:URI`|`xsd:anyURI`|
 
-Deze vertaaltabel kan worden doorgevoerd via `rdfs:seeAlso` statements, aangezien deze vervolgens gebruikt wordt in de transformatieregel voor generalisatie en in de transformatieregel voor het aspect `mim:type`.
+Deze vertaaltabel kan worden doorgevoerd via `mim:equivalent` statements, aangezien deze vervolgens gebruikt wordt in de transformatieregel voor generalisatie en in de transformatieregel voor het aspect `mim:type`.
 
 <pre class='ex-sparql'>
 CONSTRUCT {
@@ -589,16 +552,16 @@ CONSTRUCT {
   mim:Day a mim:PrimitiefDatatype.
   mim:Month a mim:PrimitiefDatatype.
   mim:URI a mim:PrimitiefDatatype.
-  xsd:string rdfs:seeAlso mim:CharacterString.
-  xsd:integer rdfs:seeAlso mim:Integer.
-  xsd:decimal rdfs:seeAlso mim:Real.
-  xsd:boolean rdfs:seeAlso mim:Boolean.
-  xsd:date rdfs:seeAlso mim:Date.
-  xsd:dateTime rdfs:seeAlso mim:DateTime.
-  xsd:gYear rdfs:seeAlso mim:Year.
-  xsd:gDay rdfs:seeAlso mim:Day.
-  xsd:gMonth rdfs:seeAlso mim:Month.
-  xsd:anyURI rdfs:seeAlso mim:URI.
+  xsd:string mim:equivalent mim:CharacterString.
+  xsd:integer mim:equivalent mim:Integer.
+  xsd:decimal mim:equivalent mim:Real.
+  xsd:boolean mim:equivalent mim:Boolean.
+  xsd:date mim:equivalent mim:Date.
+  xsd:dateTime mim:equivalent mim:DateTime.
+  xsd:gYear mim:equivalent mim:Year.
+  xsd:gDay mim:equivalent mim:Day.
+  xsd:gMonth mim:equivalent mim:Month.
+  xsd:anyURI mim:equivalent mim:URI.
 }
 WHERE {}
 </pre>
@@ -612,7 +575,7 @@ Een `mim:GestructureerdDatatype` wordt vertaald naar een `sh:NodeShape`. Er word
 <pre class='ex-sparql'>
 CONSTRUCT {
   ?nodeshape a sh:NodeShape.
-  ?nodeshape rdfs:seeAlso ?gestructureerddatatype.
+  ?nodeshape mim:equivalent ?gestructureerddatatype.
 }
 WHERE {
   ?gestructureerddatatype a mim:GestructureerdDatatype.
@@ -635,9 +598,9 @@ CONSTRUCT {
   ?propertyshape a sh:PropertyShape.
   ?propertyshape sh:path ?datatypeproperty.
   ?propertyshape sh:nodekind sh:Literal.
-  ?propertyshape rdfs:seeAlso ?attribuutsoort.
+  ?propertyshape mim:equivalent ?attribuutsoort.
   ?datatypeproperty a owl:DatatypeProperty.
-  ?datatypeproperty rdfs:seeAlso ?attribuutsoort.
+  ?datatypeproperty mim:equivalent ?attribuutsoort.
 }
 WHERE {
   ?dataelement a mim:DataElement.
@@ -660,7 +623,7 @@ Een keuze tussen datatypen en relatiedoelen wordt gemodelleerd als een speciaal 
 CONSTRUCT {
   ?shape a sh:NodeShape.
   ?shape sh:xone ?list.
-  ?shape rdfs:seeAlso ?keuze.
+  ?shape mim:equivalent ?keuze.
   ?list a rdf:List.
   ?list rdf:rest rdf:nil.
 }
@@ -702,12 +665,12 @@ ex:Polygon a mim:PrimitiefDatatype;
 
 shape:GeometrischObject-geometrie a sh:PropertyShape;
   rdfs:label "geometrie";
-  rdfs:seeAlso ex:geometrie;
+  mim:equivalent ex:geometrie;
   sh:node shape:LineOrPolygon;
 .
 shape:LineOrPolygon a sh:NodeShape;
   rdfs:label "Line or polygon";
-  rdfs:seeAlso ex:LineOrPolygon;
+  mim:equivalent ex:LineOrPolygon;
   sh:xone (
     [sh:datatype gml:Line ]
     [sh:datatype gml:Polygon ]
@@ -722,13 +685,13 @@ DELETE {
   ?endoflist rdf:rest rdf:nil
 }
 INSERT {
-  ?list rdf:first [ rdfs:seeAlso ?unionelement ];
+  ?list rdf:first [ mim:equivalent ?unionelement ];
   ?list rdf:rest ?endoflist.
 }
 WHERE {
   ?unionelement a mim:UnionElement.
   ?union mim:element ?unionelement.
-  ?list rdfs:seeAlso ?union.
+  ?list mim:equivalent ?union.
   ?list rdf:rest* ?endoflist.
   ?endoflist rdf:rest rdf:nil.
 }
@@ -764,8 +727,8 @@ WHERE {
   ?attribuutsoort mim:datatype ?keuze.
   ?keuze a mim:Keuze.
   ?keuze mim:keuzeattribuutsoort ?attribuutsoortkeuze.
-  ?superproperty rdfs:seeAlso ?attribuutsoort.
-  ?subproperty rdfs:seeAlso ?attribuutsoortkeuze.
+  ?superproperty mim:equivalent ?attribuutsoort.
+  ?subproperty mim:equivalent ?attribuutsoortkeuze.
 }
 </pre>
 
@@ -776,23 +739,23 @@ WHERE {
 ### Domein
 > Het eigen IM.
 
-> **VERDER UITWERKEN**
->
-> Het domein betreft het eigen IM. Transformatie naar `owl:Ontology` lijkt voor de hand te liggen. In het MIM lijkt dit stereotype niet formeel beschreven. Hoe achterhalen we deze? En kunnen er meerdere packages met stereotype domein zijn binnen een model? Mogelijk moeten we dan meerdere owl:Ontologies aanmaken? Dit is gerelateerd aan het issue over dubbele namen bij bv [Objecttype](#objecttype).
+Een `mim:Domein` wordt omgezet naar een `owl:Ontology`, waarbij de naam en locatie eigenschappen worden gebruikt om de URI tot stand te brengen.
 
 ### Extern
 > Een groepering van constructies die een externe instantie beheert en beschikbaar stelt aan een informatiemodel en die in het informatiemodel ongewijzigd gebruikt worden.
 
-> **VERDER UITWERKEN**
->
-> Het lijkt logisch om een extern package niet te transformeren. De aanname is dat dit al door de externe instantie is gedaan. Mits er voldoende informatie in de UML aanwezig is, kan er een owl:import statement gegenereerd worden. Hiervoor lijkt minimaal noodzakelijk dat een locatie opgegeven kan worden. Wellicht dat het element `mim:locatie` dan ook toegepast zou kunnen worden op package niveau?
+Een `mim:Extern` wordt omgezet naar een `owl:Ontology`, waarbij de naam en locatie eigenschappen worden gebruikt om de URI tot stand te brengen. Bovendien wordt een `owl:imports` aangelegd tussen de package van het type `mim:Domein` en deze externe package.
+
+De gedachte hierachter, is dat een externe package letterlijk is overgenomen vanuit een extern model, en hier aanvullend is meegenomen. Feitelijk zal de inhoud dus identiek moeten zijn aan het model op de betreffende externe locatie.
 
 ### View
 > Een groepering van objecttypen die gespecificeerd zijn in een extern informatiemodel en vanuit het perspectief van het eigen informatiemodel inzicht geeft welke gegevens van deze objecttypen relevant zijn binnen het eigen informatiemodel.
 
-> **VERDER UITWERKEN**
->
-> In geval van een view, wordt - anders dan bij extern - wel een eigen invulling gegeven aan de structuur van het objecttype. Dit betekent dat de betekenis uit het andere model wordt overgenomen, maar niet per sé alle eigenschappen en relaties. Dit betekent concreet voor de transformatie dat er wel shapes worden aangemaakt voor view-packages, maar geen classes of properties.
+Een `mim:View` wordt omgezet naar een `owl:Ontology`, waarbij de naam wordt gebruikt om de URI tot stand te brengen. Daarbij geldt dat voor de locatie, de locatie wordt overgenomen uit de package van het type `mim:Domein`. Bovendien wordt een `owl:imports` relatie gelegd tussen de package van het type domein en deze view-package, EN er wordt een `owl:imports` gelegd van de view-package naar een externe locatie, op basis van de locatie bij deze view package.
+
+De gedachte hieracter, is dat een view package deels is overgenomen vanuit een extern model. Er zijn aanpassingen gedaan aan de structuur, maar niet aan de betekenis. Dit betekent dat er een "imports" relatie loopt van de domein-package naar de view-package, en vervolgens vanuit de view-package naar de externe package (die hier verder niet is opgenomen).
+
+Deze constructie heeft ook consequenties voor de URI's van de modelelementen in deze view package. URI's van shapes (Nodeshapes en Propertyshapes) krijgen als namespace de locatie van de domein-package (dit gaat immers om de structuur en is lokaal gedefinieerd in relatie tot de domein-package). URI's van classes en properties krijgen als namespace de locatie van de view package, waarbij -net als bij `mim:Extern` dit de namespace zal zijn van het externe model.
 
 ## Overig
 
@@ -808,7 +771,7 @@ CONSTRUCT {
 }
 WHERE {
   ?modelelement mim:constraint ?constraint.
-  ?subject rdfs:seeAlso ?modelelement.
+  ?subject mim:equivalent ?modelelement.
   ?constraint ?prop ?obj.
 }
 </pre>
@@ -835,7 +798,7 @@ CONSTRUCT {
 }
 WHERE {
   ?modelelement mim:naam ?naam.
-  ?subject rdfs:seeAlso ?modelelement.
+  ?subject mim:equivalent ?modelelement.
 }
 </pre>
 
@@ -855,7 +818,7 @@ CONSTRUCT {
 }
 WHERE {
   ?modelelement mim:alias ?alias.
-  ?subject rdfs:seeAlso ?modelelement.
+  ?subject mim:equivalent ?modelelement.
 }
 </pre>
 
@@ -871,7 +834,7 @@ CONSTRUCT {
 }
 WHERE {
   ?modelelement mim:begrip ?begrip.
-  ?subject rdfs:seeAlso ?modelelement
+  ?subject mim:equivalent ?modelelement
 }
 </pre>
 
@@ -887,7 +850,7 @@ CONSTRUCT {
 }
 WHERE {
   ?modelelement mim:begripsterm ?begripsterm.
-  ?subject rdfs:seeAlso ?modelelement
+  ?subject mim:equivalent ?modelelement
 }
 </pre>
 
@@ -898,10 +861,6 @@ WHERE {
 Een `mim:definitie` wordt vertaald naar een `rdfs:comment`
 
 Rationale om niet te kiezen voor `skos:definition`: in de meeste Linked Data vocabulaires is het gebruikelijk om de beschrijving van een klasse op te nemen door middel van een `rdfs:comment`, wat ook de intentie is in het MIM. Het MIM is niet beoogd als een volledig begrippenkader. Het MIM biedt daarnaast de mogelijkheid om expliciet te verwijzen vanuit een modelelement naar een `skos:Concept`. Het ligt dan ook voor de hand om bij dit `skos:Concept` de werkelijke `skos:definition` op te nemen.
-
-> **VERDER UITWERKEN**
->
-> Ik meende dat het mogelijk was om in het MIM op te geven dat een modelelement *ook* een begrip is. In dat geval zou je dus een andere vertaling kunnen maken, dwz: *wel* naar een `skos:definition`. Dit zou wel beter zijn.
 
 ### toelichting
 
@@ -917,7 +876,7 @@ CONSTRUCT {
 }
 WHERE {
   ?modelelement mim:toelichting ?toelichting.
-  ?subject rdfs:seeAlso ?modelelement.
+  ?subject mim:equivalent ?modelelement.
 }
 </pre>
 
@@ -933,7 +892,7 @@ CONSTRUCT {
 }
 WHERE {
   ?modelelement mim:herkomst ?herkomst.
-  ?subject rdfs:seeAlso ?modelelement.
+  ?subject mim:equivalent ?modelelement.
 }
 </pre>
 
@@ -951,7 +910,7 @@ CONSTRUCT {
 }
 WHERE {
   ?modelelement mim:herkomstDefinitie ?herkomstdefinitie.
-  ?subject rdfs:seeAlso ?modelelement.
+  ?subject mim:equivalent ?modelelement.
 }
 </pre>
 
@@ -967,7 +926,7 @@ CONSTRUCT {
 }
 WHERE {
   ?modelelement mim:datumOpname ?datumopname.
-  ?subject rdfs:seeAlso ?modelelement.
+  ?subject mim:equivalent ?modelelement.
 }
 </pre>
 
@@ -1016,7 +975,7 @@ CONSTRUCT {
 WHERE {
   ?modelelement mim:kardinaliteit ?kardinaliteit.
   ?modelelement mim:mogelijkGeenWaarde ?mogelijkgeenwaarde.
-  ?propertyshape rdfs:seeAlso ?modelelement.
+  ?propertyshape mim:equivalent ?modelelement.
   BIND (t:mincount(?kardinaliteit) as ?mincount)
   FILTER(NOT(?mogelijkgeenwaarde))
 }
@@ -1026,7 +985,7 @@ CONSTRUCT {
 }
 WHERE {
   ?modelelement mim:kardinaliteit ?kardinaliteit.
-  ?propertyshape rdfs:seeAlso ?modelelement.
+  ?propertyshape mim:equivalent ?modelelement.
   BIND (t:maxcount(?kardinaliteit) as ?maxcount)
 }
 </pre>
@@ -1042,7 +1001,7 @@ CONSTRUCT {
 }
 WHERE {
   ?modelelement mim:authentiek ?authentiek.
-  ?subject rdfs:seeAlso ?modelelement.
+  ?subject mim:equivalent ?modelelement.
 }
 </pre>
 
@@ -1057,7 +1016,7 @@ CONSTRUCT {
 }
 WHERE {
   ?modelelement mim:indicatieAfleidbaar ?indicatieafleidbaar.
-  ?subject rdfs:seeAlso ?modelelement.
+  ?subject mim:equivalent ?modelelement.
 }
 </pre>
 
@@ -1086,7 +1045,7 @@ CONSTRUCT {
 }
 WHERE {
   ?modelelement mim:mogelijkGeenWaarde ?mogelijkgeenwaarde.
-  ?subject rdfs:seeAlso ?modelelement.
+  ?subject mim:equivalent ?modelelement.
 }
 </pre>
 
@@ -1115,8 +1074,8 @@ CONSTRUCT {
 WHERE {
   ?modelelement mim:type ?type.
   ?type rdfs:subClassOf*/rdf:type mim:PrimitiefDatatype.
-  ?subject rdfs:seeAlso ?modelelement.
-  ?datatype rdfs:seeAlso ?type.
+  ?subject mim:equivalent ?modelelement.
+  ?datatype mim:equivalent ?type.
 }
 
 CONSTRUCT {
@@ -1125,9 +1084,9 @@ CONSTRUCT {
 WHERE {
   ?modelelement mim:type ?type.
   ?type rdfs:subClassOf*/rdf:type ?mimtype.
-  ?subject rdfs:seeAlso ?modelelement.
+  ?subject mim:equivalent ?modelelement.
   ?subject a sh:NodeShape.
-  ?datatype rdfs:seeAlso ?type.
+  ?datatype mim:equivalent ?type.
   FILTER (?mimtype = mim:GestructureerdDatatype
        || ?mimtype = mim:Enumeratie
        || ?mimtype = mim:Referentielijst
@@ -1147,7 +1106,7 @@ CONSTRUCT {
 }
 WHERE {
   ?modelelement mim:lengte ?lengte.
-  ?subject rdfs:seeAlso ?modelelement.
+  ?subject mim:equivalent ?modelelement.
 }
 </pre>
 
@@ -1162,7 +1121,7 @@ CONSTRUCT {
 }
 WHERE {
   ?modelelement mim:patroon ?patroon.
-  ?subject rdfs:seeAlso ?modelelement.
+  ?subject mim:equivalent ?modelelement.
 }
 </pre>
 
@@ -1181,7 +1140,7 @@ CONSTRUCT {
 }
 WHERE {
   ?modelelement mim:formeelPatroon ?formeelpatroon.
-  ?subject rdfs:seeAlso ?modelelement.
+  ?subject mim:equivalent ?modelelement.
 }
 </pre>
 
@@ -1196,7 +1155,7 @@ CONSTRUCT {
 }
 WHERE {
   ?modelelement mim:uniekeAanduiding ?uniekeaanduiding.
-  ?subject rdfs:seeAlso ?modelelement.
+  ?subject mim:equivalent ?modelelement.
 }
 </pre>
 
@@ -1211,7 +1170,7 @@ CONSTRUCT {
 }
 WHERE {
   ?modelelement mim:populatie ?populatie.
-  ?subject rdfs:seeAlso ?modelelement.
+  ?subject mim:equivalent ?modelelement.
 }
 </pre>
 
@@ -1226,7 +1185,7 @@ CONSTRUCT {
 }
 WHERE {
   ?modelelement mim:kwaliteit ?kwaliteit.
-  ?subject rdfs:seeAlso ?modelelement.
+  ?subject mim:equivalent ?modelelement.
 }
 </pre>
 
@@ -1249,7 +1208,7 @@ CONSTRUCT {
 }
 WHERE {
   ?modelelement mim:indicatieAbstractObject ?indicatieabstractobject.
-  ?subject rdfs:seeAlso ?modelelement.
+  ?subject mim:equivalent ?modelelement.
 }
 </pre>
 
@@ -1264,7 +1223,7 @@ CONSTRUCT {
 }
 WHERE {
   ?modelelement mim:identificerend ?identificerend.
-  ?subject rdfs:seeAlso ?modelelement.
+  ?subject mim:equivalent ?modelelement.
 }
 </pre>
 
@@ -1280,9 +1239,9 @@ CONSTRUCT {
 }
 WHERE {
   ?modelelement mim:gegevensgroeptype ?gegevensgroeptype.
-  ?subject rdfs:seeAlso ?modelelement.
+  ?subject mim:equivalent ?modelelement.
   ?subject a sh:NodeShape.
-  ?object rdfs:seeAlso ?gegevensgroeptype.
+  ?object mim:equivalent ?gegevensgroeptype.
   ?object a owl:Class.
 }
 </pre>
@@ -1310,8 +1269,8 @@ CONSTRUCT {
 }
 WHERE {
   ?modelelement mim:bron ?objecttype.
-  ?subject rdfs:seeAlso ?modelelement.
-  ?object rdfs:seeAlso ?objecttype.
+  ?subject mim:equivalent ?modelelement.
+  ?object mim:equivalent ?objecttype.
 }
 </pre>
 
@@ -1326,8 +1285,8 @@ CONSTRUCT {
 }
 WHERE {
   ?modelelement mim:doel ?gerelateerdobjecttype.
-  ?subject rdfs:seeAlso ?modelelement.
-  ?object rdfs:seeAlso ?gerelateerdobjecttype.
+  ?subject mim:equivalent ?modelelement.
+  ?object mim:equivalent ?gerelateerdobjecttype.
 }
 </pre>
 
@@ -1342,7 +1301,7 @@ CONSTRUCT {
 }
 WHERE {
   ?modelelement mim:aggregatietype ?aggregatietype.
-  ?subject rdfs:seeAlso ?modelelement.
+  ?subject mim:equivalent ?modelelement.
 }
 </pre>
 
@@ -1381,9 +1340,9 @@ CONSTRUCT {
 }
 WHERE {
   ?modelelement mim:attribuut ?attribuutsoort.
-  ?nodeshape rdfs:seeAlso ?modelelement.
+  ?nodeshape mim:equivalent ?modelelement.
   ?nodeshape a sh:NodeShape.
-  ?propertyshape rdfs:seeAlso ?attribuutsoort.
+  ?propertyshape mim:equivalent ?attribuutsoort.
   ?propertyshape a sh:PropertyShape.
 
 }
@@ -1399,9 +1358,9 @@ CONSTRUCT {
 }
 WHERE {
   ?modelelement mim:gegevensgroep ?gegevensgroep.
-  ?nodeshape rdfs:seeAlso ?modelelement.
+  ?nodeshape mim:equivalent ?modelelement.
   ?nodeshape a sh:NodeShape.
-  ?propertyshape rdfs:seeAlso ?gegevensgroep.
+  ?propertyshape mim:equivalent ?gegevensgroep.
   ?propertyshape a sh:PropertyShape.
 
 }
