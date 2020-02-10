@@ -158,12 +158,6 @@ shape:Generalisatie a sh:NodeShape;
   sh:targetClass mim:Generalisatie;
   sh:name "mim:Generalisatie";
   dct:source mimdoc:sectie2.3.2.2-Generalisatie;
-  # Metagegevens
-  sh:property shape:naam;
-  sh:property shape:alias;
-  sh:property shape:begrip;
-  sh:property shape:begripsterm;
-  # Eigenschappen alleen in de specificatietabel
   sh:property shape:subtype;
   sh:property shape:supertype;
 .
