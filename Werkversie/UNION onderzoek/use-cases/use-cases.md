@@ -10,7 +10,9 @@ Een belangrijk voordeel van deze modellering is dat de kardinaliteiten zuiver ge
 
 Dit document beschrijft zes use cases waarin het modelleren met een *Keuze* van toegevoegde waarde is. Zonder een dergelijke modelconstructie zou het nodig moeten zijn om met een expliciete constraint de keuze aan te geven.
 
-De  use cases 1 tot en met 4 hebben betrekking op meerdere kenmerken, waartussen een keuze gemaakt moet worden omdat er van precies 1 sprake is. Dit wordt in MIM een keuze tussen twee (of meer) modelelementen. Dit heet in de verzamelingenleer een XOR constraint.
+- Bij use cases 1 tot en met 4 gaat het over meerdere kenmerken, waartussen een keuze gemaakt moet worden omdat er van precies 1 sprake is. Dit is in MIM een keuze tussen twee (of meer) modelelementen. In de verzamelingenleer noemen we dit een XOR situatie. Hierbij is het vooral van belang dat er als gevolg van de modellering van een keuze in plaats van constraint er geen nieuwe kenmerken mogen ontstaan en ook geen kenmerken mogen wegvallen. De kenmerken van het object blijven gelijk. 
+
+- Bij use cases 5 en 6 gaat het over precies 1 kenmerk. Er is hierbij geen sprake van een XOR situatie. Bij dit kenmerk is het bijzondere dat er meerdere verschijningsvormen van dit ene kenmerk kunnen zijn. Hierbij is het vooral van belang dat er als gevolg van de modellering van een keuze er geen nieuwe kenmerken mogen ontstaan. 
 
 ## Use case 1: een keuze tussen twee datatypen
 
@@ -150,7 +152,7 @@ vb:geregistreerdPartnerVan a mim:Relatiesoort;
 </pre></td></tr>
 </tbody></table>
 
-Zonder de mogelijkheid van keuze zouden beide relatiesoorten opgenomen zijn bij het objecttype. Hiermee is het echter niet duidelijk zichtbaar dat er slechts één van de twee relatiesoorten aanwezig mogen zijn. Met een constraint is dit op zich wel correct te modelleren, aan te geven dat precies 1 van beide verplicht is, maar met een modellering van een keuze is dit veel duidelijker. 
+Zonder de mogelijkheid van keuze zouden beide relatiesoorten opgenomen zijn bij het objecttype, met een optionele kardinaliteit. Hiermee is het echter niet duidelijk zichtbaar dat er slechts één van de twee relatiesoorten aanwezig mogen zijn. Met een constraint is dit op zich wel correct te modelleren, aan te geven dat precies 1 van beide verplicht is, maar met een modellering van een keuze is dit veel duidelijker. 
 
 Merk op: use case 2 en 3 zijn eigenlijk vergelijkbaar, bij use case 2 gaat het om attribuutsoorten, bij use case 3 gaat het om relatiesoorten. Vanuit het perspectief van keuze gaat het in beide gevallen om een keuze tussen twee modelelementen die verbonden zijn met een objecttype. Het is ook mogelijk om een keuze te hebben tussen attribuutsoort OF een relatiesoort. Dit werkt analoog, maar is in de use cases (nog) niet uitgewerkt.  
 
@@ -198,22 +200,27 @@ vb:eigenaar a mim:Relatiesoort;
 </pre></td></tr>
 </tbody></table>
 
-Zonder de mogelijkheid van keuze, zou je te maken krijgen met twee relatiesoorten met bijbehorend objecttype. Een alternatief zou zijn om gebruik te maken van een relatieklasse (een specialisatie van relatiesoort), waarbij dan toegestaan zou moeten worden dat een relatieklasse meer dan één relatiedoel mag hebben (eigenlijk een soort van tertiare relatie). Dit wordt echter niet ondersteund vanuit het MIM. Bij twee relatiesoorten zouden deze niet dezelfde naam mogen hebben, aangezien deze hetzelfde objecttype als bron hebben. Ook zou de kardinaliteit niet kloppen: die zou dan [0..1] moeten worden, maar dat doet geen recht aan het feit dat er één verplicht aanwezig moet zijn, en er ook geen twee naast elkaar mogen zijn. De werkelijke kardinaliteit is [1..1].
-
-Merk op: use case 1 en 4 zijn eigenlijk vergelijkbaar, bij use case 1 gaat het om datatypen, bij use case 4 gaat het om objecttypen, maar vanuit het perspectief van keuze gaat het in beide gevallen om een keuze tussen twee elementen die verbonden zijn met een objecttype.
+Zonder de mogelijkheid van keuze zouden de relatiedoelen (de gerelateerde objecttypes) opgenomen zijn bij de relatiesoorten van het objecttype, met elk een optionele kardinaliteit. Hiermee is het echter niet duidelijk zichtbaar dat er slechts één van de twee relatiedoelen aanwezig mogen zijn. Met een constraint is dit op zich wel correct te modelleren, aan te geven dat precies 1 van beide verplicht is, maar met een modellering van een keuze is dit veel duidelijker. 
 
 ## Use case 5: Een keuze tussen twee verschijningsvormen van een attribuutsoort
 
-Van een objecttype "Persoon" kan geregistreerd worden wat het telefoonnummer van deze persoon is. Minimaal dient er één telefoonnummer geregistreerd te worden, maar het mogen er ook meerdere zijn. Een dergelijk telefoonnummer kan een privé telefoonnummer zijn, of een zakelijk telefoonnummer.
+Van een objecttype "Persoon" kan geregistreerd worden wat het telefoonnummer van deze persoon is. Een dergelijk telefoonnummer kan een privé telefoonnummer zijn, of een zakelijk telefoonnummer. 
 
-Deze use case lijkt sterk op use case 2 (waarbij ook sprake was van een keuze tussen attribuutsoorten). Het verschil is dat bij deze use case vanuit een conceptueel perspectief sprake is van een meer algemeen attribuutsoort "telefoonnummer", die verschillende verschijningsvormen kent.
+Deze use case lijkt sterk op use case 2 (waarbij ook sprake was van een keuze tussen attribuutsoorten). Het verschil is dat bij deze use case er vanuit een conceptueel perspectief sprake is van een meer algemeen attribuutsoort "telefoonnummer" c.q. van 1 attribuutsoort die verschillende verschijningsvormen kent.  
 
 ## Use case 6: Een keuze tussen twee verschijningsvormen van een relatiesoort
 
 Een objecttype "Persoon" kan gerelateerd zijn aan een objecttype "Locatie". Een dergelijk adres-relatie kan betrekking hebben op het (formele) woonadres, correspondentieadres of verblijfsadres.
 
-Deze use case lijkt sterk op use case 3 (waarbij ook sprake was van een keuze tussen relatiesoorten). Het verschil is dat bij deze use case vanuit een conceptueel perspectief sprake is van een meer algemene relatiesoort "adres", die verschillende verschijningsvormen kent. Daarnaast lijken use case 5 en 6 op elkaar: het betreft vergelijkbare constructies met als verschil de keuze tussen attribuutsoort dan wel relatiesoort.
+Deze use case lijkt sterk op use case 3 (waarbij ook sprake was van een keuze tussen relatiesoorten). Het verschil is dat bij deze use case vanuit een conceptueel perspectief sprake is van een meer algemene relatiesoort "adres", die verschillende verschijningsvormen kent c.q. van 1 relatiesoort, die naar verschillende objecttypen kan verwijzen. 
+
+Daarnaast lijken use case 5 en 6 op elkaar: het betreft vergelijkbare constructies met als verschil de keuze tussen attribuutsoort dan wel relatiesoort.
 
 (Merk op: er is geen noodzaak voor een keuze tussen datatypen of relatiedoelen op deze wijze, aangezien een datatype-keuze of objecttype-keuze al mogelijk is via een specialisatie van een datatype dan wel objecttype).
 
+------
+
+Einde tekst. Deze opmerkingen moeten nog uit de uiteindelijke tekst. 
+
 **Opmerking MB**: ik vraag me dan ook af of use cases 5 en 6 wel horen bij "Keuze". Ik zou deze eerder plaatsen bij generalisatie/specialisatie, zoals bij datatype en objecttype.
+**Opmerking LvB**: Adres als datatype vind ik ongelukkig. in de BAG is dit nooit een datatype. VlakOfMultivlak was een beter voorbeeld voor een conceptueel model, ook al was die ook niet perfect. Graag een beter voorbeeld verzinnen waar geen ruis door kan ontstaan. 
