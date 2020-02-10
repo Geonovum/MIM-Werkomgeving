@@ -1488,7 +1488,7 @@ Een constraint is gekoppeld aan een klasse waarop ze van toepassing is.
 >   **Definitie Code**  
 >   De in een registratie of informatiemodel aan de enumeratiewaarde toegekend unieke code
 
-### Metagegeven: indicatie abstract object
+### Metagegeven: **indicatie abstract object**
 
 >   **Definitie Indicatie abstract object**  
 >   Indicatie dat het objecttype een generalisatie is, waarvan een object als specialisatie
