@@ -1391,9 +1391,9 @@ eigenschappen.
 *Toepassing*: objecttypen met gegevensgroepen. Of een gegevensgroeptype dat zelf ook
 weer een gegevensgroeptype bevat.
 
-### Metagegeven: **Groeptype**
+### Metagegeven: **Gegevensgroeptype**
 
->   **Definitie Groeptype**  
+>   **Definitie Gegevensgroeptype**  
 >   De binding van een gegevensgroeptype als waardetype aan een gegevensgroep.
 
 *Toelichting*

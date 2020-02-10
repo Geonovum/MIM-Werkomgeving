@@ -362,8 +362,8 @@ mim:gegevensgroep a owl:ObjectProperty;
   rdfs:comment "De binding van een gegevensgroep als groep van eigenschappen aan een objecttype of gegevensgroeptype."@nl;
   dct:source mimdoc:sectie2.12.27;
 .
-mim:groeptype a owl:ObjectProperty;
-  rdfs:label "groeptype"@nl;
+mim:gegevensgroeptype a owl:ObjectProperty;
+  rdfs:label "gegevensgroeptype"@nl;
   rdfs:comment "De binding van een gegevensgroeptype als waardetype aan een gegevensgroep."@nl;
   dct:source mimdoc:sectie2.12.28;
 .
