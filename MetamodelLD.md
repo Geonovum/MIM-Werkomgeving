@@ -140,7 +140,7 @@ De "keuze constructie" maakt een keuze mogelijk tussen meerdere attribuutsoorten
 
 | **MIM metaclass**     | **Metaclass in RDF** | **Shape in RDF** | **Grondslag** |
 |-----------------------|----------------------|------------------|---------------|
-| Package               | [`mim:Package`](http://bp4mc2.org/def/mim#Package) | shape:Package |
+| Package               | [`mim:Package`](http://bp4mc2.org/def/mim#Package) | shape:Package | [2.9](#packages) |
 | Informatiemodel       | [`mim:Informatiemodel`](http://bp4mc2.org/def/mim#Informatiemodel) | shape:Informatiemodel | [2.9.1](#informatiemodel) |
 | Domein (het eigen IM) | [`mim:Domein`](http://bp4mc2.org/def/mim#Domein) | shape:Domein | [2.9.2](#domein) |
 | Extern                | [`mim:Extern`](http://bp4mc2.org/def/mim#Extern) | shape:Extern | [2.9.3](#extern) |

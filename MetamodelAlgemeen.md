@@ -604,8 +604,8 @@ primitief datatype.
 
 ### Packages
 
-Een package is een benoemde en begrensde verzameling/groepering van
-modelelementen.
+>   **Definitie Package**  
+>   Een package is een benoemde en begrensde verzameling/groepering van modelelementen.
 
 #### Informatiemodel
 
