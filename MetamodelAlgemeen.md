@@ -790,6 +790,8 @@ alternatief. Er moet een keuze gemaakt worden.
 
 *Toepassing*: informatiemodel (optioneel)
 
+### Metagegeven: **MIM taal**
+
 >   **Definitie MIM taal**  
 >   De aanduiding van de taal die gebruikt is voor de modelelementen.
 
