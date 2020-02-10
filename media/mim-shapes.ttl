@@ -29,7 +29,6 @@ shape:Objecttype a sh:NodeShape;
   sh:property shape:definitie;
   sh:property shape:herkomstDefinitie;
   sh:property shape:datumOpname;
-  sh:property shape:uniekeAanduiding;
   sh:property shape:attribuut;
   sh:property shape:gegevensgroep;
   sh:property shape:constraint;
@@ -572,14 +571,6 @@ shape:datumOpname a sh:PropertyShape;
   sh:minCount 1;
   sh:maxCount 1;
   sh:datatype xsd:date;
-.
-shape:uniekeAanduiding a sh:PropertyShape;
-  sh:path mim:uniekeAanduiding;
-  sh:name "mim:uniekeAanduiding";
-  sh:order 7;
-  sh:minCount 1;
-  sh:maxCount 1;
-  sh:datatype xsd:string;
 .
 shape:populatie a sh:PropertyShape;
   sh:path mim:populatie;

@@ -410,10 +410,6 @@ mim:code a owl:DatatypeProperty;
 
 
 # Bij Objecttype
-mim:uniekeAanduiding a owl:DatatypeProperty;
-  rdfs:label "unieke aanduiding"@nl;
-  rdfs:comment "Voor objecttypen die deel uitmaken van een (basis)registratie of informatiemodel betreft dit de wijze waarop daarin voorkomende objecten (van dit type) uniek in de registratie worden aangeduid."@nl;
-.
 mim:populatie a owl:DatatypeProperty;
   rdfs:label "populatie"@nl;
   rdfs:comment "Voor objecttypen die deel uitmaken van een (basis)registratie betreft dit de beschrijving van de exemplaren van het gedefinieerde objecttype die in de desbetreffende (basis)- registratie voorhanden zijn."@nl;

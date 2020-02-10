@@ -203,7 +203,6 @@ De gegevensregels (structuur) voor de metagegevens zijn wel specifiek per klasse
 | toelichting | [`mim:toelichting`](http://bp4mc2.org/def/mim#toelichting) | owl:DatatypeProperty | [2.12.4](#metagegeven-toelichting)
 | type | [`mim:type`](http://bp4mc2.org/def/mim#type) | owl:ObjectProperty | [2.12.22](#metagegeven-type-domein-van-een-waarde-een-gegeven) |
 | unidirectioneel | [`mim:unidirectioneel`](http://bp4mc2.org/def/mim#unidirectioneel) | owl:DatatypeProperty | [2.12.19](#metagegeven-unidirectioneel) |
-| uniekeAanduiding | [`mim:uniekeAanduiding`](http://bp4mc2.org/def/mim#uniekeAanduiding) | owl:DatatypeProperty | |
 | waarde | [`mim:waarde`](http://bp4mc2.org/def/mim#waarde) | owl:ObjectProperty | [2.12.30](#metagegeven-waarde) |
 
 ### Modellering metagegevens voor objecten en attributen in LD
@@ -222,7 +221,6 @@ De objecttypen worden naar de volgende aspecten gespecificeerd:
 | Definitie                 | [`mim:definitie`](http://bp4mc2.org/def/mim#definitie) | 1 | tekst |
 | Herkomst definitie        | [`mim:herkomstDefinitie`](http://bp4mc2.org/def/mim#herkomstDefinitie) | 1 | tekst |
 | Datum opname              | [`mim:datumOpname`](http://bp4mc2.org/def/mim#datumOpname) | 1 | datum |
-| Unieke aanduiding         | [`mim:uniekeAanduiding`](http://bp4mc2.org/def/mim#uniekeAanduiding) | 1 | tekst |
 | Populatie                 | [`mim:populatie`](http://bp4mc2.org/def/mim#populatie) | 0..1 | tekst |
 | Kwaliteit                 | [`mim:kwaliteit`](http://bp4mc2.org/def/mim#kwaliteit) | 0..1 | tekst |
 | Toelichting               | [`mim:toelichting`](http://bp4mc2.org/def/mim#toelichting) | 0..1 | tekst |
