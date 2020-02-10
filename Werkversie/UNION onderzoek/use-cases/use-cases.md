@@ -68,8 +68,6 @@ Zonder de mogelijkheid van keuze, zou je te maken krijgen met twee attribuutsoor
 
 In MIM modelleren we daarom het attribuutsoort adres als een datatype, welke een keuze betreft tussen het datatype CharacterString en het datatype Adrestype. 
 
-TODO: het goede MIM voorbeeld graag opnemen als figuur. 
-
 ## Use case 2: een keuze tussen twee attribuutsoorten
 
 Bij een objecttype "Betalingsopdracht" moet, naast het bedrag, ook een betalingskenmerk worden opgenomen OF een omschrijving. Eén van beide attribuutsoorten moet worden ingevuld. Het is niet toegestaan dat beide velden worden ingevuld: alleen een betalingskenmerk, of alleen een omschrijving.
@@ -116,7 +114,7 @@ vb:Betalingsopdracht a mim:Objecttype;
 </pre></td></tr>
 </tbody></table>
 
-Zonder de mogelijkheid van keuze zouden beide attribuutsoorten opgenomen zijn bij het objecttype. Dit is in deze use-case geen probleem. Wel is de kardinaliteit ook in dit geval dan niet correct: die zou dan [0..1] moeten worden, maar dat doet geen recht aan het feit dat er één verplicht aanwezig moet zijn, en er ook geen twee naast elkaar mogen zijn. De werkelijke kardinaliteit is [1..1] op de keuze zelf.
+Zonder de mogelijkheid van keuze zouden beide attribuutsoorten opgenomen zijn bij het objecttype als optionele velden, met een constraint dat een van beide gevuld moet zijn. Dit is in deze use-case niet echt een probleem. Wel is de kardinaliteit ook in dit geval dan niet erg duidelijk gemodelleerd: die zou dan [0..1] moeten worden, maar dat doet geen recht aan het feit dat er één verplicht aanwezig moet zijn, en er ook geen twee naast elkaar mogen zijn. De werkelijke kardinaliteit is [1..1] op de keuze zelf. Met een constraint is dit op zich wel correct te modelleren, maar met een modellering van een keuze is dit veel duidelijker. 
 
 ## Use case 3: een keuze tussen twee relatiesoorten
 
@@ -152,9 +150,9 @@ vb:geregistreerdPartnerVan a mim:Relatiesoort;
 </pre></td></tr>
 </tbody></table>
 
-Zonder de mogelijkheid van keuze zouden beide relatiesoorten opgenomen zijn bij het objecttype. Hiermee zou niet zichtbaar zijn dat er slechts één van de twee relatiesoorten aanwezig mogen zijn.
+Zonder de mogelijkheid van keuze zouden beide relatiesoorten opgenomen zijn bij het objecttype. Hiermee is het echter niet duidelijk zichtbaar dat er slechts één van de twee relatiesoorten aanwezig mogen zijn. Met een constraint is dit op zich wel correct te modelleren, aan te geven dat precies 1 van beide verplicht is, maar met een modellering van een keuze is dit veel duidelijker. 
 
-Merk op: use case 2 en 3 zijn eigenlijk vergelijkbaar, bij use case 2 gaat het om attribuutsoorten, bij use case 3 gaat het om relatiesoorten, maar vanuit het perspectief van keuze gaat het in beide gevallen om een keuze tussen twee elementen die verbonden zijn met een objecttype.
+Merk op: use case 2 en 3 zijn eigenlijk vergelijkbaar, bij use case 2 gaat het om attribuutsoorten, bij use case 3 gaat het om relatiesoorten, maar vanuit het perspectief van keuze gaat het in beide gevallen om een keuze tussen twee elementen die verbonden zijn met een objecttype (ook als dit ofwel een attribuutsoort, ofwel een relatiesoort is). 
 
 ## Use case 4: Een keuze tussen twee relatiedoelen
 
