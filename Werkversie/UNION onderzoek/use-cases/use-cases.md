@@ -66,9 +66,9 @@ vb:Adrestype a mim:GestructureerdDatatype;
 
 Zonder de mogelijkheid van keuze, zou je te maken krijgen met twee attribuutsoorten met bijbehorend datatype. Echter, in dat geval mogen de attribuutsoorten niet dezelfde naam hebben, aangezien deze bij hetzelfde objecttype horen. Ook zou de kardinaliteit niet kloppen: die zou dan [0..1] moeten worden, maar dat doet geen recht aan het feit dat er één verplicht aanwezig moet zijn, en er ook geen twee naast elkaar mogen zijn. De werkelijke kardinaliteit is [1..1].
 
-In MIM modelleren we daarom het adres daarom als een attribuutsoort, met als datatype een keuze tussen het datatype CharacterString en het datatype Adrestype. 
+In MIM modelleren we daarom het attribuutsoort adres als een datatype, welke een keuze betreft tussen het datatype CharacterString en het datatype Adrestype. 
 
-TODO: het wel goede voorbeeld graag opnemen als figuur. 
+TODO: het goede MIM voorbeeld graag opnemen als figuur. 
 
 ## Use case 2: een keuze tussen twee attribuutsoorten
 
