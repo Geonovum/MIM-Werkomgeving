@@ -116,7 +116,7 @@ vb:Betalingsopdracht a mim:Objecttype;
 
 Zonder de mogelijkheid van keuze zouden beide attribuutsoorten opgenomen zijn bij het objecttype als optionele velden, met een constraint dat een van beide gevuld moet zijn. Dit is in deze use-case niet echt een probleem. Wel is de kardinaliteit ook in dit geval dan niet erg duidelijk gemodelleerd: die zou dan [0..1] moeten worden, maar dat doet geen recht aan het feit dat er één verplicht aanwezig moet zijn, en er ook geen twee naast elkaar mogen zijn. De werkelijke kardinaliteit is [1..1] op de keuze zelf. Met een constraint is dit op zich wel correct te modelleren, maar met een modellering van een keuze is dit veel duidelijker. 
 
-## Use case 3: een keuze tussen twee relatiesoorten
+## Use case 3: een keuze tussen twee relatiesoorten 
 
 Een objecttype "Persoon" kan getrouwd zijn met een ander persoon, of een geregistreerd partnerschap hebben met een ander persoon. Het is niet mogelijk dat een persoon beide relaties heeft. Er is sprake van een keuze tussen OF getrouwd zijn, OF geregistreerd partnerschap.
 
@@ -153,6 +153,8 @@ vb:geregistreerdPartnerVan a mim:Relatiesoort;
 Zonder de mogelijkheid van keuze zouden beide relatiesoorten opgenomen zijn bij het objecttype. Hiermee is het echter niet duidelijk zichtbaar dat er slechts één van de twee relatiesoorten aanwezig mogen zijn. Met een constraint is dit op zich wel correct te modelleren, aan te geven dat precies 1 van beide verplicht is, maar met een modellering van een keuze is dit veel duidelijker. 
 
 Merk op: use case 2 en 3 zijn eigenlijk vergelijkbaar, bij use case 2 gaat het om attribuutsoorten, bij use case 3 gaat het om relatiesoorten. Vanuit het perspectief van keuze gaat het in beide gevallen om een keuze tussen twee modelelementen die verbonden zijn met een objecttype. Het is ook mogelijk om een keuze te hebben tussen attribuutsoort OF een relatiesoort. Dit werkt analoog, maar is in de use cases (nog) niet uitgewerkt.  
+
+Nota bene. Use case 3 is relevant voor wanneer er bij Relatiemodelleringstype gekozen wordt voor: Relatiesoort leidend. Use case 4 is relevant wanneer er bij Relatiemodelleringstype gekozen wordt voor: Relatierol leidend. 
 
 ## Use case 4: Een keuze tussen twee relatiedoelen
 
