@@ -53,12 +53,10 @@ De volgende regels zijn gebruikt bij de omzetting van de MIM tekst naar RDF:
 4. Een `rdfs:label` is opgenomen met de naam van de MIM «metaclass» c.q. het aspect;
 5. Een `rdfs:comment` is opgenomen met de definitie van de MIM «metaclass» c.q. het aspect.
 
-In een enkel geval ontbreekt in de tekst een beschrijving van het aspect. In dat geval is de target rolnaam gebruikt van de associatie, zoals afgebeeld in het figuur bij de tekst. In het voorkomende geval is hiervan een issue aangemaakt.
-
 Voor de omzetting van de gegevensconstraints (zoals cardinaliteiten, datatypen en properties per klasse), is op de volgende manier een SHACL shape graph gemaakt:
 
 1. Elk voorkomen van een MIM «metaclass» kent ook een `sh:NodeShape` met een `sh:name` die overeen komt de originele technische naam (UpperCamelCase);
-2. Voor elk voorkomen van een MIM «metaclass» zijn `sh:PropertyShapes` aangemaakt om aan te geven welke aspecten zijn toegestaan voor een MIM «metaclass», de cardinaliteiten en het datatype c.q. de geassocieerde MIM «metaclass».
+2. Voor elk voorkomen van een MIM «metaclass» zijn `sh:PropertyShapes` aangemaakt om aan te geven welke aspecten zijn toegestaan voor een MIM «metaclass», de kardinaliteiten en het datatype c.q. de geassocieerde MIM «metaclass».
 
 ### Kern
 
@@ -66,31 +64,31 @@ Voor de omzetting van de gegevensconstraints (zoals cardinaliteiten, datatypen e
 
 Als prefix wordt voor de vocabulaire gebruik gemaakt van `mim`, met de namespace `http://bp4mc2.org/def/mim#`. Voor de shapes wordt als prefix gebruik gemaakt van `shape`, met als namespace `http://bp4mc2.org/def/mim-shapes#`.
 
-| **MIM metaclass** | **Metaclass in RDF** | **Shape in RDF** |
-|-------------------|----------------------|------------------|
-| Objecttype        | [`mim:Objecttype`](http://bp4mc2.org/def/mim#Objecttype) | shape:Objecttype |
-| Attribuutsoort    | [`mim:Attribuutsoort`](http://bp4mc2.org/def/mim#Attribuutsoort) | shape:Attribuutsoort |
-| Gegevensgroep     | [`mim:Gegevensgroep`](http://bp4mc2.org/def/mim#Gegevensgroep) | shape:Gegevensgroep |
-| Gegevensgroeptype | [`mim:Gegevensgroeptype`](http://bp4mc2.org/def/mim#Gegevensgroeptype) | shape:Gegevensgroeptype |
-| Generalisatie     | [`mim:Generalisatie`](http://bp4mc2.org/def/mim#Generalisatie) | shape:Generalisatie |
-| Relatiesoort      | [`mim:Relatiesoort`](http://bp4mc2.org/def/mim#Relatiesoort) | shape:Relatiesoort |
-| Relatieklasse     | [`mim:Relatieklasse`](http://bp4mc2.org/def/mim#Relatieklasse) | shape:Relatieklasse |
+| **MIM metaclass** | **Metaclass in RDF** | **Shape in RDF** | **Grondslag** |
+|-------------------|----------------------|------------------|---------------|
+| Objecttype        | [`mim:Objecttype`](http://bp4mc2.org/def/mim#Objecttype) | shape:Objecttype | [2.5.2](#objecttypen-en-attribuutsoorten) |
+| Attribuutsoort    | [`mim:Attribuutsoort`](http://bp4mc2.org/def/mim#Attribuutsoort) | shape:Attribuutsoort | [2.5.3](#attribuutsoort-en-een-groepering-ervan)
+| Gegevensgroep     | [`mim:Gegevensgroep`](http://bp4mc2.org/def/mim#Gegevensgroep) | shape:Gegevensgroep | [2.5.4](#gegevensgroep) |
+| Gegevensgroeptype | [`mim:Gegevensgroeptype`](http://bp4mc2.org/def/mim#Gegevensgroeptype) | shape:Gegevensgroeptype | [2.5.5](#gegevensgroeptype) |
+| Generalisatie     | [`mim:Generalisatie`](http://bp4mc2.org/def/mim#Generalisatie) | shape:Generalisatie | [2.6.1](#generalisatie) |
+| Relatiesoort      | [`mim:Relatiesoort`](http://bp4mc2.org/def/mim#Relatiesoort) | shape:Relatiesoort | [2.6.2](#relatiesoort) |
+| Relatieklasse     | [`mim:Relatieklasse`](http://bp4mc2.org/def/mim#Relatieklasse) | shape:Relatieklasse | [2.6.3](#relatieklasse) |
 
 ### Datatypen
 
 ![](media/rdf-datatype.png)
 
-| **MIM metaclass** | **Metaclass in RDF** | **Shape in RDF** |
-|-------------------|----------------------|------------------|
-| Datatype                | [`mim:Datatype`](http://bp4mc2.org/def/mim#Datatype) | shape:Datatype |
-| Primitief datatype      | [`mim:PrimitiefDatatype`](http://bp4mc2.org/def/mim#PrimitiefDatatype) |shape:PrimitiefDatatype |
-| Gestructureerd datatype | [`mim:GestructuurdDatatype`](http://bp4mc2.org/def/mim#GestructuurdDatatype) | shape:GestructuurdDatatype |
-| Data element            | [`mim:DataElement`](http://bp4mc2.org/def/mim#DataElement) | shape:DataElement |
-| Enumeratie              | [`mim:Enumeratie`](http://bp4mc2.org/def/mim#Enumeratie) | shape:Enumeratie |
-| Enumeratiewaarde        | [`mim:Enumeratiewaarde`](http://bp4mc2.org/def/mim#Enumeratiewaarde) | shape:Enumeratiewaarde |
-| Referentielijst         | [`mim:Referentielijst`](http://bp4mc2.org/def/mim#Referentielijst) | shape:Referentielijst |
-| Referentie element      | [`mim:ReferentieElement`](http://bp4mc2.org/def/mim#ReferentieElement) | shape:ReferentieElement |
-| Codelijst                | [`mim:Codelijst`](http://bp4mc2.org/def/mim#Codelijst) | shape:Codelijst |
+| **MIM metaclass** | **Metaclass in RDF** | **Shape in RDF** | **Grondslag** |
+|-------------------|----------------------|------------------|---------------|
+| Datatype                | [`mim:Datatype`](http://bp4mc2.org/def/mim#Datatype) | shape:Datatype | |
+| Primitief datatype      | [`mim:PrimitiefDatatype`](http://bp4mc2.org/def/mim#PrimitiefDatatype) |shape:PrimitiefDatatype | [2.8.1](#primitief-datatype) |
+| Gestructureerd datatype | [`mim:GestructuurdDatatype`](http://bp4mc2.org/def/mim#GestructuurdDatatype) | shape:GestructuurdDatatype | [2.8.2](#gestructureerd-datatype) |
+| Data element            | [`mim:DataElement`](http://bp4mc2.org/def/mim#DataElement) | shape:DataElement | [2.8.3](#data-element) |
+| Enumeratie              | [`mim:Enumeratie`](http://bp4mc2.org/def/mim#Enumeratie) | shape:Enumeratie | [2.7.3](#enumeratie) |
+| Enumeratiewaarde        | [`mim:Enumeratiewaarde`](http://bp4mc2.org/def/mim#Enumeratiewaarde) | shape:Enumeratiewaarde | [2.7.4](#enumeratiewaarde) |
+| Referentielijst         | [`mim:Referentielijst`](http://bp4mc2.org/def/mim#Referentielijst) | shape:Referentielijst | [2.7.1](#referentielijst) |
+| Referentie element      | [`mim:ReferentieElement`](http://bp4mc2.org/def/mim#ReferentieElement) | shape:ReferentieElement | [2.7.2](#referentie-element) |
+| Codelijst                | [`mim:Codelijst`](http://bp4mc2.org/def/mim#Codelijst) | shape:Codelijst | [2.7.5](#codelijst) |
 
 ### Overige
 
@@ -98,10 +96,10 @@ Als prefix wordt voor de vocabulaire gebruik gemaakt van `mim`, met de namespace
 
 ![](media/rdf-constraint.png)
 
-| **MIM metaclass** | **Metaclass in RDF** | **Shape in RDF** |
-|-------------------|----------------------|------------------|
-| Keuze             | [`mim:Keuze`](http://bp4mc2.org/def/mim#Keuze) | shape:Keuze |
-| Constraint        | [`mim:Constraint`](http://bp4mc2.org/def/mim#Constraint) | shape:Constraint |
+| **MIM metaclass** | **Metaclass in RDF** | **Shape in RDF** | **Grondslag** |
+|-------------------|----------------------|------------------|---------------|
+| Constraint        | [`mim:Constraint`](http://bp4mc2.org/def/mim#Constraint) | shape:Constraint | [2.10.1](#constraint) |
+| Keuze             | [`mim:Keuze`](http://bp4mc2.org/def/mim#Keuze) | shape:Keuze | [2.10.2](#keuze) |
 
 *Keuze*
 
@@ -113,37 +111,40 @@ De "keuze constructie" maakt een keuze mogelijk tussen meerdere attribuutsoorten
 - Datatype: een keuze tussen datatypen **in plaats van** dit keuze datatype;
 - Relatiedoel: een keuze tussen objecttypen als relatiedoel **in plaats van** het doel van de relatieroltarget
 
-| **MIM metaclass** | **Metaclass in RDF** | **Shape in RDF** |
-|-------------------|----------------------|------------------|
-| Keuze             | [`mim:Keuze`](http://bp4mc2.org/def/mim#Keuze) | shape:Keuze |
-| Datatype          | [`mim:Datatype`](http://bp4mc2.org/def/mim#Datatype) | shape:Datatype |
-| Objecttype        | [`mim:Objecttype`](http://bp4mc2.org/def/mim#Objecttype) | shape:Objecttype |
-| Attribuutsoort    | [`mim:Attribuutsoort`](http://bp4mc2.org/def/mim#Attribuutsoort) | shape:Attribuutsoort |
+| **MIM metaclass** | **Metaclass in RDF** | **Shape in RDF** | **Grondslag** |
+|-------------------|----------------------|------------------|---------------|
+| Keuze             | [`mim:Keuze`](http://bp4mc2.org/def/mim#Keuze) | shape:Keuze | [2.10.2](#keuze) |
+| Datatype          | [`mim:Datatype`](http://bp4mc2.org/def/mim#Datatype) | shape:Datatype | |
+| Objecttype        | [`mim:Objecttype`](http://bp4mc2.org/def/mim#Objecttype) | shape:Objecttype | [2.5.2](#objecten-en-objecttype) |
+| Attribuutsoort    | [`mim:Attribuutsoort`](http://bp4mc2.org/def/mim#Attribuutsoort) | shape:Attribuutsoort | [2.5.3](#attribuutsoort-en-een-groepering-ervan) |
 
 *Relatierol*
 
 ![](media/rdf-relatie.png)
 
-| **MIM metaclass** | **Metaclass in RDF** | **Shape in RDF** |
-|-------------------|----------------------|------------------|
-| Relatierol (abstract) | [`Relatierol`](http://bp4mc2.org/def/mim#Relatierol) | shape:Relatierol |
-| Relatierol source     | [`RelatierolSource`](http://bp4mc2.org/def/mim#RelatierolSource) | shape:RelatierolSource |
-| Relatierol target     | [`RelatierolTarget`](http://bp4mc2.org/def/mim#RelatierolTarget) | shape:RelatierolTarget |
+| **MIM metaclass** | **Metaclass in RDF** | **Shape in RDF** | **Grondslag** |
+|-------------------|----------------------|------------------|---------------|
+| Relatierol (abstract) | [`Relatierol`](http://bp4mc2.org/def/mim#Relatierol) | shape:Relatierol | [2.6.5](#relatierol) |
+| Relatierol source     | [`RelatierolSource`](http://bp4mc2.org/def/mim#RelatierolSource) | shape:RelatierolSource | |
+| Relatierol target     | [`RelatierolTarget`](http://bp4mc2.org/def/mim#RelatierolTarget) | shape:RelatierolTarget | |
 
 *Externe koppeling*
 
-| **MIM metaclass** | **Metaclass in RDF** | **Shape in RDF** |
-|-------------------|----------------------|------------------|
-| Externe koppeling | [`mim:ExterneKoppeling`](http://bp4mc2.org/def/mim#ExterneKoppeling) | shape:ExterneKoppeling |
+| **MIM metaclass** | **Metaclass in RDF** | **Shape in RDF** | **Grondslag** |
+|-------------------|----------------------|------------------|---------------|
+| Externe koppeling | [`mim:ExterneKoppeling`](http://bp4mc2.org/def/mim#ExterneKoppeling) | shape:ExterneKoppeling | [2.6.4](#externe-koppeling) |
 
 *Packages*
 
-| **MIM metaclass**     | **Metaclass in RDF** | **Shape in RDF** |
-|-----------------------|----------------------|------------------|
-| Informatiemodel       | [`mim:Informatiemodel`](http://bp4mc2.org/def/mim#Informatiemodel) | shape:Informatiemodel |
-| Domein (het eigen IM) | [`mim:Domein`](http://bp4mc2.org/def/mim#Domein) | shape:Domein |
-| Extern                | [`mim:Extern`](http://bp4mc2.org/def/mim#Extern) | shape:Extern |
-| View                  | [`mim:View`](http://bp4mc2.org/def/mim#View) | shape:View |
+![](media/rdf-packages.png)
+
+| **MIM metaclass**     | **Metaclass in RDF** | **Shape in RDF** | **Grondslag** |
+|-----------------------|----------------------|------------------|---------------|
+| Package               | [`mim:Package`](http://bp4mc2.org/def/mim#Package) | shape:Package |
+| Informatiemodel       | [`mim:Informatiemodel`](http://bp4mc2.org/def/mim#Informatiemodel) | shape:Informatiemodel | [2.9.1](#informatiemodel) |
+| Domein (het eigen IM) | [`mim:Domein`](http://bp4mc2.org/def/mim#Domein) | shape:Domein | [2.9.2](#domein) |
+| Extern                | [`mim:Extern`](http://bp4mc2.org/def/mim#Extern) | shape:Extern | [2.9.3](#extern) |
+| View                  | [`mim:View`](http://bp4mc2.org/def/mim#View) | shape:View | [2.9.4](#view) |
 
 ## Nadere specificatie metagegevens in LD
 
