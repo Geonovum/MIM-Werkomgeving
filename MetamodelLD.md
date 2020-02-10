@@ -328,6 +328,9 @@ Metadata aspecten worden hierbij altijd vastgelegd. Het gebruik van relatierol
 is optioneel (zowel bij bron en doel). Áls er een relatierol doel wordt
 vastgelegd, dan is de metadata hierbij wel verplicht.
 
+Merk op dat bij het modelleren op deze wijze, alleen de kardinaliteit voor het doel
+aangegeven kan worden. De kardinaliteit aan de bron kant wordt open gelaten.
+
 **Specificatie voor «Relatiesoort»**
 
 De relatiesoorten worden naar de volgende aspecten gespecificeerd.
@@ -358,9 +361,9 @@ Het veld `mim:aggregatietype` verwijst naar één van de volgende mogelijke waar
 
 | **Aggregatietype** | **Definitie** |
 |--------------------|---------------|
-| [`mim:None`](http://bp4mc2.org/def/mim#None) | Er is geen sprake van een aggregate |
-| [`mim:Composite`](http://bp4mc2.org/def/mim#Composite) | Compositie (gesloten wiebertje) |
-| [`mim:Aggregate`](http://bp4mc2.org/def/mim#Aggregate) | Aggregatie (open wiebertje) |
+| [`mim:Geen`](http://bp4mc2.org/def/mim#Geen) | Er is geen sprake van een aggregatie |
+| [`mim:Compositie`](http://bp4mc2.org/def/mim#Compositie) | Compositie (gesloten wiebertje) |
+| [`mim:Gedeeld`](http://bp4mc2.org/def/mim#Gedeeld) | Gedeelde aggregatie (open wiebertje) |
 
 **Specificatie voor mim:Relatierol**
 
@@ -376,8 +379,8 @@ Voor relatierollen worden naar de volgende aspecten gespecificeerd.
 
 #### Relatierol is leidend (alternatief 2)
 
-Verplichte benoeming van de rol van het doel in een relatie met de bijbehoren
-de metagegevens en optioneel de benoeming van de naam van de relatie.
+Verplichte benoeming van de rol van het doel in een relatie met de bijbehorende
+metagegevens en optioneel de benoeming van de naam van de relatie.
 
 **Specificatie voor «Relatiesoort»**
 
@@ -402,7 +405,6 @@ aspecten gespecificeerd.
 | Alias                        | [`mim:alias`](http://bp4mc2.org/def/mim#alias) | 0..1 | tekst |
 | Begrip                       | [`mim:begrip`](http://bp4mc2.org/def/mim#begrip) | 0..* | [`skos:Concept`](http://www.w3.org/2004/02/skos/core#Concept) |
 | Begripsterm                  | [`mim:begripsterm`](http://bp4mc2.org/def/mim#begripsterm) | 0..* | tekst |
-mim#Objecttype) |
 | Kardinaliteit                | [`mim:kardinaliteit`](http://bp4mc2.org/def/mim#kardinaliteit) | 1 | tekst |
 | Herkomst                     | [`mim:herkomst`](http://bp4mc2.org/def/mim#herkomst) | 1 | tekst |
 | Definitie                    | [`mim:definitie`](http://bp4mc2.org/def/mim#definitie) | 1 | tekst |

@@ -1519,7 +1519,7 @@ Tagged values zijn altijd van het datatype CharacterString. Aanvullend geldt:
 | Indicatie formele historie          | Ja, Nee                                                                    |
 | Indicatie classificerend            | Ja, Nee                                                                    |
 | Mogelijk geen waarde                | Ja, Nee                                                                    |
-| Type aggregratie                    | Compositie, Gedeeld, Geen                                                  |
+| [Aggregatietype](#metagegeven-aggregatietype) | Compositie, Gedeeld, Geen                                        |
 | [Authentiek](#authentieke-gegevens) | Authentiek, Basisgegeven, Wettelijk gegeven, Landelijk kerngegeven, Overig |
 
 NB: Geef bij overig in uw eigen informatiemodel aan wat u er onder verstaat.
