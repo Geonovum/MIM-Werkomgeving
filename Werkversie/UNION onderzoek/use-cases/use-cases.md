@@ -18,7 +18,7 @@ Van een objecttype "Persoon" is relevant op welk adres deze persoon woont. Er is
 
 Opmerking: andere modelleringen van een adres zijn ook mogelijk, een adres zou ook een gegevensgroep kunnen zijn en een Adrestype een Gegevensgroeptype, en een adres zou ook als een Objecttype gemodelleerd kunnen worden. In dit voorbeeld is het adres gemodelleerd als een attribuutsoort en het Adrestype als een datatype. 
 
-Onderstaand figuur geeft in zowel UML als Linked Data weer hoe beide modellen er uit zouden zien voor beide afzonderlijke situaties, wanneer er nog geen keuze is gemodelleerd. 
+Onderstaand figuur geeft in zowel UML als Linked Data weer hoe beide modellen er uit zouden zien voor beide afzonderlijke situaties (en er nog geen sprake is van een constraint of een keuze).  
 
 <table><tbody>
 <tr><th>UML</th><th>Linked Data</th></tr>
@@ -72,7 +72,7 @@ In MIM modelleren we daarom het attribuutsoort adres als een datatype, welke een
 
 Bij een objecttype "Betalingsopdracht" moet, naast het bedrag, ook een betalingskenmerk worden opgenomen OF een omschrijving. Eén van beide attribuutsoorten moet worden ingevuld. Het is niet toegestaan dat beide velden worden ingevuld: alleen een betalingskenmerk, of alleen een omschrijving.
 
-Onderstaand figuur geeft in zowel UML als Linked Data weer hoe beide modellen er uit zouden zien voor beide afzonderlijke situaties.
+Onderstaand figuur geeft in zowel UML als Linked Data weer hoe beide modellen er uit zouden zien voor beide afzonderlijke situaties (en er nog geen sprake is van een constraint of een keuze).
 
 <table><tbody>
 <tr><th>UML</th><th>Linked Data</th></tr>
@@ -120,7 +120,7 @@ Zonder de mogelijkheid van keuze zouden beide attribuutsoorten opgenomen zijn bi
 
 Een objecttype "Persoon" kan getrouwd zijn met een ander persoon, of een geregistreerd partnerschap hebben met een ander persoon. Het is niet mogelijk dat een persoon beide relaties heeft. Er is sprake van een keuze tussen OF getrouwd zijn, OF geregistreerd partnerschap.
 
-Onderstaand figuur geeft in zowel UML als Linked Data weer hoe beide modellen er uit zouden zien voor beide afzonderlijke situaties.
+Onderstaand figuur geeft in zowel UML als Linked Data weer hoe beide modellen er uit zouden zien voor beide afzonderlijke situaties (en er geen nog sprake is van een constraint of een keuze).
 
 <table><tbody>
 <tr><th>UML</th><th>Linked Data</th></tr>
@@ -158,7 +158,9 @@ Merk op: use case 2 en 3 zijn eigenlijk vergelijkbaar, bij use case 2 gaat het o
 
 Een objecttype "Vervoersmiddel" heeft een eigenaar. Dit kan een persoon zijn, of een bedrijf, maar niet beiden. Er is sprake van één relatiesoort ("eigenaar") en een keuze tussen twee relatiedoelen, de objecttypen "persoon" en "bedrijf".
 
-Onderstaand figuur geeft in zowel UML als Linked Data weer hoe beide modellen er uit zouden zien voor beide afzonderlijke situaties.
+Onderstaand figuur geeft in zowel UML als Linked Data weer hoe beide modellen er uit zouden zien voor beide afzonderlijke situaties 
+(en er geen sprake is van een constraint of een keuze). 
+
 
 <table><tbody>
 <tr><th>UML</th><th>Linked Data</th></tr>
