@@ -79,9 +79,9 @@ Onderstaande tabellen geven een overzicht van alle transformaties en een referen
 
 |MIM-klasse|Vertaling|Referentie|
 |----------|---------|----------|
-|`mim:Objecttype`|`owl:Class`, `sh:NodeShape`|[Objecttype](#objecttype)|
-|`mim:Attribuutsoort`|`owl:ObjectProperty`, `owl:DatatypeProperty`, `sh:PropertyShape`|[Attribuutsoort](#attribuutsoort)|
-|`mim:Gegevensgroep`|`sh:PropertyShape`, `owl:ObjectProperty`|[Gegevensgroep](#gegevensgroep)|
+|`mim:Objecttype`|`owl:Class`, `sh:NodeShape`|[Objecttype](#transformatie-objecttype)|
+|`mim:Attribuutsoort`|`owl:ObjectProperty`, `owl:DatatypeProperty`, `sh:PropertyShape`|[Attribuutsoort](#transformatie-attribuutsoort)|
+|`mim:Gegevensgroep`|`sh:PropertyShape`, `owl:ObjectProperty`|[Gegevensgroep](#transformatie-gegevensgroep)|
 |`mim:Gegevensgroeptype`|`owl:Class`, `sh:NodeShape`|[Gegevensgroeptype](#gegevensgroeptype)|
 |`mim:Generalisatie`|`rdfs:subClassOf` `rdf:Statement`|[Generalisatie](#generalisatie)|
 |`mim:Relatiesoort`|`sh:PropertyeShape`, `owl:ObjectProperty`|[Relatiesoort](#relatiesoort)|
@@ -170,15 +170,11 @@ Onderstaande tabellen geven een overzicht van alle transformaties en een referen
 
 ## Klassen
 
-Omdat het getransformeerde model daadwerkelijk een nieuw model is, zullen de elementen in het getransformeerde model ook eigen URI's krijgen. Om de relatie tussen het originele MIM-model het het getransformeerde model op basis van RDFS te behouden, wordt de eigenschap `rdfs:seeAlso` gebruikt.
+Omdat het getransformeerde model daadwerkelijk een nieuw model is, zullen de elementen in het getransformeerde model ook eigen URI's krijgen. Om de relatie tussen het originele MIM-model het het getransformeerde model op basis van RDFS te behouden, wordt de eigenschap `mim:equivalent` gebruikt.
 
-> **VERDER UITWERKEN**
->
-> Gebruik van `rdfs:seeAlso` is niet erg sterk. Een dergelijke eigenschap kan voor heel veel dingen gebruikt worden. Gekeken moet worden of er niet een betere property beschikbaar is voor dergelijke vocabulaires, of dat we een eigen property moeten introduceren binnen de mim vocabulaire, bv: `mim:equivalent`.
+### Transformatie: Objecttype
 
-### Objecttype
-
-> De typering van een groep objecten (in de werkelijkheid) die binnen een domein relevant zijn en als gelijksoortig worden beschouwd.
+> De typering van een groep objecten die binnen een domein relevant zijn en als gelijksoortig worden beschouwd.
 
 Een `mim:Objecttype` wordt vertaald naar een `owl:Class` in combinatie met een `sh:NodeShape`.
 
@@ -189,9 +185,9 @@ De identificatie van een objecttype is afgeleid van de naam van het objecttype e
 <pre class='ex-sparql'>
 CONSTRUCT {
   ?class a owl:Class.
-  ?class rdfs:seeAlso ?objecttype.
+  ?class mim:equivalent ?objecttype.
   ?nodeshape a sh:NodeShape.
-  ?nodeshape rdfs:seeAlso ?objecttype.
+  ?nodeshape mim:equivalent ?objecttype.
   ?nodeshape sh:targetClass ?class.
 }
 WHERE {
@@ -202,11 +198,11 @@ WHERE {
 }
 </pre>
 
-### Attribuutsoort
+### Transformatie: Attribuutsoort
 
 > De typering van gelijksoortige gegevens die voor een objecttype van toepassing is.
 
-Een `mim:Attribuutsoort` wordt vertaald naar een `sh:PropertyShape` in combinatie met een `owl:DatatypeProperty`. De nodekind van de propertyshape is een `sh:Literal`.
+Een `mim:Attribuutsoort` wordt vertaald naar een `sh:PropertyShape` in combinatie met een `owl:DatatypeProperty`.
 
 In OWL is een property anders dan in het MIM een *first class citizen*. Dit betekent dat als in twee objecttypen gebruik wordt gemaakt van een attribuutsoort die dezelfde naam heeft, dit leidt tot twee verschillende attribuutsoorten. In OWL zou dit echter leiden tot maar één attribuutsoort, tenzij daadwerkelijk sprake is van verschil in betekenis.
 
@@ -222,13 +218,13 @@ Mocht het veld `mim:begrip` niet gebruikt zijn, dan wordt gekeken naar het veld 
 De identificatie van een attribuutsoort is afgeleid van de naam van het attribuutsoort en de namespace die afgeleid is van aspecten van de package waartoe het objecttype behoord. Voor de propertyshape geldt dat deze laatste ook nog afhankelijk is van de naam van het objecttype waartoe de attribuutsoort behoord. Aangezien een attribuutsoort binnen zijn objecttype uniek behoord te zijn conform het MIM, zal hiermee ook een unieke identificatie worden verkregen. Voor de identificatie van de propertyshape geldt dat deze uniek moet zijn binnen de package als sprake is van hetzelfde begrip. Een dergelijke regel geldt ook voor andere modelelementen die binnen een objecttype vallen.
 </aside>
 
-Indien het datatype van een attribuutsoort gelijk is aan PrimitiefDatatype (of een daarvan afgeleid datatype), dan is sprake van een `owl:DatatypeProperty`. In alle andere gevallen is sprake van een `owl:Objecttype`. Zie ook de transformatie van de eigenschape `mim:type`.
+<aside id='trans-5' class='note'>
+In een RDF model wordt soms ook gebruik gemaakt van attribuutsoorten die afkomstig zijn uit andere modellen. Indien door bovenstaande
+werkwijze er een keuze gemaakt kan worden uit meerdere namespaces, dan wordt aangenomen dat het attribuutsoort afkomstig is uit een
+extern model, en zal de namespace overgenomen worden van het externe model.
+</aside>
 
->> **VERDER UITWERKEN**
->
-> In een RDF model wordt soms ook gebruik gemaakt van attribuutsoorten die afkomstig zijn uit andere modellen. De URI-generatie ondersteunt dit nu niet (een attribuutsoort krijgt altijd de namespace die ook zijn bijbehorend objecttype heeft).
->
-> Een mogelijk oplossing hiervoor is een afzonderlijk primitief datatype te ondersteunen. Een voorstel is gedaan om een primitief datatype van het type xsd:anyURI te gebruiken. Punt is echter wel dat een xsd:anyURI formeel gezien een literal is en geen URI verwijzing naar een resource.
+Indien het datatype van een attribuutsoort gelijk is aan PrimitiefDatatype (of een daarvan afgeleid datatype), dan is sprake van een `owl:DatatypeProperty` en een `sh:nodeKind sh:Literal`. In alle andere gevallen is sprake van een `owl:Objecttype` en een `sh:nodeKind sh:Iri`. Zie ook de transformatie van de eigenschapen `mim:type`.
 
 De URI van de propertyshape wordt afgeleid van de naam van het modelelement dat de attribuutsoort "bezit" en de naam van de attribuutsoort. De URI van de datatypeproperty wordt afgeleid van de naam van de attribuutsoort.
 
@@ -237,9 +233,9 @@ CONSTRUCT {
   ?propertyshape a sh:PropertyShape.
   ?propertyshape sh:path ?datatypeproperty.
   ?propertyshape sh:nodekind sh:Literal.
-  ?propertyshape rdfs:seeAlso ?attribuutsoort.
+  ?propertyshape mim:equivalent ?attribuutsoort.
   ?datatypeproperty a owl:DatatypeProperty.
-  ?datatypeproperty rdfs:seeAlso ?attribuutsoort.
+  ?datatypeproperty mim:equivalent ?attribuutsoort.
 }
 WHERE {
   ?attribuutsoort a mim:Attribuutsoort.
@@ -264,7 +260,7 @@ WHERE {
 }
 </pre>
 
-### Gegevensgroep
+### Transformatie: Gegevensgroep
 
 > Een typering van een groep van gelijksoortige gegevens die voor een objecttype van toepassing is.
 
@@ -277,9 +273,9 @@ CONSTRUCT {
   ?propertyshape a sh:PropertyShape.
   ?propertyshape sh:path ?objectproperty.
   ?propertyshape sh:nodekind sh:BlankNode.
-  ?propertyshape rdfs:seeAlso ?gegevensgroep.
+  ?propertyshape mim:equivalent ?gegevensgroep.
   ?objectproperty a owl:ObjectProperty.
-  ?objectproperty rdfs:seeAlso ?gegevensgroep.
+  ?objectproperty mim:equivalent ?gegevensgroep.
 }
 WHERE {
   ?gegevensgroep a mim:Gegevensgroep.

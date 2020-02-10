@@ -458,6 +458,12 @@ mim:relatierol a owl:ObjectProperty;
   rdfs:label "relatierol"@nl;
 .
 
+# Alleen voor transformaties
+mim:equivalent a owl:ObjectProperty;
+  rdfs:label "equivalent";
+  rdfs:comment "Geeft aan dat een mim metamodel-element equivalent is met een meta-element uit een Linked Data vocabulaire";
+.
+
 #
 # Instanties
 #
