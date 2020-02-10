@@ -870,4 +870,6 @@ shape:relatierol a sh:PropertyShape;
   sh:path mim:relatierol;
   sh:name "mim:relatierol";
   sh:class mim:Relatierol;
+  sh:minCount 1;
+  sh:maxCount 2;
 .
