@@ -573,3 +573,38 @@ mim:OverigeAuthenticiteit a skos:Concept;
   skos:prefLabel "Overig";
   skos:definition "Indien het géén van de voorgaande categorieën betreft. Veelal gaat het dan om proces-, taakveld- of domeinspecifieke gegevens."@nl;
 .
+
+# informatiemodeltypen
+mim:Informatiemodeltypen a skos:ConceptScheme;
+  rdfs:label "Informatiemodeltypen";
+  rdfs:comment "Informatiemodeltypen zoals gedefinieerd in MIM";
+.
+mim:ConceptueelInformatiemodel a skos:Concept;
+  skos:inScheme mim:Informatiemodeltypen;
+  rdfs:label "Conceptueel informatiemodel";
+  skos:prefLabel "Conceptueel";
+.
+mim:LogischInformatiemodel a skos:Concept;
+  skos:inScheme mim:Informatiemodeltypen;
+  rdfs:label "Logisch informatiemodel";
+  skos:prefLabel "Logisch";
+.
+mim:TechnischInformatiemodel a skos:Concept;
+  skos:inScheme mim:Informatiemodeltypen;
+  rdfs:label "Technisch informatiemodel";
+  skos:prefLabel "Technisch";
+.
+
+# relatiemodelleringstypen
+mim:Relatiemodelleringstypen a skos:ConceptScheme;
+  rdfs:label "Relatiemodelleringstypen";
+  rdfs:comment "Relatiemodelleringstypen zoals gedefinieerd in MIM";
+.
+mim:RelatiesoortLeidend a skos:Concept;
+  skos:inScheme mim:Relatiemodelleringstypen;
+  rdfs:label "Relatiesoort leidend";
+.
+mim:RelatierolLeidend a skos:Concept;
+  skos:inScheme mim:Relatiemodelleringstypen;
+  rdfs:label "Relatierol leidend";
+.

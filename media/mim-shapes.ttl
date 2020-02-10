@@ -30,15 +30,14 @@ shape:Objecttype a sh:NodeShape;
   sh:property shape:herkomstDefinitie;
   sh:property shape:datumOpname;
   sh:property shape:uniekeAanduiding;
+  sh:property shape:attribuut;
+  sh:property shape:gegevensgroep;
+  sh:property shape:constraint;
   # Eigenschappen alleen in de specificatietabel
   sh:property shape:populatie;
   sh:property shape:kwaliteit;
   sh:property shape:toelichting;
   sh:property shape:indicatieAbstractObject;
-  #ISSUE: Elementen hieronder komen niet in de tabel voor
-  sh:property shape:attribuut;
-  sh:property shape:gegevensgroep;
-  sh:property shape:constraint;
 .
 shape:Attribuutsoort a sh:NodeShape;
   sh:targetClass mim:Attribuutsoort;
@@ -101,7 +100,6 @@ shape:Gegevensgroeptype a sh:NodeShape;
   sh:property shape:herkomstDefinitie_optioneel;
   sh:property shape:toelichting;
   sh:property shape:datumOpname;
-  #ISSUE: Elementen hieronder komen niet in de tabel voor
   sh:property shape:attribuut;
   sh:property shape:gegevensgroep;
   sh:property shape:constraint;
@@ -180,7 +178,6 @@ shape:Relatieklasse a sh:NodeShape;
   sh:property shape:begrip;
   sh:property shape:begripsterm;
   sh:property shape:definitie;
-  #ISSUE: Elementen hieronder komen niet in de tabel voor
   sh:property shape:constraint;
 .
 shape:ExterneKoppeling a sh:NodeShape;
@@ -212,7 +209,6 @@ shape:Referentielijst a sh:NodeShape;
   sh:property shape:datumOpname;
   sh:property shape:toelichting;
   sh:property shape:locatie;
-  #ISSUE: Elementen hieronder komen niet in de tabel voor
   sh:property shape:referentieElement;
 .
 shape:ReferentieElement a sh:NodeShape;
@@ -284,7 +280,6 @@ shape:GestructureerdDatatype a sh:NodeShape;
   sh:property shape:patroon;
   sh:property shape:formeelPatroon;
   sh:property shape:datumOpname;
-  #ISSUE: Elementen hieronder komen niet in de tabel voor
   sh:property shape:dataElement;
 .
 shape:DataElement a sh:NodeShape;
@@ -303,8 +298,8 @@ shape:DataElement a sh:NodeShape;
   sh:property shape:formeelPatroon;
   sh:property shape:kardinaliteit;
 .
-shape:Union a sh:NodeShape;
-  sh:targetClass mim:Union;
+shape:Keuze a sh:NodeShape;
+  sh:targetClass mim:Keuze;
   sh:name "mim:Keuze";
   dct:source mimdoc:sectie2.3.5-Union;
   # Metagegevens
@@ -330,6 +325,12 @@ shape:Informatiemodel a sh:NodeShape;
   sh:name "mim:Informatiemodel";
   sh:property shape:naam;
   sh:property shape:alias;
+  sh:property shape:informatiemodeltype;
+  sh:property shape:informatiedomein;
+  sh:property shape:relatiemodelleringstype;
+  sh:property shape:mimversie;
+  sh:property shape:mimextensie;
+  sh:property shape:mimtaal;
 .
 shape:Domein a sh:NodeShape;
   sh:targetClass mim:Domein;
@@ -367,7 +368,6 @@ shape:Enumeratie a sh:NodeShape;
   sh:property shape:naam;
   # ISSUE: bij Enumeratie geen alias? sh:property shape:alias;
   sh:property shape:definitie;
-  #ISSUE: Elementen hieronder komen niet in de tabel voor
   sh:property shape:waarde;
 .
 shape:Enumeratiewaarde a sh:NodeShape;
@@ -403,16 +403,77 @@ shape:RelatierolTarget a sh:NodeShape;
   sh:name "mim:RelatierolTarget";
   sh:property shape:doel;
 .
-shape:Id a sh:NodeShape;
-  sh:targetClass mim:Id;
-  sh:name "mim:Id";
-.
 
 #
 # PropertyShapes
 #
 
 # De meeste property shapes worden vaker gebruikt. Vandaar dat propertyshapes afzonderlijk zijn benoemd
+
+# Meta voor informatiemodel
+
+shape:informatiemodeltype a sh:PropertyShape;
+  sh:path mim:informatiemodeltype;
+  sh:name "mim:informatiemodeltype";
+  sh:order 1;
+  sh:minCount 1;
+  sh:maxCount 1;
+  sh:node shape:Informatiemodeltypen
+.
+shape:Informatiemodeltypen a sh:NodeShape;
+  sh:name "Informatiemodeltypen";
+  sh:property [
+    sh:path skos:inScheme;
+    sh:hasValue mim:Informatiemodeltypen;
+  ]
+.
+shape:informatiedomein a sh:PropertyShape;
+  sh:path mim:informatiedomein;
+  sh:name "mim:informatiedomein";
+  sh:order 1;
+  sh:minCount 1;
+  sh:maxCount 1;
+  sh:datatype xsd:string;
+.
+shape:relatiemodelleringstype a sh:PropertyShape;
+  sh:path mim:relatiemodelleringstype;
+  sh:name "mim:relatiemodelleringstype";
+  sh:order 1;
+  sh:minCount 1;
+  sh:maxCount 1;
+  sh:node shape:Relatiemodelleringstypen
+.
+shape:Relatiemodelleringstypen a sh:NodeShape;
+  sh:name "Relatiemodelleringstypen";
+  sh:property [
+    sh:path skos:inScheme;
+    sh:hasValue mim:Relatiemodelleringstypen;
+  ]
+.
+shape:mimversie a sh:PropertyShape;
+  sh:path mim:mimversie;
+  sh:name "mim:mimversie";
+  sh:order 1;
+  sh:minCount 1;
+  sh:maxCount 1;
+  sh:datatype xsd:string;
+.
+shape:mimextensie a sh:PropertyShape;
+  sh:path mim:mimextensie;
+  sh:name "mim:mimextensie";
+  sh:order 1;
+  sh:maxCount 1;
+  sh:datatype xsd:string;
+.
+shape:mimtaal a sh:PropertyShape;
+  sh:path mim:mimtaal;
+  sh:name "mim:mimtaal";
+  sh:order 1;
+  sh:maxCount 1;
+  sh:datatype xsd:string;
+.
+
+# Metagegevens
 
 shape:naam a sh:PropertyShape;
   sh:path mim:naam;
@@ -804,21 +865,15 @@ shape:constraint a sh:PropertyShape;
   sh:nodeKind sh:BlankNode;
 .
 shape:dataElement a sh:PropertyShape;
-  sh:path mim:element;
-  sh:name "mim:element";
+  sh:path mim:dataElement;
+  sh:name "mim:dataElement";
   sh:class mim:DataElement;
 .
 shape:referentieElement a sh:PropertyShape;
-  sh:path mim:element;
-  sh:name "mim:element";
+  sh:path mim:referentieElement;
+  sh:name "mim:referentieElement";
   sh:class mim:ReferentieElement;
   sh:minCount 1;
-.
-shape:unionElement a sh:PropertyShape;
-  sh:path mim:element;
-  sh:name "mim:element";
-  sh:class mim:UnionElement;
-  sh:minCount 2;
 .
 shape:relatierol a sh:PropertyShape;
   sh:path mim:relatierol;

@@ -86,7 +86,6 @@ Als prefix wordt voor de vocabulaire gebruik gemaakt van `mim`, met de namespace
 | Primitief datatype      | [`mim:PrimitiefDatatype`](http://bp4mc2.org/def/mim#PrimitiefDatatype) |shape:PrimitiefDatatype |
 | Gestructureerd datatype | [`mim:GestructuurdDatatype`](http://bp4mc2.org/def/mim#GestructuurdDatatype) | shape:GestructuurdDatatype |
 | Data element            | [`mim:DataElement`](http://bp4mc2.org/def/mim#DataElement) | shape:DataElement |
-| Keuze                   | [`mim:Keuze`](http://bp4mc2.org/def/mim#Keuze) | shape:Keuze |
 | Enumeratie              | [`mim:Enumeratie`](http://bp4mc2.org/def/mim#Enumeratie) | shape:Enumeratie |
 | Enumeratiewaarde        | [`mim:Enumeratiewaarde`](http://bp4mc2.org/def/mim#Enumeratiewaarde) | shape:Enumeratiewaarde |
 | Referentielijst         | [`mim:Referentielijst`](http://bp4mc2.org/def/mim#Referentielijst) | shape:Referentielijst |
@@ -101,6 +100,7 @@ Als prefix wordt voor de vocabulaire gebruik gemaakt van `mim`, met de namespace
 
 | **MIM metaclass** | **Metaclass in RDF** | **Shape in RDF** |
 |-------------------|----------------------|------------------|
+| Keuze             | [`mim:Keuze`](http://bp4mc2.org/def/mim#Keuze) | shape:Keuze |
 | Constraint        | [`mim:Constraint`](http://bp4mc2.org/def/mim#Constraint) | shape:Constraint |
 
 *Keuze*
@@ -153,52 +153,57 @@ De betekenis van de metagegevens worden in LD gespecificeerd los van de klasse w
 
 De gegevensregels (structuur) voor de metagegevens zijn wel specifiek per klasse, en worden in de betreffende paragraaf behandeld.
 
-| **MIM metagegeven** | **Meta-eigenschap in RDF** | **RDF type** | **Definitie** |
-|---------------------|----------------------------|--------------|----------------|
-| alias | [`mim:naam`](http://bp4mc2.org/def/mim#naam) | owl:DatatypeProperty | De alternatieve weergave van de naam. |
-| begrip | [`mim:begrip`](http://bp4mc2.org/def/mim#begrip) | owl:ObjectProperty | Verwijzing naar een begrip, vanuit een modelelement, waarmee wordt aangegeven op welk begrip, of begrippen, het informatiemodel element is gebaseerd. |
-| begripsterm | [`mim:begripsterm`](http://bp4mc2.org/def/mim#begripsterm) | owl:DatatypeProperty | Verwijzing naar een begrip in de vorm van de term, vanuit een modelelement, waarmee wordt aangegeven op welk begrip, of begrippen, het informatiemodel element is gebaseerd. |
-| attribuut | [`mim:attribuut`](http://bp4mc2.org/def/mim#attribuut) | owl:ObjectProperty | \- |
-| authentiek | [`mim:authentiek`](http://bp4mc2.org/def/mim#authentiek) | owl:ObjectProperty | Indien het een authentiek (landelijk) basisgegeven of een als relatiesoort gemodelleerd authentiek (landelijk) basisgegeven is. Basisgegevens zijn altijd gegevens afkomstig uit de landelijke registraties. |
-| code | [`mim:code`](http://bp4mc2.org/def/mim#code) | owl:DatatypeProperty | De in een registratie of informatiemodel aan de enumeratiewaarde toegekend unieke code |
-| constraint | [`mim:constraint`](http://bp4mc2.org/def/mim#constraint) | owl:ObjectProperty | \- |
-| datum opname | [`mim:datumOpname`](http://bp4mc2.org/def/mim#datumOpname) | owl:DatatypeProperty | De datum waarop het modelelement is opgenomen in het informatiemodel.
-| definitie | [`mim:definitie`](http://bp4mc2.org/def/mim#definitie) | owl:DatatypeProperty | Zie ISO 19103. Vrij vertaald: alle alfanumerieke tekens en speciale tekens die horen bij de gekozen characterset (standaard UTF-8), dus met diakrieten, white spaces, \-teken en newlines of HTML opmaak e.d. Mag starten met spatie. De maximale lengte is onbepaald. |
-| element | [`mim:element`](http://bp4mc2.org/def/mim#element) | owl:ObjectProperty | \- |
-| formeel patroon | [`mim:formeelPatroon`](http://bp4mc2.org/def/mim#formeelPatroon) | owl:DatatypeProperty | Zoals patroon, formeel vastgelegd, uitgedrukt in een formele taal die door de computer wordt herkend. |
-| gegevensgroep | [`mim:gegevensgroep`](http://bp4mc2.org/def/mim#gegevensgroep) | owl:ObjectProperty | \- |
-| gegevensgroeptype | [`mim:gegevensgroeptype`](http://bp4mc2.org/def/mim#gegevensgroeptype) | owl:ObjectProperty | De verwijzing naar het bijbehorende gegevensgroeptype |
-| doel | [`mim:doel`](http://bp4mc2.org/def/mim#doel) | owl:ObjectProperty | Aanduiding van het gerelateerde objecttype die het eindpunt van de relatie aangeeft. Naar objecten van dit objecttype wordt verwezen. |
-| herkomst | [`mim:herkomst`](http://bp4mc2.org/def/mim#herkomst) | owl:DatatypeProperty | De registratie of het informatiemodel waaraan het modelelement ontleend is dan wel de eigen organisatie indien het door de eigen organisatie toegevoegd is. |
-| herkomst definitie | [`mim:herkomstDefinitie`](http://bp4mc2.org/def/mim#herkomstDefinitie) | owl:DatatypeProperty | De registratie of het informatiemodel waaruit de definitie is overgenomen dan wel een aanduiding die aangeeft uit welke bronnen de definitie is samengesteld. |
-| identificerend | [`mim:identificerend`](http://bp4mc2.org/def/mim#identificerend) | owl:DatatypeProperty | Aanduiding dat attribuutsoort onderdeel uitmaakt van de unieke aanduiding van een object |
-| indicatie abstract object | [`mim:indicatieAbstractObject`](http://bp4mc2.org/def/mim#indicatieAbstractObject) | owl:DatatypeProperty | Indicatie dat het objecttype een generalisatie is, waarvan een object als specialisatie altijd voorkomt in de hoedanigheid van een (en slechts één) van de specialisaties van het betreffende objecttype. |
-| indicatie afleidbaar | [`mim:indicatieAfleidbaar`](http://bp4mc2.org/def/mim#indicatieAfleidbaar) | owl:DatatypeProperty | Aanduiding dat gegeven afleidbaar is uit andere attribuut- en/of relatiesoorten. |
-| indicatie classificerend | [`mim:indicatieClassificerend`](http://bp4mc2.org/def/mim#indicatieAfleidbaar) | owl:DatatypeProperty | Aanduiding dat een aspect een classificatie betreft van het betreffende objecttype. |
-| indicatie formele historie | [`mim:indicatieFormeleHistorie`](http://bp4mc2.org/def/mim#indicatieFormeleHistorie) | owl:DatatypeProperty | Indicatie of de formele historie van het kenmerk van het object bijgehouden wordt en te bevragen is. |
-| indicatie materiële historie | [`mim:indicatieMaterieleHistorie`](http://bp4mc2.org/def/mim#indicatieMaterieleHistorie) | owl:DatatypeProperty | Indicatie of de materiële historie van het kenmerk van het object te bevragen is. |
-| kardinaliteit | [`mim:kardinaliteit`](http://bp4mc2.org/def/mim#kardinaliteit) | owl:DatatypeProperty | De kardinaliteit geeft aan hoeveel keer waarden van dit kenmerk van een object kunnen voorkomen bij een object van het betreffende objecttype. |
-| kwaliteit | [`mim:kwaliteit`](http://bp4mc2.org/def/mim#kwaliteit) | owl:DatatypeProperty | Beschrijving van de mate waarin in de registratie opgenomen objecten van het desbetreffende type volledig, juist, actueel, nauwkeurig en betrouwbaar zijn. |
-| lengte | [`mim:lengte`](http://bp4mc2.org/def/mim#lengte) | owl:DatatypeProperty | De aanduiding van de lengte van een gegeven. |
-| locatie | [`mim:locatie`](http://bp4mc2.org/def/mim#locatie) | owl:DatatypeProperty | Als het type van het attribuutsoort een waardenlijst is, dan wordt hier de locatie waar deze te vinden is opgegeven. |
-| mim taal | [`mim:taal`](http://bp4mc2.org/def/mim#taal) | owl:DatatypeProperty | De aanduiding van de taal die gebruikt is voor de modelelementen. |
-| mim extensie | [`mim:extensie`](http://bp4mc2.org/def/mim#extensie) | owl:DatatypeProperty | De aanduiding van een extensie op MIM. |
-| mim versie | [`mim:versie`](http://bp4mc2.org/def/mim#versie) | owl:DatatypeProperty | De versie van de MIM specificatie die gebruikt is om het informatiemodel in uit te drukken. |
-| mogelijk geen waarde | [`mim:mogelijkGeenWaarde`](http://bp4mc2.org/def/mim#mogelijkGeenWaarde) | owl:DatatypeProperty | Aanduiding dat van een aspect geen waarde is geregistreerd, maar dat onduidelijk is of de waarde er werkelijk ook niet is. |
-| naam | [`mim:naam`](http://bp4mc2.org/def/mim#naam) | owl:DatatypeProperty | De naam van een modelelement |
-| bron | [`mim:bron`](http://bp4mc2.org/def/mim#bron) | owl:ObjectProperty | Aanduiding van het bronobject in een relatie tussen objecten. Een bronoject heeft middels een relatiesoort een relatie met een doelobject. |
-| patroon | [`mim:patroon`](http://bp4mc2.org/def/mim#patroon) | owl:DatatypeProperty | De verzameling van waarden die gegevens van deze attribuutsoort kunnen hebben, oftewel het waardenbereik, uitgedrukt in een specifieke structuur. |
-| populatie | [`mim:populatie`](http://bp4mc2.org/def/mim#populatie) | owl:DatatypeProperty | Voor objecttypen die deel uitmaken van een (basis)registratie betreft dit de beschrijving van de exemplaren van het gedefinieerde objecttype die in de desbetreffende (basis)- registratie voorhanden zijn. |
-| specificatie formeel | [`mim:specificatieFormeel`](http://bp4mc2.org/def/mim#specificatieFormeel) | owl:DatatypeProperty | De beschrijving van de constraint in een formele specificatietaal, in OCL |
-| specificatie tekst | [`mim:specificatieTekst`](http://bp4mc2.org/def/mim#specificatieTekst) | owl:DatatypeProperty | De specificatie van de constraint in normale tekst.
-| subtype | [`mim:subtype`](http://bp4mc2.org/def/mim#subtype) | owl:ObjectProperty | \- |
-| supertype | [`mim:supertype`](http://bp4mc2.org/def/mim#supertype) | owl:ObjectProperty | \- |
-| toelichting | [`mim:toelichting`](http://bp4mc2.org/def/mim#toelichting) | owl:DatatypeProperty | Een inhoudelijke toelichting op de definitie, ter verheldering of nadere duiding. |
-| type | [`mim:type`](http://bp4mc2.org/def/mim#type) | owl:ObjectProperty | Het datatype waarmee waarden van deze attribuutsoort worden vastgelegd. |
-| aggregatietype | [`mim:aggregatietype`](http://bp4mc2.org/def/mim#aggregatietype) | owl:ObjectProperty | Standaard betreft het geen aggregatie (Geen). Het aggregatietype mag 'Compositie' zijn. Dit wordt gedaan als er een afhankelijkheid is in die zin dat de target niet kan bestaan zonder de source: de target vervalt als de source vervalt. |
-| unidirectioneel | [`mim:unidirectioneel`](http://bp4mc2.org/def/mim#unidirectioneel) | owl:DatatypeProperty | De richting van een relatie, welke betekenis geeft aan de relatie vanuit het perspectief van de eigenaar van de relatie. |
-| uniekeAanduiding | [`mim:uniekeAanduiding`](http://bp4mc2.org/def/mim#uniekeAanduiding) | owl:DatatypeProperty | Voor objecttypen die deel uitmaken van een (basis)registratie of informatiemodel betreft dit de wijze waarop daarin voorkomende objecten (van dit type) uniek in de registratie worden aangeduid. |
-| waarde | [`mim:waarde`](http://bp4mc2.org/def/mim#waarde) | owl:ObjectProperty | \- |
+| **MIM metagegeven** | **Meta-eigenschap in RDF** | **RDF type** | **Grondslag** |
+|---------------------|----------------------------|--------------|---------------|
+| aggregatietype | [`mim:aggregatietype`](http://bp4mc2.org/def/mim#aggregatietype) | owl:ObjectProperty | [2.12.20](#metagegeven-aggregatietype) |
+| alias | [`mim:naam`](http://bp4mc2.org/def/mim#naam) | owl:DatatypeProperty | [2.12.3](#metagegeven-alias) |
+| attribuut | [`mim:attribuut`](http://bp4mc2.org/def/mim#attribuut) | owl:ObjectProperty | [2.12.26](#metagegeven-attribuut) |
+| authentiek | [`mim:authentiek`](http://bp4mc2.org/def/mim#authentiek) | owl:ObjectProperty | [2.12.13](#metagegeven-authentiek) |
+| begrip | [`mim:begrip`](http://bp4mc2.org/def/mim#begrip) | owl:ObjectProperty | [2.12.5](#metagegeven-begrip) |
+| begripsterm | [`mim:begripsterm`](http://bp4mc2.org/def/mim#begripsterm) | owl:DatatypeProperty | [2.12.5](#metagegeven-begrip) |
+| bron | [`mim:bron`](http://bp4mc2.org/def/mim#bron) | owl:ObjectProperty | [2.12.17](#metagegeven-bron) |
+| code | [`mim:code`](http://bp4mc2.org/def/mim#code) | owl:DatatypeProperty | |
+| constraint | [`mim:constraint`](http://bp4mc2.org/def/mim#constraint) | owl:ObjectProperty | [2.12.35](#metagegeven-constraint) |
+| data element | [`mim:dataElement`](http://bp4mc2.org/def/mim#dataElement) | owl:ObjectProperty | [2.12.29](#metagegeven-data-element) |
+| datum opname | [`mim:datumOpname`](http://bp4mc2.org/def/mim#datumOpname) | owl:DatatypeProperty | [2.12.8](#metagegeven-datum-opname) |
+| definitie | [`mim:definitie`](http://bp4mc2.org/def/mim#definitie) | owl:DatatypeProperty | [2.12.2](#metagegeven-definitie) |
+| doel | [`mim:doel`](http://bp4mc2.org/def/mim#doel) | owl:ObjectProperty | [2.12.18](#metagegeven-doel) |
+| formeel patroon | [`mim:formeelPatroon`](http://bp4mc2.org/def/mim#formeelPatroon) | owl:DatatypeProperty | [2.12.25](#metagegeven-formeel-patroon) |
+| gegevensgroep | [`mim:gegevensgroep`](http://bp4mc2.org/def/mim#gegevensgroep) | owl:ObjectProperty | [2.12.27](#metagegeven-gegevensgroep) |
+| groeptype | [`mim:groeptype`](http://bp4mc2.org/def/mim#groeptype) | owl:ObjectProperty | [2.12.28](#metagegeven-groeptype) |
+| herkomst | [`mim:herkomst`](http://bp4mc2.org/def/mim#herkomst) | owl:DatatypeProperty | [2.12.6](#metagegeven-herkomst) |
+| herkomst definitie | [`mim:herkomstDefinitie`](http://bp4mc2.org/def/mim#herkomstDefinitie) | owl:DatatypeProperty | [2.12.7](#metagegeven-herkomst-definitie) |
+| identificerend | [`mim:identificerend`](http://bp4mc2.org/def/mim#identificerend) | owl:DatatypeProperty | [2.12.9](#metagegeven-identificerend) |
+| indicatie abstract object | [`mim:indicatieAbstractObject`](http://bp4mc2.org/def/mim#indicatieAbstractObject) | owl:DatatypeProperty | |
+| indicatie afleidbaar | [`mim:indicatieAfleidbaar`](http://bp4mc2.org/def/mim#indicatieAfleidbaar) | owl:DatatypeProperty | [2.12.14](#metagegeven-indicatie-afleidbaar) |
+| indicatie classificerend | [`mim:indicatieClassificerend`](http://bp4mc2.org/def/mim#indicatieAfleidbaar) | owl:DatatypeProperty | [2.12.15](#metagegeven-indicatie-classificerend) |
+| indicatie formele historie | [`mim:indicatieFormeleHistorie`](http://bp4mc2.org/def/mim#indicatieFormeleHistorie) | owl:DatatypeProperty | [2.12.11](#metagegeven-indicatie-formele-historie) |
+| indicatie materiële historie | [`mim:indicatieMaterieleHistorie`](http://bp4mc2.org/def/mim#indicatieMaterieleHistorie) | owl:DatatypeProperty | [2.12.10](#metagegeven-indicatie-materiele-historie) |
+| informatiedomein | [`mim:informatiedomein`](http://bp4mc2.org/def/mim#informatiedomein) | owl:DatatypeProperty | [2.11.1](#metagegeven-domein) |
+| informatiemodeltype | [`mim:informatiemodeltype`](http://bp4mc2.org/def/mim#informatiemodeltype) | owl:ObjectProperty | [2.11.2](#metagegeven-informatiemodel-type) |
+| kardinaliteit | [`mim:kardinaliteit`](http://bp4mc2.org/def/mim#kardinaliteit) | owl:DatatypeProperty | [2.12.12](#metagegeven-kardinaliteit)
+| kwaliteit | [`mim:kwaliteit`](http://bp4mc2.org/def/mim#kwaliteit) | owl:DatatypeProperty | |
+| lengte | [`mim:lengte`](http://bp4mc2.org/def/mim#lengte) | owl:DatatypeProperty | [2.12.23](#metagegeven-lengte-domein-van-een-waarde-van-een-gegeven) |
+| locatie | [`mim:locatie`](http://bp4mc2.org/def/mim#locatie) | owl:DatatypeProperty | [2.12.21](#metagegeven-locatie) |
+| mim extensie | [`mim:extensie`](http://bp4mc2.org/def/mim#extensie) | owl:DatatypeProperty | [2.11.5](#metagegeven-mim-extensie)
+| mim taal | [`mim:taal`](http://bp4mc2.org/def/mim#taal) | owl:DatatypeProperty | [2.11.6](#metagegeven-mim-taal) |
+| mim versie | [`mim:versie`](http://bp4mc2.org/def/mim#versie) | owl:DatatypeProperty | [2.11.4](#metagegeven-mim-versie) |
+| mogelijk geen waarde | [`mim:mogelijkGeenWaarde`](http://bp4mc2.org/def/mim#mogelijkGeenWaarde) | owl:DatatypeProperty | [2.12.16](#metagegeven-mogelijk-geen-waarde) |
+| naam | [`mim:naam`](http://bp4mc2.org/def/mim#naam) | owl:DatatypeProperty | [2.12.1](#metagegeven-naam) |
+| patroon | [`mim:patroon`](http://bp4mc2.org/def/mim#patroon) | owl:DatatypeProperty | [2.12.24](#metagegeven-patroon) |
+| populatie | [`mim:populatie`](http://bp4mc2.org/def/mim#populatie) | owl:DatatypeProperty | |
+| referentie element | [`mim:referentieElement`](http://bp4mc2.org/def/mim#referentieElement) | owl:ObjectProperty | [2.12.31](#metagegeven-referentie-element) |
+| relatiemodelleringstype | [`mim:relatiemodelleringstype`](http://bp4mc2.org/def/mim#relatiemodelleringstype) | owl:ObjectProperty | [2.11.3](#metagegeven-relatiemodelleringstype) |
+| relatierol | [`mim:relatierol`](http://bp4mc2.org/def/mim#relatierol) | owl:ObjectProperty | |
+| specificatie formeel | [`mim:specificatieFormeel`](http://bp4mc2.org/def/mim#specificatieFormeel) | owl:DatatypeProperty | |
+| specificatie tekst | [`mim:specificatieTekst`](http://bp4mc2.org/def/mim#specificatieTekst) | owl:DatatypeProperty | |
+| subtype | [`mim:subtype`](http://bp4mc2.org/def/mim#subtype) | owl:ObjectProperty | |
+| supertype | [`mim:supertype`](http://bp4mc2.org/def/mim#supertype) | owl:ObjectProperty | |
+| toelichting | [`mim:toelichting`](http://bp4mc2.org/def/mim#toelichting) | owl:DatatypeProperty | [2.12.4](#metagegeven-toelichting)
+| type | [`mim:type`](http://bp4mc2.org/def/mim#type) | owl:ObjectProperty | [2.12.22](#metagegeven-type-domein-van-een-waarde-een-gegeven) |
+| unidirectioneel | [`mim:unidirectioneel`](http://bp4mc2.org/def/mim#unidirectioneel) | owl:DatatypeProperty | [2.12.19](#metagegeven-unidirectioneel) |
+| uniekeAanduiding | [`mim:uniekeAanduiding`](http://bp4mc2.org/def/mim#uniekeAanduiding) | owl:DatatypeProperty | |
+| waarde | [`mim:waarde`](http://bp4mc2.org/def/mim#waarde) | owl:ObjectProperty | [2.12.30](#metagegeven-waarde) |
 
 ### Modellering metagegevens voor objecten en attributen in LD
 
