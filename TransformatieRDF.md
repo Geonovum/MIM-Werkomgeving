@@ -149,17 +149,17 @@ Onderstaande tabellen geven een overzicht van alle transformaties en een referen
 
 |MIM datatype|Vertaling|Referentie|
 |------------|---------|----------|
-|`mim:CharacterString`|`xsd:string`|[Primitief datatype - standaard datatypen](#primitief-datatype---standaard-datatypen)|
-|`mim:Integer`|`xsd:integer`|[Primitief datatype - standaard datatypen](#primitief-datatype---standaard-datatypen)|
-|`mim:Real`|`xsd:float`|[Primitief datatype - standaard datatypen](#primitief-datatype---standaard-datatypen)|
-|`mim:Decimal`|`xsd:decimal`|[Primitief datatype - standaard datatypen](#primitief-datatype---standaard-datatypen)|
-|`mim:Boolean`|`xsd:boolean`|[Primitief datatype - standaard datatypen](#primitief-datatype---standaard-datatypen)|
-|`mim:Date`|`xsd:date`|[Primitief datatype - standaard datatypen](#primitief-datatype---standaard-datatypen)|
-|`mim:DateTime`|`xsd:dateTime`|[Primitief datatype - standaard datatypen](#primitief-datatype---standaard-datatypen)|
-|`mim:Year`|`xsd:gYear`|[Primitief datatype - standaard datatypen](#primitief-datatype---standaard-datatypen)|
-|`mim:Day`|`xsd:gDay`|[Primitief datatype - standaard datatypen](#primitief-datatype---standaard-datatypen)|
-|`mim:Month`|`xsd:gMonth`|[Primitief datatype - standaard datatypen](#primitief-datatype---standaard-datatypen)|
-|`mim:URI`|`xsd:anyURI`|[Primitief datatype - standaard datatypen](#primitief-datatype---standaard-datatypen)|
+|`mim:CharacterString`|`xsd:string`|[Primitief datatype - standaard datatypen](#transformatie-primitief-datatype-standaard-datatypen)|
+|`mim:Integer`|`xsd:integer`|[Primitief datatype - standaard datatypen](#transformatie-primitief-datatype-standaard-datatypen)|
+|`mim:Real`|`xsd:float`|[Primitief datatype - standaard datatypen](#transformatie-primitief-datatype-standaard-datatypen)|
+|`mim:Decimal`|`xsd:decimal`|[Primitief datatype - standaard datatypen](#transformatie-primitief-datatype-standaard-datatypen)|
+|`mim:Boolean`|`xsd:boolean`|[Primitief datatype - standaard datatypen](#transformatie-primitief-datatype-standaard-datatypen)|
+|`mim:Date`|`xsd:date`|[Primitief datatype - standaard datatypen](#transformatie-primitief-datatype-standaard-datatypen)|
+|`mim:DateTime`|`xsd:dateTime`|[Primitief datatype - standaard datatypen](#transformatie-primitief-datatype-standaard-datatypen)|
+|`mim:Year`|`xsd:gYear`|[Primitief datatype - standaard datatypen](#transformatie-primitief-datatype-standaard-datatypen)|
+|`mim:Day`|`xsd:gDay`|[Primitief datatype - standaard datatypen](#transformatie-primitief-datatype-standaard-datatypen)|
+|`mim:Month`|`xsd:gMonth`|[Primitief datatype - standaard datatypen](#transformatie-primitief-datatype-standaard-datatypen)|
+|`mim:URI`|`xsd:anyURI`|[Primitief datatype - standaard datatypen](#transformatie-primitief-datatype-standaard-datatypen)|
 
 ## Klassen
 
@@ -531,7 +531,8 @@ Voor standaard datatypen maakt RDF gebruik van de XSD datatypen. Onderstaande ta
 |------------|------------|
 |`mim:CharacterString`|`xsd:string`|
 |`mim:Integer`|`xsd:integer`|
-|`mim:Real`|`xsd:decimal`|
+|`mim:Real`|`xsd:float`|
+|`mim:Decimal`|`xsd:decimal`|
 |`mim:Boolean`|`xsd:boolean`|
 |`mim:Date`|`xsd:date`|
 |`mim:DateTime`|`xsd:dateTime`|
@@ -547,6 +548,7 @@ CONSTRUCT {
   mim:CharacterString a mim:PrimitiefDatatype.
   mim:Integer a mim:PrimitiefDatatype.
   mim:Real a mim:PrimitiefDatatype.
+  mim:Decimal a mim:PrimitiefDatatype.
   mim:Boolean a mim:PrimitiefDatatype.
   mim:Date a mim:PrimitiefDatatype.
   mim:DateTime a mim:PrimitiefDatatype.
@@ -556,7 +558,8 @@ CONSTRUCT {
   mim:URI a mim:PrimitiefDatatype.
   xsd:string mim:equivalent mim:CharacterString.
   xsd:integer mim:equivalent mim:Integer.
-  xsd:decimal mim:equivalent mim:Real.
+  xsd:float mim:equivalent mim:Real.
+  xsd:decimal mim:equivalent mim:Decimal.
   xsd:boolean mim:equivalent mim:Boolean.
   xsd:date mim:equivalent mim:Date.
   xsd:dateTime mim:equivalent mim:DateTime.
