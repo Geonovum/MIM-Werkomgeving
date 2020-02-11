@@ -8,7 +8,7 @@ Het MIM is een *metamodel*. Dit betekent dat in termen van het MIM een concreet 
 
 Op diezelfde manier levert het toepassen van het MIM in RDF geen ontologie of vocabulaire waarin RDF kan worden uitgedrukt: slechts het informatiemodel zelf is op deze manier in RDF uitgedrukt. Voor de vertaalslag naar een ontologie is een afzonderlijke transformatie nodig.
 
-Vanuit een Linked Data perspectief is dit bijzonder. Een kernmerk van Linked Data is namelijk dat een informatiemodel op niveau 3 *ook* direct, zonder aanpassingen, bruikbaar is als informatiemodel op niveau 4. Sterk: Linked Data modellen zijn ook bruikbaar op niveau 1 en 2. Dit is vanuit het MIM zelf niet mogelijk. Hiervoor is een vertaalslag nodig naar een "echte" Linked Data ontologie.
+Vanuit een Linked Data perspectief is dit bijzonder. Een kernmerk van Linked Data is namelijk dat een informatiemodel op niveau 3 *ook* direct, zonder aanpassingen, bruikbaar is als informatiemodel op niveau 4. Sterker nog: Linked Data modellen zijn ook bruikbaar op niveau 1 en 2. Dit is vanuit het MIM zelf niet mogelijk. Hiervoor is een vertaalslag nodig naar een "echte" Linked Data ontologie.
 
 Zo leidt een MIM objecttype "Schip" tot de volgende weergave in RDF:
 
@@ -27,7 +27,7 @@ vb:Schip a mim:Objecttype;
 @prefix vbo: &lt;http://bp4mc2.org/voorbeeld/def#>.
 
 vbo:Schip a rdfs:Class;
-  rdfs:seeAlso vb:Schip;  
+  mim:equivalent vb:Schip;
 .
 vb:Pakjesboot12 a vbo:Schip.
 </pre>
@@ -43,20 +43,20 @@ Het RDF model is opgesplitst in twee delen. Zoals gebruikelijk in RDF zijn deze 
 
 In onderstaande paragrafen wordt zowel de vocabulaire als de structuur gezamenlijk per modelelement besproken. Een RDF representatie in turtle wordt gegeven en daarnaast ook een grafische representatie. Hiervoor wordt de verbeelding gebruikt zoals beschreven op https://bp4mc2.org/20181107/#grafische-representatie.
 
-Bij het opstellen van het MIM in RDF is gebruik gemaakt van de tekstuele beschrijving van het MIM. Er is een 1-op-1 omzetting gedaan, zonder enige aanpassing van de beschrijvingen. Dit maakt het mogelijk om een MIM informatiemodel om te zetten van de ene representatie (bijvoorbeeld in UML) naar de andere en weer terug, zonder verlies van informatie.
+Bij het opstellen van het MIM in RDF is gebruik gemaakt van de algemene, tekstuele beschrijving van het MIM uit [hoofdstuk 2](#metamodel-algemeen). Er is een 1-op-1 omzetting gedaan, zonder enige aanpassing van de beschrijvingen. Dit maakt het mogelijk om een MIM informatiemodel om te zetten van de ene representatie (bijvoorbeeld in UML) naar de andere en weer terug, zonder verlies van informatie.
 
 De volgende regels zijn gebruikt bij de omzetting van de MIM tekst naar RDF:
 
 1. Elk voorkomen van een MIM «metaclass» is omgezet naar een voorkomen van een `owl:Class`;
-2. Elk aspect van een MIM «metaclass» is omgezet naar een voorkomen van een `owl:DatatypeProperty`, voor zover sprake is van een aspect dat een waarde heeft die met een datatype is uit te drukken (zoals tekstuele, nummerieke of boolean aspecten);
-3. Elk aspect van een MIM «metaclass» is omgezet naar een voorkomen van een `owl:ObjectProperty`, voor zover sprake is van een aspect waarbij de waarde verwijst naar een voorkomen van een andere MIM «metaclass»;
-4. Een `rdfs:label` is opgenomen met de naam van de MIM «metaclass» c.q. het aspect;
-5. Een `rdfs:comment` is opgenomen met de definitie van de MIM «metaclass» c.q. het aspect.
+2. Elk metagegeven van een MIM «metaclass» is omgezet naar een voorkomen van een `owl:DatatypeProperty`, voor zover sprake is van een metagegeven dat een waarde heeft die met een datatype is uit te drukken (zoals tekstuele, nummerieke of boolean metagegevens);
+3. Elk metagegeven van een MIM «metaclass» is omgezet naar een voorkomen van een `owl:ObjectProperty`, voor zover sprake is van een metagegeven waarbij de waarde verwijst naar een voorkomen van een andere MIM «metaclass»;
+4. Een `rdfs:label` is opgenomen met de naam van de MIM «metaclass» c.q. het metagegeven;
+5. Een `rdfs:comment` is opgenomen met de definitie van de MIM «metaclass» c.q. het metagegeven.
 
 Voor de omzetting van de gegevensconstraints (zoals cardinaliteiten, datatypen en properties per klasse), is op de volgende manier een SHACL shape graph gemaakt:
 
 1. Elk voorkomen van een MIM «metaclass» kent ook een `sh:NodeShape` met een `sh:name` die overeen komt de originele technische naam (UpperCamelCase);
-2. Voor elk voorkomen van een MIM «metaclass» zijn `sh:PropertyShapes` aangemaakt om aan te geven welke aspecten zijn toegestaan voor een MIM «metaclass», de kardinaliteiten en het datatype c.q. de geassocieerde MIM «metaclass».
+2. Voor elk voorkomen van een MIM «metaclass» zijn `sh:PropertyShapes` aangemaakt om aan te geven welke metagegevens zijn toegestaan voor een MIM «metaclass», de kardinaliteiten en het datatype c.q. de geassocieerde MIM «metaclass».
 
 ### Kern
 
@@ -150,7 +150,7 @@ De "keuze constructie" maakt een keuze mogelijk tussen meerdere attribuutsoorten
 
 Deze paragraaf is een aanvulling op de paragraaf *'Specificatie metagegevens'* in het hoofdstuk [Metamodel Algemeen](#metamodel-algemeen).
 
-De betekenis van de metagegevens worden in LD gespecificeerd los van de klasse waartoe deze metagegevens behoren. Hieronder is een opsomming gegeven van alle metagegevens en de overeenkomstige meta-eigenschap in RDF. Ook is de definitie hier opgenomen voor zover aanwezig overgenomen uit eerdergenoemde algemene paragraaf.
+De betekenis van de metagegevens worden in LD gespecificeerd los van de klasse waartoe deze metagegevens behoren. Hieronder is een opsomming gegeven van alle metagegevens en de overeenkomstige meta-eigenschap in RDF.
 
 De gegevensregels (structuur) voor de metagegevens zijn wel specifiek per klasse, en worden in de betreffende paragraaf behandeld.
 
@@ -313,8 +313,11 @@ De gegevensgroeptypen worden naar de volgende aspecten gespecificeerd:
 Het metamodel heeft twee manieren om een relatie tussen twee objecttypen te
 beschrijven. Deze keuze wordt aangegeven in de eigen extensie, zoals beschreven
 in paragraaf 1.8. Alleen het gekozen alternatief is relevant voor de modellering
-in uw informatiemodel. - Alternatief 1: Verplichte benoeming van de naam van de
-relatie met de bijbehorende metagegevens\*\* - Alternatief 2: Verplichte
+in uw informatiemodel.
+
+- Alternatief 1: Verplichte benoeming van de naam van de
+relatie met de bijbehorende metagegevens
+- Alternatief 2: Verplichte
 benoeming van de rol van het doel in een relatie met de bijbehorende
 metagegevens en optioneel de benoeming van de naam van de relatie.
 
@@ -697,4 +700,4 @@ Het metamodel van MIM is specifiek voor het MIM opgesteld. Hiervoor zijn niet di
 
 1. Modelleurs kunnen een MIM model met behulp van Enterprise Architect opstellen. Er is een tool *Imvertor*, waarmee het mogelijk is om een MIM Model opgesteld in Enterprise Architect te transformeren naar een Linked Data model. Deze tool is open source en is te vinden op [www.imvertor.org](http://www.imvertor.org).
 
-2. Modelleurs kunnen ook direct in een Linked Data model (in OWL en SHACL) opstellen. Een dergelijk model kan, indien het voldoet aan de transformatieregels, gezien worden als een MIM informatiemodel. Om expliciet de link naar het MIM duidelijk te maken, kan gebruik worden gemaakt van deze [SPARQL constructieregels](media/rdf2mim.sparql), die feitelijk de terugvertaling uitvoeren zoals beschreven in [sectie 6.4](#transformatie-mim-rdfs-owl-shacl). Er zijn diverse tools beschikbaar om een dergelijk model op te stellen. De meest bekende tools zijn [Protege](https://protege.stanford.edu) (open source), [Topbraid Composer](https://www.topquadrant.com/topbraid-composer-install/) en [Poolparty](https://www.poolparty.biz) (de laatste twee zijn commerciële producten). Daarnaast zijn er ook veel modelleurs die gebruik maken van generieke IDE's voor het maken van Linked Data modellen, vaak op basis van de voor mensen leesbare [Turtle syntax](https://www.w3.org/TR/turtle).
+2. Modelleurs kunnen ook direct in een Linked Data model (in OWL en SHACL) opstellen. Een dergelijk model kan, indien het voldoet aan de transformatieregels, gezien worden als een MIM informatiemodel. Om expliciet de link naar het MIM duidelijk te maken, kan gebruik worden gemaakt van deze [SPARQL constructieregels](media/rdf2mim.sparql), die een RDF/RDFS/OWL/SHACL model "terugvertalen" naar een MIM model. De terugvertaalregels zijn beschreven in [sectie 6.4.9](#transformatie-vanuit-rdfs-owl-shacl). Er zijn diverse tools beschikbaar om een dergelijk model op te stellen. De meest bekende tools zijn [Protege](https://protege.stanford.edu) (open source), [Topbraid Composer](https://www.topquadrant.com/topbraid-composer-install/) en [Poolparty](https://www.poolparty.biz) (de laatste twee zijn commerciële producten). Daarnaast zijn er ook veel modelleurs die gebruik maken van generieke IDE's voor het maken van Linked Data modellen, vaak op basis van de voor mensen leesbare [Turtle syntax](https://www.w3.org/TR/turtle).

@@ -34,7 +34,9 @@ vbo:Schip a rdfs:Class;
 vb:Pakjesboot12 a vbo:Schip.
 </pre>
 
-Dit document beschrijft hoe deze vertaling van het MIM model in RDF naar een RDFS-gebaseerde ontologie plaatsvindt. Daarbij zal niet alleen gebruik worden gemaakt van RDFS, maar ook van de OWL, SHACL en SKOS vocabulaires. De vertaling wordt zo veel mogelijk als SPARQL rules beschreven, zodat een machinale vertaling mogelijk is. De vertaling is omkeerbaar. De SPARQL rules die vanuit een RDFS-gebaseerde ontologie de vertaling maken naar een MIM model in RDF, zijn daarom ook beschreven.
+Dit document beschrijft hoe deze vertaling van het MIM model in RDF naar een RDFS-gebaseerde ontologie plaatsvindt. Daarbij zal niet alleen gebruik worden gemaakt van RDFS, maar ook van de OWL, SHACL en SKOS vocabulaires. De vertaling wordt zo veel mogelijk als SPARQL rules beschreven, zodat een machinale vertaling mogelijk is.
+
+De vertaling is omkeerbaar. Op deze wijze kan een regulier Linked Data model in RDF/RDFS/OWL/SHACL worden gezien als een MIM compliant model. De SPARQL rules die vanuit een RDFS-gebaseerde ontologie de vertaling maken naar een MIM model in RDF, zijn daarom ook beschreven en opgenomen in [sectie 6.4.9](#transformatie-vanuit-rdfs-owl-shacl).
 
 ## Gebruikte functies
 
@@ -149,7 +151,8 @@ Onderstaande tabellen geven een overzicht van alle transformaties en een referen
 |------------|---------|----------|
 |`mim:CharacterString`|`xsd:string`|[Primitief datatype - standaard datatypen](#primitief-datatype---standaard-datatypen)|
 |`mim:Integer`|`xsd:integer`|[Primitief datatype - standaard datatypen](#primitief-datatype---standaard-datatypen)|
-|`mim:Real`|`xsd:decimal`|[Primitief datatype - standaard datatypen](#primitief-datatype---standaard-datatypen)|
+|`mim:Real`|`xsd:float`|[Primitief datatype - standaard datatypen](#primitief-datatype---standaard-datatypen)|
+|`mim:Decimal`|`xsd:decimal`|[Primitief datatype - standaard datatypen](#primitief-datatype---standaard-datatypen)|
 |`mim:Boolean`|`xsd:boolean`|[Primitief datatype - standaard datatypen](#primitief-datatype---standaard-datatypen)|
 |`mim:Date`|`xsd:date`|[Primitief datatype - standaard datatypen](#primitief-datatype---standaard-datatypen)|
 |`mim:DateTime`|`xsd:dateTime`|[Primitief datatype - standaard datatypen](#primitief-datatype---standaard-datatypen)|
@@ -1407,9 +1410,8 @@ Er zijn ook MIM aspecten die niet een overeenkomstige tegenhanger kennen in RDFS
 | mim:datumOpname | Indien de ontologie onder versiebeheer staat, dan kan dit aspect afgeleid worden uit het versiesysteem |
 | mim:authentiek | Specifiek MIM aspect, belangrijk voor stelselcatalogus |
 | mim:identificatieAfleidbaar | |
-| mim:locatie | |
+| mim:locatie | Dit veld wordt wel gebruikt bij het opbouwen van de URI, maar verder niet vertaald |
 | mim:patroon | Dit betreft een tekstuele variant van sh:pattern / mim:formeelPatroon |
-| mim:uniekeAanduiding | |
 | mim:populatie | Specifiek MIM aspect, belangrijk voor stelselcatalogus |
 | mim:kwaliteit | Specifiek MIM aspect, belangrijk voor stelselcatalogus |
 | mim:indicatieAbstractObject | Het concept van abstract object is minder scherp in LD dan in het MIM. Hoewel deze indicatie is om te zetten in een expliciete constraint, zal het in de praktijk makkelijker leesbaar zijn om dit aspect expliciet op te nemen |
@@ -1417,4 +1419,82 @@ Er zijn ook MIM aspecten die niet een overeenkomstige tegenhanger kennen in RDFS
 | mim:aggregatietype | Het aggregatietype zoals beoogd in het MIM is niet direct in RDFS/OWL/SHACL uit te drukken en kan zo alsnog worden toegelicht bij een propertyshape |
 | mim:specificatieTekst | Het gebruik van dit aspect ligt niet voor de hand, zie de opmerking onder deze tabel |
 | mim:specificatieFormeel | Het gebruik van dit aspect ligt niet voor de hand, zie de opmerking onder deze tabel |
-| mim:constraint | Het gebruik van dit aspect ligt niet voor de hand, zie de opmerking onder deze tabel |
+| mim:constraint | Dit aspect verwijst, via een `mim:Constraint` direct terug naar de originele shape-constraint in LD |
+
+In het MIM is het mogelijk om een constraint te beschrijven als een afzonderlijk modelelement `mim:Constraint`. Het idee hierachter is dat voor dergelijke constraints geen metamodelelementen beschikbaar zijn, en dat dit in een afzonderlijke formele (of informele) taal opgenomen moet worden. In Linked Data is het echter gebruikelijk om in dergelijke gevallen het metamodel uit te breiden met specifieke constructies voor een dergelijke formalisatie: Linked Data modellen zijn van nature open en uitbreidbare modellen, waarbij universele identificaties (URI's) ervoor zorgen dat de verschillende (meta)modelelementen uit elkaar gehouden kunnen worden.
+
+Het ligt dan ook meer voor de hand om gebruik te (blijven) maken van dergelijke constructies in Linked Data. Dit wordt uitgelegd aan de hand van onderstaand voorbeeld.
+
+**Voorbeeld**
+
+> Van een objecttype "Persoon" leggen we de geboortedatum en de datum van overlijden vast. Daarbij geldt dat de geboortedatum vóór, of
+> gelijk moet zijn aan de datum van overlijden.
+
+In het MIM zou dit als volgt uitgedrukt kunnen worden:
+
+<pre class='ex-turtle'>
+vb:Persoon a mim:Objecttype;
+  mim:naam "Persoon";
+  mim:attribuut vb:geboortedatum;
+  mim:attribuut vb:overlijdensdatum;
+  mim:constraint [
+    mim:specificatieTekst "Het is niet mogelijk dat een persoon overlijdt voordat deze is geboren.";
+    mim:specificatieFormeel "geboortedatum <= overlijdensdatum";
+  ]
+.
+vb:geboortedatum a mim:Attribuutsoort;
+  mim:naam "geboortedatum";
+  mim:datatype mim:Date;
+  mim:kardinaliteit "1"
+.
+vb:overlijdensdatum a mim:Attribuutsoort;
+  mim:naam "overlijdensdatum";
+  mim:datatype mim:Date;
+  mim:kardinaliteit "0..1"
+.
+</pre>
+
+In RDF/RDFS/SHACL zou je dit als volgt uitdrukken (waarbij SHACL wordt gebruikt als formele taal):
+
+<pre class='ex-turtle'>
+shape:Persoon a sh:NodeShape;
+  sh:targetClass voc:Persoon;
+  sh:property shape:geboortedatum
+  sh:property shape:overlijdensdatum
+  sh:property shape:geboorteVSoverlijden
+.
+shape:geboortedatum a sh:PropertyShape;
+  sh:path voc:geboortedatum;
+  sh:datatype xsd:date;
+  sh:minCount 1;
+  sh:maxCount 1;
+.
+shape:overlijdensdatum a sh:PropertyShape;
+  sh:path voc:overlijdensdatum;
+  sh:datatype xsd:date;
+  sh:maxCount 1;
+.
+shape:geboorteVSoverlijden a sh:PropertyShape;
+  sh:path voc:geboortedatum;
+  sh:lessThanOrEquals voc:overlijdensdatum
+  sh:message "Het is niet mogelijk dat een persoon overlijdt voordat deze is geboren."
+.
+<pre>
+
+Bij de terugvertaling naar het MIM, kan bovenstaande formalisatie `sh:lessThanOrEquals` gehandhaafd blijven, waarbij de link wordt gelegd via het metagegeven `mim:equivalent`:
+
+<pre class='ex-turtle'>
+vb:Meting a mim:Objecttype;
+  mim:naam "Meting";
+  mim:attribuut vb:temperatuur;
+  min:constraint [
+    a mim:Constraint;
+    mim:equivalent shape:geboorteVSoverlijden.
+  ];
+.
+shape:geboorteVSoverlijden a sh:PropertyShape;
+  sh:path voc:geboortedatum;
+  sh:lessThanOrEquals voc:overlijdensdatum
+  sh:message "Het is niet mogelijk dat een persoon overlijdt voordat deze is geboren."
+.
+</pre>
