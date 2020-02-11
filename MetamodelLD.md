@@ -163,8 +163,8 @@ De gegevensregels (structuur) voor de metagegevens zijn wel specifiek per klasse
 | begrip | [`mim:begrip`](http://bp4mc2.org/def/mim#begrip) | owl:ObjectProperty | [2.12.5](#metagegeven-begrip) |
 | begripsterm | [`mim:begripsterm`](http://bp4mc2.org/def/mim#begripsterm) | owl:DatatypeProperty | [2.12.5](#metagegeven-begrip) |
 | bron | [`mim:bron`](http://bp4mc2.org/def/mim#bron) | owl:ObjectProperty | [2.12.17](#metagegeven-bron) |
-| code | [`mim:code`](http://bp4mc2.org/def/mim#code) | owl:DatatypeProperty | [2.12.36](#metagegeven-code) |
-| constraint | [`mim:constraint`](http://bp4mc2.org/def/mim#constraint) | owl:ObjectProperty | [2.12.35](#metagegeven-constraint) |
+| code | [`mim:code`](http://bp4mc2.org/def/mim#code) | owl:DatatypeProperty | [2.12.33](#metagegeven-code) |
+| constraint | [`mim:constraint`](http://bp4mc2.org/def/mim#constraint) | owl:ObjectProperty | [2.12.32](#metagegeven-constraint) |
 | data element | [`mim:dataElement`](http://bp4mc2.org/def/mim#dataElement) | owl:ObjectProperty | [2.12.29](#metagegeven-data-element) |
 | datum opname | [`mim:datumOpname`](http://bp4mc2.org/def/mim#datumOpname) | owl:DatatypeProperty | [2.12.8](#metagegeven-datum-opname) |
 | definitie | [`mim:definitie`](http://bp4mc2.org/def/mim#definitie) | owl:DatatypeProperty | [2.12.2](#metagegeven-definitie) |
@@ -175,7 +175,7 @@ De gegevensregels (structuur) voor de metagegevens zijn wel specifiek per klasse
 | herkomst | [`mim:herkomst`](http://bp4mc2.org/def/mim#herkomst) | owl:DatatypeProperty | [2.12.6](#metagegeven-herkomst) |
 | herkomst definitie | [`mim:herkomstDefinitie`](http://bp4mc2.org/def/mim#herkomstDefinitie) | owl:DatatypeProperty | [2.12.7](#metagegeven-herkomst-definitie) |
 | identificerend | [`mim:identificerend`](http://bp4mc2.org/def/mim#identificerend) | owl:DatatypeProperty | [2.12.9](#metagegeven-identificerend) |
-| indicatie abstract object | [`mim:indicatieAbstractObject`](http://bp4mc2.org/def/mim#indicatieAbstractObject) | owl:DatatypeProperty | [2.12.37](#metagegeven-indicatie-abstract-object)|
+| indicatie abstract object | [`mim:indicatieAbstractObject`](http://bp4mc2.org/def/mim#indicatieAbstractObject) | owl:DatatypeProperty | [2.12.34](#metagegeven-indicatie-abstract-object)|
 | indicatie afleidbaar | [`mim:indicatieAfleidbaar`](http://bp4mc2.org/def/mim#indicatieAfleidbaar) | owl:DatatypeProperty | [2.12.14](#metagegeven-indicatie-afleidbaar) |
 | indicatie classificerend | [`mim:indicatieClassificerend`](http://bp4mc2.org/def/mim#indicatieAfleidbaar) | owl:DatatypeProperty | [2.12.15](#metagegeven-indicatie-classificerend) |
 | indicatie formele historie | [`mim:indicatieFormeleHistorie`](http://bp4mc2.org/def/mim#indicatieFormeleHistorie) | owl:DatatypeProperty | [2.12.11](#metagegeven-indicatie-formele-historie) |
