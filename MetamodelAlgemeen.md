@@ -1437,42 +1437,6 @@ Een referentie lijst bevat bevat referentie elementen.
 
 *Toepassing*: referentielijst.
 
-### Metagegeven: **Datatypekeuze**
-
->   **Definitie Datatypekeuze**  
->   De binding van een datatype als keuze element aan een keuze.
-
-*Toelichting*
-
-Een keuze kan keuze elementen bevatten die een keuze tussen datatypen
-modelleert.
-
-*Toepassing*: keuze object.
-
-### Metagegeven: **Doelkeuze**
-
->   **Definitie Doelkeuze**  
->   De binding van een doeleinde van een relatie als keuze element aan een keuze.
-
-*Toelichting*
-
-Een keuze kan keuze elementen bevatten die een keuze tussen relatie doelen
-modelleert.
-
-*Toepassing*: keuze object.
-
-### Metagegeven: **Attribuutkeuze**
-
->   **Definitie Attribuutkeuze**  
->   De binding van een attribuutsoort als keuze element aan een keuze.
-
-*Toelichting*
-
-Een keuze kan keuze elementen bevatten die een keuze tussen attribuutsoort
-modelleert.
-
-*Toepassing*: keuze object.
-
 ### Metagegeven: **Constraint**
 
 >   **Definitie Constraint**  
