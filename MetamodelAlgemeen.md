@@ -717,7 +717,7 @@ Het is niet de bedoeling om een derde attribuutsoort, zoals BetalingskenmerkOfOm
 
 Zonder de mogelijkheid van keuze zouden beide attribuutsoorten opgenomen zijn bij het objecttype als optionele velden, met een constraint dat een van beide gevuld moet zijn. Dit is in deze use-case niet echt een probleem. Wel is de kardinaliteit ook in dit geval dan niet erg duidelijk gemodelleerd: die zou dan [0..1] moeten worden, maar dat doet geen recht aan het feit dat er één verplicht aanwezig moet zijn, en er ook geen twee naast elkaar mogen zijn. De werkelijke kardinaliteit is [1..1] op de keuze zelf. Met een constraint is dit op zich wel correct te modelleren, maar met een modellering van een keuze is dit veel duidelijker.
 
-## Use case 3: een keuze tussen twee relatiesoorten
+##### Use case 3: een keuze tussen twee relatiesoorten
 Er is sprake van ofwel relatiesoort A ofwel relatiesoort B. In MIM modelleren we daarom een keuze tussen de 2 relatiesoorten. 
 Het maken van deze keuze is verplicht.
 
@@ -725,13 +725,9 @@ Voorbeeld: een objecttype "Persoon" kan getrouwd zijn met een ander persoon, of 
 
 Zonder de mogelijkheid van keuze zouden beide relatiesoorten opgenomen zijn bij het objecttype, met een optionele kardinaliteit. Hiermee is het echter niet duidelijk zichtbaar dat er slechts één van de twee relatiesoorten aanwezig mogen zijn. Met een constraint is dit op zich wel correct te modelleren, aan te geven dat precies 1 van beide verplicht is, maar met een modellering van een keuze is dit veel duidelijker.
 
---
+*Opmerking: use case 2 en 3 zijn eigenlijk vergelijkbaar, bij use case 2 gaat het om attribuutsoorten, bij use case 3 gaat het om relatiesoorten. Vanuit het perspectief van keuze gaat het in beide gevallen om een keuze tussen twee modelelementen die verbonden zijn met een objecttype. Het is ook mogelijk om een keuze te hebben tussen attribuutsoort OF een relatiesoort. Dit werkt analoog, maar is in de use cases (nog) niet uitgewerkt.*  
 
-Merk op: use case 2 en 3 zijn eigenlijk vergelijkbaar, bij use case 2 gaat het om attribuutsoorten, bij use case 3 gaat het om relatiesoorten. Vanuit het perspectief van keuze gaat het in beide gevallen om een keuze tussen twee modelelementen die verbonden zijn met een objecttype. Het is ook mogelijk om een keuze te hebben tussen attribuutsoort OF een relatiesoort. Dit werkt analoog, maar is in de use cases (nog) niet uitgewerkt.  
-
---
-
-## Use case 4: Een keuze tussen twee relatiedoelen
+##### Use case 4: Een keuze tussen twee relatiedoelen
 Er is sprake van een relatiesoort welke wijst naar ofwel relatiedoel A ofwel relatiedoel B. In MIM modelleren we daarom een relatiesoort welke verwijst naar aarbij keuze tussen de 2 relatiedoelen. Het maken van deze keuze is verplicht.
 
 Voorbeeld: een objecttype "Vervoersmiddel" heeft een eigenaar. Dit kan een persoon zijn, of een bedrijf, maar niet beiden. Er is sprake van één eigenaar" en een keuze tussen relatiedoel persoon (naar objecttype Persoon) en relatiedoel bedrijf (naar objecttype Bedrijf). We modelleren daarom een *Relatiesoort* eigenaar met een *Keuze* PersoonOfBedrijf met twee relatiedoelen, naar persoon en bedrijf.  
