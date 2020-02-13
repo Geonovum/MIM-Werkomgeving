@@ -223,7 +223,7 @@ Einde tekst. Deze opmerkingen moeten nog uit de uiteindelijke tekst.
 Van een objecttype "Persoon" kan geregistreerd worden wat het telefoonnummer van deze persoon is. Een dergelijk telefoonnummer kan een privé telefoonnummer zijn, of een zakelijk telefoonnummer.
 
 Deze use case lijkt sterk op use case 2 (waarbij ook sprake was van een keuze tussen attribuutsoorten). Het verschil is dat bij deze use case er vanuit een conceptueel perspectief sprake is van een meer algemeen attribuutsoort "telefoonnummer" c.q. van 1 attribuutsoort die verschillende verschijningsvormen kent.  
-
+ 
 Geborgde tekst:
 
 UC6 Daarnaast lijken use case 5 en 6 op elkaar: het betreft vergelijkbare constructies met als verschil de keuze tussen attribuutsoort dan wel relatiesoort.
