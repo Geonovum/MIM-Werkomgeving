@@ -676,9 +676,7 @@ Er zijn meerdere soorten packages. Om onderscheid te maken tussen packages waari
 >   Een constraint is een conditie of een beperking, die over een of meerdere
 >   modelelementen uit het informatiemodel geldt.
 
-*Toelichting:*
-
-Een constraint kan vastgelegd worden bij alle modelelementen. Echter, meestal
+*Toelichting:* Een constraint kan vastgelegd worden bij alle modelelementen. Echter, meestal
 komt een constraint voor bij een objecttype, om te aan te geven dat de
 constraint geldt voor 2 (of meer) kenmerken van een objecttype, of om een
 bijzondere specificatie toe te voegen die niet via de bestaande modelelementen gelegd kan worden.
