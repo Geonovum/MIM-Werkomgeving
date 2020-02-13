@@ -165,7 +165,6 @@ Een objecttype "Vervoersmiddel" heeft een eigenaar. Dit kan een persoon zijn, of
 Onderstaand figuur geeft in zowel UML als Linked Data weer hoe beide modellen er uit zouden zien voor beide afzonderlijke situaties
 (en er geen sprake is van een constraint of een keuze).
 
-
 <table><tbody>
 <tr><th>UML</th><th>Linked Data</th></tr>
 <tr><td><img src="use-case-4-keuze-A.png"/></td><td>
@@ -200,7 +199,8 @@ vb:eigenaar a mim:Relatiesoort;
 </pre></td></tr>
 </tbody></table>
 
-Zonder de mogelijkheid van keuze zouden de relatiedoelen (de gerelateerde objecttypes) opgenomen zijn bij de relatiesoorten van het objecttype, met elk een optionele kardinaliteit. Hiermee is het echter niet duidelijk zichtbaar dat er slechts één van de twee relatiedoelen aanwezig mogen zijn. Met een constraint is dit op zich wel correct te modelleren, aan te geven dat precies 1 van beide verplicht is, maar met een modellering van een keuze is dit veel duidelijker.
+Het is niet de bedoeling om twee nieuwe relatiesoorten, persoon en bedrijf, te introduceren en relatiesoort eigenaar kwijt te raken. 
+We noemen daarom een *Keuze* tussen relatiedoelen. 
 
 ## Use case 5: Een keuze tussen twee verschijningsvormen van een relatiesoort
 
@@ -233,3 +233,8 @@ UC6 (Merk op: er is geen noodzaak voor een keuze tussen datatypen of relatiedoel
 UC4: Een alternatief zou zijn om gebruik te maken van een relatieklasse (een specialisatie van relatiesoort), waarbij dan toegestaan zou moeten worden dat een relatieklasse meer dan één relatiedoel mag hebben (eigenlijk een soort van tertiare relatie). Dit wordt echter niet ondersteund vanuit het MIM. Bij twee relatiesoorten zouden deze niet dezelfde naam mogen hebben, aangezien deze hetzelfde objecttype als bron hebben. Ook zou de kardinaliteit niet kloppen: die zou dan [0..1] moeten worden, maar dat doet geen recht aan het feit dat er één verplicht aanwezig moet zijn, en er ook geen twee naast elkaar mogen zijn. De werkelijke kardinaliteit is [1..1].
 
 UC4: Merk op: use case 1 en 4 zijn eigenlijk vergelijkbaar, bij use case 1 gaat het om datatypen, bij use case 4 gaat het om objecttypen, maar vanuit het perspectief van keuze gaat het in beide gevallen om een keuze tussen twee elementen die verbonden zijn met een objecttype.
+
+UC4: borging van tekst die niet liep, want hier is geen constraint variant van, of in ieder geval geen correcte (want Het is niet de bedoeling om twee nieuwe relatiesoorten, persoon en bedrijf, te introduceren en relatiesoort eigenaar kwijt te raken. 
+We noemen daarom een *Keuze* tussen relatiedoelen) - dee tekst klopt daarom niet goed, en is hierheen verplaatst: Zonder de mogelijkheid van keuze zouden de relatiedoelen (de gerelateerde objecttypes) opgenomen zijn bij de relatiesoorten van het objecttype, met elk een optionele kardinaliteit. Hiermee is het echter niet duidelijk zichtbaar dat er slechts één van de twee relatiedoelen aanwezig mogen zijn. Met een constraint is dit op zich wel correct te modelleren, aan te geven dat precies 1 van beide verplicht is, maar met een modellering van een keuze is dit veel duidelijker.
+
+
