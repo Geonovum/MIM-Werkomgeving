@@ -70,7 +70,7 @@ Zonder de mogelijkheid van keuze, zou je te maken krijgen met twee attribuutsoor
 
 In MIM modelleren we daarom het attribuutsoort adres als een datatype, welke een keuze betreft tussen het datatype CharacterString en het datatype Adrestype.
 
-## Use case 2: een keuze tussen twee attribuutsoorten
+## Use case 2a: een keuze tussen twee attribuutsoorten bij een objecttype
 
 Bij een objecttype "Betalingsopdracht" moet, naast het bedrag, ook een betalingskenmerk worden opgenomen OF een omschrijving. Eén van beide attribuutsoorten moet worden ingevuld. Het is niet toegestaan dat beide velden worden ingevuld: alleen een betalingskenmerk, of alleen een omschrijving.
 
@@ -78,7 +78,7 @@ Onderstaand figuur geeft in zowel UML als Linked Data weer hoe beide modellen er
 
 <table><tbody>
 <tr><th>UML</th><th>Linked Data</th></tr>
-<tr><td><img src="use-case-2-keuze-A.png"/></td><td>
+<tr><td><img src="use-case-2a-keuze-A.png"/></td><td>
 <pre class='ex-turtle'>
 vb:Betalingsopdracht a mim:Objecttype;
   mim:naam "Betalingsopdracht";
@@ -96,7 +96,7 @@ vb:Betalingsopdracht a mim:Objecttype;
   ]
 .
 </pre></td></tr>
-<tr><td><img src="use-case-2-keuze-B.png"/></td><td>
+<tr><td><img src="use-case-2a-keuze-B.png"/></td><td>
 <pre class='ex-turtle'>
 vb:Betalingsopdracht a mim:Objecttype;
   mim:naam "Betalingsopdracht";
@@ -117,6 +117,71 @@ vb:Betalingsopdracht a mim:Objecttype;
 </tbody></table>
 
 Zonder de mogelijkheid van keuze zouden beide attribuutsoorten opgenomen zijn bij het objecttype als optionele velden, met een constraint dat een van beide gevuld moet zijn. Dit is in deze use-case niet echt een probleem. Wel is de kardinaliteit ook in dit geval dan niet erg duidelijk gemodelleerd: die zou dan [0..1] moeten worden, maar dat doet geen recht aan het feit dat er één verplicht aanwezig moet zijn, en er ook geen twee naast elkaar mogen zijn. De werkelijke kardinaliteit is [1..1] op de keuze zelf. Met een constraint is dit op zich wel correct te modelleren, maar met een modellering van een keuze is dit veel duidelijker.
+
+## Use case 2b: een keuze tussen twee attribuutsoorten bij een gestructureerd datatype
+Bij een objecttype "Betalingsopdracht" moet een bedrag en een beschrijving worden opgenomen. De beschrijving is feitelijk een structuur waarbij de keuze moet worden gemaakt tussen een betalingskenmerk OF een omschrijving. Eén van beide attribuutsoorten moet worden gebruikt binnen de structuur die gebruikt wordt voor een waarde van de beschrijving. Het is niet toegestaan dat beide velden worden ingevuld: alleen een betalingskenmerk, of alleen een omschrijving.
+
+Deze use case is voor een groot deel overeenkomstig aan use case 2a. Het verschil zit in het feit dat de keuze niet betrekking heeft op attribuutsoorten van een objecttype, maar attribuutsoorten van een gestructureerd datatype.
+
+Onderstaand figuur geeft in zowel UML als Linked Data weer hoe beide modellen er uit zouden zien voor beide afzonderlijke situaties (en er geen nog sprake is van een constraint of een keuze).
+
+<table><tbody>
+<tr><th>UML</th><th>Linked Data</th></tr>
+<tr><td><img src="use-case-2b-keuze-A.png"/></td><td>
+<pre class='ex-turtle'>
+vb:Betalingsopdracht a mim:Objecttype;
+  mim:naam "Betalingsopdracht";
+  mim:attribuut [
+    a mim:Attribuutsoort;
+    mim:naam "bedrag";
+    mim:type mim:Decimal;
+    mim:kardinaliteit "1";
+  ];
+  mim:attribuut [
+    a mim:Attribuutsoort;
+    mim:naam "beschrijving";
+    mim:type mim:Beschrijvingtype;
+    mim:kardinaliteit "1";
+  ]
+.
+vb:Beschrijvingtype a mim:GestructureerdDatatype;
+  mim:attribuut [
+    a mim:Attribuutsoort;
+    mim:naam "betalingskenmerk";
+    mim:type mim:CharacterString;
+    mim:kardinaliteit "1";
+  ]
+.
+</pre></td></tr>
+<tr><td><img src="use-case-2b-keuze-B.png"/></td><td>
+<pre class='ex-turtle'>
+vb:Betalingsopdracht a mim:Objecttype;
+  mim:naam "Betalingsopdracht";
+  mim:attribuut [
+    a mim:Attribuutsoort;
+    mim:naam "bedrag";
+    mim:type mim:Decimal;
+    mim:kardinaliteit "1";
+  ];
+  mim:attribuut [
+    a mim:Attribuutsoort;
+    mim:naam "beschrijving";
+    mim:type mim:Beschrijvingtype;
+    mim:kardinaliteit "1";
+  ]
+.
+vb:Beschrijvingtype a mim:GestructureerdDatatype;
+  mim:attribuut [
+    a mim:Attribuutsoort;
+    mim:naam "omschrijving";
+    mim:type mim:CharacterString;
+    mim:kardinaliteit "1";
+  ]
+.
+</pre></td></tr>
+</tbody></table>
+
+
 
 ## Use case 3: een keuze tussen twee relatiesoorten
 
@@ -187,7 +252,7 @@ vb:eigenaar a mim:Relatiesoort;
 vb:Vervoersmiddel a mim:Objecttype;
   mim:naam "Vervoersmiddel";
 .
-vb:Persoon a mim:Objecttype;
+vb:Bedrijf a mim:Objecttype;
   mim:naam "Bedrijf";
 .
 vb:eigenaar a mim:Relatiesoort;

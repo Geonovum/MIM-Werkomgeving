@@ -1,0 +1,22 @@
+@prefix vb: <http://vb#>.
+@prefix mim: <http://mim#>.
+vb:Vervoersmiddel a mim:Objecttype;
+  mim:naam "Vervoersmiddel";
+.
+vb:Persoon a mim:Objecttype;
+  mim:naam "Persoon";
+.
+vb:Persoon a mim:Objecttype;
+  mim:naam "Bedrijf";
+.
+vb:eigenaar a mim:Relatiesoort;
+  mim:naam "eigenaar";
+  mim:bron vb:Vervoersmiddel;
+  mim:doel vb:PersoonOfBedrijf;
+  mim:kardinaliteit "1";
+.
+
+vb:PersoonOfBedrijf a mim:Keuze;
+  mim:doel vb:Persoon;
+  mim:doel vb:Bedrijf;
+.
