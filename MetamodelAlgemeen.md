@@ -687,7 +687,7 @@ Een constraint wordt altijd in gewone tekst omschreven en kan optioneel als form
 
 Een *Keuze* is een opsomming van meerdere modelelementen, waarbij er maar van één tegelijkertijd sprake kan zijn.
 
-*Toelichting:* Er kan altijd maar één van de mogelijkheden gekozen worden. De keuze is voor een aantal use cases een alternatieve manier voor het modelleren van een constraint. 
+*Toelichting:* Er kan altijd maar één van de mogelijkheden gekozen worden. De keuze is voor een aantal use cases een alternatieve manier voor het modelleren van een constraint.
 
 Een *Keuze* kan op meerdere plekken gebruikt worden, en maakt het mogelijk waar in het metamodel normaal gesproken maar één mogelijkheid bestaat, een opsomming te geven van meerdere mogelijkheden, waarbij in een concreet geval altijd precies één van deze mogelijkheden wordt gebruikt.
 
@@ -701,24 +701,24 @@ Bij use cases 1 tot en met 4 gaat het over meerdere kenmerken, waartussen een ke
 
 Een objecttype heeft een attrituutsoort en het datatype hiervan is ofwel datatype A ofwel datatype B. In MIM modelleren we daarom 1  attribuutsoort met als datatype een keuze tussen het datatype A en het datatype B. Het maken van deze keuze is verplicht.
 
-Voorbeeld: *Attribuutsoort* geometrie als kenmerk van een objecttype. Dit is een keuze uit *Datatype* Line of *Datatype* Polygon. De opsomming van beide keuzemogelijkheden noemen we de *Keuze* LineOrPolygon. 
+Voorbeeld: *Attribuutsoort* geometrie als kenmerk van een objecttype. Dit is een keuze uit *Datatype* Line of *Datatype* Polygon. De opsomming van beide keuzemogelijkheden noemen we de *Keuze* LineOrPolygon.
 
-Het is niet de bedoeling om twee attribuutsoorten te modelleren met elk een datatype en de attribuutsoorten optioneel te maken. 
+Het is niet de bedoeling om twee attribuutsoorten te modelleren met elk een datatype en de attribuutsoorten optioneel te maken.
 
 Zonder de mogelijkheid van keuze, zou je te maken krijgen met twee attribuutsoorten met bijbehorend datatype. Echter, in dat geval mogen de attribuutsoorten niet dezelfde naam hebben, aangezien deze bij hetzelfde objecttype horen. Ook zou de kardinaliteit niet kloppen: die zou dan [0..1] moeten worden, maar dat doet geen recht aan het feit dat er één verplicht aanwezig moet zijn, en er ook geen twee naast elkaar mogen zijn. De werkelijke kardinaliteit is [1..1].
 
-## Use case 2: een keuze tussen twee attribuutsoorten
-Er is sprake van ofwel attribuutsoort A ofwel attribuutsoort B. In MIM modelleren we daarom een keuze tussen de 2 attribuutsoorten. 
+##### Use case 2: een keuze tussen twee attribuutsoorten
+Er is sprake van ofwel attribuutsoort A ofwel attribuutsoort B. In MIM modelleren we daarom een keuze tussen de 2 attribuutsoorten.
 Het maken van deze keuze is verplicht.
 
-Voorbeeld: bij een objecttype "Betalingsopdracht" moet naast het bedrag ook een betalingskenmerk worden opgenomen of een omschrijving. Eén van beide moet worden ingevuld. Het is niet toegestaan dat beide velden worden ingevuld. We modelleren daarom een *Keuze* 'BetalingskenmerkOfOmschrijving' met daarin een *Attribuutsoort* betalingskenmerk en een *Attribuutsoort* omschrijving. 
+Voorbeeld: bij een objecttype "Betalingsopdracht" moet naast het bedrag ook een betalingskenmerk worden opgenomen of een omschrijving. Eén van beide moet worden ingevuld. Het is niet toegestaan dat beide velden worden ingevuld. We modelleren daarom een *Keuze* 'BetalingskenmerkOfOmschrijving' met daarin een *Attribuutsoort* betalingskenmerk en een *Attribuutsoort* omschrijving.
 
-Het is niet de bedoeling om een derde attribuutsoort, zoals BetalingskenmerkOfOmschrijving, te introduceren. We noemen BetalingskenmerkOfOmschrijving daarom een *Keuze*. 
+Het is niet de bedoeling om een derde attribuutsoort, zoals BetalingskenmerkOfOmschrijving, te introduceren. We noemen BetalingskenmerkOfOmschrijving daarom een *Keuze*.
 
 Zonder de mogelijkheid van keuze zouden beide attribuutsoorten opgenomen zijn bij het objecttype als optionele velden, met een constraint dat een van beide gevuld moet zijn. Dit is in deze use-case niet echt een probleem. Wel is de kardinaliteit ook in dit geval dan niet erg duidelijk gemodelleerd: die zou dan [0..1] moeten worden, maar dat doet geen recht aan het feit dat er één verplicht aanwezig moet zijn, en er ook geen twee naast elkaar mogen zijn. De werkelijke kardinaliteit is [1..1] op de keuze zelf. Met een constraint is dit op zich wel correct te modelleren, maar met een modellering van een keuze is dit veel duidelijker.
 
 ##### Use case 3: een keuze tussen twee relatiesoorten
-Er is sprake van ofwel relatiesoort A ofwel relatiesoort B. In MIM modelleren we daarom een keuze tussen de 2 relatiesoorten. 
+Er is sprake van ofwel relatiesoort A ofwel relatiesoort B. In MIM modelleren we daarom een keuze tussen de 2 relatiesoorten.
 Het maken van deze keuze is verplicht.
 
 Voorbeeld: een objecttype "Persoon" kan getrouwd zijn met een ander persoon, of een geregistreerd partnerschap hebben met een ander persoon. Het is niet mogelijk dat een persoon en getrouwd is en een geregistreerd partnerschap heeft met de andere persoon. We modelleren daarom een *Keuze* 'soort relatie' met daarin een *Relatiesoort* getrouwd en een *Relatiesoort* geregistreerd partnerschap.
@@ -732,8 +732,10 @@ Er is sprake van een relatiesoort welke wijst naar ofwel relatiedoel A ofwel rel
 
 Voorbeeld: een objecttype "Vervoersmiddel" heeft een eigenaar. Dit kan een persoon zijn, of een bedrijf, maar niet beiden. Er is sprake van één eigenaar" en een keuze tussen relatiedoel persoon (naar objecttype Persoon) en relatiedoel bedrijf (naar objecttype Bedrijf). We modelleren daarom een *Relatiesoort* eigenaar met een *Keuze* PersoonOfBedrijf met twee relatiedoelen, naar persoon en bedrijf.  
 
-Het is niet de bedoeling om twee nieuwe relatiesoorten, persoon en bedrijf, te introduceren en relatiesoort eigenaar kwijt te raken. 
-We noemen daarom een *Keuze* tussen relatiedoelen. 
+Het is niet de bedoeling om twee nieuwe relatiesoorten, persoon en bedrijf, te introduceren en relatiesoort eigenaar kwijt te raken.
+We noemen daarom een *Keuze* tussen relatiedoelen.
+
+*Opmerking: use case 1 en 4 zijn eigenlijk vergelijkbaar, bij use case 1 gaat het om datatypen, bij use case 4 gaat het om objecttypen, maar vanuit het perspectief van keuze gaat het in beide gevallen om een keuze tussen twee elementen die verbonden zijn met een objecttype.*
 
 ## Specificatie metagegevens informatiemodel
 

@@ -199,8 +199,10 @@ vb:eigenaar a mim:Relatiesoort;
 </pre></td></tr>
 </tbody></table>
 
-Het is niet de bedoeling om twee nieuwe relatiesoorten, persoon en bedrijf, te introduceren en relatiesoort eigenaar kwijt te raken. 
-We noemen daarom een *Keuze* tussen relatiedoelen. 
+Het is niet de bedoeling om twee nieuwe relatiesoorten, persoon en bedrijf, te introduceren en relatiesoort eigenaar kwijt te raken.
+We noemen daarom een *Keuze* tussen relatiedoelen.
+
+Merk op: use case 1 en 4 zijn eigenlijk vergelijkbaar, bij use case 1 gaat het om datatypen, bij use case 4 gaat het om objecttypen, maar vanuit het perspectief van keuze gaat het in beide gevallen om een keuze tussen twee elementen die verbonden zijn met een objecttype.
 
 ## Use case 5: Een keuze tussen twee verschijningsvormen van een relatiesoort
 
@@ -223,7 +225,7 @@ Einde tekst. Deze opmerkingen moeten nog uit de uiteindelijke tekst.
 Van een objecttype "Persoon" kan geregistreerd worden wat het telefoonnummer van deze persoon is. Een dergelijk telefoonnummer kan een privé telefoonnummer zijn, of een zakelijk telefoonnummer.
 
 Deze use case lijkt sterk op use case 2 (waarbij ook sprake was van een keuze tussen attribuutsoorten). Het verschil is dat bij deze use case er vanuit een conceptueel perspectief sprake is van een meer algemeen attribuutsoort "telefoonnummer" c.q. van 1 attribuutsoort die verschillende verschijningsvormen kent.  
- 
+
 Geborgde tekst:
 
 UC6 Daarnaast lijken use case 5 en 6 op elkaar: het betreft vergelijkbare constructies met als verschil de keuze tussen attribuutsoort dan wel relatiesoort.
@@ -234,7 +236,5 @@ UC4: Een alternatief zou zijn om gebruik te maken van een relatieklasse (een spe
 
 UC4: Merk op: use case 1 en 4 zijn eigenlijk vergelijkbaar, bij use case 1 gaat het om datatypen, bij use case 4 gaat het om objecttypen, maar vanuit het perspectief van keuze gaat het in beide gevallen om een keuze tussen twee elementen die verbonden zijn met een objecttype.
 
-UC4: borging van tekst die niet liep, want hier is geen constraint variant van, of in ieder geval geen correcte (want Het is niet de bedoeling om twee nieuwe relatiesoorten, persoon en bedrijf, te introduceren en relatiesoort eigenaar kwijt te raken. 
+UC4: borging van tekst die niet liep, want hier is geen constraint variant van, of in ieder geval geen correcte (want Het is niet de bedoeling om twee nieuwe relatiesoorten, persoon en bedrijf, te introduceren en relatiesoort eigenaar kwijt te raken.
 We noemen daarom een *Keuze* tussen relatiedoelen) - dee tekst klopt daarom niet goed, en is hierheen verplaatst: Zonder de mogelijkheid van keuze zouden de relatiedoelen (de gerelateerde objecttypes) opgenomen zijn bij de relatiesoorten van het objecttype, met elk een optionele kardinaliteit. Hiermee is het echter niet duidelijk zichtbaar dat er slechts één van de twee relatiedoelen aanwezig mogen zijn. Met een constraint is dit op zich wel correct te modelleren, aan te geven dat precies 1 van beide verplicht is, maar met een modellering van een keuze is dit veel duidelijker.
-
-
