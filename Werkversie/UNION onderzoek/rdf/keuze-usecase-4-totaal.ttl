@@ -6,7 +6,7 @@ vb:Vervoersmiddel a mim:Objecttype;
 vb:Persoon a mim:Objecttype;
   mim:naam "Persoon";
 .
-vb:Persoon a mim:Objecttype;
+vb:Bedrijf a mim:Objecttype;
   mim:naam "Bedrijf";
 .
 vb:eigenaar a mim:Relatiesoort;

@@ -16,9 +16,6 @@ vb:echtgenootVan a mim:Relatiesoort;
   mim:kardinaliteit "0..1";
 .
 
-vb:Persoon a mim:Objecttype;
-  mim:naam "Persoon";
-.
 vb:geregistreerdPartnerVan a mim:Relatiesoort;
   mim:naam "geregistreerd partner van";
   mim:doel vb:Persoon;
