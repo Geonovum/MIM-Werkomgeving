@@ -72,7 +72,7 @@ Onderstaand figuur geeft in zowel UML als Linked Data weer hoe beide modellen er
 vb:Betalingsopdracht a mim:Objecttype;
   mim:naam "Betalingsopdracht";
   mim:attribuut vb:bedrag;
-  mim:keuze vb:BetalingskenmerkOFomschrijving
+  mim:attribuut vb:BetalingskenmerkOFomschrijving
 .
 vb:bedrag a mim:Attribuutsoort;
     mim:naam "bedrag";

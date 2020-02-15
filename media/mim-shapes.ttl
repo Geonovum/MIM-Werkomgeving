@@ -294,7 +294,6 @@ shape:DataElement a sh:NodeShape;
 shape:Keuze a sh:NodeShape;
   sh:targetClass mim:Keuze;
   sh:name "mim:Keuze";
-  dct:source mimdoc:sectie2.3.5-Union;
   # Metagegevens
   sh:property shape:naam;
   sh:property shape:alias;
@@ -303,9 +302,39 @@ shape:Keuze a sh:NodeShape;
   sh:property shape:herkomst;
   sh:property shape:definitie;
   sh:property shape:datumOpname;
-  sh:property shape:keuzedatatype;
-  sh:property shape:keuzeattribuutsoort;
-  sh:property shape:keuzerelatiedoel;
+.
+shape:ISAKeuze a sh:PropertyShape;
+  sh:name "ISA";
+  sh:path rdf:type;
+  sh:hasValue mim:Keuze;
+.
+shape:DatatypeKeuze a sh:NodeShape;
+  sh:name "mim:Keuze (Datatype)";
+  sh:property shape:ISAKeuze;
+  sh:property shape:type_keuze;
+.
+shape:AttribuutsoortKeuze a sh:NodeShape;
+  sh:name "mim:Keuze (Attribuutsoort)";
+  sh:property shape:ISAKeuze;
+  sh:property shape:attribuut_keuze;
+.
+shape:RelatiedoelKeuze a sh:NodeShape;
+  sh:name "mim:Keuze (Relatiedoel)";
+  sh:property shape:ISAKeuze;
+  sh:property shape:doel_keuze;
+.
+shape:KeuzeConstraint a sh:NodeShape;
+  sh:targetClass mim:KeuzeConstraint;
+  sh:name "mim:Keuzeconstraint";
+  # Metagegevens
+  sh:property shape:naam;
+  sh:property shape:alias;
+  sh:property shape:begrip;
+  sh:property shape:begripsterm;
+  sh:property shape:herkomst;
+  sh:property shape:definitie;
+  sh:property shape:datumOpname;
+  sh:property shape:modelelement;
 .
 shape:Package a sh:NodeShape;
   sh:targetClass mim:Package;
@@ -603,6 +632,13 @@ shape:type a sh:PropertyShape;
   sh:maxCount 1;
   sh:class mim:Datatype;
 .
+shape:type_keuze a sh:PropertyShape;
+  sh:path mim:type;
+  sh:name "mim:type";
+  sh:order 12;
+  sh:minCount 2;
+  sh:class mim:Datatype;
+.
 shape:lengte a sh:PropertyShape;
   sh:path mim:lengte;
   sh:name "mim:lengte";
@@ -739,6 +775,13 @@ shape:doel a sh:PropertyShape;
   sh:order 28;
   sh:minCount 1;
   sh:maxCount 1;
+  sh:node [ sh:xone (shape:Objecttype shape:RelatiedoelKeuze)]
+.
+shape:doel_keuze a sh:PropertyShape;
+  sh:path mim:doel;
+  sh:name "mim:doel";
+  sh:order 28;
+  sh:minCount 2;
   sh:class mim:Objecttype;
 .
 shape:subtype a sh:PropertyShape;
@@ -803,25 +846,11 @@ shape:specificatieFormeel a sh:PropertyShape;
   sh:datatype xsd:string;
 .
 
-shape:keuzedatatype a sh:PropertyShape;
-  sh:path mim:keuzedatatype;
-  sh:name "mim:keuzedatatype";
+shape:modelelement a sh:PropertyShape;
+  sh:path mim:modelelement;
+  sh:name "mim:modelelement";
   sh:order 35;
-  sh:class mim:Datatype;
-  sh:minCount 2;
-.
-shape:keuzeattribuutsoort a sh:PropertyShape;
-  sh:path mim:keuzeattribuutsoort;
-  sh:name "mim:keuzeattribuutsoort";
-  sh:order 35;
-  sh:class mim:Attribuutsoort;
-  sh:minCount 2;
-.
-shape:keuzerelatiedoel a sh:PropertyShape;
-  sh:path mim:keuzerelatiedoel;
-  sh:name "mim:keuzerelatiedoel";
-  sh:order 35;
-  sh:class mim:Objecttype;
+  sh:class mim:Relatiesoort;
   sh:minCount 2;
 .
 
@@ -830,7 +859,13 @@ shape:keuzerelatiedoel a sh:PropertyShape;
 shape:attribuut a sh:PropertyShape;
   sh:path mim:attribuut;
   sh:name "mim:attribuut";
+  sh:node [sh:xone (shape:Attribuutsoort shape:AttribuutsoortKeuze)];
+.
+shape:attribuut_keuze a sh:PropertyShape;
+  sh:path mim:attribuut;
+  sh:name "mim:attribuut";
   sh:class mim:Attribuutsoort;
+  sh:minCount 2;
 .
 shape:gegevensgroep a sh:PropertyShape;
   sh:path mim:gegevensgroep;

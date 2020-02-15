@@ -92,18 +92,16 @@ Als prefix wordt voor de vocabulaire gebruik gemaakt van `mim`, met de namespace
 
 ### Overige
 
-*Constraint*
+#### Constraint
 
 ![](media/rdf-constraint.png)
 
 | **MIM metaclass** | **Metaclass in RDF** | **Shape in RDF** | **Grondslag** |
 |-------------------|----------------------|------------------|---------------|
 | Constraint        | [`mim:Constraint`](http://bp4mc2.org/def/mim#Constraint) | shape:Constraint | [2.10.1](#constraint) |
-| Keuze             | [`mim:Keuze`](http://bp4mc2.org/def/mim#Keuze) | shape:Keuze | [2.10.2](#keuze) |
+| Keuzeconstraint   | [`mim:Keuzeconstraint`](http://bp4mc2.org/def/mim#Keuze) | shape:Keuze | [2.10.2](#keuze) |
 
-*Keuze*
-
-![](media/rdf-keuze.png)
+#### Keuze
 
 De "keuze constructie" maakt een keuze mogelijk tussen meerdere attribuutsoorten, datatypen en relatiedoelen (objecttypen). Er mag aan één specifieke keuze maar één soort van deze drie worden verbonden. Indien dit datatype gekozen wordt voor een attribuutsoort of relatiedoel, dan heeft dit de volgende betekenis, afhankelijk van de verbonden soort:
 
@@ -118,7 +116,31 @@ De "keuze constructie" maakt een keuze mogelijk tussen meerdere attribuutsoorten
 | Objecttype        | [`mim:Objecttype`](http://bp4mc2.org/def/mim#Objecttype) | shape:Objecttype | [2.5.2](#objecten-en-objecttype) |
 | Attribuutsoort    | [`mim:Attribuutsoort`](http://bp4mc2.org/def/mim#Attribuutsoort) | shape:Attribuutsoort | [2.5.3](#attribuutsoort-en-een-groepering-ervan) |
 
-*Relatierol*
+*Datatypekeuze*
+
+![](media/rdf-keuze-datatype.png)
+
+Aangezien een `mim:Keuze` een specialisatie is van een `mim:Datatype`, mag een attribuutsoort via een `mim:type` een verwijzen naar een Keuze. Een dergelijk keuze heeft in dit geval zelf minimaal twee `mim:type` verwijzingen naar de 2 (of meer) datatypen waaruit gekozen wordt.
+
+*Attribuutkeuze*
+
+![](media/rdf-keuze-attribuut.png)
+
+Indien een `mim:Keuze` wordt gebruikt voor een keuze tussen attribuutsoorten, dan wordt vanuit een objecttype via een `mim:attribuut` niet verwezen naar een attribuutsoort, maar naar de keuze. De keuze zelf verwijst op zijn beurt naar de attribuutsoorten waartussen gekozen wordt.
+
+*Relatiedoelkeuze*
+
+![](media/rdf-keuze-relatiedoel.png)
+
+Indien een `mim:Keuze` wordt gebruikt voor een keuze tussen objecttypen die de relatiedoelen zijn voor een relatiesoort, dan wordt vanuit een relatiesoort via een `mim:doel` niet verwezen naar een objecttype, maar naar de keuze. De keuze zelf verwijst op zijn beurt naar de objecttypen waartussen gekozen wordt.
+
+*Relatiesoortkeuze*
+
+![](media/rdf-keuze-relatiesoort.png)
+
+Een keuze tussen relatiesoorten wordt gedaan op basis van een keuzeconstraint. Een keuzeconstraint is geen datatype, maar juist een constraint die in dit geval aangeeft dat er een keuze gemaakt moet worden tussen twee relatiesoorten.
+
+#### Relatierol
 
 ![](media/rdf-relatie.png)
 
@@ -128,13 +150,13 @@ De "keuze constructie" maakt een keuze mogelijk tussen meerdere attribuutsoorten
 | Relatierol bron       | [`RelatierolBron`](http://bp4mc2.org/def/mim#RelatierolBron) | shape:RelatierolBron | [2.6.5](#relatierol) |
 | Relatierol doel       | [`RelatierolDoel`](http://bp4mc2.org/def/mim#RelatierolDoel) | shape:RelatierolDoel | [2.6.5](#relatierol) |
 
-*Externe koppeling*
+#### Externe koppeling
 
 | **MIM metaclass** | **Metaclass in RDF** | **Shape in RDF** | **Grondslag** |
 |-------------------|----------------------|------------------|---------------|
 | Externe koppeling | [`mim:ExterneKoppeling`](http://bp4mc2.org/def/mim#ExterneKoppeling) | shape:ExterneKoppeling | [2.6.4](#externe-koppeling) |
 
-*Packages*
+#### Packages
 
 ![](media/rdf-packages.png)
 
