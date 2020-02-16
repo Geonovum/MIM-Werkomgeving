@@ -164,7 +164,14 @@ mim:Constraint a owl:Class;
 .
 mim:Keuze a owl:Class;
   rdfs:label "Keuze"@nl;
+  rdfs:subClassOf mim:Datatype;
   rdfs:comment "Een opsomming van meerdere modelelementen, waarbij er maar van één tegelijkertijd sprake kan zijn."@nl;
+  dct:source mimdoc:sectie2.10.2;
+.
+mim:KeuzeConstraint a owl:Class;
+  rdfs:label "Keuze"@nl;
+  rdfs:subClassOf mim:Constraint;
+  rdfs:comment "Een conditie met een opsomming van meerdere modelelementen, waarbij er maar van één tegelijkertijd sprake kan zijn."@nl;
   dct:source mimdoc:sectie2.10.2;
 .
 
@@ -442,15 +449,9 @@ mim:specificatieFormeel a owl:DatatypeProperty;
   rdfs:comment "De beschrijving van de constraint in een formele specificatietaal, in OCL"@nl;
 .
 
-# Keuze
-mim:keuzedatatype a owl:ObjectProperty;
-  rdfs:label "keuzedatatype"@nl;
-.
-mim:keuzeattribuutsoort a owl:ObjectProperty;
-  rdfs:label "keuzeattribuutsoort"@nl;
-.
-mim:keuzerelatiedoel a owl:ObjectProperty;
-  rdfs:label "keuzerelatiedoel"@nl;
+# Keuze / KeuzeConstraint
+mim:modelelement a owl:ObjectProperty;
+  rdfs:label "modelelement"@nl;
 .
 
 # Properties uit het model die niet gedefinieerd zijn

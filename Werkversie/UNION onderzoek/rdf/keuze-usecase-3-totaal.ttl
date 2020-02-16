@@ -1,0 +1,24 @@
+@prefix vb: <http://vb#>.
+@prefix mim: <http://mim#>.
+vb:Persoon a mim:Objecttype;
+  mim:naam "Persoon";
+.
+
+vb:EchtgenootVanOFgeregistreerdPartnerVan a mim:KeuzeConstraint;
+  mim:modelelement vb:echtgenootVan;
+  mim:modelelement vb:geregistreerdPartnerVan
+.
+
+vb:echtgenootVan a mim:Relatiesoort;
+  mim:naam "echtgenoot van";
+  mim:doel vb:Persoon;
+  mim:bron vb:Persoon;
+  mim:kardinaliteit "0..1";
+.
+
+vb:geregistreerdPartnerVan a mim:Relatiesoort;
+  mim:naam "geregistreerd partner van";
+  mim:doel vb:Persoon;
+  mim:bron vb:Persoon;
+  mim:kardinaliteit "0..1";
+.

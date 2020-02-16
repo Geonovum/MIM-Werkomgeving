@@ -1,0 +1,31 @@
+@prefix vb: <http://vb#>.
+@prefix mim: <http://mim#>.
+vb:Betalingsopdracht a mim:Objecttype;
+  mim:naam "Betalingsopdracht";
+  mim:attribuut vb:bedrag;
+  mim:attribuut vb:beschrijving;
+.
+
+vb:beschrijving a mim:Attribuutsoort;
+  mim:type vb:BetalingskenmerkOFomschrijving
+.
+vb:BetalingskenmerkOFomschrijving a mim:Keuze;
+  mim:attribuut vb:betalingskenmerk;
+  mim:attribuut vb:omschrijving
+.
+
+vb:bedrag a mim:Attribuutsoort;
+    mim:naam "bedrag";
+    mim:type mim:Decimal;
+    mim:kardinaliteit "1";
+.
+vb:betalingskenmerk a mim:Attribuutsoort;
+    mim:naam "betalingskenmerk";
+    mim:type mim:CharacterString;
+    mim:kardinaliteit "1";
+.
+vb:omschrijving a mim:Attribuutsoort;
+    mim:naam "omschrijving";
+    mim:type mim:CharacterString;
+    mim:kardinaliteit "1";
+.
