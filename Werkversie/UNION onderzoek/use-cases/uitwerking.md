@@ -100,6 +100,9 @@ In het UML model is sprake van een steunproperty met stereotype `<<Keuze>>`. Dez
 
 
 ## Use case 2b: een keuze tussen twee attribuutsoorten bij een gestructureerd datatype
+
+*opmerking Lennart*: deze use case kan niet. Een gestructureerd datatype heeft als enige toegestane elementen: data element. Dit is dan ook niet een echte use case. e use case 2 is eenvoudigweg: een keuze tussen attribuutsoorten. Wat er nu gebeurd lijkt te zijn is een vanuit UML gereverse engineerde uitwerking, die niet overeenkomt met use case 2. 
+
 Bij een objecttype "Betalingsopdracht" moet een bedrag en een beschrijving worden opgenomen. De beschrijving is feitelijk een structuur waarbij de keuze moet worden gemaakt tussen een betalingskenmerk OF een omschrijving. Eén van beide attribuutsoorten moet worden gebruikt binnen de structuur die gebruikt wordt voor een waarde van de beschrijving. Het is niet toegestaan dat beide velden worden ingevuld: alleen een betalingskenmerk, of alleen een omschrijving.
 
 Deze use case is voor een groot deel overeenkomstig aan use case 2a. Het verschil zit in het feit dat de keuze niet betrekking heeft op attribuutsoorten van een objecttype, maar attribuutsoorten van een gestructureerd datatype.
@@ -141,6 +144,8 @@ vb:omschrijving a mim:Attribuutsoort;
 </tbody></table>
 
 In het UML model is in deze situatie geen noodzaak voor een steunproperty. Er is daadwerkelijk sprake van een attribuutsoort "beschrijving". Wat wel opvalt, is dat er zowel in het UML model als in het LD model (feitelijk) geen sprake meer is van een gestructureerd datatype: het is slechts een keuze en in die zin een echt datatype met veel kenmerken die ook voor een gestructureerd datatype gelden.
+
+*opmerking Lennart*: dit voldoet niet aan use case 2, want er wordt een 3e spookattribuutsoort gecreerd. UC2a lijkt een uitwerking om "subtypes" van attribuutsoort te maken, waarbij de 'beschrijving' een abstracte representatie is van ofwel de concrete 'omschrijving' ofwel de concrete 'betaalmiddel'. Een dergelijke hierarchie aanbrengen vereist meer denkwerk. Verder, een keuze tussen attribuutsoorten modelleer je nooit met een gestructureerd datatype. Een attribuutsoort zit in UML altijd in een UML-Class en dat is ook de plek waar attribuutsoorten zitten, in een objecttype, wat ook een UML-Class is. Wat je wel kan doen is er een UML-Class van maken en die <<keuze>> noemen en daar <<attribuutsoort>> inzetten.   
 
 ## Use case 3: een keuze tussen twee relatiesoorten
 
