@@ -94,14 +94,15 @@ Onderstaande tabellen geven een overzicht van alle transformaties en een referen
 |`mim:Relatierol`|`sh:PropertyShape`, `owl:ObjectProperty`|[Relatierol](#transformatie-relatierol)|
 |`mim:Referentielijst`|`owl:Class`, `sh:NodeShape`|[Referentielijst](#transformatie-referentielijst)|
 |`mim:ReferentieElement`|`owl:Class`, `sh:NodeShape`|[Referentie-element](#transformatie-referentie-element)|
-|`mim:Enumeratie`|n.n.b.|[Enumeratie](#transformatie-enumeratie)|
-|`mim:Enumeratiewaarde`|n.n.b.|[Enumeratiewaarde](#transformatie-enumeratiewaarde)|
-|`mim:Codelijst`|n.n.b.|[Codelijst](#transformatie-codelijst)|
+|`mim:Enumeratie`|`owl:Class`, `sh:NodeShape`|[Enumeratie](#transformatie-enumeratie)|
+|`mim:Enumeratiewaarde`|`skos:Concept``|[Enumeratiewaarde](#transformatie-enumeratiewaarde)|
+|`mim:Codelijst`|`owl:Class`, `sh:NodeShape`|[Codelijst](#transformatie-codelijst)|
 |`mim:Datatype`|n.v.t.|Abstracte klasse|
 |`mim:PrimitiefDatatype`|`rdfs:Datatype`|[Primitief datatype](#transformatie-primitief-datatype)|
 |`mim:GestructureerdDatatype`|`sh:NodeShape`|[Gestructureerd datatype](#transformatie-gestructureerd-datatype)|
 |`mim:DataElement`|`owl:ObjectProperty`, `owl:DatatypeProperty`, `sh:PropertyShape`|[Data element](#transformatie-data-element)|
-|`mim:Keuze`|`sh:xone`, `rdf:List`|[Keuze (datatype en relatiedoel)](#transformatie-keuze)|
+|`mim:Keuze`|`sh:xone`, `rdf:List`|[Keuze](#transformatie-keuze)|
+|`mim:Keuzeconstraint`|`sh:xone`, `rdf:List`|[Keuze](#transformatie-keuze)|
 |`mim:Package`|n.v.t.|Abstracte klasse|
 |`mim:Domein`|`owl:Ontology`|[Domein](#transformatie-domein)|
 |`mim:Extern`|`owl:imports`|[Extern](#transformatie-extern)|
@@ -466,6 +467,12 @@ WHERE {
 
 > Een lijst met een opsomming van de mogelijke domeinwaarden van een attribuutsoort, die buiten het model in een externe waardenlijst worden beheerd. De domeinwaarden in de lijst kunnen in de loop van de tijd aangepast, uitgebreid, of verwijderd worden, zonder dat het informatiemodel aangepast wordt (in tegenstelling tot bij een enumeratie).
 
+<aside id='trans-10' class='note'>
+Een enumeratie kan verschillende soorten dingen opsommen. Een lijst met waardes, bijv. een opsomming van nummers, maar ook een lijst met concepten, datatypes, of objecten. Het is dan ook niet triviaal om een goede automatische vertaling te bepalen die een enumeratie kan vertalen naar Linked Data. Om deze reden kiezen we voor een standaardtransformatie naar een klasse gelijknamig aan de enumeratieklasse, en instanties van deze klasse voor elk van de geënumereerde waardes. De geënumereeerde waardes worden ook met een `owl:oneOf` constructie begrensd door de enumeratieklasse. De SHACL gegevensregel maakt gebruikt van het `sh:in` construct om de enumeratie uit te drukken.
+
+In de Inspire RDF Guidelines wordt voorgeschreven om een enumeratie te modelleren als rdfs:Datatype in plaats van als klasse. Dit leidt tot enumeratiewaardes die een literal zijn, met het datatype van de enumeratie. Bijvoorbeeld `"hoog"^^imgolf:NatuurwaardeValue`. De reden om hiervan af te wijken is omdat enumeraties vaker waardelijsten zijn die een object of concept modelleren, dan een lijst van letterlijke waardes. Door deze waardes als objecten te modelleren blijft het mogelijk om nieuwe uitdrukkingen te doen over de waardes.
+</aside>
+
 <aside id='trans-9' class='note'>
 Het MIM doet geen uitspraak hoe een referentielijst op de externe locatie wordt gepubliceerd. Voor de transformatie wordt de aanname gedaan dat de externe locatie overeen komt met een verzameling van uitspraken van (een subklasse van) `skos:Concept`, en dat op de URL aangeduid met het aspect `mim:locatie` van de referentielijst deze verzameling is te vinden. Bovendien wordt daarbij uitgegaan dat deze referentielijst zelf een `skos:ConceptScheme` is, waarbij de identificatie van dit `skos:ConceptScheme` gelijk is aan de URL van de locatie. Wel kan in een concrete transformatie deze regels getuned worden naar de specifieke behoefte.
 
@@ -484,15 +491,79 @@ Deze constructie wordt ook toegepast bij enumeraties en codelijsten.
 
 > Een datatype waarvan de mogelijke waarden limitatief zijn opgesomd in een statische lijst.
 
-<aside id='trans-10' class='note'>
-Een enumeratie kan verschillende soorten dingen opsommen. Een lijst met waardes, bijv. een opsomming van nummers, maar ook een lijst met concepten, datatypes, of objecten. Het is dan ook niet triviaal om een goede automatische vertaling te bepalen die een enumeratie kan vertalen naar Linked Data. Om deze reden kiezen we voor een standaardtransformatie naar een klasse gelijknamig aan de enumeratieklasse, en instanties van deze klasse voor elk van de geënumereerde waardes. De geënumereeerde waardes worden ook met een `owl:oneOf` constructie begrensd door de enumeratieklasse. De SHACL gegevensregel maakt gebruikt van het `sh:in` construct om de enumeratie uit te drukken.
+Een `mim:Enumeratie` wordt vertaald naar een `owl:Class` in combinatie met een `sh:Nodeshape`, `skos:ConceptScheme` en enkele `sh:PropertyShape`s, waarbij de betreffende klasse een `rdfs:subClassOf skos:Concept` is.
 
-In de Inspire RDF Guidelines wordt voorgeschreven om een enumeratie te modelleren als rdfs:Datatype in plaats van als klasse. Dit leidt tot enumeratiewaardes die een literal zijn, met het datatype van de enumeratie. Bijvoorbeeld `"hoog"^^imgolf:NatuurwaardeValue`. De reden om hiervan af te wijken is omdat enumeraties vaker waardelijsten zijn die een object of concept modelleren, dan een lijst van letterlijke waardes. Door deze waardes als objecten te modelleren blijft het mogelijk om nieuwe uitdrukkingen te doen over de waardes.
-</aside>
+De reden om deze vertaling te maken, is dat in het MIM een enumeratie onderdeel is van het eigen model, en zeer specifieke eigenschappen kent. Het is expliciet geen "normale" klasse (daarvoor lenen `mim:Objecttype` of `mim:Referentielijst` zich meer). Maar het is ook geen enkele opsomming van enkelvoudige waarden.
+
+De waarden van een enumeratie zijn voorkomens van deze klasse en onderdeel van het `skos:ConceptScheme` dat aan deze enumeratie zit.
+
+<pre class='ex-sparql'>
+CONSTRUCT {
+  ?class a owl:Class.
+  ?class rdfs:subClassOf skos:Concept.
+  ?class mim:equivalent ?enumeratie.
+  ?nodeshape a sh:NodeShape.
+  ?nodeshape mim:equivalent ?enumeratie.
+  ?nodeshape sh:targetClass ?class.
+  ?nodeshape sh:property [
+    sh:path rdfs:label;
+  ].
+  ?nodeshape sh:property [
+    sh:path skos:notation;
+  ].
+  ?nodeshape sh:property [
+    sh:path skos:definition
+  ].
+  ?nodeshape sh:property [
+    sh:path rdf:type;
+    sh:hasValue ?class
+  ].
+  ?nodeshape sh:property [
+    sh:path skos:inScheme;
+    sh:hasValue ?scheme
+  ]
+}
+WHERE {
+  ?enumeratie a mim:Enumeratie.
+  ?objecttype mim:naam ?enumeratienaam.
+  BIND (t:classuri(?enumeratienaam) as ?class)
+  BIND (t:nodeshapeuri(?enumeratienaam) as ?nodeshape)
+  BIND (t:schemeuri(?enumeratienaam) as ?scheme)
+}
+</pre>
 
 ### Transformatie: Enumeratiewaarde
 
 > Een gedefinieerde waarde, in de vorm van een eenmalig vastgesteld constant gegeven.
+
+Enumeratiewaarden worden vertaald naar voorkomens van de klasse die bepaald wordt door de Enumeratie zelf. Voor de URI wordt het metagegeven `mim:code` gebruikt, tenzij deze niet aanwezig is.
+
+<pre class='ex-sparql'>
+CONSTRUCT {
+  ?concept a ?class.
+  ?concept skos:inScheme ?scheme.
+  ?concept mim:equivalent ?waarde.
+}
+WHERE {
+  ?waarde a mim:Enumeratiewaarde.
+  ?enumeratie mim:waarde ?waarde.
+  ?class mim:equivalent ?enumeratie.
+  ?class a owl:Class.
+  ?scheme mim:equivalent ?enumeratie.
+  ?scheme a skos:ConceptScheme.
+  {
+    {
+      ?waarde mim:naam ?notation
+      FILTER NOT EXISTS {?waarde mim:code ?nocode}
+    }
+    UNION
+    {
+      ?waarde mim:code ?notation
+    }
+  }
+  BIND (t:concepturi(?notation) as ?concept)
+}
+</pre>
 
 ### Transformatie: Codelijst
 
@@ -643,7 +714,8 @@ CONSTRUCT {
   ?list rdf:rest rdf:nil.
 }
 WHERE {
-  ?keuze a mim:Keuze.
+  ?keuze a ?type.
+  FILTER (?type = mim:Keuze || ?type = mim:Keuzeconstraint)
   ?keuze mim:naam ?keuzenaam.
   ?keuze ?keuzerelatie ?keuzewaarde.
   BIND (t:nodeshapeuri(?keuzenaam) as ?shape)
@@ -1342,27 +1414,47 @@ WHERE {
 ### transformatie: code
 > De in een registratie of informatiemodel aan de enumeratiewaarde toegekend unieke code (niet te verwarren met alias, zoals bedoeld in 2.6.1).
 
-> **VERDER UITWERKEN**
->
-> We hebben nog niet gespecificeerd hoe we enumeraties vertalen. In NEN3610-LD is standaardtransformatie een transformatie naar een klasse gelijknamig aan de enumeratieklasse, en instanties van deze klasse voor elk van de geënumereerde waardes. Als we dit volgen zouden we de `mim:code` kunnen vertalen naar een `rdfs:label` of `skos:altLabel`.
+Een `mim:code` wordt vertaald naar een `skos:notation`.
+
+<pre class='ex-sparql'>
+CONSTRUCT {
+  ?subject skos:notation ?notation
+}
+WHERE {
+  ?modelelement mim:code ?notation.
+  ?subject mim:equivalent ?modelelement
+}
+</pre>
 
 ### transformatie: specificatie-tekst
 > De specificatie van de constraint in normale tekst.
 
-> **VERDER UITWERKEN**
->
-> We hebben nog niet gespecificeerd hoe we constraints vertalen. Voorstel: alleen vertalen naar documentatie in het MIM model in RDF. In de toekomst wellicht vertalen naar SHACL.
-
 Een `mim:specificatieTekst` wordt direct, zonder aanpassing, overgenomen in het vertaalde model, als onderdeel van de [transformatieregel voor constraints](#constraint).
+
+<pre class='ex-sparql'>
+CONSTRUCT {
+  ?subject skos:specificatieTekst ?specificatietekst
+}
+WHERE {
+  ?modelelement mim:specificatieTekst ?specificatietekst.
+  ?subject mim:equivalent ?modelelement
+}
+</pre>
 
 ### transformatie: specificatie-formeel
 > De beschrijving van de constraint in een formele specificatietaal, in OCL.
 
-> **VERDER UITWERKEN**
->
-> We hebben nog niet gespecificeerd hoe we constraints vertalen. Voorstel: alleen vertalen naar documentatie in het MIM model in RDF. In de toekomst wellicht vertalen naar SHACL.
-
 Een `mim:specificatieFormeel` wordt direct, zonder aanpassing, overgenomen in het vertaalde model, als onderdeel van de [transformatieregel voor constraints](#constraint).
+
+<pre class='ex-sparql'>
+CONSTRUCT {
+  ?subject skos:specificatieFormeel ?specificatieformeel
+}
+WHERE {
+  ?modelelement mim:specificatieFormeel ?specificatieformeel.
+  ?subject mim:equivalent ?modelelement
+}
+</pre>
 
 ### transformatie: attribuut
 
