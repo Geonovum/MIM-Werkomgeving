@@ -735,8 +735,6 @@ Voorbeeld: een objecttype "Vervoersmiddel" heeft een eigenaar. Dit kan een perso
 Het is niet de bedoeling om twee nieuwe relatiesoorten, persoon en bedrijf, te introduceren en relatiesoort eigenaar kwijt te raken.
 We noemen daarom een *Keuze* tussen relatiedoelen.
 
-*Opmerking: use case 1 en 4 zijn eigenlijk vergelijkbaar, bij use case 1 gaat het om datatypen, bij use case 4 gaat het om objecttypen, maar vanuit het perspectief van keuze gaat het in beide gevallen om een keuze tussen twee elementen die verbonden zijn met een objecttype.*
-
 ## Specificatie metagegevens informatiemodel
 
 ### Metagegeven: **Domein**
