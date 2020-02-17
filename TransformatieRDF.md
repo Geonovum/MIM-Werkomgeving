@@ -64,6 +64,17 @@ Om een unieke URI op te bouwen, is naast de naam van een modelelement, `mim:naam
 Het MIM model kent geen volgorde. Ondanks dat in de weergave attribuutsoorten in een bepaalde volgorde getoond worden binnen een objecttype en ook referentiewaarden in een bepaalde volgorde getoond worden in een referentielijst, is er in het MIM geen aspect waarin deze volgorde is opgenomen. In het getransformeerde model is het mogelijk om een volgorde te specificeren met behulp van de eigenschap `sh:index`. Deze eigenschap komt echter niet terug in het MIM model zelf. Twee MIM modellen die alleen qua volgorde verschillen moeten gezien worden als equivalent.
 </aside>
 
+## URI-munting
+
+Een belangrijk gegeven in Linked Data is het munten van URI's. Bij de vertaling van een MIM modelelement naar een overeenkomstige resource in Linked Data vocabulaires zullen ook nieuwe URI's gemunt moeten worden. Enerzijds omdat er (soms) sprake is van meer dan één resource voor één modelelement, maar ook omdat een Linked Data resource wel equivalent is met een MIM modelelement, maar niet exact gelijk: we willen niet dat de formele semantiek van de Linked Data vocabulaires vermengt wordt met de formele semantiek van het MIM metamodel.
+
+Daarnaast geldt dat het in Linked Data gebruikelijk is om URI's over te nemen van andere (externe) vocabulaires c.q. modellen. Ook het MIM ondersteund dit, in de vorm van de mim metamodelklassen `mim:Extern` en `mim:View`. Echter, anders dan bij UML, behoren de modelementen uit deze externe modellen ook de URI's te krijgen die horen bij deze externe modellen.
+
+Het metamodelelement `mim:locatie` heeft een belangrijke rol bij het bepalen van de URI. De waarde van dit metamodelelement wordt gezien als de namespace-prefix van de URI. Dit betekent dan ook dat alle modelelementen binnen één package normaal gesproken dezelfde namespace krijgen. Gebruikelijk is dan ook dat externe packages de namespace krijgen die behoren bij het externe vocabulaire en de eigen domein-packages de namespace krijgen die behoort bij de eigen vocabulaire. Hierop zijn een aantal uitzonderingen:
+
+1. Indien sprake is van het hergebruiken van een attribuutsoort die ook gedefinieerd is in een externe of view package, dan wordt de `mim:locatie` gebruikt van deze externe of view package. Hierdoor is het mogelijk om een attribuutsoort "label" op te nemen die gemunt wordt met de URI `http://www.w3.org/2000/01/rdf-schema#` (rdfs:label).
+2. Indien sprake is van een view package, dan wordt de `mim:locatie` van deze view package alleen gebruikt voor de vocabulaire URI's (voorkomens van `owl:Class`, `owl:DatatypeProperty` en `owl:ObjectProperty`). Voor de voorkomens van shapes (`sh:NodeShape` en `sh:PropertyShape`) wordt juist gebruik gemaakt van de `mim:locatie` zoals deze bij de eigen domein-package is opgegeven. Rationale hierachter is dat bij view-packages de "view" lokaal gedefinieerd is, maar de elementen wel afkomstig zijn uit een externe vocabulaire.
+
 ## Overzicht
 
 Onderstaande tabellen geven een overzicht van alle transformaties en een referentie naar de betreffende transformatieregel
@@ -77,12 +88,12 @@ Onderstaande tabellen geven een overzicht van alle transformaties en een referen
 |`mim:Gegevensgroep`|`sh:PropertyShape`, `owl:ObjectProperty`|[Gegevensgroep](#transformatie-gegevensgroep)|
 |`mim:Gegevensgroeptype`|`owl:Class`, `sh:NodeShape`|[Gegevensgroeptype](#transformatie-gegevensgroeptype)|
 |`mim:Generalisatie`|`rdfs:subClassOf` `rdf:Statement`|[Generalisatie](#transformatie-generalisatie)|
-|`mim:Relatiesoort`|`sh:PropertyeShape`, `owl:ObjectProperty`|[Relatiesoort](#transformatie-relatiesoort)|
+|`mim:Relatiesoort`|`sh:PropertyShape`, `owl:ObjectProperty`|[Relatiesoort](#transformatie-relatiesoort)|
 |`mim:Relatieklasse`|`rdf:Statement`|[Relatieklasse](#transformatie-relatieklasse)|
 |`mim:ExterneKoppeling`|`sh:PropertyShape`, `owl:ObjectProperty`|[Externe koppeling](#transformatie-externe-koppeling)|
-|`mim:Relatierol`|n.n.b.|[Relatierol](#transformatie-relatierol)|
-|`mim:Referentielijst`|n.n.b.|[Referentielijst](#transformatie-referentielijst)|
-|`mim:ReferentieElement`|n.n.b.|[Referentie-element](#transformatie-referentie-element)|
+|`mim:Relatierol`|`sh:PropertyShape`, `owl:ObjectProperty`|[Relatierol](#transformatie-relatierol)|
+|`mim:Referentielijst`|`owl:Class`, `sh:NodeShape`|[Referentielijst](#transformatie-referentielijst)|
+|`mim:ReferentieElement`|`owl:Class`, `sh:NodeShape`|[Referentie-element](#transformatie-referentie-element)|
 |`mim:Enumeratie`|n.n.b.|[Enumeratie](#transformatie-enumeratie)|
 |`mim:Enumeratiewaarde`|n.n.b.|[Enumeratiewaarde](#transformatie-enumeratiewaarde)|
 |`mim:Codelijst`|n.n.b.|[Codelijst](#transformatie-codelijst)|
@@ -90,60 +101,59 @@ Onderstaande tabellen geven een overzicht van alle transformaties en een referen
 |`mim:PrimitiefDatatype`|`rdfs:Datatype`|[Primitief datatype](#transformatie-primitief-datatype)|
 |`mim:GestructureerdDatatype`|`sh:NodeShape`|[Gestructureerd datatype](#transformatie-gestructureerd-datatype)|
 |`mim:DataElement`|`owl:ObjectProperty`, `owl:DatatypeProperty`, `sh:PropertyShape`|[Data element](#transformatie-data-element)|
-|`mim:Keuze` (datatype en relatiedoel)|`sh:xone`, `rdf:List`|[Keuze (datatype en relatiedoel)](#transformatie-keuze-datatype-relatiedoel)|
-|`mim:Keuze` (attribuutsoort)|`rdfs:subPropertyOf`|[Keuze (attribuutsoort)](#transformatie-keuze-attribuutsoort)|
+|`mim:Keuze`|`sh:xone`, `rdf:List`|[Keuze (datatype en relatiedoel)](#transformatie-keuze)|
 |`mim:Package`|n.v.t.|Abstracte klasse|
 |`mim:Domein`|`owl:Ontology`|[Domein](#transformatie-domein)|
 |`mim:Extern`|`owl:imports`|[Extern](#transformatie-extern)|
 |`mim:View`|`owl:imports`|[View](#transformatie-view)|
 |`mim:Constraint`|`mim:Constraint`|[Constraint](#transformatie-constraint)|
-|`mim:RelatierolSource`|n.n.b.|[Relatierol](#transformatie-relatierol)|
-|`mim:RelatierolTarget`|n.n.b.|[Relatierol](#transformatie-relatierol)|
+|`mim:RelatierolSource`|`sh:PropertyShape`, `owl:ObjectProperty`|[Relatierol](#transformatie-relatierol)|
+|`mim:RelatierolTarget`|`sh:PropertyShape`, `owl:ObjectProperty`|[Relatierol](#transformatie-relatierol)|
 
 ### Eigenschappen
 
 |MIM-eigenschap|Vertaling|Referentie|
 |--------------|---------|----------|
-|`mim:naam`|`rdfs:label`|[naam](#naam)|
-|`mim:alias`|`skos:altLabel`|[alias](#alias)|
-|`mim:begrip`|`dct:subject`|[begrip](#begrip)|
-|`mim:begripsterm`|`mim:begripsterm`|[begripsterm](#begripsterm)|
-|`mim:definitie`|`rdfs:comment`|[definitie](#definitie)|
-|`mim:toelichting`|`mim:toelichting`|[toelichting](#toelichting)|
-|`mim:herkomst`|`mim:herkomst`|[herkomst](#herkomst)|
-|`mim:herkomstDefinitie`|`mim:herkomstDefinitie`|[herkomst definitie](#herkomst-definitie)|
-|`mim:datumOpname`|`mim:datumOpname`|[datum opname](#datum-opname)|
-|`mim:indicatieMaterieleHistorie`|n.n.b.|[indicatie materiële historie](#indicatie-materi%C3%ABle-historie)|
-|`mim:indicatieFormeleHistorie`|n.n.b.|[indicatie formele historie](#indicatie-formele-historie)|
-|`mim:kardinaliteit`|`sh:minCount`, `sh:maxCount`|[kardinaliteit](#kardinaliteit)|
-|`mim:authentiek`|`mim:authentiek`|[authentiek](#authentiek)|
-|`mim:indicatieAfleidbaar`|`mim:indicatieAfleidbaar`|[indicatie afleidbaar](#indicatie-afleidbaar)|
-|`mim:mogelijkGeenWaarde`|`mim:mogelijkGeenWaarde`, `sh:minCount`|[mogelijk geen waarde](#mogelijk-geen-waarde)
-|`mim:locatie`|`mim:locatie`|[locatie](#locatie)|
-|`mim:type`|`sh:datatype`, `sh:node`|[type](#type)|
-|`mim:lengte`|`sh:maxLength`|[lengte](#lengte)|
-|`mim:patroon`|`mim:patroon`|[patroon](#patroon)|
-|`mim:formeelPatroon`|`sh:pattern`|[formeel patroon](#formeel-patroon)|
-|`mim:uniekeAanduiding`|`mim:uniekeAanduiding`|[unieke aanduiding](#uniekeaanduiding)
-|`mim:populatie`|`mim:populatie`|[populatie](#populatie)|
-|`mim:kwaliteit`|`mim:kwaliteit`|[kwaliteit](#kwaliteit)|
-|`mim:indicatieAbstractObject`|`sh:propertyShape` en `mim:indicatieAbstractObject`|[indicatie abstract object](#indicatie-abstract-object)|
-|`mim:identificerend`|`mim:identificerend`|[identificerend](#identificerend)|
-|`mim:gegevensgroeptype`|`sh:node`|[gegevensgroeptype](#gegevensgroeptype-eigenschap)|
-|`mim:unidirectioneel`|n.n.b.|[unidirectioneel](#unidirectioneel)|
-|`mim:bron`|`sh:property`|[bron](#bron)|
-|`mim:doel`|`sh:class`|[doel](#doel)|
-|`mim:aggregatietype`|`mim:aggregatietype`|[aggregatietype](#aggregatietype)|
-|`mim:subtype`|`rdfs:subClassOf`|[Generalisatie](#generalisatie)|
-|`mim:supertype`|`rdfs:subClassOf`|[Generalisatie](#generalisatie)|
-|`mim:code`|n.n.b.|[code](#code)|
-|`mim:specificatieTekst`|`mim:specificatieTekst`|[specificatie-tekst](#specificatie-tekst)|
-|`mim:specificatieFormeel`|`mim:specificatieFormeel`|[specificatie-formeel](#specificatie-formeel)|
-|`mim:attribuut`|`sh:property`|[attribuut](#attribuut)|
-|`mim:gegevensgroep`|`sh:property`|[gegevensgroep](#gegevensgroep-eigenschap)|
-|`mim:waarde`|n.n.b.|[Enumeratie](#enumeratie)|
-|`mim:constraint`|`mim:constraint`|[Constraint](#constraint)|
-|`mim:element`|`sh:property`|[Data element](#data-element)|
+|`mim:naam`|`rdfs:label`|[naam](#transformatie-naam)|
+|`mim:alias`|`skos:altLabel`|[alias](#transformatie-alias)|
+|`mim:begrip`|`dct:subject`|[begrip](#transformatie-begrip)|
+|`mim:begripsterm`|`mim:begripsterm`|[begripsterm](#transformatie-begripsterm)|
+|`mim:definitie`|`rdfs:comment`|[definitie](#transformatie-definitie)|
+|`mim:toelichting`|`mim:toelichting`|[toelichting](#transformatie-toelichting)|
+|`mim:herkomst`|`mim:herkomst`|[herkomst](#transformatie-herkomst)|
+|`mim:herkomstDefinitie`|`mim:herkomstDefinitie`|[herkomst definitie](#transformatie-herkomst-definitie)|
+|`mim:datumOpname`|`mim:datumOpname`|[datum opname](#transformatie-datum-opname)|
+|`mim:indicatieMaterieleHistorie`|`mim:indicatieMaterieleHistorie`|[indicatie materiële historie](#transformatie-indicatie-materiele-historie)|
+|`mim:indicatieFormeleHistorie`|`mim:indicatieFormeleHistorie`|[indicatie formele historie](#transformatie-indicatie-formele-historie)|
+|`mim:kardinaliteit`|`sh:minCount`, `sh:maxCount`|[kardinaliteit](#transformatie-kardinaliteit)|
+|`mim:authentiek`|`mim:authentiek`|[authentiek](#transformatie-authentiek)|
+|`mim:indicatieAfleidbaar`|`mim:indicatieAfleidbaar`|[indicatie afleidbaar](#transformatie-indicatie-afleidbaar)|
+|`mim:mogelijkGeenWaarde`|`mim:mogelijkGeenWaarde`, `sh:minCount`|[mogelijk geen waarde](#transformatie-mogelijk-geen-waarde)
+|`mim:locatie`|`mim:locatie`|[locatie](#transformatie-locatie)|
+|`mim:type`|`sh:datatype`, `sh:node`|[type](#transformatie-type)|
+|`mim:lengte`|`sh:maxLength`|[lengte](#transformatie-lengte)|
+|`mim:patroon`|`mim:patroon`|[patroon](#transformatie-patroon)|
+|`mim:formeelPatroon`|`sh:pattern`|[formeel patroon](#transformatie-formeel-patroon)|
+|`mim:uniekeAanduiding`|`mim:uniekeAanduiding`|[unieke aanduiding](#transformatie-uniekeaanduiding)
+|`mim:populatie`|`mim:populatie`|[populatie](#transformatie-populatie)|
+|`mim:kwaliteit`|`mim:kwaliteit`|[kwaliteit](#transformatie-kwaliteit)|
+|`mim:indicatieAbstractObject`|`sh:propertyShape` en `mim:indicatieAbstractObject`|[indicatie abstract object](#transformatie-indicatie-abstract-object)|
+|`mim:identificerend`|`mim:identificerend`|[identificerend](#transformatie-identificerend)|
+|`mim:gegevensgroeptype`|`sh:node`|[gegevensgroeptype](#transformatie-gegevensgroeptype-eigenschap)|
+|`mim:unidirectioneel`|(bij false) `owl:inverseOf`|[unidirectioneel](#transformatie-unidirectioneel)|
+|`mim:bron`|`sh:property`|[bron](#transformatie-bron)|
+|`mim:doel`|`sh:class`|[doel](#transformatie-doel)|
+|`mim:aggregatietype`|`mim:aggregatietype`|[aggregatietype](#transformatie-aggregatietype)|
+|`mim:subtype`|`rdfs:subClassOf`|[Generalisatie](#transformatie-generalisatie)|
+|`mim:supertype`|`rdfs:subClassOf`|[Generalisatie](#transformatie-generalisatie)|
+|`mim:code`|`skos:notation`|[code](#transformatie-code)|
+|`mim:specificatieTekst`|`mim:specificatieTekst`|[specificatie-tekst](#transformatie-specificatie-tekst)|
+|`mim:specificatieFormeel`|`mim:specificatieFormeel`|[specificatie-formeel](#transformatie-specificatie-formeel)|
+|`mim:attribuut`|`sh:property`|[attribuut](#transformatie-attribuut)|
+|`mim:gegevensgroep`|`sh:property`|[gegevensgroep](#transformatie-gegevensgroep-eigenschap)|
+|`mim:waarde`|`rdf:type`|[Enumeratie](#transformatie-enumeratie)|
+|`mim:constraint`|`mim:constraint`|[Constraint](#transformatie-constraint)|
+|`mim:element`|`sh:property`|[Data element](#transformatie-data-element)|
 
 ### Instanties (datatypen)
 
@@ -618,11 +628,11 @@ WHERE {
 }
 </pre>
 
-### Transformatie: Keuze (datatype en relatiedoel)
+### Transformatie: Keuze
 
 > Een opsomming van meerdere modelelementen, waarbij er maar van één tegelijkertijd sprake kan zijn.
 
-Een keuze tussen datatypen en relatiedoelen wordt gemodelleerd als een speciaal soort NodeShape die zelf een `sh:xone` eigenschap heeft. Deze eigenschap verwijst naar een `rdf:List` waarin de opsomming van de keuze staat uitgewerkt.
+Een keuze tussen modelelementen wordt gemodelleerd als een speciaal soort NodeShape die zelf een `sh:xone` eigenschap heeft. Deze eigenschap verwijst naar een `rdf:List` waarin de opsomming van de keuze staat uitgewerkt.
 
 <pre class='ex-sparql'>
 CONSTRUCT {
@@ -637,7 +647,6 @@ WHERE {
   ?keuze mim:naam ?keuzenaam.
   ?keuze ?keuzerelatie ?keuzewaarde.
   BIND (t:nodeshapeuri(?keuzenaam) as ?shape)
-  FILTER (?keuzerelatie = mim:keuzedatatype || ?keuzerelatie = mim:keuzerelatiedoel)
 }
 </pre>
 
@@ -652,12 +661,12 @@ ex:GeometrischObject a mim:Objecttype;
 .
 ex:geometrie a mim:Attribuutsoort;
   mim:naam "geometrie";
-  mim:datatype ex:LineOrPolygon;
+  mim:type ex:LineOrPolygon;
 .
 ex:LineOrPolygon a mim:Keuze;
   mim:naam "Line or polygon";
-  mim:keuzedatatype ex:Line;
-  mim:keuzedatatype ex:Polygon;
+  mim:type ex:Line;
+  mim:type ex:Polygon;
 .
 ex:Line a mim:PrimitiefDatatype;
   mim:naam "Line";
@@ -690,13 +699,13 @@ DELETE {
   ?endoflist rdf:rest rdf:nil
 }
 INSERT {
-  ?list rdf:first [ mim:equivalent ?unionelement ];
+  ?list rdf:first [ mim:equivalent ?keuzeelement ];
   ?list rdf:rest ?endoflist.
 }
 WHERE {
-  ?unionelement a mim:UnionElement.
-  ?union mim:element ?unionelement.
-  ?list mim:equivalent ?union.
+  ?keuze a mim:Keuze.
+  ?keuze ?keuzerelatie ?keuzelement.
+  ?list mim:equivalent ?keuze.
   ?list rdf:rest* ?endoflist.
   ?endoflist rdf:rest rdf:nil.
 }
@@ -717,26 +726,6 @@ WHERE {
 </pre>
 
 De tweede delete-insert query is een "opruimquery": aangezien we zijn begonnen met een rdf:List in plaats van een rdf:nil, moeten we het einde van de lijst er nog weer afknippen.
-
-### Transformatie: Keuze (attribuutsoort)
-
-> Een opsomming van meerdere modelelementen, waarbij er maar van één tegelijkertijd sprake kan zijn.
-
-De keuze bij een attribuutsoort is feitelijk een keuze welke onderliggende attribuutsoorten gebruikt mogen worden op de plaats van de originele attribuutsoort. Semantisch gezien betreft dit een geval waarbij de onderliggende attribuutsoorten specialisaties zijn van het originele attribuutsoort. Dit wordt dan ook als zodanig gemodelleerd.
-
-<pre class='ex-sparql'>
-CONSTRUCT {
-  ?subproperty rdfs:subPropertyOf ?superproperty.
-}
-WHERE {
-  ?attribuutsoort mim:datatype ?keuze.
-  ?keuze a mim:Keuze.
-  ?keuze mim:keuzeattribuutsoort ?attribuutsoortkeuze.
-  ?superproperty mim:equivalent ?attribuutsoort.
-  ?subproperty mim:equivalent ?attribuutsoortkeuze.
-}
-</pre>
-
 
 ## Packages
 > Een package is een benoemde en begrensde verzameling/groepering van modelelementen.
@@ -783,7 +772,7 @@ WHERE {
 
 ## Properties
 
-### naam
+### transformatie: naam
 
 > De naam van een modelelement
 
@@ -807,7 +796,7 @@ WHERE {
 }
 </pre>
 
-### alias
+### transformatie: alias
 
 > De alternatieve weergave van de naam.
 
@@ -827,7 +816,7 @@ WHERE {
 }
 </pre>
 
-### begrip
+### transformatie: begrip
 
 > Verwijzing naar een begrip, vanuit een modelelement, waarmee wordt aangegeven op welk begrip, of begrippen, het informatiemodel element is gebaseerd.
 
@@ -843,7 +832,7 @@ WHERE {
 }
 </pre>
 
-### begripsterm
+### transformatie: begripsterm
 
 > Verwijzing naar een begrip in de vorm van de term, vanuit een modelelement, waarmee wordt aangegeven op welk begrip, of begrippen, het informatiemodel element is gebaseerd.
 
@@ -859,7 +848,7 @@ WHERE {
 }
 </pre>
 
-### definitie
+### transformatie: definitie
 
 > De beschrijving van de betekenis van dit modelelement.
 
@@ -867,7 +856,7 @@ Een `mim:definitie` wordt vertaald naar een `rdfs:comment`
 
 Rationale om niet te kiezen voor `skos:definition`: in de meeste Linked Data vocabulaires is het gebruikelijk om de beschrijving van een klasse op te nemen door middel van een `rdfs:comment`, wat ook de intentie is in het MIM. Het MIM is niet beoogd als een volledig begrippenkader. Het MIM biedt daarnaast de mogelijkheid om expliciet te verwijzen vanuit een modelelement naar een `skos:Concept`. Het ligt dan ook voor de hand om bij dit `skos:Concept` de werkelijke `skos:definition` op te nemen.
 
-### toelichting
+### transformatie: toelichting
 
 > Een inhoudelijke toelichting op de definitie, ter verheldering of nadere duiding.
 
@@ -885,7 +874,7 @@ WHERE {
 }
 </pre>
 
-### herkomst
+### transformatie: herkomst
 
 > De registratie of het informatiemodel waaraan het modelelement ontleend is dan wel de eigen organisatie indien het door de eigen organisatie toegevoegd is.
 
@@ -901,7 +890,7 @@ WHERE {
 }
 </pre>
 
-### herkomst definitie
+### transformatie: herkomst definitie
 
 > De registratie of het informatiemodel waaruit de definitie is overgenomen dan wel een aanduiding die aangeeft uit welke bronnen de definitie is samengesteld.
 
@@ -919,7 +908,7 @@ WHERE {
 }
 </pre>
 
-### datum opname
+### transformatie: datum opname
 
 > De datum waarop het modelelement is opgenomen in het informatiemodel.
 
@@ -935,27 +924,55 @@ WHERE {
 }
 </pre>
 
-### indicatie materiële historie
+### transformatie: indicatie materiële historie
 
 > Indicatie of de materiële historie van het kenmerk van het object te bevragen is.
 
-> **VERDER UITWERKEN**
->
-> Hoe gaan we dit doen? Feitelijk moet je deze indicatie omzetten naar daadwerkelijke properties.
->
-> Zie voor input het NEN3610 Linked Data Profiel [7.3.4.2.4 Attribuut met stereotype «materieleHistorie»](https://geonovum.github.io/NEN3610-Linkeddata/#regels-attributen-materieleHistorie).
+Een `mim:indicatieMaterieleHistorie` wordt direct, zonder aanpassing, overgenomen in het vertaalde model.
 
-### indicatie formele historie
+<pre class='ex-sparql'>
+CONSTRUCT {
+  ?subject mim:indicatieMaterieleHistorie ?indicatiematerielehistorie
+}
+WHERE {
+  ?modelelement mim:indicatieMaterieleHistorie ?indicatiematerielehistorie.
+  ?subject mim:equivalent ?modelelement.
+}
+</pre>
+
+<aside id='trans-99' class='note'>
+In Linked Data zal een indicatie materiële historie altijd betekenen dat er een constructie wordt gerealiseerd waarbij de eigenschappen
+die betrekking hebben op de historie van het objecttype (zoals geldigheidsperiode, bron, herkomst) onderscheiden zijn van de
+eigenschappen van het objecttype zelf. Deze constructie is toegelicht in [NEN3610 Linked Data](https://geonovum.github.io/NEN3610-Linkeddata/#regels-attributen-materieleHistorie). Hoewel het denkbaar is om een dergelijke vertaling al direct mee te nemen bij het
+vertalen van het metagegeven "indicatie materiële historie" is hier niet voor gekozen, omdat een dergelijke vertaling ook met zich
+meebrengt dat zichtbaar is gemaakt welke eigenschappen behoren tot het objecttype en welke eigenschappen tot de historie van het objecttype. Beter zou zijn als een dergelijk onderscheid al direct in het model is opgenomen.
+</aside>
+
+### transformatie: indicatie formele historie
 
 > Indicatie of de formele historie van het kenmerk van het object bijgehouden wordt en te bevragen is.
 
-> **VERDER UITWERKEN**
->
-> Hoe gaan we dit doen? Feitelijk moet je deze indicatie omzetten naar daadwerkelijke properties. Meestal doen we daarbij formele historie als onderdeel van de volledige klasse, maar niet de afzonderlijke elementen.
->
-> Zie voor input het NEN3610 Linked Data Profiel [7.3.4.2.5 Attribuut met stereotype «formeleHistorie»](https://geonovum.github.io/NEN3610-Linkeddata/#regels-attributen-formeleHistorie).
+Een `mim:indicatieFormeleHistorie` wordt direct, zonder aanpassing, overgenomen in het vertaalde model.
 
-### kardinaliteit
+<pre class='ex-sparql'>
+CONSTRUCT {
+  ?subject mim:indicatieFormeleHistorie ?indicatieformelehistorie
+}
+WHERE {
+  ?modelelement mim:indicatieFormeleHistorie ?indicatieformelehistorie.
+  ?subject mim:equivalent ?modelelement.
+}
+</pre>
+
+<aside id='trans-99' class='note'>
+In Linked Data zal een indicatie formele historie altijd betekenen dat er een constructie wordt gerealiseerd waarbij de eigenschappen
+die betrekking hebben op de historie van het objecttype (zoals geldigheidsperiode, bron, herkomst) onderscheiden zijn van de
+eigenschappen van het objecttype zelf. Deze constructie is toegelicht in [NEN3610 Linked Data](https://geonovum.github.io/NEN3610-Linkeddata/#regels-attributen-formeleHistorie). Hoewel het denkbaar is om een dergelijke vertaling al direct mee te nemen bij het
+vertalen van het metagegeven "indicatie formele historie" is hier niet voor gekozen, omdat een dergelijke vertaling ook met zich
+meebrengt dat zichtbaar is gemaakt welke eigenschappen behoren tot het objecttype en welke eigenschappen tot de historie van het objecttype. Beter zou zijn als een dergelijk onderscheid al direct in het model is opgenomen.
+</aside>
+
+### transformatie: kardinaliteit
 
 De `mim:kardinaliteit` wordt vertaald naar `sh:minCount` en `sh:maxCount`. Daarbij wordt de volgende tabel gebruikt om de string-waarde van mim:kardinaliteit om te zetten. Een `-` betekent dat de betreffende triple niet wordt opgenomen in het model.
 
@@ -995,7 +1012,7 @@ WHERE {
 }
 </pre>
 
-### authentiek
+### transformatie: authentiek
 > Aanduiding of het kenmerk een authentiek gegeven betreft.
 
 Een `mim:authentiek` wordt direct, zonder aanpassing, overgenomen in het vertaalde model.
@@ -1010,7 +1027,7 @@ WHERE {
 }
 </pre>
 
-### indicatie afleidbaar
+### transformatie: indicatie afleidbaar
 > Aanduiding dat gegeven afleidbaar is uit andere attribuut- en/of relatiesoorten.
 
 Een `mim:indicatieAfleidbaar` wordt direct, zonder aanpassing, overgenomen in het vertaalde model.
@@ -1025,7 +1042,7 @@ WHERE {
 }
 </pre>
 
-### mogelijk geen waarde
+### transformatie: mogelijk geen waarde
 > Aanduiding dat van een aspect geen waarde is geregistreerd, maar dat onduidelijk is of de waarde er werkelijk ook niet is.
 
 Een `mim:mogelijkGeenWaarde` wordt direct, zonder aanpassing, overgenomen in het vertaalde model, waarbij in een enkel geval een aanpassing wordt gedaan aan de manier waarop `mim:kardinaliteit` wordt getransformeerd.
@@ -1054,12 +1071,12 @@ WHERE {
 }
 </pre>
 
-### locatie
+### transformatie: locatie
 > Als het type van het attribuutsoort een waardenlijst is, dan wordt hier de locatie waar deze te vinden is opgegeven.
 
 Een `mim:locatie` wordt direct, zonder aanpassing, overgenomen in het vertaalde model. Daarnaast wordt dit veld gebruikt bij het munten van de URI's van de verschillende modelelementen en het achterhalen van de inhoud van een waardenlijst.
 
-### type
+### transformatie: type
 > Het datatype waarmee waarden van deze attribuutsoort worden vastgelegd.
 
 De vertaling van een `mim:type` hangt af van de vertaling van het datatype waar naar wordt verwezen:
@@ -1100,7 +1117,7 @@ WHERE {
 }
 </pre>
 
-### lengte
+### transformatie: lengte
 > De aanduiding van de lengte van een gegeven.
 
 Een `mim:lengte` wordt vertaald naar een `sh:maxLength`.
@@ -1115,7 +1132,7 @@ WHERE {
 }
 </pre>
 
-### patroon
+### transformatie: patroon
 > De verzameling van waarden die gegevens van deze attribuutsoort kunnen hebben, oftewel het waardenbereik, uitgedrukt in een specifieke structuur.
 
 De structuur van `mim:patroon` is in woorden beschreven. Deze wordt direct, zonder aanpassing, overgenomen in het vertaalde model.
@@ -1130,7 +1147,7 @@ WHERE {
 }
 </pre>
 
-### formeel patroon
+### transformatie: formeel patroon
 > Zoals patroon, formeel vastgelegd, uitgedrukt in een formele taal die door de computer wordt herkend.
 
 `mim:formeelPatroon` wordt beschreven met `sh:pattern`.
@@ -1149,7 +1166,7 @@ WHERE {
 }
 </pre>
 
-### unieke aanduiding
+### transformatie: unieke aanduiding
 > Voor objecttypen die deel uitmaken van een (basis)registratie of informatiemodel betreft dit de wijze waarop daarin voorkomende objecten (van dit type) uniek in de registratie worden aangeduid.
 
 Een `mim:uniekeAanduiding` wordt direct, zonder aanpassing, overgenomen in het vertaalde model.
@@ -1164,7 +1181,7 @@ WHERE {
 }
 </pre>
 
-### populatie
+### transformatie: populatie
 > Voor objecttypen die deel uitmaken van een (basis)registratie betreft dit de beschrijving van de exemplaren van het gedefinieerde objecttype die in de desbetreffende (basis)­registratie voorhanden zijn.
 
 Een `mim:populatie` wordt direct, zonder aanpassing, overgenomen in het vertaalde model.
@@ -1179,7 +1196,7 @@ WHERE {
 }
 </pre>
 
-### kwaliteit
+### transformatie: kwaliteit
 > Beschrijving van de mate waarin in de registratie opgenomen objecten van het desbetreffende type volledig, juist, actueel, nauwkeurig en betrouwbaar zijn.
 
 Een `mim:kwaliteit` wordt direct, zonder aanpassing, overgenomen in het vertaalde model.
@@ -1194,7 +1211,7 @@ WHERE {
 }
 </pre>
 
-### indicatie abstract object
+### transformatie: indicatie abstract object
 > Indicatie dat het objecttype een generalisatie is, waarvan een object als specialisatie altijd voorkomt in de hoedanigheid van een (en slechts één) van de specialisaties van het betreffende objecttype.
 
 In een MIM conform informatiemodel kunnen zowel abstracte als concrete klassen voorkomen. In UML kun je daarvan afleiden dat je geen instanties mag hebben van abstracte klassen, maar alleen van concrete klassen. In RDF wordt geen onderscheid gemaakt tussen het abstract of concreet zijn van klassen. In RDF worden klassen beschouwd als sets van dingen. Als je een set kunt beschrijven, dan kunnen er ook dingen zijn die tot die set behoren.
@@ -1217,7 +1234,7 @@ WHERE {
 }
 </pre>
 
-### identificerend
+### transformatie: identificerend
 > Een kenmerk van een objecttype die aangeeft of deze eigenschap uniek identificerend is voor alle objecten in de populatie van objecten van dit objecttype.
 
 Een `mim:identificerend` wordt direct, zonder aanpassing, overgenomen in het vertaalde model.
@@ -1232,7 +1249,7 @@ WHERE {
 }
 </pre>
 
-### gegevensgroeptype (eigenschap)
+### transformatie: gegevensgroeptype (eigenschap)
 
 > De verwijzing naar het bijbehorende gegevensgroeptype.
 
@@ -1251,19 +1268,31 @@ WHERE {
 }
 </pre>
 
-### unidirectioneel
+### transformatie: unidirectioneel
 
-> **VERDER UITWERKEN**
-> Betreft het automatisch opnemen van een inverse relatie. Daarbij dient de rolnaam gebruikt te worden voor deze inverse relatie.
+In Linked Data is een relatiesoort feitelijk automatisch unidirectioneel, tenzij aanvullende maatregelen worden genomen waardoor de
+relatiesoort vanuit twee kanten kan worden bekeken. Dit betekent dat de vertaling van unidirectioneel juist wordt opgepakt op het
+moment dat *niet* sprake is van unidirectioneel (de waarde van het metakenmerk is *false*).
 
-Bij `<<relatiesoort>>`:
+Indien sprake is van geen unidirectionaliteit, dan wordt een `owl:inverseOf` relatie gelegd tussen de relatierol die aan de bron-kant van de relatiesoort ligt en de relatierol die aan de doel-kant van de relatiesoort ligt. Merk op dat "unidirectioneel" alleen betekenis heeft als zowel de doel als bron kant van de relatiesoort zijn beschreven als relatierollen. Anders is de relatiesoort per definitie unidirectioneel vanuit het perspectief van Linked Data.
 
-> Het gerelateerde objecttype (de target) waarvan het objecttype, die de eigenaar is van deze relatie (de source), kennis heeft. Alle relaties zijn altijd gericht van het objecttype (source) naar het gerelateerde objecttype (target).
+<pre class='ex-sparql'>
+CONSTRUCT {
+  ?doel sh:inverseOf ?bron.
+  ?bron sh:inverseOf ?doel.
+}
+WHERE {
+  ?relatiesoort mim:relatierol ?relatierolbron.
+  ?relatiesoort mim:relatierol ?relatieroldoel.
+  ?relatiesoort mim:unidirectioneel false .
+  ?relatierolbron a mim:RelatierolDoel.
+  ?relatieroldoel a mim:RelatierolDoel.
+  ?doel mim:equivalent ?relatieroldoel.
+  ?bron mim:equivalent ?relatierolbron.
+}
+</pre>
 
-Bij `<<Externe koppeling>>`:
-> Het gerelateerde objecttype uit een extern informatiemodel (de target) waarvan het objecttype die de eigenaar van deze relatie is (de source) kennis heeft. Het aggregation type van de source is altijd ‘composition’. Alle relaties zijn altijd gericht van het objecttype (source) naar het gerelateerde objecttype (target).
-
-### bron
+### transformatie: bron
 > Aanduiding van het bronobject in een relatie tussen objecten. Een bronoject heeft middels een relatiesoort een relatie met een doelobject.
 
 Een `mim:bron` wordt vertaald naar een `sh:property` die hoort bij de de NodeShape van het objecttype. Zie voor meer informatie over hoe relaties tussen objecttypen worden vertaald de paragrafen [Relatiesoort](#relatiesoort) en [Externe koppeling](#externe-koppeling).
@@ -1279,7 +1308,7 @@ WHERE {
 }
 </pre>
 
-### doel
+### transformatie: doel
 > Aanduiding van het gerelateerde objecttype die het eindpunt van de relatie aangeeft. Naar objecten van dit objecttype wordt verwezen.
 
 Een `mim:doel` wordt vertaald naar een `sh:class` met als waarde de URI van de Class die het gerelateerde objecttype representeert. Zie voor meer informatie over hoe relaties tussen objecttypen worden vertaald de paragrafen [Relatiesoort](#relatiesoort) en [Externe koppeling](#externe-koppeling).
@@ -1295,7 +1324,7 @@ WHERE {
 }
 </pre>
 
-### aggregatietype
+### transformatie: aggregatietype
 > Aanduiding of het objecttype die de eigenaar is van een relatie het doel van relatie ziet als een samen te voegen onderdeel.
 
 Aggregatie- en compositie-associaties worden gemodelleerd zoals simpele relatiesoorten, gebruikmakend van de specifieke naam die de associatie in het oorspronkelijke model heeft. Een `mim:aggregatietype` wordt direct, zonder aanpassing, overgenomen in het vertaalde model.
@@ -1310,14 +1339,14 @@ WHERE {
 }
 </pre>
 
-### code
+### transformatie: code
 > De in een registratie of informatiemodel aan de enumeratiewaarde toegekend unieke code (niet te verwarren met alias, zoals bedoeld in 2.6.1).
 
 > **VERDER UITWERKEN**
 >
 > We hebben nog niet gespecificeerd hoe we enumeraties vertalen. In NEN3610-LD is standaardtransformatie een transformatie naar een klasse gelijknamig aan de enumeratieklasse, en instanties van deze klasse voor elk van de geënumereerde waardes. Als we dit volgen zouden we de `mim:code` kunnen vertalen naar een `rdfs:label` of `skos:altLabel`.
 
-### specificatie-tekst
+### transformatie: specificatie-tekst
 > De specificatie van de constraint in normale tekst.
 
 > **VERDER UITWERKEN**
@@ -1326,7 +1355,7 @@ WHERE {
 
 Een `mim:specificatieTekst` wordt direct, zonder aanpassing, overgenomen in het vertaalde model, als onderdeel van de [transformatieregel voor constraints](#constraint).
 
-### specificatie-formeel
+### transformatie: specificatie-formeel
 > De beschrijving van de constraint in een formele specificatietaal, in OCL.
 
 > **VERDER UITWERKEN**
@@ -1335,7 +1364,7 @@ Een `mim:specificatieTekst` wordt direct, zonder aanpassing, overgenomen in het 
 
 Een `mim:specificatieFormeel` wordt direct, zonder aanpassing, overgenomen in het vertaalde model, als onderdeel van de [transformatieregel voor constraints](#constraint).
 
-### attribuut
+### transformatie: attribuut
 
 Een `mim:attribuut` wordt vertaald naar een `sh:property` die hoort bij de de NodeShape van de bezitter van het attribuut. Zie ook [Attribuutsoort](#attribuutsoort).
 
@@ -1353,7 +1382,7 @@ WHERE {
 }
 </pre>
 
-### gegevensgroep (eigenschap)
+### transformatie: gegevensgroep (eigenschap)
 
 Een `mim:gegevensgroep` wordt vertaald naar een `sh:property` die hoort bij de de NodeShape van de bezitter van het attribuut. Zie ook [Gegevensgroep](#gegevensgroep).
 
