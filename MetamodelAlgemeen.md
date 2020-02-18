@@ -121,6 +121,17 @@ View 3a: constraint en keuze.
 Constraint
 
 
+Keuze
+
+Er zijn vijf situaties waarin een keuze toegepast wordt:
+Keuze tussen:
+- datatypen
+- attribuutsoorten binnen een objecttype
+- attribuutsoorten binnen een attribuutsoort
+- relatiesoorten
+- relatiedoelen
+
+Voor elk geldt een apart metamodel.
 
 
 ![](media/KeuzeDatatype1.png)
