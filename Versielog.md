@@ -23,6 +23,7 @@ In deze versie 1.1 zijn de volgende issues verwerkt:
 | [Issue #56](https://github.com/Geonovum/MIM-Werkomgeving/issues/56) | Aspect "gegevensgroep" ontbreekt in de tekst |  
 | [Issue #57](https://github.com/Geonovum/MIM-Werkomgeving/issues/57) | Aspect "attribuut" ontbreekt in de tekst |  
 | [Issue #59](https://github.com/Geonovum/MIM-Werkomgeving/issues/59) | Waarden voor typeAggregatie c.q. subklassen |  
+| [Issue #61](https://github.com/Geonovum/MIM-Werkomgeving/issues/61) | hoe modelleer je een keuze tussen attribuutsoorten en/of relatiesoorten? |  
 | [Issue #66](https://github.com/Geonovum/MIM-Werkomgeving/issues/66) | Herschrijven hoofdstuk 2 en 3 |  
 | [Issue #69](https://github.com/Geonovum/MIM-Werkomgeving/issues/69) | MIM document implementatie neutraal maken, met hoofdstuk voor MIM-UML |  
 | [Issue #70](https://github.com/Geonovum/MIM-Werkomgeving/issues/70) | MIM-LD vocabulaire maken |  
