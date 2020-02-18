@@ -74,7 +74,6 @@ View 2: Datatypen
 | Gestructureerd datatype | «Gestructuurd datatype» | (UML) Datatype           | Datatype           |
 | Data element            | «Data element»          | (UML) Property           | Attribute          |
 | Keuze                   | «Keuze»                 | (UML) Datatype           | Datatype           |
-| Keuze element           | «Keuze element»         | (UML) Property           | Attribute          |
 | Enumeratie              | \-                      | (UML) Enumeration        | Enumeration        |
 | Enumeratiewaarde        | \-                      | (UML) EnumerationLiteral | EnumerationLiteral |
 | Referentielijst         | «Referentielijst»       | (UML) Datatype           | Datatype           |
@@ -109,7 +108,41 @@ View 3a: Constraint
 *Keuze*
 
 
-![](media/KeuzeMetUML.png)
+
+![](media/KeuzeDatatype1UML.png)
+
+Keuze tussen datatypen
+
+
+
+
+![](media/KeuzeAttribuutsoort2UML.png)
+
+Keuze tussen attribuutsoorten
+
+
+
+
+
+![](media/KeuzeAttribuutsoort3UML.png)
+
+Keuze tussen attribuutsoorten binnen een attribuutsoort
+
+
+
+
+
+![](media/KeuzeRelatiesoort4UML.png)
+
+Keuze tussen relatiesoorten
+
+
+
+
+
+![](media/KeuzeRelatiedoel5UML.png)
+
+Keuze tussen relatiedoelen
 
 
 De 'keuze constructie' maakt een keuze mogelijk tussen meerdere attribuutsoorten, datatypen en relatiedoelen. Er zijn drie metaklassen met de naam Keuze maar elke keer als extensie van een andere UML metaklasse. Ook is er de metaklasse datatype als extensie van de uml metaklasse property. Een attribuut kan hiermee als keuze attribuut getypeerd worden.

@@ -123,9 +123,41 @@ Constraint
 
 
 
-![](media/KeuzeZonderUML.png)
+![](media/KeuzeDatatype1.png)
 
-Keuze
+Keuze tussen datatypen
+
+
+
+
+![](media/KeuzeAttribuutsoort2.png)
+
+Keuze tussen attribuutsoorten
+
+
+
+
+
+![](media/KeuzeAttribuutsoort3.png)
+
+Keuze tussen attribuutsoorten binnen een attribuutsoort
+
+
+
+
+
+![](media/KeuzeRelatiesoort4.png)
+
+Keuze tussen relatiesoorten
+
+
+
+
+
+![](media/KeuzeRelatiedoel5.png)
+
+Keuze tussen relatiedoelen
+
 
 
 
