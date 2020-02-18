@@ -2,9 +2,9 @@
 
 ## Structuur metamodel in UML
 
-Dit hoofdstuk beschrijft hoe de modelelementen worden uitgedrukt in UML.
+Dit hoofdstuk beschrijft hoe je een informatiemodel kan maken in UML, oftewel hoe de modelelementen uit het hoofdstuk Algemeen worden uitgedrukt in UML. 
 
-De eerste paragraaf bevat diagrammen, in UML. Elk diagram geeft een aantal modelelementen weer.
+De eerste paragraaf bevat diagrammen, in UML. Elk diagram geeft een aantal modelelementen weer. 
 Het geheel van diagrammen, in samenhang, is opgenomen in de bijlage [Template naamgeving conventies](#template-naamgeving-conventies).
 
 Uitgangspunten voor het metamodel in UML zijn:
