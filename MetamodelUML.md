@@ -2,9 +2,9 @@
 
 ## Structuur metamodel in UML
 
-Dit hoofdstuk beschrijft hoe de modelelementen worden uitgedrukt in UML.
+Dit hoofdstuk beschrijft hoe je een informatiemodel kan maken in UML, oftewel hoe de modelelementen uit het hoofdstuk Algemeen worden uitgedrukt in UML. 
 
-De eerste paragraaf bevat diagrammen, in UML. Elk diagram geeft een aantal modelelementen weer.
+De eerste paragraaf bevat diagrammen, in UML. Elk diagram geeft een aantal modelelementen weer. 
 Het geheel van diagrammen, in samenhang, is opgenomen in de bijlage [Template naamgeving conventies](#template-naamgeving-conventies).
 
 Uitgangspunten voor het metamodel in UML zijn:
@@ -552,19 +552,7 @@ Een Keuze worden naar de volgende aspecten gespecificeerd:
 | **Definitie**    | 1                 | Algemeen metagegeven. | *Body van de metaclass Comment*      | *Notes*        |
 | **Datum opname** | 1                 | Algemeen metagegeven. |                                      | *Tagged value* |
 
-**Specificatie voor «Keuze element»**
-
-De keuze elementen worden naar de volgende aspecten gespecificeerd:
-
-| **Aspect**            | **Kardinaliteit** | **Toelichting**                                                             | **In UML 2.5**                                                  | **In EA**      |
-|-----------------------|-------------------|-----------------------------------------------------------------------------|-----------------------------------------------------------------|----------------|
-| **Naam**              | 1                 | Algemeen metagegeven.                                                       | *name van de metaclass Named element*                           | *Name*         |
-| **Begrip**            | 0..\*             | Algemeen metagegeven.                                                       |                                                   | *Tagged value* |
-| **Definitie**         | 0..1              | Algemeen metagegeven.                                                       | *Body van de metaclass Comment*                                 | *Notes*        |
-| **- Type**            | 1                 | Algemeen metagegeven.                                                       |                                                                 | *Type*         |
-| **- Patroon**         | 0..1              | Algemeen metagegeven.                                                       |                                                                 | *Tagged value* |
-| **- Formeel patroon** | 0..1              | Algemeen metagegeven.                                                       |                                                                 | *Tagged value* |
-| **Kardinaliteit**     | 1                 | Algemeen metagegeven. *De kardinaliteit van een keuze element is altijd 1.* | *lowerValue en upperValue van de metaclass MultiplicityElement* | *Multiplicity* |
+*Opmerking: de modelelementen waaruit gekozen kan worden heten sinds MIM 1.1 geen keuze elementen meer. Keuze element is komen te vervallen.*
 
 ### Specificatie metagegevens voor packages
 

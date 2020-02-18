@@ -53,6 +53,8 @@ In de SPARQL rules wordt gebruik gemaakt van een aantal SPARQL functies. In onde
 |t:propertyshapeuri|Formuleert de uri voor een propertyshape op basis van de naam van een MIM resource en de naam van de MIM resource die hiervan de "bezitter" is. De propertyshape URI is opgebouwd als `{shape-namespace}#{t:CamelCase(bezittersnaam)}-{t:camelCase(naam)}`. Zie ook `t:nodeshapeuri`.|
 |t:nodepropertyuri|Formuleert de uri voor een property op basis van de naam van een MIM resource en de naam van de MIM resource die hiervan de "bezitter" is. De property URI is opgebouwd als `{namespace}#{t:CamelCase(bezittersnaam)}-{t:camelCase(naam)}`. Zie ook `t:classuri`.|
 |t:statementuri|Formuleert de uri voor een rdf:Statement op basis van zijn afzonderlijke elementen. Mogelijke invulling kan het maken van een hash zijn op basis van de aaneenschakeling van subject, predicate en object.|
+|t:schemeuri|Formuleert de uri voor een concept-scheme op basis van de naam van een MIM resource. De concept-scheme URI is opgebouwd als `{namespace}/id/scheme/{t:CamelCase(naam)}`. De `{namespace}` is een vooraf vastgestelde waarde die gelijk is aan de locatie van de package.|
+|t:concepturi|Formuleert de uri voor een concept op basis van de naam van een MIM resource. De concept URI is opgebouwd als `{namespace}/id/concept/{t:CamelCase(naam)}`. De `{namespace}` is een vooraf vastgestelde waarde die gelijk is aan de locatie van de package.|
 |t:mincount|Formuleert de minimum kardinaliteit op basis van een kardinaliteitsaanduiding (zie bij mim:kardinaliteit). De waarde kan ook unbound zijn, in dat geval wordt ook de variable niet gebound en daardoor de betreffende triple niet opgevoerd.|
 |t:maxcount|Formuleert de maximum kardinaliteit op basis van een kardinaliteitsaanduiding (zie bij mim:kardinaliteit). De waarde kan ook unbound zijn, in dat geval wordt ook de variable niet gebound en daardoor de betreffende triple niet opgevoerd.|
 
@@ -94,21 +96,22 @@ Onderstaande tabellen geven een overzicht van alle transformaties en een referen
 |`mim:Relatierol`|`sh:PropertyShape`, `owl:ObjectProperty`|[Relatierol](#transformatie-relatierol)|
 |`mim:Referentielijst`|`owl:Class`, `sh:NodeShape`|[Referentielijst](#transformatie-referentielijst)|
 |`mim:ReferentieElement`|`owl:Class`, `sh:NodeShape`|[Referentie-element](#transformatie-referentie-element)|
-|`mim:Enumeratie`|n.n.b.|[Enumeratie](#transformatie-enumeratie)|
-|`mim:Enumeratiewaarde`|n.n.b.|[Enumeratiewaarde](#transformatie-enumeratiewaarde)|
-|`mim:Codelijst`|n.n.b.|[Codelijst](#transformatie-codelijst)|
+|`mim:Enumeratie`|`owl:Class`, `sh:NodeShape`, `skos:ConceptScheme`|[Enumeratie](#transformatie-enumeratie)|
+|`mim:Enumeratiewaarde`|Enumeratie-klasse|[Enumeratiewaarde](#transformatie-enumeratiewaarde)|
+|`mim:Codelijst`|`owl:Class`, `sh:NodeShape`|[Codelijst](#transformatie-codelijst)|
 |`mim:Datatype`|n.v.t.|Abstracte klasse|
 |`mim:PrimitiefDatatype`|`rdfs:Datatype`|[Primitief datatype](#transformatie-primitief-datatype)|
 |`mim:GestructureerdDatatype`|`sh:NodeShape`|[Gestructureerd datatype](#transformatie-gestructureerd-datatype)|
 |`mim:DataElement`|`owl:ObjectProperty`, `owl:DatatypeProperty`, `sh:PropertyShape`|[Data element](#transformatie-data-element)|
-|`mim:Keuze`|`sh:xone`, `rdf:List`|[Keuze (datatype en relatiedoel)](#transformatie-keuze)|
+|`mim:Keuze`|`sh:xone`, `rdf:List`|[Keuze](#transformatie-keuze)|
+|`mim:Keuzeconstraint`|`sh:xone`, `rdf:List`|[Keuze](#transformatie-keuze)|
 |`mim:Package`|n.v.t.|Abstracte klasse|
 |`mim:Domein`|`owl:Ontology`|[Domein](#transformatie-domein)|
 |`mim:Extern`|`owl:imports`|[Extern](#transformatie-extern)|
 |`mim:View`|`owl:imports`|[View](#transformatie-view)|
 |`mim:Constraint`|`mim:Constraint`|[Constraint](#transformatie-constraint)|
-|`mim:RelatierolSource`|`sh:PropertyShape`, `owl:ObjectProperty`|[Relatierol](#transformatie-relatierol)|
-|`mim:RelatierolTarget`|`sh:PropertyShape`, `owl:ObjectProperty`|[Relatierol](#transformatie-relatierol)|
+|`mim:RelatierolBron`|`sh:PropertyShape`, `owl:ObjectProperty`|[Relatierol](#transformatie-relatierol)|
+|`mim:RelatierolDoel`|`sh:PropertyShape`, `owl:ObjectProperty`|[Relatierol](#transformatie-relatierol)|
 
 ### Eigenschappen
 
@@ -151,9 +154,10 @@ Onderstaande tabellen geven een overzicht van alle transformaties en een referen
 |`mim:specificatieFormeel`|`mim:specificatieFormeel`|[specificatie-formeel](#transformatie-specificatie-formeel)|
 |`mim:attribuut`|`sh:property`|[attribuut](#transformatie-attribuut)|
 |`mim:gegevensgroep`|`sh:property`|[gegevensgroep](#transformatie-gegevensgroep-eigenschap)|
-|`mim:waarde`|`rdf:type`|[Enumeratie](#transformatie-enumeratie)|
+|`mim:waarde`|`rdf:type`, `skos:inScheme`|[Enumeratie](#transformatie-enumeratie)|
 |`mim:constraint`|`mim:constraint`|[Constraint](#transformatie-constraint)|
 |`mim:element`|`sh:property`|[Data element](#transformatie-data-element)|
+|`mim:indicatieClassificerend`|`rdfs:subClassOf` (onder meer)|[indicatie classificerend](#transformatie-indicatie-classificerend)|
 
 ### Instanties (datatypen)
 
@@ -444,7 +448,7 @@ WHERE {
   ?bezitter mim:naam ?bezittersnaam
   BIND (t:propertyshapeuri(?bezittersnaam,?relatiesoortnaam) as ?propertyshape)
   BIND (t:propertyuri(?relatiesoortnaam) as ?objectproperty)
-  FILTER (?type = mim:RelatierolSource || ?type = mim:RelatierolTarget)
+  FILTER (?type = mim:RelatierolBron || ?type = mim:RelatierolDoel)
 }
 
 CONSTRUCT {
@@ -452,13 +456,13 @@ CONSTRUCT {
 }
 WHERE {
   ?sourceproperty a owl:ObjectProperty.
-  ?sourceproperty mim:equivalent ?relatierolsource.
-  ?relatierolsource a mim:RelatierolSource.
+  ?sourceproperty mim:equivalent ?relatierolbron.
+  ?relatierolbron a mim:RelatierolBron.
   ?targetproperty a owl:ObjectProperty.
-  ?targetproperty mim:equivalent ?relatieroltarget.
-  ?relatieroltarget a mim:RelatierolTarget.
-  ?relatiesoort mim:relatierol ?relatierolsource,
-                               ?relatieroltarget.
+  ?targetproperty mim:equivalent ?relatieroldoel.
+  ?relatieroldoel a mim:RelatierolDoel.
+  ?relatiesoort mim:relatierol ?relatierolbron,
+                               ?relatieroldoel.
 }
 </pre>
 
@@ -466,37 +470,165 @@ WHERE {
 
 > Een lijst met een opsomming van de mogelijke domeinwaarden van een attribuutsoort, die buiten het model in een externe waardenlijst worden beheerd. De domeinwaarden in de lijst kunnen in de loop van de tijd aangepast, uitgebreid, of verwijderd worden, zonder dat het informatiemodel aangepast wordt (in tegenstelling tot bij een enumeratie).
 
-<aside id='trans-9' class='note'>
-Het MIM doet geen uitspraak hoe een referentielijst op de externe locatie wordt gepubliceerd. Voor de transformatie wordt de aanname gedaan dat de externe locatie overeen komt met een verzameling van uitspraken van (een subklasse van) `skos:Concept`, en dat op de URL aangeduid met het aspect `mim:locatie` van de referentielijst deze verzameling is te vinden. Bovendien wordt daarbij uitgegaan dat deze referentielijst zelf een `skos:ConceptScheme` is, waarbij de identificatie van dit `skos:ConceptScheme` gelijk is aan de URL van de locatie. Wel kan in een concrete transformatie deze regels getuned worden naar de specifieke behoefte.
+Een waardelijst kan verschillende soorten dingen opsommen. Een lijst met waardes, bijv. een opsomming van nummers, maar ook een lijst met concepten, datatypes, of objecten. Het is dan ook niet triviaal om een goede automatische vertaling te bepalen die een waardelijst kan vertalen naar Linked Data.
 
-Deze constructie wordt ook toegepast bij enumeraties en codelijsten.
-</aside>
+Het MIM biedt echt aanknopingspunten hoe een waardelijst gemodelleerd dient te worden:
 
-> **VERDER UITWERKEN**
->
->  Er zijn drie waardelijstconstructies gebruikelijk in RDF: (1) Conceptschema, (2) Collectie en (3) Klasse. Bovenstaande invulling gaat uit van de eerste situatie. Maar ook de andere twee situaties komen voor. Hier zal nog een oplossing voor gezocht moeten worden.
+1. Een enumeratie geeft een opsomming van waarden, waarbij de waarden zelf ook eigenschappen kunnen hebben. Het zijn met andere woorden geen literals, maar resources;
+2. Een referentielijst geeft een opsomming van waarden, waarbij van de waarden specifieke kenmerken worden opgenomen die gespecificeerd zijn middels referentie-elementen. Ook referentiewaarden zijn met andere woorden resources, met specifieke eigenschappen.
+3. Een codelijst is gelijk aan een referentielijst, met dit verschil dat de codelijst zelf niet gespecificeerd is, maar "direct" is overgenomen van een externe partij.
+
+In de Inspire RDF Guidelines wordt voorgeschreven om een enumeratie te modelleren als rdfs:Datatype in plaats van als klasse. Dit leidt tot enumeratiewaardes die een literal zijn, met het datatype van de enumeratie. Bijvoorbeeld `"hoog"^^imgolf:NatuurwaardeValue`. De reden om hiervan af te wijken is omdat enumeraties vaker waardelijsten zijn die een object of concept modelleren, dan een lijst van letterlijke waardes. Door deze waardes als objecten te modelleren blijft het mogelijk om nieuwe uitdrukkingen te doen over de waardes.
+
+Voor het MIM wordt een waardelijst dan ook vertaald naar een klasse gelijknamig aan de waardelijst (referentielijst, enumeratie of codelijst).
+
+Voor een referentielijst geldt bovendien dat ook nog een `sh:NodeShape` wordt gedefinieerd, waar de referentie-elementen vervolgens aan gehangen kunnen worden.
+
+<pre class='ex-sparql'>
+CONSTRUCT {
+  ?class a owl:Class.
+  ?class mim:equivalent ?referentielijst.
+  ?nodeshape a sh:NodeShape.
+  ?nodeshape mim:equivalent ?referentielijst.
+  ?nodeshape sh:targetClass ?class.
+}
+WHERE {
+  ?referentielijst a mim:Referentielijst.
+  ?referentielijst mim:naam ?referentielijstnaam.
+  BIND (t:classuri(?referentielijstnaam) as ?class)
+  BIND (t:nodeshapeuri(?referentielijstnaam) as ?nodeshape)
+}
+</pre>
 
 ### Transformatie: Referentie element
 
 > Een eigenschap van een object in een referentielijst in de vorm van een gegeven.
 
+Een `mim:ReferentieElement` wordt op dezelfde wijze omgezet als een `mim:Attribuutsoort`, waarbij de referentielijst de "bezitter" is van het referentie element. De relatie tussen de referentielijst en het referentie element wordt direct meegenomen in de transformatie.
+
+De URI van de propertyshape wordt afgeleid van de naam van de referentielijst dat het referentie element "bezit" en de naam van het referentie element. De URI van de datatypeproperty wordt ook op die manier afgeleid. Dit in afwijking van de wijze waarop dit bij een attribuutsoort gebeurt. Reden is het feit dat een referentie element echt uniek bij een gestructureerd datatype hoort, conform het metamodel (er is sprake van een compositie-aggregatie). Dit is weer vergelijkbaar met de situatie bij `mim:datatElement`.
+
+<pre class='ex-sparql'>
+CONSTRUCT {
+  ?nodeshape sh:property ?propertyshape.
+  ?propertyshape a sh:PropertyShape.
+  ?propertyshape sh:path ?datatypeproperty.
+  ?propertyshape sh:nodekind sh:Literal.
+  ?propertyshape mim:equivalent ?referentielement.
+  ?datatypeproperty a owl:DatatypeProperty.
+  ?datatypeproperty mim:equivalent ?referentielement.
+}
+WHERE {
+  ?referentielement a mim:ReferentieElement.
+  ?referentielement mim:naam ?referentielementnaam.
+  ?bezitter mim:element ?referentielement.
+  ?bezitter mim:naam ?bezittersnaam
+  BIND (t:nodeshapeuri(?bezittersnaam) as ?nodeshape)
+  BIND (t:propertyshapeuri(?bezittersnaam,?referentieelementnaam) as ?propertyshape)
+  BIND (t:nodepropertyuri(?referentieelementnaam) as ?datatypeproperty)
+}
+</pre>
+
 ### Transformatie: Enumeratie
 
 > Een datatype waarvan de mogelijke waarden limitatief zijn opgesomd in een statische lijst.
 
-<aside id='trans-10' class='note'>
-Een enumeratie kan verschillende soorten dingen opsommen. Een lijst met waardes, bijv. een opsomming van nummers, maar ook een lijst met concepten, datatypes, of objecten. Het is dan ook niet triviaal om een goede automatische vertaling te bepalen die een enumeratie kan vertalen naar Linked Data. Om deze reden kiezen we voor een standaardtransformatie naar een klasse gelijknamig aan de enumeratieklasse, en instanties van deze klasse voor elk van de geënumereerde waardes. De geënumereeerde waardes worden ook met een `owl:oneOf` constructie begrensd door de enumeratieklasse. De SHACL gegevensregel maakt gebruikt van het `sh:in` construct om de enumeratie uit te drukken.
+Een `mim:Enumeratie` wordt vertaald naar een `owl:Class` in combinatie met een `sh:Nodeshape`, `skos:ConceptScheme` en enkele `sh:PropertyShape`s, waarbij de betreffende klasse een `rdfs:subClassOf skos:Concept` is.
 
-In de Inspire RDF Guidelines wordt voorgeschreven om een enumeratie te modelleren als rdfs:Datatype in plaats van als klasse. Dit leidt tot enumeratiewaardes die een literal zijn, met het datatype van de enumeratie. Bijvoorbeeld `"hoog"^^imgolf:NatuurwaardeValue`. De reden om hiervan af te wijken is omdat enumeraties vaker waardelijsten zijn die een object of concept modelleren, dan een lijst van letterlijke waardes. Door deze waardes als objecten te modelleren blijft het mogelijk om nieuwe uitdrukkingen te doen over de waardes.
-</aside>
+De reden om deze vertaling te maken, is dat in het MIM een enumeratie onderdeel is van het eigen model, en zeer specifieke eigenschappen kent. Het is expliciet geen "normale" klasse (daarvoor lenen `mim:Objecttype` of `mim:Referentielijst` zich meer). Maar het is ook geen enkele opsomming van enkelvoudige waarden.
+
+De waarden van een enumeratie zijn voorkomens van deze klasse en onderdeel van het `skos:ConceptScheme` dat aan deze enumeratie zit.
+
+<pre class='ex-sparql'>
+CONSTRUCT {
+  ?class a owl:Class.
+  ?class rdfs:subClassOf skos:Concept.
+  ?class mim:equivalent ?enumeratie.
+  ?nodeshape a sh:NodeShape.
+  ?nodeshape mim:equivalent ?enumeratie.
+  ?nodeshape sh:targetClass ?class.
+  ?nodeshape sh:property [
+    sh:path rdfs:label;
+  ].
+  ?nodeshape sh:property [
+    sh:path skos:notation;
+  ].
+  ?nodeshape sh:property [
+    sh:path skos:definition
+  ].
+  ?nodeshape sh:property [
+    sh:path rdf:type;
+    sh:hasValue ?class
+  ].
+  ?nodeshape sh:property [
+    sh:path skos:inScheme;
+    sh:hasValue ?scheme
+  ]
+}
+WHERE {
+  ?enumeratie a mim:Enumeratie.
+  ?objecttype mim:naam ?enumeratienaam.
+  BIND (t:classuri(?enumeratienaam) as ?class)
+  BIND (t:nodeshapeuri(?enumeratienaam) as ?nodeshape)
+  BIND (t:schemeuri(?enumeratienaam) as ?scheme)
+}
+</pre>
 
 ### Transformatie: Enumeratiewaarde
 
 > Een gedefinieerde waarde, in de vorm van een eenmalig vastgesteld constant gegeven.
 
+Enumeratiewaarden worden vertaald naar voorkomens van de klasse die bepaald wordt door de Enumeratie zelf. Voor de URI wordt het metagegeven `mim:code` gebruikt, tenzij deze niet aanwezig is.
+
+<pre class='ex-sparql'>
+CONSTRUCT {
+  ?concept a ?class.
+  ?concept skos:inScheme ?scheme.
+  ?concept mim:equivalent ?waarde.
+}
+WHERE {
+  ?waarde a mim:Enumeratiewaarde.
+  ?enumeratie mim:waarde ?waarde.
+  ?class mim:equivalent ?enumeratie.
+  ?class a owl:Class.
+  ?scheme mim:equivalent ?enumeratie.
+  ?scheme a skos:ConceptScheme.
+  {
+    {
+      ?waarde mim:naam ?notation
+      FILTER NOT EXISTS {?waarde mim:code ?nocode}
+    }
+    UNION
+    {
+      ?waarde mim:code ?notation
+    }
+  }
+  BIND (t:concepturi(?notation) as ?concept)
+}
+</pre>
+
 ### Transformatie: Codelijst
 
 > Een referentielijst die extern wordt beheerd, en geen onderdeel is van het informatiemodel.
+
+Een `mim:Codelijst` wordt op dezelfde wijze getransformeerd als een `mim:Referentielijst`.
+
+<pre class='ex-sparql'>
+CONSTRUCT {
+  ?class a owl:Class.
+  ?class mim:equivalent ?codelijst.
+  ?nodeshape a sh:NodeShape.
+  ?nodeshape mim:equivalent ?codelijst.
+  ?nodeshape sh:targetClass ?class.
+}
+WHERE {
+  ?codelijst a mim:Codelijst.
+  ?codelijst mim:naam ?codelijstnaam.
+  BIND (t:classuri(?codelijstnaam) as ?class)
+  BIND (t:nodeshapeuri(?codelijstnaam) as ?nodeshape)
+}
+</pre>
+
 
 ## Datatypen
 
@@ -613,9 +745,9 @@ CONSTRUCT {
   ?propertyshape a sh:PropertyShape.
   ?propertyshape sh:path ?datatypeproperty.
   ?propertyshape sh:nodekind sh:Literal.
-  ?propertyshape mim:equivalent ?attribuutsoort.
+  ?propertyshape mim:equivalent ?dataelement.
   ?datatypeproperty a owl:DatatypeProperty.
-  ?datatypeproperty mim:equivalent ?attribuutsoort.
+  ?datatypeproperty mim:equivalent ?dataelement.
 }
 WHERE {
   ?dataelement a mim:DataElement.
@@ -643,7 +775,8 @@ CONSTRUCT {
   ?list rdf:rest rdf:nil.
 }
 WHERE {
-  ?keuze a mim:Keuze.
+  ?keuze a ?type.
+  FILTER (?type = mim:Keuze || ?type = mim:Keuzeconstraint)
   ?keuze mim:naam ?keuzenaam.
   ?keuze ?keuzerelatie ?keuzewaarde.
   BIND (t:nodeshapeuri(?keuzenaam) as ?shape)
@@ -1342,27 +1475,47 @@ WHERE {
 ### transformatie: code
 > De in een registratie of informatiemodel aan de enumeratiewaarde toegekend unieke code (niet te verwarren met alias, zoals bedoeld in 2.6.1).
 
-> **VERDER UITWERKEN**
->
-> We hebben nog niet gespecificeerd hoe we enumeraties vertalen. In NEN3610-LD is standaardtransformatie een transformatie naar een klasse gelijknamig aan de enumeratieklasse, en instanties van deze klasse voor elk van de geënumereerde waardes. Als we dit volgen zouden we de `mim:code` kunnen vertalen naar een `rdfs:label` of `skos:altLabel`.
+Een `mim:code` wordt vertaald naar een `skos:notation`.
+
+<pre class='ex-sparql'>
+CONSTRUCT {
+  ?subject skos:notation ?notation
+}
+WHERE {
+  ?modelelement mim:code ?notation.
+  ?subject mim:equivalent ?modelelement
+}
+</pre>
 
 ### transformatie: specificatie-tekst
 > De specificatie van de constraint in normale tekst.
 
-> **VERDER UITWERKEN**
->
-> We hebben nog niet gespecificeerd hoe we constraints vertalen. Voorstel: alleen vertalen naar documentatie in het MIM model in RDF. In de toekomst wellicht vertalen naar SHACL.
-
 Een `mim:specificatieTekst` wordt direct, zonder aanpassing, overgenomen in het vertaalde model, als onderdeel van de [transformatieregel voor constraints](#constraint).
+
+<pre class='ex-sparql'>
+CONSTRUCT {
+  ?subject skos:specificatieTekst ?specificatietekst
+}
+WHERE {
+  ?modelelement mim:specificatieTekst ?specificatietekst.
+  ?subject mim:equivalent ?modelelement
+}
+</pre>
 
 ### transformatie: specificatie-formeel
 > De beschrijving van de constraint in een formele specificatietaal, in OCL.
 
-> **VERDER UITWERKEN**
->
-> We hebben nog niet gespecificeerd hoe we constraints vertalen. Voorstel: alleen vertalen naar documentatie in het MIM model in RDF. In de toekomst wellicht vertalen naar SHACL.
-
 Een `mim:specificatieFormeel` wordt direct, zonder aanpassing, overgenomen in het vertaalde model, als onderdeel van de [transformatieregel voor constraints](#constraint).
+
+<pre class='ex-sparql'>
+CONSTRUCT {
+  ?subject skos:specificatieFormeel ?specificatieformeel
+}
+WHERE {
+  ?modelelement mim:specificatieFormeel ?specificatieformeel.
+  ?subject mim:equivalent ?modelelement
+}
+</pre>
 
 ### transformatie: attribuut
 
@@ -1397,6 +1550,43 @@ WHERE {
   ?propertyshape mim:equivalent ?gegevensgroep.
   ?propertyshape a sh:PropertyShape.
 
+}
+</pre>
+
+### transformatie: indicatie classificerend
+
+Een `mim:indicatieClassificerend` kent een complexe vertaling. De betekenis van dit veld is dat dit veld een waardelijst kent, waarbij de waarden zelf feitelijk als subklassen gezien moeten worden van het objecttype waartoe het attribuutsoort hoort die deze indicatie heeft.
+
+De vertaling hieronder gaat er vanuit dat sprake is van een enumeratie. In geval van een referentielijst dan geldt een vergelijkbare constructie. Echter, omdat bij een referentielijst de waarden zelf niet onderdeel zijn van het model, kan niet met zekerheid wordt gesteld dat alle gegevens aanwezig zijn voor een vertaling.
+
+Bij de vertaling worden de `mim:Enumeratiewaarden` omgezet naar een `owl:Class`, waarbij een `rdfs:subClassOf` relatie wordt gelegd tussen deze klasse en de `owl:Class` die het equivalent is van het `mim:Objecttype` dat bij de `mim:Attribuutsoort` hoort met de indicatie classificerend.
+
+Aangezien de overige metagegevens getransformeerd worden op basis van de `mim:equivalent` relatie, is het van belang dat onderstaande transformatie wordt uitgevoerd vóór de transformatie van de overige metakenmerken, maar ná de transformatie van de metaklassen.
+
+<pre class='ex-sparql'>
+CONSTRUCT {
+  ?class a owl:Class.
+  ?class rdfs:subClassOf ?superclass.
+  ?class mim:equivalent ?enumeratiewaarde.
+}
+WHERE {
+  ?objecttype mim:attribuut ?attribuutsoort.
+  ?objecttype mim:equivalent ?superclass.
+  ?superclass a owl:Class.
+  ?attribuutsoort mim:indicatieClassificerend true .
+  ?attribuutsoort mim:type ?enumeratie.
+  ?enumeratie mim:waarde ?enumeratiewaarde.
+  {
+    {
+      ?enumeratiewaarde mim:naam ?notation
+      FILTER NOT EXISTS {?enumeratiewaarde mim:code ?nocode}
+    }
+    UNION
+    {
+      ?enumeratiewaarde mim:code ?notation
+    }
+  }
+  BIND (t:classeuri(?notation) as ?class)
 }
 </pre>
 

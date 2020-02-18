@@ -70,7 +70,11 @@ Zonder de mogelijkheid van keuze, zou je te maken krijgen met twee attribuutsoor
 
 In MIM modelleren we daarom het attribuutsoort adres als een datatype, welke een keuze betreft tussen het datatype CharacterString en het datatype Adrestype.
 
-## Use case 2a: een keuze tussen twee attribuutsoorten bij een objecttype
+## Use case 2 een keuze tussen twee attribuutsoorten 
+
+Bij een objecttype "Betalingsopdracht" moet, naast het bedrag, ook een betalingskenmerk worden opgenomen OF een omschrijving. Eén van beide attribuutsoorten moet worden ingevuld. Het is niet toegestaan dat beide velden worden ingevuld: alleen een betalingskenmerk, of alleen een omschrijving.
+
+### 2a: het objecttype kent alleen deze twee attribuutsoorten, de keuze zelf is betekenisloos
 
 Bij een objecttype "Betalingsopdracht" moet, naast het bedrag, ook een betalingskenmerk worden opgenomen OF een omschrijving. Eén van beide attribuutsoorten moet worden ingevuld. Het is niet toegestaan dat beide velden worden ingevuld: alleen een betalingskenmerk, of alleen een omschrijving.
 
@@ -118,10 +122,12 @@ vb:Betalingsopdracht a mim:Objecttype;
 
 Zonder de mogelijkheid van keuze zouden beide attribuutsoorten opgenomen zijn bij het objecttype als optionele velden, met een constraint dat een van beide gevuld moet zijn. Dit is in deze use-case niet echt een probleem. Wel is de kardinaliteit ook in dit geval dan niet erg duidelijk gemodelleerd: die zou dan [0..1] moeten worden, maar dat doet geen recht aan het feit dat er één verplicht aanwezig moet zijn, en er ook geen twee naast elkaar mogen zijn. De werkelijke kardinaliteit is [1..1] op de keuze zelf. Met een constraint is dit op zich wel correct te modelleren, maar met een modellering van een keuze is dit veel duidelijker.
 
-## Use case 2b: een keuze tussen twee attribuutsoorten bij een gestructureerd datatype
+### Use case 2b: de keuze zelf is (ook) zelfstandig betekenisvol voor het objecttype 
 Bij een objecttype "Betalingsopdracht" moet een bedrag en een beschrijving worden opgenomen. De beschrijving is feitelijk een structuur waarbij de keuze moet worden gemaakt tussen een betalingskenmerk OF een omschrijving. Eén van beide attribuutsoorten moet worden gebruikt binnen de structuur die gebruikt wordt voor een waarde van de beschrijving. Het is niet toegestaan dat beide velden worden ingevuld: alleen een betalingskenmerk, of alleen een omschrijving.
 
-Deze use case is voor een groot deel overeenkomstig aan use case 2a. Het verschil zit in het feit dat de keuze niet betrekking heeft op attribuutsoorten van een objecttype, maar attribuutsoorten van een gestructureerd datatype.
+Deze use case is voor een groot deel overeenkomstig aan use case 2a. Het verschil zit in het feit dat de keuze niet betrekking heeft op attribuutsoorten van een objecttype, maar dat de keuze tussen de twee attribuutsoorten vanuit het objecttype gezien 
+
+van een gestructureerd datatype.
 
 Onderstaand figuur geeft in zowel UML als Linked Data weer hoe beide modellen er uit zouden zien voor beide afzonderlijke situaties (en er geen nog sprake is van een constraint of een keuze).
 
