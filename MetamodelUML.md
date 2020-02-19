@@ -113,44 +113,45 @@ Keuze tussen:
 - relatiesoorten
 - relatiedoelen
 
-Voor elk geldt een apart metamodel.
-
+Voor elk geldt een eigens subset van het metamodel.
+ 
+ 
 ![](media/KeuzeDatatype1UML.png)
 
 Keuze tussen datatypen
-
-
-
+ 
+ 
+ 
 
 ![](media/KeuzeAttribuutsoort2UML.png)
 
 Keuze tussen attribuutsoorten
-
-
-
+ 
+ 
+ 
 
 
 ![](media/KeuzeAttribuutsoort3UML.png)
 
 Keuze tussen attribuutsoorten binnen een attribuutsoort
-
-
-
+ 
+ 
+ 
 
 
 ![](media/KeuzeRelatiesoort4UML.png)
 
 Keuze tussen relatiesoorten
-
-
-
+ 
+ 
+ 
 
 
 ![](media/KeuzeRelatiedoel5UML.png)
 
 Keuze tussen relatiedoelen
-
-
+ 
+ 
 
 
 
