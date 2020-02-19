@@ -115,43 +115,24 @@ Keuze tussen:
 
 Voor elk geldt een eigens subset van het metamodel.
  
- 
+*Keuze tussen datatypen*
 ![](media/KeuzeDatatype1UML.png)
 
-Keuze tussen datatypen
- 
- 
- 
 
+*Keuze tussen attribuutsoorten*
 ![](media/KeuzeAttribuutsoort2UML.png)
 
-Keuze tussen attribuutsoorten
- 
- 
- 
 
-
+*Keuze tussen attribuutsoorten binnen een attribuutsoort*
 ![](media/KeuzeAttribuutsoort3UML.png)
 
-Keuze tussen attribuutsoorten binnen een attribuutsoort
- 
- 
- 
 
-
+*Keuze tussen relatiesoorten*
 ![](media/KeuzeRelatiesoort4UML.png)
 
-Keuze tussen relatiesoorten
- 
- 
- 
 
-
+*Keuze tussen relatiedoelen*
 ![](media/KeuzeRelatiedoel5UML.png)
-
-Keuze tussen relatiedoelen
- 
- 
 
 
 

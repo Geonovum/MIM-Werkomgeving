@@ -34,44 +34,28 @@ Deze bijlage bevat alle modelelementen en metagegevens in één diagram.
 
 *Keuze*
 
-
-
+*Keuze tussen datatypen*
 ![](media/KeuzeDatatype1metMeta.png)
 
-Keuze tussen datatypen
- 
- 
- 
 
+*Keuze tussen attribuutsoorten*
 ![](media/KeuzeAttribuutsoort2metMetaUML.png)
 
-Keuze tussen attribuutsoorten
- 
- 
- 
 
-
+*Keuze tussen attribuutsoorten binnen de context van een attribuutsoort*
 ![](media/KeuzeAttribuutsoort3metMetaUML.png)
 
-Keuze tussen attribuutsoorten binnen een attribuutsoort
- 
- 
- 
 
-
+*Keuze tussen relatiesoorten*
 ![](media/KeuzeRelatiesoort4metMeta.png)
 
-Keuze tussen relatiesoorten
- 
- 
- 
 
-
+*Keuze tussen relatiedoelen*
 ![](media/KeuzeRelatiedoel5metMetaUML.png)
  
  
  
-Keuze tussen relatiedoelen
+
 
 *Packages*
 

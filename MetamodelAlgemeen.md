@@ -133,44 +133,24 @@ Keuze tussen:
 
 Voor elk geldt een eigen subset van het metamodel.
  
- 
+*Keuze tussen datatypen*
 ![](media/KeuzeDatatype1.png)
 
-Keuze tussen datatypen
- 
- 
- 
 
+*Keuze tussen attribuutsoorten*
 ![](media/KeuzeAttribuutsoort2.png)
-
-Keuze tussen attribuutsoorten
  
  
- 
- 
-
+*Keuze tussen attribuutsoorten binnen een attribuutsoort* 
 ![](media/KeuzeAttribuutsoort3.png)
 
-Keuze tussen attribuutsoorten binnen een attribuutsoort
- 
- 
- 
 
-
+*Keuze tussen relatiesoorten*
 ![](media/KeuzeRelatiesoort4.png)
 
-Keuze tussen relatiesoorten
- 
- 
- 
 
-
+*Keuze tussen relatiedoelen*
 ![](media/KeuzeRelatiedoel5.png)
-
-Keuze tussen relatiedoelen
-
-
-
 
 
 *Relatierol*
