@@ -32,6 +32,8 @@ van UML en W3C, in de volgende hoofdstukken.
 
 Bij het maken van een informatiemodel modelleer je in feite gewoon met de modelelementen, en geef je aan dat een Persoon een Objecttype is en een geboortedatum een attribuutsoort.  
 
+Hierna volgen eerst diagrammen met de modelelementen, als overzicht. In de paragrafen erna wordt de betekenis van elk van deze modelelementen beschreven, met een definitie en een toelichting en een voorbeeld. Tot slot volgt een paragraaf met metadata die bijgehouden wordt, of kan worden, bij een modelelement. 
+
 ### Structuur metamodel
 
 Deze paragraaf bevat een overzicht van het metamodel voor informatiemodellen, kortweg MIM, en geeft alle
@@ -194,10 +196,7 @@ De betekenis van deze modelelementen en de beschrijvingen ervan staan in [Packag
 
 ![](media/PackageZonderUml.png)
 
-
-### Betekenis modelelementen
-
-#### Objecttypen en attribuutsoorten  
+### Objecttypen en attribuutsoorten  
 In deze paragraaf staan alle modelelementen opgesomd, die gebruikt worden bij
 het maken van een informatiemodel.
 
