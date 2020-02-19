@@ -34,7 +34,7 @@
 				</AppliesTo>
 				<TaggedValues>
 					<Tag name="MIM::Primitief datatype(UML::PrimitiveType)" type="" description="" unit="" values="" default="Primitief datatype"/>
-					<Tag name="MIM::Gestructureerd datatype(UML::Datatype)" type="" description="" unit="" values="" default="Gestructureerd datatype"/>
+					<Tag name="MIM::Gestructureerd datatype(UML::DataType)" type="" description="" unit="" values="" default="Gestructureerd datatype"/>
 					<Tag name="MIM::Data element(UML::Attribute)" type="" description="" unit="" values="" default="Data element"/>
 					<Tag name="MIM_Keuzebasis::Keuze(UML::DataType)" type="" description="" unit="" values="" default="Keuze"/>
 					<Tag name="MIM_Keuzedatatype::Datatype(UML::Attribute)" type="" description="" unit="" values="" default="Datatype(Keuze)"/>
@@ -46,9 +46,9 @@
 				</AppliesTo>
 				<TaggedValues>
 					<Tag name="MIM::Enumeratie(UML::Enumeration)" type="" description="" unit="" values="" default="Enumeratie"/>
-					<Tag name="MIM::Enumeratiewaarde(UML::EnumerationLiteral)" type="" description="" unit="" values="" default="Enumeratiewaarde"/>
-					<Tag name="MIM::CodeList(UML::Datatype)" type="" description="" unit="" values="" default="CodeList"/>
-					<Tag name="MIM::Referentielijst(UML::Datatype)" type="" description="" unit="" values="" default="Referentielijst"/>
+					<Tag name="MIM::Enumeratiewaarde(UML::Attribute)" type="" description="" unit="" values="" default="Enumeratiewaarde"/>
+					<Tag name="MIM::CodeLijst(UML::DataType)" type="" description="" unit="" values="" default="CodeLijst"/>
+					<Tag name="MIM::Referentielijst(UML::DataType)" type="" description="" unit="" values="" default="Referentielijst"/>
 					<Tag name="MIM::Referentie element(UML::Attribute)" type="" description="" unit="" values="" default="Referentie element"/>
 				</TaggedValues>
 			</Stereotype>
