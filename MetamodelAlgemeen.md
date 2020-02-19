@@ -214,10 +214,7 @@ De betekenis van deze modelelementen en de beschrijvingen ervan staan in [Packag
 
 ![](media/PackageZonderUml.png)
 
-
-### Betekenis modelelementen
-
-#### Objecttypen en attribuutsoorten  
+### Objecttypen en attribuutsoorten  
 In deze paragraaf staan alle modelelementen opgesomd, die gebruikt worden bij
 het maken van een informatiemodel.
 
