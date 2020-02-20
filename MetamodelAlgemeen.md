@@ -129,7 +129,7 @@ Diagram: Constraint
 
 Er zijn vijf situaties/use cases waarin een keuze toegepast wordt:
 
-Beschrijving: [Keuze](#Keuze)
+Beschrijving: [Keuze](#Keuze-0)
 
 Keuze tussen:
 - Use case 1: een keuze tussen datatypen
@@ -159,7 +159,7 @@ Diagram: Keuze tussen attribuutsoorten
 
 *Use case 3: Keuze tussen attribuutsoorten als nadere invulling van 1 betekenisvol attribuutsoort*
 
-Een objecttype of gegevensgroep kan normaal een attribuutsoort hebben met een datatype (de lijn links). Als er sprake is van een attribuutsoort met een keuze, dan is de attribuutsoort niet gekoppeld met een datatype, maar is gekoppeld met een keuze en de keuze geeft 2 of meer attribuutsoorten aan (met elk een eigen datatype). 
+Een objecttype of gegevensgroep kan normaal een attribuutsoort hebben met een datatype (de lijn links). Als er sprake is van een attribuutsoort met een keuze, dan is het attribuutsoort niet gekoppeld met een datatype, maar dan is het attribuutsoort gekoppeld met een keuze en de keuze geeft 2 of meer attribuutsoorten aan (met elk een eigen datatype). 
  
 ![](media/KeuzeAttribuutsoort3.png)
 
