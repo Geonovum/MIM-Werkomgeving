@@ -159,7 +159,7 @@ Diagram: Keuze tussen attribuutsoorten
 
 *Use case 3: Keuze tussen attribuutsoorten als nadere invulling van 1 betekenisvol attribuutsoort*
 
-Een objecttype of gegevensgroep kan normaal een attribuutsoort hebben met een datatype (de lijn links onder). Als er sprake is van een attribuutsoort met een keuze, dan is de attribuutsoort niet gekoppeld met een datatype, maar is gekoppeld met een keuze en de keuze geeft 2 of meer attribuutsoorten aan. 
+Een objecttype of gegevensgroep kan normaal een attribuutsoort hebben met een datatype (de lijn links). Als er sprake is van een attribuutsoort met een keuze, dan is de attribuutsoort niet gekoppeld met een datatype, maar is gekoppeld met een keuze en de keuze geeft 2 of meer attribuutsoorten aan (met elk een eigen datatype). 
  
 ![](media/KeuzeAttribuutsoort3.png)
 
