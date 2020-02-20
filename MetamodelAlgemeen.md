@@ -72,7 +72,7 @@ View 1: De kern van een informatiemodel. Deze bestaat uit de volgende modeleleme
 | Relatierol        |
 | Relatierol doel   |
 
-De betekenis van deze modelelementen en de beschrijvingen ervan staat in [Objecttypen en attribuutsoorten](#betekenis-modelelementen).
+De betekenis van deze modelelementen en de beschrijvingen ervan staat in [Objecttypen en attribuutsoorten](#Objecttypen en attribuutsoorten).
 
 In diagramvorm:
 
@@ -137,7 +137,7 @@ Voor elk geldt een eigen subset van het metamodel.
  
 *Keuze tussen datatypen*
 ![](media/KeuzeDatatype1.png)
-Beschrijving: [Use case 1: een keuze tussen twee datatypen](#Use case 1: een keuze tussen twee datatypen-0). 
+Beschrijving: [Use case 1: een keuze tussen twee datatypen](#Use case 1: een keuze tussen twee datatypen). 
 
 *Keuze tussen attribuutsoorten*
 ![](media/KeuzeAttribuutsoort2.png)
