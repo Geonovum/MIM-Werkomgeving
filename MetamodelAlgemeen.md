@@ -125,7 +125,7 @@ In diagram vorm:
 
 Diagram: Constraint
 
-####Keuze
+#### Keuze
 
 Er zijn vijf situaties/use cases waarin een keuze toegepast wordt:
 
