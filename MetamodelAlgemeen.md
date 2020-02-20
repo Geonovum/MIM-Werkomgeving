@@ -143,14 +143,25 @@ Voor elk geldt een eigen subset van het metamodel.
 In diagramvorm: 
  
 *Use case 1: Keuze tussen datatypen*
+
+1 àttribuutsoort heeft normaal 1 datatype. Als er sprake is van een keuze, dan geeft de keuze 2 of meer datatypen aan.
+
 ![](media/KeuzeDatatype1.png)
 Diagram: Keuze tussen datatypen
 
 *Use case 2: Keuze tussen attribuutsoorten*
+
+Een objecttype of gegevensgroep heeft normaal een aantal àttribuutsoorten (+attribuut). Als er sprake is van een keuze, dan heeft het objecttype een keuze (+keuze) en de keuze geeft 2 of meer attribuutsoorten aan. 
+
 ![](media/KeuzeAttribuutsoort2.png)
 Diagram: Keuze tussen attribuutsoorten
 
-*Use case 3: Keuze tussen attribuutsoorten als nadere invulling van 1 betekenisvol attribuutsoort* 
+De XOR in het diagram gaat niet over de keuze, maar geeft aan dat een objecttype op de normale manier attribuutsoorten kan hebben, of via de keuze attribuutsoorten kan hebben.
+
+*Use case 3: Keuze tussen attribuutsoorten als nadere invulling van 1 betekenisvol attribuutsoort*
+
+Een objecttype heeft normaal een attribuutsoort. Als er sprake is van een keuze, dan heeft het attributsoort gee ndatatype, maar heeft het een keuze (+keuze) en de keuze geeft 2 of meer attribuutsoorten aan. 
+ 
 ![](media/KeuzeAttribuutsoort3.png)
 Diagram: Keuze tussen attribuutsoorten binnen een attribuutsoort
 
