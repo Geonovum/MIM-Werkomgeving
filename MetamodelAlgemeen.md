@@ -172,6 +172,7 @@ View 3b: Relatiesoort en relatierol
 | Relatierol bron       |
 | Relatierol doel       |
 
+In diagramvorm: 
 
 ![](media/AssociatierollenZonderUml.png)
 
@@ -187,6 +188,9 @@ View 3c: Externe koppelingen. Deze bestaat uit de volgende modelelementen:
 |-------------------|
 | Externe koppeling |
 
+In diagramvorm: 
+
+
 *Groepering*
 
 View 3d: Groepering. Deze bestaat uit de volgende modelelementen:
@@ -200,6 +204,8 @@ View 3d: Groepering. Deze bestaat uit de volgende modelelementen:
 | View              |
 
 De betekenis van deze modelelementen en de beschrijvingen ervan staan in [Packages](#packages).
+
+In diagramvorm: 
 
 ![](media/PackageZonderUml.png)
 
