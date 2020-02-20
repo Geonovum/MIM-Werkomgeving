@@ -135,8 +135,7 @@ Keuze tussen:
 - Use case 1: een keuze tussen datatypen
 - Use case 2: een keuze tussen attribuutsoorten
 - Use case 3: een keuze tussen attribuutsoorten, als nadere invulling van 1 betekenisvol attribuutsoort
-- Use case 4: een keuze tussen relatiesoorten
-- Use case 5: een keuze tussen relatiedoelen, als nadere invulling van 1 betekenisvolle relatiesoort
+- Use case 4: een keuze tussen relatiedoelen, als nadere invulling van 1 betekenisvolle relatiesoort
 
 Voor elk geldt een eigen subset van het metamodel.
 
