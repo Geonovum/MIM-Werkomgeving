@@ -72,7 +72,7 @@ View 1: De kern van een informatiemodel. Deze bestaat uit de volgende modeleleme
 | Relatierol        |
 | Relatierol doel   |
 
-De betekenis van deze modelelementen en de beschrijvingen ervan staat in [Objecttypen en attribuutsoorten](#Objecttypen-en-attribuutsoorten).
+De betekenis van deze modelelementen en de beschrijvingen ervan staat in [Objecttypen en attribuutsoorten](#Objecttypen-en-attribuutsoorten) en in [Relaties](#Relaties).
 
 In diagramvorm:
 
@@ -101,7 +101,7 @@ View 2: Datatypen. Deze bestaat uit de volgende modelelementen:
 | Referentie element      |
 | Codelijst                |
 
-De betekenis van deze modelelementen en de beschrijvingen ervan staan in [Datatypen](#datatypen-0).
+De betekenis van deze modelelementen en de beschrijvingen ervan staan in [Datatypen](#datatypen-0) en in [Waardelijsten](#waardelijsten). 
 
 In diagramvorm:
 
