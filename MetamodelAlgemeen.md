@@ -101,7 +101,7 @@ View 2: Datatypen. Deze bestaat uit de volgende modelelementen:
 | Referentie element      |
 | Codelijst                |
 
-De betekenis van deze modelelementen en de beschrijvingen ervan staan in [Datatypen](#datatypen-0) en in [Waardelijsten](#waardelijsten). 
+De betekenis van deze modelelementen en de beschrijvingen ervan staan in [Datatypen](#datatypen-1) en in [Waardelijsten](#waardelijsten). 
 
 In diagramvorm:
 
