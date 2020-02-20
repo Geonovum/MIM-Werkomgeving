@@ -165,17 +165,7 @@ Een objecttype of gegevensgroep kan normaal een attribuutsoort hebben met een da
 
 Diagram: Keuze tussen attribuutsoorten binnen een attribuutsoort
 
-*Use case 4: Keuze tussen relatiesoorten*
-
-Een objecttype of gegevensgroep kan normaal een aantal relatiesoorten hebben, die gekoppeld zijn aan een objecttype. Als er sprake is van een keuze, dan heeft het objecttype een keuze en de keuze geeft 2 of meer relatiesoorten aan. 
-
-![](media/KeuzeRelatiesoort4.png)
-
-**TODO: diagram matched niet met use case. In het diagram moet een Keuze staan. Objecttype is dan gekoppeld aan de keuze en de keuze is gekoppeld aan 2 of meer relatiesoorten.**
-
-Diagram: Keuze tussen relatiesoorten
-
-*Use case 5: Keuze tussen relatiedoelen, als nadere invulling van 1 betekenisvolle relatiesoort*
+*Use case 4: Keuze tussen relatiedoelen, als nadere invulling van 1 betekenisvolle relatiesoort*
 
 Een objecttype of gegevensgroep kan normaal een aantal relatiesoorten hebben, die gekoppeld zijn aan een objecttype. Als er sprake is van een relatiesoort met een keuze, dan is het relatiedoel van de relatiesoort niet gekoppeld aan 1 objecttype, maar dan is het objecttype gekoppeld aan een keuze en deze keuze geeft 2 of meer relatiedoelen aan. 
 
@@ -802,19 +792,7 @@ In dit voorbeeld vormt BetalingskenmerkOfOmschrijving de *Keuze* als geheel. De 
 *Opmerking: use case 2 en 3 zijn voor een groot deel overeenkomstig. De overeenkomst is dat de keuze tussen de twee attribuutsoorten betalingskenmerk en omschrijving hetzelfde gemodelleerd wordt, als een keuze, met bijvoorbeeld de naam BetalingskemerkOfOmschrijving. Het verschil zit in de aanhaking.
 
 
-**Use case 4: een keuze tussen relatiesoorten**
-Er is sprake van ofwel relatiesoort R1 ofwel relatiesoort R2. In MIM modelleren we daarom een keuze tussen de 2 relatiesoorten R1 en R2. Het maken van deze keuze is verplicht.
-
-Voorbeeld: een objecttype "Persoon" kan getrouwd zijn met een ander persoon, of een geregistreerd partnerschap hebben met een ander persoon. Het is niet mogelijk dat een persoon en getrouwd is en een geregistreerd partnerschap heeft met de andere persoon. We modelleren daarom een *Keuze* 'soort relatie' met daarin een *Relatiesoort* getrouwd en een *Relatiesoort* geregistreerd partnerschap.
-
-Zonder de mogelijkheid van keuze zouden beide relatiesoorten opgenomen zijn bij het objecttype, met een optionele kardinaliteit. Hiermee is het echter niet duidelijk zichtbaar dat er slechts één van de twee relatiesoorten aanwezig mogen zijn. Met een constraint is dit op zich wel correct te modelleren, aan te geven dat precies 1 van beide verplicht is, maar met een modellering van een keuze is dit veel duidelijker.
-
-In het voorbeeld vormt 'soort relatie' en de aanhaking ervan op het objecttype Persoon de keuze als geheel. De relatiesoorten zelf zijn de keuze mogelijkheden, maar blijven in de modellering van de metaclass relatiesoort en behoren in deze zin niet tot de modellering van de metaclass keuze.  
-
-*Opmerking: use case 2 en 4 zijn vergelijkbaar, bij use case 2 gaat het om attribuutsoorten, bij use case 4 gaat het om relatiesoorten. Vanuit het perspectief van keuze gaat het in beide gevallen om een keuze tussen twee modelelementen die verbonden zijn met een objecttype. Het is ook mogelijk om een keuze te hebben tussen attribuutsoort OF een relatiesoort. Dit werkt analoog, maar is in de use cases (nog) niet uitgewerkt.*  
-
-
-**Use case 5: een keuze tussen relatiedoelen, als nadere invulling van een betekenisvolle relatiesoort van een objecttype**
+**Use case 4: een keuze tussen relatiedoelen, als nadere invulling van een betekenisvolle relatiesoort van een objecttype**
 Er is sprake van een relatiesoort R0 en aanvullend hierbij een keuze tussen relatiedoel D1 of relatiedoel D2. In MIM modelleren we daarom een keuze tussen de 2 relatiedoelen D1 en D2. Het maken van deze keuze is verplicht.
 
 Voorbeeld: een objecttype "Vervoersmiddel" heeft een eigenaar. Dit kan een persoon zijn, of een bedrijf, maar niet beiden. Er is sprake van één eigenaar" en een keuze tussen relatiedoel persoon (naar objecttype Persoon) en relatiedoel bedrijf (naar objecttype Bedrijf). We modelleren daarom 1 *Relatiesoort* eigenaar en aanvullend met een *Keuze* PersoonOfBedrijf met twee relatiedoelen, een naar persoon en een naar bedrijf.  
