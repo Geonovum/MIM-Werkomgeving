@@ -129,7 +129,7 @@ Diagram: Constraint
 
 Er zijn vijf situaties/use cases waarin een keuze toegepast wordt:
 
-Beschrijving: [Keuze](#Keuze-0)
+Beschrijving: [Keuze](#keuze-0)
 
 Keuze tussen:
 - Use case 1: een keuze tussen datatypen
@@ -242,7 +242,7 @@ allebei objecten die gelijksoortig zijn. Het zijn allebei personen, oftewel het
 objecttype van beiden is Persoon. In het informatiemodel nemen we Persoon op met
 behulp van het modelelement Objecttype.  
 
-Diagram: [Kern](#Kern)
+Diagram: [Kern](#kern)
 
 Om duidelijk(er) te maken wat wordt bedoeld kijken we eerst naar het begrip ‘object’.
 
