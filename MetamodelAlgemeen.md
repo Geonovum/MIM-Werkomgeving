@@ -144,32 +144,41 @@ In diagramvorm:
  
 *Use case 1: Keuze tussen datatypen*
 
-1 àttribuutsoort heeft normaal 1 datatype. Als er sprake is van een keuze, dan geeft de keuze 2 of meer datatypen aan.
+1 attribuutsoort heeft normaal 1 datatype. Als er sprake is van een keuze, dan is het attribuutsoort gekoppeld met een keuze en de keuze geeft 2 of meer datatypen aan.
 
 ![](media/KeuzeDatatype1.png)
 Diagram: Keuze tussen datatypen
 
 *Use case 2: Keuze tussen attribuutsoorten*
 
-Een objecttype of gegevensgroep heeft normaal een aantal àttribuutsoorten (+attribuut). Als er sprake is van een keuze, dan heeft het objecttype een keuze (+keuze) en de keuze geeft 2 of meer attribuutsoorten aan. 
+Een objecttype of gegevensgroep kan normaal een attribuutsoort hebben met een datatype (de lijn links onder). Als er sprake is van een objecttype met een keuze tussen attribuutsoorten, dan is het objecttype gekopppeld met een keuze (de lijn links boven) en de keuze geeft 2 of meer attribuutsoorten aan (met elk een eigen datatype). 
 
 ![](media/KeuzeAttribuutsoort2.png)
-Diagram: Keuze tussen attribuutsoorten
 
-De XOR in het diagram gaat niet over de keuze, maar geeft aan dat een objecttype op de normale manier attribuutsoorten kan hebben, of via de keuze attribuutsoorten kan hebben.
+Diagram: Keuze tussen attribuutsoorten
 
 *Use case 3: Keuze tussen attribuutsoorten als nadere invulling van 1 betekenisvol attribuutsoort*
 
-Een objecttype heeft normaal een attribuutsoort. Als er sprake is van een keuze, dan heeft het attributsoort gee ndatatype, maar heeft het een keuze (+keuze) en de keuze geeft 2 of meer attribuutsoorten aan. 
+Een objecttype of gegevensgroep kan normaal een attribuutsoort hebben met een datatype (de lijn links onder). Als er sprake is van een attribuutsoort met een keuze, dan is de attribuutsoort niet gekoppeld met een datatype, maar is gekoppeld met een keuze en de keuze geeft 2 of meer attribuutsoorten aan. 
  
 ![](media/KeuzeAttribuutsoort3.png)
+
 Diagram: Keuze tussen attribuutsoorten binnen een attribuutsoort
 
 *Use case 4: Keuze tussen relatiesoorten*
+
+Een objecttype of gegevensgroep kan normaal een aantal relatiesoorten hebben, die gekoppeld zijn aan een objecttype. Als er sprake is van een keuze, dan heeft het objecttype een keuze en de keuze geeft 2 of meer relatiesoorten aan. 
+
 ![](media/KeuzeRelatiesoort4.png)
+
+**TODO: diagram matched niet met use case. In het diagram moet een Keuze staan. Objecttype is dan gekoppeld aan de keuze en de keuze is gekoppeld aan 2 of meer relatiesoorten.**
+
 Diagram: Keuze tussen relatiesoorten
 
 *Use case 5: Keuze tussen relatiedoelen, als nadere invulling van 1 betekenisvolle relatiesoort*
+
+Een objecttype of gegevensgroep kan normaal een aantal relatiesoorten hebben, die gekoppeld zijn aan een objecttype. Als er sprake is van een relatiesoort met een keuze, dan is het relatiedoel van de relatiesoort niet gekoppeld aan een objecttype, maar dan is het objecttype gekoppeld aan een keuze en de keuze geeft 2 of meer relatiedoelen aan. 
+
 ![](media/KeuzeRelatiedoel5.png)
 Diagram: Keuze tussen relatiedoelen
 
