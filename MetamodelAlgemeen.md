@@ -72,7 +72,7 @@ View 1: De kern van een informatiemodel. Deze bestaat uit de volgende modeleleme
 | Relatierol        |
 | Relatierol doel   |
 
-De betekenis van deze modelelementen en de beschrijvingen ervan staat in [Objecttypen en attribuutsoorten](#Objecttypen en attribuutsoorten).
+De betekenis van deze modelelementen en de beschrijvingen ervan staat in [Objecttypen en attribuutsoorten](#Objecttypen-en-attribuutsoorten).
 
 In diagramvorm:
 
