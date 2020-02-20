@@ -137,7 +137,7 @@ Voor elk geldt een eigen subset van het metamodel.
  
 *Keuze tussen datatypen*
 ![](media/KeuzeDatatype1.png)
-Beschrijving: [Use case 1: een keuze tussen twee datatypen] 
+Beschrijving: [Use case 1: een keuze tussen twee datatypen](#Use case 1: een keuze tussen twee datatypen-0). 
 
 *Keuze tussen attribuutsoorten*
 ![](media/KeuzeAttribuutsoort2.png)
