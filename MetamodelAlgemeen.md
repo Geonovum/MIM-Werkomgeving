@@ -550,6 +550,7 @@ worden in de registratie. In het gebruik is een Codelijst daarom analoog aan een
 Enumeratie. Welk specifiek attribuut dit is en wat de betekenis daarvan is staat
 in de codelijst zelf gedefinieerd.
 
+
 ### Datatypen
 
 >   **Definitie Datatype**  
