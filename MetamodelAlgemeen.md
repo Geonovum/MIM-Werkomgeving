@@ -712,7 +712,7 @@ Er zijn meerdere soorten packages. Om onderscheid te maken tussen packages waari
     gezien als een view.
 </aside>
 
-### Overig
+### Overige modelelementen
 
 Diagram: [Overige](#Overige)
 
