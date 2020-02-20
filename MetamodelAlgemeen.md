@@ -8,7 +8,7 @@ maar denk ook datatypen of aan metadata. In de paragrafen hierna worden alle mod
 
 Uitgangspunten voor het metamodel zijn:
 - De modelelementen worden eerst uitgelegd zonder een specifieke specificatietaal te
-gebruiken. Dit is zodat we hierna kunnen aangeven hoe je het modelelement
+gebruiken. Dit is zodat we hierna kunnen aangeven hoe je het modelelement.
 uitdrukt per specifieke specificatietaal, te weten in UML of in W3C-specificatietechnieken.
 - Een toolonafhankelijke beschrijving van het metamodel.
 Verder is er, omdat VNG Realisatie, Kadaster en Geonovum en veel andere organisaties Sparx EA
@@ -18,7 +18,7 @@ toegepast wordt. Hierdoor borgen we deze relatie.
 maak voor hetzelfde doel geen alternatieve constructies.
 - Datatypen zijn onderdeel van het metamodel en beschrijven de structuur van de data, maar niet
 de semantiek/betekenis. De aanbeveling is dan ook om eerst een informatiemodel
-te maken zonder datatypen. De regel is dat als alle datatypen uit het model
+te maken zonder datatypen. De regel is dat als alle datatypen uit het model.
 worden weggelaten, er geen semantische betekenis verloren mag gaan.
 - Elk modelelement heeft een naam en een eigen MIM metaclass, waaraan je het modelelement overal kan herkennen.
 
@@ -37,7 +37,7 @@ Hierna volgen eerst diagrammen met de modelelementen, als overzicht. In de parag
 ### Structuur metamodel
 
 Deze paragraaf bevat een overzicht van het metamodel voor informatiemodellen, kortweg MIM, en geeft alle
-modelelementen weer in diagramvorm. De beschrijving van de modelelementen staat in de volgende paragraaf.
+modelelementen weer. De beschrijving van de modelelementen staat in de volgende paragraaf.
 
 De modelelementen zijn verdeeld over een aantal diagrammen, die elk een eigen
 view op een deel van het metamodel tonen. Elk view toont een aantal van de
@@ -53,7 +53,7 @@ modelelement te herkennen in alle diagrammen en in de tekst en in elke
 specificatietaal die een uitdrukking is van dit metamodel.
 
 Bij de modelelementen zijn in deze diagrammen geen beschrijvende kenmerken, de
-metagegevens, opgenomen zoals naam, definitie enz. In de bijlage zijn deze wel
+metagegevens, opgenomen zoals naam, definitie enzovoorts. In de bijlage zijn deze wel
 opgenomen.
 
 ### Kern
@@ -72,7 +72,7 @@ View 1: De kern van een informatiemodel. Deze bestaat uit de volgende modeleleme
 | Relatierol        |
 | Relatierol doel   |
 
-De betekenis van deze modelelementen en de beschrijvingen ervan staat in [Betekenis modelelementen](#betekenis-modelelementen).
+De betekenis van deze modelelementen en de beschrijvingen ervan staat in [Objecttypen en attribuutsoorten](#betekenis-modelelementen).
 
 In diagramvorm:
 
@@ -137,23 +137,24 @@ Voor elk geldt een eigen subset van het metamodel.
  
 *Keuze tussen datatypen*
 ![](media/KeuzeDatatype1.png)
-
+Beschrijving: [Use case 1: een keuze tussen twee datatypen] 
 
 *Keuze tussen attribuutsoorten*
 ![](media/KeuzeAttribuutsoort2.png)
- 
+Beschrijving: [Use case 2: een keuze tussen twee attribuutsoorten]
  
 *Keuze tussen attribuutsoorten binnen een attribuutsoort* 
 ![](media/KeuzeAttribuutsoort3.png)
 
+Beschrijving: [Use case 3: een keuze tussen twee attribuutsoorten, als nadere invulling van een betekenisvol attribuutsoort van een objecttype]
 
 *Keuze tussen relatiesoorten*
 ![](media/KeuzeRelatiesoort4.png)
-
+Beschrijving: [Use case 4: een keuze tussen twee relatiesoorten]
 
 *Keuze tussen relatiedoelen*
 ![](media/KeuzeRelatiedoel5.png)
-
+Beschrijving: [Use case 5: een keuze tussen twee relatiedoelen, als nadere invulling van een betekenisvolle relatiesoort van een objecttype] 
 
 *Relatierol*
 
