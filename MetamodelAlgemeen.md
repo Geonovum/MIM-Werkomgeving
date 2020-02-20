@@ -459,7 +459,7 @@ een definitie krijgen.
 >   De relatierol die de rol beschrijft van het doel van de relatie.
 
 
-### Waardenlijsten
+### Waardelijsten
 
 Een datatype waarvan de mogelijke waarden zijn opgesomd in een lijst. De waarde
 van een attribuutsoort moet één van de waarden zijn uit de gespecificeerde
