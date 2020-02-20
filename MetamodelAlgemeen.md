@@ -129,7 +129,7 @@ Diagram: Constraint
 
 Er zijn vijf situaties/use cases waarin een keuze toegepast wordt:
 
-Beschrijving: [Keuze](#keuze-0)
+Beschrijving: [Keuze](#keuze)
 
 Keuze tussen:
 - Use case 1: een keuze tussen datatypen
