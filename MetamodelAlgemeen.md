@@ -127,7 +127,7 @@ Diagram: Constraint
 
 **Keuze**
 
-Er zijn vijf situaties/use cases waarin een keuze toegepast wordt:
+Er zijn vier situaties/use cases waarin een keuze toegepast wordt:
 
 Beschrijving: [Keuze](#keuze)
 
