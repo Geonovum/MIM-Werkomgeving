@@ -133,28 +133,24 @@ Keuze tussen:
 - relatiesoorten
 - relatiedoelen
 
+Beschrijving: [Keuze](#Keuze)
+
 Voor elk geldt een eigen subset van het metamodel.
  
 *Keuze tussen datatypen*
 ![](media/KeuzeDatatype1.png)
-Beschrijving: [Use case 1: een keuze tussen twee datatypen](#Use case 1: een keuze tussen twee datatypen). 
 
 *Keuze tussen attribuutsoorten*
 ![](media/KeuzeAttribuutsoort2.png)
-Beschrijving: [Use case 2: een keuze tussen twee attribuutsoorten]
- 
+
 *Keuze tussen attribuutsoorten binnen een attribuutsoort* 
 ![](media/KeuzeAttribuutsoort3.png)
 
-Beschrijving: [Use case 3: een keuze tussen twee attribuutsoorten, als nadere invulling van een betekenisvol attribuutsoort van een objecttype]
-
 *Keuze tussen relatiesoorten*
 ![](media/KeuzeRelatiesoort4.png)
-Beschrijving: [Use case 4: een keuze tussen twee relatiesoorten]
 
 *Keuze tussen relatiedoelen*
 ![](media/KeuzeRelatiedoel5.png)
-Beschrijving: [Use case 5: een keuze tussen twee relatiedoelen, als nadere invulling van een betekenisvolle relatiesoort van een objecttype] 
 
 *Relatierol*
 
