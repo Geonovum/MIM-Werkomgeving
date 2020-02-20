@@ -129,6 +129,8 @@ Diagram: Constraint
 
 Er zijn vijf situaties/use cases waarin een keuze toegepast wordt:
 
+Beschrijving: [Keuze](#Keuze)
+
 Keuze tussen:
 - Use case 1: een keuze tussen datatypen
 - Use case 2: een keuze tussen attribuutsoorten
@@ -136,9 +138,9 @@ Keuze tussen:
 - Use case 4: een keuze tussen relatiesoorten
 - Use case 5: een keuze tussen relatiedoelen, als nadere invulling van 1 betekenisvolle relatiesoort
 
-Beschrijving: [Keuze](#Keuze)
-
 Voor elk geldt een eigen subset van het metamodel.
+
+In diagramvorm: 
  
 *Use case 1: Keuze tussen datatypen*
 ![](media/KeuzeDatatype1.png)
