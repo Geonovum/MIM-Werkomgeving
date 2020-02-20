@@ -214,6 +214,8 @@ allebei objecten die gelijksoortig zijn. Het zijn allebei personen, oftewel het
 objecttype van beiden is Persoon. In het informatiemodel nemen we Persoon op met
 behulp van het modelelement Objecttype.  
 
+Diagram: [Kern](#Kern)
+
 Om duidelijk(er) te maken wat wordt bedoeld kijken we eerst naar het begrip ‘object’.
 
 >   **Definitie Object**  
@@ -251,8 +253,6 @@ cq. die objecttypen) naar eenheden die in een registratie vastgelegd kunnen
 worden (records, entiteiten e.d.) op basis van andere overwegingen.
 
 De objecten die in het beschouwde domein onderkend worden zijn zelf nooit abstract. Ze behoren altijd tot een concreet objecttype, en niet tot een abstract objecttype. Abstracte objecttypes worden wel gebruikt in de modellering, om generalisaties aan te duiden en de definitie. Zo kan bij het objecttype Pand bijvoorbeeld aangegeven worden dat dit een 'Element in de fysieke leefomgeving' is, en dat deze laatste als een abstract objecctype gezien moet worden (in ons domein). Meer over abstracte objecttypes is beschreven in [Abstracte objecttypes en concrete objecten].  
-
-Diagram: [Kern](#Kern)
 
 #### Attribuutsoort en een groepering ervan   
 
