@@ -105,7 +105,7 @@ View 3a: Constraint
 
 
 *Keuze*
-Er zijn vijf situaties waarin een keuze toegepast wordt:
+Er zijn vier situaties waarin een keuze toegepast wordt:
 Keuze tussen:
 - datatypen
 - attribuutsoorten binnen een objecttype
