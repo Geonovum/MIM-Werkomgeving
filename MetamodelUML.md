@@ -110,7 +110,6 @@ Keuze tussen:
 - datatypen
 - attribuutsoorten binnen een objecttype
 - attribuutsoorten binnen een attribuutsoort
-- relatiesoorten
 - relatiedoelen
 
 Voor elk geldt een eigens subset van het metamodel.
@@ -127,12 +126,8 @@ Voor elk geldt een eigens subset van het metamodel.
 ![](media/KeuzeAttribuutsoort3UML.png)
 
 
-*Keuze tussen relatiesoorten*
-![](media/KeuzeRelatiesoort4UML.png)
-
-
 *Keuze tussen relatiedoelen*
-![](media/KeuzeRelatiedoel5UML.png)
+![](media/KeuzeRelatiedoel4UML.png)
 
 
 

@@ -46,12 +46,8 @@ Deze bijlage bevat alle modelelementen en metagegevens in één diagram.
 ![](media/KeuzeAttribuutsoort3metMetaUML.png)
 
 
-*Keuze tussen relatiesoorten*
-![](media/KeuzeRelatiesoort4metMeta.png)
-
-
 *Keuze tussen relatiedoelen*
-![](media/KeuzeRelatiedoel5metMetaUML.png)
+![](media/KeuzeRelatiedoel4metMetaUML.png)
  
  
  

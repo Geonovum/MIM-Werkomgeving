@@ -168,7 +168,7 @@ Diagram: Keuze tussen attribuutsoorten binnen een attribuutsoort
 
 Een objecttype of gegevensgroep kan normaal een aantal relatiesoorten hebben, die gekoppeld zijn aan een objecttype. Als er sprake is van een relatiesoort met een keuze, dan is het relatiedoel van de relatiesoort niet gekoppeld aan 1 objecttype, maar dan is het objecttype gekoppeld aan een keuze en deze keuze geeft 2 of meer relatiedoelen aan. 
 
-![](media/KeuzeRelatiedoel5.png)
+![](media/KeuzeRelatiedoel4.png)
 Diagram: Keuze tussen relatiedoelen
 
 *Relatierol*
