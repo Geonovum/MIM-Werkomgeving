@@ -1,10 +1,14 @@
 ## Metamodel Algemeen
 
-Dit hoofdstuk beschrijft het metamodel in diagramvorm en in tekst. De eerste
-paragraaf bevat een diagram, die het overzicht van de modelelementen aangeeft,
-alsmede hun onderlinge verhouding. Deze modelelementen worden gebruikt bij het maken van een
-informatiemodel. Voorbeelden van modelelementen zijn: objecttype, attribuutsoort, relatiesoort,
-maar denk ook datatypen of aan metadata. In de paragrafen hierna worden alle modelelementen beschreven en toegelicht.
+Dit hoofdstuk beschrijft het metamodel in diagramvorm en in tekst. 
+
+Het metamodel beschrijft de modelelementen die worden gebruikt bij het maken van een informatiemodel. Voorbeelden van modelelementen zijn: objecttype, attribuutsoort, relatiesoort, maar denk ook datatypen of aan metagegevens. In de paragrafen hierna worden alle modelelementen beschreven en toegelicht. 
+
+Bijvoorbeeld: in de basisregistatie Kadaster wordt een perceel gemodelleerd als een objecttype. De grens van een perceel wordt gemodelleerd als een attribuutsoort. Objecttype en attribuutsoort zijn de modelelementen op metamodel niveau, het perceel en de grens zijn de modelelemenenten van het informatiemodel niveau. 
+
+- De eerste paragraaf bevat diagrammen, die kort een overzicht geven van de modelelementen die op metamodel niveau worden onderkend, alsmede hun onderlinge verhouding. 
+- De tweede paragraaf bevat de beschrijvingen in tekst van de modelelementen die op metamodel niveau worden onderkend. Wanneer u liever de beschrijvingen eerst leest, kunt u ook met deze paragraaf starten. 
+- De derde paragraaf bevat de metagegevens die worden bijgehouden over de modelelementen in een informatiemodel. Dit metamodel geeft aan welke metagegevens er zijn.  
 
 Uitgangspunten voor het metamodel zijn:
 - Elk modelelement heeft een naam en een eigen MIM metaclass, waaraan je het modelelement overal kan herkennen.
@@ -21,7 +25,6 @@ maak voor hetzelfde doel geen alternatieve constructies.
 de semantiek/betekenis. De aanbeveling is dan ook om eerst een informatiemodel
 te maken zonder datatypen. De regel is dat als alle datatypen uit het model.
 worden weggelaten, er geen semantische betekenis verloren mag gaan.
-
 
 *Toelichting metaclass*   
 Alle modelelementen zijn een metaklasse in het metamodel. Hiermee wordt aangegeven dat het niet een klasse betreft
