@@ -895,7 +895,7 @@ waarde 1-1-2012. worden als aparte data vastgelegd, in UML gebeurd dit in een
 Merk op, de metadata aspecten zijn specifiek voor elk modelelement apart. Dus
 als er in H2.2 sprake is van een generalisatie, dan worden deze metadata niet
 overerft (en de ingevulde waardes worden uiteraard zeker niet overerft). De MIM
-metaclass Union erft dus geen metagegevens, zoals patroon, van MIM metaclass
+metaclass Referentielijst erft dus geen metagegevens, zoals patroon, van MIM metaclass
 Datatype.
 
 Voor de duidelijkheid zijn een aantal metagegevens verplicht gemaakt, om te
@@ -1394,8 +1394,10 @@ attribuutsoort, data element, referentie element, datatypekeuze, doelkeuze.
 *Toelichting*
 Bijvoorbeeld: de naam van een openbare ruimte heeft minimaal lengte 1 en maximaal lengte 80. 
 
-*Toepassing*: attribuutsoort, primitief datatype (in het IM gedefinieerd), data
-element, union element, referentie element.
+Bijvoorbeeld: ‘1’ als de lengte exact 1 is; ‘1..2’ als de lengte 1 tot en met 2 lang kan zijn; '‘1,2’ voor Decimale getallen met 1 cijfer voor de komma en 2 erna. Dit is van -9,99 tot +9,99; Dit is nog verder toegelicht in hoofdstuk [Afspraken & Regels].
+
+*Toepassing*: attribuutsoort, primitief datatype (als in het IM zelf gedefinieerd), data
+element, referentie element.
 
 #### Metagegeven: **Patroon**
 
