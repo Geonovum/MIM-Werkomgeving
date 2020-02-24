@@ -810,7 +810,7 @@ In het voorbeeld vormen PersoonOfBedrijf en de twee relatiedoelen tezamen de keu
 
 Bij de modelelementen in een informatiemodel kunnen metagegevens, zoals 'naam' van het modelelement, of 'datum opname' van het modelelement, worden bijgehouden. Dit zijn geen eigenschappen van een object en worden daarom niet als bijvoorbeeld een attribuutsoort van een objecttype gemodelleerd. 
 
-### informatiemodel
+### Specificatie metagegevens informatiemodel
 
 We onderkennen een aantal specifieke metagegevens op het niveau van het informatiemodel zelf. Deze staan beschreven in deze paragaaf.   
 
@@ -1457,7 +1457,7 @@ een nadere uitleg wordt gegeven van het fenomeen abstract objecttypen.
 
 *Toepassing:* enumeratiewaarde
 
-### Metagegevens modelelement bindingen
+### Specificatie metagegevens modelelement bindingen
 
 Deze metagegevens zijn alleen nodig voor de binding van modelelementen aan elkaar. 
 
