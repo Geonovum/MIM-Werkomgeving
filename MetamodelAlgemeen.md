@@ -10,7 +10,8 @@ Bijvoorbeeld: in de basisregistatie Kadaster wordt een perceel gemodelleerd als 
 - De paragrafen erna bevat de beschrijvingen in tekst van de modelelementen die op metamodel niveau worden onderkend. Wanneer u liever de beschrijvingen eerst leest, kunt u ook met deze paragraaf starten. Dit begint bij [Objecttypen en attribuutsoorten] 
 - De laatste paragraaf bevat de metagegevens die worden bijgehouden over de modelelementen in een informatiemodel. Dit metamodel geeft aan welke metagegevens er zijn.  
 
-Uitgangspunten voor het metamodel zijn:
+**Uitgangspunten voor het metamodel**
+
 - Elk modelelement heeft een naam en een eigen MIM metaclass, waaraan je het modelelement overal kan herkennen.
 - De modelelementen worden eerst uitgelegd zonder een specifieke specificatietaal te
 gebruiken. Dit is zodat we hierna kunnen aangeven hoe je het modelelement.
