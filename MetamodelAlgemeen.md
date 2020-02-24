@@ -6,9 +6,9 @@ Het metamodel beschrijft de modelelementen die worden gebruikt bij het maken van
 
 Bijvoorbeeld: in de basisregistatie Kadaster wordt een perceel gemodelleerd als een objecttype. De grens van een perceel wordt gemodelleerd als een attribuutsoort. Objecttype en attribuutsoort zijn de modelelementen op metamodel niveau, het perceel en de grens zijn de modelelemenenten van het informatiemodel niveau. 
 
-- De eerste paragraaf bevat diagrammen, die kort een overzicht geven van de modelelementen die op metamodel niveau worden onderkend, alsmede hun onderlinge verhouding. 
-- De tweede paragraaf bevat de beschrijvingen in tekst van de modelelementen die op metamodel niveau worden onderkend. Wanneer u liever de beschrijvingen eerst leest, kunt u ook met deze paragraaf starten. 
-- De derde paragraaf bevat de metagegevens die worden bijgehouden over de modelelementen in een informatiemodel. Dit metamodel geeft aan welke metagegevens er zijn.  
+- De eerste paragraaf bevat diagrammen, die kort een overzicht geven van de modelelementen die op metamodel niveau worden onderkend, alsmede hun onderlinge verhouding
+- De paragrafen erna bevat de beschrijvingen in tekst van de modelelementen die op metamodel niveau worden onderkend. Wanneer u liever de beschrijvingen eerst leest, kunt u ook met deze paragraaf starten. Dit begint bij [Objecttypen en attribuutsoorten] 
+- De laatste paragraaf bevat de metagegevens die worden bijgehouden over de modelelementen in een informatiemodel. Dit metamodel geeft aan welke metagegevens er zijn.  
 
 Uitgangspunten voor het metamodel zijn:
 - Elk modelelement heeft een naam en een eigen MIM metaclass, waaraan je het modelelement overal kan herkennen.
