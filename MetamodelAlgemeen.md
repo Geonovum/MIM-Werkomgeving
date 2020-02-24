@@ -61,7 +61,7 @@ Bij de modelelementen zijn in deze diagrammen geen beschrijvende kenmerken opgen
 metagegevens zoals naam, definitie enzovoorts. In de diagrammen in de bijlage zijn deze wel
 opgenomen.
 
-### Kern
+#### Kern
 
 View 1: De kern van een informatiemodel. Deze bestaat uit de volgende modelelementen:
 
@@ -91,7 +91,7 @@ De verbindingen tussen de modelelementen geven aan welke combinaties kunnen voor
 - Een objecttype kan verbonden worden met een gegevensgroep en deze gegevensgroep kan weer verbonden worden met een gegevensgroeptype. Een objecttype kan dus *niet* rechtstreeks verbonden worden met een gegevensgroeptype. In een informatiemodel is een gegevensgroep een eigenschap van het objecttype en kan je aangeven dat deze gegevensgroep als type een gegevensgroeptype heeft. 
 
 
-### Datatypen
+#### Datatypen
 
 View 2: Datatypen. Deze bestaat uit de volgende modelelementen:
 
@@ -114,7 +114,7 @@ In diagramvorm:
 
 Diagram: Datatypen zonder Metagegevens
 
-### Overige
+#### Overige
 
 View 3a: constraint en keuze.
 
