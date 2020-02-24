@@ -23,7 +23,7 @@ Elk modelelement heeft een MIM metaclass. Deze wordt in UML in een
 informatiemodel gemodelleerd als een extensie van een Metaclass van UML 2.5 en een bijbehorende
 stereotype.
 
-<aside class='note'>
+<aside class='example'>
 Het MIM modelelement Objecttype wordt gemodelleerd als een UML-Class met
 stereotype «Objecttype».
 
