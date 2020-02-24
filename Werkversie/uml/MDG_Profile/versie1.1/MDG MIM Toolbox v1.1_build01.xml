@@ -1,0 +1,418 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<MDG.Technology version="1.0"><Documentation id="MIM" name="MIM" version="1.1" notes="MIM 1.1.&#xA;Alt-1 en Alt 2 gecombineerd.&#xA;Enumeratiewaarde als extent op attribute. &#xA;Toolbox aangepast.&#xA;"/><UMLProfiles><UMLProfile profiletype="uml2">
+			<Documentation id="EDFDE9C6-3" name="MIM" version="1.1" notes="Alt 1 en Alt 2 gecombineerd."/>
+			<Content>
+				<Stereotypes>
+					<Stereotype name="Attribuutsoort" notes="De typering van gelijksoortige gegevens die voor een objecttype van toepassing is." cx="0" cy="0" bgcolor="16777164" fontcolor="0" bordercolor="0" borderwidth="1" hideicon="0">
+						<AppliesTo>
+							<Apply type="Attribute"/>
+						</AppliesTo>
+						<TaggedValues>
+							<Tag name="Begrip" type="" description="Verwijzing naar een begrip. De verwijzing heeft de vorm van een term of een URI." unit="" values="" default=""/>
+							<Tag name="Herkomst" type="" description="De registratie of het informatiemodel waaraan het informatie-element ontleend is dan wel de eigen organisatie indien het door de eigen organisatie toegevoegd is." unit="" values="" default=""/>
+							<Tag name="Herkomst definitie" type="" description="De registratie of het informatiemodel waaruit de definitie is overgenomen dan wel een aanduiding die aangeeft uit welke bronnen de definitie is samengesteld." unit="" values="" default=""/>
+							<Tag name="Datum opname" type="" description="De datum waarop het informatie-element is opgenomen in het informatiemodel." unit="" values="" default=""/>
+							<Tag name="Lengte" type="" description="De aanduiding van de lengte van een gegeven." unit="" values="" default=""/>
+							<Tag name="Patroon" type="" description="De verzameling van waarden die gegevens van dit attribuutsoort kunnen hebben, dat wil zeggen het waardenbereik, uitgedrukt in een specifieke structuur." unit="" values="" default="&lt;memo&gt;"/>
+							<Tag name="Formeel patroon" type="" description="Zoals patroon, formeel vastgelegd (met een reguliere expressie), uitgedrukt in een formele taal die door de computer wordt herkend." unit="" values="" default=""/>
+							<Tag name="Indicatie materiële historie" type="enumeration" description="Indicatie of de materiële historie van dit informatie-element te bevragen is." unit="" values="Ja,Nee,Zie groep" default=""/>
+							<Tag name="Indicatie formele historie" type="enumeration" description="Indicatie of de formele historie van dit informatie-element te bevragen is." unit="" values="Ja,Nee,Zie groep" default=""/>
+							<Tag name="Authentiek" type="enumeration" description="Aanduiding of het een authentiek gegeven betreft." unit="" values="Authentiek,Basisgegeven,Wettelijk gegeven,Landelijk kerngegeven,Overig" default=""/>
+							<Tag name="Indicatie classificerend" type="" description="Indicatie dat een attribuutsoort het objecttype waar het bijhoort classificeert in (sub)typen." unit="" values="" default="Nee"/>
+							<Tag name="Mogelijk geen waarde" type="enumeration" description="Aanduiding dat dit informatie-element geen waarde kan bevatten." unit="" values="Ja,Nee" default="Nee"/>
+							<Tag name="Toelichting" type="" description="Een inhoudelijke toelichting op de toepassing van het informatie-element." unit="" values="" default="&lt;memo&gt;"/>
+						</TaggedValues>
+					</Stereotype>
+					<Stereotype name="Codelijst" notes="Een lijst met een opsomming van de mogelijke domeinwaarden van een attribuutsoort, die buiten het model in een externe waardenlijst worden beheerd." cx="0" cy="0" bgcolor="16777164" fontcolor="0" bordercolor="0" borderwidth="1" hideicon="0">
+						<AppliesTo>
+							<Apply type="DataType"/>
+						</AppliesTo>
+						<TaggedValues>
+							<Tag name="Begrip" type="" description="Verwijzing naar een begrip. De verwijzing heeft de vorm van een term of een URI." unit="" values="" default=""/>
+							<Tag name="Herkomst" type="" description="De registratie of het informatiemodel waaraan het informatie-element ontleend is dan wel de eigen organisatie indien het door de eigen organisatie toegevoegd is." unit="" values="" default=""/>
+							<Tag name="Datum opname" type="" description="De datum waarop het informatie-element is opgenomen in het informatiemodel." unit="" values="" default=""/>
+							<Tag name="Toelichting" type="" description="Een inhoudelijke toelichting op de toepassing van het informatie-element." unit="" values="" default="&lt;memo&gt;"/>
+							<Tag name="Locatie" type="" description="De locatie waar deze lijst te vinden is." unit="" values="" default=""/>
+						</TaggedValues>
+					</Stereotype>
+					<Stereotype name="Data element" notes="Een onderdeel/element van een Gestructureerd datatype die als type een datatype heeft." cx="0" cy="0" bgcolor="16777164" fontcolor="0" bordercolor="0" borderwidth="1" hideicon="0">
+						<AppliesTo>
+							<Apply type="Attribute"/>
+						</AppliesTo>
+						<TaggedValues>
+							<Tag name="Begrip" type="" description="Verwijzing naar een begrip. De verwijzing heeft de vorm van een term of een URI." unit="" values="" default=""/>
+							<Tag name="Herkomst" type="" description="De registratie of het informatiemodel waaraan het informatie-element ontleend is dan wel de eigen organisatie indien het door de eigen organisatie toegevoegd is." unit="" values="" default=""/>
+							<Tag name="Lengte" type="" description="De aanduiding van de lengte van een gegeven." unit="" values="" default=""/>
+							<Tag name="Patroon" type="" description="De verzameling van waarden die gegevens van deze attribuutsoort kunnen hebben, oftewel het waardenbereik, uitgedrukt in een specifieke structuur." unit="" values="" default="&lt;memo&gt;"/>
+							<Tag name="Formeel patroon" type="" description="Zoals patroon, formeel vastgelegd (met een reguliere expressie), uitgedrukt in een formele taal die door de computer wordt herkend." unit="" values="" default=""/>
+						</TaggedValues>
+					</Stereotype>
+					<Stereotype name="Domein" notes="" cx="0" cy="0" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+						<AppliesTo>
+							<Apply type="Package">
+								<Property name="URI" value=""/>
+							</Apply>
+						</AppliesTo>
+					</Stereotype>
+					<Stereotype name="Enumeratie" notes="" cx="0" cy="0" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+						<AppliesTo>
+							<Apply type="Enumeration"/>
+						</AppliesTo>
+						<TaggedValues>
+							<Tag name="Begrip" type="" description="Verwijzing naar een begrip. De verwijzing heeft de vorm van een term of een URI." unit="" values="" default=""/>
+						</TaggedValues>
+					</Stereotype>
+					<Stereotype name="Enumeratiewaarde" notes="" cx="0" cy="0" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+						<AppliesTo>
+							<Apply type="Attribute"/>
+						</AppliesTo>
+						<TaggedValues>
+							<Tag name="Begrip" type="" description="Verwijzing naar een begrip. De verwijzing heeft de vorm van een term of een URI." unit="" values="" default=""/>
+						</TaggedValues>
+					</Stereotype>
+					<Stereotype name="Extern" notes="Een groepering van constructies die een externe instantie beheert en beschikbaar stelt aan een informatiemodel en die in het informatiemodel ongewijzigd gebruikt worden." cx="0" cy="0" bgcolor="16777164" fontcolor="0" bordercolor="0" borderwidth="1" hideicon="0">
+						<AppliesTo>
+							<Apply type="Package">
+								<Property name="URI" value=""/>
+							</Apply>
+						</AppliesTo>
+						<TaggedValues>
+							<Tag name="Locatie" type="" description="De verwijzing naar de locatie van het bijbehorende package." unit="" values="" default=""/>
+							<Tag name="Herkomst" type="" description="De registratie of het informatiemodel waaraan het package ontleend is. Bij een view is de herkomst nooit de eigen organsiatie." unit="" values="" default=""/>
+						</TaggedValues>
+					</Stereotype>
+					<Stereotype name="Externe koppeling" notes="Een associatie waarmee vanuit het perspectief van het eigen informatiemodel een objecttype uit het ‘eigen’ informatiemodel gekoppeld wordt aan een objecttype van een extern informatiemodel." cx="0" cy="0" bgcolor="16777164" fontcolor="0" bordercolor="0" borderwidth="1" hideicon="0">
+						<AppliesTo>
+							<Apply type="Association">
+								<Property name="compositionKind" value="none"/>
+								<Property name="direction" value="Source -&gt; Destination"/>
+							</Apply>
+						</AppliesTo>
+						<TaggedValues>
+							<Tag name="Begrip" type="" description="Verwijzing naar een begrip. De verwijzing heeft de vorm van een term of een URI." unit="" values="" default=""/>
+							<Tag name="Datum opname" type="" description="De datum waarop het informatie-element is opgenomen in het informatiemodel." unit="" values="" default=""/>
+						</TaggedValues>
+					</Stereotype>
+					<Stereotype name="Gegevensgroep" notes="Een typering van een groep van gelijksoortige gegevens die voor een objecttype van toepassing is." cx="0" cy="0" bgcolor="16777164" fontcolor="0" bordercolor="0" borderwidth="1" hideicon="0">
+						<AppliesTo>
+							<Apply type="Attribute"/>
+						</AppliesTo>
+						<TaggedValues>
+							<Tag name="Begrip" type="" description="Verwijzing naar een begrip. De verwijzing heeft de vorm van een term of een URI." unit="" values="" default=""/>
+							<Tag name="Toelichting" type="" description="Een inhoudelijke toelichting op de gegevensgroep." unit="" values="" default="&lt;memo&gt;"/>
+							<Tag name="Herkomst" type="" description="De registratie of het informatiemodel waaraan het informatie-element ontleend is dan wel de eigen organisatie indien het door de eigen organisatie toegevoegd is." unit="" values="" default=""/>
+							<Tag name="Herkomst definitie" type="" description="De registratie of het informatiemodel waaruit de definitie is overgenomen dan wel een aanduiding die aangeeft uit welke bronnen de definitie is samengesteld." unit="" values="" default=""/>
+							<Tag name="Datum opname" type="" description="De datum waarop het informatie-element is opgenomen in het informatiemodel." unit="" values="" default=""/>
+							<Tag name="Indicatie materiële historie" type="enumeration" description="Indicatie of de materiële historie van dit informatie-element te bevragen is." unit="" values="Ja,Nee,Zie groep" default=""/>
+							<Tag name="Indicatie formele historie" type="enumeration" description="Indicatie of de formele historie van dit informatie-element te bevragen is." unit="" values="Ja,Nee,Zie groep" default=""/>
+							<Tag name="Authentiek" type="enumeration" description="Aanduiding of het een authentiek gegeven betreft." unit="" values="Authentiek,Basisgegeven,Wettelijk gegeven,Landelijk kerngegeven,Overig" default=""/>
+						</TaggedValues>
+					</Stereotype>
+					<Stereotype name="Gegevensgroeptype" notes="Een groep van met elkaar samenhangende attribuutsoorten. Een gegevensgroeptype is altijd een type van een gegevensgroep." cx="0" cy="0" bgcolor="16777164" fontcolor="0" bordercolor="0" borderwidth="1" hideicon="0">
+						<AppliesTo>
+							<Apply type="Class">
+								<Property name="isActive" value=""/>
+							</Apply>
+						</AppliesTo>
+						<TaggedValues>
+							<Tag name="Begrip" type="" description="Verwijzing naar een begrip. De verwijzing heeft de vorm van een term of een URI." unit="" values="" default=""/>
+							<Tag name="Herkomst definitie" type="" description="De registratie of het informatiemodel waaruit de definitie is overgenomen dan wel een aanduiding die aangeeft uit welke bronnen de definitie is samengesteld." unit="" values="" default=""/>
+							<Tag name="Toelichting" type="" description="Een inhoudelijke toelichting op de toepassing van het informatie-element." unit="" values="" default="&lt;memo&gt;"/>
+							<Tag name="Datum opname" type="" description="De datum waarop het informatie-element is opgenomen in het informatiemodel." unit="" values="" default=""/>
+						</TaggedValues>
+					</Stereotype>
+					<Stereotype name="Generalisatie" notes="De typering van het hiërarchische verband tussen een meer generiek object van een objecttype en een meer specifiek object van een ander objecttype waarbij het laatstgenoemde object eigenschappen van het eerstgenoemde object overerft." cx="0" cy="0" bgcolor="16777164" fontcolor="0" bordercolor="0" borderwidth="1" hideicon="0">
+						<AppliesTo>
+							<Apply type="Generalization">
+								<Property name="direction" value="Source -&gt; Destination"/>
+								<Property name="isSubstitutable" value=""/>
+							</Apply>
+						</AppliesTo>
+						<TaggedValues>
+							<Tag name="Datum opname" type="" description="De datum waarop het informatie-element is opgenomen in het informatiemodel." unit="" values="" default=""/>
+						</TaggedValues>
+					</Stereotype>
+					<Stereotype name="Gestructureerd datatype" notes="Specifiek benoemd gestructureerd datatype dat de structuur van een gegeven beschrijft, samengesteld uit minimaal twee elementen." cx="0" cy="0" bgcolor="16777164" fontcolor="0" bordercolor="0" borderwidth="1" hideicon="0">
+						<AppliesTo>
+							<Apply type="DataType"/>
+						</AppliesTo>
+						<TaggedValues>
+							<Tag name="Begrip" type="" description="Verwijzing naar een begrip. De verwijzing heeft de vorm van een term of een URI." unit="" values="" default=""/>
+							<Tag name="Herkomst" type="" description="De registratie of het informatiemodel waaraan het informatie-element ontleend is dan wel de eigen organisatie indien het door de eigen organisatie toegevoegd is." unit="" values="" default=""/>
+							<Tag name="Patroon" type="" description="De verzameling van waarden die gegevens van deze attribuutsoort kunnen hebben, oftewel het waardenbereik, uitgedrukt in een specifieke structuur." unit="" values="" default="&lt;memo&gt;"/>
+							<Tag name="Formeel patroon" type="" description="Zoals patroon, formeel vastgelegd (met een reguliere expressie), uitgedrukt in een formele taal die door de computer wordt herkend." unit="" values="" default=""/>
+							<Tag name="Datum opname" type="" description="De datum waarop het informatie-element is opgenomen in het informatiemodel." unit="" values="" default=""/>
+						</TaggedValues>
+					</Stereotype>
+					<Stereotype name="Informatiemodel" notes="" cx="0" cy="0" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+						<AppliesTo>
+							<Apply type="Package">
+								<Property name="URI" value=""/>
+							</Apply>
+						</AppliesTo>
+						<TaggedValues>
+							<Tag name="Herkomst" type="" description="De registratie of het informatiemodel waaraan het package ontleend is. Bij een view is de herkomst nooit de eigen organsiatie." unit="" values="" default=""/>
+							<Tag name="Informatiedomein" type="" description="" unit="" values="" default=""/>
+							<Tag name="Informatiemodeltype" type="" description="" unit="" values="" default=""/>
+							<Tag name="Relatiemodelleringstype" type="" description="" unit="" values="" default=""/>
+							<Tag name="MIM versie" type="" description="" unit="" values="" default=""/>
+							<Tag name="MIM extensie" type="" description="" unit="" values="" default=""/>
+							<Tag name="MIM taal" type="" description="" unit="" values="" default=""/>
+						</TaggedValues>
+					</Stereotype>
+					<Stereotype name="Keuzerelatie" notes="" cx="0" cy="0" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0"/>
+					<Stereotype name="Objecttype" notes="De typering van een groep objecten (in de werkelijkheid) die binnen een domein relevant zijn en als gelijksoortig worden beschouwd." cx="0" cy="0" bgcolor="16777164" fontcolor="0" bordercolor="0" borderwidth="1" hideicon="0">
+						<AppliesTo>
+							<Apply type="Class">
+								<Property name="isActive" value=""/>
+							</Apply>
+						</AppliesTo>
+						<TaggedValues>
+							<Tag name="Begrip" type="" description="Verwijzing naar een begrip. De verwijzing heeft de vorm van een term of een URI." unit="" values="" default=""/>
+							<Tag name="Herkomst" type="" description="De registratie of het informatiemodel waaraan het informatie-element ontleend is dan wel de eigen organisatie indien het door de eigen organisatie toegevoegd is." unit="" values="" default=""/>
+							<Tag name="Herkomst definitie" type="" description="De registratie of het informatiemodel waaruit de definitie is overgenomen dan wel een aanduiding die aangeeft uit welke bronnen de definitie is samengesteld." unit="" values="" default=""/>
+							<Tag name="Datum opname" type="" description="De datum waarop het informatie-element is opgenomen in het informatiemodel." unit="" values="" default=""/>
+							<Tag name="Populatie" type="" description="Voor objecttypen die deel uitmaken van een (basis)registratie betreft dit de beschrijving van de exemplaren van het gedefinieerde objecttype die in de desbetreffende (basis)-registratie voorhanden zijn." unit="" values="" default="&lt;memo&gt;"/>
+							<Tag name="Kwaliteit" type="" description="Voor objecttypen die deel uitmaken van een registratie betreft dit de waarborgen voor de juistheid van de in de registratie opgenomen objecten van het desbetreffende type." unit="" values="" default=""/>
+							<Tag name="Toelichting" type="" description="Een inhoudelijke toelichting op de toepassing van het informatie-element." unit="" values="" default="&lt;memo&gt;"/>
+						</TaggedValues>
+					</Stereotype>
+					<Stereotype name="Primitief datatype" notes="Een in het eigen model gedefinieerd primitieve datatype. Deze worden wel door de modelleur gecreëerd, met een eigen naam en een eigen definitie (en eigen metagegevens)." cx="0" cy="0" bgcolor="16777164" fontcolor="0" bordercolor="0" borderwidth="1" hideicon="0">
+						<AppliesTo>
+							<Apply type="PrimitiveType"/>
+						</AppliesTo>
+						<TaggedValues>
+							<Tag name="Begrip" type="" description="Verwijzing naar een begrip. De verwijzing heeft de vorm van een term of een URI." unit="" values="" default=""/>
+							<Tag name="Herkomst" type="" description="De registratie of het informatiemodel waaraan het informatie-element ontleend is dan wel de eigen organisatie indien het door de eigen organisatie toegevoegd is." unit="" values="" default=""/>
+							<Tag name="Lengte" type="" description="De aanduiding van de lengte van een gegeven." unit="" values="" default=""/>
+							<Tag name="Patroon" type="" description="De verzameling van waarden die gegevens van dit type kunnen hebben, oftewel het waardenbereik, uitgedrukt in een specifieke structuur. " unit="" values="" default="&lt;memo&gt;"/>
+							<Tag name="Formeel patroon" type="" description="Zoals patroon , formeel vastgelegd (met een reguliere expressie)" unit="" values="" default=""/>
+							<Tag name="Datum opname" type="" description="De datum waarop het informatie-element is opgenomen in het informatiemodel." unit="" values="" default=""/>
+						</TaggedValues>
+					</Stereotype>
+					<Stereotype name="Referentie element" notes="Een eigenschap van een object in een referentielijst in de vorm van een gegeven." cx="0" cy="0" bgcolor="16777164" fontcolor="0" bordercolor="0" borderwidth="1" hideicon="0">
+						<AppliesTo>
+							<Apply type="Attribute"/>
+						</AppliesTo>
+						<TaggedValues>
+							<Tag name="Begrip" type="" description="Verwijzing naar een begrip. De verwijzing heeft de vorm van een term of een URI." unit="" values="" default=""/>
+							<Tag name="Datum opname" type="" description="De datum waarop het referentie-element is opgenomen in het informatiemodel." unit="" values="" default=""/>
+							<Tag name="Lengte" type="" description="De aanduiding van de lengte van een gegeven." unit="" values="" default=""/>
+							<Tag name="Patroon" type="" description="De verzameling van waarden die gegevens van deze attribuutsoort kunnen hebben oftewel het waardenbereik, uitgedrukt in een specifieke structuur." unit="" values="" default="&lt;memo&gt;"/>
+							<Tag name="Formeel patroon" type="" description="Zoals patroon, formeel vastgelegd (met een reguliere expressie), uitgedrukt in een formele taal die door de computer wordt herkend." unit="" values="" default=""/>
+							<Tag name="Toelichting" type="" description="Een inhoudelijke toelichting op de toepassing van het informatie-element." unit="" values="" default="&lt;memo&gt;"/>
+						</TaggedValues>
+					</Stereotype>
+					<Stereotype name="Referentielijst" notes="Een lijst met een opsomming van de mogelijke domeinwaarden van een attribuutsoort, die buiten het model in een externe waardenlijst worden beheerd." cx="0" cy="0" bgcolor="16777164" fontcolor="0" bordercolor="0" borderwidth="1" hideicon="0">
+						<AppliesTo>
+							<Apply type="DataType"/>
+						</AppliesTo>
+						<TaggedValues>
+							<Tag name="Begrip" type="" description="Verwijzing naar een begrip. De verwijzing heeft de vorm van een term of een URI." unit="" values="" default=""/>
+							<Tag name="Herkomst" type="" description="De registratie of het informatiemodel waaraan het informatie-element ontleend is dan wel de eigen organisatie indien het door de eigen organisatie toegevoegd is." unit="" values="" default=""/>
+							<Tag name="Datum opname" type="" description="De datum waarop het informatie-element is opgenomen in het informatiemodel." unit="" values="" default=""/>
+							<Tag name="Toelichting" type="" description="Een inhoudelijke toelichting op de toepassing van het informatie-element." unit="" values="" default="&lt;memo&gt;"/>
+							<Tag name="Locatie" type="" description="De locatie waar deze lijst te vinden is opgegeven." unit="" values="" default=""/>
+						</TaggedValues>
+					</Stereotype>
+					<Stereotype name="Relatieklasse" notes="Een relatiesoort met eigenschappen." cx="0" cy="0" bgcolor="16777164" fontcolor="0" bordercolor="0" borderwidth="1" hideicon="0">
+						<AppliesTo>
+							<Apply type="AssociationClass">
+								<Property name="direction" value="Source -&gt; Destination"/>
+							</Apply>
+						</AppliesTo>
+						<TaggedValues>
+							<Tag name="Begrip" type="" description="Verwijzing naar een begrip. De verwijzing heeft de vorm van een term of een URI." unit="" values="" default=""/>
+						</TaggedValues>
+					</Stereotype>
+					<Stereotype name="Relatierol" notes="De benaming van de manier waarop een object deelneemt aan een relatie met een ander object." cx="0" cy="0" bgcolor="16777164" fontcolor="0" bordercolor="0" borderwidth="1" hideicon="0">
+						<AppliesTo>
+							<Apply type="AssociationEnd"/>
+						</AppliesTo>
+						<TaggedValues>
+							<Tag name="Begrip" type="" description="Verwijzing naar een begrip. De verwijzing heeft de vorm van een term of een URI." unit="" values="" default=""/>
+							<Tag name="Herkomst" type="" description="De registratie of het informatiemodel waaraan het informatie-element ontleend is dan wel de eigen organisatie indien het door de eigen organisatie toegevoegd is." unit="" values="" default=""/>
+							<Tag name="Herkomst defintie" type="" description="De registratie of het informatiemodel waaruit de definitie is overgenomen dan wel een aanduiding die aangeeft uit welke bronnen de definitie is samengesteld." unit="" values="" default=""/>
+							<Tag name="Datum opname" type="" description="De datum waarop het informatie-element is opgenomen in het informatiemodel." unit="" values="" default=""/>
+							<Tag name="Indicatie materiële historie" type="enumeration" description="Indicatie of de materiële historie van dit informatie-element te bevragen is." unit="" values="Ja,Nee,Zie groep" default=""/>
+							<Tag name="Indicatie formele historie" type="enumeration" description="Indicatie of de formele historie van dit informatie-element te bevragen is." unit="" values="Ja,Nee,Zie groep" default=""/>
+							<Tag name="Authentiek" type="enumeration" description="Aanduiding of het een authentiek gegeven betreft." unit="" values="Authentiek,Basisgegeven,Wettelijk gegeven,Landelijk kerngegeven,Overig" default=""/>
+							<Tag name="Toelichting" type="" description="Een inhoudelijke toelichting op de toepassing van het informatie-element." unit="" values="" default="&lt;memo&gt;"/>
+							<Tag name="Mogelijk geen waarde" type="enumeration" description="Aanduiding dat dit informatie-element geen waarde kan bevatten." unit="" values="Ja,Nee" default="Nee"/>
+						</TaggedValues>
+					</Stereotype>
+					<Stereotype name="Relatiesoort" notes="De typering van het structurele verband tussen een object van een objecttype en een (ander) object van een ander (of hetzelfde) objecttype." cx="0" cy="0" bgcolor="16777164" fontcolor="0" bordercolor="0" borderwidth="1" hideicon="0">
+						<AppliesTo>
+							<Apply type="Association">
+								<Property name="compositionKind" value="none"/>
+								<Property name="direction" value="Source -&gt; Destination"/>
+							</Apply>
+						</AppliesTo>
+						<TaggedValues>
+							<Tag name="Begrip" type="" description="Verwijzing naar een begrip. De verwijzing heeft de vorm van een term of een URI." unit="" values="" default=""/>
+							<Tag name="Herkomst" type="" description="De registratie of het informatiemodel waaraan het informatie-element ontleend is dan wel de eigen organisatie indien het door de eigen organisatie toegevoegd is." unit="" values="" default=""/>
+							<Tag name="Herkomst definitie" type="" description="De registratie of het informatiemodel waaruit de definitie is overgenomen dan wel een aanduiding die aangeeft uit welke bronnen de definitie is samengesteld." unit="" values="" default=""/>
+							<Tag name="Datum opname" type="" description="De datum waarop het informatie-element is opgenomen in het informatiemodel." unit="" values="" default=""/>
+							<Tag name="Indicatie materiële historie" type="enumeration" description="Indicatie of de materiële historie van dit informatie-element te bevragen is." unit="" values="Ja,Nee,Zie groep" default=""/>
+							<Tag name="Indicatie formele historie" type="enumeration" description="Indicatie of de formele historie van dit informatie-element te bevragen is." unit="" values="Ja,Nee,Zie groep" default=""/>
+							<Tag name="Authentiek" type="enumeration" description="Aanduiding of het een authentiek gegeven betreft." unit="" values="Authentiek,Basisgegeven,Wettelijk gegeven,Landelijk kerngegeven,Overig" default=""/>
+							<Tag name="Toelichting" type="" description="Een inhoudelijke toelichting op de toepassing van het informatie-element." unit="" values="" default="&lt;memo&gt;"/>
+							<Tag name="Mogelijk geen waarde" type="enumeration" description="Aanduiding dat dit informatie-element geen waarde kan bevatten." unit="" values="Ja,Nee" default="Nee"/>
+						</TaggedValues>
+					</Stereotype>
+					<Stereotype name="View" notes="Een groepering van objecttypen die gespecificeerd zijn in een extern informatiemodel en vanuit het perspectief van het eigen informatiemodel inzicht geeft welke gegevens van deze objecttypen relevant zijn binnen het eigen informatiemodel." cx="0" cy="0" bgcolor="16777164" fontcolor="0" bordercolor="0" borderwidth="1" hideicon="0">
+						<AppliesTo>
+							<Apply type="Package">
+								<Property name="URI" value=""/>
+							</Apply>
+						</AppliesTo>
+						<TaggedValues>
+							<Tag name="Locatie" type="" description="De verwijzing naar de locatie van het bijbehorende informatiemodel waar de view over gaat. Indien mogelijk is de verwijzing een URI of een URL." unit="" values="" default=""/>
+							<Tag name="Herkomst" type="" description="De registratie of het informatiemodel waaraan het package ontleend is. Bij een view is de herkomst nooit de eigen organsiatie." unit="" values="" default=""/>
+						</TaggedValues>
+					</Stereotype>
+				</Stereotypes>
+				<TaggedValueTypes/>
+				<ViewDefinitions/>
+				<Metamodel/>
+			</Content>
+		</UMLProfile>
+		<UMLProfile profiletype="uml2">
+			<Documentation id="29A061BB-D" name="MIM_Keuzeattribuut" version="1.1" notes="MIM Keuzeattribuut"/>
+			<Content>
+				<Stereotypes>
+					<Stereotype name="Keuze" notes="" cx="0" cy="0" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+						<AppliesTo>
+							<Apply type="Attribute"/>
+						</AppliesTo>
+					</Stereotype>
+				</Stereotypes>
+				<TaggedValueTypes/>
+				<ViewDefinitions/>
+				<Metamodel/>
+			</Content>
+		</UMLProfile>
+		<UMLProfile profiletype="uml2">
+			<Documentation id="4A1612D4-A" name="MIM_Keuzebasis" version="1.1" notes="MIM Keuzebasis"/>
+			<Content>
+				<Stereotypes>
+					<Stereotype name="Keuze" notes="Gestructureerd datatype, waarmee wordt aangegeven dat er maar één van de eigenschappen van dit datatype mogelijk is in een instantie van dit datatype." cx="0" cy="0" bgcolor="16777164" fontcolor="0" bordercolor="0" borderwidth="1" hideicon="0">
+						<AppliesTo>
+							<Apply type="DataType"/>
+						</AppliesTo>
+						<TaggedValues>
+							<Tag name="Begrip" type="" description="Verwijzing naar een begrip. De verwijzing heeft de vorm van een term of een URI." unit="" values="" default=""/>
+							<Tag name="Herkomst" type="" description="De registratie of het informatiemodel waaraan het informatie-element ontleend is dan wel de eigen organisatie indien het door de eigen organisatie toegevoegd is." unit="" values="" default=""/>
+							<Tag name="Datum opname" type="" description="De datum waarop het informatie-element is opgenomen in het informatiemodel." unit="" values="" default=""/>
+						</TaggedValues>
+					</Stereotype>
+				</Stereotypes>
+				<TaggedValueTypes/>
+				<ViewDefinitions/>
+				<Metamodel/>
+			</Content>
+		</UMLProfile>
+		<UMLProfile profiletype="uml2">
+			<Documentation id="1D9A4364-6" name="MIM_Keuzedatatype" version="1.1" notes="MIM Keuzedatatype"/>
+			<Content>
+				<Stereotypes>
+					<Stereotype name="Datatype" notes="" cx="0" cy="0" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+						<AppliesTo>
+							<Apply type="Attribute"/>
+						</AppliesTo>
+					</Stereotype>
+				</Stereotypes>
+				<TaggedValueTypes/>
+				<ViewDefinitions/>
+				<Metamodel/>
+			</Content>
+		</UMLProfile>
+		<UMLProfile profiletype="uml2">
+			<Documentation id="EE6A2E72-5" name="MIM_Keuzerelatie" version="1.1" notes="MIM Keuzerelatie"/>
+			<Content>
+				<Stereotypes>
+					<Stereotype name="Keuze" notes="Een element van een Keuze waarmee een keuze uit datatypen wordt gespecificeerd. Alleen toepasbaar bij een klasse met het stereotype Keuze." cx="0" cy="0" bgcolor="14480885" fontcolor="0" bordercolor="0" borderwidth="1" hideicon="0">
+						<AppliesTo>
+							<Apply type="Association">
+								<Property name="compositionKind" value="none"/>
+								<Property name="direction" value="Source -&gt; Destination"/>
+							</Apply>
+						</AppliesTo>
+					</Stereotype>
+				</Stereotypes>
+				<TaggedValueTypes/>
+				<ViewDefinitions/>
+				<Metamodel/>
+			</Content>
+		</UMLProfile>
+	</UMLProfiles><UIToolboxes><UMLProfile profiletype="uml2">
+			<Documentation id="AEC3F119-8" name="MIM" version="1.1" notes="MIM versie 1.1 Toolbox"/>
+			<Content>
+				<Stereotypes>
+					<Stereotype name="MIM: Objecten en attributen" alias="Objecten en attributen" notes="Selecteer en klik ergens op het diagram om te plaatsen" cx="0" cy="0" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+						<AppliesTo>
+							<Apply type="ToolboxPage"/>
+						</AppliesTo>
+						<TaggedValues>
+							<Tag name="MIM::Objecttype(UML::Class)" type="" description="" unit="" values="" default="Objecttype"/>
+							<Tag name="MIM::Attribuutsoort(UML::Attribute)" type="" description="" unit="" values="" default="Attribuutsoort"/>
+							<Tag name="MIM_Keuzeattribuut::Keuze(UML::Attribute)" type="" description="" unit="" values="" default="Keuze(attribuut)"/>
+							<Tag name="MIM::Gegevensgroeptype(UML::Class" type="" description="" unit="" values="" default="Gegevensgroeptype"/>
+							<Tag name="MIM::Gegevensgroep(UML::Attribute)" type="" description="" unit="" values="" default="Gegevensgroep"/>
+						</TaggedValues>
+					</Stereotype>
+					<Stereotype name="MIM: Relaties" notes="Selecteer en trek van type naar type om te plaatsen" cx="0" cy="0" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+						<AppliesTo>
+							<Apply type="ToolboxPage"/>
+						</AppliesTo>
+						<TaggedValues>
+							<Tag name="MIM::Generalisatie(UML::Generalization)" type="" description="" unit="" values="" default="Generalisatie"/>
+							<Tag name="MIM::Relatiesoort(UML::Association)" type="" description="" unit="" values="" default="Relatiesoort"/>
+							<Tag name="MIM::Relatierol(UML::AssociationEnd)" type="" description="" unit="" values="" default="Relatierol"/>
+							<Tag name="MIM::Relatieklasse(UML::AssociationClass)" type="" description="" unit="" values="" default="Relatieklasse"/>
+							<Tag name="MIM::Externe koppeling(UML::Association)" type="" description="" unit="" values="" default="Externe koppeling"/>
+							<Tag name="MIM_Keuzerelatie::Keuze(UML::Association)" type="" description="" unit="" values="" default="Keuze(relatie)"/>
+						</TaggedValues>
+					</Stereotype>
+					<Stereotype name="MIM: Datatypen" notes="Selecteer en klik in het diagram om te plaatsen" cx="0" cy="0" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+						<AppliesTo>
+							<Apply type="ToolboxPage"/>
+						</AppliesTo>
+						<TaggedValues>
+							<Tag name="MIM::Primitief datatype(UML::PrimitiveType)" type="" description="" unit="" values="" default="Primitief datatype"/>
+							<Tag name="MIM::Gestructureerd datatype(UML::DataType)" type="" description="" unit="" values="" default="Gestructureerd datatype"/>
+							<Tag name="MIM::Data element(UML::Attribute)" type="" description="" unit="" values="" default="Data element"/>
+							<Tag name="MIM_Keuzebasis::Keuze(UML::DataType)" type="" description="" unit="" values="" default="Keuze"/>
+							<Tag name="MIM_Keuzedatatype::Datatype(UML::Attribute)" type="" description="" unit="" values="" default="Datatype(Keuze)"/>
+						</TaggedValues>
+					</Stereotype>
+					<Stereotype name="MIM: Waardelijsten" notes="Selecteer en klik ergens op het diagram om te plaatsen" cx="0" cy="0" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+						<AppliesTo>
+							<Apply type="ToolboxPage"/>
+						</AppliesTo>
+						<TaggedValues>
+							<Tag name="MIM::Enumeratie(UML::Enumeration)" type="" description="" unit="" values="" default="Enumeratie"/>
+							<Tag name="MIM::Enumeratiewaarde(UML::Attribute)" type="" description="" unit="" values="" default="Enumeratiewaarde"/>
+							<Tag name="MIM::CodeLijst(UML::DataType)" type="" description="" unit="" values="" default="CodeLijst"/>
+							<Tag name="MIM::Referentielijst(UML::DataType)" type="" description="" unit="" values="" default="Referentielijst"/>
+							<Tag name="MIM::Referentie element(UML::Attribute)" type="" description="" unit="" values="" default="Referentie element"/>
+						</TaggedValues>
+					</Stereotype>
+					<Stereotype name="MIM: Package" notes="Selecteer en klik ergens in het diagram om te plaatsen" cx="0" cy="0" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+						<AppliesTo>
+							<Apply type="ToolboxPage"/>
+						</AppliesTo>
+						<TaggedValues>
+							<Tag name="MIM::Extern(UML::Package)" type="" description="" unit="" values="" default="Extern"/>
+							<Tag name="MIM::View(UML::Package)" type="" description="" unit="" values="" default="View"/>
+							<Tag name="MIM::Informatiemodel(UML::Package)" type="" description="" unit="" values="" default="Informatiemodel"/>
+							<Tag name="MIM::Domein(UML::Package)" type="" description="" unit="" values="" default="Domein"/>
+						</TaggedValues>
+					</Stereotype>
+				</Stereotypes>
+				<TaggedValueTypes/>
+				<ViewDefinitions/>
+				<Metamodel/>
+			</Content>
+		</UMLProfile>
+	</UIToolboxes></MDG.Technology>
