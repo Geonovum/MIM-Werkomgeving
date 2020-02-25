@@ -140,7 +140,7 @@ mogelijke beschrijving van die werkelijkheid tot een specificatie van de wijze
 van vastlegging van die werkelijkheid in een database of uitwisselformaat.
 Veelal worden vier niveaus onderscheiden, waarbij niveau 1 niet als een
 informatiemodel wordt gezien en waarbij MIM zich primair richt op niveau 2 en 3
-(Het uitdrukken in UML richt zich op niveau 2 en 3,, het uitdrukken in Linked Data
+(Het uitdrukken in UML richt zich op niveau 2 en 3, het uitdrukken in Linked Data
 richt zich op alle niveaus)[[!MDA]]
 
 #### Niveau 1: Model van begrippen

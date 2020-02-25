@@ -51,7 +51,7 @@ datatypes. Deze zijn allemaal gebaseerd op [[!GAB]]:
 |--------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | CharacterString    | Zie [[!iso-19103]]. Vrij vertaald: alle alfanumerieke tekens en speciale tekens die horen bij de gekozen characterset (standaard UTF-8), dus met diakrieten, white spaces, \\-teken en newlines of HTML opmaak e.d. Mag starten met spatie. De maximale lengte is onbepaald. *Opmerking*: getallen (ISO Numbers) met voorloopnullen worden opgenomen als CharacterString, met een patroon of formeel patroon. Bij het metagegeven Waardenverzameling attribuutsoort wordt dit dan (ook) gespecificeerd. |
 | Integer            | Zie [[!iso-19103]] (subtype van ISO Number). Vrij vertaald: geheel getal, lengte is minimaal 1 en maximale lengte is onbepaald, zonder voorloopnullen. *Opmerking*: t.a.v. positieve en negatieve getalen en + en – tekens: bijvoorbeeld -2,0 Het (formeel) patroon geeft aan of een + en/of - teken gebruikt mag worden in het gegeven.                                                                                                                                                                |
-| Real               | Zie [[!iso-19103]] (subtype van ISO Number). Vrij vertaald: een real is een zwevendekommagetal, waarbij de precisie bepaald wordt door het aantal getoonde cijfers. Het getoonde getal is een schatting en geeft niet noodzakelijk de exacte waarde weer. *Opmerking 1*: Dit verschilt van decimal, want decimal is een exacte waarde en real is geschat. *Opmerking 2:* t.a.v. positieve en negatieve getalen en + en – tekens: zie Integer.                                                           |
+| Real               | Zie [[!iso-19103]] (subtype van ISO Number). Vrij vertaald: een real is een zwevendekommagetal, waarbij de precisie bepaald wordt door het aantal getoonde cijfers. Het getoonde getal is een schatting en geeft niet noodzakelijk de exacte waarde weer. *Opmerking 1*: Dit verschilt van decimal, want decimal is een exacte waarde en real is geschat. *Opmerking 2:* t.a.v. positieve en negatieve getalen en + en – tekens: zie [Integer](#primitive-datatypes).                                                           |
 | Decimal            | Zie [[!iso-19103]] (subtype van ISO Number). Vrij vertaald: een decimal is een gegevenstype waarin het getal een exacte waarde vertegenwoordigt, als een eindige weergave van een decimaal getal. Aangezien veel valuta's decimaal zijn, hebben deze weergaven de voorkeur bij het omgaan met dergelijke waarden. *Opmerking 1:* Dit verschilt van real, want real is een geschatte waarde en Decimal is exact. *Opmerking 2:* t.a.v. positieve en negatieve getalen en + en – tekens: zie Integer.       |
 | Boolean            | Indicatie met mogelijke waarden True, false, 1 of 0. True en 1 hebben een identieke betekenis: Ja. False en 0 hebben een identieke betekenis: Nee. *Opmerking*: t.a.v. Ja of Nee. Wanneer u de Ja of Nee wilt gebruiken, gebruik dan bv. een Enumeratie genaamd Indicatie, of gebruik AN met een lengte en een (formeel) patroon.                                                                                                                                                                       |
 |                    |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
@@ -74,7 +74,7 @@ grootte.
 Een getal kan negatief zijn. Dit is inherent aan een getal. Het - of + teken
 heeft geen invloed op de lengte van het getal. Als er dus een lengte wordt
 gespecificeerd, tel het - of + teken dan niet mee. Als een getal niet negatief
-mag zijn, geef dit dan aan in een patroon (zie NonNegativeInteger).
+mag zijn, geef dit dan aan in een patroon (zie [NonNegativeInteger](#datatype-zelf-definieren)).
 
 Aanbeveling: als er niet mee gerekend kan worden, zoals de bankrekening zelf
 (waar een saldo op staat, maar die bedoelen we hier expliciet niet), gebruik dan
@@ -844,8 +844,7 @@ het wellicht dus soms nodig deze waardes om te zetten.
 | *Toegankelijkheid*           | N                       | n.v.t.                             |
 | *Gebruiksvoorwaarden*        | N                       | n.v.t.                             |
 
-Waardenbereik afspraken - *Authentiek:* als in dit metamodel ‘Authentiek’ (zie
-2.4.21) dan ‘Ja’ in stelselcatalogus, anders Nee. - *Herkomst:* Zelf in te
+Waardenbereik afspraken - *Authentiek:* als in dit metamodel [‘Authentiek’](#authentiek) dan ‘Ja’ in stelselcatalogus, anders Nee. - *Herkomst:* Zelf in te
 vullen. Afspraken hierbij:  
 Als zelf ingewonnen: noem de inwinnende organisatie. Bijvoorbeeld: VNG
 Realisatie of Gemeentes.  
@@ -859,7 +858,7 @@ is wel af te leiden uit het metagegeven van relatiesoort: gerelateerd objecttype
 Naamgevingsconventies zijn belangrijk om te specificeren. Onderstaande
 beschrijft enkele punten die op het niveau van dit metamodel zijn afgesproken.
 De verdere invulling van de naamgevingsconventies is aan de opsteller van het
-informatiemodel zelf (zie ook bijlage 1).
+informatiemodel zelf (zie ook [bijlage](#bijlagen)).
 
 #### Uniekheid van namen van modelelementen 
 
@@ -921,7 +920,7 @@ Regel: voor logische informatiemodellen wordt altijd alternatief 2 gehanteerd.
 
 Neem aanvullend een verwijzing op naar het betreffende modelelement in het
 conceptuele informatiemodel. Dit kan bijvoorbeeld met een trace of door opname van de naam
-in de alias (zie 3.16.20), zodat lezers goed de overgang van conceptueel naar
+in de [alias](#metagegeven-alias), zodat lezers goed de overgang van conceptueel naar
 logisch kunnen volgen.
 
 #### Naamgeving voor metamodel elementen

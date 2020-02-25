@@ -7,7 +7,7 @@ Het metamodel beschrijft de modelelementen die worden gebruikt bij het maken van
 Bijvoorbeeld: in de basisregistatie Kadaster wordt een perceel gemodelleerd als een objecttype. De grens van een perceel wordt gemodelleerd als een attribuutsoort. Objecttype en attribuutsoort zijn de modelelementen op metamodel niveau, het perceel en de grens zijn de modelelemenenten van het informatiemodel niveau. 
 
 - De eerste paragraaf bevat diagrammen, die kort een overzicht geven van de modelelementen die op metamodel niveau worden onderkend, alsmede hun onderlinge verhouding
-- De paragrafen erna bevat de beschrijvingen in tekst van de modelelementen die op metamodel niveau worden onderkend. Wanneer u liever de beschrijvingen eerst leest, kunt u ook met deze paragraaf starten. Dit begint bij [Objecttypen en attribuutsoorten] 
+- De paragrafen erna bevat de beschrijvingen in tekst van de modelelementen die op metamodel niveau worden onderkend. Wanneer u liever de beschrijvingen eerst leest, kunt u ook met deze paragraaf starten. Dit begint bij [Objecttypen en attribuutsoorten](#objecttypen-en-attribuutsoorten) 
 - De laatste paragraaf bevat de metagegevens die worden bijgehouden over de modelelementen in een informatiemodel. Dit metamodel geeft aan welke metagegevens er zijn.  
 
 **Uitgangspunten voor het metamodel**
@@ -580,7 +580,7 @@ als type van een attribuutsoort.
 Datatypes zijn veelal op vele plekken (her)bruikbaar en kunnen daarom gespecificeerd
 worden bij diverse «Attribuutsoort»-en.
 
-Diagram: [Datatypen](#Datatypen)
+Diagram: [Datatypen](#datatypen)
 
 #### Primitief datatype
 
@@ -721,7 +721,7 @@ Een domein package bevat de modelelemementen waaruit een informatiemodel is same
 
 ### Overige modelelementen
 
-Diagram: [Overige](#Overige)
+Diagram: [Overige](#overige)
 
 #### Constraint
 
