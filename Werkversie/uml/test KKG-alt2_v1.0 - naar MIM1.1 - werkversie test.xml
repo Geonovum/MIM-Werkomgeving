@@ -1,0 +1,1539 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<xmi:XMI xmi:version="2.1" xmlns:uml="http://schema.omg.org/spec/UML/2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:thecustomprofile="http://www.sparxsystems.com/profiles/thecustomprofile/1.0" xmlns:MIM="http://www.sparxsystems.com/profiles/MIM/1.1">
+	<xmi:Documentation exporter="Enterprise Architect" exporterVersion="6.5"/>
+	<uml:Model xmi:type="uml:Model" name="EA_Model" visibility="public">
+		<packagedElement xmi:type="uml:Package" xmi:id="EAPK_9BB2C8C8_C5DE_4c9b_A3C4_1B21A0ECC989" name="Model" visibility="public">
+			<packagedElement xmi:type="uml:Package" xmi:id="EAPK_CECEB2E9_367C_4414_A28C_F4AF6C33C539" name="Domain Model" visibility="public">
+				<packagedElement xmi:type="uml:Package" xmi:id="EAPK_0C7C75EC_CFE9_4fab_911E_D139D7529601" name="test KKG-alt2" visibility="public">
+					<packagedElement xmi:type="uml:Class" xmi:id="EAID_29CA90B9_39B3_45a6_9CEE_DA7562D248C1" name="Class1" visibility="public"/>
+					<packagedElement xmi:type="uml:Class" xmi:id="EAID_ED1BDED0_796F_4c17_A3A7_4383B943CED2" name="Test gegevensgroeptype1" visibility="public">
+						<ownedAttribute xmi:type="uml:Property" xmi:id="EAID_641BE4CE_8984_4340_80B1_44648FEFFB6F" name="test attribuut6" visibility="public" isStatic="false" isReadOnly="false" isDerived="false" isOrdered="false" isUnique="true" isDerivedUnion="false">
+							<lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000001_8984_4340_80B1_44648FEFFB6F" value="1"/>
+							<upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000002_8984_4340_80B1_44648FEFFB6F" value="1"/>
+							<type xmi:idref="EAJava_CharacterString"/>
+						</ownedAttribute>
+						<ownedAttribute xmi:type="uml:Property" xmi:id="EAID_50AE0C07_9A93_4a7d_8E3B_2A6B79B889CA" name="test attribuut7" visibility="public" isStatic="false" isReadOnly="false" isDerived="false" isOrdered="false" isUnique="true" isDerivedUnion="false">
+							<lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000003_9A93_4a7d_8E3B_2A6B79B889CA" value="1"/>
+							<upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000004_9A93_4a7d_8E3B_2A6B79B889CA" value="1"/>
+							<type xmi:idref="EAJava_CharacterString"/>
+						</ownedAttribute>
+					</packagedElement>
+					<packagedElement xmi:type="uml:Class" xmi:id="EAID_A219154D_D972_4ab7_8226_7D83CFD48C33" name="test klasse zonder toolbox" visibility="public"/>
+					<packagedElement xmi:type="uml:Class" xmi:id="EAID_4A4E162A_2737_4092_8DC7_81669D51FC34" name="Test objecttype1" visibility="public">
+						<ownedAttribute xmi:type="uml:Property" xmi:id="EAID_36374985_4394_4e27_AECB_35270E0938D6" name="test attribuut1" visibility="public" isStatic="false" isReadOnly="false" isDerived="false" isOrdered="false" isUnique="true" isDerivedUnion="false">
+							<lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000005_4394_4e27_AECB_35270E0938D6" value="1"/>
+							<upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000006_4394_4e27_AECB_35270E0938D6" value="1"/>
+							<type xmi:idref="EAJava_CharacterString"/>
+						</ownedAttribute>
+						<ownedAttribute xmi:type="uml:Property" xmi:id="EAID_97A0B93E_0567_49a9_84E2_00B86A5AA65A" name="test attribuut12" visibility="public" isStatic="false" isReadOnly="false" isDerived="false" isOrdered="false" isUnique="true" isDerivedUnion="false">
+							<type xmi:idref="EAID_3F7AAF3E_4076_4a00_ABBB_1B460998130C"/>
+							<lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000007_0567_49a9_84E2_00B86A5AA65A" value="1"/>
+							<upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000008_0567_49a9_84E2_00B86A5AA65A" value="1"/>
+						</ownedAttribute>
+						<ownedAttribute xmi:type="uml:Property" xmi:id="EAID_61B77EAD_DA82_4b45_A6EE_F3328E9F5865" name="test attribuut2" visibility="public" isStatic="false" isReadOnly="false" isDerived="false" isOrdered="false" isUnique="true" isDerivedUnion="false">
+							<type xmi:idref="EAID_E8071D01_97C0_4340_9262_FCE0C9B757AC"/>
+							<lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000009_DA82_4b45_A6EE_F3328E9F5865" value="1"/>
+							<upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000010_DA82_4b45_A6EE_F3328E9F5865" value="1"/>
+						</ownedAttribute>
+						<ownedAttribute xmi:type="uml:Property" xmi:id="EAID_6663347B_6FEA_493b_BA4C_FF09069589E1" name="test attribuut3" visibility="public" isStatic="false" isReadOnly="false" isDerived="false" isOrdered="false" isUnique="true" isDerivedUnion="false">
+							<type xmi:idref="EAID_6EA3FF0B_6300_4cd4_A6F8_66D2180E70BB"/>
+							<lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000011_6FEA_493b_BA4C_FF09069589E1" value="1"/>
+							<upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000012_6FEA_493b_BA4C_FF09069589E1" value="1"/>
+						</ownedAttribute>
+						<ownedAttribute xmi:type="uml:Property" xmi:id="EAID_E43BFF6D_51A8_45ba_BE08_6B18E45BFE66" name="test attribuut4" visibility="public" isStatic="false" isReadOnly="false" isDerived="false" isOrdered="false" isUnique="true" isDerivedUnion="false">
+							<type xmi:idref="EAID_D54316B9_2F4C_4567_9810_E24933562311"/>
+							<lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000013_51A8_45ba_BE08_6B18E45BFE66" value="1"/>
+							<upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000014_51A8_45ba_BE08_6B18E45BFE66" value="1"/>
+						</ownedAttribute>
+						<ownedAttribute xmi:type="uml:Property" xmi:id="EAID_766264A0_3A79_4c88_92E5_60A456D48B23" name="test attribuut5" visibility="public" isStatic="false" isReadOnly="false" isDerived="false" isOrdered="false" isUnique="true" isDerivedUnion="false">
+							<type xmi:idref="EAID_CB9ACB38_4437_4ecd_9621_F871F8AD84CA"/>
+							<lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000015_3A79_4c88_92E5_60A456D48B23" value="1"/>
+							<upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000016_3A79_4c88_92E5_60A456D48B23" value="1"/>
+						</ownedAttribute>
+						<ownedAttribute xmi:type="uml:Property" xmi:id="EAID_B82EFC1C_2149_4b77_8684_4B627784C96F" name="test gegevensgroep" visibility="public" isStatic="false" isReadOnly="false" isDerived="false" isOrdered="false" isUnique="true" isDerivedUnion="false">
+							<type xmi:idref="EAID_ED1BDED0_796F_4c17_A3A7_4383B943CED2"/>
+							<lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000017_2149_4b77_8684_4B627784C96F" value="1"/>
+							<upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000018_2149_4b77_8684_4B627784C96F" value="1"/>
+						</ownedAttribute>
+						<generalization xmi:type="uml:Generalization" xmi:id="EAID_3F082A96_867E_4720_9AAA_322C9CD0BEC8" general="EAID_C672763B_8E4C_41bd_9191_5E8F4D07AD81"/>
+						<ownedAttribute xmi:type="uml:Property" xmi:id="EAID_dstB38924_4FFD_4c93_9E4B_0F4AD0CC57B1" visibility="public" association="EAID_44B38924_4FFD_4c93_9E4B_0F4AD0CC57B1" isStatic="false" isReadOnly="false" isDerived="false" isOrdered="false" isUnique="true" isDerivedUnion="false" aggregation="none">
+							<type xmi:idref="EAID_FCCB561D_EAC8_40a6_A4BE_FD6BB02587FD"/>
+						</ownedAttribute>
+						<ownedAttribute xmi:type="uml:Property" xmi:id="EAID_dst33A525_7B16_4086_9EBE_DD1C49A1A80A" visibility="public" association="EAID_532814DF_32EF_40e3_B8A6_928F69DA3227" isStatic="false" isReadOnly="false" isDerived="false" isOrdered="false" isUnique="true" isDerivedUnion="false" aggregation="none">
+							<type xmi:idref="EAID_E7D31188_001D_4635_98FD_63FF2D2DA449"/>
+						</ownedAttribute>
+						<ownedAttribute xmi:type="uml:Property" xmi:id="EAID_dstA1D1DB_AD3C_4cb5_B0AA_8999A91B3623" name="test relatierol" visibility="public" association="EAID_FEA1D1DB_AD3C_4cb5_B0AA_8999A91B3623" isStatic="false" isReadOnly="false" isDerived="false" isOrdered="false" isUnique="true" isDerivedUnion="false" aggregation="none">
+							<type xmi:idref="EAID_024017F9_6FE5_42be_9D84_4729C873F838"/>
+						</ownedAttribute>
+					</packagedElement>
+					<packagedElement xmi:type="uml:Association" xmi:id="EAID_44B38924_4FFD_4c93_9E4B_0F4AD0CC57B1" visibility="public">
+						<memberEnd xmi:idref="EAID_dstB38924_4FFD_4c93_9E4B_0F4AD0CC57B1"/>
+						<memberEnd xmi:idref="EAID_srcB38924_4FFD_4c93_9E4B_0F4AD0CC57B1"/>
+						<ownedEnd xmi:type="uml:Property" xmi:id="EAID_srcB38924_4FFD_4c93_9E4B_0F4AD0CC57B1" visibility="public" association="EAID_44B38924_4FFD_4c93_9E4B_0F4AD0CC57B1" isStatic="false" isReadOnly="false" isDerived="false" isOrdered="false" isUnique="true" isDerivedUnion="false" aggregation="none">
+							<type xmi:idref="EAID_4A4E162A_2737_4092_8DC7_81669D51FC34"/>
+						</ownedEnd>
+					</packagedElement>
+					<packagedElement xmi:type="uml:Association" xmi:id="EAID_FEA1D1DB_AD3C_4cb5_B0AA_8999A91B3623" visibility="public">
+						<memberEnd xmi:idref="EAID_dstA1D1DB_AD3C_4cb5_B0AA_8999A91B3623"/>
+						<memberEnd xmi:idref="EAID_srcA1D1DB_AD3C_4cb5_B0AA_8999A91B3623"/>
+						<ownedEnd xmi:type="uml:Property" xmi:id="EAID_srcA1D1DB_AD3C_4cb5_B0AA_8999A91B3623" visibility="public" association="EAID_FEA1D1DB_AD3C_4cb5_B0AA_8999A91B3623" isStatic="false" isReadOnly="false" isDerived="false" isOrdered="false" isUnique="true" isDerivedUnion="false" aggregation="none">
+							<type xmi:idref="EAID_4A4E162A_2737_4092_8DC7_81669D51FC34"/>
+						</ownedEnd>
+					</packagedElement>
+					<packagedElement xmi:type="uml:Class" xmi:id="EAID_024017F9_6FE5_42be_9D84_4729C873F838" name="Test objecttype2" visibility="public"/>
+					<packagedElement xmi:type="uml:Class" xmi:id="EAID_E7D31188_001D_4635_98FD_63FF2D2DA449" name="Test objecttype3" visibility="public"/>
+					<packagedElement xmi:type="uml:Class" xmi:id="EAID_FCCB561D_EAC8_40a6_A4BE_FD6BB02587FD" name="Test objecttype4" visibility="public"/>
+					<packagedElement xmi:type="uml:AssociationClass" xmi:id="EAID_532814DF_32EF_40e3_B8A6_928F69DA3227" name="Test Relatieklasse" visibility="public">
+						<memberEnd xmi:idref="EAID_dst33A525_7B16_4086_9EBE_DD1C49A1A80A"/>
+						<memberEnd xmi:idref="EAID_src33A525_7B16_4086_9EBE_DD1C49A1A80A"/>
+						<ownedEnd xmi:type="uml:Property" xmi:id="EAID_src33A525_7B16_4086_9EBE_DD1C49A1A80A" visibility="public" association="EAID_532814DF_32EF_40e3_B8A6_928F69DA3227" isStatic="false" isReadOnly="false" isDerived="false" isOrdered="false" isUnique="true" isDerivedUnion="false" aggregation="none">
+							<type xmi:idref="EAID_4A4E162A_2737_4092_8DC7_81669D51FC34"/>
+						</ownedEnd>
+					</packagedElement>
+					<packagedElement xmi:type="uml:Class" xmi:id="EAID_C672763B_8E4C_41bd_9191_5E8F4D07AD81" name="Test supertype1" visibility="public"/>
+					<packagedElement xmi:type="uml:Enumeration" xmi:id="EAID_E8071D01_97C0_4340_9262_FCE0C9B757AC" name="Test enumeratie1" visibility="public">
+						<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="EAID_A18A92C1_2D3E_495e_B39F_A4D4157715C6" name="test enum waarde" visibility="public" classifier="EAJava_int"/>
+					</packagedElement>
+					<packagedElement xmi:type="uml:DataType" xmi:id="EAID_3F7AAF3E_4076_4a00_ABBB_1B460998130C" name="Test gestructureerd datatype" visibility="public">
+						<ownedAttribute xmi:type="uml:Property" xmi:id="EAID_D12F17CD_6D18_4187_9B77_70A5C0920A39" name="test attribuut 10" visibility="public" isStatic="false" isReadOnly="false" isDerived="false" isOrdered="false" isUnique="true" isDerivedUnion="false">
+							<lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000019_6D18_4187_9B77_70A5C0920A39" value="1"/>
+							<upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000020_6D18_4187_9B77_70A5C0920A39" value="1"/>
+							<type xmi:idref="EAJava_CharacterString"/>
+						</ownedAttribute>
+						<ownedAttribute xmi:type="uml:Property" xmi:id="EAID_0502C936_C1DC_4ad8_B793_D5E47810FFE7" name="test attribuut11" visibility="public" isStatic="false" isReadOnly="false" isDerived="false" isOrdered="false" isUnique="true" isDerivedUnion="false">
+							<lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000021_C1DC_4ad8_B793_D5E47810FFE7" value="1"/>
+							<upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000022_C1DC_4ad8_B793_D5E47810FFE7" value="1"/>
+							<type xmi:idref="EAJava_CharacterString"/>
+						</ownedAttribute>
+					</packagedElement>
+					<packagedElement xmi:type="uml:PrimitiveType" xmi:id="EAID_CB9ACB38_4437_4ecd_9621_F871F8AD84CA" name="Test primitief datatype" visibility="public"/>
+					<packagedElement xmi:type="uml:DataType" xmi:id="EAID_6EA3FF0B_6300_4cd4_A6F8_66D2180E70BB" name="Test referentielijst" visibility="public">
+						<ownedAttribute xmi:type="uml:Property" xmi:id="EAID_D036CCBC_F346_45ca_AA03_C1DE99BA2A6D" name="test referentieelement" visibility="public" isStatic="false" isReadOnly="false" isDerived="false" isOrdered="false" isUnique="true" isDerivedUnion="false">
+							<lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000023_F346_45ca_AA03_C1DE99BA2A6D" value="1"/>
+							<upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000024_F346_45ca_AA03_C1DE99BA2A6D" value="1"/>
+							<type xmi:idref="EAJava_CharacterString"/>
+						</ownedAttribute>
+					</packagedElement>
+					<packagedElement xmi:type="uml:DataType" xmi:id="EAID_D54316B9_2F4C_4567_9810_E24933562311" name="Test union" visibility="public">
+						<ownedAttribute xmi:type="uml:Property" xmi:id="EAID_B8038EF6_DCF6_4804_8E2A_A27B9EE33825" name="test unionelement" visibility="public" isStatic="false" isReadOnly="false" isDerived="false" isOrdered="false" isUnique="true" isDerivedUnion="false">
+							<lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000025_DCF6_4804_8E2A_A27B9EE33825" value="1"/>
+							<upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000026_DCF6_4804_8E2A_A27B9EE33825" value="1"/>
+							<type xmi:idref="EAJava_CharacterString"/>
+						</ownedAttribute>
+						<ownedAttribute xmi:type="uml:Property" xmi:id="EAID_4BF18992_BA5B_42d2_90BD_6E573D4E17D1" name="test unionelement2" visibility="public" isStatic="false" isReadOnly="false" isDerived="false" isOrdered="false" isUnique="true" isDerivedUnion="false">
+							<lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000027_BA5B_42d2_90BD_6E573D4E17D1" value="1"/>
+							<upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000028_BA5B_42d2_90BD_6E573D4E17D1" value="1"/>
+							<type xmi:idref="EAJava_CharacterString"/>
+						</ownedAttribute>
+					</packagedElement>
+					<packagedElement xmi:type="uml:Class" xmi:id="EAID_66FF9075_5F4A_4c2f_B796_7E0343DD4F7E" visibility="public"/>
+				</packagedElement>
+			</packagedElement>
+		</packagedElement>
+		<MIM:Objecttype base_Class="EAID_29CA90B9_39B3_45a6_9CEE_DA7562D248C1"/>
+		<MIM:Gegevensgroeptype base_Class="EAID_ED1BDED0_796F_4c17_A3A7_4383B943CED2" Datum_opname="kkg"/>
+		<MIM:Attribuutsoort base_Property="EAID_641BE4CE_8984_4340_80B1_44648FEFFB6F" Mogelijk_geen_waarde="Nee" Indicatie_classificerend="Nee"/>
+		<MIM:Attribuutsoort base_Property="EAID_50AE0C07_9A93_4a7d_8E3B_2A6B79B889CA" Mogelijk_geen_waarde="Nee" Indicatie_classificerend="Nee"/>
+		<MIM:Objecttype base_Class="EAID_A219154D_D972_4ab7_8226_7D83CFD48C33"/>
+		<MIM:Objecttype base_Class="EAID_4A4E162A_2737_4092_8DC7_81669D51FC34" Herkomst="kkk"/>
+		<MIM:Attribuutsoort base_Property="EAID_36374985_4394_4e27_AECB_35270E0938D6" Mogelijk_geen_waarde="Nee" Indicatie_classificerend="Nee" Herkomst="kkg"/>
+		<MIM:Attribuutsoort base_Property="EAID_97A0B93E_0567_49a9_84E2_00B86A5AA65A" Mogelijk_geen_waarde="Nee" Indicatie_classificerend="Nee" Herkomst="kkg"/>
+		<MIM:Attribuutsoort base_Property="EAID_61B77EAD_DA82_4b45_A6EE_F3328E9F5865" Mogelijk_geen_waarde="Nee" Indicatie_classificerend="Nee"/>
+		<MIM:Attribuutsoort base_Property="EAID_6663347B_6FEA_493b_BA4C_FF09069589E1" Mogelijk_geen_waarde="Nee" Indicatie_classificerend="Nee"/>
+		<MIM:Attribuutsoort base_Property="EAID_E43BFF6D_51A8_45ba_BE08_6B18E45BFE66" Mogelijk_geen_waarde="Nee" Indicatie_classificerend="Nee"/>
+		<MIM:Attribuutsoort base_Property="EAID_766264A0_3A79_4c88_92E5_60A456D48B23" Mogelijk_geen_waarde="Nee" Indicatie_classificerend="Nee"/>
+		<MIM:Gegevensgroep base_Property="EAID_B82EFC1C_2149_4b77_8684_4B627784C96F"/>
+		<MIM:Generalisatie base_Generalization="EAID_3F082A96_867E_4720_9AAA_322C9CD0BEC8"/>
+		<MIM:Externe_koppeling base_Association="EAID_44B38924_4FFD_4c93_9E4B_0F4AD0CC57B1" __EAStereoName="Externe koppeling"/>
+		<MIM:Relatierol base_Property="EAID_dstA1D1DB_AD3C_4cb5_B0AA_8999A91B3623" Mogelijk_geen_waarde="Nee$ea_notes=Values: Ja,Nee&#xA;Default: Nee&#xA;" Indicatie_materiële_historie="$ea_notes=Values: Ja,Nee,Zie groep&#xA;" Authentiek="$ea_notes=Values: Authentiek,Basisgegeven,Landelijk kerngegeven,Gemeentelijk kerngegeven,Overig&#xA;" Herkomst="kkg" Herkomst_defintie="$ea_notes=" Datum_opname="$ea_notes=" Toelichting="$ea_notes="/>
+		<MIM:Relatiesoort base_Association="EAID_FEA1D1DB_AD3C_4cb5_B0AA_8999A91B3623"/>
+		<MIM:Objecttype base_Class="EAID_024017F9_6FE5_42be_9D84_4729C873F838"/>
+		<MIM:Objecttype base_Class="EAID_E7D31188_001D_4635_98FD_63FF2D2DA449"/>
+		<MIM:Objecttype base_Class="EAID_FCCB561D_EAC8_40a6_A4BE_FD6BB02587FD"/>
+		<MIM:Relatieklasse base_AssociationClass="EAID_532814DF_32EF_40e3_B8A6_928F69DA3227"/>
+		<MIM:Objecttype base_Class="EAID_C672763B_8E4C_41bd_9191_5E8F4D07AD81"/>
+		<MIM:Gestructureerd_datatype base_DataType="EAID_3F7AAF3E_4076_4a00_ABBB_1B460998130C" __EAStereoName="Gestructureerd datatype" Herkomst="kkg" Datum_opname="kk"/>
+		<MIM:Data_element base_Property="EAID_D12F17CD_6D18_4187_9B77_70A5C0920A39" __EAStereoName="Data element" Herkomst="kkg"/>
+		<MIM:Data_element base_Property="EAID_0502C936_C1DC_4ad8_B793_D5E47810FFE7" __EAStereoName="Data element"/>
+		<MIM:Primitief_datatype base_PrimitiveType="EAID_CB9ACB38_4437_4ecd_9621_F871F8AD84CA" __EAStereoName="Primitief datatype" Patroon="De samenstelling van het complex datatype bestaande uit twee of meer data elementenmoet voldoen aan een specifiek patroon."/>
+		<MIM:Referentielijst base_DataType="EAID_6EA3FF0B_6300_4cd4_A6F8_66D2180E70BB"/>
+		<MIM:Referentie_element base_Property="EAID_D036CCBC_F346_45ca_AA03_C1DE99BA2A6D" __EAStereoName="Referentie element" Datum_opname="kkg"/>
+		<MIM:Relatierol base_DataType="EAID_D54316B9_2F4C_4567_9810_E24933562311" Herkomst="kkg" Toelichting="Voor objecttypen die deel uitmaken van een (basis)registratie of informatiemodel betreft dit de daarin opgenomen toelichting."/>
+		<thecustomprofile:MIM__Union base_DataType="EAID_D54316B9_2F4C_4567_9810_E24933562311" __EAStereoName="MIM::Union"/>
+		<thecustomprofile:MIM__Union_element base_Property="EAID_B8038EF6_DCF6_4804_8E2A_A27B9EE33825" __EAStereoName="MIM::Union element"/>
+		<MIM:Relatierol base_Property="EAID_B8038EF6_DCF6_4804_8E2A_A27B9EE33825" Herkomst="kkg"/>
+		<thecustomprofile:MIM__Union_element base_Property="EAID_4BF18992_BA5B_42d2_90BD_6E573D4E17D1" __EAStereoName="MIM::Union element"/>
+	</uml:Model>
+	<xmi:Extension extender="Enterprise Architect" extenderID="6.5">
+		<elements>
+			<element xmi:idref="EAPK_9BB2C8C8_C5DE_4c9b_A3C4_1B21A0ECC989">
+				<packageproperties/>
+				<paths/>
+				<times created="2012-04-17 00:00:00" modified="2012-04-17 00:00:00" lastloaddate="2017-05-30 12:43:23" lastsavedate="2020-03-23 17:02:49"/>
+				<flags iscontrolled="FALSE" isprotected="FALSE" batchsave="0" batchload="0" usedtd="FALSE" logxml="FALSE" packageFlags="isModel=1;"/>
+			</element>
+			<element xmi:idref="EAPK_CECEB2E9_367C_4414_A28C_F4AF6C33C539" xmi:type="uml:Package" name="Domain Model" scope="public">
+				<model package2="EAID_CECEB2E9_367C_4414_A28C_F4AF6C33C539" package="EAPK_9BB2C8C8_C5DE_4c9b_A3C4_1B21A0ECC989" tpos="4" ea_localid="3" ea_eleType="package"/>
+				<properties isSpecification="false" sType="Package" nType="0" scope="public"/>
+				<project phase="1.0" created="2017-05-30 12:43:22" modified="2017-05-30 12:43:22" complexity="1" status="Proposed"/>
+				<code/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags/>
+				<xrefs/>
+				<extendedProperties tagged="0" package_name="Model"/>
+				<packageproperties tpos="4"/>
+				<paths/>
+				<times created="2017-05-30 12:43:22" modified="2020-03-23 17:02:49" lastloaddate="2017-05-30 12:43:22" lastsavedate="2017-05-30 12:43:22"/>
+				<flags iscontrolled="FALSE" isprotected="FALSE" batchsave="0" batchload="0" usedtd="FALSE" logxml="FALSE" packageFlags="isModel=1;VICON=3;"/>
+			</element>
+			<element xmi:idref="EAPK_0C7C75EC_CFE9_4fab_911E_D139D7529601" xmi:type="uml:Package" name="test KKG-alt2" scope="public">
+				<model package2="EAID_0C7C75EC_CFE9_4fab_911E_D139D7529601" package="EAPK_CECEB2E9_367C_4414_A28C_F4AF6C33C539" tpos="0" ea_localid="4" ea_eleType="package"/>
+				<properties isSpecification="false" sType="Package" nType="0" scope="public"/>
+				<project author="pjanssen" version="1.0" phase="1.0" created="2017-05-30 12:43:41" modified="2017-06-01 17:23:55" complexity="1" status="Proposed"/>
+				<code gentype="Java"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags/>
+				<xrefs/>
+				<extendedProperties tagged="0" package_name="Domain Model"/>
+				<packageproperties version="1.0"/>
+				<paths/>
+				<times created="2017-05-30 12:43:40" modified="2020-03-23 17:02:49" lastloaddate="2020-03-23 17:02:49" lastsavedate="2020-03-23 17:02:49"/>
+				<flags iscontrolled="FALSE" isprotected="FALSE" batchsave="0" batchload="0" usedtd="FALSE" logxml="FALSE"/>
+			</element>
+			<element xmi:idref="EAID_29CA90B9_39B3_45a6_9CEE_DA7562D248C1" xmi:type="uml:Class" name="Class1" scope="public">
+				<model package="EAPK_0C7C75EC_CFE9_4fab_911E_D139D7529601" tpos="0" ea_localid="3" ea_eleType="element"/>
+				<properties isSpecification="false" sType="Class" nType="0" scope="public" stereotype="Objecttype" isRoot="false" isLeaf="false" isAbstract="false" isActive="false"/>
+				<project author="p.janssen" version="1.0" phase="1.0" created="2019-03-28 12:04:05" modified="2020-03-23 17:02:49" complexity="1" status="Proposed"/>
+				<code gentype="Java"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags>
+					<tag xmi:id="EAID_EBF7A679_4E9D_974e_A401_48CA6A795B92" name="Begrip" value="#NOTES#Description: Verwijzing naar een begrip. De verwijzing heeft de vorm van een term of een URI.&#xA;" modelElement="EAID_29CA90B9_39B3_45a6_9CEE_DA7562D248C1"/>
+					<tag xmi:id="EAID_FB3F1EDB_51FF_2d51_876B_2916B576AC55" name="Datum opname" value="#NOTES#Description: De datum waarop het informatie-element is opgenomen in het informatiemodel.&#xA;" modelElement="EAID_29CA90B9_39B3_45a6_9CEE_DA7562D248C1"/>
+					<tag xmi:id="EAID_6B33862D_C751_5dc7_BF3E_6B95BB6F558C" name="Herkomst" value="#NOTES#Description: De registratie of het informatiemodel waaraan het informatie-element ontleend is dan wel de eigen organisatie indien het door de eigen organisatie toegevoegd is.&#xA;" modelElement="EAID_29CA90B9_39B3_45a6_9CEE_DA7562D248C1"/>
+					<tag xmi:id="EAID_1FAA1D3E_1B62_631b_9811_EECCCB749F4A" name="Herkomst definitie" value="#NOTES#Description: De registratie of het informatiemodel waaruit de definitie is overgenomen dan wel een aanduiding die aangeeft uit welke bronnen de definitie is samengesteld.&#xA;" modelElement="EAID_29CA90B9_39B3_45a6_9CEE_DA7562D248C1"/>
+					<tag xmi:id="EAID_B108BD8E_2332_7b23_A2C6_000F1BC9DAEE" name="Kwaliteit" value="#NOTES#Description: Voor objecttypen die deel uitmaken van een registratie betreft dit de waarborgen voor de juistheid van de in de registratie opgenomen objecten van het desbetreffende type.&#xA;" modelElement="EAID_29CA90B9_39B3_45a6_9CEE_DA7562D248C1"/>
+					<tag xmi:id="EAID_2D3C6693_CC37_aecc_B3F0_E639AB58958F" name="Populatie" value="&lt;memo&gt;" modelElement="EAID_29CA90B9_39B3_45a6_9CEE_DA7562D248C1"/>
+					<tag xmi:id="EAID_50A2721A_D0BE_44d0_AB8D_C10DA12D8F08" name="Toelichting" value="&lt;memo&gt;" modelElement="EAID_29CA90B9_39B3_45a6_9CEE_DA7562D248C1"/>
+				</tags>
+				<xrefs value="$XREFPROP=$XID={32460DB5-7FA6-47f8-9C3C-84EB48027EB6}$XID;$NAM=Stereotypes$NAM;$TYP=element property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=Objecttype;FQName=MIM::Objecttype;@ENDSTEREO;$DES;$CLT={29CA90B9-39B3-45a6-9CEE-DA7562D248C1}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
+				<extendedProperties tagged="0" package_name="test KKG-alt2"/>
+			</element>
+			<element xmi:idref="EAID_ED1BDED0_796F_4c17_A3A7_4383B943CED2" xmi:type="uml:Class" name="Test gegevensgroeptype1" scope="public">
+				<model package="EAPK_0C7C75EC_CFE9_4fab_911E_D139D7529601" tpos="0" ea_localid="4" ea_eleType="element"/>
+				<properties isSpecification="false" sType="Class" nType="0" scope="public" stereotype="Gegevensgroeptype" isRoot="false" isLeaf="false" isAbstract="false" isActive="false"/>
+				<project author="pjanssen" version="1.0" phase="1.0" created="2017-06-01 17:28:37" modified="2020-03-23 17:02:49" complexity="1" status="Proposed"/>
+				<code product_name="Java" gentype="Java"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags>
+					<tag xmi:id="EAID_FB3F1EDB_9DF3_169d_8FF4_AAADF221AE5C" name="Datum opname" value="kkg" modelElement="EAID_ED1BDED0_796F_4c17_A3A7_4383B943CED2"/>
+				</tags>
+				<xrefs value="$XREFPROP=$XID={7C56CE23-7A35-4bcc-BFC5-B1E56DECDEC3}$XID;$NAM=Stereotypes$NAM;$TYP=element property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=Gegevensgroeptype;FQName=MIM::Gegevensgroeptype;@ENDSTEREO;$DES;$CLT={ED1BDED0-796F-4c17-A3A7-4383B943CED2}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
+				<extendedProperties tagged="0" package_name="test KKG-alt2"/>
+				<attributes>
+					<attribute xmi:idref="EAID_641BE4CE_8984_4340_80B1_44648FEFFB6F" name="test attribuut6" scope="Public">
+						<initial/>
+						<documentation/>
+						<model ea_localid="1" ea_guid="{641BE4CE-8984-4340-80B1-44648FEFFB6F}"/>
+						<properties type="CharacterString" derived="0" collection="false" length="0" duplicates="0" changeability="changeable"/>
+						<coords ordered="0" scale="0"/>
+						<containment containment="Not Specified" position="0"/>
+						<stereotype stereotype="Attribuutsoort"/>
+						<bounds lower="1" upper="1"/>
+						<options/>
+						<style/>
+						<styleex value="volatile=0;"/>
+						<tags>
+							<tag xmi:id="EAID_6B33862D_45B3_a345_9B6E_F9665ADAA902" name="Herkomst" notes="Description: De registratie of het informatiemodel waaraan het informatie-element ontleend is dan wel de eigen organisatie indien het door de eigen organisatie toegevoegd is.&#xA;"/>
+							<tag xmi:id="EAID_1FAA1D3E_7C44_9b7c_A9A2_2E21D9EFF6A3" name="Herkomst definitie" notes="Description: De registratie of het informatiemodel waaruit de definitie is overgenomen dan wel een aanduiding die aangeeft uit welke bronnen de definitie is samengesteld.&#xA;"/>
+							<tag xmi:id="EAID_FB3F1EDB_3161_ef31_8965_E94181E90DDB" name="Datum opname" notes="Description: De datum waarop het informatie-element is opgenomen in het informatiemodel.&#xA;"/>
+							<tag xmi:id="EAID_034EE5FF_0C05_9d0c_B9E2_8F050E719BCF" name="Lengte" notes="Description: De aanduiding van de lengte van een gegeven.&#xA;"/>
+							<tag xmi:id="EAID_98327E03_64C9_4564_955E_E084EEC2DC25" name="Patroon" value="&lt;memo&gt;"/>
+							<tag xmi:id="EAID_69EB40AD_8D73_c38d_97A9_7328FEC228E8" name="Formeel patroon" notes="Description: Zoals patroon, formeel vastgelegd (met een reguliere expressie), uitgedrukt in een formele taal die door de computer wordt herkend.&#xA;"/>
+							<tag xmi:id="EAID_8F70DA6F_38F5_1138_9095_B5EB1E858230" name="Indicatie materiële historie" notes="Values: Ja,Nee,Zie groep&#xA;Description: Indicatie of de materiële historie van dit informatie-element te bevragen is.&#xA;"/>
+							<tag xmi:id="EAID_D0DCC9FB_CF01_a7cf_9EBC_AF0D2261ACAE" name="Indicatie formele historie" notes="Values: Ja,Nee,Zie groep&#xA;Description: Indicatie of de formele historie van dit informatie-element te bevragen is.&#xA;"/>
+							<tag xmi:id="EAID_83B4E541_C901_b1c9_B514_7A4C7322556D" name="Locatie"/>
+							<tag xmi:id="EAID_0BFEBE52_7758_5c77_8012_EAAC833CC524" name="Authentiek" notes="Values: Authentiek,Basisgegeven,Wettelijk gegeven,Landelijk kerngegeven,Overig&#xA;Description: Aanduiding of het een authentiek gegeven betreft.&#xA;"/>
+							<tag xmi:id="EAID_50A2721A_4BE0_b74b_A92C_C15312CA81A3" name="Toelichting" value="&lt;memo&gt;"/>
+							<tag xmi:id="EAID_BE7DA005_D88B_42d8_B18A_82C8891A3EC0" name="Mogelijk geen waarde" value="Nee" notes="Values: Ja,Nee&#xA;Default: Nee&#xA;Description: Aanduiding dat dit informatie-element geen waarde kan bevatten.&#xA;"/>
+							<tag xmi:id="EAID_EBF7A679_CC7F_45cc_99D7_BDAADD8832A4" name="Begrip" notes="Description: Verwijzing naar een begrip. De verwijzing heeft de vorm van een term of een URI.&#xA;"/>
+							<tag xmi:id="EAID_516262A9_6E2F_7c6e_8191_9A556079CCEA" name="Indicatie classificerend" value="Nee" notes="Default: Nee&#xA;Description: Indicatie dat een attribuutsoort het objecttype waar het bijhoort classificeert in (sub)typen.&#xA;"/>
+						</tags>
+						<xrefs value="$XREFPROP=$XID={1E90749E-8CE2-4433-943B-CC89BFFFCF5B}$XID;$NAM=Stereotypes$NAM;$TYP=attribute property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=Attribuutsoort;FQName=MIM::Attribuutsoort;@ENDSTEREO;$DES;$CLT={641BE4CE-8984-4340-80B1-44648FEFFB6F}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
+					</attribute>
+					<attribute xmi:idref="EAID_50AE0C07_9A93_4a7d_8E3B_2A6B79B889CA" name="test attribuut7" scope="Public">
+						<initial/>
+						<documentation/>
+						<model ea_localid="2" ea_guid="{50AE0C07-9A93-4a7d-8E3B-2A6B79B889CA}"/>
+						<properties type="CharacterString" derived="0" collection="false" duplicates="0" changeability="changeable"/>
+						<coords ordered="0" scale="0"/>
+						<containment containment="Not Specified" position="1"/>
+						<stereotype stereotype="Attribuutsoort"/>
+						<bounds lower="1" upper="1"/>
+						<options/>
+						<style/>
+						<styleex value="volatile=0;"/>
+						<tags>
+							<tag xmi:id="EAID_6B33862D_45B3_a345_8FCD_737CC3ED7899" name="Herkomst" notes="Description: De registratie of het informatiemodel waaraan het informatie-element ontleend is dan wel de eigen organisatie indien het door de eigen organisatie toegevoegd is.&#xA;"/>
+							<tag xmi:id="EAID_1FAA1D3E_7C44_9b7c_8FD7_47AAE372FB6D" name="Herkomst definitie" notes="Description: De registratie of het informatiemodel waaruit de definitie is overgenomen dan wel een aanduiding die aangeeft uit welke bronnen de definitie is samengesteld.&#xA;"/>
+							<tag xmi:id="EAID_FB3F1EDB_3161_ef31_983A_0A11007521C9" name="Datum opname" notes="Description: De datum waarop het informatie-element is opgenomen in het informatiemodel.&#xA;"/>
+							<tag xmi:id="EAID_034EE5FF_0C05_9d0c_9D12_64CB929256D4" name="Lengte" notes="Description: De aanduiding van de lengte van een gegeven.&#xA;"/>
+							<tag xmi:id="EAID_98327E03_64C9_4564_ADBE_D34B5923DA8C" name="Patroon" value="&lt;memo&gt;"/>
+							<tag xmi:id="EAID_69EB40AD_8D73_c38d_8122_2107471AF51D" name="Formeel patroon" notes="Description: Zoals patroon, formeel vastgelegd (met een reguliere expressie), uitgedrukt in een formele taal die door de computer wordt herkend.&#xA;"/>
+							<tag xmi:id="EAID_8F70DA6F_38F5_1138_9208_E54D6C129C34" name="Indicatie materiële historie" notes="Values: Ja,Nee,Zie groep&#xA;Description: Indicatie of de materiële historie van dit informatie-element te bevragen is.&#xA;"/>
+							<tag xmi:id="EAID_D0DCC9FB_CF01_a7cf_925E_F65F6DC73A53" name="Indicatie formele historie" notes="Values: Ja,Nee,Zie groep&#xA;Description: Indicatie of de formele historie van dit informatie-element te bevragen is.&#xA;"/>
+							<tag xmi:id="EAID_83B4E541_C901_b1c9_942A_9D373FB2B552" name="Locatie"/>
+							<tag xmi:id="EAID_0BFEBE52_7758_5c77_9C2E_DC0654184E54" name="Authentiek" notes="Values: Authentiek,Basisgegeven,Wettelijk gegeven,Landelijk kerngegeven,Overig&#xA;Description: Aanduiding of het een authentiek gegeven betreft.&#xA;"/>
+							<tag xmi:id="EAID_50A2721A_4BE0_b74b_A2B8_B5A9465017B3" name="Toelichting" value="&lt;memo&gt;"/>
+							<tag xmi:id="EAID_BE7DA005_D88B_42d8_9BAC_1D23BDCDEA7D" name="Mogelijk geen waarde" value="Nee" notes="Values: Ja,Nee&#xA;Default: Nee&#xA;Description: Aanduiding dat dit informatie-element geen waarde kan bevatten.&#xA;"/>
+							<tag xmi:id="EAID_EBF7A679_CC7F_45cc_853A_2251C9957B84" name="Begrip" notes="Description: Verwijzing naar een begrip. De verwijzing heeft de vorm van een term of een URI.&#xA;"/>
+							<tag xmi:id="EAID_516262A9_6E2F_7c6e_AE6B_EE97AE5F6685" name="Indicatie classificerend" value="Nee" notes="Default: Nee&#xA;Description: Indicatie dat een attribuutsoort het objecttype waar het bijhoort classificeert in (sub)typen.&#xA;"/>
+						</tags>
+						<xrefs value="$XREFPROP=$XID={12E3FD36-25A1-447a-9EB7-128779A198B4}$XID;$NAM=Stereotypes$NAM;$TYP=attribute property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=Attribuutsoort;FQName=MIM::Attribuutsoort;@ENDSTEREO;$DES;$CLT={50AE0C07-9A93-4a7d-8E3B-2A6B79B889CA}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
+					</attribute>
+				</attributes>
+			</element>
+			<element xmi:idref="EAID_A219154D_D972_4ab7_8226_7D83CFD48C33" xmi:type="uml:Class" name="test klasse zonder toolbox" scope="public">
+				<model package="EAPK_0C7C75EC_CFE9_4fab_911E_D139D7529601" tpos="0" ea_localid="5" ea_eleType="element"/>
+				<properties isSpecification="false" sType="Class" nType="0" scope="public" stereotype="Objecttype" isRoot="false" isLeaf="false" isAbstract="false" isActive="false"/>
+				<project author="p.janssen" version="1.0" phase="1.0" created="2020-03-18 13:42:50" modified="2020-03-23 17:02:49" complexity="1" status="Proposed"/>
+				<code product_name="Java" gentype="Java"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags>
+					<tag xmi:id="EAID_EBF7A679_4E9D_974e_BFB7_DBB680494D36" name="Begrip" value="#NOTES#Description: Verwijzing naar een begrip. De verwijzing heeft de vorm van een term of een URI.&#xA;" modelElement="EAID_A219154D_D972_4ab7_8226_7D83CFD48C33"/>
+					<tag xmi:id="EAID_FB3F1EDB_51FF_2d51_9458_9FCD94AF6F14" name="Datum opname" value="#NOTES#Description: De datum waarop het informatie-element is opgenomen in het informatiemodel.&#xA;" modelElement="EAID_A219154D_D972_4ab7_8226_7D83CFD48C33"/>
+					<tag xmi:id="EAID_6B33862D_C751_5dc7_A941_29E8EDEA5656" name="Herkomst" value="#NOTES#Description: De registratie of het informatiemodel waaraan het informatie-element ontleend is dan wel de eigen organisatie indien het door de eigen organisatie toegevoegd is.&#xA;" modelElement="EAID_A219154D_D972_4ab7_8226_7D83CFD48C33"/>
+					<tag xmi:id="EAID_1FAA1D3E_1B62_631b_9FB3_C05A607A382C" name="Herkomst definitie" value="#NOTES#Description: De registratie of het informatiemodel waaruit de definitie is overgenomen dan wel een aanduiding die aangeeft uit welke bronnen de definitie is samengesteld.&#xA;" modelElement="EAID_A219154D_D972_4ab7_8226_7D83CFD48C33"/>
+					<tag xmi:id="EAID_B108BD8E_2332_7b23_B889_87735E60B439" name="Kwaliteit" value="#NOTES#Description: Voor objecttypen die deel uitmaken van een registratie betreft dit de waarborgen voor de juistheid van de in de registratie opgenomen objecten van het desbetreffende type.&#xA;" modelElement="EAID_A219154D_D972_4ab7_8226_7D83CFD48C33"/>
+					<tag xmi:id="EAID_2D3C6693_CC37_aecc_BA10_5C1189BF5895" name="Populatie" value="&lt;memo&gt;" modelElement="EAID_A219154D_D972_4ab7_8226_7D83CFD48C33"/>
+					<tag xmi:id="EAID_50A2721A_D0BE_44d0_8ECD_B15C48B734CE" name="Toelichting" value="&lt;memo&gt;" modelElement="EAID_A219154D_D972_4ab7_8226_7D83CFD48C33"/>
+				</tags>
+				<xrefs value="$XREFPROP=$XID={2C2D5B14-5009-4bed-A8E8-66AC10439E3F}$XID;$NAM=Stereotypes$NAM;$TYP=element property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=Objecttype;FQName=MIM::Objecttype;@ENDSTEREO;$DES;$CLT={A219154D-D972-4ab7-8226-7D83CFD48C33}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
+				<extendedProperties tagged="0" package_name="test KKG-alt2"/>
+			</element>
+			<element xmi:idref="EAID_4A4E162A_2737_4092_8DC7_81669D51FC34" xmi:type="uml:Class" name="Test objecttype1" scope="public">
+				<model package="EAPK_0C7C75EC_CFE9_4fab_911E_D139D7529601" tpos="0" ea_localid="6" ea_eleType="element"/>
+				<properties isSpecification="false" sType="Class" nType="0" scope="public" stereotype="Objecttype" isRoot="false" isLeaf="false" isAbstract="false" isActive="false"/>
+				<project author="pjanssen" version="1.0" phase="1.0" created="2017-06-01 17:24:38" modified="2020-03-23 17:02:49" complexity="1" status="Proposed"/>
+				<code product_name="Java" gentype="Java"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags>
+					<tag xmi:id="EAID_EBF7A679_4E9D_974e_8D3D_D185410D87AA" name="Begrip" value="#NOTES#Description: Verwijzing naar een begrip. De verwijzing heeft de vorm van een term of een URI.&#xA;" modelElement="EAID_4A4E162A_2737_4092_8DC7_81669D51FC34"/>
+					<tag xmi:id="EAID_FB3F1EDB_51FF_2d51_95DB_AAD9DD6A1A68" name="Datum opname" value="#NOTES#Description: De datum waarop het informatie-element is opgenomen in het informatiemodel.&#xA;" modelElement="EAID_4A4E162A_2737_4092_8DC7_81669D51FC34"/>
+					<tag xmi:id="EAID_6B33862D_C751_5dc7_B93B_F229B64514D0" name="Herkomst" value="kkk#NOTES#Description: De registratie of het informatiemodel waaraan het informatie-element ontleend is dan wel de eigen organisatie indien het door de eigen organisatie toegevoegd is.&#xA;" modelElement="EAID_4A4E162A_2737_4092_8DC7_81669D51FC34"/>
+					<tag xmi:id="EAID_1FAA1D3E_1B62_631b_AAAD_6C56F65C7E3C" name="Herkomst definitie" value="#NOTES#Description: De registratie of het informatiemodel waaruit de definitie is overgenomen dan wel een aanduiding die aangeeft uit welke bronnen de definitie is samengesteld.&#xA;" modelElement="EAID_4A4E162A_2737_4092_8DC7_81669D51FC34"/>
+					<tag xmi:id="EAID_B108BD8E_2332_7b23_87CA_44D72FD575BB" name="Kwaliteit" value="#NOTES#Description: Voor objecttypen die deel uitmaken van een registratie betreft dit de waarborgen voor de juistheid van de in de registratie opgenomen objecten van het desbetreffende type.&#xA;" modelElement="EAID_4A4E162A_2737_4092_8DC7_81669D51FC34"/>
+					<tag xmi:id="EAID_2D3C6693_CC37_aecc_946D_BEB017658212" name="Populatie" value="&lt;memo&gt;" modelElement="EAID_4A4E162A_2737_4092_8DC7_81669D51FC34"/>
+					<tag xmi:id="EAID_50A2721A_D0BE_44d0_948C_0C0F4808412D" name="Toelichting" value="&lt;memo&gt;" modelElement="EAID_4A4E162A_2737_4092_8DC7_81669D51FC34"/>
+				</tags>
+				<xrefs value="$XREFPROP=$XID={E9DF5CDB-EAF9-42fd-827B-7CD89B04CB0B}$XID;$NAM=Stereotypes$NAM;$TYP=element property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=Objecttype;FQName=MIM::Objecttype;@ENDSTEREO;$DES;$CLT={4A4E162A-2737-4092-8DC7-81669D51FC34}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
+				<extendedProperties tagged="0" package_name="test KKG-alt2"/>
+				<attributes>
+					<attribute xmi:idref="EAID_36374985_4394_4e27_AECB_35270E0938D6" name="test attribuut1" scope="Public">
+						<initial/>
+						<documentation/>
+						<model ea_localid="3" ea_guid="{36374985-4394-4e27-AECB-35270E0938D6}"/>
+						<properties type="CharacterString" derived="0" collection="false" length="0" duplicates="0" changeability="changeable"/>
+						<coords ordered="0" scale="0"/>
+						<containment containment="Not Specified" position="0"/>
+						<stereotype stereotype="Attribuutsoort"/>
+						<bounds lower="1" upper="1"/>
+						<options/>
+						<style/>
+						<styleex value="volatile=0;"/>
+						<tags>
+							<tag xmi:id="EAID_6B33862D_45B3_a345_A8DC_0C307671A1F1" name="Herkomst" value="kkg" notes="Description: De registratie of het informatiemodel waaraan het informatie-element ontleend is dan wel de eigen organisatie indien het door de eigen organisatie toegevoegd is.&#xA;"/>
+							<tag xmi:id="EAID_1FAA1D3E_7C44_9b7c_A096_C13908C61294" name="Herkomst definitie" notes="Description: De registratie of het informatiemodel waaruit de definitie is overgenomen dan wel een aanduiding die aangeeft uit welke bronnen de definitie is samengesteld.&#xA;"/>
+							<tag xmi:id="EAID_FB3F1EDB_3161_ef31_A7D9_463F626F9575" name="Datum opname" notes="Description: De datum waarop het informatie-element is opgenomen in het informatiemodel.&#xA;"/>
+							<tag xmi:id="EAID_034EE5FF_0C05_9d0c_B788_916FAB94764F" name="Lengte" notes="Description: De aanduiding van de lengte van een gegeven.&#xA;"/>
+							<tag xmi:id="EAID_98327E03_64C9_4564_9B44_FA2347BBF0B8" name="Patroon" value="&lt;memo&gt;"/>
+							<tag xmi:id="EAID_69EB40AD_8D73_c38d_959C_4AF5C3ACF782" name="Formeel patroon" notes="Description: Zoals patroon, formeel vastgelegd (met een reguliere expressie), uitgedrukt in een formele taal die door de computer wordt herkend.&#xA;"/>
+							<tag xmi:id="EAID_8F70DA6F_38F5_1138_9135_72ED2894EC6E" name="Indicatie materiële historie" notes="Values: Ja,Nee,Zie groep&#xA;Description: Indicatie of de materiële historie van dit informatie-element te bevragen is.&#xA;"/>
+							<tag xmi:id="EAID_D0DCC9FB_CF01_a7cf_A58B_215E89482C36" name="Indicatie formele historie" notes="Values: Ja,Nee,Zie groep&#xA;Description: Indicatie of de formele historie van dit informatie-element te bevragen is.&#xA;"/>
+							<tag xmi:id="EAID_83B4E541_C901_b1c9_83FA_E9CE44113D31" name="Locatie"/>
+							<tag xmi:id="EAID_0BFEBE52_7758_5c77_8481_445AE74579DC" name="Authentiek" notes="Values: Authentiek,Basisgegeven,Wettelijk gegeven,Landelijk kerngegeven,Overig&#xA;Description: Aanduiding of het een authentiek gegeven betreft.&#xA;"/>
+							<tag xmi:id="EAID_50A2721A_4BE0_b74b_A939_A225162BC1C6" name="Toelichting" value="&lt;memo&gt;"/>
+							<tag xmi:id="EAID_BE7DA005_D88B_42d8_9470_C1C3A667489C" name="Mogelijk geen waarde" value="Nee" notes="Values: Ja,Nee&#xA;Default: Nee&#xA;Description: Aanduiding dat dit informatie-element geen waarde kan bevatten.&#xA;"/>
+							<tag xmi:id="EAID_EBF7A679_CC7F_45cc_B8D9_7F47D5316438" name="Begrip" notes="Description: Verwijzing naar een begrip. De verwijzing heeft de vorm van een term of een URI.&#xA;"/>
+							<tag xmi:id="EAID_516262A9_6E2F_7c6e_955A_45F67F75F164" name="Indicatie classificerend" value="Nee" notes="Default: Nee&#xA;Description: Indicatie dat een attribuutsoort het objecttype waar het bijhoort classificeert in (sub)typen.&#xA;"/>
+						</tags>
+						<xrefs value="$XREFPROP=$XID={7F1BDFBF-3A75-475b-90FF-4B6157374C9F}$XID;$NAM=Stereotypes$NAM;$TYP=attribute property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=Attribuutsoort;FQName=MIM::Attribuutsoort;@ENDSTEREO;$DES;$CLT={36374985-4394-4e27-AECB-35270E0938D6}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
+					</attribute>
+					<attribute xmi:idref="EAID_97A0B93E_0567_49a9_84E2_00B86A5AA65A" name="test attribuut12" scope="Public">
+						<initial/>
+						<documentation/>
+						<model ea_localid="4" ea_guid="{97A0B93E-0567-49a9-84E2-00B86A5AA65A}"/>
+						<properties type="Test gestructureerd datatype" derived="0" collection="false" length="0" duplicates="0" changeability="changeable"/>
+						<coords ordered="0" scale="0"/>
+						<containment containment="Not Specified" position="0"/>
+						<stereotype stereotype="Attribuutsoort"/>
+						<bounds lower="1" upper="1"/>
+						<options/>
+						<style/>
+						<styleex value="volatile=0;"/>
+						<tags>
+							<tag xmi:id="EAID_6B33862D_45B3_a345_882C_79473B073E9B" name="Herkomst" value="kkg" notes="Description: De registratie of het informatiemodel waaraan het informatie-element ontleend is dan wel de eigen organisatie indien het door de eigen organisatie toegevoegd is.&#xA;"/>
+							<tag xmi:id="EAID_1FAA1D3E_7C44_9b7c_B115_9F6BB981A438" name="Herkomst definitie" notes="Description: De registratie of het informatiemodel waaruit de definitie is overgenomen dan wel een aanduiding die aangeeft uit welke bronnen de definitie is samengesteld.&#xA;"/>
+							<tag xmi:id="EAID_FB3F1EDB_3161_ef31_8C44_84B489D06DFB" name="Datum opname" notes="Description: De datum waarop het informatie-element is opgenomen in het informatiemodel.&#xA;"/>
+							<tag xmi:id="EAID_034EE5FF_0C05_9d0c_B247_62AE834F5BD9" name="Lengte" notes="Description: De aanduiding van de lengte van een gegeven.&#xA;"/>
+							<tag xmi:id="EAID_98327E03_64C9_4564_82F9_03E72A461B59" name="Patroon" value="&lt;memo&gt;"/>
+							<tag xmi:id="EAID_69EB40AD_8D73_c38d_936D_5029F15B6912" name="Formeel patroon" notes="Description: Zoals patroon, formeel vastgelegd (met een reguliere expressie), uitgedrukt in een formele taal die door de computer wordt herkend.&#xA;"/>
+							<tag xmi:id="EAID_8F70DA6F_38F5_1138_BF28_8746A30956EE" name="Indicatie materiële historie" notes="Values: Ja,Nee,Zie groep&#xA;Description: Indicatie of de materiële historie van dit informatie-element te bevragen is.&#xA;"/>
+							<tag xmi:id="EAID_D0DCC9FB_CF01_a7cf_BEDD_2C2C5D0C0BD5" name="Indicatie formele historie" notes="Values: Ja,Nee,Zie groep&#xA;Description: Indicatie of de formele historie van dit informatie-element te bevragen is.&#xA;"/>
+							<tag xmi:id="EAID_83B4E541_C901_b1c9_A77B_CCAC92ADB9AA" name="Locatie"/>
+							<tag xmi:id="EAID_0BFEBE52_7758_5c77_BEB1_08F4251DC602" name="Authentiek" notes="Values: Authentiek,Basisgegeven,Wettelijk gegeven,Landelijk kerngegeven,Overig&#xA;Description: Aanduiding of het een authentiek gegeven betreft.&#xA;"/>
+							<tag xmi:id="EAID_50A2721A_4BE0_b74b_88B3_668332AB7082" name="Toelichting" value="&lt;memo&gt;"/>
+							<tag xmi:id="EAID_BE7DA005_D88B_42d8_8963_491CF560AD74" name="Mogelijk geen waarde" value="Nee" notes="Values: Ja,Nee&#xA;Default: Nee&#xA;Description: Aanduiding dat dit informatie-element geen waarde kan bevatten.&#xA;"/>
+							<tag xmi:id="EAID_EBF7A679_CC7F_45cc_80AA_0FD09BD42FCC" name="Begrip" notes="Description: Verwijzing naar een begrip. De verwijzing heeft de vorm van een term of een URI.&#xA;"/>
+							<tag xmi:id="EAID_516262A9_6E2F_7c6e_B924_2E3DD263CABF" name="Indicatie classificerend" value="Nee" notes="Default: Nee&#xA;Description: Indicatie dat een attribuutsoort het objecttype waar het bijhoort classificeert in (sub)typen.&#xA;"/>
+						</tags>
+						<xrefs value="$XREFPROP=$XID={DC876060-5D9A-45cf-BCCB-30B08E00C81D}$XID;$NAM=Stereotypes$NAM;$TYP=attribute property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=Attribuutsoort;FQName=MIM::Attribuutsoort;@ENDSTEREO;$DES;$CLT={97A0B93E-0567-49a9-84E2-00B86A5AA65A}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
+					</attribute>
+					<attribute xmi:idref="EAID_61B77EAD_DA82_4b45_A6EE_F3328E9F5865" name="test attribuut2" scope="Public">
+						<initial/>
+						<documentation/>
+						<model ea_localid="5" ea_guid="{61B77EAD-DA82-4b45-A6EE-F3328E9F5865}"/>
+						<properties type="Test enumeratie1" derived="0" collection="false" length="0" duplicates="0" changeability="changeable"/>
+						<coords ordered="0" scale="0"/>
+						<containment containment="Not Specified" position="0"/>
+						<stereotype stereotype="Attribuutsoort"/>
+						<bounds lower="1" upper="1"/>
+						<options/>
+						<style/>
+						<styleex value="volatile=0;"/>
+						<tags>
+							<tag xmi:id="EAID_6B33862D_45B3_a345_BA82_E29A32F0A9CD" name="Herkomst" notes="Description: De registratie of het informatiemodel waaraan het informatie-element ontleend is dan wel de eigen organisatie indien het door de eigen organisatie toegevoegd is.&#xA;"/>
+							<tag xmi:id="EAID_1FAA1D3E_7C44_9b7c_BD90_717C256DB80D" name="Herkomst definitie" notes="Description: De registratie of het informatiemodel waaruit de definitie is overgenomen dan wel een aanduiding die aangeeft uit welke bronnen de definitie is samengesteld.&#xA;"/>
+							<tag xmi:id="EAID_FB3F1EDB_3161_ef31_9F58_C82642A241F3" name="Datum opname" notes="Description: De datum waarop het informatie-element is opgenomen in het informatiemodel.&#xA;"/>
+							<tag xmi:id="EAID_034EE5FF_0C05_9d0c_B669_73903A341769" name="Lengte" notes="Description: De aanduiding van de lengte van een gegeven.&#xA;"/>
+							<tag xmi:id="EAID_98327E03_64C9_4564_9444_BD566D9664A6" name="Patroon" value="&lt;memo&gt;"/>
+							<tag xmi:id="EAID_69EB40AD_8D73_c38d_9F6F_71455AD7DE1C" name="Formeel patroon" notes="Description: Zoals patroon, formeel vastgelegd (met een reguliere expressie), uitgedrukt in een formele taal die door de computer wordt herkend.&#xA;"/>
+							<tag xmi:id="EAID_8F70DA6F_38F5_1138_8D89_D6C6F2721C8A" name="Indicatie materiële historie" notes="Values: Ja,Nee,Zie groep&#xA;Description: Indicatie of de materiële historie van dit informatie-element te bevragen is.&#xA;"/>
+							<tag xmi:id="EAID_D0DCC9FB_CF01_a7cf_B821_3FBB0373A2EF" name="Indicatie formele historie" notes="Values: Ja,Nee,Zie groep&#xA;Description: Indicatie of de formele historie van dit informatie-element te bevragen is.&#xA;"/>
+							<tag xmi:id="EAID_83B4E541_C901_b1c9_B8DB_81A948BE186A" name="Locatie"/>
+							<tag xmi:id="EAID_0BFEBE52_7758_5c77_B8A8_689D5B5FBEAD" name="Authentiek" notes="Values: Authentiek,Basisgegeven,Wettelijk gegeven,Landelijk kerngegeven,Overig&#xA;Description: Aanduiding of het een authentiek gegeven betreft.&#xA;"/>
+							<tag xmi:id="EAID_50A2721A_4BE0_b74b_AA95_48D3B931DE51" name="Toelichting" value="&lt;memo&gt;"/>
+							<tag xmi:id="EAID_BE7DA005_D88B_42d8_A2D9_245C7FF50BB2" name="Mogelijk geen waarde" value="Nee" notes="Values: Ja,Nee&#xA;Default: Nee&#xA;Description: Aanduiding dat dit informatie-element geen waarde kan bevatten.&#xA;"/>
+							<tag xmi:id="EAID_EBF7A679_CC7F_45cc_94A2_A6B5308B2EC4" name="Begrip" notes="Description: Verwijzing naar een begrip. De verwijzing heeft de vorm van een term of een URI.&#xA;"/>
+							<tag xmi:id="EAID_516262A9_6E2F_7c6e_B65B_845D19039E47" name="Indicatie classificerend" value="Nee" notes="Default: Nee&#xA;Description: Indicatie dat een attribuutsoort het objecttype waar het bijhoort classificeert in (sub)typen.&#xA;"/>
+						</tags>
+						<xrefs value="$XREFPROP=$XID={10780962-6D79-424d-B06A-820BD541B78D}$XID;$NAM=Stereotypes$NAM;$TYP=attribute property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=Attribuutsoort;FQName=MIM::Attribuutsoort;@ENDSTEREO;$DES;$CLT={61B77EAD-DA82-4b45-A6EE-F3328E9F5865}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
+					</attribute>
+					<attribute xmi:idref="EAID_6663347B_6FEA_493b_BA4C_FF09069589E1" name="test attribuut3" scope="Public">
+						<initial/>
+						<documentation/>
+						<model ea_localid="6" ea_guid="{6663347B-6FEA-493b-BA4C-FF09069589E1}"/>
+						<properties type="Test referentielijst" derived="0" collection="false" length="0" duplicates="0" changeability="changeable"/>
+						<coords ordered="0" scale="0"/>
+						<containment containment="Not Specified" position="0"/>
+						<stereotype stereotype="Attribuutsoort"/>
+						<bounds lower="1" upper="1"/>
+						<options/>
+						<style/>
+						<styleex value="volatile=0;"/>
+						<tags>
+							<tag xmi:id="EAID_6B33862D_45B3_a345_84CE_5B8F80A6D680" name="Herkomst" notes="Description: De registratie of het informatiemodel waaraan het informatie-element ontleend is dan wel de eigen organisatie indien het door de eigen organisatie toegevoegd is.&#xA;"/>
+							<tag xmi:id="EAID_1FAA1D3E_7C44_9b7c_80C0_F63770E9056C" name="Herkomst definitie" notes="Description: De registratie of het informatiemodel waaruit de definitie is overgenomen dan wel een aanduiding die aangeeft uit welke bronnen de definitie is samengesteld.&#xA;"/>
+							<tag xmi:id="EAID_FB3F1EDB_3161_ef31_AEF8_6049F756AA1A" name="Datum opname" notes="Description: De datum waarop het informatie-element is opgenomen in het informatiemodel.&#xA;"/>
+							<tag xmi:id="EAID_034EE5FF_0C05_9d0c_BB52_6754D125B12A" name="Lengte" notes="Description: De aanduiding van de lengte van een gegeven.&#xA;"/>
+							<tag xmi:id="EAID_98327E03_64C9_4564_BB9B_14BDF62A9243" name="Patroon" value="&lt;memo&gt;"/>
+							<tag xmi:id="EAID_69EB40AD_8D73_c38d_9EDE_E424218B5522" name="Formeel patroon" notes="Description: Zoals patroon, formeel vastgelegd (met een reguliere expressie), uitgedrukt in een formele taal die door de computer wordt herkend.&#xA;"/>
+							<tag xmi:id="EAID_8F70DA6F_38F5_1138_94A7_073145BD1ED9" name="Indicatie materiële historie" notes="Values: Ja,Nee,Zie groep&#xA;Description: Indicatie of de materiële historie van dit informatie-element te bevragen is.&#xA;"/>
+							<tag xmi:id="EAID_D0DCC9FB_CF01_a7cf_A1C2_95C433BF51A6" name="Indicatie formele historie" notes="Values: Ja,Nee,Zie groep&#xA;Description: Indicatie of de formele historie van dit informatie-element te bevragen is.&#xA;"/>
+							<tag xmi:id="EAID_83B4E541_C901_b1c9_9833_622FBFF0FA9D" name="Locatie"/>
+							<tag xmi:id="EAID_0BFEBE52_7758_5c77_A7C7_358F88C0E7CD" name="Authentiek" notes="Values: Authentiek,Basisgegeven,Wettelijk gegeven,Landelijk kerngegeven,Overig&#xA;Description: Aanduiding of het een authentiek gegeven betreft.&#xA;"/>
+							<tag xmi:id="EAID_50A2721A_4BE0_b74b_B318_A7F270CCC534" name="Toelichting" value="&lt;memo&gt;"/>
+							<tag xmi:id="EAID_BE7DA005_D88B_42d8_8A4B_6AFDB9342B90" name="Mogelijk geen waarde" value="Nee" notes="Values: Ja,Nee&#xA;Default: Nee&#xA;Description: Aanduiding dat dit informatie-element geen waarde kan bevatten.&#xA;"/>
+							<tag xmi:id="EAID_EBF7A679_CC7F_45cc_B1C6_293EFB3B2EE1" name="Begrip" notes="Description: Verwijzing naar een begrip. De verwijzing heeft de vorm van een term of een URI.&#xA;"/>
+							<tag xmi:id="EAID_516262A9_6E2F_7c6e_822C_09405F4C541A" name="Indicatie classificerend" value="Nee" notes="Default: Nee&#xA;Description: Indicatie dat een attribuutsoort het objecttype waar het bijhoort classificeert in (sub)typen.&#xA;"/>
+						</tags>
+						<xrefs value="$XREFPROP=$XID={CFA58710-42DE-46be-AEA0-483ED3BF9BDC}$XID;$NAM=Stereotypes$NAM;$TYP=attribute property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=Attribuutsoort;FQName=MIM::Attribuutsoort;@ENDSTEREO;$DES;$CLT={6663347B-6FEA-493b-BA4C-FF09069589E1}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
+					</attribute>
+					<attribute xmi:idref="EAID_E43BFF6D_51A8_45ba_BE08_6B18E45BFE66" name="test attribuut4" scope="Public">
+						<initial/>
+						<documentation/>
+						<model ea_localid="7" ea_guid="{E43BFF6D-51A8-45ba-BE08-6B18E45BFE66}"/>
+						<properties type="Test union" derived="0" collection="false" length="0" duplicates="0" changeability="changeable"/>
+						<coords ordered="0" scale="0"/>
+						<containment containment="Not Specified" position="0"/>
+						<stereotype stereotype="Attribuutsoort"/>
+						<bounds lower="1" upper="1"/>
+						<options/>
+						<style/>
+						<styleex value="volatile=0;"/>
+						<tags>
+							<tag xmi:id="EAID_6B33862D_45B3_a345_8319_F27E7B492384" name="Herkomst" notes="Description: De registratie of het informatiemodel waaraan het informatie-element ontleend is dan wel de eigen organisatie indien het door de eigen organisatie toegevoegd is.&#xA;"/>
+							<tag xmi:id="EAID_1FAA1D3E_7C44_9b7c_B22D_7FEB0E3CADA9" name="Herkomst definitie" notes="Description: De registratie of het informatiemodel waaruit de definitie is overgenomen dan wel een aanduiding die aangeeft uit welke bronnen de definitie is samengesteld.&#xA;"/>
+							<tag xmi:id="EAID_FB3F1EDB_3161_ef31_8BB7_8CB1ABF0C42D" name="Datum opname" notes="Description: De datum waarop het informatie-element is opgenomen in het informatiemodel.&#xA;"/>
+							<tag xmi:id="EAID_034EE5FF_0C05_9d0c_8CE3_B7249A65CB4B" name="Lengte" notes="Description: De aanduiding van de lengte van een gegeven.&#xA;"/>
+							<tag xmi:id="EAID_98327E03_64C9_4564_A40C_E90D94E274B8" name="Patroon" value="&lt;memo&gt;"/>
+							<tag xmi:id="EAID_69EB40AD_8D73_c38d_A2C3_6D289579A9D8" name="Formeel patroon" notes="Description: Zoals patroon, formeel vastgelegd (met een reguliere expressie), uitgedrukt in een formele taal die door de computer wordt herkend.&#xA;"/>
+							<tag xmi:id="EAID_8F70DA6F_38F5_1138_B60A_3DBDC9439F03" name="Indicatie materiële historie" notes="Values: Ja,Nee,Zie groep&#xA;Description: Indicatie of de materiële historie van dit informatie-element te bevragen is.&#xA;"/>
+							<tag xmi:id="EAID_D0DCC9FB_CF01_a7cf_9B64_F97C4771CA02" name="Indicatie formele historie" notes="Values: Ja,Nee,Zie groep&#xA;Description: Indicatie of de formele historie van dit informatie-element te bevragen is.&#xA;"/>
+							<tag xmi:id="EAID_83B4E541_C901_b1c9_BC9A_EB8538B04F43" name="Locatie"/>
+							<tag xmi:id="EAID_0BFEBE52_7758_5c77_A36A_1CF9B02BDBB5" name="Authentiek" notes="Values: Authentiek,Basisgegeven,Wettelijk gegeven,Landelijk kerngegeven,Overig&#xA;Description: Aanduiding of het een authentiek gegeven betreft.&#xA;"/>
+							<tag xmi:id="EAID_50A2721A_4BE0_b74b_A946_DA748D0A4472" name="Toelichting" value="&lt;memo&gt;"/>
+							<tag xmi:id="EAID_BE7DA005_D88B_42d8_8B3F_CA683576FB8A" name="Mogelijk geen waarde" value="Nee" notes="Values: Ja,Nee&#xA;Default: Nee&#xA;Description: Aanduiding dat dit informatie-element geen waarde kan bevatten.&#xA;"/>
+							<tag xmi:id="EAID_EBF7A679_CC7F_45cc_8732_E818AE32C7C0" name="Begrip" notes="Description: Verwijzing naar een begrip. De verwijzing heeft de vorm van een term of een URI.&#xA;"/>
+							<tag xmi:id="EAID_516262A9_6E2F_7c6e_ADA0_0F372344E43F" name="Indicatie classificerend" value="Nee" notes="Default: Nee&#xA;Description: Indicatie dat een attribuutsoort het objecttype waar het bijhoort classificeert in (sub)typen.&#xA;"/>
+						</tags>
+						<xrefs value="$XREFPROP=$XID={0932C60F-2639-436b-9B29-A7C3CDCE0BD3}$XID;$NAM=Stereotypes$NAM;$TYP=attribute property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=Attribuutsoort;FQName=MIM::Attribuutsoort;@ENDSTEREO;$DES;$CLT={E43BFF6D-51A8-45ba-BE08-6B18E45BFE66}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
+					</attribute>
+					<attribute xmi:idref="EAID_766264A0_3A79_4c88_92E5_60A456D48B23" name="test attribuut5" scope="Public">
+						<initial/>
+						<documentation/>
+						<model ea_localid="8" ea_guid="{766264A0-3A79-4c88-92E5-60A456D48B23}"/>
+						<properties type="Test primitief datatype" derived="0" collection="false" length="0" duplicates="0" changeability="changeable"/>
+						<coords ordered="0" scale="0"/>
+						<containment containment="Not Specified" position="0"/>
+						<stereotype stereotype="Attribuutsoort"/>
+						<bounds lower="1" upper="1"/>
+						<options/>
+						<style/>
+						<styleex value="volatile=0;"/>
+						<tags>
+							<tag xmi:id="EAID_6B33862D_45B3_a345_A172_660B469FF85A" name="Herkomst" notes="Description: De registratie of het informatiemodel waaraan het informatie-element ontleend is dan wel de eigen organisatie indien het door de eigen organisatie toegevoegd is.&#xA;"/>
+							<tag xmi:id="EAID_1FAA1D3E_7C44_9b7c_805D_5D66365A173F" name="Herkomst definitie" notes="Description: De registratie of het informatiemodel waaruit de definitie is overgenomen dan wel een aanduiding die aangeeft uit welke bronnen de definitie is samengesteld.&#xA;"/>
+							<tag xmi:id="EAID_FB3F1EDB_3161_ef31_9669_AB72378CE4AC" name="Datum opname" notes="Description: De datum waarop het informatie-element is opgenomen in het informatiemodel.&#xA;"/>
+							<tag xmi:id="EAID_034EE5FF_0C05_9d0c_A381_F138096FE9F8" name="Lengte" notes="Description: De aanduiding van de lengte van een gegeven.&#xA;"/>
+							<tag xmi:id="EAID_98327E03_64C9_4564_8632_DC3111C543EF" name="Patroon" value="&lt;memo&gt;"/>
+							<tag xmi:id="EAID_69EB40AD_8D73_c38d_BF16_2B531922CAC4" name="Formeel patroon" notes="Description: Zoals patroon, formeel vastgelegd (met een reguliere expressie), uitgedrukt in een formele taal die door de computer wordt herkend.&#xA;"/>
+							<tag xmi:id="EAID_8F70DA6F_38F5_1138_8B43_3606E8FD2F6E" name="Indicatie materiële historie" notes="Values: Ja,Nee,Zie groep&#xA;Description: Indicatie of de materiële historie van dit informatie-element te bevragen is.&#xA;"/>
+							<tag xmi:id="EAID_D0DCC9FB_CF01_a7cf_851F_01C0926D0568" name="Indicatie formele historie" notes="Values: Ja,Nee,Zie groep&#xA;Description: Indicatie of de formele historie van dit informatie-element te bevragen is.&#xA;"/>
+							<tag xmi:id="EAID_83B4E541_C901_b1c9_A79D_48671549A45B" name="Locatie"/>
+							<tag xmi:id="EAID_0BFEBE52_7758_5c77_8C45_F396361B6ABB" name="Authentiek" notes="Values: Authentiek,Basisgegeven,Wettelijk gegeven,Landelijk kerngegeven,Overig&#xA;Description: Aanduiding of het een authentiek gegeven betreft.&#xA;"/>
+							<tag xmi:id="EAID_50A2721A_4BE0_b74b_940C_7FD39AEB5E18" name="Toelichting" value="&lt;memo&gt;"/>
+							<tag xmi:id="EAID_BE7DA005_D88B_42d8_BFC3_8A97D9FCEAF1" name="Mogelijk geen waarde" value="Nee" notes="Values: Ja,Nee&#xA;Default: Nee&#xA;Description: Aanduiding dat dit informatie-element geen waarde kan bevatten.&#xA;"/>
+							<tag xmi:id="EAID_EBF7A679_CC7F_45cc_BF8C_173283CC2CB8" name="Begrip" notes="Description: Verwijzing naar een begrip. De verwijzing heeft de vorm van een term of een URI.&#xA;"/>
+							<tag xmi:id="EAID_516262A9_6E2F_7c6e_9D6F_7508D1B0F7F8" name="Indicatie classificerend" value="Nee" notes="Default: Nee&#xA;Description: Indicatie dat een attribuutsoort het objecttype waar het bijhoort classificeert in (sub)typen.&#xA;"/>
+						</tags>
+						<xrefs value="$XREFPROP=$XID={ABD1CAB1-124A-4429-92E2-EA2EF34B45D5}$XID;$NAM=Stereotypes$NAM;$TYP=attribute property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=Attribuutsoort;FQName=MIM::Attribuutsoort;@ENDSTEREO;$DES;$CLT={766264A0-3A79-4c88-92E5-60A456D48B23}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
+					</attribute>
+					<attribute xmi:idref="EAID_B82EFC1C_2149_4b77_8684_4B627784C96F" name="test gegevensgroep" scope="Public">
+						<initial/>
+						<documentation/>
+						<model ea_localid="9" ea_guid="{B82EFC1C-2149-4b77-8684-4B627784C96F}"/>
+						<properties type="Test gegevensgroeptype1" derived="0" collection="false" length="0" duplicates="0" changeability="changeable"/>
+						<coords ordered="0" scale="0"/>
+						<containment containment="Not Specified" position="0"/>
+						<stereotype stereotype="Gegevensgroep"/>
+						<bounds lower="1" upper="1"/>
+						<options/>
+						<style/>
+						<styleex value="volatile=0;"/>
+						<tags>
+							<tag xmi:id="EAID_50A2721A_8C70_de8c_8F32_FEEF2A8C0564" name="Toelichting" value="&lt;memo&gt;"/>
+							<tag xmi:id="EAID_6B33862D_D043_4fd0_966C_F11305BC2941" name="Herkomst"/>
+							<tag xmi:id="EAID_1FAA1D3E_7AD4_227a_AE41_059925D218EA" name="Herkomst definitie"/>
+							<tag xmi:id="EAID_FB3F1EDB_83F1_fe83_99D5_2457C7490F9C" name="Datum opname"/>
+							<tag xmi:id="EAID_8F70DA6F_AB85_13ab_A1B3_D448F63E251F" name="Indicatie materiële historie" notes="Values: Ja,Nee,Zie groep&#xA;"/>
+							<tag xmi:id="EAID_D0DCC9FB_5D91_4c5d_9152_17D7F5F4CD06" name="Indicatie formele historie" notes="Values: Ja,Nee,Zie groep&#xA;"/>
+							<tag xmi:id="EAID_0BFEBE52_E5E8_55e5_AE7D_E0A9A308ACF4" name="Authentiek" notes="Values: Authentiek,Basisgegeven,Landelijk kerngegeven,Gemeentelijk kerngegeven,Overig&#xA;"/>
+						</tags>
+						<xrefs value="$XREFPROP=$XID={5080343A-323E-42fa-B022-C3E96C18D773}$XID;$NAM=Stereotypes$NAM;$TYP=attribute property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=Gegevensgroep;FQName=MIM::Gegevensgroep;@ENDSTEREO;$DES;$CLT={B82EFC1C-2149-4b77-8684-4B627784C96F}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
+					</attribute>
+				</attributes>
+				<links>
+					<Generalization xmi:id="EAID_3F082A96_867E_4720_9AAA_322C9CD0BEC8" start="EAID_4A4E162A_2737_4092_8DC7_81669D51FC34" end="EAID_C672763B_8E4C_41bd_9191_5E8F4D07AD81"/>
+					<Association xmi:id="EAID_44B38924_4FFD_4c93_9E4B_0F4AD0CC57B1" start="EAID_4A4E162A_2737_4092_8DC7_81669D51FC34" end="EAID_FCCB561D_EAC8_40a6_A4BE_FD6BB02587FD"/>
+					<Association xmi:id="EAID_7933A525_7B16_4086_9EBE_DD1C49A1A80A" start="EAID_4A4E162A_2737_4092_8DC7_81669D51FC34" end="EAID_E7D31188_001D_4635_98FD_63FF2D2DA449"/>
+					<Association xmi:id="EAID_FEA1D1DB_AD3C_4cb5_B0AA_8999A91B3623" start="EAID_4A4E162A_2737_4092_8DC7_81669D51FC34" end="EAID_024017F9_6FE5_42be_9D84_4729C873F838"/>
+				</links>
+			</element>
+			<element xmi:idref="EAID_024017F9_6FE5_42be_9D84_4729C873F838" xmi:type="uml:Class" name="Test objecttype2" scope="public">
+				<model package="EAPK_0C7C75EC_CFE9_4fab_911E_D139D7529601" tpos="0" ea_localid="7" ea_eleType="element"/>
+				<properties isSpecification="false" sType="Class" nType="0" scope="public" stereotype="Objecttype" isRoot="false" isLeaf="false" isAbstract="false" isActive="false"/>
+				<project author="pjanssen" version="1.0" phase="1.0" created="2017-06-01 17:26:37" modified="2020-03-23 17:02:49" complexity="1" status="Proposed"/>
+				<code product_name="Java" gentype="Java"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags>
+					<tag xmi:id="EAID_EBF7A679_4E9D_974e_84F8_8AEEEF3FD623" name="Begrip" value="#NOTES#Description: Verwijzing naar een begrip. De verwijzing heeft de vorm van een term of een URI.&#xA;" modelElement="EAID_024017F9_6FE5_42be_9D84_4729C873F838"/>
+					<tag xmi:id="EAID_FB3F1EDB_51FF_2d51_8AC0_97A80AC629A5" name="Datum opname" value="#NOTES#Description: De datum waarop het informatie-element is opgenomen in het informatiemodel.&#xA;" modelElement="EAID_024017F9_6FE5_42be_9D84_4729C873F838"/>
+					<tag xmi:id="EAID_6B33862D_C751_5dc7_A7E1_F1DBAB7A2B4F" name="Herkomst" value="#NOTES#Description: De registratie of het informatiemodel waaraan het informatie-element ontleend is dan wel de eigen organisatie indien het door de eigen organisatie toegevoegd is.&#xA;" modelElement="EAID_024017F9_6FE5_42be_9D84_4729C873F838"/>
+					<tag xmi:id="EAID_1FAA1D3E_1B62_631b_AFA1_E6694E06DC69" name="Herkomst definitie" value="#NOTES#Description: De registratie of het informatiemodel waaruit de definitie is overgenomen dan wel een aanduiding die aangeeft uit welke bronnen de definitie is samengesteld.&#xA;" modelElement="EAID_024017F9_6FE5_42be_9D84_4729C873F838"/>
+					<tag xmi:id="EAID_B108BD8E_2332_7b23_B7A9_117DF223BC2E" name="Kwaliteit" value="#NOTES#Description: Voor objecttypen die deel uitmaken van een registratie betreft dit de waarborgen voor de juistheid van de in de registratie opgenomen objecten van het desbetreffende type.&#xA;" modelElement="EAID_024017F9_6FE5_42be_9D84_4729C873F838"/>
+					<tag xmi:id="EAID_2D3C6693_CC37_aecc_82D8_492A8E4AF82E" name="Populatie" value="&lt;memo&gt;" modelElement="EAID_024017F9_6FE5_42be_9D84_4729C873F838"/>
+					<tag xmi:id="EAID_50A2721A_D0BE_44d0_9A4F_FA1557EDFE69" name="Toelichting" value="&lt;memo&gt;" modelElement="EAID_024017F9_6FE5_42be_9D84_4729C873F838"/>
+				</tags>
+				<xrefs value="$XREFPROP=$XID={A87E1794-FC69-4771-AD68-E7EF2BE976F9}$XID;$NAM=Stereotypes$NAM;$TYP=element property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=Objecttype;FQName=MIM::Objecttype;@ENDSTEREO;$DES;$CLT={024017F9-6FE5-42be-9D84-4729C873F838}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
+				<extendedProperties tagged="0" package_name="test KKG-alt2"/>
+				<links>
+					<Association xmi:id="EAID_FEA1D1DB_AD3C_4cb5_B0AA_8999A91B3623" start="EAID_4A4E162A_2737_4092_8DC7_81669D51FC34" end="EAID_024017F9_6FE5_42be_9D84_4729C873F838"/>
+				</links>
+			</element>
+			<element xmi:idref="EAID_E7D31188_001D_4635_98FD_63FF2D2DA449" xmi:type="uml:Class" name="Test objecttype3" scope="public">
+				<model package="EAPK_0C7C75EC_CFE9_4fab_911E_D139D7529601" tpos="0" ea_localid="8" ea_eleType="element"/>
+				<properties isSpecification="false" sType="Class" nType="0" scope="public" stereotype="Objecttype" isRoot="false" isLeaf="false" isAbstract="false" isActive="false"/>
+				<project author="pjanssen" version="1.0" phase="1.0" created="2017-06-01 17:27:02" modified="2020-03-23 17:02:49" complexity="1" status="Proposed"/>
+				<code product_name="Java" gentype="Java"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags>
+					<tag xmi:id="EAID_EBF7A679_4E9D_974e_BD6C_FBAF17DB3AD0" name="Begrip" value="#NOTES#Description: Verwijzing naar een begrip. De verwijzing heeft de vorm van een term of een URI.&#xA;" modelElement="EAID_E7D31188_001D_4635_98FD_63FF2D2DA449"/>
+					<tag xmi:id="EAID_FB3F1EDB_51FF_2d51_A149_78910135EAC0" name="Datum opname" value="#NOTES#Description: De datum waarop het informatie-element is opgenomen in het informatiemodel.&#xA;" modelElement="EAID_E7D31188_001D_4635_98FD_63FF2D2DA449"/>
+					<tag xmi:id="EAID_6B33862D_C751_5dc7_B5E0_0C60B6880C35" name="Herkomst" value="#NOTES#Description: De registratie of het informatiemodel waaraan het informatie-element ontleend is dan wel de eigen organisatie indien het door de eigen organisatie toegevoegd is.&#xA;" modelElement="EAID_E7D31188_001D_4635_98FD_63FF2D2DA449"/>
+					<tag xmi:id="EAID_1FAA1D3E_1B62_631b_831C_5718ECBFB000" name="Herkomst definitie" value="#NOTES#Description: De registratie of het informatiemodel waaruit de definitie is overgenomen dan wel een aanduiding die aangeeft uit welke bronnen de definitie is samengesteld.&#xA;" modelElement="EAID_E7D31188_001D_4635_98FD_63FF2D2DA449"/>
+					<tag xmi:id="EAID_B108BD8E_2332_7b23_9D46_588EC1EEC42E" name="Kwaliteit" value="#NOTES#Description: Voor objecttypen die deel uitmaken van een registratie betreft dit de waarborgen voor de juistheid van de in de registratie opgenomen objecten van het desbetreffende type.&#xA;" modelElement="EAID_E7D31188_001D_4635_98FD_63FF2D2DA449"/>
+					<tag xmi:id="EAID_2D3C6693_CC37_aecc_B860_D54DF529E698" name="Populatie" value="&lt;memo&gt;" modelElement="EAID_E7D31188_001D_4635_98FD_63FF2D2DA449"/>
+					<tag xmi:id="EAID_50A2721A_D0BE_44d0_B22B_36A6C9BADA06" name="Toelichting" value="&lt;memo&gt;" modelElement="EAID_E7D31188_001D_4635_98FD_63FF2D2DA449"/>
+				</tags>
+				<xrefs value="$XREFPROP=$XID={40D9006B-C7E3-4dc5-B2D3-0C30E15DE93C}$XID;$NAM=Stereotypes$NAM;$TYP=element property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=Objecttype;FQName=MIM::Objecttype;@ENDSTEREO;$DES;$CLT={E7D31188-001D-4635-98FD-63FF2D2DA449}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
+				<extendedProperties tagged="0" package_name="test KKG-alt2"/>
+				<links>
+					<Association xmi:id="EAID_7933A525_7B16_4086_9EBE_DD1C49A1A80A" start="EAID_4A4E162A_2737_4092_8DC7_81669D51FC34" end="EAID_E7D31188_001D_4635_98FD_63FF2D2DA449"/>
+				</links>
+			</element>
+			<element xmi:idref="EAID_FCCB561D_EAC8_40a6_A4BE_FD6BB02587FD" xmi:type="uml:Class" name="Test objecttype4" scope="public">
+				<model package="EAPK_0C7C75EC_CFE9_4fab_911E_D139D7529601" tpos="0" ea_localid="9" ea_eleType="element"/>
+				<properties isSpecification="false" sType="Class" nType="0" scope="public" stereotype="Objecttype" isRoot="false" isLeaf="false" isAbstract="false" isActive="false"/>
+				<project author="pjanssen" version="1.0" phase="1.0" created="2017-06-01 17:25:10" modified="2020-03-23 17:02:49" complexity="1" status="Proposed"/>
+				<code product_name="Java" gentype="Java"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags>
+					<tag xmi:id="EAID_EBF7A679_4E9D_974e_ADDD_B4D33DAA8E3B" name="Begrip" value="#NOTES#Description: Verwijzing naar een begrip. De verwijzing heeft de vorm van een term of een URI.&#xA;" modelElement="EAID_FCCB561D_EAC8_40a6_A4BE_FD6BB02587FD"/>
+					<tag xmi:id="EAID_FB3F1EDB_51FF_2d51_A125_0BB9BDC5B840" name="Datum opname" value="#NOTES#Description: De datum waarop het informatie-element is opgenomen in het informatiemodel.&#xA;" modelElement="EAID_FCCB561D_EAC8_40a6_A4BE_FD6BB02587FD"/>
+					<tag xmi:id="EAID_6B33862D_C751_5dc7_B9E6_DF53A4796692" name="Herkomst" value="#NOTES#Description: De registratie of het informatiemodel waaraan het informatie-element ontleend is dan wel de eigen organisatie indien het door de eigen organisatie toegevoegd is.&#xA;" modelElement="EAID_FCCB561D_EAC8_40a6_A4BE_FD6BB02587FD"/>
+					<tag xmi:id="EAID_1FAA1D3E_1B62_631b_9630_C2779D2B9AAB" name="Herkomst definitie" value="#NOTES#Description: De registratie of het informatiemodel waaruit de definitie is overgenomen dan wel een aanduiding die aangeeft uit welke bronnen de definitie is samengesteld.&#xA;" modelElement="EAID_FCCB561D_EAC8_40a6_A4BE_FD6BB02587FD"/>
+					<tag xmi:id="EAID_B108BD8E_2332_7b23_BB6C_BF62BF2CC250" name="Kwaliteit" value="#NOTES#Description: Voor objecttypen die deel uitmaken van een registratie betreft dit de waarborgen voor de juistheid van de in de registratie opgenomen objecten van het desbetreffende type.&#xA;" modelElement="EAID_FCCB561D_EAC8_40a6_A4BE_FD6BB02587FD"/>
+					<tag xmi:id="EAID_2D3C6693_CC37_aecc_8FF1_D2C3C35BB7C3" name="Populatie" value="&lt;memo&gt;" modelElement="EAID_FCCB561D_EAC8_40a6_A4BE_FD6BB02587FD"/>
+					<tag xmi:id="EAID_50A2721A_D0BE_44d0_AB4C_7300867490FF" name="Toelichting" value="&lt;memo&gt;" modelElement="EAID_FCCB561D_EAC8_40a6_A4BE_FD6BB02587FD"/>
+				</tags>
+				<xrefs value="$XREFPROP=$XID={4168B129-7725-4e86-9EC0-D0AB012A09D8}$XID;$NAM=Stereotypes$NAM;$TYP=element property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=Objecttype;FQName=MIM::Objecttype;@ENDSTEREO;$DES;$CLT={FCCB561D-EAC8-40a6-A4BE-FD6BB02587FD}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
+				<extendedProperties tagged="0" package_name="test KKG-alt2"/>
+				<links>
+					<Association xmi:id="EAID_44B38924_4FFD_4c93_9E4B_0F4AD0CC57B1" start="EAID_4A4E162A_2737_4092_8DC7_81669D51FC34" end="EAID_FCCB561D_EAC8_40a6_A4BE_FD6BB02587FD"/>
+				</links>
+			</element>
+			<element xmi:idref="EAID_532814DF_32EF_40e3_B8A6_928F69DA3227" xmi:type="uml:Class" name="Test Relatieklasse" scope="public">
+				<model package="EAPK_0C7C75EC_CFE9_4fab_911E_D139D7529601" tpos="0" ea_localid="10" ea_eleType="element"/>
+				<properties isSpecification="false" sType="Class" nType="17" scope="public" stereotype="Relatieklasse" isRoot="false" isLeaf="false" isAbstract="false" isActive="false"/>
+				<project author="pjanssen" version="1.0" phase="1.0" created="2017-06-01 17:38:15" modified="2020-03-23 17:02:49" complexity="1" status="Proposed"/>
+				<code product_name="Java" gentype="Java"/>
+				<style appearance="BackColor=16777164;BorderColor=0;BorderWidth=1;FontColor=0;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags/>
+				<xrefs value="$XREFPROP=$XID={5ADCDD35-21C3-4225-8066-92CF0A2B135D}$XID;$NAM=Stereotypes$NAM;$TYP=element property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=Relatieklasse;FQName=MIM::Relatieklasse;@ENDSTEREO;$DES;$CLT={532814DF-32EF-40e3-B8A6-928F69DA3227}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
+				<extendedProperties tagged="0" package_name="test KKG-alt2" conID="EAID_7933A525_7B16_4086_9EBE_DD1C49A1A80A"/>
+			</element>
+			<element xmi:idref="EAID_C672763B_8E4C_41bd_9191_5E8F4D07AD81" xmi:type="uml:Class" name="Test supertype1" scope="public">
+				<model package="EAPK_0C7C75EC_CFE9_4fab_911E_D139D7529601" tpos="0" ea_localid="11" ea_eleType="element"/>
+				<properties isSpecification="false" sType="Class" nType="0" scope="public" stereotype="Objecttype" isRoot="false" isLeaf="false" isAbstract="false" isActive="false"/>
+				<project author="pjanssen" version="1.0" phase="1.0" created="2017-06-01 17:24:56" modified="2020-03-23 17:02:49" complexity="1" status="Proposed"/>
+				<code product_name="Java" gentype="Java"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags>
+					<tag xmi:id="EAID_EBF7A679_4E9D_974e_B7FC_D2286261F07D" name="Begrip" value="#NOTES#Description: Verwijzing naar een begrip. De verwijzing heeft de vorm van een term of een URI.&#xA;" modelElement="EAID_C672763B_8E4C_41bd_9191_5E8F4D07AD81"/>
+					<tag xmi:id="EAID_FB3F1EDB_51FF_2d51_BD88_F9DD67BBE675" name="Datum opname" value="#NOTES#Description: De datum waarop het informatie-element is opgenomen in het informatiemodel.&#xA;" modelElement="EAID_C672763B_8E4C_41bd_9191_5E8F4D07AD81"/>
+					<tag xmi:id="EAID_6B33862D_C751_5dc7_8C94_B9C17219E0EA" name="Herkomst" value="#NOTES#Description: De registratie of het informatiemodel waaraan het informatie-element ontleend is dan wel de eigen organisatie indien het door de eigen organisatie toegevoegd is.&#xA;" modelElement="EAID_C672763B_8E4C_41bd_9191_5E8F4D07AD81"/>
+					<tag xmi:id="EAID_1FAA1D3E_1B62_631b_8B8C_E9ACE360286A" name="Herkomst definitie" value="#NOTES#Description: De registratie of het informatiemodel waaruit de definitie is overgenomen dan wel een aanduiding die aangeeft uit welke bronnen de definitie is samengesteld.&#xA;" modelElement="EAID_C672763B_8E4C_41bd_9191_5E8F4D07AD81"/>
+					<tag xmi:id="EAID_B108BD8E_2332_7b23_B8FF_DFDA70661690" name="Kwaliteit" value="#NOTES#Description: Voor objecttypen die deel uitmaken van een registratie betreft dit de waarborgen voor de juistheid van de in de registratie opgenomen objecten van het desbetreffende type.&#xA;" modelElement="EAID_C672763B_8E4C_41bd_9191_5E8F4D07AD81"/>
+					<tag xmi:id="EAID_2D3C6693_CC37_aecc_9E03_62DE2A21CAB7" name="Populatie" value="&lt;memo&gt;" modelElement="EAID_C672763B_8E4C_41bd_9191_5E8F4D07AD81"/>
+					<tag xmi:id="EAID_50A2721A_D0BE_44d0_921F_6312ED3BF957" name="Toelichting" value="&lt;memo&gt;" modelElement="EAID_C672763B_8E4C_41bd_9191_5E8F4D07AD81"/>
+				</tags>
+				<xrefs value="$XREFPROP=$XID={CFACE4F0-6ED3-485a-9175-E9360E1DC1FC}$XID;$NAM=Stereotypes$NAM;$TYP=element property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=Objecttype;FQName=MIM::Objecttype;@ENDSTEREO;$DES;$CLT={C672763B-8E4C-41bd-9191-5E8F4D07AD81}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
+				<extendedProperties tagged="0" package_name="test KKG-alt2"/>
+				<links>
+					<Generalization xmi:id="EAID_3F082A96_867E_4720_9AAA_322C9CD0BEC8" start="EAID_4A4E162A_2737_4092_8DC7_81669D51FC34" end="EAID_C672763B_8E4C_41bd_9191_5E8F4D07AD81"/>
+				</links>
+			</element>
+			<element xmi:idref="EAID_E8071D01_97C0_4340_9262_FCE0C9B757AC" xmi:type="uml:Enumeration" name="Test enumeratie1" scope="public">
+				<model package="EAPK_0C7C75EC_CFE9_4fab_911E_D139D7529601" tpos="0" ea_localid="12" ea_eleType="element"/>
+				<properties isSpecification="false" sType="Enumeration" nType="0" scope="public" isRoot="false" isLeaf="false" isAbstract="false"/>
+				<project author="pjanssen" version="1.0" phase="1.0" created="2017-06-01 17:28:02" modified="2020-03-23 17:02:49" complexity="1" status="Proposed"/>
+				<code gentype="Java"/>
+				<style appearance="BackColor=16777164;BorderColor=0;BorderWidth=1;FontColor=0;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags/>
+				<xrefs/>
+				<extendedProperties tagged="0" package_name="test KKG-alt2"/>
+				<attributes>
+					<attribute xmi:idref="EAID_A18A92C1_2D3E_495e_B39F_A4D4157715C6" name="test enum waarde" scope="Public">
+						<initial/>
+						<documentation/>
+						<model ea_localid="10" ea_guid="{A18A92C1-2D3E-495e-B39F-A4D4157715C6}"/>
+						<properties type="int" derived="0" collection="false" duplicates="0" changeability="changeable"/>
+						<coords ordered="0" scale="0"/>
+						<containment containment="Not Specified" position="0"/>
+						<stereotype stereotype="enum"/>
+						<bounds lower="1" upper="1"/>
+						<options/>
+						<style/>
+						<styleex value="volatile=0;"/>
+						<tags/>
+						<xrefs/>
+					</attribute>
+				</attributes>
+			</element>
+			<element xmi:idref="EAID_3F7AAF3E_4076_4a00_ABBB_1B460998130C" xmi:type="uml:DataType" name="Test gestructureerd datatype" scope="public">
+				<model package="EAPK_0C7C75EC_CFE9_4fab_911E_D139D7529601" tpos="0" ea_localid="13" ea_eleType="element"/>
+				<properties isSpecification="false" sType="DataType" nType="0" scope="public" stereotype="Gestructureerd datatype" isRoot="false" isLeaf="false" isAbstract="false"/>
+				<project author="pjanssen" version="1.0" phase="1.0" created="2017-06-01 17:40:34" modified="2020-03-23 17:02:49" complexity="1" status="Proposed"/>
+				<code gentype="Java"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags>
+					<tag xmi:id="EAID_FB3F1EDB_6FB4_1e6f_85B4_0D354800CCF9" name="Datum opname" value="kk" modelElement="EAID_3F7AAF3E_4076_4a00_ABBB_1B460998130C"/>
+					<tag xmi:id="EAID_69EB40AD_8EE6_bf8e_8050_40078FC44697" name="Formeel patroon" modelElement="EAID_3F7AAF3E_4076_4a00_ABBB_1B460998130C"/>
+					<tag xmi:id="EAID_6B33862D_5286_4252_BCFC_BD646B15F8D3" name="Herkomst" value="kkg" modelElement="EAID_3F7AAF3E_4076_4a00_ABBB_1B460998130C"/>
+					<tag xmi:id="EAID_98327E03_A33C_fca3_91F9_60087AEE2E32" name="Patroon" value="&lt;memo&gt;" modelElement="EAID_3F7AAF3E_4076_4a00_ABBB_1B460998130C"/>
+				</tags>
+				<xrefs value="$XREFPROP=$XID={1ABAF2D8-E483-4f5b-A7BC-E65067490116}$XID;$NAM=Stereotypes$NAM;$TYP=element property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=Gestructureerd datatype;FQName=MIM::Gestructureerd datatype;@ENDSTEREO;$DES;$CLT={3F7AAF3E-4076-4a00-ABBB-1B460998130C}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
+				<extendedProperties tagged="0" package_name="test KKG-alt2"/>
+				<attributes>
+					<attribute xmi:idref="EAID_D12F17CD_6D18_4187_9B77_70A5C0920A39" name="test attribuut 10" scope="Public">
+						<initial/>
+						<documentation/>
+						<model ea_localid="11" ea_guid="{D12F17CD-6D18-4187-9B77-70A5C0920A39}"/>
+						<properties type="CharacterString" derived="0" collection="false" length="0" duplicates="0" changeability="changeable"/>
+						<coords ordered="0" scale="0"/>
+						<containment containment="Not Specified" position="0"/>
+						<stereotype stereotype="Data element"/>
+						<bounds lower="1" upper="1"/>
+						<options/>
+						<style/>
+						<styleex value="volatile=0;"/>
+						<tags>
+							<tag xmi:id="EAID_6B33862D_5DD6_ee5d_B20C_08D43A58B19D" name="Herkomst" value="kkg"/>
+							<tag xmi:id="EAID_034EE5FF_BF68_edbf_8CBE_97479E3AEB3D" name="Lengte"/>
+							<tag xmi:id="EAID_98327E03_848C_ac84_9B8D_BC9CDCE9907D" name="Patroon" value="&lt;memo&gt;"/>
+							<tag xmi:id="EAID_69EB40AD_C036_a3c0_B5E6_019699B5F4FA" name="Formeel patroon"/>
+						</tags>
+						<xrefs value="$XREFPROP=$XID={B4010A44-8830-43c2-ABAB-926E00D49053}$XID;$NAM=Stereotypes$NAM;$TYP=attribute property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=Data element;FQName=MIM::Data element;@ENDSTEREO;$DES;$CLT={D12F17CD-6D18-4187-9B77-70A5C0920A39}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
+					</attribute>
+					<attribute xmi:idref="EAID_0502C936_C1DC_4ad8_B793_D5E47810FFE7" name="test attribuut11" scope="Public">
+						<initial/>
+						<documentation/>
+						<model ea_localid="12" ea_guid="{0502C936-C1DC-4ad8-B793-D5E47810FFE7}"/>
+						<properties type="CharacterString" derived="0" collection="false" length="0" duplicates="0" changeability="changeable"/>
+						<coords ordered="0" scale="0"/>
+						<containment containment="Not Specified" position="0"/>
+						<stereotype stereotype="Data element"/>
+						<bounds lower="1" upper="1"/>
+						<options/>
+						<style/>
+						<styleex value="volatile=0;"/>
+						<tags>
+							<tag xmi:id="EAID_6B33862D_5DD6_ee5d_B61A_36363715A524" name="Herkomst"/>
+							<tag xmi:id="EAID_034EE5FF_BF68_edbf_A09E_2751EBBE9E1D" name="Lengte"/>
+							<tag xmi:id="EAID_98327E03_848C_ac84_A229_C87D4FAAA75D" name="Patroon" value="&lt;memo&gt;"/>
+							<tag xmi:id="EAID_69EB40AD_C036_a3c0_B1EF_BC1483744067" name="Formeel patroon"/>
+						</tags>
+						<xrefs value="$XREFPROP=$XID={67F6A0FB-B826-4038-8BD5-C38CE1902E27}$XID;$NAM=Stereotypes$NAM;$TYP=attribute property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=Data element;FQName=MIM::Data element;@ENDSTEREO;$DES;$CLT={0502C936-C1DC-4ad8-B793-D5E47810FFE7}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
+					</attribute>
+				</attributes>
+			</element>
+			<element xmi:idref="EAID_CB9ACB38_4437_4ecd_9621_F871F8AD84CA" xmi:type="uml:PrimitiveType" name="Test primitief datatype" scope="public">
+				<model package="EAPK_0C7C75EC_CFE9_4fab_911E_D139D7529601" tpos="0" ea_localid="14" ea_eleType="element"/>
+				<properties isSpecification="false" sType="PrimitiveType" nType="0" scope="public" stereotype="Primitief datatype" isRoot="false" isLeaf="false" isAbstract="false"/>
+				<project author="pjanssen" version="1.0" phase="1.0" created="2017-06-01 17:27:21" modified="2020-03-23 17:02:49" complexity="1" status="Proposed"/>
+				<code gentype="Java"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags>
+					<tag xmi:id="EAID_FB3F1EDB_38E5_cc38_B82C_5D1B8EC25F45" name="Datum opname" value="#NOTES#Description: De datum waarop het complex datatype is opgenomen in het informatiemodel.&#xA;" modelElement="EAID_CB9ACB38_4437_4ecd_9621_F871F8AD84CA"/>
+					<tag xmi:id="EAID_69EB40AD_9677_9f96_A5DA_E050F63D42C8" name="Formeel patroon" value="#NOTES#Description: Zoals patroon , formeel vastgelegd (met een reguliere expressie)&#xA;" modelElement="EAID_CB9ACB38_4437_4ecd_9621_F871F8AD84CA"/>
+					<tag xmi:id="EAID_6B33862D_2B37_c12b_85E2_549943A4493A" name="Herkomst" value="#NOTES#Description: De registratie of het informatiemodel waaraan de complex datatype ontleend is dan wel de eigen organisatie indien het door de eigen organisatie toegevoegd is.&#xA;" modelElement="EAID_CB9ACB38_4437_4ecd_9621_F871F8AD84CA"/>
+					<tag xmi:id="EAID_034EE5FF_C089_3bc0_AFFF_7A1BE902D090" name="Lengte" modelElement="EAID_CB9ACB38_4437_4ecd_9621_F871F8AD84CA"/>
+					<tag xmi:id="EAID_98327E03_A9CD_baa9_9097_02FA9B06CC36" name="Patroon" value="&lt;memo&gt;#NOTES#De samenstelling van het complex datatype bestaande uit twee of meer data elementenmoet voldoen aan een specifiek patroon." modelElement="EAID_CB9ACB38_4437_4ecd_9621_F871F8AD84CA"/>
+				</tags>
+				<xrefs value="$XREFPROP=$XID={0A5BDB30-4893-4bdc-B4BD-D6091737A4DB}$XID;$NAM=Stereotypes$NAM;$TYP=element property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=Primitief datatype;FQName=MIM::Primitief datatype;@ENDSTEREO;$DES;$CLT={CB9ACB38-4437-4ecd-9621-F871F8AD84CA}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
+				<extendedProperties tagged="0" package_name="test KKG-alt2"/>
+			</element>
+			<element xmi:idref="EAID_6EA3FF0B_6300_4cd4_A6F8_66D2180E70BB" xmi:type="uml:DataType" name="Test referentielijst" scope="public">
+				<model package="EAPK_0C7C75EC_CFE9_4fab_911E_D139D7529601" tpos="0" ea_localid="15" ea_eleType="element"/>
+				<properties isSpecification="false" sType="DataType" nType="0" scope="public" stereotype="Referentielijst" isRoot="false" isLeaf="false" isAbstract="false"/>
+				<project author="pjanssen" version="1.0" phase="1.0" created="2017-06-01 17:28:19" modified="2020-03-23 17:02:49" complexity="1" status="Proposed"/>
+				<code gentype="Java"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags>
+					<tag xmi:id="EAID_FB3F1EDB_D5AF_f0d5_B77B_5EE5D31EDA62" name="Datum opname" modelElement="EAID_6EA3FF0B_6300_4cd4_A6F8_66D2180E70BB"/>
+					<tag xmi:id="EAID_6B33862D_F301_12f3_BEF5_CCC90DA80866" name="Herkomst" modelElement="EAID_6EA3FF0B_6300_4cd4_A6F8_66D2180E70BB"/>
+					<tag xmi:id="EAID_83B4E541_0795_3007_8D28_311CA6CFF745" name="Locatie" modelElement="EAID_6EA3FF0B_6300_4cd4_A6F8_66D2180E70BB"/>
+					<tag xmi:id="EAID_50A2721A_9E6E_ce9e_AE27_C65455C4F903" name="Toelichting" value="&lt;memo&gt;" modelElement="EAID_6EA3FF0B_6300_4cd4_A6F8_66D2180E70BB"/>
+				</tags>
+				<xrefs value="$XREFPROP=$XID={03894185-82DA-4cdc-BB0E-BF18E34695C5}$XID;$NAM=Stereotypes$NAM;$TYP=element property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=Referentielijst;FQName=MIM::Referentielijst;@ENDSTEREO;$DES;$CLT={6EA3FF0B-6300-4cd4-A6F8-66D2180E70BB}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
+				<extendedProperties tagged="0" package_name="test KKG-alt2"/>
+				<attributes>
+					<attribute xmi:idref="EAID_D036CCBC_F346_45ca_AA03_C1DE99BA2A6D" name="test referentieelement" scope="Public">
+						<initial/>
+						<documentation/>
+						<model ea_localid="13" ea_guid="{D036CCBC-F346-45ca-AA03-C1DE99BA2A6D}"/>
+						<properties type="CharacterString" derived="0" collection="false" length="0" duplicates="0" changeability="changeable"/>
+						<coords ordered="0" scale="0"/>
+						<containment containment="Not Specified" position="0"/>
+						<stereotype stereotype="Referentie element"/>
+						<bounds lower="1" upper="1"/>
+						<options/>
+						<style/>
+						<styleex value="volatile=0;"/>
+						<tags>
+							<tag xmi:id="EAID_FB3F1EDB_BEB3_52be_8C0A_5A920EEBBB92" name="Datum opname" value="kkg"/>
+							<tag xmi:id="EAID_034EE5FF_83D7_7d83_98D5_076CE4F20495" name="Lengte"/>
+							<tag xmi:id="EAID_98327E03_D6DB_34d6_9CCE_B46B15037223" name="Patroon" value="&lt;memo&gt;"/>
+							<tag xmi:id="EAID_69EB40AD_F185_c4f1_80B3_A2DE56927FB9" name="Formeel patroon"/>
+							<tag xmi:id="EAID_50A2721A_76F2_5576_BBF1_BD6B6D676DEB" name="Toelichting" value="&lt;memo&gt;"/>
+						</tags>
+						<xrefs value="$XREFPROP=$XID={33406137-E922-413a-AD55-1705B75BD3C5}$XID;$NAM=Stereotypes$NAM;$TYP=attribute property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=Referentie element;FQName=MIM::Referentie element;@ENDSTEREO;$DES;$CLT={D036CCBC-F346-45ca-AA03-C1DE99BA2A6D}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
+					</attribute>
+				</attributes>
+			</element>
+			<element xmi:idref="EAID_D54316B9_2F4C_4567_9810_E24933562311" xmi:type="uml:DataType" name="Test union" scope="public">
+				<model package="EAPK_0C7C75EC_CFE9_4fab_911E_D139D7529601" tpos="0" ea_localid="16" ea_eleType="element"/>
+				<properties isSpecification="false" sType="DataType" nType="0" scope="public" stereotype="Union" isRoot="false" isLeaf="false" isAbstract="false"/>
+				<project author="pjanssen" version="1.0" phase="1.0" created="2017-06-01 17:28:55" modified="2020-03-23 17:02:49" complexity="1" status="Proposed"/>
+				<code gentype="Java"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags>
+					<tag xmi:id="EAID_FB3F1EDB_DA69_beda_B90C_4308F0E76906" name="Datum opname" modelElement="EAID_D54316B9_2F4C_4567_9810_E24933562311"/>
+					<tag xmi:id="EAID_6B33862D_AABB_37aa_ADB6_871A53BD944F" name="Herkomst" value="kkg" modelElement="EAID_D54316B9_2F4C_4567_9810_E24933562311"/>
+					<tag xmi:id="EAID_50A2721A_F3E8_31f3_808B_5CE2E0B83FB4" name="Toelichting" value="&lt;memo&gt;#NOTES#Voor objecttypen die deel uitmaken van een (basis)registratie of informatiemodel betreft dit de daarin opgenomen toelichting." modelElement="EAID_D54316B9_2F4C_4567_9810_E24933562311"/>
+				</tags>
+				<xrefs value="$XREFPROP=$XID={868F2398-24E2-4263-9618-289F22D9F58E}$XID;$NAM=Stereotypes$NAM;$TYP=element property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=Union;FQName=MIM::Union;@ENDSTEREO;$DES;$CLT={D54316B9-2F4C-4567-9810-E24933562311}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
+				<extendedProperties tagged="0" package_name="test KKG-alt2"/>
+				<attributes>
+					<attribute xmi:idref="EAID_B8038EF6_DCF6_4804_8E2A_A27B9EE33825" name="test unionelement" scope="Public">
+						<initial/>
+						<documentation/>
+						<model ea_localid="14" ea_guid="{B8038EF6-DCF6-4804-8E2A-A27B9EE33825}"/>
+						<properties type="CharacterString" derived="0" collection="false" length="0" duplicates="0" changeability="changeable"/>
+						<coords ordered="0" scale="0"/>
+						<containment containment="Not Specified" position="0"/>
+						<stereotype stereotype="Union element"/>
+						<bounds lower="1" upper="1"/>
+						<options/>
+						<style/>
+						<styleex value="volatile=0;"/>
+						<tags>
+							<tag xmi:id="EAID_6B33862D_45E5_8245_B54C_A5BD6FD982A9" name="Herkomst" value="kkg"/>
+							<tag xmi:id="EAID_034EE5FF_57B7_fa57_B4A0_9E0DC5A9F6C6" name="Lengte"/>
+							<tag xmi:id="EAID_98327E03_26BB_4c26_A571_ABE53E63DAF3" name="Patroon" value="&lt;memo&gt;"/>
+							<tag xmi:id="EAID_69EB40AD_2165_9e21_A113_E124C609BA27" name="Formeel patroon"/>
+						</tags>
+						<xrefs value="$XREFPROP=$XID={C2F3A52B-A8D6-48f4-BE6A-233C095FDF6F}$XID;$NAM=Stereotypes$NAM;$TYP=attribute property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=Union element;FQName=MIM::Union element;@ENDSTEREO;$DES;$CLT={B8038EF6-DCF6-4804-8E2A-A27B9EE33825}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
+					</attribute>
+					<attribute xmi:idref="EAID_4BF18992_BA5B_42d2_90BD_6E573D4E17D1" name="test unionelement2" scope="Public">
+						<initial/>
+						<documentation/>
+						<model ea_localid="15" ea_guid="{4BF18992-BA5B-42d2-90BD-6E573D4E17D1}"/>
+						<properties type="CharacterString" derived="0" collection="false" length="0" duplicates="0" changeability="changeable"/>
+						<coords ordered="0" scale="0"/>
+						<containment containment="Not Specified" position="0"/>
+						<stereotype stereotype="Union element"/>
+						<bounds lower="1" upper="1"/>
+						<options/>
+						<style/>
+						<styleex value="volatile=0;"/>
+						<tags>
+							<tag xmi:id="EAID_6B33862D_45E5_8245_8942_207037613075" name="Herkomst"/>
+							<tag xmi:id="EAID_034EE5FF_57B7_fa57_BD54_E2EA716F9100" name="Lengte"/>
+							<tag xmi:id="EAID_98327E03_26BB_4c26_8902_9A888C358DC7" name="Patroon" value="&lt;memo&gt;"/>
+							<tag xmi:id="EAID_69EB40AD_2165_9e21_9CF9_601AF165AAE9" name="Formeel patroon"/>
+						</tags>
+						<xrefs value="$XREFPROP=$XID={8207656E-D0FF-4929-95CF-FB545850F02D}$XID;$NAM=Stereotypes$NAM;$TYP=attribute property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=Union element;FQName=MIM::Union element;@ENDSTEREO;$DES;$CLT={4BF18992-BA5B-42d2-90BD-6E573D4E17D1}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
+					</attribute>
+				</attributes>
+			</element>
+			<element xmi:idref="EAID_66FF9075_5F4A_4c2f_B796_7E0343DD4F7E" xmi:type="uml:Text" scope="public">
+				<model package="EAPK_0C7C75EC_CFE9_4fab_911E_D139D7529601" tpos="0" ea_localid="17" ea_eleType="element"/>
+				<properties documentation="Voorbeeldtoepassing KKG Alternatief 2" isSpecification="false" sType="Text" nType="0" scope="public"/>
+				<project author="pjanssen" version="1.0" phase="1.0" created="2017-08-09 16:15:13" modified="2020-03-23 17:02:49" complexity="1" status="Proposed"/>
+				<code gentype="&lt;none&gt;"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags/>
+				<xrefs/>
+				<extendedProperties tagged="0" package_name="test KKG-alt2"/>
+			</element>
+		</elements>
+		<connectors>
+			<connector xmi:idref="EAID_3F082A96_867E_4720_9AAA_322C9CD0BEC8">
+				<source xmi:idref="EAID_4A4E162A_2737_4092_8DC7_81669D51FC34">
+					<model ea_localid="6" type="Class" name="Test objecttype1"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="false"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</source>
+				<target xmi:idref="EAID_C672763B_8E4C_41bd_9191_5E8F4D07AD81">
+					<model ea_localid="11" type="Class" name="Test supertype1"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="true"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</target>
+				<model ea_localid="4"/>
+				<properties ea_type="Generalization" stereotype="Generalisatie" direction="Source -&gt; Destination"/>
+				<parameterSubstitutions/>
+				<documentation/>
+				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
+				<labels mb=" &#xA;«Generalisatie»"/>
+				<extendedProperties conditional=" &#xA;«Generalisatie»" virtualInheritance="0"/>
+				<style/>
+				<xrefs value="$XREFPROP=$XID={3FE95E98-F055-408b-AB0C-5EDE7EA37C72}$XID;$NAM=Stereotypes$NAM;$TYP=connector property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=Generalisatie;FQName=MIM::Generalisatie;@ENDSTEREO;$DES;$CLT={3F082A96-867E-4720-9AAA-322C9CD0BEC8}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
+				<tags/>
+			</connector>
+			<connector xmi:idref="EAID_44B38924_4FFD_4c93_9E4B_0F4AD0CC57B1">
+				<source xmi:idref="EAID_4A4E162A_2737_4092_8DC7_81669D51FC34">
+					<model ea_localid="6" type="Class" name="Test objecttype1"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="false"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Unspecified;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</source>
+				<target xmi:idref="EAID_FCCB561D_EAC8_40a6_A4BE_FD6BB02587FD">
+					<model ea_localid="9" type="Class" name="Test objecttype4"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="false"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Navigable;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</target>
+				<model ea_localid="3"/>
+				<properties ea_type="Association" stereotype="Externe koppeling" direction="Source -&gt; Destination"/>
+				<modifiers isRoot="false" isLeaf="false"/>
+				<parameterSubstitutions/>
+				<documentation/>
+				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
+				<labels mb=" &#xA;«Externe koppeling»"/>
+				<extendedProperties conditional=" &#xA;«Externe koppeling»" virtualInheritance="0"/>
+				<style/>
+				<xrefs value="$XREFPROP=$XID={D4F55A5C-0E81-4277-9E67-2948D8D19DD0}$XID;$NAM=Stereotypes$NAM;$TYP=connector property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=Externe koppeling;FQName=MIM::Externe koppeling;@ENDSTEREO;$DES;$CLT={44B38924-4FFD-4c93-9E4B-0F4AD0CC57B1}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
+				<tags>
+					<tag xmi:id="EAID_FB3F1EDB_C7C4_21c7_A21C_C689FCD0D858" name="Datum opname"/>
+				</tags>
+			</connector>
+			<connector xmi:idref="EAID_7933A525_7B16_4086_9EBE_DD1C49A1A80A">
+				<source xmi:idref="EAID_4A4E162A_2737_4092_8DC7_81669D51FC34">
+					<model ea_localid="6" type="Class" name="Test objecttype1"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="false"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Unspecified;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</source>
+				<target xmi:idref="EAID_E7D31188_001D_4635_98FD_63FF2D2DA449">
+					<model ea_localid="8" type="Class" name="Test objecttype3"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="false"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Navigable;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</target>
+				<model ea_localid="1"/>
+				<properties ea_type="Association" subtype="Class" stereotype="Relatieklasse" direction="Source -&gt; Destination"/>
+				<modifiers isRoot="false" isLeaf="false"/>
+				<parameterSubstitutions/>
+				<documentation/>
+				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
+				<labels mb=" &#xA;«Relatieklasse»"/>
+				<extendedProperties conditional=" &#xA;«Relatieklasse»" virtualInheritance="0" associationclass="EAID_532814DF_32EF_40e3_B8A6_928F69DA3227" privatedata1="10"/>
+				<style/>
+				<xrefs value="$XREFPROP=$XID={345C697F-6ADD-4084-815A-C8F0104D6480}$XID;$NAM=Stereotypes$NAM;$TYP=connector property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=Relatieklasse;FQName=MIM::Relatieklasse;@ENDSTEREO;$DES;$CLT={7933A525-7B16-4086-9EBE-DD1C49A1A80A}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
+				<tags/>
+			</connector>
+			<connector xmi:idref="EAID_FEA1D1DB_AD3C_4cb5_B0AA_8999A91B3623">
+				<source xmi:idref="EAID_4A4E162A_2737_4092_8DC7_81669D51FC34">
+					<model ea_localid="6" type="Class" name="Test objecttype1"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="false"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Unspecified;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</source>
+				<target xmi:idref="EAID_024017F9_6FE5_42be_9D84_4729C873F838">
+					<model ea_localid="7" type="Class" name="Test objecttype2"/>
+					<role name="test relatierol" stereotype="Relatierol" visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="false"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Navigable;"/>
+					<documentation/>
+					<xrefs value="$XREFPROP=$XID={A2995DF3-6E91-4e6b-8566-D88DAAB07A1C}$XID;$NAM=Stereotypes$NAM;$TYP=connectorDestEnd property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=Relatierol;FQName=MIM::Relatierol;@ENDSTEREO;$DES;$CLT={FEA1D1DB-AD3C-4cb5-B0AA-8999A91B3623}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
+					<tags>
+						<tag xmi:id="EAID_6B33862D_91C5_3691_B849_A2B45E672DF4" name="Herkomst" value="kkg"/>
+						<tag xmi:id="EAID_1FFD9315_29AD_e329_AC43_630AAE81939B" name="Herkomst defintie" value="$ea_notes="/>
+						<tag xmi:id="EAID_FB3F1EDB_3673_8e36_9D82_FA12A7084BF7" name="Datum opname" value="$ea_notes="/>
+						<tag xmi:id="EAID_8F70DA6F_2207_6c22_B986_A8DCDCD689AF" name="Indicatie materiële historie" value="$ea_notes=Values: Ja,Nee,Zie groep&#xA;"/>
+						<tag xmi:id="EAID_D0DCC9FB_4B93_b14b_BCD4_14E0EDA66FA9" name="Indicatie formele historie" value="&lt;memo&gt;$ea_notes="/>
+						<tag xmi:id="EAID_0BFEBE52_0FEA_f30f_B2C1_40844F2FA671" name="Authentiek" value="$ea_notes=Values: Authentiek,Basisgegeven,Landelijk kerngegeven,Gemeentelijk kerngegeven,Overig&#xA;"/>
+						<tag xmi:id="EAID_BE7DA005_CF9D_d6cf_B55E_9C792C44C362" name="Mogelijk geen waarde" value="Nee$ea_notes=Values: Ja,Nee&#xA;Default: Nee&#xA;"/>
+						<tag xmi:id="EAID_50A2721A_F6B2_20f6_9CAF_9893197DB819" name="Toelichting" value="$ea_notes="/>
+						<tag xmi:id="EAID_72D99F9B_88AF_4916_9259_B1478A13FA4B" name="Toelichting2" value="&lt;memo&gt;"/>
+					</tags>
+				</target>
+				<model ea_localid="2"/>
+				<properties ea_type="Association" stereotype="Relatiesoort" direction="Source -&gt; Destination"/>
+				<modifiers isRoot="false" isLeaf="false"/>
+				<parameterSubstitutions/>
+				<documentation/>
+				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
+				<labels mb=" &#xA;«Relatiesoort»" rt="+test relatierol&#xA;«Relatierol»"/>
+				<extendedProperties conditional=" &#xA;«Relatiesoort»" virtualInheritance="0"/>
+				<style/>
+				<xrefs value="$XREFPROP=$XID={6995E3E8-9646-4f6e-B483-9C8874507664}$XID;$NAM=Stereotypes$NAM;$TYP=connector property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=Relatiesoort;FQName=MIM::Relatiesoort;@ENDSTEREO;$DES;$CLT={FEA1D1DB-AD3C-4cb5-B0AA-8999A91B3623}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
+				<tags/>
+			</connector>
+		</connectors>
+		<primitivetypes>
+			<packagedElement xmi:type="uml:Package" xmi:id="EAPrimitiveTypesPackage" name="EA_PrimitiveTypes_Package" visibility="public">
+				<packagedElement xmi:type="uml:Package" xmi:id="EAJavaTypesPackage" name="EA_Java_Types_Package" visibility="public">
+					<packagedElement xmi:type="uml:PrimitiveType" xmi:id="EAJava_CharacterString" name="CharacterString" visibility="public"/>
+					<packagedElement xmi:type="uml:PrimitiveType" xmi:id="EAJava_int" name="int" visibility="public">
+						<generalization xmi:type="uml:Generalization" xmi:id="EAJava_int_General">
+							<general href="http://schema.omg.org/spec/UML/2.1/uml.xml#Integer"/>
+						</generalization>
+					</packagedElement>
+				</packagedElement>
+			</packagedElement>
+		</primitivetypes>
+		<profiles>
+			<uml:Profile xmi:version="2.1" xmlns:uml="http://schema.omg.org/spec/UML/2.1/" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmi:id="thecustomprofile" nsPrefix="thecustomprofile" name="thecustomprofile" metamodelReference="mmref01">
+				<ownedComment xmi:type="uml:Comment" xmi:id="comment01" annotatedElement="thecustomprofile">
+					<body> Version:1.0</body>
+				</ownedComment>
+				<packageImport xmi:id="mmref01">
+					<importedPackage href="http://schema.omg.org/spec/UML/2.1/"/>
+				</packageImport>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="MIM::Union" name="MIM::Union">
+					<ownedAttribute xmi:type="uml:Property" xmi:id="MIM::Union-base_DataType" name="base_DataType" association="DataType_MIM::Union">
+						<type href="http://schema.omg.org/spec/UML/2.1/DataType"/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Extension" xmi:id="DataType_MIM::Union" name="A_DataType_MIM::Union" memberEnd="extension_MIM::Union MIM::Union-base_DataType">
+					<ownedEnd xmi:id="extension_MIM::Union" name="extension_MIM::Union" type="MIM::Union" isComposite="true" lower="0" upper="1" memberEnd="extension_MIM::Union MIM::Union-base_DataType"/>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="MIM::Union element" name="MIM::Union element">
+					<ownedAttribute xmi:type="uml:Property" xmi:id="MIM::Union element-base_Property" name="base_Property" association="Property_MIM::Union element">
+						<type href="http://schema.omg.org/spec/UML/2.1/Property"/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Extension" xmi:id="Property_MIM::Union element" name="A_Property_MIM::Union element" memberEnd="extension_MIM::Union element MIM::Union element-base_Property">
+					<ownedEnd xmi:id="extension_MIM::Union element" name="extension_MIM::Union element" type="MIM::Union element" isComposite="true" lower="0" upper="1" memberEnd="extension_MIM::Union element MIM::Union element-base_Property"/>
+				</packagedElement>
+			</uml:Profile>
+			<uml:Profile xmi:version="2.1" xmlns:uml="http://schema.omg.org/spec/UML/2.1/" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmi:id="EDFDE9C6-3" nsPrefix="MIM" name="MIM" metamodelReference="mmref01">
+				<ownedComment xmi:type="uml:Comment" xmi:id="comment01" annotatedElement="EDFDE9C6-3">
+					<body>Alt 1 en Alt 2 gecombineerd. Version:1.1</body>
+				</ownedComment>
+				<packageImport xmi:id="mmref01">
+					<importedPackage href="http://schema.omg.org/spec/UML/2.1/"/>
+				</packageImport>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="Enumeratiewaarde" name="Enumeratiewaarde">
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Enumeratiewaarde-base_Attribute" name="base_Attribute" association="Attribute_Enumeratiewaarde">
+						<type href="http://schema.omg.org/spec/UML/2.1/Attribute"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Enumeratiewaarde-Begrip" name="Begrip">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Extension" xmi:id="Attribute_Enumeratiewaarde" name="A_Attribute_Enumeratiewaarde" memberEnd="extension_Enumeratiewaarde Enumeratiewaarde-base_Attribute">
+					<ownedEnd xmi:id="extension_Enumeratiewaarde" name="extension_Enumeratiewaarde" type="Enumeratiewaarde" isComposite="true" lower="0" upper="1" memberEnd="extension_Enumeratiewaarde Enumeratiewaarde-base_Attribute"/>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="Relatierol" name="Relatierol">
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Relatierol-base_AssociationEnd" name="base_AssociationEnd" association="AssociationEnd_Relatierol">
+						<type href="http://schema.omg.org/spec/UML/2.1/AssociationEnd"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Relatierol-Mogelijk geen waarde" name="Mogelijk geen waarde">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Relatierol-Indicatie materiële historie" name="Indicatie materiële historie">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Relatierol-Authentiek" name="Authentiek">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Relatierol-Herkomst" name="Herkomst">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Relatierol-Herkomst defintie" name="Herkomst defintie">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Relatierol-Begrip" name="Begrip">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Relatierol-Indicatie formele historie" name="Indicatie formele historie">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Relatierol-Datum opname" name="Datum opname">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Relatierol-Toelichting" name="Toelichting">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Extension" xmi:id="AssociationEnd_Relatierol" name="A_AssociationEnd_Relatierol" memberEnd="extension_Relatierol Relatierol-base_AssociationEnd">
+					<ownedEnd xmi:id="extension_Relatierol" name="extension_Relatierol" type="Relatierol" isComposite="true" lower="0" upper="1" memberEnd="extension_Relatierol Relatierol-base_AssociationEnd"/>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="Relatieklasse" name="Relatieklasse">
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Relatieklasse-base_AssociationClass" name="base_AssociationClass" association="AssociationClass_Relatieklasse">
+						<type href="http://schema.omg.org/spec/UML/2.1/AssociationClass"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Relatieklasse-Begrip" name="Begrip">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Extension" xmi:id="AssociationClass_Relatieklasse" name="A_AssociationClass_Relatieklasse" memberEnd="extension_Relatieklasse Relatieklasse-base_AssociationClass">
+					<ownedEnd xmi:id="extension_Relatieklasse" name="extension_Relatieklasse" type="Relatieklasse" isComposite="true" lower="0" upper="1" memberEnd="extension_Relatieklasse Relatieklasse-base_AssociationClass"/>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="Relatiesoort" name="Relatiesoort">
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Relatiesoort-base_Association" name="base_Association" association="Association_Relatiesoort">
+						<type href="http://schema.omg.org/spec/UML/2.1/Association"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Relatiesoort-Mogelijk geen waarde" name="Mogelijk geen waarde">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Relatiesoort-Indicatie materiële historie" name="Indicatie materiële historie">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Relatiesoort-Authentiek" name="Authentiek">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Relatiesoort-Herkomst definitie" name="Herkomst definitie">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Relatiesoort-Herkomst" name="Herkomst">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Relatiesoort-Begrip" name="Begrip">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Relatiesoort-Indicatie formele historie" name="Indicatie formele historie">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Relatiesoort-Datum opname" name="Datum opname">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Relatiesoort-Toelichting" name="Toelichting">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Extension" xmi:id="Association_Relatiesoort" name="A_Association_Relatiesoort" memberEnd="extension_Relatiesoort Relatiesoort-base_Association">
+					<ownedEnd xmi:id="extension_Relatiesoort" name="extension_Relatiesoort" type="Relatiesoort" isComposite="true" lower="0" upper="1" memberEnd="extension_Relatiesoort Relatiesoort-base_Association"/>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="Gegevensgroep" name="Gegevensgroep">
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Gegevensgroep-base_Attribute" name="base_Attribute" association="Attribute_Gegevensgroep">
+						<type href="http://schema.omg.org/spec/UML/2.1/Attribute"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Gegevensgroep-Indicatie materiële historie" name="Indicatie materiële historie">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Gegevensgroep-Authentiek" name="Authentiek">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Gegevensgroep-Herkomst definitie" name="Herkomst definitie">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Gegevensgroep-Herkomst" name="Herkomst">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Gegevensgroep-Begrip" name="Begrip">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Gegevensgroep-Indicatie formele historie" name="Indicatie formele historie">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Gegevensgroep-Datum opname" name="Datum opname">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Gegevensgroep-Toelichting" name="Toelichting">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Extension" xmi:id="Attribute_Gegevensgroep" name="A_Attribute_Gegevensgroep" memberEnd="extension_Gegevensgroep Gegevensgroep-base_Attribute">
+					<ownedEnd xmi:id="extension_Gegevensgroep" name="extension_Gegevensgroep" type="Gegevensgroep" isComposite="true" lower="0" upper="1" memberEnd="extension_Gegevensgroep Gegevensgroep-base_Attribute"/>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="Objecttype" name="Objecttype">
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Objecttype-base_Class" name="base_Class" association="Class_Objecttype">
+						<type href="http://schema.omg.org/spec/UML/2.1/Class"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Objecttype-Herkomst definitie" name="Herkomst definitie">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Objecttype-Herkomst" name="Herkomst">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Objecttype-Kwaliteit" name="Kwaliteit">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Objecttype-Begrip" name="Begrip">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Objecttype-Datum opname" name="Datum opname">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Objecttype-Toelichting" name="Toelichting">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Objecttype-Populatie" name="Populatie">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Extension" xmi:id="Class_Objecttype" name="A_Class_Objecttype" memberEnd="extension_Objecttype Objecttype-base_Class">
+					<ownedEnd xmi:id="extension_Objecttype" name="extension_Objecttype" type="Objecttype" isComposite="true" lower="0" upper="1" memberEnd="extension_Objecttype Objecttype-base_Class"/>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="Referentie element" name="Referentie element">
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Referentie element-base_Attribute" name="base_Attribute" association="Attribute_Referentie element">
+						<type href="http://schema.omg.org/spec/UML/2.1/Attribute"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Referentie element-Lengte" name="Lengte">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Referentie element-Formeel patroon" name="Formeel patroon">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Referentie element-Begrip" name="Begrip">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Referentie element-Datum opname" name="Datum opname">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Referentie element-Patroon" name="Patroon">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Referentie element-Toelichting" name="Toelichting">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Extension" xmi:id="Attribute_Referentie element" name="A_Attribute_Referentie element" memberEnd="extension_Referentie element Referentie element-base_Attribute">
+					<ownedEnd xmi:id="extension_Referentie element" name="extension_Referentie element" type="Referentie element" isComposite="true" lower="0" upper="1" memberEnd="extension_Referentie element Referentie element-base_Attribute"/>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="Data element" name="Data element">
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Data element-base_Attribute" name="base_Attribute" association="Attribute_Data element">
+						<type href="http://schema.omg.org/spec/UML/2.1/Attribute"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Data element-Lengte" name="Lengte">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Data element-Herkomst" name="Herkomst">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Data element-Formeel patroon" name="Formeel patroon">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Data element-Begrip" name="Begrip">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Data element-Patroon" name="Patroon">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Extension" xmi:id="Attribute_Data element" name="A_Attribute_Data element" memberEnd="extension_Data element Data element-base_Attribute">
+					<ownedEnd xmi:id="extension_Data element" name="extension_Data element" type="Data element" isComposite="true" lower="0" upper="1" memberEnd="extension_Data element Data element-base_Attribute"/>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="Codelijst" name="Codelijst">
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Codelijst-base_DataType" name="base_DataType" association="DataType_Codelijst">
+						<type href="http://schema.omg.org/spec/UML/2.1/DataType"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Codelijst-Herkomst" name="Herkomst">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Codelijst-Locatie" name="Locatie">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Codelijst-Begrip" name="Begrip">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Codelijst-Datum opname" name="Datum opname">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Codelijst-Toelichting" name="Toelichting">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Extension" xmi:id="DataType_Codelijst" name="A_DataType_Codelijst" memberEnd="extension_Codelijst Codelijst-base_DataType">
+					<ownedEnd xmi:id="extension_Codelijst" name="extension_Codelijst" type="Codelijst" isComposite="true" lower="0" upper="1" memberEnd="extension_Codelijst Codelijst-base_DataType"/>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="Generalisatie" name="Generalisatie">
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Generalisatie-base_Generalization" name="base_Generalization" association="Generalization_Generalisatie">
+						<type href="http://schema.omg.org/spec/UML/2.1/Generalization"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Generalisatie-Datum opname" name="Datum opname">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Extension" xmi:id="Generalization_Generalisatie" name="A_Generalization_Generalisatie" memberEnd="extension_Generalisatie Generalisatie-base_Generalization">
+					<ownedEnd xmi:id="extension_Generalisatie" name="extension_Generalisatie" type="Generalisatie" isComposite="true" lower="0" upper="1" memberEnd="extension_Generalisatie Generalisatie-base_Generalization"/>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="Gegevensgroeptype" name="Gegevensgroeptype">
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Gegevensgroeptype-base_Class" name="base_Class" association="Class_Gegevensgroeptype">
+						<type href="http://schema.omg.org/spec/UML/2.1/Class"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Gegevensgroeptype-Herkomst definitie" name="Herkomst definitie">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Gegevensgroeptype-Begrip" name="Begrip">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Gegevensgroeptype-Datum opname" name="Datum opname">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Gegevensgroeptype-Toelichting" name="Toelichting">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Extension" xmi:id="Class_Gegevensgroeptype" name="A_Class_Gegevensgroeptype" memberEnd="extension_Gegevensgroeptype Gegevensgroeptype-base_Class">
+					<ownedEnd xmi:id="extension_Gegevensgroeptype" name="extension_Gegevensgroeptype" type="Gegevensgroeptype" isComposite="true" lower="0" upper="1" memberEnd="extension_Gegevensgroeptype Gegevensgroeptype-base_Class"/>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="Externe koppeling" name="Externe koppeling">
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Externe koppeling-base_Association" name="base_Association" association="Association_Externe koppeling">
+						<type href="http://schema.omg.org/spec/UML/2.1/Association"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Externe koppeling-Begrip" name="Begrip">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Externe koppeling-Datum opname" name="Datum opname">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Extension" xmi:id="Association_Externe koppeling" name="A_Association_Externe koppeling" memberEnd="extension_Externe koppeling Externe koppeling-base_Association">
+					<ownedEnd xmi:id="extension_Externe koppeling" name="extension_Externe koppeling" type="Externe koppeling" isComposite="true" lower="0" upper="1" memberEnd="extension_Externe koppeling Externe koppeling-base_Association"/>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="View" name="View">
+					<ownedAttribute xmi:type="uml:Property" xmi:id="View-base_Package" name="base_Package" association="Package_View">
+						<type href="http://schema.omg.org/spec/UML/2.1/Package"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="View-Herkomst" name="Herkomst">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="View-Locatie" name="Locatie">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Extension" xmi:id="Package_View" name="A_Package_View" memberEnd="extension_View View-base_Package">
+					<ownedEnd xmi:id="extension_View" name="extension_View" type="View" isComposite="true" lower="0" upper="1" memberEnd="extension_View View-base_Package"/>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="Domein" name="Domein">
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Domein-base_Package" name="base_Package" association="Package_Domein">
+						<type href="http://schema.omg.org/spec/UML/2.1/Package"/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Extension" xmi:id="Package_Domein" name="A_Package_Domein" memberEnd="extension_Domein Domein-base_Package">
+					<ownedEnd xmi:id="extension_Domein" name="extension_Domein" type="Domein" isComposite="true" lower="0" upper="1" memberEnd="extension_Domein Domein-base_Package"/>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="Gestructureerd datatype" name="Gestructureerd datatype">
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Gestructureerd datatype-base_DataType" name="base_DataType" association="DataType_Gestructureerd datatype">
+						<type href="http://schema.omg.org/spec/UML/2.1/DataType"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Gestructureerd datatype-Herkomst" name="Herkomst">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Gestructureerd datatype-Formeel patroon" name="Formeel patroon">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Gestructureerd datatype-Begrip" name="Begrip">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Gestructureerd datatype-Datum opname" name="Datum opname">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Gestructureerd datatype-Patroon" name="Patroon">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Extension" xmi:id="DataType_Gestructureerd datatype" name="A_DataType_Gestructureerd datatype" memberEnd="extension_Gestructureerd datatype Gestructureerd datatype-base_DataType">
+					<ownedEnd xmi:id="extension_Gestructureerd datatype" name="extension_Gestructureerd datatype" type="Gestructureerd datatype" isComposite="true" lower="0" upper="1" memberEnd="extension_Gestructureerd datatype Gestructureerd datatype-base_DataType"/>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="Informatiemodel" name="Informatiemodel">
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Informatiemodel-base_Package" name="base_Package" association="Package_Informatiemodel">
+						<type href="http://schema.omg.org/spec/UML/2.1/Package"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Informatiemodel-MIM extensie" name="MIM extensie">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Informatiemodel-Relatiemodelleringstype" name="Relatiemodelleringstype">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Informatiemodel-MIM versie" name="MIM versie">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Informatiemodel-Herkomst" name="Herkomst">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Informatiemodel-Informatiemodeltype" name="Informatiemodeltype">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Informatiemodel-MIM taal" name="MIM taal">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Informatiemodel-Informatiedomein" name="Informatiedomein">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Extension" xmi:id="Package_Informatiemodel" name="A_Package_Informatiemodel" memberEnd="extension_Informatiemodel Informatiemodel-base_Package">
+					<ownedEnd xmi:id="extension_Informatiemodel" name="extension_Informatiemodel" type="Informatiemodel" isComposite="true" lower="0" upper="1" memberEnd="extension_Informatiemodel Informatiemodel-base_Package"/>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="Keuzerelatie" name="Keuzerelatie"/>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="Primitief datatype" name="Primitief datatype">
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Primitief datatype-base_PrimitiveType" name="base_PrimitiveType" association="PrimitiveType_Primitief datatype">
+						<type href="http://schema.omg.org/spec/UML/2.1/PrimitiveType"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Primitief datatype-Lengte" name="Lengte">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Primitief datatype-Herkomst" name="Herkomst">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Primitief datatype-Formeel patroon" name="Formeel patroon">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Primitief datatype-Begrip" name="Begrip">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Primitief datatype-Datum opname" name="Datum opname">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Primitief datatype-Patroon" name="Patroon">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Extension" xmi:id="PrimitiveType_Primitief datatype" name="A_PrimitiveType_Primitief datatype" memberEnd="extension_Primitief datatype Primitief datatype-base_PrimitiveType">
+					<ownedEnd xmi:id="extension_Primitief datatype" name="extension_Primitief datatype" type="Primitief datatype" isComposite="true" lower="0" upper="1" memberEnd="extension_Primitief datatype Primitief datatype-base_PrimitiveType"/>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="Extern" name="Extern">
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Extern-base_Package" name="base_Package" association="Package_Extern">
+						<type href="http://schema.omg.org/spec/UML/2.1/Package"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Extern-Herkomst" name="Herkomst">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Extern-Locatie" name="Locatie">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Extension" xmi:id="Package_Extern" name="A_Package_Extern" memberEnd="extension_Extern Extern-base_Package">
+					<ownedEnd xmi:id="extension_Extern" name="extension_Extern" type="Extern" isComposite="true" lower="0" upper="1" memberEnd="extension_Extern Extern-base_Package"/>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="Attribuutsoort" name="Attribuutsoort">
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Attribuutsoort-base_Attribute" name="base_Attribute" association="Attribute_Attribuutsoort">
+						<type href="http://schema.omg.org/spec/UML/2.1/Attribute"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Attribuutsoort-Mogelijk geen waarde" name="Mogelijk geen waarde">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Attribuutsoort-Indicatie materiële historie" name="Indicatie materiële historie">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Attribuutsoort-Authentiek" name="Authentiek">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Attribuutsoort-Lengte" name="Lengte">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Attribuutsoort-Indicatie classificerend" name="Indicatie classificerend">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Attribuutsoort-Herkomst definitie" name="Herkomst definitie">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Attribuutsoort-Herkomst" name="Herkomst">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Attribuutsoort-Formeel patroon" name="Formeel patroon">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Attribuutsoort-Begrip" name="Begrip">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Attribuutsoort-Indicatie formele historie" name="Indicatie formele historie">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Attribuutsoort-Datum opname" name="Datum opname">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Attribuutsoort-Patroon" name="Patroon">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Attribuutsoort-Toelichting" name="Toelichting">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Extension" xmi:id="Attribute_Attribuutsoort" name="A_Attribute_Attribuutsoort" memberEnd="extension_Attribuutsoort Attribuutsoort-base_Attribute">
+					<ownedEnd xmi:id="extension_Attribuutsoort" name="extension_Attribuutsoort" type="Attribuutsoort" isComposite="true" lower="0" upper="1" memberEnd="extension_Attribuutsoort Attribuutsoort-base_Attribute"/>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="Enumeratie" name="Enumeratie">
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Enumeratie-base_Enumeration" name="base_Enumeration" association="Enumeration_Enumeratie">
+						<type href="http://schema.omg.org/spec/UML/2.1/Enumeration"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Enumeratie-Begrip" name="Begrip">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Extension" xmi:id="Enumeration_Enumeratie" name="A_Enumeration_Enumeratie" memberEnd="extension_Enumeratie Enumeratie-base_Enumeration">
+					<ownedEnd xmi:id="extension_Enumeratie" name="extension_Enumeratie" type="Enumeratie" isComposite="true" lower="0" upper="1" memberEnd="extension_Enumeratie Enumeratie-base_Enumeration"/>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="Referentielijst" name="Referentielijst">
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Referentielijst-base_DataType" name="base_DataType" association="DataType_Referentielijst">
+						<type href="http://schema.omg.org/spec/UML/2.1/DataType"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Referentielijst-Herkomst" name="Herkomst">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Referentielijst-Locatie" name="Locatie">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Referentielijst-Begrip" name="Begrip">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Referentielijst-Datum opname" name="Datum opname">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Referentielijst-Toelichting" name="Toelichting">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Extension" xmi:id="DataType_Referentielijst" name="A_DataType_Referentielijst" memberEnd="extension_Referentielijst Referentielijst-base_DataType">
+					<ownedEnd xmi:id="extension_Referentielijst" name="extension_Referentielijst" type="Referentielijst" isComposite="true" lower="0" upper="1" memberEnd="extension_Referentielijst Referentielijst-base_DataType"/>
+				</packagedElement>
+			</uml:Profile>
+		</profiles>
+		<diagrams>
+			<diagram xmi:id="EAID_0F79F64D_D3C7_4333_8C71_23F44CA9D5A4">
+				<model package="EAPK_0C7C75EC_CFE9_4fab_911E_D139D7529601" localID="1" owner="EAPK_0C7C75EC_CFE9_4fab_911E_D139D7529601"/>
+				<properties name="Voorbeeld KKG-alt2" type="Logical"/>
+				<project author="pjanssen" version="1.0" created="2017-05-30 12:44:36" modified="2020-03-23 17:04:49"/>
+				<style1 value="ShowPrivate=1;ShowProtected=1;ShowPublic=1;HideRelationships=0;Locked=0;Border=1;HighlightForeign=1;PackageContents=1;SequenceNotes=0;ScalePrintImage=0;PPgs.cx=1;PPgs.cy=1;DocSize.cx=819;DocSize.cy=1067;ShowDetails=0;Orientation=P;Zoom=100;ShowTags=0;OpParams=1;VisibleAttributeDetail=0;ShowOpRetType=1;ShowIcons=1;CollabNums=0;HideProps=0;ShowReqs=0;ShowCons=0;PaperSize=1;HideParents=0;UseAlias=0;HideAtts=0;HideOps=0;HideStereo=0;HideElemStereo=0;ShowTests=0;ShowMaint=0;ConnectorNotation=UML 2.1;ExplicitNavigability=0;ShowShape=1;AllDockable=0;AdvancedElementProps=1;AdvancedFeatureProps=1;AdvancedConnectorProps=1;m_bElementClassifier=1;SPT=1;ShowNotes=0;SuppressBrackets=0;SuppConnectorLabels=0;PrintPageHeadFoot=0;ShowAsList=0;"/>
+				<style2 value="ExcludeRTF=0;DocAll=0;HideQuals=0;AttPkg=1;ShowTests=0;ShowMaint=0;SuppressFOC=1;MatrixActive=0;SwimlanesActive=1;KanbanActive=0;MatrixLineWidth=1;MatrixLineClr=0;MatrixLocked=0;TConnectorNotation=UML 2.1;TExplicitNavigability=0;AdvancedElementProps=1;AdvancedFeatureProps=1;AdvancedConnectorProps=1;m_bElementClassifier=1;SPT=1;MDGDgm=;STBLDgm=;ShowNotes=0;VisibleAttributeDetail=0;ShowOpRetType=1;SuppressBrackets=0;SuppConnectorLabels=0;PrintPageHeadFoot=0;ShowAsList=0;SuppressedCompartments=;Theme=:119;SaveTag=91777132;"/>
+				<swimlanes value="locked=false;orientation=0;width=0;inbar=false;names=false;color=-1;bold=false;fcol=0;tcol=-1;ofCol=-1;ufCol=-1;hl=0;ufh=0;hh=0;cls=0;bw=0;hli=0;SwimlaneFont=lfh:-10,lfw:0,lfi:0,lfu:0,lfs:0,lfface:Calibri,lfe:0,lfo:0,lfchar:1,lfop:0,lfcp:0,lfq:0,lfpf=0,lfWidth=0;"/>
+				<matrixitems value="locked=false;matrixactive=false;swimlanesactive=true;kanbanactive=false;width=1;clrLine=0;"/>
+				<extendedProperties/>
+				<elements>
+					<element geometry="Left=537;Top=522;Right=627;Bottom=592;" subject="EAID_A219154D_D972_4ab7_8226_7D83CFD48C33" seqno="1" style="DUID=9376EE75;"/>
+					<element geometry="Left=150;Top=30;Right=400;Bottom=52;" subject="EAID_66FF9075_5F4A_4c2f_B796_7E0343DD4F7E" seqno="2" style="DUID=512ABA8C;"/>
+					<element geometry="Left=30;Top=369;Right=209;Bottom=458;" subject="EAID_3F7AAF3E_4076_4a00_ABBB_1B460998130C" seqno="3" style="DUID=3B3D4853;HideIcon=0;"/>
+					<element geometry="Left=570;Top=390;Right=670;Bottom=470;" subject="EAID_532814DF_32EF_40e3_B8A6_928F69DA3227" seqno="4" style="DUID=6EFC760E;"/>
+					<element geometry="Left=280;Top=379;Right=477;Bottom=468;" subject="EAID_D54316B9_2F4C_4567_9810_E24933562311" seqno="5" style="DUID=39865AA4;HideIcon=0;"/>
+					<element geometry="Left=30;Top=250;Right=200;Bottom=339;" subject="EAID_ED1BDED0_796F_4c17_A3A7_4383B943CED2" seqno="6" style="DUID=9C0C8104;HideIcon=0;"/>
+					<element geometry="Left=30;Top=149;Right=239;Bottom=229;" subject="EAID_6EA3FF0B_6300_4cd4_A6F8_66D2180E70BB" seqno="7" style="DUID=0CFE95D0;HideIcon=0;"/>
+					<element geometry="Left=30;Top=20;Right=140;Bottom=90;" subject="EAID_E8071D01_97C0_4340_9262_FCE0C9B757AC" seqno="8" style="DUID=12442780;"/>
+					<element geometry="Left=500;Top=20;Right=660;Bottom=100;" subject="EAID_CB9ACB38_4437_4ecd_9621_F871F8AD84CA" seqno="9" style="DUID=4E28B9A8;HideIcon=0;"/>
+					<element geometry="Left=710;Top=319;Right=810;Bottom=399;" subject="EAID_E7D31188_001D_4635_98FD_63FF2D2DA449" seqno="10" style="DUID=2B28DBB6;HideIcon=0;"/>
+					<element geometry="Left=710;Top=200;Right=810;Bottom=280;" subject="EAID_024017F9_6FE5_42be_9D84_4729C873F838" seqno="11" style="DUID=3AEA13AB;HideIcon=0;"/>
+					<element geometry="Left=710;Top=80;Right=810;Bottom=160;" subject="EAID_FCCB561D_EAC8_40a6_A4BE_FD6BB02587FD" seqno="12" style="DUID=098241DB;HideIcon=0;"/>
+					<element geometry="Left=340;Top=20;Right=440;Bottom=100;" subject="EAID_C672763B_8E4C_41bd_9191_5E8F4D07AD81" seqno="13" style="DUID=015AA60D;HideIcon=0;"/>
+					<element geometry="Left=270;Top=169;Right=535;Bottom=340;" subject="EAID_4A4E162A_2737_4092_8DC7_81669D51FC34" seqno="14" style="DUID=74589BA4;HideIcon=0;"/>
+					<element geometry="SX=2;SY=1;EX=13;EY=1;EDGE=1;$LLB=;LLT=;LMT=;LMB=CX=62:CY=13:OX=0:OY=0:HDN=0:BLD=0:ITA=0:UND=0:CLR=-1:ALN=1:DIR=0:ROT=0;LRT=;LRB=;IRHS=;ILHS=;Path=;" subject="EAID_3F082A96_867E_4720_9AAA_322C9CD0BEC8" style="Mode=3;EOID=015AA60D;SOID=74589BA4;Color=-1;LWidth=1;Hidden=0;"/>
+					<element geometry="SX=0;SY=0;EX=0;EY=0;EDGE=2;$LLB=;LLT=;LMT=;LMB=CX=81:CY=13:OX=0:OY=0:HDN=0:BLD=0:ITA=0:UND=0:CLR=-1:ALN=1:DIR=0:ROT=0;LRT=;LRB=;IRHS=;ILHS=;Path=;" subject="EAID_44B38924_4FFD_4c93_9E4B_0F4AD0CC57B1" style="Mode=3;EOID=098241DB;SOID=74589BA4;Color=-1;LWidth=1;Hidden=0;"/>
+					<element geometry="SX=0;SY=0;EX=-49;EY=-15;EDGE=2;$LLB=;LLT=;LMT=;LMB=CX=57:CY=13:OX=0:OY=0:HDN=0:BLD=0:ITA=0:UND=0:CLR=-1:ALN=1:DIR=0:ROT=0;LRT=CX=57:CY=26:OX=67:OY=-15:HDN=0:BLD=0:ITA=0:UND=0:CLR=-1:ALN=1:DIR=0:ROT=0;LRB=;IRHS=;ILHS=;Path=;" subject="EAID_FEA1D1DB_AD3C_4cb5_B0AA_8999A91B3623" style="Mode=3;EOID=3AEA13AB;SOID=74589BA4;Color=-1;LWidth=1;Hidden=0;"/>
+					<element geometry="EDGE=2;SX=0;SY=0;EX=0;EY=0;$LLB=;LLT=;LMT=;LMB=CX=62:CY=13:OX=0:OY=0:HDN=0:BLD=0:ITA=0:UND=0:CLR=-1:ALN=1:DIR=0:ROT=0;LRT=;LRB=;IRHS=;ILHS=;Path=;" subject="EAID_7933A525_7B16_4086_9EBE_DD1C49A1A80A" style="Mode=3;EOID=2B28DBB6;SOID=74589BA4;Color=-1;LWidth=1;Hidden=0;"/>
+				</elements>
+			</diagram>
+		</diagrams>
+	</xmi:Extension>
+</xmi:XMI>
