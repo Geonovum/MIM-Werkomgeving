@@ -14,9 +14,9 @@
 var respecConfig =
 {
   //-- specStatus is verplicht! (activeer 1 van de volgende) --------------------------
-  //specStatus: "GN-WV",              // Werk Versie
+  specStatus: "GN-WV",              // Werk Versie
   //specStatus: "GN-CV",              // Consultatie Versie
-  specStatus: "GN-VV",              // Vaststellings Versie
+  //specStatus: "GN-VV",              // Vaststellings Versie
   //specStatus: "GN-DEF",             // Definitieve Versie
   //-- specType is verplicht! (activeer 1 van de volgende) ----------------------------
   //specType: "NO",                   // Norm
@@ -31,7 +31,7 @@ var respecConfig =
   format: "markdown",                 // altijd "markdown"
   //-- publishDate is verplicht -------------------------------------------------------
   //-- NB: in de werkversie uitzetten, want dan pakt Respec de pushdate ---------------
-  publishDate: "2020-02-25",  	      // Format is "YYY-MM-DD"
+  //publishDate: "2020-10-23",  	      // Format is "YYY-MM-DD"
   //-- de namen van de Editor(s) ------------------------------------------------------
   //-- vul in: per Editor: name:, company:, companyURL: -------------------------------
   editors:
@@ -255,10 +255,10 @@ var respecConfig =
     },
   },
   //-- Voor dit blok geldt: alleen als er eerdere versies zijn en altijd beiden aan/uit!
-  previousPublishDate: "2019-06-19",    	    // Format is "YYY-MM-DD"
-  previousMaturity: "GN-DEF",                 // kies 1 van deze 3 regels
-  //previousMaturity: "CV",                   // kies 1 van deze 3 regels
-  //previousMaturity: "VV",  	                // kies 1 van deze 3 regels
+  previousPublishDate: "2020-02-25",    	    // Format is "YYY-MM-DD"
+  //reviousMaturity: "GN-DEF",                 // kies 1 van deze 3 regels
+  //previousMaturity: "GN-CV",                   // kies 1 van deze 3 regels
+  previousMaturity: "GN-VV",  	                // kies 1 van deze 3 regels
 
   //-- Optionele parameters:
   //emailComments: "mim@geonovum.nl",         // reactie mailadres, alleen bij CV!
