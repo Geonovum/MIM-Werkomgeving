@@ -233,9 +233,8 @@ var respecConfig =
     {
       title:      "NEN-3610 Basismodel geo-informatie",
       href:       "https://www.nen.nl/NEN-Shop/Norm/NEN-36102011-nl.htm",
-      status:     "2016",
-      publisher:  "",
-      company:    "",
+      date:       "Maart 2011",
+      publisher:  "NEN",
     },
 	 "GeoJSON":
     {
