@@ -213,7 +213,7 @@ stereotype «id»
 
 <pre class='note'>
 In de hierna volgende paragrafen worden de metagegevens per modelelement gespecificeerd in tabellen. Per metagegeven zijn de volgdende onderdelen gespecificeerd:
-- Aspect: Het benoemde metagegeven. Met aanduiding √ is conform stelselafspraken voor basisregistraties. Een \* is conform de stelselcatalogus. Zie ook de paragraaf in H3 hierover.  
+- Aspect: Het benoemde metagegeven. Met aanduiding √ is conform stelselafspraken voor basisregistraties. Een * is conform de stelselcatalogus. Zie ook de paragraaf in H3 hierover.  
 - Kardinaliteit: Aantal maal dat een metagegeven opgenomen kan worden bij dit
 modelelement.
 - Toelichting: Nadere uitleg over het metagegeven.
