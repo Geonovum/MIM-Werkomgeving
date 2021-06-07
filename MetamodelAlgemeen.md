@@ -365,7 +365,7 @@ Verbanden met betekenis, die gelegd zijn tussen modelelementen van het type
 objecttype naar het type objecttype, of van een gegevensgroeptype naar een
 objecttype.
 
-Diagram: [Kern](#Kern)
+Diagram:  [Kern](#kern)
 
 #### Generalisatie
 
