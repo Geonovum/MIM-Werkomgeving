@@ -318,16 +318,14 @@ De gegevensgroeptypen worden naar de volgende aspecten gespecificeerd:
 
 Het metamodel heeft twee manieren om een relatie tussen twee objecttypen te
 beschrijven. Deze keuze wordt aangegeven in de eigen extensie, zoals beschreven
-in paragraaf [alternatieven](#alternatieven). Alleen het gekozen alternatief is relevant voor de modellering
-in uw informatiemodel. - Alternatief 1: Verplichte benoeming van de naam van de
-relatie met de bijbehorende metagegevens\*\* - Alternatief 2: Verplichte
-benoeming van de rol van de target in een relatie met de bijbehorende
-metagegevens en optioneel de benoeming van de naam van de relatie.
+in paragraaf [alternatieven](#alternatieven). Alleen het gekozen alternatief is relevant voor de modellering in uw informatiemodel. 
+- Alternatief 1: Verplichte benoeming van de naam van de relatie met de bijbehorende metagegevens;
+- Alternatief 2: Verplichte benoeming van de rol van de target in een relatie met de bijbehorende metagegevens en optioneel de benoeming van de naam van de relatie.
 
 Beide alternatieven gebruiken relatiesoort en relatierol, maar met andere regels
 voor gebruik.
 
-#### Relatiesoort leidend (alternatief 1)
+#### Relatiesoort is leidend (alternatief 1)
 
 Relatiesoort is verplicht, met een naam en met een definitie en deze is leidend.
 Metadata aspecten worden hierbij altijd vastgelegd. Het gebruik van relatierol

@@ -307,7 +307,7 @@ attribuut van Jan. In het informatiemodel wordt dit het attribuutsoort 'naam' va
 De gegevens Jan en Katrien worden als gelijksoortig gezien en worden daarom ondergebracht in attribuutsoort 'naam'.
 Je kan ook zeggen, het objecttype Persoon heeft een attribuutsoort 'naam' en deze is geschikt om gegevens in te plaatsen.
 
-Aan elk objecttype worden nul, één of meer *«*Attribuutsoort**en toegekend. In een informatiemodel
+Aan elk objecttype worden nul, één of meer Attribuutsoorten toegekend. In een informatiemodel
 worden alleen voor het domein relevante attribuutsoorten opgenomen bij een objecttype.
 
 Attribuutsoorten worden ook wel kenmerken of eigenschappen genoemd. Dit zijn het ook, maar er zijn
@@ -689,7 +689,7 @@ deze de modellering van de informatie van het domein bevatten.
 Een domein package bevat de modelelemementen waaruit een informatiemodel is samengesteld, zoals het objecttype Persoon en het objecttype Nummeraanduiding en de relatiesoort woonadres. Een informatiemodel is het hoofdpackage, en kent een aantal domein packages als subpackage. Er zijn meerdere soorten packages. Om onderscheid te maken tussen packages waarin het domein gemodelleerd is, en andere packages, heeft dit modelelement de naam Domein gekregen. Je zou ook kunnen zeggen, het informatiemodel bestaat uit de volgende subdomeinen.
 
 <aside class='example'>
-    Voorbeeld: Recht, of Stukken. De BRK houdt deze domein informatie in aparte packages apart bij, voor het overzicht, en om de packages afzonderlijke te kunnen aanpassen, zonder impact op de andere packages.     
+    Voorbeeld: Recht, of Stukken. De BRK houdt deze domeininformatie in aparte packages apart bij, voor het overzicht, en om de packages afzonderlijke te kunnen aanpassen, zonder impact op de andere packages.     
 </aside>
 
 
