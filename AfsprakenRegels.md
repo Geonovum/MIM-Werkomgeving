@@ -166,7 +166,7 @@ ter illustratie zijn opgenomen:
 Een «Gestructureerd datatype» is veelal specifiek binnen een informatiemodel.
 Indien mogelijk wordt zoveel mogelijk hergebruik gemaakt van elders
 gedefinieerde «Gestructureerd datatype»n, denk bijvoorbeeld aan de
-Gestructureerd datatypen: NEN3610 identificatie (NEN3610), Kadastrale aanduiding
+Gestructureerd datatypen: NEN 3610 identificatie (NEN3610), Kadastrale aanduiding
 (BRK), Objectnummering (BAG) of Labelpositie.
 
 Gewone datatypen staan op zichzelf en worden niet beschreven in termen van een
@@ -245,11 +245,11 @@ Metamodel: het gegevensgroeptype kan dus het type zijn van meer dan 1 gegevensgr
 #### Gegevensgroep versus Gestructureerd datatype
 
 Een gegevensgroep is niet hetzelfde als een Gestructureerd datatype. 
-- Eendatatype beschrijft de structuur van data, een gegevensgroep beschrijft de
+- Een datatype beschrijft de structuur van data, een gegevensgroep beschrijft de
 semantiek van een kenmerk van een object. 
 - Als één kenmerk van een object uitverschillende stukjes data bestaat, dan wordt 
 een Gestructureerd datatypegebruikt. Dit is bijvoorbeeld het geval bij het gestructureerde 
-datatype Bedrag. Deze bestaat uit een ‘hoeveelheid’ en ‘muntsoort. 
+datatype Bedrag. Deze bestaat uit een 'hoeveelheid' en 'muntsoort'. 
 - Als een object meerdere kenmerken heeft, gemodelleerd als afzonderlijke attribuutsoorten, 
 dan heeft elk kenmerk op zichzelf betekenis. Als één kenmerk wordt weggelaten, of niet bekend
 of ingewonnen is, dan verandert er niets aan de betekenis van de andere
@@ -381,7 +381,7 @@ informatiemodel en in een logisch informatiemodel
 **Conceptueel informatiemodel**
 
 <pre class='example'>
-*Specialisatie / generalisatie*
+SPECIALISATIE / GENERALISATIE
 Bovenstaande vragen beantwoorden we aan de hand van het voorbeeld van een het 
 opleidingsinstituut.  In de beschouwde werkelijkheid onderscheiden we onder 
 meer als gespreksonderwerp personen. Deze personen kunnen docenten en 
@@ -400,7 +400,7 @@ Docent en Leerling. Op onderdelen vertonen de onderscheiden objecttypen Docent
 en Leerling hetzelfde gedrag waarbij dat gedrag essentieel van belang is voor
 het te beschouwen domein en daarmee het conceptuele informatiemodel.
 
-*Abstract / concreet* 
+ABSTRACT / CONCREET 
 Wanneer er vanuit wordt gegaan dat binnen het te beschouwen gebied een persoon 
 altijd ofwel een docent ofwel leerling kan zijn (en nooit beide tegelijk) dan 
 definiëren we een Persoon als een abstract objecttype. Docent en Leerling 
@@ -598,7 +598,7 @@ verwerkt van de attribuutwaarde (wanneer was de verandering bekend en is deze
 verwerkt).
 
 <pre class='example'>
-‘bouwjaar pand’ heeft al materiële historie in zich: het bouwjaar is het moment 
+‘Bouwjaar pand’ heeft al materiële historie in zich: het bouwjaar is het moment 
 waarop de wijziging in de werkelijkheid zich voordeed en wijzigt niet. 
 De ‘indicatie materiële historie’ ervan is daarom Nee. 
 
@@ -745,7 +745,7 @@ specificaties wordt gerefereerd. De packages bevatten alleen de constructies die
 ook daadwerkelijk binnen het ‘eigen’ informatiemodel wordt gebruikt.
 
 <pre class='example'>
-Voor het uitwisselen van geografische informatie op basis van NEN3610 is een 
+Voor het uitwisselen van geografische informatie op basis van NEN 3610 is een 
 tweetal externe packages onderkend waarnaar vanuit de ‘eigen’ informatiemodellen 
 kan worden verwezen: [[!NEN3610]], of GML3.2
 </pre>
