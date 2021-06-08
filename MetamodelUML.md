@@ -212,12 +212,12 @@ Als een relatiesoort identificerend is, dan krijgt dit kenmerk in UML een
 stereotype «id»
 
 <pre class='note'>
-In de hierna volgende paragrafen worden de metagegevens per modelelement gespecificeerd in tabellen. Per metagegeven zijn de volgdende onderdelen gespecificeerd:
+In de hierna volgende paragrafen worden de metagegevens per modelelement gespecificeerd in tabellen. Per metagegeven zijn de volgende onderdelen gespecificeerd:
 - Aspect: Het benoemde metagegeven. Met aanduiding √ is conform stelselafspraken voor basisregistraties. Een * is conform de stelselcatalogus. Zie ook de paragraaf in H3 hierover.  
 - Kardinaliteit: Aantal maal dat een metagegeven opgenomen kan worden bij dit
 modelelement.
 - Toelichting: Nadere uitleg over het metagegeven.
-- In UML 2.5: De naam waarmee het het metagegeven in UML2.5 is benoemd. Het betreft veelal overerving van een metagegeven van een UML metaclass die niet in dit document is benoemd.
+- In UML 2.5: De naam waarmee het metagegeven in UML2.5 is benoemd. Het betreft veelal overerving van een metagegeven van een UML metaclass die niet in dit document is benoemd.
 - In EA: Aanduiding hoe het metagegeven in Sparx Enterprise Architect (EA) is aangegeven.
 Rode tekst betreft een standaardelement binnen EA. Zwarte tekst in de kolom betreft een uitbreiding op het UML Metamodel, via tagged values of aanvullende stereotypes.
 </pre>
@@ -403,7 +403,7 @@ aspecten gespecificeerd.
 
 De generalisaties worden naar het volgende aspect gespecificeerd:
 
-| **Aspect**    | **Kardina liteit** | **Toelichting**                                                     | **In UML 2.5**                                      | **In EA**      |
+| **Aspect**    | **Kardi naliteit** | **Toelichting**                                                     | **In UML 2.5**                                      | **In EA**      |
 |---------------|--------------------|---------------------------------------------------------------------|-----------------------------------------------------|----------------|
 | **Subtype**   | 1                  | Het objecttype dat een specialisatie is van een (ander) objecttype. | */source: related Element bij Relationship Element* | *Source*       |
 | **Supertype** | 1                  | Het objecttype dat de generalisatie is van een (ander) objecttype.  | */target: related Element bij Relationship Element* | *Target*       |

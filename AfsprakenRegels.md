@@ -89,7 +89,7 @@ waarbij het eerste getal een 0 mag zijn.
 
 We onderkennen twee soorten patronen: 
 - *Patroon*: het metagegeven (de taggedvalue) ‘Patroon’ in *tekst* vorm. Deze 
-wordt als aanvulling op het datatype (bijvoorbeeld Integer ) van het attribuut gespecificeerd. 
+wordt als aanvulling op het datatype (bijvoorbeeld Integer) van het attribuut gespecificeerd. 
 Het patroon bevat een specificatie waaraan een waarde moet voldoen. Bijvoorbeeld een 
 postcode, met als aanduiding van het patroon: Postcode. De toegestane waarden voor 
 deze patroon aanduiding worden dan vastgelegd in documentatie behorende bij het type: alle
@@ -247,8 +247,8 @@ Metamodel: het gegevensgroeptype kan dus het type zijn van meer dan 1 gegevensgr
 Een gegevensgroep is niet hetzelfde als een Gestructureerd datatype. 
 - Een datatype beschrijft de structuur van data, een gegevensgroep beschrijft de
 semantiek van een kenmerk van een object. 
-- Als één kenmerk van een object uitverschillende stukjes data bestaat, dan wordt 
-een Gestructureerd datatypegebruikt. Dit is bijvoorbeeld het geval bij het gestructureerde 
+- Als één kenmerk van een object uit verschillende stukjes data bestaat, dan wordt 
+een Gestructureerd datatype gebruikt. Dit is bijvoorbeeld het geval bij het gestructureerde 
 datatype Bedrag. Deze bestaat uit een 'hoeveelheid' en 'muntsoort'. 
 - Als een object meerdere kenmerken heeft, gemodelleerd als afzonderlijke attribuutsoorten, 
 dan heeft elk kenmerk op zichzelf betekenis. Als één kenmerk wordt weggelaten, of niet bekend
@@ -401,7 +401,7 @@ en Leerling hetzelfde gedrag waarbij dat gedrag essentieel van belang is voor
 het te beschouwen domein en daarmee het conceptuele informatiemodel.
 
 ABSTRACT / CONCREET 
-Wanneer er vanuit wordt gegaan dat binnen het te beschouwen gebied een persoon 
+Wanneer ervan uit wordt gegaan dat binnen het te beschouwen gebied een persoon 
 altijd ofwel een docent ofwel leerling kan zijn (en nooit beide tegelijk) dan 
 definiëren we een Persoon als een abstract objecttype. Docent en Leerling 
 zijn dan concrete objecttypen in het conceptueel informatiemodel.
@@ -430,7 +430,7 @@ daarom in principe overgenomen. In een logisch model wordt het digitale model
 van de werkelijkheid beschreven. Vanuit dit oogpunt kunnen er ook andere redenen
 zijn om abstracte objecttypen te creëren, bijvoorbeeld omdat een abstract object
 positieve effecten heeft voor de implementatie. Denk hierbij aan het aanbrengen
-van (extra) hiërarchie,zowel in semantiek als in ordening van eigenschappen. De
+van (extra) hiërarchie, zowel in semantiek als in ordening van eigenschappen. De
 enige regel die geldt is dat een abstract objecttype niet geïnstantieerd kan
 worden. Elk object is altijd een instantie van een concreet objecttype.
 
@@ -649,7 +649,7 @@ Aanbeveling: het komt voor dat er binnen één domein, van één conceptueel
 informatiemodel, meerdere logische informatiemodellen worden uitgewerkt. Het is
 dan aan te beleven om centrale implementatie afspraken op te stellen, welke
 gelden voor elk logisch informatiemodel. Dit speelt met name rondom historie,
-omdat het vaak ongewenst (en erg Gestructureerdof zelfs onmogelijk) is om
+omdat het vaak ongewenst (en erg Gestructureerd of zelfs onmogelijk) is om
 verschillende implementaties naast elkaar in stand te houden en naar elkaar te
 vertalen.
 
@@ -747,7 +747,7 @@ ook daadwerkelijk binnen het ‘eigen’ informatiemodel wordt gebruikt.
 <pre class='example'>
 Voor het uitwisselen van geografische informatie op basis van NEN 3610 is een 
 tweetal externe packages onderkend waarnaar vanuit de ‘eigen’ informatiemodellen 
-kan worden verwezen: [[!NEN3610]], of GML3.2
+kan worden verwezen: NEN 3610 of GML3.2
 </pre>
 
 Het is ook mogelijk om binnen een domein of binnen een organisatie een eigen
@@ -945,7 +945,7 @@ een begrip uit een model van begrippen (zoals bedoeld in paragraaf
 [Typen Informatiemodellen](#typen-informatiemodellen)) te borgen. Anders gezegd, 
 om aan te geven dát een modelelement een weergave is van het betreffende begrip op 
 IM niveau. Anders gezegd, het is niet de bedoeling om te verwijzen naar een begrip als het
-modellement hier slechts een beetje mee te maken heeft. De verwijzing geeft aan
+modelelement hier slechts een beetje mee te maken heeft. De verwijzing geeft aan
 dat het model element op informatiemodel niveau een invulling geeft aan het
 begrip. Het begrip zelf is opgenomen in een model van begrippen. Aldaar is meer
 informatie te vinden over het begrip zelf.
@@ -1013,7 +1013,7 @@ zinvol bij datatypen, maar dit is geen harde regel. Bijvoorbeeld: een koopsom
 van een huis wordt uitgedrukt met een bedrag. In het domein is de koopsom wel
 een begrip, maar het modelelement bedrag bijvoorbeeld niet (en als bedrag al
 geen begrip is, dan is valuta dit vermoedelijk ook niet, evenals euro, aantal en
-Decimaalm). In het geval dat bijvoorbeeld bedrag niet een begrip is, wordt het
+Decimalen). In het geval dat bijvoorbeeld bedrag niet een begrip is, wordt het
 metadata element begrip weggelaten.
 
 Bij het opnemen van het begrip streven we ernaar om, waar mogelijk, precies te
@@ -1028,7 +1028,7 @@ niet vanuit het objecttype Persoon. Het kan ook zo zijn dat het datatype van
 
 #### Definitie van een modelelement en de definitie van een begrip
 
-De definitie van het modelement is niet hetzelfde bedoeld als de definitie van
+De definitie van het modelelement is niet hetzelfde bedoeld als de definitie van
 een begrip. De definitie van een begrip in het begrippenkader is buiten scope
 van het informatiemodel, enerzijds omdat deze definitie anders kan zijn dan de
 definitie van het modelelement, en anderzijds omdat de definitie van het begrip
@@ -1045,7 +1045,7 @@ hoeft niet. Let hiermee op wanneer u als beheerder van het informatiemodel deze
 definitie niet zelf beheert, want lezers van het informatiemodel en gebruikers
 van de informatie baseren zich wel op deze definitie. Het kan dan gebeuren dat
 de definitie veranderd, en de informatievoorziening hier niet mee in
-overeensteming is. De aanbeveliging is daarom een goede definitie voor het
+overeenstemming is. De aanbeveling is daarom een goede definitie voor het
 modelelement te kiezen, en in de metadata een verwijzing op te nemen naar het
 begrip en hierna handmatig de overeenstemming tussen de definities te beheren.
 

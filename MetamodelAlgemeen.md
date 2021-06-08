@@ -4,7 +4,7 @@ Dit hoofdstuk beschrijft het metamodel in diagramvorm en in tekst.
 
 Het metamodel beschrijft de modelelementen die worden gebruikt bij het maken van een informatiemodel. Voorbeelden van modelelementen zijn: objecttype, attribuutsoort, relatiesoort, maar denk ook datatypen of aan metagegevens. In de paragrafen hierna worden alle modelelementen beschreven en toegelicht. 
 
-Bijvoorbeeld: in de basisregistatie Kadaster wordt een perceel gemodelleerd als een objecttype. De grens van een perceel wordt gemodelleerd als een attribuutsoort. Objecttype en attribuutsoort zijn de modelelementen op metamodel niveau, het perceel en de grens zijn de modelelemenenten van het informatiemodel niveau. 
+Bijvoorbeeld: in de basisregistratie Kadaster wordt een perceel gemodelleerd als een objecttype. De grens van een perceel wordt gemodelleerd als een attribuutsoort. Objecttype en attribuutsoort zijn de modelelementen op metamodel niveau, het perceel en de grens zijn de modelelementen van het informatiemodel niveau. 
 
 - De eerste paragraaf bevat diagrammen, die kort een overzicht geven van de modelelementen die op metamodel niveau worden onderkend, alsmede hun onderlinge verhouding
 - De paragrafen erna bevat de beschrijvingen in tekst van de modelelementen die op metamodel niveau worden onderkend. Wanneer u liever de beschrijvingen eerst leest, kunt u ook met deze paragraaf starten. Dit begint bij [Objecttypen en attribuutsoorten](#objecttypen-en-attribuutsoorten) 
@@ -155,7 +155,7 @@ Diagram: Keuze tussen datatypen
 
 *Use case 2: Keuze tussen attribuutsoorten*
 
-Een objecttype of gegevensgroep kan normaal een attribuutsoort hebben met een datatype (de lijn links onder). Als er sprake is van een objecttype met een keuze tussen attribuutsoorten, dan is het objecttype gekopppeld met een keuze (de lijn links boven) en de keuze geeft 2 of meer attribuutsoorten aan (met elk een eigen datatype). 
+Een objecttype of gegevensgroep kan normaal een attribuutsoort hebben met een datatype (de lijn links onder). Als er sprake is van een objecttype met een keuze tussen attribuutsoorten, dan is het objecttype gekoppeld met een keuze (de lijn links boven) en de keuze geeft 2 of meer attribuutsoorten aan (met elk een eigen datatype). 
 
 ![](media/KeuzeAttribuutsoort2.png)
 
@@ -274,12 +274,12 @@ registratie. Daartoe is veelal een interpretatie nodig (van die werkelijkheid
 cq. die objecttypen) naar eenheden die in een registratie vastgelegd kunnen
 worden (records, entiteiten e.d.) op basis van andere overwegingen.
 
-De objecten die in het beschouwde domein onderkend worden zijn zelf nooit abstract. Ze behoren altijd tot een concreet objecttype, en niet tot een abstract objecttype. Abstracte objecttypes worden wel gebruikt in de modellering, om generalisaties aan te duiden en de definitie. Zo kan bij het objecttype Pand bijvoorbeeld aangegeven worden dat dit een 'Element in de fysieke leefomgeving' is, en dat deze laatste als een abstract objecctype gezien moet worden (in ons domein). Meer over abstracte objecttypes is beschreven in [Abstracte objecttypes en concrete objecten].  
+De objecten die in het beschouwde domein onderkend worden zijn zelf nooit abstract. Ze behoren altijd tot een concreet objecttype, en niet tot een abstract objecttype. Abstracte objecttypes worden wel gebruikt in de modellering, om generalisaties aan te duiden en de definitie. Zo kan bij het objecttype Pand bijvoorbeeld aangegeven worden dat dit een 'Element in de fysieke leefomgeving' is, en dat deze laatste als een abstract objecttype gezien moet worden (in ons domein). Meer over abstracte objecttypes is beschreven in [Abstracte objecttypes en concrete objecten].  
 
 #### Attribuutsoort en een groepering ervan   
 
 Een attribuutsoort is de metaklasse waarmee kenmerken van een objecttype worden vastgelegd. Het zijn de kenmerken waarvoor gegevens worden bijgehouden.  
-Voordat we attribuutsoort definieren kijken we eerst naar het begrip ‘gegeven’.
+Voordat we attribuutsoort definiëren kijken we eerst naar het begrip ‘gegeven’.
 
 >   **Definitie Gegeven**  
 >   De betekenisvolle formulering van een waargenomen feit, waaraan een waarde
@@ -344,7 +344,7 @@ dus attribuutsoorten van het objecttype, maar dan ondergebracht in een
 gegevensgroeptype. De gegevensgroep als geheel wordt daarom expliciet niet
 gezien als zijnde één attribuutsoort van een object.
 
-*Toelichting:* bijvoorbeeld: in de BRK heeft een schip een motor en de motor en de motor heeft een aantal eigenschappen. De BRK beschouwt een persoon als eigenaar van een Schip, er kunnen geen afzonderdelijke eigenaren zijn van elk van de de motoren van een schip. In de BRK kan het eigendom van een Motor dan ook niet worden overgedragen aan een ander persoon. Een motor wordt daarom gezien als een eigenschap van het object schip, en omdat de motor meerdere eigenschappen heeft, worden deze ondergebracht in een gegevensgroeptype. In een ander informatiemodel, zoals van een motorfabriek, zou de Motor wel een objecttype kunnen zijn, omdat het daar wel hét onderwerp van gesprek is.\*
+*Toelichting:* bijvoorbeeld: in de BRK heeft een schip een motor en de motor en de motor heeft een aantal eigenschappen. De BRK beschouwt een persoon als eigenaar van een Schip, er kunnen geen afzonderlijke eigenaren zijn van elk van de motoren van een schip. In de BRK kan het eigendom van een Motor dan ook niet worden overgedragen aan een ander persoon. Een motor wordt daarom gezien als een eigenschap van het object schip, en omdat de motor meerdere eigenschappen heeft, worden deze ondergebracht in een gegevensgroeptype. In een ander informatiemodel, zoals van een motorfabriek, zou de Motor wel een objecttype kunnen zijn, omdat het daar wel hét onderwerp van gesprek is.\*
 
 Een gegevensgroeptype is meestal het type van slechts één gegevensgroep, omdat
 de semantiek meestal exclusief is voor één objecttype. Echter, hergebruik is
@@ -671,7 +671,7 @@ Er zijn verschillende modelelementen die een package zijn:
 *Toelichting:*
 Het informatiemodel is een package, te weten het hoofdpackage van het informatiemodel, waar alle
 subpackages die een informatiemodel beschrijven onder vallen, zoals Domein en View en extern.
-Het informatiemodel wordt verder beschreven met metadata, zoals de aanduidig van het domein wat in het informatiemodel is gemodelleerd. Het is gangbaar om de naam van het informatiemodel te beginnen met IM, maar dit is niet verplicht.    
+Het informatiemodel wordt verder beschreven met metadata, zoals de aanduiding van het domein wat in het informatiemodel is gemodelleerd. Het is gangbaar om de naam van het informatiemodel te beginnen met IM, maar dit is niet verplicht.    
 
 <aside class='example'>
     Voorbeeld: IMKAD, of IMBAGLV. Elk van deze is een naam van een informatiemodel. 
@@ -686,7 +686,7 @@ deze de modellering van de informatie van het domein bevatten.
 >   een informatiemodel beschrijven.
 
 *Toelichting:*
-Een domein package bevat de modelelemementen waaruit een informatiemodel is samengesteld, zoals het objecttype Persoon en het objecttype Nummeraanduiding en de relatiesoort woonadres. Een informatiemodel is het hoofdpackage, en kent een aantal domein packages als subpackage. Er zijn meerdere soorten packages. Om onderscheid te maken tussen packages waarin het domein gemodelleerd is, en andere packages, heeft dit modelelement de naam Domein gekregen. Je zou ook kunnen zeggen, het informatiemodel bestaat uit de volgende subdomeinen.
+Een domein package bevat de modelelementen waaruit een informatiemodel is samengesteld, zoals het objecttype Persoon en het objecttype Nummeraanduiding en de relatiesoort woonadres. Een informatiemodel is het hoofdpackage, en kent een aantal domein packages als subpackage. Er zijn meerdere soorten packages. Om onderscheid te maken tussen packages waarin het domein gemodelleerd is, en andere packages, heeft dit modelelement de naam Domein gekregen. Je zou ook kunnen zeggen, het informatiemodel bestaat uit de volgende subdomeinen.
 
 <aside class='example'>
     Voorbeeld: Recht, of Stukken. De BRK houdt deze domeininformatie in aparte packages apart bij, voor het overzicht, en om de packages afzonderlijke te kunnen aanpassen, zonder impact op de andere packages.     
@@ -715,7 +715,7 @@ Een domein package bevat de modelelemementen waaruit een informatiemodel is same
 >   eigen informatiemodel.
 
 <aside class='example'>
-    IMKAD-BRP. Een aantal van de gegevens uit de basisregistratie personen (BRP) zijn relevant voor de basisregistratie Kadaster. Deze relevante subset is door de beheerer van IMKAD ondergebracht in de view IMKAD-BRP. Vanuit modelleringsperspectief wordt dit
+    IMKAD-BRP. Een aantal van de gegevens uit de basisregistratie personen (BRP) zijn relevant voor de basisregistratie Kadaster. Deze relevante subset is door de beheerder van IMKAD ondergebracht in de view IMKAD-BRP. Vanuit modelleringsperspectief wordt dit
     gezien als een view.
 </aside>
 
@@ -752,7 +752,7 @@ Bij de use cases gaat het over meerdere kenmerken, waartussen een keuze gemaakt 
 
 **Use case 1: een keuze tussen datatypen**
 
-Een objecttype heeft een attrituutsoort en het datatype hiervan is ofwel datatype D1 ofwel datatype D2. In MIM modelleren we daarom 1  attribuutsoort met als datatype een keuze tussen het datatype D1 en het datatype D2. Het maken van deze keuze is verplicht.
+Een objecttype heeft een attribuutsoort en het datatype hiervan is ofwel datatype D1 ofwel datatype D2. In MIM modelleren we daarom 1  attribuutsoort met als datatype een keuze tussen het datatype D1 en het datatype D2. Het maken van deze keuze is verplicht.
 
 <aside class='example'>
 Voorbeeld: *Attribuutsoort* geometrie als kenmerk van een objecttype. Dit is een keuze uit *Datatype* Line of *Datatype* Polygon. De opsomming van beide keuzemogelijkheden noemen we de *Keuze* LineOrPolygon. De aanhaking aan het attribuutsoort geometrie gebeurd door aan te geven dat LineOrPolygon het type is van geometrie. 
@@ -826,7 +826,7 @@ We onderkennen een aantal specifieke metagegevens op het niveau van het informat
 #### Metagegeven: **Informatiemodel type**
 
 >   **Definitie Informatiemodel type**  
->   De beschrijving van de aard van het informatiemodel, hoe het geinterpreteerd
+>   De beschrijving van de aard van het informatiemodel, hoe het geïnterpreteerd
 >   moet worden.
 
 *Toelichting* Bijvoorbeeld: conceptueel, logisch, technisch. Zoals bedoeld in: [Typen Informatiemodellen](#typen-informatiemodellen)
@@ -885,8 +885,7 @@ opname* van het modelelement in het informatiemodel, bijvoorbeeld *Datum opname*
 
 Merk op dat een aantal van deze metagegevens al meegenomen worden in een
 specificatietaal. Bijvoorbeeld het objecttype met de naam Pand wordt in UML gemodelleerd als
-‘*Named element’* met als ‘*Name’* Pand (in UML 1.4 heette dit nog UML-Class,
-met een propery ‘*Name’*).
+‘*Named element’* met als ‘*Name’* Pand (in UML 1.4 heette dit nog UML-Class, met een property ‘*Name’*).
 
 Een aantal andere metagegevens, zoals de eerder genoemde *Datum opname* met
 waarde 1-1-2012. worden als aparte data vastgelegd, in UML gebeurd dit in een
@@ -1031,7 +1030,7 @@ de adresgegevens niet (direct of indirect) uit de BAG komen, maar bijvoorbeeld
 via een eigen inwinningsproces in een eigen registratie worden bijgehouden, dan
 de herkomst niet de BAG.
 
-Deze definitie omvat ook de definite van herkomst van de stelselcatalogus (De
+Deze definitie omvat ook de definitie van herkomst van de stelselcatalogus (De
 registratie in wiens catalogus het objecttype is gespecificeerd (oftewel de
 registratie waar het objecttype deel van uitmaakt). Deze specificatie is
 toegevoegd omdat het wel duidelijk moet zijn in welke (basis)registratie of
@@ -1090,9 +1089,9 @@ overig.
 >   identificerend is voor alle objecten in de populatie van objecten van dit
 >   objecttype.
 
-*Toelichting:* objecten hebben, of krijgen, in een administatie of
+*Toelichting:* objecten hebben, of krijgen, in een administratie of
 gegevensvoorziening vaak één identificerend kenmerk. Het kan ook zijn dat een
-aantal kenmerken in combinatie identificerend zijn, zoals twee attibuutsoorten
+aantal kenmerken in combinatie identificerend zijn, zoals twee attribuutsoorten
 of een attribuutsoort en een relatiesoort. De combinatie met een relatiesoort
 wordt alleen gedaan voor objecttypes die zelf geen unieke aanduiding hebben en
 daarom deze moeten samenstellen met de unieke aanduiding van een gerelateerde
@@ -1222,7 +1221,7 @@ weten de modelelementen attribuutsoort en relatiesoort.
 #### Metagegeven: **Indicatie classificerend**
 
 >   **Definitie Indicatie classificerend**  
->   Indicatie dat een attribuutsoort het objecttype waar het bijhoort classificeert in (sub)typen.
+>   Indicatie dat een attribuutsoort het objecttype waar het bij hoort classificeert in (sub)typen.
 
 *Toelichting*
 
@@ -1445,7 +1444,7 @@ betreft, zoals een CharacterString.
 
 >   **Definitie Indicatie abstract object**  
 >   Indicatie dat het objecttype een generalisatie is, waarvan een object als specialisatie
->   altijd voorkomt in de hoedanigheid van een (en slechts één) van de specialisaties van het betreffende objecttype.
+>   altijd voorkomt in de hoedanigheid van één (en slechts één) van de specialisaties van het betreffende objecttype.
 
 *Toelichting*
 
@@ -1505,9 +1504,9 @@ gegevensgroeptype.
 
 *Toelichting*
 
-Een gestructutreerd datatype bevat meerdere data elementen.
+Een gestructureerd datatype bevat meerdere data elementen.
 
-*Toepassing*: gestructereerd datatype.
+*Toepassing*: gestructureerd datatype.
 
 #### Metagegeven: **Waarde**
 
@@ -1527,7 +1526,7 @@ Een enumeratie bevat enumeratiewaarden.
 
 *Toelichting*
 
-Een referentie lijst bevat bevat referentie elementen.
+Een referentie lijst bevat referentie elementen.
 
 *Toepassing*: referentielijst.
 

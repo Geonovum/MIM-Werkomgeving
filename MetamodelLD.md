@@ -48,7 +48,7 @@ Bij het opstellen van het MIM in RDF is gebruik gemaakt van de algemene, tekstue
 De volgende regels zijn gebruikt bij de omzetting van de MIM tekst naar RDF:
 
 1. Elk voorkomen van een MIM «metaclass» is omgezet naar een voorkomen van een `owl:Class`;
-2. Elk metagegeven van een MIM «metaclass» is omgezet naar een voorkomen van een `owl:DatatypeProperty`, voor zover sprake is van een metagegeven dat een waarde heeft die met een datatype is uit te drukken (zoals tekstuele, nummerieke of boolean metagegevens);
+2. Elk metagegeven van een MIM «metaclass» is omgezet naar een voorkomen van een `owl:DatatypeProperty`, voor zover sprake is van een metagegeven dat een waarde heeft die met een datatype is uit te drukken (zoals tekstuele, numerieke of boolean metagegevens);
 3. Elk metagegeven van een MIM «metaclass» is omgezet naar een voorkomen van een `owl:ObjectProperty`, voor zover sprake is van een metagegeven waarbij de waarde verwijst naar een voorkomen van een andere MIM «metaclass»;
 4. Een `rdfs:label` is opgenomen met de naam van de MIM «metaclass» c.q. het metagegeven;
 5. Een `rdfs:comment` is opgenomen met de definitie van de MIM «metaclass» c.q. het metagegeven.

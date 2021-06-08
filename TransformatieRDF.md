@@ -68,7 +68,7 @@ Het MIM model kent geen volgorde. Ondanks dat in de weergave attribuutsoorten in
 
 ## URI-munting
 
-Een belangrijk gegeven in Linked Data is het munten van URI's. Bij de vertaling van een MIM modelelement naar een overeenkomstige resource in Linked Data vocabulaires zullen ook nieuwe URI's gemunt moeten worden. Enerzijds omdat er (soms) sprake is van meer dan één resource voor één modelelement, maar ook omdat een Linked Data resource wel equivalent is met een MIM modelelement, maar niet exact gelijk: we willen niet dat de formele semantiek van de Linked Data vocabulaires vermengt wordt met de formele semantiek van het MIM metamodel.
+Een belangrijk gegeven in Linked Data is het munten van URI's. Bij de vertaling van een MIM modelelement naar een overeenkomstige resource in Linked Data vocabulaires zullen ook nieuwe URI's gemunt moeten worden. Enerzijds omdat er (soms) sprake is van meer dan één resource voor één modelelement, maar ook omdat een Linked Data resource wel equivalent is met een MIM modelelement, maar niet exact gelijk: we willen niet dat de formele semantiek van de Linked Data vocabulaires vermengd wordt met de formele semantiek van het MIM metamodel.
 
 Daarnaast geldt dat het in Linked Data gebruikelijk is om URI's over te nemen van andere (externe) vocabulaires c.q. modellen. Ook het MIM ondersteund dit, in de vorm van de mim metamodelklassen `mim:Extern` en `mim:View`. Echter, anders dan bij UML, behoren de modelementen uit deze externe modellen ook de URI's te krijgen die horen bij deze externe modellen.
 
@@ -420,7 +420,7 @@ WHERE {
 Een externe koppeling wordt op dezelfde wijze omgezet als een `mim:Relatiesoort` (zie [Relatiesoort](#relatiesoort)). Het verschil is zichtbaar doordat de betreffende objecttypes uit verschillende modellen komen. Anders dan bij UML is het daarbij niet gebruikelijk om het andere objecttype "in" het eigen model te plaatsen, maar juist om direct naar het andere objecttype te verwijzen. Eventueel kan daarbij ook nog gebruik worden gemaakt van een `owl:imports` om expliciet aan te geven dat een ander model wordt gebruikt.
 
 <aside id='trans-8' class='note'>
-Een externe koppeling gedraagd zich in een RDF model exact als een relatiesoort. Het verschil wordt zichtbaar doordat het gerelateerde objecttype in een andere package zitten met de aanduiding `mim:view` of `mim:extern`. De objecttypen in deze packages zullen dan ook niet worden omgezet. Wel wordt een extra `owl:imports` statement toegevoegd. Dit gebeurt bij de vertaling van de betreffende packages.
+Een externe koppeling gedraagt zich in een RDF model exact als een relatiesoort. Het verschil wordt zichtbaar doordat het gerelateerde objecttype in een andere package zitten met de aanduiding `mim:view` of `mim:extern`. De objecttypen in deze packages zullen dan ook niet worden omgezet. Wel wordt een extra `owl:imports` statement toegevoegd. Dit gebeurt bij de vertaling van de betreffende packages.
 </aside>
 
 #### Transformatie: Relatierol
@@ -1345,7 +1345,7 @@ WHERE {
 </pre>
 
 ### transformatie: indicatie abstract object
-> Indicatie dat het objecttype een generalisatie is, waarvan een object als specialisatie altijd voorkomt in de hoedanigheid van een (en slechts één) van de specialisaties van het betreffende objecttype.
+> Indicatie dat het objecttype een generalisatie is, waarvan een object als specialisatie altijd voorkomt in de hoedanigheid van één (en slechts één) van de specialisaties van het betreffende objecttype.
 
 In een MIM conform informatiemodel kunnen zowel abstracte als concrete klassen voorkomen. In UML kun je daarvan afleiden dat je geen instanties mag hebben van abstracte klassen, maar alleen van concrete klassen. In RDF wordt geen onderscheid gemaakt tussen het abstract of concreet zijn van klassen. In RDF worden klassen beschouwd als sets van dingen. Als je een set kunt beschrijven, dan kunnen er ook dingen zijn die tot die set behoren.
 
