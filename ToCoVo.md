@@ -10,7 +10,7 @@ op het gebied van informatiemodellering meegewerkt:
 | Lennart van Bergen        | Kadaster       | MIM kerngroep. Expert informatiemodellering. Modellenbureau Kadaster |
 | Thies Mesdag              | Kadaster       | MIM kerngroep. Expert informatiemodellering. Modellenbureau Kadaster |
 | Paul Janssen              | Geonovum       | MIM kerngroep. Expert informatiemodellering. Geostandaarden          |
-| Marco Brattinga           | Kadaster       | Expert semantisch modelleren                                         |
+| Jan Campschroer           |                | MIM expertgroep                                                      |
 | Dick Krijtenburg          | Geonovum       | Coördinator beheer MIM.                                              |
 | Jan van Gelder            | Geonovum       | Redactie MIM.                        	                            |
 
@@ -34,12 +34,8 @@ informatiemodellen. Het voorziet enerzijds in duidelijke afspraken die over meer
 heen gaan over het vastleggen van gegevensspecificaties en biedt anderzijds ruimte aan de verschillende 
 niveaus van modellering.
 
-Versie 1.1 van MIM biedt naast het al bestaande uitdrukken van het metamodel in UML ook de mogelijkheid 
-om het metamodel uit te drukken in Linked Data. Hierbij wordt voorzien in en breed geuite behoefte.
-We hebben de afgelopen tijd gezien dat MIM breed wordt omarmd binnen de overheid en een plek heeft 
-veroverd binnen de NORA. Met de uitbreidingen en aanpassingen in deze versie wordt het 
-toepassingsbereik van MIM aanzienlijk verbreed.
+Versie 1.1.1 van MIM is uitgebracht om een aantal kleine aanpassingen te doen die vanuit de community waren aangedragen.
 
 Dick Krijtenburg, Geonovum
 
-Februari 2020
+*datum* 2021

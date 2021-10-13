@@ -31,7 +31,7 @@ var respecConfig =
   format: "markdown",                 // altijd "markdown"
   //-- publishDate is verplicht -------------------------------------------------------
   //-- NB: in de werkversie uitzetten, want dan pakt Respec de pushdate ---------------
-  //publishDate: "2020-10-23",  	      // Format is "YYY-MM-DD"
+  //publishDate: "2021-06-04",  	      // Format is "YYYY-MM-DD"
   //-- de namen van de Editor(s) ------------------------------------------------------
   //-- vul in: per Editor: name:, company:, companyURL: -------------------------------
   editors:
@@ -232,8 +232,8 @@ var respecConfig =
     "NEN3610":
     {
       title:      "NEN-3610 Basismodel geo-informatie",
-      href:       "https://www.nen.nl/NEN-Shop/Norm/NEN-36102011-nl.htm",
-      date:       "Maart 2011",
+      href:       "https://www.nen.nl/nen-3610-2011-a1-2016-nl-217738",
+      date:       "Mei 2016",
       publisher:  "NEN",
     },
 	 "GeoJSON":
@@ -254,7 +254,7 @@ var respecConfig =
     },
   },
   //-- Voor dit blok geldt: alleen als er eerdere versies zijn en altijd beiden aan/uit!
-  previousPublishDate: "2020-02-25",    	    // Format is "YYY-MM-DD"
+  previousPublishDate: "2020-02-25",    	    // Format is "YYYY-MM-DD"
   //reviousMaturity: "GN-DEF",                 // kies 1 van deze 3 regels
   //previousMaturity: "GN-CV",                   // kies 1 van deze 3 regels
   previousMaturity: "GN-VV",  	                // kies 1 van deze 3 regels

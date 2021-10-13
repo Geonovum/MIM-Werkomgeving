@@ -1,7 +1,7 @@
 ## Vertaling naar engels 
 
 MIM is een specificatie die is ontstaan vanuit de behoeften van enkele basisregistraties en afnemers daarvan. Daarbij is de aansluiting bij internationale (geo)normen gewaarborgd. Echter de precieze aansluiting bij die normen is niet altijd expliciet gemaakt in MIM. 
-Met name de relatie met de modelleertechnieken van de ISO 19100 serie is van belang. Deze ISO standaarden vormen de ondergrond voor o.a. Inspire en NEN3610. 
+Met name de relatie met de modelleertechnieken van de ISO 19100 serie is van belang. Deze ISO standaarden vormen de ondergrond voor o.a. Inspire en NEN 3610. 
 
 In het volgende overzicht geldt het volgende
 

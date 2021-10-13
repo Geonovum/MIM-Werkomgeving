@@ -31,7 +31,7 @@ Voor informatiemodellen die op basis van dit metamodel zijn beschreven geldt:
     voor publicatie;
 -   ze kunnen als basis gebruikt worden voor (bij voorkeur model-driven
     generatie van) afgeleide modellen en producten voor een specifiek
-    toepassingsgebied/domein zoals bijvoorbeeld NEN3610 [[!NEN3610]] of het gemeentelijke
+    toepassingsgebied/domein zoals bijvoorbeeld [[!NEN3610]] of het gemeentelijke
     domein;
 -   ze kunnen als basis gebruikt worden voor (bij voorkeur model-driven
     generatie van) afgeleide modellen voor specifieke services en
@@ -108,15 +108,15 @@ In het informatiemodel is hiervoor het *objecttype* Persoon gedefinieerd en Jan 
 
 De kenmerken zoals de naam en geboortedatum, maar bijvoorbeeld ook identificatie en registratietijdstip, worden gezien als attributen van dit objecttype. We noemen een dergelijk kenmerk een *attribuutsoort*.
 
-Sommige kenmerken geven relaties tussen obiecten weer, zoals het gegeven dat Jan in Paleis Het Loo woont. Deze modelleren we door middel van een *relatiesoort*, tussen *objecttypen*, in dit geval tussen Persoon en Gebouw.
+Sommige kenmerken geven relaties tussen objecten weer, zoals het gegeven dat Jan in Paleis Het Loo woont. Deze modelleren we door middel van een *relatiesoort*, tussen *objecttypen*, in dit geval tussen Persoon en Gebouw.
 
-Alle objecten die we als gelijksoortig beschouwen typeren we in het informatiemodel tot een objecttype, de relaties tussen de objecten typeren we in het informatiemodel als een relatiesoort en de kenmerken van de de objecten typeren we in het informatiemodel als attribuutsoorten. Op deze manier ontstaat een informatiemodel. In de van het informatiemodel afgeleide registratie kunnen vervolgens de objecten Jan en Katrien en de gegevens ervan, zoals de geboortedatum 10-10-1970, worden vastgelegd, en vervolgens uitgewisseld.
+Alle objecten die we als gelijksoortig beschouwen typeren we in het informatiemodel tot een objecttype, de relaties tussen de objecten typeren we in het informatiemodel als een relatiesoort en de kenmerken van de objecten typeren we in het informatiemodel als attribuutsoorten. Op deze manier ontstaat een informatiemodel. In de van het informatiemodel afgeleide registratie kunnen vervolgens de objecten Jan en Katrien en de gegevens ervan, zoals de geboortedatum 10-10-1970, worden vastgelegd, en vervolgens uitgewisseld.
 
 We visualiseren het voorgaande in onderstaande figuur, voor de situatie dat er een, van het informatiemodel afgeleide, registratie is.
 
 ![](media/informatiemodel.png)
 
-Als een andere registratie op haar eigen manier tegen dezelfde ‘Jan uit de werkelijkheid’ aankijkt, dan is ook in die registratie een (eigen, apart) object voor Jan aanwezig en Jan kan in dit (eigen, aparte) informatiemodel anders gemodelleerd zijn. Bijvoorbeeld in het ene domein als werknemer en in het andere domein als persoon of parter. Beide objecten Jan representeren natuurlijk dezelfde ‘Jan uit
+Als een andere registratie op haar eigen manier tegen dezelfde ‘Jan uit de werkelijkheid’ aankijkt, dan is ook in die registratie een (eigen, apart) object voor Jan aanwezig en Jan kan in dit (eigen, aparte) informatiemodel anders gemodelleerd zijn. Bijvoorbeeld in het ene domein als werknemer en in het andere domein als persoon of partner. Beide objecten Jan representeren natuurlijk dezelfde ‘Jan uit
 de werkelijkheid’, vanuit het perspectief van het eigen domein bekeken.
 
 *Belangrijke aandachtspunten*  
@@ -165,7 +165,7 @@ taal geformuleerd. Een dergelijk model definieert het **‘wat’**: welke ‘co
 (‘dingen’) worden onderscheiden (in de beschouwde werkelijkheid), wat betekenen
 zij, hoe verhouden ze zich tot elkaar en welke informatie (eigenschappen) is
 daarvan relevant. Het dient als taal waarmee domeinexperts kunnen communiceren
-met informatie-analisten en verschaft een eenduidige interpretatie van die
+met informatieanalisten en verschaft een eenduidige interpretatie van die
 werkelijkheid ten behoeve van deze communicatie.  
 *Een conceptueel informatiemodel wordt dan ook opgesteld voor gebruik door mensen,
 zodat ‘de business’ en de ICT-specialisten elkaar gaan begrijpen.*
@@ -189,7 +189,7 @@ taal beschreven en wordt waar mogelijk gegenereerd vanuit het conceptueel model.
 met name de ontwerpers, bouwers en beheerders van ICT-voorzieningen.*
 
 Ten aanzien van fysieke of technische datamodellen:
-- Een logisch informatiemodel is implementatie onafhankelijk en kan in naar meerdere technische modellen worden geimplementeerd.
+- Een logisch informatiemodel is implementatie onafhankelijk en kan in naar meerdere technische modellen worden geïmplementeerd.
   Een fysiek of technisch datamodel is afhankelijk van de gekozen techniek of tooling die wordt gebruikt.
 
 #### Niveau 4: Fysiek of technisch gegevens- of datamodel
@@ -201,7 +201,7 @@ servicetechnologie zoals [[!xml]], [[!gml]], [[!SOAP]], REST, [[!GeoJSON]],
 berichten ‘verpakt’ worden, het (internet)protocol en de logistiek van het
 berichtenverkeer. De technische specificaties worden over het algemeen zoveel
 als mogelijk gegenereerd uit het logisch informatiemodel.  
-*Deze specificaties worden opgesteld voor ‘machines’, te gebruiken door software-ontwikkelaars.*
+*Deze specificaties worden opgesteld voor ‘machines’, te gebruiken door softwareontwikkelaars.*
 
 Het voorliggende metamodel kan primair toegepast worden op twee niveaus, niveau 2 en
 niveau 3: t.b.v. een zuiver conceptueel informatiemodel (2) en t.b.v. een
@@ -232,7 +232,7 @@ daarmee de modelleertaal waarin een informatiemodel is uitgedrukt. Deze metataal
 beschrijft als het ware de grammatica en de syntax van de modelleertaal.
 
 Vaak zie je dat het metamodel niet expliciet beschreven is en dat het metamodel
-een onderdeel van de domeinkennis is geworden. Bij domeinoverstijgende
+een onderdeel van de domeinkennis is geworden. Bij domein overstijgende
 harmonisatie wordt het dan moeilijk om modellen met elkaar te vergelijken en op
 basis daarvan gegevens uit te wisselen. Beschrijving van het metamodel is daarom
 een randvoorwaarde indien er sprake is van een stelsel van samenhangende
@@ -312,18 +312,18 @@ zoals de OMG zelf heeft op gesteld voor het Ontology Definition Metamodel [[!ODM
 
 Zowel het metamodel als informatiemodellen kan worden uitgedrukt in Linked Data.
 Registraties en afnemers hiervan kunnen deze gebruiken voor de inrichting van
-hun situatiespecifieke gegevenshuishouding. Belangrijk is dat de lezer eerst
+hun situatie specifieke gegevenshuishouding. Belangrijk is dat de lezer eerst
 begrijpt wat we onder een informatiemodel en een metamodel verstaan en verder is
 het van belang de modellen in de juiste context te plaatsen. Dit laatste doen we
 aan de hand van de W3c open standaarden voor het specificeren van een ontologie.
 
-Ook geeft Linked Data een specifieke invulling aan de niveau's waarin we informatiemodellen beschrijven:
+Ook geeft Linked Data een specifieke invulling aan de niveaus waarin we informatiemodellen beschrijven:
 
 1. **Niveau 1: model van begrippen** wordt in Linked Data uitgedrukt met behulp van vooral de SKOS vocabulaire.
-2. **Niveau 2: conceptueel informatiemodel** wordt in Linked Data uitgedrukt met behulp van een metamodel vocabulaire. Deze vocabulaire, het metamodel van het informatiemodel, kan een eigen vocabulaire zijn (zoals de MIM-vocabulaire) of uitgaan van de bestaande vocabularies. In deze laatste situatie, is het conceptueel informatiemodel ook direct een logisch informatiemodel.
+2. **Niveau 2: conceptueel informatiemodel** wordt in Linked Data uitgedrukt met behulp van een metamodel vocabulaire. Deze vocabulaire, het metamodel van het informatiemodel, kan een eigen vocabulaire zijn (zoals de MIM-vocabulaire) of uitgaan van de bestaande vocabulaires. In deze laatste situatie, is het conceptueel informatiemodel ook direct een logisch informatiemodel.
 3. **Niveau 3: logisch informatiemodel** wordt in Linked Data uitgedrukt met behulp van de standaard vocabulaires RDF/RDFS ([[RDF11-PRIMER]]), OWL ([[OWL2-PRIMER]]) en [[SHACL]]. Daarbij geldt dat dit logisch informatiemodel OOK een conceptueel informatiemodel is. Doordat in Linked Data de representatie van informatie is gestandaardiseerd op basis van het RDF model, is er feitelijk geen of nauwelijks verschil tussen het conceptueel of logisch informatiemodel.
 
-Indien een MIM model wordt getypeerd als "logisch informatiemodel" dan kan dit model slechts zinvol in Linked Data worden uitgedrukt indien bij de opzet van dit model rekening gehouden is met de betekenis die dergelijke modelelementen in de standaard Linked Data vocabularies hebben. Zie hiervoor de bijlage Transformatie van MIM modellen. Voor modellen die zowel een UML als een Linked Data implementatie vereisen, dan kan beter gekozen worden voor het type "conceptueel informatiemodel".
+Indien een MIM model wordt getypeerd als "logisch informatiemodel" dan kan dit model slechts zinvol in Linked Data worden uitgedrukt indien bij de opzet van dit model rekening gehouden is met de betekenis die dergelijke modelelementen in de standaard Linked Data vocabulaires hebben. Zie hiervoor de bijlage Transformatie van MIM modellen. Voor modellen die zowel een UML als een Linked Data implementatie vereisen, dan kan beter gekozen worden voor het type "conceptueel informatiemodel".
 
 **Een ontologie voor het metamodel**
 Met een ontologie bedoelen we een model waarin we betekenis geven aan de termen die
