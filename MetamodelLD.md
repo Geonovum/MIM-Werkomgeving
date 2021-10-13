@@ -664,7 +664,7 @@ Externe packages worden naar de volgende aspecten gespecificeerd:
 
 **Specificatie voor mim:View**
 
-Externe packages worden naar de volgende aspecten gespecificeerd:
+View packages worden naar de volgende aspecten gespecificeerd:
 
 | **Aspect**                   | **Eigenschap** | **Kardinaliteit** | **Datatype of klasse** |
 |------------------------------|----------------|-------------------|--------------|
