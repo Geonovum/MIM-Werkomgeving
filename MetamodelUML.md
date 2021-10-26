@@ -8,16 +8,17 @@ De eerste paragraaf bevat diagrammen, in UML. Elk diagram geeft een aantal model
 Het geheel van diagrammen, in samenhang, is opgenomen in de bijlage [Template naamgeving conventies](#template-naamgeving-conventies).
 
 Uitgangspunten voor het metamodel in UML zijn:
+
 - UML 2.5 vormt de basis voor de conceptuele beschrijving.
 - Gebruik te maken van de bestaande UML-modelelementen conform UML van OMG. OMG noemt dit een UML metaclass. Een voorbeeld hiervan is
-UML-Class.
+  UML-Class.
 - Daar waar (semantisch) nodig extensiemechanismen toe te passen met
-behoud van de betekenis van de UML-metaclasses. Het modelelement is dan een MIM
-metaclass. Hoe deze zich verhouden tot UML is weergegeven in de bijlage.
+  behoud van de betekenis van de UML-metaclasses. Het modelelement is dan een MIM
+  metaclass. Hoe deze zich verhouden tot UML is weergegeven in de bijlage.
 - Modelelementen hebben één stereotype. Daarnaast hebben twee verschillende
-stereotypen nooit dezelfde betekenis. Stereotypes worden toegepast als er een
-verbijzondering van een UML constructie nodig is met behoud van de betekenis van
-de UML-metaclass.
+  stereotypen nooit dezelfde betekenis. Stereotypes worden toegepast als er een
+  verbijzondering van een UML constructie nodig is met behoud van de betekenis van
+  de UML-metaclass.
 
 Elk modelelement heeft een MIM metaclass. Deze wordt in UML in een
 informatiemodel gemodelleerd als een extensie van een Metaclass van UML 2.5 en een bijbehorende
@@ -26,6 +27,8 @@ stereotype.
 <aside class='example'>
 Het MIM modelelement Objecttype wordt gemodelleerd als een UML-Class met
 stereotype «Objecttype».
+
+
 
 Niet alle MIM metaclasses hebben een stereotype (nodig). In de kolom staat dan ‘-‘.
 </aside>
@@ -107,6 +110,7 @@ View 3a: Constraint
 *Keuze*
 Er zijn vier situaties waarin een keuze toegepast wordt:
 Keuze tussen:
+
 - datatypen
 - attribuutsoorten binnen een objecttype
 - attribuutsoorten binnen een attribuutsoort
@@ -176,11 +180,11 @@ View 3c: Groepering
 ![](media/PackagesZonderMetagegevens.png)
 
 | **MIM metaclass**     | **Stereotype**    | **Metaclass UML 2.5** |      | **In EA** | **In ...** |
-| --------------------- | ----------------- | --------------------- | ---- | --------- | ------ |
-| Informatiemodel       | «Informatiemodel» | (UML) Package         |      | Package   |        |
-| Domein (het eigen IM) | «Domein»          | (UML) Package         |      | Package   |        |
-| Extern                | «Extern»          | (UML) Package         |      | Package   |        |
-| View                  | «View»            | (UML) Package         |      | Package   |        |
+| --------------------- | ----------------- | --------------------- | ---- | --------- | ---------- |
+| Informatiemodel       | «Informatiemodel» | (UML) Package         |      | Package   |            |
+| Domein (het eigen IM) | «Domein»          | (UML) Package         |      | Package   |            |
+| Extern                | «Extern»          | (UML) Package         |      | Package   |            |
+| View                  | «View»            | (UML) Package         |      | Package   |            |
 
 ## Nadere specificatie metagegevens in UML
 
@@ -194,10 +198,11 @@ De alternatieve weergave van de naam.
 *Toelichting*
 
 Verdere toelichting voor UML modellen:
+
 -   De alias is te specificeren voor NamedElements (zoals UML-Class, ML-association, UML-UML-Datatype en
-UML-property). De alias is in UML gespecificeerd bij de metaclass **Element Import]**.
-Element import wordt in UML ingezet voor het importeren van een NamedElement uit een ander package.
-In dit metamodel wordt de alias (nog) niet zo gebruikt.  
+    UML-property). De alias is in UML gespecificeerd bij de metaclass **Element Import]**.
+    Element import wordt in UML ingezet voor het importeren van een NamedElement uit een ander package.
+    In dit metamodel wordt de alias (nog) niet zo gebruikt.  
 
 In Enterprise Architect is de alternatieve weergave aan te zetten in de properties van een Diagram,
 via: use alias if available.
@@ -221,6 +226,8 @@ modelelement.
 - In EA: Aanduiding hoe het metagegeven in Sparx Enterprise Architect (EA) is aangegeven.
 Rode tekst betreft een standaardelement binnen EA. Zwarte tekst in de kolom betreft een uitbreiding op het UML Metamodel, via tagged values of aanvullende stereotypes.
 </pre>
+
+
 
 ### Modellering metagegevens voor objecten en attributen in UML
 
@@ -313,6 +320,7 @@ De gegevensgroeptypen worden naar de volgende aspecten gespecificeerd:
 Het metamodel heeft twee manieren om een relatie tussen twee objecttypen te
 beschrijven. Deze keuze wordt aangegeven in de eigen extensie, zoals beschreven
 in paragraaf [alternatieven](#alternatieven). Alleen het gekozen alternatief is relevant voor de modellering in uw informatiemodel.
+
 - Alternatief 1: Verplichte benoeming van de naam van de relatie met de bijbehorende metagegevens;
 - Alternatief 2: Verplichte benoeming van de rol van de target in een relatie met de bijbehorende metagegevens en optioneel de benoeming van de naam van de relatie.
 
@@ -412,24 +420,26 @@ De generalisaties worden naar het volgende aspect gespecificeerd:
 
 De generalisaties worden naar het volgende aspect gespecificeerd:
 
-| **Aspect**    | **Kardi-naliteit** | **Toelichting**                                              | **In UML 2.5**                                      |      | **In EA**      | **In ...** |
-| ------------- | ------------------ | ------------------------------------------------------------ | --------------------------------------------------- | ---- | -------------- | ---------- |
-| **Naam**      | 0..1               | Algemeen metagegeven.                                        | *name van de metaclass Named element*               |      | *Name*         |            |
-| **Begrip**    | 0..\*              | Algemeen metagegeven.                                        |                                                     |      | *Tagged value* |            |
-| **Alias**     | 0..1               | Algemeen metagegeven.                                        |                                                     |      | *Alias*        |            |
-| **Subtype**   | 1                  | Het datatype dat een specialisatie is van een (ander) datatype. | */source: related Element bij Relationship Element* |      | *Source*       |            |
-| **Supertype** | 1                  | Het datatype dat de generalisatie is van een (ander) datatype. | */target: related Element bij Relationship Element* |      | *Target*       |            |
+| **Aspect**       | **Kardi-naliteit** | **Toelichting**                                              | **In UML 2.5**                                      |      | **In EA**      | **In ...** |
+| ---------------- | ------------------ | ------------------------------------------------------------ | --------------------------------------------------- | ---- | -------------- | ---------- |
+| **Naam**         | 0..1               | Algemeen metagegeven.                                        | *name van de metaclass Named element*               |      | *Name*         |            |
+| **Begrip**       | 0..\*              | Algemeen metagegeven.                                        |                                                     |      | *Tagged value* |            |
+| **Alias**        | 0..1               | Algemeen metagegeven.                                        |                                                     |      | *Alias*        |            |
+| **Subtype**      | 1                  | Het datatype dat een specialisatie is van een (ander) datatype. | */source: related Element bij Relationship Element* |      | *Source*       |            |
+| **Supertype**    | 1                  | Het datatype dat de generalisatie is van een (ander) datatype. | */target: related Element bij Relationship Element* |      | *Target*       |            |
+| **Datum opname** | 1                  | Algemeen metagegeven                                         |                                                     |      | *Tagged value* |            |
 
 **Specificatie voor «Relatieklasse»**
 
 De relatieklassen worden naar de volgende aspecten gespecificeerd:
 
-| **Aspect**    | **Kardi-naliteit** | **Toelichting**       | **In UML 2.5**                        |      | **In EA**      |      |
-| ------------- | ------------------ | --------------------- | ------------------------------------- | ---- | -------------- | ---- |
-| **Naam**      | 1                  | Algemeen metagegeven. | *name van de metaclass Named element* |      | *Name*         |      |
-| **Begrip**    | 0..\*              | Algemeen metagegeven. |                                       |      | *Tagged value* |      |
-| **Alias**     | 0..1               | Algemeen metagegeven. |                                       |      | *Alias*        |      |
-| **Definitie** | 1                  | Algemeen metagegeven. | *Body van de metaclass Comment*       |      | *Notes*        |      |
+| **Aspect**       | **Kardi-naliteit** | **Toelichting**       | **In UML 2.5**                        |      | **In EA**      |      |
+| ---------------- | ------------------ | --------------------- | ------------------------------------- | ---- | -------------- | ---- |
+| **Naam**         | 1                  | Algemeen metagegeven. | *name van de metaclass Named element* |      | *Name*         |      |
+| **Begrip**       | 0..\*              | Algemeen metagegeven. |                                       |      | *Tagged value* |      |
+| **Alias**        | 0..1               | Algemeen metagegeven. |                                       |      | *Alias*        |      |
+| **Definitie**    | 1                  | Algemeen metagegeven. | *Body van de metaclass Comment*       |      | *Notes*        |      |
+| **Datum opname** | 1                  | Algemeen metagegeven. |                                       |      | *Tagged value* |      |
 
 **Specificatie voor «Externe koppeling»**
 
@@ -550,6 +560,8 @@ De data-elementen worden naar de volgende aspecten gespecificeerd:
 | **- Patroon**                               | 0..1               | Algemeen metagegeven. |                                                              |      | *Tagged value* |            |
 | **- Formeel patroon**                       | 0..1               | Algemeen metagegeven. |                                                              |      | *Tagged value* |            |
 | **Kardinaliteit**                           | 1                  | Algemeen metagegeven. | *lowerValue en upperValue van de metaclass MultiplicityElement* |      | *Multiplicity* |            |
+
+
 
 **Specificatie voor «Keuze»**
 
