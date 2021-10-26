@@ -29,6 +29,7 @@ Het MIM modelelement Objecttype wordt gemodelleerd als een UML-Class met
 stereotype «Objecttype».
 
 
+
 Niet alle MIM metaclasses hebben een stereotype (nodig). In de kolom staat dan ‘-‘.
 </aside>
 
@@ -227,6 +228,7 @@ Rode tekst betreft een standaardelement binnen EA. Zwarte tekst in de kolom betr
 </pre>
 
 
+
 ### Modellering metagegevens voor objecten en attributen in UML
 
 
@@ -418,13 +420,14 @@ De generalisaties worden naar het volgende aspect gespecificeerd:
 
 De generalisaties worden naar het volgende aspect gespecificeerd:
 
-| **Aspect**    | **Kardi-naliteit** | **Toelichting**                                              | **In UML 2.5**                                      |      | **In EA**      | **In ...** |
-| ------------- | ------------------ | ------------------------------------------------------------ | --------------------------------------------------- | ---- | -------------- | ---------- |
-| **Naam**      | 0..1               | Algemeen metagegeven.                                        | *name van de metaclass Named element*               |      | *Name*         |            |
-| **Begrip**    | 0..\*              | Algemeen metagegeven.                                        |                                                     |      | *Tagged value* |            |
-| **Alias**     | 0..1               | Algemeen metagegeven.                                        |                                                     |      | *Alias*        |            |
-| **Subtype**   | 1                  | Het datatype dat een specialisatie is van een (ander) datatype. | */source: related Element bij Relationship Element* |      | *Source*       |            |
-| **Supertype** | 1                  | Het datatype dat de generalisatie is van een (ander) datatype. | */target: related Element bij Relationship Element* |      | *Target*       |            |
+| **Aspect**       | **Kardi-naliteit** | **Toelichting**                                              | **In UML 2.5**                                      |      | **In EA**      | **In ...** |
+| ---------------- | ------------------ | ------------------------------------------------------------ | --------------------------------------------------- | ---- | -------------- | ---------- |
+| **Naam**         | 0..1               | Algemeen metagegeven.                                        | *name van de metaclass Named element*               |      | *Name*         |            |
+| **Begrip**       | 0..\*              | Algemeen metagegeven.                                        |                                                     |      | *Tagged value* |            |
+| **Alias**        | 0..1               | Algemeen metagegeven.                                        |                                                     |      | *Alias*        |            |
+| **Subtype**      | 1                  | Het datatype dat een specialisatie is van een (ander) datatype. | */source: related Element bij Relationship Element* |      | *Source*       |            |
+| **Supertype**    | 1                  | Het datatype dat de generalisatie is van een (ander) datatype. | */target: related Element bij Relationship Element* |      | *Target*       |            |
+| **Datum opname** | 1                  | Algemeen metagegeven                                         |                                                     |      | *Tagged value* |            |
 
 **Specificatie voor «Relatieklasse»**
 
