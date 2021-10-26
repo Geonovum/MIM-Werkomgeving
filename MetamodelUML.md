@@ -433,12 +433,13 @@ De generalisaties worden naar het volgende aspect gespecificeerd:
 
 De relatieklassen worden naar de volgende aspecten gespecificeerd:
 
-| **Aspect**    | **Kardi-naliteit** | **Toelichting**       | **In UML 2.5**                        |      | **In EA**      |      |
-| ------------- | ------------------ | --------------------- | ------------------------------------- | ---- | -------------- | ---- |
-| **Naam**      | 1                  | Algemeen metagegeven. | *name van de metaclass Named element* |      | *Name*         |      |
-| **Begrip**    | 0..\*              | Algemeen metagegeven. |                                       |      | *Tagged value* |      |
-| **Alias**     | 0..1               | Algemeen metagegeven. |                                       |      | *Alias*        |      |
-| **Definitie** | 1                  | Algemeen metagegeven. | *Body van de metaclass Comment*       |      | *Notes*        |      |
+| **Aspect**       | **Kardi-naliteit** | **Toelichting**       | **In UML 2.5**                        |      | **In EA**      |      |
+| ---------------- | ------------------ | --------------------- | ------------------------------------- | ---- | -------------- | ---- |
+| **Naam**         | 1                  | Algemeen metagegeven. | *name van de metaclass Named element* |      | *Name*         |      |
+| **Begrip**       | 0..\*              | Algemeen metagegeven. |                                       |      | *Tagged value* |      |
+| **Alias**        | 0..1               | Algemeen metagegeven. |                                       |      | *Alias*        |      |
+| **Definitie**    | 1                  | Algemeen metagegeven. | *Body van de metaclass Comment*       |      | *Notes*        |      |
+| **Datum opname** | 1                  | Algemeen metagegeven. |                                       |      | *Tagged value* |      |
 
 **Specificatie voor «Externe koppeling»**
 
