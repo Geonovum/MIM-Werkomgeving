@@ -799,12 +799,16 @@ In dit voorbeeld vormt BetalingskenmerkOfOmschrijving de *Keuze* als geheel. De 
 Er is sprake van een relatiesoort R0 en aanvullend hierbij een keuze tussen relatiedoel D1 of relatiedoel D2. In MIM modelleren we daarom een keuze tussen de 2 relatiedoelen D1 en D2. Het maken van deze keuze is verplicht.
 
 <aside class='example'>
-Voorbeeld: een objecttype "Vervoersmiddel" heeft een eigenaar. Dit kan een persoon zijn, of een bedrijf, maar niet beiden. Er is sprake van één eigenaar" en een keuze tussen relatiedoel persoon (naar objecttype Persoon) en relatiedoel bedrijf (naar objecttype Bedrijf). We modelleren daarom 1 *Relatiesoort* eigenaar en aanvullend met een *Keuze* PersoonOfBedrijf met twee relatiedoelen, een naar persoon en een naar bedrijf.  
+Voorbeeld: een objecttype "Vervoermiddel" heeft een eigenaar. Dit kan een persoon zijn, of een bedrijf, maar niet beiden. Er is sprake van één eigenaar" en een keuze tussen relatiedoel persoon (naar objecttype Persoon) en relatiedoel bedrijf (naar objecttype Bedrijf). We modelleren daarom 1 *Relatiesoort* eigenaar en aanvullend met een *Keuze* EigenaarKeuze met twee relatiedoelen, een naar persoon en een naar bedrijf.  
 </aside>
  
-Het is bij deze use case niet de bedoeling om twee nieuwe relatiesoorten, eigenaar_persoon en eigenaar_bedrijf, te introduceren en al zeker niet om de relatiesoort eigenaar kwijt te raken. We modelleren daarom 1 relatiesoort met de naam eigenaar en een *Keuze* tussen relatiedoelen. 
+Het is bij deze use case niet de bedoeling om twee nieuwe relatiesoorten, eigenaar_persoon en eigenaar_bedrijf, te introduceren en al zeker niet om de relatiesoort eigenaar kwijt te raken. We modelleren daarom 1 relatiesoort met de naam eigenaar en een *Keuze* tussen relatiedoelen.
 
-In het voorbeeld vormen PersoonOfBedrijf en de twee relatiedoelen tezamen de keuze als geheel. De relatiedoelen zelf zijn de keuze mogelijkheden. De modellering van de relatiesoort eigenaar blijft hetzelfde en behoort niet tot de modellering van de metaclass keuze.   
+![](media/relatiedoelkeuze.png)
+
+Diagram: Voorbeeld van keuze tussen relatiedoelen uitgwerkt in een UML diagram.
+
+In het voorbeeld vormen EigenaarKeuze en de twee relatiedoelen tezamen de keuze als geheel. De relatiedoelen zelf zijn de keuze mogelijkheden. De modellering van de relatiesoort eigenaar blijft hetzelfde en behoort niet tot de modellering van de metaclass keuze.   
 
 ## Specificatie metagegevens 
 
