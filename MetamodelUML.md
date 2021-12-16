@@ -358,6 +358,7 @@ De relatiesoorten worden naar de volgende aspecten gespecificeerd.
 | **Authentiek√**                   | 1                  | Algemeen metagegeven. |                                                              |      | *Tagged value*                                               |            |
 | **Indicatie afleidbaar**          | 1                  | Algemeen metagegeven. | *isDerived bij UML metaclass Assocation*                     |      | *isDerived*                                                  |            |
 | **Mogelijk geen waarde**          | 1                  | Algemeen metagegeven. |                                                              |      | *Tagged value*                                               |            |
+| **Identificerend**                | 0..1               | Algemeen metagegeven. |                                                              |      | *Tagged value*|                     |
 
 **Specificatie voor «Relatierol»**
 
@@ -406,6 +407,7 @@ aspecten gespecificeerd.
 | **Authentiek√ \***                | 1                  | Algemeen metagegeven. |                                                              |      | *Tagged value* |            |
 | **Mogelijk geen waarde**          | 1                  | Algemeen metagegeven. |                                                              |      | *Tagged value* |            |
 | **Toelichting√ \***               | 0..1               | Algemeen metagegeven. |                                                              |      | *Tagged value* |            |
+| **Identificerend**                | 0..1               | Algemeen metagegeven. | *isID bij de metaclass Property*                             |      | *Tagged value* |            |
 
 **Specificatie voor «Generalisatie» tussen objecttypes**
 
@@ -455,7 +457,7 @@ Externe koppelingen worden naar de volgende aspecten gespecificeerd.
 | **Relatie eigenaar** | 1                  | Algemeen metagegeven.                      | */source: related Element bij Relationship Element* |      | *Source*                                                     |            |
 | **Relatie doel**     | 1                  | Algemeen metagegeven.                      | */target: related Element bij Relationship Element* |      | *Target*                                                     |            |
 | **Aggregatietype**   | 1                  | Algemeen metagegeven.                      | *AggregationKind bij metaclass Property*            |      | *Aggregation van de source role met waarde composite of shared* |            |
-
+| **Identificerend**   | 0..1               | Algemeen metagegeven.                      |                                                     |      | *Tagged value*         |            |
 
 ### Specificatie metagegevens voor waardenlijsten
 
@@ -491,7 +493,7 @@ De referentie-elementen worden naar de volgende aspecten gespecificeerd:
 | **- Patroon**                               | 0..1               | Algemeen metagegeven. |                                                              |      | *Tagged value*                       |            |
 | **- Formeel patroon**                       | 0..1               | Algemeen metagegeven. |                                                              |      | *Tagged value*                       |            |
 | **Kardinaliteit**                           | 1                  | Algemeen metagegeven. | *lowerValue en upperValue van de metaclass Multiplicity Element* |      | *Multiplicity van de de target role* |            |
-| **Identificerend**                          | 0..1               | Algemeen metagegeven. | *isID van de metaclass Property*                             |      | *isID bij de betreffende class*      |            |
+| **Identificerend**                          | 0..1               | Algemeen metagegeven. | *isID van de metaclass Property*                             |      | *isID*      |            |
 | **Toelichting**                             | 0..1               | Algemeen metagegeven. |                                                              |      | *Tagged value*                       |            |
 
 **Specificatie voor «codeList»**

@@ -1067,7 +1067,7 @@ geïnspireerd is door een andere definitie, of de andere definitie daadwerkelijk
 dermate herdefinieerd dat de oorspronkelijke definitie niet meer van toepassing
 is.
 
-Het gaat erom dat het voor gebruikers helder is hoe informatie die aan dit
+Het gaat erom dat het voor gebruikers helder is hoe informatie die aan dit 
 informatiemodel voldoet zich verhoudt tot informatie die aan het andere
 informatiemodel voldoet. Het metagegeven *herkomst definitie* schept hier
 duidelijkheid in.
@@ -1089,17 +1089,16 @@ overig.
 #### Metagegeven: **Identificerend**
 
 >   **Definitie Identificerend**  
->   Een kenmerk van een objecttype die aangeeft of deze eigenschap uniek
->   identificerend is voor alle objecten in de populatie van objecten van dit
->   objecttype.
+>	Een aanduiding dat een kenmerk of een combinatie van kenmerken van een
+>	objecttype uniek identificerend is voor alle objecten in de populatie van
+>	objecten van dit objecttype, of de aanduiding dat een referentie element
+>	uniek identificerend is voor alle lijst items in een referentielijst.
 
-*Toelichting:* objecten hebben, of krijgen, in een administratie of
-gegevensvoorziening vaak één identificerend kenmerk. Het kan ook zijn dat een
-aantal kenmerken in combinatie identificerend zijn, zoals twee attribuutsoorten
-of een attribuutsoort en een relatiesoort. De combinatie met een relatiesoort
-wordt alleen gedaan voor objecttypes die zelf geen unieke aanduiding hebben en
-daarom deze moeten samenstellen met de unieke aanduiding van een gerelateerde
-objecttype.
+Toelichting: objecten hebben, of krijgen, in een administratie of gegevensvoorziening vaak één identificerend kenmerk. Het kan ook zijn dat een aantal kenmerken in combinatie identificerend zijn, zoals twee attribuutsoorten of een attribuutsoort en een relatiesoort. De combinatie met een relatiesoort wordt alleen gedaan voor objecttypes die zelf geen unieke aanduiding hebben en daarom deze moeten samenstellen met de unieke aanduiding van een gerelateerde objecttype.
+
+Referentielijsten is het enige type waardelijst die dit metagegeven kan hebben, omdat de enumeratie zelf identificerend is en de uniek identificerende code van een codelijst zich buiten het informatiemodel bevindt.
+
+Toepassing: attribuutsoort, alle relaties (relatiesoort, relatierol, relatieklasse, externe koppeling), referentie element.
 
 #### Metagegeven: **Indicatie materiële historie**
 
