@@ -336,7 +336,7 @@ vastgelegd, dan is de metadata hierbij wel verplicht.
 
 **Specificatie voor «Relatiesoort»**
 
-De relatiesoorten worden naar de volgende aspecten gespecificeerd.
+De relatiesoorten worden naar de volgende aspecten gespecificeerd:
 
 | **Aspect**                        | **Kardi-naliteit** | **Toelichting**       | **In UML 2.5**                                               |      | **In  EA**                                                   | **In ...** |
 | --------------------------------- | ------------------ | --------------------- | ------------------------------------------------------------ | ---- | ------------------------------------------------------------ | ---------- |
@@ -362,7 +362,7 @@ De relatiesoorten worden naar de volgende aspecten gespecificeerd.
 
 **Specificatie voor «Relatierol»**
 
-Voor relatierollen worden naar de volgende aspecten gespecificeerd.
+Voor relatierollen worden naar de volgende aspecten gespecificeerd:
 
 | **Aspect**    | **Kardi-naliteit** | **Toelichting**       | **In UML 2.5**                       |      | **In EA**      | **In ...** |
 | ------------- | ------------------ | --------------------- | ------------------------------------ | ---- | -------------- | ---------- |
@@ -378,7 +378,7 @@ de metagegevens en optioneel de benoeming van de naam van de relatie.
 
 **Specificatie voor «Relatiesoort»**
 
-De relatiesoorten worden naar de volgende aspecten gespecificeerd.
+De relatiesoorten worden naar de volgende aspecten gespecificeerd:
 
 | **Aspect**    | **Kardi-naliteit** | **Toelichting**       | **In UML 2.5**                       |      | **In EA**      | **In ...** |
 | ------------- | ------------------ | --------------------- | ------------------------------------ | ---- | -------------- | ---------- |
@@ -390,7 +390,7 @@ De relatiesoorten worden naar de volgende aspecten gespecificeerd.
 **Specificatie voor «Relatierol»**
 
 Voor relatierol worden bij de target rol van een relatiesoort de volgende
-aspecten gespecificeerd.
+aspecten gespecificeerd:
 
 | **Aspect**                        | **Kardi-naliteit** | **Toelichting**       | **In UML 2.5**                                               |      | **In EA**      | **In ...** |
 | --------------------------------- | ------------------ | --------------------- | ------------------------------------------------------------ | ---- | -------------- | ---------- |
@@ -433,6 +433,8 @@ De generalisaties worden naar het volgende aspect gespecificeerd:
 
 **Specificatie voor «Relatieklasse»**
 
+WAS in MIM 1.0
+
 De relatieklassen worden naar de volgende aspecten gespecificeerd:
 
 | **Aspect**       | **Kardi-naliteit** | **Toelichting**       | **In UML 2.5**                        |      | **In EA**      |      |
@@ -443,9 +445,39 @@ De relatieklassen worden naar de volgende aspecten gespecificeerd:
 | **Definitie**    | 1                  | Algemeen metagegeven. | *Body van de metaclass Comment*       |      | *Notes*        |      |
 | **Datum opname** | 1                  | Algemeen metagegeven. |                                       |      | *Tagged value* |      |
 
+
+WORDT in MIM 1.1
+
+De metaklasse Relatieklasse is een specialisatie van de metaklasse Relatiesoort en overerft alle metagegevens.
+
+| **Aspect**                        | **Kardi-naliteit** | **Toelichting**       | **In UML 2.5**                                               |      | **In  EA**                                                   | **In ...** |
+| --------------------------------- | ------------------ | --------------------- | ------------------------------------------------------------ | ---- | ------------------------------------------------------------ | ---------- |
+| **Naam√**                         | 1                  | Algemeen metagegeven. | *name van metaclass Named element*                           |      | *Name*                                                       |            |
+| **Begrip**                        | 0..\*              | Algemeen metagegeven. |                                                              |      | *Tagged value*                                               |            |
+| **Alias**                         | 0..1               | Algemeen metagegeven. |                                                              |      | *Alias*                                                      |            |
+| **Unidirectioneel**               | 1                  | Algemeen metagegeven. |                                                              |      | *Direction van de betreffende assiciation (van source naar target)* |            |
+| **Relatie eigenaar**              | 1                  | Algemeen metagegeven. | */source: related Element bij Relationship Element*          |      | *Source*                                                     |            |
+| **Relatie doel**                  | 1                  | Algemeen metagegeven. | */target: related Element bij Relationship Element*          |      | *Target*                                                     |            |
+| **Aggregatietype**                | 1                  | Algemeen metagegeven. | *AggregationKind bij metaclass Property*                     |      | *Aggregation van de source role met waarde composite of shared* |            |
+| **Kardinaliteit√**                | 1                  | Algemeen metagegeven. | *lowerValue en upperValue van de metaclass MultiplicityElement* |      | *Multiplicity van de target role*                            |            |
+| **Herkomst**                      | 1                  | Algemeen metagegeven. |                                                              |      | *Tagged value*                                               |            |
+| **Definitie√**                    | 1                  | Algemeen metagegeven. | *Body van de metaclass Comment*                              |      | *Notes*                                                      |            |
+| **Toelichting√**                  | 0..1               | Algemeen metagegeven. |                                                              |      | *Tagged value*                                               |            |
+| **Herkomst definitie√**           | 1                  | Algemeen metagegeven. |                                                              |      | *Tagged value*                                               |            |
+| **Datum opname**                  | 1                  | Algemeen metagegeven. |                                                              |      | *Tagged value*                                               |            |
+| **Indicatie materiële historie√** | 1                  | Algemeen metagegeven. |                                                              |      | *Tagged value*                                               |            |
+| **Indicatie formele historie√**   | 1                  | Algemeen metagegeven. |                                                              |      | *Tagged value*                                               |            |
+| **Authentiek√**                   | 1                  | Algemeen metagegeven. |                                                              |      | *Tagged value*                                               |            |
+| **Indicatie afleidbaar**          | 1                  | Algemeen metagegeven. | *isDerived bij UML metaclass Assocation*                     |      | *isDerived*                                                  |            |
+| **Mogelijk geen waarde**          | 1                  | Algemeen metagegeven. |                                                              |      | *Tagged value*                                               |            |
+| **Identificerend**                | 0..1               | Algemeen metagegeven. |                                                              |      | *Tagged value*|                     |
+
+
+
+
 **Specificatie voor «Externe koppeling»**
 
-Externe koppelingen worden naar de volgende aspecten gespecificeerd.
+Externe koppelingen worden naar de volgende aspecten gespecificeerd:
 
 | **Aspect**           | **Kardi-naliteit** | **Toelichting**                            | **In UML 2.5**                                      |      | **In EA**                                                    | **In ...** |
 | -------------------- | ------------------ | ------------------------------------------ | --------------------------------------------------- | ---- | ------------------------------------------------------------ | ---------- |
