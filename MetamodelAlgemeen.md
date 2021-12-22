@@ -661,7 +661,25 @@ primitief datatype.
 >   **Definitie Package**  
 >   Een package is een benoemde en begrensde verzameling/groepering van modelelementen.
 
-Er zijn verschillende modelelementen die een package zijn: 
+Er zijn verschillende modelelementen van het type package:
+- Informatiemodel
+- Domein
+- Extern
+- View
+
+In een informatiemodel package mogen alleen domein of view packages opgenomen worden. Beide kunnen meertallig voorkomen en de volgorde is hierbij niet van belang. Een extern package bevindt zich buiten het package informatiemodel.
+
+In een domein, view of extern package mogen de volgende MIM-elementen worden opgenomen:
+
+- Objecttype
+- Gegevensgroeptype
+- Datatype (alle varianten)
+- Relatieklasse
+- Keuze
+
+De volgorde is hierbij niet van belang.
+
+De verschillende package-typen worden hier beneden uitgelegd.
 
 #### Informatiemodel
 
@@ -1112,8 +1130,8 @@ objecttype.
 Bijvoorbeeld: Ja. Met te bevragen wordt bedoeld, er wordt historie bijgehouden
 op enerlei wijze, welke op enerlei wijze te bevragen is.
 
-De in te vullen waarde komt uit: zie Tagged values en waardenbereik tagged
-values.
+De in te vullen waarde komt uit: zie [Tagged values en waardenbereik tagged
+values.](#toegestane-waarden-voor-bepaalde-metadata-gegevens)
 
 Materiële historie geeft aan wanneer een verandering is opgetreden in de werkelijkheid die heeft
 geleid tot verandering van de attribuutwaarde. Verdere toelichting,
@@ -1133,8 +1151,8 @@ objecttype.
 Bijvoorbeeld: Nee. Met te bevragen wordt bedoeld, er wordt historie bijgehouden
 op enerlei wijze, welke op enerlei wijze te bevragen is.
 
-De in te vullen waarde komt uit: zie Tagged values en waardenbereik tagged
-values.
+De in te vullen waarde komt uit: zie [Tagged values en waardenbereik tagged
+values.](#toegestane-waarden-voor-bepaalde-metadata-gegevens)
 
 Formele historie geeft aan wanneer in de administratie een verandering bekend
 is, en is verwerkt. Verdere toelichting, zie het hoofdstuk [Afspraken &Regels](#afspraken-regels).
@@ -1196,8 +1214,8 @@ inwinningsprocessen en wettelijk regelingen. Authentieke gegevens moeten door
 alle overheidsinstellingen verplicht en zonder nader onderzoek, worden gebruikt
 bij de uitvoering van publiekrechtelijke taken.
 
-De in te vullen waarde komt uit: zie Tagged values en waardenbereik tagged
-values.
+De in te vullen waarde komt uit: zie [Tagged values en waardenbereik tagged
+values.](#toegestane-waarden-voor-bepaalde-metadata-gegevens)
 
 *Toepassing*: alle modelelementen die een kenmerk (kunnen) zijn van een
 objecttype.
@@ -1240,8 +1258,8 @@ Praktisch gezien kan vervolgens gekozen worden om de onderliggende objecttypen n
 op te nemen, en slechts dit aspect op te nemen. Ook kan, in combinatie met **indicatie afleidbaar**
 dit aspect afgeleid worden uit het meest concrete objecttype, indien dergelijke objecttypen wel zijn gemodelleerd.
 
-De in te vullen waarde komt uit: zie Tagged values en waardenbereik tagged
-values.
+De in te vullen waarde komt uit: zie [Tagged values en waardenbereik tagged
+values.](#toegestane-waarden-voor-bepaalde-metadata-gegevens)
 
 *Toepassing*: attribuutsoort.
 
