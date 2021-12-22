@@ -1111,8 +1111,8 @@ Toepassing: attribuutsoort, alle relaties (relatiesoort, relatierol, relatieklas
 Bijvoorbeeld: Ja. Met te bevragen wordt bedoeld, er wordt historie bijgehouden
 op enerlei wijze, welke op enerlei wijze te bevragen is.
 
-De in te vullen waarde komt uit: zie Tagged values en waardenbereik tagged
-values.
+De in te vullen waarde komt uit: zie [Tagged values en waardenbereik tagged
+values](#toegestane-waarden-voor-bepaalde-metadata-gegevens)
 
 Materiële historie geeft aan wanneer een verandering is opgetreden in de werkelijkheid die heeft
 geleid tot verandering van de attribuutwaarde. Verdere toelichting,
@@ -1132,8 +1132,8 @@ objecttype.
 Bijvoorbeeld: Nee. Met te bevragen wordt bedoeld, er wordt historie bijgehouden
 op enerlei wijze, welke op enerlei wijze te bevragen is.
 
-De in te vullen waarde komt uit: zie Tagged values en waardenbereik tagged
-values.
+De in te vullen waarde komt uit: zie [Tagged values en waardenbereik tagged
+values](#.
 
 Formele historie geeft aan wanneer in de administratie een verandering bekend
 is, en is verwerkt. Verdere toelichting, zie het hoofdstuk [Afspraken &Regels](#afspraken-regels).
