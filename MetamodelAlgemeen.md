@@ -667,7 +667,7 @@ Er zijn verschillende modelelementen van het type package:
 - Extern
 - View
 
-In een informatiemodel package mogen alleen domein, view of extern packages opgenomen worden. De volgorde is hierbij niet van belang.
+In een informatiemodel package mogen alleen domein of view packages opgenomen worden. Beide kunnen meertallig voorkomen en de volgorde is hierbij niet van belang. Een extern package bevindt zich buiten het package informatiemodel.
 
 In een domein, view of extern package mogen de volgende MIM-elementen worden opgenomen:
 
