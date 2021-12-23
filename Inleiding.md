@@ -245,7 +245,7 @@ als mogelijk gegenereerd uit het logisch informatiemodel.
 
 Dit niveau is **niet** in scope van MIM. 
 
-De volgende opmerkingen worden nog gemaakt bij de onderkende niveaus:
+**Een aantal aanvullende opmerkingen bij de onderkende niveaus**
 
 - In algemeenheid geldt dat het begrijpen van onderwerpen of dingen die een rol spelen in een 'universe of discourse' altijd vooraf gaat aan de modellering ervan, welk niveau deze modellering ook betreft en welke niveau je besluit of wel of niet toe te passen. Je kan bijvoorbeeld besluiten om wel of niet begrippen te definiëren of te modelleren. Wanneer je dit wel doet, dan is het erg nuttig om de definitie van het begrip te gebruiken als input voor het maken van het informatiemodel en vanuit het informatiemodel een link te leggen naar het begrip. Let wel, de definities op beide niveaus zijn niet altijd hetzelfde. De definitie in het informatiemodel moet soms preciezer zijn om preciezer de betekenis van de geregistreerde of uitgewisselde data te definiëren (informatie = data + betekenis).
 - MIM geeft niet normatief een volgorde of werkwijze aan voor de invulling van de 4 niveaus en schrijft de invulling van niveau 1 en 4 ook niet voor. Wel is de aanbeveling om geen niveaus over te slaan.
