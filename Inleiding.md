@@ -166,12 +166,13 @@ te weten niveau 2 en 3. Hieronder worden de niveaus nader toegelicht.
 Dit niveau beschrijft de werkelijkheid binnen het beschouwde domein (de ‘universe of discourse’) 
 door middel van de beschrijving van de daarin gehanteerde begrippen en hun relaties tot elkaar. 
 Een begrip wordt ook wel een concept genoemd, iets waar mensen aan denken en over praten. 
-Doel is dat de actoren binnen een domein elkaar begrijpen en één taal spreken. 
-Een model van begrippen wordt opgesteld voor gebruik door mensen, met name ‘de business’. 
 
 Er zijn verschillende manieren om begrippen te beschrijven, zoals in een woordenboek, of in 
 een formele taal of vocabulaire, of in een taxonomie of in een model van begrippen waarin 
 de onderlinge samenhang is aangegeven en er zijn nog andere manieren - maar geen van allen zijn een informatiemodel. 
+
+*Doel is dat de actoren binnen een domein elkaar begrijpen en één taal spreken. 
+Een model van begrippen wordt opgesteld voor gebruik door mensen, met name ‘de business’.*
 
 Ten aanzien van begrippen en informatiemodellen en het verschil hiertussen:
 
@@ -200,7 +201,8 @@ communicatie. Met conceptueel wordt niet bedoeld abstract of hoog over, de besch
 informatie die beschikbaar is zijn heel precies en concreet.
 
 *Een conceptueel informatiemodel wordt opgesteld voor gebruik door mensen,
-zodat ‘de business’ en de ICT-specialisten elkaar (gaan) begrijpen voor wat betreft de informatie die in het domein wordt geregistreerd en/of kan worden uitgewisseld.*
+zodat ‘de business’ en de ICT-specialisten elkaar (gaan) begrijpen voor wat betreft 
+de informatie die in het domein wordt geregistreerd en/of kan worden uitgewisseld.*
 
 Ten aanzien van logische informatiemodellen:
 - Een conceptueel informatiemodel is onafhankelijk van standaarden voor gegevensuitwisseling.
@@ -219,6 +221,7 @@ gaat hierbij, in tegenstelling tot een conceptueel model, dus veel meer om het
 **‘hoe’**. Het slaat de brug tussen werkelijkheid en systemen maar beschrijft nog
 niet de implementatie in die systemen. Een dergelijk model wordt in een formele
 taal beschreven en wordt waar mogelijk gegenereerd vanuit het conceptueel model.  
+
 *Het logisch model wordt opgesteld voor ICT-interoperabiliteit, voor gebruik door
 met name de ontwerpers, bouwers en beheerders van ICT-voorzieningen.*
 
@@ -237,6 +240,7 @@ servicetechnologie zoals [[!xml]], [[!gml]], [[!SOAP]], REST, [[!GeoJSON]],
 berichten ‘verpakt’ worden, het (internet)protocol en de logistiek van het
 berichtenverkeer. De technische specificaties worden over het algemeen zoveel
 als mogelijk gegenereerd uit het logisch informatiemodel.  
+
 *Deze specificaties worden opgesteld voor ‘machines’, te gebruiken door softwareontwikkelaars.*
 
 Dit niveau is **niet** in scope van MIM. 
