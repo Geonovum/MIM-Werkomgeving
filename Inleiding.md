@@ -166,7 +166,6 @@ te weten niveau 2 en 3. Hieronder worden de niveaus nader toegelicht.
 Dit niveau beschrijft de werkelijkheid binnen het beschouwde domein (de ‘universe of discourse’) 
 door middel van de beschrijving van de daarin gehanteerde begrippen en hun relaties tot elkaar. 
 Een begrip wordt ook wel een concept genoemd, iets waar mensen aan denken en over praten. 
-
 Er zijn verschillende manieren om begrippen te beschrijven, zoals in een woordenboek, of in 
 een formele taal of vocabulaire, of in een taxonomie of in een model van begrippen waarin 
 de onderlinge samenhang is aangegeven en er zijn nog andere manieren - maar geen van allen zijn een informatiemodel. 
@@ -186,7 +185,9 @@ zo zijn, begrippen beschrijven een domein vaak veel breder dan een informatiemod
 aangebracht die data gericht is, maar bij het modelleren van begrippen wordt dit nog niet gedaan. 
 De samenhang tussen informatie is hierbij vaak (bewust) beperkter dan de samenhang tussen begrippen.
 
-Dit niveau is **niet** in scope van MIM. 
+Dit niveau is **niet** in scope van MIM. Dit niveau is niet volledig beschreven maar is ter illustratie 
+opgenomen. Er kan meer in zitten dan hier beschreven en er gaat meer aan vooraf. 
+
 
 #### Niveau 2: Conceptueel informatiemodel
 Beschrijft de modellering van de werkelijkheid binnen het beschouwde domein door middel van de 
@@ -212,6 +213,7 @@ Ten aanzien van logische informatiemodellen:
 
 Dit niveau is wel in scope van MIM. 
 
+
 #### Niveau 3: Logisch informatie- of gegevensmodel
 Beschrijft hoe de, in het conceptuele model onderscheiden, concepten gebruikt
 worden bij de interactie tussen systemen en hun gebruikers en tussen systemen
@@ -231,6 +233,7 @@ Ten aanzien van fysieke of technische datamodellen:
 
 Dit niveau is wel in scope van MIM. 
 
+
 #### Niveau 4: Fysiek of technisch gegevens- of datamodel
 Specificeert de structuur en eigenschappen van de technologie waarin de
 informatie wordt vastgelegd of uitgewisseld. Dit is sterk afhankelijk van de
@@ -243,18 +246,14 @@ als mogelijk gegenereerd uit het logisch informatiemodel.
 
 *Deze specificaties worden opgesteld voor ‘machines’, te gebruiken door softwareontwikkelaars.*
 
-Dit niveau is **niet** in scope van MIM. 
+Dit niveau is **niet** in scope van MIM. Dit niveau is niet volledig beschreven maar is ter illustratie 
+opgenomen. Er kan meer in zitten dan hier beschreven en er kan meer na volgen.   
 
 
 #### Aanvullende opmerkingen bij de onderkende niveaus
 
 - In algemeenheid geldt dat het begrijpen van onderwerpen of dingen die een rol spelen in een 'universe of discourse' altijd vooraf gaat aan de modellering ervan, welk niveau deze modellering ook betreft en welke modellen je  besluit om wel of niet toe te maken of op te leveren. 
 - Deze standaard geeft niet normatief een volgorde of werkwijze aan voor de invulling van de 4 niveaus. Je kan bijvoorbeeld besluiten om wel of niet begrippen te definiëren en/of te modelleren. Wanneer je dan later een informatiemodel gaat maken dan is het nuttig om deze hierbij mee te nemen als input en hiermee consistent te blijven. Let wel, de definities op beide niveaus zijn niet altijd hetzelfde. De definitie in het informatiemodel moet soms preciezer zijn om preciezer de betekenis van de geregistreerde of uitgewisselde data te definiëren. 
-- Niveau 1 is niet volledig beschreven, er zit meer in dan hier beschreven en er gaat meer aan vooraf. Deze is ter illustratie opgenomen. 
-- Niveau 4 is niet volledig beschreven, er zit meer in dan hier beschreven. Deze is ter illustratie opgenomen. 
-
-
-Ten aanzien van conceptuele en logische informatiemodellen: 
 - Het voorliggende metamodel voor het modelleren van informatie (MIM) is bedoeld voor niveau 2 en 
 niveau 3: t.b.v. een zuiver conceptueel informatiemodel (2) en t.b.v. een logisch informatiemodel (3). 
 Het moge duidelijk zijn dat het altijd het één of het ander is, conceptueel of logisch. Een combinatie van 
