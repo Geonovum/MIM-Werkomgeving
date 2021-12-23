@@ -185,6 +185,8 @@ zo zijn, begrippen beschrijven een domein vaak veel breder dan een informatiemod
 aangebracht die data gericht is, maar bij het modelleren van begrippen wordt dit nog niet gedaan. 
 De samenhang tussen informatie is hierbij vaak (bewust) beperkter dan de samenhang tussen begrippen.
 
+Dit niveau is **niet** in scope van MIM. 
+
 #### Niveau 2: Conceptueel informatiemodel
 Beschrijft de modellering van de werkelijkheid binnen het beschouwde domein door middel van de 
 beschrijving van welke informatie (data met betekenis en structuur) een rol speelt. 
@@ -206,6 +208,8 @@ Ten aanzien van logische informatiemodellen:
 - Een conceptueel informatiemodel is onafhankelijk van een koppelvlak of keten, oftewel is keten overstijgend.  
   Een logisch informatiemodel is specifiek voor een koppelvlak of keten.
 
+Dit niveau is wel in scope van MIM. 
+
 #### Niveau 3: Logisch informatie- of gegevensmodel
 Beschrijft hoe de, in het conceptuele model onderscheiden, concepten gebruikt
 worden bij de interactie tussen systemen en hun gebruikers en tussen systemen
@@ -222,6 +226,8 @@ Ten aanzien van fysieke of technische datamodellen:
 - Een logisch informatiemodel is implementatie onafhankelijk en kan in naar meerdere technische modellen worden geïmplementeerd.
   Een fysiek of technisch datamodel is afhankelijk van de gekozen techniek of tooling die wordt gebruikt.
 
+Dit niveau is wel in scope van MIM. 
+
 #### Niveau 4: Fysiek of technisch gegevens- of datamodel
 Specificeert de structuur en eigenschappen van de technologie waarin de
 informatie wordt vastgelegd of uitgewisseld. Dit is sterk afhankelijk van de
@@ -232,6 +238,8 @@ berichten ‘verpakt’ worden, het (internet)protocol en de logistiek van het
 berichtenverkeer. De technische specificaties worden over het algemeen zoveel
 als mogelijk gegenereerd uit het logisch informatiemodel.  
 *Deze specificaties worden opgesteld voor ‘machines’, te gebruiken door softwareontwikkelaars.*
+
+Dit niveau is **niet** in scope van MIM. 
 
 De volgende opmerkingen worden nog gemaakt bij de onderkende niveaus:
 
