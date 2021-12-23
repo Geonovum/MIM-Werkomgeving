@@ -144,7 +144,7 @@ domein specifieke terminologie. In MIM wordt dit niveau 1 genoemd en voor MIM is
 niveau 1 buiten scope. Op dit niveau is de notie van welke informatie er geregistreerd 
 en uitgewisseld moet worden nog niet aanwezig of op de achtergrond. Op dit niveau is 
 er nog geen sprake van een informatiemodel, omdat deze modellen kennis modelleren en zich (nog) 
-niet richten op het modelleren van informatie (data en de betekenis hiervan) .
+niet richten op het modelleren van informatie (informatie, zoals bedoeld in [Wat is een informatiemodel](#wat-is-een-informatiemodel)).
 
 Het modelleren van informatie gebeurt in een informatiemodel. Hierin wordt aangegeven welke 
 objecten welke kenmerken/eigenschappen hebben en of deze kenmerken/eigenschappen in het 
