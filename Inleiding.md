@@ -135,7 +135,7 @@ informatiemodel in de registratie op te nemen. Dit is een belangrijk proces, maa
 
 ### Typen informatiemodellen
 Bij het modelleren van een domein zijn er een aantal beschouwingsniveaus, variërend van een zo 
-getrouw mogelijke beschrijving van betekenis van de woorden en termen die mensen gebruiken 
+getrouw mogelijke beschrijving van de betekenis en bedoeling van de woorden en termen die mensen gebruiken 
 als ze het ergens over hebben tot een specificatie van de wijze van registratie en uitwisseling van data.
 
 De modellering van een bepaald domein start in principe met het beschrijven van kennis, 
@@ -150,7 +150,7 @@ Het modelleren van informatie gebeurt in een informatiemodel. Hierin wordt aange
 objecten welke kenmerken/eigenschappen hebben en of deze kenmerken/eigenschappen in het 
 beschouwde domein verplicht zijn of optioneel zijn enzovoorts. Het informatiemodel geeft 
 hierbij aan welke informatie wordt geregistreerd of uitgewisseld kan worden en beschrijft 
-ook niet meer dan dat. In MIM val een informatiemodel onder niveau 2 of 3. MIM richt zich 
+ook niet meer dan dat. In MIM valt een informatiemodel onder niveau 2 of 3. MIM richt zich 
 primair op niveau 2 en 3. Het informatiemodel is hierbij altijd techniek onafhankelijk.
 
 Het informatiemodel kan vervolgens uitgewerkt worden in verschillende soorten technische 
@@ -175,7 +175,9 @@ samenhang tussen begrippen is aangegeven en aan de modelleren van kennis in alge
 
 Ten aanzien van begrippen en informatiemodellen en het verschil hiertussen:
 
-- Een begrip is de combinatie van een term of woord en een definitie. Begrippen worden door mensen gebruikt om mentaal de werkelijkheid te beschouwen en te begrijpen. Een begrip omvat niet de betekenis en structuur van data. 
+- Een begrip is de combinatie van een term of woord en een definitie. Begrippen worden door 
+mensen gebruikt om mentaal de werkelijkheid te beschouwen en te begrijpen. 
+Een begrip omvat niet de betekenis en structuur van data. 
 - Van een aantal begrippen zal later blijken dat het een eigenschap is van een object 
 waarover we informatie zullen gaan bijgehouden, maar dit zal zeker niet voor alle begrippen 
 zo zijn, begrippen beschrijven een domein vaak veel breder dan een informatiemodel dit doet
