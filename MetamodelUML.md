@@ -82,15 +82,6 @@ View 2: Datatypen
 | Referentie element      | «Referentie element»    | (UML) Property           |      | Attribute          |            |
 | Codelijst               | «Codelijst»             | (UML) Datatype           |      | Datatype           |            |
 
-*Nadere specificaties voor datatypen*
-
-Voor enumeraties is geen stereotype gespecificeerd. In het metamodel maken we
-gebruik van de bestaande UML-enumeration (metaclass) voor de specificaties van
-een enumeratie.
-
-Voor enumeratiewaarde is geen stereotype gespecificeerd. In het metamodel maken
-we gebruik van de bestaande UML-enumerationLiteral (metaclass) voor de
-specificaties van een enumeratiewaarde.
 
 ### Overige
 
