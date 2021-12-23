@@ -76,8 +76,9 @@ View 1: De kern van een informatiemodel. Deze bestaat uit de volgende modeleleme
 | Relatieklasse     |
 | Relatierol        |
 | Relatierol doel   |
+| Datatypen         | 
 
-De betekenis van deze modelelementen en de beschrijvingen ervan staat in [Objecttypen en attribuutsoorten](#Objecttypen-en-attribuutsoorten) en in [Relaties](#Relaties).
+De betekenis van deze modelelementen en de beschrijvingen ervan staat in [Objecttypen en attribuutsoorten](#Objecttypen-en-attribuutsoorten) en in [Relaties](#Relaties) en in [Datatypen](#datatypen-0).
 
 In diagramvorm:
 
@@ -153,17 +154,17 @@ In diagramvorm:
 ![](media/KeuzeDatatype1.png)
 Diagram: Keuze tussen datatypen
 
-*Use case 2: Keuze tussen attribuutsoorten*
+*Use case 2: Keuze tussen 2 of meer attribuutsoorten*
 
-Een objecttype of gegevensgroep kan normaal een attribuutsoort hebben met een datatype (de lijn links onder). Als er sprake is van een objecttype met een keuze tussen attribuutsoorten, dan is het objecttype gekoppeld met een keuze (de lijn links boven) en de keuze geeft 2 of meer attribuutsoorten aan (met elk een eigen datatype). 
+Een objecttype of gegevensgroep kan normaal een attribuutsoort hebben met een datatype (de lijn links onder). Als een objecttype meerdere op zichzelfstaande attribuutsoorten heeft en er sprake is van een keuze tussen een aantal van deze attribuutsoorten, dan is het objecttype gekoppeld met een keuze (de lijn links boven) en de keuze geeft 2 of meer attribuutsoorten aan (met elk een eigen datatype). 
 
 ![](media/KeuzeAttribuutsoort2.png)
 
 Diagram: Keuze tussen attribuutsoorten
 
-*Use case 3: Keuze tussen attribuutsoorten als nadere invulling van 1 betekenisvol attribuutsoort*
+*Use case 3: Keuze tussen meerdere manieren om 1 betekenisvol attribuutsoort in te vullen*
 
-Een objecttype of gegevensgroep kan normaal een attribuutsoort hebben met een datatype (de lijn links). Als er sprake is van een attribuutsoort met een keuze, dan is het attribuutsoort niet gekoppeld met een datatype, maar dan is het attribuutsoort gekoppeld met een keuze en de keuze geeft 2 of meer attribuutsoorten aan (met elk een eigen datatype). 
+Een objecttype of gegevensgroep kan normaal een attribuutsoort hebben met een datatype (de lijn links). Als er sprake is van een attribuutsoort die op meerdere manieren ingevuld kan worden met een keuze hiertussen, dan is het attribuutsoort niet gekoppeld met een datatype, maar dan is het attribuutsoort gekoppeld met een keuze en de keuze geeft 2 of meer attribuutsoorten aan (met elk een eigen datatype). 
  
 ![](media/KeuzeAttribuutsoort3.png)
 
@@ -192,7 +193,7 @@ In diagramvorm:
 
 Diagram: Relatierol
 
-
+Merk op dat een keuze tussen relatiesoorten ook een mogelijke keuze is, maar deze is vooralsnog niet uitgewerkt en opgenomen in deze versie. 
 
 *Externe koppeling*
 
@@ -202,8 +203,7 @@ View 3c: Externe koppelingen. Deze bestaat uit de volgende modelelementen:
 |-------------------|
 | Externe koppeling |
 
-In diagramvorm: 
-
+In diagramvorm:
 
 *Groepering*
 
@@ -783,7 +783,7 @@ Het is niet de bedoeling om twee attribuutsoorten te modelleren met elk een data
 Zonder de mogelijkheid van keuze, zou je te maken krijgen met twee attribuutsoorten met bijbehorend datatype. Echter, in dat geval mogen de attribuutsoorten niet dezelfde naam hebben, aangezien deze bij hetzelfde objecttype horen. Ook zou de kardinaliteit niet kloppen: die zou dan [0..1] moeten worden, maar dat doet geen recht aan het feit dat er één verplicht aanwezig moet zijn, en er ook geen twee naast elkaar mogen zijn. De werkelijke kardinaliteit is [1..1].
 
 
-**Use case 2: een keuze tussen attribuutsoorten**
+**Use case 2: een keuze tussen 2 of meer attribuutsoorten**
 Er is sprake van ofwel attribuutsoort A1 ofwel attribuutsoort A2. In MIM modelleren we daarom een keuze tussen de 2 attribuutsoorten A1 en A2. Het maken van deze keuze is verplicht.
 
 <aside class='example'>
@@ -799,7 +799,7 @@ In dit voorbeeld vormt BetalingskenmerkOfOmschrijving en de aanhaking ervan op h
 Zonder de mogelijkheid van keuze zouden beide attribuutsoorten opgenomen zijn bij het objecttype als optionele velden, met een constraint dat een van beide gevuld moet zijn. Nadeel hiervan is dat de kardinaliteit dan niet erg duidelijk gemodelleerd is: die zou dan voor beide attribuutsoorten [0..1] moeten worden, maar dat doet geen recht aan het feit dat er één verplicht aanwezig moet zijn, en er ook geen twee naast elkaar mogen zijn. De werkelijke kardinaliteit voor een gekozen attribuutsoort is [1..1]. Met een constraint is dit te specificeren en derhalve ook op zich wel correct te modelleren, maar met een modellering van een keuze is dit veel duidelijker.
 
 
-**Use case 3: een keuze tussen attribuutsoorten, als nadere invulling van een betekenisvol attribuutsoort van een objecttype**
+**Use case 3: een keuze tussen meerdere manieren om invulling te geven aan 1 betekenisvol attribuutsoort van een objecttype**
 Er is sprake van ofwel attribuutsoort A0 en aanvullend hierbij een keuze tussen ofwel attribuutsoort A1 ofwel attribuutsoort A2. In MIM modelleren we daarom voor A1 en A2 een keuze tussen de 2 attribuutsoorten. Het maken van deze keuze is verplicht.
 
 <aside class='example'>
@@ -851,7 +851,10 @@ We onderkennen een aantal specifieke metagegevens op het niveau van het informat
 >   De beschrijving van de aard van het informatiemodel, hoe het geïnterpreteerd
 >   moet worden.
 
-*Toelichting* Bijvoorbeeld: conceptueel, logisch, technisch. Zoals bedoeld in: [Typen Informatiemodellen](#typen-informatiemodellen)
+*Toelichting* 
+Dit kan zijn: "conceptueel" of "logisch". Zoals bedoeld in: [Typen Informatiemodellen](#typen-informatiemodellen). Er moet een keuze gemaakt worden.
+
+Dit kan bijvoorbeeld uitgebreid worden met: "technisch" wanneer er behoefte is om niveau 4 aan te geven. 
 
 *Toepassing*: informatiemodel (verplicht)
 
@@ -861,7 +864,8 @@ We onderkennen een aantal specifieke metagegevens op het niveau van het informat
 >   Aanduiding van een in MIM gedefinieerd alternatief voor een
 >   modelleringswijze, en welke keuze hierbij is gemaakt.
 
-*Toelichting* Bijvoorbeeld: "Relatiesoort leidend" of "Relatierol leidend". Dit
+*Toelichting* 
+Dit kan zijn "Relatiesoort leidend" of "Relatierol leidend". Dit
 betreft de keuze die je maakt voor het in paragraaf [Alternatieven](#alternatieven) gekozen
 alternatief. Er moet een keuze gemaakt worden.
 
@@ -873,7 +877,10 @@ alternatief. Er moet een keuze gemaakt worden.
 >   De versie van de MIM specificatie die gebruikt is om het informatiemodel in
 >   uit te drukken.
 
-*Toelichting* Bijvoorbeeld: 1.0.1 of 1.1
+*Toelichting* Neem hiervoor een door MIM in gebruik zijnde MIM-versie. 
+Kies bij voorkeur een zo recent mogelijke versie. 
+
+Bijvoorbeeld: 1.01 of 1.1 of 1.1.1 
 
 *Toepassing*: informatiemodel (verplicht)
 
@@ -882,7 +889,12 @@ alternatief. Er moet een keuze gemaakt worden.
 >   **Definitie MIM extensie**  
 >   De aanduiding van een extensie op MIM.
 
-*Toelichting* Bijvoorbeeld: Kadaster of NEN3610:2020
+*Toelichting* Dit metagegeven is optioneel en alleen van toepassing als er sprake is van een extensie zoals bedoeld in 
+[Een eigen extensie](#een-eigen-extensie-op-het-metamodel). 
+
+Neem hiervoor een in gebruik zijnde extensie. 
+
+Bijvoorbeeld: Kadaster of NEN3610:2020
 
 *Toepassing*: informatiemodel (optioneel)
 
@@ -972,24 +984,28 @@ informatiemodel om hier zorgvuldig mee om te gaan).
 #### Metagegeven: **Alias**
 
 >   **Definitie Alias**  
->   De alternatieve weergave van de naam.
+>   De weergave van de naam van een modelelement in natuurlijke taal (niet technisch).
 
 *Toelichting*
 
-Als de naam van het modelelement in het informatiemodel kan bijvoorbeeld zonder
-spaties is geschreven, dan kan in de alias de naam in natuurlijke taal worden
-opgenomen. Bijvoorbeeld: OnroerendeZaak heeft als alias Onroerende zaak. De
-alias is bedoeld als alternatieve schrijfwijze, en heeft verder geen andere
-betekenis. De alias is optioneel (zie verder ook
+Als de naam van iets wat in het informatiemodel gemodelleerd wordt spaties, diakrieten of verbindingstreepjes bevat dan kan er gekozen worden om deze naam, de naam van een modelelement in het informatiemodel, zo op te schrijven dat hier in de techniek makkelijker mee te werken is. Wanneer de originele schrijfwijze in natuurlijke taal van belang is kan deze worden opgenomen in het metagegeven alias (zie verder ook
 [Naamgevingsconventies](#afspraken-rondom-naamgeving-en-definities)).
 
-Bijvoorbeeld: OnroerendeZaak heeft als alias Onroerende zaak.
+Bijvoorbeeld 'Onroerende zaak' kan worden gemodelleerd als een objecttype met de naam 'OnroerendeZaak' (camelcase notatiewijze) of 'geïnspireerd op' kan gemodelleerd worden als de naam van een attribuutsoort 'geinspireerd op' (geen diakrieten). In de alias komt dan te staan 'Onroerende zaak' of 'geïnspireerd op'.  
+
+Het is niet de bedoeling om in de alias de technische makkelijker werkbare naam op te nemen. 
+
+Als de alias gevuld is, dan staat hierin de schrijfwijze in natuurlijke taal. Deze schrijfwijze wordt dan gebruikt waar dit gewenst is, met name in documentatie die voor mensen is bedoeld en in plaats van de technische makkelijker werkbare naam. Het is toegestaan om altijd de schrijfwijze in natuurlijke taal op te namen in de alias, ook als deze gelijk is aan de naam van het modelelement.   
+
+Toepassing: objecttype, attribuutsoort, gegevensgroep, relatiesoort, relatierol, relatieklasse en externe koppeling en (expliciet niet voor packages en Enumeratiewaarde)
 
 *Toepassing*: alle modelelementen die een naam hebben, uitgezonderd de
-**Enumeratiewaarde**. NB: Een uitzondering is gemaakt voor UML modellen voor de
-UML-EnumerationLiteral. De ‘naam’ betreft hier een daadwerkelijk waarde, waarin
+Enumeratiewaarde en packages, oftewel objecttype, attribuutsoort, gegevensgroep, relatiesoort, relatierol, relatieklasse en externe koppeling.
+
+Opmerking: een uitzondering is gemaakt voor UML modellen voor de UML-EnumerationLiteral. 
+De ‘naam’ betreft hier een daadwerkelijk waarde, waarin
 de naam gelijk staat aan de waarde. Het is daarom expliciet ongewenst om
-hiervoor een alternatieve naamgeving te gebruiken. De alias wordt hier, mede
+hiervoor een _alias_ te gebruiken. De alias wordt hier, mede
 daarom, gebruikt voor (alleen) de modellering van het metadata aspect Code,
 welke aanvullend is op naam (niet een alternatief van naam).
 
@@ -1413,11 +1429,27 @@ attribuutsoort, data element, referentie element, datatypekeuze, doelkeuze.
 >   De aanduiding van de lengte van een gegeven.
 
 *Toelichting*
+
 Bijvoorbeeld: de naam van een openbare ruimte heeft minimaal lengte 1 en maximaal lengte 80. 
+ 
+De notatiewijze en de betekenis is als volgt: 
 
-Bijvoorbeeld: ‘1’ als de lengte exact 1 is; ‘1..2’ als de lengte 1 tot en met 2 lang kan zijn; '‘1,2’ voor Decimale getallen met 1 cijfer voor de komma en 2 erna. Dit is van -9,99 tot +9,99; Dit is nog verder toegelicht in hoofdstuk [Afspraken & Regels].
+| **Notatie** | **Betekenis**                                                                              |
+|------------------|---------------------------------------------------------------------------------------|
+| 1           | De lengte is precies 1 en evenzo voor andere integers                                      |
+| 1..         | De lengte is minimaal 1 (inclusief 1) of meer (onbegrensd) en evenzo voor andere integers  |
+| 1..9        | De lengte is minimaal 1 en maximaal 9 (inclusief 9) en evenzo voor andere integers         |
+| 1,2         | De lengte is maximaal 1 getal voor de komma en precies 2 getallen na de komma              |
 
-*Toepassing*: attribuutsoort, primitief datatype (als in het IM zelf gedefinieerd), data
+Het gaat bij deze lengte om hoe lang een gegevens in functionele zin mag zijn, en niet om hoeveel ruimte het gegeven in technisch zin kan innemen. Het minteken voor negatieve getallen is geen onderdeel van de specificatie van de lengte.   
+
+Bijvoorbeeld:  lengte 1,2 en datatype decimaal speficieert een waarde van -9,99 tot +9,99. 
+
+Bijvoorbeeld: lengte 2 en datatype float specificeert een waarde van -999 tot +999 en 0,01 voldoet ook.   
+
+Om het waardenbereik binnen deze lengte te specificeren wordt een patroon of formeel patroon gebruikt. 
+
+*Toepassing*: attribuutsoort, primitief datatype (alleen als dit datatype in het IM zelf gedefinieerd is), data
 element, referentie element.
 
 #### Metagegeven: **Patroon**
