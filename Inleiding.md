@@ -162,16 +162,16 @@ De aangegeven niveaus zijn vooral bedoeld om de scope van MIM duidelijk aan geve
 te weten niveau 2 en 3. Hieronder worden de niveaus nader toegelicht.
 
 
-#### Niveau 1: Model van begrippen
-Beschrijft de werkelijkheid binnen het beschouwde domein (de ‘universe of discourse’) 
-door middel van de daarin gehanteerde begrippen en hun relaties tot elkaar. Een begrip 
-wordt ook wel een concept genoemd, iets waar mensen aan denken en over praten. 
+#### Niveau 1: Model van begrippen 
+Dit niveau beschrijft de werkelijkheid binnen het beschouwde domein (de ‘universe of discourse’) 
+door middel van de beschrijving van de daarin gehanteerde begrippen en hun relaties tot elkaar. 
+Een begrip wordt ook wel een concept genoemd, iets waar mensen aan denken en over praten. 
 Doel is dat de actoren binnen een domein elkaar begrijpen en één taal spreken. 
 Een model van begrippen wordt opgesteld voor gebruik door mensen, met name ‘de business’. 
-De begrippen worden beschreven in een formele taal, een vocabulaire. 
-Denk hier aan een woordenboek, een taxonomie, een model van begrippen waarin de onderlinge 
-samenhang tussen begrippen is aangegeven en aan de modelleren van kennis in algemeenheid 
-- maar denk hierbij niet aan een informatiemodel.
+
+Er zijn verschillende manieren om begrippen te beschrijven, zoals in een woordenboek, of in 
+een formele taal of vocabulaire, of in een taxonomie of in een model van begrippen waarin 
+de onderlinge samenhang is aangegeven en er zijn nog andere manieren - maar geen van allen zijn een informatiemodel. 
 
 Ten aanzien van begrippen en informatiemodellen en het verschil hiertussen:
 
