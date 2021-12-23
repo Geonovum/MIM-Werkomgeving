@@ -248,12 +248,11 @@ Dit niveau is **niet** in scope van MIM.
 
 **Een aantal aanvullende opmerkingen bij de onderkende niveaus**
 
-- In algemeenheid geldt dat het begrijpen van onderwerpen of dingen die een rol spelen in een 'universe of discourse' altijd vooraf gaat aan de modellering ervan, welk niveau deze modellering ook betreft en welke niveau je ook besluit om wel of niet toe te passen. 
-- Je kan bijvoorbeeld besluiten om wel of niet begrippen te definiëren of te modelleren. Wanneer je dit wel doet. dan is het nuttig om dit als input te gebruiken voor het maken van het informatiemodel. Let wel, de definities op beide niveaus zijn niet altijd hetzelfde. De definitie in het informatiemodel moet soms preciezer zijn om preciezer de betekenis van de geregistreerde of uitgewisselde data te definiëren. 
+- In algemeenheid geldt dat het begrijpen van onderwerpen of dingen die een rol spelen in een 'universe of discourse' altijd vooraf gaat aan de modellering ervan, welk niveau deze modellering ook betreft en welke modellen je  besluit om wel of niet toe te maken of op te leveren. 
 - Niveau 1 is niet volledig beschreven, er zit meer in dan hier beschreven en er gaat meer aan vooraf. Deze is ter illustratie opgenomen. 
 - Niveau 4 is niet volledig beschreven, er zit meer in dan hier beschreven. Deze is ter illustratie opgenomen. 
-- MIM geeft niet normatief een volgorde of werkwijze aan voor de invulling van de 4 niveaus. 
- 
+- MIM geeft niet normatief een volgorde of werkwijze aan voor de invulling van de 4 niveaus. Je kan bijvoorbeeld besluiten om wel of niet begrippen te definiëren en/of te modelleren. Wanneer je dan later een informatiemodel gaat maken dan is het nuttig om deze hierbij mee te nemen. Let wel, de definities op beide niveaus zijn niet altijd hetzelfde. De definitie in het informatiemodel moet soms preciezer zijn om preciezer de betekenis van de geregistreerde of uitgewisselde data te definiëren. 
+
 Ten aanzien van conceptuele en logische informatiemodellen: 
 - Het voorliggende metamodel voor het modelleren van informatie (MIM) is bedoeld voor niveau 2 en 
 niveau 3: t.b.v. een zuiver conceptueel informatiemodel (2) en t.b.v. een logisch informatiemodel (3). 
@@ -261,8 +260,8 @@ Het moge duidelijk zijn dat het altijd het één of het ander is, conceptueel of
 beide in één model leidt tot verwarring. Voor eenzelfde domein verschilt de structuur van het informatiemodel 
 naar gelang het type en bevat het logisch informatiemodel meer, vooral formele, specificaties dan een 
 conceptueel informatiemodel. 
-- Het is voor de hand liggend maar niet persé noodzakelijk om voor een domein 
-eerst een conceptueel en daarna een logisch informatiemodel op te stellen. Met name bij een informatievoorziening 
+- Het is voor de hand liggend maar niet persé noodzakelijk om voor een domein eerst een conceptueel 
+en daarna een logisch informatiemodel op te stellen. Met name bij een informatievoorziening 
 waarbij er meerdere koppelvlakken en/of doelgroeppen betrokken zijn met elk eigen informatiebehoeftes is het 
 aan te bevelen is om eerst een conceptueel informatiemodel te maken, zonder zich al te richten naar een specifiek 
 koppelvlak of een specifieke doelgroep. 
@@ -272,6 +271,7 @@ Bijlage 3 verschaft een overzicht van de metadata-constructen en -elementen die 
 Het is daarom van belang om voorafgaand aan het opstellen van een informatiemodel expliciet te bepalen welk van 
 beide typen beoogd is en de modellering conform het gekozen type te doen plaatsvinden. In de beschrijving van het
 informatiemodel moet vermeld worden om welk van beide typen het gaat. 
+
 
 ### Wat is het metamodel voor informatiemodellering
 Een metamodel is een model van een model. Het definieert een verzameling van
