@@ -94,7 +94,7 @@ De verbindingen tussen de modelelementen geven aan welke combinaties kunnen voor
 
 #### Datatypen
 
-View 2: Datatypen. Deze bestaat uit de volgende modelelementen:
+View 2: Datatypen. De verschillende soorten datatypen en bijbehorende modelelementen: 
 
 | **MIM metaclass**       |
 |-------------------------|
@@ -105,7 +105,7 @@ View 2: Datatypen. Deze bestaat uit de volgende modelelementen:
 | Enumeratiewaarde        |
 | Referentielijst         |
 | Referentie element      |
-| Codelijst                |
+| Codelijst               |
 
 De betekenis van deze modelelementen en de beschrijvingen ervan staan in [Datatypen](#datatypen-1) en in [Waardelijsten](#waardelijsten). 
 
@@ -1423,31 +1423,32 @@ enumeratie als type vermeld.
 *Toepassing*: Alle informatie elementen die een attribuut modelleren:
 attribuutsoort, data element, referentie element, datatypekeuze, doelkeuze.
 
-#### Metagegeven: **Lengte** (domein van een waarde van een gegeven)
+#### Metagegeven: **Lengte** 
 
 >   **Definitie Lengte**  
->   De aanduiding van de lengte van een gegeven.
+>   De aanduiding van de lengte van een gegeven, in de vorm van de aangegeven notatiewijze.
 
 *Toelichting*
 
-Bijvoorbeeld: de naam van een openbare ruimte heeft minimaal lengte 1 en maximaal lengte 80. 
- 
+Het gaat bij deze lengte om hoe lang een gegevens in functionele zin mag zijn, en niet om hoeveel 
+ruimte het gegeven in technisch zin kan innemen. Het minteken voor negatieve getallen is geen 
+onderdeel van de specificatie van de lengte.   
+
+Bijvoorbeeld: de naam van een openbare ruimte, een characterstring, heeft minimaal lengte 1 en maximaal lengte 80. 
+
+Bijvoorbeeld: een decimaal met een waarde vanaf -9,99 en tot en met +9,99 
+
 De notatiewijze en de betekenis is als volgt: 
 
 | **Notatie** | **Betekenis**                                                                              |
-|------------------|---------------------------------------------------------------------------------------|
+|-----|----------------------------------------------------------------------------------------------------|
 | 1           | De lengte is precies 1 en evenzo voor andere integers                                      |
 | 1..         | De lengte is minimaal 1 (inclusief 1) of meer (onbegrensd) en evenzo voor andere integers  |
 | 1..9        | De lengte is minimaal 1 en maximaal 9 (inclusief 9) en evenzo voor andere integers         |
-| 1,2         | De lengte is maximaal 1 getal voor de komma en precies 2 getallen na de komma              |
+| 3,2         | De lengte is maximaal 3 getallen (inclusief 3, dus 1, 2 of 3) voor de komma en precies 2 getallen na de komma en evenzo voor andere integers |                            
 
-Het gaat bij deze lengte om hoe lang een gegevens in functionele zin mag zijn, en niet om hoeveel ruimte het gegeven in technisch zin kan innemen. Het minteken voor negatieve getallen is geen onderdeel van de specificatie van de lengte.   
-
-Bijvoorbeeld:  lengte 1,2 en datatype decimaal speficieert een waarde van -9,99 tot +9,99. 
-
-Bijvoorbeeld: lengte 2 en datatype float specificeert een waarde van -999 tot +999 en 0,01 voldoet ook.   
-
-Om het waardenbereik binnen deze lengte te specificeren wordt een patroon of formeel patroon gebruikt. 
+De lengte geeft aan hoeveel posities gebruikt mogen worden voor een gegeven. Om het waardenbereik van een gegeven 
+("binnen" deze lengte) te specificeren wordt een patroon of formeel patroon gebruikt. 
 
 *Toepassing*: attribuutsoort, primitief datatype (alleen als dit datatype in het IM zelf gedefinieerd is), data
 element, referentie element.
