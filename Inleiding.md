@@ -175,8 +175,7 @@ samenhang tussen begrippen is aangegeven en aan de modelleren van kennis in alge
 
 Ten aanzien van begrippen en informatiemodellen en het verschil hiertussen:
 
-- Een begrip beschrijft de betekenis van een woord of term, zoals mensen en experts de 
-werkelijkheid beschouwen en begrijpen (en niet de betekenis en structuur van data)
+- Een begrip is de combinatie van een term of woord en een definitie. Begrippen worden door mensen gebruikt om mentaal de werkelijkheid te beschouwen en te begrijpen. Een begrip omvat niet de betekenis en structuur van data. 
 - Van een aantal begrippen zal later blijken dat het een eigenschap is van een object 
 waarover we informatie zullen gaan bijgehouden, maar dit zal zeker niet voor alle begrippen 
 zo zijn, begrippen beschrijven een domein vaak veel breder dan een informatiemodel dit doet
