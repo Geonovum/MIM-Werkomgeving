@@ -134,41 +134,69 @@ De opname in een registratie kent vaak een inwinningsproces om gegevenswaarden o
 informatiemodel in de registratie op te nemen. Dit is een belangrijk proces, maar valt buiten scope van het informatiemodel.
 
 ### Typen informatiemodellen
-Zoals hiervoor uiteengezet beschrijft een informatiemodel de werkelijkheid. In
-de praktijk blijken hier niveaus in te bestaan, variërend van een zo getrouw
-mogelijke beschrijving van die werkelijkheid tot een specificatie van de wijze
-van vastlegging van die werkelijkheid in een database of uitwisselformaat.
-Veelal worden vier niveaus onderscheiden, waarbij niveau 1 niet als een
-informatiemodel wordt gezien en waarbij MIM zich primair richt op niveau 2 en 3
-(Het uitdrukken in UML richt zich op niveau 2 en 3, het uitdrukken in Linked Data
-richt zich op alle niveaus)[[!MDA]]
+Bij het modelleren van een domein zijn er een aantal beschouwingsniveaus, variërend van een zo 
+getrouw mogelijke beschrijving van betekenis van de woorden en termen die mensen gebruiken 
+als ze het ergens over hebben tot een specificatie van de wijze van registratie en uitwisseling van data.
+
+De modellering van een bepaald domein start in principe met het beschrijven van kennis, 
+te weten de begrippen die een rol spelen in een domein, uitgedrukt in een (meestal) 
+domein specifieke terminologie. In MIM wordt dit niveau 1 genoemd en voor MIM is dit 
+niveau 1 buiten scope. Op dit niveau is de notie van welke informatie er geregistreerd 
+en uitgewisseld moet worden nog niet aanwezig of op de achtergrond. Op dit niveau is 
+er nog geen sprake van een informatiemodel, omdat deze modellen kennis modelleren en zich (nog) 
+niet richten op het modelleren van informatie (data en de betekenis hiervan) .
+
+Het modelleren van informatie gebeurt in een informatiemodel. Hierin wordt aangegeven welke 
+objecten welke kenmerken/eigenschappen hebben en of deze kenmerken/eigenschappen in het 
+beschouwde domein verplicht zijn of optioneel zijn enzovoorts. Het informatiemodel geeft 
+hierbij aan welke informatie wordt geregistreerd of uitgewisseld kan worden en beschrijft 
+ook niet meer dan dat. In MIM val een informatiemodel onder niveau 2 of 3. MIM richt zich 
+primair op niveau 2 en 3. Het informatiemodel is hierbij altijd techniek onafhankelijk.
+
+Het informatiemodel kan vervolgens uitgewerkt worden in verschillende soorten technische 
+schema's (zoals XML of JSON of specifieke invullingen hiervan). In MIM wordt dit niveau 4 
+genoemd en voor MIM is dit niveau 4 buiten scope. Wel staat MIM een (model-gedreven 
+werkwijze voor waarbij niveau 4 gegenereerd kan worden vanuit niveau 2 of 3.
+
+De aangegeven niveaus zijn vooral bedoeld om de scope van MIM duidelijk aan geven, 
+te weten niveau 2 en 3. Hieronder worden de niveaus nader toegelicht.
+
 
 #### Niveau 1: Model van begrippen
-Beschrijft de werkelijkheid binnen het beschouwde domein (de ‘universe of
-discourse’) d.m.v. de daarin gehanteerde begrippen en hun relaties tot elkaar.
-Doel is dat de actoren daarbinnen elkaar begrijpen en één taal spreken. Een
-model van begrippen wordt opgesteld voor gebruik door mensen, met name ‘de
-business’. De begrippen worden beschreven in een formele taal, een vocabulaire.
-Een vocabulaire is geen informatiemodel. Begrippen kunnen in meerdere
-informatiemodellen gebruikt worden.
+Beschrijft de werkelijkheid binnen het beschouwde domein (de ‘universe of discourse’) 
+door middel van de daarin gehanteerde begrippen en hun relaties tot elkaar. Een begrip 
+wordt ook wel een concept genoemd, iets waar mensen aan denken en over praten. 
+Doel is dat de actoren binnen een domein elkaar begrijpen en één taal spreken. 
+Een model van begrippen wordt opgesteld voor gebruik door mensen, met name ‘de business’. 
+De begrippen worden beschreven in een formele taal, een vocabulaire. 
+Denk hier aan een woordenboek, een taxonomie, een model van begrippen waarin de onderlinge 
+samenhang tussen begrippen is aangegeven en aan de modelleren van kennis in algemeenheid 
+- maar denk hierbij niet aan een informatiemodel.
 
-Ten aanzien van begrippen en informatiemodellen:
-- Van een aantal begrippen wordt informatie bijgehouden, niet van alle.   
-- Voor het bijhouden van informatie wordt een gedetailleerde eenduidige structuur aangebracht.
-- De samenhang tussen informatie is vaak (bewust) beperkter dan de samenhang tussen begrippen.
+Ten aanzien van begrippen en informatiemodellen en het verschil hiertussen:
+
+- Een begrip is de combinatie van een term of woord en een definitie. Begrippen worden door mensen gebruikt om mentaal de werkelijkheid te beschouwen en te begrijpen. Een begrip omvat niet de betekenis en structuur van data. 
+- Van een aantal begrippen zal later blijken dat het een eigenschap is van een object 
+waarover we informatie zullen gaan bijgehouden, maar dit zal zeker niet voor alle begrippen 
+zo zijn, begrippen beschrijven een domein vaak veel breder dan een informatiemodel dit doet
+- Voor het bijhouden van informatie wordt een gedetailleerde eenduidige structuur 
+aangebracht die data gericht is, maar bij het modelleren van begrippen wordt dit nog niet gedaan. 
+De samenhang tussen informatie is hierbij vaak (bewust) beperkter dan de samenhang tussen begrippen.
 
 #### Niveau 2: Conceptueel informatiemodel
-Modellering van de werkelijkheid binnen het beschouwde domein, v.w.b. informatie
-daarvan, en is onafhankelijk van ontwerp van en implementatie in systemen. Het geeft
-een zo getrouw mogelijke beschrijving van die werkelijkheid en is in natuurlijke
-taal geformuleerd. Een dergelijk model definieert het **‘wat’**: welke ‘concepten’
-(‘dingen’) worden onderscheiden (in de beschouwde werkelijkheid), wat betekenen
-zij, hoe verhouden ze zich tot elkaar en welke informatie (eigenschappen) is
-daarvan relevant. Het dient als taal waarmee domeinexperts kunnen communiceren
-met informatieanalisten en verschaft een eenduidige interpretatie van die
-werkelijkheid ten behoeve van deze communicatie.  
-*Een conceptueel informatiemodel wordt dan ook opgesteld voor gebruik door mensen,
-zodat ‘de business’ en de ICT-specialisten elkaar gaan begrijpen.*
+Beschrijft de modellering van de werkelijkheid binnen het beschouwde domein door middel van de 
+beschrijving van welke informatie (data met betekenis en structuur) een rol speelt. 
+Een conceptueel informatiemodel is hierbij onafhankelijk van het ontwerp van en de implementatie in systemen. 
+Het geeft een zo getrouw mogelijke beschrijving van die werkelijkheid en is in natuurlijke taal geformuleerd. 
+Een dergelijk model definieert het ‘wat’: welke ‘concepten’ (‘dingen’) worden onderscheiden 
+(in de beschouwde werkelijkheid), wat betekenen zij, hoe verhouden ze zich tot elkaar en welke informatie 
+(eigenschappen) is daarvan relevant. Het dient als taal waarmee domeinexperts kunnen communiceren met 
+informatieanalisten en verschaft een eenduidige interpretatie van die werkelijkheid ten behoeve van deze 
+communicatie. Met conceptueel wordt niet bedoeld abstract of hoog over, de beschrijvingen van de 
+informatie die beschikbaar is zijn heel precies en concreet.
+
+*Een conceptueel informatiemodel wordt opgesteld voor gebruik door mensen,
+zodat ‘de business’ en de ICT-specialisten elkaar (gaan) begrijpen voor wat betreft de informatie die in het domein wordt geregistreerd en/of kan worden uitgewisseld.*
 
 Ten aanzien van logische informatiemodellen:
 - Een conceptueel informatiemodel is onafhankelijk van standaarden voor gegevensuitwisseling.
@@ -203,25 +231,29 @@ berichtenverkeer. De technische specificaties worden over het algemeen zoveel
 als mogelijk gegenereerd uit het logisch informatiemodel.  
 *Deze specificaties worden opgesteld voor ‘machines’, te gebruiken door softwareontwikkelaars.*
 
-Het voorliggende metamodel kan primair toegepast worden op twee niveaus, niveau 2 en
-niveau 3: t.b.v. een zuiver conceptueel informatiemodel (2) en t.b.v. een
-logisch informatiemodel (3). Het moge duidelijk zijn dat het altijd het één of
-het ander is. Een combinatie van beide in één model leidt tot verwarring. Voor
-eenzelfde domein verschilt de structuur van het informatiemodel naar gelang het
-type en bevat het logisch informatiemodel meer, vooral formele, specificaties
-dan een conceptueel model. Het is voor de hand liggend maar niet persé
-noodzakelijk om voor een domein eerst een conceptueel en daarna een logisch
-informatiemodel op te stellen. Een organisatie kan er voor kiezen om alleen een
-logisch informatiemodel op te stellen. Een begrippenmodel is in dat geval
-dringend aanbevolen. Bijlage 3 verschaft een overzicht van de
-metadata-constructen en -elementen die per type model van toepassing zijn.
+De volgende opmerkingen worden nog gemaakt bij de onderkende niveaus:
 
-Het is van belang om voorafgaand aan het opstellen van een informatiemodel
-expliciet te bepalen welk van beide typen beoogd is en de modellering conform
-het gekozen type te doen plaatsvinden. In de beschrijving van het
-informatiemodel moet vermeld worden om welk van beide typen het gaat. Aan te
-bevelen is om eerst een conceptueel model op te stellen en dit vervolgens uit te
-werken naar een logisch model.
+- In algemeenheid geldt dat het begrijpen van onderwerpen of dingen die een rol spelen in een 'universe of discourse' altijd vooraf gaat aan de modellering ervan, welk niveau deze modellering ook betreft en welke niveau je besluit of wel of niet toe te passen. Je kan bijvoorbeeld besluiten om wel of niet begrippen te definiëren of te modelleren. Wanneer je dit wel doet, dan is het erg nuttig om de definitie van het begrip te gebruiken als input voor het maken van het informatiemodel en vanuit het informatiemodel een link te leggen naar het begrip. Let wel, de definities op beide niveaus zijn niet altijd hetzelfde. De definitie in het informatiemodel moet soms preciezer zijn om preciezer de betekenis van de geregistreerde of uitgewisselde data te definiëren (informatie = data + betekenis).
+- MIM geeft niet normatief een volgorde of werkwijze aan voor de invulling van de 4 niveaus en schrijft de invulling van niveau 1 en 4 ook niet voor. Wel is de aanbeveling om geen niveaus over te slaan.
+- Niveau 1 is niet volledig beschreven, er zit meer in dan hier beschreven en er gaat meer aan vooraf. Dit niveau is met name illustratief opgenomen. 
+- Niveau 4 is niet volledig beschreven, er zit meer in dan hier is beschreven en wordt meer gedaan worden erna. Dit niveau is met name illustratief opgenomen. 
+- Het voorliggende metamodel voor het modelleren van informatie (MIM) is bedoeld voor niveau 2 en 
+niveau 3: t.b.v. een zuiver conceptueel informatiemodel (2) en t.b.v. een logisch informatiemodel (3). 
+Het moge duidelijk zijn dat het altijd het één of het ander is, conceptueel of logisch. Een combinatie van 
+beide in één model leidt tot verwarring. Voor eenzelfde domein verschilt de structuur van het informatiemodel 
+naar gelang het type en bevat het logisch informatiemodel meer, vooral formele, specificaties dan een 
+conceptueel informatiemodel. 
+- Het is voor de hand liggend maar niet persé noodzakelijk om voor een domein 
+eerst een conceptueel en daarna een logisch informatiemodel op te stellen. Met name bij een informatievoorziening 
+waarbij er meerdere koppelvlakken en/of doelgroeppen betrokken zijn met elk eigen informatiebehoeftes is het 
+aan te bevelen is om eerst een conceptueel informatiemodel te maken, zonder zich al te richten naar een specifiek 
+koppelvlak of een specifieke doelgroep. 
+- Een organisatie kan er voor kiezen om alleen een logisch informatiemodel op te stellen of om een conceptueel informatiemodel 
+integraal te behouden en enkel uit te breiden met logische aspecten bij het maken van een logisch informatiemodel. 
+Bijlage 3 verschaft een overzicht van de metadata-constructen en -elementen die per type model van toepassing zijn.
+Het is daarom van belang om voorafgaand aan het opstellen van een informatiemodel expliciet te bepalen welk van 
+beide typen beoogd is en de modellering conform het gekozen type te doen plaatsvinden. In de beschrijving van het
+informatiemodel moet vermeld worden om welk van beide typen het gaat. 
 
 ### Wat is het metamodel voor informatiemodellering
 Een metamodel is een model van een model. Het definieert een verzameling van
