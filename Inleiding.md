@@ -133,7 +133,7 @@ opgeslagen, beheerd en uitgewisseld worden.
 De opname in een registratie kent vaak een inwinningsproces om gegevenswaarden over de feitelijke dingen in de werkelijkheid conform het
 informatiemodel in de registratie op te nemen. Dit is een belangrijk proces, maar valt buiten scope van het informatiemodel.
 
-### Typen informatiemodellen
+### Typering van modellen en wat wel en niet in scope is van deze standaard
 Bij het modelleren van een domein zijn er een aantal beschouwingsniveaus, variërend van een zo 
 getrouw mogelijke beschrijving van de betekenis en bedoeling van de woorden en termen die mensen gebruiken 
 als ze het ergens over hebben tot een specificatie van de wijze van registratie en uitwisseling van data.
