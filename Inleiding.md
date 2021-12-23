@@ -246,7 +246,7 @@ als mogelijk gegenereerd uit het logisch informatiemodel.
 Dit niveau is **niet** in scope van MIM. 
 
 
-#### Aanvullende opmerkingen bij de onderkende niveaus**
+#### Aanvullende opmerkingen bij de onderkende niveaus
 
 - In algemeenheid geldt dat het begrijpen van onderwerpen of dingen die een rol spelen in een 'universe of discourse' altijd vooraf gaat aan de modellering ervan, welk niveau deze modellering ook betreft en welke modellen je  besluit om wel of niet toe te maken of op te leveren. 
 - Niveau 1 is niet volledig beschreven, er zit meer in dan hier beschreven en er gaat meer aan vooraf. Deze is ter illustratie opgenomen. 
