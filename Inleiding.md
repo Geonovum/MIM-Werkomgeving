@@ -247,10 +247,12 @@ Dit niveau is **niet** in scope van MIM.
 
 **Een aantal aanvullende opmerkingen bij de onderkende niveaus**
 
-- In algemeenheid geldt dat het begrijpen van onderwerpen of dingen die een rol spelen in een 'universe of discourse' altijd vooraf gaat aan de modellering ervan, welk niveau deze modellering ook betreft en welke niveau je besluit of wel of niet toe te passen. Je kan bijvoorbeeld besluiten om wel of niet begrippen te definiëren of te modelleren. Wanneer je dit wel doet, dan is het erg nuttig om de definitie van het begrip te gebruiken als input voor het maken van het informatiemodel en vanuit het informatiemodel een link te leggen naar het begrip. Let wel, de definities op beide niveaus zijn niet altijd hetzelfde. De definitie in het informatiemodel moet soms preciezer zijn om preciezer de betekenis van de geregistreerde of uitgewisselde data te definiëren (informatie = data + betekenis).
-- MIM geeft niet normatief een volgorde of werkwijze aan voor de invulling van de 4 niveaus en schrijft de invulling van niveau 1 en 4 ook niet voor. Wel is de aanbeveling om geen niveaus over te slaan.
+- In algemeenheid geldt dat het begrijpen van onderwerpen of dingen die een rol spelen in een 'universe of discourse' altijd vooraf gaat aan de modellering ervan, welk niveau deze modellering ook betreft en welke niveau je ook besluit om wel of niet toe te passen. Je kan bijvoorbeeld besluiten om wel of niet begrippen te definiëren of te modelleren. Wanneer je dit wel doet, dan is het nuttig om de definities hiervan te gebruiken als input voor het maken van het informatiemodel. Let wel, de definities op beide niveaus zijn niet altijd hetzelfde. De definitie in het informatiemodel moet soms preciezer zijn om preciezer de betekenis van de geregistreerde of uitgewisselde data te definiëren.
+- MIM geeft niet normatief een volgorde of werkwijze aan voor de invulling van de 4 niveaus en schrijft de invulling van niveau 1 en 4 ook niet voor. 
 - Niveau 1 is niet volledig beschreven, er zit meer in dan hier beschreven en er gaat meer aan vooraf. Dit niveau is met name illustratief opgenomen. 
 - Niveau 4 is niet volledig beschreven, er zit meer in dan hier is beschreven en wordt meer gedaan worden erna. Dit niveau is met name illustratief opgenomen. 
+
+Ten aanzien van conceptuele en logische informatiemodellen: 
 - Het voorliggende metamodel voor het modelleren van informatie (MIM) is bedoeld voor niveau 2 en 
 niveau 3: t.b.v. een zuiver conceptueel informatiemodel (2) en t.b.v. een logisch informatiemodel (3). 
 Het moge duidelijk zijn dat het altijd het één of het ander is, conceptueel of logisch. Een combinatie van 
