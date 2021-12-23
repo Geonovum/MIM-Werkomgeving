@@ -259,12 +259,12 @@ Ten aanzien van conceptuele en logische informatiemodellen:
 niveau 3: t.b.v. een zuiver conceptueel informatiemodel (2) en t.b.v. een logisch informatiemodel (3). 
 Het moge duidelijk zijn dat het altijd het één of het ander is, conceptueel of logisch. Een combinatie van 
 beide in één model leidt tot verwarring. Voor eenzelfde domein verschilt de structuur van het informatiemodel 
-naar gelang het type en bevat het logisch informatiemodel meer, vooral formele, specificaties dan een 
+naar gelang het type en bevat het logisch informatiemodel meer, vooral datagerichte, specificaties dan een 
 conceptueel informatiemodel. 
 - Het is voor de hand liggend maar niet persé noodzakelijk om voor een domein eerst een conceptueel 
 en daarna een logisch informatiemodel op te stellen. Met name bij een informatievoorziening 
 waarbij er meerdere koppelvlakken en/of doelgroeppen betrokken zijn met elk eigen informatiebehoeftes is het 
-aan te bevelen is om eerst een conceptueel informatiemodel te maken, zonder zich al te richten naar een specifiek 
+aan te bevelen om eerst een conceptueel informatiemodel te maken, zonder zich al te richten naar een specifiek 
 koppelvlak of een specifieke doelgroep. 
 - Een organisatie kan er voor kiezen om alleen een logisch informatiemodel op te stellen of om een conceptueel informatiemodel 
 integraal te behouden en enkel uit te breiden met logische aspecten bij het maken van een logisch informatiemodel. 
