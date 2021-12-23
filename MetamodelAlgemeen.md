@@ -226,8 +226,8 @@ In diagramvorm:
 Diagram: groepering
 
 ### Objecttypen en attribuutsoorten  
-In deze paragraaf staan alle modelelementen opgesomd, die gebruikt worden bij
-het maken van een informatiemodel.
+In deze paragraaf staan alle modelelementen gespecificeerd die gebruikt worden bij
+het maken van een informatiemodel. Bij elk modelelement is een definitie en een toelichting opgenomen.
 
 #### Objecten en objecttype  
 
@@ -773,7 +773,7 @@ Bij de use cases gaat het over meerdere kenmerken, waartussen een keuze gemaakt 
 Een objecttype heeft een attribuutsoort en het datatype hiervan is ofwel datatype D1 ofwel datatype D2. In MIM modelleren we daarom 1  attribuutsoort met als datatype een keuze tussen het datatype D1 en het datatype D2. Het maken van deze keuze is verplicht.
 
 <aside class='example'>
-Voorbeeld: *Attribuutsoort* geometrie als kenmerk van een objecttype. Dit is een keuze uit *Datatype* Line of *Datatype* Polygon. De opsomming van beide keuzemogelijkheden noemen we de *Keuze* LineOrPolygon. De aanhaking aan het attribuutsoort geometrie gebeurd door aan te geven dat LineOrPolygon het type is van geometrie. 
+Voorbeeld: *Attribuutsoort* geometrie als kenmerk van een objecttype. Dit is een keuze uit *Datatype* Line of *Datatype* Polygon. De opsomming van beide keuzemogelijkheden noemen we de *Keuze* LineOrPolygon. De aanhaking aan het attribuutsoort geometrie gebeurt door aan te geven dat LineOrPolygon het type is van geometrie. 
 </aside>
  
 In dit voorbeeld vormt LineOrPolygon de *Keuze* als geheel. De datatypes zelf zijn de keuze mogelijkheden, maar blijven in de modellering van de metaclass datatype en behoren in deze zin niet tot de modellering van de metaclass keuze.  
@@ -806,7 +806,7 @@ Er is sprake van ofwel attribuutsoort A0 en aanvullend hierbij een keuze tussen 
 Bij een objecttype "Betalingsopdracht" moet een bedrag en een *beschrijving* worden opgenomen. Deze beschrijving heeft betekenis voor het objecttype, als eigenschap. Verder moet er voor de beschrijving aanvullend een keuze worden gemaakt tussen een *beschrijving in de vorm van een betalingskenmerk* OF een *beschrijving in de vorm van een omschrijving*. Beide worden (ook) gezien als attribuutsoorten. Het is niet toegestaan dat beide velden worden ingevuld: alleen een betalingskenmerk, of alleen een omschrijving. 
 </aside>
  
-We modelleren daarom een *Keuze* 'BetalingskenmerkOfOmschrijving' met daarin een *Attribuutsoort* betalingskenmerk en een *Attribuutsoort* omschrijving. Het is bij deze use case niet de bedoeling om het attribuutsoort beschrijving kwijt te raken in de modellering. De aanhaking van de *Keuze* 'BetalingskenmerkOfOmschrijving' is daarom aan het **attribuutsoort**. De aanhaking aan het attribuutsoort beschrijving gebeurd door aan te geven dat BetalingskenmerkOfOmschrijving het type is van beschrijving. 
+We modelleren daarom een *Keuze* 'BetalingskenmerkOfOmschrijving' met daarin een *Attribuutsoort* betalingskenmerk en een *Attribuutsoort* omschrijving. Het is bij deze use case niet de bedoeling om het attribuutsoort beschrijving kwijt te raken in de modellering. De aanhaking van de *Keuze* 'BetalingskenmerkOfOmschrijving' is daarom aan het **attribuutsoort**. De aanhaking aan het attribuutsoort beschrijving gebeurt door aan te geven dat BetalingskenmerkOfOmschrijving het type is van beschrijving. 
 
 In dit voorbeeld vormt BetalingskenmerkOfOmschrijving de *Keuze* als geheel. De attribuutsoorten zelf zijn de keuze mogelijkheden, maar blijven in de modellering van de metaclass attribuutsoort en behoren in deze zin niet tot de modellering van de metaclass keuze.  
 
@@ -830,7 +830,13 @@ In het voorbeeld vormen EigenaarKeuze en de twee relatiedoelen tezamen de keuze 
 
 ## Specificatie metagegevens 
 
-Bij de modelelementen in een informatiemodel kunnen metagegevens, zoals 'naam' van het modelelement, of 'datum opname' van het modelelement, worden bijgehouden. Dit zijn geen eigenschappen van een object en worden daarom niet als bijvoorbeeld een attribuutsoort van een objecttype gemodelleerd. 
+Bij de modelelementen in een informatiemodel kunnen metagegevens, zoals 'naam' van het modelelement, of 'datum opname' van het modelelement, worden bijgehouden. Dit zijn geen eigenschappen van een object en worden daarom niet als bijvoorbeeld een attribuutsoort van een objecttype gemodelleerd.
+
+In de volgende paragrafen worden de metagegevens in tekst beschreven. Bij elk metagegeven is de definitie opgenomen, een toelichting en de toepassing ervan bij modelelementen.
+
+In [bijlage 6.1.2](#modelelementen-en-metagegevens-als-diagram) is de koppeling tussen metagegevens en de modelelementen beschreven door middel van UML diagrammen. Er is daarin ook opgenomen of ze verplicht of optioneel zijn.
+
+In [paragraaf 2.9](#toegestane-waarden-voor-bepaalde-metagegevens) is het waardebereik en defaultwaarden voor een aantal metagegevens opgenomen.
 
 ### Specificatie metagegevens informatiemodel
 
@@ -841,7 +847,7 @@ We onderkennen een aantal specifieke metagegevens op het niveau van het informat
 >   **Definitie Informatiedomein**  
 >   Aanduiding van het functionele domein waartoe het informatiemodel behoort.
 
-*Toelichting* Bijvoorbeeld: brk . Wanneer bepaalde definities of identificaties van het informatiemodel in de wereld niet uniek zijn, omdat een ander informatiemodel dezelfde naam hanteert voor een modelelement, of eenzelfde structuur voor een identificerende eigenschap, dan is het mogelijk om deze uniek te maken met behulp van deze aanduiding.   
+*Toelichting* Bijvoorbeeld: brk. Wanneer bepaalde definities of identificaties van het informatiemodel in de wereld niet uniek zijn, omdat een ander informatiemodel dezelfde naam hanteert voor een modelelement, of eenzelfde structuur voor een identificerende eigenschap, dan is het mogelijk om deze uniek te maken met behulp van deze aanduiding.   
 
 *Toepassing*: informatiemodel (verplicht)
 
@@ -910,8 +916,8 @@ specificatietaal. Bijvoorbeeld het objecttype met de naam Pand wordt in UML gemo
 ‘*Named element’* met als ‘*Name’* Pand (in UML 1.4 heette dit nog UML-Class, met een property ‘*Name’*).
 
 Een aantal andere metagegevens, zoals de eerder genoemde *Datum opname* met
-waarde 1-1-2012. worden als aparte data vastgelegd, in UML gebeurd dit in een
-‘*Tagged value*’. In Linked data gebeurd dit met een ‘*owl:DatatypeProperty*’.
+waarde 1-1-2012. worden als aparte data vastgelegd, in UML gebeurt dit in een
+‘*Tagged value*’. In Linked data gebeurt dit met een ‘*owl:DatatypeProperty*’.
 
 Merk op, de metadata aspecten zijn specifiek voor elk modelelement apart. Dus
 als er in H2.2 sprake is van een generalisatie, dan worden deze metadata niet
@@ -1180,6 +1186,9 @@ er altijd minimaal 1).
 Bijvoorbeeld: verblijfsobjecten die gelegen zijn in een pand (garagebox 0, huis
 1, flat \*).
 
+Andere getallen dan 0, 1 en * zijn ook toegestaan, bijvoorbeeld 2 .. * of 0 .. 2
+De notatie van * verschilt per modelleertaal. Met * wordt bedoeld, veel of vele (niet nader gespecificeerd maar bijvoorbeeld 10 of 100 is toegestaan).
+
 Indien een attribuutsoort deel uit maakt van een gegevensgroeptype, dan wordt de
 kardinaliteit vermeld van het attribuutsoort binnen het gegevensgroeptype. Voor
 de uiteindelijke kardinaliteit van hoe vaak een gegeven voorkomt bij het object
@@ -1193,8 +1202,26 @@ degelijk heeft, maar de waarde ervan is onbekend. De kardinaliteit wordt dan
 niet van 1 naar 0 gezet, maar er wordt aangegeven dat er sprake is van mogelijk
 geen waarde. Meer hierover is beschreven in het hoofdstuk [Afspraken & Regels](#afspraken-regels).
 
+Een generalisatie is een bijzondere vorm van een relatie. De kardinaliteit van de bron en van het doel is hier altijd en per definitie 1..1. Dit hoeft daarom nooit via een aanduiding van een kardinaliteit te worden aangegeven.
+
 *Toepassing*: alle modelelementen die een kenmerk (kunnen) zijn van een
 objecttype.
+
+#### Metagegeven: **Kardinaliteit relatie bron**
+
+>   **Definitie Kardinaliteit relatie bron**  
+>   Aanduiding of het kenmerk een authentiek gegeven betreft.
+
+Voorbeeld: een verblijfsobject ligt in een pand. De eigenaar van de relatie is het verblijfsobject (de bron van de relatie) en het doel van de relatie is een pand.
+
+- De kardinaliteit van het doel van de relatie geeft aan: in hoeveel panden kan 1 verblijfsobject liggen. Antwoord: 1..*
+- De kardinaliteit van de bron geeft aan: hoeveel verblijfsobjecten kunnen er in 1 pand liggen. Antwoord: 0..*
+
+*Toelichting*
+
+De kardinaliteit van de bron van de relatie is een regel die geldt voor de data (een constraint). Wanneer de kardinaliteit van de bron van de relatie 1 of meer is, dan geeft dit aan dat het object dat het doel van de relatie is alleen kan bestaan wanneer ernaar gewezen wordt vanuit de bron van de relatie. Anders gezegd, het object dat het doel van de relatie is mag geen wees zijn en mag dit ook niet worden.
+
+Toepassing: relatiesoort en externe koppeling
 
 #### Metagegeven: **Authentiek**
 
@@ -1563,14 +1590,18 @@ Een constraint is gekoppeld aan een klasse waarop ze van toepassing is.
 
 *Toepassing*: objecttype, gegevensgroeptype, relatieklasse.
 
-## Toegestane waarden voor (bepaalde) metadata gegevens
+## Toegestane waarden voor (bepaalde) metagegevens
 
-Tagged values zijn altijd van het datatype CharacterString. Aanvullend geldt:
+### Waardebereik metagegevens
+
+Een aantal metagegevens zijn als tagged values opgenomen. Deze zijn altijd van het datatype CharacterString. Aanvullend geldt:
 
 -   Voor lengtes geldt dat er alleen getallen in mogen (van het datatype
     Integer).
 
 -   Voor datums geldt dat deze het volgende patroon volgen: jjjjmmdd
+
+Voor de volgende metagegevens geldt een specifiek waardebereik.
 
 | **Tagged value**                    | **Waardenbereik**                                                          |
 |-------------------------------------|----------------------------------------------------------------------------|
@@ -1581,4 +1612,23 @@ Tagged values zijn altijd van het datatype CharacterString. Aanvullend geldt:
 | [Aggregatietype](#metagegeven-aggregatietype) | Compositie, Gedeeld, Geen                                        |
 | [Authentiek](#authentieke-gegevens) | Authentiek, Basisgegeven, Wettelijk gegeven, Landelijk kerngegeven, Overig |
 
-NB: Geef bij overig in uw eigen informatiemodel aan wat u er onder verstaat.
+NB: Geef bij de toepassing van overig in een informatiemodel aan wat er onder wordt verstaan.
+
+
+### Defaultwaarden voor metagegevens modelelementen
+
+Er zijn metagegevens die een defaultwaarde hebben. Het is echter niet nodig om deze defaultwaarde expliciet aan te geven in het informatiemodel. De default staat hier aangegeven. Alleen wanneer er afgeweken wordt van deze default wordt dit in het informatiemodel aangegeven.
+
+Aanwijzing MIM-beheerder: metagegevens met een defaultwaarde mogen niet optioneel zijn. Kies de defaultwaarde defensief.
+
+| **Metagegeven**                     | **Defaultwaarde**                                                          |
+|-------------------------------------|----------------------------------------------------------------------------|
+| Indicatie materiële historie        | Nee                                                                    |
+| Indicatie formele historie          | Nee                                                                    |
+| Indicatie classificerend            | Nee                                                                    |
+| Mogelijk geen waarde                | Nee                                                                    |
+| Identificerend                      | Nee                                       |
+| Kardinaliteit attribuut             | 1                                                                      |
+| Type aggregatie                     | Geen |
+
+De kardinaliteit bij een relatiesoort heeft geen defaultwaarde. Bij een relatiedoel moet die altijd ingevuld zijn. Bij een relatiebron is die optioneel ingevuld. Als er niets is ingevuld bij een relatiebron dan kan er niets over de kardinaliteit van de relatiebron worden gezegd. In de praktijk betekent dat een kardinaliteit van 0..*.
