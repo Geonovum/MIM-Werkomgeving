@@ -1210,7 +1210,7 @@ objecttype.
 #### Metagegeven: **Kardinaliteit relatie bron**
 
 >   **Definitie Kardinaliteit relatie bron**  
->   Aanduiding of het kenmerk een authentiek gegeven betreft.
+De kardinaliteit relatie bron geeft bij een relatiesoort aan hoeveel instanties van het bron objecttype in een relatie met één instantie van het doel objecttype verbonden kunnen zijn.
 
 Voorbeeld: een verblijfsobject ligt in een pand. De eigenaar van de relatie is het verblijfsobject (de bron van de relatie) en het doel van de relatie is een pand.
 
@@ -1219,7 +1219,7 @@ Voorbeeld: een verblijfsobject ligt in een pand. De eigenaar van de relatie is h
 
 *Toelichting*
 
-De kardinaliteit van de bron van de relatie is een regel die geldt voor de data (een constraint). Wanneer de kardinaliteit van de bron van de relatie 1 of meer is, dan geeft dit aan dat het object dat het doel van de relatie is alleen kan bestaan wanneer ernaar gewezen wordt vanuit de bron van de relatie. Anders gezegd, het object dat het doel van de relatie is mag geen wees zijn en mag dit ook niet worden.
+De kardinaliteit van de bron van de relatie geeft aan hoeveel instanties van de bron van de relatie kunnen verwijzen naar één instantie van het doel van de relatie. Wanneer de kardinaliteit aan de bronkant van de relatie niet is gespecificeerd dan is er geen sprake van een defaultwaarde.
 
 Toepassing: relatiesoort en externe koppeling
 
@@ -1594,7 +1594,7 @@ Een constraint is gekoppeld aan een klasse waarop ze van toepassing is.
 
 ### Waardebereik metagegevens
 
-Een aantal metagegevens zijn als tagged values opgenomen. Deze zijn altijd van het datatype CharacterString. Aanvullend geldt:
+Een aantal metagegevens zijn hebben als datatype CharacterString. Aanvullend geldt:
 
 -   Voor lengtes geldt dat er alleen getallen in mogen (van het datatype
     Integer).
