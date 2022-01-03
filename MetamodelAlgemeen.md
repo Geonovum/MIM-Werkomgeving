@@ -1153,7 +1153,7 @@ Bijvoorbeeld: Ja. Met te bevragen wordt bedoeld, er wordt historie bijgehouden
 op enerlei wijze, welke op enerlei wijze te bevragen is.
 
 De in te vullen waarde komt uit: zie [Tagged values en waardenbereik tagged
-values.](#toegestane-waarden-voor-bepaalde-metadata-gegevens)
+values](#toegestane-waarden-voor-bepaalde-metadata-gegevens)
 
 Materiële historie geeft aan wanneer een verandering is opgetreden in de werkelijkheid die heeft
 geleid tot verandering van de attribuutwaarde. Verdere toelichting,
@@ -1174,7 +1174,7 @@ Bijvoorbeeld: Nee. Met te bevragen wordt bedoeld, er wordt historie bijgehouden
 op enerlei wijze, welke op enerlei wijze te bevragen is.
 
 De in te vullen waarde komt uit: zie [Tagged values en waardenbereik tagged
-values.](#toegestane-waarden-voor-bepaalde-metadata-gegevens)
+values](#toegestane-waarden-voor-bepaalde-metadata-gegevens)
 
 Formele historie geeft aan wanneer in de administratie een verandering bekend
 is, en is verwerkt. Verdere toelichting, zie het hoofdstuk [Afspraken &Regels](#afspraken-regels).
@@ -1258,7 +1258,7 @@ alle overheidsinstellingen verplicht en zonder nader onderzoek, worden gebruikt
 bij de uitvoering van publiekrechtelijke taken.
 
 De in te vullen waarde komt uit: zie [Tagged values en waardenbereik tagged
-values.](#toegestane-waarden-voor-bepaalde-metadata-gegevens)
+values](#toegestane-waarden-voor-bepaalde-metadata-gegevens)
 
 *Toepassing*: alle modelelementen die een kenmerk (kunnen) zijn van een
 objecttype.
@@ -1302,7 +1302,7 @@ op te nemen, en slechts dit aspect op te nemen. Ook kan, in combinatie met **ind
 dit aspect afgeleid worden uit het meest concrete objecttype, indien dergelijke objecttypen wel zijn gemodelleerd.
 
 De in te vullen waarde komt uit: zie [Tagged values en waardenbereik tagged
-values.](#toegestane-waarden-voor-bepaalde-metadata-gegevens)
+values](#toegestane-waarden-voor-bepaalde-metadata-gegevens)
 
 *Toepassing*: attribuutsoort.
 
