@@ -1265,7 +1265,7 @@ objecttype.
 
 #### Metagegeven: **Indicatie afleidbaar**
 
->   **Definitie indicatie afleidbaar**  
+>   **Definitie Indicatie afleidbaar**  
 >   Aanduiding dat gegeven afleidbaar is uit andere attribuut- en/of
 >   relatiesoorten.
 
@@ -1306,9 +1306,9 @@ values.](#toegestane-waarden-voor-bepaalde-metadata-gegevens)
 
 *Toepassing*: attribuutsoort.
 
-#### Metagegeven: **mogelijk geen waarde**
+#### Metagegeven: **Mogelijk geen waarde**
 
->   **Definitie mogelijk geen waarde**  
+>   **Definitie Mogelijk geen waarde**  
 >   Aanduiding dat van een aspect geen waarde is geregistreerd, maar dat
 >   onduidelijk is of de waarde er werkelijk ook niet is.
 
@@ -1329,9 +1329,9 @@ voorwaarden, met een opgaaf van reden.
 *Toepassing*: de modelelementen waarvoor een waarde ingevuld kan worden, te
 weten de modelelementen attribuutsoort en relatiesoort.
 
-#### Metagegeven: **bron**
+#### Metagegeven: **Bron**
 
->   **Definitie bron**  
+>   **Definitie Bron**  
 >   Aanduiding van het bronobject in een relatie tussen objecten. Een bronobject
 >   heeft middels een relatiesoort een relatie met een doelobject.
 
@@ -1347,9 +1347,9 @@ anders is voor het adres niet van belang.
 *Toepassing*: relaties, oftewel de modelelementen Relatiesoort en Externe
 koppeling.
 
-#### Metagegeven: **doel**
+#### Metagegeven: **Doel**
 
->   **Definitie doel**  
+>   **Definitie Doel**  
 >   Aanduiding van het gerelateerde objecttype die het eindpunt van de relatie
 >   aangeeft. Naar objecten van dit objecttype wordt verwezen.
 
@@ -1517,12 +1517,12 @@ betreft, zoals een CharacterString.
 
 *Toepassing*: de modelelementen uit de groep datatype en attribuutsoort.
 
-#### Metagegeven: **code**
+#### Metagegeven: **Code**
 
 >   **Definitie Code**  
 >   De in een registratie of informatiemodel aan de enumeratiewaarde toegekend unieke code
 
-#### Metagegeven: **indicatie abstract object**
+#### Metagegeven: **Indicatie abstract object**
 
 >   **Definitie Indicatie abstract object**  
 >   Indicatie dat het objecttype een generalisatie is, waarvan een object als specialisatie
@@ -1537,6 +1537,28 @@ Zie ook sectie [Abstracte objecttypes en concrete objecten](#abstracte-objecttyp
 een nadere uitleg wordt gegeven van het fenomeen abstract objecttypen.
 
 *Toepassing:* enumeratiewaarde
+
+#### Metagegeven: **Populatie**
+
+>   **Definitie Populatie**  
+Voor objecttypen die deel uitmaken van een (basis)registratie betreft dit de beschrijving van de exemplaren van het gedefinieerde objecttype die in de desbetreffende (basis)­registratie voorhanden zijn.
+
+*Toelichting*
+
+Dit is de beschrijving van de subset van de verzameling van alle instanties van dit objecttype. De subset bevat de instanties die opgenomen zijn in de registratie die met het informatiemodel wordt beschreven. Wordt bijvoorbeeld gebruikt bij basisregistraties om aan te geven dat niet alle instanties van een objecttype opgenomen zijn in de registratie maar alleen die welke voldoen aan een conditie.
+
+*Toepassing:* objecttype
+
+#### Metagegeven: **Kwaliteit**
+
+>   **Definitie Kwaliteit**  
+Beschrijving van de mate waarin in de registratie opgenomen objecten van het desbetreffende type volledig, juist, actueel, nauwkeurig en betrouwbaar zijn.
+
+*Toelichting*
+
+Hier kan in tekst een beschrijving opgenomen worden over de kwaliteit van de inwinning van gegevens bij dit objecttype.
+
+*Toepassing:* objecttype
 
 ### Specificatie metagegevens modelelement bindingen
 
