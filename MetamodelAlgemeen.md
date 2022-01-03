@@ -1301,7 +1301,8 @@ Praktisch gezien kan vervolgens gekozen worden om de onderliggende objecttypen n
 op te nemen, en slechts dit aspect op te nemen. Ook kan, in combinatie met **indicatie afleidbaar**
 dit aspect afgeleid worden uit het meest concrete objecttype, indien dergelijke objecttypen wel zijn gemodelleerd.
 
-De in te vullen waarde komt uit: zie [Tagged values en waardenbereik tagged values](#toegestane-waarden-voor-bepaalde-metadata-gegevens)
+De in te vullen waarde komt uit: zie [Tagged values en waardenbereik tagged
+values](#toegestane-waarden-voor-bepaalde-metadata-gegevens)
 
 *Toepassing*: attribuutsoort.
 
