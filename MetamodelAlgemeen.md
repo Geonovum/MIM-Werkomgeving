@@ -1133,7 +1133,7 @@ Bijvoorbeeld: Nee. Met te bevragen wordt bedoeld, er wordt historie bijgehouden
 op enerlei wijze, welke op enerlei wijze te bevragen is.
 
 De in te vullen waarde komt uit: zie [Tagged values en waardenbereik tagged
-values](#.
+values](#toegestane-waarden-voor-bepaalde-metadata-gegevens)
 
 Formele historie geeft aan wanneer in de administratie een verandering bekend
 is, en is verwerkt. Verdere toelichting, zie het hoofdstuk [Afspraken &Regels](#afspraken-regels).
@@ -1195,8 +1195,8 @@ inwinningsprocessen en wettelijk regelingen. Authentieke gegevens moeten door
 alle overheidsinstellingen verplicht en zonder nader onderzoek, worden gebruikt
 bij de uitvoering van publiekrechtelijke taken.
 
-De in te vullen waarde komt uit: zie Tagged values en waardenbereik tagged
-values.
+De in te vullen waarde komt uit: zie [Tagged values en waardenbereik tagged
+values](#toegestane-waarden-voor-bepaalde-metadata-gegevens)
 
 *Toepassing*: alle modelelementen die een kenmerk (kunnen) zijn van een
 objecttype.
@@ -1239,8 +1239,8 @@ Praktisch gezien kan vervolgens gekozen worden om de onderliggende objecttypen n
 op te nemen, en slechts dit aspect op te nemen. Ook kan, in combinatie met **indicatie afleidbaar**
 dit aspect afgeleid worden uit het meest concrete objecttype, indien dergelijke objecttypen wel zijn gemodelleerd.
 
-De in te vullen waarde komt uit: zie Tagged values en waardenbereik tagged
-values.
+De in te vullen waarde komt uit: zie [Tagged values en waardenbereik tagged
+values](#toegestane-waarden-voor-bepaalde-metadata-gegevens) 
 
 *Toepassing*: attribuutsoort.
 
