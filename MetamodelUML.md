@@ -234,7 +234,7 @@ Rode tekst betreft een standaardelement binnen EA. Zwarte tekst in de kolom betr
 
 **Specificatie voor «Objecttype»**
 
-De objecttypen worden naar de volgende aspecten gespecificeerd:
+Objecttypen hebben de volgende metagegeves:
 
 | **Aspect**                    | **Kardi-naliteit** | **Toelichting**                                              | **In  UML 2.5**                          |      | **In EA**                                                    | **In ...** |
 | ----------------------------- | ------------------ | ------------------------------------------------------------ | ---------------------------------------- | ---- | ------------------------------------------------------------ | ---------- |
@@ -253,7 +253,7 @@ De objecttypen worden naar de volgende aspecten gespecificeerd:
 
 **Specificatie voor «Attribuutsoort»**
 
-De attribuutsoorten worden naar de volgende aspecten gespecificeerd:
+Attribuutsoorten hebben de volgende metagegevens:
 
 | **Aspect**                                  | **Kardi-naliteit** | **Toelichting**                                              | **In UML 2.5**                                               |      | **In EA**      | **In ...** |
 | ------------------------------------------- | ------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ---- | -------------- | ---------- |
@@ -281,7 +281,7 @@ De attribuutsoorten worden naar de volgende aspecten gespecificeerd:
 
 **Specificatie voor «Gegevensgroep»**
 
-De gegevensgroepen worden naar de volgende aspecten gespecificeerd:
+Gegevensgroepen hebben de volgende metagegevens::
 
 | **Aspect**                       | **Kardi-naliteit** | **Toelichting**                                        | **In UML 2.5**                                               |      | **In EA**                                                    | **In ...** |
 | -------------------------------- | ------------------ | ------------------------------------------------------ | ------------------------------------------------------------ | ---- | ------------------------------------------------------------ | ---------- |
@@ -301,7 +301,7 @@ De gegevensgroepen worden naar de volgende aspecten gespecificeerd:
 
 **Specificatie voor «Gegevensgroeptype»**
 
-De gegevensgroeptypen worden naar de volgende aspecten gespecificeerd:
+Gegevensgroeptypen hebben de volgende metagegevens:
 
 | **Aspect**             | **Kardi-naliteit** | **Toelichting**       | **In UML 2.5**                        |      | **In EA**      | **In ...** |
 | ---------------------- | ------------------ | --------------------- | ------------------------------------- | ---- | -------------- | ---------- |
@@ -336,7 +336,7 @@ vastgelegd, dan is de metadata hierbij wel verplicht.
 
 **Specificatie voor «Relatiesoort»**
 
-De relatiesoorten worden naar de volgende aspecten gespecificeerd:
+Relatiesoorten hebben de volgende metagegevens:
 
 | **Aspect**                        | **Kardi-naliteit** | **Toelichting**       | **In UML 2.5**                                               |      | **In  EA**                                                   | **In ...** |
 | --------------------------------- | ------------------ | --------------------- | ------------------------------------------------------------ | ---- | ------------------------------------------------------------ | ---------- |
@@ -362,7 +362,7 @@ De relatiesoorten worden naar de volgende aspecten gespecificeerd:
 
 **Specificatie voor «Relatierol»**
 
-Voor relatierollen worden naar de volgende aspecten gespecificeerd:
+Relatierollen hebben de volgende metagegevens:
 
 | **Aspect**    | **Kardi-naliteit** | **Toelichting**       | **In UML 2.5**                       |      | **In EA**      | **In ...** |
 | ------------- | ------------------ | --------------------- | ------------------------------------ | ---- | -------------- | ---------- |
@@ -378,7 +378,7 @@ de metagegevens en optioneel de benoeming van de naam van de relatie.
 
 **Specificatie voor «Relatiesoort»**
 
-De relatiesoorten worden naar de volgende aspecten gespecificeerd:
+Relatiesoorten hebben de volgende metagegevens:
 
 | **Aspect**    | **Kardi-naliteit** | **Toelichting**       | **In UML 2.5**                       |      | **In EA**      | **In ...** |
 | ------------- | ------------------ | --------------------- | ------------------------------------ | ---- | -------------- | ---------- |
@@ -435,7 +435,7 @@ De generalisaties worden naar het volgende aspect gespecificeerd:
 
 WAS in MIM 1.0
 
-De relatieklassen worden naar de volgende aspecten gespecificeerd:
+Relatieklassen hebben de volgende metagegevens:
 
 | **Aspect**       | **Kardi-naliteit** | **Toelichting**       | **In UML 2.5**                        |      | **In EA**      |      |
 | ---------------- | ------------------ | --------------------- | ------------------------------------- | ---- | -------------- | ---- |
@@ -477,7 +477,7 @@ De metaklasse Relatieklasse is een specialisatie van de metaklasse Relatiesoort 
 
 **Specificatie voor «Externe koppeling»**
 
-Externe koppelingen worden naar de volgende aspecten gespecificeerd:
+Externe koppelingen hebben de volgende metagegevens:
 
 | **Aspect**           | **Kardi-naliteit** | **Toelichting**                            | **In UML 2.5**                                      |      | **In EA**                                                    | **In ...** |
 | -------------------- | ------------------ | ------------------------------------------ | --------------------------------------------------- | ---- | ------------------------------------------------------------ | ---------- |
@@ -510,7 +510,7 @@ Voor referentielijsten worden de volgende aspecten gespecificeerd:
 
 **Specificatie voor «Referentie element»**
 
-De referentie-elementen worden naar de volgende aspecten gespecificeerd:
+Referentie-elementen hebben de volgende metagegevens:
 
 | **Aspect**                                  | **Kardi-naliteit** | **Toelichting**       | **In UML 2.5**                                               |      | **In EA**                            | **In ...** |
 | ------------------------------------------- | ------------------ | --------------------- | ------------------------------------------------------------ | ---- | ------------------------------------ | ---------- |
@@ -551,7 +551,7 @@ DateTime, Surface.
 
 **Specificatie voor «Primitief datatype»**
 
-De datatypen worden naar de volgende aspecten gespecificeerd:
+Datatypen hebben de volgende metagegevens:
 
 | **Aspect**                                  | **Kardi-naliteit** | **Toelichting**       | **In UML 2.5**                        |      | **In EA**      | **In ...** |
 | ------------------------------------------- | ------------------ | --------------------- | ------------------------------------- | ---- | -------------- | ---------- |
@@ -581,7 +581,7 @@ Voor Gestructureerde datatypen worden de volgende aspecten gespecificeerd:
 
 **Specificatie voor «Data element»**
 
-De data-elementen worden naar de volgende aspecten gespecificeerd:
+Data-elementen hebben de volgende metagegevens:
 
 | **Aspect**                                  | **Kardi-naliteit** | **Toelichting**       | **In UML 2.5**                                               |      | **In EA**      | **In ...** |
 | ------------------------------------------- | ------------------ | --------------------- | ------------------------------------------------------------ | ---- | -------------- | ---------- |
@@ -599,7 +599,7 @@ De data-elementen worden naar de volgende aspecten gespecificeerd:
 
 **Specificatie voor «Keuze»**
 
-Een Keuze worden naar de volgende aspecten gespecificeerd:
+Keuze heeft de volgende metagegevens:
 
 | **Aspect**       | **Kardi-naliteit** | **Toelichting**       | **In UML 2.5**                       |      | **In EA**      | **In ...** |
 | ---------------- | ------------------ | --------------------- | ------------------------------------ | ---- | -------------- | ---------- |
@@ -615,7 +615,7 @@ Een Keuze worden naar de volgende aspecten gespecificeerd:
 
 **Specificatie voor «Informatiemodel»**
 
-Informatiemodel packages worden naar de volgende aspecten gespecificeerd:
+Informatiemodel packages hebben de volgende metagegevens:
 
 | **Aspect**                 | **Kardi-naliteit** | **Toelichting**                                              | **In UML 2.5**                       |      | **In EA**      | **In ...** |
 | -------------------------- | ------------------ | ------------------------------------------------------------ | ------------------------------------ | ---- | -------------- | ---------- |
@@ -633,7 +633,7 @@ Informatiemodel packages worden naar de volgende aspecten gespecificeerd:
 
 **Specificatie voor «Domein»**
 
-Domein packages worden naar de volgende aspecten gespecificeerd:
+Domein packages hebben de volgende metagegevens:
 
 | **Aspect** | **Kardi-naliteit** | **Toelichting**                                         | **In UML 2.5**                       |      | **In EA** | **In ...** |
 | ---------- | ------------------ | ------------------------------------------------------- | ------------------------------------ | ---- | --------- | ---------- |
@@ -641,7 +641,7 @@ Domein packages worden naar de volgende aspecten gespecificeerd:
 
 **Specificatie voor «Extern»**
 
-Externe packages worden naar de volgende aspecten gespecificeerd:
+Externe packages hebben de volgende metagegevens:
 
 | **Aspect**      | **Kardi-naliteit** | **Toelichting**                                              | **In UML 2.5**                       |      | **In EA**      | **In ...** |
 | --------------- | ------------------ | ------------------------------------------------------------ | ------------------------------------ | ---- | -------------- | ---------- |
@@ -652,7 +652,7 @@ Externe packages worden naar de volgende aspecten gespecificeerd:
 
 **Specificatie voor «View»**
 
-View packages worden naar de volgende aspecten gespecificeerd, analoog aan
+View packages hebben de volgende metagegevens, analoog aan
 «Extern»:
 
 | **Aspect**      | **Kardi-naliteit** | **Toelichting**                                              | **In UML 2.5**                        |      | **In EA**      | **In ...** |
@@ -666,8 +666,7 @@ View packages worden naar de volgende aspecten gespecificeerd, analoog aan
 
 #### Specificatie voor Enumeratie
 
-Enumeraties betreffen de metaclass Enumeration en worden naar de volgende
-aspecten gespecificeerd:
+Enumeraties hebben de volgende metagegevens:
 
 | **Aspect**    | **Kardi-naliteit** | **Toelichting**       | **In UML 2.5**                        |      | **In EA**      | **In ...** |
 | ------------- | ------------------ | --------------------- | ------------------------------------- | ---- | -------------- | ---------- |
@@ -677,8 +676,7 @@ aspecten gespecificeerd:
 
 #### Specificatie voor Enumeratiewaarde
 
-De enumeratiewaarde zelf betreft de metaclass UML-EnumerationLiteral en kent
-volgende aspecten:
+Enumeratiewaarden hebben de volgende metagegevens:
 
 | **Aspect**    | **Kardi-naliteit** | **Toelichting**                                              | **In UML 2.5**                          |      | **In EA** | **In ...** |
 | ------------- | ------------------ | ------------------------------------------------------------ | --------------------------------------- | ---- | --------- | ---------- |
@@ -688,8 +686,7 @@ volgende aspecten:
 
 #### Specificatie voor een Constraint
 
-Constraint betreft de metaclass UML Constraint en wordt naar de volgende
-aspecten gespecificeerd:
+Constraint betreft de metaclass UML Constraint en heeft de volgende metagegevens:
 
 | **Aspect**               | **Kardi-naliteit** | **Toelichting**                                              | **In UML 2.5**                        |      | **In EA**                  | **In ...** |
 | ------------------------ | ------------------ | ------------------------------------------------------------ | ------------------------------------- | ---- | -------------------------- | ---------- |
