@@ -514,6 +514,7 @@ De datatypen worden naar de volgende aspecten gespecificeerd:
 | ------------------------------------------- | ------------------ | --------------------- | ------------------------------------- | ---- | -------------- | ---------- |
 | **Naam**                                    | 1                  | Algemeen metagegeven. | *name van de metaclass Named element* |      | *Name*         |            |
 | **Begrip**                                  | 0..\*              | Algemeen metagegeven. |                                       |      | *Tagged value* |            |
+| **Alias**                        | 0..1               | Algemeen metagegeven.                                  |                                                              |      | *Alias*                                                      |            |
 | **Definitie**                               | 0..1               | Algemeen metagegeven. | *Body van de metaclass Comment*       |      | *Notes*        |            |
 | **Domein** *(aspecten van een waarde/data)* |                    |                       |                                       |      |                |            |
 | **- Lengte**                                | 0..1               | Algemeen metagegeven. |                                       |      | *Tagged value* |            |
@@ -530,6 +531,7 @@ Voor Gestructureerde datatypen worden de volgende aspecten gespecificeerd:
 | ------------------- | ------------------ | --------------------- | ------------------------------------- | ---- | -------------- | ---------- |
 | **Naam**            | 1                  | Algemeen metagegeven. | *name van de metaclass Named element* |      | *Name*         |            |
 | **Begrip**          | 0..\*              | Algemeen metagegeven. |                                       |      | *Tagged value* |            |
+| **Alias**                        | 0..1               | Algemeen metagegeven.                                  |                                                              |      | *Alias*                                                      |            |
 | **Herkomst**        | 1                  | Algemeen metagegeven. |                                       |      | *Tagged value* |            |
 | **Definitie**       | 1                  | Algemeen metagegeven. | *Body van de metaclass Comment*       |      | *Notes*        |            |
 | **Patroon**         | 0..1               | Algemeen metagegeven. |                                       |      | *Tagged value* |            |
@@ -544,6 +546,7 @@ De data-elementen worden naar de volgende aspecten gespecificeerd:
 | ------------------------------------------- | ------------------ | --------------------- | ------------------------------------------------------------ | ---- | -------------- | ---------- |
 | **Naam**                                    | 1                  | Algemeen metagegeven. | *name van de metaclass Named element*                        |      | *Name*         |            |
 | **Begrip**                                  | 0..\*              | Algemeen metagegeven. |                                                              |      | *Tagged value* |            |
+| **Alias**                        | 0..1               | Algemeen metagegeven.                                  |                                                              |      | *Alias*                                                      |            |
 | **Definitie**                               | 0..1               | Algemeen metagegeven. | *Body van de metaclass Comment*                              |      | *Notes*        |            |
 | **Domein** *(aspecten van een waarde/data)* |                    |                       |                                                              |      |                |            |
 | **- Type**                                  | 1                  | Algemeen metagegeven. |                                                              |      | *Type*         |            |
@@ -562,6 +565,7 @@ Een Keuze worden naar de volgende aspecten gespecificeerd:
 | ---------------- | ------------------ | --------------------- | ------------------------------------ | ---- | -------------- | ---------- |
 | **Naam**         | 1                  | Algemeen metagegeven. | *name van de metaclass Namedelement* |      | *Name*         |            |
 | **Begrip**       | 0..\*              | Algemeen metagegeven. |                                      |      | *Tagged value* |            |
+| **Alias**        | 0..1               | Algemeen metagegeven. |                                      |      | *Alias*        |            |
 | **Herkomst**     | 1                  | Algemeen metagegeven. |                                      |      | *Tagged value* |            |
 | **Definitie**    | 1                  | Algemeen metagegeven. | *Body van de metaclass Comment*      |      | *Notes*        |            |
 | **Datum opname** | 1                  | Algemeen metagegeven. |                                      |      | *Tagged value* |            |
