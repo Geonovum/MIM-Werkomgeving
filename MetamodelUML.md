@@ -406,6 +406,7 @@ De generalisaties worden naar het volgende aspect gespecificeerd:
 | ------------- | ------------------ | ------------------------------------------------------------ | --------------------------------------------------- | ---- | --------- | ---------- |
 | **Subtype**   | 1                  | Het objecttype dat een specialisatie is van een (ander) objecttype. | */source: related Element bij Relationship Element* |      | *Source*  |            |
 | **Supertype** | 1                  | Het objecttype dat de generalisatie is van een (ander) objecttype. | */target: related Element bij Relationship Element* |      | *Target*  |            |
+| **Datum opname**              | 1                  | Algemeen metagegeven.                                        |                                          |      | *Tagged value*                                               |            |
 
 **Specificatie voor «Generalisatie» tussen datatypes**
 
@@ -442,6 +443,7 @@ Externe koppelingen worden naar de volgende aspecten gespecificeerd.
 | **Begrip**           | 0..\*              | Algemeen metagegeven.                      |                                                     |      | *Tagged value*                                               |            |
 | **Alias**            | 0..1               | Algemeen metagegeven.                      | *UML-Property*                                      |      | *Alias*                                                      |            |
 | **Datum opname**     | 1                  | Algemeen metagegeven.                      |                                                     |      | *Tagged value*                                               |            |
+| **Kardinaliteit√**                | 1                  | Algemeen metagegeven. | *lowerValue en upperValue van de metaclass MultiplicityElement* |      | *Multiplicity van de target role*                            |            |
 | **Unidirectioneel**  | 1                  | Algemeen metagegeven.                      |                                                     |      | *Direction van de betreffende assiciation (van source naar target)* |            |
 | **Relatie eigenaar** | 1                  | Algemeen metagegeven.                      | */source: related Element bij Relationship Element* |      | *Source*                                                     |            |
 | **Relatie doel**     | 1                  | Algemeen metagegeven.                      | */target: related Element bij Relationship Element* |      | *Target*                                                     |            |
@@ -485,7 +487,7 @@ De referentie-elementen worden naar de volgende aspecten gespecificeerd:
 | **Identificerend**                          | 0..1               | Algemeen metagegeven. | *isID van de metaclass Property*                             |      | *isID bij de betreffende class*      |            |
 | **Toelichting**                             | 0..1               | Algemeen metagegeven. |                                                              |      | *Tagged value*                       |            |
 
-**Specificatie voor «codeList»**
+**Specificatie voor «Codelijst»**
 
 Voor codelijst worden de volgende aspecten gespecificeerd:
 
@@ -545,6 +547,7 @@ De data-elementen worden naar de volgende aspecten gespecificeerd:
 | **Naam**                                    | 1                  | Algemeen metagegeven. | *name van de metaclass Named element*                        |      | *Name*         |            |
 | **Begrip**                                  | 0..\*              | Algemeen metagegeven. |                                                              |      | *Tagged value* |            |
 | **Definitie**                               | 0..1               | Algemeen metagegeven. | *Body van de metaclass Comment*                              |      | *Notes*        |            |
+| **Datum opname**              | 1                  | Algemeen metagegeven.                                        |                                          |      | *Tagged value*                                               |            |
 | **Domein** *(aspecten van een waarde/data)* |                    |                       |                                                              |      |                |            |
 | **- Type**                                  | 1                  | Algemeen metagegeven. |                                                              |      | *Type*         |            |
 | **- Lengte**                                | 0..1               | Algemeen metagegeven. |                                                              |      | *Tagged value* |            |
@@ -642,6 +645,7 @@ volgende aspecten:
 | **Naam**      | 1                  | Algemeen metagegeven.                                        | *name van de metaclass Named element*   |      | *Name*    |            |
 | **Definitie** | 0..1               | Algemeen metagegeven. *De beschrijving van de betekenis van de enumeratiewaarde zoals gespecificeerd in de catalogus van de desbetreffende registratie.* | *Body van de metaclass Comment*         |      | *Notes*   |            |
 | **Code**      | 0..1               | De in een registratie of informatiemodel aan de enumeratiewaarde toegekend unieke code (niet te verwarren met alias, zoals bedoeld in 2.6.1). | *Alias van de metaclass Element Import* |      | *Alias*   |            |
+| **Datum opname**              | 1                  | Algemeen metagegeven.                                        |                                          |      | *Tagged value*                                               |            |
 
 #### Specificatie voor een Constraint
 
@@ -653,6 +657,7 @@ aspecten gespecificeerd:
 | **Naam√**                | 1                  | Algemeen metagegeven.                                        | *name van de metaclass Named element* |      | *Name*                     |            |
 | **Specificatie tekst**   | 0..1               | De specificatie van de constraint in normale tekst.          |                                       |      | *Notes (type = invariant)* |            |
 | **Specificatie formeel** | 0..1               | De beschrijving van de constraint in een formele specificatietaal, in OCL |                                       |      | *Notes (type =OCL)*        |            |
+| **Datum opname**              | 1                  | Algemeen metagegeven.                                        |                                          |      | *Tagged value*                                               |            |
 
 ## UML Tooling
 
