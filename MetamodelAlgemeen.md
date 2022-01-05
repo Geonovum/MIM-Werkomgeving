@@ -1564,7 +1564,7 @@ Hier kan in tekst een beschrijving opgenomen worden over de kwaliteit van de inw
 
 Deze metagegevens zijn alleen nodig voor de binding van modelelementen aan elkaar. 
 
-meer uitleg!!!!!!
+Voorbeelden daarvan zijn de binding tussen een objecttype en een attribuut, tussen een objecttype en een generalisatie, tussen een enumeratie en een enumeratiewaarde. In modelleertalen is die binding niet altijd benoemd maar impliciet aanwezig. Het metagegeven hoeft dan in die modelleertaal niet expliciet te worden opgenomen. Omdat dit hoofdstuk los van een modelleertaal is beschreven zijn de namen van de bindingen wel opgenomen.
 
 #### Metagegeven: **heeft attribuut**
 
@@ -1713,16 +1713,38 @@ Een keuze tussen relatiedoelen kan als eigenschap aan een objectype worden gekop
 
 *Toepassing*: Objecttype, keuze.
 
-#### Metagegeven: **van toepassing op modelelement**
+#### Metagegeven: **van toepassing op objecttype**
 
->   **Definitie van toepassing op modeldocument**  
+>   **Definitie van toepassing op objecttype**  
 >   De binding van een constraint aan een modelelement.
 
 *Toelichting*
 
-Een constraint is gekoppeld aan een modelelement waarop ze van toepassing is.
+Een constraint is gekoppeld aan de context van objecttype waarop ze van toepassing is.
 
-*Toepassing*: Objecttype, gegevensgroeptype, relatieklasse.
+*Toepassing*: Objecttype.
+
+#### Metagegeven: **van toepassing op gegevensgroeptype**
+
+>   **Definitie van toepassing op gegevensgroeptype**  
+>   De binding van een constraint aan een gegevensgroeptype.
+
+*Toelichting*
+
+Een constraint is gekoppeld aan de context van een gegevensgroeptype waarop ze van toepassing is.
+
+*Toepassing*: Gegevensgroeptype.
+
+#### Metagegeven: **van toepassing op relatieklasse**
+
+>   **Definitie van toepassing op relatieklasse**  
+>   De binding van een constraint aan een relatieklasse.
+
+*Toelichting*
+
+Een constraint is gekoppeld aan de context van een relatieklasse waarop ze van toepassing is.
+
+*Toepassing*: Gegevensgroeptype.
 
 ## Toegestane waarden voor (bepaalde) metagegevens
 
