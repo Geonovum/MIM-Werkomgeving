@@ -923,13 +923,23 @@ Bijvoorbeeld: Kadaster of NEN3610:2020
 
 ### Specificatie metagegevens modelelementen
 
-We onderkennen een aantal specifieke metagegevens op het niveau van de modelelementen waarmee een informatiemodel wordt samengesteld. Deze staan beschreven in deze paragaaf.    
+We onderkennen een aantal specifieke metagegevens op het niveau van de modelelementen waarmee 
+een informatiemodel wordt samengesteld. Deze staan beschreven in deze paragaaf.    
 
-Elk modelelement kent een aantal metagegevens, die bepaalde aspecten van het
-modelelement specificeren. Zo is er de *naam* van het modelelement, bijvoorbeeld
+Zo is er de *naam* van het modelelement, bijvoorbeeld
 het objecttype met als *naam* Pand en een bijbehorende *definitie*, of de *Datum
-opname* van het modelelement in het informatiemodel, bijvoorbeeld *Datum opname*
-1-1-2012.
+opname* van het modelelement in het informatiemodel, bijvoorbeeld 1-1-2012.
+
+Welke metagegevens verplicht zijn per modelelement en welke niet staat beschreven 
+in het diagram in [Metagegevens per modelelement](#modelelementen-en-metagegevens-als-diagram). 
+Dit diagram is een onderdeel van de specificatie. 
+
+Elk modelelement kent een eigen set van metagegevens, die bepaalde aspecten van het
+modelelement specificeren. Metagegevens kunnen dus verplicht zijn en kunnen optioneel zijn. 
+Zo is een definitie altijd verplicht voor elk modelelement die de betekenis van 
+gegevens omschrijft, zoals een attribuutsoort of relatiesoort, maar ook voor 
+het objecttype die de context hiervan is. Bij de meeste datatypen is de definitie 
+daarentegen optioneel, deze worden alleen ingevuld indien nodig. 
 
 Merk op dat een aantal van deze metagegevens al meegenomen worden in een
 specificatietaal. Bijvoorbeeld het objecttype met de naam Pand wordt in UML gemodelleerd als
@@ -945,18 +955,17 @@ overerft (en de ingevulde waardes worden uiteraard zeker niet overerft). De MIM
 metaclass Referentielijst erft dus geen metagegevens, zoals patroon, van MIM metaclass
 Datatype.
 
-Voor de duidelijkheid zijn een aantal metagegevens verplicht gemaakt, om te
-voorkomen dat een niet ingevulde waarde verschillende betekenissen heeft, zoals:
-niet aan de orde (wat zo is bij optionele gegevens), nog niet ingevuld, leeg
-betekent zie default waarde, of dat het onbekend is welk van deze voorgaande
-betekenissen het is.
+Voor de eenduidigheid zijn een aantal metagegevens verplicht gemaakt om te
+voorkomen dat het onduidelijk is wat een niet ingevulde waarde betekent. 
+De betekenis hoort te zijn: 'niet aan de orde', wat zo is bij optionele gegevens. 
+Wat iets anders is dan: 'nog niet ingevuld', 'zie default waarde', of 'onbekend'. 
 
 Hieronder volgen eerst de algemene metagegevens. Dit zijn metagegevens zoals
-*Naam*, *Definitie* en *Datum opname*, en deze komen bij meerdere modelelementen
-voor. De definitie en toelichting van deze metagegevens worden in deze paragraaf
-gespecificeerd. In de paragrafen hierna wordt vervolgens naar deze paragraaf
+*Naam*, *Definitie* en *Populatie* met een definitie en een toelichting. 
+In de paragrafen hierna wordt vervolgens naar deze paragraaf
 verwezen. Specifieke metagegevens die maar één keer voorkomen zijn bij het
-modelelement zelf beschreven.
+modelelement zelf beschreven en zijn niet opgenomen in deze algemene lijst.
+
 
 #### Metagegeven: **Naam**
 
@@ -971,6 +980,7 @@ opgesomd in het hoofdstuk [Betekenis modelelementen](#betekenis-modelelementen).
 (en eventueel zijn in een uitbreiding extra modelelementen limitatief opgesomd).
 
 *Toepassing*: alle modelelementen.
+
 
 #### Metagegeven: **Alias**
 
@@ -1000,18 +1010,6 @@ hiervoor een _alias_ te gebruiken. De alias wordt hier, mede
 daarom, gebruikt voor (alleen) de modellering van het metadata aspect Code,
 welke aanvullend is op naam (niet een alternatief van naam).
 
-#### Metagegeven: **Toelichting**
-
->   **Definitie Toelichting**  
->   Een inhoudelijke toelichting op de definitie, ter verheldering of nadere duiding.
-
-*Toelichting*
-
-Bijvoorbeeld: een aantal treffende voorbeelden (waardes) van het kenmerk van het
-object.
-
-*Toepassing*: alle modelelementen met een definitie.
-
 #### Metagegeven: **Begrip**
 
 >   **Definitie Begrip**  
@@ -1031,6 +1029,7 @@ http://brk.basisregistraties.overheid.nl/id/begrip/Perceel
 *Toepassing*: alle modelelementen met een naam, met uitzondering van packages en
 constraint.
 
+
 #### Metagegeven: **Herkomst**
 
 >   **Definitie Herkomst**  
@@ -1045,7 +1044,7 @@ uitgelegd als: de basisregistratie Kadaster.
 
 Er wordt expliciet niet bedoeld van welke informatievoorziening of registratie
 de *data* is overgenomen. Het gaat er bij dit metagegeven expliciet om uit welk
-domein of bron het modelelement zijn herkomst vindt. Voor basisregistraties is
+domein of bron het **modelelement** zijn herkomst vindt. Voor basisregistraties is
 de herkomst altijd het eigen informatiemodel. Dit metagegeven is vooral van
 belang als het modelelement is overgenomen uit een ander informatiemodel.
 
@@ -1119,6 +1118,28 @@ Het gaat erom dat het voor gebruikers helder is hoe informatie die aan dit
 informatiemodel voldoet zich verhoudt tot informatie die aan het andere
 informatiemodel voldoet. Het metagegeven *herkomst definitie* schept hier
 duidelijkheid in.
+
+*Toepassing*: alle modelelementen die het metagegeven **definitie** kennen.
+
+#### Metagegeven: **Toelichting**
+
+>   **Definitie Toelichting**  
+>   Een inhoudelijke toelichting op de definitie, ter verheldering of nadere duiding.
+
+*Toelichting*
+
+Bijvoorbeeld: een aantal treffende voorbeelden (waardes) van het kenmerk van het
+object of een aanduiding van wat er niet onder de definitie valt.
+
+Het is niet de bedoeling om andere metagegevens in de toelichting op te nemen, zoals populatie of begrip. 
+
+De toelichting is op zichzelf helder en te begrijpen en is gericht op de betekenis 
+van gegevens en/of de context van deze gegevens. De toelichting is niet gericht op 
+de inwinning van de gegevens maar beschrijft de betekenis van hetgeen wat ingewonnen 
+is, zodat het voor de gebruikers van de gegevens helder is wat de betekenis ervan is. 
+Het is daarom niet de bedoeling om inwinregels of veelgestelde vragen zelf in de 
+toelichting op te nemen. Uiteraard is het wel goed om kennis die in de inwinregels 
+en antwoorden "verborgen" zit een plek te geven in de toelichting. 
 
 *Toepassing*: alle modelelementen die het metagegeven **definitie** kennen.
 
