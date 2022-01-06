@@ -23,3 +23,4 @@ In deze versie 1.1.1  zijn de volgende issues verwerkt:
 | [Issue #178](https://github.com/Geonovum/MIM-Werkomgeving/issues/178) | «Externe koppeling» metadata mist kardinaliteit in de documentatie                         |
 | [Issue #198](https://github.com/Geonovum/MIM-Werkomgeving/issues/198) | Alias of alternatieve naam                                                                 |
 | [Issue #199](https://github.com/Geonovum/MIM-Werkomgeving/issues/199) | Toelichting niet overal mogelijk waar die verwacht wordt                                   |
+  
