@@ -145,6 +145,8 @@ Keuze tussen:
 
 Voor elk geldt een eigen subset van het metamodel.
 
+Merk op dat een keuze tussen relatiesoorten ook een mogelijke keuze is, maar deze is vooralsnog niet uitgewerkt en opgenomen in deze versie. 
+
 In diagramvorm: 
  
 *Use case 1: Keuze tussen datatypen*
@@ -192,8 +194,6 @@ In diagramvorm:
 ![](media/AssociatierollenZonderUml.png)
 
 Diagram: Relatierol
-
-Merk op dat een keuze tussen relatiesoorten ook een mogelijke keuze is, maar deze is vooralsnog niet uitgewerkt en opgenomen in deze versie. 
 
 *Externe koppeling*
 
