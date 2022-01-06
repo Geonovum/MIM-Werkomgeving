@@ -444,6 +444,7 @@ De relatieklassen worden naar de volgende aspecten gespecificeerd:
 **Specificatie voor «Externe koppeling»**
 
 Externe koppelingen worden naar de volgende aspecten gespecificeerd.
+
 | **Aspect**           | **Kardi-naliteit** | **Toelichting**                            | **In UML 2.5**                                      |      | **In EA**                                                    | **In ...** |
 | -------------------- | ------------------ | ------------------------------------------ | --------------------------------------------------- | ---- | ------------------------------------------------------------ | ---------- |
 | **Naam**             | 1            | Algemeen metagegeven. Standaard ‘betreft’. | *name van de metaclass Named element* |    | *Name*         |     |
