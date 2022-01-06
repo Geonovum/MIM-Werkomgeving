@@ -989,19 +989,13 @@ opgesomd in het hoofdstuk [Betekenis modelelementen](#betekenis-modelelementen).
 
 *Toelichting*
 
-Als de naam van iets wat in het informatiemodel gemodelleerd wordt spaties, diakrieten of verbindingstreepjes bevat dan kan er gekozen worden om deze naam, de naam van een modelelement in het informatiemodel, zo op te schrijven dat hier in de techniek makkelijker mee te werken is. Wanneer de originele schrijfwijze in natuurlijke taal van belang is kan deze worden opgenomen in het metagegeven alias (zie verder ook
-[Naamgevingsconventies](#afspraken-rondom-naamgeving-en-definities)).
+Als de naam van iets wat in het informatiemodel gemodelleerd wordt spaties, diakrieten of verbindingstreepjes bevat, zoals een objecttype 'Onroerende zaak' of een attribuutsoort 'geïnspireerd op', dan kan er gekozen worden om deze naam in het informatiemodel zo op te schrijven dat hier in de techniek makkelijker mee te werken is. Denk aan: 'geinspireerd op' (geen diakrieten) of 'OnroerendeZaak' (camelcase notatiewijze). Wanneer de originele schrijfwijze in natuurlijke taal van belang is kan deze worden opgenomen in het metagegeven alias.
 
-Bijvoorbeeld 'Onroerende zaak' kan worden gemodelleerd als een objecttype met de naam 'OnroerendeZaak' (camelcase notatiewijze) of 'geïnspireerd op' kan gemodelleerd worden als de naam van een attribuutsoort 'geinspireerd op' (geen diakrieten). In de alias komt dan te staan 'Onroerende zaak' of 'geïnspireerd op'.  
+Het is niet de bedoeling om (andersom) in de alias de technische makkelijkere naam op te nemen.
 
-Het is niet de bedoeling om in de alias de technische makkelijker werkbare naam op te nemen. 
+De alias wordt ook gebruikt voor een alternatieve weergave van een enumeratie waarde. De ‘naam’ betreft hier een daadwerkelijk waarde, zoals 'Nederlands', waarin de naam gelijk staat aan de waarde en dit moet zo blijven, maar als er sprake is van een voor documentatie doeleinden bedoelde codering van deze enumeratie waarde dan kan deze code in de alias worden opgenomen.
 
-Als de alias gevuld is, dan staat hierin de schrijfwijze in natuurlijke taal. Deze schrijfwijze wordt dan gebruikt waar dit gewenst is, met name in documentatie die voor mensen is bedoeld en in plaats van de technische makkelijker werkbare naam. Het is toegestaan om altijd de schrijfwijze in natuurlijke taal op te namen in de alias, ook als deze gelijk is aan de naam van het modelelement.   
-
-Toepassing: objecttype, attribuutsoort, gegevensgroep, relatiesoort, relatierol, relatieklasse en externe koppeling en (expliciet niet voor packages en Enumeratiewaarde)
-
-*Toepassing*: alle modelelementen die een naam hebben, uitgezonderd de
-Enumeratiewaarde en packages, oftewel objecttype, attribuutsoort, gegevensgroep, relatiesoort, relatierol, relatieklasse en externe koppeling.
+Toepassing: objecttype, attribuutsoort, gegevensgroep, relatiesoort, relatierol, relatieklasse, externe koppeling, keuze, enumeratie, primitief datatype, gestructureerd datatype, dataelement en expliciet niet voor packages, enumeratiewaarde, en constraint.
 
 Opmerking: een uitzondering is gemaakt voor UML modellen voor de UML-EnumerationLiteral. 
 De ‘naam’ betreft hier een daadwerkelijk waarde, waarin
