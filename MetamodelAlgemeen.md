@@ -964,29 +964,6 @@ opgesomd in het hoofdstuk [Betekenis modelelementen](#betekenis-modelelementen).
 
 *Toepassing*: alle modelelementen.
 
-#### Metagegeven: **Definitie**
-
->   **Definitie Definitie**  
->   De beschrijving van de betekenis van dit modelelement.
-
-*Toelichting*
-
-Bijvoorbeeld: Een Pand is de kleinste, bij de totstandkoming functioneel en
-bouwkundig-constructief zelfstandige eenheid die direct en duurzaam met de aarde
-is verbonden en betreedbaar en afsluitbaar is.
-
-De definitie volgt, indien aanwezig, de catalogus van de desbetreffende
-(basis)registratie of informatiemodel, mits deze het modelelement definieert
-vanuit een informatie en informatiemodel perspectief (er zijn ook andere
-definities mogelijk vanuit andere perspectieven, zoals vanuit een juridisch
-perspectief, of vanuit het perspectief van een model van begrippen, zoals
-genoemd in de paragraaf [Typen informatiemodellen](#typen-informatiemodellen).
-Dergelijke definities kunnen hetzelfde zijn, of op het moment hetzelfde, of
-verschillend, of aanvullend op elkaar. Het is aan de beheerder van het
-informatiemodel om hier zorgvuldig mee om te gaan).
-
-*Toepassing*: alle modelelementen.
-
 #### Metagegeven: **Alias**
 
 >   **Definitie Alias**  
@@ -1083,6 +1060,29 @@ informatiemodel het objecttype).
 *Toepassing*: alle modelelementen die een kenmerk (kunnen) zijn van objecttype
 (objecttype zelf heeft een eigen definitie van herkomst) en in het
 informatiemodel gedefinieerde datatypes (maar niet bij elementen van datatypes).
+
+#### Metagegeven: **Definitie**
+
+>   **Definitie Definitie**  
+>   De beschrijving van de betekenis van dit modelelement.
+
+*Toelichting*
+
+Bijvoorbeeld: Een Pand is de kleinste, bij de totstandkoming functioneel en
+bouwkundig-constructief zelfstandige eenheid die direct en duurzaam met de aarde
+is verbonden en betreedbaar en afsluitbaar is.
+
+De definitie volgt, indien aanwezig, de catalogus van de desbetreffende
+(basis)registratie of informatiemodel, mits deze het modelelement definieert
+vanuit een informatie en informatiemodel perspectief (er zijn ook andere
+definities mogelijk vanuit andere perspectieven, zoals vanuit een juridisch
+perspectief, of vanuit het perspectief van een model van begrippen, zoals
+genoemd in de paragraaf [Typen informatiemodellen](#typen-informatiemodellen).
+Dergelijke definities kunnen hetzelfde zijn, of op het moment hetzelfde, of
+verschillend, of aanvullend op elkaar. Het is aan de beheerder van het
+informatiemodel om hier zorgvuldig mee om te gaan).
+
+*Toepassing*: alle modelelementen.
 
 #### Metagegeven: **Herkomst definitie**
 
