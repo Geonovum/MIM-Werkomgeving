@@ -1477,7 +1477,7 @@ De notatiewijze en de betekenis is als volgt:
 De lengte geeft aan hoeveel posities gebruikt mogen worden voor een gegeven. Om het waardenbereik van een gegeven 
 ("binnen" deze lengte) te specificeren wordt een patroon of formeel patroon gebruikt. 
 
-*Toepassing*: attribuutsoort, primitief datatype (alleen als dit datatype in het IM zelf gedefinieerd is), data
+*Toepassing*: Attribuutsoort, primitief datatype (alleen als dit datatype in het IM zelf gedefinieerd is), data
 element, referentie element.
 
 #### Metagegeven: **Patroon**
@@ -1497,7 +1497,7 @@ Het specificeren van een patroon is alleen van toepassing wanneer de
 specificatie aangeeft dat de waarde (direct of indirect) een primitief datatype
 betreft, zoals een CharacterString.
 
-*Toepassing*: de modelelementen uit de groep datatype en attribuutsoort.
+*Toepassing*: De modelelementen uit de groep datatype en attribuutsoort.
 
 #### Metagegeven: **Formeel patroon**
 
@@ -1515,7 +1515,7 @@ Het specificeren van een patroon is alleen van toepassing wanneer de
 specificatie aangeeft dat de waarde (direct of indirect) een primitief datatype
 betreft, zoals een CharacterString.
 
-*Toepassing*: de modelelementen uit de groep datatype en attribuutsoort.
+*Toepassing*: De modelelementen uit de groep datatype en attribuutsoort.
 
 #### Metagegeven: **Code**
 
@@ -1536,7 +1536,7 @@ Bijvoorbeeld het abstract objecttype "Voertuig", met concrete specialisaties "Au
 Zie ook sectie [Abstracte objecttypes en concrete objecten](#abstracte-objecttypes-en-concrete-objecten) waar
 een nadere uitleg wordt gegeven van het fenomeen abstract objecttypen.
 
-*Toepassing:* enumeratiewaarde
+*Toepassing:* Enumeratiewaarde
 
 #### Metagegeven: **Populatie**
 
@@ -1547,7 +1547,7 @@ Voor objecttypen die deel uitmaken van een (basis)registratie betreft dit de bes
 
 Dit is de beschrijving van de subset van de verzameling van alle instanties van dit objecttype. De subset bevat de instanties die opgenomen zijn in de registratie die met het informatiemodel wordt beschreven. Wordt bijvoorbeeld gebruikt bij basisregistraties om aan te geven dat niet alle instanties van een objecttype opgenomen zijn in de registratie maar alleen die welke voldoen aan een conditie.
 
-*Toepassing:* objecttype
+*Toepassing:* Objecttype
 
 #### Metagegeven: **Kwaliteit**
 
@@ -1558,26 +1558,28 @@ Beschrijving van de mate waarin in de registratie opgenomen objecten van het des
 
 Hier kan in tekst een beschrijving opgenomen worden over de kwaliteit van de inwinning van gegevens bij dit objecttype.
 
-*Toepassing:* objecttype
+*Toepassing:* Objecttype
 
 ### Specificatie metagegevens modelelement bindingen
 
 Deze metagegevens zijn alleen nodig voor de binding van modelelementen aan elkaar. 
 
-#### Metagegeven: **Attribuut**
+Voorbeelden daarvan zijn de binding tussen een objecttype en een attribuut, tussen een objecttype en een generalisatie, tussen een enumeratie en een enumeratiewaarde. In modelleertalen is die binding niet altijd benoemd maar impliciet aanwezig. Het metagegeven hoeft dan in die modelleertaal niet expliciet te worden opgenomen. Omdat dit hoofdstuk los van een modelleertaal is beschreven zijn de namen van de bindingen wel opgenomen.
 
->   **Definitie Attribuut**  
+#### Metagegeven: **heeft attribuut**
+
+>   **Definitie heeft attribuut**  
 >   De binding van een attribuutsoort als eigenschap aan een objecttype.
 
 *Toelichting*
 
-Een objecttype gebruikt attributen voor het specificeren van eigenschappen.
+Een objecttype en een gegevensgroeptype gebruiken attributen voor het specificeren van eigenschappen.
 
-*Toepassing*: objecttypen met attributen.
+*Toepassing*: Objecttypen en gegevensgroeptypen met attributen.
 
-#### Metagegeven: **Gegevensgroep**
+#### Metagegeven: **heeft gegevensgroep**
 
->   **Definitie Gegevensgroep**  
+>   **Definitie heeft gegevensgroep**  
 >   De binding van een gegevensgroep als groep van eigenschappen aan een
 >   objecttype of gegevensgroeptype.
 
@@ -1586,12 +1588,12 @@ Een objecttype gebruikt attributen voor het specificeren van eigenschappen.
 Een objecttype gebruikt gegevensgroepen voor het specificeren van groepen van
 eigenschappen.
 
-*Toepassing*: objecttypen met gegevensgroepen. Of een gegevensgroeptype dat zelf ook
+*Toepassing*: Objecttypen met gegevensgroepen of een gegevensgroeptype dat zelf ook
 weer een gegevensgroeptype bevat.
 
-#### Metagegeven: **Gegevensgroeptype**
+#### Metagegeven: **heeft gegevensgroeptype**
 
->   **Definitie Gegevensgroeptype**  
+>   **Definitie heeft gegevensgroeptype**  
 >   De binding van een gegevensgroeptype als waardetype aan een gegevensgroep.
 
 *Toelichting*
@@ -1599,11 +1601,55 @@ weer een gegevensgroeptype bevat.
 Een attribuut met het stereotype gegevensgroep heeft als waardetype een
 gegevensgroeptype.
 
-*Toepassing*: gegevensgroep.
+*Toepassing*: Gegevensgroep.
 
-#### Metagegeven: **Data element**
+#### Metagegeven: **verwijst naar supertype**
 
->   **Definitie Data element**  
+>   **Definitie verwijst naar supertype**  
+>   De binding van een supertype aan een subtype middels een generalisatie.
+
+*Toelichting*
+
+Een subtype verwijst met een generalisatie naar een supertype.
+
+*Toepassing*: Objectype en datatype.
+
+#### Metagegeven: **heeft datatype**
+
+>   **Definitie heeft datatype**  
+>   De binding van een datatype aan een eigenschap.
+
+*Toelichting*
+
+Een datatype wordt onder andere toegekend aan een attribuutsoort.
+
+*Toepassing*: Attribuutsoort, keuze, referentie element, data element
+
+#### Metagegeven: **heeft relatiesoort**
+
+>   **Definitie heeft relatiesoort**  
+>   De binding van een objecttype aan een objecttype middels een relatiesoort.
+
+*Toelichting*
+
+Een objectype kan een relatie hebben naar zichzelf of een ander objecttype.
+
+*Toepassing*: Objecttype.
+
+#### Metagegeven: **heeft externe koppeling**
+
+>   **Definitie heeft externe koppeling**  
+>   De binding van een objecttype uit een extern package aan een objecttype.
+
+*Toelichting*
+
+Een objectype kan een relatie hebben met en objecttype in een extern package.
+
+*Toepassing*: Objecttype.
+
+#### Metagegeven: **heeft data element**
+
+>   **Definitie heeft data element**  
 >   De binding van een data element aan een gestructureerd datatype.
 
 *Toelichting*
@@ -1612,10 +1658,10 @@ Een gestructureerd datatype bevat meerdere data elementen.
 
 *Toepassing*: gestructureerd datatype.
 
-#### Metagegeven: **Waarde**
+#### Metagegeven: **bevat enumeratiewaarde**
 
->   **Definitie Waarde**  
->   De binding van een waarde aan een enumeratie.
+>   **Definitie bevat enumeratie waarde**  
+>   De binding van een enumeratiewaarde aan een enumeratie.
 
 *Toelichting*
 
@@ -1623,27 +1669,82 @@ Een enumeratie bevat enumeratiewaarden.
 
 *Toepassing*: enumeratie.
 
-#### Metagegeven: **Referentie element**
+#### Metagegeven: **bevat referentie element**
 
->   **Definitie Referentie element**  
+>   **Definitie bevat referentie element**  
 >   De binding van een referentie element aan een referentielijst.
 
 *Toelichting*
 
 Een referentie lijst bevat referentie elementen.
 
-*Toepassing*: referentielijst.
+*Toepassing*: Referentielijst.
 
-#### Metagegeven: **Constraint**
+#### Metagegeven: **heeft datatypekeuze**
 
->   **Definitie Constraint**  
->   De binding van een constraint aan een klasse.
+>   **Definitie heeft datatypekeuze**  
+>   De binding van een keuze uit datatypen aan een attribuutsoort.
 
 *Toelichting*
 
-Een constraint is gekoppeld aan een klasse waarop ze van toepassing is.
+Een attribuutsoort kan als datatype een keuze uit datatypen hebben.
 
-*Toepassing*: objecttype, gegevensgroeptype, relatieklasse.
+*Toepassing*: Attribuutsoort.
+
+#### Metagegeven: **heeft keuzeattribuut**
+
+>   **Definitie heeft keuzeattribuut**  
+>   De binding van een keuze uit attributen aan een attribuutsoort of keuze.
+
+*Toelichting*
+
+Een keuze tussen anttibuutsoorten kan als eigenschap aan een objectype worden gekoppeld.
+
+*Toepassing*: Objecttype, keuze.
+
+#### Metagegeven: **heeft relatiedoelkeuze**
+
+>   **Definitie heeft relatiedoelkeuze**  
+>   De binding van een keuze uit relatiedoelen aan een objecttype.
+
+*Toelichting*
+
+Een keuze tussen relatiedoelen kan als eigenschap aan een objectype worden gekoppeld.
+
+*Toepassing*: Objecttype, keuze.
+
+#### Metagegeven: **van toepassing op objecttype**
+
+>   **Definitie van toepassing op objecttype**  
+>   De binding van een constraint aan een modelelement.
+
+*Toelichting*
+
+Een constraint is gekoppeld aan de context van objecttype waarop ze van toepassing is.
+
+*Toepassing*: Objecttype.
+
+#### Metagegeven: **van toepassing op gegevensgroeptype**
+
+>   **Definitie van toepassing op gegevensgroeptype**  
+>   De binding van een constraint aan een gegevensgroeptype.
+
+*Toelichting*
+
+Een constraint is gekoppeld aan de context van een gegevensgroeptype waarop ze van toepassing is.
+
+*Toepassing*: Gegevensgroeptype.
+
+#### Metagegeven: **van toepassing op relatieklasse**
+
+>   **Definitie van toepassing op relatieklasse**  
+>   De binding van een constraint aan een relatieklasse.
+
+*Toelichting*
+
+Een constraint is gekoppeld aan de context van een relatieklasse waarop ze van toepassing is.
+
+*Toepassing*: Gegevensgroeptype.
 
 ## Toegestane waarden voor (bepaalde) metagegevens
 
