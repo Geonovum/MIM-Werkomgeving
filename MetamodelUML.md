@@ -444,7 +444,6 @@ De relatieklassen worden naar de volgende aspecten gespecificeerd:
 **Specificatie voor «Externe koppeling»**
 
 Externe koppelingen worden naar de volgende aspecten gespecificeerd.
-
 | **Aspect**           | **Kardi-naliteit** | **Toelichting**                            | **In UML 2.5**                                      |      | **In EA**                                                    | **In ...** |
 | -------------------- | ------------------ | ------------------------------------------ | --------------------------------------------------- | ---- | ------------------------------------------------------------ | ---------- |
 | **Naam**             | 1            | Algemeen metagegeven. Standaard ‘betreft’. | *name van de metaclass Named element* |    | *Name*         |     |
@@ -455,11 +454,11 @@ Externe koppelingen worden naar de volgende aspecten gespecificeerd.
 | **Herkomst definitie**  | 1         | Algemeen metagegeven. |                                       |    | *Tagged value* |     |
 | **Toelichting**      | 0..1         | Algemeen metagegeven. |                                       |    | *Tagged value* |     |
 | **Datum opname**     | 1            | Algemeen metagegeven. |                                       |    | *Tagged value* |     |
+| **Kardinaliteit√**                | 1                  | Algemeen metagegeven. | *lowerValue en upperValue van de metaclass MultiplicityElement* |      | *Multiplicity van de target role*                            |            |
 | **Unidirectioneel**  | 1                  | Algemeen metagegeven.                      |                                                     |      | *Direction van de betreffende assiciation (van source naar target)* |            |
 | **Relatie eigenaar** | 1                  | Algemeen metagegeven.                      | */source: related Element bij Relationship Element* |      | *Source*                                                     |            |
 | **Relatie doel**     | 1                  | Algemeen metagegeven.                      | */target: related Element bij Relationship Element* |      | *Target*                                                     |            |
 | **Aggregatietype**   | 1                  | Algemeen metagegeven.                      | *AggregationKind bij metaclass Property*            |      | *Aggregation van de source role met waarde composite of shared* |            |
-
 
 ### Specificatie metagegevens voor waardenlijsten
 

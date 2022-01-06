@@ -377,7 +377,7 @@ Diagram: [Kern](#kern)
 >   modelelement eigenschappen van het meer generieke modelelement overerft. Dit
 >   verband is alleen gedefinieerd voor objecttypen en datatypen.
 
-*Toelichting:* Deze toelichting is tweeledig.
+*Toelichting:*
 
 Generalisatie tussen objecttypes:
 
@@ -402,6 +402,12 @@ een NietNegatiefGetal.
 Deze generalisatie is van toepassing op de volgende datatypes: «Primitief
 datatype», «Gestructureerd datatype», «Referentielijst», «Codelijst»,
 «Enumeratie».
+
+Meervoudige overerving of multiple-inheritance:
+
+Een subtype kan meerdere objectypen als generalisatie hebben. In het diagram [Kern](#kern) is dit aangegeven door een Objecttype als subtype naar o..* Generalisaties te laten verwijzen. Dat impliceert dat een subtype 0..* supertypen kan hebben.
+
+
 
 #### Relatiesoort
 
@@ -875,7 +881,7 @@ Dit kan bijvoorbeeld uitgebreid worden met: "technisch" wanneer er behoefte is o
 *Toelichting* 
 Dit kan zijn "Relatiesoort leidend" of "Relatierol leidend". Dit
 betreft de keuze die je maakt voor het in paragraaf [Alternatieven](#alternatieven) gekozen
-alternatief. Er moet een keuze gemaakt worden.
+alternatief. Er moet een keuze gemaakt worden. Deze keuze geldt primair voor de modelelementen relatiesoort en relatiedoel zoals bedoeld in 3.2.2. maar geldt in het verlengde hiervan voor het modelelement externe koppeling.
 
 *Toepassing*: informatiemodel (verplicht)
 
