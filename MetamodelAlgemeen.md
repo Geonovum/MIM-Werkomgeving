@@ -285,19 +285,21 @@ Voordat we attribuutsoort definiëren kijken we eerst naar het begrip ‘gegeven
 >   De betekenisvolle formulering van een waargenomen feit, waaraan een waarde
 >   kan worden toegekend.
 
-*Toelichting:* Gegevens zijn de objectief waarneembare neerslag of registratie
+*Toelichting:* 
+
+Voorbeelden van gegevens zijn de waardes ‘Jan’ en ‘1-1-1970’ betreffende de naam en
+de geboortedatum van een object van het type Persoon. Een informatiemodel specificeert 
+niet de gegevens zelf. Een gegeven zoals '1-1-1970' noemen we een attribuut van Jan. 
+In het informatiemodel wordt dit het attribuutsoort 'geboortedatum' of 'overlijdensdatum' 
+van een objecttype Persoon. Merk op dat een gegeven ‘1-1-1970’ zonder duidelijkheid over 
+het soort gegeven c.q. het attribuutsoort 'geboortedatum' of 'overlijdensdatum' geen informatie biedt.
+
+Gegevens zijn de objectief waarneembare neerslag of registratie
 van feiten op een bepaald medium, zodanig dat deze gegevens uitgewisseld en voor
 langere tijd bewaard kunnen worden. Dat kan op papier, in digitale vorm, et
 cetera. Met deze gegevens wordt een model (een selectief deel dus) van de
 werkelijkheid vastgelegd in de tijd. Ofschoon de werkelijkheid nooit stilstaat,
 kan deze door het vastleggen van de gegevens toch worden bevroren.
-
-Voorbeelden van gegevens zijn de waardes ‘Jan’ en ‘1-1-1970’ betreffende de naam en
-de geboortedatum van een object van het type Persoon. Merk op dat een gegeven zonder
-duidelijkheid over het soort gegeven c.q. de attribuutsoort 'naam' geen informatie biedt.
-
-Een informatiemodel specificeert niet de gegevens zelf. Een gegeven zoals '1-1-1970' noemen we een
-attribuut van Jan. In het informatiemodel wordt dit het attribuutsoort 'naam' van een objecttype Persoon.
 
 >   **Definitie Attribuutsoort**  
 >   De typering van gelijksoortige gegevens die voor een objecttype van
