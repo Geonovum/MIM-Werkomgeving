@@ -42,9 +42,14 @@ var respecConfig =
       companyURL: "https://www.geonovum.nl"
     },
     {
-      name:       "Jan van Gelder",
+      name:       "Paul Janssen",
       company:    "Geonovum",
       companyURL: "https://www.geonovum.nl"
+    },
+    {
+      name:       "Lennart van Bergen",
+      company:    "Kadaster",
+      companyURL: "https://www.kadaster.nl"
     },
   ],
   //-- de namen van de Author(s) ------------------------------------------------------
@@ -72,35 +77,20 @@ var respecConfig =
       companyURL: "https://www.geonovum.nl"
     },
     {
-      name:       "Aan eerdere versies van MIM werkten mee:",
-      company:    "",
-      companyURL: ""
-    },
-	  {
-      name:       "Ellen Debats",
-      company:    "KING",
-      companyURL: "https://www.vng.nl"
-    },
-    {
-      name:       "Arjan C. Kloosterboer",
-      company:    "KING",
-      companyURL: "https://www.vng.nl"
-    },
-    {
-      name:       "Wilko Quak",
-      company:    "TU Delft",
-      companyURL: "https://www.tudelft.nl"
-    },
-    {
-      name:       "Peter Lentjens",
-      company:    "Kadaster",
-      companyURL: "https://www.kadaster.nl"
-	  },
-	  {
-      name:       "Linda van den Brink",
+      name:       "Pano Maria",
       company:    "Geonovum",
       companyURL: "https://www.geonovum.nl"
-	  },
+    },
+    {
+      name:       "Johan Boer",
+      company:    "VNG Realisatie",
+      companyURL: "https://www.vngrealisatie.nl/"
+    },
+    {
+      name:       "Jan Campschroer",
+      company:    "Politie",
+      companyURL: "https://www.politie.nl"
+    },
   ],
   //-- shortName is verplicht! (komt in de URL: kies logische naam) --------------------
   shortName: "mim", 	              // Wordt gebruikt in de document URL
