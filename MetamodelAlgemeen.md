@@ -967,9 +967,11 @@ opgesomd in het hoofdstuk [Betekenis modelelementen](#betekenis-modelelementen).
 #### Metagegeven: **Definitie**
 
 >   **Definitie Definitie**  
->   De beschrijving van de betekenis van dit modelelement.
+>   De omschrijving van de betekenis van dit modelelement.
 
 *Toelichting*
+
+Een definitie is een samenvattende omschrijving van een specifiek modelelement met een naam, zodat het niet met een ander modelelement verward kan worden en zodat eenieder begrijpt wat er met het modelelement bedoeld wordt. De definitie behoort hierbij op zichzelf helder te zijn.  
 
 Bijvoorbeeld: Een Pand is de kleinste, bij de totstandkoming functioneel en
 bouwkundig-constructief zelfstandige eenheid die direct en duurzaam met de aarde
@@ -984,6 +986,14 @@ genoemd in de paragraaf [Typen informatiemodellen](#typen-informatiemodellen).
 Dergelijke definities kunnen hetzelfde zijn, of op het moment hetzelfde, of
 verschillend, of aanvullend op elkaar. Het is aan de beheerder van het
 informatiemodel om hier zorgvuldig mee om te gaan).
+
+Het komt voor dat er voor een ding dat gemodelleerd is, of een eigenschap ervan, 
+een woord is gebruikt wat ook in een ander informatiedomein voorkomt. 
+De definitie maakt dan helder wat er in beide gevallen bedoeld wordt, 
+zodat ook vastgesteld kan worden of er wel of niet hetzelfde bedoeld wordt. 
+Voor een attribuutsoorten of relaties kan het best voorkomen dat hetzelfde woord 
+meerdere keren gebruikt wordt, zoals bijvoorbeeld dat een Pand kan een bouwjaar heeft 
+en een Brug of een Auto ook. Dit is prima, maar let dan wel extra goed op de definitie. 
 
 *Toepassing*: alle modelelementen.
 
@@ -1023,7 +1033,15 @@ welke aanvullend is op naam (niet een alternatief van naam).
 *Toelichting*
 
 Bijvoorbeeld: een aantal treffende voorbeelden (waardes) van het kenmerk van het
-object.
+object, of een aanduiding waarvoor het gebruik van een gegeven wel of niet is bedoeld in het gebruik. 
+
+Het is niet de bedoeling om andere metagegevens op te nemen in de toelichting (zoals bijvoobeeld zoals populatie of begrip).
+
+De toelichting behoort op zichzelf helder te zijn voor gebruik. 
+Het is niet de bedoeling om inwinregels of veelgestelde vragen en bijbehorende antwoorden 
+op te nemen in de toelichting. De antwoorden behoren daarom verwerkt te worden via 
+aanscherpingen van de toelichting en wanneer er betekenis in de inwinregels zit die nog 
+niet in de toelichting zit dan wordt deze ook via een aanscherping verwerkt.  
 
 *Toepassing*: alle modelelementen met een definitie.
 
