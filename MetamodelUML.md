@@ -102,7 +102,9 @@ View 3a: Constraint
 | Constraint        | \-             | (UML) Constraint      |      | Constraint |            |
 
 
+
 *Keuze*
+
 Er zijn vier situaties waarin een keuze toegepast wordt:
 Keuze tussen:
 
