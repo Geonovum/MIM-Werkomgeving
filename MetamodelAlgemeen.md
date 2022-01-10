@@ -1255,6 +1255,8 @@ Voorbeeld: een verblijfsobject ligt in een pand. De eigenaar van de relatie is h
 - De kardinaliteit van het doel van de relatie geeft aan: in hoeveel panden kan 1 verblijfsobject liggen. Antwoord: 1..*
 - De kardinaliteit van de bron geeft aan: hoeveel verblijfsobjecten kunnen er in 1 pand liggen. Antwoord: 0..*
 
+Deze kardinaliteit is vooral nuttig voor controles, deze komt op data niveau echter (meestal) niet terug omdat relaties in MIM gericht zijn.  
+
 *Toelichting*
 
 De kardinaliteit van de bron van de relatie geeft aan hoeveel instanties van de bron van de relatie kunnen verwijzen naar één instantie van het doel van de relatie. Wanneer de kardinaliteit aan de bronkant van de relatie niet is gespecificeerd dan is er geen sprake van een defaultwaarde.
