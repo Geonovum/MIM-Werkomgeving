@@ -1584,9 +1584,20 @@ Hier kan in tekst een beschrijving opgenomen worden over de kwaliteit van de inw
 
 ### Specificatie metagegevens modelelement bindingen
 
-Deze metagegevens zijn alleen nodig voor de binding van modelelementen aan elkaar. 
+Bindingen geven aan hoe modelelementen met elkaar verbonden kunnen en mogen worden. 
 
-Voorbeelden daarvan zijn de binding tussen een objecttype en een attribuut, tussen een objecttype en een generalisatie, tussen een enumeratie en een enumeratiewaarde. In modelleertalen is die binding niet altijd benoemd maar impliciet aanwezig. Het metagegeven hoeft dan in die modelleertaal niet expliciet te worden opgenomen. Omdat dit hoofdstuk los van een modelleertaal is beschreven zijn de namen van de bindingen wel opgenomen.
+Voorbeeld: de binding tussen een objecttype en een attribuutsoort, om aan te geven dat een attribuutsoort 
+gemodelleerd kan worden als eigenschap van een objecttype. Een voorbeeld van wat niet mag is de verbinding van een attribuutsoort aan een relatiesoort. 
+Andere voorbeelden zijn de binding tussen een objecttype en een generalisatie, of tussen een enumeratie en een enumeratiewaarde. 
+
+Deze metagegevens zijn alleen nodig voor de binding van modelelementen aan elkaar 
+en zijn vrijwel altijd een onderdeel van een modelleertaal (waarmee een informatiemodel gemaakt kan worden).
+In modelleertalen is de binding niet altijd benoemd en is dan impliciet aanwezig. Het metagegeven hoeft dan in die modelleertaal niet expliciet te worden opgenomen. 
+Omdat dit hoofdstuk los van een modelleertaal is beschreven zijn de namen van de bindingen wel opgenomen.
+
+De bindingen zijn ook in diagram vorm te lezen aan het begin van dit hoofdstuk, in [Diagrammen van modelelementen](#structuur-metamodel). 
+
+### Structuur metamodel
 
 #### Metagegeven: **heeft attribuut**
 
