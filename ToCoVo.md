@@ -15,7 +15,7 @@ op het gebied van informatiemodellering meegewerkt:
 | Jan Campschroer           | Politie        | MIM expertgroep                               |
 | Dick Krijtenburg          | Geonovum       | Coördinator beheer MIM                        |
 
-
+     
 ## Voorwoord
 
 Informatie is een belangrijke motor voor het functioneren van de overheid in Nederland. 
