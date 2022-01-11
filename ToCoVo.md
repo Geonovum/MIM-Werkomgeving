@@ -5,14 +5,16 @@
 Aan de totstandkoming van deze versie van dit metamodel hebben de volgende inhoudelijke experts
 op het gebied van informatiemodellering meegewerkt:
 
-| Naam                      | Organisatie    | Rol en achtergrond                                                   |
-|---------------------------|----------------|----------------------------------------------------------------------|
-| Lennart van Bergen        | Kadaster       | MIM kerngroep. Expert informatiemodellering. Modellenbureau Kadaster |
-| Thies Mesdag              | Kadaster       | MIM kerngroep. Expert informatiemodellering. Modellenbureau Kadaster |
-| Paul Janssen              | Geonovum       | MIM kerngroep. Expert informatiemodellering. Geostandaarden          |
-| Jan Campschroer           |                | MIM expertgroep                                                      |
-| Dick Krijtenburg          | Geonovum       | Coördinator beheer MIM.                                              |
-| Jan van Gelder            | Geonovum       | Redactie MIM.                        	                            |
+| Naam                      | Organisatie    | Rol en achtergrond                            |
+|---------------------------|----------------|-----------------------------------------------|
+| Lennart van Bergen        | Kadaster       | MIM kerngroep. Expert informatiemodellering.  |
+| Thies Mesdag              | Kadaster       | MIM kerngroep. Expert informatiemodellering.  |
+| Paul Janssen              | Geonovum       | MIM kerngroep. Expert informatiemodellering.  |
+| Johan Boer                | VNG            | MIM expertgroep                               |
+| Pano Maria                | Geonovum       | MIM expertgroep                               |
+| Jan Campschroer           | Politie        | MIM expertgroep                               |
+| Dick Krijtenburg          | Geonovum       | Coördinator beheer MIM                        |
+
 
 ## Voorwoord
 
@@ -38,4 +40,4 @@ Versie 1.1.1 van MIM is uitgebracht om een aantal kleine aanpassingen te doen di
 
 Dick Krijtenburg, Geonovum
 
-*datum* 2021
+11 januari 2022
