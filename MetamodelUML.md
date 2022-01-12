@@ -797,15 +797,22 @@ aspecten gespecificeerd:
 
 ## UML Tooling
 
-Er is een metamodel *profiel* gemaakt in Sparx Enterprise Architect, dat
+### Profielen voor UML tooling  
+
+Er is door de MIM beheerder een metamodel *profiel* gemaakt in Sparx Enterprise Architect, dat
 gebruikt kan worden bij het modelleren van een informatiemodel. Dit profiel kan
 je inladen en daarna kan je kiezen uit de metamodel elementen. Het profiel is
 faciliterend en zorgt dat (de meeste) modelelementen van het informatiemodel
-automatisch voldoen aan dit metamodel. Het is niet vereist om dit profiel te
-gebruiken. Het is niet toegestaan om het profiel te wijzigen. Het is wel
-toegestaan om het profiel uit te breiden, naar de behoefte van de eigen
-organisatie.
+automatisch voldoen aan dit metamodel. Dit profiel is te vinden op [MIM profiel - toolbox voor EA](https://register.geostandaarden.nl/informatiemodel/mim/).  
+
+Het is niet vereist om dit profiel te gebruiken. Het is ook toegestaan om het profiel uit te breiden, naar de behoefte van de eigen
+organisatie. Maar, het is niet toegestaan om het profiel te wijzigen, dan wordt niet meer aan MIM voldaan. De reden hiervoor is dat 
+een dergelijk aanpassing niet beheerd kan worden door de MIM-beheerder en er ambiguiteit zal ontstaan bij de interpretatie van het model.  
+
+Voor andere UML tools kan ook een MIM profiel gemaakt worden. 
+
+### Conformiteit check 
 
 Er is een tool *Imvertor*, die kan controleren of een informatiemodel voldoet
 aan dit metamodel en zo niet, wat de reden daarvan is. Deze tool is open source
-en is te vinden op [www.imvertor.org](http://www.imvertor.org).
+en is te vinden op [www.imvertor.org](http://www.imvertor.org). 
