@@ -795,9 +795,12 @@ aspecten gespecificeerd:
 
 | **Aspect**                  | **Kardina-liteit** | **Toelichting**                | **In UML 2.5**                        |    | **In EA**      | **In ...** |
 | --------------------------- | -------- | ---------------------------------------- | ------------------------------------- | -- | -------------- | -------- |
-| **Naam√**                | 1                  | Algemeen metagegeven.                                        | *name van de metaclass Named element* |      | *Name*                     |            |
-| **Specificatie tekst**   | 0..1               | De specificatie van de constraint in normale tekst.          |                                       |      | *Notes (type = invariant)* |            |
-| **Specificatie formeel** | 0..1               | De beschrijving van de constraint in een formele specificatietaal, in OCL |                                       |      | *Notes (type =OCL)*        |            |
+| **Naam√**                  | 1         | Algemeen metagegeven.                    | *name van de metaclass Named element* |    | *Name*         |          |
+| **Specificatie tekst**     | 0..1      | De specificatie van de constraint in normale tekst.                       |      |    | *Notes (type = invariant)*  |          |
+| **Specificatie formeel**   | 0..1      | De beschrijving van de constraint in een formele specificatietaal, in OCL |      |    | *Notes (type =OCL)*         |          |
+| **van toepassing op objecttype**        | 0..1  | Binding van een contraint aan een objecttype      |                     |    |                |          |
+| **van toepassing op gegevensgroeptype** | 0..1  | Binding aan een gegevensgroeptype                 |                     |    |                |          |
+| **van toepassing op relatieklasse**     | 0..1  | Binding aan een relatieklasse                     |                     |    |                |          |
 
 ## UML Tooling
 
