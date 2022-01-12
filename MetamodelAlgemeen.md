@@ -139,13 +139,13 @@ Beschrijving: [Keuze](#keuze)
 
 Keuze tussen:
 - Use case 1: een keuze tussen datatypen
-- Use case 2: een keuze tussen attribuutsoorten
-- Use case 3: een keuze tussen attribuutsoorten, als nadere invulling van 1 betekenisvol attribuutsoort
+- Use case 2: een keuze tussen 2 of meer attribuutsoorten
+- Use case 3: een keuze tussen meerdere manieren om 1 betekenisvol attribuutsoort in te vullen
 - Use case 4: een keuze tussen relatiedoelen, als nadere invulling van 1 betekenisvolle relatiesoort
 
 Voor elk geldt een eigen subset van het metamodel.
 
-Merk op dat een keuze tussen relatiesoorten ook een mogelijke keuze is, maar deze is vooralsnog niet uitgewerkt en opgenomen in deze versie. 
+Merk op dat een keuze tussen relatiesoorten ook een mogelijke keuze is, maar deze is vooralsnog niet uitgewerkt en daarom nog niet opgenomen in deze versie. 
 
 In diagramvorm: 
  
