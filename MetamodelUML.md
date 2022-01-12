@@ -105,13 +105,12 @@ View 3a: Constraint
 
 *Keuze*
 
-Er zijn vier situaties waarin een keuze toegepast wordt:
-Keuze tussen:
+Er zijn vier situaties waarin een keuze toegepast wordt: 
 
-- datatypen
-- attribuutsoorten binnen een objecttype
-- attribuutsoorten binnen een attribuutsoort
-- relatiedoelen
+- Use case 1: een keuze tussen datatypen
+- Use case 2: een keuze tussen 2 of meer attribuutsoorten
+- Use case 3: een keuze tussen meerdere manieren om 1 betekenisvol attribuutsoort in te vullen
+- Use case 4: een keuze tussen relatiedoelen, als nadere invulling van 1 betekenisvolle relatiesoort
 
 Voor elk geldt een eigen subset van het metamodel.
 
@@ -132,7 +131,7 @@ Bij de keuze tussen datatypes is er een extra constructie nodig, omdat in UML he
 Gebruik de Keuze: 
 - Kies een _MIM-Attribuutsoort_ en koppel de hiervoor gemodelleerde Keuze hieraan via een typering, zoals gebruikelijk. 
 
-*Keuze tussen attribuutsoorten*
+*Keuze tussen 2 of meer attribuutsoorten*
 
 ![](media/KeuzeAttribuutsoort2UML.png)
 
@@ -147,7 +146,7 @@ Gebruik de Keuze:
 Er is gekozen voor een UML-Attribute en niet voor een UML-Association in navolging van de modellering van de gegevensgroep en het gegevensgroeptype. 
 
 
-*Keuze tussen attribuutsoorten binnen een attribuutsoort*
+*Keuze tussen meerdere manieren om 1 betekenisvol attribuutsoort in te vullen*
 
 ![](media/KeuzeAttribuutsoort3UML.png)
 
@@ -159,7 +158,8 @@ Gebruik de Keuze:
 - Modelleer in een MIM-Objecttype of in een MIM-Gegevensgroeptype een MIM-Attribuutsoort zoals gebruikelijk, en koppel de hiervoor gemodelleerde Keuze hieraan, via een typering, zoals gebruikelijk.  
 
 
-*Keuze tussen relatiedoelen*
+*Keuze tussen relatiedoelen, als nadere invulling van 1 betekenisvolle relatiesoort*
+
 ![](media/KeuzeRelatiedoel4UML.png)
 
 
