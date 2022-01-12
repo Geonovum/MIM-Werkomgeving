@@ -1171,8 +1171,12 @@ Toepassing: attribuutsoort, alle relaties (relatiesoort, relatierol, relatieklas
 
 *Toelichting*
 
-Bijvoorbeeld: Ja. Met te bevragen wordt bedoeld, er wordt historie bijgehouden
+Bijvoorbeeld: Ja. 
+
+Met te bevragen wordt bedoeld, er wordt historie bijgehouden
 op enerlei wijze, welke op enerlei wijze te bevragen is.
+
+Dit metagegeven is alleen betekenisvol voor kenmerken waarvoor data wordt bijgehouden. 
 
 De in te vullen waarde komt uit: zie [Tagged values en waardenbereik tagged
 values](#toegestane-waarden-voor-bepaalde-metadata-gegevens)
@@ -1182,7 +1186,7 @@ geleid tot verandering van de attribuutwaarde. Verdere toelichting,
 zie het hoofdstuk [Afspraken & Regels](#afspraken-regels)
 
 *Toepassing*: alle modelelementen die een kenmerk (kunnen) zijn van een
-objecttype.
+objecttype, waarvoor data kan worden bijgehouden: attribuutsoort en relaties (relatiesoort, relatieklasse, externe koppeling). 
 
 #### Metagegeven: **Indicatie formele historie**
 
@@ -1192,8 +1196,12 @@ objecttype.
 
 *Toelichting*
 
-Bijvoorbeeld: Nee. Met te bevragen wordt bedoeld, er wordt historie bijgehouden
+Bijvoorbeeld: Nee. 
+
+Met te bevragen wordt bedoeld, er wordt historie bijgehouden
 op enerlei wijze, welke op enerlei wijze te bevragen is.
+
+Dit metagegeven is alleen betekenisvol voor kenmerken waarvoor data wordt bijgehouden. 
 
 De in te vullen waarde komt uit: zie [Tagged values en waardenbereik tagged
 values](#toegestane-waarden-voor-bepaalde-metadata-gegevens)
@@ -1202,7 +1210,7 @@ Formele historie geeft aan wanneer in de administratie een verandering bekend
 is, en is verwerkt. Verdere toelichting, zie het hoofdstuk [Afspraken &Regels](#afspraken-regels).
 
 *Toepassing*: alle modelelementen die een kenmerk (kunnen) zijn van een
-objecttype.
+objecttype waarvoor data kan worden bijgehouden: attribuutsoort en relaties (relatiesoort, relatieklasse, externe koppeling). 
 
 #### Metagegeven: **Kardinaliteit**
 
