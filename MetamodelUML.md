@@ -121,41 +121,36 @@ De 'keuze constructie' maakt een keuze mogelijk tussen meerdere datatypen, attri
 ![](media/KeuzeDatatype1UML.png)
 
 
-Modelleer de Keuze: 
+Modellering van deze Keuze in een informatiemodel: 
 - Modelleer een _UML-Datatype_ met stereotype _keuze_. 
-- Modelleer hierin 2 of meer MIM-Datatypes. 
-- Het MIM-Datatype wordt gemodelleerd door een _UML-attribute_ met stereotype _keuze_ en dit UML-attribute heeft als datatype een MIM-Datatype, elke gewenste MIM-Datatype variant is mogelijk. 
+- Modelleer hierin 2 of meer MIM-Datatypes: neem hiervoor eerst een _UML-attribute_ met stereotype _keuze_ op in de Keuze zoals gemodelleerd in punt 1, dit UML-attribute krijgt als typering het gewenste (MIM) Datatype. Merk op dat dit extra UML-attribute is zelf geen keuze mogelijkheid is, de keuze is immers tussen de datatypes. 
 
-Bij de keuze tussen datatypes is er een extra constructie nodig, omdat in UML het niet mogelijk is om een datatype aan te geven zonder dat er eerst een UML-attribute is gemodelleerd. Dit extra UML-attribute is echter geen keuze optie, de keuze is immers tussen de datatypes. 
-
-Gebruik de Keuze: 
+Gebruik de Keuze voor een (MIM) Attrituutsoort: 
 - Kies een _MIM-Attribuutsoort_ en koppel de hiervoor gemodelleerde Keuze hieraan via een typering, zoals gebruikelijk. 
 
 *Keuze tussen 2 of meer attribuutsoorten*
 
 ![](media/KeuzeAttribuutsoort2UML.png)
 
-Modelleer de Keuze: 
-- Modelleer een _UML-Class_ met stereotype _keuze_. 
-- Modelleer hierin 2 of meer MIM-Attribuutsoorten. 
-- Het MIM-Attribuutsoort wordt gemodelleerd zoals gebruikelijk, door een _UML-Property_ met stereotype _attribuutsoort_ en dit UML-attribute heeft als datatype een MIM-Datatype, elke gewenste MIM-Datatype variant is mogelijk. 
+Modellering van het Keuze in een informatiemodel: 
+- Modelleer in UML een _UML-Class_ met stereotype _keuze_. 
+- Modelleer hierin 2 of meer MIM-Attribuutsoorten: elk (MIM) Attribuutsoort wordt gemodelleerd zoals gebruikelijk, door een _UML-Property_ (attribute) met stereotype _attribuutsoort_ (en deze UML-Property (attribute) heeft zelf weer als typering een MIM-Datatype). 
 
-Gebruik de Keuze: 
-- Modelleer in een MIM-Objecttype of in een MIM-Gegevensgroeptype een _UML-Property met stereotype _keuze_ en koppel de hiervoor gemodelleerde Keuze hieraan, via een typering, zoals gebruikelijk. Aan dit stereotype _keuze_ is te zien dat deze zelf geen attribuutsoort is van het objecttype. Immers, alleen de met stereotype _attribuutsoort_ aangeduide UML-attributen zijn een MIM-Attribuutsoort.  
+Gebruik de Keuze voor het (MIM) Objecttype of het (MIM) Gegevensgroeptype: 
+- Modelleer in een (MIM) Objecttype of in een (MIM) Gegevensgroeptype een _UML-Property (attribute) met stereotype _keuze_ en koppel de hiervoor gemodelleerde Keuze hieraan, via een typering, zoals gebruikelijk. Aan dit stereotype _keuze_ is te zien dat deze UML-Property zelf geen attribuutsoort is van het objecttype. Immers, alleen de met stereotype _attribuutsoort_ aangeduide UML-properties (attributes) zijn een (MIM) Attribuutsoort.  
 
-Er is gekozen voor een UML-Attribute en niet voor een UML-Association in navolging van de modellering van de gegevensgroep en het gegevensgroeptype. 
-
+Er is hier voor de aankoppeling gekozen voor een UML-Attribute en niet voor een UML-Association in navolging van de modellering van de gegevensgroep en het gegevensgroeptype. 
 
 *Keuze tussen meerdere manieren om 1 betekenisvol attribuutsoort in te vullen*
 
 ![](media/KeuzeAttribuutsoort3UML.png)
 
-Modelleer de Keuze: 
-- Modelleer een _UML-Class_ met stereotype _keuze_. 
-- Modelleer hierin 2 of meer keuze opties voor de attribuutsoort van het objecttype door voor elke keuze een UML-attribute te modelleren met stereotype _keuze_ en dit UML-Property heeft als datatype een MIM-Datatype, elke gewenste MIM-Datatype variant is mogelijk. Aan dit stereotype _keuze_ is te zien dat deze zelf geen attribuutsoort is van het objecttype. Immers, alleen het met stereotype _attribuutsoort_ aangeduide UML-attribute is een MIM-Attribuutsoort. 
+Modellering van de Keuze in een informatiemodel: 
+- Modelleer in UML een _UML-Class_ met stereotype _keuze_. 
+- Modelleer hierin 2 of meer keuze mogelijkheden door voor elke keuze mogelijkheid een UML-property (attribute) te modelleren met stereotype _keuze_ (en deze UML-Property heeft als datatype een MIM-Datatype). Aan dit stereotype _keuze_ is te zien dat deze zelf geen (MIM) Attribuutsoort is van het objecttype. Immers, alleen het met stereotype _Attribuutsoort_ aangeduide UML-attribute is een (MIM) Attribuutsoort. 
 
-Gebruik de Keuze: 
-- Modelleer in een MIM-Objecttype of in een MIM-Gegevensgroeptype een MIM-Attribuutsoort zoals gebruikelijk, en koppel de hiervoor gemodelleerde Keuze hieraan, via een typering, zoals gebruikelijk.  
+Gebruik de Keuze voor de (MIM) Attribuutsoort: 
+- Modelleer in een (MIM) Objecttype of in een (MIM) Gegevensgroeptype een MIM-Attribuutsoort zoals gebruikelijk, en koppel de hiervoor gemodelleerde Keuze hieraan, via een typering, zoals gebruikelijk.  
 
 
 *Keuze tussen relatiedoelen, als nadere invulling van 1 betekenisvolle relatiesoort*
