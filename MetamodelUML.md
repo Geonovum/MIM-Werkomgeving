@@ -113,12 +113,14 @@ Keuze tussen:
 - attribuutsoorten binnen een attribuutsoort
 - relatiedoelen
 
-Voor elk geldt een eigens subset van het metamodel.
+Voor elk geldt een eigen subset van het metamodel.
 
 De 'keuze constructie' maakt een keuze mogelijk tussen meerdere datatypen, attribuutsoorten, en relatiedoelen. In UML behouden we dezelfde modellering, een datatype blijft dus een datatype, een attribuutsoort een attribuutsoort en een relatiesoort een relatiesoort. 
 
 *Keuze tussen datatypen*
+
 ![](media/KeuzeDatatype1UML.png)
+
 
 Modelleer de Keuze: 
 - Modelleer een _UML-Datatype_ met stereotype _keuze_. 
@@ -131,6 +133,7 @@ Gebruik de Keuze:
 - Kies een _MIM-Attribuutsoort_ en koppel de hiervoor gemodelleerde Keuze hieraan via een typering, zoals gebruikelijk. 
 
 *Keuze tussen attribuutsoorten*
+
 ![](media/KeuzeAttribuutsoort2UML.png)
 
 Modelleer de Keuze: 
@@ -143,7 +146,9 @@ Gebruik de Keuze:
 
 Er is gekozen voor een UML-Attribute en niet voor een UML-Association in navolging van de modellering van de gegevensgroep en het gegevensgroeptype. 
 
+
 *Keuze tussen attribuutsoorten binnen een attribuutsoort*
+
 ![](media/KeuzeAttribuutsoort3UML.png)
 
 Modelleer de Keuze: 
@@ -153,18 +158,28 @@ Modelleer de Keuze:
 Gebruik de Keuze: 
 - Modelleer in een MIM-Objecttype of in een MIM-Gegevensgroeptype een MIM-Attribuutsoort zoals gebruikelijk, en koppel de hiervoor gemodelleerde Keuze hieraan, via een typering, zoals gebruikelijk.  
 
+
 *Keuze tussen relatiedoelen*
 ![](media/KeuzeRelatiedoel4UML.png)
 
 
 
-Er zijn drie metaklassen met de naam Keuze maar elke keer als extensie van een andere UML metaklasse, waar ook uit blijkt om welke variant van de keuze het gaat. Ook is er de metaklasse datatype als extensie van de uml metaklasse property. Een attribuut kan hiermee als keuze attribuut getypeerd worden.
+
+
+Er zijn drie metaklassen met de naam Keuze maar elke keer als extensie van een andere UML metaklasse, waar ook uit blijkt om welke variant van de keuze het gaat. 
 
 | **MIM metaclass** | **Stereotype** | **Metaclass UML 2.5** |      | **In EA**    | **In ...** |
 | ----------------- | -------------- | --------------------- | ---- | ------------ | ---------- |
-| Keuze             | Keuze          | (UML) Datatype        |      | Datatype     |            |
 | Keuze             | Keuze          | (UML) Class           |      | Class        |            |
+| Keuze             | Keuze          | (UML) Datatype        |      | Datatype     |            |
 | Keuze             | Keuze          | (UML) Property        |      | Attribute    |            |
+
+- Als een UML Class met stereotype keuze is gebruikt, dan zitten hierin alleen attribuutsoorten en/of relatiesdoelen, de attribuutsoorten en relatiedoelen waaruit gekozen kan worden. 
+- Als een UML Datatype met stereotype keuze is gebruikt, dan zitten hierin alleen datatypes, de datatypes waaruit gekozen kan worden. 
+- Als een UML Property met stereotype keuze is gebruikt, dan is er sprake van een hulpconstructie om het modelelement Keuze aan te koppelen aan het MIM-modelelement waarvoor de keuze geldt.
+
+Merk op dat deze tabel niet gaat over de modelelementen waaruit een keuze gemaakt moet worden. Dat zijn immers de modelelementen datatype, attribuutsoort en relatiesoort. Deze tabel gaat over de modellering van Keuze in UML oftewel de extra hulpconstructies die in UML nodig zijn om de modelelementen waaruit een keuze gemaakt moet worden aan te koppelen aan het MIM-modelelement waarvoor de keuze geldt. Deze extra hulpconstructies krijgen als stereotype _keuze_ en dit geeft aan dat de betekenis hiervan anders is dan de betekenis van de MIM-elementen datatype, attirbuutsoort en relatiesoort. 
+
 
 *Relatierol*
 
