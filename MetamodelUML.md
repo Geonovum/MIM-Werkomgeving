@@ -253,8 +253,8 @@ Rode tekst betreft een standaardelement binnen EA. Zwarte tekst in de kolom betr
 
 De objecttypen worden naar de volgende aspecten gespecificeerd:
 
-| **Aspect**                    | **Kardinaliteit** | **Toelichting**                                              | **In  UML 2.5**                          |      | **In EA**                                                    | **In ...** |
-| ----------------------------- | ------------------ | ------------------------------------------------------------ | ---------------------------------------- | ---- | ------------------------------------------------------------ | ---------- |
+| **Aspect**                  | **Kardina-liteit** | **Toelichting**                | **In UML 2.5**                        |    | **In EA**      | **In ...** |
+| --------------------------- | -------- | ---------------------------------------- | ------------------------------------- | -- | -------------- | -------- |
 | **Naam√**            | 1            | Algemeen metagegeven. | *name van de metaclass Named element* |    | *Name*         |     |
 | **Alias**            | 0..1         | Algemeen metagegeven. | *UML-Property*                        |    | *Alias*        |     |
 | **Herkomst**         | 1            | Algemeen metagegeven. |                                       |    | *tagged value* |     |
@@ -273,13 +273,12 @@ De objecttypen worden naar de volgende aspecten gespecificeerd:
 | **heeft externe koppeling** | 0..*    | Binding van een externe koppeling.             | *owned element* = UML-Relationship |    | *association*        |     |
 | **verwijst naar supertype** | 0..*    | Binding van een generalisatie (naar een ander objecttype).                 | *owned element* = UML-Relationship |    | *association*        |     |
 
-
 **Specificatie voor «Attribuutsoort»**
 
 De attribuutsoorten worden naar de volgende aspecten gespecificeerd:
 
-| **Aspect**                                  | **Kardinaliteit** | **Toelichting**                                              | **In UML 2.5**                                               |      | **In EA**      | **In ...** |
-| ------------------------------------------- | ------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ---- | -------------- | ---------- |
+| **Aspect**                  | **Kardina-liteit** | **Toelichting**                | **In UML 2.5**                        |    | **In EA**      | **In ...** |
+| --------------------------- | -------- | ---------------------------------------- | ------------------------------------- | -- | -------------- | -------- |
 | **Naam√**            | 1            | Algemeen metagegeven. | *name van de metaclass Named element* |    | *Name*         |     |
 | **Alias**            | 0..1         | Algemeen metagegeven. | *UML-Property*                        |    | *Alias*        |     |
 | **Herkomst**         | 1            | Algemeen metagegeven. |                                       |    | *tagged value* |     |
@@ -306,8 +305,8 @@ De attribuutsoorten worden naar de volgende aspecten gespecificeerd:
 
 De gegevensgroepen worden naar de volgende aspecten gespecificeerd:
 
-| **Aspect**                       | **Kardinaliteit** | **Toelichting**                                        | **In UML 2.5**                                               |      | **In EA**                                                    | **In ...** |
-| -------------------------------- | ------------------ | ------------------------------------------------------ | ------------------------------------------------------------ | ---- | ------------------------------------------------------------ | ---------- |
+| **Aspect**                  | **Kardina-liteit** | **Toelichting**                | **In UML 2.5**                        |    | **In EA**      | **In ...** |
+| --------------------------- | -------- | ---------------------------------------- | ------------------------------------- | -- | -------------- | -------- |
 | **Naam**             | 1            | Algemeen metagegeven. | *name van de metaclass Named element* |    | *Name*         |     |
 | **Alias**            | 0..1         | Algemeen metagegeven. | *UML-Property*                        |    | *Alias*        |     |
 | **Herkomst**         | 1            | Algemeen metagegeven. |                                       |    | *tagged value* |     |
@@ -316,10 +315,7 @@ De gegevensgroepen worden naar de volgende aspecten gespecificeerd:
 | **Herkomst definitie** | 1          | Algemeen metagegeven. |                                       |    | *Tagged value* |     |
 | **Toelichting√**     | 0..1         | Algemeen metagegeven. |                                       |    | *Tagged value* |     |
 | **Datum opname**     | 1            | Algemeen metagegeven. |                                       |    | *Tagged value* |     |
-| **Gegevensgroeptype**            | 1                  | De verwijzing naar het bijbehorende gegevensgroeptype. |                                                              |      | *Type*                                                       |            |
-| **Indicatie materiële historie** | 1                  | Algemeen metagegeven.                                  |                                                              |      | *Tagged value*                                               |            |
-| **Indicatie formele historie**   | 1                  | Algemeen metagegeven.                                  |                                                              |      | *Tagged value*                                               |            |
-| **Kardinaliteit**                | 1                  | Algemeen metagegeven.                                  | *lowerValue en upperValue van de metaclass Multiplicity Element* |      | *Multiplicity van de source role van de bijbehorende composite relatie* |            |
+| **Kardinaliteit**    | 1                  | Algemeen metagegeven.                                  | *lowerValue en upperValue van de metaclass Multiplicity Element* |      | *Multiplicity van de source role van de bijbehorende composite relatie* |            |
 | **Authentiek**                   | 1                  | Algemeen metagegeven.                                  |                                                              |      | *Tagged value*                                               |            |
 | **heeft gegevensgroeptype**   | 1       | Binding van een gegevensgroeptype.     | *owned element* = UML-Class |    | *type* = Class          |     |
 
@@ -327,8 +323,8 @@ De gegevensgroepen worden naar de volgende aspecten gespecificeerd:
 
 De gegevensgroeptypen worden naar de volgende aspecten gespecificeerd:
 
-| **Aspect**             | **Kardinaliteit** | **Toelichting**       | **In UML 2.5**                        |      | **In EA**      | **In ...** |
-| ---------------------- | ------------------ | --------------------- | ------------------------------------- | ---- | -------------- | ---------- |
+| **Aspect**                  | **Kardina-liteit** | **Toelichting**                | **In UML 2.5**                        |    | **In EA**      | **In ...** |
+| --------------------------- | -------- | ---------------------------------------- | ------------------------------------- | -- | -------------- | -------- |
 | **Naam**             | 1            | Algemeen metagegeven. | *name van de metaclass Named element* |    | *Name*         |     |
 | **Alias**            | 0..1         | Algemeen metagegeven. | *UML-Property*                        |    | *Alias*        |     |
 | **Herkomst**         | 1            | Algemeen metagegeven. |                                       |    | *tagged value* |     |
@@ -368,8 +364,8 @@ vastgelegd, dan is de metadata hierbij wel verplicht.
 
 De relatiesoorten worden naar de volgende aspecten gespecificeerd.
 
-| **Aspect**                        | **Kardinaliteit** | **Toelichting**       | **In UML 2.5**                                               |      | **In  EA**                                                   | **In ...** |
-| --------------------------------- | ------------------ | --------------------- | ------------------------------------------------------------ | ---- | ------------------------------------------------------------ | ---------- |
+| **Aspect**                  | **Kardina-liteit** | **Toelichting**                | **In UML 2.5**                        |    | **In EA**      | **In ...** |
+| --------------------------- | -------- | ---------------------------------------- | ------------------------------------- | -- | -------------- | -------- |
 | **Naam√**             | 1            | Algemeen metagegeven. | *name van de metaclass Named element* |    | *Name*         |     |
 | **Alias**            | 0..1         | Algemeen metagegeven. | *UML-Property*                        |    | *Alias*        |     |
 | **Herkomst**         | 1            | Algemeen metagegeven. |                                       |    | *tagged value* |     |
@@ -391,12 +387,13 @@ De relatiesoorten worden naar de volgende aspecten gespecificeerd.
 | **Indicatie afleidbaar**          | 1                  | Algemeen metagegeven. | *isDerived bij UML metaclass Assocation*                     |      | *isDerived*                                                  |            |
 | **Mogelijk geen waarde**          | 1                  | Algemeen metagegeven. |                                                              |      | *Tagged value*                                               |            |
 | **verwijst naar relatiedoel**   | 0..*  | Binding van een objecttype. | */target: related Element bij Relationship Element* = UML-Class |    | *association target* = Class       |     |
+
 **Specificatie voor «Relatierol»**
 
 Voor relatierollen worden naar de volgende aspecten gespecificeerd.
 
-| **Aspect**    | **Kardinaliteit** | **Toelichting**       | **In UML 2.5**                       |      | **In EA**      | **In ...** |
-| ------------- | ------------------ | --------------------- | ------------------------------------ | ---- | -------------- | ---------- |
+| **Aspect**                  | **Kardina-liteit** | **Toelichting**                | **In UML 2.5**                        |    | **In EA**      | **In ...** |
+| --------------------------- | -------- | ---------------------------------------- | ------------------------------------- | -- | -------------- | -------- |
 | **Naam**             | 1            | Algemeen metagegeven. | *name van de metaclass Named element* |    | *Name*         |     |
 | **Alias**            | 0..1         | Algemeen metagegeven. | *UML-Property*                        |    | *Alias*        |     |
 | **Herkomst**         | 1            | Algemeen metagegeven. |                                       |    | *tagged value* |     |
@@ -415,8 +412,8 @@ de metagegevens en optioneel de benoeming van de naam van de relatie.
 
 De relatiesoorten worden naar de volgende aspecten gespecificeerd.
 
-| **Aspect**    | **Kardinaliteit** | **Toelichting**       | **In UML 2.5**                       |      | **In EA**      | **In ...** |
-| ------------- | ------------------ | --------------------- | ------------------------------------ | ---- | -------------- | ---------- |
+| **Aspect**                  | **Kardina-liteit** | **Toelichting**                | **In UML 2.5**                        |    | **In EA**      | **In ...** |
+| --------------------------- | -------- | ---------------------------------------- | ------------------------------------- | -- | -------------- | -------- |
 | **Naam**             | 1            | Algemeen metagegeven. | *name van de metaclass Named element* |    | *Name*         |     |
 | **Alias**            | 0..1         | Algemeen metagegeven. | *UML-Property*                        |    | *Alias*        |     |
 | **Herkomst**         | 1            | Algemeen metagegeven. |                                       |    | *tagged value* |     |
@@ -432,8 +429,8 @@ De relatiesoorten worden naar de volgende aspecten gespecificeerd.
 Voor relatierol worden bij de target rol van een relatiesoort de volgende
 aspecten gespecificeerd.
 
-| **Aspect**                        | **Kardinaliteit** | **Toelichting**       | **In UML 2.5**                                               |      | **In EA**      | **In ...** |
-| --------------------------------- | ------------------ | --------------------- | ------------------------------------------------------------ | ---- | -------------- | ---------- |
+| **Aspect**                  | **Kardina-liteit** | **Toelichting**                | **In UML 2.5**                        |    | **In EA**      | **In ...** |
+| --------------------------- | -------- | ---------------------------------------- | ------------------------------------- | -- | -------------- | -------- |
 | **Naam√**            | 1            | Algemeen metagegeven. | *name van de metaclass Named element* |    | *Name*         |     |
 | **Alias**            | 0..1         | Algemeen metagegeven. | *UML-Property*                        |    | *Alias*        |     |
 | **Herkomst**         | 1            | Algemeen metagegeven. |                                       |    | *tagged value* |     |
@@ -454,12 +451,10 @@ aspecten gespecificeerd.
 
 De generalisaties worden naar het volgende aspect gespecificeerd:
 
-| **Aspect**    | **Kardinaliteit** | **Toelichting**                                              | **In UML 2.5**                                      |      | **In EA** | **In ...** |
-| ------------- | ------------------ | ------------------------------------------------------------ | --------------------------------------------------- | ---- | --------- | ---------- |
-| **Subtype**   | 1                  | De generalisatie relatie kent twee kanten, de bron kant (source) van de relatie en de doel kant (target) van de relatie. De bron kant van deze generalisatie relatie specificeert een _objecttype_ die een subtype/specialisatie is van het via deze generalisatie relatie aangegeven supertype (zie verwijst naar supertype). Kortweg, het subtype is een specialisatie van het supertype. Het objecttype dat het subtype is van deze generalisatie is verbonden met deze generalisatie. 
- | */source: related Element bij Relationship Element* |      | *Source*  |            |
-| **verwijst naar supertype** | 1    | Binding van deze generalisatie aan een objecttype. De generalisatie relatie kent twee kanten, de bron kant (source) van de relatie en de doel kant (target) van de relatie. De doel kant van deze generalisatie relatie specificeert een _objecttype_ die het supertype/de generalisatie is van het via deze generalisatie aangegeven subtype. Kortweg, het supertype is een generalisatie van het subtype. 
- | */target: related Element bij Relationship Element* = UML-Class |      | *Target*  |                 |
+| **Aspect**                  | **Kardina-liteit** | **Toelichting**                | **In UML 2.5**                        |    | **In EA**      | **In ...** |
+| --------------------------- | -------- | ---------------------------------------- | ------------------------------------- | -- | -------------- | -------- |
+| **Subtype**   | 1                  | De generalisatie relatie kent twee kanten, de bron kant (source) van de relatie en de doel kant (target) van de relatie. De bron kant van deze generalisatie relatie specificeert een _objecttype_ die een subtype/specialisatie is van het via deze generalisatie relatie aangegeven supertype (zie verwijst naar supertype). Kortweg, het subtype is een specialisatie van het supertype. Het objecttype dat het subtype is van deze generalisatie is verbonden met deze generalisatie. | */source: related Element bij Relationship Element* |      | *Source*  |            |
+| **verwijst naar supertype** | 1    | Binding van deze generalisatie aan een objecttype. De generalisatie relatie kent twee kanten, de bron kant (source) van de relatie en de doel kant (target) van de relatie. De doel kant van deze generalisatie relatie specificeert een _objecttype_ die het supertype/de generalisatie is van het via deze generalisatie aangegeven subtype. Kortweg, het supertype is een generalisatie van het subtype. | */target: related Element bij Relationship Element* = UML-Class |      | *Target*  |                 |
 | **Datum opname** | 1               | Algemeen metagegeven                                         |                     |      | *Tagged value* |            |
 
 
@@ -467,12 +462,11 @@ De generalisaties worden naar het volgende aspect gespecificeerd:
 
 De generalisaties worden naar het volgende aspect gespecificeerd:
 
-| **Aspect**       | **Kardinaliteit** | **Toelichting**                                              | **In UML 2.5**                                      |      | **In EA**      | **In ...** |
-| ---------------- | ------------------ | ------------------------------------------------------------ | --------------------------------------------------- | ---- | -------------- | ---------- |
+| **Aspect**                  | **Kardina-liteit** | **Toelichting**                | **In UML 2.5**                        |    | **In EA**      | **In ...** |
+| --------------------------- | -------- | ---------------------------------------- | ------------------------------------- | -- | -------------- | -------- |
 | **Subtype**   | 1                  | De generalisatie relatie kent twee kanten, de bron kant (source) van de relatie en de doel kant (target) van de relatie. De bron kant van deze generalisatie relatie specificeert een _datatype_ die een subtype/specialisatie is van het via deze generalisatie relatie aangegeven supertype (zie verwijst naar supertype). Kortweg, het subtype is een specialisatie van het supertype. Het datatype dat het subtype is van deze generalisatie is verbonden met deze generalisatie. 
- | */source: related Element bij Relationship Element* |      | *Source*  |            |
-| **verwijst naar supertype** | 1    | Binding van deze generalisatie aan een datatype. De generalisatie relatie kent twee kanten, de bron kant (source) van de relatie en de doel kant (target) van de relatie. De doel kant van deze generalisatie relatie specificeert een _datatype_ die het supertype/de generalisatie is van het via deze generalisatie aangegeven subtype. Kortweg, het supertype is een generalisatie van het subtype. 
- | */target: related Element bij Relationship Element* = UML-datatype |      | *Target*  |                 |
+ | */source: related Element bij Relationship Element* |      |      | *Source*  |            |
+| **verwijst naar supertype** | 1    | Binding van deze generalisatie aan een datatype. De generalisatie relatie kent twee kanten, de bron kant (source) van de relatie en de doel kant (target) van de relatie. De doel kant van deze generalisatie relatie specificeert een _datatype_ die het supertype/de generalisatie is van het via deze generalisatie aangegeven subtype. Kortweg, het supertype is een generalisatie van het subtype. | */target: related Element bij Relationship Element* = UML-datatype |      |      | *Target*  |                 |
 | **Datum opname** | 1               | Algemeen metagegeven                                         |                     |      | *Tagged value* |            |
 
 
@@ -480,15 +474,15 @@ De generalisaties worden naar het volgende aspect gespecificeerd:
 
 De relatieklassen worden naar de volgende aspecten gespecificeerd:
 
-| **Aspect**       | **Kardinaliteit** | **Toelichting**       | **In UML 2.5**                        |      | **In EA**      |      |
-| ---------------- | ------------------ | --------------------- | ------------------------------------- | ---- | -------------- | ---- |
-| **Naam√**             | 1            | Algemeen metagegeven. | *name van de metaclass Named element* |    | *Name*         |     |
+| **Aspect**                  | **Kardina-liteit** | **Toelichting**                | **In UML 2.5**                        |    | **In EA**      | **In ...** |
+| --------------------------- | -------- | ---------------------------------------- | ------------------------------------- | -- | -------------- | -------- |
+| **Naam√**            | 1            | Algemeen metagegeven. | *name van de metaclass Named element* |    | *Name*         |     |
 | **Alias**            | 0..1         | Algemeen metagegeven. | *UML-Property*                        |    | *Alias*        |     |
 | **Herkomst**         | 1            | Algemeen metagegeven. |                                       |    | *tagged value* |     |
 | **Begrip**           | 0..\*        | Algemeen metagegeven. |                                       |    | *Tagged value* |     |
 | **Definitie√**       | 1            | Algemeen metagegeven. | *Body van de metaclass Comment*       |    | *Notes*        |     |
 | **Herkomst definitie√** | 1         | Algemeen metagegeven. |                                       |    | *Tagged value* |     |
-| **Toelichting√**      | 0..1         | Algemeen metagegeven. |                                       |    | *Tagged value* |     |
+| **Toelichting√**     | 0..1         | Algemeen metagegeven. |                                       |    | *Tagged value* |     |
 | **Datum opname**     | 1            | Algemeen metagegeven. |                                       |    | *Tagged value* |     |
 | **Unidirectioneel**               | 1                  | Algemeen metagegeven. |                                                              |      | *Direction van de betreffende assiciation (van source naar target)* |            |
 | **Relatie eigenaar**              | 1                  | Algemeen metagegeven. | */source: related Element bij Relationship Element*          |      | *Source*                                                     |            |
@@ -506,8 +500,8 @@ De relatieklassen worden naar de volgende aspecten gespecificeerd:
 
 Externe koppelingen worden naar de volgende aspecten gespecificeerd.
 
-| **Aspect**           | **Kardinaliteit** | **Toelichting**                            | **In UML 2.5**                                      |      | **In EA**                                                    | **In ...** |
-| -------------------- | ------------------ | ------------------------------------------ | --------------------------------------------------- | ---- | ------------------------------------------------------------ | ---------- |
+| **Aspect**                  | **Kardina-liteit** | **Toelichting**                | **In UML 2.5**                        |    | **In EA**      | **In ...** |
+| --------------------------- | -------- | ---------------------------------------- | ------------------------------------- | -- | -------------- | -------- |
 | **Naam√**             | 1            | Algemeen metagegeven. | *name van de metaclass Named element* |    | *Name*         |     |
 | **Alias**            | 0..1         | Algemeen metagegeven. | *UML-Property*                        |    | *Alias*        |     |
 | **Herkomst**         | 1            | Algemeen metagegeven. |                                       |    | *tagged value* |     |
@@ -536,8 +530,8 @@ Externe koppelingen worden naar de volgende aspecten gespecificeerd.
 
 Voor referentielijsten worden de volgende aspecten gespecificeerd:
 
-| **Aspect**       | **Kardinaliteit** | **Toelichting**       | **In UML 2.5**                       |      | **In EA**      | **In ...** |
-| ---------------- | ------------------ | --------------------- | ------------------------------------ | ---- | -------------- | ---------- |
+| **Aspect**                  | **Kardina-liteit** | **Toelichting**                | **In UML 2.5**                        |    | **In EA**      | **In ...** |
+| --------------------------- | -------- | ---------------------------------------- | ------------------------------------- | -- | -------------- | -------- |
 | **Naam**             | 1            | Algemeen metagegeven. | *name van de metaclass Named element* |    | *Name*         |     |
 | **Alias**            | 0..1         | Algemeen metagegeven. | *UML-Property*                        |    | *Alias*        |     |
 | **Herkomst**         | 1            | Algemeen metagegeven. |                                       |    | *tagged value* |     |
@@ -554,8 +548,8 @@ Voor referentielijsten worden de volgende aspecten gespecificeerd:
 
 De referentie-elementen worden naar de volgende aspecten gespecificeerd:
 
-| **Aspect**           | **Kardinaliteit**   | **Toelichting**    | **In UML 2.5**        |      | **In EA**    | **In ...** |
-| ------------------------------------------- | ------------------ | --------------------- | ------------------------------------------------------------ | ---- | ------------------------------------ | ---------- |
+| **Aspect**                  | **Kardina-liteit** | **Toelichting**                | **In UML 2.5**                        |    | **In EA**      | **In ...** |
+| --------------------------- | -------- | ---------------------------------------- | ------------------------------------- | -- | -------------- | -------- |
 | **Naam**             | 1            | Algemeen metagegeven. | *name van de metaclass Named element* |    | *Name*         |     |
 | **Alias**            | 0..1         | Algemeen metagegeven. | *UML-Property*                        |    | *Alias*        |     |
 | **Herkomst**         | 1            | Algemeen metagegeven. |                                       |    | *tagged value* |     |
@@ -576,8 +570,8 @@ De referentie-elementen worden naar de volgende aspecten gespecificeerd:
 
 Voor codelijst worden de volgende aspecten gespecificeerd:
 
-| **Aspect**       | **Kardinaliteit** | **Toelichting**                                              | **In UML 2.5**                        |      | **In EA**      | **In ...** |
-| ---------------- | ------------------ | ------------------------------------------------------------ | ------------------------------------- | ---- | -------------- | ---------- |
+| **Aspect**                  | **Kardina-liteit** | **Toelichting**                | **In UML 2.5**                        |    | **In EA**      | **In ...** |
+| --------------------------- | -------- | ---------------------------------------- | ------------------------------------- | -- | -------------- | -------- |
 | **Naam**         | 1                  | Algemeen metagegeven. *De naam van de lijst zoals gespecificeerd in de catalogus van de desbetreffende registratie dan wel, indien het een door de eigen organisatie toegevoegde lijst betreft, de door de eigen organisatie vastgestelde naam.* | *name van de metaclass Named element* |      | *Name*         |      |
 | **Alias**        | 0..1               | Algemeen metagegeven.    | *UML-Property* |      | *Alias*        |            |
 | **Herkomst**     | 1                  | Algemeen metagegeven.    |                |      | *tagged value* |            |
@@ -598,8 +592,8 @@ DateTime, Surface.
 
 De datatypen worden naar de volgende aspecten gespecificeerd:
 
-| **Aspect**       | **Kardinaliteit** | **Toelichting**       | **In UML 2.5**                        |      | **In EA**      | **In ...** |
-| ---------------- | ----------------- | --------------------- | ------------------------------------- | ---- | -------------- | ---------- |
+| **Aspect**                  | **Kardina-liteit** | **Toelichting**                | **In UML 2.5**                        |    | **In EA**      | **In ...** |
+| --------------------------- | -------- | ---------------------------------------- | ------------------------------------- | -- | -------------- | -------- |
 | **Naam**         | 1          | Algemeen metagegeven.    | *name van de metaclass Named element* | | *Name*  | |
 | **Alias**        | 0..1       | Algemeen metagegeven.    | *UML-Property* |      | *Alias*        |            |
 | **Herkomst**     | 0..1       | Algemeen metagegeven.    |                |      | *tagged value* |            |
@@ -617,8 +611,8 @@ De datatypen worden naar de volgende aspecten gespecificeerd:
 
 Voor Gestructureerde datatypen worden de volgende aspecten gespecificeerd:
 
-| **Aspect**          | **Kardinaliteit** | **Toelichting**       | **In UML 2.5**                        |      | **In EA**      | **In ...** |
-| ------------------- | ------------------ | --------------------- | ------------------------------------- | ---- | -------------- | ---------- |
+| **Aspect**                  | **Kardina-liteit** | **Toelichting**                | **In UML 2.5**                        |    | **In EA**      | **In ...** |
+| --------------------------- | -------- | ---------------------------------------- | ------------------------------------- | -- | -------------- | -------- |
 | **Naam**         | 1             | Algemeen metagegeven. *De naam van het domein package.* | *name van de metaclass Namedelement* |      | *Name*    |            |
 | **Alias**        | 0..1          | Algemeen metagegeven.    | *UML-Property* |      | *Alias*        |            |
 | **Herkomst**     | 0..1          | Algemeen metagegeven.    |                |      | *tagged value* |            |
@@ -636,8 +630,8 @@ Voor Gestructureerde datatypen worden de volgende aspecten gespecificeerd:
 
 De data-elementen worden naar de volgende aspecten gespecificeerd:
 
-| **Aspect**                                  | **Kardinaliteit** | **Toelichting**       | **In UML 2.5**                                               |      | **In EA**      | **In ...** |
-| ------------------------------------------- | ------------------ | --------------------- | ------------------------------------------------------------ | ---- | -------------- | ---------- |
+| **Aspect**                  | **Kardina-liteit** | **Toelichting**                | **In UML 2.5**                        |    | **In EA**      | **In ...** |
+| --------------------------- | -------- | ---------------------------------------- | ------------------------------------- | -- | -------------- | -------- |
 | **Naam**         | 1             | Algemeen metagegeven. *De naam van het domein package.* | *name van de metaclass Namedelement* |      | *Name*    |            |
 | **Alias**        | 0..1          | Algemeen metagegeven.    | *UML-Property* |      | *Alias*        |            |
 | **Herkomst**     | 0..1          | Algemeen metagegeven. 11 |                |      | *tagged value* |            |
@@ -659,8 +653,8 @@ De data-elementen worden naar de volgende aspecten gespecificeerd:
 
 Een Keuze worden naar de volgende aspecten gespecificeerd:
 
-| **Aspect**       | **Kardinaliteit** | **Toelichting**       | **In UML 2.5**                       |      | **In EA**      | **In ...** |
-| ---------------- | ------------------ | --------------------- | ------------------------------------ | ---- | -------------- | ---------- |
+| **Aspect**                  | **Kardina-liteit** | **Toelichting**                | **In UML 2.5**                        |    | **In EA**      | **In ...** |
+| --------------------------- | -------- | ---------------------------------------- | ------------------------------------- | -- | -------------- | -------- |
 | **Naam**         | 1             | Algemeen metagegeven. *De naam van het domein package.* | *name van de metaclass Namedelement* |      | *Name*    |            |
 | **Alias**        | 0..1          | Algemeen metagegeven.    | *UML-Property* |      | *Alias*        |            |
 | **Herkomst**     | 0..1          | Algemeen metagegeven. 11 |                |      | *tagged value* |            |
@@ -682,8 +676,8 @@ Een Keuze worden naar de volgende aspecten gespecificeerd:
 
 Informatiemodel packages worden naar de volgende aspecten gespecificeerd:
 
-| **Aspect**                 | **Kardinaliteit** | **Toelichting**                                              | **In UML 2.5**                       |      | **In EA**      | **In ...** |
-| -------------------------- | ------------------ | ------------------------------------------------------------ | ------------------------------------ | ---- | -------------- | ---------- |
+| **Aspect**                  | **Kardina-liteit** | **Toelichting**                | **In UML 2.5**                        |    | **In EA**      | **In ...** |
+| --------------------------- | -------- | ---------------------------------------- | ------------------------------------- | -- | -------------- | -------- |
 | **Naam**         | 1          | Algemeen metagegeven.    | *name van de metaclass Named element* | | *Name*  | |
 | **Alias**        | 0..1       | Algemeen metagegeven.    | *UML-Property* |      | *Alias*        |            |
 | **Herkomst**     | 1          | Algemeen metagegeven. 11 |                |      | *tagged value* |            |
@@ -705,8 +699,8 @@ Informatiemodel packages worden naar de volgende aspecten gespecificeerd:
 
 Domein packages worden naar de volgende aspecten gespecificeerd:
 
-| **Aspect** | **Kardinaliteit** | **Toelichting**                                         | **In UML 2.5**                       |      | **In EA** | **In ...** |
-| ---------- | ------------------ | ------------------------------------------------------- | ------------------------------------ | ---- | --------- | ---------- |
+| **Aspect**                  | **Kardina-liteit** | **Toelichting**                | **In UML 2.5**                        |    | **In EA**      | **In ...** |
+| --------------------------- | -------- | ---------------------------------------- | ------------------------------------- | -- | -------------- | -------- |
 | **Naam**         | 1             | Algemeen metagegeven. *De naam van het domein package.* | *name van de metaclass Namedelement* |      | *Name*    |            |
 | **Alias**        | 0..1          | Algemeen metagegeven.    | *UML-Property* |      | *Alias*        |            |
 | **Herkomst**     | 1             | Algemeen metagegeven. 11 |                |      | *tagged value* |            |
@@ -720,8 +714,8 @@ Domein packages worden naar de volgende aspecten gespecificeerd:
 
 Externe packages worden naar de volgende aspecten gespecificeerd:
 
-| **Aspect**      | **Kardinaliteit** | **Toelichting**                                              | **In UML 2.5**                       |      | **In EA**      | **In ...** |
-| --------------- | ------------------ | ------------------------------------------------------------ | ------------------------------------ | ---- | -------------- | ---------- |
+| **Aspect**                  | **Kardina-liteit** | **Toelichting**                | **In UML 2.5**                        |    | **In EA**      | **In ...** |
+| --------------------------- | -------- | ---------------------------------------- | ------------------------------------- | -- | -------------- | -------- |
 | **Naam**         | 1             | Algemeen metagegeven. *De naam van het domein package.* | *name van de metaclass Namedelement* |      | *Name*    |            |
 | **Alias**        | 0..1          | Algemeen metagegeven.    | *UML-Property* |      | *Alias* |            |
 | **Herkomst**     | 1             | Algemeen metagegeven. 11 | *Bij een view is de herkomst nooit de eigen organisatie.* |      | *tagged value* |            |
@@ -737,8 +731,8 @@ Externe packages worden naar de volgende aspecten gespecificeerd:
 View packages worden naar de volgende aspecten gespecificeerd, analoog aan
 «Extern»:
 
-| **Aspect**      | **Kardinaliteit** | **Toelichting**                                              | **In UML 2.5**                        |      | **In EA**      | **In ...** |
-| --------------- | ------------------ | ------------------------------------------------------------ | ------------------------------------- | ---- | -------------- | ---------- |
+| **Aspect**                  | **Kardina-liteit** | **Toelichting**                | **In UML 2.5**                        |    | **In EA**      | **In ...** |
+| --------------------------- | -------- | ---------------------------------------- | ------------------------------------- | -- | -------------- | -------- |
 | **Naam**        | 1                  | Algemeen metagegeven. *Deze is, indien mogelijk, analoog aan de naamgeving in het externe schema waar de view over gaat, eventueel met een prefix.* | *name van de metaclass Named element* |      | *Name*         |            |
 | **Alias**        | 0..1          | Algemeen metagegeven.    | *UML-Property* |      | *Alias*        |            |
 | **Herkomst**     | 1             | Algemeen metagegeven.    |                |      | *tagged value* |            |
@@ -755,8 +749,8 @@ View packages worden naar de volgende aspecten gespecificeerd, analoog aan
 Enumeraties betreffen de metaclass Enumeration en worden naar de volgende
 aspecten gespecificeerd:
 
-| **Aspect**    | **Kardinaliteit** | **Toelichting**       | **In UML 2.5**                        |      | **In EA**      | **In ...** |
-| ------------- | ------------------ | --------------------- | ------------------------------------- | ---- | -------------- | ---------- |
+| **Aspect**                  | **Kardina-liteit** | **Toelichting**                | **In UML 2.5**                        |    | **In EA**      | **In ...** |
+| --------------------------- | -------- | ---------------------------------------- | ------------------------------------- | -- | -------------- | -------- |
 | **Naam**         | 1          | Algemeen metagegeven.    | *name van de metaclass Named element* |      | *Name*         | |
 | **Alias**        | 0..1       | Algemeen metagegeven.    | *UML-Property*                        |      | *Alias*        | |
 | **Herkomst**     | 1          | Algemeen metagegeven.    |                                       |      | *tagged value* | |
@@ -772,8 +766,8 @@ aspecten gespecificeerd:
 De enumeratiewaarde zelf betreft de metaclass UML-EnumerationLiteral en kent
 volgende aspecten:
 
-| **Aspect**    | **Kardinaliteit** | **Toelichting**                                              | **In UML 2.5**                          |      | **In EA** | **In ...** |
-| ------------- | ------------------ | ------------------------------------------------------------ | --------------------------------------- | ---- | --------- | ---------- |
+| **Aspect**                  | **Kardina-liteit** | **Toelichting**                | **In UML 2.5**                        |    | **In EA**      | **In ...** |
+| --------------------------- | -------- | ---------------------------------------- | ------------------------------------- | -- | -------------- | -------- |
 | **Naam**         | 1          | Algemeen metagegeven.    | *name van de metaclass Named element* | | *Name*  | |
 | **Code**      | 0..1          | De in een registratie of informatiemodel aan de enumeratiewaarde toegekend unieke code (niet te verwarren met alias, zoals bedoeld in 2.8.2). | *Alias van de metaclass Element Import* |      | *Alias*   |            |
 | **Herkomst**     | 0..1       | Algemeen metagegeven.    |                |      | *tagged value* |            |
@@ -789,8 +783,8 @@ volgende aspecten:
 Constraint betreft de metaclass UML Constraint en wordt naar de volgende
 aspecten gespecificeerd:
 
-| **Aspect**               | **Kardinaliteit** | **Toelichting**                                              | **In UML 2.5**                        |      | **In EA**                  | **In ...** |
-| ------------------------ | ------------------ | ------------------------------------------------------------ | ------------------------------------- | ---- | -------------------------- | ---------- |
+| **Aspect**                  | **Kardina-liteit** | **Toelichting**                | **In UML 2.5**                        |    | **In EA**      | **In ...** |
+| --------------------------- | -------- | ---------------------------------------- | ------------------------------------- | -- | -------------- | -------- |
 | **Naam√**                | 1                  | Algemeen metagegeven.                                        | *name van de metaclass Named element* |      | *Name*                     |            |
 | **Specificatie tekst**   | 0..1               | De specificatie van de constraint in normale tekst.          |                                       |      | *Notes (type = invariant)* |            |
 | **Specificatie formeel** | 0..1               | De beschrijving van de constraint in een formele specificatietaal, in OCL |                                       |      | *Notes (type =OCL)*        |            |
