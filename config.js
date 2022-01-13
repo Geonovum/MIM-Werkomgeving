@@ -68,8 +68,8 @@ var respecConfig =
     },
     {
       name:       "Marco Brattinga",
-      company:    "Kadaster",
-      companyURL: "https://www.kadaster.nl"
+      company:    "Ordina",
+      companyURL: "https://www.ordina.nl/"
     },
     {
       name:       "Paul Janssen",
