@@ -1058,9 +1058,7 @@ registratie waar het objecttype deel van uitmaakt). Deze specificatie is
 toegevoegd omdat het wel duidelijk moet zijn in welke (basis)registratie of
 informatiemodel het objecttype).
 
-*Toepassing*: alle modelelementen die een kenmerk (kunnen) zijn van objecttype
-(objecttype zelf heeft een eigen definitie van herkomst) en in het
-informatiemodel gedefinieerde datatypes (maar niet bij elementen van datatypes).
+*Toepassing*: alle modelelementen.
 
 #### Metagegeven: **Definitie**
 
