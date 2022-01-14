@@ -102,7 +102,6 @@ View 3a: Constraint
 | Constraint        | \-             | (UML) Constraint      |      | Constraint |            |
 
 
-
 *Keuze*
 
 Er zijn vier situaties waarin een keuze toegepast wordt: 
@@ -116,6 +115,7 @@ Voor elk geldt een eigen subset van het metamodel.
 
 De 'keuze constructie' maakt een keuze mogelijk tussen meerdere datatypen, attribuutsoorten, en relatiedoelen. In UML behouden we dezelfde modellering, een datatype blijft dus een datatype, een attribuutsoort een attribuutsoort en een relatiesoort een relatiesoort. De UML elementen die het stereotype keuze krijgen zijn zelf geen datatype, attribuutsoort of relatiedoel.
 
+Merk op dat de diagrammen op metamodel niveau zijn gemodelleerd. Hoe dit op informatiemodel niveau uitpakt is onder het diagram beschreven in tekst. 
 
 
 *Keuze tussen datatypen*
@@ -166,7 +166,7 @@ Modellering van het Keuze in een informatiemodel:
 Gebruik de Keuze voor het (MIM) Objecttype of het (MIM) Gegevensgroeptype: 
 - Modelleer in een (MIM) Objecttype of in een (MIM) Gegevensgroeptype een _UML-Association_ met stereotype _keuze_ en koppel de hiervoor gemodelleerde Keuze hieraan, als target van de UML-association, zoals gebruikelijk. Aan dit stereotype _keuze_ is te zien dat deze _UML-Association_ zelf **geen** relatiesoort of externe koppeling is. 
 
-**De modellering van een Keuze in UML **
+**De modellering van een Keuze in UML**
 
 Er zijn drie metaklassen met de naam Keuze maar elke keer als extensie van een andere UML metaklasse, waar ook uit blijkt om welke variant van de keuze het gaat. 
 
