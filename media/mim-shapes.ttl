@@ -120,6 +120,7 @@ shape:Relatiesoort a sh:NodeShape;
   sh:property shape:doel;
   sh:property shape:aggregatietype;
   # Metagegevens
+  sh:property shape:identificerend;
   sh:property shape:kardinaliteit;
   sh:property shape:kardinaliteitRelatieBron;
   sh:property shape:herkomst;
@@ -146,6 +147,7 @@ shape:Relatierol a sh:NodeShape;
   sh:property shape:begripsterm;
   sh:property shape:definitie_optioneel;
   # Aanvullend in geval van alternatief 2
+  sh:property shape:identificerend;
   sh:property shape:kardinaliteit;
   sh:property shape:herkomst;
   sh:property shape:toelichting;
