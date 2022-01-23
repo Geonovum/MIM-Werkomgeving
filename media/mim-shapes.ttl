@@ -161,6 +161,7 @@ shape:Generalisatie a sh:NodeShape;
   dct:source mimdoc:sectie2.3.2.2-Generalisatie;
   sh:property shape:subtype;
   sh:property shape:supertype;
+  sh:property shape:datumOpname;
 .
 shape:Relatieklasse a sh:NodeShape;
   sh:targetClass mim:Relatieklasse;
@@ -173,6 +174,7 @@ shape:Relatieklasse a sh:NodeShape;
   sh:property shape:begripsterm;
   sh:property shape:definitie;
   sh:property shape:constraint;
+  sh:property shape:datumOpname;
 .
 shape:ExterneKoppeling a sh:NodeShape;
   sh:targetClass mim:ExterneKoppeling;
@@ -291,6 +293,7 @@ shape:DataElement a sh:NodeShape;
   sh:property shape:patroon;
   sh:property shape:formeelPatroon;
   sh:property shape:kardinaliteit;
+  sh:property shape:datumOpname;
 .
 shape:Keuze a sh:NodeShape;
   sh:targetClass mim:Keuze;
@@ -354,12 +357,14 @@ shape:Informatiemodel a sh:NodeShape;
   sh:property shape:mimversie;
   sh:property shape:mimextensie;
   sh:property shape:mimtaal;
+  sh:property shape:datumOpname;
 .
 shape:Domein a sh:NodeShape;
   sh:targetClass mim:Domein;
   sh:name "mim:Domein";
   sh:property shape:naam;
   sh:property shape:alias;
+  sh:property shape:datumOpname;
 .
 shape:Extern a sh:NodeShape;
   sh:targetClass mim:Extern;
@@ -371,6 +376,7 @@ shape:Extern a sh:NodeShape;
   sh:property shape:locatie;
   sh:property shape:definitie;
   sh:property shape:herkomst;
+  sh:property shape:datumOpname;
 .
 shape:View a sh:NodeShape;
   sh:targetClass mim:View;
@@ -382,6 +388,7 @@ shape:View a sh:NodeShape;
   sh:property shape:locatie;
   sh:property shape:definitie;
   sh:property shape:herkomst;
+  sh:property shape:datumOpname;
 .
 shape:Enumeratie a sh:NodeShape;
   sh:targetClass mim:Enumeratie;
@@ -392,6 +399,7 @@ shape:Enumeratie a sh:NodeShape;
   # ISSUE: bij Enumeratie geen alias? sh:property shape:alias;
   sh:property shape:definitie;
   sh:property shape:waarde;
+  sh:property shape:datumOpname;
 .
 shape:Enumeratiewaarde a sh:NodeShape;
   sh:targetClass mim:Enumeratiewaarde;
@@ -401,6 +409,7 @@ shape:Enumeratiewaarde a sh:NodeShape;
   sh:property shape:code;
   sh:property shape:begrip;
   sh:property shape:begripsterm;
+  sh:property shape:datumOpname;
 .
 shape:Constraint a sh:NodeShape;
   sh:targetClass mim:Constraint;
