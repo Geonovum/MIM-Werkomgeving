@@ -18,6 +18,7 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#>.
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>.
 @prefix dct: <http://purl.org/dc/terms/>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 
 #
 # Classes
@@ -473,57 +474,79 @@ mim:equivalent a owl:ObjectProperty;
 mim:CharacterString a mim:PrimitiefDatatype;
   rdfs:label "CharacterString"@nl;
   mim:naam "CharacterString"@nl;
-  mim:definitie "Zie ISO 19103. Vrij vertaald: alle alfanumerieke tekens en speciale tekens die horen bij de gekozen characterset (standaard UTF-8), dus met diakrieten, white spaces, \-teken en newlines of HTML opmaak e.d. Mag starten met spatie. De maximale lengte is onbepaald."@nl;
+  mim:definitie "Zie ISO 19103. Vrij vertaald: alle alfanumerieke tekens en speciale tekens die horen bij de gekozen characterset (standaard UTF-8), dus met diakrieten, white spaces, \\-teken en newlines of HTML opmaak e.d. Mag starten met spatie. De maximale lengte is onbepaald."@nl;
+  mim:datumOpname "2020-10-23"^^xsd:date;
+  mim:herkomst "MIM Metamodel";
 .
 mim:Integer a mim:PrimitiefDatatype;
   rdfs:label "Integer"@nl;
   mim:naam "Integer"@nl;
   mim:definitie "Zie [iso-19103] (subtype van ISO Number). Vrij vertaald: geheel getal, lengte is minimaal 1 en maximale lengte is onbepaald, zonder voorloopnullen."@nl;
+  mim:datumOpname "2020-10-23"^^xsd:date;
+  mim:herkomst "MIM Metamodel";
 .
 mim:Real a mim:PrimitiefDatatype;
   rdfs:label "Real"@nl;
   mim:naam "Real"@nl;
   mim:definitie "Zie [iso-19103] (subtype van ISO Number). Vrij vertaald: een real is een zwevendekommagetal, waarbij de precisie bepaald wordt door het aantal getoonde cijfers. Het getoonde getal is een schatting en geeft niet noodzakelijk de exacte waarde weer."@nl;
+  mim:datumOpname "2020-10-23"^^xsd:date;
+  mim:herkomst "MIM Metamodel";
 .
 mim:Decimal a mim:PrititiefDatatype;
   rdfs:label "Decimal"@nl;
   mim:naam "Decimal"@nl;
   mim:definitie "Zie [iso-19103] (subtype van ISO Number). Vrij vertaald: een decimal is een gegevenstype waarin het getal een exacte waarde vertegenwoordigt, als een eindige weergave van een decimaal getal. Aangezien veel valuta's decimaal zijn, hebben deze weergaven de voorkeur bij het omgaan met dergelijke waarden."@nl;
+  mim:datumOpname "2020-10-23"^^xsd:date;
+  mim:herkomst "MIM Metamodel";
 .
 mim:Boolean a mim:PrimitiefDatatype;
   rdfs:label "Boolean"@nl;
   mim:naam "Boolean"@nl;
   mim:definitie "Indicatie met mogelijke waarden True, false, 1 of 0. True en 1 hebben een identieke betekenis: Ja. False en 0 hebben een identieke betekenis: Nee."@nl;
+  mim:datumOpname "2020-10-23"^^xsd:date;
+  mim:herkomst "MIM Metamodel";
 .
 mim:Date a mim:PrimitiefDatatype;
   rdfs:label "Date"@nl;
   mim:naam "Date"@nl;
   mim:definitie "4-cijferig jaar, 2-cijferig maand, 2-cijferig dag uitgedrukt in yyyy-mm-dd conform https://en.wikipedia.org/wiki/ISO_8601"@nl;
+  mim:datumOpname "2020-10-23"^^xsd:date;
+  mim:herkomst "MIM Metamodel";
 .
 mim:DateTime a mim:PrimitiefDatatype;
   rdfs:label "DateTime"@nl;
   mim:naam "DateTime"@nl;
   mim:definitie "yyyy-mm-ddThh:mm:ss conform https://en.wikipedia.org/wiki/ISO_8601"@nl;
+  mim:datumOpname "2020-10-23"^^xsd:date;
+  mim:herkomst "MIM Metamodel";
 .
 mim:Year a mim:PrimitiefDatatype;
   rdfs:label "Year"@nl;
   mim:naam "Year"@nl;
   mim:definitie "4-cijferig jaar uitgedrukt in yyyy conform https://en.wikipedia.org/wiki/ISO_8601"@nl;
+  mim:datumOpname "2020-10-23"^^xsd:date;
+  mim:herkomst "MIM Metamodel";
 .
 mim:Day a mim:PrimitiefDatatype;
   rdfs:label "Day"@nl;
   mim:naam "Day"@nl;
   mim:definitie "2-cijferige dag uitgedrukt in dd conform https://en.wikipedia.org/wiki/ISO_8601"@nl;
+  mim:datumOpname "2020-10-23"^^xsd:date;
+  mim:herkomst "MIM Metamodel";
 .
 mim:Month a mim:PrimitiefDatatype;
   rdfs:label "Month"@nl;
   mim:naam "Month"@nl;
   mim:definitie "2-cijferige maand uitgedrukt in mm conform https://en.wikipedia.org/wiki/ISO_8601"@nl;
+  mim:datumOpname "2020-10-23"^^xsd:date;
+  mim:herkomst "MIM Metamodel";
 .
 mim:URI a mim:PrimitiefDatatype;
   rdfs:label "URI"@nl;
   mim:naam "URI"@nl;
   mim:definitie "Unieke identificatie op internet conform RFC3986 en de URI-strategie Linked Open Data. Gestandaardiseerde manier om op het internet dingen (pagina's met informatie, objecten, datasets) uniek te identificeren."@nl;
+  mim:datumOpname "2020-10-23"^^xsd:date;
+  mim:herkomst "MIM Metamodel";
 .
 
 # Aggregatietypen
@@ -544,6 +567,7 @@ mim:Compositie a mim:Enumeratiewaarde;
   skos:prefLabel "Compositie"@nl;
   skos:altLabel "Composition"@en;
   skos:definitie "Compositie (gesloten wiebertje)"@nl;
+  mim:naam "Compositie"@nl;
 .
 mim:Gedeeld a mim:Enumeratiewaarde;
   skos:inScheme mim:Aggregatietypen;
@@ -551,6 +575,7 @@ mim:Gedeeld a mim:Enumeratiewaarde;
   skos:prefLabel "Gedeeld"@nl;
   skos:altLabel "Shared"@en;
   skos:definitie "Gedeeld (open wiebertje)"@nl;
+  mim:naam "Gedeeld"@nl;
 .
 
 # authenticiteit
