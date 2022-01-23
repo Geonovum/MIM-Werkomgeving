@@ -173,6 +173,7 @@ shape:Relatieklasse a sh:NodeShape;
   sh:property shape:begrip;
   sh:property shape:begripsterm;
   sh:property shape:definitie;
+  sh:property shape:toelichting;
   sh:property shape:constraint;
   sh:property shape:datumOpname;
 .
@@ -256,6 +257,7 @@ shape:PrimitiefDatatype a sh:NodeShape;
   sh:property shape:begrip;
   sh:property shape:begripsterm;
   sh:property shape:definitie;
+  sh:property shape:toelichting;
   sh:property shape:lengte;
   sh:property shape:patroon;
   sh:property shape:formeelPatroon;
@@ -273,6 +275,7 @@ shape:GestructureerdDatatype a sh:NodeShape;
   sh:property shape:begripsterm;
   sh:property shape:herkomst;
   sh:property shape:definitie;
+  sh:property shape:toelichting;
   sh:property shape:patroon;
   sh:property shape:formeelPatroon;
   sh:property shape:datumOpname;
@@ -288,6 +291,7 @@ shape:DataElement a sh:NodeShape;
   sh:property shape:begrip;
   sh:property shape:begripsterm;
   sh:property shape:definitie;
+  sh:property shape:toelichting;
   sh:property shape:type;
   sh:property shape:lengte;
   sh:property shape:patroon;
@@ -305,6 +309,7 @@ shape:Keuze a sh:NodeShape;
   sh:property shape:begripsterm;
   sh:property shape:herkomst;
   sh:property shape:definitie;
+  sh:property shape:toelichting;
   sh:property shape:datumOpname;
 .
 shape:ISAKeuze a sh:PropertyShape;
@@ -337,6 +342,7 @@ shape:KeuzeConstraint a sh:NodeShape;
   sh:property shape:begripsterm;
   sh:property shape:herkomst;
   sh:property shape:definitie;
+  sh:property shape:toelichting;
   sh:property shape:datumOpname;
   sh:property shape:modelelement;
 .
@@ -375,6 +381,7 @@ shape:Extern a sh:NodeShape;
   # ISSUE: bij Extern geen alias? sh:property shape:alias;
   sh:property shape:locatie;
   sh:property shape:definitie;
+  sh:property shape:toelichting;
   sh:property shape:herkomst;
   sh:property shape:datumOpname;
 .
@@ -387,6 +394,7 @@ shape:View a sh:NodeShape;
   # ISSUE: bij View geen alias? sh:property shape:alias;
   sh:property shape:locatie;
   sh:property shape:definitie;
+  sh:property shape:toelichting;
   sh:property shape:herkomst;
   sh:property shape:datumOpname;
 .
@@ -398,6 +406,7 @@ shape:Enumeratie a sh:NodeShape;
   sh:property shape:naam;
   # ISSUE: bij Enumeratie geen alias? sh:property shape:alias;
   sh:property shape:definitie;
+  sh:property shape:toelichting;
   sh:property shape:waarde;
   sh:property shape:datumOpname;
 .
@@ -406,6 +415,7 @@ shape:Enumeratiewaarde a sh:NodeShape;
   sh:name "mim:Enumeratiewaarde";
   sh:property shape:naam;
   sh:property shape:definitie_optioneel;
+  sh:property shape:toelichting;
   sh:property shape:code;
   sh:property shape:begrip;
   sh:property shape:begripsterm;
@@ -421,10 +431,6 @@ shape:Constraint a sh:NodeShape;
 .
 
 # De volgende shapes zijn niet expliciet aangegeven, maar bestaan wel
-shape:PrimitiefDatatype a sh:NodeShape;
-  sh:targetClass mim:PrimitiefDatatype;
-  sh:name "mim:PrimitiefDatatype";
-.
 shape:RelatierolBron a sh:NodeShape;
   sh:targetClass mim:RelatierolBron;
   sh:name "mim:RelatierolBron";
