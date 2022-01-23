@@ -134,7 +134,7 @@ Onderstaande tabellen geven een overzicht van alle transformaties en een referen
 |`mim:mogelijkGeenWaarde`|`mim:mogelijkGeenWaarde`, `sh:minCount`|[mogelijk geen waarde](#transformatie-mogelijk-geen-waarde)
 |`mim:locatie`|`mim:locatie`|[locatie](#transformatie-locatie)|
 |`mim:type`|`sh:datatype`, `sh:node`|[type](#transformatie-type)|
-|`mim:lengte`|`sh:maxLength`|[lengte](#transformatie-lengte)|
+|`mim:lengte`|`sh:minLength`, `sh:maxLength`|[lengte](#transformatie-lengte)|
 |`mim:patroon`|`mim:patroon`|[patroon](#transformatie-patroon)|
 |`mim:formeelPatroon`|`sh:pattern`|[formeel patroon](#transformatie-formeel-patroon)|
 |`mim:uniekeAanduiding`|`mim:uniekeAanduiding`|[unieke aanduiding](#transformatie-uniekeaanduiding)
@@ -1251,18 +1251,37 @@ WHERE {
 </pre>
 
 ### transformatie: lengte
-> De aanduiding van de lengte van een gegeven.
+> De aanduiding van de lengte van een gegeven, in de vorm van de aangegeven notatiewijze.
 
-Een `mim:lengte` wordt vertaald naar een `sh:maxLength`.
+Afhankelijk van de notatiewijze vindt de transformatie plaats. Deze transformatie is niet van toepassing op het gebruik van lengte voor getallen (aantal cijfers voor- en/of na de komma).
 
-<pre class='ex-sparql'>
+Een `mim:lengte` wordt vertaald naar `sh:minLength` en/of `sh:maxLength`, conform onderstaande tabel.
+
+|Notatiewijze|sh:minLength|sh:maxLength|Betekenis|
+|------------|------------|------------|---------|
+|1..|1||De lengte is minimaal 1 karakter, geen maximum aangegeven|
+|99||99|De lengte is maximaal 99 karakters, geen minimum aangegeven|
+|1..1|1|1|Lengte is exact 1 karakter|
+|1..99|1|99|De lengte is minimaal 1 karakter en maximaal 99 karakters|
+
 CONSTRUCT {
-  ?subject sh:maxLength ?lengte
+  ?subject sh:minLength ?minlength
 }
 WHERE {
   ?modelelement mim:lengte ?lengte.
   ?subject mim:equivalent ?modelelement.
+  BIND (t:mincount(?lengte) as ?minlength)
 }
+
+CONSTRUCT {
+  ?subject sh:maxLength ?maxlength
+}
+WHERE {
+  ?modelelement mim:lengte ?lengte.
+  ?subject mim:equivalent ?modelelement.
+  BIND (t:maxcount(?lengte) as ?maxlength)
+}
+
 </pre>
 
 ### transformatie: patroon
@@ -1617,7 +1636,7 @@ Aspecten:
 | sh:minCount en sh:maxCount | mim:kardinaliteit | De kardinaliteit wordt bepaald door sh:minCount en sh:maxCount |
 | sh:datatype | mim:type | Voor eenvoudige (data)type wordt sh:datatype gebruikt |
 | sh:node | mim:type | Indien het datatype een gestructureerd datatype of enumeratie betreft, dan betreft de sh:node de relatie naar het datatype |
-| sh:maxLength | mim:lengte | Identieke betekenis |
+| sh:minLength en sh:maxLength | mim:lengte | De lengte wordt bepaald door sh:minLength en sh:maxLength |
 | sh:pattern | mim:formeelPatroon | Identieke betekenis |
 | sh:class | mim:doel | Indien een propertyshape een relatiesoort voorstelt, dan geeft sh:class het doel van de relatiesoort weer |
 
