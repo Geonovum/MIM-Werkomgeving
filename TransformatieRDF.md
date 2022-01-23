@@ -1651,6 +1651,7 @@ Er zijn ook MIM aspecten die niet een overeenkomstige tegenhanger kennen in RDFS
 | mim:datumOpname | Indien de ontologie onder versiebeheer staat, dan kan dit aspect afgeleid worden uit het versiesysteem |
 | mim:authentiek | Specifiek MIM aspect, belangrijk voor stelselcatalogus |
 | mim:identificatieAfleidbaar | |
+| mim:kardinaliteitRelatieBron | Dit betreft de kardinaliteit van de inverse relatie die in het geval van het gebruik van dit aspect niet aanwezig is|
 | mim:locatie | Dit veld wordt wel gebruikt bij het opbouwen van de URI, maar verder niet vertaald |
 | mim:patroon | Dit betreft een tekstuele variant van sh:pattern / mim:formeelPatroon |
 | mim:populatie | Specifiek MIM aspect, belangrijk voor stelselcatalogus |

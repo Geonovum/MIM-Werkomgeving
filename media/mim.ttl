@@ -295,6 +295,11 @@ mim:kardinaliteit a owl:DatatypeProperty;
   rdfs:comment "De kardinaliteit geeft aan hoeveel keer waarden van dit kenmerk van een object kunnen voorkomen bij een object van het betreffende objecttype."@nl;
   dct:source mimdoc:sectie2.12.12;
 .
+mim:kardinaliteitRelatieBron a owl:DatatypeProperty;
+  rdfs:label "kardinaliteit relatie bron"@nl;
+  rdfs:comment "De kardinaliteit relatie bron geeft bij een relatiesoort aan hoeveel instanties van het bron objecttype in een relatie met één instantie van het doel objecttype verbonden kunnen zijn."@nl;
+  dct:source mimdoc:sectie2.8.2.13;
+.
 mim:authentiek a owl:ObjectProperty;
   rdfs:label "authentiek"@nl;
   rdfs:comment "Aanduiding of het kenmerk een authentiek gegeven betreft."@nl;

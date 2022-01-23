@@ -121,6 +121,7 @@ shape:Relatiesoort a sh:NodeShape;
   sh:property shape:aggregatietype;
   # Metagegevens
   sh:property shape:kardinaliteit;
+  sh:property shape:kardinaliteitRelatieBron;
   sh:property shape:herkomst;
   sh:property shape:definitie;
   sh:property shape:toelichting;
@@ -712,6 +713,13 @@ shape:kardinaliteit a sh:PropertyShape;
   sh:name "mim:kardinaliteit";
   sh:order 19;
   sh:minCount 1;
+  sh:maxCount 1;
+  sh:datatype xsd:string;
+.
+shape:kardinaliteitRelatieBron a sh:PropertyShape;
+  sh:path mim:kardinaliteitRelatieBron;
+  sh:name "mim:kardinaliteitRelatieBron";
+  sh:order 19;
   sh:maxCount 1;
   sh:datatype xsd:string;
 .
