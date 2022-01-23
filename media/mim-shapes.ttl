@@ -12,6 +12,7 @@
 @prefix sh: <http://www.w3.org/ns/shacl#>.
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>.
 @prefix dct: <http://purl.org/dc/terms/>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
 
 #
 # NodeShapes
@@ -503,7 +504,7 @@ shape:naam a sh:PropertyShape;
   sh:order 1;
   sh:minCount 1;
   sh:maxCount 1;
-  sh:datatype xsd:string;
+  sh:or ( [ sh:datatype xsd:string ] [ sh:datatype rdf:langString ] ) ;
 .
 # In enkele gevallen wordt de naam-property ook optioneel gebruikt
 shape:naam_optioneel a sh:PropertyShape;
@@ -511,7 +512,7 @@ shape:naam_optioneel a sh:PropertyShape;
   sh:name "mim:naam";
   sh:order 1;
   sh:maxCount 1;
-  sh:datatype xsd:string;
+  sh:or ( [ sh:datatype xsd:string ] [ sh:datatype rdf:langString ] ) ;
 .
 # Voor codelijst is er een specifieke toelichting gegeven, die hierbij opgenomen
 shape:naam_codelijst a sh:PropertyShape;
@@ -520,7 +521,7 @@ shape:naam_codelijst a sh:PropertyShape;
   sh:order 1;
   sh:minCount 1;
   sh:maxCount 1;
-  sh:datatype xsd:string;
+  sh:or ( [ sh:datatype xsd:string ] [ sh:datatype rdf:langString ] ) ;
   rdfs:comment "De naam van de lijst zoals gespecificeerd in de catalogus van de desbetreffende registratie dan wel, indien het een door de eigen organisatie toegevoegde lijst betreft, de door de eigen organisatie vastgestelde naam.";
 .
 shape:alias a sh:PropertyShape;
@@ -528,7 +529,7 @@ shape:alias a sh:PropertyShape;
   sh:name "mim:alias";
   sh:order 2;
   sh:maxCount 1;
-  sh:datatype xsd:string;
+  sh:or ( [ sh:datatype xsd:string ] [ sh:datatype rdf:langString ] ) ;
 .
 shape:begrip a sh:PropertyShape;
   sh:path mim:begrip;
@@ -545,7 +546,7 @@ shape:begripsterm a sh:PropertyShape;
   sh:path mim:begripsterm;
   sh:name "mim:begripsterm";
   sh:order 3;
-  sh:datatype xsd:string;
+  sh:or ( [ sh:datatype xsd:string ] [ sh:datatype rdf:langString ] ) ;
 .
 shape:herkomst a sh:PropertyShape;
   sh:path mim:herkomst;
@@ -553,7 +554,7 @@ shape:herkomst a sh:PropertyShape;
   sh:order 4;
   sh:minCount 1;
   sh:maxCount 1;
-  sh:datatype xsd:string;
+  sh:or ( [ sh:datatype xsd:string ] [ sh:datatype rdf:langString ] ) ;
 .
 shape:definitie a sh:PropertyShape;
   sh:path mim:definitie;
@@ -561,7 +562,7 @@ shape:definitie a sh:PropertyShape;
   sh:order 5;
   sh:minCount 1;
   sh:maxCount 1;
-  sh:datatype xsd:string;
+  sh:or ( [ sh:datatype xsd:string ] [ sh:datatype rdf:langString ] ) ;
 .
 # In enkele gevallen wordt de definitie-property ook optioneel gebruikt
 shape:definitie_optioneel a sh:PropertyShape;
@@ -569,7 +570,7 @@ shape:definitie_optioneel a sh:PropertyShape;
   sh:name "mim:definitie";
   sh:order 5;
   sh:maxCount 1;
-  sh:datatype xsd:string;
+  sh:or ( [ sh:datatype xsd:string ] [ sh:datatype rdf:langString ] ) ;
 .
 shape:herkomstDefinitie a sh:PropertyShape;
   sh:path mim:herkomstDefinitie;
@@ -577,7 +578,7 @@ shape:herkomstDefinitie a sh:PropertyShape;
   sh:order 6;
   sh:minCount 1;
   sh:maxCount 1;
-  sh:datatype xsd:string;
+  sh:or ( [ sh:datatype xsd:string ] [ sh:datatype rdf:langString ] ) ;
 .
 # In enkele gevallen wordt de herkomstDefinitie-property ook optioneel gebruikt
 shape:herkomstDefinitie_optioneel a sh:PropertyShape;
@@ -585,7 +586,7 @@ shape:herkomstDefinitie_optioneel a sh:PropertyShape;
   sh:name "mim:herkomstDefinitie";
   sh:order 6;
   sh:maxCount 1;
-  sh:datatype xsd:string;
+  sh:or ( [ sh:datatype xsd:string ] [ sh:datatype rdf:langString ] ) ;
 .
 shape:datumOpname a sh:PropertyShape;
   sh:path mim:datumOpname;
@@ -614,7 +615,7 @@ shape:toelichting a sh:PropertyShape;
   sh:name "mim:toelichting";
   sh:order 10;
   sh:maxCount 1;
-  sh:datatype xsd:string;
+  sh:or ( [ sh:datatype xsd:string ] [ sh:datatype rdf:langString ] ) ;
 .
 shape:indicatieAbstractObject a sh:PropertyShape;
   sh:path mim:indicatieAbstractObject;
@@ -836,7 +837,7 @@ shape:specificatieTekst a sh:PropertyShape;
   sh:name "mim:specificatieTekst";
   sh:order 33;
   sh:maxCount 1;
-  sh:datatype xsd:string;
+  sh:or ( [ sh:datatype xsd:string ] [ sh:datatype rdf:langString ] ) ;
 .
 shape:specificatieFormeel a sh:PropertyShape;
   sh:path mim:specificatieFormeel;
