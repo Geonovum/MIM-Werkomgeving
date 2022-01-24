@@ -1833,7 +1833,7 @@ Er zijn metagegevens die een defaultwaarde hebben. Het is echter niet nodig om d
 Aanwijzing MIM-beheerder: metagegevens met een defaultwaarde mogen niet optioneel zijn. Kies de defaultwaarde defensief.
 
 | **Metagegeven**                     | **Defaultwaarde** | **Toelichting**                                        |
-|-------------------------------------|----------------------------------------------------------------------------|
+|-------------------------------------|-------------------| -------------------------------------------------------|
 | Indicatie materiële historie        | `Nee`             |                                                        |
 | Indicatie formele historie          | `Nee`             |                                                        |
 | Indicatie classificerend            | `Nee`             |                                                        |
