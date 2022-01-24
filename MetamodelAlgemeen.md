@@ -1806,15 +1806,17 @@ Voor de volgende metagegevens geldt een specifiek waardebereik.
 
 | **Tagged value**                    | **Waardenbereik**                                                          |
 |-------------------------------------|----------------------------------------------------------------------------|
-| Indicatie materiële historie        | Ja, Nee                                                                    |
-| Indicatie formele historie          | Ja, Nee                                                                    |
-| Indicatie classificerend            | Ja, Nee                                                                    |
-| Mogelijk geen waarde                | Ja, Nee                                                                    |
-| [Aggregatietype](#metagegeven-aggregatietype) | Compositie, Gedeeld, Geen                                        |
-| [Authentiek](#authentieke-gegevens) | Authentiek, Basisgegeven, Wettelijk gegeven, Landelijk kerngegeven, Overig |
+| Indicatie materiële historie        | `Ja`, `Nee`                                                                |
+| Indicatie formele historie          | `Ja`, `Nee`                                                                |
+| Indicatie classificerend            | `Ja`, `Nee`                                                                |
+| Indicatie abstract object           | `Ja`, `Nee`                                                                |
+| Mogelijk geen waarde                | `Ja`, `Nee`                                                                |
+| [Aggregatietype](#metagegeven-aggregatietype) | `Compositie`, `Gedeeld`, `Geen`                                  |
+| [Authentiek](#authentieke-gegevens) | `Authentiek`, `Basisgegeven`, `Wettelijk gegeven`, `Landelijk kerngegeven`, `Overig` |
 
-NB: Geef bij de toepassing van overig in een informatiemodel aan wat er onder wordt verstaan.
+NB: Geef bij de toepassing van `overig` in een informatiemodel aan wat er onder wordt verstaan.
 
+Voor technische implementatiedoeleinden is het toegestaan om Ja en Nee te interpreteren en eventueel te vervangen door een Boolean, maar voor mens-leesbare functionele documentatie horen altijd de in de tabel aangegeven waarden te worden gebruikt. 
 
 ### Defaultwaarden voor metagegevens modelelementen
 
@@ -1822,14 +1824,14 @@ Er zijn metagegevens die een defaultwaarde hebben. Het is echter niet nodig om d
 
 Aanwijzing MIM-beheerder: metagegevens met een defaultwaarde mogen niet optioneel zijn. Kies de defaultwaarde defensief.
 
-| **Metagegeven**                     | **Defaultwaarde**                                                          |
+| **Metagegeven**                     | **Defaultwaarde** | **Toelichting**                                        |
 |-------------------------------------|----------------------------------------------------------------------------|
-| Indicatie materiële historie        | Nee                                                                    |
-| Indicatie formele historie          | Nee                                                                    |
-| Indicatie classificerend            | Nee                                                                    |
-| Mogelijk geen waarde                | Nee                                                                    |
-| Identificerend                      | Nee                                       |
-| Kardinaliteit attribuut             | 1                                                                      |
-| Type aggregatie                     | Geen |
+| Indicatie materiële historie        | `Nee`             |                                                        |
+| Indicatie formele historie          | `Nee`             |                                                        |
+| Indicatie classificerend            | `Nee`             |                                                        |
+| Mogelijk geen waarde                | `Nee`             |                                                        |
+| Identificerend                      | `Nee`             |                                                        |
+| Kardinaliteit attribuut             | `1`               |                                                        |
+| Type aggregatie                     | `Geen`            |                                                        |
 
-De kardinaliteit bij een relatiesoort heeft geen defaultwaarde. Bij een relatiedoel moet die altijd ingevuld zijn. Bij een relatiebron is die optioneel ingevuld. Als er niets is ingevuld bij een relatiebron dan kan er niets over de kardinaliteit van de relatiebron worden gezegd. In de praktijk betekent dat een kardinaliteit van 0..*.
+Opmerking met betrekking tot de kardinaliteit van relaties: deze staat niet in de tabel. Deze kennen geen defaultwaarde. De kardinaliteit aan de doel kant altijd moet worden aangegeven. De kardinaliteit aan de bron/eigenaar kant van een relatie is optioneel om in te vullen, wanneer er niets is ingevuld dan wordt er niets over de kardinaliteit gezegd en kent deze geen default waarde (in de praktijk betekent dit dat een kardinaliteit aan de bron kant als 0..* geimplementeerd wordt).
