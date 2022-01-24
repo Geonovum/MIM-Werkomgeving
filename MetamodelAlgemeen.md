@@ -1418,23 +1418,31 @@ koppeling.
 
 >   **Definitie Aggregatietype**  
 >   Aanduiding of het objecttype die de eigenaar is van een relatie het doel van
->   relatie ziet als een samen te voegen onderdeel.
+>   relatie ziet als een samen te voegen onderdeel die bij het objecttype hoort. 
 
 *Toelichting* Bijvoorbeeld: een auto heeft verschillende onderdelen, waaronder
 een motor. In het informatiemodel gaat het vooral om de auto en is de motor
 alleen relevant vanuit het perspectief van dat het een onderdeel is van de auto.
 
+De aggregatie is in de basis een relatie en het aggregratietype geeft aanvullend hierop extra informatie. 
+
 Standaard is er bij een relatie geen sprake van een aggregatie, (aggregatietype "Geen").
-Als er wel sprake is van een aggregatie, dan geeft dit
-aan dat het objecttype die doel is van de relatie een onderdeel is van het
-objecttype die de eigenaar is van de relatie. De eigenaar geeft aan hoe de
+Er is dan sprake van een relatie tussen objecten van beide objecttypes, 
+en deze kan conditioneel zijn, maar de objecten worden gezien als dat ze zelfstandig 
+bestaansrecht hebben en daarnaast ook een relatie met elkaar hebben en verder niets. 
+
+Als er wel sprake is van een aggregatie, dan geeft het aggregratietype aan dat het objecttype die doel is van 
+de relatie, in functionele zin en in aanvulling op de relatie zelf, ook een onderdeel (component) 
+is van het objecttype die de eigenaar is van de relatie. De eigenaar geeft hierbij aan hoe de 
 aggregatie in gezien moet worden. Dit kan zijn:
 
-- 'Compositie' (Engels: composite): de eigenaar is volledig verantwoordelijk voor het beheer van het onderdeel. Als de eigenaar
-vervalt, dan vervallen automatisch ook de onderdelen mee. Het doel kan niet
-bestaan zonder de bron: het doel vervalt als de bron vervalt.
+- 'Compositie' (Engels: composite): het doel object is een integraal onderdeel van het eigenaar object 
+en dit onderdeel wordt niet gedeeld met anderen. De eigenaar is volledig verantwoordelijk voor het beheer 
+van de bijhouding van informatie over het onderdeel. Als de eigenaar vervalt, dan vervallen automatisch 
+ook de onderdelen mee. Het doel object kan als onderdeel niet zelfstandig bestaan: het doel vervalt als de eigenaar vervalt. 
+Wel kan je een onderdeel vervangen met behoud van het eigenaar object. 
 - 'Gedeeld' (Engels: shared): het onderdeel kan gebruikt en gedeeld worden door meerdere eigenaren.
-Bijvoorbeeld: een betaalrekening.
+Bijvoorbeeld: een betaalrekening. 
 
 *Toepassing*: relaties, oftewel de modelelementen Relatiesoort en Externe
 koppeling.
@@ -1832,6 +1840,6 @@ Aanwijzing MIM-beheerder: metagegevens met een defaultwaarde mogen niet optionee
 | Mogelijk geen waarde                | `Nee`             |                                                        |
 | Identificerend                      | `Nee`             |                                                        |
 | Kardinaliteit attribuut             | `1`               |                                                        |
-| Type aggregatie                     | `Geen`            |                                                        |
+| Aggregatietype                      | `Geen`            |                                                        |
 
 Opmerking met betrekking tot de kardinaliteit van relaties: deze staat niet in de tabel. Deze kennen geen defaultwaarde. De kardinaliteit aan de doel kant altijd moet worden aangegeven. De kardinaliteit aan de bron/eigenaar kant van een relatie is optioneel om in te vullen, wanneer er niets is ingevuld dan wordt er niets over de kardinaliteit gezegd en kent deze geen default waarde (in de praktijk betekent dit dat een kardinaliteit aan de bron kant als 0..* geimplementeerd wordt).
