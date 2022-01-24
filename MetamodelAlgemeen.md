@@ -1832,14 +1832,14 @@ Er zijn metagegevens die een defaultwaarde hebben. Het is echter niet nodig om d
 
 Aanwijzing MIM-beheerder: metagegevens met een defaultwaarde mogen niet optioneel zijn. Kies de defaultwaarde defensief.
 
-| **Metagegeven**                     | **Defaultwaarde** | **Toelichting**                                        |
-|-------------------------------------|-------------------| -------------------------------------------------------|
-| Indicatie materiële historie        | `Nee`             |                                                        |
-| Indicatie formele historie          | `Nee`             |                                                        |
-| Indicatie classificerend            | `Nee`             |                                                        |
-| Mogelijk geen waarde                | `Nee`             |                                                        |
-| Identificerend                      | `Nee`             |                                                        |
-| Kardinaliteit attribuut             | `1`               |                                                        |
-| Aggregatietype                      | `Geen`            |                                                        |
+| **Metagegeven**                     | **Defaultwaarde** | 
+|-------------------------------------|-------------------| 
+| Indicatie materiële historie        | `Nee`             |                                                        
+| Indicatie formele historie          | `Nee`             |                                                        
+| Indicatie classificerend            | `Nee`             |                                                        
+| Mogelijk geen waarde                | `Nee`             |                                                        
+| Identificerend                      | `Nee`             |                                                        
+| Kardinaliteit attribuut             | `1`               |                                                        
+| Aggregatietype                      | `Geen`            |                                                        
 
 Opmerking met betrekking tot de kardinaliteit van relaties: deze staat niet in de tabel. Deze kennen geen defaultwaarde. De kardinaliteit aan de doel kant altijd moet worden aangegeven. De kardinaliteit aan de bron/eigenaar kant van een relatie is optioneel om in te vullen, wanneer er niets is ingevuld dan wordt er niets over de kardinaliteit gezegd en kent deze geen default waarde (in de praktijk betekent dit dat een kardinaliteit aan de bron kant als 0..* geimplementeerd wordt).
