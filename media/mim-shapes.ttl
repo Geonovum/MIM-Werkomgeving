@@ -58,7 +58,7 @@ shape:Attribuutsoort a sh:NodeShape;
   sh:property shape:formeelPatroon;
   sh:property shape:indicatieMaterieleHistorie;
   sh:property shape:indicatieFormeleHistorie;
-  sh:property shape:kardinaliteit;
+  sh:property shape:kardinaliteit_attribuut;
   sh:property shape:authentiek;
   sh:property shape:toelichting;
   sh:property shape:indicatieAfleidbaar;
@@ -686,6 +686,7 @@ shape:indicatieMaterieleHistorie a sh:PropertyShape;
   sh:minCount 1;
   sh:maxCount 1;
   sh:datatype xsd:boolean;
+  sh:defaultValue false;
 .
 shape:indicatieFormeleHistorie a sh:PropertyShape;
   sh:path mim:indicatieFormeleHistorie;
@@ -694,6 +695,7 @@ shape:indicatieFormeleHistorie a sh:PropertyShape;
   sh:minCount 1;
   sh:maxCount 1;
   sh:datatype xsd:boolean;
+  sh:defaultValue false;
 .
 shape:locatie a sh:PropertyShape;
   sh:path mim:locatie;
@@ -717,6 +719,15 @@ shape:kardinaliteit a sh:PropertyShape;
   sh:minCount 1;
   sh:maxCount 1;
   sh:datatype xsd:string;
+.
+shape:kardinaliteit_attribuut a sh:PropertyShape;
+  sh:path mim:kardinaliteit;
+  sh:name "mim:kardinaliteit";
+  sh:order 19;
+  sh:minCount 1;
+  sh:maxCount 1;
+  sh:datatype xsd:string;
+  sh:defaultValue "1..1";
 .
 shape:kardinaliteitRelatieBron a sh:PropertyShape;
   sh:path mim:kardinaliteitRelatieBron;
@@ -747,6 +758,7 @@ shape:indicatieAfleidbaar a sh:PropertyShape;
   sh:minCount 1;
   sh:maxCount 1;
   sh:datatype xsd:boolean;
+  sh:defaultValue false;
 .
 shape:indicatieClassificerend a sh:PropertyShape;
   sh:path mim:indicatieClassificerend;
@@ -755,6 +767,7 @@ shape:indicatieClassificerend a sh:PropertyShape;
   sh:minCount 1;
   sh:maxCount 1;
   sh:datatype xsd:boolean;
+  sh:defaultValue false;
 .
 shape:mogelijkGeenWaarde a sh:PropertyShape;
   sh:path mim:mogelijkGeenWaarde;
@@ -770,6 +783,7 @@ shape:identificerend a sh:PropertyShape;
   sh:order 24;
   sh:maxCount 1;
   sh:datatype xsd:boolean;
+  sh:defaultValue false;
 .
 shape:gegevensgroeptype a sh:PropertyShape;
   sh:path mim:gegevensgroeptype;
@@ -842,6 +856,7 @@ shape:aggregatietype a sh:PropertyShape;
   sh:minCount 1;
   sh:maxCount 1;
   sh:node shape:Aggregatietypen;
+  sh:defaultValue mim:Geen;
 .
 shape:Aggregatietypen a sh:NodeShape;
   sh:name "Aggregatietypen";
