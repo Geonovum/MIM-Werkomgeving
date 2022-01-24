@@ -592,35 +592,33 @@ Diagram: [Datatypen](#datatypen)
 
 #### Primitief datatype
 
-Een standaard datatype, zoals bekend in vele
-specificatietalen, dat de structuur van een gegeven beschrijft. Het metamodel
-volgt waar mogelijk de definities zoals beschreven in ISO standaarden (zie
-§3.1). Deze datatypes hebben altijd al een naam en definitie gekregen vanuit
-deze standaarden en deze worden gebruikt. Deze worden niet door de modelleur
-gecreëerd en hebben daarom geen MIM metaclass.
-
 >   **Definitie Primitief datatype**  
->   Een in het eigen model gedefinieerd datatype die gebaseerd is op een
->   PrimitiveType, met een eigen naam en definitie.
-
-NB: Wanneer het datatype Postcode landelijk zodanig beschikbaar is gemaakt zodat
-hier gebruik van gemaakt kan worden in het model, middels een verwijzing, dan hoeft Postcode niet meer
-in het eigen model opgenomen te worden.
+>   Een primitief datatype is een datatype met een eenvoudige basisstructuur, oftewel enkelvoudig en zonder gelaagdheid. 
 
 *Toelichting:* Een primitief datatype is een datatype zonder verdere
 specificatie over de structuur. Dit datatype is enkelvoudig, oftewel niet
-samengesteld, en wordt ook wel simpel datatype genoemd. Dit datatype kent daarom
-zelf geen eigen modelelementen zoals een «Data element».
+samengesteld en wordt ook wel simpel datatype genoemd. Dit datatype kent daarom
+zelf geen eigen modelelementen zoals een «Data element». Ook is er geen sprake van een gelaagdheid, ook wel nesting genoemd. Een primitief datatype kan wel een patroon of formeel patroon hebben, die een nadere restrictie legt.
 
-Wanneer een Primitief datatype wordt gespecificeerd, dan heeft deze standaard
-als primitive datatype een CharacterString.
+Een primitief datatype kan een standaard datatype, zoals CharacterString, Integer enz. Het metamodel volgt hierbij de definities zoals beschreven in de ISO standaarden (zie
+§3.1). 
+* Deze datatypes hebben altijd al een naam en definitie gekregen vanuit deze standaarden en deze worden gebruikt.
+* Deze datatypes hebben geen MIM metaclass. 
 
-Een informatiemodel definieert datatypes als er behoefte is aan een datatype dat
+Een primitief datatype kan ook in het eigen informatiemodel zelf gedefinieerd zijn, zoals bijvoorbeeld een primitief datatype AN: een alfanumerieke CharacterString conform de MES-1 specificatie (oftewel zonder bijzondere karakters zoals een smiley en zonder bijzondere tekens uit niet Europese talen). 
+* Dit is een zelf gedefinieerde variant die als basis een van de voorgaande standaard datatypes heeft, zoals CharacterString. Dit standaard datatype moet eenduidig aangegeven worden (zie generalisatie bij datatypes, of door in een extensie aan te geven wat de default is, bv. CharacterString). 
+* Hierbij hoort de MIM metaclass gespecificeerd te worden: `primitief datatype`. 
+
+Een informatiemodel definieert zelf datatypes als er behoefte is aan een datatype dat
 eenmalig gedefinieerd wordt en op meerdere plekken in het model gebruikt moet
 kunnen worden met altijd exact dezelfde structuur en waardenbereik (zie ook
 ‘patroon’ in [Domeinwaarden of lijsten](#domeinwaarden-of-lijsten)). Dit
 datatype, met een eigen naam, wordt vervolgens gebruikt als type van een
 attribuutsoort.
+
+NB: Wanneer het datatype Postcode landelijk zodanig beschikbaar is gemaakt zodat
+hier gebruik van gemaakt kan worden in het model, middels een verwijzing, dan hoeft Postcode niet meer
+in het eigen model opgenomen te worden.
 
 #### Gestructureerd datatype
 
@@ -1555,13 +1553,19 @@ betreft, zoals een CharacterString.
 #### Metagegeven: **Indicatie abstract object**
 
 >   **Definitie Indicatie abstract object**  
->   Indicatie dat het objecttype een generalisatie is, waarvan een object als specialisatie
->   altijd voorkomt in de hoedanigheid van één (en slechts één) van de specialisaties van het betreffende objecttype.
+>   Een indicatie die aangeeft of er objecten _kunnen_ bestaan die getypeerd worden als zijnde objecten (instanties) van alleen dit objecttype. Een abstract objecttype moet altijd de generalisatie zijn van één of meerdere objecttypes die niet abstract zijn. 
+
+N.B. Eén informatiemodel kan een abstract objecttype bevatten die _binnen dit informatiemodel_ een generalisatie is van geen enkel objecttype. Deze niet abstracte objecttypen kunnen zich immers ook buiten het informatiemodel bevinden en aldaar worden gespecificeerd. Dit komt voor bij informatiemodellen die een abstracte typering definieren waarop (concretere) informatiemodellen willen aansluiten en nadere invulling aan geven.  
 
 *Toelichting*
 
-Een abstract objecttype moet altijd de generalisatie zijn van één of meerdere specialisaties.
-Bijvoorbeeld het abstract objecttype "Voertuig", met concrete specialisaties "Auto", "Fiets" en "Bromfiets".
+Niet abstract wordt ook vaak wel genoemd: concreet. 
+
+Bijvoorbeeld het abstract objecttype "Voertuig", met concrete specialisaties "Auto", "Fiets" en "Bromfiets". Dit betekent dat er geen voertuigen mogen bestaan die alleen maar een voertuig zijn en waarbij in het midden gelaten mag worden of het een Auto, Fiets, Bromfiets betreft. Als het "Voertuig" daarentegen niet als abstract is gemodelleerd, dan mogen er wel voertuigen bestaan die alleen maar een voertuig zijn en niet een Auto, Fiets of Bromfiets. In beide gevallen kan er over de objecten gesproken worden als zijnde een voertuig en kunnen deze objecten in algemene zin als zodanig behandeld worden (zoals een generalisatie bedoeld is). 
+
+Wanneer een objecttype niet abstract is, oftewel concreet, dan kunnen er objecten bestaan die een instantie van objecttype zijn. 
+
+Wanneer een objecttype wel abstract is, dan kunnen er geen objecten bestaan die een instantie van dit objecttype zijn. Er moet dan altijd sprake zijn van een concreet (niet abstract) objecttype die het abstracte objecttype als generalisatie heeft. Objecten zijn dan instanties van dit concrete objecttype en geen instanties van het abstracte objecttype. Wel voldoen deze objecten beide objecttype definities en kunnen deze objecten in algemene zin als zodanig behandeld worden.
 
 Zie ook sectie [Abstracte objecttypes en concrete objecten](#abstracte-objecttypes-en-concrete-objecten) waar
 een nadere uitleg wordt gegeven van het fenomeen abstract objecttypen.
@@ -1802,15 +1806,17 @@ Voor de volgende metagegevens geldt een specifiek waardebereik.
 
 | **Tagged value**                    | **Waardenbereik**                                                          |
 |-------------------------------------|----------------------------------------------------------------------------|
-| Indicatie materiële historie        | Ja, Nee                                                                    |
-| Indicatie formele historie          | Ja, Nee                                                                    |
-| Indicatie classificerend            | Ja, Nee                                                                    |
-| Mogelijk geen waarde                | Ja, Nee                                                                    |
-| [Aggregatietype](#metagegeven-aggregatietype) | Compositie, Gedeeld, Geen                                        |
-| [Authentiek](#authentieke-gegevens) | Authentiek, Basisgegeven, Wettelijk gegeven, Landelijk kerngegeven, Overig |
+| Indicatie materiële historie        | `Ja`, `Nee`                                                                |
+| Indicatie formele historie          | `Ja`, `Nee`                                                                |
+| Indicatie classificerend            | `Ja`, `Nee`                                                                |
+| Indicatie abstract object           | `Ja`, `Nee`                                                                |
+| Mogelijk geen waarde                | `Ja`, `Nee`                                                                |
+| [Aggregatietype](#metagegeven-aggregatietype) | `Compositie`, `Gedeeld`, `Geen`                                  |
+| [Authentiek](#authentieke-gegevens) | `Authentiek`, `Basisgegeven`, `Wettelijk gegeven`, `Landelijk kerngegeven`, `Overig` |
 
-NB: Geef bij de toepassing van overig in een informatiemodel aan wat er onder wordt verstaan.
+NB: Geef bij de toepassing van `overig` in een informatiemodel aan wat er onder wordt verstaan.
 
+Voor technische implementatiedoeleinden is het toegestaan om Ja en Nee te interpreteren en eventueel te vervangen door een Boolean, maar voor mens-leesbare functionele documentatie horen altijd de in de tabel aangegeven waarden te worden gebruikt. 
 
 ### Defaultwaarden voor metagegevens modelelementen
 
@@ -1818,14 +1824,14 @@ Er zijn metagegevens die een defaultwaarde hebben. Het is echter niet nodig om d
 
 Aanwijzing MIM-beheerder: metagegevens met een defaultwaarde mogen niet optioneel zijn. Kies de defaultwaarde defensief.
 
-| **Metagegeven**                     | **Defaultwaarde**                                                          |
+| **Metagegeven**                     | **Defaultwaarde** | **Toelichting**                                        |
 |-------------------------------------|----------------------------------------------------------------------------|
-| Indicatie materiële historie        | Nee                                                                    |
-| Indicatie formele historie          | Nee                                                                    |
-| Indicatie classificerend            | Nee                                                                    |
-| Mogelijk geen waarde                | Nee                                                                    |
-| Identificerend                      | Nee                                       |
-| Kardinaliteit attribuut             | 1                                                                      |
-| Type aggregatie                     | Geen |
+| Indicatie materiële historie        | `Nee`             |                                                        |
+| Indicatie formele historie          | `Nee`             |                                                        |
+| Indicatie classificerend            | `Nee`             |                                                        |
+| Mogelijk geen waarde                | `Nee`             |                                                        |
+| Identificerend                      | `Nee`             |                                                        |
+| Kardinaliteit attribuut             | `1`               |                                                        |
+| Type aggregatie                     | `Geen`            |                                                        |
 
-De kardinaliteit bij een relatiesoort heeft geen defaultwaarde. Bij een relatiedoel moet die altijd ingevuld zijn. Bij een relatiebron is die optioneel ingevuld. Als er niets is ingevuld bij een relatiebron dan kan er niets over de kardinaliteit van de relatiebron worden gezegd. In de praktijk betekent dat een kardinaliteit van 0..*.
+Opmerking met betrekking tot de kardinaliteit van relaties: deze staat niet in de tabel. Deze kennen geen defaultwaarde. De kardinaliteit aan de doel kant altijd moet worden aangegeven. De kardinaliteit aan de bron/eigenaar kant van een relatie is optioneel om in te vullen, wanneer er niets is ingevuld dan wordt er niets over de kardinaliteit gezegd en kent deze geen default waarde (in de praktijk betekent dit dat een kardinaliteit aan de bron kant als 0..* geimplementeerd wordt).
