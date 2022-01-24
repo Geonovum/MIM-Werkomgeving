@@ -592,35 +592,33 @@ Diagram: [Datatypen](#datatypen)
 
 #### Primitief datatype
 
-Een standaard datatype, zoals bekend in vele
-specificatietalen, dat de structuur van een gegeven beschrijft. Het metamodel
-volgt waar mogelijk de definities zoals beschreven in ISO standaarden (zie
-§3.1). Deze datatypes hebben altijd al een naam en definitie gekregen vanuit
-deze standaarden en deze worden gebruikt. Deze worden niet door de modelleur
-gecreëerd en hebben daarom geen MIM metaclass.
-
 >   **Definitie Primitief datatype**  
->   Een in het eigen model gedefinieerd datatype die gebaseerd is op een
->   PrimitiveType, met een eigen naam en definitie.
-
-NB: Wanneer het datatype Postcode landelijk zodanig beschikbaar is gemaakt zodat
-hier gebruik van gemaakt kan worden in het model, middels een verwijzing, dan hoeft Postcode niet meer
-in het eigen model opgenomen te worden.
+>   Een primitief datatype is een datatype met een eenvoudige basisstructuur, oftewel enkelvoudig en zonder gelaagdheid. 
 
 *Toelichting:* Een primitief datatype is een datatype zonder verdere
 specificatie over de structuur. Dit datatype is enkelvoudig, oftewel niet
-samengesteld, en wordt ook wel simpel datatype genoemd. Dit datatype kent daarom
-zelf geen eigen modelelementen zoals een «Data element».
+samengesteld en wordt ook wel simpel datatype genoemd. Dit datatype kent daarom
+zelf geen eigen modelelementen zoals een «Data element». Ook is er geen sprake van een gelaagdheid, ook wel nesting genoemd. Een primitief datatype kan wel een patroon of formeel patroon hebben, die een nadere restrictie legt.
 
-Wanneer een Primitief datatype wordt gespecificeerd, dan heeft deze standaard
-als primitive datatype een CharacterString.
+Een primitief datatype kan een standaard datatype, zoals CharacterString, Integer enz. Het metamodel volgt hierbij de definities zoals beschreven in de ISO standaarden (zie
+§3.1). 
+* Deze datatypes hebben altijd al een naam en definitie gekregen vanuit deze standaarden en deze worden gebruikt.
+* Deze datatypes hebben geen MIM metaclass. 
 
-Een informatiemodel definieert datatypes als er behoefte is aan een datatype dat
+Een primitief datatype kan ook in het eigen informatiemodel zelf gedefinieerd zijn, zoals bijvoorbeeld een primitief datatype AN: een alfanumerieke CharacterString conform de MES-1 specificatie (oftewel zonder bijzondere karakters zoals een smiley en zonder bijzondere tekens uit niet Europese talen). 
+* Dit is een zelf gedefinieerde variant die als basis een van de voorgaande standaard datatypes heeft, zoals CharacterString. Dit standaard datatype moet eenduidig aangegeven worden (zie generalisatie bij datatypes, of door in een extensie aan te geven wat de default is, bv. CharacterString). 
+* Hierbij hoort de MIM metaclass gespecificeerd te worden: `primitief datatype`. 
+
+Een informatiemodel definieert zelf datatypes als er behoefte is aan een datatype dat
 eenmalig gedefinieerd wordt en op meerdere plekken in het model gebruikt moet
 kunnen worden met altijd exact dezelfde structuur en waardenbereik (zie ook
 ‘patroon’ in [Domeinwaarden of lijsten](#domeinwaarden-of-lijsten)). Dit
 datatype, met een eigen naam, wordt vervolgens gebruikt als type van een
 attribuutsoort.
+
+NB: Wanneer het datatype Postcode landelijk zodanig beschikbaar is gemaakt zodat
+hier gebruik van gemaakt kan worden in het model, middels een verwijzing, dan hoeft Postcode niet meer
+in het eigen model opgenomen te worden.
 
 #### Gestructureerd datatype
 
