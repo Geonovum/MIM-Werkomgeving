@@ -1553,13 +1553,19 @@ betreft, zoals een CharacterString.
 #### Metagegeven: **Indicatie abstract object**
 
 >   **Definitie Indicatie abstract object**  
->   Indicatie dat het objecttype een generalisatie is, waarvan een object als specialisatie
->   altijd voorkomt in de hoedanigheid van één (en slechts één) van de specialisaties van het betreffende objecttype.
+>   Een indicatie die aangeeft of er objecten _kunnen_ bestaan die getypeerd worden als zijnde objecten (instanties) van alleen dit objecttype. Een abstract objecttype moet altijd de generalisatie zijn van één of meerdere objecttypes die niet abstract zijn. 
+
+N.B. Eén informatiemodel kan een abstract objecttype bevatten die _binnen dit informatiemodel_ een generalisatie is van geen enkel objecttype. Deze niet abstracte objecttypen kunnen zich immers ook buiten het informatiemodel bevinden en aldaar worden gespecificeerd. Dit komt voor bij informatiemodellen die een abstracte typering definieren waarop (concretere) informatiemodellen willen aansluiten en nadere invulling aan geven.  
 
 *Toelichting*
 
-Een abstract objecttype moet altijd de generalisatie zijn van één of meerdere specialisaties.
-Bijvoorbeeld het abstract objecttype "Voertuig", met concrete specialisaties "Auto", "Fiets" en "Bromfiets".
+Niet abstract wordt ook vaak wel genoemd: concreet. 
+
+Bijvoorbeeld het abstract objecttype "Voertuig", met concrete specialisaties "Auto", "Fiets" en "Bromfiets". Dit betekent dat er geen voertuigen mogen bestaan die alleen maar een voertuig zijn en waarbij in het midden gelaten mag worden of het een Auto, Fiets, Bromfiets betreft. Als het "Voertuig" daarentegen niet als abstract is gemodelleerd, dan mogen er wel voertuigen bestaan die alleen maar een voertuig zijn en niet een Auto, Fiets of Bromfiets. In beide gevallen kan er over de objecten gesproken worden als zijnde een voertuig en kunnen deze objecten in algemene zin als zodanig behandeld worden (zoals een generalisatie bedoeld is). 
+
+Wanneer een objecttype niet abstract is, oftewel concreet, dan kunnen er objecten bestaan die een instantie van objecttype zijn. 
+
+Wanneer een objecttype wel abstract is, dan kunnen er geen objecten bestaan die een instantie van dit objecttype zijn. Er moet dan altijd sprake zijn van een concreet (niet abstract) objecttype die het abstracte objecttype als generalisatie heeft. Objecten zijn dan instanties van dit concrete objecttype en geen instanties van het abstracte objecttype. Wel voldoen deze objecten beide objecttype definities en kunnen deze objecten in algemene zin als zodanig behandeld worden.
 
 Zie ook sectie [Abstracte objecttypes en concrete objecten](#abstracte-objecttypes-en-concrete-objecten) waar
 een nadere uitleg wordt gegeven van het fenomeen abstract objecttypen.
