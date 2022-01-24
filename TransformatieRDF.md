@@ -118,7 +118,7 @@ Onderstaande tabellen geven een overzicht van alle transformaties en een referen
 |MIM-eigenschap|Vertaling|Referentie|
 |--------------|---------|----------|
 |`mim:naam`|`rdfs:label`|[naam](#transformatie-naam)|
-|`mim:alias`|`skos:altLabel`|[alias](#transformatie-alias)|
+|`mim:alias`|`mim:alias`|[alias](#transformatie-alias)|
 |`mim:begrip`|`dct:subject`|[begrip](#transformatie-begrip)|
 |`mim:begripsterm`|`mim:begripsterm`|[begripsterm](#transformatie-begripsterm)|
 |`mim:definitie`|`rdfs:comment`|[definitie](#transformatie-definitie)|
@@ -933,15 +933,15 @@ WHERE {
 
 > De alternatieve weergave van de naam.
 
-Een `mim:alias` wordt vertaald naar een `skos:altLabel`
+Een `mim:alias` wordt direct, zonder aanpassing, overgenomen in het vertaalde model.
 
 <aside id='trans-13' class='note'>
-Het MIM geeft de mogelijkheid voor naamgevingsconventies. Zie MIM [Naamgevingsconventies](#afspraken-rondom-naamgeving-en-definities). Dit is op dit moment niet in het MIM zelf als gestructureerd aspect beschikbaar. Voor een RDF model wordt uitgegaan dat de `mim:alias` een voor mensen alternatieve weergave biedt. Hier wordt dus **geen** technische naam verondersteld en dit veld mag dus ook spaties bevatten.
+Het MIM geeft de mogelijkheid voor naamgevingsconventies. Zie MIM [Naamgevingsconventies](#afspraken-rondom-naamgeving-en-definities). Dit is op dit moment niet in het MIM zelf als gestructureerd aspect beschikbaar. Om te voorkomen dat we bij de transformatie onnodige interpretatie doen van de betekenis van mim:alias nemen we dit veld as-is over.
 </aside>
 
 <pre class='ex-sparql'>
 CONSTRUCT {
-  ?subject skos:altLabel ?alias
+  ?subject mim:alias ?alias
 }
 WHERE {
   ?modelelement mim:alias ?alias.
@@ -1629,8 +1629,8 @@ Aspecten:
 
 |RDFS term | MIM-aspect | Uitleg |
 |----------|-------------|--------|
-| rdfs:label of sh:name als rdfs:label ontbreekt | mim:naam | Het rdfs:label (of sh:name als het label ontbreekt) van een nodeshape of class betreft de naam |
-| skos:altLabel of sh:name | mim:alias | skos:altLabel is letterlijk een alias, sh:name is ook een alias en wordt met name gebruikt voor meer technische namen, terwijl skos:altLabel vaak een meer functionele naam bevat. |
+| rdfs:label, sh:name | mim:naam | Het rdfs:label (of sh:name als een meer technische naam gewenst is) van een nodeshape of class betreft de naam |
+| skos:altLabel, skos:prefLabel, rdfs:label, sh:name | mim:alias | skos:altLabel is letterlijk een alias, sh:name is ook een alias en wordt met name gebruikt voor meer technische namen, terwijl skos:prefLabel of skos:altLabel vaak een meer functionele naam bevat.|
 | dct:subject | mim:begrip | dct:subject geeft dezelfde relatie weer als mim:begrip |
 | rdfs:comment | mim:definitie | rdfs:comment wordt in de praktijk gebruikt op de manier als de mim:definitie. Merk op dat skos:definition hier niet wordt toegepast, omdat vanuit het MIM aanbevolen wordt om hiervoor een afzonderlijk begrippenkader op te stellen (via dct:subject / mim:begrip)|
 | sh:minCount en sh:maxCount | mim:kardinaliteit | De kardinaliteit wordt bepaald door sh:minCount en sh:maxCount |
