@@ -43,6 +43,8 @@ Het RDF model is opgesplitst in twee delen. Zoals gebruikelijk in RDF zijn deze 
 
 In onderstaande paragrafen wordt zowel de vocabulaire als de structuur gezamenlijk per modelelement besproken. Een RDF representatie in turtle wordt gegeven en daarnaast ook een grafische representatie. Hiervoor wordt de verbeelding gebruikt zoals beschreven op https://bp4mc2.org/20181107/#grafische-representatie.
 
+Met behulp van bovenstaande twee - machine leesbare - bestanden kan een geserialiseerd MIM model uitgedrukt in RDF (bijvoorbeeld een [XML](https://www.w3.org/TR/rdf-syntax-grammar/), [JSON](https://www.w3.org/TR/json-ld11/) of [Turtle](https://www.w3.org/TR/turtle/) bestand) gevalideerd worden of deze correct conform MIM is opgesteld. Hiervoor kan bijvoorbeeld [dit open source java tool](https://github.com/architolk/mimtools) gebruikt worden.
+
 Bij het opstellen van het MIM in RDF is gebruik gemaakt van de algemene, tekstuele beschrijving van het MIM uit het hoofdstuk[Metamodel Algemeen](#metamodel-algemeen). Er is een 1-op-1 omzetting gedaan, zonder enige aanpassing van de beschrijvingen. Dit maakt het mogelijk om een MIM informatiemodel om te zetten van de ene representatie (bijvoorbeeld in UML) naar de andere en weer terug, zonder verlies van informatie.
 
 De volgende regels zijn gebruikt bij de omzetting van de MIM tekst naar RDF:
@@ -57,6 +59,8 @@ Voor de omzetting van de gegevensconstraints (zoals cardinaliteiten, datatypen e
 
 1. Elk voorkomen van een MIM «metaclass» kent ook een `sh:NodeShape` met een `sh:name` die overeen komt de originele technische naam (UpperCamelCase);
 2. Voor elk voorkomen van een MIM «metaclass» zijn `sh:PropertyShapes` aangemaakt om aan te geven welke metagegevens zijn toegestaan voor een MIM «metaclass», de kardinaliteiten en het datatype c.q. de geassocieerde MIM «metaclass».
+
+Ten opzichte van de UML weergave van het MIM metamodel kent het MIM in RDF alleen het gebruik van de namen van de metagegevens en niet de namen van de bindingen die bij deze metagegevens horen. Zo kent het UML metamodel voor de binding tussen Objecttype en Attribuutsoort de bindingsnaam "heeft attribuut" en de rolnaam "attribuut". Het MIM in RDF gebruikt alleen de rolnaam "attribuut" in dit geval.
 
 ### Kern
 
