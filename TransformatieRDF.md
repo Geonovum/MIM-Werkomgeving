@@ -1634,7 +1634,7 @@ WHERE {
   ?package mim:bevatModelement ?eigenaar.
   ?eigenaar ?eigenaarrelatie ?modelelement
   ?package mim:equivalent ?ontology.
-  ?modelelement mim:equivalant ?eigenschap.
+  ?modelelement mim:equivalant ?property.
   FILTER NOT EXISTS {?package mim:bevatModelelement ?modelelement}
   FILTER (?eigenaarrelatie=mim:attribuut
        || ?eigenaarrelatie=mim:dataElement
