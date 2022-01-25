@@ -374,6 +374,7 @@ shape:Package a sh:NodeShape;
   sh:name "mim:Package";
   sh:property shape:naam;
   sh:property shape:alias;
+  sh:property shape:bevatModelelement;
 .
 shape:Informatiemodel a sh:NodeShape;
   sh:targetClass mim:Informatiemodel;
@@ -465,13 +466,25 @@ shape:RelatierolDoel a sh:NodeShape;
   sh:property shape:doel;
 .
 
+shape:Modelelement a sh:NodeShape;
+  sh:targetClass mim:Modelelement;
+  sh:name "mim:Modelelement";
+.
+
 #
 # PropertyShapes
 #
 
 # De meeste property shapes worden vaker gebruikt. Vandaar dat propertyshapes afzonderlijk zijn benoemd
 
-# Meta voor informatiemodel
+# Meta voor package / informatiemodel
+
+shape:bevatModelelement a sh:PropertyShape;
+  sh:path mim:bevatModelelement;
+  sh:name "mim:bevatModelelement";
+  sh:order 1;
+  sh:class mim:Modelelement;
+.
 
 shape:informatiemodeltype a sh:PropertyShape;
   sh:path mim:informatiemodeltype;

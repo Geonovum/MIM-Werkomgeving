@@ -24,23 +24,34 @@
 # Classes
 #
 
+# Root metaklasse
+# - Merk op: deze metaklasse wordt niet expliciet in MIM gedefinieerd in H2, maar wel genoemd en gebruikt als generalisatie.
+mim:Modelelement a owl:Class;
+  rdfs:label "Modelelement"@nl;
+  rdfs:comment "Een modelelement uit het Metamodel voor Informatie Modellering (MIM)"@nl;
+.
+
 # Objecten en attributen
 mim:Objecttype a owl:Class;
+  rdfs:subClassOf mim:Modelelement;
   rdfs:label "Objecttype"@nl;
   rdfs:comment "De typering van een groep objecten die binnen een domein relevant zijn en als gelijksoortig worden beschouwd."@nl;
   dct:source mimdoc:sectie2.5.2;
 .
 mim:Attribuutsoort a owl:Class;
+  rdfs:subClassOf mim:Modelelement;
   rdfs:label "Attribuutsoort"@nl;
   rdfs:comment "De typering van gelijksoortige gegevens die voor een objecttype van toepassing is."@nl;
   dct:source mimdoc:sectie2.5.3;
 .
 mim:Gegevensgroep a owl:Class;
+  rdfs:subClassOf mim:Modelelement;
   rdfs:label "Gegevensgroep"@nl;
   rdfs:comment "Een typering van een groep van gelijksoortige gegevens die voor een objecttype van toepassing is."@nl;
   dct:source mimdoc:sectie2.5.4;
 .
 mim:Gegevensgroeptype a owl:Class;
+  rdfs:subClassOf mim:Modelelement;
   rdfs:label "Gegevensgroeptype"@nl;
   rdfs:comment "Een groep van met elkaar samenhangende attribuutsoorten. Een gegevensgroeptype is altijd een type van een gegevensgroep."@nl;
   dct:source mimdoc:sectie2.5.5;
@@ -48,11 +59,13 @@ mim:Gegevensgroeptype a owl:Class;
 
 # Relaties
 mim:Generalisatie a owl:Class;
+  rdfs:subClassOf mim:Modelelement;
   rdfs:label "Generalisatie"@nl;
   rdfs:comment "De typering van het hiërarchische verband tussen een meer generiek en een meer specifiek modelelement van hetzelfde soort, waarbij het meer specifieke modelelement eigenschappen van het meer generieke modelelement overerft. Dit verband is alleen gedefinieerd voor objecttypen en datatypen."@nl;
   dct:source mimdoc:sectie2.6.1;
 .
 mim:Relatiesoort a owl:Class;
+  rdfs:subClassOf mim:Modelelement;
   rdfs:label "Relatiesoort"@nl;
   rdfs:comment "De typering van het structurele verband tussen een object van een objecttype en een (ander) object van een ander (of hetzelfde) objecttype."@nl;
   dct:source mimdoc:sectie2.6.2;
@@ -64,11 +77,13 @@ mim:Relatieklasse a owl:Class;
   dct:source mimdoc:sectie2.6.3;
 .
 mim:ExterneKoppeling a owl:Class;
+  rdfs:subClassOf mim:Modelelement;
   rdfs:label "Externe koppeling"@nl;
   rdfs:comment "Een associatie waarmee vanuit het perspectief van het eigen informatiemodel een objecttype uit het ‘eigen’ informatiemodel gekoppeld wordt aan een objecttype van een extern informatiemodel. De relatie zelf hoort bij het ‘eigen’ objecttype."@nl;
   dct:source mimdoc:sectie2.6.4;
 .
 mim:Relatierol a owl:Class;
+  rdfs:subClassOf mim:Modelelement;
   rdfs:label "Relatierol"@nl;
   rdfs:comment "De benaming van de manier waarop een object deelneemt aan een relatie met een ander object."@nl;
   dct:source mimdoc:sectie2.6.5;
@@ -82,6 +97,7 @@ mim:Referentielijst a owl:Class;
   dct:source mimdoc:sectie2.7.1;
 .
 mim:ReferentieElement a owl:Class;
+  rdfs:subClassOf mim:Modelelement;
   rdfs:label "Referentie element"@nl;
   rdfs:comment "Een eigenschap van een object in een referentielijst in de vorm van een gegeven."@nl;
   dct:source mimdoc:sectie2.7.2;
@@ -93,6 +109,7 @@ mim:Enumeratie a owl:Class;
   dct:source mimdoc:sectie2.7.3;
 .
 mim:Enumeratiewaarde a owl:Class;
+  rdfs:subClassOf mim:Modelelement;
   rdfs:label "Enumeratiewaarde"@nl;
   rdfs:comment "Een gedefinieerde waarde, in de vorm van een eenmalig vastgesteld constant gegeven."@nl;
   dct:source mimdoc:sectie2.7.4;
@@ -106,6 +123,7 @@ mim:Codelijst a owl:Class;
 
 # Datatypen
 mim:Datatype a owl:Class;
+  rdfs:subClassOf mim:Modelelement;
   rdfs:label "Datatype"@nl;
   rdfs:comment "Een beschrijving van de structuur waaraan een waarde, oftewel de data zelf, aan moet voldoen.";
 .
@@ -122,6 +140,7 @@ mim:GestructureerdDatatype a owl:Class;
   dct:source mimdoc:sectie2.8.2;
 .
 mim:DataElement a owl:Class;
+  rdfs:subClassOf mim:Modelelement;
   rdfs:label "Data element"@nl;
   rdfs:comment "Een onderdeel/element van een Gestructureerd datatype die als type een datatype heeft."@nl;
   dct:source mimdoc:sectie2.8.3;
@@ -129,6 +148,7 @@ mim:DataElement a owl:Class;
 
 # Packages
 mim:Package a owl:Class;
+  rdfs:subClassOf mim:Modelelement;
   rdfs:label "Package"@nl;
   rdfs:comment "Een package is een benoemde en begrensde verzameling/groepering van modelelementen."@nl;
 .
@@ -159,19 +179,20 @@ mim:View a owl:Class;
 
 # Overige
 mim:Constraint a owl:Class;
+  rdfs:subClassOf mim:Modelelement;
   rdfs:label "Constraint"@nl;
   rdfs:comment "Een constraint is een conditie of een beperking, die over een of meerdere modelelementen uit het informatiemodel geldt."@nl;
   dct:source mimdoc:sectie2.10.1;
 .
 mim:Keuze a owl:Class;
-  rdfs:label "Keuze"@nl;
   rdfs:subClassOf mim:Datatype;
+  rdfs:label "Keuze"@nl;
   rdfs:comment "Een opsomming van meerdere modelelementen, waarbij er maar van één tegelijkertijd sprake kan zijn."@nl;
   dct:source mimdoc:sectie2.10.2;
 .
 mim:KeuzeConstraint a owl:Class;
-  rdfs:label "Keuze"@nl;
   rdfs:subClassOf mim:Constraint;
+  rdfs:label "Keuze"@nl;
   rdfs:comment "Een conditie met een opsomming van meerdere modelelementen, waarbij er maar van één tegelijkertijd sprake kan zijn."@nl;
   dct:source mimdoc:sectie2.10.2;
 .
@@ -458,6 +479,17 @@ mim:specificatieFormeel a owl:DatatypeProperty;
 # Keuze / KeuzeConstraint
 mim:modelelement a owl:ObjectProperty;
   rdfs:label "modelelement"@nl;
+  owl:inverseOf mim:constraint;
+  # De eigenschap 'modelelement' wordt niet echt gedefinieerd, maar is de inverse van de eigenschap 'constraint'
+  # Bij KeuzeConstraint is het logischer dat deze eigenschap wordt gebruikt, en niet zijn inverse
+.
+
+# Package / Modelelement
+mim:bevatModelelement a owl:ObjectProperty;
+  rdfs:label "bevat modelelement"@nl;
+  # De eigenschap 'bevat modelelement' wordt niet echt gedefinieerd, maar gebruikt om aan te geven in welke package
+  # Een modelelement zit. Deze eigenschap is niet 'modelelement' genoemd, aangezien die eigenschap in het metamodel
+  # al bestond, maar met een andere betekenis (namelijk: de inverse van de eigenschap 'constraint')
 .
 
 # Properties uit het model die niet gedefinieerd zijn

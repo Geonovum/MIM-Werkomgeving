@@ -85,6 +85,7 @@ Onderstaande tabellen geven een overzicht van alle transformaties en een referen
 
 |MIM-klasse|Vertaling|Referentie|
 |----------|---------|----------|
+|`mim:Modelelement`|n.v.t.|Abstracte klasse|
 |`mim:Objecttype`|`owl:Class`, `sh:NodeShape`|[Objecttype](#transformatie-objecttype)|
 |`mim:Attribuutsoort`|`owl:ObjectProperty`, `owl:DatatypeProperty`, `sh:PropertyShape`|[Attribuutsoort](#transformatie-attribuutsoort)|
 |`mim:Gegevensgroep`|`sh:PropertyShape`, `owl:ObjectProperty`|[Gegevensgroep](#transformatie-gegevensgroep)|
@@ -158,6 +159,7 @@ Onderstaande tabellen geven een overzicht van alle transformaties en een referen
 |`mim:constraint`|`mim:constraint`|[Constraint](#transformatie-constraint)|
 |`mim:element`|`sh:property`|[Data element](#transformatie-data-element)|
 |`mim:indicatieClassificerend`|`rdfs:subClassOf` (onder meer)|[indicatie classificerend](#transformatie-indicatie-classificerend)|
+|`mim:bevatModelelement`|`rdfs:isDefinedBy`, `owl:imports`|[bevat modelelement](#transformatie-bevat-modelelement)|
 
 ### Instanties (datatypen)
 
@@ -1606,6 +1608,60 @@ WHERE {
     }
   }
   BIND (t:classeuri(?notation) as ?class)
+}
+</pre>
+
+### transformatie: bevat modelelement
+
+Een `mim:bevatModelelement` wordt vertaald naar een `rdfs:isDefinedBy` voor zover modelelementen vertaald worden naar een owl:Class, owl:DatatypeProperty of owl:ObjectProperty. Merk op dat de vertaling in de omgekeerde richting is. Als bijvoorbeeld een Domein X modelelement Objecttype Y bevat, dan zal de relatie rdfs:isDefinedBy gaan lopen vanaf de klasse Y naar de Ontology X. In geval er sprake is van een owl:Ontology, dan wordt vertaald naar `owl:imports`.
+
+In MIM is het niet nodig om voor alle modelelementen rechtstreeks aan te geven welke package dit modelelement bezit: het is ook mogelijk dat dit via andere modelelementen loopt. Als een rechtstreekse relatie niet aanwezig is, dan wordt deze afgeleide relatie gebruikt.
+
+<pre class='ex-sparql'>
+CONSTRUCT {
+  ?class rdfs:isDefinedBy ?ontology
+}
+WHERE {
+  ?package mim:bevatModelement ?modelelement.
+  ?package mim:equivalent ?ontology.
+  ?modelelement mim:equivalant ?class.
+  ?class a owl:Class.
+}
+CONSTRUCT {
+  ?property rdfs:isDefinedBy ?ontology
+}
+WHERE {
+  ?package mim:bevatModelement ?eigenaar.
+  ?eigenaar ?eigenaarrelatie ?modelelement
+  ?package mim:equivalent ?ontology.
+  ?modelelement mim:equivalant ?eigenschap.
+  FILTER NOT EXISTS {?package mim:bevatModelelement ?modelelement}
+  FILTER (?eigenaarrelatie=mim:attribuut
+       || ?eigenaarrelatie=mim:dataElement
+       || ?eigenaarrelatie=mim:waarde
+       || ?eigenaarrelatie=mim:referentieElement
+       || ?eigenaarrelatie=mim:constraint)
+}
+CONSTRUCT {
+  ?property rdfs:isDefinedBy ?ontology
+}
+WHERE {
+  ?package mim:bevatModelement ?eigenaar.
+  ?modelelement ?eigenaarrelatie ?eigenaar
+  ?package mim:equivalent ?ontology.
+  ?modelelement mim:equivalant ?eigenschap.
+  FILTER NOT EXISTS {?package mim:bevatModelelement ?modelelement}
+  FILTER (?eigenaarrelatie=mim:bron
+       || ?eigenaarrelatie=mim:subtype)
+}
+CONSTRUCT {
+  ?ontology owl:imports ?importontology
+}
+WHERE {
+  ?package mim:bevatModelement ?subpackage.
+  ?package mim:equivalent ?ontology.
+  ?subpackage mim:equivalent ?importedontology.
+  ?importedontology a owl:Ontology.
 }
 </pre>
 

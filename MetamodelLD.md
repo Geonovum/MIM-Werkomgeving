@@ -164,6 +164,8 @@ Een keuze tussen relatiesoorten wordt gedaan op basis van een keuzeconstraint. E
 
 ![](media/rdf-packages.png)
 
+De relatie bevatModelelement geeft aan dat packages modelelementen kunnen bevatten. Welke modelelementen precies toegestaan zijn, wordt in het plaatje niet tot uitdrukking gebracht. Zie hiervoor [sectie 2.6](#packages).
+
 | **MIM metaclass**     | **Metaclass in RDF** | **Shape in RDF** | **Grondslag** |
 |-----------------------|----------------------|------------------|---------------|
 | Package               | [`mim:Package`](http://bp4mc2.org/def/mim#Package) | shape:Package | [grondslag](#packages) |
