@@ -225,30 +225,34 @@ View 3c: Groepering
 Deze paragraaf is een aanvulling op de paragraaf *'Specificatie metagegevens'*
 in het hoofdstuk [Metamodel Algemeen](#metamodel-algemeen).
 
->   **Alias**
+>   **Naam en Alias**
 
-De alternatieve weergave van de naam.
+In hoofdstuk 2 wordt de naam van een modelelement en de alias van deze naam beschreven. 
+Hier wordt beschreven dat de naam van een modelelement meerdere schrijfwijzes kan hebben, te weten:
+* een 'normale schrijfwijze' in natuurlijke taal, zoals Onroerende zaak 
+* een 'technischere schrijfwijze' in bijvoorbeeld camel case, zoals OnroerendeZaak 
 
-*Toelichting*
+In een UML diagram heeft een modelelement ook altijd een naam, te weten een _name_ omdat het een UML-named element is. 
 
-Verdere toelichting voor UML modellen:
+Een modelleur kan er voor kiezen om de 'normale schrijfwijze' van de naam van het modelelement in UML op te nemen: 
 
--   De alias is te specificeren voor NamedElements (zoals UML-Class, ML-association, UML-UML-Datatype en
-    UML-property). De alias is in UML gespecificeerd bij de metaclass **Element Import]**.
-    Element import wordt in UML ingezet voor het importeren van een NamedElement uit een ander package.
-    In dit metamodel wordt de alias (nog) niet zo gebruikt.  
+* in de `name` van een named element, bv.de name van een UML-Class, of 
+* in de tagged value `alias` 
+ 
+Deze `alias` wordt gebruikt wanneer de modelleur behoefte heeft om in de alias de normale schrijfwijze op te nemen. Dit is met name van belang wanneer de modelleur ervoor heeft gekozen om de 'technischere schrijfwijze' in de _name_ op te nemen. De 'natuurlijke schrijfwijze' kan dan geborgd worden in de `alias`. 
 
-In Enterprise Architect is de alternatieve weergave aan te zetten in de properties van een Diagram,
-via: use alias if available.
+In principe zijn beide uitwisselbaar, het gaat immers om hetzelfde modelelement en de naam is hetzelfde, alleen de schrijfwijze is anders.
+
+Het is aan de informatiemodel beheerder om te kiezen wanneer welke schrijfwijze wordt gebruikt. Bijvoorbeeld voor documentatie doeleinden t.b.v. gewone gebruikers wordt de normale schrijfwijze gebruikt en voor uitwerkingen op MIM niveau 3 en 4 de technischere schrijfwijze. Het is ook prima om beide op niveau 3 en 4 een plek te geven zodat beide gebruikt kunnen worden naar gelang. 
 
 
 >   **Identificerend**
 
-Als een attribuutsoort identificerend is, dan krijgt dit kenmerk in UML isId =
-true.
+Als een attribuutsoort identificerend is, dan krijgt dit kenmerk in UML isId = true.
 
-Als een relatiesoort identificerend is, dan krijgt dit kenmerk in UML een
-stereotype «id»
+Als een relatiesoort identificerend is, dan krijgt dit kenmerk in UML een tagged value _identificerend_ = `Ja`. 
+Aanvullend mag in UML het UML-stereotype «id» toegevoegd worden om dit in een diagram te visualiseren, in aanvulling op bijvoorbeeld «relatiesoort». 
+(het stereotype «id» is zelf geen MIM modelelement).  
 
 <pre class='note'>
 In de hierna volgende paragrafen worden de metagegevens per modelelement gespecificeerd in tabellen. Per metagegeven zijn de volgende onderdelen gespecificeerd:
