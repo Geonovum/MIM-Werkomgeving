@@ -1266,6 +1266,7 @@ Een `mim:lengte` wordt vertaald naar `sh:minLength` en/of `sh:maxLength`, confor
 |1..1|1|1|Lengte is exact 1 karakter|
 |1..99|1|99|De lengte is minimaal 1 karakter en maximaal 99 karakters|
 
+<pre class='ex-sparql'>
 CONSTRUCT {
   ?subject sh:minLength ?minlength
 }
@@ -1283,7 +1284,6 @@ WHERE {
   ?subject mim:equivalent ?modelelement.
   BIND (t:maxcount(?lengte) as ?maxlength)
 }
-
 </pre>
 
 ### transformatie: patroon
