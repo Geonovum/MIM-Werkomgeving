@@ -173,12 +173,22 @@ shape:Relatieklasse a sh:NodeShape;
   # Metagegevens
   sh:property shape:naam;
   sh:property shape:alias;
+  sh:property shape:herkomst;
   sh:property shape:begrip;
   sh:property shape:begripsterm;
   sh:property shape:definitie;
+  sh:property shape:herkomstDefinitie;
   sh:property shape:toelichting;
   sh:property shape:constraint;
   sh:property shape:datumOpname;
+  sh:property shape:unidirectioneel;
+  sh:property shape:aggregatietype;
+  sh:property shape:kardinaliteit;
+  sh:property shape:indicatieMaterieleHistorie;
+  sh:property shape:indicatieFormeleHistorie;
+  sh:property shape:authentiek;
+  sh:property shape:indicatieAfleidbaar;
+  sh:property shape:mogelijkGeenWaarde;
 .
 shape:ExterneKoppeling a sh:NodeShape;
   sh:targetClass mim:ExterneKoppeling;

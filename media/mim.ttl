@@ -566,7 +566,7 @@ mim:Geen a skos:Concept;
   skos:altLabel "None"@en;
   skos:definitie "Er is geen sprake van een aggregate"@nl;
 .
-mim:Compositie a mim:Enumeratiewaarde;
+mim:Compositie a skos:Concept;
   skos:inScheme mim:Aggregatietypen;
   rdfs:label "Compositie"@nl;
   skos:prefLabel "Compositie"@nl;
@@ -574,7 +574,7 @@ mim:Compositie a mim:Enumeratiewaarde;
   skos:definitie "Compositie (gesloten wiebertje)"@nl;
   mim:naam "Compositie"@nl;
 .
-mim:Gedeeld a mim:Enumeratiewaarde;
+mim:Gedeeld a skos:Concept;
   skos:inScheme mim:Aggregatietypen;
   rdfs:label "Gedeeld"@nl;
   skos:prefLabel "Gedeeld"@nl;
