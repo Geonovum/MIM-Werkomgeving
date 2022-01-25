@@ -1619,7 +1619,7 @@ De bindingen zijn ook in diagram vorm te lezen aan het begin van dit hoofdstuk, 
 
 ### Structuur metamodel
 
-#### Metagegeven: **heeft attribuut**
+#### Metagegeven: **heeft attribuut** / **attribuut** 
 
 >   **Definitie heeft attribuut**  
 >   De binding van een attribuutsoort als eigenschap aan een objecttype.
@@ -1630,7 +1630,7 @@ Een objecttype en een gegevensgroeptype gebruiken attributen voor het specificer
 
 *Toepassing*: Objecttypen en gegevensgroeptypen met attributen.
 
-#### Metagegeven: **heeft gegevensgroep**
+#### Metagegeven: **heeft gegevensgroep** / **gegevensgroep**
 
 >   **Definitie heeft gegevensgroep**  
 >   De binding van een gegevensgroep als groep van eigenschappen aan een
@@ -1644,7 +1644,7 @@ eigenschappen.
 *Toepassing*: Objecttypen met gegevensgroepen of een gegevensgroeptype dat zelf ook
 weer een gegevensgroeptype bevat.
 
-#### Metagegeven: **heeft gegevensgroeptype**
+#### Metagegeven: **heeft gegevensgroeptype** / **gegevensgroeptype** 
 
 >   **Definitie heeft gegevensgroeptype**  
 >   De binding van een gegevensgroeptype als waardetype aan een gegevensgroep.
@@ -1656,7 +1656,7 @@ gegevensgroeptype.
 
 *Toepassing*: Gegevensgroep.
 
-#### Metagegeven: **verwijst naar supertype**
+#### Metagegeven: **verwijst naar supertype** / **supertype**
 
 >   **Definitie verwijst naar supertype**  
 >   De binding van een supertype aan een subtype middels een generalisatie.
@@ -1667,7 +1667,7 @@ Een subtype verwijst met een generalisatie naar een supertype.
 
 *Toepassing*: Objectype en datatype.
 
-#### Metagegeven: **heeft datatype**
+#### Metagegeven: **heeft datatype** / **datatype**
 
 >   **Definitie heeft datatype**  
 >   De binding van een datatype aan een eigenschap.
@@ -1678,7 +1678,7 @@ Een datatype wordt onder andere toegekend aan een attribuutsoort.
 
 *Toepassing*: Attribuutsoort, keuze, referentie element, data element
 
-#### Metagegeven: **heeft relatiesoort**
+#### Metagegeven: **heeft relatiesoort** / **relatiesoort**
 
 >   **Definitie heeft relatiesoort**  
 >   De binding van een objecttype aan een objecttype middels een relatiesoort.
@@ -1689,7 +1689,7 @@ Een objectype kan een relatie hebben naar zichzelf of een ander objecttype.
 
 *Toepassing*: Objecttype.
 
-#### Metagegeven: **heeft externe koppeling**
+#### Metagegeven: **heeft externe koppeling** / **externe koppeling** 
 
 >   **Definitie heeft externe koppeling**  
 >   De binding van een objecttype uit een extern package aan een objecttype.
@@ -1700,7 +1700,7 @@ Een objectype kan een relatie hebben met en objecttype in een extern package.
 
 *Toepassing*: Objecttype.
 
-#### Metagegeven: **heeft data element**
+#### Metagegeven: **heeft data element** / **data element**
 
 >   **Definitie heeft data element**  
 >   De binding van een data element aan een gestructureerd datatype.
@@ -1711,7 +1711,7 @@ Een gestructureerd datatype bevat meerdere data elementen.
 
 *Toepassing*: gestructureerd datatype.
 
-#### Metagegeven: **bevat enumeratiewaarde**
+#### Metagegeven: **bevat enumeratiewaarde** / **enumeratiewaarde**
 
 >   **Definitie bevat enumeratie waarde**  
 >   De binding van een enumeratiewaarde aan een enumeratie.
@@ -1722,7 +1722,7 @@ Een enumeratie bevat enumeratiewaarden.
 
 *Toepassing*: enumeratie.
 
-#### Metagegeven: **bevat referentie element**
+#### Metagegeven: **bevat referentie element** / **referentie element**
 
 >   **Definitie bevat referentie element**  
 >   De binding van een referentie element aan een referentielijst.
@@ -1733,9 +1733,9 @@ Een referentie lijst bevat referentie elementen.
 
 *Toepassing*: Referentielijst.
 
-#### Metagegeven: **heeft datatypekeuze**
+#### Metagegeven: **heeft datatypekeuze** / **datatypekeuze**
 
->   **Definitie heeft datatypekeuze**  
+>   **Definitie heeft keuzedatatype**  
 >   De binding van een keuze uit datatypen aan een attribuutsoort.
 
 *Toelichting*
@@ -1744,7 +1744,7 @@ Een attribuutsoort kan als datatype een keuze uit datatypen hebben.
 
 *Toepassing*: Attribuutsoort.
 
-#### Metagegeven: **heeft keuzeattribuut**
+#### Metagegeven: **heeft keuzeattribuut** / **keuzeattribuut**
 
 >   **Definitie heeft keuzeattribuut**  
 >   De binding van een keuze uit attributen aan een attribuutsoort of keuze.
@@ -1755,9 +1755,9 @@ Een keuze tussen anttibuutsoorten kan als eigenschap aan een objectype worden ge
 
 *Toepassing*: Objecttype, keuze.
 
-#### Metagegeven: **heeft relatiedoelkeuze**
+#### Metagegeven: **heeft keuzerelatiedoel** / **keuzerelatiedoel**
 
->   **Definitie heeft relatiedoelkeuze**  
+>   **Definitie heeft keuzerelatiedoel**  
 >   De binding van een keuze uit relatiedoelen aan een objecttype.
 
 *Toelichting*
@@ -1766,38 +1766,19 @@ Een keuze tussen relatiedoelen kan als eigenschap aan een objectype worden gekop
 
 *Toepassing*: Objecttype, keuze.
 
-#### Metagegeven: **van toepassing op objecttype**
+#### Metagegeven: **heeft constraint** / **constraint**
 
->   **Definitie van toepassing op objecttype**  
+>   **Definitie heef constraint / constraint**
 >   De binding van een constraint aan een modelelement.
 
-*Toelichting*
-
-Een constraint is gekoppeld aan de context van objecttype waarop ze van toepassing is.
-
-*Toepassing*: Objecttype.
-
-#### Metagegeven: **van toepassing op gegevensgroeptype**
-
->   **Definitie van toepassing op gegevensgroeptype**  
->   De binding van een constraint aan een gegevensgroeptype.
+Het modelelement die een constraint heeft kan zijn: objecttype, relatieklasse, gegevensgroeptype. 
 
 *Toelichting*
 
-Een constraint is gekoppeld aan de context van een gegevensgroeptype waarop ze van toepassing is.
+Een constraint is gekoppeld aan de context van modelelement waarop ze van toepassing is. 
 
-*Toepassing*: Gegevensgroeptype.
+Dit modelelement kan zijn: objecttype, gegevensgroeptype of relatieklasse. 
 
-#### Metagegeven: **van toepassing op relatieklasse**
-
->   **Definitie van toepassing op relatieklasse**  
->   De binding van een constraint aan een relatieklasse.
-
-*Toelichting*
-
-Een constraint is gekoppeld aan de context van een relatieklasse waarop ze van toepassing is.
-
-*Toepassing*: Gegevensgroeptype.
 
 ## Toegestane waarden voor (bepaalde) metagegevens
 
