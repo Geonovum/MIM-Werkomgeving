@@ -1512,7 +1512,9 @@ Andere getallen dan 1 of 2 of 3 of 9 kunnen uiteraard gebruikt worden om er de l
 
 *Toelichting*
 
-Het gaat bij deze lengte om hoe lang een gegevens in functionele zin mag zijn. Dus, hoeveel karakters en hoeveel getallen voor en na de komma.  
+Het gaat bij deze lengte om hoe lang een gegeven in functionele zin mag zijn. Dus, hoeveel karakters en hoeveel getallen voor en na de komma. 
+
+De lengte heeft betrekking op data waar een modelelement over gaat. Bij een attribuutsoort gaat het om de lengte van de data van het attribuut. Bij een gestructureerd datatype krijgt elk data element een eigen lengte en gaat het om de lengte van alleen dit data element.  
 
 Bijvoorbeeld: 
 * Een naam van een persoon met minimale lengte 2 en onbegrensd: CharacterString, lengte 2.. 
