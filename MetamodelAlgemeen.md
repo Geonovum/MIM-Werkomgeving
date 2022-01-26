@@ -1823,7 +1823,7 @@ Een aantal metagegevens zijn hebben als datatype CharacterString. Aanvullend gel
 
 Voor de volgende metagegevens geldt een specifiek waardebereik.
 
-| **Metagegeven**                    | **Waardenbereik**                                                          |
+| **Metagegeven**                     | **Waardenbereik**                                                          |
 |-------------------------------------|----------------------------------------------------------------------------|
 | Indicatie materiële historie        | `Ja`, `Nee`                                                                |
 | Indicatie formele historie          | `Ja`, `Nee`                                                                |
@@ -1847,10 +1847,12 @@ Aanwijzing MIM-beheerder: metagegevens met een defaultwaarde mogen niet optionee
 |-------------------------------------|-------------------| 
 | Indicatie materiële historie        | `Nee`             |                                                        
 | Indicatie formele historie          | `Nee`             |                                                        
-| Indicatie classificerend            | `Nee`             |                                                        
+| Indicatie classificerend            | `Nee`             |
+| Indicatie abstract object           | `Nee`             |
 | Mogelijk geen waarde                | `Nee`             |                                                        
 | Identificerend                      | `Nee`             |                                                        
+| Unidirectioneel                     | `Ja`              |  
 | Kardinaliteit attribuut             | `1`               |                                                        
-| Aggregatietype                      | `Geen`            |                                                        
+| Aggregatietype                      | `Geen`            |  
 
 Opmerking met betrekking tot de kardinaliteit van relaties: deze staat niet in de tabel. Deze kennen geen defaultwaarde. De kardinaliteit aan de doel kant altijd moet worden aangegeven. De kardinaliteit aan de bron/eigenaar kant van een relatie is optioneel om in te vullen, wanneer er niets is ingevuld dan wordt er niets over de kardinaliteit gezegd en kent deze geen default waarde (in de praktijk betekent dit dat een kardinaliteit aan de bron kant als 0..* geimplementeerd wordt).
