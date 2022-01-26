@@ -1265,7 +1265,7 @@ Deze kardinaliteit is vooral nuttig voor controles, deze komt op data niveau ech
 
 De kardinaliteit van de bron van de relatie geeft aan hoeveel instanties van de bron van de relatie kunnen verwijzen naar één instantie van het doel van de relatie. Wanneer de kardinaliteit aan de bronkant van de relatie niet is gespecificeerd dan is er geen sprake van een defaultwaarde.
 
-Toepassing: relatiesoort en externe koppeling
+Toepassing: relatiesoort, externe koppeling en relatieklasse
 
 #### Metagegeven: **Authentiek**
 
