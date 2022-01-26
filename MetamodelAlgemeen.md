@@ -1489,29 +1489,52 @@ attribuutsoort, data element, referentie element, datatypekeuze, doelkeuze.
 #### Metagegeven: **Lengte** 
 
 >   **Definitie Lengte**  
->   De aanduiding van de lengte van een gegeven, in de vorm van de aangegeven notatiewijze.
-
-*Toelichting*
-
-Het gaat bij deze lengte om hoe lang een gegevens in functionele zin mag zijn, en niet om hoeveel 
-ruimte het gegeven in technisch zin kan innemen. Het minteken voor negatieve getallen is geen 
-onderdeel van de specificatie van de lengte.   
-
-Bijvoorbeeld: de naam van een openbare ruimte, een characterstring, heeft minimaal lengte 1 en maximaal lengte 80. 
-
-Bijvoorbeeld: een decimaal met een waarde vanaf -9,99 en tot en met +9,99 
+>   De aanduiding van de lengte van een gegeven, volgens de aangegeven notatiewijze.
 
 De notatiewijze en de betekenis is als volgt: 
 
-| **Notatie** | **Betekenis**                                                                              |
-|-----|----------------------------------------------------------------------------------------------------|
-| 1           | De lengte is precies 1 en evenzo voor andere integers                                      |
-| 1..         | De lengte is minimaal 1 (inclusief 1) of meer (onbegrensd) en evenzo voor andere integers  |
-| 1..9        | De lengte is minimaal 1 en maximaal 9 (inclusief 9) en evenzo voor andere integers         |
-| 3,2         | De lengte is maximaal 3 getallen (inclusief 3, dus 1, 2 of 3) voor de komma en precies 2 getallen na de komma en evenzo voor andere integers |                            
+Voor karakters:  
 
-De lengte geeft aan hoeveel posities gebruikt mogen worden voor een gegeven. Om het waardenbereik van een gegeven 
-("binnen" deze lengte) te specificeren wordt een patroon of formeel patroon gebruikt. 
+| **Notatie** | **Betekenis**                                                                              |
+|-------------|--------------------------------------------------------------------------------------------|
+| 1           | De lengte is precies 1                                                                     |
+| 2..         | De lengte is minimaal 1 (inclusief 1) of meer (onbegrensd)                                 |
+| 1..9        | De lengte is minimaal 1 en maximaal 80 (inclusief 9)                                      |
+
+Voor getallen:
+
+| **Notatie** | **Betekenis**                                                                              |
+|-------------|--------------------------------------------------------------------------------------------|
+| 3           | De lengte is maximaal 3 (inclusief 3, dus 1, 2 of 3) voor de komma      |  
+| 3,2         | De lengte is maximaal 3 (inclusief 3, dus 1, 2 of 3) voor de komma, en maximaal 2 getallen na de komma  |    
+
+Andere getallen van 1 of 2 of 3 of 9 kunnen uiteraard gebruikt worden om er de lengte mee te specificeren. 
+
+*Toelichting*
+
+Het gaat bij deze lengte om hoe lang een gegevens in functionele zin mag zijn. Dus, hoeveel karakters en hoeveel getallen voor en na de komma.  
+
+Bijvoorbeeld: 
+* Een naam van een persoon met minimale lengte 2 en onbegrensd: CharacterString, lengte 2.. 
+* Een naam van een openbare ruimte met minimale lengte 2 en maximale lengte 80: CharacterString, lengte 2..80 
+* Een identificatie als getal, van maximaal lengte 16: Integer, lengte 16 
+* Een identificatie van precies lengte 16, met voorloopnullen: CharacterString, lengte 16 
+* Een percentage met 2 getallen achter de komma: Decimal, lengte 3,2 
+
+Veel voorkomende maximum waarden voor CharacterString zijn: 80, 200, 4000.
+
+Een getal wat voorloopnullen mag hebben is een CharacterString. Het getal 0001 bestaat niet, dit is het getal 1. 
+
+De lengte geldt voor gegevens _indien_ er sprake is van een gegeven. Gegevens die optioneel zijn worden leeggelaten, het is daarom niet de bedoeling om voor optionele gegevens een lengte van minimaal 0 te specificeren. Specificeer: als het gegeven ingevuld is, dan is de lengte minimaal 1.  
+
+Het - teken bij een negatief heeft geen gevolgen voor de specificatie van de lengte.
+
+Niet alle eisen aan een gegevens kunnen gespecificeerd worden met een lengte. Gebruik dan een patroon of formeel patroon of een andere specificatie van de minimale en/of maximale waarde. Bijvoorbeeld: 
+* 1 of 2 cijfers achter de komma kan niet gespecificeerd worden met lengte 
+* 1 of 2 cijfers voor de komma kan niet gespecificeerd worden met lengte  
+* een exacte lengte voor een getal, oftewel lengte precies 16 waarbij lengte 1 of 15 niet mag 
+* het waardenbereik van een gegeven, "binnen" deze lengte 
+* of een getal negatief of positief mag zijn. 
 
 *Toepassing*: Attribuutsoort, primitief datatype (alleen als dit datatype in het IM zelf gedefinieerd is), data
 element, referentie element.
