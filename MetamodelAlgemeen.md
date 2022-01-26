@@ -1823,7 +1823,7 @@ Een aantal metagegevens zijn hebben als datatype CharacterString. Aanvullend gel
 
 Voor de volgende metagegevens geldt een specifiek waardebereik.
 
-| **Tagged value**                    | **Waardenbereik**                                                          |
+| **Metagegeven**                    | **Waardenbereik**                                                          |
 |-------------------------------------|----------------------------------------------------------------------------|
 | Indicatie materiële historie        | `Ja`, `Nee`                                                                |
 | Indicatie formele historie          | `Ja`, `Nee`                                                                |
@@ -1835,7 +1835,7 @@ Voor de volgende metagegevens geldt een specifiek waardebereik.
 
 NB: Geef bij de toepassing van `overig` in een informatiemodel aan wat er onder wordt verstaan.
 
-Voor technische implementatiedoeleinden is het toegestaan om Ja en Nee te interpreteren en eventueel te vervangen door een Boolean, maar voor mens-leesbare functionele documentatie horen altijd de in de tabel aangegeven waarden te worden gebruikt. 
+De metagegevens met Ja en Nee zijn semantisch bedoeld als een boolean (er zijn geen andere waarden mogelijk zoals onbekend, overig of geen waarde (leeg). Er zijn geen andere waarden mogelijk. Voor technische implementatiedoeleinden is het toegestaan om Ja en Nee te interpreteren en eventueel te vervangen door een Boolean. Let wel, voor mens-leesbare functionele documentatie horen altijd de in de tabel aangegeven waarden Ja en Nee te worden gebruikt. 
 
 ### Defaultwaarden voor metagegevens modelelementen
 
