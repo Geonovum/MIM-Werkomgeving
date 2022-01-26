@@ -1717,7 +1717,7 @@ Een datatype wordt onder andere toegekend aan een attribuutsoort.
 
 Een objectype kan een relatie hebben naar zichzelf of een ander objecttype.
 
-*Toepassing*: Objecttype.
+*Toepassing*: Objecttype, Gegevensgroeptype.
 
 #### Metagegeven: **heeft externe koppeling** / **externe koppeling** 
 
@@ -1728,7 +1728,7 @@ Een objectype kan een relatie hebben naar zichzelf of een ander objecttype.
 
 Een objectype kan een relatie hebben met en objecttype in een extern package.
 
-*Toepassing*: Objecttype.
+*Toepassing*: Objecttype, Gegevensgroeptype.
 
 #### Metagegeven: **heeft data element** / **data element**
 
