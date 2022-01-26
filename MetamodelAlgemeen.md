@@ -1508,7 +1508,7 @@ Voor getallen:
 | 3           | De lengte is maximaal 3 (inclusief 3, dus 1, 2 of 3) voor de komma      |  
 | 3,2         | De lengte is maximaal 3 (inclusief 3, dus 1, 2 of 3) voor de komma, en maximaal 2 getallen na de komma  |    
 
-Andere getallen van 1 of 2 of 3 of 9 kunnen uiteraard gebruikt worden om er de lengte mee te specificeren. 
+Andere getallen dan 1 of 2 of 3 of 9 kunnen uiteraard gebruikt worden om er de lengte mee te specificeren. 
 
 *Toelichting*
 
