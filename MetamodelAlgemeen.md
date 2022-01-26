@@ -1512,7 +1512,7 @@ Andere getallen dan 1 of 2 of 3 of 9 kunnen uiteraard gebruikt worden om er de l
 
 *Toelichting*
 
-Het gaat bij deze lengte om hoe lang een gegevens in functionele zin mag zijn. Dus, hoeveel karakters en hoeveel getallen voor en na de komma.  
+Het gaat bij deze lengte om hoe lang een gegevens in functionele zin mag zijn. Dus, hoeveel karakters of hoeveel getallen voor en na de komma.  
 
 Bijvoorbeeld: 
 * Een naam van een persoon met minimale lengte 2 en onbegrensd: CharacterString, lengte 2.. 
@@ -1528,7 +1528,7 @@ Voorheen vaak gebruikt:
  
 Veel voorkomende maximum waarden voor CharacterString zijn: 80, 200, 4000.
 
-Een getal wat voorloopnullen mag hebben is een CharacterString. Het getal 0001 bestaat niet, dit is het getal 1. 
+Een getal wat voorloopnullen mag hebben, zoals gemeentecode 0060, wordt gespecificeerd als een CharacterString. Het getal 0001 bestaat niet, dit is het getal 1. 
 
 De lengte geldt voor gegevens _indien_ er sprake is van een gegeven. Gegevens die optioneel zijn worden leeggelaten, het is daarom niet de bedoeling om voor optionele gegevens een lengte van minimaal 0 te specificeren. Specificeer: als het gegeven ingevuld is, dan is de lengte minimaal 1.  
 
