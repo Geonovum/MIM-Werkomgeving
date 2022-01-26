@@ -20,7 +20,8 @@ In deze versie 1.1.1  zijn de volgende issues verwerkt:
 | [Issue #177](https://github.com/Geonovum/MIM-Werkomgeving/issues/177) | Indicatie classificerend                                                                   |
 | [Issue #178](https://github.com/Geonovum/MIM-Werkomgeving/issues/178) | «Externe koppeling» metadata mist kardinaliteit in de documentatie                         |
 | [Issue #179](https://github.com/Geonovum/MIM-Werkomgeving/issues/179) | Typering van modellen en wat wel en niet in scope is van MIM (Paragraaf 1.6) ·  |
-| [Issue #198](https://github.com/Geonovum/MIM-Werkomgeving/issues/198) | Waar is de Alias voor bedoeld (lijkt net niet te matchen met 'alternatieve naam')                                                        |
+| [Issue #198](https://github.com/Geonovum/MIM-Werkomgeving/issues/198) | Alias is voor bedoeld om meerdere schrijfwijzen te ondersteunen (zoals camel case) en niet zo zeer als een 'alternatieve naam' (een echt andere naam, een synoniem) |
 | [Issue #199](https://github.com/Geonovum/MIM-Werkomgeving/issues/199) | Toelichting niet overal mogelijk waar die verwacht wordt                                   |
-| [Issue #224](https://github.com/Geonovum/MIM-Werkomgeving/issues/224)   | Op welke model elementen zit historie                                        |
-  
+| [Issue #224](https://github.com/Geonovum/MIM-Werkomgeving/issues/224)   | Op welke model elementen zit historie                                                    |
+| [Issue #225](https://github.com/Geonovum/MIM-Werkomgeving/issues/225)  | Metagegevens relatiesoort en externe koppeling - dezelfde hanteren                         |  
+
