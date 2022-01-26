@@ -1656,9 +1656,9 @@ De bindingen zijn ook in diagram vorm te lezen aan het begin van dit hoofdstuk, 
 
 *Toelichting*
 
-Een objecttype en een gegevensgroeptype gebruiken attributen voor het specificeren van eigenschappen.
+Objecttypen, gegevensgroeptypen of relatieklassen hebben attributsoorten (0,1,n) voor het specificeren van eigenschappen.
 
-*Toepassing*: Objecttypen en gegevensgroeptypen met attributen.
+*Toepassing*: Objecttype, gegevensgroeptype en relatieklasse.
 
 #### Metagegeven: **heeft gegevensgroep** / **gegevensgroep**
 
@@ -1668,8 +1668,7 @@ Een objecttype en een gegevensgroeptype gebruiken attributen voor het specificer
 
 *Toelichting*
 
-Een objecttype gebruikt gegevensgroepen voor het specificeren van groepen van
-eigenschappen.
+Objecttypen en relatieklassen hebben gegevensgroepen (0,1,n) voor het specificeren van groepen van eigenschappen.
 
 *Toepassing*: Objecttypen met gegevensgroepen of een gegevensgroeptype dat zelf ook
 weer een gegevensgroeptype bevat.
@@ -1781,9 +1780,9 @@ Een attribuutsoort kan als datatype een keuze uit datatypen hebben.
 
 *Toelichting*
 
-Een keuze tussen anttibuutsoorten kan als eigenschap aan een objectype worden gekoppeld.
+Een keuze tussen attribuutsoorten kan als eigenschap aan een objectype, gegevensgroeptype of relatieklasse worden gekoppeld. 
 
-*Toepassing*: Objecttype, keuze.
+*Toepassing*: Objecttype, Gegevensgroeptype, Relatieklasse, Attribuutsoort.
 
 #### Metagegeven: **heeft keuzerelatiedoel** / **keuzerelatiedoel**
 
@@ -1792,9 +1791,9 @@ Een keuze tussen anttibuutsoorten kan als eigenschap aan een objectype worden ge
 
 *Toelichting*
 
-Een keuze tussen relatiedoelen kan als eigenschap aan een objectype worden gekoppeld.
+Een keuze tussen relatiedoelen kan als eigenschap aan een objectype of gegevensgroeptype worden gekoppeld.
 
-*Toepassing*: Objecttype, keuze.
+*Toepassing*: Objecttype, Gegevensgroeptype, Keuze.
 
 #### Metagegeven: **heeft constraint** / **constraint**
 
