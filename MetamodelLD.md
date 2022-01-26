@@ -78,6 +78,10 @@ Als prefix wordt voor de vocabulaire gebruik gemaakt van `mim`, met de namespace
 | Relatiesoort      | [`mim:Relatiesoort`](http://bp4mc2.org/def/mim#Relatiesoort) | shape:Relatiesoort | [grondslag](#relatiesoort) |
 | Relatieklasse     | [`mim:Relatieklasse`](http://bp4mc2.org/def/mim#Relatieklasse) | shape:Relatieklasse | [grondslag](#relatieklasse) |
 
+In bovenstaand figuur zijn niet alle bindingen getekend rondom `mim:Relatiesoort`: dit zou het figuur onnodig complex maken. De bindingen met `mim:Gegevensgroeptype` zijn niet getekend. Dit is afgebeeld in onderstaand figuur. Daarbij is zichtbaar dat een `mim:Gegevensgroeptype` wel uitgaande relaties kan hebben, maar geen inkomende relaties: dat is altijd een `mim:Objecttype`.
+
+![](media/rdf-relatiekern.png)
+
 ### Datatypen
 
 ![](media/rdf-datatype.png)
