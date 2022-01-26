@@ -1498,8 +1498,8 @@ Voor karakters:
 | **Notatie** | **Betekenis**                                                                              |
 |-------------|--------------------------------------------------------------------------------------------|
 | 1           | De lengte is precies 1                                                                     |
-| 2..         | De lengte is minimaal 1 (inclusief 1) of meer (onbegrensd)                                 |
-| 1..9        | De lengte is minimaal 1 en maximaal 80 (inclusief 9)                                      |
+| 2..         | De lengte is minimaal 2 (inclusief 2) of meer (onbegrensd)                                 |
+| 3..9        | De lengte is minimaal 3 en maximaal 80 (inclusief 9)                                       |
 
 Voor getallen:
 
