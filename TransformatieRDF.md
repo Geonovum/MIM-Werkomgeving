@@ -1261,9 +1261,9 @@ Een `mim:lengte` wordt vertaald naar `sh:minLength` en/of `sh:maxLength`, confor
 
 |Notatiewijze|sh:minLength|sh:maxLength|Betekenis|
 |------------|------------|------------|---------|
+|1|1|1|De lengte is exact 1 karakter|
+|..99||99|De lengte is maximaal 99 karakters, geen minimum aangegeven|
 |1..|1||De lengte is minimaal 1 karakter, geen maximum aangegeven|
-|99||99|De lengte is maximaal 99 karakters, geen minimum aangegeven|
-|1..1|1|1|Lengte is exact 1 karakter|
 |1..99|1|99|De lengte is minimaal 1 karakter en maximaal 99 karakters|
 
 <pre class='ex-sparql'>
