@@ -1641,7 +1641,9 @@ Andere voorbeelden zijn de binding tussen een objecttype en een generalisatie, o
 Deze metagegevens zijn alleen nodig voor de binding van modelelementen aan elkaar 
 en zijn vrijwel altijd een onderdeel van een modelleertaal (waarmee een informatiemodel gemaakt kan worden).
 In modelleertalen is de binding niet altijd benoemd en is dan impliciet aanwezig. Het metagegeven hoeft dan in die modelleertaal niet expliciet te worden opgenomen. 
-Omdat dit hoofdstuk los van een modelleertaal is beschreven zijn de namen van de bindingen wel opgenomen.
+Omdat dit hoofdstuk los van een modelleertaal is beschreven zijn de namen van de bindingen wel opgenomen. 
+
+Mocht het relevant zijn om de namen van de verbindingen ergens te gebruiken: er zijn twee schrijfwijzen aangegeven die equivalent zijn, gescheiden door een `/`. 
 
 De bindingen zijn ook in diagram vorm te lezen aan het begin van dit hoofdstuk, in [Diagrammen van modelelementen](#structuur-metamodel). 
 
