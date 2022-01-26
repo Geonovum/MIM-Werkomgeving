@@ -675,6 +675,7 @@ shape:indicatieAbstractObject a sh:PropertyShape;
   sh:minCount 1;
   sh:maxCount 1;
   sh:datatype xsd:boolean;
+  sh:defaultValue false;
 .
 shape:type a sh:PropertyShape;
   sh:path mim:type;
@@ -809,6 +810,7 @@ shape:mogelijkGeenWaarde a sh:PropertyShape;
   sh:minCount 1;
   sh:maxCount 1;
   sh:datatype xsd:boolean;
+  sh:defaultValue false;
 .
 shape:identificerend a sh:PropertyShape;
   sh:path mim:identificerend;
@@ -833,6 +835,7 @@ shape:unidirectioneel a sh:PropertyShape;
   sh:minCount 1;
   sh:maxCount 1;
   sh:datatype xsd:boolean;
+  sh:defaultValue true;
 .
 shape:bron a sh:PropertyShape;
   sh:path mim:bron;
