@@ -189,6 +189,9 @@ shape:Relatieklasse a sh:NodeShape;
   sh:property shape:authentiek;
   sh:property shape:indicatieAfleidbaar;
   sh:property shape:mogelijkGeenWaarde;
+  # Bindingen, zoals bij Objecttype
+  sh:property shape:attribuut;
+  sh:property shape:gegevensgroep;
 .
 shape:ExterneKoppeling a sh:NodeShape;
   sh:targetClass mim:ExterneKoppeling;
