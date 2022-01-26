@@ -1521,6 +1521,11 @@ Bijvoorbeeld:
 * Een identificatie van precies lengte 16, met voorloopnullen: CharacterString, lengte 16 
 * Een percentage met 2 getallen achter de komma: Decimal, lengte 3,2 
 
+Voorheen vaak gebruikt: 
+* AN80 komt overeen met CharacterString, lengte 1..80  
+* N8 komt met Integer, lengte 8 
+* N3,2 komt overeen met Decimal, lengte 3,2 
+ 
 Veel voorkomende maximum waarden voor CharacterString zijn: 80, 200, 4000.
 
 Een getal wat voorloopnullen mag hebben is een CharacterString. Het getal 0001 bestaat niet, dit is het getal 1. 
