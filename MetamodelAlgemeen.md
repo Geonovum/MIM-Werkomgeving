@@ -1499,7 +1499,7 @@ Voor karakters:
 |-------------|--------------------------------------------------------------------------------------------|
 | 1           | De lengte is precies 1                                                                     |
 | 2..         | De lengte is minimaal 2 (inclusief 2) of meer (onbegrensd)                                 |
-| 3..9        | De lengte is minimaal 3 en maximaal 80 (inclusief 9)                                       |
+| 2..9        | De lengte is minimaal 2 en maximaal 9 (inclusief 9)                                        |
 
 Voor getallen:
 
@@ -1523,7 +1523,7 @@ Bijvoorbeeld:
 
 Voorheen vaak gebruikt: 
 * AN80 komt overeen met CharacterString, lengte 1..80  
-* N8 komt met Integer, lengte 8 
+* N8 komt overeen met Integer, lengte 8 (dus van -99999999 tot en met +99999999)
 * N3,2 komt overeen met Decimal, lengte 3,2 
  
 Veel voorkomende maximum waarden voor CharacterString zijn: 80, 200, 4000.
