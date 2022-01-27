@@ -86,11 +86,6 @@ var respecConfig =
       company:    "VNG Realisatie",
       companyURL: "https://www.vngrealisatie.nl/"
     },
-    {
-      name:       "Jan Campschroer",
-      company:    "Politie",
-      companyURL: "https://www.politie.nl"
-    },
   ],
   //-- shortName is verplicht! (komt in de URL: kies logische naam) --------------------
   shortName: "mim", 	              // Wordt gebruikt in de document URL
