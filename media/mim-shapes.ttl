@@ -21,6 +21,7 @@ shape:Objecttype a sh:NodeShape;
   sh:targetClass mim:Objecttype;
   sh:name "mim:Objecttype";
   dct:source mimdoc:sectie3.2.1-Objecttype;
+  sh:property [sh:path rdf:type; sh:hasValue mim:Objecttype];
   # Metagegevens
   sh:property shape:naam;
   sh:property shape:alias;
@@ -91,6 +92,7 @@ shape:Gegevensgroeptype a sh:NodeShape;
   sh:targetClass mim:Gegevensgroeptype;
   sh:name "mim:Gegevensgroeptype";
   dct:source mimdoc:sectie2.3.1-Gegevensgroeptype;
+  sh:property [sh:path rdf:type; sh:hasValue mim:Gegevensgroeptype];
   # Metagegevens
   sh:property shape:naam;
   sh:property shape:alias;
@@ -189,6 +191,9 @@ shape:Relatieklasse a sh:NodeShape;
   sh:property shape:authentiek;
   sh:property shape:indicatieAfleidbaar;
   sh:property shape:mogelijkGeenWaarde;
+  # Bindingen, zoals bij Objecttype
+  sh:property shape:attribuut;
+  sh:property shape:gegevensgroep;
 .
 shape:ExterneKoppeling a sh:NodeShape;
   sh:targetClass mim:ExterneKoppeling;
@@ -675,6 +680,7 @@ shape:indicatieAbstractObject a sh:PropertyShape;
   sh:minCount 1;
   sh:maxCount 1;
   sh:datatype xsd:boolean;
+  sh:defaultValue false;
 .
 shape:type a sh:PropertyShape;
   sh:path mim:type;
@@ -809,6 +815,7 @@ shape:mogelijkGeenWaarde a sh:PropertyShape;
   sh:minCount 1;
   sh:maxCount 1;
   sh:datatype xsd:boolean;
+  sh:defaultValue false;
 .
 shape:identificerend a sh:PropertyShape;
   sh:path mim:identificerend;
@@ -833,6 +840,7 @@ shape:unidirectioneel a sh:PropertyShape;
   sh:minCount 1;
   sh:maxCount 1;
   sh:datatype xsd:boolean;
+  sh:defaultValue true;
 .
 shape:bron a sh:PropertyShape;
   sh:path mim:bron;
@@ -840,7 +848,7 @@ shape:bron a sh:PropertyShape;
   sh:order 27;
   sh:minCount 1;
   sh:maxCount 1;
-  sh:class mim:Objecttype;
+  sh:node [ sh:xone (shape:Objecttype shape:Gegevensgroeptype)]
 .
 shape:doel a sh:PropertyShape;
   sh:path mim:doel;

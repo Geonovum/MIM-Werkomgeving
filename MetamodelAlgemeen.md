@@ -1265,7 +1265,7 @@ Deze kardinaliteit is vooral nuttig voor controles, deze komt op data niveau ech
 
 De kardinaliteit van de bron van de relatie geeft aan hoeveel instanties van de bron van de relatie kunnen verwijzen naar één instantie van het doel van de relatie. Wanneer de kardinaliteit aan de bronkant van de relatie niet is gespecificeerd dan is er geen sprake van een defaultwaarde.
 
-Toepassing: relatiesoort en externe koppeling
+Toepassing: relatiesoort, externe koppeling en relatieklasse
 
 #### Metagegeven: **Authentiek**
 
@@ -1530,7 +1530,7 @@ Voorheen vaak gebruikt:
  
 Veel voorkomende maximum waarden voor CharacterString zijn: 80, 200, 4000.
 
-Een getal wat voorloopnullen mag hebben is een CharacterString. Het getal 0001 bestaat niet, dit is het getal 1. 
+Een getal wat voorloopnullen mag hebben, zoals gemeentecode 0060, wordt gespecificeerd als een CharacterString. Het getal 0001 bestaat niet, dit is het getal 1. 
 
 De lengte geldt voor gegevens _indien_ er sprake is van een gegeven. Gegevens die optioneel zijn worden leeggelaten, het is daarom niet de bedoeling om voor optionele gegevens een lengte van minimaal 0 te specificeren. Specificeer: als het gegeven ingevuld is, dan is de lengte minimaal 1.  
 
@@ -1658,9 +1658,9 @@ De bindingen zijn ook in diagram vorm te lezen aan het begin van dit hoofdstuk, 
 
 *Toelichting*
 
-Een objecttype en een gegevensgroeptype gebruiken attributen voor het specificeren van eigenschappen.
+Objecttypen, gegevensgroeptypen of relatieklassen hebben attributsoorten (0,1,n) voor het specificeren van eigenschappen.
 
-*Toepassing*: Objecttypen en gegevensgroeptypen met attributen.
+*Toepassing*: Objecttype, gegevensgroeptype en relatieklasse.
 
 #### Metagegeven: **heeft gegevensgroep** / **gegevensgroep**
 
@@ -1670,8 +1670,7 @@ Een objecttype en een gegevensgroeptype gebruiken attributen voor het specificer
 
 *Toelichting*
 
-Een objecttype gebruikt gegevensgroepen voor het specificeren van groepen van
-eigenschappen.
+Objecttypen en relatieklassen hebben gegevensgroepen (0,1,n) voor het specificeren van groepen van eigenschappen.
 
 *Toepassing*: Objecttypen met gegevensgroepen of een gegevensgroeptype dat zelf ook
 weer een gegevensgroeptype bevat.
@@ -1719,7 +1718,7 @@ Een datatype wordt onder andere toegekend aan een attribuutsoort.
 
 Een objectype kan een relatie hebben naar zichzelf of een ander objecttype.
 
-*Toepassing*: Objecttype.
+*Toepassing*: Objecttype, Gegevensgroeptype.
 
 #### Metagegeven: **heeft externe koppeling** / **externe koppeling** 
 
@@ -1730,7 +1729,7 @@ Een objectype kan een relatie hebben naar zichzelf of een ander objecttype.
 
 Een objectype kan een relatie hebben met en objecttype in een extern package.
 
-*Toepassing*: Objecttype.
+*Toepassing*: Objecttype, Gegevensgroeptype.
 
 #### Metagegeven: **heeft data element** / **data element**
 
@@ -1783,9 +1782,9 @@ Een attribuutsoort kan als datatype een keuze uit datatypen hebben.
 
 *Toelichting*
 
-Een keuze tussen anttibuutsoorten kan als eigenschap aan een objectype worden gekoppeld.
+Een keuze tussen attribuutsoorten kan als eigenschap aan een objectype, gegevensgroeptype of relatieklasse worden gekoppeld. 
 
-*Toepassing*: Objecttype, keuze.
+*Toepassing*: Objecttype, Gegevensgroeptype, Relatieklasse, Attribuutsoort.
 
 #### Metagegeven: **heeft keuzerelatiedoel** / **keuzerelatiedoel**
 
@@ -1794,9 +1793,9 @@ Een keuze tussen anttibuutsoorten kan als eigenschap aan een objectype worden ge
 
 *Toelichting*
 
-Een keuze tussen relatiedoelen kan als eigenschap aan een objectype worden gekoppeld.
+Een keuze tussen relatiedoelen kan als eigenschap aan een objectype of gegevensgroeptype worden gekoppeld.
 
-*Toepassing*: Objecttype, keuze.
+*Toepassing*: Objecttype, Gegevensgroeptype, Keuze.
 
 #### Metagegeven: **heeft constraint** / **constraint**
 
@@ -1825,7 +1824,7 @@ Een aantal metagegevens zijn hebben als datatype CharacterString. Aanvullend gel
 
 Voor de volgende metagegevens geldt een specifiek waardebereik.
 
-| **Metagegeven**                    | **Waardenbereik**                                                          |
+| **Metagegeven**                     | **Waardenbereik**                                                          |
 |-------------------------------------|----------------------------------------------------------------------------|
 | Indicatie materiële historie        | `Ja`, `Nee`                                                                |
 | Indicatie formele historie          | `Ja`, `Nee`                                                                |
@@ -1849,10 +1848,12 @@ Aanwijzing MIM-beheerder: metagegevens met een defaultwaarde mogen niet optionee
 |-------------------------------------|-------------------| 
 | Indicatie materiële historie        | `Nee`             |                                                        
 | Indicatie formele historie          | `Nee`             |                                                        
-| Indicatie classificerend            | `Nee`             |                                                        
+| Indicatie classificerend            | `Nee`             |
+| Indicatie abstract object           | `Nee`             |
 | Mogelijk geen waarde                | `Nee`             |                                                        
 | Identificerend                      | `Nee`             |                                                        
+| Unidirectioneel                     | `Ja`              |  
 | Kardinaliteit attribuut             | `1`               |                                                        
-| Aggregatietype                      | `Geen`            |                                                        
+| Aggregatietype                      | `Geen`            |  
 
 Opmerking met betrekking tot de kardinaliteit van relaties: deze staat niet in de tabel. Deze kennen geen defaultwaarde. De kardinaliteit aan de doel kant altijd moet worden aangegeven. De kardinaliteit aan de bron/eigenaar kant van een relatie is optioneel om in te vullen, wanneer er niets is ingevuld dan wordt er niets over de kardinaliteit gezegd en kent deze geen default waarde (in de praktijk betekent dit dat een kardinaliteit aan de bron kant als 0..* geimplementeerd wordt).

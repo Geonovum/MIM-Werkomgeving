@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:java="http://www.yworks.com/xml/yfiles-common/1.0/java" xmlns:sys="http://www.yworks.com/xml/yfiles-common/markup/primitives/2.0" xmlns:x="http://www.yworks.com/xml/yfiles-common/markup/2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:y="http://www.yworks.com/xml/graphml" xmlns:yed="http://www.yworks.com/xml/yed/3" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://www.yworks.com/xml/schema/graphml/1.1/ygraphml.xsd">
+  <!--Created by yEd 3.20-->
+  <key for="port" id="d0" yfiles.type="portgraphics"/>
+  <key for="port" id="d1" yfiles.type="portgeometry"/>
+  <key for="port" id="d2" yfiles.type="portuserdata"/>
+  <key attr.name="url" attr.type="string" for="node" id="d3"/>
+  <key attr.name="description" attr.type="string" for="node" id="d4"/>
+  <key for="node" id="d5" yfiles.type="nodegraphics"/>
+  <key for="graphml" id="d6" yfiles.type="resources"/>
+  <key attr.name="subject-uri" attr.type="string" for="edge" id="d7"/>
+  <key attr.name="object-uri" attr.type="string" for="edge" id="d8"/>
+  <key attr.name="url" attr.type="string" for="edge" id="d9"/>
+  <key attr.name="description" attr.type="string" for="edge" id="d10"/>
+  <key for="edge" id="d11" yfiles.type="edgegraphics"/>
+  <graph edgedefault="directed" id="G">
+    <node id="n0">
+      <data key="d3" xml:space="preserve"><![CDATA[http://bp4mc2.org/def/mim-shapes#ExterneKoppeling]]></data>
+      <data key="d4"/>
+      <data key="d5">
+        <y:GenericNode configuration="com.yworks.entityRelationship.big_entity">
+          <y:Geometry height="226.3440594059407" width="240.0" x="467.3092369477911" y="57.370082117713196"/>
+          <y:Fill color="#E8EEF7" color2="#B7C9E3" transparent="false"/>
+          <y:BorderStyle color="#000000" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="node_width" configuration="CroppingLabel" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="20.1328125" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="t" textColor="#000000" verticalTextPosition="bottom" visible="true" width="240.0" x="0.0" xml:space="preserve" y="4.0">mim:ExterneKoppeling</y:NodeLabel>
+          <y:NodeLabel alignment="left" autoSizePolicy="content" configuration="com.yworks.entityRelationship.label.attributes" fontFamily="Dialog" fontSize="10" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="180.66015625" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="226.0068359375" x="2.0" xml:space="preserve" y="32.1328125">mim:naam [1,1]
+mim:alias [0,1]
+mim:begrip → skos:Concept [0,n]
+mim:begripsterm [0,n]
+mim:herkomst [1,1]
+mim:definitie [1,1]
+mim:datumOpname (date) [1,1]
+mim:herkomstDefinitie [1,1]
+mim:toelichting [0,1]
+mim:indicatieMaterieleHistorie (boolean) [1,1]
+mim:indicatieFormeleHistorie (boolean) [1,1]
+mim:kardinaliteit (string) [1,1]
+mim:indicatieAfleidbaar (boolean) [1,1]
+mim:mogelijkGeenWaarde (boolean) [1,1]
+mim:unidirectioneel (boolean) [1,1]<y:LabelModel><y:ErdAttributesNodeLabelModel/></y:LabelModel><y:ModelParameter><y:ErdAttributesNodeLabelModelParameter/></y:ModelParameter></y:NodeLabel>
+          <y:StyleProperties>
+            <y:Property class="java.lang.Boolean" name="y.view.ShadowNodePainter.SHADOW_PAINTING" value="true"/>
+          </y:StyleProperties>
+        </y:GenericNode>
+      </data>
+    </node>
+    <node id="n1">
+      <data key="d3" xml:space="preserve"><![CDATA[http://bp4mc2.org/def/mim-shapes#Gegevensgroeptype]]></data>
+      <data key="d4"/>
+      <data key="d5">
+        <y:GenericNode configuration="com.yworks.entityRelationship.big_entity">
+          <y:Geometry height="146.14223132502366" width="200.0" x="65.50000000000006" y="312.8362923641761"/>
+          <y:Fill color="#E8EEF7" color2="#B7C9E3" transparent="false"/>
+          <y:BorderStyle color="#000000" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="node_width" configuration="CroppingLabel" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="20.1328125" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="t" textColor="#000000" verticalTextPosition="bottom" visible="true" width="200.0" x="0.0" xml:space="preserve" y="4.0">mim:Gegevensgroeptype</y:NodeLabel>
+          <y:NodeLabel alignment="left" autoSizePolicy="content" configuration="com.yworks.entityRelationship.label.attributes" fontFamily="Dialog" fontSize="10" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="109.99609375" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="194.458984375" x="2.0" xml:space="preserve" y="32.1328125">mim:naam [1,1]
+mim:alias [0,1]
+mim:begrip → skos:Concept [0,n]
+mim:begripsterm [0,n]
+mim:definitie [0,1]
+mim:datumOpname (date) [1,1]
+mim:herkomstDefinitie [0,1]
+mim:toelichting [0,1]
+mim:constraint → mim:Constraint [0,n]<y:LabelModel><y:ErdAttributesNodeLabelModel/></y:LabelModel><y:ModelParameter><y:ErdAttributesNodeLabelModelParameter/></y:ModelParameter></y:NodeLabel>
+          <y:StyleProperties>
+            <y:Property class="java.lang.Boolean" name="y.view.ShadowNodePainter.SHADOW_PAINTING" value="true"/>
+          </y:StyleProperties>
+        </y:GenericNode>
+      </data>
+    </node>
+    <node id="n2">
+      <data key="d3" xml:space="preserve"><![CDATA[http://bp4mc2.org/def/mim-shapes#Objecttype]]></data>
+      <data key="d4"/>
+      <data key="d5">
+        <y:GenericNode configuration="com.yworks.entityRelationship.big_entity">
+          <y:Geometry height="200.34405940594058" width="229.0" x="51.0" y="-64.07425742574256"/>
+          <y:Fill color="#E8EEF7" color2="#B7C9E3" transparent="false"/>
+          <y:BorderStyle color="#000000" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="node_width" configuration="CroppingLabel" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="20.1328125" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="t" textColor="#000000" verticalTextPosition="bottom" visible="true" width="229.0" x="0.0" xml:space="preserve" y="4.0">mim:Objecttype</y:NodeLabel>
+          <y:NodeLabel alignment="left" autoSizePolicy="content" configuration="com.yworks.entityRelationship.label.attributes" fontFamily="Dialog" fontSize="10" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="157.10546875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="215.81640625" x="2.0" xml:space="preserve" y="32.1328125">mim:naam [1,1]
+mim:alias [0,1]
+mim:begrip → skos:Concept [0,n]
+mim:begripsterm [0,n]
+mim:herkomst [1,1]
+mim:definitie [1,1]
+mim:datumOpname (date) [1,1]
+mim:herkomstDefinitie [1,1]
+mim:populatie (string) [0,1]
+mim:kwaliteit (string) [0,1]
+mim:toelichting [0,1]
+mim:indicatieAbstractObject (boolean) [1,1]
+mim:constraint → mim:Constraint [0,n]<y:LabelModel><y:ErdAttributesNodeLabelModel/></y:LabelModel><y:ModelParameter><y:ErdAttributesNodeLabelModelParameter/></y:ModelParameter></y:NodeLabel>
+          <y:StyleProperties>
+            <y:Property class="java.lang.Boolean" name="y.view.ShadowNodePainter.SHADOW_PAINTING" value="true"/>
+          </y:StyleProperties>
+        </y:GenericNode>
+      </data>
+    </node>
+    <node id="n3">
+      <data key="d3" xml:space="preserve"><![CDATA[http://bp4mc2.org/def/mim-shapes#Relatiesoort]]></data>
+      <data key="d4"/>
+      <data key="d5">
+        <y:GenericNode configuration="com.yworks.entityRelationship.big_entity">
+          <y:Geometry height="238.7445934513346" width="240.0" x="-376.3092369477911" y="51.16981509501625"/>
+          <y:Fill color="#E8EEF7" color2="#B7C9E3" transparent="false"/>
+          <y:BorderStyle color="#000000" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="node_width" configuration="CroppingLabel" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="20.1328125" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="t" textColor="#000000" verticalTextPosition="bottom" visible="true" width="240.0" x="0.0" xml:space="preserve" y="4.0">mim:Relatiesoort</y:NodeLabel>
+          <y:NodeLabel alignment="left" autoSizePolicy="content" configuration="com.yworks.entityRelationship.label.attributes" fontFamily="Dialog" fontSize="10" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="204.21484375" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="226.0068359375" x="2.0" xml:space="preserve" y="32.1328125">mim:naam [1,1]
+mim:alias [0,1]
+mim:begrip → skos:Concept [0,n]
+mim:begripsterm [0,n]
+mim:herkomst [1,1]
+mim:definitie [1,1]
+mim:datumOpname (date) [1,1]
+mim:herkomstDefinitie [1,1]
+mim:toelichting [0,1]
+mim:indicatieMaterieleHistorie (boolean) [1,1]
+mim:indicatieFormeleHistorie (boolean) [1,1]
+mim:kardinaliteit (string) [1,1]
+mim:kardinaliteitRelatieBron (string) [0,1]
+mim:indicatieAfleidbaar (boolean) [1,1]
+mim:mogelijkGeenWaarde (boolean) [1,1]
+mim:identificerend (boolean) [0,1]
+mim:unidirectioneel (boolean) [1,1]<y:LabelModel><y:ErdAttributesNodeLabelModel/></y:LabelModel><y:ModelParameter><y:ErdAttributesNodeLabelModelParameter/></y:ModelParameter></y:NodeLabel>
+          <y:StyleProperties>
+            <y:Property class="java.lang.Boolean" name="y.view.ShadowNodePainter.SHADOW_PAINTING" value="true"/>
+          </y:StyleProperties>
+        </y:GenericNode>
+      </data>
+    </node>
+    <node id="n4">
+      <data key="d3" xml:space="preserve"><![CDATA[http://bp4mc2.org/def/mim#bron?shape=http%3A%2F%2Fbp4mc2.org%2Fdef%2Fmim-shapes%23bron&logic=xone]]></data>
+      <data key="d4"/>
+      <data key="d5">
+        <y:ShapeNode>
+          <y:Geometry height="30.0" width="40.0" x="145.5" y="209.55304717218706"/>
+          <y:Fill color="#FFFFFF" transparent="false"/>
+          <y:BorderStyle color="#000000" raised="false" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="node_width" configuration="CroppingLabel" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="20.1328125" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="t" textColor="#000000" verticalTextPosition="bottom" visible="true" width="40.0" x="0.0" xml:space="preserve" y="4.0">xone</y:NodeLabel>
+          <y:Shape type="ellipse"/>
+        </y:ShapeNode>
+      </data>
+    </node>
+    <edge id="e0" source="n4" target="n2">
+      <data key="d7" xml:space="preserve"><![CDATA[http://bp4mc2.org/def/mim#bron?shape=http%3A%2F%2Fbp4mc2.org%2Fdef%2Fmim-shapes%23bron&logic=xone]]></data>
+      <data key="d8" xml:space="preserve"><![CDATA[http://bp4mc2.org/def/mim-shapes#Objecttype]]></data>
+      <data key="d10"/>
+      <data key="d11">
+        <y:PolyLineEdge>
+          <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
+          <y:LineStyle color="#000000" type="line" width="1.0"/>
+          <y:Arrows source="none" target="standard"/>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e1" source="n4" target="n1">
+      <data key="d7" xml:space="preserve"><![CDATA[http://bp4mc2.org/def/mim#bron?shape=http%3A%2F%2Fbp4mc2.org%2Fdef%2Fmim-shapes%23bron&logic=xone]]></data>
+      <data key="d8" xml:space="preserve"><![CDATA[http://bp4mc2.org/def/mim-shapes#Gegevensgroeptype]]></data>
+      <data key="d10"/>
+      <data key="d11">
+        <y:PolyLineEdge>
+          <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
+          <y:LineStyle color="#000000" type="line" width="1.0"/>
+          <y:Arrows source="none" target="standard"/>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e2" source="n4" target="n2">
+      <data key="d7" xml:space="preserve"><![CDATA[http://bp4mc2.org/def/mim#bron?shape=http%3A%2F%2Fbp4mc2.org%2Fdef%2Fmim-shapes%23bron&logic=xone]]></data>
+      <data key="d8" xml:space="preserve"><![CDATA[http://bp4mc2.org/def/mim-shapes#Objecttype]]></data>
+      <data key="d10"/>
+      <data key="d11">
+        <y:PolyLineEdge>
+          <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
+          <y:LineStyle color="#000000" type="line" width="1.0"/>
+          <y:Arrows source="none" target="standard"/>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e3" source="n4" target="n1">
+      <data key="d7" xml:space="preserve"><![CDATA[http://bp4mc2.org/def/mim#bron?shape=http%3A%2F%2Fbp4mc2.org%2Fdef%2Fmim-shapes%23bron&logic=xone]]></data>
+      <data key="d8" xml:space="preserve"><![CDATA[http://bp4mc2.org/def/mim-shapes#Gegevensgroeptype]]></data>
+      <data key="d10"/>
+      <data key="d11">
+        <y:PolyLineEdge>
+          <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
+          <y:LineStyle color="#000000" type="line" width="1.0"/>
+          <y:Arrows source="none" target="standard"/>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e4" source="n4" target="n2">
+      <data key="d7" xml:space="preserve"><![CDATA[http://bp4mc2.org/def/mim#bron?shape=http%3A%2F%2Fbp4mc2.org%2Fdef%2Fmim-shapes%23bron&logic=xone]]></data>
+      <data key="d8" xml:space="preserve"><![CDATA[http://bp4mc2.org/def/mim-shapes#Objecttype]]></data>
+      <data key="d10"/>
+      <data key="d11">
+        <y:PolyLineEdge>
+          <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
+          <y:LineStyle color="#000000" type="line" width="1.0"/>
+          <y:Arrows source="none" target="standard"/>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e5" source="n4" target="n1">
+      <data key="d7" xml:space="preserve"><![CDATA[http://bp4mc2.org/def/mim#bron?shape=http%3A%2F%2Fbp4mc2.org%2Fdef%2Fmim-shapes%23bron&logic=xone]]></data>
+      <data key="d8" xml:space="preserve"><![CDATA[http://bp4mc2.org/def/mim-shapes#Gegevensgroeptype]]></data>
+      <data key="d10"/>
+      <data key="d11">
+        <y:PolyLineEdge>
+          <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
+          <y:LineStyle color="#000000" type="line" width="1.0"/>
+          <y:Arrows source="none" target="standard"/>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e6" source="n0" target="n2">
+      <data key="d7" xml:space="preserve"><![CDATA[http://bp4mc2.org/def/mim-shapes#ExterneKoppeling]]></data>
+      <data key="d8" xml:space="preserve"><![CDATA[http://bp4mc2.org/def/mim#doel?shape=http%3A%2F%2Fbp4mc2.org%2Fdef%2Fmim-shapes%23doel&logic=xone]]></data>
+      <data key="d9" xml:space="preserve"><![CDATA[http://bp4mc2.org/def/mim#doel]]></data>
+      <data key="d10"/>
+      <data key="d11">
+        <y:PolyLineEdge>
+          <y:Path sx="-38.52945113788485" sy="-77.24090700140647" tx="58.52476572958494" ty="57.20343254204934"/>
+          <y:LineStyle color="#000000" type="line" width="1.0"/>
+          <y:Arrows source="none" target="standard"/>
+          <y:EdgeLabel alignment="center" backgroundColor="#FFFFFF" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasLineColor="false" height="18.1328125" horizontalTextPosition="center" iconTextGap="4" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" width="89.32421875" x="-138.3210284987607" xml:space="preserve" y="-9.06640992681669">mim:doel [1,1]<y:LabelModel><y:SmartEdgeLabelModel autoRotationEnabled="false" defaultAngle="0.0" defaultDistance="10.0"/></y:LabelModel><y:ModelParameter><y:SmartEdgeLabelModelParameter angle="0.0" distance="30.0" distanceToCenter="true" position="center" ratio="0.5" segment="0"/></y:ModelParameter><y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" frozen="true" placement="anywhere" side="anywhere" sideReference="relative_to_edge_flow"/></y:EdgeLabel>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e7" source="n0" target="n4">
+      <data key="d7" xml:space="preserve"><![CDATA[http://bp4mc2.org/def/mim-shapes#ExterneKoppeling]]></data>
+      <data key="d8" xml:space="preserve"><![CDATA[http://bp4mc2.org/def/mim#bron?shape=http%3A%2F%2Fbp4mc2.org%2Fdef%2Fmim-shapes%23bron&logic=xone]]></data>
+      <data key="d9" xml:space="preserve"><![CDATA[http://bp4mc2.org/def/mim#bron]]></data>
+      <data key="d10"/>
+      <data key="d11">
+        <y:PolyLineEdge>
+          <y:Path sx="-2.9203480589022774" sy="54.01093535150352" tx="0.0" ty="0.0"/>
+          <y:LineStyle color="#000000" type="line" width="1.0"/>
+          <y:Arrows source="none" target="standard"/>
+          <y:EdgeLabel alignment="center" backgroundColor="#FFFFFF" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasLineColor="false" height="18.1328125" horizontalTextPosition="center" iconTextGap="4" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" width="91.52734375" x="-186.67689397727634" xml:space="preserve" y="-9.066398628594186">mim:bron [1,1]<y:LabelModel><y:SmartEdgeLabelModel autoRotationEnabled="false" defaultAngle="0.0" defaultDistance="10.0"/></y:LabelModel><y:ModelParameter><y:SmartEdgeLabelModelParameter angle="0.0" distance="30.0" distanceToCenter="true" position="center" ratio="0.5" segment="0"/></y:ModelParameter><y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" frozen="true" placement="anywhere" side="anywhere" sideReference="relative_to_edge_flow"/></y:EdgeLabel>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e8" source="n3" target="n2">
+      <data key="d7" xml:space="preserve"><![CDATA[http://bp4mc2.org/def/mim-shapes#Relatiesoort]]></data>
+      <data key="d8" xml:space="preserve"><![CDATA[http://bp4mc2.org/def/mim#doel?shape=http%3A%2F%2Fbp4mc2.org%2Fdef%2Fmim-shapes%23doel&logic=xone]]></data>
+      <data key="d9" xml:space="preserve"><![CDATA[http://bp4mc2.org/def/mim#doel]]></data>
+      <data key="d10"/>
+      <data key="d11">
+        <y:PolyLineEdge>
+          <y:Path sx="-101.21028037383178" sy="-76.78713106097342" tx="44.28112449799198" ty="57.65720848248239"/>
+          <y:LineStyle color="#000000" type="line" width="1.0"/>
+          <y:Arrows source="none" target="standard"/>
+          <y:EdgeLabel alignment="center" backgroundColor="#FFFFFF" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasLineColor="false" height="18.1328125" horizontalTextPosition="center" iconTextGap="4" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" width="89.32421875" x="48.98185613547946" xml:space="preserve" y="-9.066407484918784">mim:doel [1,1]<y:LabelModel><y:SmartEdgeLabelModel autoRotationEnabled="false" defaultAngle="0.0" defaultDistance="10.0"/></y:LabelModel><y:ModelParameter><y:SmartEdgeLabelModelParameter angle="0.0" distance="30.0" distanceToCenter="true" position="center" ratio="0.5" segment="0"/></y:ModelParameter><y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" frozen="true" placement="anywhere" side="anywhere" sideReference="relative_to_edge_flow"/></y:EdgeLabel>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e9" source="n3" target="n4">
+      <data key="d7" xml:space="preserve"><![CDATA[http://bp4mc2.org/def/mim-shapes#Relatiesoort]]></data>
+      <data key="d8" xml:space="preserve"><![CDATA[http://bp4mc2.org/def/mim#bron?shape=http%3A%2F%2Fbp4mc2.org%2Fdef%2Fmim-shapes%23bron&logic=xone]]></data>
+      <data key="d9" xml:space="preserve"><![CDATA[http://bp4mc2.org/def/mim#bron]]></data>
+      <data key="d10"/>
+      <data key="d11">
+        <y:PolyLineEdge>
+          <y:Path sx="13.14257028112445" sy="54.01093535150352" tx="0.0" ty="0.0"/>
+          <y:LineStyle color="#000000" type="line" width="1.0"/>
+          <y:Arrows source="none" target="standard"/>
+          <y:EdgeLabel alignment="center" backgroundColor="#FFFFFF" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasLineColor="false" height="18.1328125" horizontalTextPosition="center" iconTextGap="4" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" width="91.52734375" x="95.09252813254977" xml:space="preserve" y="-9.066398628594186">mim:bron [1,1]<y:LabelModel><y:SmartEdgeLabelModel autoRotationEnabled="false" defaultAngle="0.0" defaultDistance="10.0"/></y:LabelModel><y:ModelParameter><y:SmartEdgeLabelModelParameter angle="0.0" distance="30.0" distanceToCenter="true" position="center" ratio="0.5" segment="0"/></y:ModelParameter><y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" frozen="true" placement="anywhere" side="anywhere" sideReference="relative_to_edge_flow"/></y:EdgeLabel>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+  </graph>
+  <data key="d6">
+    <y:Resources/>
+  </data>
+</graphml>
