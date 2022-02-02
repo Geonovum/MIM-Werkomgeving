@@ -120,6 +120,8 @@ Merk op dat de diagrammen op metamodel niveau zijn gemodelleerd. Hoe dit op info
 
 *Keuze tussen datatypen*
 
+Dit UML is uitgewerkt voor Objecttype. Voor Gegevensgroeptype en Relatieklasse geldt hetzelfde patroon.
+
 ![](media/KeuzeDatatype1UML.png)
 
 
@@ -131,6 +133,8 @@ Gebruik de Keuze voor een (MIM) Attrituutsoort:
 - Kies een _MIM-Attribuutsoort_ en koppel de hiervoor gemodelleerde Keuze hieraan via een typering, zoals gebruikelijk. 
 
 *Keuze tussen 2 of meer attribuutsoorten*
+
+Dit UML is uitgewerkt voor Objecttype. Voor Gegevensgroeptype en Relatieklasse geldt hetzelfde patroon.
 
 ![](media/KeuzeAttribuutsoort2UML.png)
 
@@ -145,6 +149,8 @@ Er is hier voor de aankoppeling gekozen voor een UML-Attribute en niet voor een 
 
 *Keuze tussen meerdere manieren om 1 betekenisvol attribuutsoort in te vullen*
 
+Dit UML is uitgewerkt voor Objecttype. Voor Gegevensgroeptype en Relatieklasse geldt hetzelfde patroon.
+
 ![](media/KeuzeAttribuutsoort3UML.png)
 
 Modellering van de Keuze in een informatiemodel: 
@@ -156,6 +162,8 @@ Gebruik de Keuze voor de (MIM) Attribuutsoort:
 
 
 *Keuze tussen relatiedoelen, als nadere invulling van 1 betekenisvolle relatiesoort*
+
+Dit UML is uitgewerkt voor Objecttype. Voor Gegevensgroeptype geldt hetzelfde patroon, behalve dat een Gegevensgroeptype geen doel mag zijn van een Relatiesoort.
 
 ![](media/KeuzeRelatiedoel4UML.png)
 

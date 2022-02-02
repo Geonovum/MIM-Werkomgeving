@@ -151,6 +151,8 @@ In diagramvorm:
  
 *Use case 1: Keuze tussen datatypen*
 
+Dit diagram is uitgewerkt voor Objecttype. Voor Gegevensgroeptype en Relatieklasse geldt hetzelfde patroon.
+
 1 attribuutsoort heeft normaal 1 datatype. Als er sprake is van een keuze, dan is het attribuutsoort gekoppeld met een keuze en de keuze geeft 2 of meer datatypen aan.
 
 ![](media/KeuzeDatatype1.png)
@@ -158,26 +160,32 @@ Diagram: Keuze tussen datatypen
 
 *Use case 2: Keuze tussen 2 of meer attribuutsoorten*
 
+Dit diagram is uitgewerkt voor Objecttype. Voor Gegevensgroeptype en Relatieklasse geldt hetzelfde patroon.
+
 Een objecttype of gegevensgroep kan normaal een attribuutsoort hebben met een datatype (de lijn links onder). Als een objecttype meerdere op zichzelfstaande attribuutsoorten heeft en er sprake is van een keuze tussen een aantal van deze attribuutsoorten, dan is het objecttype gekoppeld met een keuze (de lijn links boven) en de keuze geeft 2 of meer attribuutsoorten aan (met elk een eigen datatype). 
 
 ![](media/KeuzeAttribuutsoort2.png)
 
-Diagram: Keuze tussen attribuutsoorten
+Diagram: Keuze tussen attribuutsoorten. Patroon geldt ook voor Gegevensgroeptype en Relatieklasse
 
 *Use case 3: Keuze tussen meerdere manieren om 1 betekenisvol attribuutsoort in te vullen*
+
+Dit diagram is uitgewerkt voor Objecttype. Voor Gegevensgroeptype en Relatieklasse geldt hetzelfde patroon.
 
 Een objecttype of gegevensgroep kan normaal een attribuutsoort hebben met een datatype (de lijn links). Als er sprake is van een attribuutsoort die op meerdere manieren ingevuld kan worden met een keuze hiertussen, dan is het attribuutsoort niet gekoppeld met een datatype, maar dan is het attribuutsoort gekoppeld met een keuze en de keuze geeft 2 of meer attribuutsoorten aan (met elk een eigen datatype). 
  
 ![](media/KeuzeAttribuutsoort3.png)
 
-Diagram: Keuze tussen attribuutsoorten binnen een attribuutsoort
+Diagram: Keuze tussen attribuutsoorten binnen een attribuutsoort. Patroon geldt ook voor Gegevensgroeptype en Relatieklasse
 
 *Use case 4: Keuze tussen relatiedoelen, als nadere invulling van 1 betekenisvolle relatiesoort*
+
+Dit diagram is uitgewerkt voor Objecttype. Voor Gegevensgroeptype geldt hetzelfde patroon, behalve dat een Gegevensgroeptype geen doel mag zijn van een Relatiesoort.
 
 Een objecttype of gegevensgroep kan normaal een relatiesoort hebben, die gekoppeld is aan een objecttype. Als er sprake is van een relatiesoort met een keuze, dan is het relatiedoel van de relatiesoort niet gekoppeld aan 1 objecttype, maar dan is het objecttype gekoppeld aan een keuze en deze keuze geeft 2 of meer relatiedoelen aan. 
 
 ![](media/KeuzeRelatiedoel4.png)
-Diagram: Keuze tussen relatiedoelen
+Diagram: Keuze tussen relatiedoelen. Patroon geldt ook voor Gegevensgroeptype, behalve dat een Gegevensgroeptype geen doel mag zijn van een Relatiesoort.
 
 *Relatierol*
 

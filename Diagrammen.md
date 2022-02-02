@@ -35,18 +35,26 @@ Deze bijlage bevat alle modelelementen en metagegevens in één diagram.
 *Keuze*
 
 *Keuze tussen datatypen*
+
+Dit UML is uitgewerkt voor Objecttype. Voor Gegevensgroeptype en Relatieklasse geldt hetzelfde patroon.
 ![](media/KeuzeDatatype1metMeta.png)
 
 
 *Keuze tussen attribuutsoorten*
+
+Dit UML is uitgewerkt voor Objecttype. Voor Gegevensgroeptype en Relatieklasse geldt hetzelfde patroon.
 ![](media/KeuzeAttribuutsoort2metMetaUML.png)
 
 
 *Keuze tussen attribuutsoorten binnen de context van een attribuutsoort*
+
+Dit UML is uitgewerkt voor Objecttype. Voor Gegevensgroeptype en Relatieklasse geldt hetzelfde patroon.
 ![](media/KeuzeAttribuutsoort3metMetaUML.png)
 
 
 *Keuze tussen relatiedoelen*
+
+Dit UML is uitgewerkt voor Objecttype. Voor Gegevensgroeptype geldt hetzelfde patroon, behalve dat een Gegevensgroeptype geen doel mag zijn voor een Relatiesoort.
 ![](media/KeuzeRelatiedoel4metMetaUML.png)
  
  
