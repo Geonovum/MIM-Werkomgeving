@@ -51,7 +51,7 @@ het overheidsdomein, al is het ook in bredere context inzetbaar.
 Het metamodel beschrijven we in vijf hoofdstukken en een bijlage.
 
 Lees de [Inleiding](#inleiding) verder voor inzicht in wat we onder een
-informatiemodel en onder een metamodel verstaan, hoe deze de modellen zich
+informatiemodel en onder een metamodel verstaan, hoe deze modellen zich
 verhouden tot UML en de vier lagen metamodel architectuur van de Object
 Management Group [[!OMG]], Linked Data en de internetstandaarden van de W3c en welke overige standaarden worden toegepast.
 
@@ -77,10 +77,10 @@ aanbevelingen bij het toepassen van het metamodel.
 
 Er zijn een aantal bijlages, dit zijn hulpmiddelen of aanvullingen op MIM.
 - De bijlage [Template naamgeving conventies](#template-naamgeving-conventies) verschaft een invulmogelijkheid om eigen naamgevingsconventies te documenteren, per in dit metamodel genoemd modelelement.
-- De bijlage [Transformatie MIM - RDFS/OWL/SHACL](#transformatie-mim-rdfs-owl-shacl) beschrijft hoe een MIM model getransformeerd kan worden naar een RDF model dat gebruikt kan worden om daadwerkelijk Linked Data in uit te drukken en visa-versa (op instantie niveau, waarbij dit in overeenstemming is met de specificatie op informatiemodel niveau).
+- De bijlage [Transformatie MIM - RDFS/OWL/SHACL](#transformatie-mim-rdfs-owl-shacl) beschrijft hoe een MIM model getransformeerd kan worden naar een RDF model dat gebruikt kan worden om daadwerkelijk Linked Data in uit te drukken en vice versa (op instantie niveau, waarbij dit in overeenstemming is met de specificatie op informatiemodel niveau).
 
-### Gebruikswijzer 
-Met de bouwstenen oftewel de modelelementen die in dit metamodel beschreven zijn is een informatiemodel te maken. Om zo'n informatiemodel te maken volstaat het veelal om van het hoofdstuk [Metamodel Algemeen] door te nemen, te kiezen voor modellering met ofwel UML ofwel linked data, en het bijbehorende hoofdstuk te lezen. De andere hoofdstukken kan je behandelen als naslagwerk, voor als er tijdens het modelleren vragen ontstaan. Neem vervolgens uw favoriete modelleertool en ga aan de slag. Voor bepaalde modelleertools zijn er hulpmiddelen gemaakt, zodat je met deze hulpmiddelen de modelelementen kan aanmaken door erop te klikken en bijvoorbeeld naar een diagram kan slepen en ook kan valideren of je model correct het MIM volgt (wat automatisch gaat als je de hulpmiddelen gebruikt). Tot slot is het mogelijk om naar informatiemodellen te kijken van organisaties die al een MIM informatiemodel hebben gepubliceerd. Voor specifieke modelleringen en vragen zullen er ook uitgewerkte voorbeelden worden gemaakt. 
+### Gebruikswijzer
+Met de bouwstenen oftewel de modelelementen die in dit metamodel beschreven zijn is een informatiemodel te maken. Om zo'n informatiemodel te maken volstaat het veelal om het hoofdstuk [Metamodel Algemeen] door te nemen, te kiezen voor modellering met ofwel UML ofwel linked data, en het bijbehorende hoofdstuk te lezen. De andere hoofdstukken kan je behandelen als naslagwerk, voor als er tijdens het modelleren vragen ontstaan. Neem vervolgens uw favoriete modelleertool en ga aan de slag. Voor bepaalde modelleertools zijn er hulpmiddelen gemaakt, zodat je met deze hulpmiddelen de modelelementen kan aanmaken door erop te klikken en bijvoorbeeld naar een diagram kan slepen en ook kan valideren of je model correct het MIM volgt (wat automatisch gaat als je de hulpmiddelen gebruikt). Tot slot is het mogelijk om naar informatiemodellen te kijken van organisaties die al een MIM informatiemodel hebben gepubliceerd. Voor specifieke modelleringen en vragen zullen er ook uitgewerkte voorbeelden worden gemaakt.
 
 ### Wat is een informatiemodel
 Wanneer we informatie over bepaalde onderwerpen willen inwinnen, registreren of uitwisselen, dan is het van belang om deze informatie  eerst goed te beschrijven. We doen dit zodat het voor eenieder die met de informatie aan de slag gaat helder en eenduidig is:
@@ -97,12 +97,12 @@ Het beschrijven vindt plaats door de informatie van de objecten die we beschouwd
 <aside class='example'>
     Jan en Katrien zijn bijvoorbeeld ‘dingen in de werkelijkheid’. Zij hebben
     bepaalde kenmerken, zoals een naam en een geboortedatum. In een informatiemodel
-    komen Jan en Katrien zelf niet zelf voor. Zij worden in het informatiemodel gemodelleerd als een Persoon.
+    komen Jan en Katrien zelf niet voor. Zij worden in het informatiemodel gemodelleerd als een Persoon.
     Ook hun gegevens, zoals het feit dat 10-10-1970 de geboortedatum van Jan is, komen niet voor.
     In het informatiemodel is alleen het kenmerk geboortedatum gemodelleerd, als een kenmerk van een Persoon.
 </aside>
 
-De Persoon in het informatiemodel is ene beschrijving vanuit het perspectief van het informatiedomein van waaruit we Jan en Katrien beschouwen. We bekijken Jan en Katrien dan ook wel als een van de *objecten* binnen een domein.
+De Persoon in het informatiemodel is een beschrijving vanuit het perspectief van het informatiedomein van waaruit we Jan en Katrien beschouwen. We bekijken Jan en Katrien dan ook wel als een van de *objecten* binnen een domein.
 
 In het informatiemodel is hiervoor het *objecttype* Persoon gedefinieerd en Jan en Katrien zijn dus objecten van het objecttype Persoon. De objecten Domtoren en Paleis Het Loo typeren we tot het objecttype Gebouw. Objecttypen in een informatiemodel representeren dus de dingen in de werkelijkheid.
 
@@ -117,7 +117,7 @@ We visualiseren het voorgaande in onderstaande figuur, voor de situatie dat er e
 ![](media/informatiemodel.png)
 
 Als een andere registratie op haar eigen manier tegen dezelfde ‘Jan uit de werkelijkheid’ aankijkt, dan is ook in die registratie een (eigen, apart) object voor Jan aanwezig en Jan kan in dit (eigen, aparte) informatiemodel anders gemodelleerd zijn. Bijvoorbeeld in het ene domein als werknemer en in het andere domein als persoon of partner. Beide objecten Jan representeren natuurlijk dezelfde ‘Jan uit
-de werkelijkheid’, vanuit het perspectief van het eigen domein bekeken.
+de werkelijkheid’, elk vanuit het perspectief van het eigen domein bekeken.
 
 *Belangrijke aandachtspunten*  
 Merk op dat we hier veelal spreken over een registratie, omdat dit vaak zo is. Er zijn echter ook toepassingen van een informatiemodel waarin er alleen gegevens worden uitgewisseld, of waarbij er sprake is van gewoon de beschrijving van informatie, ongeacht of deze wel of niet in een registratie is opgenomen.
@@ -231,7 +231,7 @@ met name de ontwerpers, bouwers en beheerders van ICT-voorzieningen.*
 Dit niveau is volledig in scope van MIM. 
 
 Ten aanzien van fysieke of technische datamodellen:
-- Een logisch informatiemodel is implementatie onafhankelijk en kan in naar meerdere technische modellen worden geïmplementeerd.
+- Een logisch informatiemodel is implementatie onafhankelijk en kan in meerdere technische modellen worden geïmplementeerd.
   Een fysiek of technisch datamodel is afhankelijk van de gekozen techniek of tooling die wordt gebruikt.
 
 #### Niveau 4: Fysiek of technisch gegevens- of datamodel
@@ -329,7 +329,7 @@ werkelijkheid op een specifiek tijdsmoment vormen.
 |----------------|------------------------------------------------------------------------------|---------------------------------------------------------------|
 | M3             | MOF, verzameling van constructies voor definiëren van metamodellen           | MOF klasse, MOF attribuut, MOF Associatie, MOF operatie, etc. |
 | M2             | Metamodellen (UML, CWM, etc.), bestaande uit instanties van MOF constructies | UML klasse, UML associatie, UML attribuut, etc.               |
-| M1             | Modellen, bestaande uit instanties van M2 metamodel constructies             | Klasse “Order”, klasse “Klant”, attribuut “naam” etc          |
+| M1             | Modellen, bestaande uit instanties van M2 metamodel constructies             | Klasse “Order”, klasse “Klant”, attribuut “naam” etc.          |
 | M0             | Objecten en data, de instanties van M1 model constructies                    | Order 43123, Artikel 8RB31, etc.                              |
 
 *Tabel 1 Vier lagen metamodel OMG*
@@ -490,11 +490,11 @@ Voor vragen, suggesties of opmerkingen kunt u contact opnemen met de MIM helpdes
 | 12. | NEN 3610 Basismodel Geo-informatie (vanaf /A1:2016) | [[!NEN3610]]   |
 
 De Stelselcatalogus [[!SCAT]], het GAB [[!GAB]] en de Handreiking gegevensbeschrijving
-[[!NORA]] raken elkaar op een aantal vlakken maar er kunnen op deze raakvlaken verschillen zijn
+[[!NORA]] raken elkaar op een aantal vlakken maar er kunnen op deze raakvlakken verschillen zijn
 in de gemaakte afspraken. Voor het metamodel hanteren we daarom de volgende spelregel:
 de Stelselcatalogus is zoveel als mogelijk leidend, vervolgens het GAB en als
 laatste de handreiking.
 
 <aside class='note'>
-    De versies van de genoemde referenties zijn bewust niet opgenomen, zodat het mogelijk is om gebruik te maken van nieuwere versies van deze referenties. Wanneer er nieuwe versies uitkomen van de genoemde normreferenties dan wordt er gecheckt of MIM hier nog mee in lijn is. Wanneer dit niet zo is, dan wordt eraan gewerkt om dit weer met elkaar in lijn te brengen, zoals MIM 'upward compatible' is en blijft.
+    De versies van de genoemde referenties zijn bewust niet opgenomen, zodat het mogelijk is om gebruik te maken van nieuwere versies van deze referenties. Wanneer er nieuwe versies uitkomen van de genoemde normreferenties dan wordt er gecheckt of MIM hier nog mee in lijn is. Wanneer dit niet zo is, dan wordt eraan gewerkt om dit weer met elkaar in lijn te brengen, zodat MIM 'upward compatible' is en blijft.
 </aside>
