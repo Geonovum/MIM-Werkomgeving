@@ -407,7 +407,7 @@ vb:Schip a mim:Objecttype;
 .
 </pre>
 
-**Een ontologie voor een informatiemodel**
+**Een ontologie voor een informatiemodel**  
 Omdat een informatiemodel als invulling van de MIM ontologie zelf al exemplaren betreft, is het niet direct mogelijk om
 op basis van dit informatiemodel ook daadwerkelijk Linked Data in uit te drukken. Hiervoor
 is het nodig om de exemplaren uit het MIM informatiemodel zelf te transformeren, te "promoveren",

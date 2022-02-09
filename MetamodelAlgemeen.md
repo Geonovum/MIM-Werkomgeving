@@ -14,8 +14,7 @@ Bijvoorbeeld: in de basisregistratie Kadaster wordt een perceel gemodelleerd als
 
 - Elk modelelement heeft een naam en een eigen MIM metaclass, waaraan je het modelelement overal kan herkennen.
 - De modelelementen worden eerst uitgelegd zonder een specifieke specificatietaal te
-gebruiken. Dit is zodat we hierna kunnen aangeven hoe je het modelelement.
-uitdrukt per specifieke specificatietaal, te weten in UML of in W3C-specificatietechnieken.
+gebruiken. Dit is zodat we hierna kunnen aangeven hoe je het modelelement uitdrukt per specifieke specificatietaal, te weten in UML of in W3C-specificatietechnieken.
 - Een toolonafhankelijke beschrijving van het metamodel.
 Verder is er, omdat VNG Realisatie, Kadaster en Geonovum en veel andere organisaties Sparx EA
 gebruiken, aanvullend aangegeven hoe het metamodel in Enterprise Architect
@@ -282,7 +281,7 @@ registratie. Daartoe is veelal een interpretatie nodig (van die werkelijkheid
 cq. die objecttypen) naar eenheden die in een registratie vastgelegd kunnen
 worden (records, entiteiten e.d.) op basis van andere overwegingen.
 
-De objecten die in het beschouwde domein onderkend worden zijn zelf nooit abstract. Ze behoren altijd tot een concreet objecttype, en niet tot een abstract objecttype. Abstracte objecttypes worden wel gebruikt in de modellering, om generalisaties aan te duiden en de definitie. Zo kan bij het objecttype Pand bijvoorbeeld aangegeven worden dat dit een 'Element in de fysieke leefomgeving' is, en dat deze laatste als een abstract objecttype gezien moet worden (in ons domein). Meer over abstracte objecttypes is beschreven in [Abstracte objecttypes en concrete objecten].  
+De objecten die in het beschouwde domein onderkend worden zijn zelf nooit abstract. Ze behoren altijd tot een concreet objecttype, en niet tot een abstract objecttype. Abstracte objecttypes worden wel gebruikt in de modellering, om generalisaties aan te duiden en de definitie. Zo kan bij het objecttype Pand bijvoorbeeld aangegeven worden dat dit een 'Element in de fysieke leefomgeving' is, en dat deze laatste als een abstract objecttype gezien moet worden (in ons domein). Meer over abstracte objecttypes is beschreven in [Abstracte objecttypes en concrete objecten](#abstracte-objecttypes-en-concrete-objecten).  
 
 #### Attribuutsoort en een groepering ervan   
 
@@ -354,7 +353,7 @@ dus attribuutsoorten van het objecttype, maar dan ondergebracht in een
 gegevensgroeptype. De gegevensgroep als geheel wordt daarom expliciet niet
 gezien als zijnde één attribuutsoort van een object.
 
-*Toelichting:* bijvoorbeeld: in de BRK heeft een schip een motor en de motor en de motor heeft een aantal eigenschappen. De BRK beschouwt een persoon als eigenaar van een Schip, er kunnen geen afzonderlijke eigenaren zijn van elk van de motoren van een schip. In de BRK kan het eigendom van een Motor dan ook niet worden overgedragen aan een ander persoon. Een motor wordt daarom gezien als een eigenschap van het object schip, en omdat de motor meerdere eigenschappen heeft, worden deze ondergebracht in een gegevensgroeptype. In een ander informatiemodel, zoals van een motorfabriek, zou de Motor wel een objecttype kunnen zijn, omdat het daar wel hét onderwerp van gesprek is.\*
+*Toelichting:* bijvoorbeeld: in de BRK heeft een schip een motor en de motor en de motor heeft een aantal eigenschappen. De BRK beschouwt een persoon als eigenaar van een schip, er kunnen geen afzonderlijke eigenaren zijn van elk van de motoren van een schip. In de BRK kan het eigendom van een Motor dan ook niet worden overgedragen aan een ander persoon. Een motor wordt daarom gezien als een eigenschap van het object schip, en omdat de motor meerdere eigenschappen heeft, worden deze ondergebracht in een gegevensgroeptype. In een ander informatiemodel, zoals van een motorfabriek, zou de Motor wel een objecttype kunnen zijn, omdat het daar wel hét onderwerp van gesprek is.
 
 Een gegevensgroeptype is meestal het type van slechts één gegevensgroep, omdat
 de semantiek meestal exclusief is voor één objecttype. Echter, hergebruik is
@@ -608,7 +607,7 @@ specificatie over de structuur. Dit datatype is enkelvoudig, oftewel niet
 samengesteld en wordt ook wel simpel datatype genoemd. Dit datatype kent daarom
 zelf geen eigen modelelementen zoals een «Data element». Ook is er geen sprake van een gelaagdheid, ook wel nesting genoemd. Een primitief datatype kan wel een patroon of formeel patroon hebben, die een nadere restrictie legt.
 
-Een primitief datatype kan een standaard datatype, zoals CharacterString, Integer enz. Het metamodel volgt hierbij de definities zoals beschreven in de ISO standaarden (zie
+Een primitief datatype kan een standaard datatype zijn, zoals CharacterString, Integer enz. Het metamodel volgt hierbij de definities zoals beschreven in de ISO standaarden (zie
 §3.1). 
 * Deze datatypes hebben altijd al een naam en definitie gekregen vanuit deze standaarden en deze worden gebruikt.
 * Deze datatypes hebben geen MIM metaclass. 
@@ -782,8 +781,7 @@ Dit document beschrijft een aantal use cases waarin het modelleren met een *Keuz
 
 Bij de use cases gaat het over meerdere kenmerken, waartussen een keuze gemaakt moet worden omdat er van precies 1 sprake is/mag zijn. Dit is in MIM een keuze tussen twee (of meer) modelelementen. In de verzamelingenleer noemen we dit een XOR situatie. Hierbij is het vooral van belang dat er als gevolg van de modellering van een keuze in plaats van constraint er geen nieuwe kenmerken mogen ontstaan en ook geen kenmerken mogen wegvallen. De kenmerken van het object blijven gelijk.
 
-**Use case 1: een keuze tussen datatypen**
-
+**Use case 1: een keuze tussen datatypen**  
 Een objecttype heeft een attribuutsoort en het datatype hiervan is ofwel datatype D1 ofwel datatype D2. In MIM modelleren we daarom 1  attribuutsoort met als datatype een keuze tussen het datatype D1 en het datatype D2. Het maken van deze keuze is verplicht.
 
 <aside class='example'>
@@ -797,7 +795,7 @@ Het is niet de bedoeling om twee attribuutsoorten te modelleren met elk een data
 Zonder de mogelijkheid van keuze, zou je te maken krijgen met twee attribuutsoorten met bijbehorend datatype. Echter, in dat geval mogen de attribuutsoorten niet dezelfde naam hebben, aangezien deze bij hetzelfde objecttype horen. Ook zou de kardinaliteit niet kloppen: die zou dan [0..1] moeten worden, maar dat doet geen recht aan het feit dat er één verplicht aanwezig moet zijn, en er ook geen twee naast elkaar mogen zijn. De werkelijke kardinaliteit is [1..1].
 
 
-**Use case 2: een keuze tussen 2 of meer attribuutsoorten**
+**Use case 2: een keuze tussen 2 of meer attribuutsoorten**  
 Er is sprake van ofwel attribuutsoort A1 ofwel attribuutsoort A2. In MIM modelleren we daarom een keuze tussen de 2 attribuutsoorten A1 en A2. Het maken van deze keuze is verplicht.
 
 <aside class='example'>
@@ -806,14 +804,14 @@ Voorbeeld: bij een objecttype "Betalingsopdracht" moet naast het bedrag ook een 
  
 We modelleren daarom een *Keuze* 'BetalingskenmerkOfOmschrijving' met daarin een *Attribuutsoort* betalingskenmerk en een *Attribuutsoort* omschrijving.
 
-Het is bij deze use case niet de bedoeling om een derde attribuutsoort, zoals BetalingskenmerkOfOmschrijving, te introduceren als attribuutsoort van het objecttype. De aanhaking van de *Keuze* 'BetalingskenmerkOfOmschrijving' is daarom aan het **objecttype**.
+Het is bij deze use case niet de bedoeling om een derde attribuutsoort, zoals BetalingskenmerkOfOmschrijving, te introduceren als attribuutsoort van het objecttype. De aanhaking van de *Keuze* 'BetalingskenmerkOfOmschrijving' is daarom aan het objecttype.
 
 In dit voorbeeld vormt BetalingskenmerkOfOmschrijving en de aanhaking ervan op het objecttype de *Keuze* als geheel. De attribuutsoorten zelf zijn de keuze mogelijkheden, maar blijven in de modellering van de metaclass attribuutsoort en behoren in deze zin niet tot de modellering van de metaclass keuze.  
 
 Zonder de mogelijkheid van keuze zouden beide attribuutsoorten opgenomen zijn bij het objecttype als optionele velden, met een constraint dat een van beide gevuld moet zijn. Nadeel hiervan is dat de kardinaliteit dan niet erg duidelijk gemodelleerd is: die zou dan voor beide attribuutsoorten [0..1] moeten worden, maar dat doet geen recht aan het feit dat er één verplicht aanwezig moet zijn, en er ook geen twee naast elkaar mogen zijn. De werkelijke kardinaliteit voor een gekozen attribuutsoort is [1..1]. Met een constraint is dit te specificeren en derhalve ook op zich wel correct te modelleren, maar met een modellering van een keuze is dit veel duidelijker.
 
 
-**Use case 3: een keuze tussen meerdere manieren om invulling te geven aan 1 betekenisvol attribuutsoort van een objecttype**
+**Use case 3: een keuze tussen meerdere manieren om invulling te geven aan 1 betekenisvol attribuutsoort van een objecttype**  
 Er is sprake van ofwel attribuutsoort A0 en aanvullend hierbij een keuze tussen ofwel attribuutsoort A1 ofwel attribuutsoort A2. In MIM modelleren we daarom voor A1 en A2 een keuze tussen de 2 attribuutsoorten. Het maken van deze keuze is verplicht.
 
 <aside class='example'>
@@ -827,7 +825,7 @@ In dit voorbeeld vormt BetalingskenmerkOfOmschrijving de *Keuze* als geheel. De 
 *Opmerking: use case 2 en 3 zijn voor een groot deel overeenkomstig. De overeenkomst is dat de keuze tussen de twee attribuutsoorten betalingskenmerk en omschrijving hetzelfde gemodelleerd wordt, als een keuze, met bijvoorbeeld de naam BetalingskemerkOfOmschrijving. Het verschil zit in de aanhaking.
 
 
-**Use case 4: een keuze tussen relatiedoelen, als nadere invulling van een betekenisvolle relatiesoort van een objecttype**
+**Use case 4: een keuze tussen relatiedoelen, als nadere invulling van een betekenisvolle relatiesoort van een objecttype**  
 Er is sprake van een relatiesoort R0 en aanvullend hierbij een keuze tussen relatiedoel D1 of relatiedoel D2. In MIM modelleren we daarom een keuze tussen de 2 relatiedoelen D1 en D2. Het maken van deze keuze is verplicht.
 
 <aside class='example'>
@@ -900,7 +898,7 @@ alternatief. Er moet een keuze gemaakt worden. Deze keuze geldt primair voor de 
 *Toelichting* Neem hiervoor een door MIM in gebruik zijnde MIM-versie. 
 Kies bij voorkeur een zo recent mogelijke versie. 
 
-Bijvoorbeeld: 1.01 of 1.1 of 1.1.1 
+Bijvoorbeeld: 1.0.1 of 1.1 of 1.1.1 
 
 *Toepassing*: informatiemodel (verplicht)
 
@@ -1823,7 +1821,7 @@ Dit modelelement kan zijn: objecttype, gegevensgroeptype of relatieklasse.
 
 ### Waardebereik metagegevens
 
-Een aantal metagegevens zijn hebben als datatype CharacterString. Aanvullend geldt:
+Een aantal metagegevens hebben als datatype CharacterString. Aanvullend geldt:
 
 -   Voor lengtes geldt dat er alleen getallen in mogen (van het datatype
     Integer).
