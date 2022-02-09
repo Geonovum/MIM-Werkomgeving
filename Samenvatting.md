@@ -1,5 +1,5 @@
 Metamodel voor het beschrijven van informatiemodellen (MIM), versie 1.1.1.
 
-Met deze specificatie kan een informatiemodel gemaakt worden, in deze versie is dit uitgewerkt met UML en met Linked Data.
+Met MIM, Metamodel voor Informatiemodellen wordt een metamodel beschreven waar informatiemodellen mee gemaakt kunnen worden. Het beschrijft de metaklassen, metastructuur en metagegevens als grondslag voor een informatiemodel. Doel hiervan is standaardiseren van de methode van informatiemodelleren waarmee afstemming tussen informatiemodellen, vergelijkbaarheid in publicatie en gebruik van gemeenschappelijke tooling mogelijk wordt. MIM faciliteert hiermee het ontstaan van een stelsel van samenhangende informatiemodellen. MIM wordt conceptueel beschreven en is in deze versie uitgewerkt voor een toepassing in UML en in Linked Data.
 De beschrijving van MIM kent sinds versie 1.1 een algemeen deel, een deel in UML en nieuw toegevoegd in versie 1.1 is het hoofdstuk [Metamodel in Linked Data (LD)](#metamodel-in-linked-data-ld). Verder zijn er een aantal nieuwe mogelijkheden toegevoegd die voorzien in gebruikerswensen. 
 Versie 1.1.1 is gebruikt om een verzameling kleine aanpassingen te doen.

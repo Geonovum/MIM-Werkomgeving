@@ -80,7 +80,7 @@ Er zijn een aantal bijlages, dit zijn hulpmiddelen of aanvullingen op MIM.
 - De bijlage [Transformatie MIM - RDFS/OWL/SHACL](#transformatie-mim-rdfs-owl-shacl) beschrijft hoe een MIM model getransformeerd kan worden naar een RDF model dat gebruikt kan worden om daadwerkelijk Linked Data in uit te drukken en visa-versa (op instantie niveau, waarbij dit in overeenstemming is met de specificatie op informatiemodel niveau).
 
 ### Gebruikswijzer 
-Met de bouwstenen oftewel de modelelementen die in dit metamodel beschreven zijn is een informatiemodel te maken. Om zo'n informatiemodel te maken volstaat het veelal om van het hoofdstuk [Metamodel Algemeen] door te nemen, te kiezen voor modellering met ofwel UML ofwel linked data, en het bijbehorende hoofdstuk te lezen. De andere hoofdstukken kan je behandelen als naslagwerk, voor als er tijdens het modelleren vragen ontstaan. Neem vervolgens uw favoriete modelleertool en ga aan de slag. Voor bepaalde modelleertools zijn er hulpmiddelen gemaakt, zodat je met deze hulpmiddelen de modelelementen kan aanmaken door erop te klikken en bijvoorbeeld naar een diagram kan slepen en ook kan valideren of je model correct het MIM volgt (wat automatisch gaat als je de hulpmiddelen gebruikt). Tot slot is het mogelijk om naar informatiemodellen te kijken van organisaties die al een MIM informatiemodel hebben gepubliceerd. Voor specifieke modelleringen en vragen zullen er ook uitgewerkte voorbeelden worden gemaakt. 
+Met de bouwstenen oftewel de modelelementen die in dit metamodel beschreven zijn is een informatiemodel te maken. Om zo'n informatiemodel te maken volstaat het veelal om van het hoofdstuk [Metamodel Algemeen](#metamodel-algemeen) door te nemen, te kiezen voor modellering met ofwel UML ofwel linked data, en het bijbehorende hoofdstuk te lezen. De andere hoofdstukken kan je behandelen als naslagwerk, voor als er tijdens het modelleren vragen ontstaan. Neem vervolgens uw favoriete modelleertool en ga aan de slag. Voor bepaalde modelleertools zijn er hulpmiddelen gemaakt, zodat je met deze hulpmiddelen de modelelementen kan aanmaken door erop te klikken en bijvoorbeeld naar een diagram kan slepen en ook kan valideren of je model correct het MIM volgt (wat automatisch gaat als je de hulpmiddelen gebruikt). Tot slot is het mogelijk om naar informatiemodellen te kijken van organisaties die al een MIM informatiemodel hebben gepubliceerd. Voor specifieke modelleringen en vragen zullen er ook uitgewerkte voorbeelden worden gemaakt. 
 
 ### Wat is een informatiemodel
 Wanneer we informatie over bepaalde onderwerpen willen inwinnen, registreren of uitwisselen, dan is het van belang om deze informatie  eerst goed te beschrijven. We doen dit zodat het voor eenieder die met de informatie aan de slag gaat helder en eenduidig is:
@@ -157,7 +157,7 @@ techniek onafhankelijk.
 
 Het informatiemodel kan vervolgens uitgewerkt worden in verschillende soorten technische 
 datamodellen en schema's (zoals XML of JSON of specifieke invullingen hiervan). In MIM wordt 
-dit niveau 1 genoemd en voor MIM heeft dit niveau 1 niet de focus en is dit niveau buiten scope. 
+dit niveau 4 genoemd en voor MIM heeft dit niveau 4 niet de focus en is dit niveau buiten scope. 
 Wel staat MIM een model-gedreven werkwijze voor waarbij de modellen van niveau 4 gegenereerd 
 kunnen worden vanuit niveau 2 of 3.
 
@@ -231,7 +231,7 @@ met name de ontwerpers, bouwers en beheerders van ICT-voorzieningen.*
 Dit niveau is volledig in scope van MIM. 
 
 Ten aanzien van fysieke of technische datamodellen:
-- Een logisch informatiemodel is implementatie onafhankelijk en kan in naar meerdere technische modellen worden geïmplementeerd.
+- Een logisch informatiemodel is implementatie onafhankelijk en kan in meerdere technische modellen worden geïmplementeerd.
   Een fysiek of technisch datamodel is afhankelijk van de gekozen techniek of tooling die wordt gebruikt.
 
 #### Niveau 4: Fysiek of technisch gegevens- of datamodel
@@ -302,7 +302,7 @@ het van belang om de modellen in de juiste context te plaatsen. Dit laatste doen
 aan de hand van de vier lagen metamodel architectuur van de Object Management
 Group [[!OMG]]. In deze paragaaf gaan we op deze concepten in.
 
-**Vier lagen metamodel architectuur OMG**
+**Vier lagen metamodel architectuur OMG**  
 Voor de specificatie van het metamodel is gebruik gemaakt van dezelfde formele
 taal waarin de informatiemodellen zijn beschreven, namelijk UML. Het metamodel
 van deze informatiemodellen is een uitbreiding op het basale UML-metamodel.
@@ -371,7 +371,7 @@ Registraties en afnemers hiervan kunnen deze gebruiken voor de inrichting van
 hun situatie specifieke gegevenshuishouding. Belangrijk is dat de lezer eerst
 begrijpt wat we onder een informatiemodel en een metamodel verstaan en verder is
 het van belang de modellen in de juiste context te plaatsen. Dit laatste doen we
-aan de hand van de W3c open standaarden voor het specificeren van een ontologie.
+aan de hand van de W3C open standaarden voor het specificeren van een ontologie.
 
 Ook geeft Linked Data een specifieke invulling aan de niveaus waarin we informatiemodellen beschrijven:
 
@@ -379,9 +379,9 @@ Ook geeft Linked Data een specifieke invulling aan de niveaus waarin we informat
 2. **Niveau 2: conceptueel informatiemodel** wordt in Linked Data uitgedrukt met behulp van een metamodel vocabulaire. Deze vocabulaire, het metamodel van het informatiemodel, kan een eigen vocabulaire zijn (zoals de MIM-vocabulaire) of uitgaan van de bestaande vocabulaires. In deze laatste situatie, is het conceptueel informatiemodel ook direct een logisch informatiemodel.
 3. **Niveau 3: logisch informatiemodel** wordt in Linked Data uitgedrukt met behulp van de standaard vocabulaires RDF/RDFS ([[RDF11-PRIMER]]), OWL ([[OWL2-PRIMER]]) en [[SHACL]]. Daarbij geldt dat dit logisch informatiemodel OOK een conceptueel informatiemodel is. Doordat in Linked Data de representatie van informatie is gestandaardiseerd op basis van het RDF model, is er feitelijk geen of nauwelijks verschil tussen het conceptueel of logisch informatiemodel.
 
-Indien een MIM model wordt getypeerd als "logisch informatiemodel" dan kan dit model slechts zinvol in Linked Data worden uitgedrukt indien bij de opzet van dit model rekening gehouden is met de betekenis die dergelijke modelelementen in de standaard Linked Data vocabulaires hebben. Zie hiervoor de bijlage Transformatie van MIM modellen. Voor modellen die zowel een UML als een Linked Data implementatie vereisen, dan kan beter gekozen worden voor het type "conceptueel informatiemodel".
+Indien een MIM model wordt getypeerd als "logisch informatiemodel" dan kan dit model slechts zinvol in Linked Data worden uitgedrukt indien bij de opzet van dit model rekening gehouden is met de betekenis die dergelijke modelelementen in de standaard Linked Data vocabulaires hebben. Zie hiervoor de bijlage Transformatie van MIM modellen. Voor modellen die zowel een UML als een Linked Data implementatie vereisen kan beter gekozen worden voor het type "conceptueel informatiemodel".
 
-**Een ontologie voor het metamodel**
+**Een ontologie voor het metamodel**  
 Met een ontologie bedoelen we een model waarin we betekenis geven aan de termen die
 in een specifiek domein worden gebruikt. In geval van het MIM metamodel betreft dit het MIM-domein zelf.
 
@@ -394,7 +394,7 @@ ook welke constructies we wel en niet willen toestaan op het moment dat een mode
 een MIM model in Linked Data opstelt. Hiervoor maken we gebruik van de wereldwijd
 geaccepteerde internetstandaard [SHACL](https://www.w3.org/TR/shacl).
 
-**Een informatiemodel**
+**Een informatiemodel**  
 Het (conceptueel) informatiemodel zien we als een invulling van de MIM ontologie. Dit betekent dat
 de elementen in het informatiemodel exemplaren zijn van de klassen die in de MIM ontologie
 zijn gedefinieerd. Zo is onderstaand voorbeeld een voorbeeld waarin het modelelement
