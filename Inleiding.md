@@ -172,7 +172,7 @@ te weten niveau 2 en 3. Hieronder worden de niveaus nader toegelicht.
 
 Dit niveau beschrijft de werkelijkheid binnen het beschouwde domein (de ‘universe of discourse’) 
 door middel van de beschrijving van de daarin gehanteerde begrippen en hun relaties tot elkaar. 
-Een begrip wordt ook wel een concept genoemd, iets waar mensen aan denken en over praten. 
+Een begrip wordt ook wel een _concept_ genoemd, iets waar mensen aan denken en over praten. 
 Er zijn verschillende manieren om begrippen te beschrijven, zoals in een woordenboek, of in 
 een formele taal of vocabulaire, of in een taxonomie of in een model van begrippen waarin 
 de onderlinge samenhang is aangegeven en er zijn nog andere manieren - maar geen van allen zijn een informatiemodel. 
@@ -188,7 +188,7 @@ Ten aanzien van begrippen en informatiemodellen en het verschil hiertussen:
 - Een begrip is de combinatie van een term of woord en een definitie. Begrippen worden door 
 mensen gebruikt om mentaal de werkelijkheid te beschouwen en te begrijpen. 
 Een begrip omvat niet de betekenis en structuur van data. 
-- Van een aantal begrippen zal later blijken dat het een eigenschap is van een object 
+- Van een aantal begrippen ('concepten') zal later blijken dat het een eigenschap is van een object 
 waarover we informatie zullen gaan bijgehouden, maar dit zal zeker niet voor alle begrippen 
 zo zijn, begrippen beschrijven een domein vaak veel breder dan een informatiemodel dit doet. 
 Een aantal begrippen zullen in het informatiemodel beschouwd gaan worden als informatieobjecten, 
@@ -206,12 +206,14 @@ middel van de beschrijving van welke informatie (data met betekenis en structuur
 Een conceptueel informatiemodel is hierbij onafhankelijk van het ontwerp van en de implementatie in systemen. 
 Het geeft een zo getrouw mogelijke beschrijving van die werkelijkheid en is in natuurlijke taal geformuleerd. 
 
-Een dergelijk model definieert het ‘wat’: welke 'onderwerpen van gesprek' ('concepten', 'dingen’) worden onderscheiden 
-(in de beschouwde werkelijkheid), wat betekenen zij, hoe verhouden ze zich tot elkaar en welke informatie 
-(eigenschappen) is daarvan relevant. Het dient als taal waarmee domeinexperts kunnen communiceren met 
-informatieanalisten en verschaft een eenduidige interpretatie van die werkelijkheid ten behoeve van deze 
-communicatie. Met conceptueel wordt niet bedoeld abstract of hoog over, de beschrijvingen van de 
-informatie die beschikbaar is zijn heel precies en concreet.
+Een dergelijk model definieert het ‘wat’: welke 'onderwerpen van gesprek' ('concepten', 'dingen’) 
+worden onderscheiden in de beschouwde werkelijkheid. Wat betekenen zij, hoe verhouden ze zich tot elkaar en 
+welke informatie is daarvan relevant. Deze informatie wordt gemodelleerd als informatieobjecten met eigenschappen/kenmerken, oftewel waarvoor data 
+beschikbaar is (of zal zijn) en wordt ondergebracht in een informatiemodel. Dit informatiemodel dient als taal waarmee domeinexperts kunnen 
+communiceren met informatieanalisten en verschaft een eenduidige interpretatie van die werkelijkheid ten behoeve van deze 
+communicatie. 
+
+Met conceptueel wordt niet bedoeld abstract of hoog over, de beschrijvingen van de informatie die beschikbaar is zijn heel precies en concreet.
 
 *Een conceptueel informatiemodel wordt opgesteld voor gebruik door mensen,
 zodat ‘de business’ en de ICT-specialisten elkaar (gaan) begrijpen voor wat betreft 
@@ -222,11 +224,13 @@ Dit niveau is volledig in scope van MIM.
 Ten aanzien van logische informatiemodellen:
 - Een conceptueel informatiemodel is onafhankelijk van standaarden voor gegevensuitwisseling.
   Een logisch informatiemodel past deze wel toe (denk aan identificaties, geometrie versies, tijdslijnen van historie)  
-- Een conceptueel informatiemodel is onafhankelijk van een koppelvlak of keten, oftewel is keten overstijgend.  
-  Een logisch informatiemodel is specifiek voor een koppelvlak of keten of een bepaalde toepassing (met bijbehorende implementatie, database en interfaces).
+- Een conceptueel informatiemodel beschrijft de informatie in een informatiemdomen en is onafhankelijk van een koppelvlak of keten, 
+oftewel is keten of koppelvlak overstijgend. Een logisch informatiemodel is specifiek voor een koppelvlak of keten of een 
+bepaalde toepassing (met bijbehorende implementatie, database en interfaces).
 
 #### Niveau 3: Logisch informatie- of gegevensmodel
-Beschrijft hoe de, in het conceptuele model onderscheiden, concepten gebruikt
+
+Beschrijft hoe de, in het conceptuele informatiemodel onderscheiden, concepten gebruikt
 worden bij de interactie tussen systemen en hun gebruikers en tussen systemen
 onderling. Anders gezegd, een model van de representatie van informatie over de
 werkelijkheid in digitale registraties en in de uitwisseling daartussen. Het
@@ -236,13 +240,13 @@ niet de implementatie in die systemen. Een dergelijk model wordt in een formele
 taal beschreven en wordt waar mogelijk gegenereerd vanuit het conceptueel model.  
 
 *Het logisch model wordt opgesteld voor ICT-interoperabiliteit, voor gebruik door
-met name de ontwerpers, bouwers en beheerders van ICT-voorzieningen.*
+met name de ontwerpers, ontwikkelaars en beheerders van ICT-voorzieningen.*
 
 Dit niveau is volledig in scope van MIM. 
 
 Ten aanzien van fysieke of technische datamodellen:
-- Een logisch informatiemodel is implementatie onafhankelijk en kan in meerdere technische modellen worden geïmplementeerd.
-  Een fysiek of technisch datamodel is afhankelijk van de gekozen techniek of tooling die wordt gebruikt.
+- Een logisch informatiemodel is implementatie onafhankelijk en kan in meerdere technische modellen of formaten worden geïmplementeerd.
+  Een fysiek of technisch datamodel is afhankelijk van de gekozen techniek of tooling die wordt gebruikt en wordt daadwerkelijk technische geimplementeerd.
 
 #### Niveau 4: Fysiek of technisch gegevens- of datamodel
 Specificeert de structuur en eigenschappen van de technologie waarin de
