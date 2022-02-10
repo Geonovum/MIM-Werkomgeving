@@ -236,7 +236,10 @@ Diagram: groepering
 In deze paragraaf staan alle modelelementen gespecificeerd die gebruikt worden bij
 het maken van een informatiemodel. Bij elk modelelement is een definitie en een toelichting opgenomen.
 
-#### Objecten 
+Voordat het modelelement objecttype gedefinieerd wordt, en andere modelelementen, 
+wordt eerst beschreven wat objecten en gegevens zijn en hoe deze zich verhouden tot modelementen.
+
+**Objecten en gegevens**
 
 Een objecttype is een groep van gelijksoortige objecten. Zo zijn Jan en Katrien
 allebei objecten die gelijksoortig zijn en beide getypeerd kunnen worden als persoon. 
@@ -246,6 +249,8 @@ In het informatiemodel nemen we Persoon op met behulp van het modelelement Objec
 Diagram: [Kern](#kern)
 
 Om duidelijk(er) te maken wat wordt bedoeld kijken we eerst naar het begrip ‘object’.
+
+**Objecten **
 
 >   **Definitie Object**  
 >   Een ding, een tastbaar iets, in de werkelijkheid, zoals daarnaar gekeken
@@ -267,27 +272,7 @@ beschouwd als een verzameling gebouwen terwijl een ander domein daarin panden
 onderscheidt. Een object is voor een domein relevant als eigenschappen
 (kenmerken) daarvan van belang zijn voor het functioneren van dat domein.
 
-#### Objecttype 
-
->   **Definitie Objecttype**  
->   De typering van een groep objecten die binnen een
->   domein relevant zijn en als gelijksoortig worden beschouwd.
-
-*Toelichting* Jan, Piet en Marie zijn mensen die vanuit het Burgerzaken-domein
-beschouwd worden als objecten van het type ‘natuurlijk persoon’. In een ander
-domein, ‘de volksmond’, noemen we dit ‘mens’ wat ook een objecttype is. In weer
-een ander domein is Jan van het type ‘vergunninghouder’ en Piet en Marie niet,
-omdat aan hen (nog) nooit een vergunning verleend is. Objecttypen zijn een
-abstractie van de werkelijkheid oftewel we beogen hiermee de werkelijkheid zo
-getrouw mogelijk te beschrijven, binnen de context van het domein. Dit staat
-geheel los van het vastleggen van gegevens over objecten van een type in een
-registratie. Daartoe is veelal een interpretatie nodig (van die werkelijkheid
-cq. die objecttypen) naar eenheden die in een registratie vastgelegd kunnen
-worden (records, entiteiten e.d.) op basis van andere overwegingen.
-
-De objecten die in het beschouwde domein onderkend worden zijn zelf nooit abstract. Ze behoren altijd tot een concreet objecttype, en niet tot een abstract objecttype. Abstracte objecttypes worden wel gebruikt in de modellering, om generalisaties aan te duiden en de definitie. Zo kan bij het objecttype Pand bijvoorbeeld aangegeven worden dat dit een 'Element in de fysieke leefomgeving' is, en dat deze laatste als een abstract objecttype gezien moet worden (in ons domein). Meer over abstracte objecttypes is beschreven in [Abstracte objecttypes en concrete objecten](#abstracte-objecttypes-en-concrete-objecten).  
-
-#### Gegeven
+**Gegevens**
 
 Een object heeft kenmerken/eigenschappen waarvoor gegevens over bekend zijn. 
 
@@ -314,6 +299,26 @@ werkelijkheid vastgelegd in de tijd. Ofschoon de werkelijkheid nooit stilstaat,
 kan deze door het vastleggen van de gegevens toch worden bevroren.
 
 Het waargenomen feit dat twee objecten een relatie hebben wordt ook gezien als een gegeven. 
+
+#### Objecttype 
+
+>   **Definitie Objecttype**  
+>   De typering van een groep objecten die binnen een
+>   domein relevant zijn en als gelijksoortig worden beschouwd.
+
+*Toelichting* Jan, Piet en Marie zijn mensen die vanuit het Burgerzaken-domein
+beschouwd worden als objecten van het type ‘natuurlijk persoon’. In een ander
+domein, ‘de volksmond’, noemen we dit ‘mens’ wat ook een objecttype is. In weer
+een ander domein is Jan van het type ‘vergunninghouder’ en Piet en Marie niet,
+omdat aan hen (nog) nooit een vergunning verleend is. Objecttypen zijn een
+abstractie van de werkelijkheid oftewel we beogen hiermee de werkelijkheid zo
+getrouw mogelijk te beschrijven, binnen de context van het domein. Dit staat
+geheel los van het vastleggen van gegevens over objecten van een type in een
+registratie. Daartoe is veelal een interpretatie nodig (van die werkelijkheid
+cq. die objecttypen) naar eenheden die in een registratie vastgelegd kunnen
+worden (records, entiteiten e.d.) op basis van andere overwegingen.
+
+De objecten die in het beschouwde domein onderkend worden zijn zelf nooit abstract. Ze behoren altijd tot een concreet objecttype, en niet tot een abstract objecttype. Abstracte objecttypes worden wel gebruikt in de modellering, om generalisaties aan te duiden en de definitie. Zo kan bij het objecttype Pand bijvoorbeeld aangegeven worden dat dit een 'Element in de fysieke leefomgeving' is, en dat deze laatste als een abstract objecttype gezien moet worden (in ons domein). Meer over abstracte objecttypes is beschreven in [Abstracte objecttypes en concrete objecten](#abstracte-objecttypes-en-concrete-objecten).  
 
 #### Attribuutsoort  
 
