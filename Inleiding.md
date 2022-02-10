@@ -169,6 +169,7 @@ te weten niveau 2 en 3. Hieronder worden de niveaus nader toegelicht.
 
 
 #### Niveau 1: Model van begrippen 
+
 Dit niveau beschrijft de werkelijkheid binnen het beschouwde domein (de ‘universe of discourse’) 
 door middel van de beschrijving van de daarin gehanteerde begrippen en hun relaties tot elkaar. 
 Een begrip wordt ook wel een concept genoemd, iets waar mensen aan denken en over praten. 
@@ -189,17 +190,23 @@ mensen gebruikt om mentaal de werkelijkheid te beschouwen en te begrijpen.
 Een begrip omvat niet de betekenis en structuur van data. 
 - Van een aantal begrippen zal later blijken dat het een eigenschap is van een object 
 waarover we informatie zullen gaan bijgehouden, maar dit zal zeker niet voor alle begrippen 
-zo zijn, begrippen beschrijven een domein vaak veel breder dan een informatiemodel dit doet
-- Voor het bijhouden van informatie wordt een gedetailleerde eenduidige structuur 
+zo zijn, begrippen beschrijven een domein vaak veel breder dan een informatiemodel dit doet. 
+Een aantal begrippen zullen in het informatiemodel beschouwd gaan worden als informatieobjecten, 
+een aantal begrippen worden een kenmerk/eigenschap van deze informatieobjecten, 
+en een heel aantal begrippen zullen geen rol spelen in het informatiemodel omdat er geen data van is of komt.  
+- Voor het bijhouden van informatie wordt een gedetailleerde eenduidige structuur en betekenis 
 aangebracht die data gericht is, maar bij het modelleren van begrippen wordt dit nog niet gedaan. 
-De samenhang tussen informatie is hierbij vaak (bewust) beperkter dan de samenhang tussen begrippen.
+De samenhang tussen informatie is hierbij vaak (bewust) beperkter dan de samenhang tussen begrippen. 
+
 
 #### Niveau 2: Conceptueel informatiemodel
-Beschrijft de modellering van de werkelijkheid binnen het beschouwde domein door middel van de 
-beschrijving van welke informatie (data met betekenis en structuur) een rol speelt. 
+
+Een conceptueel informatiemodel beschrijft de modellering van de werkelijkheid binnen het beschouwde domein door 
+middel van de beschrijving van welke informatie (data met betekenis en structuur) een rol speelt. 
 Een conceptueel informatiemodel is hierbij onafhankelijk van het ontwerp van en de implementatie in systemen. 
 Het geeft een zo getrouw mogelijke beschrijving van die werkelijkheid en is in natuurlijke taal geformuleerd. 
-Een dergelijk model definieert het ‘wat’: welke ‘concepten’ (‘dingen’) worden onderscheiden 
+
+Een dergelijk model definieert het ‘wat’: welke 'onderwerpen van gesprek' ('concepten', 'dingen’) worden onderscheiden 
 (in de beschouwde werkelijkheid), wat betekenen zij, hoe verhouden ze zich tot elkaar en welke informatie 
 (eigenschappen) is daarvan relevant. Het dient als taal waarmee domeinexperts kunnen communiceren met 
 informatieanalisten en verschaft een eenduidige interpretatie van die werkelijkheid ten behoeve van deze 
