@@ -251,7 +251,7 @@ Om duidelijk(er) te maken wat wordt bedoeld kijken we eerst naar het begrip ‘o
 >   Een ding, een tastbaar iets, in de werkelijkheid, zoals daarnaar gekeken
 >   wordt vanuit een bepaald domein.
 
-Een object is geen modelelemenent in een informatiemodel. 
+NB. Een object is geen modelelement in een informatiemodel. 
 
 *Toelichting:* Met in de werkelijkheid wordt bedoeld dat het om de daadwerkelijke onderwerpen van gesprek gaat, de verzameling van de concrete tastbare dingen waarover we het hebben. Bijvoorbeeld, de persoon Jan, Paleis 't Loo.
 Het wordt veelal als niet politiek correct beschouwd mensen als
@@ -295,7 +295,7 @@ Een object heeft kenmerken/eigenschappen waarvoor gegevens over bekend zijn.
 >   De betekenisvolle formulering van een waargenomen feit, waaraan een waarde
 >   kan worden toegekend.
 
-Een gegeven is geen modelelemenent in een informatiemodel. 
+NB. Een gegeven is geen modelelement in een informatiemodel. 
 
 *Toelichting:* 
 
