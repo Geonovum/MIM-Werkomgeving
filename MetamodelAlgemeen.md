@@ -313,6 +313,8 @@ cetera. Met deze gegevens wordt een model (een selectief deel dus) van de
 werkelijkheid vastgelegd in de tijd. Ofschoon de werkelijkheid nooit stilstaat,
 kan deze door het vastleggen van de gegevens toch worden bevroren.
 
+Het waargenomen feit dat twee objecten een relatie hebben wordt ook gezien als een gegeven. 
+
 #### Attribuutsoort  
 
 Een attribuutsoort is de metaklasse waarmee kenmerken van een objecttype worden vastgelegd. Het zijn de kenmerken waarvoor gegevens worden bijgehouden.  
