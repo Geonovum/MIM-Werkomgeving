@@ -864,7 +864,7 @@ In [paragraaf 2.9](#toegestane-waarden-voor-bepaalde-metagegevens) is het waarde
 
 We onderkennen een aantal specifieke metagegevens op het niveau van het informatiemodel zelf. Deze staan beschreven in deze paragaaf.   
 
-#### Metagegeven: **Domein**
+#### Metagegeven: **Informatiedomein**
 
 >   **Definitie Informatiedomein**  
 >   Aanduiding van het functionele domein waartoe het informatiemodel behoort.
