@@ -180,7 +180,7 @@ de onderlinge samenhang is aangegeven en er zijn nog andere manieren - maar geen
 Een model van begrippen wordt opgesteld voor gebruik door mensen, met name ‘de business’.*
 
 Dit niveau is **niet** in scope van MIM. Dit niveau is niet volledig beschreven maar is ter illustratie 
-opgenomen. Er kan meer in zitten dan hier beschreven en er gaat meer aan vooraf. 
+in deze paragraaf opgenomen. Er kan meer in zitten dan hier beschreven en er gaat meer aan vooraf. 
 
 Ten aanzien van begrippen en informatiemodellen en het verschil hiertussen:
 
@@ -250,7 +250,7 @@ als mogelijk gegenereerd uit het logisch informatiemodel.
 *Deze specificaties worden opgesteld voor ‘machines’, te gebruiken door softwareontwikkelaars.*
 
 Dit niveau is **niet** in scope van MIM. Dit niveau is niet volledig beschreven maar is ter illustratie 
-opgenomen. Er kan meer in zitten dan hier beschreven en er kan meer na volgen.   
+in deze paragraaf opgenomen. Er kan meer in zitten dan hier beschreven en er kan meer na volgen.   
 
 #### Aanvullende opmerkingen bij de onderkende niveaus
 
