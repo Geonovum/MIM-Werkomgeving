@@ -152,9 +152,11 @@ Het modelleren van informatie gebeurt met en in een informatiemodel. Hierin word
 welke objecten welke kenmerken/eigenschappen hebben en of deze kenmerken/eigenschappen in het 
 beschouwde domein verplicht zijn of optioneel zijn enzovoorts. Het informatiemodel geeft 
 hierbij aan welke informatie wordt geregistreerd of uitgewisseld kan worden. Het beschrijft alle 
-informatie, en het beschrijft ook niet meer dan dat. In MIM valt een informatiemodel onder 
-niveau 2 of 3. MIM richt zich primair op niveau 2 en 3. Het informatiemodel is hierbij altijd 
-techniek onafhankelijk.
+informatie, en het beschrijft ook niet meer dan dat. Hierbij kan er ook gekozen worden om het domein 
+te onderverdelen in meerdere informatie domeinen en voor een informatiedomein scherp te definieren,
+meestal door aan te geven welke informatieobjecten in scope zijn van een informatiemodel en welke niet. 
+In MIM valt een informatiemodel onder niveau 2 of 3. MIM richt zich primair op niveau 2 en 3. 
+Het informatiemodel is hierbij altijd techniek onafhankelijk.
 
 Het informatiemodel kan vervolgens uitgewerkt worden in verschillende soorten technische 
 datamodellen en schema's (zoals XML of JSON of specifieke invullingen hiervan). In MIM wordt 
