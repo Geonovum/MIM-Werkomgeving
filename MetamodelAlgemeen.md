@@ -161,7 +161,7 @@ Diagram: Keuze tussen datatypen
 
 Dit diagram is uitgewerkt voor Objecttype. Voor Gegevensgroeptype en Relatieklasse geldt hetzelfde patroon.
 
-Een objecttype of gegevensgroep kan normaal een attribuutsoort hebben met een datatype (de lijn links onder). Als een objecttype meerdere op zichzelfstaande attribuutsoorten heeft en er sprake is van een keuze tussen een aantal van deze attribuutsoorten, dan is het objecttype gekoppeld met een keuze (de lijn links boven) en de keuze geeft 2 of meer attribuutsoorten aan (met elk een eigen datatype). 
+Een objecttype of gegevensgroep kan normaal een attribuutsoort hebben met een datatype (de lijn links onder). Als een objecttype meerdere op zichzelf staande attribuutsoorten heeft en er sprake is van een keuze tussen een aantal van deze attribuutsoorten, dan is het objecttype gekoppeld met een keuze (de lijn links boven) en de keuze geeft 2 of meer attribuutsoorten aan (met elk een eigen datatype). 
 
 ![](media/KeuzeAttribuutsoort2.png)
 
@@ -237,7 +237,7 @@ In deze paragraaf staan alle modelelementen gespecificeerd die gebruikt worden b
 het maken van een informatiemodel. Bij elk modelelement is een definitie en een toelichting opgenomen.
 
 Voordat het modelelement objecttype gedefinieerd wordt, en andere modelelementen, 
-wordt eerst beschreven wat objecten en gegevens zijn en hoe deze zich verhouden tot modelementen.
+wordt eerst beschreven wat objecten en gegevens zijn en hoe deze zich verhouden tot modelelementen.
 
 **Objecten en gegevens**
 
@@ -429,7 +429,7 @@ datatype», «Gestructureerd datatype», «Referentielijst», «Codelijst»,
 
 Meervoudige overerving of multiple-inheritance:
 
-Een subtype kan meerdere objectypen als generalisatie hebben. In het diagram [Kern](#kern) is dit aangegeven door een Objecttype als subtype naar o..* Generalisaties te laten verwijzen. Dat impliceert dat een subtype 0..* supertypen kan hebben.
+Een subtype kan meerdere objecttypen als generalisatie hebben. In het diagram [Kern](#kern) is dit aangegeven door een Objecttype als subtype naar o..* Generalisaties te laten verwijzen. Dat impliceert dat een subtype 0..* supertypen kan hebben.
 
 
 
@@ -853,7 +853,7 @@ Het is bij deze use case niet de bedoeling om twee nieuwe relatiesoorten, eigena
 
 ![](media/relatiedoelkeuze.png)
 
-Diagram: Voorbeeld van keuze tussen relatiedoelen uitgwerkt in een UML diagram.
+Diagram: Voorbeeld van keuze tussen relatiedoelen uitgewerkt in een UML diagram.
 
 In het voorbeeld vormen EigenaarKeuze en de twee relatiedoelen tezamen de keuze als geheel. De relatiedoelen zelf zijn de keuze mogelijkheden. De modellering van de relatiesoort eigenaar blijft hetzelfde en behoort niet tot de modellering van de metaclass keuze.   
 
@@ -876,7 +876,7 @@ We onderkennen een aantal specifieke metagegevens op het niveau van het informat
 >   **Definitie Informatiedomein**  
 >   Aanduiding van het functionele domein waartoe het informatiemodel behoort.
 
-*Toelichting* Bijvoorbeeld: brk. Wanneer bepaalde definities of identificaties van het informatiemodel in de wereld niet uniek zijn, omdat een ander informatiemodel dezelfde naam hanteert voor een modelelement, of eenzelfde structuur voor een identificerende eigenschap, dan is het mogelijk om deze uniek te maken met behulp van deze aanduiding.   
+*Toelichting* Bijvoorbeeld: BRK. Wanneer bepaalde definities of identificaties van het informatiemodel in de wereld niet uniek zijn, omdat een ander informatiemodel dezelfde naam hanteert voor een modelelement, of eenzelfde structuur voor een identificerende eigenschap, dan is het mogelijk om deze uniek te maken met behulp van deze aanduiding.   
 
 *Toepassing*: informatiemodel (verplicht)
 
@@ -1616,7 +1616,7 @@ betreft, zoals een CharacterString.
 >   **Definitie Indicatie abstract object**  
 >   Een indicatie die aangeeft of er objecten _kunnen_ bestaan die getypeerd worden als zijnde objecten (instanties) van alleen dit objecttype. Een abstract objecttype moet altijd de generalisatie zijn van één of meerdere objecttypes die niet abstract zijn. 
 
-N.B. Eén informatiemodel kan een abstract objecttype bevatten die _binnen dit informatiemodel_ een generalisatie is van geen enkel objecttype. Deze niet abstracte objecttypen kunnen zich immers ook buiten het informatiemodel bevinden en aldaar worden gespecificeerd. Dit komt voor bij informatiemodellen die een abstracte typering definieren waarop (concretere) informatiemodellen willen aansluiten en nadere invulling aan geven.  
+N.B. Eén informatiemodel kan een abstract objecttype bevatten die _binnen dit informatiemodel_ een generalisatie is van geen enkel objecttype. Deze niet abstracte objecttypen kunnen zich immers ook buiten het informatiemodel bevinden en aldaar worden gespecificeerd. Dit komt voor bij informatiemodellen die een abstracte typering definiëren waarop (concretere) informatiemodellen willen aansluiten en nadere invulling aan geven.  
 
 *Toelichting*
 
@@ -1719,7 +1719,7 @@ gegevensgroeptype.
 
 Een subtype verwijst met een generalisatie naar een supertype.
 
-*Toepassing*: Objectype en datatype.
+*Toepassing*: Objecttype en datatype.
 
 #### Metagegeven: **heeft datatype** / **datatype**
 
@@ -1739,7 +1739,7 @@ Een datatype wordt onder andere toegekend aan een attribuutsoort.
 
 *Toelichting*
 
-Een objectype kan een relatie hebben naar zichzelf of een ander objecttype.
+Een objecttype kan een relatie hebben naar zichzelf of een ander objecttype.
 
 *Toepassing*: Objecttype, Gegevensgroeptype.
 
@@ -1750,7 +1750,7 @@ Een objectype kan een relatie hebben naar zichzelf of een ander objecttype.
 
 *Toelichting*
 
-Een objectype kan een relatie hebben met en objecttype in een extern package.
+Een objecttype kan een relatie hebben met en objecttype in een extern package.
 
 *Toepassing*: Objecttype, Gegevensgroeptype.
 
@@ -1805,7 +1805,7 @@ Een attribuutsoort kan als datatype een keuze uit datatypen hebben.
 
 *Toelichting*
 
-Een keuze tussen attribuutsoorten kan als eigenschap aan een objectype, gegevensgroeptype of relatieklasse worden gekoppeld. 
+Een keuze tussen attribuutsoorten kan als eigenschap aan een objecttype, gegevensgroeptype of relatieklasse worden gekoppeld. 
 
 *Toepassing*: Objecttype, Gegevensgroeptype, Relatieklasse, Attribuutsoort.
 
@@ -1816,7 +1816,7 @@ Een keuze tussen attribuutsoorten kan als eigenschap aan een objectype, gegevens
 
 *Toelichting*
 
-Een keuze tussen relatiedoelen kan als eigenschap aan een objectype of gegevensgroeptype worden gekoppeld.
+Een keuze tussen relatiedoelen kan als eigenschap aan een objecttype of gegevensgroeptype worden gekoppeld.
 
 *Toepassing*: Objecttype, Gegevensgroeptype, Keuze.
 
@@ -1879,4 +1879,4 @@ Aanwijzing MIM-beheerder: metagegevens met een defaultwaarde mogen niet optionee
 | Kardinaliteit attribuut             | `1`               |                                                        
 | Aggregatietype                      | `Geen`            |  
 
-Opmerking met betrekking tot de kardinaliteit van relaties: deze staat niet in de tabel. Deze kennen geen defaultwaarde. De kardinaliteit aan de doel kant altijd moet worden aangegeven. De kardinaliteit aan de bron/eigenaar kant van een relatie is optioneel om in te vullen, wanneer er niets is ingevuld dan wordt er niets over de kardinaliteit gezegd en kent deze geen default waarde (in de praktijk betekent dit dat een kardinaliteit aan de bron kant als 0..* geimplementeerd wordt).
+Opmerking met betrekking tot de kardinaliteit van relaties: deze staat niet in de tabel. Deze kennen geen defaultwaarde. De kardinaliteit aan de doel kant altijd moet worden aangegeven. De kardinaliteit aan de bron/eigenaar kant van een relatie is optioneel om in te vullen, wanneer er niets is ingevuld dan wordt er niets over de kardinaliteit gezegd en kent deze geen default waarde (in de praktijk betekent dit dat een kardinaliteit aan de bron kant als 0..* geïmplementeerd wordt).

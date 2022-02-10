@@ -463,7 +463,7 @@ en daarom buiten scope worden geplaatst (ongeacht of deze optioneel of verplicht
 U beheert uw eigen extensie. Voor meer informatie over een specifieke extensie kan contact opgenomen worden
 met de beheerder van deze extensie. Wanneer meerdere organisaties gebruik willen maken van metamodel constructies 
 die in extensies beschreven zijn dan kan er gekeken worden of het wenselijk is om deze op te nemen in MIM. 
-Desgewenst kan een extensie gepubliceerd worden bij MIM of kan ernaar verwezen worden vanuit MIM. 
+Desgewenst kan een extensie gepubliceerd worden bij MIM-beheer of kan ernaar verwezen worden vanuit MIM-beheer. 
 
 <aside class='note'>
     Een metamodel extensie is expliciet niet bedoeld voor aanvullende constructies
