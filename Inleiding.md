@@ -443,7 +443,8 @@ Een informatiemodel uitgedrukt in Linked Data wordt geacht te voldoen aan het MI
 2. Het informatiemodel is uitgedrukt in RDF, RDFS, OWL en SHACL en is te transformeren naar de MIM vocabulaire op basis van de transformatieregels beschreven in de bijlage, [Transformatie MIM - RDFS/OWL/SHACL](#transformatie-mim-rdfs-owl-shacl).
 
 ### Een eigen extensie op het metamodel
-Indien er extra metamodelconstructies nodig zijn voor een informatiemodel, dan
+Indien er extra metamodelconstructies nodig zijn voor een informatiemodel, 
+zoals een extra metamodel element of extra metagegevens, dan
 kan dit metamodel uitgebreid worden met een aanvulling oftewel extensie (in de
 vorm van een extra bijlage) die door de betreffende organisatie toegevoegd wordt
 aan het onderhavige document. 
@@ -454,13 +455,15 @@ meerdere organisaties hierin geïnteresseerd zijn, kan een modelelement uit een
 extensie ook toegevoegd worden aan dit metamodel.
 
 Het is ook mogelijk om in de extensie aan te geven welke elementen uit dit
-metamodel *niet* ingezet worden in informatiemodellen. Denk hierbij 
+metamodel *niet* ingezet worden in uw informatiemodellen. Denk hierbij 
 bijvoorbeeld aan een bepaald modelelement die niet gebruikte wordt. Of aan bepaalde 
 metadata aspecten die niet ingewonnen worden voor uw informatiemodellen 
 en daarom buiten scope worden geplaatst (ongeacht of deze optioneel of verplicht zijn in MIM).
 
-Voor meer informatie over een specifieke extensie kan contact opgenomen worden
-met de beheerder van deze extensie.
+U beheert uw eigen extensie. Voor meer informatie over een specifieke extensie kan contact opgenomen worden
+met de beheerder van deze extensie. Wanneer meerdere organisaties gebruik willen maken van metamodel constructies 
+die in extensies beschreven zijn dan kan er gekeken worden of het wenselijk is om deze op te nemen in MIM. 
+Desgewenst kan een extensie gepubliceerd worden bij MIM of kan ernaar verwezen worden vanuit MIM. 
 
 <aside class='note'>
     Een metamodel extensie is expliciet niet bedoeld voor aanvullende constructies
