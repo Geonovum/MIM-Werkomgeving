@@ -236,12 +236,12 @@ Diagram: groepering
 In deze paragraaf staan alle modelelementen gespecificeerd die gebruikt worden bij
 het maken van een informatiemodel. Bij elk modelelement is een definitie en een toelichting opgenomen.
 
-#### Objecten en objecttype  
+#### Objecten 
 
 Een objecttype is een groep van gelijksoortige objecten. Zo zijn Jan en Katrien
-allebei objecten die gelijksoortig zijn. Het zijn allebei personen, oftewel het
-objecttype van beiden is Persoon. In het informatiemodel nemen we Persoon op met
-behulp van het modelelement Objecttype.  
+allebei objecten die gelijksoortig zijn en beide getypeerd kunnen worden als persoon. 
+Het zijn allebei personen, oftewel het objecttype van beiden is Persoon. 
+In het informatiemodel nemen we Persoon op met behulp van het modelelement Objecttype.  
 
 Diagram: [Kern](#kern)
 
@@ -250,6 +250,8 @@ Om duidelijk(er) te maken wat wordt bedoeld kijken we eerst naar het begrip ‘o
 >   **Definitie Object**  
 >   Een ding, een tastbaar iets, in de werkelijkheid, zoals daarnaar gekeken
 >   wordt vanuit een bepaald domein.
+
+Een object is geen modelelemenent in een informatiemodel. 
 
 *Toelichting:* Met in de werkelijkheid wordt bedoeld dat het om de daadwerkelijke onderwerpen van gesprek gaat, de verzameling van de concrete tastbare dingen waarover we het hebben. Bijvoorbeeld, de persoon Jan, Paleis 't Loo.
 Het wordt veelal als niet politiek correct beschouwd mensen als
@@ -264,6 +266,8 @@ dat ‘tastbaar iets’ relevant is. Zo wordt de gebouwde omgeving in het ene do
 beschouwd als een verzameling gebouwen terwijl een ander domein daarin panden
 onderscheidt. Een object is voor een domein relevant als eigenschappen
 (kenmerken) daarvan van belang zijn voor het functioneren van dat domein.
+
+#### Objecttype 
 
 >   **Definitie Objecttype**  
 >   De typering van een groep objecten die binnen een
@@ -283,14 +287,15 @@ worden (records, entiteiten e.d.) op basis van andere overwegingen.
 
 De objecten die in het beschouwde domein onderkend worden zijn zelf nooit abstract. Ze behoren altijd tot een concreet objecttype, en niet tot een abstract objecttype. Abstracte objecttypes worden wel gebruikt in de modellering, om generalisaties aan te duiden en de definitie. Zo kan bij het objecttype Pand bijvoorbeeld aangegeven worden dat dit een 'Element in de fysieke leefomgeving' is, en dat deze laatste als een abstract objecttype gezien moet worden (in ons domein). Meer over abstracte objecttypes is beschreven in [Abstracte objecttypes en concrete objecten](#abstracte-objecttypes-en-concrete-objecten).  
 
-#### Attribuutsoort en een groepering ervan   
+#### Gegeven
 
-Een attribuutsoort is de metaklasse waarmee kenmerken van een objecttype worden vastgelegd. Het zijn de kenmerken waarvoor gegevens worden bijgehouden.  
-Voordat we attribuutsoort definiëren kijken we eerst naar het begrip ‘gegeven’.
+Een object heeft kenmerken/eigenschappen waarvoor gegevens over bekend zijn. 
 
 >   **Definitie Gegeven**  
 >   De betekenisvolle formulering van een waargenomen feit, waaraan een waarde
 >   kan worden toegekend.
+
+Een gegeven is geen modelelemenent in een informatiemodel. 
 
 *Toelichting:* 
 
@@ -307,6 +312,11 @@ langere tijd bewaard kunnen worden. Dat kan op papier, in digitale vorm, et
 cetera. Met deze gegevens wordt een model (een selectief deel dus) van de
 werkelijkheid vastgelegd in de tijd. Ofschoon de werkelijkheid nooit stilstaat,
 kan deze door het vastleggen van de gegevens toch worden bevroren.
+
+#### Attribuutsoort  
+
+Een attribuutsoort is de metaklasse waarmee kenmerken van een objecttype worden vastgelegd. Het zijn de kenmerken waarvoor gegevens worden bijgehouden.  
+Voordat we attribuutsoort definiëren kijken we eerst naar het begrip ‘gegeven’.
 
 >   **Definitie Attribuutsoort**  
 >   De typering van gelijksoortige gegevens die voor een objecttype van
