@@ -250,7 +250,7 @@ Diagram: [Kern](#kern)
 
 Om duidelijk(er) te maken wat wordt bedoeld kijken we eerst naar het begrip ‘object’.
 
-**Objecten **
+**Objecten**
 
 >   **Definitie Object**  
 >   Een ding, een tastbaar iets, in de werkelijkheid, zoals daarnaar gekeken
