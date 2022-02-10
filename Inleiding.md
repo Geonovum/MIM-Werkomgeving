@@ -105,7 +105,7 @@ Het beschrijven vindt plaats door de informatie van de objecten die we beschouwd
 
 De Persoon in het informatiemodel is ene beschrijving vanuit het perspectief van het informatiedomein van waaruit we Jan en Katrien beschouwen. We bekijken Jan en Katrien dan ook wel als een van de *objecten* binnen een domein, die we vervolgens gaan modelleren als informatieobjecten.
 
-In het informatiemodel is hiervoor het *objecttype* Persoon gedefinieerd en Jan en Katrien zijn dus objecten van het objecttype Persoon. De objecten 'Domtoren' en 'Paleis Het Loo' typeren we tot het objecttype Gebouw. Objecttypen in een informatiemodel _representeren_ dus de dingen in de werkelijkheid. Het informatiemodel is een model van de verwerkelijkheid en richt zich op de informatie erover. 
+In het informatiemodel is hiervoor het *objecttype* Persoon gedefinieerd en Jan en Katrien zijn dus objecten van het objecttype Persoon. De objecten 'Domtoren' en 'Paleis Het Loo' typeren we tot het objecttype Gebouw. Objecttypen in een informatiemodel _representeren_ dus de dingen in de werkelijkheid. Het informatiemodel is een model van de werkelijkheid en richt zich op de informatie erover. 
 
 De kenmerken zoals de naam en geboortedatum, maar bijvoorbeeld ook identificatie en registratietijdstip, worden gezien als attributen van dit objecttype. We noemen een dergelijk kenmerk een *attribuutsoort*. 
 
@@ -124,7 +124,7 @@ de werkelijkheid’, vanuit het perspectief van het eigen domein bekeken.
 Merk op dat we hier veelal spreken over een registratie, omdat dit vaak zo is. Er zijn echter ook toepassingen van een informatiemodel waarin er alleen gegevens worden uitgewisseld, of waarbij er sprake is van gewoon de beschrijving van informatie, ongeacht of deze wel of niet in een registratie is opgenomen.
 
 Alleen dingen en kenmerken die relevant zijn voor een bepaald domein worden in het informatiemodel beschreven, zoals gebouwen binnen
-het domein Basisregistratie Topografie en personen binnen het domein Basisregistratie Personen. Een domein kan van alles zijn maar in het kader van dit metamodel gaat het om (beleids)sectoren die omwille van bestuurlijke en beheersmatige redenen geïdentificeerd en georganiseerd zijn. Voorbeelden: ruimtelijke ordening, grootschalige topografie, kadastrale informatie of gemeentelijk domein.
+het domein Basisregistratie Topografie en personen binnen het domein Basisregistratie Personen. Een domein kan van alles zijn maar in het kader van dit metamodel gaat het om (beleids-)sectoren die omwille van bestuurlijke en beheersmatige redenen geïdentificeerd en georganiseerd zijn. Voorbeelden: ruimtelijke ordening, grootschalige topografie, kadastrale informatie of gemeentelijk domein.
 
 Het is hierbij de bedoeling dat een informatiemodel de betekenis en definitie van de informatie zelf beschrijft, onafhankelijk van een
 mogelijke (technische) implementatie of toepassingsomgeving. Zodat het primair helder is wat de informatie betekent, ongeacht waar je deze informatie tegenkomt en ongeacht de gebruikte techniek. Anders gezegd, in koppelvlakken, ketens en implementaties is het vrij om de elk technisch uitwisselingsformaat of bijvoorbeeld database technologie te kiezen, door het informatiemodel daarin uit te drukken.
@@ -153,7 +153,7 @@ welke objecten welke kenmerken/eigenschappen hebben en of deze kenmerken/eigensc
 beschouwde domein verplicht zijn of optioneel zijn enzovoorts. Het informatiemodel geeft 
 hierbij aan welke informatie wordt geregistreerd of uitgewisseld kan worden. Het beschrijft alle 
 informatie, en het beschrijft ook niet meer dan dat. Hierbij kan er ook gekozen worden om het domein 
-te onderverdelen in meerdere informatie domeinen en voor een informatiedomein scherp te definieren,
+te onderverdelen in meerdere informatie domeinen en voor een informatiedomein scherp te definiëren,
 meestal door aan te geven welke informatieobjecten in scope zijn van een informatiemodel en welke niet. 
 In MIM valt een informatiemodel onder niveau 2 of 3. MIM richt zich primair op niveau 2 en 3. 
 Het informatiemodel is hierbij altijd techniek onafhankelijk.
@@ -246,7 +246,7 @@ Dit niveau is volledig in scope van MIM.
 
 Ten aanzien van fysieke of technische datamodellen:
 - Een logisch informatiemodel is implementatie onafhankelijk en kan in meerdere technische modellen of formaten worden geïmplementeerd.
-  Een fysiek of technisch datamodel is afhankelijk van de gekozen techniek of tooling die wordt gebruikt en wordt daadwerkelijk technische geimplementeerd.
+  Een fysiek of technisch datamodel is afhankelijk van de gekozen techniek of tooling die wordt gebruikt en wordt daadwerkelijk technische geïmplementeerd.
 
 #### Niveau 4: Fysiek of technisch gegevens- of datamodel
 Specificeert de structuur en eigenschappen van de technologie waarin de
@@ -279,7 +279,7 @@ beide typen beoogd is en de modellering conform het gekozen type te doen plaatsv
 informatiemodel moet vermeld worden om welk van beide typen het gaat. 
 - Het is voor de hand liggend maar niet persé noodzakelijk om voor een domein eerst een conceptueel 
 en daarna een logisch informatiemodel op te stellen. Met name bij een informatievoorziening 
-waarbij er meerdere koppelvlakken en/of doelgroeppen betrokken zijn met elk eigen informatiebehoeftes is het 
+waarbij er meerdere koppelvlakken en/of doelgroepen betrokken zijn met elk eigen informatiebehoeftes is het 
 aan te bevelen om eerst een conceptueel informatiemodel te maken, zonder zich al te richten naar een specifiek 
 koppelvlak of een specifieke doelgroep. Wanneer alle logische informatiemodellen een correcte uitwerking zijn van 
 het conceptuele informatiemodel dan zijn ze allemaal naar elkaar transformeerbaar via transformatie specificaties. 
@@ -359,7 +359,7 @@ onze informatiemodellen hanteren.
 
 Zo is bijvoorbeeld de ene class de andere class niet. Bijvoorbeeld als een Persoon het 
 onderwerp van gesprek is waarover we een aantal eigenschappen willen bijhouden dan modelleer je 
-de Persoon als een class met als duiding dat dit een objectype is, en bijvoorbeeld een 
+de Persoon als een class met als duiding dat dit een objecttype is, en bijvoorbeeld een 
 groepering van eigenschappen zoals geboortedatum en een geboorteplaats als een class 
 genaamd geboortegegevens met als duiding dat dit geen objecttype is. In veel specificatietalen, 
 met name de generiekere en de technische, gaat dit onderscheid verloren.
@@ -456,7 +456,7 @@ extensie ook toegevoegd worden aan dit metamodel.
 
 Het is ook mogelijk om in de extensie aan te geven welke elementen uit dit
 metamodel *niet* ingezet worden in uw informatiemodellen. Denk hierbij 
-bijvoorbeeld aan een bepaald modelelement die niet gebruikte wordt. Of aan bepaalde 
+bijvoorbeeld aan een bepaald modelelement die niet gebruikt wordt. Of aan bepaalde 
 metadata aspecten die niet ingewonnen worden voor uw informatiemodellen 
 en daarom buiten scope worden geplaatst (ongeacht of deze optioneel of verplicht zijn in MIM).
 
