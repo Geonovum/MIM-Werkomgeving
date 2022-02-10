@@ -53,7 +53,7 @@ Het metamodel beschrijven we in vijf hoofdstukken en een bijlage.
 Lees de [Inleiding](#inleiding) verder voor inzicht in wat we onder een
 informatiemodel en onder een metamodel verstaan, hoe deze de modellen zich
 verhouden tot UML en de vier lagen metamodel architectuur van de Object
-Management Group [[!OMG]], Linked Data en de internetstandaarden van de W3c en welke overige standaarden worden toegepast.
+Management Group [[!OMG]], Linked Data en de internetstandaarden van de W3C en welke overige standaarden worden toegepast.
 
 Het hoofdstuk [Metamodel Algemeen](#metamodel-algemeen) bevat de beschrijving van alle
 bouwstenen c.q. de modelelementen van het metamodel, in de vorm van definities en specificaties.
@@ -85,6 +85,7 @@ Met de bouwstenen oftewel de modelelementen die in dit metamodel beschreven zijn
 ### Wat is een informatiemodel
 Wanneer we informatie over bepaalde onderwerpen willen inwinnen, registreren of uitwisselen, dan is het van belang om deze informatie  eerst goed te beschrijven. We doen dit zodat het voor eenieder die met de informatie aan de slag gaat helder en eenduidig is:
 - waarover de informatie gaat, bv. informatie over een persoon of een gebouw, we noemen dit de objecten, de onderwerpen van gesprek
+- dat deze onderwerpen van gesprek gemodelleerd zijn als informatieobjecten 
 - de eigenschappen/kenmerken zelf, waarvan we informatie bijhouden, bv. de naam van een persoon of het bouwjaar van een gebouw
 - wat de betekenis is van die informatie, de semantiek
 - hoe deze informatie qua structuur in elkaar zit, qua onderlinge relaties en qua interne structuur van de data
@@ -92,23 +93,23 @@ Wanneer we informatie over bepaalde onderwerpen willen inwinnen, registreren of 
 We doen dit door een model te maken van de informatie. Een informatiemodel beschrijft daarom de structuur, semantiek en de eigenschappen van informatie over dingen in de werkelijkheid. De beschrijving van de informatie heeft de vorm van een model dat een gestructureerde weergave is van die werkelijkheid. Een dergelijk model is noodzakelijk om deze informatie te kunnen beheren en
 gebruiken (door mensen en machines) bij het communiceren over deze werkelijkheid, in registraties of anderszins, zoals het specificeren van de tussen registraties uit te wisselen gegevens of van de te bevragen informatie uit een registratie.
 
-Het beschrijven vindt plaats door de informatie van de objecten die we beschouwden te modelleren, met hun kenmerken en hun onderlinge relaties.
+Het beschrijven vindt plaats door de informatie van de objecten die we beschouwden te modelleren als informatieobjecten, met hun kenmerken en hun onderlinge relaties.
 
 <aside class='example'>
     Jan en Katrien zijn bijvoorbeeld ‘dingen in de werkelijkheid’. Zij hebben
     bepaalde kenmerken, zoals een naam en een geboortedatum. In een informatiemodel
-    komen Jan en Katrien zelf niet zelf voor. Zij worden in het informatiemodel gemodelleerd als een Persoon.
-    Ook hun gegevens, zoals het feit dat 10-10-1970 de geboortedatum van Jan is, komen niet voor.
-    In het informatiemodel is alleen het kenmerk geboortedatum gemodelleerd, als een kenmerk van een Persoon.
+    komen Jan en Katrien zelf niet zelf voor. Zij worden in het informatiemodel gemodelleerd als een informatieobject Persoon.
+    Ook hun gegevens, zoals het feit dat 10-10-1970 de geboortedatum van Jan is, komen niet voor in het informatiemodel.
+    In het informatiemodel is alleen het kenmerk geboortedatum gemodelleerd, als een kenmerk van een Persoon, met een definitie een toelichting. 
 </aside>
 
-De Persoon in het informatiemodel is ene beschrijving vanuit het perspectief van het informatiedomein van waaruit we Jan en Katrien beschouwen. We bekijken Jan en Katrien dan ook wel als een van de *objecten* binnen een domein.
+De Persoon in het informatiemodel is ene beschrijving vanuit het perspectief van het informatiedomein van waaruit we Jan en Katrien beschouwen. We bekijken Jan en Katrien dan ook wel als een van de *objecten* binnen een domein, die we vervolgens gaan modelleren als informatieobjecten.
 
-In het informatiemodel is hiervoor het *objecttype* Persoon gedefinieerd en Jan en Katrien zijn dus objecten van het objecttype Persoon. De objecten Domtoren en Paleis Het Loo typeren we tot het objecttype Gebouw. Objecttypen in een informatiemodel representeren dus de dingen in de werkelijkheid.
+In het informatiemodel is hiervoor het *objecttype* Persoon gedefinieerd en Jan en Katrien zijn dus objecten van het objecttype Persoon. De objecten 'Domtoren' en 'Paleis Het Loo' typeren we tot het objecttype Gebouw. Objecttypen in een informatiemodel _representeren_ dus de dingen in de werkelijkheid. Het informatiemodel is een model van de verwerkelijkheid en richt zich op de informatie erover. 
 
-De kenmerken zoals de naam en geboortedatum, maar bijvoorbeeld ook identificatie en registratietijdstip, worden gezien als attributen van dit objecttype. We noemen een dergelijk kenmerk een *attribuutsoort*.
+De kenmerken zoals de naam en geboortedatum, maar bijvoorbeeld ook identificatie en registratietijdstip, worden gezien als attributen van dit objecttype. We noemen een dergelijk kenmerk een *attribuutsoort*. 
 
-Sommige kenmerken geven relaties tussen objecten weer, zoals het gegeven dat Jan in Paleis Het Loo woont. Deze modelleren we door middel van een *relatiesoort*, tussen *objecttypen*, in dit geval tussen Persoon en Gebouw.
+Sommige kenmerken geven relaties tussen objecten weer, zoals het gegeven dat Jan in Paleis Het Loo woont. Deze modelleren we door middel van een *relatiesoort*, tussen *objecttypen*, in dit geval tussen de informatieobjecten Persoon en Gebouw.
 
 Alle objecten die we als gelijksoortig beschouwen typeren we in het informatiemodel tot een objecttype, de relaties tussen de objecten typeren we in het informatiemodel als een relatiesoort en de kenmerken van de objecten typeren we in het informatiemodel als attribuutsoorten. Op deze manier ontstaat een informatiemodel. In de van het informatiemodel afgeleide registratie kunnen vervolgens de objecten Jan en Katrien en de gegevens ervan, zoals de geboortedatum 10-10-1970, worden vastgelegd, en vervolgens uitgewisseld.
 
@@ -131,7 +132,7 @@ Er worden geen regels toegepast die gerelateerd zijn aan de manier waarop de geg
 opgeslagen, beheerd en uitgewisseld worden.
 
 De opname in een registratie kent vaak een inwinningsproces om gegevenswaarden over de feitelijke dingen in de werkelijkheid conform het
-informatiemodel in de registratie op te nemen. Dit is een belangrijk proces, maar valt buiten scope van het informatiemodel.
+informatiemodel in de registratie op te nemen. Dit is een belangrijk proces, maar valt buiten scope van het informatiemodel (scheiding proces en informatie, het proces is niet in scope van deze standaard).
 
 ### Typering van modellen en wat wel en niet in scope is van deze standaard
 Bij het modelleren van een domein zijn er een aantal beschouwingsniveaus, variërend van een zo 
