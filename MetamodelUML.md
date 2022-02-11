@@ -184,7 +184,7 @@ Er zijn drie metaklassen met de naam Keuze maar elke keer als extensie van een a
 | Keuze             | Keuze          | (UML) Datatype        |      | Datatype     |            |
 | Keuze             | Keuze          | (UML) Property        |      | Attribute    |            |
 
-- Als een UML Class met stereotype keuze is gebruikt, dan zitten hierin alleen attribuutsoorten en/of relatiesdoelen, de attribuutsoorten en relatiedoelen waaruit gekozen kan worden. 
+- Als een UML Class met stereotype keuze is gebruikt, dan zitten hierin alleen attribuutsoorten en/of relatiedoelen, de attribuutsoorten en relatiedoelen waaruit gekozen kan worden. 
 - Als een UML Datatype met stereotype keuze is gebruikt, dan zitten hierin alleen datatypes, de datatypes waaruit gekozen kan worden. 
 - Als een UML Property met stereotype keuze is gebruikt, dan is er sprake van een hulpconstructie om het modelelement Keuze aan te koppelen aan het MIM-modelelement waarvoor de keuze geldt.
 
@@ -832,7 +832,7 @@ automatisch voldoen aan dit metamodel. Dit profiel is te vinden op [MIM profiel 
 
 Het is niet vereist om dit profiel te gebruiken. Het is ook toegestaan om het profiel uit te breiden, naar de behoefte van de eigen
 organisatie. Maar, het is niet toegestaan om het profiel te wijzigen, dan wordt niet meer aan MIM voldaan. De reden hiervoor is dat 
-een dergelijk aanpassing niet beheerd kan worden door de MIM-beheerder en er ambiguiteit zal ontstaan bij de interpretatie van het model.  
+een dergelijk aanpassing niet beheerd kan worden door de MIM-beheerder en er ambiguïteit zal ontstaan bij de interpretatie van het model.  
 
 Voor andere UML tools kan ook een MIM profiel gemaakt worden. 
 
