@@ -1674,7 +1674,8 @@ De bindingen zijn ook in diagram vorm te lezen aan het begin van dit hoofdstuk, 
 
 ### Structuur metamodel
 
-#### Metagegeven: **heeft attribuut** / **attribuut**
+#### Metagegeven: **heeft attribuut** 
+Verkorte schrijfwijze: **attribuut**
 
 >   **Definitie heeft attribuut**  
 >   De binding van een attribuutsoort als eigenschap aan een objecttype.
@@ -1685,7 +1686,8 @@ Objecttypen, gegevensgroeptypen of relatieklassen hebben attributsoorten (0,1,n)
 
 *Toepassing*: Objecttype, gegevensgroeptype en relatieklasse.
 
-#### Metagegeven: **heeft gegevensgroep** / **gegevensgroep**
+#### Metagegeven: **heeft gegevensgroep** 
+Verkorte schrijfwijze: **gegevensgroep**
 
 >   **Definitie heeft gegevensgroep**  
 >   De binding van een gegevensgroep als groep van eigenschappen aan een
@@ -1698,7 +1700,8 @@ Objecttypen en relatieklassen hebben gegevensgroepen (0,1,n) voor het specificer
 *Toepassing*: Objecttypen met gegevensgroepen of een gegevensgroeptype dat zelf ook
 weer een gegevensgroeptype bevat.
 
-#### Metagegeven: **heeft gegevensgroeptype** / **gegevensgroeptype**
+#### Metagegeven: **heeft gegevensgroeptype** 
+Verkorte schrijfwijze: **gegevensgroeptype**
 
 >   **Definitie heeft gegevensgroeptype**  
 >   De binding van een gegevensgroeptype als waardetype aan een gegevensgroep.
@@ -1710,7 +1713,8 @@ gegevensgroeptype.
 
 *Toepassing*: Gegevensgroep.
 
-#### Metagegeven: **verwijst naar supertype** / **supertype**
+#### Metagegeven: **verwijst naar supertype** 
+Verkorte schrijfwijze: **supertype**
 
 >   **Definitie verwijst naar supertype**  
 >   De binding van een supertype aan een subtype middels een generalisatie.
@@ -1721,7 +1725,8 @@ Een subtype verwijst met een generalisatie naar een supertype.
 
 *Toepassing*: Objecttype en datatype.
 
-#### Metagegeven: **heeft datatype** / **datatype**
+#### Metagegeven: **heeft datatype**
+Verkorte schrijfwijze: **datatype**
 
 >   **Definitie heeft datatype**  
 >   De binding van een datatype aan een eigenschap.
@@ -1732,7 +1737,8 @@ Een datatype wordt onder andere toegekend aan een attribuutsoort.
 
 *Toepassing*: Attribuutsoort, keuze, referentie element, data element
 
-#### Metagegeven: **heeft relatiesoort** / **relatiesoort**
+#### Metagegeven: **heeft relatiesoort**
+Verkorte schrijfwijze: **relatiesoort**
 
 >   **Definitie heeft relatiesoort**  
 >   De binding van een objecttype aan een objecttype middels een relatiesoort.
@@ -1743,7 +1749,8 @@ Een objecttype kan een relatie hebben naar zichzelf of een ander objecttype.
 
 *Toepassing*: Objecttype, Gegevensgroeptype.
 
-#### Metagegeven: **heeft externe koppeling** / **externe koppeling**
+#### Metagegeven: **heeft externe koppeling**
+Verkorte schrijfwijze: **externe koppeling**
 
 >   **Definitie heeft externe koppeling**  
 >   De binding van een objecttype uit een extern package aan een objecttype.
@@ -1754,7 +1761,8 @@ Een objecttype kan een relatie hebben met en objecttype in een extern package.
 
 *Toepassing*: Objecttype, Gegevensgroeptype.
 
-#### Metagegeven: **heeft data element** / **data element**
+#### Metagegeven: **heeft data element**
+Verkorte schrijfwijze: **data element**
 
 >   **Definitie heeft data element**  
 >   De binding van een data element aan een gestructureerd datatype.
@@ -1765,7 +1773,8 @@ Een gestructureerd datatype bevat meerdere data elementen.
 
 *Toepassing*: gestructureerd datatype.
 
-#### Metagegeven: **bevat enumeratiewaarde** / **enumeratiewaarde**
+#### Metagegeven: **bevat enumeratiewaarde**
+Verkorte schrijfwijze: **enumeratiewaarde**
 
 >   **Definitie bevat enumeratie waarde**  
 >   De binding van een enumeratiewaarde aan een enumeratie.
@@ -1776,7 +1785,8 @@ Een enumeratie bevat enumeratiewaarden.
 
 *Toepassing*: enumeratie.
 
-#### Metagegeven: **bevat referentie element** / **referentie element**
+#### Metagegeven: **bevat referentie element**
+Verkorte schrijfwijze: **referentie element**
 
 >   **Definitie bevat referentie element**  
 >   De binding van een referentie element aan een referentielijst.
@@ -1787,7 +1797,8 @@ Een referentie lijst bevat referentie elementen.
 
 *Toepassing*: Referentielijst.
 
-#### Metagegeven: **heeft datatypekeuze** / **datatypekeuze**
+#### Metagegeven: **heeft datatypekeuze**
+Verkorte schrijfwijze: **datatypekeuze**
 
 >   **Definitie heeft keuzedatatype**  
 >   De binding van een keuze uit datatypen aan een attribuutsoort.
@@ -1798,7 +1809,8 @@ Een attribuutsoort kan als datatype een keuze uit datatypen hebben.
 
 *Toepassing*: Attribuutsoort.
 
-#### Metagegeven: **heeft keuzeattribuut** / **keuzeattribuut**
+#### Metagegeven: **heeft keuzeattribuut**
+Verkorte schrijfwijze: **keuzeattribuut**
 
 >   **Definitie heeft keuzeattribuut**  
 >   De binding van een keuze uit attributen aan een attribuutsoort of keuze.
@@ -1809,7 +1821,8 @@ Een keuze tussen attribuutsoorten kan als eigenschap aan een objecttype, gegeven
 
 *Toepassing*: Objecttype, Gegevensgroeptype, Relatieklasse, Attribuutsoort.
 
-#### Metagegeven: **heeft keuzerelatiedoel** / **keuzerelatiedoel**
+#### Metagegeven: **heeft keuzerelatiedoel**
+Verkorte schrijfwijze: **keuzerelatiedoel**
 
 >   **Definitie heeft keuzerelatiedoel**  
 >   De binding van een keuze uit relatiedoelen aan een objecttype.
@@ -1820,9 +1833,10 @@ Een keuze tussen relatiedoelen kan als eigenschap aan een objecttype of gegevens
 
 *Toepassing*: Objecttype, Gegevensgroeptype, Keuze.
 
-#### Metagegeven: **heeft constraint** / **constraint**
+#### Metagegeven: **heeft constraint**
+Verkorte schrijfwijze: **constraint**
 
->   **Definitie heef constraint / constraint**
+>   **Definitie heef constraint** 
 >   De binding van een constraint aan een modelelement.
 
 Het modelelement die een constraint heeft kan zijn: objecttype, relatieklasse, gegevensgroeptype.
