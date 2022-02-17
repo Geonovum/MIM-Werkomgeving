@@ -193,7 +193,7 @@ var respecConfig =
     "iso-11404":
     {
       title:      "11404:2008 Information technology – General Purpose Datatypes (GPD)",
-      href:       "http://noraonline.nl/wiki/Gegevensbeschrijvingen/Handreiking",
+      href:       "https://www.nen.nl/nen-iso-iec-11404-2008-en-122652",
       status:     "",
       publisher:  "",
       company:    "NEN-ISO/IEC",
