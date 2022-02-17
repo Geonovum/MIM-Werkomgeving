@@ -1,4 +1,4 @@
-Metamodel voor het beschrijven van informatiemodellen (MIM), versie 1.1.1.
+Metamodel voor het beschrijven van informatiemodellen (MIM), **versie 1.1.1**.
 
 Met MIM, het Metamodel voor Informatie Modellering, wordt een metamodel beschreven waar informatiemodellen mee gemaakt kunnen worden. Het beschrijft de metaklassen, metastructuur en metagegevens als grondslag voor een informatiemodel. Doel hiervan is standaardiseren van de methode van informatiemodelleren waarmee afstemming tussen informatiemodellen, vergelijkbaarheid in publicatie en gebruik van gemeenschappelijke tooling mogelijk wordt. MIM faciliteert hiermee het ontstaan van een stelsel van samenhangende informatiemodellen. 
 

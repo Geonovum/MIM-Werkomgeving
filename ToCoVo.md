@@ -40,4 +40,3 @@ Versie 1.1.1 van MIM is uitgebracht om een aantal kleine aanpassingen te doen di
 
 Dick Krijtenburg, Geonovum
 
-11 januari 2022
