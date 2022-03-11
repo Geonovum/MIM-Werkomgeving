@@ -68,7 +68,7 @@
 			</Content>
 		</UMLProfile>
 		<UMLProfile profiletype="uml2">
-			<Documentation id="EDFDE9C6-3" name="MIMtest1.1.1" version="1.1.1" notes="test mim1.1.1"/>
+			<Documentation id="EDFDE9C6-3" name="MIM" version="1.1.1" notes="test mim1.1.1"/>
 			<Content>
 				<Stereotypes>
 					<Stereotype name="Attribuutsoort" notes="De typering van gelijksoortige gegevens die voor een objecttype van toepassing is." cx="0" cy="0" bgcolor="16777164" fontcolor="0" bordercolor="0" borderwidth="1" hideicon="0">
