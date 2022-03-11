@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<UMLProfile profiletype="uml2">
+	<Documentation id="29A061BB-D" name="MIM_Keuzeattribuut" version="1.1" notes="MIM Keuzeattribuut"/>
+	<Content>
+		<Stereotypes>
+			<Stereotype name="Keuze" notes="" cx="0" cy="0" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+				<AppliesTo>
+					<Apply type="Attribute"/>
+				</AppliesTo>
+				<TaggedValues>
+					<Tag name="Begrip" type="" description="Verwijzing naar een begrip. De verwijzing heeft de vorm van een term of een URI." unit="" values="" default=""/>
+					<Tag name="Herkomst" type="" description="De registratie of het informatiemodel waaraan de attribuutsoort ontleend is dan wel de eigen organisatie  indien het door de eigen organisatie toegevoegd is." unit="" values="" default=""/>
+					<Tag name="Herkomst definitie" type="" description="De registratie of het informatiemodel waaruit de definitie is overgenomen dan wel een aanduiding die aangeeft uit welke bronnen de defintie is samengesteld." unit="" values="" default=""/>
+					<Tag name="Datum opname" type="" description="De datum waarop de attribuutsoort is opgenomen in het informatiemodel." unit="" values="" default=""/>
+					<Tag name="Indicatie materiële historie" type="enumeration" description="Indicatie of de materiële historie van de attribuutsoort te bevragen is. Materiële historie geeft aan wanneer een verandering is opgetreden in de werkelijkheid die heeft geleid tot verandering van de attribuutwaarde." unit="" values="Ja,Nee,Zie groep" default=""/>
+					<Tag name="Indicatie formele historie" type="enumeration" description="Indicatie of de formele historie van de attribuutsoort te bevragen is. Formele historie geeft aan wanneer in de administratie een verandering is verwerkt van de attribuutwaarde (wanneer was de verandering bekend en is deze verwerkt)." unit="" values="Ja,Nee,Zie groep" default=""/>
+					<Tag name="Authentiek" type="enumeration" description="Aanduiding of het een authentiek gegeven (attribuutsoort) betreft." unit="" values="Authentiek,Basisgegeven,Landelijk kerngegeven,Gemeentelijk kerngegeven,Overig" default=""/>
+					<Tag name="Toelichting" type="" description="Een inhoudelijke toelichting op de attribuutsoort." unit="" values="" default="&lt;memo&gt;"/>
+				</TaggedValues>
+			</Stereotype>
+		</Stereotypes>
+		<TaggedValueTypes/>
+		<ViewDefinitions/>
+		<Metamodel/>
+	</Content>
+</UMLProfile>
