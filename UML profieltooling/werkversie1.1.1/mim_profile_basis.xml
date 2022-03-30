@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="windows-1252"?>
 <UMLProfile profiletype="uml2">
-	<Documentation id="EDFDE9C6-3" name="MIM" version="1.1.1" notes="test mim1.1.1"/>
+	<Documentation id="EDFDE9C6-3" name="MIM" version="1.1.1" notes="MIM"/>
 	<Content>
 		<Stereotypes>
 			<Stereotype name="Attribuutsoort" notes="De typering van gelijksoortige gegevens die voor een objecttype van toepassing is." cx="0" cy="0" bgcolor="16777164" fontcolor="0" bordercolor="0" borderwidth="1" hideicon="0">
@@ -120,7 +120,7 @@
 					<Tag name="Indicatie formele historie" type="enumeration" description="Indicatie of de formele historie van het kenmerk van het object bijgehouden wordt en te bevragen is." unit="" values="Ja,Nee,Zie groep" default=""/>
 					<Tag name="Authentiek" type="enumeration" description="Aanduiding of het kenmerk een authentiek gegeven betreft." unit="" values="Authentiek,Basisgegeven,Wettelijk gegeven,Landelijk kerngegeven,Overig" default=""/>
 					<Tag name="Indicatie afleidbaar" type="" description="Aanduiding dat gegeven afleidbaar is uit andere attribuut- en/of relatiesoorten." unit="" values="" default=""/>
-					<Tag name="Mogelijk geen waarde" type="" description="Aanduiding dat van een aspect geen waarde is geregistreerd, maar dat onduidelijk is of de waarde er werkelijk ook niet is." unit="" values="" default=""/>
+					<Tag name="Mogelijk geen waarde" type="" description="Aanduiding dat van een aspect geen waarde is geregistreerd, maar dat onduidelijk is of de waarde er werkelijk ook niet is." unit="" values="" default="Nee"/>
 				</TaggedValues>
 			</Stereotype>
 			<Stereotype name="Gegevensgroep" notes="Een typering van een groep van gelijksoortige gegevens die voor een objecttype van toepassing is." cx="0" cy="0" bgcolor="16777164" fontcolor="0" bordercolor="0" borderwidth="1" hideicon="0">
@@ -273,7 +273,7 @@
 					<Tag name="Indicatie materiële historie" type="enumeration" description="Indicatie of de materiële historie van het kenmerk van het object te bevragen is." unit="" values="Ja,Nee,Zie groep" default=""/>
 					<Tag name="Indicatie formele historie" type="enumeration" description="Indicatie of de formele historie van het kenmerk van het object bijgehouden wordt en te bevragen is." unit="" values="Ja,Nee,Zie groep" default=""/>
 					<Tag name="Authentiek" type="enumeration" description="Aanduiding of het kenmerk een authentiek gegeven betreft." unit="" values="Authentiek,Basisgegeven,Wettelijk gegeven,Landelijk kerngegeven,Overig" default=""/>
-					<Tag name="Mogelijk geen waarde" type="" description="Aanduiding dat van een aspect geen waarde is geregistreerd, maar dat onduidelijk is of de waarde er werkelijk ook niet is." unit="" values="" default=""/>
+					<Tag name="Mogelijk geen waarde" type="" description="Aanduiding dat van een aspect geen waarde is geregistreerd, maar dat onduidelijk is of de waarde er werkelijk ook niet is." unit="" values="" default="Nee"/>
 				</TaggedValues>
 			</Stereotype>
 			<Stereotype name="Relatierol" notes="De benaming van de manier waarop een object deelneemt aan een relatie met een ander object." cx="0" cy="0" bgcolor="16777164" fontcolor="0" bordercolor="0" borderwidth="1" hideicon="0">
@@ -289,7 +289,7 @@
 					<Tag name="Indicatie materiële historie" type="enumeration" description="Indicatie of de materiële historie van het kenmerk van het object te bevragen is." unit="" values="Ja,Nee,Zie groep" default=""/>
 					<Tag name="Indicatie formele historie" type="enumeration" description="Indicatie of de formele historie van het kenmerk van het object bijgehouden wordt en te bevragen is." unit="" values="Ja,Nee,Zie groep" default=""/>
 					<Tag name="Authentiek" type="enumeration" description="Aanduiding of het kenmerk een authentiek gegeven betreft." unit="" values="Authentiek,Basisgegeven,Wettelijk gegeven,Landelijk kerngegeven,Overig" default=""/>
-					<Tag name="Mogelijk geen waarde" type="" description="Aanduiding dat van een aspect geen waarde is geregistreerd, maar dat onduidelijk is of de waarde er werkelijk ook niet is." unit="" values="" default=""/>
+					<Tag name="Mogelijk geen waarde" type="" description="Aanduiding dat van een aspect geen waarde is geregistreerd, maar dat onduidelijk is of de waarde er werkelijk ook niet is." unit="" values="" default="Nee"/>
 				</TaggedValues>
 			</Stereotype>
 			<Stereotype name="Relatiesoort" notes="De typering van het structurele verband tussen een object van een objecttype en een (ander) object van een ander (of hetzelfde) objecttype." cx="0" cy="0" bgcolor="16777164" fontcolor="0" bordercolor="0" borderwidth="1" hideicon="0">
@@ -309,7 +309,7 @@
 					<Tag name="Indicatie formele historie" type="enumeration" description="Indicatie of de formele historie van het kenmerk van het object bijgehouden wordt en te bevragen is." unit="" values="Ja,Nee,Zie groep" default=""/>
 					<Tag name="Authentiek" type="enumeration" description="Aanduiding of het kenmerk een authentiek gegeven betreft." unit="" values="Authentiek,Basisgegeven,Wettelijk gegeven,Landelijk kerngegeven,Overig" default=""/>
 					<Tag name="Indicatie afleidbaar" type="" description="Aanduiding dat gegeven afleidbaar is uit andere attribuut- en/of relatiesoorten." unit="" values="" default=""/>
-					<Tag name="Mogelijk geen waarde" type="" description="Aanduiding dat van een aspect geen waarde is geregistreerd, maar dat onduidelijk is of de waarde er werkelijk ook niet is." unit="" values="" default=""/>
+					<Tag name="Mogelijk geen waarde" type="" description="Aanduiding dat van een aspect geen waarde is geregistreerd, maar dat onduidelijk is of de waarde er werkelijk ook niet is." unit="" values="" default="Nee"/>
 				</TaggedValues>
 			</Stereotype>
 			<Stereotype name="View" notes="Een groepering van objecttypen die gespecificeerd zijn in een extern informatiemodel en vanuit het perspectief van het eigen informatiemodel inzicht geeft welke gegevens van deze objecttypen relevant zijn binnen het eigen informatiemodel." cx="0" cy="0" bgcolor="16777164" fontcolor="0" bordercolor="0" borderwidth="1" hideicon="0">
