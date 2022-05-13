@@ -92,48 +92,59 @@ Dit probleem wordt veroorzaakt doordat een diagram en een toolbox aan elkaar gek
 
 ## Gebruik Quick Linker
 
-De Quick Linker is een hulpmiddel om snel en eenvoudig relaties te kunnen leggen tussen verschillende elementen. Het voordeel hiervan is dat het de gebruiker inzicht geeft in de volgens MIM toegestane relaties. Je kunt de Quick Linker op drie manieren inzetten, namelijk voor het:
+De Quick Linker is een hulpmiddel om snel en eenvoudig relaties te kunnen leggen tussen verschillende elementen. Het voordeel hiervan is dat het de gebruiker inzicht geeft in de volgens MIM toegestane relaties. De Quick Linker is beschikbaar via een icoontje dat rechtsboven een diagramelement verschijnt op het moment dat je het selecteert.
+
+![](Media/mim_ql_icon.jpg)
+
+Je kunt de Quick Linker op drie manieren inzetten, namelijk voor het:
 
  - [Verbinden van twee bestaande modelelementen](#verbinden-bestaande-modelelementen)
  - [Creëren van nieuwe modelelementen](#nieuw-modelelement)
  - [Creëren van meerdere modelelemten tegelijk](#meerdere-nieuwe-modelelementen)
 
-De Quick Linker is beschikbaar via een icoontje dat rechtsboven een diagramelement verschijnt op het moment dat je het selecteert.
-
-![](Media/mim_ql_icon.jpg)
-
-> **Let op**: om de Quick Linker te kunnen gebruiken, dient er tenminste één modelelement in het diagram aanwezig te zijn. 
-
-
-
 Hieronder beschrijven we elke methode afzonderlijk.
 
 ### Verbinden bestaande modelelementen
-Klik met de muis op het icoon en trek een lijn naar het object waarmee je het wilt verbinden
-Er verschijnt een stippellijn en een menu.
-
-![](Media/mim_ql_generalization.jpg)
+ - Klik met de muis op het icoon
+ - Houd de muisknop ingedrukt en trek een lijn naar het object waarmee je het wilt verbinden
+ - Er verschijnt een stippellijn en een menu.
 
 ![](Media/mim_ql_connect_elements.jpg)
 
-### Nieuw modelelement
-Klik met de muis op het icoon en trek een lijn naar een lege plek in het diagram.
-![](Media/mim_ql_draw_relation.jpg)
+ - Selecteer het gewenste type MIM-relatie (bijvoorbeeld: `«Generalisatie»`.
+
 ![](Media/mim_ql_generalization.jpg)
 
-voorwaarde; er moet tenminste één nieuw modelelement aanwezig zijn.
-van zelfde soort of toegestane regel.
+### Nieuw modelelement
+Je kunt ook vanuit een bestaand element een nieuw modelelement creëren. Dat gaat als volgt:
+
+ - Klik met de muis op het icoon
+ - Houd de muisknop ingedrukt en trek een lijn naar een lege plek in het diagram.
+ - Er verschijnt een stippellijn en een menu.
+
+![](Media/mim_ql_draw_relation.jpg)
+
+ - Dit menu ziet er anders uit dan bij het verbinden van twee bestaande elementen.
+ - Navigeer naar '_MIM_' en selecteer het gewenste type MIM-relatie (bijvoorbeeld: `«Generalisatie»`)
+ - 
+![](Media/mim_ql_generalization.jpg)
 
 ### Meerdere nieuwe modelelementen
-Klik met de muis op het icoon en trek een lijn naar een lege plek in het diagram.
+Ook is het mogelijk om vanuit een bestaand element meerdere én verschillende soorten modelelementen in één keer te creëren. Dat gaat als volgt:
+
+ - Klik met de muis op het icoon
+ - Houd de muisknop ingedrukt en trek een lijn naar een lege plek in het diagram.
+ - Er verschijnt een stippellijn en een menu.
 
 ![](Media/mim_ql_create_multiple.jpg)
 
-Definieer meerder elementen
+ - Navigeer naar '_Create Multiple Elements_'.
+ - Er verschijnt een nieuw venster.
 
 ![](Media/mim_ql_define_multiple.jpg)
 
-Resultaat:
+ - Defineer in dit venster de elementen in de eerste kolom ('_Name_') en selecteer het gewenste type relatie in de derde kolom ('_Type_').
+ - Klik op '_Ok_' als je klaar bent.
 
 ![](Media/mim_ql_result_multiple.jpg)
 
