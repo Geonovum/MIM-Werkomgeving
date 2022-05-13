@@ -15,9 +15,11 @@ Enterprise Architect versie: 15.2
     - Kies '_Resources_' (onder '_Explore_')
  - Klik op '_MDG Technologies_'
 
- > **Let op**: hier moet je de keuze maken of je de toolbox op model- of gebruikersniveau importeert.
+ > **Let op**: hier moet je de keuze maken of je de toolbox op model- of gebruikersniveau importeert. Beide hebben voor- en nadelen: 
  >  - **Model**: alleen te gebruiken in het huidige EA-project. Voor elke nieuw project moet je de toolbox opnieuw importeren.
  >  - **User**: te gebruiken in alle EA-projecten. Je hoeft de toolbox slechts éénmalig te importeren.
+
+ > **Tip!** Indien binnen jouw EA-omgeving ook een toolbox van een extensie op het MIM aanwezig is (bijvoorbeeld voor de BRO), dan is het raadzaam om de toolboxen alleen op model-niveau te importeren. Indien tenminste één van de twee op user-niveau is geïmporteerd, kan dit bij het toewijzen van stereotypen verwarring opleveren. Veel stereotypen hebben exact dezelfde naam en voor EA is het dan onduidelijk welke het moet kiezen. De bovenstaande aanpak houdt de werkwijze zuiverder.  
 
  - Klik met de rechtermuisknop op '_Model Technologies_' of '_User Technologies_'.
  - Selecteer '_Import technology_'.
@@ -116,4 +118,4 @@ Deze instructie is bedoeld voor het verwijderen van toolboxen die je niet meer w
  - Met het checkbox in de kolom '_Enabled_' kun je ervoor kiezen om bepaalde bepaalde toolboxen uit te zetten. Dit doe je door het vinkje te verwijderen.
  - Ga verder met de laatste stappen van het [importeren van de MIM-toolbox](#importeren-mim-toolbox).
 
- > **Let op**: indien je toolboxen gebruikt met gelijknamige modelelementen, bijvoorbeeld oudere MIM-toolboxen of NEN3610 BRO Grouping-NL, dan kan dit bij het toewijzen van het stereotype «Relatierol» leiden tot een verwijzing naar het 'verkeerde' profiel. Enterprise Architect doet dit automatisch. Hierdoor beschikt het stereotype niet over de juiste tagged values.
+ > **Let op**: indien je toolboxen gebruikt met gelijknamige modelelementen, bijvoorbeeld oudere MIM-toolboxen of NEN3610 BRO Grouping-NL, dan kan dit bij het toewijzen van het stereotype «Relatierol» leiden tot een verwijzing naar het 'verkeerde' profiel. Enterprise Architect doet dit automatisch. Hierdoor beschikt het stereotype bijvoorbeeld niet over de gewenste tagged values.
