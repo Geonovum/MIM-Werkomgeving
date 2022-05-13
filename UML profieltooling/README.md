@@ -12,6 +12,10 @@
  1. `«profile» Keuzerelatie`
  1. `«profile» MIM`
  1. `«profile toolbox» MIM`
+ 1. DIAGRAM
+ 1. QUICKLINKER
+
+![](Media/MIM_01_profile_benodigde_profielen.jpg)
 
 ## NOG ONDERBRENGEN
  - Met al die profielen maak je een MDG MIM toolbox v1.1.1.xml
@@ -33,6 +37,8 @@
  - Typ: profile name: "MIM"
  - Kies: `<path>`
  - typ: version: `<versienummer>` (bijv.:1.1.1)
+
+![](Media/MIM_02_profile_publish_as_uml_settings.jpg)
 
 Let op er zijn twee belangrijke voorwaarden
  > **opm.**: [**CONTROLEREN**]De profile name moet overeenkomenm met de naam van het package
@@ -104,14 +110,14 @@ Als je diagram rtoevoegd moet je drie stappen doorlopen bij het selecteren van p
 ## SCREENSHOTS (NOG PLAATSEN)
 > **Opm.**: voor diagram nog één afbeelding wijzigen (MDG tech wizard - contents), kruis diagram ... aan en afbeelding diagram selection toevoegen
 
-![tekst](media/MIM_01_profile_benodigde_profielen.jpg)
-![tekst](media/MIM_02_profile_publish_as_uml_settings.jpg)
-![tekst](media/MIM_03_publish_as_UML_or_MDG.jpg)
-![tekst](media/MIM_04_mdg_tech.jpg)
-![tekst](media/MIM_05_mdg_tech.jpg)
-![tekst](media/MIM_06_mdg_tech.jpg)
-![tekst](media/MIM_07_mdg_tech.jpg)
-![tekst](media/MIM_08_mdg_tech.jpg)
+
+
+![](Media/MIM_03_publish_as_UML_or_MDG.jpg)
+![](Media/MIM_04_mdg_tech.jpg)
+![](Media/MIM_05_mdg_tech.jpg)
+![](Media/MIM_06_mdg_tech.jpg)
+![](Media/MIM_07_mdg_tech.jpg)
+![](Media/MIM_08_mdg_tech.jpg)
 
 <!-- ## OPMERKINGEN
  - MIM willen we zien welke versie het is 
