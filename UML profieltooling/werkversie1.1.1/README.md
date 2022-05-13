@@ -14,7 +14,7 @@ Enterprise Architect versie: 15.2
     - Selecteer in het dropdown-menu '_Windows_'
     - Kies '_Resources_' (onder '_Explore_')
 
-      ![find resources](UML%20profieltoeling/media/mim_import_find_resources.jpg)
+      ![find resources](MIM-Werkomgeving/UML%20profieltoeling/media/mim_import_find_resources.jpg)
 
  - Klik op '_MDG Technologies_'
 
