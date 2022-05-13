@@ -6,7 +6,7 @@ Enterprise Architect versie: 15.2
 ## 1 Importeren MIM-toolbox
 
  - [Download het XML-bestand](https://register.geostandaarden.nl/informatiemodel/mim/) van de MIM-toolbox: `MDG_MIM_Toolbox_v1.1.1_build01.xml`.
- - Verwijder eventueel eerst de oudere versie van de toolbox als je die niet meer nodig hebt ([Toolbox verwijderen](#5-verwijderen-oudere-toolboxen)).
+ - Verwijder eventueel eerst de oudere versie van de toolbox als je die niet meer nodig hebt ([Toolbox verwijderen](#5-verwijderen-oudere-toolbox)).
  - Open Enterprise Architect
  - Open '_Resources_'
     - Kies rechts in beeld op '_Portals_'
@@ -177,13 +177,13 @@ Net als alle andere relatie-elementen uit de MIM-toolbox, kun je `«Relatierol»
 
  - Er verschijnt een popup-venster dat vraagt: '_Save latest changes?_', klik '_Ja_'.
  - De tagged values zijn nu gesynchroniseerd.
- 
+
 ![](Media/mim_relatierol_sync_saved.jpg)
 
 
  > **Let op**: dit werkt nog niet!
 
-## 5 Verwijderen oudere toolbox(en)
+## 5 Verwijderen oudere toolbox
 Deze instructie is bedoeld voor het verwijderen van toolboxen die je niet meer wilt gebruiken. Bijvoorbeeld oudere versies van de MIM-toolbox.
 
  - Open Enterprise Architect
