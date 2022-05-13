@@ -12,8 +12,8 @@
  1. `«profile» Keuzerelatie`
  1. `«profile» MIM`
  1. `«profile toolbox» MIM`
- 1. DIAGRAM
- 1. QUICKLINKER
+ 1. ***DIAGRAM*** (diagram profiel maken)
+ 1. ***QUICKLINKER*** (quick linker maken)
 
 ![](Media/MIM_01_profile_benodigde_profielen.jpg)
 
@@ -34,6 +34,9 @@
  - Ga naar: "Specialize" 
  - Kies: "Publish Technologie"
  - Kies: "Publish Pack As UML profile"
+
+![](Media/MIM_03_publish_as_UML_or_MDG.jpg)
+
  - Typ: profile name: "MIM"
  - Kies: `<path>`
  - typ: version: `<versienummer>` (bijv.:1.1.1)
@@ -41,8 +44,8 @@
 ![](Media/MIM_02_profile_publish_as_uml_settings.jpg)
 
 Let op er zijn twee belangrijke voorwaarden
- > **opm.**: [**CONTROLEREN**]De profile name moet overeenkomenm met de naam van het package
-Verder lijkt het erop of «profile»MIM en «toolbox profile»MIM niet alleen overeen moeten komen met de naam van het package, maar eveneens onderling ... 
+ > **opm.**: [**CONTROLEREN**]De profile name moet overeenkomenm met de naam van het package.
+Verder lijkt het erop of «profile» MIM en «toolbox profile» MIM niet alleen overeen moeten komen met de naam van het package, maar eveneens onderling ... 
 
 1. De vier keuze-packages moeten een unieke naam hebben bij profile name (bijv. "MIM_Keuzeattribuut")
 2. Het basisprofiel <naam> (iets van «profile» MIM), moet bij profile name dezelfde naam hebben als «toolbox profile» MIM
@@ -62,6 +65,9 @@ Als je diagram rtoevoegd moet je drie stappen doorlopen bij het selecteren van p
  - Ga weer naar "Specialize"
  - Kies: "Publish Package"
  - Kies: "Generate MDG Technology"
+
+![](Media/MIM_03_publish_as_UML_or_MDG.jpg)
+
  - Kies Volgende
  - Kies 'Open an existing MTS file'
  - Negeer de melding
@@ -74,27 +80,46 @@ Als je diagram rtoevoegd moet je drie stappen doorlopen bij het selecteren van p
  - ID: MIM
  - Version: 1.1.1
 
+![](Media/MIM_04_mdg_tech.jpg)
+
  > **Opm**: deze twee moeten dus kloppen met stap x in packages publiceren
 
- - Icon en logo blijven vooralsnog leeg
- - URL: link naar corresponderende MIM-documentatie op GitHub/ReSpec
- - Support, link naar website geonovum
- - Notes: Vul in het notes veld kort release notes in: wat is er nieuw/aangepast
- - Klik volgende
- - Laat de instellingen in venster onaangepast
+ - Icon en logo blijven vooralsnog leeg.
+ - URL: link naar corresponderende MIM-documentatie op GitHub/ReSpec.
+ - Support, link naar website Geonovum.
+ - Notes: Vul in het notes veld kort release notes in: wat is er nieuw/aangepast.
+ - Klik 'Volgende'
+ - Controleer de instellingen en klik op 'Ok'
+
+![](Media/MIM_05_mdg_tech.jpg)
 
  > **Opm**: In het metaprofiel zitten profiles en toolboxes
 
- - Alle configuraties kun je laden vanuit de MTF file
- - Voor de eerste keer kun je ook een MTS-file genereren
- - Select:  "Files To Be Included As Profiles"
- - Kies hier alle xml bestanden, behalve de toolboxprofile
- - In de volgende stap doe je precies het omgekeerde
- - Klik volgende
- - Check de box Save to MTS en klik op voltooien
+ - Alle configuraties kun je laden vanuit de MTF file.
+ - Voor de eerste keer kun je ook een MTS-file genereren.
+ - Select:  "Files To Be Included As Profiles".
+ - Kies hier alle xml-bestanden, behalve de toolboxprofile.
+ - Klik 'Volgende'.
 
+![](Media/MIM_06_mdg_tech.jpg)
+
+ - Select: "Files To Be Included As Diagrams"
+ - Kies hier het diagram profiel
+ - Klik 'Volgende'.
+
+![](screenshot-ontbreekt-nog)
+
+ - In de volgende stap selecteer je tot slot het toolbox profiel.
+
+![](Media/MIM_07_mdg_tech.jpg)
+
+ - Klik 'Volgende'.
+ - Check de box "Save to MTS" en klik op 'Voltooien'
  - Indien je wijzigingen in de configuratie hebt aangebracht:
  - Kies checkbox  "Save To Mts"
+
+![](Media/MIM_08_mdg_tech.jpg)
+
  - Klik: "Voltooien"
 
 ## STAP 3: TEST DE TOOLBOX
@@ -112,12 +137,7 @@ Als je diagram rtoevoegd moet je drie stappen doorlopen bij het selecteren van p
 
 
 
-![](Media/MIM_03_publish_as_UML_or_MDG.jpg)
-![](Media/MIM_04_mdg_tech.jpg)
-![](Media/MIM_05_mdg_tech.jpg)
-![](Media/MIM_06_mdg_tech.jpg)
-![](Media/MIM_07_mdg_tech.jpg)
-![](Media/MIM_08_mdg_tech.jpg)
+
 
 <!-- ## OPMERKINGEN
  - MIM willen we zien welke versie het is 
