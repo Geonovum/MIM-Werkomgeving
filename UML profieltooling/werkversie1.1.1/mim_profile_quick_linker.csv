@@ -1,0 +1,13 @@
+//Source Element Type;Source ST filter;Target Element Type;Target ST Filter;Diagram Filter;New Element Type;New Element ST;New Link Type;New Link ST;New Link Direction;New Link Caption;New Link & Element Caption;Create Link;Create Element;Disallow Self connector;Exclusive to ST Filter + No inherit from metatype;Menu Group;Complexity Level;Target Must Be Parent;Embed element;Precedes Separator LEAF;Precedes Separator GROUP;DUMMY COLUMN
+Class;Objecttype;Class;Objecttype;MIM::MIM-UML::Class;Class;Objecttype;Generalization;Generalisatie;to;MIM Generalisatie;MIM Generalisatie;TRUE;TRUE;TRUE;TRUE;MIM;0;;;;;
+DataType;Gestructureerd datatype;DataType;Gestructureerd datatype;MIM::MIM-UML::Class;DataType;Gestructureerd datatype;Generalization;Generalisatie;to;MIM Generalisatie;MIM Generalisatie;TRUE;TRUE;TRUE;TRUE;MIM;0;;;;;
+DataType;Referentielijst;DataType;Referentielijst;MIM::MIM-UML::Class;DataType;Referentielijst;Generalization;Generalisatie;to;MIM Generalisatie;MIM Generalisatie;TRUE;TRUE;TRUE;TRUE;MIM;0;;;;;
+DataType;Codelijst;DataType;Codelijst;MIM::MIM-UML::Class;DataType;Codelijst;Generalization;Generalisatie;to;MIM Generalisatie;MIM Generalisatie;TRUE;TRUE;TRUE;TRUE;MIM;0;;;;;
+PrimitiveType;Primitief datatype;PrimitiveType;Primitief datatype;MIM::MIM-UML::Class;PrimitiveType;Primitief datatype;Generalization;Generalisatie;to;MIM Generalisatie;MIM Generalisatie;TRUE;TRUE;TRUE;TRUE;MIM;0;;;;;
+Enumeration;Enumeratie;Enumeration;Enumeratie;MIM::MIM-UML::Class;Enumeration;Enumeratie;Generalization;Generalisatie;to;MIM Generalisatie;MIM Generalisatie;TRUE;TRUE;TRUE;TRUE;MIM;0;;;;;
+Class;Objecttype;Class;Objecttype;MIM::MIM-UML::Class;Class;Objecttype;Association;Relatiesoort;to;MIM Relatiesoort;MIM Relatiesoort;TRUE;TRUE;TRUE;TRUE;MIM;0;;;;;
+Class;Gegevensgroeptype;Class;Objecttype;MIM::MIM-UML::Class;Class;Objecttype;Association;Relatiesoort;to;MIM Relatiesoort;MIM Relatiesoort;TRUE;TRUE;TRUE;TRUE;MIM;0;;;;;
+Class;Objecttype;DataType;Keuze;MIM::MIM-UML::Class;DataType;Keuze;Association;Relatiesoort;to;MIM Relatiesoort;MIM Relatiesoort;TRUE;TRUE;TRUE;TRUE;MIM;0;;;;;
+Class;Objecttype;Class;Objecttype;MIM::MIM-UML::Class;Class;Objecttype;AssociationClass;Relatieklasse;to;MIM Relatieklasse;MIM Relatieklasse;TRUE;TRUE;TRUE;TRUE;MIM;0;;;;;
+Class;Objecttype;Class;Objecttype;MIM::MIM-UML::Class;Class;Objecttype;Association;Externe koppeling;to;MIM Externe koppeling;MIM Externe koppeling;TRUE;TRUE;TRUE;TRUE;MIM;0;;;;;
+DataType;Keuze;Class;Objecttype;MIM::MIM-UML::Class;Class;Objecttype;Association;Keuze;to;MIM Keuze;MIM Keuze;TRUE;TRUE;TRUE;TRUE;MIM;0;TRUE;;;;

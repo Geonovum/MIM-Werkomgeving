@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<UMLProfile profiletype="uml2">
+	<Documentation id="02B01BEF-3" name="MIM" version="1.1.1" notes="MIM"/>
+	<Content>
+		<Stereotypes>
+			<Stereotype name="MIM" notes="Dit diagram vormt de basis voor modelleren met MIM. Dit diagram is gekoppeld aan de MIM-toolbox. Dit voorkomt dat bij het maken van een nieuw diagram de MIM-toolbox opnieuw opgezocht moet worden." cx="174" cy="35" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+				<AppliesTo>
+					<Apply type="Diagram_Logical">
+						<Property name="alias" value="MIM"/>
+						<Property name="toolbox" value="MIM"/>
+						<Property name="diagramID" value="abc"/>
+						<Property name="toolboxPage" value="MIM: Objecten en attributen=1; MIM: Relaties=1; MIM: Datatypen=1; MIM: Waardelijsten=1; MIM: Packages=1;"/>
+					</Apply>
+				</AppliesTo>
+			</Stereotype>
+		</Stereotypes>
+		<TaggedValueTypes/>
+		<ViewDefinitions/>
+		<Metamodel/>
+	</Content>
+</UMLProfile>
