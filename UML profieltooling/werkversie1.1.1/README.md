@@ -98,7 +98,7 @@ De Quick Linker is beschikbaar via een icoontje dat rechtsboven een diagrameleme
 
 > **Let op**: om de Quick Linker te kunnen gebruiken, dient er tenminste één modelelement in het diagram aanwezig te zijn. 
 
-![](mim_ql_icon.jpg)
+![](Media/mim_ql_icon.jpg)
 
 Je kunt de Quick Linker op drie manieren inzetten, namelijk voor het:
 
@@ -112,14 +112,14 @@ Hieronder beschrijven we elke methode afzonderlijk.
 Klik met de muis op het icoon en trek een lijn naar het object waarmee je het wilt verbinden
 Er verschijnt een stippellijn en een menu.
 
-![](mim_ql_generalization.jpg)
+![](Media/mim_ql_generalization.jpg)
 
-![](mim_ql_connect_elements.jpg)
+![](Media/mim_ql_connect_elements.jpg)
 
 ### Nieuw modelelement
 Klik met de muis op het icoon en trek een lijn naar een lege plek in het diagram.
-![](mim_ql_draw_relation.jpg)
-![](mim_ql_generalization.jpg)
+![](Media/mim_ql_draw_relation.jpg)
+![](Media/mim_ql_generalization.jpg)
 
 voorwaarde; er moet tenminste één nieuw modelelement aanwezig zijn.
 van zelfde soort of toegestane regel.
@@ -127,15 +127,15 @@ van zelfde soort of toegestane regel.
 ### Meerdere nieuwe modelelementen
 Klik met de muis op het icoon en trek een lijn naar een lege plek in het diagram.
 
-![](mim_ql_create_multiple.jpg)
+![](Media/mim_ql_create_multiple.jpg)
 
 Definieer meerder elementen
 
-![](mim_ql_define_multiple.jpg)
+![](Media/mim_ql_define_multiple.jpg)
 
 Resultaat:
 
-![](mim_ql_result_multiple.jpg)
+![](Media/mim_ql_result_multiple.jpg)
 
 ## Gebruik toolbox-item Relatierol
 
