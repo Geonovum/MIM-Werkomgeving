@@ -16,7 +16,7 @@ Enterprise Architect versie: 15.2
 ![](Media/mim_import_find_resources.jpg)
 
  - Klik op '_MDG Technologies_'
- 
+
 ![](Media/mim_import_find_mdg_tech.jpg)
 
  > **Let op**: hier moet je de keuze maken of je de toolbox op model- of gebruikersniveau importeert. Beide hebben voor- en nadelen: 
@@ -26,8 +26,18 @@ Enterprise Architect versie: 15.2
  > **Tip!** Indien binnen jouw EA-omgeving ook een toolbox van een extensie op het MIM aanwezig is (bijvoorbeeld voor de BRO), dan is het raadzaam om de toolboxen alleen op model-niveau te importeren. Indien tenminste één van de twee op user-niveau is geïmporteerd, kan dit bij het toewijzen van stereotypen verwarring opleveren. Veel stereotypen hebben exact dezelfde naam en voor EA is het dan onduidelijk welke het moet kiezen. De bovenstaande aanpak houdt de werkwijze zuiverder.  
 
  - Klik met de rechtermuisknop op '_Model Technologies_' of '_User Technologies_'.
+
+![](Media/mim_import_choose_type.jpg)
+
  - Selecteer '_Import technology_'.
- - Zoek het gedownloade XML-bestand van de MIM-toolbox op en kies '_Openen_'.
+ - Zoek het gedownloade XML-bestand van de MIM-toolbox op en kies '_Openen_'. Overigens kun je ook in dit venster nog kiezen tussen '_model_' of '_user_'. Of je in deze stap, of één stap eerder de keuze maakt, verandert niets aan het resultaat.
+
+![](Media/mim_import_to_model.jpg)
+
+ - Klik '_Ok_'
+
+![](Media/mim_import_to_model_succesful.jpg)
+
  - Bij een _user import_ zal er nog een venster verschijnen met de tekst '_Copy succesfull_'.
  - De MIM-toolbox is nu beschikbaar  voor gebruik, maar het is raadzaam om eerst de volgende instructies door te nemen: 
  - Instructie voor het [gebruik van het MIM-diagram](#gebruik-mim-diagram).
