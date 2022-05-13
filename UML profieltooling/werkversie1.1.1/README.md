@@ -19,6 +19,9 @@ Enterprise Architect versie: 15.2
       </figure>      
 
  - Klik op '_MDG Technologies_'
+      <figure>
+         <img src="Media/mim_import_mdg_tech.jpg" alt="find mdg Technologies">
+      </figure>    
 
  > **Let op**: hier moet je de keuze maken of je de toolbox op model- of gebruikersniveau importeert. Beide hebben voor- en nadelen: 
  >  - **Model**: alleen te gebruiken in het huidige EA-project. Voor elke nieuw project moet je de toolbox opnieuw importeren.
