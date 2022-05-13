@@ -5,33 +5,34 @@ Enterprise Architect versie: 15.2
 
 ## Importeren MIM-toolbox
 
- 1. [Download het XML-bestand](https://register.geostandaarden.nl/informatiemodel/mim/) van de MIM-toolbox: `MDG_MIM_Toolbox_v1.1.1_build01.xml`.
- 1. Verwijder eventueel eerst de oudere versie van de toolbox als je die niet meer nodig hebt ([Toolbox verwijderen](#verwijderen-oudere-toolboxen)).
- 1. Open Enterprise Architect
- 1. Open '_Resources_'
-    1. Kies rechts in beeld op '_Portals_'
-    1. Selecteer in het dropdown-menu '_Windows_'
-    1. Kies '_Resources_' (onder '_Explore_')
+ - [Download het XML-bestand](https://register.geostandaarden.nl/informatiemodel/mim/) van de MIM-toolbox: `MDG_MIM_Toolbox_v1.1.1_build01.xml`.
+ - Verwijder eventueel eerst de oudere versie van de toolbox als je die niet meer nodig hebt ([Toolbox verwijderen](#verwijderen-oudere-toolboxen)).
+ - Open Enterprise Architect
+ - Open '_Resources_'
+    - Kies rechts in beeld op '_Portals_'
+    - Selecteer in het dropdown-menu '_Windows_'
+    - Kies '_Resources_' (onder '_Explore_')
 
 ![](Media/mim_import_find_resources.jpg)
 
- 1. Klik op '_MDG Technologies_'
+ - Klik op '_MDG Technologies_'
+ 
 ![](Media/mim_import_find_mdg_tech.jpg)
 
  > **Let op**: hier moet je de keuze maken of je de toolbox op model- of gebruikersniveau importeert. Beide hebben voor- en nadelen: 
- >  1. **Model**: alleen te gebruiken in het huidige EA-project. Voor elke nieuw project moet je de toolbox opnieuw importeren.
- >  1. **User**: te gebruiken in alle EA-projecten. Je hoeft de toolbox slechts éénmalig te importeren.
+ >  - **Model**: alleen te gebruiken in het huidige EA-project. Voor elke nieuw project moet je de toolbox opnieuw importeren.
+ >  - **User**: te gebruiken in alle EA-projecten. Je hoeft de toolbox slechts éénmalig te importeren.
 
  > **Tip!** Indien binnen jouw EA-omgeving ook een toolbox van een extensie op het MIM aanwezig is (bijvoorbeeld voor de BRO), dan is het raadzaam om de toolboxen alleen op model-niveau te importeren. Indien tenminste één van de twee op user-niveau is geïmporteerd, kan dit bij het toewijzen van stereotypen verwarring opleveren. Veel stereotypen hebben exact dezelfde naam en voor EA is het dan onduidelijk welke het moet kiezen. De bovenstaande aanpak houdt de werkwijze zuiverder.  
 
- 1. Klik met de rechtermuisknop op '_Model Technologies_' of '_User Technologies_'.
- 1. Selecteer '_Import technology_'.
- 1. Zoek het gedownloade XML-bestand van de MIM-toolbox op en kies '_Openen_'.
- 1. Bij een _user import_ zal er nog een venster verschijnen met de tekst '_Copy succesfull_'.
- 1. De MIM-toolbox is nu beschikbaar  voor gebruik, maar het is raadzaam om eerst de volgende instructies door te nemen: 
- 1. Instructie voor het [gebruik van het MIM-diagram](#gebruik-mim-diagram).
- 1. Instructie voor het [gebruik van de Quick Linker](#gebruik-quick-linker).
- 1. Instructie voor het [gebruik van toolbox-item «Relatierol»](#gebruik-toolbox-item-relatierol).
+ - Klik met de rechtermuisknop op '_Model Technologies_' of '_User Technologies_'.
+ - Selecteer '_Import technology_'.
+ - Zoek het gedownloade XML-bestand van de MIM-toolbox op en kies '_Openen_'.
+ - Bij een _user import_ zal er nog een venster verschijnen met de tekst '_Copy succesfull_'.
+ - De MIM-toolbox is nu beschikbaar  voor gebruik, maar het is raadzaam om eerst de volgende instructies door te nemen: 
+ - Instructie voor het [gebruik van het MIM-diagram](#gebruik-mim-diagram).
+ - Instructie voor het [gebruik van de Quick Linker](#gebruik-quick-linker).
+ - Instructie voor het [gebruik van toolbox-item «Relatierol»](#gebruik-toolbox-item-relatierol).
 
  > **Let op**: de MIM-toolbox heeft een versienummer. Deze staat niet in de naam. Indien je besloten hebt om oudere versies van de MIM-toolbox niet te verwijderen, komt de naam 'MIM' mogelijk meerdere malen voor. Het [beheren van toolboxen](#toolboxen-beheren) in Enterprise Architect doe je op deze manier.
 
