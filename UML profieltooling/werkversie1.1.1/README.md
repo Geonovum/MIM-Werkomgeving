@@ -16,7 +16,6 @@ Enterprise Architect versie: 15.2
 
       <figure>
          <img src="Media/mim_import_find_resources.jpg" alt="find resources menu">
-         <figcaption>Navigeer naar '<i>Resources</i>'.</figcaption>
       </figure>      
 
  - Klik op '_MDG Technologies_'
