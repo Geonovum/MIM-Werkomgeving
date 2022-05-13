@@ -107,18 +107,18 @@ Als je diagram rtoevoegd moet je drie stappen doorlopen bij het selecteren van p
  - Kies hier het diagram profiel
  - Klik 'Volgende'.
 
-![](screenshot-ontbreekt-nog)
+![](Media/MIM_07_mdg_tech.jpg)
 
  - In de volgende stap selecteer je tot slot het toolbox profiel.
 
-![](Media/MIM_07_mdg_tech.jpg)
+![](Media/MIM_08_mdg_tech.jpg)
 
  - Klik 'Volgende'.
  - Check de box "Save to MTS" en klik op 'Voltooien'
  - Indien je wijzigingen in de configuratie hebt aangebracht:
  - Kies checkbox  "Save To Mts"
 
-![](Media/MIM_08_mdg_tech.jpg)
+![](Media/MIM_09_mdg_tech.jpg)
 
  - Klik: "Voltooien"
 
@@ -131,22 +131,6 @@ Als je diagram rtoevoegd moet je drie stappen doorlopen bij het selecteren van p
  - En dat kan door MIM metaklassen te slepen
  - Of door gebruik te maken va "Sync Tagged Values And Constraints"
  - Deze laatste optie vind je terug in het "Resources" menu
-
-## SCREENSHOTS (NOG PLAATSEN)
-> **Opm.**: voor diagram nog één afbeelding wijzigen (MDG tech wizard - contents), kruis diagram ... aan en afbeelding diagram selection toevoegen
-
-
-
-
-
-<!-- ## OPMERKINGEN
- - MIM willen we zien welke versie het is 
- - Bij test blijken een aantal stereotypen niet te werken
- - Paul laat zien hoe dat zit
- - Dat MIMprofile blijkt niet te werken
- - Bij versie staat ergens default 1.0, moet 1.1.1 worden
- - Paul moest in het XML iets veranderen
- - Lukt even niet... -->
 
 ## MIM_MDG
  - profile helpers, model wizard: https://sparxsystems.com/enterprise_architect_user_guide/15.2/modeling/using_the_profile_helpers.html
