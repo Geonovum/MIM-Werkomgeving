@@ -15,7 +15,7 @@ Enterprise Architect versie: 15.2
     - Kies '_Resources_' (onder '_Explore_')
 
       <figure>
-         <img src="/Media/mim_import_find_resources.jpg" alt="find resources menu" style="width:100%">
+         <img src="Media/mim_import_find_resources.jpg" alt="find resources menu" style="width:100%">
          <figcaption>Navigeer naar '<i>Resources</i>'.</figcaption>
       </figure>      
 
