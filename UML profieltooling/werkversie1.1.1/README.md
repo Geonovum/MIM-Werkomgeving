@@ -98,13 +98,13 @@ De Quick Linker is een hulpmiddel om snel en eenvoudig relaties te kunnen leggen
 
 Je kunt de Quick Linker op drie manieren inzetten, namelijk voor het:
 
- - [Verbinden van twee bestaande modelelementen](#verbinden-bestaande-modelelementen)
- - [Creëren van nieuwe modelelementen](#nieuw-modelelement)
- - [Creëren van meerdere modelelemten tegelijk](#meerdere-nieuwe-modelelementen)
+ - [Verbinden van twee bestaande modelelementen](#3.1-verbinden-bestaande-modelelementen)
+ - [Creëren van nieuwe modelelementen](#3.2-nieuw-modelelement)
+ - [Creëren van meerdere modelelemten tegelijk](#3.3-meerdere-nieuwe-modelelementen)
 
 Hieronder beschrijven we elke methode afzonderlijk.
 
-### Verbinden bestaande modelelementen
+### 3.1 Verbinden bestaande modelelementen
  - Klik met de muis op het icoon
  - Houd de muisknop ingedrukt en trek een lijn naar het object waarmee je het wilt verbinden
  - Er verschijnt een stippellijn en een menu.
@@ -115,7 +115,7 @@ Hieronder beschrijven we elke methode afzonderlijk.
 
 ![](Media/mim_ql_generalization.jpg)
 
-### Nieuw modelelement
+### 3.2 Nieuw modelelement
 Je kunt ook vanuit een bestaand element een nieuw modelelement creëren. Dat gaat als volgt:
 
  - Klik met de muis op het icoon
@@ -129,7 +129,7 @@ Je kunt ook vanuit een bestaand element een nieuw modelelement creëren. Dat gaa
 
 ![](Media/mim_ql_generalization.jpg)
 
-### Meerdere nieuwe modelelementen
+### 3.3 Meerdere nieuwe modelelementen
 Ook is het mogelijk om vanuit een bestaand element meerdere én verschillende soorten modelelementen in één keer te creëren. Dat gaat als volgt:
 
  - Klik met de muis op het icoon
