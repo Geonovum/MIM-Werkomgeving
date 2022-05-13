@@ -3,6 +3,13 @@ MIM-versie: 1.1.1
 
 Enterprise Architect versie: 15.2
 
+<style>
+   .center {
+      display:  block;
+      margin-left: auto;
+      margin-right: auto;
+   }
+</style>
 
 
 ## Importeren MIM-toolbox
@@ -23,7 +30,7 @@ Enterprise Architect versie: 15.2
 
  - Klik op '_MDG Technologies_'
 <figure>
-   <img src="Media/mim_import_find_mdg_tech.jpg" alt="find mdg Technologies" class="center" display="block">
+   <img src="Media/mim_import_find_mdg_tech.jpg" alt="find mdg Technologies" class="center">
 </figure>    
 
  > **Let op**: hier moet je de keuze maken of je de toolbox op model- of gebruikersniveau importeert. Beide hebben voor- en nadelen: 
