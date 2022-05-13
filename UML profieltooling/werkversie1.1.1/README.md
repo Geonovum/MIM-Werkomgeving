@@ -16,12 +16,12 @@ Enterprise Architect versie: 15.2
     - Kies '_Resources_' (onder '_Explore_')
 
 <figure>
-   <img src="Media/mim_import_find_resources.jpg" alt="find resources menu">
+   <img src="Media/mim_import_find_resources.jpg" alt="find resources menu" class="center">
 </figure>      
 
  - Klik op '_MDG Technologies_'
 <figure>
-   <img src="Media/mim_import_find_mdg_tech.jpg" alt="find mdg Technologies">
+   <img src="Media/mim_import_find_mdg_tech.jpg" alt="find mdg Technologies" class="center">
 </figure>    
 
  > **Let op**: hier moet je de keuze maken of je de toolbox op model- of gebruikersniveau importeert. Beide hebben voor- en nadelen: 
