@@ -37,7 +37,7 @@ Enterprise Architect versie: 15.2
 ![](Media/mim_import_to_model.jpg)
 
  - Klik '_Ok_'
- - Navigeer in het '_Resources_' venster naar '_MDG Technologies_'>'_Model Technologies_' en  controleer of hier nu een map met de naam '_MIM_' staat.
+ - Navigeer in het '_Resources_' naar '_MDG Technologies_' > '_Model Technologies_' en  controleer of hier nu een map met de naam '_MIM_' staat.
 
 ![](Media/mim_import_to_model_succesful.jpg)
 
@@ -53,25 +53,42 @@ Enterprise Architect versie: 15.2
 
 In voorgaande versies werd de MIM-toolbox toegepast op een standaard UML diagram (`UML::Class`). Dat kan nog steeds. Dit heeft echter één nadelige eigenschap. Als je in je project met meerdere diagrammen werkt, kan het voorkomen dat bij het wisselen tussen diagrammen de toolbox terugspringt op de standaard UML-toolbox. Hierdoor moet je de MIM-toolbox opnieuw opzoeken.
 
-Dit probleem wordt veroorzaakt doordat een diagram en een toolbox aan elkaar gekoppeld zijn. Daarom is in versie 1.1.1 van de MIM-toolbox een MIM-diagram aangemaakt waaraan de toolbox gekoppeld is. Dit diagram is een directe afgeleide van het standaard '_UML Class diagram_'. Hieronder staat uitgelegd hoe je dit kunt toepassen.
+Dit probleem wordt veroorzaakt doordat een diagram en een toolbox aan elkaar gekoppeld zijn. Daarom is in versie 1.1.1 van de MIM-toolbox een speciaal MIM-diagram aangemaakt waaraan de toolbox gekoppeld is. Dit diagram is een directe afgeleide van het standaard '_UML Class diagram_'. Hieronder staat uitgelegd hoe je dit kunt toepassen.
 
  - Ga in de '_Project Browser_' naar '_Project_'.
- - Klik op het diagramlogo om een nieuw diagram aan te maken .
+ - Selecteer een package.
+ - Klik op het diagramlogo om een nieuw diagram aan te maken.
+
+![](Media/mim_diagram_create.jpg)
 
  > **Let op**: dit kan alleen als je onder model al een package hebt aangemaakt. Als je dat nog niet hebt, maak dan eerst een nieuw package aan.
 
+ - Er opent nu een venster.
  - Geef het diagram een naam.
  - Klik op het dropdown-menu bij '_Type_'.
  - Selecteer '_Specialized_' > '_User Technologies_' of '_Model Technologies_' (afhankelijk van de manier waarop je de [toolbox geimporteerd](#importeren-mim-toolbox) hebt).
+
+![](Media/mim_diagram_find_mim.jpg)
+
  - Klik in het deelvenster '_Select From_' op de '_MIM-toolbox_'.
+
+![](Media/mim_diagram_select_tech.jpg)
+
  - Nu verschijnt in het deelvenster '_Diagram Types_' het '_MIM-diagram_'.
  - Selecteer het diagram en klik op '_Ok_'.
 
  > **Let op**: het is belangrijk dat je het diagram daadwerkelijk selecteert. Je kunt herkennen of dit gelukt is, doordat in het onderste deelvenster een toelichtende tekst op het diagram verschijnt (anders staat er alleen 'MIM').
 
+![](Media/mim_diagram_select_diagram.jpg) 
+
  - De MIM-toolbox verschijnt nu in het toolbox-menu.
- - Dubbelklik in de '_Project browser_' op het nieuwe diagram. 
- - In het venster '_Properties_' zie je dat het diagram van het type '_MIM_' is. 
+
+![](Media/mim_diagram_toolbox_menu.jpg)
+
+ - Dubbelklik in de '_Project browser_' op het nieuwe diagram.
+ - In het venster '_Properties_' zie je dat het diagram van het type '_MIM_' is.
+
+![](Media/mim_diagram_final_check.jpg)
 
 ## Gebruik Quick Linker
 
