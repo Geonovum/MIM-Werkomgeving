@@ -6,6 +6,7 @@ Enterprise Architect versie: 15.2
 
 
 ## Importeren MIM-toolbox
+
  - [Download het XML-bestand](https://register.geostandaarden.nl/informatiemodel/mim/) van de MIM-toolbox: `MDG_MIM_Toolbox_v1.1.1_build01.xml`.
  - Verwijder eventueel eerst de oudere versie van de toolbox als je die niet meer nodig hebt ([Toolbox verwijderen](#verwijderen-oudere-toolboxen)).
  - Open Enterprise Architect
@@ -14,14 +15,14 @@ Enterprise Architect versie: 15.2
     - Selecteer in het dropdown-menu '_Windows_'
     - Kies '_Resources_' (onder '_Explore_')
 
-      <figure>
-         <img src="Media/mim_import_find_resources.jpg" alt="find resources menu">
-      </figure>      
+<figure>
+   <img src="Media/mim_import_find_resources.jpg" alt="find resources menu">
+</figure>      
 
  - Klik op '_MDG Technologies_'
-      <figure>
-         <img src="Media/mim_import_find_mdg_tech.jpg" alt="find mdg Technologies">
-      </figure>    
+<figure>
+   <img src="Media/mim_import_find_mdg_tech.jpg" alt="find mdg Technologies">
+</figure>    
 
  > **Let op**: hier moet je de keuze maken of je de toolbox op model- of gebruikersniveau importeert. Beide hebben voor- en nadelen: 
  >  - **Model**: alleen te gebruiken in het huidige EA-project. Voor elke nieuw project moet je de toolbox opnieuw importeren.
