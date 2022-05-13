@@ -15,6 +15,8 @@ Enterprise Architect versie: 15.2
     - Selecteer in het dropdown-menu '_Windows_'
     - Kies '_Resources_' (onder '_Explore_')
 
+![](Media/mim_import_find_resources.jpg)
+
 <figure>
    <img src="Media/mim_import_find_resources.jpg" alt="find resources menu" class="center">
 </figure>      
