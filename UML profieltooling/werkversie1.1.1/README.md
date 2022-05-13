@@ -31,10 +31,13 @@ Enterprise Architect versie: 15.2
 
  - Selecteer '_Import technology_'.
  - Zoek het gedownloade XML-bestand van de MIM-toolbox op en kies '_Openen_'. Overigens kun je ook in dit venster nog kiezen tussen '_model_' of '_user_'. Of je in deze stap, of één stap eerder de keuze maakt, verandert niets aan het resultaat.
+ - De velden '_Technology_', '_Version_' en '_Notes_' worden nu ingevuld met de juiste informatie.
+ - Controleer het versienummer: `Version: 1.1.1`.
 
 ![](Media/mim_import_to_model.jpg)
 
  - Klik '_Ok_'
+ - Navigeer in het '_Resources_' venster naar '_MDG Technologies_'>'_Model Technologies_' en  controleer of hier nu een map met de naam '_MIM_' staat.
 
 ![](Media/mim_import_to_model_succesful.jpg)
 
