@@ -92,19 +92,19 @@ Dit probleem wordt veroorzaakt doordat een diagram en een toolbox aan elkaar gek
 
 ## Gebruik Quick Linker
 
-De Quick Linker is een hulpmiddel om snel en eenvoudig relaties te kunnen leggen tussen verschillende elementen. Het voordeel hiervan is dat het de gebruiker inzicht geeft in de volgens MIM toegestane relaties.
+De Quick Linker is een hulpmiddel om snel en eenvoudig relaties te kunnen leggen tussen verschillende elementen. Het voordeel hiervan is dat het de gebruiker inzicht geeft in de volgens MIM toegestane relaties. Je kunt de Quick Linker op drie manieren inzetten, namelijk voor het:
+
+ - [Verbinden van twee bestaande modelelementen](#verbinden-bestaande-modelelementen)
+ - [Creëren van nieuwe modelelementen](#nieuw-modelelement)
+ - [Creëren van meerdere modelelemten tegelijk](#meerdere-nieuwe-modelelementen)
 
 De Quick Linker is beschikbaar via een icoontje dat rechtsboven een diagramelement verschijnt op het moment dat je het selecteert.
 
-> **Let op**: om de Quick Linker te kunnen gebruiken, dient er tenminste één modelelement in het diagram aanwezig te zijn. 
-
 ![](Media/mim_ql_icon.jpg)
 
-Je kunt de Quick Linker op drie manieren inzetten, namelijk voor het:
+> **Let op**: om de Quick Linker te kunnen gebruiken, dient er tenminste één modelelement in het diagram aanwezig te zijn. 
 
- - [verbinden van twee bestaande modelelementen](#verbinden-bestaande-modelelementen)
- - [creëren van nieuwe modelelementen](#nieuw-modelelement)
- - [creëren van meerdere modelelemten tegelijk](#meerdere-nieuwe-modelelementen)
+
 
 Hieronder beschrijven we elke methode afzonderlijk.
 
