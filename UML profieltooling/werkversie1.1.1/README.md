@@ -105,8 +105,8 @@ Je kunt de Quick Linker op drie manieren inzetten, namelijk voor het:
 Hieronder beschrijven we elke methode afzonderlijk.
 
 ### 3.1 Verbinden bestaande modelelementen
- - Klik met de muis op het icoon
- - Houd de muisknop ingedrukt en trek een lijn naar het object waarmee je het wilt verbinden
+ - Klik met de muis op het icoon.
+ - Houd de muisknop ingedrukt en trek een lijn naar het object waarmee je het wilt verbinden.
  - Er verschijnt een stippellijn en een menu.
 
 ![](Media/mim_ql_connect_elements.jpg)
@@ -118,7 +118,7 @@ Hieronder beschrijven we elke methode afzonderlijk.
 ### 3.2 Nieuw modelelement
 Je kunt ook vanuit een bestaand element een nieuw modelelement creëren. Dat gaat als volgt:
 
- - Klik met de muis op het icoon
+ - Klik met de muis op het icoon.
  - Houd de muisknop ingedrukt en trek een lijn naar een lege plek in het diagram.
  - Er verschijnt een stippellijn en een menu.
 
@@ -132,7 +132,7 @@ Je kunt ook vanuit een bestaand element een nieuw modelelement creëren. Dat gaa
 ### 3.3 Meerdere nieuwe modelelementen
 Ook is het mogelijk om vanuit een bestaand element meerdere én verschillende soorten modelelementen in één keer te creëren. Dat gaat als volgt:
 
- - Klik met de muis op het icoon
+ - Klik met de muis op het icoon.
  - Houd de muisknop ingedrukt en trek een lijn naar een lege plek in het diagram.
  - Er verschijnt een stippellijn en een menu.
 
@@ -150,19 +150,36 @@ Ook is het mogelijk om vanuit een bestaand element meerdere én verschillende so
 
 ## 4 Gebruik toolbox-item Relatierol
 
-(korte toelichting schrijven)
+Net als alle andere relatie-elementen uit de MIM-toolbox, kun je `«Relatierol»` naar het diagram slepen. Dit werkt alleen als je dit naar het uiteinde van een reeds bestaande `«Relatiesoort»` sleept. Wanneer je in EA het stereotype `«Relatierol»` toewijst aan een relatie, worden de bijbehorende '_Tagged Values_' niet automatisch meegenomen. Hieronder staat bschreven hoe je de tagged values voor alle in het model aanwezige stereotypen `«Relatierol»` in het model kunt synchroniseren.
 
  - Indien je twee modelelementen met elkaar verbindt door middel van een «Relatiesoort», kun je de relatierol van de target toevoegen door middel van het toolbox-item «Relatierol».
  - Klik op het toolbox-item «Relatierol» en sleep het item met de muisknop ingedrukt naar de target-kant van de associatie en laat hier de muisknop weer los.
  - Er verschijnt een popup-venster.
+
+![](Media/mim_relatierol_name.jpg)
+
  - Vul bij '_Enter value_' de naam van de relatierol in en klik op '_Ok_'.
  - Klik vervolgens in het '_Properties_' venster op het '_Target_' tabblad.
- - Hierin ontbreken de bijbehorende tagged values.
+ - Hierin ontbreken de bijbehorende tagged values voor [alternatief 1](https://docs.geostandaarden.nl/mim/mim/#relatiesoort-is-leidend-alternatief-1) of [alternatief 2](https://docs.geostandaarden.nl/mim/mim/#relatierol-is-leidend-alternatief-2).
+
+![](Media/mim_relatierol_target_menu.jpg)
+
  - Ga naar het toolbox-item Relatierol en klik hier met de rechtermuisknop op.
+
+![](Media/mim_relatierol_sync_select.jpg)
+
  - Klik op '_Synchronize Stereotype_'.
+ - Er opent een nieuw venster
+ - Hierin staat in het veld '_stereotype_' 'relatierol' al geselecteerd.
  - Klik op '_Ok_'.
+
+![](Media/mim_relatierol_sync_menu.jpg)
+
  - Er verschijnt een popup-venster dat vraagt: '_Save latest changes?_', klik '_Ja_'.
  - De tagged values zijn nu gesynchroniseerd.
+ 
+![](Media/mim_relatierol_sync_saved.jpg)
+
 
  > **Let op**: dit werkt nog niet!
 
