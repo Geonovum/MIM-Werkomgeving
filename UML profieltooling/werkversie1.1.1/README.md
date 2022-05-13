@@ -3,10 +3,10 @@ MIM-versie: 1.1.1
 
 Enterprise Architect versie: 15.2
 
-## Importeren MIM-toolbox
+## 1 Importeren MIM-toolbox
 
  - [Download het XML-bestand](https://register.geostandaarden.nl/informatiemodel/mim/) van de MIM-toolbox: `MDG_MIM_Toolbox_v1.1.1_build01.xml`.
- - Verwijder eventueel eerst de oudere versie van de toolbox als je die niet meer nodig hebt ([Toolbox verwijderen](#verwijderen-oudere-toolboxen)).
+ - Verwijder eventueel eerst de oudere versie van de toolbox als je die niet meer nodig hebt ([Toolbox verwijderen](#5-verwijderen-oudere-toolboxen)).
  - Open Enterprise Architect
  - Open '_Resources_'
     - Kies rechts in beeld op '_Portals_'
@@ -43,13 +43,13 @@ Enterprise Architect versie: 15.2
 
  - Bij een _user import_ zal er nog een venster verschijnen met de tekst '_Copy succesfull_'.
  - De MIM-toolbox is nu beschikbaar  voor gebruik, maar het is raadzaam om eerst de volgende instructies door te nemen: 
- - Instructie voor het [gebruik van het MIM-diagram](#gebruik-mim-diagram).
- - Instructie voor het [gebruik van de Quick Linker](#gebruik-quick-linker).
- - Instructie voor het [gebruik van toolbox-item «Relatierol»](#gebruik-toolbox-item-relatierol).
+ - Instructie voor het [gebruik van het MIM-diagram](#2-gebruik-mim-diagram).
+ - Instructie voor het [gebruik van de Quick Linker](#3-gebruik-quick-linker).
+ - Instructie voor het [gebruik van toolbox-item «Relatierol»](#4-gebruik-toolbox-item-relatierol).
 
- > **Let op**: de MIM-toolbox heeft een versienummer. Deze staat niet in de naam. Indien je besloten hebt om oudere versies van de MIM-toolbox niet te verwijderen, komt de naam 'MIM' mogelijk meerdere malen voor. Het [beheren van toolboxen](#toolboxen-beheren) in Enterprise Architect doe je op deze manier.
+ > **Let op**: de MIM-toolbox heeft een versienummer. Deze staat niet in de naam. Indien je besloten hebt om oudere versies van de MIM-toolbox niet te verwijderen, komt de naam 'MIM' mogelijk meerdere malen voor. Het [beheren van toolboxen](#6-toolboxen-beheren) in Enterprise Architect doe je op deze manier.
 
-## Gebruik MIM-diagram
+## 2 Gebruik MIM-diagram
 
 In voorgaande versies werd de MIM-toolbox toegepast op een standaard UML diagram (`UML::Class`). Dat kan nog steeds. Dit heeft echter één nadelige eigenschap. Als je in je project met meerdere diagrammen werkt, kan het voorkomen dat bij het wisselen tussen diagrammen de toolbox terugspringt op de standaard UML-toolbox. Hierdoor moet je de MIM-toolbox opnieuw opzoeken.
 
@@ -90,7 +90,7 @@ Dit probleem wordt veroorzaakt doordat een diagram en een toolbox aan elkaar gek
 
 ![](Media/mim_diagram_final_check.jpg)
 
-## Gebruik Quick Linker
+## 3 Gebruik Quick Linker
 
 De Quick Linker is een hulpmiddel om snel en eenvoudig relaties te kunnen leggen tussen verschillende elementen. Het voordeel hiervan is dat het de gebruiker inzicht geeft in de volgens MIM toegestane relaties. De Quick Linker is beschikbaar via een icoontje dat rechtsboven een diagramelement verschijnt op het moment dat je het selecteert.
 
@@ -126,7 +126,7 @@ Je kunt ook vanuit een bestaand element een nieuw modelelement creëren. Dat gaa
 
  - Dit menu ziet er anders uit dan bij het verbinden van twee bestaande elementen.
  - Navigeer naar '_MIM_' en selecteer het gewenste type MIM-relatie (bijvoorbeeld: `«Generalisatie»`)
- - 
+
 ![](Media/mim_ql_generalization.jpg)
 
 ### Meerdere nieuwe modelelementen
@@ -148,7 +148,7 @@ Ook is het mogelijk om vanuit een bestaand element meerdere én verschillende so
 
 ![](Media/mim_ql_result_multiple.jpg)
 
-## Gebruik toolbox-item Relatierol
+## 4 Gebruik toolbox-item Relatierol
 
 (korte toelichting schrijven)
 
@@ -166,7 +166,7 @@ Ook is het mogelijk om vanuit een bestaand element meerdere én verschillende so
 
  > **Let op**: dit werkt nog niet!
 
-## Verwijderen oudere toolbox(en)
+## 5 Verwijderen oudere toolbox(en)
 Deze instructie is bedoeld voor het verwijderen van toolboxen die je niet meer wilt gebruiken. Bijvoorbeeld oudere versies van de MIM-toolbox.
 
  - Open Enterprise Architect
@@ -187,7 +187,7 @@ Deze instructie is bedoeld voor het verwijderen van toolboxen die je niet meer w
     - Start hierna voor de zekerheid EA opnieuw op.
     - Ga verder met het [importeren van de MIM-toolbox](#importeren-mim-toolbox).
 
-## Toolboxen beheren
+## 6 Toolboxen beheren
  - Ga naar de menubalk boven in beeld en selecteer '_Specialize_' > '_Manage-Tech_'
  - Hier vind je een overzicht van alle aanwezige MDG-technologies.
  - Scroll naar beneden en zoek '_MIM_' op.
