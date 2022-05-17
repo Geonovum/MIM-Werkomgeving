@@ -1,4 +1,4 @@
-# Handleiding voor het importeren en gebruik van de MIM-toolbox in Enterprise Architect
+# Handleiding voor het importeren en toepassen van de MIM-toolbox in Enterprise Architect
 
 MIM-versie: 1.1.1
 
