@@ -1,13 +1,5 @@
 # Handleiding voor het importeren en gebruik van de MIM-toolbox in Enterprise Architect
 
-<style>
-mark{
-    color:red;
-}
-</style>
-
-<mark>what is DataBase</mark>
-
 MIM-versie: 1.1.1
 
 Enterprise Architect versie: 15.2
@@ -211,7 +203,7 @@ Deze instructie is bedoeld voor het verwijderen van toolboxen die je niet meer w
     - Klik met de rechtermuisknop op de toolbox en selecteer '_Locate Technology_'. 
     - Verwijder het XML-bestand van de toolbox op deze locatie
     - Start hierna voor de zekerheid EA opnieuw op.
-    - Ga verder met het [importeren van de MIM-toolbox](#1%20importeren-mim-toolbox).
+    - Ga verder met het [importeren van de MIM-toolbox](#1-importeren-mim-toolbox).
 
 ## 6 Toolboxen beheren
  - Ga naar de menubalk boven in beeld en selecteer '_Specialize_' > '_Manage-Tech_'
@@ -221,6 +213,6 @@ Deze instructie is bedoeld voor het verwijderen van toolboxen die je niet meer w
  - Klik op één van de versies voor meer informatie.
  - In het informatievenster rechtsboven zie je welke versie het betreft. Tevens vind je hier terug of de toolbox op model- of gebruikersniveau is geïmporteerd.
  - Met het checkbox in de kolom '_Enabled_' kun je ervoor kiezen om bepaalde bepaalde toolboxen uit te zetten. Dit doe je door het vinkje te verwijderen.
- - Ga verder met de laatste stappen van het [importeren van de MIM-toolbox](#1%20importeren-mim-toolbox).
+ - Ga verder met de laatste stappen van het [importeren van de MIM-toolbox](#1-importeren-mim-toolbox).
 
  > **Let op**: indien je toolboxen gebruikt met gelijknamige modelelementen, bijvoorbeeld oudere MIM-toolboxen of NEN3610 BRO Grouping-NL, dan kan dit bij het toewijzen van het stereotype «Relatierol» leiden tot een verwijzing naar het 'verkeerde' profiel. Enterprise Architect doet dit automatisch. Hierdoor beschikt het stereotype bijvoorbeeld niet over de gewenste tagged values.
