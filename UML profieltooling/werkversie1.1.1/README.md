@@ -1,9 +1,5 @@
 # Handleiding voor het importeren en gebruik van de MIM-toolbox in Enterprise Architect
 
-<div style="color:green">
-    Markdown inline css styles
-</div>
-
 MIM-versie: 1.1.1
 
 Enterprise Architect versie: 15.2
