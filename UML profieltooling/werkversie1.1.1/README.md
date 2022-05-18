@@ -4,10 +4,10 @@ MIM-versie: 1.1.1
 
 Enterprise Architect versie: 15.2
 
-## 1 Importeren MIM-toolbox
+## 1 | Importeren MIM-toolbox
 
  - [Download het XML-bestand](https://register.geostandaarden.nl/informatiemodel/mim/1.1.1/) van de MIM-toolbox: `MDG_MIM_Toolbox_v1.1.1_build01.xml`.
- - Verwijder eventueel eerst de oudere versie van de toolbox als je die niet meer nodig hebt ([Toolbox verwijderen](#5-verwijderen-oudere-toolbox)).
+ - Verwijder eventueel eerst de oudere versie van de toolbox als je die niet meer nodig hebt ([Toolbox verwijderen](#5-|-verwijderen-oudere-toolbox)).
  - Open Enterprise Architect
  - Open '_Resources_'
     - Kies rechts in beeld op '_Portals_'
@@ -46,13 +46,13 @@ Enterprise Architect versie: 15.2
 
  - Bij een _user import_ zal er nog een venster verschijnen met de tekst '_Copy succesfull_'.
  - De MIM-toolbox is nu beschikbaar  voor gebruik, maar het is raadzaam om eerst de volgende instructies door te nemen: 
- - Instructie voor het [gebruik van het MIM-diagram](#2-gebruik-mim-diagram).
- - Instructie voor het [gebruik van de Quick Linker](#3-gebruik-quick-linker).
- - Instructie voor het [gebruik van toolbox-item «Relatierol»](#4-gebruik-toolbox-item-relatierol).
+ - Instructie voor het [gebruik van het MIM-diagram](#2-|-toepassen-mim-diagram).
+ - Instructie voor het [gebruik van de Quick Linker](#3-|-toepassen-quick-linker).
+ - Instructie voor het [gebruik van toolbox-item «Relatierol»](#4-|-toepassen-toolbox-item-'relatierol').
 
- > **Let op**: de MIM-toolbox heeft een versienummer. Deze staat niet in de naam. Indien je besloten hebt om oudere versies van de MIM-toolbox niet te verwijderen, komt de naam 'MIM' mogelijk meerdere malen voor. Het [beheren van toolboxen](#6-toolboxen-beheren) in Enterprise Architect doe je op deze manier.
+ > **Let op**: de MIM-toolbox heeft een versienummer. Deze staat niet in de naam. Indien je besloten hebt om oudere versies van de MIM-toolbox niet te verwijderen, komt de naam 'MIM' mogelijk meerdere malen voor. Het [beheren van toolboxen](#6-|-toolboxen-beheren) in Enterprise Architect doe je op deze manier.
 
-## 2 Gebruik MIM-diagram
+## 2 | Toepassen MIM-diagram
 
 In voorgaande versies werd de MIM-toolbox toegepast op een standaard UML diagram (`UML::Class`). Dat kan nog steeds. Dit heeft echter één nadelige eigenschap. Als je in je project met meerdere diagrammen werkt, kan het voorkomen dat bij het wisselen tussen diagrammen de toolbox terugspringt op de standaard UML-toolbox. Hierdoor moet je de MIM-toolbox opnieuw opzoeken.
 
@@ -69,7 +69,7 @@ Dit probleem wordt veroorzaakt doordat een diagram en een toolbox aan elkaar gek
  - Er opent nu een venster.
  - Geef het diagram een naam.
  - Klik op het dropdown-menu bij '_Type_'.
- - Selecteer '_Specialized_' > '_User Technologies_' of '_Model Technologies_' (afhankelijk van de manier waarop je de [toolbox geimporteerd](#importeren-mim-toolbox) hebt).
+ - Selecteer '_Specialized_' > '_User Technologies_' of '_Model Technologies_' (afhankelijk van de manier waarop je de [toolbox geimporteerd](#1-|-importeren-mim-toolbox) hebt).
 
 ![](Media/mim_diagram_find_mim.jpg)
 
@@ -93,7 +93,7 @@ Dit probleem wordt veroorzaakt doordat een diagram en een toolbox aan elkaar gek
 
 ![](Media/mim_diagram_final_check.jpg)
 
-## 3 Gebruik Quick Linker
+## 3 | Toepassen Quick Linker
 
 De Quick Linker is een hulpmiddel om snel en eenvoudig relaties te kunnen leggen tussen verschillende elementen. Het voordeel hiervan is dat het de gebruiker inzicht geeft in de volgens MIM toegestane relaties. De Quick Linker is beschikbaar via een icoontje dat rechtsboven een diagramelement verschijnt op het moment dat je het selecteert.
 
@@ -101,13 +101,13 @@ De Quick Linker is een hulpmiddel om snel en eenvoudig relaties te kunnen leggen
 
 Je kunt de Quick Linker op drie manieren inzetten, namelijk voor het:
 
- - [Verbinden van twee bestaande modelelementen](#3.1-verbinden-bestaande-modelelementen)
- - [Creëren van nieuwe modelelementen](#3.2-nieuw-modelelement)
- - [Creëren van meerdere modelelemten tegelijk](#3.3-meerdere-nieuwe-modelelementen)
+ - [Verbinden van twee bestaande modelelementen](#3.1-|-verbinden-bestaande-modelelementen)
+ - [Creëren van nieuwe modelelementen](#3.2-|-nieuw-modelelement)
+ - [Creëren van meerdere modelelemten tegelijk](#3.3-|-meerdere-nieuwe-modelelementen)
 
 Hieronder beschrijven we elke methode afzonderlijk.
 
-### 3.1 Verbinden bestaande modelelementen
+### 3.1 | Verbinden bestaande modelelementen
  - Klik met de muis op het icoon.
  - Houd de muisknop ingedrukt en trek een lijn naar het object waarmee je het wilt verbinden.
  - Er verschijnt een stippellijn en een menu.
@@ -118,7 +118,7 @@ Hieronder beschrijven we elke methode afzonderlijk.
 
 ![](Media/mim_ql_generalization.jpg)
 
-### 3.2 Nieuw modelelement
+### 3.2 | Nieuw modelelement
 Je kunt ook vanuit een bestaand element een nieuw modelelement creëren. Dat gaat als volgt:
 
  - Klik met de muis op het icoon.
@@ -132,7 +132,7 @@ Je kunt ook vanuit een bestaand element een nieuw modelelement creëren. Dat gaa
 
 ![](Media/mim_ql_generalization.jpg)
 
-### 3.3 Meerdere nieuwe modelelementen
+### 3.3 | Meerdere nieuwe modelelementen
 Ook is het mogelijk om vanuit een bestaand element meerdere én verschillende soorten modelelementen in één keer te creëren. Dat gaat als volgt:
 
  - Klik met de muis op het icoon.
@@ -151,7 +151,7 @@ Ook is het mogelijk om vanuit een bestaand element meerdere én verschillende so
 
 ![](Media/mim_ql_result_multiple.jpg)
 
-## 4 Gebruik toolbox-item Relatierol
+## 4 | Toepassen toolbox-item 'Relatierol'
 
 Net als alle andere relatie-elementen uit de MIM-toolbox, kun je `«Relatierol»` naar het diagram slepen. Dit werkt alleen als je dit naar het uiteinde van een reeds bestaande `«Relatiesoort»` sleept. Wanneer je in EA het stereotype `«Relatierol»` toewijst aan een relatie, worden de bijbehorende '_Tagged Values_' niet automatisch meegenomen. Hieronder staat bschreven hoe je de tagged values voor alle in het model aanwezige stereotypen `«Relatierol»` in het model kunt synchroniseren.
 
@@ -186,7 +186,7 @@ Net als alle andere relatie-elementen uit de MIM-toolbox, kun je `«Relatierol»
 
  > **Let op**: dit werkt nog niet!
 
-## 5 Verwijderen oudere toolbox
+## 5 | Verwijderen oudere toolbox
 Deze instructie is bedoeld voor het verwijderen van toolboxen die je niet meer wilt gebruiken. Bijvoorbeeld oudere versies van de MIM-toolbox.
 
  - Open Enterprise Architect
@@ -205,9 +205,9 @@ Deze instructie is bedoeld voor het verwijderen van toolboxen die je niet meer w
     - Klik met de rechtermuisknop op de toolbox en selecteer '_Locate Technology_'. 
     - Verwijder het XML-bestand van de toolbox op deze locatie
     - Start hierna voor de zekerheid EA opnieuw op.
-    - Ga verder met het [importeren van de MIM-toolbox](#1-importeren-mim-toolbox).
+    - Ga verder met het [importeren van de MIM-toolbox](#1-|-importeren-mim-toolbox).
 
-## 6 Toolboxen beheren
+## 6 | Toolboxen beheren
  - Ga naar de menubalk boven in beeld en selecteer '_Specialize_' > '_Manage-Tech_'
  - Hier vind je een overzicht van alle aanwezige MDG-technologies.
  - Scroll naar beneden en zoek '_MIM_' op.
@@ -215,6 +215,6 @@ Deze instructie is bedoeld voor het verwijderen van toolboxen die je niet meer w
  - Klik op één van de versies voor meer informatie.
  - In het informatievenster rechtsboven zie je welke versie het betreft. Tevens vind je hier terug of de toolbox op model- of gebruikersniveau is geïmporteerd.
  - Met het checkbox in de kolom '_Enabled_' kun je ervoor kiezen om bepaalde bepaalde toolboxen uit te zetten. Dit doe je door het vinkje te verwijderen.
- - Ga verder met de laatste stappen van het [importeren van de MIM-toolbox](#1-importeren-mim-toolbox).
+ - Ga verder met de laatste stappen van het [importeren van de MIM-toolbox](#1-|-importeren-mim-toolbox).
 
  > **Let op**: indien je toolboxen gebruikt met gelijknamige modelelementen, bijvoorbeeld oudere MIM-toolboxen of NEN3610 BRO Grouping-NL, dan kan dit bij het toewijzen van het stereotype «Relatierol» leiden tot een verwijzing naar het 'verkeerde' profiel. Enterprise Architect doet dit automatisch. Hierdoor beschikt het stereotype bijvoorbeeld niet over de gewenste tagged values.
