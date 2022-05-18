@@ -24,14 +24,14 @@ Enterprise Architect versie: 15.2
  >  - **Model**: alleen te gebruiken in het huidige EA-project. Voor elke nieuw project moet je de toolbox opnieuw importeren.
  >  - **User**: te gebruiken in alle EA-projecten. Je hoeft de toolbox slechts éénmalig te importeren.
 
- > **Tip!** Indien binnen jouw EA-omgeving ook een toolbox van een extensie op het MIM aanwezig is (bijvoorbeeld voor de BRO), dan is het raadzaam om de toolboxen alleen op model-niveau te importeren. Indien tenminste één van de twee op user-niveau is geïmporteerd, kan dit bij het toewijzen van stereotypen verwarring opleveren. Veel stereotypen hebben exact dezelfde naam en voor EA is het dan onduidelijk welke het moet kiezen. De bovenstaande aanpak houdt de werkwijze zuiverder.  
+ > **Tip!** Indien binnen jouw EA-omgeving ook een toolbox van een extensie op het MIM aanwezig is (bijvoorbeeld voor de BRO), dan is het raadzaam om de toolboxen alleen op model-niveau te importeren. Indien tenminste één van de twee op user-niveau is geïmporteerd, kan dit bij het toewijzen van stereotypen verwarring opleveren. Veel stereotypen hebben exact dezelfde naam en voor EA is het dan onduidelijk welke _MDG Technology_ het moet kiezen. De bovenstaande aanpak houdt de werkwijze zuiverder.
 
  - Klik met de rechtermuisknop op '_Model Technologies_' of '_User Technologies_'.
 
 ![](Media/mim_import_choose_type.jpg)
 
  - Selecteer '_Import technology_'.
- - Zoek het gedownloade XML-bestand van de MIM-toolbox op en kies '_Openen_'. Overigens kun je ook in dit venster nog kiezen tussen '_model_' of '_user_'. Of je in deze stap, of één stap eerder de keuze maakt, verandert niets aan het resultaat.
+ - Zoek het gedownloade XML-bestand van de MIM-toolbox op en kies '_Openen_'. Overigens kun je ook in dit venster nog kiezen tussen '_model_' of '_user_'. Of je in _deze_ stap, of _één stap eerder_ de keuze maakt voor '_model_' of '_user_', maakt geen verschil.
  - De velden '_Technology_', '_Version_' en '_Notes_' worden nu ingevuld met de juiste informatie.
  - Controleer het versienummer: `Version: 1.1.1`.
 
