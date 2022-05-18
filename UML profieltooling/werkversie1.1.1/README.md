@@ -48,7 +48,7 @@ Enterprise Architect versie: 15.2
  - De MIM-toolbox is nu beschikbaar  voor gebruik, maar het is raadzaam om eerst de volgende instructies door te nemen: 
  - Instructie voor het [gebruik van het MIM-diagram](#2--toepassen-mim-diagram).
  - Instructie voor het [gebruik van de Quick Linker](#3--toepassen-quick-linker).
- - Instructie voor het [gebruik van toolbox-item «Relatierol»](#4--toepassen-toolbox-item-'relatierol').
+ - Instructie voor het [gebruik van toolbox-item «Relatierol»](#4--toepassen-toolbox-item-relatierol).
 
  > **Let op**: de MIM-toolbox heeft een versienummer. Deze staat niet in de naam. Indien je besloten hebt om oudere versies van de MIM-toolbox niet te verwijderen, komt de naam 'MIM' mogelijk meerdere malen voor. Het [beheren van toolboxen](#6--toolboxen-beheren) in Enterprise Architect doe je op deze manier.
 
@@ -101,9 +101,9 @@ De Quick Linker is een hulpmiddel om snel en eenvoudig relaties te kunnen leggen
 
 Je kunt de Quick Linker op drie manieren inzetten, namelijk voor het:
 
- - [Verbinden van twee bestaande modelelementen](#3.1--verbinden-bestaande-modelelementen)
- - [Creëren van nieuwe modelelementen](#3.2--nieuw-modelelement)
- - [Creëren van meerdere modelelemten tegelijk](#3.3--meerdere-nieuwe-modelelementen)
+ - [Verbinden van twee bestaande modelelementen](#31--verbinden-bestaande-modelelementen)
+ - [Creëren van nieuwe modelelementen](#32--nieuw-modelelement)
+ - [Creëren van meerdere modelelemten tegelijk](#33--meerdere-nieuwe-modelelementen)
 
 Hieronder beschrijven we elke methode afzonderlijk.
 
