@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="windows-1252"?>
 <UMLProfile profiletype="uml2">
-	<Documentation id="EDFDE9C6-3" name="MIM" version="1.1.1" notes="MIM"/>
+	<Documentation id="EDFDE9C6-3" name="MIM" version="1.0" notes="MIM"/>
 	<Content>
 		<Stereotypes>
 			<Stereotype name="Attribuutsoort" notes="De typering van gelijksoortige gegevens die voor een objecttype van toepassing is." cx="0" cy="0" bgcolor="16777164" fontcolor="0" bordercolor="0" borderwidth="1" hideicon="0">
@@ -16,10 +16,9 @@
 					<Tag name="Lengte" type="" description="De aanduiding van de lengte van een gegeven, volgens de aangegeven notatiewijze." unit="" values="" default=""/>
 					<Tag name="Patroon" type="" description="De verzameling van waarden die gegevens van deze attribuutsoort kunnen hebben, oftewel het waardenbereik, uitgedrukt in een specifieke structuur." unit="" values="" default="&lt;memo&gt;"/>
 					<Tag name="Formeel patroon" type="" description="Zoals patroon, formeel vastgelegd, uitgedrukt in een formele taal die door de computer wordt herkend." unit="" values="" default=""/>
-					<Tag name="Indicatie materiële historie" type="enumeration" description="Indicatie of de materiële historie van het kenmerk van het object te bevragen is." unit="" values="Ja,Nee,Zie groep" default=""/>
-					<Tag name="Indicatie formele historie" type="enumeration" description="Indicatie of de formele historie van het kenmerk van het object bijgehouden wordt en te bevragen is." unit="" values="Ja,Nee,Zie groep" default=""/>
+					<Tag name="Indicatie materiële historie" type="enumeration" description="Indicatie of de materiële historie van het kenmerk van het object te bevragen is." unit="" values="Ja,Nee" default=""/>
+					<Tag name="Indicatie formele historie" type="enumeration" description="Indicatie of de formele historie van het kenmerk van het object bijgehouden wordt en te bevragen is." unit="" values="Ja,Nee" default=""/>
 					<Tag name="Authentiek" type="enumeration" description="Aanduiding of het kenmerk een authentiek gegeven betreft." unit="" values="Authentiek,Basisgegeven,Wettelijk gegeven,Landelijk kerngegeven,Overig" default=""/>
-					<Tag name="Indicatie classificerend" type="enumeration" description="Indicatie dat een attribuutsoort het objecttype waar het bij hoort classificeert in (sub)typen." unit="" values="Ja,Nee" default=""/>
 					<Tag name="Mogelijk geen waarde" type="enumeration" description="Aanduiding dat van een aspect geen waarde is geregistreerd, maar dat onduidelijk is of de waarde er werkelijk ook niet is." unit="" values="Ja,Nee" default="Nee"/>
 				</TaggedValues>
 			</Stereotype>
@@ -76,19 +75,6 @@
 					<Tag name="Datum opname" type="" description="De datum waarop het modelelement is opgenomen in het informatiemodel." unit="" values="" default=""/>
 				</TaggedValues>
 			</Stereotype>
-			<Stereotype name="Enumeratiewaarde" notes="Een gedefinieerde waarde, in de vorm van een eenmalig vastgesteld constant gegeven." cx="0" cy="0" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
-				<AppliesTo>
-					<Apply type="Attribute"/>
-				</AppliesTo>
-				<TaggedValues>
-					<Tag name="Herkomst" type="" description="De registratie of het informatiemodel waaraan het modelelement ontleend is dan wel de eigen organisatie indien het door de eigen organisatie toegevoegd is." unit="" values="" default=""/>
-					<Tag name="Begrip" type="" description="Verwijzing naar een begrip, vanuit een modelelement, waarmee wordt aangegeven op welk begrip, of begrippen, het informatiemodel element is gebaseerd. De verwijzing heeft de vorm van een term of een URI." unit="" values="" default=""/>
-					<Tag name="Herkomst definitie" type="" description="De registratie of het informatiemodel waaruit de definitie is overgenomen dan wel een aanduiding die aangeeft uit welke bronnen de definitie is samengesteld." unit="" values="" default=""/>
-					<Tag name="Toelichting" type="" description="Een inhoudelijke toelichting op de definitie, ter verheldering of nadere duiding." unit="" values="" default="&lt;memo&gt;"/>
-					<Tag name="Datum opname" type="" description="De datum waarop het modelelement is opgenomen in het informatiemodel." unit="" values="" default=""/>
-					<Tag name="Code" type="" description="De in een registratie of informatiemodel aan de enumeratiewaarde toegekend unieke code" unit="" values="" default=""/>
-				</TaggedValues>
-			</Stereotype>
 			<Stereotype name="Extern" notes="Een groepering van constructies die een externe instantie beheert en beschikbaar stelt aan een informatiemodel en die in het informatiemodel ongewijzigd gebruikt worden." cx="0" cy="0" bgcolor="16777164" fontcolor="0" bordercolor="0" borderwidth="1" hideicon="0">
 				<AppliesTo>
 					<Apply type="Package">
@@ -116,10 +102,9 @@
 					<Tag name="Herkomst definitie" type="" description="De registratie of het informatiemodel waaruit de definitie is overgenomen dan wel een aanduiding die aangeeft uit welke bronnen de definitie is samengesteld." unit="" values="" default=""/>
 					<Tag name="Toelichting" type="" description="Een inhoudelijke toelichting op de definitie, ter verheldering of nadere duiding." unit="" values="" default="&lt;memo&gt;"/>
 					<Tag name="Datum opname" type="" description="De datum waarop het modelelement is opgenomen in het informatiemodel." unit="" values="" default=""/>
-					<Tag name="Indicatie materiële historie" type="enumeration" description="Indicatie of de materiële historie van het kenmerk van het object te bevragen is." unit="" values="Ja,Nee,Zie groep" default=""/>
-					<Tag name="Indicatie formele historie" type="enumeration" description="Indicatie of de formele historie van het kenmerk van het object bijgehouden wordt en te bevragen is." unit="" values="Ja,Nee,Zie groep" default=""/>
+					<Tag name="Indicatie materiële historie" type="enumeration" description="Indicatie of de materiële historie van het kenmerk van het object te bevragen is." unit="" values="Ja,Nee" default=""/>
+					<Tag name="Indicatie formele historie" type="enumeration" description="Indicatie of de formele historie van het kenmerk van het object bijgehouden wordt en te bevragen is." unit="" values="Ja,Nee" default=""/>
 					<Tag name="Authentiek" type="enumeration" description="Aanduiding of het kenmerk een authentiek gegeven betreft." unit="" values="Authentiek,Basisgegeven,Wettelijk gegeven,Landelijk kerngegeven,Overig" default=""/>
-					<Tag name="Indicatie afleidbaar" type="" description="Aanduiding dat gegeven afleidbaar is uit andere attribuut- en/of relatiesoorten." unit="" values="" default=""/>
 					<Tag name="Mogelijk geen waarde" type="" description="Aanduiding dat van een aspect geen waarde is geregistreerd, maar dat onduidelijk is of de waarde er werkelijk ook niet is." unit="" values="" default="Nee"/>
 				</TaggedValues>
 			</Stereotype>
@@ -133,8 +118,8 @@
 					<Tag name="Herkomst definitie" type="" description="De registratie of het informatiemodel waaruit de definitie is overgenomen dan wel een aanduiding die aangeeft uit welke bronnen de definitie is samengesteld." unit="" values="" default=""/>
 					<Tag name="Toelichting" type="" description="Een inhoudelijke toelichting op de definitie, ter verheldering of nadere duiding." unit="" values="" default="&lt;memo&gt;"/>
 					<Tag name="Datum opname" type="" description="De datum waarop het modelelement is opgenomen in het informatiemodel." unit="" values="" default=""/>
-					<Tag name="Indicatie materiële historie" type="enumeration" description="Indicatie of de materiële historie van het kenmerk van het object te bevragen is." unit="" values="Ja,Nee,Zie groep" default=""/>
-					<Tag name="Indicatie formele historie" type="enumeration" description="Indicatie of de formele historie van het kenmerk van het object bijgehouden wordt en te bevragen is." unit="" values="Ja,Nee,Zie groep" default=""/>
+					<Tag name="Indicatie materiële historie" type="enumeration" description="Indicatie of de materiële historie van het kenmerk van het object te bevragen is." unit="" values="Ja,Nee" default=""/>
+					<Tag name="Indicatie formele historie" type="enumeration" description="Indicatie of de formele historie van het kenmerk van het object bijgehouden wordt en te bevragen is." unit="" values="Ja,Nee" default=""/>
 					<Tag name="Authentiek" type="enumeration" description="Aanduiding of het kenmerk een authentiek gegeven betreft." unit="" values="Authentiek,Basisgegeven,Wettelijk gegeven,Landelijk kerngegeven,Overig" default=""/>
 				</TaggedValues>
 			</Stereotype>
@@ -193,7 +178,7 @@
 					<Tag name="MIM versie" type="" description="De versie van de MIM specificatie die gebruikt is om het informatiemodel in uit te drukken." unit="" values="" default=""/>
 					<Tag name="MIM extensie" type="" description="De aanduiding van een extensie op MIM." unit="" values="" default=""/>
 					<Tag name="MIM taal" type="" description="De aanduiding van de taal die gebruikt is voor de modelelementen." unit="" values="" default=""/>
-					<Tag name="Relatiemodelleringstype" type="" description="Aanduiding van een in MIM gedefinieerd alternatief voor een modelleringswijze, en welke keuze hierbij is gemaakt." unit="" values="" default=""/>
+					<Tag name="Relatiemodelleringstype" type="enumeration" description="Aanduiding van een in MIM gedefinieerd alternatief voor een modelleringswijze, en welke keuze hierbij is gemaakt." unit="" values="Relatiesoort leidend,Relatierol leidend" default=""/>
 				</TaggedValues>
 			</Stereotype>
 			<Stereotype name="Keuzerelatie" notes="" cx="0" cy="0" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0"/>
@@ -208,11 +193,9 @@
 					<Tag name="Begrip" type="" description="Verwijzing naar een begrip, vanuit een modelelement, waarmee wordt aangegeven op welk begrip, of begrippen, het informatiemodel element is gebaseerd. De verwijzing heeft de vorm van een term of een URI." unit="" values="" default=""/>
 					<Tag name="Herkomst definitie" type="" description="De registratie of het informatiemodel waaruit de definitie is overgenomen dan wel een aanduiding die aangeeft uit welke bronnen de definitie is samengesteld." unit="" values="" default=""/>
 					<Tag name="Toelichting" type="" description="Een inhoudelijke toelichting op de definitie, ter verheldering of nadere duiding." unit="" values="" default="&lt;memo&gt;"/>
-					<Tag name="Datum opname" type="" description="De datum waarop het modelelement is opgenomen in het informatiemodel." unit="" values="" default="&lt;date&gt;"/>
-					<Tag name="Unieke aanduiding" type="" description="De identificerende kenmerken van een object die een instantie van het objecttype uniek identificeren." unit="" values="" default=""/>
+					<Tag name="Datum opname" type="" description="De datum waarop het modelelement is opgenomen in het informatiemodel." unit="" values="" default=""/>
 					<Tag name="Populatie" type="" description="Voor objecttypen die deel uitmaken van een (basis)registratie betreft dit de beschrijving van de exemplaren van het gedefinieerde objecttype die in de desbetreffende (basis)­registratie voorhanden zijn." unit="" values="" default="&lt;memo&gt;"/>
 					<Tag name="Kwaliteit" type="" description="Beschrijving van de mate waarin in de registratie opgenomen objecten van het desbetreffende type volledig, juist, actueel, nauwkeurig en betrouwbaar zijn." unit="" values="" default=""/>
-					<Tag name="Indicatie abstract object" type="" description="Een indicatie die aangeeft of er objecten kunnen bestaan die getypeerd worden als zijnde objecten (instanties) van alleen dit objecttype. Een abstract objecttype moet altijd de generalisatie zijn van één of meerdere objecttypes die niet abstract zijn." unit="" values="" default=""/>
 				</TaggedValues>
 			</Stereotype>
 			<Stereotype name="Primitief datatype" notes="Een primitief datatype is een datatype met een eenvoudige basisstructuur, oftewel enkelvoudig en zonder gelaagdheid." cx="0" cy="0" bgcolor="16777164" fontcolor="0" bordercolor="0" borderwidth="1" hideicon="0">
@@ -270,8 +253,8 @@
 					<Tag name="Herkomst definitie" type="" description="De registratie of het informatiemodel waaruit de definitie is overgenomen dan wel een aanduiding die aangeeft uit welke bronnen de definitie is samengesteld." unit="" values="" default=""/>
 					<Tag name="Toelichting" type="" description="Een inhoudelijke toelichting op de definitie, ter verheldering of nadere duiding." unit="" values="" default="&lt;memo&gt;"/>
 					<Tag name="Datum opname" type="" description="De datum waarop het modelelement is opgenomen in het informatiemodel." unit="" values="" default=""/>
-					<Tag name="Indicatie materiële historie" type="enumeration" description="Indicatie of de materiële historie van het kenmerk van het object te bevragen is." unit="" values="Ja,Nee,Zie groep" default=""/>
-					<Tag name="Indicatie formele historie" type="enumeration" description="Indicatie of de formele historie van het kenmerk van het object bijgehouden wordt en te bevragen is." unit="" values="Ja,Nee,Zie groep" default=""/>
+					<Tag name="Indicatie materiële historie" type="enumeration" description="Indicatie of de materiële historie van het kenmerk van het object te bevragen is." unit="" values="Ja,Nee" default=""/>
+					<Tag name="Indicatie formele historie" type="enumeration" description="Indicatie of de formele historie van het kenmerk van het object bijgehouden wordt en te bevragen is." unit="" values="Ja,Nee" default=""/>
 					<Tag name="Authentiek" type="enumeration" description="Aanduiding of het kenmerk een authentiek gegeven betreft." unit="" values="Authentiek,Basisgegeven,Wettelijk gegeven,Landelijk kerngegeven,Overig" default=""/>
 					<Tag name="Mogelijk geen waarde" type="" description="Aanduiding dat van een aspect geen waarde is geregistreerd, maar dat onduidelijk is of de waarde er werkelijk ook niet is." unit="" values="" default="Nee"/>
 				</TaggedValues>
@@ -286,8 +269,8 @@
 					<Tag name="Herkomst defintie" type="" description="De registratie of het informatiemodel waaruit de definitie is overgenomen dan wel een aanduiding die aangeeft uit welke bronnen de definitie is samengesteld." unit="" values="" default=""/>
 					<Tag name="Toelichting" type="" description="Een inhoudelijke toelichting op de definitie, ter verheldering of nadere duiding." unit="" values="" default="&lt;memo&gt;"/>
 					<Tag name="Datum opname" type="" description="De datum waarop het modelelement is opgenomen in het informatiemodel." unit="" values="" default=""/>
-					<Tag name="Indicatie materiële historie" type="enumeration" description="Indicatie of de materiële historie van het kenmerk van het object te bevragen is." unit="" values="Ja,Nee,Zie groep" default=""/>
-					<Tag name="Indicatie formele historie" type="enumeration" description="Indicatie of de formele historie van het kenmerk van het object bijgehouden wordt en te bevragen is." unit="" values="Ja,Nee,Zie groep" default=""/>
+					<Tag name="Indicatie materiële historie" type="enumeration" description="Indicatie of de materiële historie van het kenmerk van het object te bevragen is." unit="" values="Ja,Nee" default=""/>
+					<Tag name="Indicatie formele historie" type="enumeration" description="Indicatie of de formele historie van het kenmerk van het object bijgehouden wordt en te bevragen is." unit="" values="Ja,Nee" default=""/>
 					<Tag name="Authentiek" type="enumeration" description="Aanduiding of het kenmerk een authentiek gegeven betreft." unit="" values="Authentiek,Basisgegeven,Wettelijk gegeven,Landelijk kerngegeven,Overig" default=""/>
 					<Tag name="Mogelijk geen waarde" type="" description="Aanduiding dat van een aspect geen waarde is geregistreerd, maar dat onduidelijk is of de waarde er werkelijk ook niet is." unit="" values="" default="Nee"/>
 				</TaggedValues>
@@ -305,10 +288,9 @@
 					<Tag name="Herkomst definitie" type="" description="De registratie of het informatiemodel waaruit de definitie is overgenomen dan wel een aanduiding die aangeeft uit welke bronnen de definitie is samengesteld." unit="" values="" default=""/>
 					<Tag name="Toelichting" type="" description="Een inhoudelijke toelichting op de definitie, ter verheldering of nadere duiding." unit="" values="" default="&lt;memo&gt;"/>
 					<Tag name="Datum opname" type="" description="De datum waarop het modelelement is opgenomen in het informatiemodel." unit="" values="" default=""/>
-					<Tag name="Indicatie materiële historie" type="enumeration" description="Indicatie of de materiële historie van het kenmerk van het object te bevragen is." unit="" values="Ja,Nee,Zie groep" default=""/>
-					<Tag name="Indicatie formele historie" type="enumeration" description="Indicatie of de formele historie van het kenmerk van het object bijgehouden wordt en te bevragen is." unit="" values="Ja,Nee,Zie groep" default=""/>
+					<Tag name="Indicatie materiële historie" type="enumeration" description="Indicatie of de materiële historie van het kenmerk van het object te bevragen is." unit="" values="Ja,Nee" default=""/>
+					<Tag name="Indicatie formele historie" type="enumeration" description="Indicatie of de formele historie van het kenmerk van het object bijgehouden wordt en te bevragen is." unit="" values="Ja,Nee" default=""/>
 					<Tag name="Authentiek" type="enumeration" description="Aanduiding of het kenmerk een authentiek gegeven betreft." unit="" values="Authentiek,Basisgegeven,Wettelijk gegeven,Landelijk kerngegeven,Overig" default=""/>
-					<Tag name="Indicatie afleidbaar" type="" description="Aanduiding dat gegeven afleidbaar is uit andere attribuut- en/of relatiesoorten." unit="" values="" default=""/>
 					<Tag name="Mogelijk geen waarde" type="" description="Aanduiding dat van een aspect geen waarde is geregistreerd, maar dat onduidelijk is of de waarde er werkelijk ook niet is." unit="" values="" default="Nee"/>
 				</TaggedValues>
 			</Stereotype>

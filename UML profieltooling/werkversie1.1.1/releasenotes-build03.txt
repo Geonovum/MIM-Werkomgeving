@@ -1,0 +1,45 @@
+MDG_MIM_Toolbox_v1.1.1_build03.xml
+
+2022-06-07
+Release notes.
+
+De volgende items zijn aangepast.
+Dit zijn allemaal geen MIM wijzigingen maar correcties op de toepassing van MIM 1.1.1 in de toolbox.
+
+Attribuutsoort.
+	verwijderd: tagged value indicatie classificerend.
+	reden: dit is al een EA metagegeven
+
+Enumeratiewaarde.
+	verwijderd: tagged value code
+	reden: dit is middels metagegeven Alias van EA
+
+Externe koppeling.
+	verwijderd: tagged value indicatie afleidbaar
+	reden: is een metagegeven van EA
+
+Objecttype.
+	verwijderd: tagged value indicatie abstract object
+	reden: is een metagegeven in EA
+	verwijderd: tagged value unieke aanduiding
+	reden: is geen tagged value en wordt via IsID aangegeven
+	verwijderd: type=date bij tagged value datum opname
+	reden: is niet de juiste manier om dat te definieren
+
+Relatiesoort.
+	verwijderd: tagged value indicatie afleidbaar
+	reden: is een metagegeven in EA
+
+Materiele Historie.
+	verwijderd: waarde = zie groep
+	reden: MIM kent deze waarde niet. Het is alleen ja of nee.
+
+Formele Historie.
+	verwijderd: waarde = zie groep
+	reden: MIM kent deze waarde niet. Het is alleen ja of nee.
+
+Relatiemodelleringstype.
+	toegevoegd: enumeratielijst met de waarden Relatiesoort leidend en Relatierol leidend.
+	reden: dit zijn de in MIM gedefinieerde waarden.
+
+
