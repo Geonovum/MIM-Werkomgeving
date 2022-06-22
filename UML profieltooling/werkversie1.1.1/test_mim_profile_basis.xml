@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="windows-1252"?>
 <UMLProfile profiletype="uml2">
-	<Documentation id="EDFDE9C6-3" name="MIM" version="1.0" notes="MIM"/>
+	<Documentation id="EDFDE9C6-3" name="MIMtest2" version="1.0" notes="MIMtest2"/>
 	<Content>
 		<Stereotypes>
 			<Stereotype name="Attribuutsoort" notes="De typering van gelijksoortige gegevens die voor een objecttype van toepassing is." cx="0" cy="0" bgcolor="16777164" fontcolor="0" bordercolor="0" borderwidth="1" hideicon="0">
@@ -264,7 +264,7 @@
 					<Apply type="AssociationEnd"/>
 				</AppliesTo>
 				<TaggedValues>
-					<Tag name="Herkomst" type="" description="De registratie of het informatiemodel waaraan het modelelement ontleend is dan wel de eigen organisatie indien het door de eigen organisatie toegevoegd is." unit="" values="" default="&lt;string&gt;"/>
+					<Tag name="Herkomst" type="String" description="De registratie of het informatiemodel waaraan het modelelement ontleend is dan wel de eigen organisatie indien het door de eigen organisatie toegevoegd is." unit="" values="" default=""/>
 					<Tag name="Begrip" type="" description="Verwijzing naar een begrip, vanuit een modelelement, waarmee wordt aangegeven op welk begrip, of begrippen, het informatiemodel element is gebaseerd. De verwijzing heeft de vorm van een term of een URI." unit="" values="" default=""/>
 					<Tag name="Herkomst defintie" type="" description="De registratie of het informatiemodel waaruit de definitie is overgenomen dan wel een aanduiding die aangeeft uit welke bronnen de definitie is samengesteld." unit="" values="" default=""/>
 					<Tag name="Toelichting" type="" description="Een inhoudelijke toelichting op de definitie, ter verheldering of nadere duiding." unit="" values="" default="&lt;memo&gt;"/>
