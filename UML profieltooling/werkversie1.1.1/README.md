@@ -4,6 +4,18 @@ MIM-versie: 1.1.1
 
 Enterprise Architect versie: 15.2
 
+Update 24 juni 2022
+
+Versienummer toegevoegd, zodat uit de naam van de toolbox duidelijk blijkt wat de versie is. Tevens is dit doorgevoerd naar de modelelementen. Zodat je bij de properties van het modelelement direct kunt zien met welke MIM-versie het element is aangemaakt
+
+## Inhoud
+ 1. [Importeren MIM-toolbox](#1--importeren-mim-toolbox)
+ 1. [Toepassen MIM-diagram](#2--toepassen-mim-diagram)
+ 1. [Toepassen Quick Linker](#3--toepassen-quick-linker)
+ 1. [Toepassen toolbox-item 'Relatierol'](#4--toepassen-toolbox-item-relatierol)
+ 1. [Verwijderen oude toolbox](#5--verwijderen-oude-toolbox)
+ 1. [Toolbox beheren](#6--toolbox-beheren)
+
 ## 1 | Importeren MIM-toolbox
 
  - [Download het XML-bestand](https://register.geostandaarden.nl/informatiemodel/mim/1.1.1/) van de MIM-toolbox: `MDG_MIM_Toolbox_v1.1.1_build01.xml`.
@@ -40,7 +52,9 @@ Enterprise Architect versie: 15.2
 ![](Media/mim_import_to_model.jpg)
 
  - Klik '_Ok_'
- - Navigeer in het '_Resources_' naar '_MDG Technologies_' > '_Model Technologies_' en  controleer of hier nu een map met de naam '_MIM_' staat.
+ - Navigeer in het '_Resources_' naar '_MDG Technologies_' > '_Model Technologies_'.
+ - Controleer of hier nu een map met de naam '_MIM MDG_' staat.
+ - Controleer ook of het MIM-versienummer klopt bij '_UML Profiles_', '_Diagram Types_' en '_Toolboxes_'.
 
 ![](Media/mim_import_to_model_succesful.jpg)
 
@@ -73,11 +87,11 @@ Dit probleem wordt veroorzaakt doordat een diagram en een toolbox aan elkaar gek
 
 ![](Media/mim_diagram_find_mim.jpg)
 
- - Klik in het deelvenster '_Select From_' op de '_MIM-toolbox_'.
+ - Klik in het deelvenster '_Select From_' op '_MIM 1.1.1_'.
 
 ![](Media/mim_diagram_select_tech.jpg)
 
- - Nu verschijnt in het deelvenster '_Diagram Types_' het '_MIM-diagram_'.
+ - Nu verschijnt in het deelvenster '_Diagram Types_' het '_MIM Diagram_'.
  - Selecteer het diagram en klik op '_Ok_'.
 
  > **Let op**: het is belangrijk dat je het diagram daadwerkelijk selecteert. Je kunt herkennen of dit gelukt is, doordat in het onderste deelvenster een toelichtende tekst op het diagram verschijnt (anders staat er alleen 'MIM').
@@ -92,6 +106,14 @@ Dit probleem wordt veroorzaakt doordat een diagram en een toolbox aan elkaar gek
  - In het venster '_Properties_' zie je dat het diagram van het type '_MIM_' is.
 
 ![](Media/mim_diagram_final_check.jpg)
+
+Het MIM-versienummer komt nu ook terug het veld Stereotype in het venster '_Properties_' van het object.
+ - Maak een objecttype "A" aan.
+ - Controleer vervolgens in de het venster '_Properties_' of in de naam van het stereotype het betreffende MIM-versienummer verschijnt.
+ - Tevens verschijnt er in dit venster een deelmenu met de titel '_«Objecttype» ( from MIM 1.1.1 - Basiselementen )_'
+ - Als dit klopt, is de toolbox correct geïmporteerd.
+
+![](Media/mim_modelelement_versienummer.jpg)
 
 ## 3 | Toepassen Quick Linker
 
