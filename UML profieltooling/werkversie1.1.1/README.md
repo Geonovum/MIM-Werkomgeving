@@ -53,7 +53,7 @@ Versienummer toegevoegd, zodat uit de naam van de toolbox duidelijk blijkt wat d
 
  - Klik '_Ok_'
  - Navigeer in het '_Resources_' naar '_MDG Technologies_' > '_Model Technologies_'.
- - Controleer of hier nu een map met de naam '_MIM MDG_' staat.
+ - Controleer of hier nu een map met de naam '_MIM_' staat.
  - Controleer ook of het MIM-versienummer klopt bij '_UML Profiles_', '_Diagram Types_' en '_Toolboxes_'.
 
 ![](Media/mim_import_to_model_succesful.jpg)
