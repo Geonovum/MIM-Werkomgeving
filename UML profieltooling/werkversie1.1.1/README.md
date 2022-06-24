@@ -13,8 +13,8 @@ Versienummer toegevoegd, zodat uit de naam van de toolbox duidelijk blijkt wat d
  1. [Toepassen MIM-diagram](#2--toepassen-mim-diagram)
  1. [Toepassen Quick Linker](#3--toepassen-quick-linker)
  1. [Toepassen toolbox-item 'Relatierol'](#4--toepassen-toolbox-item-relatierol)
- 1. [Verwijderen oude toolbox](#5--verwijderen-oude-toolbox)
- 1. [Toolbox beheren](#6--toolbox-beheren)
+ 1. [Verwijderen oudere toolbox](#5--verwijderen-oudere-toolbox)
+ 1. [Toolboxen beheren](#6--toolboxen-beheren)
 
 ## 1 | Importeren MIM-toolbox
 
