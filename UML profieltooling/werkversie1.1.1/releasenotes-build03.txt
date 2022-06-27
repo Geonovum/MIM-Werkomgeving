@@ -1,10 +1,19 @@
 MDG_MIM_Toolbox_v1.1.1_build03.xml
 
-2022-06-07
+2022-06-27
 Release notes.
 
 De volgende items zijn aangepast.
 Dit zijn allemaal geen MIM wijzigingen maar correcties op de toepassing van MIM 1.1.1 in de toolbox.
+
+
+1) Benaming van de MIM UML Profiles in de MDG hebben nu een prefix MIM 1.1.1 (dus met versienummer). Hierdoor is het mogelijk om de MIM versie te herkennen aan een toegekend stereotype. Dit heeft geen effect op de betekenis van het stereotype zelf.
+
+2) De MIM toolbox onderdelen hebben een MIM 1.1.1 prefix gekregen
+
+3) De 'memo' velden hadden in het memo de definitie van het tagged value (de tekst in het notes-veld) staan. Dit is een fout van EA. In een gegenereerde objectcatalogus kwam daardoor deze tekst als waarde van het TV te staan. De definitie is nu weggelaten waardoor het memo-veld nu een leeg is.
+
+4) Bij een aantal stereotypen stonden ten onrechte TV's die door EA zelf als metagegeven toegekend kunnen worden. Dit is gecorrigeerd in de volgende gevallen:
 
 Attribuutsoort.
 	verwijderd: tagged value indicatie classificerend.
