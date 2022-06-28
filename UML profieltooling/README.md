@@ -6,14 +6,16 @@
  - We werken nu in "werkversie 1.1.1"
 
 ## WELKE PACKAGES ALS PROFIEL PUBLISEREN
+ 1. `«profile» MIM`
  1. `«profile» Keuzeattribuut`
  1. `«profile» Keuzebasis`
  1. `«profile» Keuzedatatype`
  1. `«profile» Keuzerelatie`
- 1. `«profile» MIM`
+ 1. `«profile diagram» MIM`
  1. `«profile toolbox» MIM`
- 1. ***DIAGRAM*** (diagram profiel maken)
- 1. ***QUICKLINKER*** (quick linker maken)
+
+Daarnaast heb je nog een csv-bestand nodig voor de **quick linker** en een **mtsfile** waarin de belangrijkste informatie voor het generen van een MDG-technology al in is opgeslagen.
+
 
 ![](Media/MIM_01_profile_benodigde_profielen.jpg)
 
