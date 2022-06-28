@@ -9,12 +9,12 @@
 > NOTE: Inleidende tekst "Deze handleiding beschrijft ... "
 
 ## Inhoud
- - Beschrijving doel etc.
- - Benodigde bestanden
- - Settings (versienummer, quick linker, etc.)
- - Profielen genereren
- - MDG genereren
- - Resultaat controleren
+ 1. Beschrijving doel etc.
+ 1. Benodigde bestanden
+ 1. Settings (versienummer, quick linker, etc.)
+ 1. Profielen genereren
+ 1. MDG genereren
+ 1. Resultaat controleren
 
 ## Beschrijving
  - Met al die profielen maak je een MDG MIM toolbox v1.1.1.xml
