@@ -1,6 +1,6 @@
 MDG_MIM_Toolbox_v1.1.1_build03.xml
 
-2022-06-27
+2022-06-228
 Release notes.
 
 De volgende items zijn aangepast.
