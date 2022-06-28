@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="windows-1252"?>
-<MDG.Technology version="1.0"><Documentation id="build03" name="MIM" version="1.1.1" notes="MIM 1.1.1 - Geonovum - build 03&#xA;&#xA;&#xA;Inhoudelijk&#xA; • Alt-1 en Alt-2 gecombineerd. (relatiesoort leidend en relatierol leidend)&#xA; • Enumeratiewaarde als extent op attribuut.&#xA; • Toevoeging en uniformering keuze-elementen&#xA; • Uniformering definities model-elementen&#xA; • Uniformering definities tagged values&#xA;&#xA;Praktisch&#xA; • MIM-relaties aan Quick Linker toegevoegd&#xA; • MIM-diagram toegevoegd&#xA; • Koppeling MIM-diagram en MIM-toolbox" infoURI="https://docs.geostandaarden.nl/mim/mim/" supportURI="https://github.com/Geonovum/MIM-Werkomgeving/issues/"/><UMLProfiles><UMLProfile profiletype="uml2">
-			<Documentation id="EDFDE9C6-3" name="MIM" version="1.1.1" alias="MIM 1.1.1 - Basiselementen" notes="MIM"/>
+<MDG.Technology version="1.0"><Documentation id="MIM" name="MIM" version="1.1.1" notes="MIM 1.1.1 - Geonovum&#xA;&#xA;Inhoudelijk&#xA; • Alt-1 en Alt 2 gecombineerd.&#xA; • Enumeratiewaarde als extent op attribuut.&#xA; • Toevoeging en uniformering keuze-elementen&#xA; • Uniformering definities model-elementen&#xA; • Uniformering definities tagged values&#xA;&#xA;Praktisch&#xA; • MIM-relaties aan Quick Linker toegevoegd&#xA; • MIM-diagram toegevoegd&#xA; • Koppeling MIM-diagram en MIM-toolbox" infoURI="https://docs.geostandaarden.nl/mim/mim/" supportURI="https://github.com/Geonovum/MIM-Werkomgeving/issues/"/><UMLProfiles><UMLProfile profiletype="uml2">
+			<Documentation id="EDFDE9C6-3" name="MIM" version="1.1.1" notes="MIM"/>
 			<Content>
 				<Stereotypes>
 					<Stereotype name="Attribuutsoort" notes="De typering van gelijksoortige gegevens die voor een objecttype van toepassing is." cx="0" cy="0" bgcolor="16777164" fontcolor="0" bordercolor="0" borderwidth="1" hideicon="0">
@@ -16,9 +16,10 @@
 							<Tag name="Lengte" type="" description="De aanduiding van de lengte van een gegeven, volgens de aangegeven notatiewijze." unit="" values="" default=""/>
 							<Tag name="Patroon" type="" description="De verzameling van waarden die gegevens van deze attribuutsoort kunnen hebben, oftewel het waardenbereik, uitgedrukt in een specifieke structuur." unit="" values="" default="&lt;memo&gt;"/>
 							<Tag name="Formeel patroon" type="" description="Zoals patroon, formeel vastgelegd, uitgedrukt in een formele taal die door de computer wordt herkend." unit="" values="" default=""/>
-							<Tag name="Indicatie materiële historie" type="enumeration" description="Indicatie of de materiële historie van het kenmerk van het object te bevragen is." unit="" values="Ja,Nee" default=""/>
-							<Tag name="Indicatie formele historie" type="enumeration" description="Indicatie of de formele historie van het kenmerk van het object bijgehouden wordt en te bevragen is." unit="" values="Ja,Nee" default=""/>
+							<Tag name="Indicatie materiële historie" type="enumeration" description="Indicatie of de materiële historie van het kenmerk van het object te bevragen is." unit="" values="Ja,Nee,Zie groep" default=""/>
+							<Tag name="Indicatie formele historie" type="enumeration" description="Indicatie of de formele historie van het kenmerk van het object bijgehouden wordt en te bevragen is." unit="" values="Ja,Nee,Zie groep" default=""/>
 							<Tag name="Authentiek" type="enumeration" description="Aanduiding of het kenmerk een authentiek gegeven betreft." unit="" values="Authentiek,Basisgegeven,Wettelijk gegeven,Landelijk kerngegeven,Overig" default=""/>
+							<Tag name="Indicatie classificerend" type="enumeration" description="Indicatie dat een attribuutsoort het objecttype waar het bij hoort classificeert in (sub)typen." unit="" values="Ja,Nee" default=""/>
 							<Tag name="Mogelijk geen waarde" type="enumeration" description="Aanduiding dat van een aspect geen waarde is geregistreerd, maar dat onduidelijk is of de waarde er werkelijk ook niet is." unit="" values="Ja,Nee" default="Nee"/>
 						</TaggedValues>
 					</Stereotype>
@@ -85,6 +86,7 @@
 							<Tag name="Herkomst definitie" type="" description="De registratie of het informatiemodel waaruit de definitie is overgenomen dan wel een aanduiding die aangeeft uit welke bronnen de definitie is samengesteld." unit="" values="" default=""/>
 							<Tag name="Toelichting" type="" description="Een inhoudelijke toelichting op de definitie, ter verheldering of nadere duiding." unit="" values="" default="&lt;memo&gt;"/>
 							<Tag name="Datum opname" type="" description="De datum waarop het modelelement is opgenomen in het informatiemodel." unit="" values="" default=""/>
+							<Tag name="Code" type="" description="De in een registratie of informatiemodel aan de enumeratiewaarde toegekend unieke code" unit="" values="" default=""/>
 						</TaggedValues>
 					</Stereotype>
 					<Stereotype name="Extern" notes="Een groepering van constructies die een externe instantie beheert en beschikbaar stelt aan een informatiemodel en die in het informatiemodel ongewijzigd gebruikt worden." cx="0" cy="0" bgcolor="16777164" fontcolor="0" bordercolor="0" borderwidth="1" hideicon="0">
@@ -114,9 +116,10 @@
 							<Tag name="Herkomst definitie" type="" description="De registratie of het informatiemodel waaruit de definitie is overgenomen dan wel een aanduiding die aangeeft uit welke bronnen de definitie is samengesteld." unit="" values="" default=""/>
 							<Tag name="Toelichting" type="" description="Een inhoudelijke toelichting op de definitie, ter verheldering of nadere duiding." unit="" values="" default="&lt;memo&gt;"/>
 							<Tag name="Datum opname" type="" description="De datum waarop het modelelement is opgenomen in het informatiemodel." unit="" values="" default=""/>
-							<Tag name="Indicatie materiële historie" type="enumeration" description="Indicatie of de materiële historie van het kenmerk van het object te bevragen is." unit="" values="Ja,Nee" default=""/>
-							<Tag name="Indicatie formele historie" type="enumeration" description="Indicatie of de formele historie van het kenmerk van het object bijgehouden wordt en te bevragen is." unit="" values="Ja,Nee" default=""/>
+							<Tag name="Indicatie materiële historie" type="enumeration" description="Indicatie of de materiële historie van het kenmerk van het object te bevragen is." unit="" values="Ja,Nee,Zie groep" default=""/>
+							<Tag name="Indicatie formele historie" type="enumeration" description="Indicatie of de formele historie van het kenmerk van het object bijgehouden wordt en te bevragen is." unit="" values="Ja,Nee,Zie groep" default=""/>
 							<Tag name="Authentiek" type="enumeration" description="Aanduiding of het kenmerk een authentiek gegeven betreft." unit="" values="Authentiek,Basisgegeven,Wettelijk gegeven,Landelijk kerngegeven,Overig" default=""/>
+							<Tag name="Indicatie afleidbaar" type="" description="Aanduiding dat gegeven afleidbaar is uit andere attribuut- en/of relatiesoorten." unit="" values="" default=""/>
 							<Tag name="Mogelijk geen waarde" type="" description="Aanduiding dat van een aspect geen waarde is geregistreerd, maar dat onduidelijk is of de waarde er werkelijk ook niet is." unit="" values="" default="Nee"/>
 						</TaggedValues>
 					</Stereotype>
@@ -130,8 +133,8 @@
 							<Tag name="Herkomst definitie" type="" description="De registratie of het informatiemodel waaruit de definitie is overgenomen dan wel een aanduiding die aangeeft uit welke bronnen de definitie is samengesteld." unit="" values="" default=""/>
 							<Tag name="Toelichting" type="" description="Een inhoudelijke toelichting op de definitie, ter verheldering of nadere duiding." unit="" values="" default="&lt;memo&gt;"/>
 							<Tag name="Datum opname" type="" description="De datum waarop het modelelement is opgenomen in het informatiemodel." unit="" values="" default=""/>
-							<Tag name="Indicatie materiële historie" type="enumeration" description="Indicatie of de materiële historie van het kenmerk van het object te bevragen is." unit="" values="Ja,Nee" default=""/>
-							<Tag name="Indicatie formele historie" type="enumeration" description="Indicatie of de formele historie van het kenmerk van het object bijgehouden wordt en te bevragen is." unit="" values="Ja,Nee" default=""/>
+							<Tag name="Indicatie materiële historie" type="enumeration" description="Indicatie of de materiële historie van het kenmerk van het object te bevragen is." unit="" values="Ja,Nee,Zie groep" default=""/>
+							<Tag name="Indicatie formele historie" type="enumeration" description="Indicatie of de formele historie van het kenmerk van het object bijgehouden wordt en te bevragen is." unit="" values="Ja,Nee,Zie groep" default=""/>
 							<Tag name="Authentiek" type="enumeration" description="Aanduiding of het kenmerk een authentiek gegeven betreft." unit="" values="Authentiek,Basisgegeven,Wettelijk gegeven,Landelijk kerngegeven,Overig" default=""/>
 						</TaggedValues>
 					</Stereotype>
@@ -190,7 +193,7 @@
 							<Tag name="MIM versie" type="" description="De versie van de MIM specificatie die gebruikt is om het informatiemodel in uit te drukken." unit="" values="" default=""/>
 							<Tag name="MIM extensie" type="" description="De aanduiding van een extensie op MIM." unit="" values="" default=""/>
 							<Tag name="MIM taal" type="" description="De aanduiding van de taal die gebruikt is voor de modelelementen." unit="" values="" default=""/>
-							<Tag name="Relatiemodelleringstype" type="enumeration" description="Aanduiding van een in MIM gedefinieerd alternatief voor een modelleringswijze, en welke keuze hierbij is gemaakt." unit="" values="Relatiesoort leidend,Relatierol leidend" default=""/>
+							<Tag name="Relatiemodelleringstype" type="" description="Aanduiding van een in MIM gedefinieerd alternatief voor een modelleringswijze, en welke keuze hierbij is gemaakt." unit="" values="" default=""/>
 						</TaggedValues>
 					</Stereotype>
 					<Stereotype name="Keuzerelatie" notes="" cx="0" cy="0" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0"/>
@@ -205,9 +208,11 @@
 							<Tag name="Begrip" type="" description="Verwijzing naar een begrip, vanuit een modelelement, waarmee wordt aangegeven op welk begrip, of begrippen, het informatiemodel element is gebaseerd. De verwijzing heeft de vorm van een term of een URI." unit="" values="" default=""/>
 							<Tag name="Herkomst definitie" type="" description="De registratie of het informatiemodel waaruit de definitie is overgenomen dan wel een aanduiding die aangeeft uit welke bronnen de definitie is samengesteld." unit="" values="" default=""/>
 							<Tag name="Toelichting" type="" description="Een inhoudelijke toelichting op de definitie, ter verheldering of nadere duiding." unit="" values="" default="&lt;memo&gt;"/>
-							<Tag name="Datum opname" type="" description="De datum waarop het modelelement is opgenomen in het informatiemodel." unit="" values="" default=""/>
+							<Tag name="Datum opname" type="" description="De datum waarop het modelelement is opgenomen in het informatiemodel." unit="" values="" default="&lt;date&gt;"/>
+							<Tag name="Unieke aanduiding" type="" description="De identificerende kenmerken van een object die een instantie van het objecttype uniek identificeren." unit="" values="" default=""/>
 							<Tag name="Populatie" type="" description="Voor objecttypen die deel uitmaken van een (basis)registratie betreft dit de beschrijving van de exemplaren van het gedefinieerde objecttype die in de desbetreffende (basis)­registratie voorhanden zijn." unit="" values="" default="&lt;memo&gt;"/>
 							<Tag name="Kwaliteit" type="" description="Beschrijving van de mate waarin in de registratie opgenomen objecten van het desbetreffende type volledig, juist, actueel, nauwkeurig en betrouwbaar zijn." unit="" values="" default=""/>
+							<Tag name="Indicatie abstract object" type="" description="Een indicatie die aangeeft of er objecten kunnen bestaan die getypeerd worden als zijnde objecten (instanties) van alleen dit objecttype. Een abstract objecttype moet altijd de generalisatie zijn van één of meerdere objecttypes die niet abstract zijn." unit="" values="" default=""/>
 						</TaggedValues>
 					</Stereotype>
 					<Stereotype name="Primitief datatype" notes="Een primitief datatype is een datatype met een eenvoudige basisstructuur, oftewel enkelvoudig en zonder gelaagdheid." cx="0" cy="0" bgcolor="16777164" fontcolor="0" bordercolor="0" borderwidth="1" hideicon="0">
@@ -265,8 +270,8 @@
 							<Tag name="Herkomst definitie" type="" description="De registratie of het informatiemodel waaruit de definitie is overgenomen dan wel een aanduiding die aangeeft uit welke bronnen de definitie is samengesteld." unit="" values="" default=""/>
 							<Tag name="Toelichting" type="" description="Een inhoudelijke toelichting op de definitie, ter verheldering of nadere duiding." unit="" values="" default="&lt;memo&gt;"/>
 							<Tag name="Datum opname" type="" description="De datum waarop het modelelement is opgenomen in het informatiemodel." unit="" values="" default=""/>
-							<Tag name="Indicatie materiële historie" type="enumeration" description="Indicatie of de materiële historie van het kenmerk van het object te bevragen is." unit="" values="Ja,Nee" default=""/>
-							<Tag name="Indicatie formele historie" type="enumeration" description="Indicatie of de formele historie van het kenmerk van het object bijgehouden wordt en te bevragen is." unit="" values="Ja,Nee" default=""/>
+							<Tag name="Indicatie materiële historie" type="enumeration" description="Indicatie of de materiële historie van het kenmerk van het object te bevragen is." unit="" values="Ja,Nee,Zie groep" default=""/>
+							<Tag name="Indicatie formele historie" type="enumeration" description="Indicatie of de formele historie van het kenmerk van het object bijgehouden wordt en te bevragen is." unit="" values="Ja,Nee,Zie groep" default=""/>
 							<Tag name="Authentiek" type="enumeration" description="Aanduiding of het kenmerk een authentiek gegeven betreft." unit="" values="Authentiek,Basisgegeven,Wettelijk gegeven,Landelijk kerngegeven,Overig" default=""/>
 							<Tag name="Mogelijk geen waarde" type="" description="Aanduiding dat van een aspect geen waarde is geregistreerd, maar dat onduidelijk is of de waarde er werkelijk ook niet is." unit="" values="" default="Nee"/>
 						</TaggedValues>
@@ -276,13 +281,13 @@
 							<Apply type="AssociationEnd"/>
 						</AppliesTo>
 						<TaggedValues>
-							<Tag name="Herkomst" type="" description="De registratie of het informatiemodel waaraan het modelelement ontleend is dan wel de eigen organisatie indien het door de eigen organisatie toegevoegd is." unit="" values="" default="&lt;string&gt;"/>
+							<Tag name="Herkomst" type="" description="De registratie of het informatiemodel waaraan het modelelement ontleend is dan wel de eigen organisatie indien het door de eigen organisatie toegevoegd is." unit="" values="" default=""/>
 							<Tag name="Begrip" type="" description="Verwijzing naar een begrip, vanuit een modelelement, waarmee wordt aangegeven op welk begrip, of begrippen, het informatiemodel element is gebaseerd. De verwijzing heeft de vorm van een term of een URI." unit="" values="" default=""/>
 							<Tag name="Herkomst defintie" type="" description="De registratie of het informatiemodel waaruit de definitie is overgenomen dan wel een aanduiding die aangeeft uit welke bronnen de definitie is samengesteld." unit="" values="" default=""/>
 							<Tag name="Toelichting" type="" description="Een inhoudelijke toelichting op de definitie, ter verheldering of nadere duiding." unit="" values="" default="&lt;memo&gt;"/>
 							<Tag name="Datum opname" type="" description="De datum waarop het modelelement is opgenomen in het informatiemodel." unit="" values="" default=""/>
-							<Tag name="Indicatie materiële historie" type="enumeration" description="Indicatie of de materiële historie van het kenmerk van het object te bevragen is." unit="" values="Ja,Nee" default=""/>
-							<Tag name="Indicatie formele historie" type="enumeration" description="Indicatie of de formele historie van het kenmerk van het object bijgehouden wordt en te bevragen is." unit="" values="Ja,Nee" default=""/>
+							<Tag name="Indicatie materiële historie" type="enumeration" description="Indicatie of de materiële historie van het kenmerk van het object te bevragen is." unit="" values="Ja,Nee,Zie groep" default=""/>
+							<Tag name="Indicatie formele historie" type="enumeration" description="Indicatie of de formele historie van het kenmerk van het object bijgehouden wordt en te bevragen is." unit="" values="Ja,Nee,Zie groep" default=""/>
 							<Tag name="Authentiek" type="enumeration" description="Aanduiding of het kenmerk een authentiek gegeven betreft." unit="" values="Authentiek,Basisgegeven,Wettelijk gegeven,Landelijk kerngegeven,Overig" default=""/>
 							<Tag name="Mogelijk geen waarde" type="" description="Aanduiding dat van een aspect geen waarde is geregistreerd, maar dat onduidelijk is of de waarde er werkelijk ook niet is." unit="" values="" default="Nee"/>
 						</TaggedValues>
@@ -300,9 +305,10 @@
 							<Tag name="Herkomst definitie" type="" description="De registratie of het informatiemodel waaruit de definitie is overgenomen dan wel een aanduiding die aangeeft uit welke bronnen de definitie is samengesteld." unit="" values="" default=""/>
 							<Tag name="Toelichting" type="" description="Een inhoudelijke toelichting op de definitie, ter verheldering of nadere duiding." unit="" values="" default="&lt;memo&gt;"/>
 							<Tag name="Datum opname" type="" description="De datum waarop het modelelement is opgenomen in het informatiemodel." unit="" values="" default=""/>
-							<Tag name="Indicatie materiële historie" type="enumeration" description="Indicatie of de materiële historie van het kenmerk van het object te bevragen is." unit="" values="Ja,Nee" default=""/>
-							<Tag name="Indicatie formele historie" type="enumeration" description="Indicatie of de formele historie van het kenmerk van het object bijgehouden wordt en te bevragen is." unit="" values="Ja,Nee" default=""/>
+							<Tag name="Indicatie materiële historie" type="enumeration" description="Indicatie of de materiële historie van het kenmerk van het object te bevragen is." unit="" values="Ja,Nee,Zie groep" default=""/>
+							<Tag name="Indicatie formele historie" type="enumeration" description="Indicatie of de formele historie van het kenmerk van het object bijgehouden wordt en te bevragen is." unit="" values="Ja,Nee,Zie groep" default=""/>
 							<Tag name="Authentiek" type="enumeration" description="Aanduiding of het kenmerk een authentiek gegeven betreft." unit="" values="Authentiek,Basisgegeven,Wettelijk gegeven,Landelijk kerngegeven,Overig" default=""/>
+							<Tag name="Indicatie afleidbaar" type="" description="Aanduiding dat gegeven afleidbaar is uit andere attribuut- en/of relatiesoorten." unit="" values="" default=""/>
 							<Tag name="Mogelijk geen waarde" type="" description="Aanduiding dat van een aspect geen waarde is geregistreerd, maar dat onduidelijk is of de waarde er werkelijk ook niet is." unit="" values="" default="Nee"/>
 						</TaggedValues>
 					</Stereotype>
@@ -324,11 +330,11 @@
 				<TaggedValueTypes/>
 				<ViewDefinitions/>
 				<Metamodel/>
-				<QuickLink data="//Source Element Type,Source ST filter,Target Element Type,Target ST Filter,Diagram Filter,New Element Type,New Element ST,New Link Type,New Link ST,New Link Direction,New Link Caption,New Link &amp; Element Caption,Create Link,Create Element,Disallow Self connector,Exclusive to ST Filter + No inherit from metatype,Menu Group,Complexity Level,Target Must Be Parent,Embed element,Precedes Separator LEAF,Precedes Separator GROUP,DUMMY COLUMN&#xA;Class,Objecttype,Class,Objecttype,MIM::MIM Diagram,Class,Objecttype,Generalization,Generalisatie,to,MIM Generalisatie,MIM Generalisatie,TRUE,TRUE,TRUE,TRUE,MIM,0,,,,,&#xA;DataType,Gestructureerd datatype,DataType,Gestructureerd datatype,MIM::MIM Diagram,DataType,Gestructureerd datatype,Generalization,Generalisatie,to,MIM Generalisatie,MIM Generalisatie,TRUE,TRUE,TRUE,TRUE,MIM,0,,,,,&#xA;DataType,Referentielijst,DataType,Referentielijst,MIM::MIM Diagram,DataType,Referentielijst,Generalization,Generalisatie,to,MIM Generalisatie,MIM Generalisatie,TRUE,TRUE,TRUE,TRUE,MIM,0,,,,,&#xA;DataType,Codelijst,DataType,Codelijst,MIM::MIM Diagram,DataType,Codelijst,Generalization,Generalisatie,to,MIM Generalisatie,MIM Generalisatie,TRUE,TRUE,TRUE,TRUE,MIM,0,,,,,&#xA;PrimitiveType,Primitief datatype,PrimitiveType,Primitief datatype,MIM::MIM Diagram,PrimitiveType,Primitief datatype,Generalization,Generalisatie,to,MIM Generalisatie,MIM Generalisatie,TRUE,TRUE,TRUE,TRUE,MIM,0,,,,,&#xA;Enumeration,Enumeratie,Enumeration,Enumeratie,MIM::MIM Diagram,Enumeration,Enumeratie,Generalization,Generalisatie,to,MIM Generalisatie,MIM Generalisatie,TRUE,TRUE,TRUE,TRUE,MIM,0,,,,,&#xA;Class,Objecttype,Class,Objecttype,MIM::MIM Diagram,Class,Objecttype,Association,Relatiesoort,to,MIM Relatiesoort,MIM Relatiesoort,TRUE,TRUE,TRUE,TRUE,MIM,0,,,,,&#xA;Class,Gegevensgroeptype,Class,Objecttype,MIM::MIM Diagram,Class,Objecttype,Association,Relatiesoort,to,MIM Relatiesoort,MIM Relatiesoort,TRUE,TRUE,TRUE,TRUE,MIM,0,,,,,&#xA;Class,Objecttype,DataType,Keuze,MIM::MIM Diagram,DataType,Keuze,Association,Relatiesoort,to,MIM Relatiesoort,MIM Relatiesoort,TRUE,TRUE,TRUE,TRUE,MIM,0,,,,,&#xA;Class,Objecttype,Class,Objecttype,MIM::MIM Diagram,Class,Objecttype,AssociationClass,Relatieklasse,to,MIM Relatieklasse,MIM Relatieklasse,TRUE,TRUE,TRUE,TRUE,MIM,0,,,,,&#xA;Class,Objecttype,Class,Objecttype,MIM::MIM Diagram,Class,Objecttype,Association,Externe koppeling,to,MIM Externe koppeling,MIM Externe koppeling,TRUE,TRUE,TRUE,TRUE,MIM,0,,,,,&#xA;DataType,Keuze,Class,Objecttype,MIM::MIM Diagram,Class,Objecttype,Association,Keuze,to,MIM Keuze,MIM Keuze,TRUE,TRUE,TRUE,TRUE,MIM,0,TRUE,,,,&#xA;"/>
+				<QuickLink data="//Source Element Type,Source ST filter,Target Element Type,Target ST Filter,Diagram Filter,New Element Type,New Element ST,New Link Type,New Link ST,New Link Direction,New Link Caption,New Link &amp; Element Caption,Create Link,Create Element,Disallow Self connector,Exclusive to ST Filter + No inherit from metatype,Menu Group,Complexity Level,Target Must Be Parent,Embed element,Precedes Separator LEAF,Precedes Separator GROUP,DUMMY COLUMN&#xA;Class,Objecttype,Class,Objecttype,MIM::MIM;UML::Class,Class,Objecttype,Generalization,Generalisatie,to,MIM Generalisatie,MIM Generalisatie,TRUE,TRUE,TRUE,TRUE,MIM,0,,,,,&#xA;DataType,Gestructureerd datatype,DataType,Gestructureerd datatype,MIM::MIM;UML::Class,DataType,Gestructureerd datatype,Generalization,Generalisatie,to,MIM Generalisatie,MIM Generalisatie,TRUE,TRUE,TRUE,TRUE,MIM,0,,,,,&#xA;DataType,Referentielijst,DataType,Referentielijst,MIM::MIM;UML::Class,DataType,Referentielijst,Generalization,Generalisatie,to,MIM Generalisatie,MIM Generalisatie,TRUE,TRUE,TRUE,TRUE,MIM,0,,,,,&#xA;DataType,Codelijst,DataType,Codelijst,MIM::MIM;UML::Class,DataType,Codelijst,Generalization,Generalisatie,to,MIM Generalisatie,MIM Generalisatie,TRUE,TRUE,TRUE,TRUE,MIM,0,,,,,&#xA;PrimitiveType,Primitief datatype,PrimitiveType,Primitief datatype,MIM::MIM;UML::Class,PrimitiveType,Primitief datatype,Generalization,Generalisatie,to,MIM Generalisatie,MIM Generalisatie,TRUE,TRUE,TRUE,TRUE,MIM,0,,,,,&#xA;Enumeration,Enumeratie,Enumeration,Enumeratie,MIM::MIM;UML::Class,Enumeration,Enumeratie,Generalization,Generalisatie,to,MIM Generalisatie,MIM Generalisatie,TRUE,TRUE,TRUE,TRUE,MIM,0,,,,,&#xA;Class,Objecttype,Class,Objecttype,MIM::MIM;UML::Class,Class,Objecttype,Association,Relatiesoort,to,MIM Relatiesoort,MIM Relatiesoort,TRUE,TRUE,TRUE,TRUE,MIM,0,,,,,&#xA;Class,Gegevensgroeptype,Class,Objecttype,MIM::MIM;UML::Class,Class,Objecttype,Association,Relatiesoort,to,MIM Relatiesoort,MIM Relatiesoort,TRUE,TRUE,TRUE,TRUE,MIM,0,,,,,&#xA;Class,Objecttype,DataType,Keuze,MIM::MIM;UML::Class,DataType,Keuze,Association,Relatiesoort,to,MIM Relatiesoort,MIM Relatiesoort,TRUE,TRUE,TRUE,TRUE,MIM,0,,,,,&#xA;Class,Objecttype,Class,Objecttype,MIM::MIM;UML::Class,Class,Objecttype,AssociationClass,Relatieklasse,to,MIM Relatieklasse,MIM Relatieklasse,TRUE,TRUE,TRUE,TRUE,MIM,0,,,,,&#xA;Class,Objecttype,Class,Objecttype,MIM::MIM;UML::Class,Class,Objecttype,Association,Externe koppeling,to,MIM Externe koppeling,MIM Externe koppeling,TRUE,TRUE,TRUE,TRUE,MIM,0,,,,,&#xA;DataType,Keuze,Class,Objecttype,MIM::MIM;UML::Class,Class,Objecttype,Association,Keuze,to,MIM Keuze,MIM Keuze,TRUE,TRUE,TRUE,TRUE,MIM,0,TRUE,,,,&#xA;"/>
 			</Content>
 		</UMLProfile>
 		<UMLProfile profiletype="uml2">
-			<Documentation id="29A061BB-D" name="MIM_Keuzeattribuut" version="1.1.1" alias="MIM 1.1.1 - Keuzeattribuut" notes="MIM_Keuzeattribuut"/>
+			<Documentation id="29A061BB-D" name="MIM_Keuzeattribuut" version="1.1.1" notes="MIM_Keuzeattribuut"/>
 			<Content>
 				<Stereotypes>
 					<Stereotype name="Keuze" notes="" cx="0" cy="0" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
@@ -343,7 +349,7 @@
 			</Content>
 		</UMLProfile>
 		<UMLProfile profiletype="uml2">
-			<Documentation id="4A1612D4-A" name="MIM_Keuzebasis" version="1.1.1" alias="MIM 1.1.1 - Keuzebasis" notes="MIM_Keuzebasis"/>
+			<Documentation id="4A1612D4-A" name="MIM_Keuzebasis" version="1.1.1" notes="MIM_Keuzebasis"/>
 			<Content>
 				<Stereotypes>
 					<Stereotype name="Keuze" notes="Gestructureerd datatype, waarmee wordt aangegeven dat er maar één van de eigenschappen van dit datatype mogelijk is in een instantie van dit datatype." cx="0" cy="0" bgcolor="16777164" fontcolor="0" bordercolor="0" borderwidth="1" hideicon="0">
@@ -365,7 +371,7 @@
 			</Content>
 		</UMLProfile>
 		<UMLProfile profiletype="uml2">
-			<Documentation id="1D9A4364-6" name="MIM_Keuzedatatype" version="1.1.1" alias="MIM 1.1.1 - Keuzedatatype" notes="MIM_Keuzedatatype"/>
+			<Documentation id="1D9A4364-6" name="MIM_Keuzedatatype" version="1.1.1" notes="MIM_Keuzedatatype"/>
 			<Content>
 				<Stereotypes>
 					<Stereotype name="Datatype" notes="" cx="0" cy="0" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
@@ -380,7 +386,7 @@
 			</Content>
 		</UMLProfile>
 		<UMLProfile profiletype="uml2">
-			<Documentation id="EE6A2E72-5" name="MIM_Keuzerelatie" version="1.1.1" alias="MIM 1.1.1 - Keuzerelatie" notes="MIM_Keuzerelatie"/>
+			<Documentation id="EE6A2E72-5" name="MIM_Keuzerelatie" version="1.1.1" notes="MIM_Keuzerelatie"/>
 			<Content>
 				<Stereotypes>
 					<Stereotype name="Keuze" notes="Een element van een Keuze waarmee een keuze uit datatypen wordt gespecificeerd. Alleen toepasbaar bij een klasse met het stereotype Keuze." cx="0" cy="0" bgcolor="14480885" fontcolor="0" bordercolor="0" borderwidth="1" hideicon="0">
@@ -398,14 +404,15 @@
 			</Content>
 		</UMLProfile>
 	</UMLProfiles><DiagramProfile><UMLProfile profiletype="uml2">
-			<Documentation id="7E0118D7-0" name="MIM" version="1.1.1" alias="MIM 1.1.1" notes="MIM"/>
+			<Documentation id="02B01BEF-3" name="MIM" version="1.1.1" notes="MIM"/>
 			<Content>
 				<Stereotypes>
-					<Stereotype name="MIM Diagram" notes="Dit diagram vormt de basis voor modelleren met MIM. Het is gekoppeld aan de MIM-toolbox, waardoor deze continue beschikbaar blijft. De MIM-toolbox is een extensie op het standaard UML::Class diagram." cx="0" cy="0" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+					<Stereotype name="MIM" notes="Dit diagram vormt de basis voor modelleren met MIM. Dit diagram is gekoppeld aan de MIM-toolbox. Dit voorkomt dat bij het maken van een nieuw diagram de MIM-toolbox opnieuw opgezocht moet worden." cx="174" cy="35" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
 						<AppliesTo>
 							<Apply type="Diagram_Logical">
 								<Property name="alias" value="MIM"/>
 								<Property name="toolbox" value="MIM"/>
+								<Property name="diagramID" value="abc"/>
 								<Property name="toolboxPage" value="MIM: Objecten en attributen=1; MIM: Relaties=1; MIM: Datatypen=1; MIM: Waardelijsten=1; MIM: Packages=1;"/>
 							</Apply>
 						</AppliesTo>
@@ -417,10 +424,10 @@
 			</Content>
 		</UMLProfile>
 	</DiagramProfile><UIToolboxes><UMLProfile profiletype="uml2">
-			<Documentation id="AEC3F119-8" name="MIM" version="1.1.1" alias="MIM 1.1.1" notes="MIM"/>
+			<Documentation id="28737E63-6" name="MIM" version="1.1.1" notes="MIM"/>
 			<Content>
 				<Stereotypes>
-					<Stereotype name="MIM: Objecten en attributen" notes="Selecteer en klik ergens op het diagram om te plaatsen" cx="0" cy="0" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+					<Stereotype name="MIM: Objecten en attributen" notes="Selecteer en klik ergens op het diagram om te plaatsen" cx="299" cy="101" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
 						<AppliesTo>
 							<Apply type="ToolboxPage"/>
 						</AppliesTo>
@@ -432,7 +439,7 @@
 							<Tag name="MIM::Gegevensgroep(UML::Attribute)" type="" description="" unit="" values="" default="Gegevensgroep"/>
 						</TaggedValues>
 					</Stereotype>
-					<Stereotype name="MIM: Relaties" notes="Selecteer en trek van type naar type om te plaatsen" cx="0" cy="0" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+					<Stereotype name="MIM: Relaties" notes="Selecteer en trek van type naar type om te plaatsen" cx="281" cy="114" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
 						<AppliesTo>
 							<Apply type="ToolboxPage"/>
 						</AppliesTo>
@@ -445,19 +452,7 @@
 							<Tag name="MIM_Keuzerelatie::Keuze(UML::Association)" type="" description="" unit="" values="" default="Keuze(relatie)"/>
 						</TaggedValues>
 					</Stereotype>
-					<Stereotype name="MIM: Datatypen" notes="Selecteer en klik in het diagram om te plaatsen" cx="0" cy="0" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
-						<AppliesTo>
-							<Apply type="ToolboxPage"/>
-						</AppliesTo>
-						<TaggedValues>
-							<Tag name="MIM::Primitief datatype(UML::PrimitiveType)" type="" description="" unit="" values="" default="Primitief datatype"/>
-							<Tag name="MIM::Gestructureerd datatype(UML::DataType)" type="" description="" unit="" values="" default="Gestructureerd datatype"/>
-							<Tag name="MIM::Data element(UML::Attribute)" type="" description="" unit="" values="" default="Data element"/>
-							<Tag name="MIM_Keuzebasis::Keuze(UML::DataType)" type="" description="" unit="" values="" default="Keuze"/>
-							<Tag name="MIM_Keuzedatatype::Datatype(UML::Attribute)" type="" description="" unit="" values="" default="Datatype(Keuze)"/>
-						</TaggedValues>
-					</Stereotype>
-					<Stereotype name="MIM: Waardelijsten" notes="Selecteer en klik ergens op het diagram om te plaatsen" cx="0" cy="0" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+					<Stereotype name="MIM: Waardelijsten" notes="Selecteer en klik ergens op het diagram om te plaatsen" cx="319" cy="101" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
 						<AppliesTo>
 							<Apply type="ToolboxPage"/>
 						</AppliesTo>
@@ -469,7 +464,19 @@
 							<Tag name="MIM::Referentie element(UML::Attribute)" type="" description="" unit="" values="" default="Referentie element"/>
 						</TaggedValues>
 					</Stereotype>
-					<Stereotype name="MIM: Packages" notes="Selecteer en klik ergens in het diagram om te plaatsen" cx="0" cy="0" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+					<Stereotype name="MIM: Datatypen" notes="Selecteer en klik in het diagram om te plaatsen" cx="373" cy="101" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+						<AppliesTo>
+							<Apply type="ToolboxPage"/>
+						</AppliesTo>
+						<TaggedValues>
+							<Tag name="MIM::Primitief datatype(UML::PrimitiveType)" type="" description="" unit="" values="" default="Primitief datatype"/>
+							<Tag name="MIM::Gestructureerd datatype(UML::DataType)" type="" description="" unit="" values="" default="Gestructureerd datatype"/>
+							<Tag name="MIM::Data element(UML::Attribute)" type="" description="" unit="" values="" default="Data element"/>
+							<Tag name="MIM_Keuzebasis::Keuze(UML::DataType)" type="" description="" unit="" values="" default="Keuze"/>
+							<Tag name="MIM_Keuzedatatype::Datatype(UML::Attribute)" type="" description="" unit="" values="" default="Datatype(Keuze)"/>
+						</TaggedValues>
+					</Stereotype>
+					<Stereotype name="MIM: Packages" notes="Selecteer en klik ergens in het diagram om te plaatsen" cx="262" cy="88" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
 						<AppliesTo>
 							<Apply type="ToolboxPage"/>
 						</AppliesTo>
@@ -480,7 +487,7 @@
 							<Tag name="MIM::Domein(UML::Package)" type="" description="" unit="" values="" default="Domein"/>
 						</TaggedValues>
 					</Stereotype>
-					<Stereotype name="UMLClassRelationships" alias="UML: Relaties" notes="Relationships for Class Diagrams" cx="0" cy="0" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+					<Stereotype name="UMLClassRelationships" alias="UML: Relaties" notes="Relationships for Class Diagrams" cx="246" cy="140" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
 						<AppliesTo>
 							<Apply type="ToolboxPage"/>
 						</AppliesTo>
