@@ -18,9 +18,8 @@
 
 ## Beschrijving
  - Met al die profielen maak je een MDG MIM toolbox v1.1.1.xml
- - MTS is een configuratieprofiel
+  - MTS is een configuratieprofiel
  - Dit is vooral handig als je vaker een MDG Technology gaat genereren
-
  - Voor MIM 1.1.1 bestaat dit bestand al
  - Voor profielen: zie afbeelding
  - Rood en groen
