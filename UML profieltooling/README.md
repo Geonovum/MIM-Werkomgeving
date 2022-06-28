@@ -1,11 +1,39 @@
 # HANDLEIDING MIM-PROFIEL, -TOOLBOX, -MDG GENEREREN
 
-## GITHUB: DOCUMENTEN EN BESTANDEN
- - GitHub: MIM-werkomgeving
- - Folder UML profile tooling
- - We werken nu in "werkversie 1.1.1"
+> NOTE: Versie, applicaties, etc.
 
-## WELKE PACKAGES ALS PROFIEL PUBLISEREN
+ - Enterprise
+ - SVN
+ - GitHub
+
+> NOTE: Inleidende tekst "Deze handleiding beschrijft ... "
+
+## Inhoud
+ - Beschrijving doel etc.
+ - Benodigde bestanden
+ - Settings (versienummer, quick linker, etc.)
+ - Profielen genereren
+ - MDG genereren
+ - Resultaat controleren
+
+## Beschrijving
+ - Met al die profielen maak je een MDG MIM toolbox v1.1.1.xml
+ - MTS is een configuratieprofiel
+ - Dit is vooral handig als je vaker een MDG Technology gaat genereren
+
+ - Voor MIM 1.1.1 bestaat dit bestand al
+ - Voor profielen: zie afbeelding
+ - Rood en groen
+
+## Benodigde bestanden
+ - EA-file (voor het genereren van de profiles en mdg technology)
+ - MTS-file (voor het genreren van mdg technology)
+ - CSV-file (voor het ... van de quick linker)
+
+
+## X | WELKE PACKAGES ALS PROFIEL PUBLISEREN
+
+Voor het maken van een MDG technology voor MIM, 
  1. `«profile» MIM`
  1. `«profile» Keuzeattribuut`
  1. `«profile» Keuzebasis`
@@ -16,21 +44,14 @@
 
 Daarnaast heb je nog een csv-bestand nodig voor de **quick linker** en een **mtsfile** waarin de belangrijkste informatie voor het generen van een MDG-technology al in is opgeslagen.
 
+   ![](Media/MIM_01_profile_benodigde_profielen.jpg)
 
-![](Media/MIM_01_profile_benodigde_profielen.jpg)
+## X | NOG ONDERBRENGEN
 
-## NOG ONDERBRENGEN
- - Met al die profielen maak je een MDG MIM toolbox v1.1.1.xml
- - MTS is een configuratieprofiel
- - Dit is vooral handig als je meerdere keren het profiel moet genereren
- - En dat gebeurt
- - Voor MIM 1.1.1 bestaat dit bestand al
- - Voor profielen: zie afbeelding
- - Rood en groen
 
  > **Opm: Een diagram moet je als als diagram publishen!** `Publish Diagram as UML Profile`
 
-## STAP 1: PUBLICEER "PACKAGE" ALS UML PROFIEL
+## X | STAP 1: PUBLICEER "PACKAGE" ALS UML PROFIEL
  - Kies package MIM-UML profiel
  - Je kiest per profiel
  - Ga naar: "Specialize" 
@@ -62,7 +83,7 @@ Als je diagram rtoevoegd moet je drie stappen doorlopen bij het selecteren van p
 
  >**Let op**: de toolbox moet samengesteld worden uit verschillende profielen (lijst). Het 'basisprofiel' is ... en dat moet dezelfde naam hebb
 
-## STAP 2: GENEREER MDG TECHNOLOGIE
+## X | STAP 2: GENEREER MDG TECHNOLOGIE
  - Selecteer vervolgens het package waaronder alle subpackages vallen
  - Ga weer naar "Specialize"
  - Kies: "Publish Package"
@@ -124,7 +145,7 @@ Als je diagram rtoevoegd moet je drie stappen doorlopen bij het selecteren van p
 
  - Klik: "Voltooien"
 
-## STAP 3: TEST DE TOOLBOX
+## X | STAP 3: TEST DE TOOLBOX
  - Laad het MIM-profiel via "Resources"
  - maar er is een EAP-testf file
  - Verschillende manieren om de nieuwe toolbox te testen
@@ -134,12 +155,12 @@ Als je diagram rtoevoegd moet je drie stappen doorlopen bij het selecteren van p
  - Of door gebruik te maken va "Sync Tagged Values And Constraints"
  - Deze laatste optie vind je terug in het "Resources" menu
 
-## MIM_MDG
+## X | MIM_MDG
  - profile helpers, model wizard: https://sparxsystems.com/enterprise_architect_user_guide/15.2/modeling/using_the_profile_helpers.html
  - Create Diagram Profiles using the Profile Helpers:https://sparxsystems.com/enterprise_architect_user_guide/15.2/modeling/create_diagram_profiles_using_.html
  - Morgen weer verder!
 
-## Aandachtspunt
+## X | Aandachtspunt
  - Tekstveld voor teolichting, niet initial value, maar notes veld als datatype
  - Uitgebreide toelichting wordt afgekapt vanwege maximale lengte.
  - Profiel niet elke keer opnieuw moeten laden door het kopppelen aan een (std.) diagram
