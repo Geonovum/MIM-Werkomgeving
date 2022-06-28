@@ -34,13 +34,13 @@
 ## X | WELKE PACKAGES ALS PROFIEL PUBLISEREN
  - Controleer of de benodigde profile packages aanwezig zijn:
  
- 1. `«profile» MIM`
- 1. `«profile» Keuzeattribuut`
- 1. `«profile» Keuzebasis`
- 1. `«profile» Keuzedatatype`
- 1. `«profile» Keuzerelatie`
- 1. `«profile diagram» MIM`
- 1. `«profile toolbox» MIM`
+    1. `«profile» MIM`
+    1. `«profile» Keuzeattribuut`
+    1. `«profile» Keuzebasis`
+    1. `«profile» Keuzedatatype`
+    1. `«profile» Keuzerelatie`
+    1. `«profile diagram» MIM`
+    1. `«profile toolbox» MIM`
 
 
 Daarnaast heb je nog een csv-bestand nodig voor de **quick linker** en een **mtsfile** waarin de belangrijkste informatie voor het generen van een MDG-technology al in is opgeslagen.
