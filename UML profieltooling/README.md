@@ -42,28 +42,25 @@
     - `«profile diagram» MIM`
     - `«profile toolbox» MIM`
 
-
 Daarnaast heb je nog een csv-bestand nodig voor de **quick linker** en een **mtsfile** waarin de belangrijkste informatie voor het generen van een MDG-technology al in is opgeslagen.
 
    ![](Media/MIM_01_profile_benodigde_profielen.jpg)
-
-## X | NOG ONDERBRENGEN
-
-
- > **Opm: Een diagram moet je als als diagram publishen!** `Publish Diagram as UML Profile`
+   ![](toevoegenAfbeelding-QuickLinker)
+   ![](toevoegenAfbeelding-MTS)
 
 ## X | STAP 1: PUBLICEER "PACKAGE" ALS UML PROFIEL
- - Kies package MIM-UML profiel
- - Je kiest per profiel
- - Ga naar: "Specialize" 
- - Kies: "Publish Technologie"
- - Kies: "Publish Pack As UML profile"
+ - Kies package MIM-UML profiel.
+ - Selecteer vervolgens één van de bovengenoemde profielen.
+ - Ga naar: _Specialize_.
+ - Kies: _Publish Technologie_.
+ - En klik op: _Publish Pack As UML profile_.
+ - Er verschijnt nu een nieuw venster.
 
 ![](Media/MIM_03_publish_as_UML_or_MDG.jpg)
 
- - Typ: profile name: "MIM"
- - Kies: `<path>`
- - typ: version: `<versienummer>` (bijv.:1.1.1)
+ - Voer _profile name_ in: _MIM_.
+ - Kies: `<path>`.
+ - Voer het versienummer van MIM in waar deze toolbox mee moet kloppen, version: `<versienummer>` (bijv.:`1.1.1`).
 
 ![](Media/MIM_02_profile_publish_as_uml_settings.jpg)
 
