@@ -11,6 +11,8 @@
 ## Inhoud
  1. Beschrijving doel etc.
  1. Benodigde bestanden
+ 1. Voorbereiding
+ 1. Aanpassingen
  1. Settings (versienummer, quick linker, etc.)
  1. Profielen genereren
  1. MDG genereren
@@ -29,10 +31,9 @@
  - MTS-file (voor het genreren van mdg technology)
  - CSV-file (voor het ... van de quick linker)
 
-
 ## X | WELKE PACKAGES ALS PROFIEL PUBLISEREN
-
-Voor het maken van een MDG technology voor MIM, 
+ - Controleer of de benodigde profile packages aanwezig zijn:
+ 
  1. `«profile» MIM`
  1. `«profile» Keuzeattribuut`
  1. `«profile» Keuzebasis`
@@ -40,6 +41,7 @@ Voor het maken van een MDG technology voor MIM,
  1. `«profile» Keuzerelatie`
  1. `«profile diagram» MIM`
  1. `«profile toolbox» MIM`
+
 
 Daarnaast heb je nog een csv-bestand nodig voor de **quick linker** en een **mtsfile** waarin de belangrijkste informatie voor het generen van een MDG-technology al in is opgeslagen.
 
