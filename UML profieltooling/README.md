@@ -52,14 +52,14 @@ Daarnaast heb je nog een csv-bestand nodig voor de **quick linker** en een **mts
  - Kies package MIM-UML profiel.
  - Selecteer vervolgens één van de bovengenoemde profielen.
  - Ga naar: _Specialize_.
- - Kies: _Publish Technologie_.
+ - Kies _Publish Package as UML Profile_.
  - En klik op: _Publish Pack As UML profile_.
  - Er verschijnt nu een nieuw venster.
 
 ![](Media/MIM_03_publish_as_UML_or_MDG.jpg)
 
  - Voer _profile name_ in: _MIM_.
- - Kies: `<path>`.
+ - Kies de locatie waar je het profiel wilt opslaan en geef het bestand een herkenbare naam 
  - Voer het versienummer van MIM in waar deze toolbox mee moet kloppen, version: `<versienummer>` (bijv.:`1.1.1`).
 
 ![](Media/MIM_02_profile_publish_as_uml_settings.jpg)
