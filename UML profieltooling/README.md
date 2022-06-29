@@ -7,12 +7,13 @@
 ## Inhoud
  1. Beschrijving doel etc.
  1. Benodigde bestanden
- 1. Voorbereiding
- 1. Aanpassingen
+ 1. Voorbereiding (todo)
+ 1. Aanpassingen (todo)
  1. Settings (versienummer, quick linker, etc.)
  1. Profielen genereren
  1. MDG genereren
  1. Resultaat controleren
+ 1. QuickLinker maken (todo)
 
 ## Beschrijving
 Deze handleiding beschrijft het proces voor het genereren van een customized toolbox voor modelleren met Enterprise Architect. De beschrijving gaat specifiek in op het maken van de _MIM-toolbox_. Maar ook voor het genereren customized toolboxen in het algemeen, biedt deze beschrijving een handig overzicht van de benodigde stappen. Een inhoudelijke beschrijving voor het maken van de benodigde profielen, vind je hier ([linkOpnemen](url)). De meest actuele versie van MIM kun je hier ([linkOpnemen](url)) raadplegen. 
@@ -36,11 +37,17 @@ Controleer of alle benodigde bestanden aanwezig zijn:
     - `«profile diagram» MIM`
     - `«profile toolbox» MIM`
 
-Daarnaast heb je nog een csv-bestand nodig voor de **quick linker** en een **mtsfile** waarin de belangrijkste informatie voor het generen van een MDG-technology al in is opgeslagen.
+![](Media/MIM_01_profile_benodigde_profielen.jpg)
 
-   ![](Media/MIM_01_profile_benodigde_profielen.jpg)
-   ![](toevoegenAfbeelding-QuickLinker)
-   ![](toevoegenAfbeelding-MTS)
+ - Daarnaast heb je nog een csv-bestand nodig voor de **quick linker**:
+
+![](Media/mim_profile_quick_linker_location.jpg)
+
+ - En een **mtsfile** waarin de belangrijkste informatie voor het generen van een MDG-technology al in is opgeslagen.
+
+![](Media/mim_profile_mts_file_location.jpg)
+
+Indien de packages met de profielen al als XML-bestand beschikbaar zijn (zie: ([linkOpnemenNaarPackagePublicerenAlsProfiel](url)), klik dan hier ([linkOpnemenGenererenToolbox](url)) om verder te gaan met het genereren van de toolbox
 
 ## X | STAP 1: PUBLICEER "PACKAGE" ALS UML PROFIEL
  - Kies package MIM-UML profiel.
