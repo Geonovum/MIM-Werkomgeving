@@ -28,24 +28,17 @@ Controleer of alle benodigde bestanden aanwezig zijn:
 
 ## X | WELKE PACKAGES ALS PROFIEL PUBLISEREN
  - Controleer of de benodigde profile packages aanwezig zijn:
- 
-    - `«profile» MIM`
-    - `«profile» Keuzeattribuut`
-    - `«profile» Keuzebasis`
-    - `«profile» Keuzedatatype`
-    - `«profile» Keuzerelatie`
-    - `«profile diagram» MIM`
-    - `«profile toolbox» MIM`
 
 ![](Media/MIM_01_profile_benodigde_profielen.jpg)
 
- - Daarnaast heb je nog een csv-bestand nodig voor de **quick linker**:
+ - Daarnaast heb je nog een **mtsfile** nodig waarin de belangrijkste informatie voor het generen van een MDG-technology al in is opgeslagen.
+ - Tot slot is het handig om  ook het csv-bestand voor de **quick linker** achter de hand te hebben.
 
-![](Media/mim_profile_quick_linker_location.jpg)
+![](Media/mim_profile_mts_and_csv_file_location.jpg)
 
- - En een **mtsfile** waarin de belangrijkste informatie voor het generen van een MDG-technology al in is opgeslagen.
+Beiden kun je [hier](https://github.com/Geonovum/MIM-Werkomgeving/tree/master/UML%20profieltooling/werkversie1.1.1) vinden.
 
-![](Media/mim_profile_mts_file_location.jpg)
+<!-- ![](Media/mim_profile_quick_linker_location.jpg) -->
 
 Indien de packages met de profielen al als XML-bestand beschikbaar zijn (zie: ([linkOpnemenNaarPackagePublicerenAlsProfiel](url)), klik dan hier ([linkOpnemenGenererenToolbox](url)) om verder te gaan met het genereren van de toolbox
 
