@@ -19,12 +19,12 @@
  1. Resultaat controleren
 
 ## Beschrijving
-Deze handleiding beschrijft het proces voor het genereren van een customized toolbox voor modelleren met Enterprise Architect. De beschrijving gaat specifiek in op het maken van de _MIM-toolbox_. Maar ook voor het genereren customized toolboxen in het algemeen, biedt deze beschrijving een handig overzicht van de benodigde stappen. Een inhoudelijke beschrijving voor het maken van de benodigde profielen, blijft buiten beschouwing. De meest actuele versie van MIM kun je hier [linkOpnemen](url) raadplegen. 
+Deze handleiding beschrijft het proces voor het genereren van een customized toolbox voor modelleren met Enterprise Architect. De beschrijving gaat specifiek in op het maken van de _MIM-toolbox_. Maar ook voor het genereren customized toolboxen in het algemeen, biedt deze beschrijving een handig overzicht van de benodigde stappen. Een inhoudelijke beschrijving voor het maken van de benodigde profielen, vind je hier ([linkOpnemen](url)). De meest actuele versie van MIM kun je hier ([linkOpnemen](url)) raadplegen. 
 
-> NOTE: Nog iets zeggen over waar je inhoudelijke informatie over het maken van _profile packages_ kunt vinden? 
+> NOTE: Nog iets zeggen over waar je inhoudelijke informatie over het maken van _profile packages_ kunt vinden (zelf schrijven en/of verwijzen naar _Sparx_/_profile helpers_)
 
 ## Benodigde bestanden
- - EA-file met MIM profile packages voor het genereren van de profiles en mdg technology([Create MDG Technology File](https://sparxsystems.com/enterprise_architect_user_guide/15.2/modeling/creatingmdgtechnologies.html)) 
+ - EA-file met MIM profile packages voor het genereren van de profiles en mdg technology ([Create MDG Technology File](https://sparxsystems.com/enterprise_architect_user_guide/15.2/modeling/creatingmdgtechnologies.html)) 
  - MTS-file met MIM properties voor het genereren van MDG Technology ([Working with MTS Files](https://sparxsystems.com/enterprise_architect_user_guide/16.0/modeling_frameworks/working_with_mts_files.html )) 
  - CSV-file met definities van de quick linkers ([Quick Linker Definition Format](https://sparxsystems.com/enterprise_architect_user_guide/16.0/modeling_frameworks/quick_linker_definition_format.html))
 
