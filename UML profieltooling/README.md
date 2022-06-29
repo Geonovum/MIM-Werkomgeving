@@ -6,9 +6,19 @@
  - SVN
  - GitHub
 
-> NOTE: Inleidende tekst "Deze handleiding beschrijft ... "
+> NOTE: Inleidende tekst "Deze handleiding beschrijft hoe je vanuit Enterprise Architect een toolbox kunt maken. 
 
-## Inhoud
+Voor MIM bechreven, maar kan in bredere zin toegepast worden.
+
+
+
+De inhoud van de toolbox wordt niet hier beschreven.
+
+GAat om een bestaand EAP-bestand met de benodigde profiel packages voor MIM.
+
+
+
+## 1. Inhoud
  1. Beschrijving doel etc.
  1. Benodigde bestanden
  1. Voorbereiding
@@ -18,7 +28,7 @@
  1. MDG genereren
  1. Resultaat controleren
 
-## Beschrijving
+## 1. Beschrijving
  - Met al die profielen maak je een MDG MIM toolbox v1.1.1.xml
   - MTS is een configuratieprofiel
  - Dit is vooral handig als je vaker een MDG Technology gaat genereren
@@ -27,9 +37,10 @@
  - Rood en groen
 
 ## Benodigde bestanden
- - EA-file (voor het genereren van de profiles en mdg technology)
- - MTS-file (voor het genreren van mdg technology)
- - CSV-file (voor het ... van de quick linker)
+ - EA-file met MIM profile packages voor het genereren van de profiles en mdg technology https://sparxsystems.com/enterprise_architect_user_guide/15.2/modeling/creatingmdgtechnologies.html (Create MDG Technology File
+Create MDG Technology File)
+ - MTS-file met MIM properties voor het genereren van mdg technology) https://sparxsystems.com/enterprise_architect_user_guide/16.0/modeling_frameworks/working_with_mts_files.html (Working with MTS Files)
+ - CSV-file met definities van de quick linkers) https://sparxsystems.com/enterprise_architect_user_guide/16.0/modeling_frameworks/quick_linker_definition_format.html (Quick Linker Definition Format)
 
 ## X | WELKE PACKAGES ALS PROFIEL PUBLISEREN
  - Controleer of de benodigde profile packages aanwezig zijn:
