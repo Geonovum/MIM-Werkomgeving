@@ -1,12 +1,8 @@
 # HANDLEIDING MIM-PROFIEL, -TOOLBOX, -MDG GENEREREN
 
-> NOTE: Versie, applicaties, etc.
-
- - Enterprise
- - SVN
- - GitHub
-
-
+ - _Enterprise 15.2_
+ - _SVN 1.14.1_
+ - _GitHub_
 
 ## Inhoud
  1. Beschrijving doel etc.
@@ -24,7 +20,8 @@ Deze handleiding beschrijft het proces voor het genereren van een customized too
 > NOTE: Nog iets zeggen over waar je inhoudelijke informatie over het maken van _profile packages_ kunt vinden (zelf schrijven en/of verwijzen naar _Sparx_/_profile helpers_)
 
 ## Benodigde bestanden
- - EA-file met MIM profile packages voor het genereren van de profiles en mdg technology ([Create MDG Technology File](https://sparxsystems.com/enterprise_architect_user_guide/15.2/modeling/creatingmdgtechnologies.html)) 
+Controleer of alle benodigde bestanden aanwezig zijn:
+ - EA-file met MIM profile packages voor het genereren van de profiles en mdg technology ([Create MDG Technology File](https://sparxsystems.com/enterprise_architect_user_guide/15.2/modeling/creatingmdgtechnologies.html)), hiertoe behoren tenminste één `«profile»` _package_, een `«diagram profile»` _package_ en een `«toolbox profile»` _package_ (zie voor meer informatie over ... ([linkOpnemenNaarWelkePackagesPubliceren](url)).
  - MTS-file met MIM properties voor het genereren van MDG Technology ([Working with MTS Files](https://sparxsystems.com/enterprise_architect_user_guide/16.0/modeling_frameworks/working_with_mts_files.html )) 
  - CSV-file met definities van de quick linkers ([Quick Linker Definition Format](https://sparxsystems.com/enterprise_architect_user_guide/16.0/modeling_frameworks/quick_linker_definition_format.html))
 
