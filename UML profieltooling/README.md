@@ -19,7 +19,9 @@
  1. Resultaat controleren
 
 ## Beschrijving
-Deze handleiding beschrijft het proces voor het genereren van een customized toolbox voor modelleren met Enterprise Architect. De bschrijving gaat specifiek in op het maken van de MIM-toolbox. Maar, het is ook toepasbaar voor het maken van andere typen toolboxen. De inhoud van de toolbox en de onderliggende profielen blijft buiten beschouwing. De meest actuele versie van MIM kun je hier [linkOpnemen](url) raadplegen. 
+Deze handleiding beschrijft het proces voor het genereren van een customized toolbox voor modelleren met Enterprise Architect. De beschrijving gaat specifiek in op het maken van de _MIM-toolbox_. Maar ook voor het genereren customized toolboxen in het algemeen, biedt deze beschrijving een handig overzicht van de benodigde stappen. Een inhoudelijke beschrijving voor het maken van de benodigde profielen, blijft buiten beschouwing. De meest actuele versie van MIM kun je hier [linkOpnemen](url) raadplegen. 
+
+> NOTE: Nog iets zeggen over waar je inhoudelijke informatie over het maken van _profile packages_ kunt vinden? 
 
 ## Benodigde bestanden
  - EA-file met MIM profile packages voor het genereren van de profiles en mdg technology([Create MDG Technology File](https://sparxsystems.com/enterprise_architect_user_guide/15.2/modeling/creatingmdgtechnologies.html)) 
