@@ -95,7 +95,6 @@ Als alias van elk package: hierdoor kan de gebruiker van de toolbox in één oog
 
 > **NOTE**: Aanvullen/controleren
 
-
 #### Versienummer diagram
 
 Binnen MIM heeft dit (nog) geen versienummer. Indien gewenst, zou dat via de naam van dit stereotype kunnen. De MIM-dataspecificatie zegt niets over een diagram.
@@ -132,72 +131,79 @@ Verder lijkt het erop of «profile» MIM en «toolbox profile» MIM niet alleen 
 In MIM-toolbox diagram kun je aan de prefixen zien, wat de profile names moeten zijn
 Als je diagram rtoevoegd moet je drie stappen doorlopen bij het selecteren van profielen
 
- - Klik: "Save"
+ - Klik: 'Save'
  - Herhaal dit proces voor alle bovengenoemde onderdelen (dus ook voor toolbox profile)
 
  >**Let op**: de toolbox moet samengesteld worden uit verschillende profielen (lijst). Het 'basisprofiel' is ... en dat moet dezelfde naam hebb
 
 ## X | STAP 2: GENEREER MDG TECHNOLOGIE
- - Selecteer vervolgens het package waaronder alle subpackages vallen
- - Ga weer naar "Specialize"
- - Kies: "Publish Package"
- - Kies: "Generate MDG Technology"
+
+ - Selecteer vervolgens het package waaronder alle subpackages vallen: `MIM-UMLprofiel`.
+
+![](Media/mim_mdg_select_package.jpg)
+
+
+ - Klik op 'Specialize' in de _ribbon_.
+ - Kies: 'Publish Package'.
+ - Kies: 'Generate MDG Technology'.
 
 ![](Media/MIM_03_publish_as_UML_or_MDG.jpg)
 
- - Kies Volgende
- - Kies 'Open an existing MTS file'
- - Negeer de melding
+ - Kies 'Volgende'.
+ - Kies 'Open an existing MTS file'.
+ - Negeer de melding.
  
- > **Opm**: De MTS file vult een aantal standaard configuraties vooraf in, maar je kunt deze tijdens het proces nog aanpassen.
+ > **Opm**: Het MTS-bestand vult een aantal standaard configuraties vooraf in, maar je kunt deze tijdens het proces nog aanpassen.
 
- - Vanuit MTS file wordt het volgende venster al ingevuld
- - Technology: MIM
- - Filename: ingevuld, maar kun je zelf kiezen
- - ID: MIM
- - Version: 1.1.1
+ Vanuit het MTS-bestand wordt het volgende venster al ingevuld
+ - Technology: `MIM`
+ - Filename: (kies een naam en locatie)
+ - ID: b + build number (bijv.: `b03`)
+ - Version: `1.1.1`
 
-![](Media/MIM_04_mdg_tech.jpg)
-
- > **Opm**: deze twee moeten dus kloppen met stap x in packages publiceren
+![](Media/mim_mdg_tech_1.jpg)
 
  - Icon en logo blijven vooralsnog leeg.
  - URL: link naar corresponderende MIM-documentatie op GitHub/ReSpec.
- - Support, link naar website Geonovum.
- - Notes: Vul in het notes veld kort release notes in: wat is er nieuw/aangepast.
- - Klik 'Volgende'
+ - Support: link naar website Geonovum.
+ - Notes: Vul in het notes veld kort in wat is er in deze versie nieuw is.
+ - Klik 'Volgende'.
  - Controleer de instellingen en klik op 'Ok'
 
-![](Media/MIM_05_mdg_tech.jpg)
+![](Media/mim_mdg_tech_2.jpg)
 
  > **Opm**: In het metaprofiel zitten profiles en toolboxes
 
  - Alle configuraties kun je laden vanuit de MTF file.
  - Voor de eerste keer kun je ook een MTS-file genereren.
- - Select:  "Files To Be Included As Profiles".
- - Kies hier alle xml-bestanden, behalve de toolboxprofile.
+ - Select:  'Files To Be Included As **Profiles**'.
+ - Kies hier alle XML-bestanden, behalve de toolboxprofile.
  - Klik 'Volgende'.
 
-![](Media/MIM_06_mdg_tech.jpg)
+![](Media/mim_mdg_tech_3.jpg)
 
- - Select: "Files To Be Included As Diagrams"
- - Kies hier het diagram profiel
+ - Select: 'Files To Be Included As **Diagram definitions**'
+ - Kies hier het diagramprofiel
  - Klik 'Volgende'.
 
-![](Media/MIM_07_mdg_tech.jpg)
+![](Media/mim_mdg_tech_4.jpg)
+
+ - Select: 'Files To Be Included As **Toolbox Definitions**'
+ - Kies hier het toolboxprofiel
+ - Klik 'Volgende'.
 
  - In de volgende stap selecteer je tot slot het toolbox profiel.
 
-![](Media/MIM_08_mdg_tech.jpg)
+![](Media/mim_mdg_tech_5.jpg)
 
  - Klik 'Volgende'.
- - Check de box "Save to MTS" en klik op 'Voltooien'
+ - Check de box 'Save to MTS' en klik op 'Voltooien'
  - Indien je wijzigingen in de configuratie hebt aangebracht:
- - Kies checkbox  "Save To Mts"
+ - Kies checkbox  'Save To MTS'
 
-![](Media/MIM_09_mdg_tech.jpg)
+![](Media/mim_mdg_tech_6.jpg)
 
- - Klik: "Voltooien"
+ - Klik: 'Voltooien'
 
 ## X | STAP 3: TEST DE TOOLBOX
  - Laad het MIM-profiel via "Resources"
