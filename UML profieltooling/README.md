@@ -18,15 +18,16 @@
 ## Beschrijving
 Deze handleiding beschrijft het proces voor het genereren van een customized toolbox voor modelleren met Enterprise Architect. Het gaat specifiek in op het maken van de _MIM-toolbox_. Maar ook voor het genereren customized toolboxen in het algemeen, biedt deze beschrijving een handig overzicht van de benodigde stappen. Een inhoudelijke beschrijving voor het maken van de benodigde profielen, vind je hier ([linkOpnemen](url)). De meest actuele versie van MIM kun je hier ([linkOpnemen](url)) raadplegen.
 
-diff
+```diff
 + Er zijn 'x' stappen in het proces:.
 + Packages omzetten naar profielen
 + Profielen omzetten naar mdg tool
-+ ...
++ ...`
+```
 
-diff
+```diff
 + In deze bexchrijving gan we ervan uit dat de inhoud voor de toolbox al is aangemaakt en dat deze in de juiste packages en dito structuur is opgenomen.
-
+```
 
 > NOTE: Nog iets zeggen over waar je inhoudelijke informatie over het maken van _profile packages_ kunt vinden (zelf schrijven en/of verwijzen naar _Sparx_/_profile helpers_)
 
@@ -37,6 +38,8 @@ Controleer of je beschikt over alle benodigde bestanden:
  - CSV-file met definities van de quick linkers ([Quick Linker Definition Format](https://sparxsystems.com/enterprise_architect_user_guide/16.0/modeling_frameworks/quick_linker_definition_format.html))
 
 ## X | WELKE PACKAGES ALS PROFIEL PUBLISEREN
+
+Open met Enterprise Architect het project met de MIM-profielen
 
  - Controleer of de benodigde profile packages aanwezig zijn:
 
