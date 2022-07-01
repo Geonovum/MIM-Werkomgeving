@@ -18,7 +18,6 @@
 ## Beschrijving
 Deze handleiding beschrijft het proces voor het genereren van een customized toolbox voor modelleren met Enterprise Architect. Het gaat specifiek in op het maken van de _MIM-toolbox_. Maar ook voor het genereren customized toolboxen in het algemeen, biedt deze beschrijving een handig overzicht van de benodigde stappen. Een inhoudelijke beschrijving voor het maken van de benodigde profielen, vind je hier ([linkOpnemen](url)). De meest actuele versie van MIM kun je hier ([linkOpnemen](url)) raadplegen.
 
-
 Er zijn drie stappen in het proces. Het kan zijn dat je 
  1. Voorbereiding
  1. Profiel publiceren
@@ -50,7 +49,6 @@ De MTS- en CSV-file vind je [hier](https://github.com/Geonovum/MIM-Werkomgeving/
 
 ![](Media/mim_profile_mts_and_csv_file_location.jpg)
 
-
 ### Benodigde profielen
 Controleer of je beschikt over alle benodigde profielen:
 
@@ -80,18 +78,25 @@ Voor de MIM-toolbox is besloten om het versienummer op verschillende plekken mee
  - _optioneel_: [stereotype in diagram](#versienummer-diagram). Let op: als je dit veranderd, moet je ook het csv-bestand van de _Quick Linker_ aanpassen ([linkOpnemenNaarQuickLinkerMakenOfBewerken](url)).
 
 #### Versienummer _MDG Technology_ (Toolbox)
- - [ ] Aanvullen
+ - [ ] Aanvullen/controleren
+
+Dit is het originele versienummer. Als een gebruiker de toolbox importeerd, kan dit teruggevonden worden onder 'Specialize ... etc.'
 
 #### Versienummer profiel
- - [ ] Aanvullen
+ - [ ] Aanvullen/controleren
+
+Profielen waaruit toolbox gegenereerd wordt. Nummer o.a. terug te vinden in XML-bestand. Handig om te weten, omdat er in de loop van de tijd meerdere profielen gemaakt zullen worden. Mocht je dus willen weten welk profiel aan een toolbox ten grondslag ligt, kun je dat in de XML terugvinden.
 
 #### Versienummer _package_
-Als alias van elk package: hierdoor kan de gebruiker van de toolbox in één oogopslag zien met welke versie van de toolbox een modelelement gemaakt is.
+ - [ ] Aanvullen/controleren
 
- - [ ] Aanvullen
+Als alias van elk package: hierdoor kan de gebruiker van de toolbox in één oogopslag zien met welke versie van de toolbox een modelelement gemaakt is. Dit is vooral heel handig in het dagelijks gebruik. Ook als je twee (versies van) MIM-modellen wilt vergelijken, geef je de gebruiker via deze plek snel inzicht in de gebruikte MIM-versie.
+
 
 #### Versienummer diagram
- - [ ] Aanvullen
+ - [ ] Aanvullen/controleren
+
+Binnen MIM heeft dit (nog) geen versienummer. Indien gewenst, zou dat via de naam van dit stereotype kunnen. De MIM-dataspecificatie zegt niets over een diagram. 
 
 ## Profiel publiceren
 
