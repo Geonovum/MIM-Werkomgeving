@@ -13,7 +13,7 @@
  1. Profielen genereren
  1. MDG genereren
  1. Resultaat controleren
- 1. QuickLinker maken (todo)
+ 1. QuickLinker maken of bewerken (todo)
 
 ## Beschrijving
 Deze handleiding beschrijft het proces voor het genereren van een customized toolbox voor modelleren met Enterprise Architect. Het gaat specifiek in op het maken van de _MIM-toolbox_. Maar ook voor het genereren customized toolboxen in het algemeen, biedt deze beschrijving een handig overzicht van de benodigde stappen. Een inhoudelijke beschrijving voor het maken van de benodigde profielen, vind je hier ([linkOpnemen](url)). De meest actuele versie van MIM kun je hier ([linkOpnemen](url)) raadplegen.
@@ -26,7 +26,8 @@ Deze handleiding beschrijft het proces voor het genereren van een customized too
 ```
 
 ```diff
-+ In deze bexchrijving gan we ervan uit dat de inhoud voor de toolbox al is aangemaakt en dat deze in de juiste packages en dito structuur is opgenomen.
++ In deze bexchrijving gan we ervan uit dat de inhoud voor de toolbox al is aangemaakt
++ en dat deze in de juiste packages en dito structuur is opgenomen.
 ```
 
 > NOTE: Nog iets zeggen over waar je inhoudelijke informatie over het maken van _profile packages_ kunt vinden (zelf schrijven en/of verwijzen naar _Sparx_/_profile helpers_)
@@ -41,14 +42,14 @@ De MTS- en csv-file vind je [hier](https://github.com/Geonovum/MIM-Werkomgeving/
 
 ## Benodigde profielen
 
-Open met Enterprise Architect het project met de MIM-profielen
-Ga in de project browser naar het package `MIM-UMLprofiel`
-
+ - Open met Enterprise Architect het project met de MIM-profielen
+ - Ga in de project browser naar het package `MIM-UMLprofiel`
  - Controleer of daarin de benodigde _profile packages_ aanwezig zijn:
 
 ![](Media/MIM_01_profile_benodigde_profielen.jpg)
 
- - Controleer of in het _package_ `«profile» MIM` het `«document» QuickLinker` aanwezig is. 
+ - Controleer of in het _package_ `«profile» MIM` het element `«document» QuickLinker` aanwezig is.
+ - Het csv-bestand van de QuickLinker is een kopie van de informatie die in dit element is opgeslagen. Als je wijzigingen wilt aanbrengen in de QuickLinker, of als er in het model wijzingen zijn doorgevoerd die van invloed zijn op de QuickLinker, kun je die met behulp van het csv-bestand aanpassen (hier [linkOpnemenNaarQuickLinkerMakenOfBewerken](url) lees je hoe dat moet).
 
 ![](Media/mim_profile_quick_linker_location.jpg)
 
