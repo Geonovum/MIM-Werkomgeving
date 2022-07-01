@@ -142,14 +142,13 @@ Doorloop voor het genereren van een toolbox de volgende stappen in de _Generate 
 
  - Selecteer het package waaronder alle subpackages vallen, in dit geval: `MIM-UMLprofiel`.
 
-![](Media/mim_mdg_gen_tech.jpg)
-
+![](Media/mim_mdg_select_package.jpg)
 
  - Klik op 'Specialize' in de _ribbon_.
  - Kies: 'Publish Package'.
  - Kies: 'Generate MDG Technology'.
 
-![](Media/MIM_03_publish_as_UML_or_MDG.jpg)
+![](Media/mim_mdg_gen_tech.jpg)
 
  - Kies 'Volgende'.
  - Kies 'Open an existing MTS file'.
