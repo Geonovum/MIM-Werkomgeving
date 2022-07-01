@@ -31,14 +31,14 @@ NOG VERWERKEN
 + (zelf schrijven en/of verwijzen naar _Sparx_/_profile helpers_)?
 ```
 
-## Voorbereiding
+## 1 | Voorbereiding
 Controleer voordat je profielen gaat genereren eerst de volgende zaken:
 
  - Beschik je over de [benodigde bestanden](#benodigde-bestanden)?
  - Zijn de [benodigde profielen](#benodigde-profielen) aanwezig?
  - Is het [versienummer correct ingevuld](#versienummer-toolbox)?
 
-### Benodigde bestanden
+### 1.1 | Benodigde bestanden
 Controleer of je beschikt over alle benodigde bestanden:
 
  - EA-file met MIM profile packages voor het genereren van de profiles en mdg technology ([Create MDG Technology File](https://sparxsystems.com/enterprise_architect_user_guide/15.2/modeling/creatingmdgtechnologies.html)), hiertoe behoren tenminste één `«profile»` _package_, een `«diagram profile»` _package_ en een `«toolbox profile»` _package_ (zie voor meer informatie over ... ([linkOpnemenNaarWelkePackagesPubliceren](url)).
@@ -49,7 +49,7 @@ De MTS- en CSV-file vind je [hier](https://github.com/Geonovum/MIM-Werkomgeving/
 
 ![](Media/mim_profile_mts_and_csv_file_location.jpg)
 
-### Benodigde profielen
+### 1.2| Benodigde profielen
 Controleer of je beschikt over alle benodigde profielen:
 
  - Open met Enterprise Architect het project met de MIM-profielen.
@@ -66,7 +66,7 @@ Controleer of je beschikt over alle benodigde profielen:
 
 Indien de profielen al in XML-formaat beschikbaar zijn (zie: ([linkOpnemenNaarPackagePublicerenAlsProfiel](url)), klik dan hier ([linkOpnemenGenererenToolbox](url)) om de volgende stap over te slaan en direct te beginnen met het genereren van de toolbox.
 
-### Versienummer Toolbox
+### 1.3 | Versienummer Toolbox
 
 Het is handig om een toolbox een versienummer mee te geven. ~~~Hiervoor zijn verschillende manieren. Bovendien is het mogelijk om te kiezen hoever je deze nummering doorvoert.~~~ Hieronder wordt uitgelegd op welke manier de MIM-toolbox van een versienummer wordt voorzien. het belangrijkste uitgangspunt is dat het versienummer van de MIM-toolbox, correspondeert met het versienummer van de bijbehorende MIM-dataspecificatie.
 
@@ -77,35 +77,38 @@ Voor de MIM-toolbox is besloten om het versienummer op verschillende plekken mee
  - als [alias van het _package_](#versienummer-package)
  - _optioneel_: [stereotype in diagram](#versienummer-diagram). Let op: als je dit veranderd, moet je ook het csv-bestand van de _Quick Linker_ aanpassen ([linkOpnemenNaarQuickLinkerMakenOfBewerken](url)).
 
-#### Versienummer _MDG Technology_ (Toolbox)
+#### a | Versienummer _MDG Technology_ (Toolbox)
 
 Dit is het originele versienummer. Als een gebruiker de toolbox importeerd, kan dit teruggevonden worden onder 'Specialize ... etc.'
 
 > **NOTE**: Aanvullen/controleren
 
-#### Versienummer profiel
+#### b | Versienummer profiel
 
 Profielen waaruit toolbox gegenereerd wordt. Nummer o.a. terug te vinden in XML-bestand. Handig om te weten, omdat er in de loop van de tijd meerdere profielen gemaakt zullen worden. Mocht je dus willen weten welk profiel aan een toolbox ten grondslag ligt, kun je dat in de XML terugvinden.
 
 > **NOTE**: Aanvullen/controleren
 
-#### Versienummer _package_
+#### c | Versienummer _package_
 
 Als alias van elk package: hierdoor kan de gebruiker van de toolbox in één oogopslag zien met welke versie van de toolbox een modelelement gemaakt is. Dit is vooral heel handig in het dagelijks gebruik. Ook als je twee (versies van) MIM-modellen wilt vergelijken, geef je de gebruiker via deze plek snel inzicht in de gebruikte MIM-versie.
 
 > **NOTE**: Aanvullen/controleren
 
-#### Versienummer diagram
+#### d | Versienummer diagram
 
 Binnen MIM heeft dit (nog) geen versienummer. Indien gewenst, zou dat via de naam van dit stereotype kunnen. De MIM-dataspecificatie zegt niets over een diagram.
 
 > **NOTE**: Aanvullen/controleren
 
-## Profiel publiceren
+## 2 | Profiel publiceren
 
-### X | STAP 1: PUBLICEER "PACKAGE" ALS UML PROFIEL
- - Kies package MIM-UML profiel.
- - Selecteer vervolgens één van de bovengenoemde profielen.
+### 2.1 Publiceer _package_ als UML-profiel
+
+> **NOTE**: Tussenkoppen toevoegen
+
+ - Navigeer naar het package `MIM-UMLprofiel`.
+ - Selecteer vervolgens één van de bovengenoemde profielen (bijv. `«profile» MIM`).
  - Ga naar: _Specialize_.
  - Kies _Publish Package as UML Profile_.
  - En klik op: _Publish Pack As UML profile_.
@@ -115,38 +118,35 @@ Binnen MIM heeft dit (nog) geen versienummer. Indien gewenst, zou dat via de naa
 
  - Voer _profile name_ in: _MIM_.
  - Kies de locatie waar je het profiel wilt opslaan en geef het bestand een herkenbare naam 
- - Voer het versienummer van MIM in waar deze toolbox mee moet kloppen, version: `<versienummer>` (bijv.:`1.1.1`).
+ - Voer het versienummer van de corresponderende MIM-dataspecificatie in (bijv.:`1.1.1`).
 
 ![](Media/MIM_02_profile_publish_as_uml_settings.jpg)
 
 Let op er zijn twee belangrijke voorwaarden
- > **opm.**: [**CONTROLEREN**]De profile name moet overeenkomenm met de naam van het package.
-Verder lijkt het erop of «profile» MIM en «toolbox profile» MIM niet alleen overeen moeten komen met de naam van het package, maar eveneens onderling ... 
+ > **opm.**: [**CONTROLEREN**]
+1. De _profile name_ moet overeenkomenm met de naam van het package.
+2. De namen van de packages met de stereotypen `«profile»`, `«profile diagram»` en `«profile toolbox»` moeten exact hetzelfde zijn
 
-1. De vier keuze-packages moeten een unieke naam hebben bij profile name (bijv. "MIM_Keuzeattribuut")
-2. Het basisprofiel <naam> (iets van «profile» MIM), moet bij profile name dezelfde naam hebben als «toolbox profile» MIM
-
- > **opm**: ~zorg dat profile name en version overal exact hetzelfde zijn, anders werkt het profiel niet~. Dit kan eventueel met een XML-editor gerepareerd worden, maar voorkomen is beter dan genezen.
+> **Opmerking**: Dat er daarnaast packages zijn met een andere naam, maakt niet uit, zoals bijv. `MIM_Keuzebasis`, zo lang de drie voorgenoemde packages maar hetzelfde zijn.
 
 In MIM-toolbox diagram kun je aan de prefixen zien, wat de profile names moeten zijn
-Als je diagram rtoevoegd moet je drie stappen doorlopen bij het selecteren van profielen
+Als je diagram toevoegd moet je drie stappen doorlopen bij het selecteren van profielen
 
  - Klik: 'Save'
- - Herhaal dit proces voor alle bovengenoemde onderdelen (dus ook voor toolbox profile)
+ - Herhaal deze stappen voor alle profielen
+ - Ga daarna door na de volgende stap om op basis van de profielen een toolbox te genereren.
 
- >**Let op**: de toolbox moet samengesteld worden uit verschillende profielen (lijst). Het 'basisprofiel' is ... en dat moet dezelfde naam hebb
-
-### X | STAP 2: GENEREER MDG TECHNOLOGIE
+### 3 | Genereer MDG Technologie
 
 Doorloop voor het genereren van een toolbox de volgende stappen in de _Generate MDG Technology Wizard_. 
 
-#### Selecteer package
+#### 3.1 | Selecteer package
 
  - Selecteer het package waaronder alle subpackages vallen, in dit geval: `MIM-UMLprofiel`.
 
 ![](Media/mim_mdg_select_package.jpg)
 
-#### Open wizard
+#### 3.2 | Open wizard
 
  - Klik op 'Specialize' in de _ribbon_.
  - Kies: 'Publish Package'.
@@ -154,7 +154,7 @@ Doorloop voor het genereren van een toolbox de volgende stappen in de _Generate 
 
 ![](Media/mim_mdg_gen_tech.jpg)
 
-#### Selecteer MTS-bestand
+#### 3.3 | Selecteer MTS-bestand
 
  - Kies 'Volgende'.
  - Kies 'Open an existing MTS file'.
@@ -162,7 +162,7 @@ Doorloop voor het genereren van een toolbox de volgende stappen in de _Generate 
  
  > **Opm**: Het MTS-bestand vult een aantal standaard configuraties vooraf in, maar je kunt deze tijdens het proces nog aanpassen. Dit is een handig bestand. Het kan voorkomen dat je na het genereren van de toolbox aanpassingen wilt maken. Als je na het aanpassen van de gegevens opnieuw de toolbox wilt genereren, is het fijn als je deze gegevens niet opnieuw hoeft in te vullen.
 
-#### Controleer gegevens
+#### 3.4 | Controleer gegevens
  
 Vanuit het MTS-bestand wordt het volgende venster al ingevuld
  - Technology: `MIM`
@@ -180,7 +180,7 @@ Vanuit het MTS-bestand wordt het volgende venster al ingevuld
 
  - Klik 'Volgende'.
 
-#### Controleer instellingen
+#### 3.5 | Controleer instellingen
 
  - Controleer of _Profiles_, _Diagram Types_ en _Toolboxes_ zijn geselecteerd
  - Wijzig indien nodig de instellingen 
@@ -188,7 +188,7 @@ Vanuit het MTS-bestand wordt het volgende venster al ingevuld
 
 ![](Media/mim_mdg_tech_2.jpg)
 
-#### Selecteer _profiles_
+#### 3.6 | Selecteer _profiles_
 
  - Alle configuraties kun je laden vanuit de MTF file.
  - Voor de eerste keer kun je ook een MTS-file genereren.
@@ -198,7 +198,7 @@ Vanuit het MTS-bestand wordt het volgende venster al ingevuld
 
 ![](Media/mim_mdg_tech_3.jpg)
 
-#### Selecteer _diagrams_
+#### 3.7 | Selecteer _diagrams_
 
  - Select: 'Files To Be Included As **Diagram definitions**'
  - Kies hier het diagramprofiel
@@ -206,7 +206,7 @@ Vanuit het MTS-bestand wordt het volgende venster al ingevuld
 
 ![](Media/mim_mdg_tech_4.jpg)
 
-#### Selecteer _Toolboxes_
+#### 3.8 | Selecteer _Toolboxes_
 
  - Select: 'Files To Be Included As **Toolbox Definitions**'
  - Kies hier het toolboxprofiel
@@ -216,7 +216,7 @@ Vanuit het MTS-bestand wordt het volgende venster al ingevuld
 
 ![](Media/mim_mdg_tech_5.jpg)
 
-#### Controleer gegevens en voltooi proces
+#### 3.9 | Controleer gegevens en voltooi proces
 
  - Klik 'Volgende'.
  - Check de box 'Save to MTS' en klik op 'Voltooien'
@@ -227,7 +227,7 @@ Vanuit het MTS-bestand wordt het volgende venster al ingevuld
 
  - Klik: 'Voltooien'
 
-## X | STAP 3: TEST DE TOOLBOX
+## 4 | Test de Toolbox
  - Laad het MIM-profiel via "Resources"
  - maar er is een EAP-testf file
  - Verschillende manieren om de nieuwe toolbox te testen
@@ -237,12 +237,12 @@ Vanuit het MTS-bestand wordt het volgende venster al ingevuld
  - Of door gebruik te maken va "Sync Tagged Values And Constraints"
  - Deze laatste optie vind je terug in het "Resources" menu
 
-## X | MIM_MDG
+## 5 | MIM MDG
  - profile helpers, model wizard: https://sparxsystems.com/enterprise_architect_user_guide/15.2/modeling/using_the_profile_helpers.html
  - Create Diagram Profiles using the Profile Helpers:https://sparxsystems.com/enterprise_architect_user_guide/15.2/modeling/create_diagram_profiles_using_.html
  - Morgen weer verder!
 
-## X | Aandachtspunt
+## X | Aandachtspunten
  - Tekstveld voor teolichting, niet initial value, maar notes veld als datatype
  - Uitgebreide toelichting wordt afgekapt vanwege maximale lengte.
  - Profiel niet elke keer opnieuw moeten laden door het kopppelen aan een (std.) diagram
