@@ -71,18 +71,18 @@ Voor de MIM-toolbox is besloten om het versienummer op verschillende plekken mee
  - _optioneel_: [stereotype in diagram](#versienummer-diagram). Let op: als je dit veranderd, moet je ook het csv-bestand van de _Quick Linker_ aanpassen ([linkOpnemenNaarQuickLinkerMakenOfBewerken](url)).
 
 ### Versienummer _MDG Technology_ (Toolbox)
- - [] Aanvullen
+ - [ ] Aanvullen
 
 ### Versienummer profiel
- - [] Aanvullen
+ - [ ] Aanvullen
 
 ### Versienummer _package_
 Als alias van elk package: hierdoor kan de gebruiker van de toolbox in één oogopslag zien met welke versie van de toolbox een modelelement gemaakt is.
 
- - [] Aanvullen
+ - [ ] Aanvullen
 
 ### Versienummer diagram
- - [] Aanvullen
+ - [ ] Aanvullen
 
 
 ## X | STAP 1: PUBLICEER "PACKAGE" ALS UML PROFIEL
