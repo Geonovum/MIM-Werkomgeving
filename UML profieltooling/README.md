@@ -38,7 +38,7 @@ Controleer of je beschikt over alle benodigde bestanden:
  - MTS-file met MIM properties voor het genereren van MDG Technology ([Working with MTS Files](https://sparxsystems.com/enterprise_architect_user_guide/16.0/modeling_frameworks/working_with_mts_files.html )) 
  - CSV-file met definities van de quick linkers ([Quick Linker Definition Format](https://sparxsystems.com/enterprise_architect_user_guide/16.0/modeling_frameworks/quick_linker_definition_format.html))
 
-De MTS- en csv-file vind je [hier](https://github.com/Geonovum/MIM-Werkomgeving/tree/master/UML%20profieltooling/werkversie1.1.1).
+De MTS- en CSV-file vind je [hier](https://github.com/Geonovum/MIM-Werkomgeving/tree/master/UML%20profieltooling/werkversie1.1.1).
 
 ## Benodigde profielen
 
@@ -52,11 +52,11 @@ De MTS- en csv-file vind je [hier](https://github.com/Geonovum/MIM-Werkomgeving/
 
 ![](Media/mim_profile_quick_linker_location.jpg)
 
-> **NOTE**: Het csv-bestand van de QuickLinker is een kopie van de informatie die in dit element is opgeslagen. Als je wijzigingen wilt aanbrengen in de QuickLinker, of als er in het model wijzingen zijn doorgevoerd die van invloed zijn op de QuickLinker, kun je die met behulp van het csv-bestand aanpassen (hier [linkOpnemenNaarQuickLinkerMakenOfBewerken](url) lees je hoe dat moet).
+> **NOTE**: Het CSV-bestand van de QuickLinker is een kopie van de informatie die in dit element is opgeslagen. Als je wijzigingen wilt aanbrengen in de QuickLinker, of als er in het model wijzingen zijn doorgevoerd die van invloed zijn op de QuickLinker, kun je die met behulp van het CSV-bestand aanpassen (hier [linkOpnemenNaarQuickLinkerMakenOfBewerken](url) lees je hoe dat moet).
 
 
  - Daarnaast heb je nog een **mtsfile** nodig waarin de belangrijkste informatie voor het generen van een MDG-technology al in is opgeslagen.
- - Tot slot is het handig om  ook het csv-bestand voor de **quick linker** achter de hand te hebben. In principe bevat het  «document» in het package «profile» MIM
+ - Tot slot is het handig om  ook het CSV-bestand voor de **quick linker** achter de hand te hebben. In principe bevat het  «document» in het package «profile» MIM
 
 ![](Media/mim_profile_mts_and_csv_file_location.jpg)
 
