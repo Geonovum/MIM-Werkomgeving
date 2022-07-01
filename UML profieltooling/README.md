@@ -63,7 +63,7 @@ Indien de profielen al in XML-formaat beschikbaar zijn (zie: ([linkOpnemenNaarPa
 
 Het is handig om een toolbox een versienummer mee te geven. ~~~Hiervoor zijn verschillende manieren. Bovendien is het mogelijk om te kiezen hoever je deze nummering doorvoert.~~~ Hieronder wordt uitgelegd op welke manier de MIM-toolbox van een versienummer wordt voorzien. het belangrijkste uitgangspunt is dat het versienummer van de MIM-toolbox, correspondeert met het versienummer van de bijbehorende MIM-dataspecificatie.
 
-Voor de MIM-toolbox is besloten om het versienummer op verschillende plekken mee te geven
+Voor de MIM-toolbox is besloten om het versienummer op verschillende plekken mee te geven:
 
  - bij [het genereren van de Toolbox](#versienummer-mdg-technology-toolbox)
  - bij [het genereren van het profiel](#versienummer-profiel)
@@ -71,18 +71,18 @@ Voor de MIM-toolbox is besloten om het versienummer op verschillende plekken mee
  - _optioneel_: [stereotype in diagram](#versienummer-diagram). Let op: als je dit veranderd, moet je ook het csv-bestand van de _Quick Linker_ aanpassen ([linkOpnemenNaarQuickLinkerMakenOfBewerken](url)).
 
 ### Versienummer _MDG Technology_ (Toolbox)
-...
+[] Aanvullen
 
 ### Versienummer profiel
-...
+[] Aanvullen
 
 ### Versienummer _package_
 Als alias van elk package: hierdoor kan de gebruiker van de toolbox in één oogopslag zien met welke versie van de toolbox een modelelement gemaakt is.
 
+[] Aanvullen
+
 ### Versienummer diagram
-...
-
-
+[] Aanvullen
 
 
 ## X | STAP 1: PUBLICEER "PACKAGE" ALS UML PROFIEL
