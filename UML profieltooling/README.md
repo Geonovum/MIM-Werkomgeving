@@ -216,7 +216,7 @@ Vanuit het MTS-bestand wordt het volgende venster al ingevuld
 
 ![](Media/mim_mdg_tech_5.jpg)
 
-#### Controleer gegevens
+#### Controleer gegevens en voltooi proces
 
  - Klik 'Volgende'.
  - Check de box 'Save to MTS' en klik op 'Voltooien'
