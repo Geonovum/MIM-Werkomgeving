@@ -40,6 +40,9 @@ Controleer of je beschikt over alle benodigde bestanden:
 
 De MTS- en CSV-file vind je [hier](https://github.com/Geonovum/MIM-Werkomgeving/tree/master/UML%20profieltooling/werkversie1.1.1).
 
+![](Media/mim_profile_mts_and_csv_file_location.jpg)
+
+
 ## Benodigde profielen
 
  - Open met Enterprise Architect het project met de MIM-profielen.
@@ -54,15 +57,9 @@ De MTS- en CSV-file vind je [hier](https://github.com/Geonovum/MIM-Werkomgeving/
 
 > **NOTE**: Het CSV-bestand van de QuickLinker is een kopie van de informatie die in dit element is opgeslagen. Als je wijzigingen wilt aanbrengen in de QuickLinker, of als er in het model wijzingen zijn doorgevoerd die van invloed zijn op de QuickLinker, kun je die met behulp van het CSV-bestand aanpassen (hier [linkOpnemenNaarQuickLinkerMakenOfBewerken](url) lees je hoe dat moet).
 
+ - 
 
- - Daarnaast heb je nog een **mtsfile** nodig waarin de belangrijkste informatie voor het generen van een MDG-technology al in is opgeslagen.
- - Tot slot is het handig om  ook het CSV-bestand voor de **quick linker** achter de hand te hebben. In principe bevat het  «document» in het package «profile» MIM
-
-![](Media/mim_profile_mts_and_csv_file_location.jpg)
-
-
-
-Indien de packages met de profielen al als XML-bestand beschikbaar zijn (zie: ([linkOpnemenNaarPackagePublicerenAlsProfiel](url)), klik dan hier ([linkOpnemenGenererenToolbox](url)) om verder te gaan met het genereren van de toolbox
+Indien de profielen al in XML-formaat beschikbaar zijn (zie: ([linkOpnemenNaarPackagePublicerenAlsProfiel](url)), klik dan hier ([linkOpnemenGenererenToolbox](url)) om de volgende stap over te slaan en direct te beginnen met het genereren van de toolbox. 
 
 ## X | STAP 1: PUBLICEER "PACKAGE" ALS UML PROFIEL
  - Kies package MIM-UML profiel.
