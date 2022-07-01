@@ -78,25 +78,29 @@ Voor de MIM-toolbox is besloten om het versienummer op verschillende plekken mee
  - _optioneel_: [stereotype in diagram](#versienummer-diagram). Let op: als je dit veranderd, moet je ook het csv-bestand van de _Quick Linker_ aanpassen ([linkOpnemenNaarQuickLinkerMakenOfBewerken](url)).
 
 #### Versienummer _MDG Technology_ (Toolbox)
- - [ ] Aanvullen/controleren
 
 Dit is het originele versienummer. Als een gebruiker de toolbox importeerd, kan dit teruggevonden worden onder 'Specialize ... etc.'
 
+> **NOTE**: Aanvullen/controleren
+
 #### Versienummer profiel
- - [ ] Aanvullen/controleren
 
 Profielen waaruit toolbox gegenereerd wordt. Nummer o.a. terug te vinden in XML-bestand. Handig om te weten, omdat er in de loop van de tijd meerdere profielen gemaakt zullen worden. Mocht je dus willen weten welk profiel aan een toolbox ten grondslag ligt, kun je dat in de XML terugvinden.
 
+> **NOTE**: Aanvullen/controleren
+
 #### Versienummer _package_
- - [ ] Aanvullen/controleren
 
 Als alias van elk package: hierdoor kan de gebruiker van de toolbox in één oogopslag zien met welke versie van de toolbox een modelelement gemaakt is. Dit is vooral heel handig in het dagelijks gebruik. Ook als je twee (versies van) MIM-modellen wilt vergelijken, geef je de gebruiker via deze plek snel inzicht in de gebruikte MIM-versie.
 
+> **NOTE**: Aanvullen/controleren
+
 
 #### Versienummer diagram
- - [ ] Aanvullen/controleren
 
-Binnen MIM heeft dit (nog) geen versienummer. Indien gewenst, zou dat via de naam van dit stereotype kunnen. De MIM-dataspecificatie zegt niets over een diagram. 
+Binnen MIM heeft dit (nog) geen versienummer. Indien gewenst, zou dat via de naam van dit stereotype kunnen. De MIM-dataspecificatie zegt niets over een diagram.
+
+> **NOTE**: Aanvullen/controleren
 
 ## Profiel publiceren
 
