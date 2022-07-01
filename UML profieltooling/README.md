@@ -138,9 +138,11 @@ Als je diagram rtoevoegd moet je drie stappen doorlopen bij het selecteren van p
 
 ## X | STAP 2: GENEREER MDG TECHNOLOGIE
 
- - Selecteer vervolgens het package waaronder alle subpackages vallen: `MIM-UMLprofiel`.
+Doorloop voor het genereren van een toolbox de volgende stappen in de _Generate MDG Technology Wizard_. 
 
-![](Media/mim_mdg_select_package.jpg)
+ - Selecteer het package waaronder alle subpackages vallen, in dit geval: `MIM-UMLprofiel`.
+
+![](Media/mim_mdg_gen_tech.jpg)
 
 
  - Klik op 'Specialize' in de _ribbon_.
