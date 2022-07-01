@@ -18,16 +18,18 @@
 ## Beschrijving
 Deze handleiding beschrijft het proces voor het genereren van een customized toolbox voor modelleren met Enterprise Architect. Het gaat specifiek in op het maken van de _MIM-toolbox_. Maar ook voor het genereren customized toolboxen in het algemeen, biedt deze beschrijving een handig overzicht van de benodigde stappen. Een inhoudelijke beschrijving voor het maken van de benodigde profielen, vind je hier ([linkOpnemen](url)). De meest actuele versie van MIM kun je hier ([linkOpnemen](url)) raadplegen.
 
-> **NOTE**: Nog iets zeggen over waar je inhoudelijke informatie over het maken van _profile packages_ kunt vinden (zelf schrijven en/of verwijzen naar _Sparx_/_profile helpers_)
+
+Er zijn drie stappen in het proces. Het kan zijn dat je 
+ 1. Voorbereiding
+ 1. Profiel publiceren
+ 1. MDG Technology genereren (toolbox)
 
 ```diff
 NOG VERWERKEN
-+ Er zijn 'x' stappen in het proces:.
-+ Packages omzetten naar profielen
-+ Profielen omzetten naar mdg tool
-+ ...`
 + In deze bexchrijving gaan we ervan uit dat de inhoud voor de toolbox al is aangemaakt
 + en dat deze in de juiste packages en dito structuur is opgenomen.
++ Beschrijving inhoudelijke informatie voor het maken van _profile packages_
++ (zelf schrijven en/of verwijzen naar _Sparx_/_profile helpers_)?
 ```
 
 ## Voorbereiding
@@ -91,8 +93,9 @@ Als alias van elk package: hierdoor kan de gebruiker van de toolbox in één oog
 #### Versienummer diagram
  - [ ] Aanvullen
 
+## Profiel publiceren
 
-## X | STAP 1: PUBLICEER "PACKAGE" ALS UML PROFIEL
+### X | STAP 1: PUBLICEER "PACKAGE" ALS UML PROFIEL
  - Kies package MIM-UML profiel.
  - Selecteer vervolgens één van de bovengenoemde profielen.
  - Ga naar: _Specialize_.
