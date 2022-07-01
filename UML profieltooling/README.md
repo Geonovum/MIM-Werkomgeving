@@ -30,7 +30,14 @@ NOG VERWERKEN
 + en dat deze in de juiste packages en dito structuur is opgenomen.
 ```
 
-## Benodigde bestanden
+## Voorbereiding
+Controleer voordat je profielen gaat genereren eerst de volgende zaken:
+
+ - Beschik je over de [benodigde bestanden](#benodigde-bestanden)?
+ - Zijn de [benodigde profielen](#benodigde-profielen) aanwezig?
+ - Is het [versienummer correct ingevuld](#versienummer-toolbox)?
+
+### Benodigde bestanden
 Controleer of je beschikt over alle benodigde bestanden:
 
  - EA-file met MIM profile packages voor het genereren van de profiles en mdg technology ([Create MDG Technology File](https://sparxsystems.com/enterprise_architect_user_guide/15.2/modeling/creatingmdgtechnologies.html)), hiertoe behoren tenminste één `«profile»` _package_, een `«diagram profile»` _package_ en een `«toolbox profile»` _package_ (zie voor meer informatie over ... ([linkOpnemenNaarWelkePackagesPubliceren](url)).
@@ -42,7 +49,7 @@ De MTS- en CSV-file vind je [hier](https://github.com/Geonovum/MIM-Werkomgeving/
 ![](Media/mim_profile_mts_and_csv_file_location.jpg)
 
 
-## Benodigde profielen
+### Benodigde profielen
 Controleer of je beschikt over alle benodigde profielen:
 
  - Open met Enterprise Architect het project met de MIM-profielen.
@@ -59,7 +66,7 @@ Controleer of je beschikt over alle benodigde profielen:
 
 Indien de profielen al in XML-formaat beschikbaar zijn (zie: ([linkOpnemenNaarPackagePublicerenAlsProfiel](url)), klik dan hier ([linkOpnemenGenererenToolbox](url)) om de volgende stap over te slaan en direct te beginnen met het genereren van de toolbox.
 
-## Versienummer Toolbox
+### Versienummer Toolbox
 
 Het is handig om een toolbox een versienummer mee te geven. ~~~Hiervoor zijn verschillende manieren. Bovendien is het mogelijk om te kiezen hoever je deze nummering doorvoert.~~~ Hieronder wordt uitgelegd op welke manier de MIM-toolbox van een versienummer wordt voorzien. het belangrijkste uitgangspunt is dat het versienummer van de MIM-toolbox, correspondeert met het versienummer van de bijbehorende MIM-dataspecificatie.
 
@@ -70,18 +77,18 @@ Voor de MIM-toolbox is besloten om het versienummer op verschillende plekken mee
  - als [alias van het _package_](#versienummer-package)
  - _optioneel_: [stereotype in diagram](#versienummer-diagram). Let op: als je dit veranderd, moet je ook het csv-bestand van de _Quick Linker_ aanpassen ([linkOpnemenNaarQuickLinkerMakenOfBewerken](url)).
 
-### Versienummer _MDG Technology_ (Toolbox)
+#### Versienummer _MDG Technology_ (Toolbox)
  - [ ] Aanvullen
 
-### Versienummer profiel
+#### Versienummer profiel
  - [ ] Aanvullen
 
-### Versienummer _package_
+#### Versienummer _package_
 Als alias van elk package: hierdoor kan de gebruiker van de toolbox in één oogopslag zien met welke versie van de toolbox een modelelement gemaakt is.
 
  - [ ] Aanvullen
 
-### Versienummer diagram
+#### Versienummer diagram
  - [ ] Aanvullen
 
 
