@@ -37,22 +37,27 @@ Controleer of je beschikt over alle benodigde bestanden:
  - MTS-file met MIM properties voor het genereren van MDG Technology ([Working with MTS Files](https://sparxsystems.com/enterprise_architect_user_guide/16.0/modeling_frameworks/working_with_mts_files.html )) 
  - CSV-file met definities van de quick linkers ([Quick Linker Definition Format](https://sparxsystems.com/enterprise_architect_user_guide/16.0/modeling_frameworks/quick_linker_definition_format.html))
 
-## X | WELKE PACKAGES ALS PROFIEL PUBLISEREN
+De MTS- en csv-file vind je [hier](https://github.com/Geonovum/MIM-Werkomgeving/tree/master/UML%20profieltooling/werkversie1.1.1).
+
+## Benodigde profielen
 
 Open met Enterprise Architect het project met de MIM-profielen
+Ga in de project browser naar het package `MIM-UMLprofiel`
 
- - Controleer of de benodigde profile packages aanwezig zijn:
+ - Controleer of daarin de benodigde _profile packages_ aanwezig zijn:
 
 ![](Media/MIM_01_profile_benodigde_profielen.jpg)
 
+ - Controleer of in het _package_ `«profile» MIM` het `«document» QuickLinker` aanwezig is. 
+
+![](Media/mim_profile_quick_linker_location.jpg)
+
  - Daarnaast heb je nog een **mtsfile** nodig waarin de belangrijkste informatie voor het generen van een MDG-technology al in is opgeslagen.
- - Tot slot is het handig om  ook het csv-bestand voor de **quick linker** achter de hand te hebben.
+ - Tot slot is het handig om  ook het csv-bestand voor de **quick linker** achter de hand te hebben. In principe bevat het  «document» in het package «profile» MIM
 
 ![](Media/mim_profile_mts_and_csv_file_location.jpg)
 
-Beiden kun je [hier](https://github.com/Geonovum/MIM-Werkomgeving/tree/master/UML%20profieltooling/werkversie1.1.1) vinden.
 
-<!-- ![](Media/mim_profile_quick_linker_location.jpg) -->
 
 Indien de packages met de profielen al als XML-bestand beschikbaar zijn (zie: ([linkOpnemenNaarPackagePublicerenAlsProfiel](url)), klik dan hier ([linkOpnemenGenererenToolbox](url)) om verder te gaan met het genereren van de toolbox
 
