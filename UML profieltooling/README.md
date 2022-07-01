@@ -139,17 +139,17 @@ Let op er zijn twee belangrijke voorwaarden:
  - Herhaal deze stappen voor alle profielen
  - Ga daarna door na de volgende stap om op basis van de profielen een toolbox te genereren.
 
-### 3 | Genereer MDG Technologie
+## 3 | Genereer MDG Technologie
 
 Doorloop voor het genereren van een toolbox de volgende stappen in de _Generate MDG Technology Wizard_. 
 
-#### 3.1 | Selecteer package
+### 3.1 | Selecteer package
 
  - Selecteer het package waaronder alle subpackages vallen, in dit geval: `MIM-UMLprofiel`.
 
 ![](Media/mim_mdg_select_package.jpg)
 
-#### 3.2 | Open wizard
+### 3.2 | Open wizard
 
  - Klik op 'Specialize' in de _ribbon_.
  - Kies: 'Publish Package'.
@@ -157,7 +157,7 @@ Doorloop voor het genereren van een toolbox de volgende stappen in de _Generate 
 
 ![](Media/mim_mdg_gen_tech.jpg)
 
-#### 3.3 | Selecteer MTS-bestand
+### 3.3 | Selecteer MTS-bestand
 
  - Kies 'Volgende'.
  - Kies 'Open an existing MTS file'.
@@ -165,7 +165,7 @@ Doorloop voor het genereren van een toolbox de volgende stappen in de _Generate 
  
  > **Opm**: Het MTS-bestand vult een aantal standaard configuraties vooraf in, maar je kunt deze tijdens het proces nog aanpassen. Dit is een handig bestand. Het kan voorkomen dat je na het genereren van de toolbox aanpassingen wilt maken. Als je na het aanpassen van de gegevens opnieuw de toolbox wilt genereren, is het fijn als je deze gegevens niet opnieuw hoeft in te vullen.
 
-#### 3.4 | Controleer gegevens
+### 3.4 | Controleer gegevens
  
 Vanuit het MTS-bestand wordt het volgende venster al ingevuld
  - Technology: `MIM`
@@ -176,14 +176,14 @@ Vanuit het MTS-bestand wordt het volgende venster al ingevuld
 ![](Media/mim_mdg_tech_1.jpg)
 
 > **Toelichting**
-> - Icon en logo: deze velden blijven vooralsnog leeg.
-> - URL: link naar corresponderende MIM-documentatie op GitHub/ReSpec.
-> - Support: link naar website Geonovum.
-> - Notes: Vul in het notes veld kort in wat is er in deze versie nieuw is.
+> 1. Icon en logo: deze velden blijven vooralsnog leeg.
+> 1. URL: link naar corresponderende MIM-documentatie op GitHub/ReSpec.
+> 1. Support: link naar website Geonovum.
+> 1. Notes: Vul in het notes veld kort in wat is er in deze versie nieuw is.
 
  - Klik 'Volgende'.
 
-#### 3.5 | Controleer instellingen
+### 3.5 | Controleer instellingen
 
  - Controleer of _Profiles_, _Diagram Types_ en _Toolboxes_ zijn geselecteerd
  - Wijzig indien nodig de instellingen 
@@ -191,7 +191,7 @@ Vanuit het MTS-bestand wordt het volgende venster al ingevuld
 
 ![](Media/mim_mdg_tech_2.jpg)
 
-#### 3.6 | Selecteer _profiles_
+### 3.6 | Selecteer _profiles_
 
  - Alle configuraties kun je laden vanuit de MTF file.
  - Voor de eerste keer kun je ook een MTS-file genereren.
@@ -201,7 +201,7 @@ Vanuit het MTS-bestand wordt het volgende venster al ingevuld
 
 ![](Media/mim_mdg_tech_3.jpg)
 
-#### 3.7 | Selecteer _diagrams_
+### 3.7 | Selecteer _diagrams_
 
  - Select: 'Files To Be Included As **Diagram definitions**'
  - Kies hier het diagramprofiel
@@ -209,7 +209,7 @@ Vanuit het MTS-bestand wordt het volgende venster al ingevuld
 
 ![](Media/mim_mdg_tech_4.jpg)
 
-#### 3.8 | Selecteer _Toolboxes_
+### 3.8 | Selecteer _Toolboxes_
 
  - Select: 'Files To Be Included As **Toolbox Definitions**'
  - Kies hier het toolboxprofiel
@@ -219,7 +219,7 @@ Vanuit het MTS-bestand wordt het volgende venster al ingevuld
 
 ![](Media/mim_mdg_tech_5.jpg)
 
-#### 3.9 | Controleer gegevens en voltooi proces
+### 3.9 | Controleer gegevens en voltooi proces
 
  - Klik 'Volgende'.
  - Check de box 'Save to MTS' en klik op 'Voltooien'
