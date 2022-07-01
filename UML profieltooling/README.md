@@ -122,16 +122,19 @@ Binnen MIM heeft dit (nog) geen versienummer. Indien gewenst, zou dat via de naa
 
 ![](Media/MIM_02_profile_publish_as_uml_settings.jpg)
 
-Let op er zijn twee belangrijke voorwaarden
- > **opm.**: [**CONTROLEREN**]
-1. De _profile name_ moet overeenkomenm met de naam van het package.
-2. De namen van de packages met de stereotypen `«profile»`, `«profile diagram»` en `«profile toolbox»` moeten exact hetzelfde zijn
+Let op er zijn twee belangrijke voorwaarden:
+1. De _profile name_ moet overeenkomenm met de naam van het _package_.
+2. De namen van de packages met de stereotypen `«profile»`, `«profile diagram»` en `«profile toolbox»` moeten exact hetzelfde zijn.
 
-> **Opmerking**: Dat er daarnaast packages zijn met een andere naam, maakt niet uit, zoals bijv. `MIM_Keuzebasis`, zo lang de drie voorgenoemde packages maar hetzelfde zijn.
+> **Opmerking**: Dat er daarnaast packages zijn met een andere naam, maakt niet uit, zoals bijv. `MIM_Keuzebasis`, zo lang de drie voorgenoemde packages maar hetzelfde zijn. Wel is het zo dat de prefix die in het MIM-toolbox
 
-In MIM-toolbox diagram kun je aan de prefixen zien, wat de profile names moeten zijn
-Als je diagram toevoegd moet je drie stappen doorlopen bij het selecteren van profielen
+3. De naam van een package moet overeenkomen met de prefix van een toolbox-element (zie: afbeelding).
 
+![](mim_profile_prefix_check.jpg)
+
+> **Opmerking**: Een toolbox-element verwijst naar de het package met het bijbehorende profiel. Als je de packagenaam van een profiel aanpast, verandert de naam van het toolbox-element niet automatisch mee. In de uiteindelijke toolbox zul je dit element dan niet kunnen gebruiken.
+
+ - Controleer of aan deze voorwaarden voldaan wordt.
  - Klik: 'Save'
  - Herhaal deze stappen voor alle profielen
  - Ga daarna door na de volgende stap om op basis van de profielen een toolbox te genereren.
