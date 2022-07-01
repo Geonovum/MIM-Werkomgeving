@@ -50,9 +50,10 @@ De MTS- en csv-file vind je [hier](https://github.com/Geonovum/MIM-Werkomgeving/
 
  - Controleer of in het _package_ `«profile» MIM` het element `«document» QuickLinker` aanwezig is.
 
+![](Media/mim_profile_quick_linker_location.jpg)
+
 > **NOTE**: Het csv-bestand van de QuickLinker is een kopie van de informatie die in dit element is opgeslagen. Als je wijzigingen wilt aanbrengen in de QuickLinker, of als er in het model wijzingen zijn doorgevoerd die van invloed zijn op de QuickLinker, kun je die met behulp van het csv-bestand aanpassen (hier [linkOpnemenNaarQuickLinkerMakenOfBewerken](url) lees je hoe dat moet).
 
-![](Media/mim_profile_quick_linker_location.jpg)
 
  - Daarnaast heb je nog een **mtsfile** nodig waarin de belangrijkste informatie voor het generen van een MDG-technology al in is opgeslagen.
  - Tot slot is het handig om  ook het csv-bestand voor de **quick linker** achter de hand te hebben. In principe bevat het  «document» in het package «profile» MIM
