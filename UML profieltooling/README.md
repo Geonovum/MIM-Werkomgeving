@@ -61,7 +61,7 @@ Indien de profielen al in XML-formaat beschikbaar zijn (zie: ([linkOpnemenNaarPa
 
 ## Versienummer Toolbox
 
-Het is handig om een toolbox een versienummer mee te geven. Hiervoor zijn verschillende manieren. Bovendien is het mogelijk om te kiezen hoever je deze nummering doorvoert. Hieronder wordt uitgelegd op welke manier de MIM-toolbox van een versienummer wordt voorzien. het belangrijkste uitgangspunt is dat het versienummer van de MIM-toolbox, correspondeert met het versienummer van de bijbehorende MIM-dataspecificatie.
+Het is handig om een toolbox een versienummer mee te geven. ~~~Hiervoor zijn verschillende manieren. Bovendien is het mogelijk om te kiezen hoever je deze nummering doorvoert.~~~ Hieronder wordt uitgelegd op welke manier de MIM-toolbox van een versienummer wordt voorzien. het belangrijkste uitgangspunt is dat het versienummer van de MIM-toolbox, correspondeert met het versienummer van de bijbehorende MIM-dataspecificatie.
 
 Voor de MIM-toolbox is besloten om het versienummer op verschillende plekken mee te geven
 
