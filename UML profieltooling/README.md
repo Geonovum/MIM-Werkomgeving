@@ -146,40 +146,47 @@ Doorloop voor het genereren van een toolbox de volgende stappen in de _Generate 
 
 ![](Media/mim_mdg_select_package.jpg)
 
+#### Open wizard
+
  - Klik op 'Specialize' in de _ribbon_.
  - Kies: 'Publish Package'.
  - Kies: 'Generate MDG Technology'.
 
-#### Open wizard
-
 ![](Media/mim_mdg_gen_tech.jpg)
+
+#### Selecteer MTS-bestand
 
  - Kies 'Volgende'.
  - Kies 'Open an existing MTS file'.
  - Negeer de melding.
  
- > **Opm**: Het MTS-bestand vult een aantal standaard configuraties vooraf in, maar je kunt deze tijdens het proces nog aanpassen.
+ > **Opm**: Het MTS-bestand vult een aantal standaard configuraties vooraf in, maar je kunt deze tijdens het proces nog aanpassen. Dit is een handig bestand. Het kan voorkomen dat je na het genereren van de toolbox aanpassingen wilt maken. Als je na het aanpassen van de gegevens opnieuw de toolbox wilt genereren, is het fijn als je deze gegevens niet opnieuw hoeft in te vullen.
 
- Vanuit het MTS-bestand wordt het volgende venster al ingevuld
+#### Controleer gegevens
+ 
+Vanuit het MTS-bestand wordt het volgende venster al ingevuld
  - Technology: `MIM`
  - Filename: (kies een naam en locatie)
- - ID: b + build number (bijv.: `b03`)
+ - ID: build + build number (bijv.: `build03`)
  - Version: `1.1.1`
-
-#### Controleren gegevens
 
 ![](Media/mim_mdg_tech_1.jpg)
 
- - Icon en logo blijven vooralsnog leeg.
- - URL: link naar corresponderende MIM-documentatie op GitHub/ReSpec.
- - Support: link naar website Geonovum.
- - Notes: Vul in het notes veld kort in wat is er in deze versie nieuw is.
+> **Toelichting**
+> - Icon en logo: deze velden blijven vooralsnog leeg.
+> - URL: link naar corresponderende MIM-documentatie op GitHub/ReSpec.
+> - Support: link naar website Geonovum.
+> - Notes: Vul in het notes veld kort in wat is er in deze versie nieuw is.
+
  - Klik 'Volgende'.
- - Controleer de instellingen en klik op 'Ok'
+
+#### Controleer instellingen
+
+ - Controleer of _Profiles_, _Diagram Types_ en _Toolboxes_ zijn geselecteerd
+ - Wijzig indien nodig de instellingen 
+ - Klik op 'Ok'
 
 ![](Media/mim_mdg_tech_2.jpg)
-
- > **Opm**: In het metaprofiel zitten Pro_f_iles, _Diagram Types_ en _Toolboxes_.
 
 #### Selecteer _profiles_
 
