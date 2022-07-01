@@ -136,9 +136,11 @@ Als je diagram rtoevoegd moet je drie stappen doorlopen bij het selecteren van p
 
  >**Let op**: de toolbox moet samengesteld worden uit verschillende profielen (lijst). Het 'basisprofiel' is ... en dat moet dezelfde naam hebb
 
-## X | STAP 2: GENEREER MDG TECHNOLOGIE
+### X | STAP 2: GENEREER MDG TECHNOLOGIE
 
 Doorloop voor het genereren van een toolbox de volgende stappen in de _Generate MDG Technology Wizard_. 
+
+#### Selecteer package
 
  - Selecteer het package waaronder alle subpackages vallen, in dit geval: `MIM-UMLprofiel`.
 
@@ -147,6 +149,8 @@ Doorloop voor het genereren van een toolbox de volgende stappen in de _Generate 
  - Klik op 'Specialize' in de _ribbon_.
  - Kies: 'Publish Package'.
  - Kies: 'Generate MDG Technology'.
+
+#### Open wizard
 
 ![](Media/mim_mdg_gen_tech.jpg)
 
@@ -162,6 +166,8 @@ Doorloop voor het genereren van een toolbox de volgende stappen in de _Generate 
  - ID: b + build number (bijv.: `b03`)
  - Version: `1.1.1`
 
+#### Controleren gegevens
+
 ![](Media/mim_mdg_tech_1.jpg)
 
  - Icon en logo blijven vooralsnog leeg.
@@ -173,7 +179,9 @@ Doorloop voor het genereren van een toolbox de volgende stappen in de _Generate 
 
 ![](Media/mim_mdg_tech_2.jpg)
 
- > **Opm**: In het metaprofiel zitten profiles en toolboxes
+ > **Opm**: In het metaprofiel zitten Pro_f_iles, _Diagram Types_ en _Toolboxes_.
+
+#### Selecteer _profiles_
 
  - Alle configuraties kun je laden vanuit de MTF file.
  - Voor de eerste keer kun je ook een MTS-file genereren.
@@ -183,11 +191,15 @@ Doorloop voor het genereren van een toolbox de volgende stappen in de _Generate 
 
 ![](Media/mim_mdg_tech_3.jpg)
 
+#### Selecteer _diagrams_
+
  - Select: 'Files To Be Included As **Diagram definitions**'
  - Kies hier het diagramprofiel
  - Klik 'Volgende'.
 
 ![](Media/mim_mdg_tech_4.jpg)
+
+#### Selecteer _Toolboxes_
 
  - Select: 'Files To Be Included As **Toolbox Definitions**'
  - Kies hier het toolboxprofiel
@@ -196,6 +208,8 @@ Doorloop voor het genereren van een toolbox de volgende stappen in de _Generate 
  - In de volgende stap selecteer je tot slot het toolbox profiel.
 
 ![](Media/mim_mdg_tech_5.jpg)
+
+#### Controleer gegevens
 
  - Klik 'Volgende'.
  - Check de box 'Save to MTS' en klik op 'Voltooien'
