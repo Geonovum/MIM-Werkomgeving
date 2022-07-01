@@ -130,7 +130,7 @@ Let op er zijn twee belangrijke voorwaarden:
 
 3. De naam van een package moet overeenkomen met de prefix van een toolbox-element (zie: afbeelding).
 
-![](mim_profile_prefix_check.jpg)
+![](Media/mim_profile_prefix_check.jpg)
 
 > **Opmerking**: Een toolbox-element verwijst naar de het package met het bijbehorende profiel. Als je de packagenaam van een profiel aanpast, verandert de naam van het toolbox-element niet automatisch mee. In de uiteindelijke toolbox zul je dit element dan niet kunnen gebruiken.
 
