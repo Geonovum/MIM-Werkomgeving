@@ -70,6 +70,8 @@ Indien de profielen al in XML-formaat beschikbaar zijn (zie: ([linkOpnemenNaarPa
 
 Het is handig om een toolbox een versienummer mee te geven. Hiervoor zijn verschillende manieren. Bovendien is het mogelijk om te kiezen hoever je deze nummering doorvoert. Hieronder wordt uitgelegd op welke manier de MIM-toolbox van een versienummer wordt voorzien.  belangrijkste uitgangspunt is dat het versienummer van de MIM-toolbox correspondeert met het versienummer van de MIM-dataspecificatie.
 
+**Format**: `MIM<spatie>#.#.#`
+
 Voor de MIM-toolbox is besloten om het versienummer op verschillende plekken mee te geven:
 
  - bij [het genereren van de _toolbox_](#131--versienummer-mdg-technology-toolbox)
@@ -90,14 +92,20 @@ Profielen waaruit de toolbox gegenereerd wordt, hebben ook een versienummer. Dit
 
 Door in het veld `Alias` van elk package het versienummer mee te geven kan een gebruiker van de toolbox in één oogopslag in het _properties-venster_ zien met welke versie van de toolbox een modelelement is gemaakt. Dit is vooral handig in het dagelijks gebruik. Ook als je twee (versies van) MIM-modellen wilt vergelijken, geef je de gebruiker via deze plek snel inzicht in de gebruikte MIM-versie.
 
-**AFBEELDING INVOEGEN**
+![](Media/mim_versionnr_elements_result.jpg)
 
 #### 1.3.4 | Versienummer _toolbox pages_
 
-De _toolbox pages_ krijgen eveneens een versienummer. Hiervoor vouw je het package met het stereotype `toolbox profile` uit. Voor elke toolbox page is een element met het stereotype: `stereotype`. Door bij elk element het versienummer toe te voegen, ziet de gebruiker van de toolbox in één oogopslag met welke versie er gewerkt wordt.
+De _toolbox pages_ krijgen eveneens een versienummer. Hiervoor vouw je het package met het stereotype `toolbox profile` uit. Voor elke toolbox page is een element met het stereotype: `stereotype`.
 
 ![](Media/mim_versionnr_toolbox_stereo_types.jpg)
+
+Controleer of bij elk element het versienummer klopt.
+
 ![](Media/mim_versionnr_toolbox_stereo_types_check.jpg)
+
+Hierdoor ziet de gebruiker van de toolbox in één oogopslag met welke versie er gewerkt wordt.
+
 ![](Media/mim_versionnr_toolbox_stereo_types_result.jpg)
 
 #### 1.3.5 | Versienummer _diagram_
