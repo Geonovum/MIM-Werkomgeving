@@ -266,9 +266,14 @@ Vanuit het MTS-bestand wordt het volgende venster al ingevuld
  - MIM 1.1 build 1
  - Vorige versie had ook zo'n naam, dit kun je op website of github terugvinden. gaat om de naam van de het XML
 
-## Nog plaatsen:
+## Nog plaatsen
+
+(tekst)
 
 ![](Media/mim_create_diagram_profiel.jpg)
+
 ![](Media/mim_create_diagram_profiel_model.jpg)
+
 ![](Media/mim_ql_in_browser.jpg)
+
 ![](Media/mim_ql_linked_doc.jpg)
