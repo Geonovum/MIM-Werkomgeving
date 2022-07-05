@@ -56,7 +56,7 @@ Controleer of je beschikt over alle benodigde profielen:
  - Ga in de project browser naar het package `MIM-UMLprofiel`.
  - Controleer of daarin de benodigde _profile packages_ aanwezig zijn:
 
-![](Media/MIM_01_profile_benodigde_profielen.jpg)
+![](Media/mim_profile_benodigde_profielen.jpg)
 
  - Controleer of in het _package_ `«profile» MIM` het element `«document» QuickLinker` aanwezig is.
 
@@ -128,13 +128,13 @@ In MIM heeft dit onderdeel geen versienummer; het is immers een hulpmiddel. De M
  - En klik op: _Publish Pack As UML profile_.
  - Er verschijnt nu een nieuw venster.
 
-![](Media/MIM_03_publish_as_UML_or_MDG.jpg)
+![](Media/mim_publish_as_UML_or_MDG.jpg)
 
  - Voer _profile name_ in: _MIM_.
  - Kies de locatie waar je het profiel wilt opslaan en geef het bestand een herkenbare naam 
  - Voer het versienummer van de corresponderende MIM-dataspecificatie in (bijv.:`1.1.1`).
 
-![](Media/MIM_02_profile_publish_as_uml_settings.jpg)
+![](Media/mim_profile_publish_as_uml_settings.jpg)
 
 Let op er zijn twee belangrijke voorwaarden:
 1. De _profile name_ moet overeenkomenm met de naam van het _package_.
@@ -265,3 +265,10 @@ Vanuit het MTS-bestand wordt het volgende venster al ingevuld
  - Profiel niet elke keer opnieuw moeten laden door het kopppelen aan een (std.) diagram
  - MIM 1.1 build 1
  - Vorige versie had ook zo'n naam, dit kun je op website of github terugvinden. gaat om de naam van de het XML
+
+## Nog plaatsen:
+
+![](Media/mim_create_diagram_profiel.jpg)
+![](Media/mim_create_diagram_profiel_model.jpg)
+![](Media/mim_ql_in_browser.jpg)
+![](Media/mim_ql_linked_doc.jpg)
