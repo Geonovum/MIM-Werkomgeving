@@ -32,7 +32,7 @@ NOG VERWERKEN
 ```
 
 ## 1 | Voorbereiding
-Controleer voordat je profielen gaat genereren eerst de volgende zaken:
+Controleer voordat je (MIM-)profielen gaat genereren eerst de volgende zaken:
 
  - Beschik je over de [benodigde bestanden](#benodigde-bestanden)?
  - Zijn de [benodigde profielen](#benodigde-profielen) aanwezig?
@@ -41,11 +41,11 @@ Controleer voordat je profielen gaat genereren eerst de volgende zaken:
 ### 1.1 | Benodigde bestanden
 Controleer of je beschikt over alle benodigde bestanden:
 
- - EA-file met MIM profile packages voor het genereren van de profiles en mdg technology ([Create MDG Technology File](https://sparxsystems.com/enterprise_architect_user_guide/15.2/modeling/creatingmdgtechnologies.html)), hiertoe behoren tenminste één `«profile»` _package_, een `«diagram profile»` _package_ en een `«toolbox profile»` _package_ (zie voor meer informatie over ... ([linkOpnemenNaarWelkePackagesPubliceren](url)).
- - MTS-file met MIM properties voor het genereren van MDG Technology ([Working with MTS Files](https://sparxsystems.com/enterprise_architect_user_guide/16.0/modeling_frameworks/working_with_mts_files.html )) 
- - CSV-file met definities van de quick linkers ([Quick Linker Definition Format](https://sparxsystems.com/enterprise_architect_user_guide/16.0/modeling_frameworks/quick_linker_definition_format.html))
+ - **EA-bestand** met MIM profile packages voor het genereren van de profiles en mdg technology ([Create MDG Technology File](https://sparxsystems.com/enterprise_architect_user_guide/15.2/modeling/creatingmdgtechnologies.html)), hiertoe behoort ten minste één package per stereotype: `«profile»`, `«diagram profile»` en `«toolbox profile»` (zie voor meer informatie over ... ([linkOpnemenNaarWelkePackagesPubliceren](url)).
+ - **MTS-bestand** met MIM properties voor het genereren van MDG Technology ([Working with MTS Files](https://sparxsystems.com/enterprise_architect_user_guide/16.0/modeling_frameworks/working_with_mts_files.html )) 
+ - **CSV-bestand** met definities van de quick linkers ([Quick Linker Definition Format](https://sparxsystems.com/enterprise_architect_user_guide/16.0/modeling_frameworks/quick_linker_definition_format.html))
 
-De MTS- en CSV-file vind je [hier](https://github.com/Geonovum/MIM-Werkomgeving/tree/master/UML%20profieltooling/werkversie1.1.1).
+Het MTS- en CSV-bestand vind je [hier](https://github.com/Geonovum/MIM-Werkomgeving/tree/master/UML%20profieltooling/werkversie1.1.1) (zie ook: onderstaande afbeelding).
 
 ![](Media/mim_profile_mts_and_csv_file_location.jpg)
 
@@ -68,7 +68,7 @@ Indien de profielen al in XML-formaat beschikbaar zijn (zie: ([linkOpnemenNaarPa
 
 ### 1.3 | Versienummer Toolbox
 
-Het is handig om een toolbox een versienummer mee te geven. ~~~Hiervoor zijn verschillende manieren. Bovendien is het mogelijk om te kiezen hoever je deze nummering doorvoert.~~~ Hieronder wordt uitgelegd op welke manier de MIM-toolbox van een versienummer wordt voorzien. het belangrijkste uitgangspunt is dat het versienummer van de MIM-toolbox, correspondeert met het versienummer van de bijbehorende MIM-dataspecificatie.
+Het is handig om een toolbox een versienummer mee te geven. Hiervoor zijn verschillende manieren. Bovendien is het mogelijk om te kiezen hoever je deze nummering doorvoert. Hieronder wordt uitgelegd op welke manier de MIM-toolbox van een versienummer wordt voorzien.  belangrijkste uitgangspunt is dat het versienummer van de MIM-toolbox correspondeert met het versienummer van de MIM-dataspecificatie.
 
 Voor de MIM-toolbox is besloten om het versienummer op verschillende plekken mee te geven:
 
@@ -79,27 +79,21 @@ Voor de MIM-toolbox is besloten om het versienummer op verschillende plekken mee
 
 #### 1.3.1 | Versienummer _MDG Technology_ (Toolbox)
 
-Dit is het originele versienummer. Als een gebruiker de toolbox importeerd, kan dit teruggevonden worden onder 'Specialize ... etc.'
-
-> **NOTE**: Aanvullen/controleren
+Dit is het originele versienummer. Als een gebruiker de toolbox importeerd, kan dit teruggevonden worden onder `Specialize` > `Manage Tech`. In het venster dat dan verschijnt zoek je `MIM` op in de kolom _Technology_. In het subvenster rechtsboven vind je het versienummer terug.
 
 #### 1.3.2 | Versienummer profiel
 
-Profielen waaruit toolbox gegenereerd wordt. Nummer o.a. terug te vinden in XML-bestand. Handig om te weten, omdat er in de loop van de tijd meerdere profielen gemaakt zullen worden. Mocht je dus willen weten welk profiel aan een toolbox ten grondslag ligt, kun je dat in de XML terugvinden.
-
-> **NOTE**: Aanvullen/controleren
+Profielen waaruit de toolbox gegenereerd wordt, hebben ook een versienummer. Dit nummer is o.a. terug te vinden in XML-bestand. Dit is wellicht niet strikt noodzakelijk maar zeker handig om te doen, omdat er in de loop van de tijd meerdere profielen gemaakt zullen worden. Mocht je willen weten welk profiel aan een toolbox ten grondslag ligt, kun je dat in het XML-bestand van het profiel terugvinden.
 
 #### 1.3.3 | Versienummer _package_
 
-Als alias van elk package: hierdoor kan de gebruiker van de toolbox in één oogopslag zien met welke versie van de toolbox een modelelement gemaakt is. Dit is vooral heel handig in het dagelijks gebruik. Ook als je twee (versies van) MIM-modellen wilt vergelijken, geef je de gebruiker via deze plek snel inzicht in de gebruikte MIM-versie.
-
-> **NOTE**: Aanvullen/controleren
+Door in het veld Alias van elk package het versienummer mee te geven kan een gebruiker van de toolbox in één oogopslag zien met welke versie van de toolbox een modelelement is gemaakt. Dit is vooral handig in het dagelijks gebruik. Ook als je twee (versies van) MIM-modellen wilt vergelijken, geef je de gebruiker via deze plek snel inzicht in de gebruikte MIM-versie.
 
 #### 1.3.4 | Versienummer diagram
 
-Binnen MIM heeft dit (nog) geen versienummer. Indien gewenst, zou dat via de naam van dit stereotype kunnen. De MIM-dataspecificatie zegt niets over een diagram.
+In MIM heeft dit onderdeel geen versienummer; het is immers een hulpmiddel. De MIM-dataspecificatie zegt daarom ook niets over een diagram. Maar, indien gewenst zou dat via de naam van dit stereotype kunnen. 
 
-> **NOTE**: Aanvullen/controleren
+> **LET OP**: Indien je hiervoor kiest, moet de nieuwe diagramnaam ook worden doorgevoerd in het _Quick Linker_-element (lees [hier](linkOpnemenNaarQuickLinkerMakenOfBewerken) hoe dat werkt).
 
 ## 2 | Profiel publiceren
 
@@ -194,7 +188,7 @@ Vanuit het MTS-bestand wordt het volgende venster al ingevuld
 ### 3.6 | Selecteer _profiles_
 
  - Alle configuraties kun je laden vanuit de MTF file.
- - Voor de eerste keer kun je ook een MTS-file genereren.
+ - Voor de eerste keer kun je ook een MTS-bestand genereren.
  - Select:  'Files To Be Included As **Profiles**'.
  - Kies hier alle XML-bestanden, behalve de toolboxprofile.
  - Klik 'Volgende'.
