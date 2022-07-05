@@ -277,3 +277,5 @@ Vanuit het MTS-bestand wordt het volgende venster al ingevuld
 ![](Media/mim_ql_in_browser.jpg)
 
 ![](Media/mim_ql_linked_doc.jpg)
+
+![](Media/mim_ql_column_e.jpg)
