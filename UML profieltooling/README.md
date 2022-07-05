@@ -268,7 +268,18 @@ Vanuit het MTS-bestand wordt het volgende venster al ingevuld
 
 ## Nog plaatsen
 
-(tekst)
+#### Regels
+ - `«profile»`, `«diagram profile»` en `«toolbox profile»` moeten dezelfde naam dragen
+ - Bij het genereren van een profiel, moet _profile name_ gelijk zijn aan de naam die het profiel draagt
+ - Binnen een package mogen elementen niet dezelfde naam hebben, maar MIM kent verschillende elementen met de naam '_Keuze_'. Om dit mogelijk te maken in de toolbox, zijn voor de keuze-elementen aparte aanvullende packages gemaakt. Vandaar dat er meerdere packages `«profile»` zijn. 
+
+#### Quicklinker
+ - CSV-bestand nodig
+ - In Nederlandse versies van OS, is scheidingsteken een puntkomma: ";"
+ - Voor Enterprise heb je een komma (",") nodig als scheidingsteken. 
+ - Ook iets zeggen over werken in excel, kan ook in EAP, maar werkt onoverzichtelijk
+
+#### Afbeeldingen
 
 ![](Media/mim_create_diagram_profiel.jpg)
 
