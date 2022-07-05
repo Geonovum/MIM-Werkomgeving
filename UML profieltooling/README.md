@@ -72,11 +72,11 @@ Het is handig om een toolbox een versienummer mee te geven. Hiervoor zijn versch
 
 Voor de MIM-toolbox is besloten om het versienummer op verschillende plekken mee te geven:
 
- - bij [het genereren van de _toolbox_](#versienummer-mdg-technology-toolbox)
- - bij [het genereren van het _profile_](#versienummer-profiel)
- - als [alias van het _package_](#versienummer-package)
- - als [alias van de _toolbox pages_](#versienummer-toolbox-pages)
- - _optioneel_: [stereotype in diagram](#versienummer-diagram). Let op: als je dit veranderd, moet je ook het csv-bestand van de _Quick Linker_ aanpassen ([linkOpnemenNaarQuickLinkerMakenOfBewerken](url)).
+ - bij [het genereren van de _toolbox_](#131--versienummer-mdg-technology-toolbox)
+ - bij [het genereren van het _profile_](#132--versienummer-profiel)
+ - als [alias van het _package_](#133--versienummer-package)
+ - als [alias van de _toolbox pages_](#134--versienummer-toolbox-pages)
+ - _optioneel_: [stereotype in diagram](#135--versienummer-diagram). Let op: als je dit veranderd, moet je ook het csv-bestand van de _Quick Linker_ aanpassen ([linkOpnemenNaarQuickLinkerMakenOfBewerken](url)).
 
 #### 1.3.1 | Versienummer _MDG Technology_ (Toolbox)
 
