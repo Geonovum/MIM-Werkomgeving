@@ -88,15 +88,17 @@ Profielen waaruit de toolbox gegenereerd wordt, hebben ook een versienummer. Dit
 
 #### 1.3.3 | Versienummer _package_
 
-Door in het veld Alias van elk package het versienummer mee te geven kan een gebruiker van de toolbox in één oogopslag zien met welke versie van de toolbox een modelelement is gemaakt. Dit is vooral handig in het dagelijks gebruik. Ook als je twee (versies van) MIM-modellen wilt vergelijken, geef je de gebruiker via deze plek snel inzicht in de gebruikte MIM-versie.
+Door in het veld `Alias` van elk package het versienummer mee te geven kan een gebruiker van de toolbox in één oogopslag in het _properties-venster_ zien met welke versie van de toolbox een modelelement is gemaakt. Dit is vooral handig in het dagelijks gebruik. Ook als je twee (versies van) MIM-modellen wilt vergelijken, geef je de gebruiker via deze plek snel inzicht in de gebruikte MIM-versie.
+
+**AFBEELDING INVOEGEN**
 
 #### 1.3.4 | Versienummer _toolbox pages_
 
-(tekst toevoegen)
+De _toolbox pages_ krijgen eveneens een versienummer. Hiervoor vouw je het package met het stereotype `toolbox profile` uit. Voor elke toolbox page is een element met het stereotype: `stereotype`. Door bij elk element het versienummer toe te voegen, ziet de gebruiker van de toolbox in één oogopslag met welke versie er gewerkt wordt.
 
-[link](Media/mim_versionnr_toolbox_stereo_types.jpg)
-[link](Media/mim_versionnr_toolbox_stereo_types_check.jpg)
-[link](mim_versionnr_toolbox_stereo_types_result.jpg)
+![](Media/mim_versionnr_toolbox_stereo_types.jpg)
+![](Media/mim_versionnr_toolbox_stereo_types_check.jpg)
+![](Media/mim_versionnr_toolbox_stereo_types_result.jpg)
 
 #### 1.3.5 | Versienummer _diagram_
 
