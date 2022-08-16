@@ -82,7 +82,7 @@ Voor de MIM-toolbox is besloten om het versienummer op verschillende plekken mee
 
 #### 1.3.1 | Versienummer _MDG Technology_ (Toolbox)
 
-Dit is het originele versienummer. Als een gebruiker de toolbox importeerd, kan dit teruggevonden worden onder `Specialize` > `Manage Tech`. In het venster dat dan verschijnt zoek je `MIM` op in de kolom _Technology_. In het subvenster rechtsboven vind je het versienummer terug.
+Dit is het officiële versienummer. Als een gebruiker de toolbox importeerd, kan dit teruggevonden worden onder `Specialize` > `Manage Tech`. In het venster dat dan verschijnt zoek je `MIM` op in de kolom _Technology_. In het subvenster rechtsboven vind je het versienummer terug.
 
 #### 1.3.2 | Versienummer _profile_
 
