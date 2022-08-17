@@ -112,7 +112,7 @@ Hierdoor ziet de gebruiker van de toolbox in één oogopslag met welke versie er
 
 In MIM heeft het diagram geen versienummer. De MIM-dataspecificatie zegt daarom ook niets over een diagram; het is immers een hulpmiddel. 
 
-> **LET OP**: Indien je ervoor kiest om de naam van het diagram toch aan te passen, moet de nieuwe diagramnaam ook worden doorgevoerd in het _Quick Linker_-element (`kolom E`: `Diagram Filter`) (lees [hier](linkOpnemenNaarQuickLinkerMakenOfBewerken) hoe dat werkt).
+> **LET OP**: Indien je ervoor kiest om de naam van het diagram toch aan te passen, dient de nieuwe diagramnaam ook worden doorgevoerd in het _Quick Linker_-element (`kolom E`: `Diagram Filter`) (lees [hier](linkOpnemenNaarQuickLinkerMakenOfBewerken) hoe dat werkt).
 
 ## 2 | Profiel publiceren
 
