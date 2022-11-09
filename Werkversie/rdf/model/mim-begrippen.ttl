@@ -1,0 +1,301 @@
+@prefix dct:    <http://purl.org/dc/terms/> .
+@prefix mim:    <http://bp4mc2.org/def/mim#> .
+@prefix mimdoc: <http://bp4mc2.org/def/mimdoc#> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+
+<http://bp4mc2.org/mim/id/begrip/Referentielijst>
+        a                skos:Concept ;
+        rdfs:label       "Referentielijst"@nl ;
+        dct:source       mimdoc:sectie2.7.1 ;
+        skos:broader     <http://bp4mc2.org/mim/id/begrip/Datatype> ;
+        skos:definition  "De representatie van een lijst met een opsomming van de mogelijke domeinwaarden van een attribuutsoort, die buiten het model in een externe waardenlijst worden beheerd. De domeinwaarden in de lijst kunnen in de loop van de tijd aangepast, uitgebreid, of verwijderd worden, zonder dat het informatiemodel aangepast wordt (in tegenstelling tot bij een enumeratie). De representatie bevat een aantal kenmerken, die overgenomen zijn van de specificatie van de externe waardelijst."@nl ;
+        skos:inScheme    <http://bp4mc2.org/id/begrippenkader/mim> .
+
+<http://bp4mc2.org/mim/id/begrip/Datatype>
+        a                skos:Concept ;
+        rdfs:label       "Datatype"@nl ;
+        skos:broader     <http://bp4mc2.org/mim/id/begrip/Modelelement> ;
+        skos:definition  "Een beschrijving van de structuur waaraan een waarde, oftewel de data zelf, aan moet voldoen." ;
+        skos:inScheme    <http://bp4mc2.org/id/begrippenkader/mim> .
+
+mim:Enumeratie  dct:subject  <http://bp4mc2.org/mim/id/begrip/Enumeratie> .
+
+<http://bp4mc2.org/mim/id/begrip/Enumeratie>
+        a                skos:Concept ;
+        rdfs:label       "Enumeratie"@nl ;
+        dct:source       mimdoc:sectie2.7.3 ;
+        skos:broader     <http://bp4mc2.org/mim/id/begrip/Datatype> ;
+        skos:definition  "Een datatype waarvan de mogelijke waarden limitatief zijn opgesomd in een statische lijst."@nl ;
+        skos:inScheme    <http://bp4mc2.org/id/begrippenkader/mim> .
+
+mim:Relatieklasse  dct:subject  <http://bp4mc2.org/mim/id/begrip/Relatieklasse> .
+
+<http://bp4mc2.org/mim/id/begrip/Extern>
+        a                skos:Concept ;
+        rdfs:label       "Extern"@nl ;
+        dct:source       mimdoc:sectie2.9.3 ;
+        skos:broader     <http://bp4mc2.org/mim/id/begrip/Package> ;
+        skos:definition  "Een groepering van constructies die een externe instantie beheert en beschikbaar stelt aan een informatiemodel en die in het informatiemodel ongewijzigd gebruikt worden."@nl ;
+        skos:inScheme    <http://bp4mc2.org/id/begrippenkader/mim> .
+
+<http://bp4mc2.org/mim/id/begrip/RelatierolBron>
+        a                skos:Concept ;
+        rdfs:label       "Relatierol bron"@nl ;
+        dct:source       mimdoc:sectie2.6.5 ;
+        skos:broader     <http://bp4mc2.org/mim/id/begrip/Relatierol> ;
+        skos:definition  "De relatierol die de rol beschrijft van de bron van de relatie." ;
+        skos:inScheme    <http://bp4mc2.org/id/begrippenkader/mim> .
+
+mim:Objecttype  dct:subject  <http://bp4mc2.org/mim/id/begrip/Objecttype> .
+
+mim:Informatiemodel  dct:subject  <http://bp4mc2.org/mim/id/begrip/Informatiemodel> .
+
+<http://bp4mc2.org/mim/id/begrip/Objecttype>
+        a                skos:Concept ;
+        rdfs:label       "Objecttype"@nl ;
+        dct:source       mimdoc:sectie2.5.2 ;
+        skos:broader     <http://bp4mc2.org/mim/id/begrip/Modelelement> ;
+        skos:definition  "De typering van een groep objecten die binnen een domein relevant zijn en als gelijksoortig worden beschouwd."@nl ;
+        skos:inScheme    <http://bp4mc2.org/id/begrippenkader/mim> .
+
+<http://bp4mc2.org/mim/id/begrip/Informatiemodel>
+        a                skos:Concept ;
+        rdfs:label       "Informatiemodel"@nl ;
+        dct:source       mimdoc:sectie2.9.1 ;
+        skos:broader     <http://bp4mc2.org/mim/id/begrip/Package> ;
+        skos:definition  "De groepering van alle modelelementen waaruit het informatiemodel is opgebouwd. Het informatiemodel als geheel."@nl ;
+        skos:inScheme    <http://bp4mc2.org/id/begrippenkader/mim> .
+
+mim:ExterneKoppeling  dct:subject  <http://bp4mc2.org/mim/id/begrip/ExterneKoppeling> .
+
+<http://bp4mc2.org/mim/id/begrip/Relatieklasse>
+        a                skos:Concept ;
+        rdfs:label       "Relatieklasse"@nl ;
+        dct:source       mimdoc:sectie2.6.3 ;
+        skos:broader     <http://bp4mc2.org/mim/id/begrip/Relatiesoort> ;
+        skos:definition  "Een relatiesoort met eigenschappen."@nl ;
+        skos:inScheme    <http://bp4mc2.org/id/begrippenkader/mim> .
+
+mim:Enumeratiewaarde  dct:subject  <http://bp4mc2.org/mim/id/begrip/Enumeratiewaarde> .
+
+<http://bp4mc2.org/mim/id/begrip/Relatiesoort>
+        a                skos:Concept ;
+        rdfs:label       "Relatiesoort"@nl ;
+        dct:source       mimdoc:sectie2.6.2 ;
+        skos:broader     <http://bp4mc2.org/mim/id/begrip/Modelelement> ;
+        skos:definition  "De typering van het structurele verband tussen een object van een objecttype en een (ander) object van een ander (of hetzelfde) objecttype."@nl ;
+        skos:inScheme    <http://bp4mc2.org/id/begrippenkader/mim> .
+
+mim:Package  dct:subject  <http://bp4mc2.org/mim/id/begrip/Package> .
+
+<http://bp4mc2.org/mim/id/begrip/Attribuutsoort>
+        a                skos:Concept ;
+        rdfs:label       "Attribuutsoort"@nl ;
+        dct:source       mimdoc:sectie2.5.3 ;
+        skos:broader     <http://bp4mc2.org/mim/id/begrip/Modelelement> ;
+        skos:definition  "De typering van gelijksoortige gegevens die voor een objecttype van toepassing is."@nl ;
+        skos:inScheme    <http://bp4mc2.org/id/begrippenkader/mim> .
+
+<http://bp4mc2.org/mim/id/begrip/DataElement>
+        a                skos:Concept ;
+        rdfs:label       "Data element"@nl ;
+        dct:source       mimdoc:sectie2.8.3 ;
+        skos:broader     <http://bp4mc2.org/mim/id/begrip/Modelelement> ;
+        skos:definition  "Een onderdeel/element van een Gestructureerd datatype die als type een datatype heeft."@nl ;
+        skos:inScheme    <http://bp4mc2.org/id/begrippenkader/mim> .
+
+mim:Relatierol  dct:subject  <http://bp4mc2.org/mim/id/begrip/Relatierol> .
+
+mim:Gegevensgroeptype
+        dct:subject  <http://bp4mc2.org/mim/id/begrip/Gegevensgroeptype> .
+
+<http://bp4mc2.org/mim/id/begrip/Relatierol>
+        a                skos:Concept ;
+        rdfs:label       "Relatierol"@nl ;
+        dct:source       mimdoc:sectie2.6.5 ;
+        skos:broader     <http://bp4mc2.org/mim/id/begrip/Modelelement> ;
+        skos:definition  "De benaming van de manier waarop een object deelneemt aan een relatie met een ander object."@nl ;
+        skos:inScheme    <http://bp4mc2.org/id/begrippenkader/mim> .
+
+<http://bp4mc2.org/mim/id/begrip/Modelelement>
+        a                skos:Concept ;
+        rdfs:label       "Modelelement"@nl ;
+        skos:definition  "Een modelelement uit het Metamodel voor Informatie Modellering (MIM)"@nl ;
+        skos:inScheme    <http://bp4mc2.org/id/begrippenkader/mim> .
+
+mim:Keuze  dct:subject  <http://bp4mc2.org/mim/id/begrip/Keuze> .
+
+mim:View  dct:subject  <http://bp4mc2.org/mim/id/begrip/View> .
+
+<http://bp4mc2.org/id/begrippenkader/mim>
+        a           skos:ConceptScheme ;
+        rdfs:label  "MIM Begrippenkader" .
+
+mim:Domein  dct:subject  <http://bp4mc2.org/mim/id/begrip/Domein> .
+
+mim:Constraint  dct:subject  <http://bp4mc2.org/mim/id/begrip/Constraint> .
+
+<http://bp4mc2.org/mim/id/begrip/Package>
+        a                skos:Concept ;
+        rdfs:label       "Package"@nl ;
+        skos:broader     <http://bp4mc2.org/mim/id/begrip/Modelelement> ;
+        skos:definition  "Een package is een benoemde en begrensde verzameling/groepering van modelelementen."@nl ;
+        skos:inScheme    <http://bp4mc2.org/id/begrippenkader/mim> .
+
+mim:KeuzeConstraint  dct:subject  <http://bp4mc2.org/mim/id/begrip/KeuzeConstraint> .
+
+<http://bp4mc2.org/mim/id/begrip/Constraint>
+        a                skos:Concept ;
+        rdfs:label       "Constraint"@nl ;
+        dct:source       mimdoc:sectie2.10.1 ;
+        skos:broader     <http://bp4mc2.org/mim/id/begrip/Modelelement> ;
+        skos:definition  "Een constraint is een conditie of een beperking, die over een of meerdere modelelementen uit het informatiemodel geldt."@nl ;
+        skos:inScheme    <http://bp4mc2.org/id/begrippenkader/mim> .
+
+<http://bp4mc2.org/mim/id/begrip/KeuzeConstraint>
+        a                skos:Concept ;
+        rdfs:label       "Keuze"@nl ;
+        dct:source       mimdoc:sectie2.10.2 ;
+        skos:broader     <http://bp4mc2.org/mim/id/begrip/Constraint> ;
+        skos:definition  "Een conditie met een opsomming van meerdere modelelementen, waarbij er maar van één tegelijkertijd sprake kan zijn."@nl ;
+        skos:inScheme    <http://bp4mc2.org/id/begrippenkader/mim> .
+
+mim:RelatierolDoel  dct:subject  <http://bp4mc2.org/mim/id/begrip/RelatierolDoel> .
+
+<http://bp4mc2.org/mim/id/begrip/View>
+        a                skos:Concept ;
+        rdfs:label       "View"@nl ;
+        dct:source       mimdoc:sectie2.9.4 ;
+        skos:broader     <http://bp4mc2.org/mim/id/begrip/Package> ;
+        skos:definition  "Een groepering van objecttypen die gespecificeerd zijn in een extern informatiemodel en vanuit het perspectief van het eigen informatiemodel inzicht geeft welke gegevens van deze objecttypen relevant zijn binnen het eigen informatiemodel."@nl ;
+        skos:inScheme    <http://bp4mc2.org/id/begrippenkader/mim> .
+
+mim:Gegevensgroep  dct:subject  <http://bp4mc2.org/mim/id/begrip/Gegevensgroep> .
+
+<http://bp4mc2.org/mim/id/begrip/Gegevensgroeptype>
+        a                skos:Concept ;
+        rdfs:label       "Gegevensgroeptype"@nl ;
+        dct:source       mimdoc:sectie2.5.5 ;
+        skos:broader     <http://bp4mc2.org/mim/id/begrip/Modelelement> ;
+        skos:definition  "Een groep van met elkaar samenhangende attribuutsoorten. Een gegevensgroeptype is altijd een type van een gegevensgroep."@nl ;
+        skos:inScheme    <http://bp4mc2.org/id/begrippenkader/mim> .
+
+<http://bp4mc2.org/mim/id/begrip/PrimitiefDatatype>
+        a                skos:Concept ;
+        rdfs:label       "Primitief datatype"@nl ;
+        dct:source       mimdoc:sectie2.8.1 ;
+        skos:broader     <http://bp4mc2.org/mim/id/begrip/Datatype> ;
+        skos:definition  "Een in het eigen model gedefinieerd datatype die gebaseerd is op een PrimitiveType, met een eigen naam en definitie."@nl ;
+        skos:inScheme    <http://bp4mc2.org/id/begrippenkader/mim> .
+
+<http://bp4mc2.org/mim/id/begrip/Keuze>
+        a                skos:Concept ;
+        rdfs:label       "Keuze"@nl ;
+        dct:source       mimdoc:sectie2.10.2 ;
+        skos:broader     <http://bp4mc2.org/mim/id/begrip/Datatype> ;
+        skos:definition  "Een opsomming van meerdere modelelementen, waarbij er maar van één tegelijkertijd sprake kan zijn."@nl ;
+        skos:inScheme    <http://bp4mc2.org/id/begrippenkader/mim> .
+
+mim:PrimitiefDatatype
+        dct:subject  <http://bp4mc2.org/mim/id/begrip/PrimitiefDatatype> .
+
+mim:Attribuutsoort  dct:subject  <http://bp4mc2.org/mim/id/begrip/Attribuutsoort> .
+
+mim:Relatiesoort  dct:subject  <http://bp4mc2.org/mim/id/begrip/Relatiesoort> .
+
+mim:Generalisatie  dct:subject  <http://bp4mc2.org/mim/id/begrip/Generalisatie> .
+
+mim:Referentielijst  dct:subject  <http://bp4mc2.org/mim/id/begrip/Referentielijst> .
+
+<http://bp4mc2.org/mim/id/begrip/Gegevensgroep>
+        a                skos:Concept ;
+        rdfs:label       "Gegevensgroep"@nl ;
+        dct:source       mimdoc:sectie2.5.4 ;
+        skos:broader     <http://bp4mc2.org/mim/id/begrip/Modelelement> ;
+        skos:definition  "Een typering van een groep van gelijksoortige gegevens die voor een objecttype van toepassing is."@nl ;
+        skos:inScheme    <http://bp4mc2.org/id/begrippenkader/mim> .
+
+mim:Modelelement  dct:subject  <http://bp4mc2.org/mim/id/begrip/Modelelement> .
+
+mim:Codelijst  dct:subject  <http://bp4mc2.org/mim/id/begrip/Codelijst> .
+
+mim:RelatierolBron  dct:subject  <http://bp4mc2.org/mim/id/begrip/RelatierolBron> .
+
+<http://bp4mc2.org/mim/id/begrip/Codelijst>
+        a                skos:Concept ;
+        rdfs:label       "Codelijst"@nl ;
+        dct:source       mimdoc:sectie2.7.5 ;
+        skos:broader     <http://bp4mc2.org/mim/id/begrip/Datatype> ;
+        skos:definition  "De representatie van een lijst met een opsomming van de mogelijke domeinwaarden van een attribuutsoort, die buiten het model in een externe waardenlijst worden beheerd. De domeinwaarden in de lijst kunnen in de loop van de tijd aangepast, uitgebreid, of verwijderd worden, zonder dat het informatiemodel aangepast wordt (in tegenstelling tot bij een enumeratie). De representatie bevat geen kenmerken, voor alle kenmerken wordt verwezen naar de specificatie van de externe waardelijst."@nl ;
+        skos:inScheme    <http://bp4mc2.org/id/begrippenkader/mim> .
+
+mim:DataElement  dct:subject  <http://bp4mc2.org/mim/id/begrip/DataElement> .
+
+mim:Extern  dct:subject  <http://bp4mc2.org/mim/id/begrip/Extern> .
+
+<http://bp4mc2.org/mim/id/begrip/Domein>
+        a                skos:Concept ;
+        rdfs:label       "Domein"@nl ;
+        dct:source       mimdoc:sectie2.9.2 ;
+        skos:broader     <http://bp4mc2.org/mim/id/begrip/Package> ;
+        skos:definition  "Een groepering van constructies die een semantisch samenhangend gedeelte van een informatiemodel beschrijven."@nl ;
+        skos:inScheme    <http://bp4mc2.org/id/begrippenkader/mim> .
+
+<http://bp4mc2.org/mim/id/begrip/GestructureerdDatatype>
+        a                skos:Concept ;
+        rdfs:label       "Gestructureerd datatype"@nl ;
+        dct:source       mimdoc:sectie2.8.2 ;
+        skos:broader     <http://bp4mc2.org/mim/id/begrip/Datatype> ;
+        skos:definition  "Specifiek benoemd datatype dat de structuur van een gegeven beschrijft, samengesteld uit minimaal twee elementen die in samenhang betekenisvol zijn."@nl ;
+        skos:inScheme    <http://bp4mc2.org/id/begrippenkader/mim> .
+
+mim:Datatype  dct:subject  <http://bp4mc2.org/mim/id/begrip/Datatype> .
+
+<http://bp4mc2.org/mim/id/begrip/ExterneKoppeling>
+        a                skos:Concept ;
+        rdfs:label       "Externe koppeling"@nl ;
+        dct:source       mimdoc:sectie2.6.4 ;
+        skos:broader     <http://bp4mc2.org/mim/id/begrip/Modelelement> ;
+        skos:definition  "Een associatie waarmee vanuit het perspectief van het eigen informatiemodel een objecttype uit het ‘eigen’ informatiemodel gekoppeld wordt aan een objecttype van een extern informatiemodel. De relatie zelf hoort bij het ‘eigen’ objecttype."@nl ;
+        skos:inScheme    <http://bp4mc2.org/id/begrippenkader/mim> .
+
+<http://bp4mc2.org/mim/id/begrip/Generalisatie>
+        a                skos:Concept ;
+        rdfs:label       "Generalisatie"@nl ;
+        dct:source       mimdoc:sectie2.6.1 ;
+        skos:broader     <http://bp4mc2.org/mim/id/begrip/Modelelement> ;
+        skos:definition  "De typering van het hiërarchische verband tussen een meer generiek en een meer specifiek modelelement van hetzelfde soort, waarbij het meer specifieke modelelement eigenschappen van het meer generieke modelelement overerft. Dit verband is alleen gedefinieerd voor objecttypen en datatypen."@nl ;
+        skos:inScheme    <http://bp4mc2.org/id/begrippenkader/mim> .
+
+mim:GestructureerdDatatype
+        dct:subject  <http://bp4mc2.org/mim/id/begrip/GestructureerdDatatype> .
+
+<http://bp4mc2.org/mim/id/begrip/Enumeratiewaarde>
+        a                skos:Concept ;
+        rdfs:label       "Enumeratiewaarde"@nl ;
+        dct:source       mimdoc:sectie2.7.4 ;
+        skos:broader     <http://bp4mc2.org/mim/id/begrip/Modelelement> ;
+        skos:definition  "Een gedefinieerde waarde, in de vorm van een eenmalig vastgesteld constant gegeven."@nl ;
+        skos:inScheme    <http://bp4mc2.org/id/begrippenkader/mim> .
+
+<http://bp4mc2.org/mim/id/begrip/RelatierolDoel>
+        a                skos:Concept ;
+        rdfs:label       "Relatierol doel"@nl ;
+        dct:source       mimdoc:sectie2.6.5 ;
+        skos:broader     <http://bp4mc2.org/mim/id/begrip/Relatierol> ;
+        skos:definition  "De relatierol die de rol beschrijft van het doel van de relatie." ;
+        skos:inScheme    <http://bp4mc2.org/id/begrippenkader/mim> .
+
+<http://bp4mc2.org/mim/id/begrip/ReferentieElement>
+        a                skos:Concept ;
+        rdfs:label       "Referentie element"@nl ;
+        dct:source       mimdoc:sectie2.7.2 ;
+        skos:broader     <http://bp4mc2.org/mim/id/begrip/Modelelement> ;
+        skos:definition  "Een eigenschap van een object in een referentielijst in de vorm van een gegeven."@nl ;
+        skos:inScheme    <http://bp4mc2.org/id/begrippenkader/mim> .
+
+mim:ReferentieElement
+        dct:subject  <http://bp4mc2.org/mim/id/begrip/ReferentieElement> .
