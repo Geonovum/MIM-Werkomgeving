@@ -6,173 +6,42 @@
 @prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
 
+mim:RelatiesoortLeidend
+        a              skos:Concept ;
+        rdfs:label     "Relatiesoort leidend" ;
+        skos:inScheme  <http://definities.geostandaarden.nl/mim/id/begrippenkader/> .
+
+<http://definities.geostandaarden.nl/mim/id/begrip/Datatype>
+        a                skos:Concept ;
+        rdfs:label       "Datatype"@nl ;
+        dct:source       mimdoc:sectie2.5 ;
+        skos:broader     <http://definities.geostandaarden.nl/mim/id/begrip/Modelelement> ;
+        skos:definition  "Een beschrijving van de structuur waaraan een waarde, oftewel de data zelf, aan moet voldoen." ;
+        skos:inScheme    <http://definities.geostandaarden.nl/mim/id/begrippenkader/> ;
+        skos:prefLabel   "Datatype"@nl .
+
+<http://definities.geostandaarden.nl/mim/id/begrip/kardinaliteitRelatieBron>
+        a                skos:Concept ;
+        rdfs:label       "kardinaliteit relatie bron"@nl ;
+        dct:source       mimdoc:sectie2.8.2.13 ;
+        skos:definition  "De kardinaliteit relatie bron geeft bij een relatiesoort aan hoeveel instanties van het bron objecttype in een relatie met één instantie van het doel objecttype verbonden kunnen zijn."@nl ;
+        skos:prefLabel   "kardinaliteit relatie bron"@nl .
+
 <http://definities.geostandaarden.nl/mim/id/begrip/datatypekeuze>
         a                skos:Concept ;
         rdfs:label       "datatypekeuze"@nl ;
-        dct:source       mimdoc:sectie2.12.32 ;
-        skos:definition  "De binding van een datatype als keuze element aan een keuze."@nl ;
+        dct:source       mimdoc:sectie2.8.4.11 ;
+        skos:definition  "De binding van een keuze uit datatypen aan een attribuutsoort."@nl ;
         skos:prefLabel   "datatypekeuze"@nl .
 
-<http://definities.geostandaarden.nl/mim/id/begrip/Gegevensgroeptype>
+<http://definities.geostandaarden.nl/mim/id/begrip/GestructureerdDatatype>
         a                skos:Concept ;
-        rdfs:label       "Gegevensgroeptype"@nl ;
-        dct:source       mimdoc:sectie2.2.4 ;
-        skos:broader     <http://definities.geostandaarden.nl/mim/id/begrip/Modelelement> ;
-        skos:definition  "Een groep van met elkaar samenhangende attribuutsoorten. Een gegevensgroeptype is altijd een type van een gegevensgroep."@nl ;
-        skos:inScheme    <http://definities.geostandaarden.nl/mim/id/begrippenkader/> ;
-        skos:prefLabel   "Gegevensgroeptype"@nl .
-
-mim:PrimitiefDatatype
-        dct:subject  <http://definities.geostandaarden.nl/mim/id/begrip/PrimitiefDatatype> .
-
-mim:begripsterm  dct:subject  <http://definities.geostandaarden.nl/mim/id/begrip/begripsterm> .
-
-mim:GestructureerdDatatype
-        dct:subject  <http://definities.geostandaarden.nl/mim/id/begrip/GestructureerdDatatype> .
-
-<http://definities.geostandaarden.nl/mim/id/begrip/kardinaliteit>
-        a                skos:Concept ;
-        rdfs:label       "kardinaliteit"@nl ;
-        dct:source       mimdoc:sectie2.12.12 ;
-        skos:definition  "De kardinaliteit geeft aan hoeveel keer waarden van dit kenmerk van een object kunnen voorkomen bij een object van het betreffende objecttype."@nl ;
-        skos:prefLabel   "kardinaliteit"@nl .
-
-mim:kardinaliteitRelatieBron
-        dct:subject  <http://definities.geostandaarden.nl/mim/id/begrip/kardinaliteitRelatieBron> .
-
-mim:Relatiesoort  dct:subject  <http://definities.geostandaarden.nl/mim/id/begrip/Relatiesoort> .
-
-mim:Attribuutsoort  dct:subject  <http://definities.geostandaarden.nl/mim/id/begrip/Attribuutsoort> .
-
-mim:relatiemodelleringstype
-        dct:subject  <http://definities.geostandaarden.nl/mim/id/begrip/relatiemodelleringstype> .
-
-mim:Generalisatie  dct:subject  <http://definities.geostandaarden.nl/mim/id/begrip/Generalisatie> .
-
-<http://definities.geostandaarden.nl/mim/id/begrip/kwaliteit>
-        a                skos:Concept ;
-        rdfs:label       "kwaliteit"@nl ;
-        skos:definition  "Beschrijving van de mate waarin in de registratie opgenomen objecten van het desbetreffende type volledig, juist, actueel, nauwkeurig en betrouwbaar zijn."@nl ;
-        skos:prefLabel   "kwaliteit"@nl .
-
-mim:ExterneKoppeling  dct:subject  <http://definities.geostandaarden.nl/mim/id/begrip/ExterneKoppeling> .
-
-mim:Relatierol  dct:subject  <http://definities.geostandaarden.nl/mim/id/begrip/Relatierol> .
-
-<http://definities.geostandaarden.nl/mim/id/begrip/RelatierolDoel>
-        a                skos:Concept ;
-        rdfs:label       "Relatierol doel"@nl ;
-        dct:source       mimdoc:sectie2.3.5 ;
-        skos:broader     <http://definities.geostandaarden.nl/mim/id/begrip/Relatierol> ;
-        skos:definition  "De relatierol die de rol beschrijft van het doel van de relatie." ;
-        skos:inScheme    <http://definities.geostandaarden.nl/mim/id/begrippenkader/> ;
-        skos:prefLabel   "Relatierol doel"@nl .
-
-mim:type  dct:subject  <http://definities.geostandaarden.nl/mim/id/begrip/type> .
-
-<http://definities.geostandaarden.nl/mim/id/begrip/lengte>
-        a                skos:Concept ;
-        rdfs:label       "lengte"@nl ;
-        dct:source       mimdoc:sectie2.12.23 ;
-        skos:definition  "De aanduiding van de lengte van een gegeven."@nl ;
-        skos:prefLabel   "lengte"@nl .
-
-mim:identificerend  dct:subject  <http://definities.geostandaarden.nl/mim/id/begrip/identificerend> .
-
-mim:kwaliteit  dct:subject  <http://definities.geostandaarden.nl/mim/id/begrip/kwaliteit> .
-
-<http://definities.geostandaarden.nl/mim/id/begrip/informatiedomein>
-        a                skos:Concept ;
-        rdfs:label       "informatiedomein"@nl ;
-        dct:source       mimdoc:sectie2.11.1 ;
-        skos:definition  "Aanduiding van het functionele domein waartoe het informatiemodel behoort."@nl ;
-        skos:prefLabel   "informatiedomein"@nl .
-
-<http://definities.geostandaarden.nl/mim/id/begrip/locatie>
-        a                skos:Concept ;
-        rdfs:label       "locatie"@nl ;
-        dct:source       mimdoc:sectie2.12.21 ;
-        skos:definition  "Als het type van het attribuutsoort een waardenlijst is, dan wordt hier de locatie waar deze te vinden is opgegeven."@nl ;
-        skos:prefLabel   "locatie"@nl .
-
-<http://definities.geostandaarden.nl/mim/id/begrip/dataElement>
-        a                skos:Concept ;
-        rdfs:label       "data element"@nl ;
-        dct:source       mimdoc:sectie2.12.29 ;
-        skos:definition  "De binding van een data element aan een gestructureerd datatype."@nl ;
-        skos:prefLabel   "data element"@nl .
-
-<http://definities.geostandaarden.nl/mim/id/begrip/mimversie>
-        a                skos:Concept ;
-        rdfs:label       "MIM versie"@nl ;
-        dct:source       mimdoc:sectie2.11.4 ;
-        skos:definition  "De versie van de MIM specificatie die gebruikt is om het informatiemodel in uit te drukken."@nl ;
-        skos:prefLabel   "MIM versie"@nl .
-
-<http://definities.geostandaarden.nl/mim/id/begrip/constraint>
-        a                skos:Concept ;
-        rdfs:label       "constraint"@nl ;
-        dct:source       mimdoc:sectie2.12.35 ;
-        skos:definition  "De binding van een constraint aan een klasse."@nl ;
-        skos:prefLabel   "constraint"@nl .
-
-mim:mimtaal  dct:subject  <http://definities.geostandaarden.nl/mim/id/begrip/mimtaal> .
-
-<http://definities.geostandaarden.nl/mim/id/begrip/PrimitiefDatatype>
-        a                skos:Concept ;
-        rdfs:label       "Primitief datatype"@nl ;
-        dct:source       mimdoc:sectie2.8.1 ;
+        rdfs:label       "Gestructureerd datatype"@nl ;
+        dct:source       mimdoc:sectie2.5.2 ;
         skos:broader     <http://definities.geostandaarden.nl/mim/id/begrip/Datatype> ;
-        skos:definition  "Een in het eigen model gedefinieerd datatype die gebaseerd is op een PrimitiveType, met een eigen naam en definitie."@nl ;
+        skos:definition  "Specifiek benoemd datatype dat de structuur van een gegeven beschrijft, samengesteld uit minimaal twee elementen die in samenhang betekenisvol zijn."@nl ;
         skos:inScheme    <http://definities.geostandaarden.nl/mim/id/begrippenkader/> ;
-        skos:prefLabel   "Primitief datatype"@nl .
-
-<http://definities.geostandaarden.nl/mim/id/begrip/DataElement>
-        a                skos:Concept ;
-        rdfs:label       "Data element"@nl ;
-        dct:source       mimdoc:sectie2.8.3 ;
-        skos:broader     <http://definities.geostandaarden.nl/mim/id/begrip/Modelelement> ;
-        skos:definition  "Een onderdeel/element van een Gestructureerd datatype die als type een datatype heeft."@nl ;
-        skos:inScheme    <http://definities.geostandaarden.nl/mim/id/begrippenkader/> ;
-        skos:prefLabel   "Data element"@nl .
-
-<http://definities.geostandaarden.nl/mim/id/begrip/formeelPatroon>
-        a                skos:Concept ;
-        rdfs:label       "formeel patroon"@nl ;
-        dct:source       mimdoc:sectie2.12.25 ;
-        skos:definition  "Zoals patroon, formeel vastgelegd, uitgedrukt in een formele taal die door de computer wordt herkend."@nl ;
-        skos:prefLabel   "formeel patroon"@nl .
-
-<http://definities.geostandaarden.nl/mim/id/begrip/type>
-        a                skos:Concept ;
-        rdfs:label       "type"@nl ;
-        dct:source       mimdoc:sectie2.12.22 ;
-        skos:definition  "Het datatype waarmee waarden van deze attribuutsoort worden vastgelegd."@nl ;
-        skos:prefLabel   "type"@nl .
-
-mim:mimversie  dct:subject  <http://definities.geostandaarden.nl/mim/id/begrip/mimversie> .
-
-<http://definities.geostandaarden.nl/mim/id/begrip/datumOpname>
-        a                skos:Concept ;
-        rdfs:label       "datum opname"@nl ;
-        dct:source       mimdoc:sectie2.12.8 ;
-        skos:definition  "De datum waarop het modelelement is opgenomen in het informatiemodel."@nl ;
-        skos:prefLabel   "datum opname"@nl .
-
-mim:Datatype  dct:subject  <http://definities.geostandaarden.nl/mim/id/begrip/Datatype> .
-
-<http://definities.geostandaarden.nl/mim/id/begrip/herkomstDefinitie>
-        a                skos:Concept ;
-        rdfs:label       "herkomst definitie"@nl ;
-        dct:source       mimdoc:sectie2.12.7 ;
-        skos:definition  "De registratie of het informatiemodel waaruit de definitie is overgenomen dan wel een aanduiding die aangeeft uit welke bronnen de definitie is samengesteld."@nl ;
-        skos:prefLabel   "herkomst definitie"@nl .
-
-mim:KeuzeConstraint  dct:subject  <http://definities.geostandaarden.nl/mim/id/begrip/KeuzeConstraint> .
-
-mim:View  dct:subject  <http://definities.geostandaarden.nl/mim/id/begrip/View> .
-
-mim:modelelement  dct:subject  <http://definities.geostandaarden.nl/mim/id/begrip/modelelement> .
+        skos:prefLabel   "Gestructureerd datatype"@nl .
 
 <http://definities.geostandaarden.nl/mim/id/begrip/Relatierol>
         a                skos:Concept ;
@@ -183,38 +52,153 @@ mim:modelelement  dct:subject  <http://definities.geostandaarden.nl/mim/id/begri
         skos:inScheme    <http://definities.geostandaarden.nl/mim/id/begrippenkader/> ;
         skos:prefLabel   "Relatierol"@nl .
 
-mim:dataElement  dct:subject  <http://definities.geostandaarden.nl/mim/id/begrip/dataElement> .
-
-mim:bevatModelelement
-        dct:subject  <http://definities.geostandaarden.nl/mim/id/begrip/bevatModelelement> .
-
-mim:authentiek  dct:subject  <http://definities.geostandaarden.nl/mim/id/begrip/authentiek> .
-
-mim:doelkeuze  dct:subject  <http://definities.geostandaarden.nl/mim/id/begrip/doelkeuze> .
-
-<http://definities.geostandaarden.nl/mim/id/begrip/KeuzeConstraint>
+<http://definities.geostandaarden.nl/mim/id/begrip/dataElement>
         a                skos:Concept ;
-        rdfs:label       "Keuze constraint"@nl ;
-        dct:source       mimdoc:sectie2.10.2 ;
-        skos:broader     <http://definities.geostandaarden.nl/mim/id/begrip/Constraint> ;
-        skos:definition  "Een conditie met een opsomming van meerdere modelelementen, waarbij er maar van één tegelijkertijd sprake kan zijn."@nl ;
+        rdfs:label       "data element"@nl ;
+        dct:source       mimdoc:sectie2.8.4.8 ;
+        skos:definition  "De binding van een data element aan een gestructureerd datatype."@nl ;
+        skos:prefLabel   "data element"@nl .
+
+<http://definities.geostandaarden.nl/mim/id/begrip/begrip>
+        a                skos:Concept ;
+        rdfs:label       "begrip"@nl ;
+        dct:source       mimdoc:sectie2.8.2.3 ;
+        skos:definition  "Verwijzing naar een begrip, vanuit een modelelement, waarmee wordt aangegeven op welk begrip, of begrippen, het informatiemodel element is gebaseerd." ;
+        skos:prefLabel   "begrip"@nl .
+
+<http://definities.geostandaarden.nl/mim/id/begrip/code>
+        a                skos:Concept ;
+        rdfs:label       "code"@nl ;
+        dct:source       mimdoc:sectie2.8.2.27 ;
+        skos:definition  "De in een registratie of informatiemodel aan de enumeratiewaarde toegekend unieke code"@nl ;
+        skos:prefLabel   "code"@nl .
+
+<http://definities.geostandaarden.nl/mim/id/begrip/kardinaliteit>
+        a                skos:Concept ;
+        rdfs:label       "kardinaliteit"@nl ;
+        dct:source       mimdoc:sectie2.8.2.12 ;
+        skos:definition  "De kardinaliteit geeft aan hoeveel keer waarden van dit kenmerk van een object kunnen voorkomen bij een object van het betreffende objecttype."@nl ;
+        skos:prefLabel   "kardinaliteit"@nl .
+
+<http://definities.geostandaarden.nl/mim/id/begrip/informatiemodeltype>
+        a                skos:Concept ;
+        rdfs:label       "informatiemodeltype"@nl ;
+        dct:source       mimdoc:sectie2.8.1.2 ;
+        skos:definition  "De beschrijving van de aard van het informatiemodel, hoe het geïnterpreteerd moet worden."@nl ;
+        skos:prefLabel   "informatiemodeltype"@nl .
+
+mim:ConceptueelInformatiemodel
+        a               skos:Concept ;
+        rdfs:label      "Conceptueel informatiemodel" ;
+        skos:inScheme   <http://definities.geostandaarden.nl/mim/id/begrippenkader/> ;
+        skos:prefLabel  "Conceptueel" .
+
+<http://definities.geostandaarden.nl/mim/id/begrip/Gegevensgroep>
+        a                skos:Concept ;
+        rdfs:label       "Gegevensgroep"@nl ;
+        dct:source       mimdoc:sectie2.2.3 ;
+        skos:broader     <http://definities.geostandaarden.nl/mim/id/begrip/Modelelement> ;
+        skos:definition  "Een typering van een groep van gelijksoortige gegevens die voor een objecttype van toepassing is."@nl ;
         skos:inScheme    <http://definities.geostandaarden.nl/mim/id/begrippenkader/> ;
-        skos:prefLabel   "Keuze constraint"@nl .
+        skos:prefLabel   "Gegevensgroep"@nl .
 
-<http://definities.geostandaarden.nl/mim/id/begrip/naam>
+<http://definities.geostandaarden.nl/mim/id/begrip/herkomst>
         a                skos:Concept ;
-        rdfs:label       "naam"@nl ;
-        dct:source       mimdoc:sectie2.12.1 ;
-        skos:definition  "De naam van een modelelement."@nl ;
-        skos:prefLabel   "naam"@nl .
+        rdfs:label       "herkomst"@nl ;
+        dct:source       mimdoc:sectie2.8.2.4 ;
+        skos:definition  "De registratie of het informatiemodel waaraan het modelelement ontleend is dan wel de eigen organisatie indien het door de eigen organisatie toegevoegd is."@nl ;
+        skos:prefLabel   "herkomst"@nl .
 
-mim:gegevensgroep  dct:subject  <http://definities.geostandaarden.nl/mim/id/begrip/gegevensgroep> .
+<http://definities.geostandaarden.nl/mim/id/begrip/ExterneKoppeling>
+        a                skos:Concept ;
+        rdfs:label       "Externe koppeling"@nl ;
+        dct:source       mimdoc:sectie2.3.4 ;
+        skos:broader     <http://definities.geostandaarden.nl/mim/id/begrip/Modelelement> ;
+        skos:definition  "Een associatie waarmee vanuit het perspectief van het eigen informatiemodel een objecttype uit het ‘eigen’ informatiemodel gekoppeld wordt aan een objecttype van een extern informatiemodel. De relatie zelf hoort bij het ‘eigen’ objecttype."@nl ;
+        skos:inScheme    <http://definities.geostandaarden.nl/mim/id/begrippenkader/> ;
+        skos:prefLabel   "Externe koppeling"@nl .
 
-mim:DataElement  dct:subject  <http://definities.geostandaarden.nl/mim/id/begrip/DataElement> .
+<http://definities.geostandaarden.nl/mim/id/begrip/mimextensie>
+        a                skos:Concept ;
+        rdfs:label       "MIM extensie"@nl ;
+        dct:source       mimdoc:sectie2.11.5 ;
+        skos:definition  "De aanduiding van een extensie op MIM."@nl ;
+        skos:prefLabel   "MIM extensie"@nl .
 
-mim:RelatierolBron  dct:subject  <http://definities.geostandaarden.nl/mim/id/begrip/RelatierolBron> .
+mim:Basisgegeven  a      skos:Concept ;
+        rdfs:label       "Basisgegeven" ;
+        skos:definition  "Een in een basisregistratie opgenomen gegeven."@nl ;
+        skos:inScheme    <http://definities.geostandaarden.nl/mim/id/begrippenkader/> ;
+        skos:prefLabel   "Basisgegeven" .
 
-mim:herkomst  dct:subject  <http://definities.geostandaarden.nl/mim/id/begrip/herkomst> .
+mim:LandelijkKerngegeven
+        a                skos:Concept ;
+        rdfs:label       "LandelijkKerngegeven" ;
+        skos:definition  "Indien het een gegeven of een als relatiesoort gemodelleerd gegeven is in een landelijk sector- en domein-overstijgend informatiemodel en geen authentiek gegeven en geen basisgegeven is."@nl ;
+        skos:inScheme    <http://definities.geostandaarden.nl/mim/id/begrippenkader/> ;
+        skos:prefLabel   "Landelijk kerngegeven" .
+
+<http://definities.geostandaarden.nl/mim/id/begrip/mimtaal>
+        a                skos:Concept ;
+        rdfs:label       "MIM taal"@nl ;
+        dct:source       mimdoc:sectie2.11.6 ;
+        skos:definition  "De aanduiding van de taal die gebruikt is voor de modelelementen."@nl ;
+        skos:prefLabel   "MIM taal"@nl .
+
+<http://definities.geostandaarden.nl/mim/id/begrip/indicatieMaterieleHistorie>
+        a                skos:Concept ;
+        rdfs:label       "Indicatie materiële historie"@nl ;
+        dct:source       mimdoc:sectie2.8.2.10 ;
+        skos:definition  "Indicatie of de materiële historie van het kenmerk van het object te bevragen is."@nl ;
+        skos:prefLabel   "Indicatie materiële historie"@nl .
+
+<http://definities.geostandaarden.nl/mim/id/begrip/Enumeratiewaarde>
+        a                skos:Concept ;
+        rdfs:label       "Enumeratiewaarde"@nl ;
+        dct:source       mimdoc:sectie2.4.4 ;
+        skos:broader     <http://definities.geostandaarden.nl/mim/id/begrip/Modelelement> ;
+        skos:definition  "Een gedefinieerde waarde, in de vorm van een eenmalig vastgesteld constant gegeven."@nl ;
+        skos:inScheme    <http://definities.geostandaarden.nl/mim/id/begrippenkader/> ;
+        skos:prefLabel   "Enumeratiewaarde"@nl .
+
+<http://definities.geostandaarden.nl/mim/id/begrip/Package>
+        a                skos:Concept ;
+        rdfs:label       "Package"@nl ;
+        dct:source       mimdoc:sectie2.6 ;
+        skos:broader     <http://definities.geostandaarden.nl/mim/id/begrip/Modelelement> ;
+        skos:definition  "Een package is een benoemde en begrensde verzameling/groepering van modelelementen."@nl ;
+        skos:inScheme    <http://definities.geostandaarden.nl/mim/id/begrippenkader/> ;
+        skos:prefLabel   "Package"@nl .
+
+<http://definities.geostandaarden.nl/mim/id/begrip/ReferentieElement>
+        a                skos:Concept ;
+        rdfs:label       "Referentie element"@nl ;
+        dct:source       mimdoc:sectie2.4.2 ;
+        skos:broader     <http://definities.geostandaarden.nl/mim/id/begrip/Modelelement> ;
+        skos:definition  "Een eigenschap van een object in een referentielijst in de vorm van een gegeven."@nl ;
+        skos:inScheme    <http://definities.geostandaarden.nl/mim/id/begrippenkader/> ;
+        skos:prefLabel   "Referentie element"@nl .
+
+<http://definities.geostandaarden.nl/mim/id/begrip/gegevensgroep>
+        a                skos:Concept ;
+        rdfs:label       "gegevensgroep"@nl ;
+        dct:source       mimdoc:sectie2.8.4.2 ;
+        skos:definition  "De binding van een gegevensgroep als groep van eigenschappen aan een objecttype of gegevensgroeptype."@nl ;
+        skos:prefLabel   "gegevensgroep"@nl .
+
+<http://definities.geostandaarden.nl/mim/id/begrip/authentiek>
+        a                skos:Concept ;
+        rdfs:label       "authentiek"@nl ;
+        dct:source       mimdoc:sectie2.8.2.14 ;
+        skos:definition  "Aanduiding of het kenmerk een authentiek gegeven betreft."@nl ;
+        skos:prefLabel   "authentiek"@nl .
+
+<http://definities.geostandaarden.nl/mim/id/begrip/doel>
+        a                skos:Concept ;
+        rdfs:label       "doel" ;
+        dct:source       mimdoc:sectie2.8.2.19 ;
+        skos:definition  "Aanduiding van het gerelateerde objecttype die het eindpunt van de relatie aangeeft. Naar objecten van dit objecttype wordt verwezen."@nl ;
+        skos:prefLabel   "doel" .
 
 <http://definities.geostandaarden.nl/mim/id/begrip/Generalisatie>
         a                skos:Concept ;
@@ -234,94 +218,163 @@ mim:herkomst  dct:subject  <http://definities.geostandaarden.nl/mim/id/begrip/he
         skos:inScheme    <http://definities.geostandaarden.nl/mim/id/begrippenkader/> ;
         skos:prefLabel   "Codelijst"@nl .
 
-mim:Objecttype  dct:subject  <http://definities.geostandaarden.nl/mim/id/begrip/Objecttype> .
-
-mim:datatypekeuze  dct:subject  <http://definities.geostandaarden.nl/mim/id/begrip/datatypekeuze> .
-
-<http://definities.geostandaarden.nl/mim/id/begrip/referentieElement>
+<http://definities.geostandaarden.nl/mim/id/begrip/Relatiesoort>
         a                skos:Concept ;
-        rdfs:label       "referentie element"@nl ;
-        dct:source       mimdoc:sectie2.12.31 ;
-        skos:definition  "De binding van een referentie element aan een referentielijst."@nl ;
-        skos:prefLabel   "referentie element"@nl .
-
-mim:Enumeratiewaarde  dct:subject  <http://definities.geostandaarden.nl/mim/id/begrip/Enumeratiewaarde> .
-
-<http://definities.geostandaarden.nl/mim/id/begrip/Informatiemodel>
-        a                skos:Concept ;
-        rdfs:label       "Informatiemodel"@nl ;
-        dct:source       mimdoc:sectie2.9.1 ;
-        skos:broader     <http://definities.geostandaarden.nl/mim/id/begrip/Package> ;
-        skos:definition  "De groepering van alle modelelementen waaruit het informatiemodel is opgebouwd. Het informatiemodel als geheel."@nl ;
+        rdfs:label       "Relatiesoort"@nl ;
+        dct:source       mimdoc:sectie2.3.2 ;
+        skos:broader     <http://definities.geostandaarden.nl/mim/id/begrip/Modelelement> ;
+        skos:definition  "De typering van het structurele verband tussen een object van een objecttype en een (ander) object van een ander (of hetzelfde) objecttype."@nl ;
         skos:inScheme    <http://definities.geostandaarden.nl/mim/id/begrippenkader/> ;
-        skos:prefLabel   "Informatiemodel"@nl .
+        skos:prefLabel   "Relatiesoort"@nl .
 
-mim:kardinaliteit  dct:subject  <http://definities.geostandaarden.nl/mim/id/begrip/kardinaliteit> .
-
-<http://definities.geostandaarden.nl/mim/id/begrip/View>
+<http://definities.geostandaarden.nl/mim/id/begrip/naam>
         a                skos:Concept ;
-        rdfs:label       "View"@nl ;
-        dct:source       mimdoc:sectie2.9.4 ;
-        skos:broader     <http://definities.geostandaarden.nl/mim/id/begrip/Package> ;
-        skos:definition  "Een groepering van objecttypen die gespecificeerd zijn in een extern informatiemodel en vanuit het perspectief van het eigen informatiemodel inzicht geeft welke gegevens van deze objecttypen relevant zijn binnen het eigen informatiemodel."@nl ;
+        rdfs:label       "naam"@nl ;
+        dct:source       mimdoc:sectie2.8.2.1 ;
+        skos:definition  "De naam van een modelelement."@nl ;
+        skos:prefLabel   "naam"@nl .
+
+<http://definities.geostandaarden.nl/mim/id/begrip/alias>
+        a                skos:Concept ;
+        rdfs:label       "alias"@nl ;
+        dct:source       mimdoc:sectie2.8.2.2 ;
+        skos:definition  "De weergave van de naam van een modelelement in natuurlijke taal (niet technisch)."@nl ;
+        skos:prefLabel   "alias"@nl .
+
+<http://definities.geostandaarden.nl/mim/id/begrip/identificerend>
+        a                skos:Concept ;
+        rdfs:label       "identificerend"@nl ;
+        dct:source       mimdoc:sectie2.8.2.9 ;
+        skos:definition  "Een aanduiding dat een kenmerk of een combinatie van kenmerken van een objecttype uniek identificerend is voor alle objecten in de populatie van objecten van dit objecttype, of de aanduiding dat een referentie element uniek identificerend is voor alle lijst items in een referentielijst."@nl ;
+        skos:prefLabel   "identificerend"@nl .
+
+<http://definities.geostandaarden.nl/mim/id/begrip/attribuutkeuze>
+        a                skos:Concept ;
+        rdfs:label       "attribuutkeuze"@nl ;
+        dct:source       mimdoc:sectie2.8.4.12 ;
+        skos:definition  "De binding van een keuze uit attributen aan een attribuutsoort of keuze."@nl ;
+        skos:prefLabel   "attribuutkeuze"@nl .
+
+<http://definities.geostandaarden.nl/mim/id/begrip/unidirectioneel>
+        a                skos:Concept ;
+        rdfs:label       "unidirectioneel"@nl ;
+        dct:source       mimdoc:sectie2.8.2.20 ;
+        skos:definition  "De richting van een relatie, welke betekenis geeft aan de relatie vanuit het perspectief van de eigenaar van de relatie."@nl ;
+        skos:prefLabel   "unidirectioneel"@nl .
+
+<http://definities.geostandaarden.nl/mim/id/begrip/gegevensgroeptype>
+        a                skos:Concept ;
+        rdfs:label       "gegevensgroeptype"@nl ;
+        dct:source       mimdoc:sectie2.8.4.3 ;
+        skos:definition  "De binding van een gegevensgroeptype als waardetype aan een gegevensgroep."@nl ;
+        skos:prefLabel   "gegevensgroeptype"@nl .
+
+<http://definities.geostandaarden.nl/mim/id/begrippenkader/>
+        a           skos:ConceptScheme ;
+        rdfs:label  "MIM Begrippenkader" .
+
+<http://definities.geostandaarden.nl/mim/id/begrip/aggregatietype>
+        a                skos:Concept ;
+        rdfs:label       "aggregatietype"@nl ;
+        dct:source       mimdoc:sectie2.8.2.21 ;
+        skos:definition  "Aanduiding of het objecttype die de eigenaar is van een relatie het doel van relatie ziet als een samen te voegen onderdeel die bij het objecttype hoort."@nl ;
+        skos:prefLabel   "aggregatietype"@nl .
+
+<http://definities.geostandaarden.nl/mim/id/begrip/Modelelement>
+        a                skos:Concept ;
+        rdfs:label       "Modelelement"@nl ;
+        skos:definition  "Een modelelement uit het Metamodel voor Informatie Modellering (MIM)"@nl ;
         skos:inScheme    <http://definities.geostandaarden.nl/mim/id/begrippenkader/> ;
-        skos:prefLabel   "View"@nl .
-
-mim:bron  dct:subject  <http://definities.geostandaarden.nl/mim/id/begrip/bron> .
-
-mim:Modelelement  dct:subject  <http://definities.geostandaarden.nl/mim/id/begrip/Modelelement> .
-
-mim:subtype  dct:subject  <http://definities.geostandaarden.nl/mim/id/begrip/subtype> .
+        skos:prefLabel   "Modelelement"@nl .
 
 <http://definities.geostandaarden.nl/mim/id/begrip/indicatieFormeleHistorie>
         a                skos:Concept ;
         rdfs:label       "Indicatie formele historie"@nl ;
-        dct:source       mimdoc:sectie2.12.11 ;
+        dct:source       mimdoc:sectie2.8.2.11 ;
         skos:definition  "Indicatie of de formele historie van het kenmerk van het object bijgehouden wordt en te bevragen is."@nl ;
         skos:prefLabel   "Indicatie formele historie"@nl .
+
+<http://definities.geostandaarden.nl/mim/id/begrip/KeuzeConstraint>
+        a                skos:Concept ;
+        rdfs:label       "Keuze constraint"@nl ;
+        dct:source       mimdoc:sectie2.10.2 ;
+        skos:broader     <http://definities.geostandaarden.nl/mim/id/begrip/Constraint> ;
+        skos:definition  "Een conditie met een opsomming van meerdere modelelementen, waarbij er maar van één tegelijkertijd sprake kan zijn."@nl ;
+        skos:inScheme    <http://definities.geostandaarden.nl/mim/id/begrippenkader/> ;
+        skos:prefLabel   "Keuze constraint"@nl .
+
+mim:Compositie  a       skos:Concept ;
+        rdfs:label      "Compositie"@nl ;
+        mim:naam        "Compositie"@nl ;
+        skos:altLabel   "Composition"@en ;
+        skos:definitie  "het doel object is een integraal onderdeel van het eigenaar object en dit onderdeel wordt niet gedeeld met anderen. De eigenaar is volledig verantwoordelijk voor het beheer van de bijhouding van informatie over het onderdeel. Als de eigenaar vervalt, dan vervallen automatisch ook de onderdelen mee. Het doel object kan als onderdeel niet zelfstandig bestaan: het doel vervalt als de eigenaar vervalt. Wel kan je een onderdeel vervangen met behoud van het eigenaar object."@nl ;
+        skos:inScheme   <http://definities.geostandaarden.nl/mim/id/begrippenkader/> ;
+        skos:prefLabel  "Compositie"@nl ;
+        skos:scopeNote  "Een compositie-aggregatie wordt afgebeeld met een gesloten wiebertje aan de kant van de eigenaar"@nl .
+
+<http://definities.geostandaarden.nl/mim/id/begrip/definitie>
+        a                skos:Concept ;
+        rdfs:label       "definitie"@nl ;
+        dct:source       mimdoc:sectie2.8.2.5 ;
+        skos:definition  "De beschrijving van de betekenis van dit modelelement."@nl ;
+        skos:prefLabel   "definitie"@nl .
 
 <http://definities.geostandaarden.nl/mim/id/begrip/waarde>
         a                skos:Concept ;
         rdfs:label       "waarde"@nl ;
-        dct:source       mimdoc:sectie2.12.30 ;
-        skos:definition  "De binding van een waarde aan een enumeratie."@nl ;
+        dct:source       mimdoc:sectie2.8.4.9 ;
+        skos:definition  "De binding van een enumeratiewaarde aan een enumeratie."@nl ;
         skos:prefLabel   "waarde"@nl .
 
-<http://definities.geostandaarden.nl/mim/id/begrip/indicatieMaterieleHistorie>
+<http://definities.geostandaarden.nl/mim/id/begrip/indicatieClassificerend>
         a                skos:Concept ;
-        rdfs:label       "Indicatie materiële historie"@nl ;
-        dct:source       mimdoc:sectie2.12.10 ;
-        skos:definition  "Indicatie of de materiële historie van het kenmerk van het object te bevragen is."@nl ;
-        skos:prefLabel   "Indicatie materiële historie"@nl .
+        rdfs:label       "indicatie classificerend"@nl ;
+        dct:source       mimdoc:sectie2.8.2.16 ;
+        skos:definition  "Indicatie dat een attribuutsoort het objecttype waar het bij hoort classificeert in (sub)typen."@nl ;
+        skos:prefLabel   "indicatie classificerend"@nl .
 
-mim:Gegevensgroeptype
-        dct:subject  <http://definities.geostandaarden.nl/mim/id/begrip/Gegevensgroeptype> .
-
-<http://definities.geostandaarden.nl/mim/id/begrip/relatiemodelleringstype>
+<http://definities.geostandaarden.nl/mim/id/begrip/lengte>
         a                skos:Concept ;
-        rdfs:label       "relatiemodelleringstype"@nl ;
-        dct:source       mimdoc:sectie2.11.3 ;
-        skos:definition  "Aanduiding van een in MIM gedefinieerd alternatief voor een modelleringswijze, en welke keuze hierbij is gemaakt."@nl ;
-        skos:prefLabel   "relatiemodelleringstype"@nl .
+        rdfs:label       "lengte"@nl ;
+        dct:source       mimdoc:sectie2.8.2.24 ;
+        skos:definition  "De aanduiding van de lengte van een gegeven, volgens de aangegeven notatiewijze."@nl ;
+        skos:prefLabel   "lengte"@nl .
 
-<http://definities.geostandaarden.nl/mim/id/begrip/relatierol>
+<http://definities.geostandaarden.nl/mim/id/begrip/Extern>
+        a                skos:Concept ;
+        rdfs:label       "Extern"@nl ;
+        dct:source       mimdoc:sectie2.6.3 ;
+        skos:broader     <http://definities.geostandaarden.nl/mim/id/begrip/Package> ;
+        skos:definition  "Een groepering van constructies die een externe instantie beheert en beschikbaar stelt aan een informatiemodel en die in het informatiemodel ongewijzigd gebruikt worden."@nl ;
+        skos:inScheme    <http://definities.geostandaarden.nl/mim/id/begrippenkader/> ;
+        skos:prefLabel   "Extern"@nl .
+
+<http://definities.geostandaarden.nl/mim/id/begrip/herkomstDefinitie>
+        a                skos:Concept ;
+        rdfs:label       "herkomst definitie"@nl ;
+        dct:source       mimdoc:sectie2.8.2.6 ;
+        skos:definition  "De registratie of het informatiemodel waaruit de definitie is overgenomen dan wel een aanduiding die aangeeft uit welke bronnen de definitie is samengesteld."@nl ;
+        skos:prefLabel   "herkomst definitie"@nl .
+
+mim:LogischInformatiemodel
         a               skos:Concept ;
-        rdfs:label      "relatierol"@nl ;
-        skos:prefLabel  "relatierol"@nl .
+        rdfs:label      "Logisch informatiemodel" ;
+        skos:inScheme   <http://definities.geostandaarden.nl/mim/id/begrippenkader/> ;
+        skos:prefLabel  "Logisch" .
 
-<http://definities.geostandaarden.nl/mim/id/begrip/supertype>
+<http://definities.geostandaarden.nl/mim/id/begrip/attribuut>
         a                skos:Concept ;
-        rdfs:label       "supertype" ;
-        skos:definition  "Het objecttype dat de generalisatie is van een (ander) objecttype."@nl ;
-        skos:prefLabel   "supertype" .
+        rdfs:label       "attribuut"@nl ;
+        dct:source       mimdoc:sectie2.8.4.1 ;
+        skos:definition  "De binding van een attribuutsoort als eigenschap aan een objecttype."@nl ;
+        skos:prefLabel   "attribuut"@nl .
 
-mim:indicatieFormeleHistorie
-        dct:subject  <http://definities.geostandaarden.nl/mim/id/begrip/indicatieFormeleHistorie> .
-
-mim:Gegevensgroep  dct:subject  <http://definities.geostandaarden.nl/mim/id/begrip/Gegevensgroep> .
-
-mim:indicatieAbstractObject
-        dct:subject  <http://definities.geostandaarden.nl/mim/id/begrip/indicatieAbstractObject> .
+<http://definities.geostandaarden.nl/mim/id/begrip/bron>
+        a                skos:Concept ;
+        rdfs:label       "bron" ;
+        dct:source       mimdoc:sectie2.8.2.18 ;
+        skos:definition  "Aanduiding van het bronobject in een relatie tussen objecten. Een bronobject heeft middels een relatiesoort een relatie met een doelobject."@nl ;
+        skos:prefLabel   "bron" .
 
 <http://definities.geostandaarden.nl/mim/id/begrip/Enumeratie>
         a                skos:Concept ;
@@ -332,243 +385,28 @@ mim:indicatieAbstractObject
         skos:inScheme    <http://definities.geostandaarden.nl/mim/id/begrippenkader/> ;
         skos:prefLabel   "Enumeratie"@nl .
 
-<http://definities.geostandaarden.nl/mim/id/begrip/indicatieClassificerend>
+<http://definities.geostandaarden.nl/mim/id/begrip/RelatierolDoel>
         a                skos:Concept ;
-        rdfs:label       "indicatie classificerend"@nl ;
-        dct:source       mimdoc:sectie2.12.15 ;
-        skos:definition  "Indicatie dat een attribuutsoort het objecttype waar het bijhoort classificeert in (sub)typen."@nl ;
-        skos:prefLabel   "indicatie classificerend"@nl .
-
-<http://definities.geostandaarden.nl/mim/id/begrip/bron>
-        a                skos:Concept ;
-        rdfs:label       "bron" ;
-        dct:source       mimdoc:sectie2.12.17 ;
-        skos:definition  "Aanduiding van het bronobject in een relatie tussen objecten. Een bronobject heeft middels een relatiesoort een relatie met een doelobject."@nl ;
-        skos:prefLabel   "bron" .
-
-mim:indicatieMaterieleHistorie
-        dct:subject  <http://definities.geostandaarden.nl/mim/id/begrip/indicatieMaterieleHistorie> .
-
-<http://definities.geostandaarden.nl/mim/id/begrip/informatiemodeltype>
-        a                skos:Concept ;
-        rdfs:label       "informatiemodeltype"@nl ;
-        dct:source       mimdoc:sectie2.11.2 ;
-        skos:definition  "De beschrijving van de aard van het informatiemodel, hoe het geinterpreteerd moet worden."@nl ;
-        skos:prefLabel   "informatiemodeltype"@nl .
-
-mim:supertype  dct:subject  <http://definities.geostandaarden.nl/mim/id/begrip/supertype> .
-
-mim:lengte  dct:subject  <http://definities.geostandaarden.nl/mim/id/begrip/lengte> .
-
-<http://definities.geostandaarden.nl/mim/id/begrip/Objecttype>
-        a                skos:Concept ;
-        rdfs:label       "Objecttype"@nl ;
-        dct:source       mimdoc:sectie2.2.1 ;
-        skos:broader     <http://definities.geostandaarden.nl/mim/id/begrip/Modelelement> ;
-        skos:definition  "De typering van een groep objecten die binnen een domein relevant zijn en als gelijksoortig worden beschouwd."@nl ;
-        skos:inScheme    <http://definities.geostandaarden.nl/mim/id/begrippenkader/> ;
-        skos:prefLabel   "Objecttype"@nl .
-
-<http://definities.geostandaarden.nl/mim/id/begrip/begrip>
-        a                skos:Concept ;
-        rdfs:label       "begrip"@nl ;
-        dct:source       mimdoc:sectie2.12.5 ;
-        skos:definition  "Verwijzing naar een begrip, vanuit een modelelement, waarmee wordt aangegeven op welk begrip, of begrippen, het informatiemodel element is gebaseerd." ;
-        skos:prefLabel   "begrip"@nl .
-
-mim:patroon  dct:subject  <http://definities.geostandaarden.nl/mim/id/begrip/patroon> .
-
-<http://definities.geostandaarden.nl/mim/id/begrip/specificatieTekst>
-        a                skos:Concept ;
-        rdfs:label       "specificatie tekst"@nl ;
-        skos:definition  "De specificatie van de constraint in normale tekst."@nl ;
-        skos:prefLabel   "specificatie tekst"@nl .
-
-<http://definities.geostandaarden.nl/mim/id/begrip/attribuut>
-        a                skos:Concept ;
-        rdfs:label       "attribuut"@nl ;
-        dct:source       mimdoc:sectie2.12.26 ;
-        skos:definition  "De binding van een attribuutsoort als eigenschap aan een objecttype."@nl ;
-        skos:prefLabel   "attribuut"@nl .
-
-mim:Referentielijst  dct:subject  <http://definities.geostandaarden.nl/mim/id/begrip/Referentielijst> .
-
-mim:Package  dct:subject  <http://definities.geostandaarden.nl/mim/id/begrip/Package> .
-
-<http://definities.geostandaarden.nl/mim/id/begrip/Relatiesoort>
-        a                skos:Concept ;
-        rdfs:label       "Relatiesoort"@nl ;
-        dct:source       mimdoc:sectie2.3.2 ;
-        skos:broader     <http://definities.geostandaarden.nl/mim/id/begrip/Modelelement> ;
-        skos:definition  "De typering van het structurele verband tussen een object van een objecttype en een (ander) object van een ander (of hetzelfde) objecttype."@nl ;
-        skos:inScheme    <http://definities.geostandaarden.nl/mim/id/begrippenkader/> ;
-        skos:prefLabel   "Relatiesoort"@nl .
-
-<http://definities.geostandaarden.nl/mim/id/begrip/Extern>
-        a                skos:Concept ;
-        rdfs:label       "Extern"@nl ;
-        dct:source       mimdoc:sectie2.9.3 ;
-        skos:broader     <http://definities.geostandaarden.nl/mim/id/begrip/Package> ;
-        skos:definition  "Een groepering van constructies die een externe instantie beheert en beschikbaar stelt aan een informatiemodel en die in het informatiemodel ongewijzigd gebruikt worden."@nl ;
-        skos:inScheme    <http://definities.geostandaarden.nl/mim/id/begrippenkader/> ;
-        skos:prefLabel   "Extern"@nl .
-
-mim:aggregatietype  dct:subject  <http://definities.geostandaarden.nl/mim/id/begrip/aggregatietype> .
-
-<http://definities.geostandaarden.nl/mim/id/begrip/specificatieFormeel>
-        a                skos:Concept ;
-        rdfs:label       "specificatie formeel"@nl ;
-        skos:definition  "De beschrijving van de constraint in een formele specificatietaal, in OCL"@nl ;
-        skos:prefLabel   "specificatie formeel"@nl .
-
-mim:populatie  dct:subject  <http://definities.geostandaarden.nl/mim/id/begrip/populatie> .
-
-<http://definities.geostandaarden.nl/mim/id/begrip/Referentielijst>
-        a                skos:Concept ;
-        rdfs:label       "Referentielijst"@nl ;
-        dct:source       mimdoc:sectie2.4.1 ;
-        skos:broader     <http://definities.geostandaarden.nl/mim/id/begrip/Datatype> ;
-        skos:definition  "De representatie van een lijst met een opsomming van de mogelijke domeinwaarden van een attribuutsoort, die buiten het model in een externe waardenlijst worden beheerd. De domeinwaarden in de lijst kunnen in de loop van de tijd aangepast, uitgebreid, of verwijderd worden, zonder dat het informatiemodel aangepast wordt (in tegenstelling tot bij een enumeratie). De representatie bevat een aantal kenmerken, die overgenomen zijn van de specificatie van de externe waardelijst."@nl ;
-        skos:inScheme    <http://definities.geostandaarden.nl/mim/id/begrippenkader/> ;
-        skos:prefLabel   "Referentielijst"@nl .
-
-<http://definities.geostandaarden.nl/mim/id/begrip/Constraint>
-        a                skos:Concept ;
-        rdfs:label       "Constraint"@nl ;
-        dct:source       mimdoc:sectie2.10.1 ;
-        skos:broader     <http://definities.geostandaarden.nl/mim/id/begrip/Modelelement> ;
-        skos:definition  "Een constraint is een conditie of een beperking, die over een of meerdere modelelementen uit het informatiemodel geldt."@nl ;
-        skos:inScheme    <http://definities.geostandaarden.nl/mim/id/begrippenkader/> ;
-        skos:prefLabel   "Constraint"@nl .
-
-mim:informatiemodeltype
-        dct:subject  <http://definities.geostandaarden.nl/mim/id/begrip/informatiemodeltype> .
-
-<http://definities.geostandaarden.nl/mim/id/begrip/mimtaal>
-        a                skos:Concept ;
-        rdfs:label       "MIM taal"@nl ;
-        dct:source       mimdoc:sectie2.11.6 ;
-        skos:definition  "De aanduiding van de taal die gebruikt is voor de modelelementen."@nl ;
-        skos:prefLabel   "MIM taal"@nl .
-
-mim:attribuut  dct:subject  <http://definities.geostandaarden.nl/mim/id/begrip/attribuut> .
-
-<http://definities.geostandaarden.nl/mim/id/begrip/Datatype>
-        a                skos:Concept ;
-        rdfs:label       "Datatype"@nl ;
-        skos:broader     <http://definities.geostandaarden.nl/mim/id/begrip/Modelelement> ;
-        skos:definition  "Een beschrijving van de structuur waaraan een waarde, oftewel de data zelf, aan moet voldoen." ;
-        skos:inScheme    <http://definities.geostandaarden.nl/mim/id/begrippenkader/> ;
-        skos:prefLabel   "Datatype"@nl .
-
-mim:gegevensgroeptype
-        dct:subject  <http://definities.geostandaarden.nl/mim/id/begrip/gegevensgroeptype> .
-
-mim:Relatieklasse  dct:subject  <http://definities.geostandaarden.nl/mim/id/begrip/Relatieklasse> .
-
-<http://definities.geostandaarden.nl/mim/id/begrip/indicatieAfleidbaar>
-        a                skos:Concept ;
-        rdfs:label       "indicatie afleidbaar"@nl ;
-        dct:source       mimdoc:sectie2.12.14 ;
-        skos:definition  "Aanduiding dat gegeven afleidbaar is uit andere attribuut- en/of relatiesoorten."@nl ;
-        skos:prefLabel   "indicatie afleidbaar"@nl .
-
-<http://definities.geostandaarden.nl/mim/id/begrip/attribuutkeuze>
-        a                skos:Concept ;
-        rdfs:label       "attribuutkeuze"@nl ;
-        dct:source       mimdoc:sectie2.12.34 ;
-        skos:definition  "De binding van een attribuutsoort als keuze element aan een keuze."@nl ;
-        skos:prefLabel   "attribuutkeuze"@nl .
-
-<http://definities.geostandaarden.nl/mim/id/begrip/ReferentieElement>
-        a                skos:Concept ;
-        rdfs:label       "Referentie element"@nl ;
-        dct:source       mimdoc:sectie2.4.2 ;
-        skos:broader     <http://definities.geostandaarden.nl/mim/id/begrip/Modelelement> ;
-        skos:definition  "Een eigenschap van een object in een referentielijst in de vorm van een gegeven."@nl ;
-        skos:inScheme    <http://definities.geostandaarden.nl/mim/id/begrippenkader/> ;
-        skos:prefLabel   "Referentie element"@nl .
-
-mim:specificatieFormeel
-        dct:subject  <http://definities.geostandaarden.nl/mim/id/begrip/specificatieFormeel> .
-
-mim:naam  dct:subject  <http://definities.geostandaarden.nl/mim/id/begrip/naam> .
-
-mim:equivalent  dct:subject  <http://definities.geostandaarden.nl/mim/id/begrip/equivalent> .
-
-mim:Domein  dct:subject  <http://definities.geostandaarden.nl/mim/id/begrip/Domein> .
-
-mim:herkomstDefinitie
-        dct:subject  <http://definities.geostandaarden.nl/mim/id/begrip/herkomstDefinitie> .
-
-mim:code  dct:subject  <http://definities.geostandaarden.nl/mim/id/begrip/code> .
-
-mim:indicatieClassificerend
-        dct:subject  <http://definities.geostandaarden.nl/mim/id/begrip/indicatieClassificerend> .
-
-<http://definities.geostandaarden.nl/mim/id/begrip/herkomst>
-        a                skos:Concept ;
-        rdfs:label       "herkomst"@nl ;
-        dct:source       mimdoc:sectie2.12.6 ;
-        skos:definition  "De registratie of het informatiemodel waaraan het modelelement ontleend is dan wel de eigen organisatie indien het door de eigen organisatie toegevoegd is."@nl ;
-        skos:prefLabel   "herkomst"@nl .
-
-mim:alias  dct:subject  <http://definities.geostandaarden.nl/mim/id/begrip/alias> .
-
-<http://definities.geostandaarden.nl/mim/id/begrip/doelkeuze>
-        a                skos:Concept ;
-        rdfs:label       "doelkeuze"@nl ;
-        dct:source       mimdoc:sectie2.12.33 ;
-        skos:definition  "De binding van een doeleinde van een relatie als keuze element aan een keuze."@nl ;
-        skos:prefLabel   "doelkeuze"@nl .
-
-<http://definities.geostandaarden.nl/mim/id/begrip/RelatierolBron>
-        a                skos:Concept ;
-        rdfs:label       "Relatierol bron"@nl ;
+        rdfs:label       "Relatierol doel"@nl ;
         dct:source       mimdoc:sectie2.3.5 ;
         skos:broader     <http://definities.geostandaarden.nl/mim/id/begrip/Relatierol> ;
-        skos:definition  "De relatierol die de rol beschrijft van de bron van de relatie." ;
+        skos:definition  "De relatierol die de rol beschrijft van het doel van de relatie." ;
         skos:inScheme    <http://definities.geostandaarden.nl/mim/id/begrippenkader/> ;
-        skos:prefLabel   "Relatierol bron"@nl .
+        skos:prefLabel   "Relatierol doel"@nl .
 
-<http://definities.geostandaarden.nl/mim/id/begrip/toelichting>
+mim:Geen  a             skos:Concept ;
+        rdfs:label      "Geen"@nl ;
+        skos:altLabel   "None"@en ;
+        skos:definitie  "Er is geen sprake van een aggregate"@nl ;
+        skos:inScheme   <http://definities.geostandaarden.nl/mim/id/begrippenkader/> ;
+        skos:prefLabel  "Geen"@nl .
+
+<http://definities.geostandaarden.nl/mim/id/begrip/kwaliteit>
         a                skos:Concept ;
-        rdfs:label       "toelichting"@nl ;
-        dct:source       mimdoc:sectie2.12.4 ;
-        skos:definition  "Een inhoudelijke toelichting op de definitie, ter verheldering of nadere duiding."@nl ;
-        skos:prefLabel   "toelichting"@nl .
-
-mim:Keuze  dct:subject  <http://definities.geostandaarden.nl/mim/id/begrip/Keuze> .
-
-mim:indicatieAfleidbaar
-        dct:subject  <http://definities.geostandaarden.nl/mim/id/begrip/indicatieAfleidbaar> .
-
-<http://definities.geostandaarden.nl/mim/id/begrip/ExterneKoppeling>
-        a                skos:Concept ;
-        rdfs:label       "Externe koppeling"@nl ;
-        dct:source       mimdoc:sectie2.3.4 ;
-        skos:broader     <http://definities.geostandaarden.nl/mim/id/begrip/Modelelement> ;
-        skos:definition  "Een associatie waarmee vanuit het perspectief van het eigen informatiemodel een objecttype uit het ‘eigen’ informatiemodel gekoppeld wordt aan een objecttype van een extern informatiemodel. De relatie zelf hoort bij het ‘eigen’ objecttype."@nl ;
-        skos:inScheme    <http://definities.geostandaarden.nl/mim/id/begrippenkader/> ;
-        skos:prefLabel   "Externe koppeling"@nl .
-
-<http://definities.geostandaarden.nl/mim/id/begrip/Gegevensgroep>
-        a                skos:Concept ;
-        rdfs:label       "Gegevensgroep"@nl ;
-        dct:source       mimdoc:sectie2.2.3 ;
-        skos:broader     <http://definities.geostandaarden.nl/mim/id/begrip/Modelelement> ;
-        skos:definition  "Een typering van een groep van gelijksoortige gegevens die voor een objecttype van toepassing is."@nl ;
-        skos:inScheme    <http://definities.geostandaarden.nl/mim/id/begrippenkader/> ;
-        skos:prefLabel   "Gegevensgroep"@nl .
-
-mim:relatierol  dct:subject  <http://definities.geostandaarden.nl/mim/id/begrip/relatierol> .
-
-<http://definities.geostandaarden.nl/mim/id/begrip/alias>
-        a                skos:Concept ;
-        rdfs:label       "alias"@nl ;
-        dct:source       mimdoc:sectie2.12.3 ;
-        skos:definition  "De alternatieve weergave van de naam."@nl ;
-        skos:prefLabel   "alias"@nl .
+        rdfs:label       "kwaliteit"@nl ;
+        dct:source       mimdoc:sectie2.8.2.30 ;
+        skos:definition  "Beschrijving van de mate waarin in de registratie opgenomen objecten van het desbetreffende type volledig, juist, actueel, nauwkeurig en betrouwbaar zijn."@nl ;
+        skos:prefLabel   "kwaliteit"@nl .
 
 <http://definities.geostandaarden.nl/mim/id/begrip/Keuze>
         a                skos:Concept ;
@@ -579,58 +417,99 @@ mim:relatierol  dct:subject  <http://definities.geostandaarden.nl/mim/id/begrip/
         skos:inScheme    <http://definities.geostandaarden.nl/mim/id/begrippenkader/> ;
         skos:prefLabel   "Keuze"@nl .
 
-mim:RelatierolDoel  dct:subject  <http://definities.geostandaarden.nl/mim/id/begrip/RelatierolDoel> .
+mim:RelatierolLeidend
+        a              skos:Concept ;
+        rdfs:label     "Relatierol leidend" ;
+        skos:inScheme  <http://definities.geostandaarden.nl/mim/id/begrippenkader/> .
 
-<http://definities.geostandaarden.nl/mim/id/begrippenkader/>
-        a           skos:ConceptScheme ;
-        rdfs:label  "MIM Begrippenkader" .
-
-mim:referentieElement
-        dct:subject  <http://definities.geostandaarden.nl/mim/id/begrip/referentieElement> .
-
-mim:mogelijkGeenWaarde
-        dct:subject  <http://definities.geostandaarden.nl/mim/id/begrip/mogelijkGeenWaarde> .
-
-<http://definities.geostandaarden.nl/mim/id/begrip/definitie>
+<http://definities.geostandaarden.nl/mim/id/begrip/datumOpname>
         a                skos:Concept ;
-        rdfs:label       "definitie"@nl ;
-        dct:source       mimdoc:sectie2.12.2 ;
-        skos:definition  "De beschrijving van de betekenis van dit modelelement."@nl ;
-        skos:prefLabel   "definitie"@nl .
+        rdfs:label       "datum opname"@nl ;
+        dct:source       mimdoc:sectie2.8.2.8 ;
+        skos:definition  "De datum waarop het modelelement is opgenomen in het informatiemodel."@nl ;
+        skos:prefLabel   "datum opname"@nl .
 
-<http://definities.geostandaarden.nl/mim/id/begrip/modelelement>
+<http://definities.geostandaarden.nl/mim/id/begrip/doelkeuze>
+        a                skos:Concept ;
+        rdfs:label       "doelkeuze"@nl ;
+        dct:source       mimdoc:sectie2.8.4.13 ;
+        skos:definition  "De binding van een keuze uit relatiedoelen aan een objecttype."@nl ;
+        skos:prefLabel   "doelkeuze"@nl .
+
+<http://definities.geostandaarden.nl/mim/id/begrip/relatiemodelleringstype>
+        a                skos:Concept ;
+        rdfs:label       "relatiemodelleringstype"@nl ;
+        dct:source       mimdoc:sectie2.8.1.3 ;
+        skos:definition  "Aanduiding van een in MIM gedefinieerd alternatief voor een modelleringswijze, en welke keuze hierbij is gemaakt."@nl ;
+        skos:prefLabel   "relatiemodelleringstype"@nl .
+
+<http://definities.geostandaarden.nl/mim/id/begrip/Gegevensgroeptype>
+        a                skos:Concept ;
+        rdfs:label       "Gegevensgroeptype"@nl ;
+        dct:source       mimdoc:sectie2.2.4 ;
+        skos:broader     <http://definities.geostandaarden.nl/mim/id/begrip/Modelelement> ;
+        skos:definition  "Een groep van met elkaar samenhangende attribuutsoorten. Een gegevensgroeptype is altijd een type van een gegevensgroep."@nl ;
+        skos:inScheme    <http://definities.geostandaarden.nl/mim/id/begrippenkader/> ;
+        skos:prefLabel   "Gegevensgroeptype"@nl .
+
+<http://definities.geostandaarden.nl/mim/id/begrip/formeelPatroon>
+        a                skos:Concept ;
+        rdfs:label       "formeel patroon"@nl ;
+        dct:source       mimdoc:sectie2.8.2.26 ;
+        skos:definition  "Zoals patroon, formeel vastgelegd, uitgedrukt in een formele taal die door de computer wordt herkend."@nl ;
+        skos:prefLabel   "formeel patroon"@nl .
+
+<http://definities.geostandaarden.nl/mim/id/begrip/Referentielijst>
+        a                skos:Concept ;
+        rdfs:label       "Referentielijst"@nl ;
+        dct:source       mimdoc:sectie2.4.1 ;
+        skos:broader     <http://definities.geostandaarden.nl/mim/id/begrip/Datatype> ;
+        skos:definition  "De representatie van een lijst met een opsomming van de mogelijke domeinwaarden van een attribuutsoort, die buiten het model in een externe waardenlijst worden beheerd. De domeinwaarden in de lijst kunnen in de loop van de tijd aangepast, uitgebreid, of verwijderd worden, zonder dat het informatiemodel aangepast wordt (in tegenstelling tot bij een enumeratie). De representatie bevat een aantal kenmerken, die overgenomen zijn van de specificatie van de externe waardelijst."@nl ;
+        skos:inScheme    <http://definities.geostandaarden.nl/mim/id/begrippenkader/> ;
+        skos:prefLabel   "Referentielijst"@nl .
+
+mim:TechnischInformatiemodel
         a               skos:Concept ;
-        rdfs:label      "modelelement"@nl ;
-        skos:prefLabel  "modelelement"@nl .
+        rdfs:label      "Technisch informatiemodel" ;
+        skos:inScheme   <http://definities.geostandaarden.nl/mim/id/begrippenkader/> ;
+        skos:prefLabel  "Technisch" .
 
-mim:Enumeratie  dct:subject  <http://definities.geostandaarden.nl/mim/id/begrip/Enumeratie> .
-
-mim:locatie  dct:subject  <http://definities.geostandaarden.nl/mim/id/begrip/locatie> .
-
-<http://definities.geostandaarden.nl/mim/id/begrip/gegevensgroeptype>
+<http://definities.geostandaarden.nl/mim/id/begrip/toelichting>
         a                skos:Concept ;
-        rdfs:label       "gegevensgroeptype"@nl ;
-        dct:source       mimdoc:sectie2.12.28 ;
-        skos:definition  "De binding van een gegevensgroeptype als waardetype aan een gegevensgroep."@nl ;
-        skos:prefLabel   "gegevensgroeptype"@nl .
+        rdfs:label       "toelichting"@nl ;
+        dct:source       mimdoc:sectie2.8.2.7 ;
+        skos:definition  "Een inhoudelijke toelichting op de definitie, ter verheldering of nadere duiding."@nl ;
+        skos:prefLabel   "toelichting"@nl .
 
-mim:Informatiemodel  dct:subject  <http://definities.geostandaarden.nl/mim/id/begrip/Informatiemodel> .
-
-<http://definities.geostandaarden.nl/mim/id/begrip/mimextensie>
+<http://definities.geostandaarden.nl/mim/id/begrip/PrimitiefDatatype>
         a                skos:Concept ;
-        rdfs:label       "MIM extensie"@nl ;
-        dct:source       mimdoc:sectie2.11.5 ;
-        skos:definition  "De aanduiding van een extensie op MIM."@nl ;
-        skos:prefLabel   "MIM extensie"@nl .
+        rdfs:label       "Primitief datatype"@nl ;
+        dct:source       mimdoc:sectie2.5.1 ;
+        skos:broader     <http://definities.geostandaarden.nl/mim/id/begrip/Datatype> ;
+        skos:definition  "Een primitief datatype is een datatype met een eenvoudige basisstructuur, oftewel enkelvoudig en zonder gelaagdheid."@nl ;
+        skos:inScheme    <http://definities.geostandaarden.nl/mim/id/begrippenkader/> ;
+        skos:prefLabel   "Primitief datatype"@nl .
 
-<http://definities.geostandaarden.nl/mim/id/begrip/code>
+<http://definities.geostandaarden.nl/mim/id/begrip/type>
         a                skos:Concept ;
-        rdfs:label       "code"@nl ;
-        dct:source       mimdoc:sectie2.12.36 ;
-        skos:definition  "De in een registratie of informatiemodel aan de enumeratiewaarde toegekend unieke code"@nl ;
-        skos:prefLabel   "code"@nl .
+        rdfs:label       "type"@nl ;
+        dct:source       mimdoc:sectie2.8.2.23 ;
+        skos:definition  "Het datatype waarmee waarden van dit modelelement worden vastgelegd."@nl ;
+        skos:prefLabel   "type"@nl .
 
-mim:unidirectioneel  dct:subject  <http://definities.geostandaarden.nl/mim/id/begrip/unidirectioneel> .
+<http://definities.geostandaarden.nl/mim/id/begrip/patroon>
+        a                skos:Concept ;
+        rdfs:label       "patroon"@nl ;
+        dct:source       mimdoc:sectie2.8.2.25 ;
+        skos:definition  "De verzameling van waarden die gegevens van deze attribuutsoort kunnen hebben, oftewel het waardenbereik, uitgedrukt in een specifieke structuur."@nl ;
+        skos:prefLabel   "patroon"@nl .
+
+<http://definities.geostandaarden.nl/mim/id/begrip/indicatieAfleidbaar>
+        a                skos:Concept ;
+        rdfs:label       "indicatie afleidbaar"@nl ;
+        dct:source       mimdoc:sectie2.8.2.15 ;
+        skos:definition  "Aanduiding dat gegeven afleidbaar is uit andere attribuut- en/of relatiesoorten."@nl ;
+        skos:prefLabel   "indicatie afleidbaar"@nl .
 
 <http://definities.geostandaarden.nl/mim/id/begrip/subtype>
         a                skos:Concept ;
@@ -638,39 +517,30 @@ mim:unidirectioneel  dct:subject  <http://definities.geostandaarden.nl/mim/id/be
         skos:definition  "Het objecttype dat een specialisatie is van een (ander) objecttype."@nl ;
         skos:prefLabel   "subtype" .
 
-mim:doel  dct:subject  <http://definities.geostandaarden.nl/mim/id/begrip/doel> .
-
-mim:attribuutkeuze  dct:subject  <http://definities.geostandaarden.nl/mim/id/begrip/attribuutkeuze> .
-
-mim:waarde  dct:subject  <http://definities.geostandaarden.nl/mim/id/begrip/waarde> .
-
-mim:toelichting  dct:subject  <http://definities.geostandaarden.nl/mim/id/begrip/toelichting> .
-
-<http://definities.geostandaarden.nl/mim/id/begrip/Domein>
+<http://definities.geostandaarden.nl/mim/id/begrip/begripsterm>
         a                skos:Concept ;
-        rdfs:label       "Domein"@nl ;
-        dct:source       mimdoc:sectie2.9.2 ;
-        skos:broader     <http://definities.geostandaarden.nl/mim/id/begrip/Package> ;
-        skos:definition  "Een groepering van constructies die een semantisch samenhangend gedeelte van een informatiemodel beschrijven."@nl ;
+        rdfs:label       "begripsterm"@nl ;
+        dct:source       mimdoc:sectie2.8.2.3 ;
+        skos:definition  "Verwijzing naar een begrip in de vorm van een term, vanuit een modelelement, waarmee wordt aangegeven op welk begrip, of begrippen, het informatiemodel element is gebaseerd." ;
+        skos:prefLabel   "begripsterm"@nl .
+
+<http://definities.geostandaarden.nl/mim/id/begrip/relatierol>
+        a               skos:Concept ;
+        rdfs:label      "relatierol"@nl ;
+        skos:prefLabel  "relatierol"@nl .
+
+<http://definities.geostandaarden.nl/mim/id/begrip/mogelijkGeenWaarde>
+        a                skos:Concept ;
+        rdfs:label       "mogelijk geen waarde"@nl ;
+        dct:source       mimdoc:sectie2.8.2.17 ;
+        skos:definition  "Aanduiding dat van een aspect geen waarde is geregistreerd, maar dat onduidelijk is of de waarde er werkelijk ook niet is."@nl ;
+        skos:prefLabel   "mogelijk geen waarde"@nl .
+
+mim:WettelijkGegeven  a  skos:Concept ;
+        rdfs:label       "Wettelijk gegeven" ;
+        skos:definition  "Gegeven behorende bij een wettelijke registratie, niet zijnde een basisregistratie"@nl ;
         skos:inScheme    <http://definities.geostandaarden.nl/mim/id/begrippenkader/> ;
-        skos:prefLabel   "Domein"@nl .
-
-mim:definitie  dct:subject  <http://definities.geostandaarden.nl/mim/id/begrip/definitie> .
-
-<http://definities.geostandaarden.nl/mim/id/begrip/equivalent>
-        a                skos:Concept ;
-        rdfs:label       "equivalent" ;
-        skos:definition  "Geeft aan dat een mim metamodel-element equivalent is met een meta-element uit een Linked Data vocabulaire" ;
-        skos:prefLabel   "equivalent" .
-
-<http://definities.geostandaarden.nl/mim/id/begrip/unidirectioneel>
-        a                skos:Concept ;
-        rdfs:label       "unidirectioneel"@nl ;
-        dct:source       mimdoc:sectie2.12.19 ;
-        skos:definition  "De richting van een relatie, welke betekenis geeft aan de relatie vanuit het perspectief van de eigenaar van de relatie."@nl ;
-        skos:prefLabel   "unidirectioneel"@nl .
-
-mim:Constraint  dct:subject  <http://definities.geostandaarden.nl/mim/id/begrip/Constraint> .
+        skos:prefLabel   "Wettelijk gegeven" .
 
 <http://definities.geostandaarden.nl/mim/id/begrip/Relatieklasse>
         a                skos:Concept ;
@@ -681,20 +551,155 @@ mim:Constraint  dct:subject  <http://definities.geostandaarden.nl/mim/id/begrip/
         skos:inScheme    <http://definities.geostandaarden.nl/mim/id/begrippenkader/> ;
         skos:prefLabel   "Relatieklasse"@nl .
 
+<http://definities.geostandaarden.nl/mim/id/begrip/equivalent>
+        a                skos:Concept ;
+        rdfs:label       "equivalent" ;
+        skos:definition  "Geeft aan dat een mim metamodel-element equivalent is met een meta-element uit een Linked Data vocabulaire" ;
+        skos:prefLabel   "equivalent" .
+
+<http://definities.geostandaarden.nl/mim/id/begrip/modelelement>
+        a               skos:Concept ;
+        rdfs:label      "modelelement"@nl ;
+        skos:prefLabel  "modelelement"@nl .
+
+<http://definities.geostandaarden.nl/mim/id/begrip/RelatierolBron>
+        a                skos:Concept ;
+        rdfs:label       "Relatierol bron"@nl ;
+        dct:source       mimdoc:sectie2.3.5 ;
+        skos:broader     <http://definities.geostandaarden.nl/mim/id/begrip/Relatierol> ;
+        skos:definition  "De relatierol die de rol beschrijft van de bron van de relatie." ;
+        skos:inScheme    <http://definities.geostandaarden.nl/mim/id/begrippenkader/> ;
+        skos:prefLabel   "Relatierol bron"@nl .
+
+mim:Gedeeld  a          skos:Concept ;
+        rdfs:label      "Gedeeld"@nl ;
+        mim:naam        "Gedeeld"@nl ;
+        skos:altLabel   "Shared"@en ;
+        skos:definitie  "het onderdeel kan gebruikt en gedeeld worden door meerdere eigenaren."@nl ;
+        skos:example    "Een betaalrekening" ;
+        skos:inScheme   <http://definities.geostandaarden.nl/mim/id/begrippenkader/> ;
+        skos:prefLabel  "Gedeeld"@nl ;
+        skos:scopeNote  "een gedeelde aggregatie wordt afgebeeld met een open wiebertje aan de kant van de eigenaar"@nl .
+
+<http://definities.geostandaarden.nl/mim/id/begrip/specificatieFormeel>
+        a                skos:Concept ;
+        rdfs:label       "specificatie formeel"@nl ;
+        skos:definition  "De beschrijving van de constraint in een formele specificatietaal, in OCL"@nl ;
+        skos:prefLabel   "specificatie formeel"@nl .
+
+<http://definities.geostandaarden.nl/mim/id/begrip/mimversie>
+        a                skos:Concept ;
+        rdfs:label       "MIM versie"@nl ;
+        dct:source       mimdoc:sectie2.11.4 ;
+        skos:definition  "De versie van de MIM specificatie die gebruikt is om het informatiemodel in uit te drukken."@nl ;
+        skos:prefLabel   "MIM versie"@nl .
+
+<http://definities.geostandaarden.nl/mim/id/begrip/locatie>
+        a                skos:Concept ;
+        rdfs:label       "locatie"@nl ;
+        dct:source       mimdoc:sectie2.8.2.22 ;
+        skos:definition  "Als het type van het attribuutsoort een waardenlijst is, dan wordt hier de locatie waar deze te vinden is opgegeven."@nl ;
+        skos:prefLabel   "locatie"@nl .
+
+<http://definities.geostandaarden.nl/mim/id/begrip/DataElement>
+        a                skos:Concept ;
+        rdfs:label       "Data element"@nl ;
+        dct:source       mimdoc:sectie2.5.3 ;
+        skos:broader     <http://definities.geostandaarden.nl/mim/id/begrip/Modelelement> ;
+        skos:definition  "Een onderdeel/element van een Gestructureerd datatype die als type een datatype heeft."@nl ;
+        skos:inScheme    <http://definities.geostandaarden.nl/mim/id/begrippenkader/> ;
+        skos:prefLabel   "Data element"@nl .
+
+<http://definities.geostandaarden.nl/mim/id/begrip/constraint>
+        a                skos:Concept ;
+        rdfs:label       "constraint"@nl ;
+        dct:source       mimdoc:sectie2.8.4.14 ;
+        skos:definition  "De binding van een constraint aan een modelelement."@nl ;
+        skos:prefLabel   "constraint"@nl .
+
 <http://definities.geostandaarden.nl/mim/id/begrip/indicatieAbstractObject>
         a                skos:Concept ;
         rdfs:label       "indicatie abstract object"@nl ;
-        skos:definition  "Indicatie dat het objecttype een generalisatie is, waarvan een object als specialisatie altijd voorkomt in de hoedanigheid van een (en slechts één) van de specialisaties van het betreffende objecttype."@nl ;
+        dct:source       mimdoc:sectie2.8.2.28 ;
+        skos:definition  "Een indicatie die aangeeft of er objecten kunnen bestaan die getypeerd worden als zijnde objecten (instanties) van alleen dit objecttype. Een abstract objecttype moet altijd de generalisatie zijn van één of meerdere objecttypes die niet abstract zijn."@nl ;
         skos:prefLabel   "indicatie abstract object"@nl .
 
-mim:formeelPatroon  dct:subject  <http://definities.geostandaarden.nl/mim/id/begrip/formeelPatroon> .
-
-<http://definities.geostandaarden.nl/mim/id/begrip/Modelelement>
+<http://definities.geostandaarden.nl/mim/id/begrip/Informatiemodel>
         a                skos:Concept ;
-        rdfs:label       "Modelelement"@nl ;
-        skos:definition  "Een modelelement uit het Metamodel voor Informatie Modellering (MIM)"@nl ;
+        rdfs:label       "Informatiemodel"@nl ;
+        dct:source       mimdoc:sectie2.6.1 ;
+        skos:broader     <http://definities.geostandaarden.nl/mim/id/begrip/Package> ;
+        skos:definition  "De groepering van alle modelelementen waaruit het informatiemodel is opgebouwd. Het informatiemodel als geheel."@nl ;
         skos:inScheme    <http://definities.geostandaarden.nl/mim/id/begrippenkader/> ;
-        skos:prefLabel   "Modelelement"@nl .
+        skos:prefLabel   "Informatiemodel"@nl .
+
+<http://definities.geostandaarden.nl/mim/id/begrip/View>
+        a                skos:Concept ;
+        rdfs:label       "View"@nl ;
+        dct:source       mimdoc:sectie2.6.4 ;
+        skos:broader     <http://definities.geostandaarden.nl/mim/id/begrip/Package> ;
+        skos:definition  "Een groepering van objecttypen die gespecificeerd zijn in een extern informatiemodel en vanuit het perspectief van het eigen informatiemodel inzicht geeft welke gegevens van deze objecttypen relevant zijn binnen het eigen informatiemodel."@nl ;
+        skos:inScheme    <http://definities.geostandaarden.nl/mim/id/begrippenkader/> ;
+        skos:prefLabel   "View"@nl .
+
+<http://definities.geostandaarden.nl/mim/id/begrip/Domein>
+        a                skos:Concept ;
+        rdfs:label       "Domein"@nl ;
+        dct:source       mimdoc:sectie2.6.2 ;
+        skos:broader     <http://definities.geostandaarden.nl/mim/id/begrip/Package> ;
+        skos:definition  "Een groepering van constructies die een semantisch samenhangend gedeelte van een informatiemodel beschrijven."@nl ;
+        skos:inScheme    <http://definities.geostandaarden.nl/mim/id/begrippenkader/> ;
+        skos:prefLabel   "Domein"@nl .
+
+mim:Authentiek  a        skos:Concept ;
+        rdfs:label       "Authentiek" ;
+        skos:definition  "In een basisregistratie opgenomen gegeven dat bij wettelijk voorschrift als authentiek is aangemerkt."@nl ;
+        skos:inScheme    <http://definities.geostandaarden.nl/mim/id/begrippenkader/> ;
+        skos:prefLabel   "Authentiek" .
+
+<http://definities.geostandaarden.nl/mim/id/begrip/Objecttype>
+        a                skos:Concept ;
+        rdfs:label       "Objecttype"@nl ;
+        dct:source       mimdoc:sectie2.2.1 ;
+        skos:broader     <http://definities.geostandaarden.nl/mim/id/begrip/Modelelement> ;
+        skos:definition  "De typering van een groep objecten die binnen een domein relevant zijn en als gelijksoortig worden beschouwd."@nl ;
+        skos:inScheme    <http://definities.geostandaarden.nl/mim/id/begrippenkader/> ;
+        skos:prefLabel   "Objecttype"@nl .
+
+<http://definities.geostandaarden.nl/mim/id/begrip/informatiedomein>
+        a                skos:Concept ;
+        rdfs:label       "informatiedomein"@nl ;
+        dct:source       mimdoc:sectie2.8.1.1 ;
+        skos:definition  "Aanduiding van het functionele domein waartoe het informatiemodel behoort."@nl ;
+        skos:prefLabel   "informatiedomein"@nl .
+
+mim:OverigeAuthenticiteit
+        a                skos:Concept ;
+        rdfs:label       "Overige authenticiteit" ;
+        skos:definition  "Indien het géén van de voorgaande categorieën betreft. Veelal gaat het dan om proces-, taakveld- of domeinspecifieke gegevens."@nl ;
+        skos:inScheme    <http://definities.geostandaarden.nl/mim/id/begrippenkader/> ;
+        skos:prefLabel   "Overig" .
+
+<http://definities.geostandaarden.nl/mim/id/begrip/bevatModelelement>
+        a               skos:Concept ;
+        rdfs:label      "bevat modelelement"@nl ;
+        skos:prefLabel  "bevat modelelement"@nl .
+
+<http://definities.geostandaarden.nl/mim/id/begrip/supertype>
+        a                skos:Concept ;
+        rdfs:label       "supertype" ;
+        dct:source       mimdoc:sectie2.8.4.4 ;
+        skos:definition  "De binding van een supertype aan een subtype middels een generalisatie."@nl ;
+        skos:prefLabel   "supertype" .
+
+<http://definities.geostandaarden.nl/mim/id/begrip/Constraint>
+        a                skos:Concept ;
+        rdfs:label       "Constraint"@nl ;
+        dct:source       mimdoc:sectie2.10.1 ;
+        skos:broader     <http://definities.geostandaarden.nl/mim/id/begrip/Modelelement> ;
+        skos:definition  "Een constraint is een conditie of een beperking, die over een of meerdere modelelementen uit het informatiemodel geldt."@nl ;
+        skos:inScheme    <http://definities.geostandaarden.nl/mim/id/begrippenkader/> ;
+        skos:prefLabel   "Constraint"@nl .
 
 <http://definities.geostandaarden.nl/mim/id/begrip/Attribuutsoort>
         a                skos:Concept ;
@@ -705,122 +710,22 @@ mim:formeelPatroon  dct:subject  <http://definities.geostandaarden.nl/mim/id/beg
         skos:inScheme    <http://definities.geostandaarden.nl/mim/id/begrippenkader/> ;
         skos:prefLabel   "Attribuutsoort"@nl .
 
-mim:mimextensie  dct:subject  <http://definities.geostandaarden.nl/mim/id/begrip/mimextensie> .
-
-<http://definities.geostandaarden.nl/mim/id/begrip/bevatModelelement>
-        a               skos:Concept ;
-        rdfs:label      "bevat modelelement"@nl ;
-        skos:prefLabel  "bevat modelelement"@nl .
-
-<http://definities.geostandaarden.nl/mim/id/begrip/mogelijkGeenWaarde>
+<http://definities.geostandaarden.nl/mim/id/begrip/specificatieTekst>
         a                skos:Concept ;
-        rdfs:label       "mogelijk geen waarde"@nl ;
-        dct:source       mimdoc:sectie2.12.16 ;
-        skos:definition  "Aanduiding dat van een aspect geen waarde is geregistreerd, maar dat onduidelijk is of de waarde er werkelijk ook niet is."@nl ;
-        skos:prefLabel   "mogelijk geen waarde"@nl .
+        rdfs:label       "specificatie tekst"@nl ;
+        skos:definition  "De specificatie van de constraint in normale tekst."@nl ;
+        skos:prefLabel   "specificatie tekst"@nl .
 
-mim:datumOpname  dct:subject  <http://definities.geostandaarden.nl/mim/id/begrip/datumOpname> .
-
-<http://definities.geostandaarden.nl/mim/id/begrip/doel>
+<http://definities.geostandaarden.nl/mim/id/begrip/referentieElement>
         a                skos:Concept ;
-        rdfs:label       "doel" ;
-        dct:source       mimdoc:sectie2.12.18 ;
-        skos:definition  "Aanduiding van het gerelateerde objecttype die het eindpunt van de relatie aangeeft. Naar objecten van dit objecttype wordt verwezen."@nl ;
-        skos:prefLabel   "doel" .
-
-mim:begrip  dct:subject  <http://definities.geostandaarden.nl/mim/id/begrip/begrip> .
-
-mim:specificatieTekst
-        dct:subject  <http://definities.geostandaarden.nl/mim/id/begrip/specificatieTekst> .
-
-<http://definities.geostandaarden.nl/mim/id/begrip/aggregatietype>
-        a                skos:Concept ;
-        rdfs:label       "aggregatietype"@nl ;
-        dct:source       mimdoc:sectie2.12.20 ;
-        skos:definition  "Aanduiding of het objecttype die de eigenaar is van een relatie het doel van relatie ziet als een samen te voegen onderdeel."@nl ;
-        skos:prefLabel   "aggregatietype"@nl .
-
-<http://definities.geostandaarden.nl/mim/id/begrip/patroon>
-        a                skos:Concept ;
-        rdfs:label       "patroon"@nl ;
-        dct:source       mimdoc:sectie2.12.24 ;
-        skos:definition  "De verzameling van waarden die gegevens van deze attribuutsoort kunnen hebben, oftewel het waardenbereik, uitgedrukt in een specifieke structuur."@nl ;
-        skos:prefLabel   "patroon"@nl .
-
-mim:Extern  dct:subject  <http://definities.geostandaarden.nl/mim/id/begrip/Extern> .
-
-<http://definities.geostandaarden.nl/mim/id/begrip/begripsterm>
-        a                skos:Concept ;
-        rdfs:label       "begripsterm"@nl ;
-        dct:source       mimdoc:sectie2.12.5 ;
-        skos:definition  "Verwijzing naar een begrip in de vorm van een term, vanuit een modelelement, waarmee wordt aangegeven op welk begrip, of begrippen, het informatiemodel element is gebaseerd." ;
-        skos:prefLabel   "begripsterm"@nl .
-
-mim:Codelijst  dct:subject  <http://definities.geostandaarden.nl/mim/id/begrip/Codelijst> .
-
-<http://definities.geostandaarden.nl/mim/id/begrip/Package>
-        a                skos:Concept ;
-        rdfs:label       "Package"@nl ;
-        skos:broader     <http://definities.geostandaarden.nl/mim/id/begrip/Modelelement> ;
-        skos:definition  "Een package is een benoemde en begrensde verzameling/groepering van modelelementen."@nl ;
-        skos:inScheme    <http://definities.geostandaarden.nl/mim/id/begrippenkader/> ;
-        skos:prefLabel   "Package"@nl .
+        rdfs:label       "referentie element"@nl ;
+        dct:source       mimdoc:sectie2.8.4.10 ;
+        skos:definition  "De binding van een referentie element aan een referentielijst."@nl ;
+        skos:prefLabel   "referentie element"@nl .
 
 <http://definities.geostandaarden.nl/mim/id/begrip/populatie>
         a                skos:Concept ;
         rdfs:label       "populatie"@nl ;
-        skos:definition  "Voor objecttypen die deel uitmaken van een (basis)registratie betreft dit de beschrijving van de exemplaren van het gedefinieerde objecttype die in de desbetreffende (basis)- registratie voorhanden zijn."@nl ;
+        dct:source       mimdoc:sectie2.8.2.29 ;
+        skos:definition  "Voor objecttypen die deel uitmaken van een (basis)registratie betreft dit de beschrijving van de exemplaren van het gedefinieerde objecttype die in de desbetreffende (basis)­registratie voorhanden zijn."@nl ;
         skos:prefLabel   "populatie"@nl .
-
-<http://definities.geostandaarden.nl/mim/id/begrip/Enumeratiewaarde>
-        a                skos:Concept ;
-        rdfs:label       "Enumeratiewaarde"@nl ;
-        dct:source       mimdoc:sectie2.4.4 ;
-        skos:broader     <http://definities.geostandaarden.nl/mim/id/begrip/Modelelement> ;
-        skos:definition  "Een gedefinieerde waarde, in de vorm van een eenmalig vastgesteld constant gegeven."@nl ;
-        skos:inScheme    <http://definities.geostandaarden.nl/mim/id/begrippenkader/> ;
-        skos:prefLabel   "Enumeratiewaarde"@nl .
-
-<http://definities.geostandaarden.nl/mim/id/begrip/identificerend>
-        a                skos:Concept ;
-        rdfs:label       "identificerend"@nl ;
-        dct:source       mimdoc:sectie2.12.9 ;
-        skos:definition  "Een kenmerk van een objecttype die aangeeft of deze eigenschap uniek identificerend is voor alle objecten in de populatie van objecten van dit objecttype."@nl ;
-        skos:prefLabel   "identificerend"@nl .
-
-<http://definities.geostandaarden.nl/mim/id/begrip/gegevensgroep>
-        a                skos:Concept ;
-        rdfs:label       "gegevensgroep"@nl ;
-        dct:source       mimdoc:sectie2.12.27 ;
-        skos:definition  "De binding van een gegevensgroep als groep van eigenschappen aan een objecttype of gegevensgroeptype."@nl ;
-        skos:prefLabel   "gegevensgroep"@nl .
-
-<http://definities.geostandaarden.nl/mim/id/begrip/GestructureerdDatatype>
-        a                skos:Concept ;
-        rdfs:label       "Gestructureerd datatype"@nl ;
-        dct:source       mimdoc:sectie2.8.2 ;
-        skos:broader     <http://definities.geostandaarden.nl/mim/id/begrip/Datatype> ;
-        skos:definition  "Specifiek benoemd datatype dat de structuur van een gegeven beschrijft, samengesteld uit minimaal twee elementen die in samenhang betekenisvol zijn."@nl ;
-        skos:inScheme    <http://definities.geostandaarden.nl/mim/id/begrippenkader/> ;
-        skos:prefLabel   "Gestructureerd datatype"@nl .
-
-mim:informatiedomein  dct:subject  <http://definities.geostandaarden.nl/mim/id/begrip/informatiedomein> .
-
-mim:constraint  dct:subject  <http://definities.geostandaarden.nl/mim/id/begrip/constraint> .
-
-<http://definities.geostandaarden.nl/mim/id/begrip/kardinaliteitRelatieBron>
-        a                skos:Concept ;
-        rdfs:label       "kardinaliteit relatie bron"@nl ;
-        dct:source       mimdoc:sectie2.8.2.13 ;
-        skos:definition  "De kardinaliteit relatie bron geeft bij een relatiesoort aan hoeveel instanties van het bron objecttype in een relatie met één instantie van het doel objecttype verbonden kunnen zijn."@nl ;
-        skos:prefLabel   "kardinaliteit relatie bron"@nl .
-
-mim:ReferentieElement
-        dct:subject  <http://definities.geostandaarden.nl/mim/id/begrip/ReferentieElement> .
-
-<http://definities.geostandaarden.nl/mim/id/begrip/authentiek>
-        a                skos:Concept ;
-        rdfs:label       "authentiek"@nl ;
-        dct:source       mimdoc:sectie2.12.13 ;
-        skos:definition  "Aanduiding of het kenmerk een authentiek gegeven betreft."@nl ;
-        skos:prefLabel   "authentiek"@nl .

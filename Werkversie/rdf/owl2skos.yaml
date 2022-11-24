@@ -7,7 +7,7 @@ queries:
       prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
       insert {
         graph <urn:output> {
-          <http://bp4mc2.org/id/begrippenkader/mim> a skos:ConceptScheme;
+          <http://definities.geostandaarden.nl/mim/id/begrippenkader/> a skos:ConceptScheme;
             rdfs:label "MIM Begrippenkader"
           .
         }
@@ -22,12 +22,14 @@ queries:
       insert {
         graph <urn:output> {
           ?concept a skos:Concept.
-          ?concept skos:inScheme <http://bp4mc2.org/id/begrippenkader/mim>.
+          ?concept skos:inScheme <http://definities.geostandaarden.nl/mim/id/begrippenkader/>.
+        }
+        graph <urn:input> {
           ?class dct:subject ?concept.
         }
       }
       where {
-        select (iri(concat("http://bp4mc2.org/mim/id/begrip/",strafter(str(?class),"#"))) as ?concept) ?class
+        select (iri(concat("http://definities.geostandaarden.nl/mim/id/begrip/",strafter(str(?class),"#"))) as ?concept) ?class
         where {
           graph <urn:input> {
             ?class a ?t
@@ -44,11 +46,13 @@ queries:
       insert {
         graph <urn:output> {
           ?concept a skos:Concept.
+        }
+        graph <urn:input> {
           ?property dct:subject ?concept.
         }
       }
       where {
-        select (iri(concat("http://bp4mc2.org/mim/id/begrip/",strafter(str(?class),"#"))) as ?concept) ?property
+        select (iri(concat("http://definities.geostandaarden.nl/mim/id/begrip/",strafter(str(?property),"#"))) as ?concept) ?property
         where {
           graph <urn:input> {
             ?property a ?t
@@ -68,10 +72,8 @@ queries:
         }
       }
       where {
-        graph <urn:output> {
-          ?owlterm dct:subject ?concept
-        }
         graph <urn:input> {
+          ?owlterm dct:subject ?concept.
           ?owlterm rdfs:label ?label
         }
       }
@@ -86,10 +88,8 @@ queries:
         }
       }
       where {
-        graph <urn:output> {
-          ?owlterm dct:subject ?concept
-        }
         graph <urn:input> {
+          ?owlterm dct:subject ?concept.
           ?owlterm rdfs:comment ?comment
         }
       }
@@ -102,10 +102,8 @@ queries:
         }
       }
       where {
-        graph <urn:output> {
-          ?owlterm dct:subject ?concept
-        }
         graph <urn:input> {
+          ?owlterm dct:subject ?concept.
           ?owlterm dct:source ?source
         }
       }
@@ -120,11 +118,28 @@ queries:
         }
       }
       where {
-        graph <urn:output> {
-          ?sub dct:subject ?concept.
-          ?super dct:subject ?broader
-        }
         graph <urn:input> {
+          ?sub dct:subject ?concept.
+          ?super dct:subject ?broader.
           ?sub rdfs:subClassOf ?super
+        }
+      }
+  - title: copy skos concepts from ontology (list of values)
+    query: >
+      prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+      prefix skos: <http://www.w3.org/2004/02/skos/core#>
+      prefix dct: <http://purl.org/dc/terms/>
+      insert {
+        graph <urn:output> {
+          ?concept a skos:Concept.
+          ?concept skos:inScheme <http://definities.geostandaarden.nl/mim/id/begrippenkader/>.
+          ?concept ?p ?o
+        }
+      }
+      where {
+        graph <urn:input> {
+          ?concept a skos:Concept.
+          ?concept ?p ?o
+          FILTER (isLiteral(?o))
         }
       }
