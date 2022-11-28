@@ -5,6 +5,8 @@
 @prefix dct: <http://purl.org/dc/terms/>.
 @prefix foaf: <http://xmlns.com/foaf/0.1/>.
 
+mimdoc:schema a skos:ConceptScheme. #Technisch nodig voor skosmos applicatie, geen betekenisvolle waarde
+
 mimdoc:nora-online a dct:BibliographicResource;
   rdfs:label "Nora online";
   dct:bibliographicCitation "Nora online";
