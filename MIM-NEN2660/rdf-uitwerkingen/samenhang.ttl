@@ -1,0 +1,100 @@
+@prefix mim: <http://bp4mc2.org/def/mim#>.
+@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+@prefix sh: <http://www.w3.org/ns/shacl#>.
+@prefix gsp: <http://www.opengis.net/ont/geosparql#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix brtbegrip: <http://brt.basisregistraties.overheid.nl/id/begrip/>.
+@prefix bagbegrip: <http://bag.basisregistraties.overheid.nl/id/begrip/>.
+@prefix imbrt: <http://brt.basisregistraties.overheid.nl/def/imbrt#>.
+@prefix imbag: <http://brt.basisregistraties.overheid.nl/def/imbag#>.
+@prefix brt: <http://brt.basisregistraties.overheid.nl/def/brt#>.
+@prefix bag: <http://brt.basisregistraties.overheid.nl/def/bag#>.
+@prefix brtshape: <http://brt.basisregistraties.overheid.nl/def/brt-shape#>.
+@prefix bagshape: <http://brt.basisregistraties.overheid.nl/def/bag-shape#>.
+@prefix building: <http://brt.basisregistraties.overheid.nl/id/building/>.
+@prefix house: <http://bag.basisregistraties.overheid.nl/id/house/>.
+@prefix geometry: <http://geo.basisregistraties.overheid.nl/id/geo/>.
+
+# Definitie, uit het betreffende ConceptScheme
+brtbegrip:Gebouw a skos:Concept.
+brtbegrip:Hoogte a skos:Concept.
+bagbegrip:Pand a skos:Concept.
+
+# Uit de SKOS ontologie
+skos:closeMatch a skos:mappingRelation.
+
+# Harmonisatierelatie
+brtbegrip:Gebouw skos:closeMatch bagbegrip:Pand.
+
+# MIM, uit IMBAG en IMBRT
+# Merk op: voor het voorbeeld is hier een engelse naam gebruikt: in IMBAG en IMBRT zijn dit Nederlandse namen!
+imbag:House a mim:Objecttype;
+  mim:naam "House";
+  mim:alias "Pand";
+  mim:begrip bagbegrip:Gebouw;
+.
+imbrt:Building a mim:Objecttype;
+  mim:naam "Building";
+  mim:alias "Gebouw";
+  mim:begrip brtbegrip:Gebouw;
+  mim:attribuut imbrt:Building.height;
+.
+imbrt:Building.height a mim:Attribuutsoort;
+  mim:naam "height";
+  mim:alias "hoogte";
+  mim:type mim:Integer; #Niet in het plaatje afgebeeld
+.
+
+# IMBAG en IMBRT in ontologie
+bag:House a owl:Class;
+  rdfs:label "House"@en;
+  mim:equivalent imbag:House;
+.
+brt:Building a owl:Class;
+  rdfs:label "Building"@en;
+  mim:equivalent imbrt:Building;
+.
+brt:height a owl:DatatypeProperty;
+  rdfs:label "height"@en;
+  mim:equivalent imbrt:Building.height;
+.
+
+# IMBAG en IMBRT in shapes
+bagshape:House a sh:NodeShape;
+  sh:targetClass bag:House;
+  rdfs:label "House-Data";
+  mim:equivalent imbag:House;
+.
+
+brtshape:Building a sh:NodeShape;
+  sh:targetClass brt:Building;
+  rdfs:label "Building-Data";
+  mim:equivalent imbrt:Building;
+  sh:property brtshape:Building.height;
+.
+
+brtshape:Building.height a sh:PropertyShape;
+  sh:path brt:height;
+  rdfs:label "Building.height";
+  mim:equivalent imbrt:Building.height;
+  sh:datatype xsd:integer; #Niet in het plaatje afgebeeld
+.
+
+# Instanties
+building:ThisBuilding a brt:Building;
+  brt:height 12;
+.
+
+house:ThisHouse a bag:House.
+
+# Geometrie
+building:ThisBuilding gsp:hasGeometry geometry:ThisBuildingGeo.
+geometry:ThisBuildingGeo a gsp:Geometry;
+  gsp:asWkt "POLYGON(...)";
+.
+
+house:ThisHouse gsp:hasGeometry geometry:ThisHouseGeo.
+geometry:ThisHouseGeo a gsp:Geometry;
+  gsp:asWkt "POLYGON(...)";
+.
