@@ -1,0 +1,20 @@
+MDG_MIM_Toolbox_v1.1.1_build04.xml
+
+2022-11-14
+Release notes.
+
+De volgende items zijn aangepast.
+Dit zijn allemaal geen MIM wijzigingen maar correcties op de toepassing van MIM 1.1.1 in de toolbox.
+
+
+1) Invullen van default waarden bij tagged values daar waar MIM dat aangeeft (https://github.com/Geonovum/MIM-Werkomgeving/issues/280)
+
+2) Memo velden van tagged values zijn nu standaard leeg (https://github.com/Geonovum/MIM-Werkomgeving/issues/279)
+
+3) Attribuutsoort miste de tagged value 'classificererend' (https://github.com/Geonovum/MIM-Werkomgeving/issues/278)
+
+4) Dropdownlist toegevoegd voor waarden van tagged value informatiemodeltype (https://github.com/Geonovum/MIM-Werkomgeving/issues/277)
+
+
+
+
