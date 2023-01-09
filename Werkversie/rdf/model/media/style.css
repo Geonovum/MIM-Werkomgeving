@@ -1,0 +1,212 @@
+﻿/*-------------------------------------------------------------------------------------
+//-- File. . . :  style.css
+//-- Bevat . . :  Template voor de  stylesheet voor respec
+//--              Gebaseerd op https://github.com/Geonovum/respec/wiki
+//--              Deze file mag worden neergezet in de root-directory van de
+//--              betreffende standaard, maar ook 1 niveau lager in de map "media"
+//--              gedefinieerde stijlen overschrijven de default stijlen.
+//-- Door. . . :  Jan van Gelder
+//-------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------
+//-- Log . . . :  20181009 - JvG - Initiele versie
+//-----------------------------------------------------------------------------------*/
+
+/*-- Definitie van Image ------------------------------------------------------------*/
+img
+{
+  /*max-width: 100%; */
+  height: auto;
+  width: auto;
+}
+
+/*-- Vult elke img met -fullwidth aan het einde van de titel tot volledige breedte ------------------------------------------------------------*/
+img[alt$="-fullwidth"]{
+  width:  100%;
+  display: block;
+}
+
+/*-- Definite van het Geonovum Logo bovenaan Respec document ------------------------*/
+img#Geonovum
+{
+  width:132px;
+  height: 67px;
+}
+
+/*-- Definite van BlockQuotes (uitgelichte tekstblokken) ----------------------------*/
+blockquote
+{
+  /* margin-left: 20px !important; */
+  font-family:  'Esteban', serif !important;
+  font-style: italic;
+  border-color: transparent !important;
+  border-style: none !important;
+  background-color: darkgray;
+  color: white;
+}
+
+/*-- Optioneel een symbool voor de blockquote --------------------------------------*/
+blockquote:before
+{
+  display: block;
+  height: 0;
+  /* content: "|"; */
+  margin-left: -0.95em;
+  font: italic 400%/1 Esteban, serif;
+  color: grey;
+}
+
+/*-- Definite van tabellen ---------------------------------------------------------*/
+table
+{
+  empty-cells: show;
+  min-width: 90%;
+  border-color: grey;
+  border-style: solid;
+}
+
+/*-- Definite van de kopregel van een tabel ----------------------------------------*/
+thead
+{
+  background-color: grey;
+  color: white;
+}
+/*-- Definite van de body van een tabel --------------------------------------------*/
+tbody
+{
+  border-color: darkolivegreen;
+  background-color: lightgrey
+}
+
+/*-- Definite van de tabel-rij (deze zorgt voor 2 kleuren in de rijen) -------------*/
+tr:nth-child(even)
+{
+  background-color:  darkgrey;
+}
+
+/*-- Definite van de tabel-cel (data) ----------------------------------------------*/
+td
+{
+  min-width: 100px;     /* lege kolommen hebben deze minimale breedte */
+}
+
+/*-- Definite van rode tekst -------------------------------------------------------*/
+r
+{
+  color: red;
+}
+
+/*-- Definite van rose tekstblok ---------------------------------------------------*/
+div#remark
+{
+  border-color: darkblue;
+  border-style: solid;
+  background-color:  rosybrown;
+  color: darkblue;
+}
+
+/*-- Definite turtle example -------------------------------------------------------*/
+pre.ex-turtle {
+  margin-left: 0;
+  padding: 0 2em;
+  margin-top: 1.5em;
+  padding: 1em 1em 0 1em;
+}
+pre.ex-turtle:before
+{
+  background: white;
+  display: block;
+  font-family: sans-serif;
+  font-size: 90%;
+  margin: -1em 0 0.4em -1em;
+  padding: 0.2em 1em;
+}
+pre.ex-turtle
+{
+  background: #eeb;
+}
+pre.ex-turtle, pre.ex-turtle:before
+{
+  border: 1px solid #cc9;
+}
+pre.ex-turtle:before
+{
+  color: #996;
+  content: "voorbeeld RDF representatie";
+  width: 13em;
+}
+
+/*-- Definite SPARQL uitwerken -------------------------------------------------------*/
+pre.ex-sparql {
+  margin-left: 0;
+  padding: 0 2em;
+  margin-top: 1.5em;
+  padding: 1em 1em 0 1em;
+}
+pre.ex-sparql:before
+{
+  background: white;
+  display: block;
+  font-family: sans-serif;
+  font-size: 90%;
+  margin: -1em 0 0.4em -1em;
+  padding: 0.2em 1em;
+}
+pre.ex-sparql
+{
+  background: #eeb;
+}
+pre.ex-sparql, pre.ex-sparql:before
+{
+  border: 1px solid #cc9;
+}
+pre.ex-sparql:before
+{
+  color: #996;
+  content: "SPARQL";
+  width: 13em;
+}
+
+/*-- Definite Generiek Example ---------------------------------------------------*/
+pre.ex-generic {
+  margin-left: 0;
+  padding: 0 2em;
+  margin-top: 1.5em;
+  padding: 1em 1em 0 1em;
+}
+pre.ex-generic:before
+{
+  background: white;
+  display: block;
+  font-family: sans-serif;
+  font-size: 90%;
+  margin: -1em 0 0.4em -1em;
+  padding: 0.2em 1em;
+}
+pre.ex-generic
+{
+  background: lightblue;
+}
+pre.ex-generic, pre.ex-generic:before
+{
+  border: 1px solid darkslateblue;
+}
+pre.ex-generic:before
+{
+  color:darkslategray;
+  content: "voorbeeld";
+  width: 5em;
+}
+
+.ldex
+{
+  border-color: darkkhaki;
+  border-style: solid;
+  background-color:  khaki;
+  color: darkred;
+}
+
+todo
+{
+  background-color:  yellow;
+  color: purple;
+}
