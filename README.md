@@ -12,6 +12,9 @@ De webversie staat hier:
 De webversie van de Handreiking die hoort bij MIM staat hier:
 <https://geonovum.github.io/HIM-Werkomgeving>
 
+De werkversie van de MIM ontologie staat hier:
+<https://geonovum.github.io/MIM-Werkomgeving/Werkversie/rdf/model
+
 Publicatie definitieve versies
 ------------------------------
 
