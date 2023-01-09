@@ -1,0 +1,15 @@
+title: Copy all
+version: 0.1
+queries:
+  - title: copy all
+    query: >
+      insert {
+        graph <urn:output> {
+          ?s?p?o
+        }
+      }
+      where {
+        graph <urn:input> {
+          ?s?p?o
+        }
+      }

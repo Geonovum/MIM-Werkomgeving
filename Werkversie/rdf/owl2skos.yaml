@@ -1,0 +1,145 @@
+title: Convertion of OWL ontology to SKOS concept scheme
+version: 0.1
+queries:
+  - title: create concept scheme
+    query: >
+      prefix skos: <http://www.w3.org/2004/02/skos/core#>
+      prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+      insert {
+        graph <urn:output> {
+          <http://definities.geostandaarden.nl/mim/id/begrippenkader/> a skos:ConceptScheme;
+            rdfs:label "MIM Begrippenkader"
+          .
+        }
+      }
+      where {}
+  - title: create concepts from classes
+    query: >
+      prefix owl: <http://www.w3.org/2002/07/owl#>
+      prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+      prefix skos: <http://www.w3.org/2004/02/skos/core#>
+      prefix dct: <http://purl.org/dc/terms/>
+      insert {
+        graph <urn:output> {
+          ?concept a skos:Concept.
+          ?concept skos:inScheme <http://definities.geostandaarden.nl/mim/id/begrippenkader/>.
+        }
+        graph <urn:input> {
+          ?class dct:subject ?concept.
+        }
+      }
+      where {
+        select (iri(concat("http://definities.geostandaarden.nl/mim/id/begrip/",strafter(str(?class),"#"))) as ?concept) ?class
+        where {
+          graph <urn:input> {
+            ?class a ?t
+            FILTER (?t=owl:Class || ?t=rdfs:Class)
+          }
+        }
+      }
+  - title: create concepts from attributes
+    query: >
+      prefix owl: <http://www.w3.org/2002/07/owl#>
+      prefix skos: <http://www.w3.org/2004/02/skos/core#>
+      prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+      prefix dct: <http://purl.org/dc/terms/>
+      insert {
+        graph <urn:output> {
+          ?concept a skos:Concept.
+        }
+        graph <urn:input> {
+          ?property dct:subject ?concept.
+        }
+      }
+      where {
+        select (iri(concat("http://definities.geostandaarden.nl/mim/id/begrip/",strafter(str(?property),"#"))) as ?concept) ?property
+        where {
+          graph <urn:input> {
+            ?property a ?t
+            FILTER (?t=owl:DatatypeProperty || ?t=owl:ObjectProperty || ?t=rdf:Property)
+          }
+        }
+      }
+  - title: add labels
+    query: >
+      prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+      prefix skos: <http://www.w3.org/2004/02/skos/core#>
+      prefix dct: <http://purl.org/dc/terms/>
+      insert {
+        graph <urn:output> {
+          ?concept rdfs:label ?label.
+          ?concept skos:prefLabel ?label.
+        }
+      }
+      where {
+        graph <urn:input> {
+          ?owlterm dct:subject ?concept.
+          ?owlterm rdfs:label ?label
+        }
+      }
+  - title: add definition from comments
+    query: >
+      prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+      prefix skos: <http://www.w3.org/2004/02/skos/core#>
+      prefix dct: <http://purl.org/dc/terms/>
+      insert {
+        graph <urn:output> {
+          ?concept skos:definition ?comment
+        }
+      }
+      where {
+        graph <urn:input> {
+          ?owlterm dct:subject ?concept.
+          ?owlterm rdfs:comment ?comment
+        }
+      }
+  - title: add source reference
+    query: >
+      prefix dct: <http://purl.org/dc/terms/>
+      insert {
+        graph <urn:output> {
+          ?concept dct:source ?source
+        }
+      }
+      where {
+        graph <urn:input> {
+          ?owlterm dct:subject ?concept.
+          ?owlterm dct:source ?source
+        }
+      }
+  - title: add broader from subclass
+    query: >
+      prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+      prefix skos: <http://www.w3.org/2004/02/skos/core#>
+      prefix dct: <http://purl.org/dc/terms/>
+      insert {
+        graph <urn:output> {
+          ?concept skos:broader ?broader
+        }
+      }
+      where {
+        graph <urn:input> {
+          ?sub dct:subject ?concept.
+          ?super dct:subject ?broader.
+          ?sub rdfs:subClassOf ?super
+        }
+      }
+  - title: copy skos concepts from ontology (list of values)
+    query: >
+      prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+      prefix skos: <http://www.w3.org/2004/02/skos/core#>
+      prefix dct: <http://purl.org/dc/terms/>
+      insert {
+        graph <urn:output> {
+          ?concept a skos:Concept.
+          ?concept skos:inScheme <http://definities.geostandaarden.nl/mim/id/begrippenkader/>.
+          ?concept ?p ?o
+        }
+      }
+      where {
+        graph <urn:input> {
+          ?concept a skos:Concept.
+          ?concept ?p ?o
+          FILTER (isLiteral(?o))
+        }
+      }

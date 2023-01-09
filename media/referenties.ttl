@@ -5,23 +5,564 @@
 @prefix dct: <http://purl.org/dc/terms/>.
 @prefix foaf: <http://xmlns.com/foaf/0.1/>.
 
-mimdoc:sectie2.5.2 a dct:BibliographicResource;
+mimdoc:schema a skos:ConceptScheme. #Technisch nodig voor skosmos applicatie, geen betekenisvolle waarde
+
+mimdoc:nora-online a dct:BibliographicResource;
+  rdfs:label "Nora online";
+  dct:bibliographicCitation "Nora online";
+  foaf:page <https://www.noraonline.nl>;
+.
+mimdoc:nora-authentiek-gegeven a dct:BibliographicResource;
+  rdfs:label "Nora online: authentiek gegeven";
+  dct:bibliographicCitation "Nora online: authentiek gegeven";
+  foaf:page <https://www.noraonline.nl/wiki/Authentiek_gegeven>;
+  dct:isPartOf mimdoc:nora-online;
+.
+mimdoc:nora-authentiek-gegeven a dct:BibliographicResource;
+  rdfs:label "Nora online: authentiek gegeven";
+  dct:bibliographicCitation "Nora online: authentiek gegeven";
+  foaf:page <https://www.noraonline.nl/wiki/Basisgegeven>;
+  dct:isPartOf mimdoc:nora-online;
+.
+
+mimdoc:standard a dct:BibliographicResource;
+  rdfs:label "Metamodel algemeen";
+  dct:bibliographicCitation "MIM - Metamodel Informatie Modellering";
+  foaf:page <https://docs.geostandaarden.nl/mim/mim/>;
+.
+
+mimdoc:sectie2 a dct:BibliographicResource;
+  rdfs:label "Metamodel algemeen";
+  dct:bibliographicCitation "Sectie 2 Metamodel algemeen";
+  foaf:page <https://docs.geostandaarden.nl/mim/mim/#metamodel-algemeen>;
+  dct:isPartOf mimdoc:standard
+.
+
+mimdoc:sectie2.2 a dct:BibliographicResource;
+  rdfs:label "Objecttypen en attribuutsoorten";
+  dct:bibliographicCitation "Sectie 2.2 Objecttypen en attribuutsoorten";
+  foaf:page <https://docs.geostandaarden.nl/mim/mim/#objecttypen-en-attribuutsoorten>;
+  dct:isPartOf mimdoc:sectie2
+.
+mimdoc:sectie2.2.1 a dct:BibliographicResource;
   rdfs:label "Objecttype";
-  dct:bibliographicCitation "Sectie 2.5.2 Objecten en objecttype";
-  foaf:page <https://geonovum.github.io/MIM-Werkomgeving/#objecten-en-objecttype>
+  dct:bibliographicCitation "Sectie 2.2.1 Objecttype";
+  foaf:page <https://docs.geostandaarden.nl/mim/mim/#objecttype>;
+  dct:isPartOf mimdoc:sectie2.2
+.
+mimdoc:sectie2.2.2 a dct:BibliographicResource;
+  rdfs:label "Attribuutsoort";
+  dct:bibliographicCitation "Sectie 2.2.2 Attribuutsoort";
+  foaf:page <https://docs.geostandaarden.nl/mim/mim/#attribuutsoort>;
+  dct:isPartOf mimdoc:sectie2.2
+.
+mimdoc:sectie2.2.3 a dct:BibliographicResource;
+  rdfs:label "Gegevensgroep";
+  dct:bibliographicCitation "Sectie 2.2.3 Gegevensgroep";
+  foaf:page <https://docs.geostandaarden.nl/mim/mim/#gegevensgroep>;
+  dct:isPartOf mimdoc:sectie2.2
+
+.
+mimdoc:sectie2.2.4 a dct:BibliographicResource;
+  rdfs:label "Gegevensgroeptype";
+  dct:bibliographicCitation "Sectie 2.2.4 Gegevensgroeptype";
+  foaf:page <https://docs.geostandaarden.nl/mim/mim/#gegevensgroeptype>;
+  dct:isPartOf mimdoc:sectie2.2
+
+.
+
+mimdoc:sectie2.3 a dct:BibliographicResource;
+  rdfs:label "Relaties";
+  dct:bibliographicCitation "Sectie 2.3 Relaties";
+  foaf:page <https://docs.geostandaarden.nl/mim/mim/#relaties>;
+  dct:isPartOf mimdoc:sectie2
+.
+mimdoc:sectie2.3.1 a dct:BibliographicResource;
+  rdfs:label "Generalisatie";
+  dct:bibliographicCitation "Sectie 2.3.1 Generalisatie";
+  foaf:page <https://docs.geostandaarden.nl/mim/mim/#generalisatie>;
+  dct:isPartOf mimdoc:sectie2.3
+.
+mimdoc:sectie2.3.2 a dct:BibliographicResource;
+  rdfs:label "Relatiesoort";
+  dct:bibliographicCitation "Sectie 2.3.2 Relatiesoort";
+  foaf:page <https://docs.geostandaarden.nl/mim/mim/#relatiesoort>;
+  dct:isPartOf mimdoc:sectie2.3
+.
+mimdoc:sectie2.3.3 a dct:BibliographicResource;
+  rdfs:label "Relatieklasse";
+  dct:bibliographicCitation "Sectie 2.3.3 Relatieklasse";
+  foaf:page <https://docs.geostandaarden.nl/mim/mim/#relatieklasse>;
+  dct:isPartOf mimdoc:sectie2.3
+.
+mimdoc:sectie2.3.4 a dct:BibliographicResource;
+  rdfs:label "Externe koppeling";
+  dct:bibliographicCitation "Sectie 2.3.4 Externe koppeling";
+  foaf:page <https://docs.geostandaarden.nl/mim/mim/#externe-koppeling>;
+  dct:isPartOf mimdoc:sectie2.3
+.
+mimdoc:sectie2.3.5 a dct:BibliographicResource;
+  rdfs:label "Relatierol";
+  dct:bibliographicCitation "Sectie 2.3.5 Relatierol";
+  foaf:page <https://docs.geostandaarden.nl/mim/mim/#relatierol>;
+  dct:isPartOf mimdoc:sectie2.3
+.
+
+mimdoc:sectie2.4 a dct:BibliographicResource;
+  rdfs:label "Waardelijsten";
+  dct:bibliographicCitation "Sectie 2.4 Waardelijsten";
+  foaf:page <https://docs.geostandaarden.nl/mim/mim/#waardelijsten>;
+  dct:isPartOf mimdoc:sectie2
+.
+mimdoc:sectie2.4.1 a dct:BibliographicResource;
+  rdfs:label "Referentielijst";
+  dct:bibliographicCitation "Sectie 2.4.1 Referentielijst";
+  foaf:page <https://docs.geostandaarden.nl/mim/mim/#referentielijst>;
+  dct:isPartOf mimdoc:sectie2.4
+.
+mimdoc:sectie2.4.2 a dct:BibliographicResource;
+  rdfs:label "Referentie element";
+  dct:bibliographicCitation "Sectie 2.4.2 Referentie element";
+  foaf:page <https://docs.geostandaarden.nl/mim/mim/#referentie-element>;
+  dct:isPartOf mimdoc:sectie2.4
+.
+mimdoc:sectie2.4.3 a dct:BibliographicResource;
+  rdfs:label "Enumeratie";
+  dct:bibliographicCitation "Sectie 2.4.3 Enumeratie";
+  foaf:page <https://docs.geostandaarden.nl/mim/mim/#enumeratie>;
+  dct:isPartOf mimdoc:sectie2.4
+.
+mimdoc:sectie2.4.4 a dct:BibliographicResource;
+  rdfs:label "Enumeratiewaarde";
+  dct:bibliographicCitation "Sectie 2.4.4 Enumeratiewaarde";
+  foaf:page <https://docs.geostandaarden.nl/mim/mim/#enumeratiewaarde>;
+  dct:isPartOf mimdoc:sectie2.4
+.
+mimdoc:sectie2.4.5 a dct:BibliographicResource;
+  rdfs:label "Codelijst";
+  dct:bibliographicCitation "Sectie 2.4.5 Codelijst";
+  foaf:page <https://docs.geostandaarden.nl/mim/mim/#codelijst>;
+  dct:isPartOf mimdoc:sectie2.4
+.
+
+mimdoc:sectie2.5 a dct:BibliographicResource;
+  rdfs:label "Datatypen";
+  dct:bibliographicCitation "Sectie 2.5 Datatypen";
+  foaf:page <https://docs.geostandaarden.nl/mim/mim/#datatypen-0>;
+  dct:isPartof mimdoc:sectie2;
+.
+mimdoc:sectie2.5.1 a dct:BibliographicResource;
+  rdfs:label "Primitief datatype";
+  dct:bibliographicCitation "Sectie 2.5.1 Primitief datatype";
+  foaf:page <https://docs.geostandaarden.nl/mim/mim/#primitief-datatype>;
+  dct:isPartOf mimdoc:sectie2.5
+.
+mimdoc:sectie2.5.2 a dct:BibliographicResource;
+  rdfs:label "Gestructureerd datatype";
+  dct:bibliographicCitation "Sectie 2.5.2 Gestructureerd datatype";
+  foaf:page <https://docs.geostandaarden.nl/mim/mim/#gestructureerd-datatype>;
+  dct:isPartOf mimdoc:sectie2.5
 .
 mimdoc:sectie2.5.3 a dct:BibliographicResource;
-  rdfs:label "Attribuutsoort";
-  dct:bibliographicCitation "Sectie 2.5.3 Attribuutsoort en een groepering ervan";
-  foaf:page <https://geonovum.github.io/MIM-Werkomgeving/#attribuutsoort-en-een-groepering-ervan>
+  rdfs:label "Gestructureerd datatype";
+  dct:bibliographicCitation "Sectie 2.5.3 Gestructureerd datatype";
+  foaf:page <https://docs.geostandaarden.nl/mim/mim/#data-element>;
+  dct:isPartOf mimdoc:sectie2.5
 .
-mimdoc:sectie2.5.4 a dct:BibliographicResource;
-  rdfs:label "Gegevensgroep";
-  dct:bibliographicCitation "Sectie 2.5.4 Gegevensgroep";
-  foaf:page <https://geonovum.github.io/MIM-Werkomgeving/#gegevensgroep>
+
+mimdoc:sectie2.6 a dct:BibliographicResource;
+  rdfs:label "Packages";
+  dct:bibliographicCitation "Sectie 2.6 Packages";
+  foaf:page <https://docs.geostandaarden.nl/mim/mim/#packages>;
+  dct:isPartof mimdoc:sectie2;
 .
-mimdoc:sectie2.5.5 a dct:BibliographicResource;
-  rdfs:label "Gegevensgroeptype";
-  dct:bibliographicCitation "Sectie 2.5.5 Gegevensgroeptype";
-  foaf:page <https://geonovum.github.io/MIM-Werkomgeving/#gegevensgroeptype>
+mimdoc:sectie2.6.1 a dct:BibliographicResource;
+  rdfs:label "Informatiemodel";
+  dct:bibliographicCitation "Sectie 2.6.1 Informatiemodel";
+  foaf:page <https://docs.geostandaarden.nl/mim/mim/#informatiemodel>;
+  dct:isPartOf mimdoc:sectie2.6
+.
+mimdoc:sectie2.6.2 a dct:BibliographicResource;
+  rdfs:label "Domein";
+  dct:bibliographicCitation "Sectie 2.6.2 Domein";
+  foaf:page <https://docs.geostandaarden.nl/mim/mim/#domein>;
+  dct:isPartOf mimdoc:sectie2.6
+.
+mimdoc:sectie2.6.3 a dct:BibliographicResource;
+  rdfs:label "Domein";
+  dct:bibliographicCitation "Sectie 2.6.3 Extern";
+  foaf:page <https://docs.geostandaarden.nl/mim/mim/#extern>;
+  dct:isPartOf mimdoc:sectie2.6
+.
+mimdoc:sectie2.6.4 a dct:BibliographicResource;
+  rdfs:label "View";
+  dct:bibliographicCitation "Sectie 2.6.4 View";
+  foaf:page <https://docs.geostandaarden.nl/mim/mim/#view>;
+  dct:isPartOf mimdoc:sectie2.6
+.
+
+mimdoc:sectie2.7 a dct:BibliographicResource;
+  rdfs:label "Overige modelelementen";
+  dct:bibliographicCitation "Sectie 2.7 Overige modelelementen";
+  foaf:page <https://docs.geostandaarden.nl/mim/mim/#overige-modelelementen>;
+  dct:isPartof mimdoc:sectie2;
+.
+mimdoc:sectie2.7.1 a dct:BibliographicResource;
+  rdfs:label "Constraint";
+  dct:bibliographicCitation "Sectie 2.7.1 Constraint";
+  foaf:page <https://docs.geostandaarden.nl/mim/mim/#constraint>;
+  dct:isPartOf mimdoc:sectie2.7
+.
+mimdoc:sectie2.7.2 a dct:BibliographicResource;
+  rdfs:label "Keuze";
+  dct:bibliographicCitation "Sectie 2.7.2 Keuze";
+  foaf:page <https://docs.geostandaarden.nl/mim/mim/#keuze>;
+  dct:isPartOf mimdoc:sectie2.7
+.
+
+mimdoc:sectie2.8 a dct:BibliographicResource;
+  rdfs:label "Specificatie metagegevens";
+  dct:bibliographicCitation "Sectie 2.8 Specificatie metagegevens";
+  foaf:page <https://docs.geostandaarden.nl/mim/mim/#specificatie-metagegevens>;
+  dct:isPartof mimdoc:sectie2;
+.
+
+mimdoc:sectie2.8.1 a dct:BibliographicResource;
+  rdfs:label "Specificatie metagegevens informatiemodel";
+  dct:bibliographicCitation "Sectie 2.8.1 Specificatie metagegevens informatiemodel";
+  foaf:page <https://docs.geostandaarden.nl/mim/mim/#specificatie-metagegevens-informatiemodel>;
+  dct:isPartof mimdoc:sectie2.8;
+.
+mimdoc:sectie2.8.1.1 a dct:BibliographicResource;
+  rdfs:label "Specificatie metagegevens informatiemodel";
+  dct:bibliographicCitation "Sectie 2.8.1.1 Metagegeven: informatiedomein";
+  foaf:page <https://docs.geostandaarden.nl/mim/mim/#metagegeven-informatiedomein>;
+  dct:isPartof mimdoc:sectie2.8.1;
+.
+mimdoc:sectie2.8.1.2 a dct:BibliographicResource;
+  rdfs:label "Metagegeven: informatiemodeltype";
+  dct:bibliographicCitation "Sectie 2.8.1.2 Metagegeven: informatiemodeltype";
+  foaf:page <https://docs.geostandaarden.nl/mim/mim/#metagegeven-informatiemodel-type>;
+  dct:isPartof mimdoc:sectie2.8.1;
+.
+mimdoc:sectie2.8.1.3 a dct:BibliographicResource;
+  rdfs:label "Metagegeven: relatiemodelleringstype";
+  dct:bibliographicCitation "Sectie 2.8.1.3 Metagegeven: relatiemodelleringstype";
+  foaf:page <https://docs.geostandaarden.nl/mim/mim/#metagegeven-relatiemodelleringstype>;
+  dct:isPartof mimdoc:sectie2.8.1;
+.
+mimdoc:sectie2.8.1.4 a dct:BibliographicResource;
+  rdfs:label "Metagegeven: MIM versie";
+  dct:bibliographicCitation "Sectie 2.8.1.4 Metagegeven: MIM versie";
+  foaf:page <https://docs.geostandaarden.nl/mim/mim/#metagegeven-mim-versie>;
+  dct:isPartof mimdoc:sectie2.8.1;
+.
+mimdoc:sectie2.8.1.5 a dct:BibliographicResource;
+  rdfs:label "Metagegeven: MIM extensie";
+  dct:bibliographicCitation "Sectie 2.8.1.5 Metagegeven: MIM extensie";
+  foaf:page <https://docs.geostandaarden.nl/mim/mim/#metagegeven-mim-extensie>;
+  dct:isPartof mimdoc:sectie2.8.1;
+.
+mimdoc:sectie2.8.1.6 a dct:BibliographicResource;
+  rdfs:label "Metagegeven: MIM taal";
+  dct:bibliographicCitation "Sectie 2.8.1.6 Metagegeven: MIM taal";
+  foaf:page <https://docs.geostandaarden.nl/mim/mim/#metagegeven-mim-taal>;
+  dct:isPartof mimdoc:sectie2.8.1;
+.
+
+mimdoc:sectie2.8.2 a dct:BibliographicResource;
+  rdfs:label "Specificatie metagegevens modelelementen";
+  dct:bibliographicCitation "Sectie 2.8.2 Specificatie metagegevens modelelementen";
+  foaf:page <https://docs.geostandaarden.nl/mim/mim/#specificatie-metagegevens-modelelementen>;
+  dct:isPartof mimdoc:sectie2.8;
+.
+mimdoc:sectie2.8.2.1 a dct:BibliographicResource;
+  rdfs:label "Metagegeven: naam";
+  dct:bibliographicCitation "Sectie 2.8.2.1 Metagegeven: naam";
+  foaf:page <https://docs.geostandaarden.nl/mim/mim/#metagegeven-naam>;
+  dct:isPartof mimdoc:sectie2.8.2;
+.
+mimdoc:sectie2.8.2.2 a dct:BibliographicResource;
+  rdfs:label "Metagegeven: alias";
+  dct:bibliographicCitation "Sectie 2.8.2.2 Metagegeven: alias";
+  foaf:page <https://docs.geostandaarden.nl/mim/mim/#metagegeven-alias>;
+  dct:isPartof mimdoc:sectie2.8.2;
+.
+mimdoc:sectie2.8.2.3 a dct:BibliographicResource;
+  rdfs:label "Metagegeven: begrip";
+  dct:bibliographicCitation "Sectie 2.8.2.3 Metagegeven: begrip";
+  foaf:page <https://docs.geostandaarden.nl/mim/mim/#metagegeven-begrip>;
+  dct:isPartof mimdoc:sectie2.8.2;
+.
+mimdoc:sectie2.8.2.4 a dct:BibliographicResource;
+  rdfs:label "Metagegeven: naam";
+  dct:bibliographicCitation "Sectie 2.8.2.4 Metagegeven: naam";
+  foaf:page <https://docs.geostandaarden.nl/mim/mim/#metagegeven-naam>;
+  dct:isPartof mimdoc:sectie2.8.2;
+.
+mimdoc:sectie2.8.2.5 a dct:BibliographicResource;
+  rdfs:label "Metagegeven: definitie";
+  dct:bibliographicCitation "Sectie 2.8.2.5 Metagegeven: definitie";
+  foaf:page <https://docs.geostandaarden.nl/mim/mim/#metagegeven-definitie>;
+  dct:isPartof mimdoc:sectie2.8.2;
+.
+mimdoc:sectie2.8.2.6 a dct:BibliographicResource;
+  rdfs:label "Metagegeven: herkomst definitie";
+  dct:bibliographicCitation "Sectie 2.8.2.6 Metagegeven: herkomst definitie";
+  foaf:page <https://docs.geostandaarden.nl/mim/mim/#metagegeven-herkomst-definitie>;
+  dct:isPartof mimdoc:sectie2.8.2;
+.
+mimdoc:sectie2.8.2.7 a dct:BibliographicResource;
+  rdfs:label "Metagegeven: toelichting";
+  dct:bibliographicCitation "Sectie 2.8.2.7 Metagegeven: toelichting";
+  foaf:page <https://docs.geostandaarden.nl/mim/mim/#metagegeven-toelichting>;
+  dct:isPartof mimdoc:sectie2.8.2;
+.
+mimdoc:sectie2.8.2.8 a dct:BibliographicResource;
+  rdfs:label "Metagegeven: datum opname";
+  dct:bibliographicCitation "Sectie 2.8.2.8 Metagegeven: datum opname";
+  foaf:page <https://docs.geostandaarden.nl/mim/mim/#metagegeven-datum-opname>;
+  dct:isPartof mimdoc:sectie2.8.2;
+.
+mimdoc:sectie2.8.2.9 a dct:BibliographicResource;
+  rdfs:label "Metagegeven: identificerend";
+  dct:bibliographicCitation "Sectie 2.8.2.9 Metagegeven: identificerend";
+  foaf:page <https://docs.geostandaarden.nl/mim/mim/#metagegeven-identificerend>;
+  dct:isPartof mimdoc:sectie2.8.2;
+.
+mimdoc:sectie2.8.2.10 a dct:BibliographicResource;
+  rdfs:label "Metagegeven: indicatie materiële historie";
+  dct:bibliographicCitation "Sectie 2.8.2.10 Metagegeven: indicatie materiële historie";
+  foaf:page <https://docs.geostandaarden.nl/mim/mim/#metagegeven-indicatie-materiele-historie>;
+  dct:isPartof mimdoc:sectie2.8.2;
+.
+mimdoc:sectie2.8.2.11 a dct:BibliographicResource;
+  rdfs:label "Metagegeven: indicatie formele historie";
+  dct:bibliographicCitation "Sectie 2.8.2.11 Metagegeven: indicatie formele historie";
+  foaf:page <https://docs.geostandaarden.nl/mim/mim/#metagegeven-indicatie-formele-historie>;
+  dct:isPartof mimdoc:sectie2.8.2;
+.
+mimdoc:sectie2.8.2.12 a dct:BibliographicResource;
+  rdfs:label "Metagegeven: kardinaliteit";
+  dct:bibliographicCitation "Sectie 2.8.2.12 Metagegeven: kardinaliteit";
+  foaf:page <https://docs.geostandaarden.nl/mim/mim/#metagegeven-kardinaliteit>;
+  dct:isPartof mimdoc:sectie2.8.2;
+.
+mimdoc:sectie2.8.2.13 a dct:BibliographicResource;
+  rdfs:label "Metagegeven: kardinaliteit relatie bron";
+  dct:bibliographicCitation "Sectie 2.8.2.13 Metagegeven: kardinaliteit relatie bron";
+  foaf:page <https://docs.geostandaarden.nl/mim/mim/#metagegeven-kardinaliteit-relatie-bron>;
+  dct:isPartof mimdoc:sectie2.8.2;
+.
+mimdoc:sectie2.8.2.14 a dct:BibliographicResource;
+  rdfs:label "Metagegeven: authentiek";
+  dct:bibliographicCitation "Sectie 2.8.2.14 Metagegeven: authentiek";
+  foaf:page <https://docs.geostandaarden.nl/mim/mim/#metagegeven-authentiek>;
+  dct:isPartof mimdoc:sectie2.8.2;
+.
+mimdoc:sectie2.8.2.15 a dct:BibliographicResource;
+  rdfs:label "Metagegeven: indicatie afleidbaar";
+  dct:bibliographicCitation "Sectie 2.8.2.15 Metagegeven: indicatie afleidbaar";
+  foaf:page <https://docs.geostandaarden.nl/mim/mim/#metagegeven-indicatie-afleidbaar>;
+  dct:isPartof mimdoc:sectie2.8.2;
+.
+mimdoc:sectie2.8.2.16 a dct:BibliographicResource;
+  rdfs:label "Metagegeven: identificatie classificerend";
+  dct:bibliographicCitation "Sectie 2.8.2.16 Metagegeven: identificatie classificerend";
+  foaf:page <https://docs.geostandaarden.nl/mim/mim/#metagegeven-indicatie-classificerend>;
+  dct:isPartof mimdoc:sectie2.8.2;
+.
+mimdoc:sectie2.8.2.17 a dct:BibliographicResource;
+  rdfs:label "Metagegeven: mogelijk geen waarde";
+  dct:bibliographicCitation "Sectie 2.8.2.17 Metagegeven: mogelijk geen waarde";
+  foaf:page <https://docs.geostandaarden.nl/mim/mim/#metagegeven-mogelijk-geen-waarde>;
+  dct:isPartof mimdoc:sectie2.8.2;
+.
+mimdoc:sectie2.8.2.18 a dct:BibliographicResource;
+  rdfs:label "Metagegeven: bron";
+  dct:bibliographicCitation "Sectie 2.8.2.18 Metagegeven: bron";
+  foaf:page <https://docs.geostandaarden.nl/mim/mim/#metagegeven-bron>;
+  dct:isPartof mimdoc:sectie2.8.2;
+.
+mimdoc:sectie2.8.2.19 a dct:BibliographicResource;
+  rdfs:label "Metagegeven: doel";
+  dct:bibliographicCitation "Sectie 2.8.2.19 Metagegeven: doel";
+  foaf:page <https://docs.geostandaarden.nl/mim/mim/#metagegeven-doel>;
+  dct:isPartof mimdoc:sectie2.8.2;
+.
+mimdoc:sectie2.8.2.20 a dct:BibliographicResource;
+  rdfs:label "Metagegeven: unidirectioneel";
+  dct:bibliographicCitation "Sectie 2.8.2.20 Metagegeven: unidirectioneel";
+  foaf:page <https://docs.geostandaarden.nl/mim/mim/#metagegeven-unidirectioneel>;
+  dct:isPartof mimdoc:sectie2.8.2;
+.
+mimdoc:sectie2.8.2.21 a dct:BibliographicResource;
+  rdfs:label "Metagegeven: aggregatietype";
+  dct:bibliographicCitation "Sectie 2.8.2.21 Metagegeven: aggregatietype";
+  foaf:page <https://docs.geostandaarden.nl/mim/mim/#metagegeven-aggregatietype>;
+  dct:isPartof mimdoc:sectie2.8.2;
+.
+mimdoc:sectie2.8.2.22 a dct:BibliographicResource;
+  rdfs:label "Metagegeven: locatie";
+  dct:bibliographicCitation "Sectie 2.8.2.22 Metagegeven: locatie";
+  foaf:page <https://docs.geostandaarden.nl/mim/mim/#metagegeven-locatie>;
+  dct:isPartof mimdoc:sectie2.8.2;
+.
+mimdoc:sectie2.8.2.23 a dct:BibliographicResource;
+  rdfs:label "Metagegeven: type";
+  dct:bibliographicCitation "Sectie 2.8.2.23 Metagegeven: type";
+  foaf:page <https://docs.geostandaarden.nl/mim/mim/#metagegeven-type-domein-van-een-waarde-een-gegeven>;
+  dct:isPartof mimdoc:sectie2.8.2;
+.
+mimdoc:sectie2.8.2.24 a dct:BibliographicResource;
+  rdfs:label "Metagegeven: lengte";
+  dct:bibliographicCitation "Sectie 2.8.2.24 Metagegeven: lengte";
+  foaf:page <https://docs.geostandaarden.nl/mim/mim/#metagegeven-lengte>;
+  dct:isPartof mimdoc:sectie2.8.2;
+.
+mimdoc:sectie2.8.2.25 a dct:BibliographicResource;
+  rdfs:label "Metagegeven: patroon";
+  dct:bibliographicCitation "Sectie 2.8.2.25 Metagegeven: patroon";
+  foaf:page <https://docs.geostandaarden.nl/mim/mim/#metagegeven-patroon>;
+  dct:isPartof mimdoc:sectie2.8.2;
+.
+mimdoc:sectie2.8.2.26 a dct:BibliographicResource;
+  rdfs:label "Metagegeven: formeel patroon";
+  dct:bibliographicCitation "Sectie 2.8.2.26 Metagegeven: formeel patroon";
+  foaf:page <https://docs.geostandaarden.nl/mim/mim/#metagegeven-formeel-patroon>;
+  dct:isPartof mimdoc:sectie2.8.2;
+.
+mimdoc:sectie2.8.2.27 a dct:BibliographicResource;
+  rdfs:label "Metagegeven: code";
+  dct:bibliographicCitation "Sectie 2.8.2.27 Metagegeven: code";
+  foaf:page <https://docs.geostandaarden.nl/mim/mim/#metagegeven-code>;
+  dct:isPartof mimdoc:sectie2.8.2;
+.
+mimdoc:sectie2.8.2.28 a dct:BibliographicResource;
+  rdfs:label "Metagegeven: indicatie abstract object";
+  dct:bibliographicCitation "Sectie 2.8.2.28 Metagegeven: indicatie abstract object";
+  foaf:page <https://docs.geostandaarden.nl/mim/mim/#metagegeven-indicatie-abstract-object>;
+  dct:isPartof mimdoc:sectie2.8.2;
+.
+mimdoc:sectie2.8.2.29 a dct:BibliographicResource;
+  rdfs:label "Metagegeven: populatie";
+  dct:bibliographicCitation "Sectie 2.8.2.29 Metagegeven: populatie";
+  foaf:page <https://docs.geostandaarden.nl/mim/mim/#metagegeven-populatie>;
+  dct:isPartof mimdoc:sectie2.8.2;
+.
+mimdoc:sectie2.8.2.30 a dct:BibliographicResource;
+  rdfs:label "Metagegeven: kwaliteit";
+  dct:bibliographicCitation "Sectie 2.8.2.30 Metagegeven: kwaliteit";
+  foaf:page <https://docs.geostandaarden.nl/mim/mim/#metagegeven-kwaliteit>;
+  dct:isPartof mimdoc:sectie2.8.2;
+.
+
+mimdoc:sectie2.8.4 a dct:BibliographicResource;
+  rdfs:label "Structuur metamodel";
+  dct:bibliographicCitation "Sectie 2.8.4 Structuur metamodel";
+  foaf:page <https://docs.geostandaarden.nl/mim/mim/#structuur-metamodel-0>;
+  dct:isPartof mimdoc:sectie2.8;
+.
+mimdoc:sectie2.8.4.1 a dct:BibliographicResource;
+  rdfs:label "Metagegeven: heeft attribuut";
+  dct:bibliographicCitation "Sectie 2.8.4.1 Metagegeven: heeft attribuut";
+  foaf:page <https://docs.geostandaarden.nl/mim/mim/#metagegeven-heeft-attribuut>;
+  dct:isPartof mimdoc:sectie2.8.4;
+.
+mimdoc:sectie2.8.4.2 a dct:BibliographicResource;
+  rdfs:label "Metagegeven: heeft gegevensgroep";
+  dct:bibliographicCitation "Sectie 2.8.4.2 Metagegeven: heeft gegevensgroep";
+  foaf:page <https://docs.geostandaarden.nl/mim/mim/#metagegeven-heeft-gegevensgroep>;
+  dct:isPartof mimdoc:sectie2.8.4;
+.
+mimdoc:sectie2.8.4.3 a dct:BibliographicResource;
+  rdfs:label "Metagegeven: heeft gegevensgroeptype";
+  dct:bibliographicCitation "Sectie 2.8.4.3 Metagegeven: heeft gegevensgroeptype";
+  foaf:page <https://docs.geostandaarden.nl/mim/mim/#metagegeven-heeft-gegevensgroeptype>;
+  dct:isPartof mimdoc:sectie2.8.4;
+.
+mimdoc:sectie2.8.4.4 a dct:BibliographicResource;
+  rdfs:label "Metagegeven: verwijst naar supertype";
+  dct:bibliographicCitation "Sectie 2.8.4.4 Metagegeven: verwijst naar supertype";
+  foaf:page <https://docs.geostandaarden.nl/mim/mim/#metagegeven-verwijst-naar-supertype>;
+  dct:isPartof mimdoc:sectie2.8.4;
+.
+mimdoc:sectie2.8.4.5 a dct:BibliographicResource;
+  rdfs:label "Metagegeven: heeft datatype";
+  dct:bibliographicCitation "Sectie 2.8.4.5 Metagegeven: heeft datatype";
+  foaf:page <https://docs.geostandaarden.nl/mim/mim/#metagegeven-heeft-datatype>;
+  dct:isPartof mimdoc:sectie2.8.4;
+.
+mimdoc:sectie2.8.4.6 a dct:BibliographicResource;
+  rdfs:label "Metagegeven: heeft relatiesoort";
+  dct:bibliographicCitation "Sectie 2.8.4.6 Metagegeven: heeft relatiesoort";
+  foaf:page <https://docs.geostandaarden.nl/mim/mim/#metagegeven-heeft-relatiesoort>;
+  dct:isPartof mimdoc:sectie2.8.4;
+.
+mimdoc:sectie2.8.4.7 a dct:BibliographicResource;
+  rdfs:label "Metagegeven: heeft externe koppeling";
+  dct:bibliographicCitation "Sectie 2.8.4.7 Metagegeven: heeft externe koppeling";
+  foaf:page <https://docs.geostandaarden.nl/mim/mim/#metagegeven-heeft-externe-koppeling>;
+  dct:isPartof mimdoc:sectie2.8.4;
+.
+mimdoc:sectie2.8.4.8 a dct:BibliographicResource;
+  rdfs:label "Metagegeven: heeft data element";
+  dct:bibliographicCitation "Sectie 2.8.4.8 Metagegeven: heeft data element";
+  foaf:page <https://docs.geostandaarden.nl/mim/mim/#metagegeven-heeft-data-element>;
+  dct:isPartof mimdoc:sectie2.8.4;
+.
+mimdoc:sectie2.8.4.9 a dct:BibliographicResource;
+  rdfs:label "Metagegeven: bevat enumeratiewaarde";
+  dct:bibliographicCitation "Sectie 2.8.4.9 Metagegeven: bevat enumeratiewaarde";
+  foaf:page <https://docs.geostandaarden.nl/mim/mim/#metagegeven-bevat-enumeratiewaarde>;
+  dct:isPartof mimdoc:sectie2.8.4;
+.
+mimdoc:sectie2.8.4.10 a dct:BibliographicResource;
+  rdfs:label "Metagegeven: bevat referentie element";
+  dct:bibliographicCitation "Sectie 2.8.4.10 Metagegeven: bevat referentie element";
+  foaf:page <https://docs.geostandaarden.nl/mim/mim/#metagegeven-bevat-referentie-element>;
+  dct:isPartof mimdoc:sectie2.8.4;
+.
+mimdoc:sectie2.8.4.11 a dct:BibliographicResource;
+  rdfs:label "Metagegeven: heeft datatypekeuze";
+  dct:bibliographicCitation "Sectie 2.8.4.11 Metagegeven: heeft datatypekeuze";
+  foaf:page <https://docs.geostandaarden.nl/mim/mim/#metagegeven-heeft-datatypekeuze>;
+  dct:isPartof mimdoc:sectie2.8.4;
+.
+mimdoc:sectie2.8.4.12 a dct:BibliographicResource;
+  rdfs:label "Metagegeven: heeft keuzeattribuut";
+  dct:bibliographicCitation "Sectie 2.8.4.12 Metagegeven: heeft keuzeattribuut";
+  foaf:page <https://docs.geostandaarden.nl/mim/mim/#metagegeven-heeft-keuzeattribuut>;
+  dct:isPartof mimdoc:sectie2.8.4;
+.
+mimdoc:sectie2.8.4.13 a dct:BibliographicResource;
+  rdfs:label "Metagegeven: heeft keuzerelatiedoel";
+  dct:bibliographicCitation "Sectie 2.8.4.13 Metagegeven: heeft keuzerelatiedoel";
+  foaf:page <https://docs.geostandaarden.nl/mim/mim/#metagegeven-heeft-keuzerelatiedoel>;
+  dct:isPartof mimdoc:sectie2.8.4;
+.
+mimdoc:sectie2.8.4.14 a dct:BibliographicResource;
+  rdfs:label "Metagegeven: heeft constraint";
+  dct:bibliographicCitation "Sectie 2.8.4.14 Metagegeven: heeft constraint";
+  foaf:page <https://docs.geostandaarden.nl/mim/mim/#metagegeven-heeft-constraint>;
+  dct:isPartof mimdoc:sectie2.8.4;
+.
+
+mimdoc:sectie5 a dct:BibliographicResource;
+  rdfs:label "Afspraken & regels";
+  dct:bibliographicCitation "Sectie 5 Afspraken & regels";
+  foaf:page <https://docs.geostandaarden.nl/mim/mim/#afspraken-regels>;
+  dct:isPartof mimdoc:sectie5;
+.
+mimdoc:sectie5.1 a dct:BibliographicResource;
+  rdfs:label "Datatype(n)";
+  dct:bibliographicCitation "Sectie 5.1 Datatype(n)";
+  foaf:page <https://docs.geostandaarden.nl/mim/mim/#datatype-n>;
+  dct:isPartof mimdoc:sectie5;
+.
+mimdoc:sectie5.1.1 a dct:BibliographicResource;
+  rdfs:label "Primitieve datatypes";
+  dct:bibliographicCitation "Sectie 5.1.1 Primitieve datatypes";
+  foaf:page <https://docs.geostandaarden.nl/mim/mim/#primitive-datatypes>;
+  dct:isPartof mimdoc:sectie5.1;
 .
