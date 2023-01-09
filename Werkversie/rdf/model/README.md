@@ -4,7 +4,7 @@
 In deze map staan de bestanden die horen bij de werkversie van de MIM Ontologie.
 
 De webversie staat hier:
-<https://geonovum.github.io/MIM-Werkomgeving/Werkversie/rdf>
+<https://geonovum.github.io/MIM-Werkomgeving/Werkversie/rdf/model>
 
 
 De modelelementen zijn verplaatst naar de map /media:
