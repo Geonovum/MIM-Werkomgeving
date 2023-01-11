@@ -1,6 +1,35 @@
 # Ontologie
 
 ## Klassen
+- [mim:Modelelement](http://modellen.mim-standaard.nl/def/mim#Modelelement)
+  - [mim:Attribuutsoort](http://modellen.mim-standaard.nl/def/mim#Attribuutsoort)
+  - [mim:Constraint](http://modellen.mim-standaard.nl/def/mim#Constraint)
+    - [mim:Keuzeconstraint](http://modellen.mim-standaard.nl/def/mim#KeuzeConstraint)
+  - [mim:DataElement](http://modellen.mim-standaard.nl/def/mim#DataElement)
+  - [mim:Datatype](http://modellen.mim-standaard.nl/def/mim#Datatype)
+    - [mim:Codelijst](http://modellen.mim-standaard.nl/def/mim#Codelijst)
+    - [mim:Enumeratie](http://modellen.mim-standaard.nl/def/mim#Enumeratie)
+    - [mim:GestructureerdDatatype](http://modellen.mim-standaard.nl/def/mim#GestructureerdDatatype)
+    - [mim:Keuze](http://modellen.mim-standaard.nl/def/mim#Keuze)
+    - [mim:PrimitiefDatatype](http://modellen.mim-standaard.nl/def/mim#PrimitiefDatatype)
+    - [mim:Referentielijst](http://modellen.mim-standaard.nl/def/mim#Referentielijst)
+  - [mim:Enumeratiewaarde](http://modellen.mim-standaard.nl/def/mim#Enumeratiewaarde)
+  - [mim:ExterneKoppeling](http://modellen.mim-standaard.nl/def/mim#ExterneKoppeling)
+  - [mim:Gegevensgroep](http://modellen.mim-standaard.nl/def/mim#Gegevensgroep)
+  - [mim:Gegevensgroeptype](http://modellen.mim-standaard.nl/def/mim#Gegevensgroeptype)
+  - [mim:Generalisatie](http://modellen.mim-standaard.nl/def/mim#Generalisatie)
+  - [mim:Objecttype](http://modellen.mim-standaard.nl/def/mim#Objecttype)
+  - [mim:Package](http://modellen.mim-standaard.nl/def/mim#Package)
+    - [mim:Domein](http://modellen.mim-standaard.nl/def/mim#Domein)
+    - [mim:Extern](http://modellen.mim-standaard.nl/def/mim#Extern)
+    - [mim:Informatiemodel](http://modellen.mim-standaard.nl/def/mim#Informatiemodel)
+    - [mim:View](http://modellen.mim-standaard.nl/def/mim#View)
+  - [mim:ReferentieElement](http://modellen.mim-standaard.nl/def/mim#ReferentieElement)
+  - [mim:Relatierol](http://modellen.mim-standaard.nl/def/mim#Relatierol)
+    - [mim:RelatierolBron](http://modellen.mim-standaard.nl/def/mim#RelatierolBron)
+    - [mim:RelatierolDoel](http://modellen.mim-standaard.nl/def/mim#RelatierolDoel)
+  - [mim:Relatiesoort](http://modellen.mim-standaard.nl/def/mim#Relatiesoort)
+    - [mim:Relatieklasse](http://modellen.mim-standaard.nl/def/mim#Relatieklasse)
 
 ### Attribuutsoort
 

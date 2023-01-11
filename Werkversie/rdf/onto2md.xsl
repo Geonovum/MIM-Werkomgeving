@@ -14,12 +14,66 @@
 
 <xsl:output method="text"/>
 
+<xsl:variable name="params" select="/ROOT/@params"/>
+<xsl:variable name="lang">
+  <xsl:choose>
+    <xsl:when test="substring-after($params,'lang=')!=''"><xsl:value-of select="substring-after($params,'lang=')"/></xsl:when>
+    <xsl:otherwise>en</xsl:otherwise>
+  </xsl:choose>
+</xsl:variable>
+
 <xsl:key name="resource" match="/ROOT/rdf:RDF/rdf:Description" use="@rdf:about"/>
 <xsl:key name="blank" match="/ROOT/rdf:RDF/rdf:Description" use="@rdf:nodeID"/>
 <xsl:key name="nshape" match="/ROOT/rdf:RDF/rdf:Description" use="sh:targetClass/@rdf:resource"/>
 <xsl:key name="pshape" match="/ROOT/rdf:RDF/rdf:Description" use="sh:path/@rdf:resource"/>
 <xsl:key name="nshapep" match="/ROOT/rdf:RDF/rdf:Description" use="sh:property/@rdf:resource"/>
 <xsl:key name="concepts" match="/ROOT/rdf:RDF/rdf:Description" use="skos:inScheme/@rdf:resource"/>
+
+<xsl:variable name="namespace">
+  <xsl:value-of select="key('resource',/ROOT/rdf:RDF/rdf:Description/sh:declare/@rdf:nodeID)/sh:namespace[1]"/>
+</xsl:variable>
+
+<!-- Deze nog integreren met degene hieronder -->
+<xsl:template match="@*" mode="reflabel">
+  <xsl:variable name="pshapelabel"><xsl:apply-templates select="key('nshape',.)[1]" mode="label"/></xsl:variable>
+  <xsl:variable name="nshapelabel"><xsl:apply-templates select="key('pshape',.)[1]" mode="label"/></xsl:variable>
+  <xsl:variable name="definedlabel"><xsl:apply-templates select="key('resource',.)" mode="label"/></xsl:variable>
+  <xsl:choose>
+    <xsl:when test="$definedlabel!=''"><xsl:value-of select="$definedlabel"/></xsl:when>
+    <xsl:when test="$nshapelabel!=''"><xsl:value-of select="$nshapelabel"/></xsl:when>
+    <xsl:when test="$pshapelabel!=''"><xsl:value-of select="$pshapelabel"/></xsl:when>
+    <xsl:otherwise><xsl:value-of select="."/></xsl:otherwise>
+  </xsl:choose>
+</xsl:template>
+
+<xsl:template match="*" mode="label">
+  <xsl:variable name="pshapelabel"><xsl:apply-templates select="key('nshape',@rdf:about)[1]" mode="label"/></xsl:variable>
+  <xsl:variable name="nshapelabel"><xsl:apply-templates select="key('pshape',@rdf:about)[1]" mode="label"/></xsl:variable>
+  <xsl:choose>
+    <xsl:when test="exists(sh:name)"><xsl:value-of select="sh:name"/></xsl:when>
+    <xsl:when test="$nshapelabel!=''"><xsl:value-of select="$nshapelabel"/></xsl:when>
+    <xsl:when test="$pshapelabel!=''"><xsl:value-of select="$pshapelabel"/></xsl:when>
+    <xsl:when test="rdfs:label[@xml:lang=$lang]!=''"><xsl:value-of select="rdfs:label[@xml:lang=$lang]"/></xsl:when>
+    <xsl:otherwise><xsl:value-of select="rdfs:label[1]"/></xsl:otherwise>
+  </xsl:choose>
+</xsl:template>
+
+<xsl:template match="@*" mode="link">
+  <xsl:choose>
+    <xsl:when test="starts-with(.,$namespace) and ends-with($namespace,'#')">#<xsl:value-of select="substring-after(.,$namespace)"/></xsl:when>
+    <xsl:otherwise><xsl:value-of select="."/></xsl:otherwise>
+  </xsl:choose>
+</xsl:template>
+
+<xsl:template match="*" mode="labelledlink">
+  <xsl:text>[</xsl:text><xsl:apply-templates select="." mode="label"/><xsl:text>](</xsl:text>
+  <xsl:apply-templates select="@rdf:about" mode="link"/>
+  <xsl:text>)</xsl:text>
+</xsl:template>
+
+<xsl:template match="@*" mode="anchor">
+  <xsl:text>[</xsl:text><xsl:apply-templates select="." mode="reflabel"/><xsl:text>](</xsl:text><xsl:apply-templates select="." mode="link"/><xsl:text>)</xsl:text>
+</xsl:template>
 
 <xsl:template match="text()|*" mode="header1">
   <xsl:text># </xsl:text><xsl:value-of select="."/><xsl:text>&#xa;</xsl:text>
@@ -174,6 +228,23 @@
   <xsl:apply-templates select="." mode="meta-eigenaar"/>
 </xsl:template>
 
+<xsl:template match="rdf:Description" mode="class-hierarchy-leaf">
+  <xsl:param name="spaces"/>
+  <xsl:value-of select="$spaces"/><xsl:text>- </xsl:text>
+  <xsl:apply-templates select="." mode="labelledlink"/>
+  <xsl:text>&#xa;</xsl:text>
+  <xsl:variable name="uri" select="@rdf:about"/>
+  <xsl:for-each select="../rdf:Description[rdf:type/@rdf:resource='http://www.w3.org/2002/07/owl#Class' and rdfs:subClassOf/@rdf:resource=$uri]"><xsl:sort select="concat(key('nshape',@rdf:about)/sh:name[1],rdfs:label[@xml:lang=$lang],rdfs:label[1])"/>
+    <xsl:apply-templates select="." mode="class-hierarchy-leaf"><xsl:with-param name="spaces"><xsl:value-of select="concat($spaces,'  ')"/></xsl:with-param></xsl:apply-templates>
+  </xsl:for-each>
+</xsl:template>
+
+<xsl:template match="rdf:RDF" mode="class-hierarchy">
+  <xsl:for-each select="rdf:Description[rdf:type/@rdf:resource='http://www.w3.org/2002/07/owl#Class' and not(exists(rdfs:subClassOf))]"><xsl:sort select="concat(key('nshape',@rdf:about)/sh:name[1],rdfs:label[@xml:lang=$lang],rdfs:label[1])"/>
+    <xsl:apply-templates select="." mode="class-hierarchy-leaf"><xsl:with-param name="spaces"></xsl:with-param></xsl:apply-templates>
+  </xsl:for-each>
+</xsl:template>
+
 <xsl:template match="/ROOT/rdf:RDF">
   <xsl:variable name="ontologie">Ontologie</xsl:variable>
   <xsl:variable name="klassen">Klassen</xsl:variable>
@@ -181,6 +252,7 @@
   <xsl:variable name="attributen">Eigenschappen (metagegevens)</xsl:variable>
   <xsl:apply-templates select="$ontologie" mode="header1"/>
   <xsl:apply-templates select="$klassen" mode="header2"/>
+  <xsl:apply-templates select="." mode="class-hierarchy"/>
   <xsl:for-each select="rdf:Description[rdf:type/@rdf:resource='http://www.w3.org/2002/07/owl#Class']"><xsl:sort select="rdfs:label"/>
     <xsl:apply-templates select="." mode="classes"/>
   </xsl:for-each>
