@@ -7,7 +7,7 @@ De webversie staat hier:
 <https://geonovum.github.io/MIM-Werkomgeving/Werkversie/rdf/model>
 
 De finale versie zou hier moeten komen:
-<http://definities.mim-standaard.nl/def/mim>
+<http://modellen.mim-standaard.nl/def/mim>
 
 De modelelementen zijn verplaatst naar de map /media:
 - mim.ttl => De ontologie
