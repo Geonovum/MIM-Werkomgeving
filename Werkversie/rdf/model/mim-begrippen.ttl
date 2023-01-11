@@ -91,7 +91,8 @@ mimbegrip:Codelijst  rdf:type  skos:Concept ;
         skos:broader     mimbegrip:Datatype ;
         skos:definition  "De representatie van een lijst met een opsomming van de mogelijke domeinwaarden van een attribuutsoort, die buiten het model in een externe waardenlijst worden beheerd. De domeinwaarden in de lijst kunnen in de loop van de tijd aangepast, uitgebreid, of verwijderd worden, zonder dat het informatiemodel aangepast wordt (in tegenstelling tot bij een enumeratie). De representatie bevat geen kenmerken, voor alle kenmerken wordt verwezen naar de specificatie van de externe waardelijst."@nl ;
         skos:inScheme    <http://definities.mim-standaard.nl/id/begrippenkader/MIM> ;
-        skos:prefLabel   "Codelijst"@nl .
+        skos:prefLabel   "Codelijst"@nl ;
+        skos:scopeNote   "Zowel referentielijsten als codelijsten zijn in feite waardenlijsten. In tegenstelling echter tot de referentielijst wordt een codelijst niet in het informatiemodel beschreven, omdat de definitie en semantiek geheel in de externe waardenlijst staat en niet (nader) geduid hoeft te worden in het informatiemodel zelf. Een codelijst heeft in het informatiemodel daarom geen attributen (en zou voor de definitie alleen hoeven te refereren naar de definitie bij de extern gepubliceerde waardenlijst, maar voor het gemak is de definitie wel opgenomen als metagegeven in dit metamodel). De extern gepubliceerde waardenlijst bevat, naast gewone attributen, ook altijd één specifiek attribuut, met daarin de domeinwaarden die gebruikt mogen/moeten worden in de registratie. In het gebruik is een Codelijst daarom analoog aan een Enumeratie. Welk specifiek attribuut dit is en wat de betekenis daarvan is staat in de codelijst zelf gedefinieerd."@nl .
 
 mimbegrip:formeelPatroon
         rdf:type         skos:Concept ;
@@ -183,7 +184,8 @@ mimbegrip:Referentielijst
         skos:broader     mimbegrip:Datatype ;
         skos:definition  "De representatie van een lijst met een opsomming van de mogelijke domeinwaarden van een attribuutsoort, die buiten het model in een externe waardenlijst worden beheerd. De domeinwaarden in de lijst kunnen in de loop van de tijd aangepast, uitgebreid, of verwijderd worden, zonder dat het informatiemodel aangepast wordt (in tegenstelling tot bij een enumeratie). De representatie bevat een aantal kenmerken, die overgenomen zijn van de specificatie van de externe waardelijst."@nl ;
         skos:inScheme    <http://definities.mim-standaard.nl/id/begrippenkader/MIM> ;
-        skos:prefLabel   "Referentielijst"@nl .
+        skos:prefLabel   "Referentielijst"@nl ;
+        skos:scopeNote   "De referentielijst bevat representaties van objecten, die in het informatiemodel niet als een objecttype onderwerp van gesprek zijn. De referentielijst wordt gebruikt als type van een attribuut van een object. Het objecttype LAND is als voorbeeld opgenomen in een referentielijst en niet als objecttype. Maar we willen wel de structuur en betekenis van LAND vastleggen, zodat we er naar kunnen refereren. Een object dat is opgenomen in een referentielijst heeft daarom veelal meerdere attributen, zoals de naam, de ontstaansdatum, een omschrijving en de ISO code, die zijn opgenomen in de referentie lijst. Alle attributen van gerefereerde objecten uit de referentielijst gelden in de context van het informatiemodel, mits opgenomen in de «Referentielijst». In de registratie wordt vaak alleen de referentie ernaartoe opgenomen, omdat het niet de bedoeling is om alle gegevens over te nemen. De gegevens staan immers al in de referentielijst en er is bewust gekozen om een referentielijst te modelleren. Het attribuut van een objecttype dat als type een referentielijst heeft bevat in de registratie daarom (vaak) alleen een referentie naar een object uit de lijst."@nl .
 
 mimbegrip:lengte  rdf:type  skos:Concept ;
         rdfs:label       "lengte"@nl ;
@@ -270,7 +272,8 @@ mimbegrip:Enumeratie  rdf:type  skos:Concept ;
         skos:broader     mimbegrip:Datatype ;
         skos:definition  "Een datatype waarvan de mogelijke waarden limitatief zijn opgesomd in een statische lijst."@nl ;
         skos:inScheme    <http://definities.mim-standaard.nl/id/begrippenkader/MIM> ;
-        skos:prefLabel   "Enumeratie"@nl .
+        skos:prefLabel   "Enumeratie"@nl ;
+        skos:scopeNote   "In de registratie krijgt een attribuut één van deze waarden. De lijst is een statische lijst met constanten (meerdere attributen, zoals bij een referentielijst, zijn nooit aan de orde)."@nl .
 
 mimbegrip:Gegevensgroeptype
         rdf:type         skos:Concept ;
@@ -319,7 +322,8 @@ mimbegrip:PrimitiefDatatype
         skos:broader     mimbegrip:Datatype ;
         skos:definition  "Een primitief datatype is een datatype met een eenvoudige basisstructuur, oftewel enkelvoudig en zonder gelaagdheid."@nl ;
         skos:inScheme    <http://definities.mim-standaard.nl/id/begrippenkader/MIM> ;
-        skos:prefLabel   "Primitief datatype"@nl .
+        skos:prefLabel   "Primitief datatype"@nl ;
+        skos:scopeNote   "Een primitief datatype is een datatype zonder verdere specificatie over de structuur. Dit datatype is enkelvoudig, oftewel niet samengesteld, en wordt ook wel simpel datatype genoemd. Dit datatype kent daarom zelf geen eigen modelelementen zoals een «Data element». Wanneer een Primitief datatype wordt gespecificeerd, dan heeft deze standaard als primitive datatype een CharacterString. Een informatiemodel definieert datatypes als er behoefte is aan een datatype dat eenmalig gedefinieerd wordt en op meerdere plekken in het model gebruikt moet kunnen worden met altijd exact dezelfde structuur en waardenbereik. Dit datatype, met een eigen naam, wordt vervolgens gebruikt als type van een attribuutsoort."@nl .
 
 mimbegrip:constraint  rdf:type  skos:Concept ;
         rdfs:label       "constraint"@nl ;
@@ -333,7 +337,8 @@ mimbegrip:alias  rdf:type  skos:Concept ;
         dct:source       mimdoc:sectie2.8.2.2 ;
         skos:definition  "De weergave van de naam van een modelelement in natuurlijke taal (niet technisch)."@nl ;
         skos:inScheme    <http://definities.mim-standaard.nl/id/begrippenkader/MIM> ;
-        skos:prefLabel   "alias"@nl .
+        skos:prefLabel   "alias"@nl ;
+        skos:scopeNote   "Als de naam van het modelelement in het informatiemodel kan bijvoorbeeld zonder spaties is geschreven, dan kan in de alias de naam in natuurlijke taal worden opgenomen. Bijvoorbeeld: OnroerendeZaak heeft als alias Onroerende zaak. De alias is bedoeld als alternatieve schrijfwijze, en heeft verder geen andere betekenis. De alias is optioneel."@nl .
 
 mimcol:Bindingen  rdf:type  skos:Collection ;
         rdfs:label      "Bindingen" ;
@@ -369,7 +374,8 @@ mimbegrip:definitie  rdf:type  skos:Concept ;
         dct:source       mimdoc:sectie2.8.2.5 ;
         skos:definition  "De beschrijving van de betekenis van dit modelelement."@nl ;
         skos:inScheme    <http://definities.mim-standaard.nl/id/begrippenkader/MIM> ;
-        skos:prefLabel   "definitie"@nl .
+        skos:prefLabel   "definitie"@nl ;
+        skos:scopeNote   "Bijvoorbeeld: Een Pand is de kleinste, bij de totstandkoming functioneel en bouwkundig-constructief zelfstandige eenheid die direct en duurzaam met de aarde is verbonden en betreedbaar en afsluitbaar is. De definitie volgt, indien aanwezig, de catalogus van de desbetreffende (basis)registratie of informatiemodel, mits deze het modelelement definieert vanuit een informatie en informatiemodel perspectief (er zijn ook andere definities mogelijk vanuit andere perspectieven, zoals vanuit een juridisch perspectief, of vanuit het perspectief van een model van begrippen, zoals genoemd in de paragraaf Typen informatiemodellen. Dergelijke definities kunnen hetzelfde zijn, of op het moment hetzelfde, of verschillend, of aanvullend op elkaar. Het is aan de beheerder van het informatiemodel om hier zorgvuldig mee om te gaan)."@nl .
 
 mimbegrip:Objecttype  rdf:type  skos:Concept ;
         rdfs:label       "Objecttype"@nl ;
@@ -428,7 +434,8 @@ mimbegrip:DataElement
         skos:broader     mimbegrip:Modelelement ;
         skos:definition  "Een onderdeel/element van een Gestructureerd datatype die als type een datatype heeft."@nl ;
         skos:inScheme    <http://definities.mim-standaard.nl/id/begrippenkader/MIM> ;
-        skos:prefLabel   "Data element"@nl .
+        skos:prefLabel   "Data element"@nl ;
+        skos:scopeNote   "Het data element is een eigenschap van een Gestructureerd datatype en beschrijft de structuur van een gegeven. Het is niet een eigenschap van een object en niet hetzelfde als een attribuutsoort. Het data element beschrijft in combinatie met andere data-elementen de structuur van een gegeven en heeft zelf een datatype. Dit datatype is meestal een primitief datatype."@nl .
 
 mimbegrip:informatiemodeltype
         rdf:type         skos:Concept ;
@@ -445,7 +452,8 @@ mimbegrip:Enumeratiewaarde
         skos:broader     mimbegrip:Modelelement ;
         skos:definition  "Een gedefinieerde waarde, in de vorm van een eenmalig vastgesteld constant gegeven."@nl ;
         skos:inScheme    <http://definities.mim-standaard.nl/id/begrippenkader/MIM> ;
-        skos:prefLabel   "Enumeratiewaarde"@nl .
+        skos:prefLabel   "Enumeratiewaarde"@nl ;
+        skos:scopeNote   "De waarde van de data zelf. Alleen deze waarde mag gebruikt worden."@nl .
 
 mimbegrip:relatierol  rdf:type  skos:Concept ;
         rdfs:label      "relatierol"@nl ;
@@ -547,7 +555,8 @@ mimbegrip:GestructureerdDatatype
         skos:broader     mimbegrip:Datatype ;
         skos:definition  "Specifiek benoemd datatype dat de structuur van een gegeven beschrijft, samengesteld uit minimaal twee elementen die in samenhang betekenisvol zijn."@nl ;
         skos:inScheme    <http://definities.mim-standaard.nl/id/begrippenkader/MIM> ;
-        skos:prefLabel   "Gestructureerd datatype"@nl .
+        skos:prefLabel   "Gestructureerd datatype"@nl ;
+        skos:scopeNote   "De waarde van het attribuutsoort verkoopprijs met gestructureerd datatype bedrag is uitgedrukt in een combinatie van een som en valuta zoals 35 euro. De introductie van één datatype Bedrag, uitgedrukt in som en valuta, legt dus vast dat som en valuta onlosmakelijk met elkaar zijn verbonden. De eigenschappen in het Gestructureerd datatype tezamen zijn identificerend (een Gestructureerd datatype \"identificeert zichzelf\", zoals er maar per definitie één “1 liter” bestaat, één 35 euro en één datum 6 april 2017, met per definitie altijd dezelfde betekenis: Een blik olie heeft een inhoud van 7 liter, kost 35 euro, en is verkocht op 6 april 2017. Piet heeft 1 liter bloed gedoneerd, daarvoor 35 euro vergoeding gekregen, op 6 april 2017. Het identificerend zijn geldt bijvoorbeeld niet voor Jan Jansen. Er zijn meerdere personen met deze naam en dat zijn verschillende personen (Jan Jansen is dan ook een gegevensgroeptype Naam met voornaam Jan en achternaam Jansen en geen Gestructureerd datatype)."@nl .
 
 mimbegrip:specificatieTekst
         rdf:type         skos:Concept ;
@@ -562,7 +571,8 @@ mimbegrip:referentieElement
         dct:source       mimdoc:sectie2.8.4.10 ;
         skos:definition  "De binding van een referentie element aan een referentielijst."@nl ;
         skos:inScheme    <http://definities.mim-standaard.nl/id/begrippenkader/MIM> ;
-        skos:prefLabel   "referentie element"@nl .
+        skos:prefLabel   "referentie element"@nl ;
+        skos:scopeNote   "Een referentie element kan uniek zijn, zoals een code, en is dan op zichzelf geschikt om gebruikt te worden als referentie (zoals bedoeld in de definitie van Referentielijst). Bij het referentie element kan een definitie en toelichting worden opgenomen, die aangeven hoe de externe waardelijst in het eigen informatiemodel gebruikt wordt."@nl .
 
 mimbegrip:supertype  rdf:type  skos:Concept ;
         rdfs:label       "supertype" ;
@@ -692,7 +702,8 @@ mimbegrip:begrip  rdf:type  skos:Concept ;
         dct:source       mimdoc:sectie2.8.2.3 ;
         skos:definition  "Verwijzing naar een begrip, vanuit een modelelement, waarmee wordt aangegeven op welk begrip, of begrippen, het informatiemodel element is gebaseerd." ;
         skos:inScheme    <http://definities.mim-standaard.nl/id/begrippenkader/MIM> ;
-        skos:prefLabel   "begrip"@nl .
+        skos:prefLabel   "begrip"@nl ;
+        skos:scopeNote   "Hiermee wordt aangegeven hoe een informatiemodel element zich verhoudt tot de begrippen uit het begrippenkader. Dit is niet een 1 op 1 relatie."@nl .
 
 mim:WettelijkGegeven  rdf:type  skos:Concept ;
         rdfs:label       "Wettelijk gegeven" ;

@@ -205,6 +205,22 @@ queries:
           ?owlterm rdfs:comment ?comment
         }
       }
+  - title: add scopeNote from comments
+    query: >
+      prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+      prefix skos: <http://www.w3.org/2004/02/skos/core#>
+      prefix dct: <http://purl.org/dc/terms/>
+      insert {
+        graph <urn:output> {
+          ?concept skos:scopeNote ?scopenote
+        }
+      }
+      where {
+        graph <urn:input> {
+          ?owlterm dct:subject ?concept.
+          ?owlterm skos:scopeNote ?scopenote
+        }
+      }
   - title: add source reference
     query: >
       prefix dct: <http://purl.org/dc/terms/>
