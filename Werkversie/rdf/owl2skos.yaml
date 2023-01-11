@@ -1,5 +1,8 @@
 title: Convertion of OWL ontology to SKOS concept scheme
 version: 0.1
+prefixes:
+  mimbegrip: http://definities.mim-standaard.nl/id/begrip/
+  mimcol: http://definities.mim-standaard.nl/id/collectie/
 queries:
   - title: create concept scheme
     query: >
@@ -7,9 +10,32 @@ queries:
       prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
       insert {
         graph <urn:output> {
-          <http://definities.geostandaarden.nl/mim/id/begrippenkader/> a skos:ConceptScheme;
-            rdfs:label "MIM Begrippenkader"
+          <http://definities.mim-standaard.nl/id/begrippenkader/MIM> a skos:ConceptScheme;
+            rdfs:label "MIM Begrippenkader";
+            skos:prefLabel "MIM Begrippenkader"
           .
+        }
+      }
+      where {}
+  - title: create collections
+    query: >
+      prefix skos: <http://www.w3.org/2004/02/skos/core#>
+      prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+      prefix mimcol: <http://definities.mim-standaard.nl/id/collectie/>
+      insert {
+        graph <urn:output> {
+          mimcol:Datatypen a skos:Collection.
+          mimcol:Datatypen rdfs:label "Datatypen".
+          mimcol:Datatypen skos:prefLabel "Datatypen".
+          mimcol:Modelelementen a skos:Collection.
+          mimcol:Modelelementen rdfs:label "Modelelementen".
+          mimcol:Modelelementen skos:prefLabel "Modelelementen".
+          mimcol:Metagegevens a skos:Collection.
+          mimcol:Metagegevens rdfs:label "Metagegevens".
+          mimcol:Metagegevens skos:prefLabel "Metagegevens".
+          mimcol:Bindingen a skos:Collection.
+          mimcol:Bindingen rdfs:label "Bindingen".
+          mimcol:Bindingen skos:prefLabel "Bindingen".
         }
       }
       where {}
@@ -22,19 +48,55 @@ queries:
       insert {
         graph <urn:output> {
           ?concept a skos:Concept.
-          ?concept skos:inScheme <http://definities.geostandaarden.nl/mim/id/begrippenkader/>.
+          ?concept skos:inScheme <http://definities.mim-standaard.nl/id/begrippenkader/MIM>.
         }
         graph <urn:input> {
           ?class dct:subject ?concept.
         }
       }
       where {
-        select (iri(concat("http://definities.geostandaarden.nl/mim/id/begrip/",strafter(str(?class),"#"))) as ?concept) ?class
+        select (iri(concat("http://definities.mim-standaard.nl/id/begrip/",strafter(str(?class),"#"))) as ?concept) ?class
         where {
           graph <urn:input> {
             ?class a ?t
             FILTER (?t=owl:Class || ?t=rdfs:Class)
           }
+        }
+      }
+  - title: populate mimcol:Modelelementen
+    query: >
+      prefix skos: <http://www.w3.org/2004/02/skos/core#>
+      prefix mimcol: <http://definities.mim-standaard.nl/id/collectie/>
+      prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+      prefix dct: <http://purl.org/dc/terms/>
+      prefix mim: <http://bp4mc2.org/def/mim#>
+      insert {
+        graph <urn:output> {
+          mimcol:Modelelementen skos:member ?concept.
+        }
+      }
+      where {
+        graph <urn:input> {
+          ?class dct:subject ?concept.
+          ?class rdfs:subClassOf* mim:Modelelement
+        }
+      }
+  - title: populate mimcol:Datatypen
+    query: >
+      prefix skos: <http://www.w3.org/2004/02/skos/core#>
+      prefix mimcol: <http://definities.mim-standaard.nl/id/collectie/>
+      prefix dct: <http://purl.org/dc/terms/>
+      prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+      prefix mim: <http://bp4mc2.org/def/mim#>
+      insert {
+        graph <urn:output> {
+          mimcol:Datatypen skos:member ?concept.
+        }
+      }
+      where {
+        graph <urn:input> {
+          ?class dct:subject ?concept.
+          ?class rdfs:subClassOf* mim:Datatype
         }
       }
   - title: create concepts from attributes
@@ -46,18 +108,53 @@ queries:
       insert {
         graph <urn:output> {
           ?concept a skos:Concept.
+          ?concept skos:inScheme <http://definities.mim-standaard.nl/id/begrippenkader/MIM>.
         }
         graph <urn:input> {
           ?property dct:subject ?concept.
         }
       }
       where {
-        select (iri(concat("http://definities.geostandaarden.nl/mim/id/begrip/",strafter(str(?property),"#"))) as ?concept) ?property
+        select (iri(concat("http://definities.mim-standaard.nl/id/begrip/",strafter(str(?property),"#"))) as ?concept) ?property
         where {
           graph <urn:input> {
             ?property a ?t
             FILTER (?t=owl:DatatypeProperty || ?t=owl:ObjectProperty || ?t=rdf:Property)
           }
+        }
+      }
+  - title: populate mimcol:Metagegevens
+    query: >
+      prefix owl: <http://www.w3.org/2002/07/owl#>
+      prefix skos: <http://www.w3.org/2004/02/skos/core#>
+      prefix mimcol: <http://definities.mim-standaard.nl/id/collectie/>
+      prefix dct: <http://purl.org/dc/terms/>
+      insert {
+        graph <urn:output> {
+          mimcol:Metagegevens skos:member ?concept.
+        }
+      }
+      where {
+        graph <urn:input> {
+          ?property dct:subject ?concept.
+          ?property a owl:DatatypeProperty.
+        }
+      }
+  - title: populate mimcol:Bindingen
+    query: >
+      prefix owl: <http://www.w3.org/2002/07/owl#>
+      prefix skos: <http://www.w3.org/2004/02/skos/core#>
+      prefix mimcol: <http://definities.mim-standaard.nl/id/collectie/>
+      prefix dct: <http://purl.org/dc/terms/>
+      insert {
+        graph <urn:output> {
+          mimcol:Bindingen skos:member ?concept.
+        }
+      }
+      where {
+        graph <urn:input> {
+          ?property dct:subject ?concept.
+          ?property a owl:ObjectProperty.
         }
       }
   - title: add labels
@@ -132,7 +229,7 @@ queries:
       insert {
         graph <urn:output> {
           ?concept a skos:Concept.
-          ?concept skos:inScheme <http://definities.geostandaarden.nl/mim/id/begrippenkader/>.
+          ?concept skos:inScheme <http://definities.mim-standaard.nl/id/begrippenkader/MIM>.
           ?concept ?p ?o
         }
       }
@@ -141,5 +238,27 @@ queries:
           ?concept a skos:Concept.
           ?concept ?p ?o
           FILTER (isLiteral(?o))
+        }
+      }
+  - title: add collection and members for skos concepts from ontology
+    query: >
+      prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+      prefix skos: <http://www.w3.org/2004/02/skos/core#>
+      prefix dct: <http://purl.org/dc/terms/>
+      insert {
+        graph <urn:output> {
+          ?collection a skos:Collection.
+          ?collection rdfs:label ?collabel.
+          ?collection skos:prefLabel ?collabel.
+          ?collection skos:member ?concept.
+        }
+      }
+      where {
+        select ?concept (iri(concat("http://definities.mim-standaard.nl/id/collectie/",strafter(str(?scheme),"#"))) as ?collection) (strafter(str(?scheme),"#") as ?collabel)
+        where {
+          graph <urn:input> {
+            ?concept a skos:Concept.
+            ?concept skos:inScheme ?scheme.
+          }
         }
       }

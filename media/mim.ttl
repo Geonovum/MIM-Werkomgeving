@@ -716,10 +716,12 @@ mim:Relatiemodelleringstypen a skos:ConceptScheme;
 mim:RelatiesoortLeidend a skos:Concept;
   skos:inScheme mim:Relatiemodelleringstypen;
   rdfs:label "Relatiesoort leidend";
+  skos:prefLabel "Relatiesoort leidend";
   dct:source mimdoc:sectie2.8.1.3;
 .
 mim:RelatierolLeidend a skos:Concept;
   skos:inScheme mim:Relatiemodelleringstypen;
   rdfs:label "Relatierol leidend";
+  skos:prefLabel "Relatierol leidend";
   dct:source mimdoc:sectie2.8.1.3;
 .
