@@ -11,8 +11,8 @@ queries:
       insert {
         graph <urn:output> {
           <http://definities.mim-standaard.nl/id/begrippenkader/MIM> a skos:ConceptScheme;
-            rdfs:label "MIM Begrippenkader";
-            skos:prefLabel "MIM Begrippenkader"
+            rdfs:label "MIM Begrippenkader"@nl;
+            skos:prefLabel "MIM Begrippenkader"@nl
           .
         }
       }
@@ -25,17 +25,17 @@ queries:
       insert {
         graph <urn:output> {
           mimcol:Datatypen a skos:Collection.
-          mimcol:Datatypen rdfs:label "Datatypen".
-          mimcol:Datatypen skos:prefLabel "Datatypen".
+          mimcol:Datatypen rdfs:label "Datatypen"@nl.
+          mimcol:Datatypen skos:prefLabel "Datatypen"@nl.
           mimcol:Modelelementen a skos:Collection.
-          mimcol:Modelelementen rdfs:label "Modelelementen".
-          mimcol:Modelelementen skos:prefLabel "Modelelementen".
+          mimcol:Modelelementen rdfs:label "Modelelementen"@nl.
+          mimcol:Modelelementen skos:prefLabel "Modelelementen"@nl.
           mimcol:Metagegevens a skos:Collection.
-          mimcol:Metagegevens rdfs:label "Metagegevens".
-          mimcol:Metagegevens skos:prefLabel "Metagegevens".
+          mimcol:Metagegevens rdfs:label "Metagegevens"@nl.
+          mimcol:Metagegevens skos:prefLabel "Metagegevens"@nl.
           mimcol:Bindingen a skos:Collection.
-          mimcol:Bindingen rdfs:label "Bindingen".
-          mimcol:Bindingen skos:prefLabel "Bindingen".
+          mimcol:Bindingen rdfs:label "Bindingen"@nl.
+          mimcol:Bindingen skos:prefLabel "Bindingen"@nl.
         }
       }
       where {}
@@ -285,11 +285,12 @@ queries:
         }
       }
       where {
-        select ?concept (iri(concat("http://definities.mim-standaard.nl/id/collectie/",strafter(str(?scheme),"#"))) as ?collection) (strafter(str(?scheme),"#") as ?collabel)
+        select ?concept (iri(concat("http://definities.mim-standaard.nl/id/collectie/",strafter(str(?scheme),"#"))) as ?collection) ?collabel
         where {
           graph <urn:input> {
             ?concept a skos:Concept.
             ?concept skos:inScheme ?scheme.
+            ?scheme rdfs:label ?collabel.
           }
         }
       }

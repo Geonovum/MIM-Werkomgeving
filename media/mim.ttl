@@ -20,7 +20,7 @@
 #
 <http://bp4mc2.org/def/mim#> a owl:Ontology;
   rdfs:label "De MIM Ontologie"@nl;
-  rdfs:comment "De ontologie van het metamodel van MIM";
+  rdfs:comment "De ontologie van het metamodel van MIM"@nl;
   owl:versionIRI <http://bp4mc2.org/def/mim/1.1.1>;
   owl:versionInfo "1.1.1";
   dct:source <https://docs.geostandaarden.nl/mim/mim/>;
@@ -100,13 +100,13 @@ mim:Relatierol a owl:Class;
 mim:RelatierolBron a owl:Class;
   rdfs:subClassOf mim:Relatierol;
   rdfs:label "Relatierol bron"@nl;
-  rdfs:comment "De relatierol die de rol beschrijft van de bron van de relatie.";
+  rdfs:comment "De relatierol die de rol beschrijft van de bron van de relatie."@nl;
   dct:source mimdoc:sectie2.3.5;
 .
 mim:RelatierolDoel a owl:Class;
   rdfs:subClassOf mim:Relatierol;
   rdfs:label "Relatierol doel"@nl;
-  rdfs:comment "De relatierol die de rol beschrijft van het doel van de relatie.";
+  rdfs:comment "De relatierol die de rol beschrijft van het doel van de relatie."@nl;
   dct:source mimdoc:sectie2.3.5;
 .
 
@@ -150,7 +150,7 @@ mim:Codelijst a owl:Class;
 mim:Datatype a owl:Class;
   rdfs:subClassOf mim:Modelelement;
   rdfs:label "Datatype"@nl;
-  rdfs:comment "Een beschrijving van de structuur waaraan een waarde, oftewel de data zelf, aan moet voldoen.";
+  rdfs:comment "Een beschrijving van de structuur waaraan een waarde, oftewel de data zelf, aan moet voldoen."@nl;
   dct:source mimdoc:sectie2.5;
 .
 mim:PrimitiefDatatype a owl:Class;
@@ -277,13 +277,13 @@ mim:alias a owl:DatatypeProperty;
 .
 mim:begrip a owl:ObjectProperty;
   rdfs:label "begrip"@nl;
-  rdfs:comment "Verwijzing naar een begrip, vanuit een modelelement, waarmee wordt aangegeven op welk begrip, of begrippen, het informatiemodel element is gebaseerd.";
+  rdfs:comment "Verwijzing naar een begrip, vanuit een modelelement, waarmee wordt aangegeven op welk begrip, of begrippen, het informatiemodel element is gebaseerd."@nl;
   skos:scopeNote "Hiermee wordt aangegeven hoe een informatiemodel element zich verhoudt tot de begrippen uit het begrippenkader. Dit is niet een 1 op 1 relatie."@nl;
   dct:source mimdoc:sectie2.8.2.3;
 .
 mim:begripsterm a owl:DatatypeProperty;
   rdfs:label "begripsterm"@nl;
-  rdfs:comment "Verwijzing naar een begrip in de vorm van een term, vanuit een modelelement, waarmee wordt aangegeven op welk begrip, of begrippen, het informatiemodel element is gebaseerd.";
+  rdfs:comment "Verwijzing naar een begrip in de vorm van een term, vanuit een modelelement, waarmee wordt aangegeven op welk begrip, of begrippen, het informatiemodel element is gebaseerd."@nl;
   dct:source mimdoc:sectie2.8.2.3;
 .
 mim:herkomst a owl:DatatypeProperty;
@@ -358,12 +358,12 @@ mim:mogelijkGeenWaarde a owl:DatatypeProperty;
   dct:source mimdoc:sectie2.8.2.17;
 .
 mim:bron a owl:ObjectProperty;
-  rdfs:label "bron";
+  rdfs:label "bron"@nl;
   rdfs:comment "Aanduiding van het bronobject in een relatie tussen objecten. Een bronobject heeft middels een relatiesoort een relatie met een doelobject."@nl;
   dct:source mimdoc:sectie2.8.2.18;
 .
 mim:doel a owl:ObjectProperty;
-  rdfs:label "doel";
+  rdfs:label "doel"@nl;
   rdfs:comment "Aanduiding van het gerelateerde objecttype die het eindpunt van de relatie aangeeft. Naar objecten van dit objecttype wordt verwezen."@nl;
   dct:source mimdoc:sectie2.8.2.19;
 .
@@ -440,7 +440,7 @@ mim:gegevensgroeptype a owl:ObjectProperty;
   dct:source mimdoc:sectie2.8.4.3;
 .
 mim:supertype a owl:ObjectProperty;
-  rdfs:label "supertype";
+  rdfs:label "supertype"@nl;
   rdfs:comment "De binding van een supertype aan een subtype middels een generalisatie."@nl;
   dct:source mimdoc:sectie2.8.4.4;
 .
@@ -483,7 +483,7 @@ mim:constraint a owl:ObjectProperty;
 
 # Generalisatie
 mim:subtype a owl:ObjectProperty;
-  rdfs:label "subtype";
+  rdfs:label "subtype"@nl;
   rdfs:comment "Het objecttype dat een specialisatie is van een (ander) objecttype."@nl;
 .
 
@@ -520,8 +520,8 @@ mim:relatierol a owl:ObjectProperty;
 
 # Alleen voor transformaties
 mim:equivalent a owl:ObjectProperty;
-  rdfs:label "equivalent";
-  rdfs:comment "Geeft aan dat een mim metamodel-element equivalent is met een meta-element uit een Linked Data vocabulaire";
+  rdfs:label "equivalent"@nl;
+  rdfs:comment "Geeft aan dat een mim metamodel-element equivalent is met een meta-element uit een Linked Data vocabulaire"@nl;
 .
 
 #
@@ -620,8 +620,8 @@ mim:URI a mim:PrimitiefDatatype;
 
 # Aggregatietypen
 mim:Aggregatietypen a skos:ConceptScheme;
-  rdfs:label "Aggregatietypen";
-  rdfs:comment "Aggregatietypen conform UML";
+  rdfs:label "Aggregatietypen"@nl;
+  rdfs:comment "Aggregatietypen conform UML"@nl;
 .
 mim:Geen a skos:Concept;
   skos:inScheme mim:Aggregatietypen;
@@ -648,92 +648,92 @@ mim:Gedeeld a skos:Concept;
   skos:altLabel "Shared"@en;
   skos:definitie "het onderdeel kan gebruikt en gedeeld worden door meerdere eigenaren."@nl;
   skos:scopeNote "een gedeelde aggregatie wordt afgebeeld met een open wiebertje aan de kant van de eigenaar"@nl;
-  skos:example "Een betaalrekening";
+  skos:example "Een betaalrekening"@nl;
   mim:naam "Gedeeld"@nl;
   dct:source mimdoc:sectie2.8.2.21;
 .
 
 # authenticiteit
 mim:Authenticiteit a skos:ConceptScheme;
-  rdfs:label "Authenticiteit";
-  rdfs:comment "Authenticiteit zoals gedefinieerd in MIM";
+  rdfs:label "Authenticiteit"@nl;
+  rdfs:comment "Authenticiteit zoals gedefinieerd in MIM"@nl;
 .
 mim:Authentiek a skos:Concept;
   skos:inScheme mim:Authenticiteit;
-  rdfs:label "Authentiek";
-  skos:prefLabel "Authentiek";
+  rdfs:label "Authentiek"@nl;
+  skos:prefLabel "Authentiek"@nl;
   skos:definition "In een basisregistratie opgenomen gegeven dat bij wettelijk voorschrift als authentiek is aangemerkt."@nl;
   dct:source mimdoc:sectie5.11;
   dct:source mimdoc:nora-authentiek-gegeven
 .
 mim:Basisgegeven a skos:Concept;
   skos:inScheme mim:Authenticiteit;
-  rdfs:label "Basisgegeven";
-  skos:prefLabel "Basisgegeven";
+  rdfs:label "Basisgegeven"@nl;
+  skos:prefLabel "Basisgegeven"@nl;
   skos:definition "Een in een basisregistratie opgenomen gegeven."@nl;
   dct:source mimdoc:sectie5.11;
   dct:source mimdoc:nora-basisgegeven
 .
 mim:WettelijkGegeven a skos:Concept;
   skos:inScheme mim:Authenticiteit;
-  rdfs:label "Wettelijk gegeven";
-  skos:prefLabel "Wettelijk gegeven";
+  rdfs:label "Wettelijk gegeven"@nl;
+  skos:prefLabel "Wettelijk gegeven"@nl;
   skos:definition "Gegeven behorende bij een wettelijke registratie, niet zijnde een basisregistratie"@nl;
   dct:source mimdoc:sectie5.11;
 .
 mim:LandelijkKerngegeven a skos:Concept;
   skos:inScheme mim:Authenticiteit;
-  rdfs:label "LandelijkKerngegeven";
-  skos:prefLabel "Landelijk kerngegeven";
+  rdfs:label "LandelijkKerngegeven"@nl;
+  skos:prefLabel "Landelijk kerngegeven"@nl;
   skos:definition "Indien het een gegeven of een als relatiesoort gemodelleerd gegeven is in een landelijk sector- en domein-overstijgend informatiemodel en geen authentiek gegeven en geen basisgegeven is."@nl;
   dct:source mimdoc:sectie5.11;
 .
 mim:OverigeAuthenticiteit a skos:Concept;
   skos:inScheme mim:Authenticiteit;
-  rdfs:label "Overige authenticiteit";
-  skos:prefLabel "Overig";
+  rdfs:label "Overige authenticiteit"@nl;
+  skos:prefLabel "Overig"@nl;
   skos:definition "Indien het géén van de voorgaande categorieën betreft. Veelal gaat het dan om proces-, taakveld- of domeinspecifieke gegevens."@nl;
   dct:source mimdoc:sectie5.11;
 .
 
 # informatiemodeltypen
 mim:Informatiemodeltypen a skos:ConceptScheme;
-  rdfs:label "Informatiemodeltypen";
-  rdfs:comment "Informatiemodeltypen zoals gedefinieerd in MIM";
+  rdfs:label "Informatiemodeltypen"@nl;
+  rdfs:comment "Informatiemodeltypen zoals gedefinieerd in MIM"@nl;
 .
 mim:ConceptueelInformatiemodel a skos:Concept;
   skos:inScheme mim:Informatiemodeltypen;
-  rdfs:label "Conceptueel informatiemodel";
-  skos:prefLabel "Conceptueel";
+  rdfs:label "Conceptueel informatiemodel"@nl;
+  skos:prefLabel "Conceptueel"@nl;
   dct:source mimdoc:sectie2.8.1.2;
 .
 mim:LogischInformatiemodel a skos:Concept;
   skos:inScheme mim:Informatiemodeltypen;
-  rdfs:label "Logisch informatiemodel";
-  skos:prefLabel "Logisch";
+  rdfs:label "Logisch informatiemodel"@nl;
+  skos:prefLabel "Logisch"@nl;
   dct:source mimdoc:sectie2.8.1.2;
 .
 mim:TechnischInformatiemodel a skos:Concept;
   skos:inScheme mim:Informatiemodeltypen;
-  rdfs:label "Technisch informatiemodel";
-  skos:prefLabel "Technisch";
+  rdfs:label "Technisch informatiemodel"@nl;
+  skos:prefLabel "Technisch"@nl;
   dct:source mimdoc:sectie2.8.1.2;
 .
 
 # relatiemodelleringstypen
 mim:Relatiemodelleringstypen a skos:ConceptScheme;
-  rdfs:label "Relatiemodelleringstypen";
-  rdfs:comment "Relatiemodelleringstypen zoals gedefinieerd in MIM";
+  rdfs:label "Relatiemodelleringstypen"@nl;
+  rdfs:comment "Relatiemodelleringstypen zoals gedefinieerd in MIM"@nl;
 .
 mim:RelatiesoortLeidend a skos:Concept;
   skos:inScheme mim:Relatiemodelleringstypen;
-  rdfs:label "Relatiesoort leidend";
-  skos:prefLabel "Relatiesoort leidend";
+  rdfs:label "Relatiesoort leidend"@nl;
+  skos:prefLabel "Relatiesoort leidend"@nl;
   dct:source mimdoc:sectie2.8.1.3;
 .
 mim:RelatierolLeidend a skos:Concept;
   skos:inScheme mim:Relatiemodelleringstypen;
-  rdfs:label "Relatierol leidend";
-  skos:prefLabel "Relatierol leidend";
+  rdfs:label "Relatierol leidend"@nl;
+  skos:prefLabel "Relatierol leidend"@nl;
   dct:source mimdoc:sectie2.8.1.3;
 .

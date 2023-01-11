@@ -13,22 +13,22 @@
 
 mimcol:Informatiemodeltypen
         rdf:type        skos:Collection ;
-        rdfs:label      "Informatiemodeltypen" ;
+        rdfs:label      "Informatiemodeltypen"@nl ;
         skos:member     mim:ConceptueelInformatiemodel , mim:LogischInformatiemodel , mim:TechnischInformatiemodel ;
-        skos:prefLabel  "Informatiemodeltypen" .
+        skos:prefLabel  "Informatiemodeltypen"@nl .
 
 mimbegrip:subtype  rdf:type  skos:Concept ;
-        rdfs:label       "subtype" ;
+        rdfs:label       "subtype"@nl ;
         skos:definition  "Het objecttype dat een specialisatie is van een (ander) objecttype."@nl ;
         skos:inScheme    <http://definities.mim-standaard.nl/id/begrippenkader/MIM> ;
-        skos:prefLabel   "subtype" .
+        skos:prefLabel   "subtype"@nl .
 
 mimbegrip:RelatierolDoel
         rdf:type         skos:Concept ;
         rdfs:label       "Relatierol doel"@nl ;
         dct:source       mimdoc:sectie2.3.5 ;
         skos:broader     mimbegrip:Relatierol ;
-        skos:definition  "De relatierol die de rol beschrijft van het doel van de relatie." ;
+        skos:definition  "De relatierol die de rol beschrijft van het doel van de relatie."@nl ;
         skos:inScheme    <http://definities.mim-standaard.nl/id/begrippenkader/MIM> ;
         skos:prefLabel   "Relatierol doel"@nl .
 
@@ -49,9 +49,9 @@ mimbegrip:kardinaliteit
 
 mimcol:Modelelementen
         rdf:type        skos:Collection ;
-        rdfs:label      "Modelelementen" ;
+        rdfs:label      "Modelelementen"@nl ;
         skos:member     mimbegrip:Extern , mimbegrip:Gegevensgroep , mimbegrip:Attribuutsoort , mimbegrip:Generalisatie , mimbegrip:Domein , mimbegrip:KeuzeConstraint , mimbegrip:Relatierol , mimbegrip:Package , mimbegrip:Codelijst , mimbegrip:RelatierolBron , mimbegrip:Gegevensgroeptype , mimbegrip:PrimitiefDatatype , mimbegrip:View , mimbegrip:Enumeratie , mimbegrip:RelatierolDoel , mimbegrip:Datatype , mimbegrip:GestructureerdDatatype , mimbegrip:Keuze , mimbegrip:ReferentieElement , mimbegrip:DataElement , mimbegrip:ExterneKoppeling , mimbegrip:Referentielijst , mimbegrip:Relatieklasse , mimbegrip:Constraint , mimbegrip:Relatiesoort , mimbegrip:Objecttype , mimbegrip:Informatiemodel , mimbegrip:Enumeratiewaarde , mimbegrip:Modelelement ;
-        skos:prefLabel  "Modelelementen" .
+        skos:prefLabel  "Modelelementen"@nl .
 
 mimbegrip:gegevensgroeptype
         rdf:type         skos:Concept ;
@@ -110,10 +110,10 @@ mimbegrip:locatie  rdf:type  skos:Concept ;
         skos:prefLabel   "locatie"@nl .
 
 mim:Basisgegeven  rdf:type  skos:Concept ;
-        rdfs:label       "Basisgegeven" ;
+        rdfs:label       "Basisgegeven"@nl ;
         skos:definition  "Een in een basisregistratie opgenomen gegeven."@nl ;
         skos:inScheme    <http://definities.mim-standaard.nl/id/begrippenkader/MIM> ;
-        skos:prefLabel   "Basisgegeven" .
+        skos:prefLabel   "Basisgegeven"@nl .
 
 mimbegrip:specificatieFormeel
         rdf:type         skos:Concept ;
@@ -141,9 +141,9 @@ mimbegrip:ExterneKoppeling
 
 mim:ConceptueelInformatiemodel
         rdf:type        skos:Concept ;
-        rdfs:label      "Conceptueel informatiemodel" ;
+        rdfs:label      "Conceptueel informatiemodel"@nl ;
         skos:inScheme   <http://definities.mim-standaard.nl/id/begrippenkader/MIM> ;
-        skos:prefLabel  "Conceptueel" .
+        skos:prefLabel  "Conceptueel"@nl .
 
 mimbegrip:waarde  rdf:type  skos:Concept ;
         rdfs:label       "waarde"@nl ;
@@ -207,7 +207,7 @@ mimbegrip:RelatierolBron
         rdfs:label       "Relatierol bron"@nl ;
         dct:source       mimdoc:sectie2.3.5 ;
         skos:broader     mimbegrip:Relatierol ;
-        skos:definition  "De relatierol die de rol beschrijft van de bron van de relatie." ;
+        skos:definition  "De relatierol die de rol beschrijft van de bron van de relatie."@nl ;
         skos:inScheme    <http://definities.mim-standaard.nl/id/begrippenkader/MIM> ;
         skos:prefLabel   "Relatierol bron"@nl .
 
@@ -219,10 +219,10 @@ mimbegrip:mimtaal  rdf:type  skos:Concept ;
         skos:prefLabel   "MIM taal"@nl .
 
 mimbegrip:equivalent  rdf:type  skos:Concept ;
-        rdfs:label       "equivalent" ;
-        skos:definition  "Geeft aan dat een mim metamodel-element equivalent is met een meta-element uit een Linked Data vocabulaire" ;
+        rdfs:label       "equivalent"@nl ;
+        skos:definition  "Geeft aan dat een mim metamodel-element equivalent is met een meta-element uit een Linked Data vocabulaire"@nl ;
         skos:inScheme    <http://definities.mim-standaard.nl/id/begrippenkader/MIM> ;
-        skos:prefLabel   "equivalent" .
+        skos:prefLabel   "equivalent"@nl .
 
 mimbegrip:indicatieClassificerend
         rdf:type         skos:Concept ;
@@ -234,26 +234,26 @@ mimbegrip:indicatieClassificerend
 
 mimcol:Authenticiteit
         rdf:type        skos:Collection ;
-        rdfs:label      "Authenticiteit" ;
+        rdfs:label      "Authenticiteit"@nl ;
         skos:member     mim:LandelijkKerngegeven , mim:Basisgegeven , mim:OverigeAuthenticiteit , mim:WettelijkGegeven , mim:Authentiek ;
-        skos:prefLabel  "Authenticiteit" .
+        skos:prefLabel  "Authenticiteit"@nl .
 
 mimcol:Datatypen  rdf:type  skos:Collection ;
-        rdfs:label      "Datatypen" ;
+        rdfs:label      "Datatypen"@nl ;
         skos:member     mimbegrip:Codelijst , mimbegrip:Enumeratie , mimbegrip:Keuze , mimbegrip:GestructureerdDatatype , mimbegrip:PrimitiefDatatype , mimbegrip:Referentielijst , mimbegrip:Datatype ;
-        skos:prefLabel  "Datatypen" .
+        skos:prefLabel  "Datatypen"@nl .
 
 mimcol:Metagegevens  rdf:type  skos:Collection ;
-        rdfs:label      "Metagegevens" ;
+        rdfs:label      "Metagegevens"@nl ;
         skos:member     mimbegrip:specificatieTekst , mimbegrip:unidirectioneel , mimbegrip:indicatieAfleidbaar , mimbegrip:naam , mimbegrip:locatie , mimbegrip:mogelijkGeenWaarde , mimbegrip:authentiek , mimbegrip:kardinaliteitRelatieBron , mimbegrip:populatie , mimbegrip:herkomst , mimbegrip:datumOpname , mimbegrip:definitie , mimbegrip:kwaliteit , mimbegrip:mimextensie , mimbegrip:indicatieMaterieleHistorie , mimbegrip:code , mimbegrip:mimtaal , mimbegrip:specificatieFormeel , mimbegrip:mimversie , mimbegrip:herkomstDefinitie , mimbegrip:lengte , mimbegrip:identificerend , mimbegrip:informatiemodeltype , mimbegrip:toelichting , mimbegrip:indicatieClassificerend , mimbegrip:kardinaliteit , mimbegrip:patroon , mimbegrip:indicatieFormeleHistorie , mimbegrip:indicatieAbstractObject , mimbegrip:formeelPatroon , mimbegrip:informatiedomein , mimbegrip:begripsterm , mimbegrip:relatiemodelleringstype , mimbegrip:alias , mimbegrip:aggregatietype ;
-        skos:prefLabel  "Metagegevens" .
+        skos:prefLabel  "Metagegevens"@nl .
 
 mim:Gedeeld  rdf:type   skos:Concept ;
         rdfs:label      "Gedeeld"@nl ;
         mim:naam        "Gedeeld"@nl ;
         skos:altLabel   "Shared"@en ;
         skos:definitie  "het onderdeel kan gebruikt en gedeeld worden door meerdere eigenaren."@nl ;
-        skos:example    "Een betaalrekening" ;
+        skos:example    "Een betaalrekening"@nl ;
         skos:inScheme   <http://definities.mim-standaard.nl/id/begrippenkader/MIM> ;
         skos:prefLabel  "Gedeeld"@nl ;
         skos:scopeNote  "een gedeelde aggregatie wordt afgebeeld met een open wiebertje aan de kant van de eigenaar"@nl .
@@ -295,7 +295,7 @@ mimbegrip:begripsterm
         rdf:type         skos:Concept ;
         rdfs:label       "begripsterm"@nl ;
         dct:source       mimdoc:sectie2.8.2.3 ;
-        skos:definition  "Verwijzing naar een begrip in de vorm van een term, vanuit een modelelement, waarmee wordt aangegeven op welk begrip, of begrippen, het informatiemodel element is gebaseerd." ;
+        skos:definition  "Verwijzing naar een begrip in de vorm van een term, vanuit een modelelement, waarmee wordt aangegeven op welk begrip, of begrippen, het informatiemodel element is gebaseerd."@nl ;
         skos:inScheme    <http://definities.mim-standaard.nl/id/begrippenkader/MIM> ;
         skos:prefLabel   "begripsterm"@nl .
 
@@ -341,9 +341,9 @@ mimbegrip:alias  rdf:type  skos:Concept ;
         skos:scopeNote   "Als de naam van het modelelement in het informatiemodel kan bijvoorbeeld zonder spaties is geschreven, dan kan in de alias de naam in natuurlijke taal worden opgenomen. Bijvoorbeeld: OnroerendeZaak heeft als alias Onroerende zaak. De alias is bedoeld als alternatieve schrijfwijze, en heeft verder geen andere betekenis. De alias is optioneel."@nl .
 
 mimcol:Bindingen  rdf:type  skos:Collection ;
-        rdfs:label      "Bindingen" ;
+        rdfs:label      "Bindingen"@nl ;
         skos:member     mimbegrip:dataElement , mimbegrip:type , mimbegrip:constraint , mimbegrip:bron , mimbegrip:bevatModelelement , mimbegrip:gegevensgroep , mimbegrip:datatypekeuze , mimbegrip:referentieElement , mimbegrip:modelelement , mimbegrip:doel , mimbegrip:attribuutkeuze , mimbegrip:relatierol , mimbegrip:supertype , mimbegrip:waarde , mimbegrip:gegevensgroeptype , mimbegrip:equivalent , mimbegrip:doelkeuze , mimbegrip:subtype , mimbegrip:begrip , mimbegrip:attribuut ;
-        skos:prefLabel  "Bindingen" .
+        skos:prefLabel  "Bindingen"@nl .
 
 mimbegrip:Modelelement
         rdf:type         skos:Concept ;
@@ -403,15 +403,15 @@ mimbegrip:Informatiemodel
 
 mimcol:Aggregatietypen
         rdf:type        skos:Collection ;
-        rdfs:label      "Aggregatietypen" ;
+        rdfs:label      "Aggregatietypen"@nl ;
         skos:member     mim:Gedeeld , mim:Geen , mim:Compositie ;
-        skos:prefLabel  "Aggregatietypen" .
+        skos:prefLabel  "Aggregatietypen"@nl .
 
 mimcol:Relatiemodelleringstypen
         rdf:type        skos:Collection ;
-        rdfs:label      "Relatiemodelleringstypen" ;
+        rdfs:label      "Relatiemodelleringstypen"@nl ;
         skos:member     mim:RelatierolLeidend , mim:RelatiesoortLeidend ;
-        skos:prefLabel  "Relatiemodelleringstypen" .
+        skos:prefLabel  "Relatiemodelleringstypen"@nl .
 
 mimbegrip:View  rdf:type  skos:Concept ;
         rdfs:label       "View"@nl ;
@@ -423,9 +423,9 @@ mimbegrip:View  rdf:type  skos:Concept ;
 
 mim:TechnischInformatiemodel
         rdf:type        skos:Concept ;
-        rdfs:label      "Technisch informatiemodel" ;
+        rdfs:label      "Technisch informatiemodel"@nl ;
         skos:inScheme   <http://definities.mim-standaard.nl/id/begrippenkader/MIM> ;
-        skos:prefLabel  "Technisch" .
+        skos:prefLabel  "Technisch"@nl .
 
 mimbegrip:DataElement
         rdf:type         skos:Concept ;
@@ -462,17 +462,17 @@ mimbegrip:relatierol  rdf:type  skos:Concept ;
 
 mim:OverigeAuthenticiteit
         rdf:type         skos:Concept ;
-        rdfs:label       "Overige authenticiteit" ;
+        rdfs:label       "Overige authenticiteit"@nl ;
         skos:definition  "Indien het géén van de voorgaande categorieën betreft. Veelal gaat het dan om proces-, taakveld- of domeinspecifieke gegevens."@nl ;
         skos:inScheme    <http://definities.mim-standaard.nl/id/begrippenkader/MIM> ;
-        skos:prefLabel   "Overig" .
+        skos:prefLabel   "Overig"@nl .
 
 mim:LandelijkKerngegeven
         rdf:type         skos:Concept ;
-        rdfs:label       "LandelijkKerngegeven" ;
+        rdfs:label       "LandelijkKerngegeven"@nl ;
         skos:definition  "Indien het een gegeven of een als relatiesoort gemodelleerd gegeven is in een landelijk sector- en domein-overstijgend informatiemodel en geen authentiek gegeven en geen basisgegeven is."@nl ;
         skos:inScheme    <http://definities.mim-standaard.nl/id/begrippenkader/MIM> ;
-        skos:prefLabel   "Landelijk kerngegeven" .
+        skos:prefLabel   "Landelijk kerngegeven"@nl .
 
 mimbegrip:attribuut  rdf:type  skos:Concept ;
         rdfs:label       "attribuut"@nl ;
@@ -506,9 +506,9 @@ mimbegrip:Relatierol  rdf:type  skos:Concept ;
 
 mim:RelatierolLeidend
         rdf:type        skos:Concept ;
-        rdfs:label      "Relatierol leidend" ;
+        rdfs:label      "Relatierol leidend"@nl ;
         skos:inScheme   <http://definities.mim-standaard.nl/id/begrippenkader/MIM> ;
-        skos:prefLabel  "Relatierol leidend" .
+        skos:prefLabel  "Relatierol leidend"@nl .
 
 mimbegrip:bevatModelelement
         rdf:type        skos:Concept ;
@@ -517,11 +517,11 @@ mimbegrip:bevatModelelement
         skos:prefLabel  "bevat modelelement"@nl .
 
 mimbegrip:doel  rdf:type  skos:Concept ;
-        rdfs:label       "doel" ;
+        rdfs:label       "doel"@nl ;
         dct:source       mimdoc:sectie2.8.2.19 ;
         skos:definition  "Aanduiding van het gerelateerde objecttype die het eindpunt van de relatie aangeeft. Naar objecten van dit objecttype wordt verwezen."@nl ;
         skos:inScheme    <http://definities.mim-standaard.nl/id/begrippenkader/MIM> ;
-        skos:prefLabel   "doel" .
+        skos:prefLabel   "doel"@nl .
 
 mimbegrip:Relatieklasse
         rdf:type         skos:Concept ;
@@ -536,7 +536,7 @@ mimbegrip:Datatype  rdf:type  skos:Concept ;
         rdfs:label       "Datatype"@nl ;
         dct:source       mimdoc:sectie2.5 ;
         skos:broader     mimbegrip:Modelelement ;
-        skos:definition  "Een beschrijving van de structuur waaraan een waarde, oftewel de data zelf, aan moet voldoen." ;
+        skos:definition  "Een beschrijving van de structuur waaraan een waarde, oftewel de data zelf, aan moet voldoen."@nl ;
         skos:inScheme    <http://definities.mim-standaard.nl/id/begrippenkader/MIM> ;
         skos:prefLabel   "Datatype"@nl .
 
@@ -575,11 +575,11 @@ mimbegrip:referentieElement
         skos:scopeNote   "Een referentie element kan uniek zijn, zoals een code, en is dan op zichzelf geschikt om gebruikt te worden als referentie (zoals bedoeld in de definitie van Referentielijst). Bij het referentie element kan een definitie en toelichting worden opgenomen, die aangeven hoe de externe waardelijst in het eigen informatiemodel gebruikt wordt."@nl .
 
 mimbegrip:supertype  rdf:type  skos:Concept ;
-        rdfs:label       "supertype" ;
+        rdfs:label       "supertype"@nl ;
         dct:source       mimdoc:sectie2.8.4.4 ;
         skos:definition  "De binding van een supertype aan een subtype middels een generalisatie."@nl ;
         skos:inScheme    <http://definities.mim-standaard.nl/id/begrippenkader/MIM> ;
-        skos:prefLabel   "supertype" .
+        skos:prefLabel   "supertype"@nl .
 
 mimbegrip:relatiemodelleringstype
         rdf:type         skos:Concept ;
@@ -590,10 +590,10 @@ mimbegrip:relatiemodelleringstype
         skos:prefLabel   "relatiemodelleringstype"@nl .
 
 mim:Authentiek  rdf:type  skos:Concept ;
-        rdfs:label       "Authentiek" ;
+        rdfs:label       "Authentiek"@nl ;
         skos:definition  "In een basisregistratie opgenomen gegeven dat bij wettelijk voorschrift als authentiek is aangemerkt."@nl ;
         skos:inScheme    <http://definities.mim-standaard.nl/id/begrippenkader/MIM> ;
-        skos:prefLabel   "Authentiek" .
+        skos:prefLabel   "Authentiek"@nl .
 
 mimbegrip:dataElement
         rdf:type         skos:Concept ;
@@ -627,9 +627,9 @@ mimbegrip:patroon  rdf:type  skos:Concept ;
 
 mim:RelatiesoortLeidend
         rdf:type        skos:Concept ;
-        rdfs:label      "Relatiesoort leidend" ;
+        rdfs:label      "Relatiesoort leidend"@nl ;
         skos:inScheme   <http://definities.mim-standaard.nl/id/begrippenkader/MIM> ;
-        skos:prefLabel  "Relatiesoort leidend" .
+        skos:prefLabel  "Relatiesoort leidend"@nl .
 
 mimbegrip:herkomst  rdf:type  skos:Concept ;
         rdfs:label       "herkomst"@nl ;
@@ -654,9 +654,9 @@ mimbegrip:identificerend
 
 mim:LogischInformatiemodel
         rdf:type        skos:Concept ;
-        rdfs:label      "Logisch informatiemodel" ;
+        rdfs:label      "Logisch informatiemodel"@nl ;
         skos:inScheme   <http://definities.mim-standaard.nl/id/begrippenkader/MIM> ;
-        skos:prefLabel  "Logisch" .
+        skos:prefLabel  "Logisch"@nl .
 
 mimbegrip:attribuutkeuze
         rdf:type         skos:Concept ;
@@ -700,23 +700,23 @@ mimbegrip:kardinaliteitRelatieBron
 mimbegrip:begrip  rdf:type  skos:Concept ;
         rdfs:label       "begrip"@nl ;
         dct:source       mimdoc:sectie2.8.2.3 ;
-        skos:definition  "Verwijzing naar een begrip, vanuit een modelelement, waarmee wordt aangegeven op welk begrip, of begrippen, het informatiemodel element is gebaseerd." ;
+        skos:definition  "Verwijzing naar een begrip, vanuit een modelelement, waarmee wordt aangegeven op welk begrip, of begrippen, het informatiemodel element is gebaseerd."@nl ;
         skos:inScheme    <http://definities.mim-standaard.nl/id/begrippenkader/MIM> ;
         skos:prefLabel   "begrip"@nl ;
         skos:scopeNote   "Hiermee wordt aangegeven hoe een informatiemodel element zich verhoudt tot de begrippen uit het begrippenkader. Dit is niet een 1 op 1 relatie."@nl .
 
 mim:WettelijkGegeven  rdf:type  skos:Concept ;
-        rdfs:label       "Wettelijk gegeven" ;
+        rdfs:label       "Wettelijk gegeven"@nl ;
         skos:definition  "Gegeven behorende bij een wettelijke registratie, niet zijnde een basisregistratie"@nl ;
         skos:inScheme    <http://definities.mim-standaard.nl/id/begrippenkader/MIM> ;
-        skos:prefLabel   "Wettelijk gegeven" .
+        skos:prefLabel   "Wettelijk gegeven"@nl .
 
 mimbegrip:bron  rdf:type  skos:Concept ;
-        rdfs:label       "bron" ;
+        rdfs:label       "bron"@nl ;
         dct:source       mimdoc:sectie2.8.2.18 ;
         skos:definition  "Aanduiding van het bronobject in een relatie tussen objecten. Een bronobject heeft middels een relatiesoort een relatie met een doelobject."@nl ;
         skos:inScheme    <http://definities.mim-standaard.nl/id/begrippenkader/MIM> ;
-        skos:prefLabel   "bron" .
+        skos:prefLabel   "bron"@nl .
 
 mimbegrip:indicatieMaterieleHistorie
         rdf:type         skos:Concept ;
@@ -767,8 +767,8 @@ mimbegrip:datatypekeuze
 
 <http://definities.mim-standaard.nl/id/begrippenkader/MIM>
         rdf:type        skos:ConceptScheme ;
-        rdfs:label      "MIM Begrippenkader" ;
-        skos:prefLabel  "MIM Begrippenkader" .
+        rdfs:label      "MIM Begrippenkader"@nl ;
+        skos:prefLabel  "MIM Begrippenkader"@nl .
 
 mim:Compositie  rdf:type  skos:Concept ;
         rdfs:label      "Compositie"@nl ;
