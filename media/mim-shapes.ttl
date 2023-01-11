@@ -4,9 +4,9 @@
 # Source: https://www.geonovum.nl/geo-standaarden/metamodel-informatiemodellering/nationaal-metamodel-voor-informatiemodellering
 ##
 
-@prefix mim: <http://bp4mc2.org/def/mim#>.
-@prefix mimdoc: <http://bp4mc2.org/def/mimdoc#>.
-@prefix shape: <http://bp4mc2.org/def/mim-shapes#>.
+@prefix mim: <http://modellen.mim-standaard.nl/def/mim#>.
+@prefix mimdoc: <http://definities.mim-standaard.nl/id/referentie/>.
+@prefix shape: <http://modellen.mim-standaard.nl/def/mim-shapes#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
 @prefix sh: <http://www.w3.org/ns/shacl#>.

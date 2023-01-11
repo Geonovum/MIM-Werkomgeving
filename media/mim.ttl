@@ -6,8 +6,9 @@
 # - Huidige basis is versie van 2019, controle op wijzigingen t/m 1.1.1
 # - Herziening namespace
 
-@prefix mim: <http://bp4mc2.org/def/mim#>.
-@prefix mimdoc: <http://bp4mc2.org/def/mimdoc#>.
+@prefix mim: <http://modellen.mim-standaard.nl/def/mim#>.
+@prefix mimdoc: <http://definities.mim-standaard.nl/id/referentie/>.
+@prefix shape: <http://modellen.mim-standaard.nl/def/mim-shapes#>.
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
 @prefix owl: <http://www.w3.org/2002/07/owl#>.
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>.

@@ -69,7 +69,7 @@ queries:
       prefix mimcol: <http://definities.mim-standaard.nl/id/collectie/>
       prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
       prefix dct: <http://purl.org/dc/terms/>
-      prefix mim: <http://bp4mc2.org/def/mim#>
+      prefix mim: <http://modellen.mim-standaard.nl/def/mim#>
       insert {
         graph <urn:output> {
           mimcol:Modelelementen skos:member ?concept.
@@ -87,7 +87,7 @@ queries:
       prefix mimcol: <http://definities.mim-standaard.nl/id/collectie/>
       prefix dct: <http://purl.org/dc/terms/>
       prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-      prefix mim: <http://bp4mc2.org/def/mim#>
+      prefix mim: <http://modellen.mim-standaard.nl/def/mim#>
       insert {
         graph <urn:output> {
           mimcol:Datatypen skos:member ?concept.
@@ -129,6 +129,7 @@ queries:
       prefix skos: <http://www.w3.org/2004/02/skos/core#>
       prefix mimcol: <http://definities.mim-standaard.nl/id/collectie/>
       prefix dct: <http://purl.org/dc/terms/>
+      prefix sh: <http://www.w3.org/ns/shacl#>
       insert {
         graph <urn:output> {
           mimcol:Metagegevens skos:member ?concept.
@@ -136,8 +137,17 @@ queries:
       }
       where {
         graph <urn:input> {
-          ?property dct:subject ?concept.
-          ?property a owl:DatatypeProperty.
+          {
+            ?property dct:subject ?concept.
+            ?property a owl:DatatypeProperty.
+          }
+          UNION
+          {
+            ?property dct:subject ?concept.
+            ?property a owl:ObjectProperty.
+            ?pshape sh:path ?property.
+            ?pshape sh:node/sh:property/sh:path skos:inScheme.
+          }
         }
       }
   - title: populate mimcol:Bindingen
@@ -146,6 +156,7 @@ queries:
       prefix skos: <http://www.w3.org/2004/02/skos/core#>
       prefix mimcol: <http://definities.mim-standaard.nl/id/collectie/>
       prefix dct: <http://purl.org/dc/terms/>
+      prefix sh: <http://www.w3.org/ns/shacl#>
       insert {
         graph <urn:output> {
           mimcol:Bindingen skos:member ?concept.
@@ -155,6 +166,10 @@ queries:
         graph <urn:input> {
           ?property dct:subject ?concept.
           ?property a owl:ObjectProperty.
+          FILTER NOT EXISTS {
+            ?pshape sh:path ?property.
+            ?pshape sh:node/sh:property/sh:path skos:inScheme.
+          }
         }
       }
   - title: add labels
