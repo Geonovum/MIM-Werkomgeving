@@ -12,6 +12,10 @@ dct:isPartof rdfs:label "Is onderdeel van" .
 dct:bibliographicCitation rdfs:label "Referentie" .
 # ----
 
+<http://definities.mim-standaard.nl/referenties> a owl:Ontology;
+  rdfs:label "Referenties"@nl;
+.
+
 mimdoc:nora-online a dct:BibliographicResource;
   rdfs:label "Nora online";
   dct:bibliographicCitation "Nora online";

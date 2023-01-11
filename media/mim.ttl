@@ -14,6 +14,7 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>.
 @prefix dct: <http://purl.org/dc/terms/>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix sh: <http://www.w3.org/ns/shacl#>.
 
 #
 # Ontology
@@ -24,7 +25,10 @@
   owl:versionIRI <http://bp4mc2.org/def/mim/1.1.1>;
   owl:versionInfo "1.1.1";
   dct:source <https://docs.geostandaarden.nl/mim/mim/>;
-  owl:imports <http://bp4mc2.org/def/mimdoc#> # Bestand betreft: media/referenties.ttl
+  owl:imports <http://definities.mim-standaard.nl/referenties>; # Bestand betreft: media/referenties.ttl
+  sh:declare   [ sh:namespace  "http://modellen.mim-standaard.nl/def/mim#" ;
+                 sh:prefix     "mim"
+               ]
 .
 
 #
