@@ -241,7 +241,7 @@ var respecConfig =
   },
   //-- Voor dit blok geldt: alleen als er eerdere versies zijn en altijd beiden aan/uit!
   //previousPublishDate: "2020-02-25",    	    // Format is "YYYY-MM-DD"
-  //reviousMaturity: "GN-DEF",                 // kies 1 van deze 3 regels
+  //reviousMaturity: "GN-DEF",                    // kies 1 van deze 3 regels
   //previousMaturity: "GN-CV",                   // kies 1 van deze 3 regels
   //previousMaturity: "GN-VV",  	                // kies 1 van deze 3 regels
 
@@ -249,4 +249,6 @@ var respecConfig =
   //emailComments: "mim@geonovum.nl",         // reactie mailadres, alleen bij CV!
   //subtitle: "iets",                         // Subtitel van het document
   maxTocLevel: 4,                             // Aantal niveau's ToC, default is 0
+  organisationStylesURL: "https://tools.geostandaarden.nl/respec/style/",       // JvG: Toegevoegd tbv. Logius jslib
+  organisationPrefix: "GN-",                                                    // JvG: Toegevoegd tbv. Logius jslib
 };
