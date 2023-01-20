@@ -54,16 +54,24 @@ Je hebt nu succesvol de package structuur aangemaakt.
 
 ## Stap 3: Modelleer de toolbox-extentie
 
+ - Vouw het package `«profile»DISGEO` uit
+ - Dubbelklik op het diagram
+ - Hierdoor opent het diagram en verschijnt de bijbehorende toolbox: `UML::Profile`
+ - Ga in het toolboxmenu naar _Metaclass_ en sleep dit element in het diagram.
+ - Er verschijnt nu een venster _Extend Metaclass_.
+ - Klik in de linkerkolom op _Stereotypes_. Hierdoor verschijnen aan de rechterkant alle stereotypen die MIM kent. 
 
+>**Let op**: deze zijn alleen beschikbaarbaar nadat je de MIM-toolbox hebt geïmporteerd (zie: [stap: 1](#stap-1-importeer-de-mim-toolbox-in-de-ea-omgeving)).
 
-Vouw het package `«profile»DISGEO` uit
-Dubbelklik op het diagram
-Hierdoor opent het diagram en verschijnt de bijbehorende toolbox: `UML::Profile`
-Ga in het toolboxmenu naar Metaclass en sleep dit element in het diagram.
-Er verschijnt nu een venster Extend Metaclass.
-Klik in de linkerkolom op Stereotypes. Hierdoor verschijnen aan de rechterkant alle stereotypen die MIM kent. 
+ - Zoek in de lijst aan de rechterkant `«Objecttype»` en `«Attribuutsoort»` op, selecteer deze en klik op _OK_.
+ - Deze worden nu toegevoegd aan het diagram.
+ - Zoek nu in het toolboxmenu Add Stereotype op (onder Profile Helpers) en sleep dit element op het diagram.
+ - er verschijnt nu een venster Add Stereotype
+ - Geef een naam op voor het stereotype. In het geval van dit voorbeeld is gekozen voor Attribuutsoort, maar dit kan elke andere willekeurige naam zijn.
+ - Klik vervogens op de button Add Metaclass.
+ - Hier geef je de UML-metaklasse op waarop je extentie plaatsvindt.
+ - Je moet hiervoor weten van welke UML-metaklasse het MIM-stereotype is afgeleid. Je kunt dat hier terugvinden in [hoofdstuk 3 van de MIM-standaard](https://docs.geostandaarden.nl/mim/mim/#metamodel-in-uml).
 
-Let op: deze zijn alleen beschikbaarbaar nadat je de MIM-toolbox hebt geïmporteerd (zie: [stap: 1](#stap-1-importeer-de-mim-toolbox-in-de-ea-omgeving).
 
 ## Stap 4: Modelleer het diagram?
 
