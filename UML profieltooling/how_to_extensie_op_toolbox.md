@@ -67,7 +67,7 @@ Je hebt nu succesvol de package structuur aangemaakt.
  - Deze worden nu toegevoegd aan het diagram.
  - Zoek nu in het toolboxmenu Add Stereotype op (onder Profile Helpers) en sleep dit element op het diagram.
  - er verschijnt nu een venster Add Stereotype.
- - We gaan nu een stereotype maken dat dient als extentie op het MIM-stereotype Objecttype.
+ - We gaan nu een stereotype maken dat dient als extentie op het MIM-stereotype `«Attribuutsoort»`.
  - Geef een naam op voor het stereotype. In het geval van dit voorbeeld is gekozen voor Attribuutsoort, maar dit kan elke andere willekeurige naam zijn.
  - Klik vervogens op de button Add Metaclass.
  - Hier geef je de UML-metaklasse op waarop je extentie plaatsvindt. In dit geval Als je niet weet van welke UML-metaklasse je stereotype wordt afgeleid, zoek dit dan op in hoofdstuk 3 van de ](https://docs.geostandaarden.nl/mim/mim/#metamodel-in-uml).
@@ -82,10 +82,11 @@ Je hebt nu succesvol de package structuur aangemaakt.
  - In het geval van dit voorbeeld Actualiteit.
  - In de linkerkolom kun je nog een standaardwaarde opvoeren, maar dat is niet verplicht.
  - In dit voorbeeld laten blijft dit veld leeg.
- - Herhaal deze stap voor alle toe te voegen tagged values die je aan dit element wilt toeveogen.
- - Als je klaar bent kun je bovenstaande stappen herhalen voor Attribuutsoort.
- - Klik op _Voltooien_
- - Je ziet nu dat er vanuit het nieuwe stereotype met de tagged values, daarnaast een relatie van het type Extension is naar de UML-metaklasse Attribute toegevoegd.
+ - Herhaal deze stap voor alle toe te voegen tagged values die je aan dit element wilt toevogen.
+ - Als je klaar bent, kun je bovenstaande stappen herhalen voor `«Objecttype»`. Klik daarna op _Voltooien_
+
+Je ziet nu het nieuwe stereotype met de tagged values. Daarnaast heeft het nu een relatie met de UML-metaklasse `«Attribute»`. Als laatste onderdeel van deze stap moet nu de relatie gelegd worden tussen het nieuwe stereotype en het MIM-stereotype. Dit gaat als volgt:
+
  - Klik nu op het element Attribuutsoort (de extentie, niet het MIM-type).
  - Er verschijnen nu rechts van het element een aantal iconen.
  - Klik op de witte pijl met de muisknop ingedrukt en sleep dit naar het bijbehorende MIM-type (het bovenste icoon)
