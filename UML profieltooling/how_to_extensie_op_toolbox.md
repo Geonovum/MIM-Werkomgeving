@@ -66,12 +66,29 @@ Je hebt nu succesvol de package structuur aangemaakt.
  - Zoek in de lijst aan de rechterkant `«Objecttype»` en `«Attribuutsoort»` op, selecteer deze en klik op _OK_.
  - Deze worden nu toegevoegd aan het diagram.
  - Zoek nu in het toolboxmenu Add Stereotype op (onder Profile Helpers) en sleep dit element op het diagram.
- - er verschijnt nu een venster Add Stereotype
+ - er verschijnt nu een venster Add Stereotype.
+ - We gaan nu een stereotype maken dat dient als extentie op het MIM-stereotype Objecttype.
  - Geef een naam op voor het stereotype. In het geval van dit voorbeeld is gekozen voor Attribuutsoort, maar dit kan elke andere willekeurige naam zijn.
  - Klik vervogens op de button Add Metaclass.
- - Hier geef je de UML-metaklasse op waarop je extentie plaatsvindt.
- - Je moet hiervoor weten van welke UML-metaklasse het MIM-stereotype is afgeleid. Je kunt dat hier terugvinden in [hoofdstuk 3 van de MIM-standaard](https://docs.geostandaarden.nl/mim/mim/#metamodel-in-uml).
+ - Hier geef je de UML-metaklasse op waarop je extentie plaatsvindt. In dit geval Als je niet weet van welke UML-metaklasse je stereotype wordt afgeleid, zoek dit dan op in hoofdstuk 3 van de ](https://docs.geostandaarden.nl/mim/mim/#metamodel-in-uml).
 
+ >**Info**: In hoofdstuk 3 van de MIM-standaard staat beschreven van welke UML-metaklasse elk MIM-stereotype is afgeleid. Omdat je een extentie maakt op MIM, is de nieuwe extentie automatisch óók een extentie op een UML-type. Desondanks moet je dit in Enterprise Architect expliciet benoemen.
+
+ - Laat de overige instellingen staan en klik op _Volgende_.
+ - In dit venster (Define Tagged Values), kun je de extra metadata-elementen opvoeren.
+ - Klik met de rechtermuisknop in de kolom Property
+ - Kies uit het menu Add Tagged Value.
+ - Voer een naam op voor de tagged value
+ - In het geval van dit voorbeeld Actualiteit.
+ - In de linkerkolom kun je nog een standaardwaarde opvoeren, maar dat is niet verplicht.
+ - In dit voorbeeld laten blijft dit veld leeg.
+ - Herhaal deze stap voor alle toe te voegen tagged values die je aan dit element wilt toeveogen.
+ - Als je klaar bent kun je bovenstaande stappen herhalen voor Attribuutsoort.
+ - Klik op _Voltooien_
+ - Je ziet nu dat er vanuit het nieuwe stereotype met de tagged values, daarnaast een relatie van het type Extension is naar de UML-metaklasse Attribute toegevoegd.
+ - Klik nu op het element Attribuutsoort (de extentie, niet het MIM-type).
+ - Er verschijnen nu rechts van het element een aantal iconen.
+ - Klik op de witte pijl met de muisknop ingedrukt en sleep dit naar het bijbehorende MIM-type (het bovenste icoon) en h
 
 ## Stap 4: Modelleer het diagram?
 
