@@ -22,10 +22,11 @@ Met een extensie breidt je MIM-toolbox uit. Dit is handig wanneer je extra infor
 
 ## Voorbereiding
 
-De MIM-toolbox waarop je een extensie wilt bouwen, in de vorm van een MDG Technology (.xml)
-Enterprise Architect
+Zorg dat je de volgende twee zaken bij de hand hebt:
+ 1. Enterprise Architect
+ 1. De MIM-toolbox waarop je een extensie wilt bouwen, in de vorm van een MDG Technology (.xml). Hier vind je de [meest actuele versie](https://register.geostandaarden.nl/informatiemodel/mim/1.1.1/) van de toolbox 
 
-## Stap 1: importeer de MIM-toolbox in de EA-omgeving
+## Stap 1: Importeer de MIM-toolbox in de EA-omgeving
  - Open de _project browser_.
  - Klik op de tab _Resources_.
  - Klik op de map _MDG Technologies_.
@@ -36,7 +37,7 @@ Enterprise Architect
 
 Indien je geen foutmelding krijgt, heb je de MIM-toolbox succesvol geïmporteerd.
 
-## Stap 2: maak de package-structuur aan voor de extensie
+## Stap 2: Maak de package-structuur aan voor de extensie
 
  - Klik in de project browser linksbovenin op de map met het gele sterretje, of druk `Ctrl+Shift+M`.
  - Hierdoor open de Model Wizard.
@@ -54,3 +55,19 @@ In de project browser zie dat er nu een nieuwe package DiSGeo is toegevoegd. Dat
  - en een `«toolbox profile»`.
 
 Je hebt nu succesvol de package structuur aangemaakt.
+
+## Stap 3: Modelleer de toolbox-extentie
+
+## Stap 4: Modelleer het diagram?
+
+## Stap 5: Modelleer het toolbox-menu
+
+## Stap 6: Exporteer/Genereer (naar) MDG
+
+>**NOTE**: [linkOpnemen](www.example.com) naar hoofdstuk in de **handleiding MIM-toolbox genereren**.
+
+## Stap 7: Importeer MDG
+
+>**NOTE**: [linkOpnemen](www.example.com) naar hoofdstuk in de **handleiding MIM-toolbox**.
+
+## Stap 8: Werken met de extensie
