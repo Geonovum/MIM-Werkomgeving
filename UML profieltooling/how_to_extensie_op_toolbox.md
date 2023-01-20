@@ -88,7 +88,12 @@ Je hebt nu succesvol de package structuur aangemaakt.
  - Je ziet nu dat er vanuit het nieuwe stereotype met de tagged values, daarnaast een relatie van het type Extension is naar de UML-metaklasse Attribute toegevoegd.
  - Klik nu op het element Attribuutsoort (de extentie, niet het MIM-type).
  - Er verschijnen nu rechts van het element een aantal iconen.
- - Klik op de witte pijl met de muisknop ingedrukt en sleep dit naar het bijbehorende MIM-type (het bovenste icoon) en h
+ - Klik op de witte pijl met de muisknop ingedrukt en sleep dit naar het bijbehorende MIM-type (het bovenste icoon)
+ - Kies uit het menu dat nu verschijnt voor Generalization.
+ - Je extentie-type heeft nu een relatie met MIM::Attribuutsoort en UML::Attribute.
+ - Herhaal deze stappen voor `«Objecttype»`.
+
+Je hebt nu succesvol het profiel van je extentie aangemaakt.
 
 ## Stap 4: Modelleer het diagram?
 
