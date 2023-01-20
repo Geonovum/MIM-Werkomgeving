@@ -2,18 +2,10 @@
 
 De handleiding is geschreven voor EA versie 15.2
 
-Deze handleiding gebruik DiSGeo als voorbeeld. Voor het informatiemodel DiSGeo zijn voor de MIM-stereotypen `«Objecttype»` en `«Attribuutsoort»` meta-informatie nodig in de vorm van extra tagged values.
-
-### Objecttype
- - Actualiteit
- - Inwinning verplicht
-
-### Attribuutsoort
- - Iwninningsregels
- - Positionele juistheid
+Deze handleiding gebruik **DiSGeo** als voorbeeld. Voor het **informatiemodel DiSGeo** zijn voor de MIM-stereotypen `«Objecttype»` en `«Attribuutsoort»` meta-informatie nodig in de vorm van extra tagged values. Voor [Objecttype](https://geonovum.github.io/disgeo-imsor/modelleerprincipes/#specificatie-voor-objecttype) gaat dat om het toevoegen van `Actualiteit` en `Inwinning verplicht`, voor [Attribuutsoort](https://geonovum.github.io/disgeo-imsor/modelleerprincipes/#specificatie-voor-attribuutsoort) zijn dat: `Inwinningsregels` en `Positionele juistheid`.
 
 ## Introductie
-Deze handleiding beschrijft hoe je in **Enterprise Architect** een **extensie** maakt **op de MIM-toolbox**. Dit is bijvoorbeeld handig als er extra metamodelconstructies nodig zijn voor het maken van een informatiemodel. Meer informatie en spelregels hiervoor vind je in de [MIM-standaard](https://docs.geostandaarden.nl/mim/mim/#een-eigen-extensie-op-het-metamodel). Een extensie op de MIM-toolbox is ook bedoeld voor het maken van aanvullende constructies die alleen spelen op het niveau van implementatie, of op het niveau van afgeleide technsiche modellen ten behoeve van specifieke interfaces.
+Deze handleiding beschrijft hoe je in **Enterprise Architect** een **extentie** maakt **op de MIM-toolbox**. Dit is bijvoorbeeld handig als er extra metamodelconstructies nodig zijn voor het maken van een informatiemodel. Meer informatie en spelregels hiervoor vind je in de [MIM-standaard](https://docs.geostandaarden.nl/mim/mim/#een-eigen-extensie-op-het-metamodel). Een extensie op de MIM-toolbox is ook bedoeld voor het maken van aanvullende constructies die alleen spelen op het niveau van implementatie, of op het niveau van afgeleide technsiche modellen ten behoeve van specifieke interfaces.
 
 Met een extensie breidt je MIM-toolbox uit. Dit is handig wanneer je extra informatie aan modelonderdelen (bijv. objecttypen) wilt toevoegen. Bijvoorbeeld voor:
  - het uitbreiden van de set met metagegevens voor modelonderdelen van een specifiek sector-/domeinmodel (extra tagged values);
@@ -23,7 +15,11 @@ Met een extensie breidt je MIM-toolbox uit. Dit is handig wanneer je extra infor
 ## Voorbereiding
 
 Zorg dat je de volgende twee zaken bij de hand hebt:
- 1. Enterprise Architect
+ 1. Enterprise Architect: Het is handig om de volgende venster te openen
+    - Browser
+    - Toolbox
+    - Properties
+    - Features
  1. De MIM-toolbox waarop je een extensie wilt bouwen, in de vorm van een MDG Technology (.xml). Hier vind je de [meest actuele versie](https://register.geostandaarden.nl/informatiemodel/mim/1.1.1/) van de toolbox 
 
 ## Stap 1: Importeer de MIM-toolbox in de EA-omgeving
@@ -57,6 +53,17 @@ In de project browser zie dat er nu een nieuwe package DiSGeo is toegevoegd. Dat
 Je hebt nu succesvol de package structuur aangemaakt.
 
 ## Stap 3: Modelleer de toolbox-extentie
+
+
+
+Vouw het package `«profile»DISGEO` uit
+Dubbelklik op het diagram
+Hierdoor opent het diagram en verschijnt de bijbehorende toolbox: `UML::Profile`
+Ga in het toolboxmenu naar Metaclass en sleep dit element in het diagram.
+Er verschijnt nu een venster Extend Metaclass.
+Klik in de linkerkolom op Stereotypes. Hierdoor verschijnen aan de rechterkant alle stereotypen die MIM kent. 
+
+Let op: deze zijn alleen beschikbaarbaar nadat je de MIM-toolbox hebt geïmporteerd (zie: [stap: 1](#stap-1-importeer-de-mim-toolbox-in-de-ea-omgeving).
 
 ## Stap 4: Modelleer het diagram?
 
