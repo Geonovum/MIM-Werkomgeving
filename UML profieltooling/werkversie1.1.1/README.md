@@ -16,7 +16,7 @@ Versienummer toegevoegd, zodat uit de naam van de toolbox duidelijk blijkt wat d
  1. [Verwijderen oudere toolbox](#5--verwijderen-oudere-toolbox)
  1. [Toolboxen beheren](#6--toolboxen-beheren)
 
-## 1 | Importeren MIM-toolbox
+## 1: Importeren MIM-toolbox
 
  - [Download het XML-bestand](https://register.geostandaarden.nl/informatiemodel/mim/1.1.1/) van de MIM-toolbox: `MDG_MIM_Toolbox_v1.1.1_build01.xml`.
  - Verwijder eventueel eerst de oudere versie van de toolbox als je die niet meer nodig hebt ([Toolbox verwijderen](#5--verwijderen-oudere-toolbox)).
@@ -66,7 +66,7 @@ Versienummer toegevoegd, zodat uit de naam van de toolbox duidelijk blijkt wat d
 
  > **Let op**: de MIM-toolbox heeft een versienummer. Deze staat niet in de naam. Indien je besloten hebt om oudere versies van de MIM-toolbox niet te verwijderen, komt de naam 'MIM' mogelijk meerdere malen voor. Het [beheren van toolboxen](#6--toolboxen-beheren) in Enterprise Architect doe je op deze manier.
 
-## 2 | Toepassen MIM-diagram
+## 2: Toepassen MIM-diagram
 
 In voorgaande versies werd de MIM-toolbox toegepast op een standaard UML diagram (`UML::Class`). Dat kan nog steeds. Dit heeft echter één nadelige eigenschap. Als je in je project met meerdere diagrammen werkt, kan het voorkomen dat bij het wisselen tussen diagrammen de toolbox terugspringt op de standaard UML-toolbox. Hierdoor moet je de MIM-toolbox opnieuw opzoeken.
 
@@ -115,7 +115,7 @@ Het MIM-versienummer komt nu ook terug het veld Stereotype in het venster '_Prop
 
 ![](Media/mim_modelelement_versienummer.jpg)
 
-## 3 | Toepassen Quick Linker
+## 3: Toepassen Quick Linker
 
 De Quick Linker is een hulpmiddel om snel en eenvoudig relaties te kunnen leggen tussen verschillende elementen. Het voordeel hiervan is dat het de gebruiker inzicht geeft in de volgens MIM toegestane relaties. De Quick Linker is beschikbaar via een icoontje dat rechtsboven een diagramelement verschijnt op het moment dat je het selecteert.
 
@@ -173,7 +173,7 @@ Ook is het mogelijk om vanuit een bestaand element meerdere én verschillende so
 
 ![](Media/mim_ql_result_multiple.jpg)
 
-## 4 | Toepassen toolbox-item 'Relatierol'
+## 4: Toepassen toolbox-item 'Relatierol'
 
 Net als alle andere relatie-elementen uit de MIM-toolbox, kun je `«Relatierol»` naar het diagram slepen. Dit werkt alleen als je dit naar het uiteinde van een reeds bestaande `«Relatiesoort»` sleept. Wanneer je in EA het stereotype `«Relatierol»` toewijst aan een relatie, worden de bijbehorende '_Tagged Values_' niet automatisch meegenomen. Hieronder staat bschreven hoe je de tagged values voor alle in het model aanwezige stereotypen `«Relatierol»` in het model kunt synchroniseren.
 
@@ -208,7 +208,7 @@ Net als alle andere relatie-elementen uit de MIM-toolbox, kun je `«Relatierol»
 
  > **Let op**: dit werkt nog niet!
 
-## 5 | Verwijderen oudere toolbox
+## 5: Verwijderen oudere toolbox
 Deze instructie is bedoeld voor het verwijderen van toolboxen die je niet meer wilt gebruiken. Bijvoorbeeld oudere versies van de MIM-toolbox.
 
  - Open Enterprise Architect
@@ -229,7 +229,7 @@ Deze instructie is bedoeld voor het verwijderen van toolboxen die je niet meer w
     - Start hierna voor de zekerheid EA opnieuw op.
     - Ga verder met het [importeren van de MIM-toolbox](#1--importeren-mim-toolbox).
 
-## 6 | Toolboxen beheren
+## 6: Toolboxen beheren
  - Ga naar de menubalk boven in beeld en selecteer '_Specialize_' > '_Manage-Tech_'
  - Hier vind je een overzicht van alle aanwezige MDG-technologies.
  - Scroll naar beneden en zoek '_MIM_' op.
@@ -240,3 +240,5 @@ Deze instructie is bedoeld voor het verwijderen van toolboxen die je niet meer w
  - Ga verder met de laatste stappen van het [importeren van de MIM-toolbox](#1--importeren-mim-toolbox).
 
  > **Let op**: indien je toolboxen gebruikt met gelijknamige modelelementen, bijvoorbeeld oudere MIM-toolboxen of NEN3610 BRO Grouping-NL, dan kan dit bij het toewijzen van het stereotype «Relatierol» leiden tot een verwijzing naar het 'verkeerde' profiel. Enterprise Architect doet dit automatisch. Hierdoor beschikt het stereotype bijvoorbeeld niet over de gewenste tagged values.
+
+## 7: Workspaces gebruiken
