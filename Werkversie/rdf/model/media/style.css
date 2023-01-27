@@ -55,40 +55,52 @@ blockquote:before
   color: grey;
 }
 
-/*-- Definite van tabellen ---------------------------------------------------------*/
-table
+/*-- Tabellen ----------------------------------------------------------------------*/
+table.simple
 {
-  empty-cells: show;
-  min-width: 90%;
-  border-color: grey;
-  border-style: solid;
+     empty-cells:           show;
+     min-width:             100%;
+     border-bottom-color: #b4dbf6 !important;
 }
 
 /*-- Definite van de kopregel van een tabel ----------------------------------------*/
-thead
+table.simple thead
 {
-  background-color: grey;
-  color: white;
-}
-/*-- Definite van de body van een tabel --------------------------------------------*/
-tbody
-{
-  border-color: darkolivegreen;
-  background-color: lightgrey
+     color:                 #ffffff;
 }
 
-/*-- Definite van de tabel-rij (deze zorgt voor 2 kleuren in de rijen) -------------*/
-tr:nth-child(even)
+table.simple head th, td
 {
-  background-color:  darkgrey;
+     font-weight:             normal;
+     padding-left:          12px;
+}
+
+/*-- Definite van de kopregel van een tabel: aangepaste kleur (voor leesbaarheid)---*/
+table.simple thead th
+
+{
+  background-color: #b4dbf6;
+  color: #000000;
+}
+
+/*-- Definite van de body van een tabel --------------------------------------------*/
+table.simple tbody
+{
+     border-color:          #97c00e;
+     background-color:      #f7f7f7;
+}
+
+/*-- Definitie van de tabel-rij (deze zorgt voor 2 kleuren in de rijen) ------------*/
+table.simple tr:nth-child(even) 
+{
+     background-color:      #ffffff;
 }
 
 /*-- Definite van de tabel-cel (data) ----------------------------------------------*/
-td
+table.simple td 
 {
-  min-width: 100px;     /* lege kolommen hebben deze minimale breedte */
+     min-width:             100px;     
 }
-
 /*-- Definite van rode tekst -------------------------------------------------------*/
 r
 {
