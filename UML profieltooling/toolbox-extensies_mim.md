@@ -48,3 +48,13 @@ IMvertor geneert ook toolboxen. Die zijn compleet, maar wel 'plat'.
  1. Profielen en toolboxen, door Geonovum handmatig ontwikkeld gedistribueerd (Onhandig)
  1. MIM-toolbox met mogelijk profielen voor extensies, door geonovum ontwikkeld en gedistribueerd (Theoretische optie)
  1. MIM-compliant toolbox met alle extra benodigdheden, Automatisch gegenereerd door Imvertor (Mogelijk, maar ongevalideerd)
+
+ 
+#### Nog verwerken
+_"Het lijkt mij goed om te kijken hoe we het gebruik van toolboxen in EA wat meer kunnen stroomlijnen. In essentie lijkt het mij wenselijk als je in de EA-werkomgeving in één toolbox alles tot je beschikking hebt voor het maken, publiceren en generen van afgeleide producten van modellen._
+
+_Nu is het bijvoorbeeld zo dat wij vanuit Geonovum een MIM-toolbox aanbieden die een één-op-één-implementatie van de standaard is. Imvertor heeft echter meer informatie nodig om te kunnen draaien. Daarnaast is het soms nodig om een extensie op het metamodel te maken. Je hebt als modelleur dan niet genoeg aan de MIM-toolbox. Tegelijkertijd kan Imvertor geautomatiseerd een toolboxen genereren._
+
+_Maar het valt mij op dat er hierdoor discussie ontstaat over of de MIM-toolbox een zuivere representatie van het metamodel moet zijn waarbij Geonovum als beheerder van de standaard verantwoordelijk is, of dat de MIM-toolbox juist een zo’n gebruiksvriendelijk mogelijk hulpmiddel voor de modelleur moet zijn._
+
+_Voor beide is wat te zeggen, maar ik denk dat het mogelijk is om zonder grote concessies aan beide wensen te voldoen. Ik heb hiervoor wat ideeën die ik graag eens met jou bespreek."_
