@@ -2,7 +2,7 @@
 
 ## Basisgedachte
 Het idee voor het ontwikkelen van een standaard werkwijze voor extensies op de MIM-toolbox komt voort uit de behoefte om modelleurs, die volgens het MIM-metamodel met Enterprise Architect werken en gebruik maken van Imvertor, op een éénduidige manier te faciliteren met een complete toolbox. 
-compleet wil zeggen dat de modelleur zelf bepaalt welke extra elementen er nodig en profielen hiervan kan importeren, op zo'n manier dat het een extensie vormt op MIM. Zodat de MIM-toolbox een zuivere implementatie van de standaard kan blijven en tegelijkertijd de herkomst van verschillende tagged value groepen duidelijk herleidbaar is.
+Compleet wil in dit geval zeggen dat de modelleur zelf bepaalt welke extra elementen er nodig en profielen hiervan kan importeren, op zo'n manier dat het een extensie vormt op MIM. Zo blijft de MIM-toolbox een zuivere implementatie van de standaard. Tegelijkertijd de herkomst van verschillende tagged value groepen duidelijk herleidbaar is. 
 
 #### Samengevat
 
@@ -37,3 +37,14 @@ Deze verkenning is erop gericht om uit te zoeken in hoeverre deze wens gedeeld w
 Maar nu: MIM+A en MIM+B zijn twee verschillende toolboxen
 Bijv. MIM + IMV + DSG + JSON
 
+Niet alle meta-inforamtie wil je ook in de publicatie laten landen.
+
+De BRO heeft ook verschillende profielen voor conceptuele en logische modellen.
+
+IMvertor geneert ook toolboxen. Die zijn compleet, maar wel 'plat'.
+
+#### Methoden toevoegen tagged values
+ 1. Handmatig alle tags per modelelemnt toevoegen (Onwenselijk)
+ 1. Profielen en toolboxen, door Geonovum handmatig ontwikkeld gedistribueerd (Onhandig)
+ 1. MIM-toolbox met mogelijk profielen voor extensies, door geonovum ontwikkeld en gedistribueerd (Theoretische optie)
+ 1. MIM-compliant toolbox met alle extra benodigdheden, Automatisch gegenereerd door Imvertor (Mogelijk, maar ongevalideerd)
