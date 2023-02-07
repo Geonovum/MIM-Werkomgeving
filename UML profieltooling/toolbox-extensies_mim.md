@@ -44,11 +44,13 @@ De BRO heeft ook verschillende profielen voor conceptuele en logische modellen.
 IMvertor geneert ook toolboxen. Die zijn compleet, maar wel 'plat'.
 
 #### Methoden toevoegen tagged values
- 1. Handmatig alle tags per modelelemnt toevoegen (Onwenselijk)
- 1. Profielen en toolboxen, door Geonovum handmatig ontwikkeld gedistribueerd (Onhandig)
- 1. MIM-toolbox met mogelijk profielen voor extensies, door geonovum ontwikkeld en gedistribueerd (Theoretische optie)
- 1. MIM-compliant toolbox met alle extra benodigdheden, Automatisch gegenereerd door Imvertor (Mogelijk, maar ongevalideerd)
-
+ 1. **Handmatig** alle tags per modelelemnt toevoegen
+ 1. **Profielen** en **toolboxen**, door **Geonovum handmatig** ontwikkeld gedistribueerd
+ 1. **MIM-toolbox** met mogelijk **profielen voor extensies**, door **Geonovum handmatig** ontwikkeld en gedistribueerd
+ 1. **MIM-compliant toolbox** met alle extra benodigdheden, **Automatisch gegenereerd door Imvertor**
+ 
+Aan alle methoden zitten voor en nadelen. Deze worden in de volgende verder uiteengezet.
+`(...)`
  
 #### Nog verwerken
 _"Het lijkt mij goed om te kijken hoe we het gebruik van toolboxen in EA wat meer kunnen stroomlijnen. In essentie lijkt het mij wenselijk als je in de EA-werkomgeving in één toolbox alles tot je beschikking hebt voor het maken, publiceren en generen van afgeleide producten van modellen._
