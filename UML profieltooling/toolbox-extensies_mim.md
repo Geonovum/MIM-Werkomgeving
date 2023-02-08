@@ -43,7 +43,13 @@ Geonovum faciliteert een MIM-toolbox voor gebruik in Enterprise Architect. De to
 In de praktijk maken steeds meer partijen gebruik van de Imvertor software voor het publiceren en genereren van afgeleide producten van informatiemodellen. Hiervoor is het noodzakelijk om aan sommige modelelementen extra informatie toe te voegen (tagged values). Zo heeft het package `«Informatiemodel»` onder andere de extra tags `Afkorting` en `Release` nodig. Je hebt als modelleur dan niet genoeg aan alleen de MIM-toolbox.
 
 ### Sectormodellen en andere toepassingen
-Ook voor andere toepassingen is het wenselijk om extra informatie (tagged values) te kunnen toevoegen. Of misschien zelfs wel extra stereotypen, als een extensie op het MIM. Denk bijvoorbeeld aan NEN3610, JSON, sector-eigen eigenschappen... 
+Ook voor andere toepassingen is het wenselijk om extra informatie (tagged values) te kunnen toevoegen. Of misschien zelfs wel extra stereotypen, als een extensie op het MIM. 
+
+Redenen voor het toevoegen van informatie:
+ - technisch
+ - inhoudelijk
+
+Denk bijvoorbeeld aan NEN3610, JSON, of voor een specifiek sectormodel.
 
 ### Handmatig
 Het is mogelijk om deze eigenschappen met de hand toe te voegen, maar dat is bewerkelijk en kan bovendien leiden tot inconsistentie binnen een model of tussen modellen. 
@@ -87,3 +93,34 @@ Aan alle methoden zitten voor en nadelen. Deze worden in de volgende verder uite
 | | Volledig handmatig | Aparte Toolbox per extensie | Eén Complete Toolboxpage | Automatisch gegenereerd vanuit Imvertor |
 | -- | -- | -- | -- | -- |
 | a | b | c | d | e |
+
+
+ • Imvertor heeft van alles een configuratie op de server beschikbaar staan
+ • Je zou alles met de hand kunnen doen
+ • Dan en dan biedt je het aan imvertor aan
+ • Dat is het 
+    • Of [a] OK omdat het voldoet aan de minimumeisen (van MIM?) 
+    • Of [b] je bent compleet
+ • Ergens daartussen ligt de waarheid, dat weet je niet precies.
+
+ KANTTEKENING
+ • Maar Imvertor heeft eigen eigenschappen
+ • Bijvoorbeeld de Tag 'Release', zonder deze informatie, draait Imvertor niet
+ • Hiervoor zou je dan een aparte toolbox moeten maken.
+ • Uitbreiden op MIM.
+ • En die toolbox introduceert dan het stereotype: «Informatiemodel» mét de tag 'Release'
+ • Dat kun je doen.
+ • Dat ziet er ook mooi uit.
+ • En dan heb je de toolbox in eigen hand.
+
+ Maar
+ • Op server van imvertor staan open source alle configuraties:
+ • Dus, wat is mim11 en mim111 en wat is json-ext op mim111?
+ • Dat is allemaal al gedefinieerd
+ • In config van report zie je dat allemaal staan
+ • Vier jaar geleden kwam de vraag: kunnen we één toolbox generen waar dat allemaal inzit?
+ • Imvertor genereert ze nu automatisch, maar de ervaring is dat sommige toolboxen niet draaien.
+ • Arjan heeft veel moeite gedaan om boven tafel te krijgen waar een toolbox precies aan moet voldoen,
+ • Maar sparx lijkt dit zelf onder de hoed te willen houden.
+ • Daardoor is het nadeel van automatische generatie m.b.v. imvertor dat je nooit zeker weet of de toolbox (correct) laadt
+ • Het voordeel van het zelf genereren (vanuit ea) is dat je zeker weet dat het laadt en anders kun je bij sparx aankloppen.
