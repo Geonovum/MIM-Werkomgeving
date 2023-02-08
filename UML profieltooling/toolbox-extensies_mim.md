@@ -43,13 +43,11 @@ Geonovum faciliteert een MIM-toolbox voor gebruik in Enterprise Architect. De to
 In de praktijk maken steeds meer partijen gebruik van de Imvertor software voor het publiceren en genereren van afgeleide producten van informatiemodellen. Hiervoor is het noodzakelijk om aan sommige modelelementen extra informatie toe te voegen (tagged values). Zo heeft het package `«Informatiemodel»` onder andere de extra tags `Afkorting` en `Release` nodig. Je hebt als modelleur dan niet genoeg aan alleen de MIM-toolbox.
 
 ### Sectormodellen en andere toepassingen
-Ook voor andere toepassingen is het wenselijk om extra informatie (tagged values) te kunnen toevoegen. Of misschien zelfs wel extra stereotypen, als een extensie op het MIM. 
+Ook voor andere toepassingen is het wenselijk om extra tagged values of stereotypen te kunnen toevoegen. Binnen het domein waarin MIM toegepast wordt, zijn soms extra tagged values nodig. Bovendien maken veel geo-informatiemodellen gebruik van de NEN3610-standaard. Er zijn grofweg twee redenen voor uitbreidingen op de MIM-gegevensset:
+ - Technisch
+ - Inhoudelijk
 
-Redenen voor het toevoegen van informatie:
- - technisch
- - inhoudelijk
-
-Denk bijvoorbeeld aan NEN3610, JSON, of voor een specifiek sectormodel.
+Denk bijvoorbeeld aan **NEN3610**, **JSON**, of voor een specifiek sectormodel.
 
 ### Handmatig
 Het is mogelijk om deze eigenschappen met de hand toe te voegen, maar dat is bewerkelijk en kan bovendien leiden tot inconsistentie binnen een model of tussen modellen. 
