@@ -1,17 +1,24 @@
 # Verkenning extensies op de MIM-toolbox
 
+## Hoofdvraag
+
+_In hoeverre is het mogelijk, om alle informatie die je als modelleur nodig hebt voor het maken, publiceren en generen van afgeleide producten van modellen, in Enterprise Architect vanuit één toolboxpage beschikbaar te maken?_ 
+
 ## Basisgedachte
+
 Het idee voor het ontwikkelen van een standaard werkwijze voor extensies op de MIM-toolbox komt voort uit de behoefte om modelleurs, die volgens het MIM-metamodel met Enterprise Architect werken en gebruik maken van Imvertor, op een éénduidige manier te faciliteren met een complete toolbox.
 
 Compleet wil in dit geval zeggen dat de modelleur zelf bepaalt welke extra elementen er nodig en profielen hiervan kan importeren, op zo'n manier dat het een extensie vormt op MIM. Zo blijft de MIM-toolbox een zuivere implementatie van de standaard. Tegelijkertijd de herkomst van verschillende tagged value groepen duidelijk herleidbaar is. 
 
+#### (nog verwerken)
+
 _In essentie lijkt het mij wenselijk als je in de EA-werkomgeving in één toolbox alles tot je beschikking hebt voor het maken, publiceren en generen van afgeleide producten van modellen._
 
-### Hoofdvraag
-In hoeverre is het mogelijk om 
-vanuit één toolboxpage beschikbaar maken
+#### (nog verwerken)
 
 _Maar het valt mij op dat er hierdoor discussie ontstaat over of de MIM-toolbox een zuivere representatie van het metamodel moet zijn waarbij Geonovum als beheerder van de standaard verantwoordelijk is, of dat de MIM-toolbox juist een zo’n gebruiksvriendelijk mogelijk hulpmiddel voor de modelleur moet zijn._
+
+#### (nog verwerken)
 
 _Voor beide is wat te zeggen, maar ik denk dat het mogelijk is om zonder grote concessies aan beide wensen te voldoen. Ik heb hiervoor wat ideeën die ik graag eens met jou bespreek._
 
@@ -47,10 +54,14 @@ Hieruit ontstond het idee om de MIM-toolbox uit te kunnen breiden met modulles d
 >**Voorbeeld**: Je hebt een NEN3610-model (dat gebaseerd is op MIM) en je dat wilt kunnen publiceren met Imvertor. Dan is het idee dat je het MIM-profiel met toolbox importeert en daaraan dan los de profielen NEN3610:2022 en Imvertor aan toevoegd. 
 
 ### Verkenning
-Deze verkenning is erop gericht om uit te zoeken: 
+Deze verkenning is erop gericht om uit te zoeken:
+ - huidige werkwijze
+ - bezwaren 
  - in hoeverre deze wens gedeeld wordt, 
  - of zoiets mogelijk is, en zo ja:
  - hoe we dit kunnen ontwikkelen.
+ - alternatieven
+ - voor- en nadelen?
 
 
 Maar nu: MIM+A en MIM+B zijn twee verschillende toolboxen
