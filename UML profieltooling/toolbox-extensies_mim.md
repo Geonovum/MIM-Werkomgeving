@@ -1,11 +1,19 @@
 # Verkenning extensies op de MIM-toolbox
 
 ## Basisgedachte
-Het idee voor het ontwikkelen van een standaard werkwijze voor extensies op de MIM-toolbox komt voort uit de behoefte om modelleurs, die volgens het MIM-metamodel met Enterprise Architect werken en gebruik maken van Imvertor, op een éénduidige manier te faciliteren met een complete toolbox. 
+Het idee voor het ontwikkelen van een standaard werkwijze voor extensies op de MIM-toolbox komt voort uit de behoefte om modelleurs, die volgens het MIM-metamodel met Enterprise Architect werken en gebruik maken van Imvertor, op een éénduidige manier te faciliteren met een complete toolbox.
+
 Compleet wil in dit geval zeggen dat de modelleur zelf bepaalt welke extra elementen er nodig en profielen hiervan kan importeren, op zo'n manier dat het een extensie vormt op MIM. Zo blijft de MIM-toolbox een zuivere implementatie van de standaard. Tegelijkertijd de herkomst van verschillende tagged value groepen duidelijk herleidbaar is. 
 
-In essentie lijkt het mij wenselijk als je in de EA-werkomgeving in één toolbox alles tot je beschikking hebt voor het maken, publiceren en generen van afgeleide producten van modellen.
+_In essentie lijkt het mij wenselijk als je in de EA-werkomgeving in één toolbox alles tot je beschikking hebt voor het maken, publiceren en generen van afgeleide producten van modellen._
 
+### Hoofdvraag
+In hoeverre is het mogelijk om 
+vanuit één toolboxpage beschikbaar maken
+
+_Maar het valt mij op dat er hierdoor discussie ontstaat over of de MIM-toolbox een zuivere representatie van het metamodel moet zijn waarbij Geonovum als beheerder van de standaard verantwoordelijk is, of dat de MIM-toolbox juist een zo’n gebruiksvriendelijk mogelijk hulpmiddel voor de modelleur moet zijn._
+
+_Voor beide is wat te zeggen, maar ik denk dat het mogelijk is om zonder grote concessies aan beide wensen te voldoen. Ik heb hiervoor wat ideeën die ik graag eens met jou bespreek._
 
 #### Samengevat
 
@@ -22,7 +30,7 @@ Informatiemodelleurs die volgens de MIM-standaard werken in Enterprise Architect
 ## Uitdagingen huidige situatie
 
 ### MIM-toolbox
-Geonovum faciliteert een MIM-toolbox voor gebruik in Enterprise Architect. In deze toolbox (en de onderliggende profielen) is de MIM-standaard één-op-één verwerkt. Daardoor beschikt een modelleur over de juiste stereotypen en bijbehorende tagged values.
+Geonovum faciliteert een MIM-toolbox voor gebruik in Enterprise Architect. De toolbox (en de onderliggende profielen) implementeert de MIM-standaard één-op-één. Daardoor beschik je als modelleur over de juiste stereotypen en bijbehorende tagged values.
 
 ### Imvertor
 In de praktijk maken steeds meer partijen gebruik van de Imvertor software voor het publiceren en genereren van afgeleide producten van informatiemodellen. Hiervoor is het noodzakelijk om aan sommige modelelementen extra informatie toe te voegen (tagged values). Zo heeft het package `«Informatiemodel»` onder andere de extra tags `Afkorting` en `Release` nodig. Je hebt als modelleur dan niet genoeg aan alleen de MIM-toolbox.
@@ -63,11 +71,8 @@ IMvertor geneert ook toolboxen. Die zijn compleet, maar wel 'plat'.
 Aan alle methoden zitten voor en nadelen. Deze worden in de volgende verder uiteengezet.
 `(...)`
  
-#### Nog verwerken
-_"Het lijkt mij goed om te kijken hoe we het gebruik van toolboxen in EA wat meer kunnen stroomlijnen. In essentie lijkt het mij wenselijk als je in de EA-werkomgeving in één toolbox alles tot je beschikking hebt voor het maken, publiceren en generen van afgeleide producten van modellen._
+### Voor- en nadelen verschillende methoden
 
-_Nu is het bijvoorbeeld zo dat wij vanuit Geonovum een MIM-toolbox aanbieden die een één-op-één-implementatie van de standaard is. Imvertor heeft echter meer informatie nodig om te kunnen draaien. Daarnaast is het soms nodig om een extensie op het metamodel te maken. Je hebt als modelleur dan niet genoeg aan de MIM-toolbox. Tegelijkertijd kan Imvertor geautomatiseerd een toolboxen genereren._
-
-_Maar het valt mij op dat er hierdoor discussie ontstaat over of de MIM-toolbox een zuivere representatie van het metamodel moet zijn waarbij Geonovum als beheerder van de standaard verantwoordelijk is, of dat de MIM-toolbox juist een zo’n gebruiksvriendelijk mogelijk hulpmiddel voor de modelleur moet zijn._
-
-_Voor beide is wat te zeggen, maar ik denk dat het mogelijk is om zonder grote concessies aan beide wensen te voldoen. Ik heb hiervoor wat ideeën die ik graag eens met jou bespreek."_
+| | Volledig handmatig | Aparte Toolbox per extensie | Eén Complete Toolboxpage | Automatisch gegenereerd vanuit Imvertor |
+| -- | -- | -- | -- | -- |
+| a | b | c | d | e |
