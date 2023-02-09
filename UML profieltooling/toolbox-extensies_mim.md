@@ -4,6 +4,15 @@
 
 _In hoeverre is het mogelijk, om alle informatie die je als modelleur nodig hebt voor het maken, publiceren en generen van afgeleide producten van modellen, in Enterprise Architect vanuit één toolboxpage beschikbaar te maken?_ 
 
+```diff
++ a
++ Basisgedachte
++ compleet
+- concessies
+- Profielen
+- Alles
+```
+
 ## Basisgedachte
 
 Het idee voor het ontwikkelen van een standaard werkwijze voor extensies op de MIM-toolbox komt voort uit de behoefte om modelleurs, die volgens het MIM-metamodel met Enterprise Architect werken en gebruik maken van Imvertor, op een éénduidige manier te faciliteren met een complete toolbox.
