@@ -1,6 +1,20 @@
 # Verkenning extensies op de MIM-toolbox
 
-## Hoofdvraag
+## Aanleiding voor verkenning
+
+Deze verkenning is erop gericht om uit te zoeken:
+ - Huidige werkwijze
+ - Bezwaren 
+ - In hoeverre deze wens gedeeld wordt, 
+ - Of zoiets mogelijk is, en zo ja:
+ - Hoe we dit kunnen ontwikkelen.
+ - Alternatieven
+ - Voor- en nadelen?
+
+Maar nu: MIM+A en MIM+B zijn twee verschillende toolboxen
+Bijv. MIM + IMV + DSG + JSON. Niet alle meta-inforamtie wil je ook in de publicatie laten landen. De BRO heeft ook verschillende profielen voor conceptuele en logische modellen. IMvertor geneert ook toolboxen. Die zijn compleet, maar wel 'plat'.
+
+#####
 
 _In hoeverre is het mogelijk, om alle informatie die je als modelleur nodig hebt voor het maken, publiceren en generen van afgeleide producten van modellen, in Enterprise Architect vanuit één toolboxpage beschikbaar te maken?_ 
 
@@ -56,26 +70,6 @@ Het is mogelijk om deze eigenschappen met de hand toe te voegen, maar dat is bew
 Hieruit ontstond het idee om de MIM-toolbox uit te kunnen breiden met modulles die de benodigde extra eigenschappen bevatten. Het mooiste zou zijn als de MIM-toolbox modulair uitbreidbaar is op basis van de extra profielen die geïmporteerd zijn.
 
 >**Voorbeeld**: Je hebt een NEN3610-model (dat gebaseerd is op MIM) en je dat wilt kunnen publiceren met Imvertor. Dan is het idee dat je het MIM-profiel met toolbox importeert en daaraan dan los de profielen NEN3610:2022 en Imvertor aan toevoegd. 
-
-### Verkenning
-Deze verkenning is erop gericht om uit te zoeken:
- - huidige werkwijze
- - bezwaren 
- - in hoeverre deze wens gedeeld wordt, 
- - of zoiets mogelijk is, en zo ja:
- - hoe we dit kunnen ontwikkelen.
- - alternatieven
- - voor- en nadelen?
-
-
-Maar nu: MIM+A en MIM+B zijn twee verschillende toolboxen
-Bijv. MIM + IMV + DSG + JSON
-
-Niet alle meta-inforamtie wil je ook in de publicatie laten landen.
-
-De BRO heeft ook verschillende profielen voor conceptuele en logische modellen.
-
-IMvertor geneert ook toolboxen. Die zijn compleet, maar wel 'plat'.
 
 #### Methoden toevoegen tagged values
  1. ([linkOpnemen](url))**Handmatig** alle tags per modelelement toevoegen
