@@ -151,42 +151,10 @@ Aan alle methoden zitten voor en nadelen. Deze worden in de volgende verder uite
 ```
 
 ### Overwegingen
-Het is misschien wel mogelijk om in Imvertor zelf een schema te definiëren waarmee gecontroleerd kan worden of een specificatie aan de eisen voldoet.
+Het is misschien wel mogelijk om in Imvertor zelf een schema te definiëren waarmee gecontroleerd kan worden of een specificatie aan de eisen voldoet. Het is echter de vraag of er binnen de Imvertor-community animo is om deze investering te doen. Vanuit Armatiek is deze behoefte er niet; het geeft alleen maar meer stress om extra software in de lucht te houden.
 
-Het is echter de vraag of er binnen de Imvertor-community animo is om deze investering te doen. Vanuit Armatiek is deze behoefte er niet; het geeft alleen maar meer stress om extra software in de lucht te houden.
-
-Vindt Geonovum dat het ontwikkelen en distribueren van een toolbox als dienst aan de MIM-community een handmatige activiteit moet zijn? Of zouden we dit beter kunnen uitbesteden aan een tool?
+Vindt Geonovum dat het ontwikkelen en distribueren van een toolbox als dienst aan de MIM-community een handmatige activiteit moet zijn? Of zouden we dit beter kunnen uitbesteden aan een tool? Het is belangrijk om hier als Geonovum een duidelijk standpunt over in te nemen.
 
 Bovendien is EA ook 'maar' een tool. Hierin hebben we met elkaar veel kennis geÏnvesteerd en veel partijen werken hier mee. Desondanks zou je ook voor andere tooling of configuraties kunnen kiezen. Dan moet je weer opnieuw beginnen als je ervoor hebt gekozen om profielen met de hand op te stellen. Vanuit Imvertor ligt dat echter allemaal al klaar in een universeel formaat.  
 
-
-## Ruwe aantekeningen
- • Imvertor heeft van alles een configuratie op de server beschikbaar staan
- • Je zou alles met de hand kunnen doen
- • Dan en dan biedt je het aan imvertor aan
- • Dat is het 
-    • Of [a] OK omdat het voldoet aan de minimumeisen (van MIM?) 
-    • Of [b] je bent compleet
- • Ergens daartussen ligt de waarheid, dat weet je niet precies.
-
- KANTTEKENING
- • Maar Imvertor heeft eigen eigenschappen
- • Bijvoorbeeld de Tag 'Release', zonder deze informatie, draait Imvertor niet
- • Hiervoor zou je dan een aparte toolbox moeten maken.
- • Uitbreiden op MIM.
- • En die toolbox introduceert dan het stereotype: «Informatiemodel» mét de tag 'Release'
- • Dat kun je doen.
- • Dat ziet er ook mooi uit.
- • En dan heb je de toolbox in eigen hand.
-
- Maar
- • Op server van imvertor staan open source alle configuraties:
- • Dus, wat is mim11 en mim111 en wat is json-ext op mim111?
- • Dat is allemaal al gedefinieerd
- • In config van report zie je dat allemaal staan
- • Vier jaar geleden kwam de vraag: kunnen we één toolbox generen waar dat allemaal inzit?
- • Imvertor genereert ze nu automatisch, maar de ervaring is dat sommige toolboxen niet draaien.
- • Arjan heeft veel moeite gedaan om boven tafel te krijgen waar een toolbox precies aan moet voldoen,
- • Maar sparx lijkt dit zelf onder de hoed te willen houden.
- • Daardoor is het nadeel van automatische generatie m.b.v. imvertor dat je nooit zeker weet of de toolbox (correct) laadt
- • Het voordeel van het zelf genereren (vanuit ea) is dat je zeker weet dat het laadt en anders kun je bij sparx aankloppen.
+Met het oog op de toekomst zou ook rekening gehouden moeten worden met meertaligheid. MIM is een Nederlands metamodel. Voor JSON zijn straks Engelstalige specificaties nodig. Ook de BRO kent meertaligheid, in zoverre dat logische modellen in het Engels. Wat betekent het met de huidige werkwijze om ook een Engelstalige versie aan te bieden van de MIM-toolbox?
