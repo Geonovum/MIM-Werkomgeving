@@ -98,7 +98,11 @@ Je hebt nu succesvol het profiel van je extentie aangemaakt.
 
 ## Stap 4: Modelleer het diagram?
 
+>**NOTE**: stappen beschrijven
+
 ## Stap 5: Modelleer het toolbox-menu
+
+>**NOTE**: stappen beschrijven
 
 ## Stap 6: Exporteer/Genereer (naar) MDG
 
