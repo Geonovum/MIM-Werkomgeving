@@ -110,22 +110,23 @@ Aan alle methoden zitten voor en nadelen. Deze worden in de volgende verder uite
 ##### Voordelen
 
 ```diff
-+ Modulair: modelleur voegt alleen de benodigde 'modules' toe
-+ Herleidbaarheid van de tagged values (MIM, of één van de extensies erop)
-+ Gebruikersperpectief centraal
-+ Alles bij de hand
-+ Extensies op MIM, dus standaard blijft zuiver
++ Modulair: modelleur voegt alleen de benodigde 'modules' toe.
++ Herleidbaarheid van de tagged values (MIM, of één van de extensies erop).
++ Gebruikersperpectief centraal.
++ Alles bij de hand.
++ Extensies op MIM, dus standaard blijft zuiver.
 + Ontwikkeld in EA-omgeving, dus moet werken en 'recht op' support van Sparx
 + Ontwikkeling toolbox bij Geonovum in beheer.
-+ Extra features (Quick Linker, Aliassen voor herleidbaarheid)
++ Extra features (Quick Linker, Aliassen voor herleidbaarheid).
 ```
 
 ##### Nadelen
 
 ```diff
-- Profielen voor zowel MIM als extensies worden met de hand gegenereerd
+- Nog in onderzoek in hoeverre deze optie mogelijk is.
+- Profielen voor zowel MIM als extensies worden met de hand gegenereerd.
 - Geen technische ondersteuning vanuit Geonovum mogelijk, wel enige inhoudelijke ondersteuning m.b.t. MIM of EA.
-- Alleen nuttig voor de MIM-modellen die in EA ontwikkeld worden. 
+- Alleen nuttig voor de MIM-modellen die in EA ontwikkeld worden; Imvertor kent nog meer metamodellen.
 ```
 
 #### 4 - Automatisch gegenereerde toolbox vanuit Imvertor
@@ -133,19 +134,31 @@ Aan alle methoden zitten voor en nadelen. Deze worden in de volgende verder uite
 ##### Voordelen
 
 ```diff
-+ Gebruikersperpectief centraal
-+ Op de server al ontzettend veel configuraties (open source) beschikbaar staan en dit is dus ook allemaal al gedefinieerd
-+ Daarom mogelijk om profielen/toolboxen automatisch te generen 
++ Gebruikersperpectief centraal.
++ Software al beschikbaar
++ Configuraties zijn (open source) beschikbaar en dus ook allemaal gedefinieerd.
 ```
 
 ##### Nadelen
 
 ```diff
-- Onzekerheid: de ervarling leert dat automatisch gegeneerde profielen/toolboxen niet altijd werken
-- Het blijft onduidelijk waar een toolbox precies aan moet voldoen als je die buiten de EA-omgeving om ontwikkelt (zoals Imvertor doet)
-- Hierin is dan ook geen ondersteuning beschikbaar vanuit Sparx
-- Geen extra featurs zoals Quick Linker en Aliassen voor herleidbaarheid
+- Niet modulair: dus geen selectie mogelijk van alleen benodigde onderdelen (bijv. tv's)
+- Profielonderdelen niet herleidbaar (welke tv's heb je waarvoor nodig?)
+- Onzekerheid: de ervarling leert dat automatisch gegeneerde profielen/toolboxen niet altijd werken.
+- Validatie op de toolbox is niet mogelijk omdat het vanuit Sparx onduidelijk blijft waar een toolbox precies aan moet voldoen als je die buiten de EA-omgeving om ontwikkelt (zoals Imvertor doet).
+- Hierin is dan ook geen ondersteuning beschikbaar vanuit Sparx.
+- Geen extra featurs zoals Quick Linker en Aliassen voor herleidbaarheid.
 ```
+
+### Overwegingen
+Het is misschien wel mogelijk om in Imvertor zelf een schema te definiëren waarmee gecontroleerd kan worden of een specificatie aan de eisen voldoet.
+
+Het is echter de vraag of er binnen de Imvertor-community animo is om deze investering te doen. Vanuit Armatiek is deze behoefte er niet; het geeft alleen maar meer stress om extra software in de lucht te houden.
+
+Vindt Geonovum dat het ontwikkelen en distribueren van een toolbox als dienst aan de MIM-community een handmatige activiteit moet zijn? Of zouden we dit beter kunnen uitbesteden aan een tool?
+
+Bovendien is EA ook 'maar' een tool. Hierin hebben we met elkaar veel kennis geÏnvesteerd en veel partijen werken hier mee. Desondanks zou je ook voor andere tooling of configuraties kunnen kiezen. Dan moet je weer opnieuw beginnen als je ervoor hebt gekozen om profielen met de hand op te stellen. Vanuit Imvertor ligt dat echter allemaal al klaar in een universeel formaat.  
+
 
 ## Ruwe aantekeningen
  • Imvertor heeft van alles een configuratie op de server beschikbaar staan
