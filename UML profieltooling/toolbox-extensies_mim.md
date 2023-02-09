@@ -112,10 +112,12 @@ Aan alle methoden zitten voor en nadelen. Deze worden in de volgende verder uite
 ```diff
 + Modulair: modelleur voegt alleen de benodigde 'modules' toe
 + Herleidbaarheid van de tagged values (MIM, of één van de extensies erop)
-+ Gebruiksvriendelijk
++ Gebruikersperpectief centraal
 + Alles bij de hand
 + Extensies op MIM, dus standaard blijft zuiver
-+ Ontwikkeld in EA-omgeving, dus moet werken en 'recht op' support
++ Ontwikkeld in EA-omgeving, dus moet werken en 'recht op' support van Sparx
++ Ontwikkeling toolbox bij Geonovum in beheer.
++ Extra features (Quick Linker, Aliassen voor herleidbaarheid)
 ```
 
 ##### Nadelen
@@ -131,13 +133,18 @@ Aan alle methoden zitten voor en nadelen. Deze worden in de volgende verder uite
 ##### Voordelen
 
 ```diff
-+ <text>
++ Gebruikersperpectief centraal
++ Op de server al ontzettend veel configuraties (open source) beschikbaar staan en dit is dus ook allemaal al gedefinieerd
++ Daarom mogelijk om profielen/toolboxen automatisch te generen 
 ```
 
 ##### Nadelen
 
 ```diff
-- <text>
+- Onzekerheid: de ervarling leert dat automatisch gegeneerde profielen/toolboxen niet altijd werken
+- Het blijft onduidelijk waar een toolbox precies aan moet voldoen als je die buiten de EA-omgeving om ontwikkelt (zoals Imvertor doet)
+- Hierin is dan ook geen ondersteuning beschikbaar vanuit Sparx
+- Geen extra featurs zoals Quick Linker en Aliassen voor herleidbaarheid
 ```
 
 ## Ruwe aantekeningen
