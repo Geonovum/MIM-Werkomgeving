@@ -4,15 +4,6 @@
 
 _In hoeverre is het mogelijk, om alle informatie die je als modelleur nodig hebt voor het maken, publiceren en generen van afgeleide producten van modellen, in Enterprise Architect vanuit één toolboxpage beschikbaar te maken?_ 
 
-```diff
-+ a
-+ Basisgedachte
-+ compleet
-- concessies
-- Profielen
-- Alles
-```
-
 ## Basisgedachte
 
 Het idee voor het ontwikkelen van een standaard werkwijze voor extensies op de MIM-toolbox komt voort uit de behoefte om modelleurs, die volgens het MIM-metamodel met Enterprise Architect werken en gebruik maken van Imvertor, op een éénduidige manier te faciliteren met een complete toolbox.
@@ -87,7 +78,7 @@ De BRO heeft ook verschillende profielen voor conceptuele en logische modellen.
 IMvertor geneert ook toolboxen. Die zijn compleet, maar wel 'plat'.
 
 #### Methoden toevoegen tagged values
- 1. **Handmatig** alle tags per modelelemnt toevoegen
+ 1. **Handmatig** alle tags per modelelement toevoegen
  1. **Profielen** en **toolboxen**, door **Geonovum handmatig** ontwikkeld gedistribueerd
  1. **MIM-toolbox** met mogelijk **profielen voor extensies**, door **Geonovum handmatig** ontwikkeld en gedistribueerd
  1. **MIM-compliant toolbox** met alle extra benodigdheden, **Automatisch gegenereerd door Imvertor**
@@ -97,11 +88,59 @@ Aan alle methoden zitten voor en nadelen. Deze worden in de volgende verder uite
  
 ### Voor- en nadelen verschillende methoden
 
-| | Volledig handmatig | Aparte Toolbox per extensie | Eén Complete Toolboxpage | Automatisch gegenereerd vanuit Imvertor |
-| -- | -- | -- | -- | -- |
-| a | b | c | d | e |
+   #### 1 - Handmatig
+   Het staat een informatiemodelleur altijd vrij om geen gebruik te maken van het MIM-profiel. Het is altijd mogelijk om een standaard geheel handmatig te implementeren; een profiel puur bedoeld als hulpmiddel om dit proces te vereenvoudigen en is _geen verplichting_. Omdat voor deze optie niks ontwikkeld hoeft te worden, valt deze optie buiten de beschouwing van voor- en nadelen. 
 
+   #### 2 - Toolbox per extensie
 
+   ##### Voordelen
+
+   ```diff
+   + <text>
+   ```
+
+   ##### Nadelen
+
+   ```diff
+   - <text>
+   ```
+
+#### 3 - Toolbox met alle extensies
+
+##### Voordelen
+
+```diff
++ Modulair: modelleur voegt alleen de benodigde 'modules' toe
++ Herleidbaarheid van de tagged values (MIM, of één van de extensies erop)
++ Gebruiksvriendelijk
++ Alles bij de hand
++ Extensies op MIM, dus standaard blijft zuiver
++ Ontwikkeld in EA-omgeving, dus moet werken en 'recht op' support
+```
+
+##### Nadelen
+
+```diff
+- Profielen voor zowel MIM als extensies worden met de hand gegenereerd
+- Geen technische ondersteuning vanuit Geonovum mogelijk, wel enige inhoudelijke ondersteuning m.b.t. MIM of EA.
+- Alleen nuttig voor de MIM-modellen die in EA ontwikkeld worden. 
+```
+
+#### 4 - Automatisch gegenereerde toolbox vanuit Imvertor
+
+##### Voordelen
+
+```diff
++ <text>
+```
+
+##### Nadelen
+
+```diff
+- <text>
+```
+
+## Ruwe aantekeningen
  • Imvertor heeft van alles een configuratie op de server beschikbaar staan
  • Je zou alles met de hand kunnen doen
  • Dan en dan biedt je het aan imvertor aan
