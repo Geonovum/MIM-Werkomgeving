@@ -78,10 +78,10 @@ De BRO heeft ook verschillende profielen voor conceptuele en logische modellen.
 IMvertor geneert ook toolboxen. Die zijn compleet, maar wel 'plat'.
 
 #### Methoden toevoegen tagged values
- 1. **Handmatig** alle tags per modelelement toevoegen
- 1. **Profielen** en **toolboxen**, door **Geonovum handmatig** ontwikkeld gedistribueerd
- 1. **MIM-toolbox** met mogelijk **profielen voor extensies**, door **Geonovum handmatig** ontwikkeld en gedistribueerd
- 1. **MIM-compliant toolbox** met alle extra benodigdheden, **Automatisch gegenereerd door Imvertor**
+ 1. ([linkOpnemen](url))**Handmatig** alle tags per modelelement toevoegen
+ 1. ([linkOpnemen](url))**Profielen** en **toolboxen**, door **Geonovum handmatig** ontwikkeld gedistribueerd
+ 1. ([linkOpnemen](url))**MIM-toolbox** met mogelijk **profielen voor extensies**, door **Geonovum handmatig** ontwikkeld en gedistribueerd
+ 1. ([linkOpnemen](url))**MIM-compliant toolbox** met alle extra benodigdheden, **Automatisch gegenereerd door Imvertor**
  
 Aan alle methoden zitten voor en nadelen. Deze worden in de volgende verder uiteengezet.
 `(...)`
