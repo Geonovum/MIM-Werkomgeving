@@ -135,7 +135,7 @@ In deze stap maak je de menupagina van de toolbox. Hiermee bepaal je hoe en welk
  - Voor de leesbaarheid is het fijn om het type een alias mee te geven (anders heet het toolbox-item `DISGEO::DSG-Objectype(UML::Class)`. Vanwege het eerder genoemde uitgangspunt, krijgt dit stereotype het alias **Objecttype**.
  - Voeg nu op dezelfde manier **Attribuutsoort** toe en klik **_nog niet_** op _OK_.
 
->**NOTE**: controleren of je MIM-typen vanuiten MIM-package kan halen, anders moet je die met de hand invoeren...
+>**NOTE**: controleren of je MIM-typen vanuiten MIM-package kan halen, anders moet je die met de hand invoeren... **ANTWOORD: JA DAT KAN INDERDAAD**
 
 >**NOTE**: instructie verder afschrijven.
 
