@@ -149,6 +149,6 @@ Het is misschien wel mogelijk om in Imvertor zelf een schema te definiëren waar
 
 Vindt Geonovum dat het ontwikkelen en distribueren van een toolbox als dienst aan de MIM-community een handmatige activiteit moet zijn? Of zouden we dit beter kunnen uitbesteden aan een tool? Het is belangrijk om hier als Geonovum een duidelijk standpunt over in te nemen.
 
-Bovendien is EA ook 'maar' een tool. Hierin hebben we met elkaar veel kennis geÏnvesteerd en veel partijen werken hier mee. Desondanks zou je ook voor andere tooling of configuraties kunnen kiezen. Dan moet je weer opnieuw beginnen als je ervoor hebt gekozen om profielen met de hand op te stellen. Vanuit Imvertor ligt dat echter allemaal al klaar in een universeel formaat.  
+Bovendien is EA ook 'maar' een tool. Hierin hebben we met elkaar veel kennis geÏnvesteerd en veel partijen werken hier mee. Desondanks zou je ook voor andere tooling of configuraties kunnen kiezen. Dan moet je weer opnieuw beginnen als je ervoor hebt gekozen om profielen met de hand op te stellen. Dat geldt overigens ook voor alle handleidingen die hiervoor gemaakt zijn. Vanuit Imvertor ligt dat echter allemaal al klaar in een universeel formaat.
 
 Met het oog op de toekomst zou ook rekening gehouden moeten worden met meertaligheid. MIM is een Nederlands metamodel. Voor JSON zijn straks Engelstalige specificaties nodig. Ook de BRO kent meertaligheid, in zoverre dat logische modellen in het Engels. Wat betekent het met de huidige werkwijze om ook een Engelstalige versie aan te bieden van de MIM-toolbox?
