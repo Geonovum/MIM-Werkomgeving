@@ -155,4 +155,4 @@ Met het oog op de toekomst zou ook rekening gehouden moeten worden met meertalig
 
 ## Notities
 
- - Het idee is nu dat alle combinaties van MIM + 1 of meerdere extensies mogelijk moet zijn,   maar misschien is dat veel gelimiteerder.
+ - Het idee is nu dat alle combinaties van MIM + één of meerdere extensies mogelijk moet zijn,   maar misschien is dat veel gelimiteerder.
