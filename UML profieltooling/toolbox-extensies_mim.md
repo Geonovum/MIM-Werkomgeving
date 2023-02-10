@@ -14,7 +14,7 @@ Deze verkenning is erop gericht om uit te zoeken:
 Maar nu: MIM+A en MIM+B zijn twee verschillende toolboxen
 Bijv. MIM + IMV + DSG + JSON. Niet alle meta-inforamtie wil je ook in de publicatie laten landen. De BRO heeft ook verschillende profielen voor conceptuele en logische modellen. IMvertor geneert ook toolboxen. Die zijn compleet, maar wel 'plat'.
 
-#####
+###
 
 _In hoeverre is het mogelijk, om alle informatie die je als modelleur nodig hebt voor het maken, publiceren en generen van afgeleide producten van modellen, in Enterprise Architect vanuit één toolboxpage beschikbaar te maken?_ 
 
@@ -152,3 +152,7 @@ Vindt Geonovum dat het ontwikkelen en distribueren van een toolbox als dienst aa
 Bovendien is EA ook 'maar' een tool. Hierin hebben we met elkaar veel kennis geÏnvesteerd en veel partijen werken hier mee. Desondanks zou je ook voor andere tooling of configuraties kunnen kiezen. Dan moet je weer opnieuw beginnen als je ervoor hebt gekozen om profielen met de hand op te stellen. Dat geldt overigens ook voor alle handleidingen die hiervoor gemaakt zijn. Vanuit Imvertor ligt dat echter allemaal al klaar in een universeel formaat.
 
 Met het oog op de toekomst zou ook rekening gehouden moeten worden met meertaligheid. MIM is een Nederlands metamodel. Voor JSON zijn straks Engelstalige specificaties nodig. Ook de BRO kent meertaligheid, in zoverre dat logische modellen in het Engels. Wat betekent het met de huidige werkwijze om ook een Engelstalige versie aan te bieden van de MIM-toolbox?
+
+## Notities
+
+ - Het idee is nu dat alle combinaties van MIM + 1 of meerdere extensies mogelijk moet zijn,   maar misschien is dat veel gelimiteerder.
