@@ -94,6 +94,30 @@ Je ziet nu het nieuwe stereotype met de tagged values. Daarnaast heeft het nu ee
  - Je extensie-type heeft nu een relatie met `MIM::Attribuutsoort` én `UML::Attribute`.
  - Herhaal deze stappen voor `«Objecttype»`.
 
+Als laatste stap is het handig om het kleurscheme van het modelelement gelijk te maken aan dat van MIM. Dat gaat als volgt:
+
+ - Klik met de rechtermuisknop op het nieuwe element `DSG-Objecttype`.
+ - Navigeer naar _Appearance_ en klik op _Default Appearance_.
+ - Nu opent een venster met dezelfde naam.
+ - Klik op _Background Color_.
+ - Klik op _More Colors_.
+ - Selecteer het tabblad _Custom_.
+ - En vul vervolgens onderstaande waarden in
+
+```
+   Hue:   128
+   Sat:   245
+   Lum:   230
+   Red:   206
+   Green: 253
+   Blue:  254
+```
+
+ - Klik op OK.
+ - Zet _Border Color_ en _Font Color_ op zwart.
+ - Klik op OK.
+ - Herhaal deze stap voor de andere modelelementen, in dit geval `DSG-Attribuutsoort`.
+
 Je hebt nu succesvol het profiel van je extensie aangemaakt.
 
 ## Stap 4: Modelleer het toolbox-menu
@@ -127,22 +151,7 @@ In deze stap maak je de menupagina van de toolbox. Hiermee bepaal je hoe en welk
  - Klik nu op het modelelement `«metaclass» Diagram Logical` en voeg bij Features een nieuw attribuut toe met de naam: `toolboxPage`.
  Vul bij _Initial Value_ de het volgende in: `MIM: Objecten en attributen=1;MIM: Relaties=1;MIM: Datatypen=1;MIM: Waardelijsten=1;MIM: Packages=1;UML: Connectors=0;`. Dit geeft aan welke onderdelen van de het toolbox menu uit- (waarde: `1`) of ingevouwen (waarde: `0`) zijn.
 
-Klik met de rechtermuisknop op het nieuwe element.
-Navigeer naar Appearance en klik op Default Appearance
-Nu opent een venster met dezelfde naam
-Klik op Background Color
-Klik op More Colors
-Selecteer het tabblad Custom
-En vul vervolgens onderstaande waarden in
 
-```
-   Hue: 128
-   Sat: 245
-   Lum: 230
-   Red: 206
-   Green: 253
-   Blue: 254
-```
 
 >**NOTE**: stappen beschrijven
 
