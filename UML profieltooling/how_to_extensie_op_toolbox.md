@@ -126,7 +126,7 @@ In deze stap maak je de menupagina van de toolbox. Hiermee bepaal je hoe en welk
  - Open het lege diagram uit het package `«toolbox profile»DISGEO`.
  - Sleep uit de toolbox die bij dit diagram hoort de _Profile Helper_ _Add Toolbox Page_ op het diagram.
  - Het venster _Add Toolbox Page_ opent nu.
- - Vul de naam in van de pagina die wilt gaan maken, in dit geval maken we een kopie van de MIM-toolbox, dus noemen we deze (eerste) pagina: _Objecten en Attributen_.
+ - Vul de naam in van de pagina die wilt gaan maken, in dit geval maken we een kopie van de MIM-toolbox, dus noemen we deze (eerste) pagina: _MIM: Objecten en attributen_.
 
  - klik vervolgens op de Add-button en selecteer de optie _Add Stereotype_.
  - Het venster _Select A Profile Element_ opent nu.
@@ -149,7 +149,11 @@ In deze stap maak je de menupagina van de toolbox. Hiermee bepaal je hoe en welk
  - Vouw onder _Properties_ de lijst met _General_ uit.
  - Kies bij _Toolbox Profile_ uit de lijst met namen, de naam van het profiel, in dit geval: **DISGEO** en klik op _OK_.
  - Klik nu op het modelelement `«metaclass» Diagram Logical` en voeg bij Features een nieuw attribuut toe met de naam: `toolboxPage`.
- Vul bij _Initial Value_ de het volgende in: `MIM: Objecten en attributen=1;MIM: Relaties=1;MIM: Datatypen=1;MIM: Waardelijsten=1;MIM: Packages=1;UML: Connectors=0;`. Dit geeft aan welke onderdelen van de het toolbox menu uit- (waarde: `1`) of ingevouwen (waarde: `0`) zijn.
+ Vul bij _Initial Value_ de het volgende in:
+
+ ```MIM: Objecten en attributen=1;MIM: Relaties=1;MIM: Datatypen=1;MIM: Waardelijsten=1;MIM: Packages=1;UML: Connectors=0;```.
+
+ - Dit geeft aan welke onderdelen van de het toolbox menu uit- (waarde: `1`) of ingevouwen (waarde: `0`) zijn.
 
 
 
