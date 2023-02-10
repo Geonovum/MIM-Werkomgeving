@@ -96,7 +96,7 @@ Je ziet nu het nieuwe stereotype met de tagged values. Daarnaast heeft het nu ee
 
 Je hebt nu succesvol het profiel van je extentie aangemaakt.
 
-## Stap 4: Modelleer het diagram?
+## Stap 4: Modelleer het diagram
 
 >**NOTE**: stappen beschrijven
 
