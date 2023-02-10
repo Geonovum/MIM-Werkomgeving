@@ -117,6 +117,14 @@ In deze stap maak je de menupagina van de toolbox. Hiermee bepaal je hoe en welk
 
 ## Stap 5: Modelleer het diagram
 
+ - Open het lege diagram uit het package `«Diagram Profile»Disgeo`.
+ - Sleept uit de toolbox die bij dit diagram hoort de _Profile Helper_ _Add Diagram Extention_ op het diagram.
+ - Het venster _Add Diagram Extention_ opent nu.
+ - Geef een naam op voor het diagram en kies bij _Extention Type_ voor `Class`.
+ - Geef bij _Description_ eventueel een beschrijving op voor de toepassing van dit diagram. Het is handig om hier te vermelden dat je dit diagram nodig hebt om voor de MIM-toolbox inclusief extensie!
+ - Vouw onder _Properties_ de lijst met _General_ uit.
+ - Kies bij _Toolbox Profile_ uit de lijst met namen de naam van het profiel, in dit geval: **DISGEO** en klik op _OK_.
+
 >**NOTE**: stappen beschrijven
 
 ## Stap 6: Exporteer/Genereer (naar) MDG
