@@ -113,9 +113,9 @@ Als laatste stap is het handig om het kleurscheme van het modelelement gelijk te
    Blue:  254
 ```
 
- - Klik op OK.
+ - Klik op _OK_.
  - Zet _Border Color_ en _Font Color_ op zwart.
- - Klik op OK.
+ - Klik op _OK_.
  - Herhaal deze stap voor de andere modelelementen, in dit geval `DSG-Attribuutsoort`.
 
 Je hebt nu succesvol het profiel van je extensie aangemaakt.
