@@ -148,7 +148,7 @@ In deze stap maak je de menupagina van de toolbox. Hiermee bepaal je hoe en welk
  - Geef bij _Description_ eventueel een beschrijving op voor de toepassing van dit diagram. Het is handig om hier te vermelden dat je dit diagram nodig hebt om voor de MIM-toolbox inclusief extensie!
  - Vouw onder _Properties_ de lijst met _General_ uit.
  - Kies bij _Toolbox Profile_ uit de lijst met namen, de naam van het profiel, in dit geval: **DISGEO** en klik op _OK_.
- - Klik nu op het modelelement `«metaclass» Diagram Logical` en voeg bij Features een nieuw attribuut toe met de naam: `toolboxPage`.
+ - Klik nu op het modelelement `«metaclass» Diagram Logical` en voeg bij _Features_ een nieuw attribuut toe met de naam: `toolboxPage`.
  Vul bij _Initial Value_ de het volgende in:
 
  ```
@@ -157,9 +157,7 @@ In deze stap maak je de menupagina van de toolbox. Hiermee bepaal je hoe en welk
 
  - Dit geeft aan welke onderdelen van de het toolbox menu uit- (waarde: `1`) of ingevouwen (waarde: `0`) zijn.
 
-
-
->**NOTE**: stappen beschrijven
+Je hebt nu succesvol een _Diagram Profile_ aangemaakt.
 
 ## Stap 6: Exporteer/Genereer (naar) MDG
 
