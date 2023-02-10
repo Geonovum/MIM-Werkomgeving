@@ -123,7 +123,26 @@ In deze stap maak je de menupagina van de toolbox. Hiermee bepaal je hoe en welk
  - Geef een naam op voor het diagram en kies bij _Extention Type_ voor `Class`.
  - Geef bij _Description_ eventueel een beschrijving op voor de toepassing van dit diagram. Het is handig om hier te vermelden dat je dit diagram nodig hebt om voor de MIM-toolbox inclusief extensie!
  - Vouw onder _Properties_ de lijst met _General_ uit.
- - Kies bij _Toolbox Profile_ uit de lijst met namen de naam van het profiel, in dit geval: **DISGEO** en klik op _OK_.
+ - Kies bij _Toolbox Profile_ uit de lijst met namen, de naam van het profiel, in dit geval: **DISGEO** en klik op _OK_.
+ - Klik nu op het modelelement `«metaclass» Diagram Logical` en voeg bij Features een nieuw attribuut toe met de naam: `toolboxPage`.
+ Vul bij _Initial Value_ de het volgende in: `MIM: Objecten en attributen=1;MIM: Relaties=1;MIM: Datatypen=1;MIM: Waardelijsten=1;MIM: Packages=1;UML: Connectors=0;`. Dit geeft aan welke onderdelen van de het toolbox menu uit- (waarde: `1`) of ingevouwen (waarde: `0`) zijn.
+
+Klik met de rechtermuisknop op het nieuwe element.
+Navigeer naar Appearance en klik op Default Appearance
+Nu opent een venster met dezelfde naam
+Klik op Background Color
+Klik op More Colors
+Selecteer het tabblad Custom
+En vul vervolgens onderstaande waarden in
+
+```
+   Hue: 128
+   Sat: 245
+   Lum: 230
+   Red: 206
+   Green: 253
+   Blue: 254
+```
 
 >**NOTE**: stappen beschrijven
 
