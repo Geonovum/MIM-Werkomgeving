@@ -151,7 +151,9 @@ In deze stap maak je de menupagina van de toolbox. Hiermee bepaal je hoe en welk
  - Klik nu op het modelelement `«metaclass» Diagram Logical` en voeg bij Features een nieuw attribuut toe met de naam: `toolboxPage`.
  Vul bij _Initial Value_ de het volgende in:
 
- ```MIM: Objecten en attributen=1;MIM: Relaties=1;MIM: Datatypen=1;MIM: Waardelijsten=1;MIM: Packages=1;UML: Connectors=0;```.
+ ```
+ MIM: Objecten en attributen=1;MIM: Relaties=1;MIM: Datatypen=1;MIM: Waardelijsten=1;MIM: Packages=1;UML: Connectors=0;
+ ```
 
  - Dit geeft aan welke onderdelen van de het toolbox menu uit- (waarde: `1`) of ingevouwen (waarde: `0`) zijn.
 
