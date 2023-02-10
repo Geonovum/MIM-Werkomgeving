@@ -61,25 +61,25 @@ Je hebt nu succesvol de package structuur aangemaakt.
  - Er verschijnt nu een venster _Extend Metaclass_.
  - Klik in de linkerkolom op _Stereotypes_. Hierdoor verschijnen aan de rechterkant alle stereotypen die MIM kent. 
 
->**Let op**: deze zijn alleen beschikbaarbaar nadat je de MIM-toolbox hebt geïmporteerd (zie: [stap: 1](#stap-1-importeer-de-mim-toolbox-in-de-ea-omgeving)).
+>**Let op**: deze zijn alleen beschikbaarbaar _nadat_ je de MIM-toolbox hebt geïmporteerd (zie: [stap: 1](#stap-1-importeer-de-mim-toolbox-in-de-ea-omgeving)).
 
  - Zoek in de lijst aan de rechterkant `«Objecttype»` en `«Attribuutsoort»` op, selecteer deze en klik op _OK_.
  - Deze worden nu toegevoegd aan het diagram.
- - Zoek nu in het toolboxmenu Add Stereotype op (onder Profile Helpers) en sleep dit element op het diagram.
+ - Zoek nu in het toolboxmenu _Add Stereotype_ op (onder _Profile Helpers_) en sleep dit element op het diagram.
  - er verschijnt nu een venster Add Stereotype.
  - We gaan nu een stereotype maken dat dient als extentie op het MIM-stereotype `«Attribuutsoort»`.
- - Geef een naam op voor het stereotype. In het geval van dit voorbeeld is gekozen voor Attribuutsoort, maar dit kan elke andere willekeurige naam zijn.
- - Klik vervogens op de button Add Metaclass.
- - Hier geef je de UML-metaklasse op waarop je extentie plaatsvindt. In dit geval Als je niet weet van welke UML-metaklasse je stereotype wordt afgeleid, zoek dit dan op in hoofdstuk 3 van de ](https://docs.geostandaarden.nl/mim/mim/#metamodel-in-uml).
+ - Geef een naam op voor het stereotype. In het geval van dit voorbeeld is gekozen voor `DSG-Attribuutsoort`, maar dit kan elke andere willekeurige naam zijn.
+ - Klik vervogens op de button _Add Metaclass_.
+ - Hier geef je de UML-metaklasse op waarop je extensie plaatsvindt. Als je niet weet van welke UML-metaklasse je stereotype wordt afgeleid, zoek dit dan op in hoofdstuk 3 van de ](https://docs.geostandaarden.nl/mim/mim/#metamodel-in-uml).
 
  >**Info**: In hoofdstuk 3 van de MIM-standaard staat beschreven van welke UML-metaklasse elk MIM-stereotype is afgeleid. Omdat je een extentie maakt op MIM, is de nieuwe extentie automatisch óók een extentie op een UML-type. Desondanks moet je dit in Enterprise Architect expliciet benoemen.
 
  - Laat de overige instellingen staan en klik op _Volgende_.
- - In dit venster (Define Tagged Values), kun je de extra metadata-elementen opvoeren.
- - Klik met de rechtermuisknop in de kolom Property
- - Kies uit het menu Add Tagged Value.
+ - In dit venster, _Define Tagged Values_, kun je de extra metadata-elementen opvoeren.
+ - Klik met de rechtermuisknop in de kolom _Property_
+ - Kies uit het menu _Add Tagged Value_.
  - Voer een naam op voor de tagged value
- - In het geval van dit voorbeeld Actualiteit.
+ - In het geval van dit voorbeeld `Actualiteit`.
  - In de linkerkolom kun je nog een standaardwaarde opvoeren, maar dat is niet verplicht.
  - In dit voorbeeld laten blijft dit veld leeg.
  - Herhaal deze stap voor alle toe te voegen tagged values die je aan dit element wilt toevogen.
@@ -87,11 +87,11 @@ Je hebt nu succesvol de package structuur aangemaakt.
 
 Je ziet nu het nieuwe stereotype met de tagged values. Daarnaast heeft het nu een relatie met de UML-metaklasse `«Attribute»`. Als laatste onderdeel van deze stap moet nu de relatie gelegd worden tussen het nieuwe stereotype en het MIM-stereotype. Dit gaat als volgt:
 
- - Klik nu op het element Attribuutsoort (de extentie, niet het MIM-type).
+ - Klik nu op het element `DSG-Attribuutsoort`.
  - Er verschijnen nu rechts van het element een aantal iconen.
  - Klik op de witte pijl met de muisknop ingedrukt en sleep dit naar het bijbehorende MIM-type (het bovenste icoon)
- - Kies uit het menu dat nu verschijnt voor Generalization.
- - Je extentie-type heeft nu een relatie met MIM::Attribuutsoort en UML::Attribute.
+ - Kies uit het menu dat nu verschijnt voor _Generalization_.
+ - Je extentie-type heeft nu een relatie met `MIM::Attribuutsoort` én `UML::Attribute`.
  - Herhaal deze stappen voor `«Objecttype»`.
 
 Je hebt nu succesvol het profiel van je extentie aangemaakt.
