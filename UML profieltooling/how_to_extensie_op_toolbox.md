@@ -94,7 +94,7 @@ Je ziet nu het nieuwe stereotype met de tagged values. Daarnaast heeft het nu ee
  - Je extensie-type heeft nu een relatie met `MIM::Attribuutsoort` én `UML::Attribute`.
  - Herhaal deze stappen voor `«Objecttype»`.
 
-Als laatste stap is het handig om het kleurscheme van het modelelement gelijk te maken aan dat van MIM. Dat gaat als volgt:
+Als laatste stap is het handig om het kleurenschema van het modelelement gelijk te maken aan dat van MIM. Dat gaat als volgt:
 
  - Klik met de rechtermuisknop op het nieuwe element `DSG-Objecttype`.
  - Navigeer naar _Appearance_ en klik op _Default Appearance_.
