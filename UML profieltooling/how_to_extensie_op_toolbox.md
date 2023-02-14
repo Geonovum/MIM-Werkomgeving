@@ -121,13 +121,12 @@ Als laatste stap is het handig om het kleurenschema van het modelelement gelijk 
 Je hebt nu succesvol het profiel van je extensie aangemaakt.
 
 ## Stap 4: Modelleer het toolbox-menu
-In deze stap maak je de menupagina van de toolbox. Hiermee bepaal je hoe en welke stereotypes zichtbaar zijn in het menu. Het doel van de Disgeo-extensie is om bestaande MIM-stereotypen uitbreiden met extra tagged values. Daarvoor introduceerden we in EA onder de moterkap weliswaar twee nieuwe stereotypen (`«DSG-Objectype»` en `«DSG-Attribuutsoort»`), maar die willen we niet expliciet terugzien in de toolbox. In de toolbox willen we `«Objecttype»` en `«Attribuutsoort»` aanbieden.
+In deze stap maak je de menupagina van de toolbox. Hiermee bepaal je hoe en welke stereotypes zichtbaar zijn in het menu. Het doel van de DiSGeo-extensie is om bestaande MIM-stereotypen uitbreiden met extra _tagged values_. Daarvoor introduceerden we in EA onder de moterkap weliswaar twee nieuwe stereotypen (`«DSG-Objectype»` en `«DSG-Attribuutsoort»`), maar die willen we niet expliciet terugzien in de toolbox. In de toolbox willen we `«Objecttype»` en `«Attribuutsoort»` aanbieden.
 
  - Open het lege diagram uit het package `«toolbox profile»DISGEO`.
  - Sleep uit de toolbox die bij dit diagram hoort de _Profile Helper_ _Add Toolbox Page_ op het diagram.
  - Het venster _Add Toolbox Page_ opent nu.
  - Vul de naam in van de pagina die wilt gaan maken, in dit geval maken we een kopie van de MIM-toolbox, dus noemen we deze (eerste) pagina: _MIM: Objecten en attributen_.
-
  - klik vervolgens op de Add-button en selecteer de optie _Add Stereotype_.
  - Het venster _Select A Profile Element_ opent nu.
  - Navigeer naar het package `«profile»`DISGEO en selecter `«stereotype»DSG-Objecttype` en klik op OK.
@@ -135,7 +134,7 @@ In deze stap maak je de menupagina van de toolbox. Hiermee bepaal je hoe en welk
  - Voor de leesbaarheid is het fijn om het type een alias mee te geven (anders heet het toolbox-item `DISGEO::DSG-Objectype(UML::Class)`. Vanwege het eerder genoemde uitgangspunt, krijgt dit stereotype het alias **Objecttype**.
  - Voeg nu op dezelfde manier **Attribuutsoort** toe en klik **_nog niet_** op _OK_.
 
->**NOTE**: controleren of je MIM-typen vanuiten MIM-package kan halen, anders moet je die met de hand invoeren... **ANTWOORD: JA DAT KAN INDERDAAD**
+>**NOTE**: controleren of je MIM-typen vanuit het MIM-package kan halen, anders moet je die met de hand invoeren... **ANTWOORD: JA DAT KAN INDERDAAD**
 
 >**NOTE**: instructie verder afschrijven.
 
