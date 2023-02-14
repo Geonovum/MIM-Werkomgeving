@@ -126,7 +126,7 @@ In deze stap maak je de menupagina van de toolbox. Hiermee bepaal je hoe en welk
  - Open het lege diagram uit het package `«toolbox profile»DISGEO`.
  - Sleep uit de toolbox die bij dit diagram hoort de _Profile Helper_ _Add Toolbox Page_ op het diagram.
  - Het venster _Add Toolbox Page_ opent nu.
- - Vul de naam in van de pagina die wilt gaan maken, in dit geval maken we een kopie van de MIM-toolbox, dus noemen we deze (eerste) pagina: _MIM: Objecten en attributen_.
+ - Vul de naam in van de toolboxpagina die je wilt maken. In dit geval maken we een kopie van de MIM-toolbox, dus noemen we deze (eerste) pagina: _MIM: Objecten en attributen_.
  - klik vervolgens op de Add-button en selecteer de optie _Add Stereotype_.
  - Het venster _Select A Profile Element_ opent nu.
  - Navigeer naar het package `«profile»`DISGEO en selecter `«stereotype»DSG-Objecttype` en klik op OK.
@@ -137,6 +137,8 @@ In deze stap maak je de menupagina van de toolbox. Hiermee bepaal je hoe en welk
 >**NOTE**: controleren of je MIM-typen vanuit het MIM-package kan halen, anders moet je die met de hand invoeren... **ANTWOORD: JA DAT KAN INDERDAAD**
 
 >**NOTE**: instructie verder afschrijven.
+
+>**NOTE**: De naam van het stereotype komt in het modelelement terecht. Dus DSG-Objecttype is niet handig. Omdat het voor de gebruiker eruit moet zien als een MIM-type, is het toch beter dit stereotype `«Objecttype»` te noemen.
 
 ## Stap 5: Modelleer het diagram
 
