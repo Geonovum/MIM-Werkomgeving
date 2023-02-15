@@ -205,6 +205,6 @@ Hoe je dat doet, lees je [hier](https://github.com/Geonovum/MIM-Werkomgeving/tre
 
 ## Stap 7: Werken met de toolbox
 
-Kijk hier voor de meest actuele [handleiding](https://github.com/Geonovum/MIM-Werkomgeving/tree/master/UML%20profieltooling/werkversie1.1.1#readme) voor het gebruik van toolboxen in EA.
+Bekijk de meest actuele [handleiding](https://github.com/Geonovum/MIM-Werkomgeving/tree/master/UML%20profieltooling/werkversie1.1.1#readme) voor het gebruik van toolboxen in EA.
 
 >**NOTE**: nog toevoegen
