@@ -4,24 +4,18 @@
  - _SVN 1.14.1_
  - _GitHub_
 
-Inhoud
- 1. Beschrijving
- 1. Benodigde bestanden
- 1. Voorbereiding (todo)
- 1. Aanpassingen (todo)
- 1. Settings (versienummer, quick linker, etc.)
- 1. Profielen genereren
- 1. MDG genereren
- 1. Resultaat controleren
- 1. QuickLinker maken of bewerken (todo)
+## Inhoud
+ 1. [1 Voorbereiding](#1-voorbereiding)
+ 1. [2 Profiel publiceren](#2-profiel-publiceren)
+ 1. [3 Genereer MDG Technologie](#3-genereer-mdg-technologie)
+ 1. [4 Test de Toolbox](#4-test-de-toolbox)
+ 1. [5 Quicklinker](#5-quicklinker)
+ 1. [6 Aandachtspunten](#6-aandachtspunten)
+ 1. [7 MIM MDG](#7-mim-mdg)
+ 1. [8 Regels](#8-regels)
 
 ## Beschrijving
 Deze handleiding beschrijft het proces voor het genereren van een customized toolbox voor modelleren met Enterprise Architect. Het gaat specifiek in op het maken van de _MIM-toolbox_. Maar ook voor het genereren customized toolboxen in het algemeen, biedt deze beschrijving een handig overzicht van de benodigde stappen. Een inhoudelijke beschrijving voor het maken van de benodigde profielen, vind je hier ([linkOpnemen](url)). De meest actuele versie van MIM kun je hier ([linkOpnemen](url)) raadplegen.
-
-Er zijn drie stappen in het proces. Het kan zijn dat je 
- 1. [Voorbereiding](#1-voorbereiding)
- 1. [Profiel publiceren](#2-profiel-publiceren)
- 1. [MDG Technology genereren (toolbox)](#3-genereer-mdg-technologie)
 
 <!-- ```diff
 NOG VERWERKEN
@@ -278,6 +272,9 @@ In ieder geval beschrijven:
 ![](Media/mim_ql_column_e.jpg)
 
 ## 6 Aandachtspunten
+
+>**NOTE**: verder uitwerken
+
  - Tekstveld voor toelichting, niet `initial value`, maar `notes field` als datatype
  - Uitgebreide toelichting wordt afgekapt vanwege maximale lengte.
  - Profiel niet elke keer opnieuw moeten laden door het kopppelen aan een (std.) diagram
@@ -285,11 +282,17 @@ In ieder geval beschrijven:
  - Vorige versie had ook zo'n naam, dit kun je op website of github terugvinden. gaat om de naam van de het XML
 
 ## 7 MIM MDG
+
+>**NOTE**: verder uitwerken
+
  - profile helpers, model wizard: https://sparxsystems.com/enterprise_architect_user_guide/15.2/modeling/using_the_profile_helpers.html
  - Create Diagram Profiles using the Profile Helpers:https://sparxsystems.com/enterprise_architect_user_guide/15.2/modeling/create_diagram_profiles_using_.html
  - Morgen weer verder!
 
 ## 8 Regels
+
+>**NOTE**: verder uitwerken
+
  - `«profile»`, `«diagram profile»` en `«toolbox profile»` moeten dezelfde naam dragen
  - Bij het genereren van een profiel, moet _profile name_ gelijk zijn aan de naam die het profiel draagt
  - Binnen een package mogen elementen niet dezelfde naam hebben, maar MIM kent verschillende elementen met de naam '_Keuze_'. Om dit mogelijk te maken in de toolbox, zijn voor de keuze-elementen aparte aanvullende packages gemaakt. Vandaar dat er meerdere packages `«profile»` zijn. 
