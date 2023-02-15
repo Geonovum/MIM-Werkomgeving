@@ -157,9 +157,9 @@ In de MIM-toolbox heeft deze pagina nog drie andere stereotypes. Deze kun je uit
 ```diff
 DISGEO::Objecttype(UML::Class)
 DISGEO::Attribuutsoort(UML::Attribute)
-+ • MIM::Gegevensgroep(UML::Attribute)
-+ • MIM::Gegevensgroeptype(UML::Class)
-+ • MIM_Keuzeattribuut::Keuze(UML::Attribute)
++ MIM::Gegevensgroep(UML::Attribute)
++ MIM::Gegevensgroeptype(UML::Class)
++ MIM_Keuzeattribuut::Keuze(UML::Attribute)
 ```
 
  - **Geef** ze de bijbehorende **aliassen** uit het MIM-profiel
@@ -202,9 +202,6 @@ Volg [deze link](https://github.com/Geonovum/MIM-Werkomgeving/tree/master/UML%20
 Nadat je elk profiel gepubliceert hebt, 'bundel' je ze in een MDG Technology. 
 Hoe je dat doet, lees je [hier](https://github.com/Geonovum/MIM-Werkomgeving/tree/master/UML%20profieltooling#3--genereer-mdg-technologie)
 
-
 ## Stap 7: Werken met de toolbox
 
 Bekijk de meest actuele [handleiding](https://github.com/Geonovum/MIM-Werkomgeving/tree/master/UML%20profieltooling/werkversie1.1.1#readme) voor het gebruik van toolboxen in EA.
-
->**NOTE**: nog toevoegen
