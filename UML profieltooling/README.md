@@ -1,4 +1,4 @@
-# HANDLEIDING MIM-PROFIEL, -TOOLBOX, -MDG GENEREREN
+# HANDLEIDING MIM-Profiel, -Toolbox & -MDG Genereren
 
  - _Enterprise 15.2_
  - _SVN 1.14.1_
