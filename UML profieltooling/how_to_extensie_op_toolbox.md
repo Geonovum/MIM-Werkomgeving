@@ -139,12 +139,13 @@ Je hebt nu de twee nieuwe stereotypes toegevoeg aan de toolboxpagina. In de MIM-
  - Klik nogmaals op de Add-button en navigeer nu naar het package `«MIM-UMLprofile»` en voeg de volgende elementen toe:
 
 ```diff
- • MIM: Objecten en attributen
+MIM: Objecten en attributen
+
  • DISGEO::DSG-Attribuutsoort(UML::Attribute)
  • DISGEO::DSG-Objecttype(UML::Class)
-+  • MIM::Gegevensgroep(UML::Attribute)
-+  • MIM::Gegevensgroeptype(UML::Class)
-+  • MIM_Keuzeattribuut::Keuze(UML::Attribute)
++ • MIM::Gegevensgroep(UML::Attribute)
++ • MIM::Gegevensgroeptype(UML::Class)
++ • MIM_Keuzeattribuut::Keuze(UML::Attribute)
 ```
 
  - Geef ze de bijbehorende aliassen uit het MIM-profiel
