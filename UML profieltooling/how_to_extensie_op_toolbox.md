@@ -136,7 +136,7 @@ In deze stap maak je de menupagina van de toolbox. Hiermee bepaal je hoe en welk
 
 Je hebt nu de twee nieuwe stereotypes toegevoeg aan de toolboxpagina. In de MIM-toolbox heeft deze pagina nog drie andere stereotypes. Deze kun je uit het package MIM-UML halen. Deze beschrijving gaat ervan uit dat je hierover beschikt.
 
-Klik nogmaals op de Add-button en navigeer nu naar het MIM-UMLprofile package en voeg de volgende elementen toe:
+ - Klik nogmaals op de Add-button en navigeer nu naar het MIM-UMLprofile package en voeg de volgende elementen toe:
 
 ```diff
 DISGEO::DSG-Attribuutsoort(UML::Attribute)
@@ -146,13 +146,13 @@ DISGEO::DSG-Objecttype(UML::Class)
 + MIM_Keuzeattribuut::Keuze(UML::Attribute)
 ```
 
-Het is in alle gevallen mogelijk om de namen van de stereotypen met de hand op te voeren. De schrijfwijze luistert heel nauw, dus heeft het de voorkeur gebruik te maken van _Add Stereotype_.
+ - Klik nu op _OK_.
+ - Voeg de toolboxpage toe voor MIM-Relaties, MIM-Datatypen, MIM-Waardelijsten en MIM-Packages.
+ - Herhaal hiervoor de voorgaande stappen.
 
->**NOTE**: controleren of je MIM-typen vanuit het MIM-package kan halen, anders moet je die met de hand invoeren... **ANTWOORD: JA DAT KAN INDERDAAD**
+ Je hebt nu met succes het toolboxmenu gemaakt. Het is in alle gevallen mogelijk om de namen van de stereotypen met de hand op te voeren. De schrijfwijze luistert heel nauw, dus heeft het de voorkeur gebruik te maken van _Add Stereotype_.
 
->**NOTE**: instructie verder afschrijven.
-
->**NOTE**: De naam van het stereotype komt in het modelelement terecht. Dus DSG-Objecttype is niet handig. Omdat het voor de gebruiker eruit moet zien als een MIM-type, is het toch beter dit stereotype `«Objecttype»` te noemen.
+>**Editorial note**: De naam van het stereotype komt in het modelelement terecht. Dus DSG-Objecttype is niet handig. Omdat het voor de gebruiker eruit moet zien als een MIM-type, is het toch beter dit stereotype `«Objecttype»` te noemen.
 
 ## Stap 5: Modelleer het diagram
 
