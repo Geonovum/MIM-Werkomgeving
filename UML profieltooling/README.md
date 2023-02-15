@@ -2,7 +2,7 @@
 
 |   | Versie |
 |-- | -- |
-| Document | 15 februari 2023 |
+| Document | 15-02-2023 |
 | Enterprise Architect | 15.2 |
 | Subversion (SVN) | 1.14.1 |
 
