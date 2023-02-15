@@ -1,8 +1,8 @@
 # Handleiding MIM-Profiel, -Toolbox & -MDG Genereren
 
- - _Enterprise 15.2_
- - _SVN 1.14.1_
- - _GitHub_
+| Versie Enterprise Architect | 15.2 |
+| Versie Subversion (SVN) | 1.14.1 |
+| Laatste update | 15 februari 2023 |
 
 ## Inhoud
  1. [Voorbereiding](#1-voorbereiding)
