@@ -4,7 +4,7 @@ MIM-versie: 1.1.1
 
 Enterprise Architect versie: 15.2
 
-Update 24 juni 2022
+Laatste update: 15 februari 2023
 
 Versienummer toegevoegd, zodat uit de naam van de toolbox duidelijk blijkt wat de versie is. Tevens is dit doorgevoerd naar de modelelementen. Zodat je bij de properties van het modelelement direct kunt zien met welke MIM-versie het element is aangemaakt
 
