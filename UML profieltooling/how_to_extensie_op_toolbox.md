@@ -130,9 +130,23 @@ In deze stap maak je de menupagina van de toolbox. Hiermee bepaal je hoe en welk
  - klik vervolgens op de Add-button en selecteer de optie _Add Stereotype_.
  - Het venster _Select A Profile Element_ opent nu.
  - Navigeer naar het package `«profile»`DISGEO en selecter `«stereotype»DSG-Objecttype` en klik op OK.
- - In de eerste rij van de tabel in het venster add toolbox page, is nu dit stereotype toegevoegd.
- - Voor de leesbaarheid is het fijn om het type een alias mee te geven (anders heet het toolbox-item `DISGEO::DSG-Objectype(UML::Class)`. Vanwege het eerder genoemde uitgangspunt, krijgt dit stereotype het alias **Objecttype**.
+ - In de eerste rij van de tabel in het venster _Add Toolbox Page_, is nu dit stereotype toegevoegd.
+ - Voor de leesbaarheid is het fijn om het type een **alias** mee te geven (anders heet het toolbox-item `DISGEO::DSG-Objectype(UML::Class)`. Vanwege het eerder genoemde uitgangspunt, krijgt dit stereotype het alias **Objecttype**.
  - Voeg nu op dezelfde manier **Attribuutsoort** toe en klik **_nog niet_** op _OK_.
+
+Je hebt nu de twee nieuwe stereotypes toegevoeg aan de toolboxpagina. In de MIM-toolbox heeft deze pagina nog drie andere stereotypes. Deze kun je uit het package MIM-UML halen. Deze beschrijving gaat ervan uit dat je hierover beschikt.
+
+Klik nogmaals op de Add-button en navigeer nu naar het MIM-UMLprofile package en voeg de volgende elementen toe:
+
+```diff
+DISGEO::DSG-Attribuutsoort(UML::Attribute)
+DISGEO::DSG-Objecttype(UML::Class)
++ MIM::Gegevensgroep(UML::Attribute)
++ MIM::Gegevensgroeptype(UML::Class)
++ MIM_Keuzeattribuut::Keuze(UML::Attribute)
+```
+
+Het is in alle gevallen mogelijk om de namen van de stereotypen met de hand op te voeren. De schrijfwijze luistert heel nauw, dus heeft het de voorkeur gebruik te maken van _Add Stereotype_.
 
 >**NOTE**: controleren of je MIM-typen vanuit het MIM-package kan halen, anders moet je die met de hand invoeren... **ANTWOORD: JA DAT KAN INDERDAAD**
 
