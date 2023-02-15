@@ -1,4 +1,4 @@
-# Handleiding MIM-Profiel, -Toolbox & -MDG Genereren
+# Handleiding - MIM-Profiel, -Toolbox & -MDG Genereren
 
 | Software/Standaard | Versie |
 |-- | -- |

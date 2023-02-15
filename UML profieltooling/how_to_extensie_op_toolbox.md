@@ -1,4 +1,4 @@
-# Handleiding Extensie maken op MIM-toolbox
+# Handleiding - Extensie maken op MIM-toolbox
 
 | Software/Standaard  | Versie |
 | -- | -- |
