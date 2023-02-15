@@ -191,3 +191,5 @@ Je hebt nu succesvol een _Diagram Profile_ aangemaakt.
 >**NOTE**: [linkOpnemen](www.example.com) naar hoofdstuk in de **handleiding MIM-toolbox**.
 
 ## Stap 8: Werken met de extensie
+
+>**NOTE**: nog toevoegen
