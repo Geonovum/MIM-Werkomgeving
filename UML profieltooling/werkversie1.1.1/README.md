@@ -9,12 +9,12 @@ Update 24 juni 2022
 Versienummer toegevoegd, zodat uit de naam van de toolbox duidelijk blijkt wat de versie is. Tevens is dit doorgevoerd naar de modelelementen. Zodat je bij de properties van het modelelement direct kunt zien met welke MIM-versie het element is aangemaakt
 
 ## Inhoud
- 1. [Importeren MIM-toolbox](#1--importeren-mim-toolbox)
- 1. [Toepassen MIM-diagram](#2--toepassen-mim-diagram)
- 1. [Toepassen Quick Linker](#3--toepassen-quick-linker)
- 1. [Toepassen toolbox-item 'Relatierol'](#4--toepassen-toolbox-item-relatierol)
- 1. [Verwijderen oudere toolbox](#5--verwijderen-oudere-toolbox)
- 1. [Toolboxen beheren](#6--toolboxen-beheren)
+ 1. [Importeren MIM-toolbox](#1-importeren-mim-toolbox)
+ 1. [Toepassen MIM-diagram](#2-toepassen-mim-diagram)
+ 1. [Toepassen Quick Linker](#3-toepassen-quick-linker)
+ 1. [Toepassen toolbox-item 'Relatierol'](#4-toepassen-toolbox-item-relatierol)
+ 1. [Verwijderen oudere toolbox](#5-verwijderen-oudere-toolbox)
+ 1. [Toolboxen beheren](#6-toolboxen-beheren)
 
 ## 1: Importeren MIM-toolbox
 
