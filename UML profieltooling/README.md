@@ -5,14 +5,14 @@
  - _GitHub_
 
 ## Inhoud
- 1. [1 Voorbereiding](#1-voorbereiding)
- 1. [2 Profiel publiceren](#2-profiel-publiceren)
- 1. [3 Genereer MDG Technologie](#3-genereer-mdg-technologie)
- 1. [4 Test de Toolbox](#4-test-de-toolbox)
- 1. [5 Quicklinker](#5-quicklinker)
- 1. [6 Aandachtspunten](#6-aandachtspunten)
- 1. [7 MIM MDG](#7-mim-mdg)
- 1. [8 Regels](#8-regels)
+ 1. [Voorbereiding](#1-voorbereiding)
+ 1. [Profiel publiceren](#2-profiel-publiceren)
+ 1. [Genereer MDG Technologie](#3-genereer-mdg-technologie)
+ 1. [Test de Toolbox](#4-test-de-toolbox)
+ 1. [Quicklinker](#5-quicklinker)
+ 1. [Aandachtspunten](#6-aandachtspunten)
+ 1. [MIM MDG](#7-mim-mdg)
+ 1. [Regels](#8-regels)
 
 ## Beschrijving
 Deze handleiding beschrijft het proces voor het genereren van een customized toolbox voor modelleren met Enterprise Architect. Het gaat specifiek in op het maken van de _MIM-toolbox_. Maar ook voor het genereren customized toolboxen in het algemeen, biedt deze beschrijving een handig overzicht van de benodigde stappen. Een inhoudelijke beschrijving voor het maken van de benodigde profielen, vind je hier ([linkOpnemen](url)). De meest actuele versie van MIM kun je hier ([linkOpnemen](url)) raadplegen.
