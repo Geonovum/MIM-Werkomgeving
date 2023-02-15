@@ -2,7 +2,8 @@
 
 | Software/Standaard  | Versie |
 | -- | -- |
-| MIM | 1.1.1 |
+| MIM-standaard | 1.1.1 |
+| MIM-toolbox | 1.1.1 b04 |
 | Enterprise Architect (EA) | 15.2 |
 
 ## Inhoud
