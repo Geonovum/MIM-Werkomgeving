@@ -184,12 +184,20 @@ Je hebt nu succesvol een _Diagram Profile_ aangemaakt.
 
 ## Stap 6: Exporteer/Genereer (naar) MDG
 
->**NOTE**: [linkOpnemen](www.example.com) naar hoofdstuk in de **handleiding MIM-toolbox genereren**.
+Je hebt nu succesvol de volgende drie profielen gemaakt:
+ - `«profile»DISGEO`
+ - `«diagram profile»DISGEO`
+ - `«toolbox profile»DISGEO`
 
-## Stap 7: Importeer MDG
+In de volgende stap lees je hoe je de profielen publiceert
+Volg [deze link](https://github.com/Geonovum/MIM-Werkomgeving/tree/master/UML%20profieltooling#2--profiel-publiceren) voor een beschrijving.
 
->**NOTE**: [linkOpnemen](www.example.com) naar hoofdstuk in de **handleiding MIM-toolbox**.
+Nadat je elk profiel gepubliceert hebt, 'bundel' je ze in een MDG Technology. 
+Hoe je dat doet, lees je [hier](https://github.com/Geonovum/MIM-Werkomgeving/tree/master/UML%20profieltooling#3--genereer-mdg-technologie)
 
-## Stap 8: Werken met de extensie
+
+## Stap 8: Werken met de toolbox
+
+Kijk hier voor de meest actuele [handleiding](https://github.com/Geonovum/MIM-Werkomgeving/tree/master/UML%20profieltooling/werkversie1.1.1#readme) voor het gebruik van toolboxen in EA.
 
 >**NOTE**: nog toevoegen
