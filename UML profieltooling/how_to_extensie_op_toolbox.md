@@ -136,16 +136,18 @@ In deze stap maak je de menupagina van de toolbox. Hiermee bepaal je hoe en welk
 
 Je hebt nu de twee nieuwe stereotypes toegevoeg aan de toolboxpagina. In de MIM-toolbox heeft deze pagina nog drie andere stereotypes. Deze kun je uit het package MIM-UML halen. Deze beschrijving gaat ervan uit dat je hierover beschikt.
 
- - Klik nogmaals op de Add-button en navigeer nu naar het MIM-UMLprofile package en voeg de volgende elementen toe:
+ - Klik nogmaals op de Add-button en navigeer nu naar het package `«MIM-UMLprofile»` en voeg de volgende elementen toe:
 
 ```diff
-DISGEO::DSG-Attribuutsoort(UML::Attribute)
-DISGEO::DSG-Objecttype(UML::Class)
-+ MIM::Gegevensgroep(UML::Attribute)
-+ MIM::Gegevensgroeptype(UML::Class)
-+ MIM_Keuzeattribuut::Keuze(UML::Attribute)
+ • MIM: Objecten en attributen
+ • DISGEO::DSG-Attribuutsoort(UML::Attribute)
+ • DISGEO::DSG-Objecttype(UML::Class)
++  • MIM::Gegevensgroep(UML::Attribute)
++  • MIM::Gegevensgroeptype(UML::Class)
++  • MIM_Keuzeattribuut::Keuze(UML::Attribute)
 ```
 
+ - Geef ze de bijbehorende aliassen uit het MIM-profiel
  - Klik nu op _OK_.
  - Voeg de toolboxpage toe voor _**MIM-Relaties**_, _**MIM-Datatypen**_, _**MIM-Waardelijsten**_ en _**MIM-Packages**_.
  - Herhaal hiervoor de voorgaande stappen.
