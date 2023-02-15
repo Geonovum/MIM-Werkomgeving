@@ -45,14 +45,14 @@ Indien je geen foutmelding krijgt, heb je de MIM-toolbox succesvol geïmporteerd
 
 ## Stap 2: Maak de package-structuur aan voor de extensie
 
- - Klik in de project browser linksbovenin op de map met het gele sterretje, of druk `Ctrl+Shift+M`.
- - Hierdoor open de Model Wizard.
+ - Klik in de _project browser_ linksbovenin op de **map met het gele sterretje**, of druk `Ctrl+Shift+M`.
+ - Hierdoor open de _Model Wizard_.
  - Selecteer het tabblad _Model Patterns_.
  - Klik daaronder op _Model Technologies Perspective_.
  - Ga naar _Management_ en selecter vervolgens: _MDG Technology Builder_.
- - In het venster verschijnen nu verschillende Model Patterns. Dit zijn templates voor het maken van modellen. 
+ - In het venster verschijnen nu verschillende _Model Patterns_. Dit zijn templates voor het maken van modellen. 
  - Kies nu onder _MDG Technology Builder_ voor _Basic Template_ en klik linksonderin op _Create Pattern(s)_.
- - Geef in het dialoogvenster dat nu verschijnt de extensie die je gaat maken een naam. Bijvoorbeeld 'DiSGeo' en klik op _OK_.
+ - Geef in het dialoogvenster dat nu verschijnt de naam van de extensie op die je gaat maken (bijvoorbeeld 'DISGEO') en klik op _OK_.
 
 In de project browser zie dat er nu een nieuwe package DiSGeo is toegevoegd. Dat package bevat een 
  - _diagram_;
@@ -76,30 +76,30 @@ Je hebt nu succesvol de package structuur aangemaakt.
  - Zoek in de lijst aan de rechterkant `«Objecttype»` en `«Attribuutsoort»` op, selecteer deze en klik op _OK_.
  - Deze worden nu toegevoegd aan het diagram.
  - Zoek nu in het toolboxmenu _Add Stereotype_ op (onder _Profile Helpers_) en sleep dit element op het diagram.
- - er verschijnt nu een venster Add Stereotype.
+ - Er verschijnt nu een venster _Add Stereotype_.
  - We gaan nu een stereotype maken dat dient als extensie op het MIM-stereotype `«Attribuutsoort»`.
  - Geef een naam op voor het stereotype. In het geval van dit voorbeeld is gekozen voor `Attribuutsoort`, maar dit kan elke andere willekeurige naam zijn.
  - Klik vervogens op de button _Add Metaclass_.
- - Hier geef je de UML-metaklasse op waarop je extensie plaatsvindt. Als je niet weet van welke UML-metaklasse je stereotype wordt afgeleid, zoek dit dan op in hoofdstuk 3 van de ](https://docs.geostandaarden.nl/mim/mim/#metamodel-in-uml).
+ - Hier geef je de UML-metaklasse **uit EA** op waarop je extensie plaatsvindt. Als je niet weet van welke UML-metaklasse je stereotype wordt afgeleid, zoek dit dan op in het MIM-profiel.
 
- >**Info**: In hoofdstuk 3 van de MIM-standaard staat beschreven van welke UML-metaklasse elk MIM-stereotype is afgeleid. Omdat je een extensie maakt op MIM, is de nieuwe extensie automatisch óók een extensie op een UML-type. Desondanks moet je dit in Enterprise Architect expliciet benoemen.
+ >**Info**: In [hoofdstuk 3 van de MIM-standaard](https://docs.geostandaarden.nl/mim/mim/#metamodel-in-uml) staat beschreven van welke UML-metaklasse elk MIM-stereotype is afgeleid. Omdat je een extensie maakt op MIM, is de nieuwe extensie automatisch óók een extensie op een UML-type. Desondanks moet je dit in Enterprise Architect **expliciet** benoemen.
 
  - Laat de overige instellingen staan en klik op _Volgende_.
  - In dit venster, _Define Tagged Values_, kun je de extra metadata-elementen opvoeren.
  - Klik met de rechtermuisknop in de kolom _Property_
  - Kies uit het menu _Add Tagged Value_.
- - Voer een naam op voor de tagged value
- - In het geval van dit voorbeeld `Actualiteit`.
+ - Voer een naam op voor de tagged value. In het geval van dit voorbeeld `Actualiteit`.
  - In de linkerkolom kun je nog een standaardwaarde opvoeren, maar dat is niet verplicht.
- - In dit voorbeeld laten blijft dit veld leeg.
- - Herhaal deze stap voor alle toe te voegen tagged values die je aan dit element wilt toevogen.
- - Als je klaar bent, kun je bovenstaande stappen herhalen voor `«Objecttype»`. Klik daarna op _Voltooien_
+ - In dit voorbeeld blijft dit veld leeg.
+ - Herhaal deze stap voor alle tagged values die je aan dit element wilt toevoegen.
+ - Als je klaar bent, kun je bovenstaande stappen herhalen voor `«Objecttype»`.
+ - Klik daarna op _Voltooien_
 
 Je ziet nu het nieuwe stereotype met de tagged values. Daarnaast heeft het nu een relatie met de UML-metaklasse `«Attribute»`. Als laatste onderdeel van deze stap moet nu de relatie gelegd worden tussen het nieuwe stereotype en het MIM-stereotype. Dit gaat als volgt:
 
  - Klik nu op het element `Attribuutsoort`.
  - Er verschijnen nu rechts van het element een aantal iconen.
- - Klik op de witte pijl met de muisknop ingedrukt en sleep dit naar het bijbehorende MIM-type (het bovenste icoon)
+ - Klik op de witte pijl ([_QuickLinker_](https://github.com/Geonovum/MIM-Werkomgeving/blob/master/UML%20profieltooling/werkversie1.1.1/README.md#3-toepassen-quick-linker)) met de muisknop ingedrukt en sleep dit naar het bijbehorende MIM-type (het bovenste icoon)
  - Kies uit het menu dat nu verschijnt voor _Generalization_.
  - Je extensie-type heeft nu een relatie met `MIM::Attribuutsoort` én `UML::Attribute`.
  - Herhaal deze stappen voor `«Objecttype»`.
@@ -112,7 +112,7 @@ Als laatste stap is het handig om het kleurenschema van het modelelement gelijk 
  - Klik op _Background Color_.
  - Klik op _More Colors_.
  - Selecteer het tabblad _Custom_.
- - En vul vervolgens onderstaande waarden in
+ - En vul vervolgens onderstaande waarden in:
 
 ```
    Hue:   128
@@ -124,7 +124,7 @@ Als laatste stap is het handig om het kleurenschema van het modelelement gelijk 
 ```
 
  - Klik op _OK_.
- - Zet _Border Color_ en _Font Color_ op zwart.
+ - Zet _Border Color_ en _Font Color_ op `zwart`.
  - Klik op _OK_.
  - Herhaal deze stap voor de andere modelelementen, in dit geval `Attribuutsoort`.
 
@@ -143,7 +143,6 @@ In deze stap maak je de menupagina van de toolbox. Hiermee bepaal je hoe en welk
  - In de eerste rij van de tabel in het venster _Add Toolbox Page_, is nu dit stereotype toegevoegd.
  - Voor de leesbaarheid is het fijn om het type een **alias** mee te geven (anders heet het toolbox-item `DISGEO::Objectype(UML::Class)`. Vanwege het eerder genoemde uitgangspunt, krijgt dit stereotype het alias **Objecttype**.
  - Voeg nu op dezelfde manier **Attribuutsoort** toe en klik **_nog niet_** op _OK_.
-
  - Je hebt nu de twee nieuwe stereotypes toegevoeg aan de toolboxpagina:
 
 ```diff
@@ -151,7 +150,7 @@ In deze stap maak je de menupagina van de toolbox. Hiermee bepaal je hoe en welk
 + DISGEO::Attribuutsoort(UML::Attribute)
 ```
 
- In de MIM-toolbox heeft deze pagina nog drie andere stereotypes. Deze kun je uit het package MIM-UML halen. Deze beschrijving gaat ervan uit dat je hierover beschikt.
+In de MIM-toolbox heeft deze pagina nog drie andere stereotypes. Deze kun je uit het package MIM-UML halen. Deze beschrijving gaat ervan uit dat je hierover beschikt.
 
  - Klik nogmaals op de Add-button en navigeer nu naar het package `«MIM-UMLprofile»` en voeg de volgende elementen toe:
 
@@ -168,11 +167,11 @@ DISGEO::Attribuutsoort(UML::Attribute)
  - Voeg de toolboxpage toe voor _**MIM-Relaties**_, _**MIM-Datatypen**_, _**MIM-Waardelijsten**_ en _**MIM-Packages**_.
  - Herhaal hiervoor de voorgaande stappen.
 
- Je hebt nu met succes het toolboxmenu gemaakt. Het is in alle gevallen mogelijk om de namen van de stereotypen met de hand op te voeren. De schrijfwijze luistert heel nauw, dus heeft het de voorkeur gebruik te maken van _Add Stereotype_.
+Je hebt nu met succes het toolboxmenu gemaakt. Het is in alle gevallen mogelijk om de namen van de stereotypen met de hand op te voeren. De schrijfwijze luistert heel nauw, dus heeft het de voorkeur gebruik te maken van _Add Stereotype_.
 
 ## Stap 5: Modelleer het diagram
 
- - Open het lege diagram uit het package `«Diagram Profile»Disgeo`.
+ - Open het lege diagram uit het package `«Diagram Profile»DISGEO`.
  - Sleept uit de toolbox die bij dit diagram hoort de _Profile Helper_ _Add Diagram Extention_ op het diagram.
  - Het venster _Add Diagram Extention_ opent nu.
  - Geef een naam op voor het diagram en kies bij _Extention Type_ voor `Class`.
