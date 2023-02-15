@@ -1,9 +1,9 @@
 # Handleiding Extensie maken op MIM-toolbox
 
-|   | Versie |
+| Software/Standaard  | Versie |
 | -- | -- |
-| Enterprise Architect (EA) | 15.2 |
 | MIM | 1.1.1 |
+| Enterprise Architect (EA) | 15.2 |
 
 ## Inhoud
  1. [Beschrijving](#beschrijving)
