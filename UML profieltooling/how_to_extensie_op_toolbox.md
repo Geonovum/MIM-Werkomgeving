@@ -147,7 +147,7 @@ DISGEO::DSG-Objecttype(UML::Class)
 ```
 
  - Klik nu op _OK_.
- - Voeg de toolboxpage toe voor MIM-Relaties, MIM-Datatypen, MIM-Waardelijsten en MIM-Packages.
+ - Voeg de toolboxpage toe voor _**MIM-Relaties**_, _**MIM-Datatypen**_, _**MIM-Waardelijsten**_ en _**MIM-Packages**_.
  - Herhaal hiervoor de voorgaande stappen.
 
  Je hebt nu met succes het toolboxmenu gemaakt. Het is in alle gevallen mogelijk om de namen van de stereotypen met de hand op te voeren. De schrijfwijze luistert heel nauw, dus heeft het de voorkeur gebruik te maken van _Add Stereotype_.
