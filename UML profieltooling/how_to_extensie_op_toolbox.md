@@ -4,6 +4,16 @@ De handleiding is geschreven voor EA versie 15.2
 
 Deze handleiding gebruik **DiSGeo** als voorbeeld. Voor het **informatiemodel DiSGeo** zijn voor de MIM-stereotypen `«Objecttype»` en `«Attribuutsoort»` meta-informatie nodig in de vorm van extra tagged values. Voor [Objecttype](https://geonovum.github.io/disgeo-imsor/modelleerprincipes/#specificatie-voor-objecttype) gaat dat om het toevoegen van `Actualiteit` en `Inwinning verplicht`, voor [Attribuutsoort](https://geonovum.github.io/disgeo-imsor/modelleerprincipes/#specificatie-voor-attribuutsoort) zijn dat: `Inwinningsregels` en `Positionele juistheid`.
 
+## Inhoud
+
+ 1. [Importeer de MIM-toolbox in de EA-omgeving](#importeer-de-mim-toolbox-in-de-ea-omgeving)
+ 1. [Maak de package-structuur aan voor de extensie](#maak-de-package-structuur-aan-voor-de-extensie)
+ 1. [Modelleer de toolbox-extensie](#modelleer-de-toolbox-extensie)
+ 1. [Modelleer het toolbox-menu](#modelleer-het-toolbox-menu)
+ 1. [Modelleer het diagram](#modelleer-het-diagram)
+ 1. [Genereer MDG Technology](#genereer-mdg-technology)
+ 1. [Werken met de toolbox](#werken-met-de-toolbox)
+
 ## Introductie
 Deze handleiding beschrijft hoe je in **Enterprise Architect** een **extensie** maakt **op de MIM-toolbox**. Dit is bijvoorbeeld handig als er extra metamodelconstructies nodig zijn voor het maken van een informatiemodel. Meer informatie en spelregels hiervoor vind je in de [MIM-standaard](https://docs.geostandaarden.nl/mim/mim/#een-eigen-extensie-op-het-metamodel). Een extensie op de MIM-toolbox is ook bedoeld voor het maken van aanvullende constructies die alleen spelen op het niveau van implementatie, of op het niveau van afgeleide technsiche modellen ten behoeve van specifieke interfaces.
 
@@ -182,7 +192,7 @@ DISGEO::DSG-Attribuutsoort(UML::Attribute)
 
 Je hebt nu succesvol een _Diagram Profile_ aangemaakt.
 
-## Stap 6: Exporteer/Genereer (naar) MDG
+## Stap 6: Genereer MDG Technology
 
 Je hebt nu succesvol de volgende drie profielen gemaakt:
  - `«profile»DISGEO`
@@ -196,7 +206,7 @@ Nadat je elk profiel gepubliceert hebt, 'bundel' je ze in een MDG Technology.
 Hoe je dat doet, lees je [hier](https://github.com/Geonovum/MIM-Werkomgeving/tree/master/UML%20profieltooling#3--genereer-mdg-technologie)
 
 
-## Stap 8: Werken met de toolbox
+## Stap 7: Werken met de toolbox
 
 Kijk hier voor de meest actuele [handleiding](https://github.com/Geonovum/MIM-Werkomgeving/tree/master/UML%20profieltooling/werkversie1.1.1#readme) voor het gebruik van toolboxen in EA.
 
