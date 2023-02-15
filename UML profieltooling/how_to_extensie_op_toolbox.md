@@ -78,7 +78,7 @@ Je hebt nu succesvol de package structuur aangemaakt.
  - Zoek nu in het toolboxmenu _Add Stereotype_ op (onder _Profile Helpers_) en sleep dit element op het diagram.
  - er verschijnt nu een venster Add Stereotype.
  - We gaan nu een stereotype maken dat dient als extensie op het MIM-stereotype `«Attribuutsoort»`.
- - Geef een naam op voor het stereotype. In het geval van dit voorbeeld is gekozen voor `DSG-Attribuutsoort`, maar dit kan elke andere willekeurige naam zijn.
+ - Geef een naam op voor het stereotype. In het geval van dit voorbeeld is gekozen voor `Attribuutsoort`, maar dit kan elke andere willekeurige naam zijn.
  - Klik vervogens op de button _Add Metaclass_.
  - Hier geef je de UML-metaklasse op waarop je extensie plaatsvindt. Als je niet weet van welke UML-metaklasse je stereotype wordt afgeleid, zoek dit dan op in hoofdstuk 3 van de ](https://docs.geostandaarden.nl/mim/mim/#metamodel-in-uml).
 
@@ -97,7 +97,7 @@ Je hebt nu succesvol de package structuur aangemaakt.
 
 Je ziet nu het nieuwe stereotype met de tagged values. Daarnaast heeft het nu een relatie met de UML-metaklasse `«Attribute»`. Als laatste onderdeel van deze stap moet nu de relatie gelegd worden tussen het nieuwe stereotype en het MIM-stereotype. Dit gaat als volgt:
 
- - Klik nu op het element `DSG-Attribuutsoort`.
+ - Klik nu op het element `Attribuutsoort`.
  - Er verschijnen nu rechts van het element een aantal iconen.
  - Klik op de witte pijl met de muisknop ingedrukt en sleep dit naar het bijbehorende MIM-type (het bovenste icoon)
  - Kies uit het menu dat nu verschijnt voor _Generalization_.
@@ -106,7 +106,7 @@ Je ziet nu het nieuwe stereotype met de tagged values. Daarnaast heeft het nu ee
 
 Als laatste stap is het handig om het kleurenschema van het modelelement gelijk te maken aan dat van MIM. Dat gaat als volgt:
 
- - Klik met de rechtermuisknop op het nieuwe element `DSG-Objecttype`.
+ - Klik met de rechtermuisknop op het nieuwe element `Objecttype`.
  - Navigeer naar _Appearance_ en klik op _Default Appearance_.
  - Nu opent een venster met dezelfde naam.
  - Klik op _Background Color_.
@@ -126,12 +126,12 @@ Als laatste stap is het handig om het kleurenschema van het modelelement gelijk 
  - Klik op _OK_.
  - Zet _Border Color_ en _Font Color_ op zwart.
  - Klik op _OK_.
- - Herhaal deze stap voor de andere modelelementen, in dit geval `DSG-Attribuutsoort`.
+ - Herhaal deze stap voor de andere modelelementen, in dit geval `Attribuutsoort`.
 
 Je hebt nu succesvol het profiel van je extensie aangemaakt.
 
 ## Stap 4: Modelleer het toolbox-menu
-In deze stap maak je de menupagina van de toolbox. Hiermee bepaal je hoe en welke stereotypes zichtbaar zijn in het menu. Het doel van de DiSGeo-extensie is om bestaande MIM-stereotypen uitbreiden met extra _tagged values_. Daarvoor introduceerden we in EA onder de moterkap weliswaar twee nieuwe stereotypen (`«DSG-Objectype»` en `«DSG-Attribuutsoort»`), maar die willen we niet expliciet terugzien in de toolbox. In de toolbox willen we `«Objecttype»` en `«Attribuutsoort»` aanbieden.
+In deze stap maak je de menupagina van de toolbox. Hiermee bepaal je hoe en welke stereotypes zichtbaar zijn in het menu. Het doel van de DiSGeo-extensie is om bestaande MIM-stereotypen uitbreiden met extra _tagged values_. Daarvoor introduceerden we in EA onder de moterkap weliswaar twee nieuwe stereotypen (`«Objectype»` en `«Attribuutsoort»`), maar die willen we niet expliciet terugzien in de toolbox. In de toolbox willen we `«Objecttype»` en `«Attribuutsoort»` aanbieden.
 
  - Open het lege diagram uit het package `«toolbox profile»DISGEO`.
  - Sleep uit de toolbox die bij dit diagram hoort de _Profile Helper_ _Add Toolbox Page_ op het diagram.
@@ -139,16 +139,16 @@ In deze stap maak je de menupagina van de toolbox. Hiermee bepaal je hoe en welk
  - Vul de naam in van de toolboxpagina die je wilt maken. In dit geval maken we een kopie van de MIM-toolbox, dus noemen we deze (eerste) pagina: _MIM: Objecten en attributen_.
  - klik vervolgens op de Add-button en selecteer de optie _Add Stereotype_.
  - Het venster _Select A Profile Element_ opent nu.
- - Navigeer naar het package `«profile»`DISGEO en selecter `«stereotype»DSG-Objecttype` en klik op OK.
+ - Navigeer naar het package `«profile»`DISGEO en selecter `«stereotype»Objecttype` en klik op OK.
  - In de eerste rij van de tabel in het venster _Add Toolbox Page_, is nu dit stereotype toegevoegd.
- - Voor de leesbaarheid is het fijn om het type een **alias** mee te geven (anders heet het toolbox-item `DISGEO::DSG-Objectype(UML::Class)`. Vanwege het eerder genoemde uitgangspunt, krijgt dit stereotype het alias **Objecttype**.
+ - Voor de leesbaarheid is het fijn om het type een **alias** mee te geven (anders heet het toolbox-item `DISGEO::Objectype(UML::Class)`. Vanwege het eerder genoemde uitgangspunt, krijgt dit stereotype het alias **Objecttype**.
  - Voeg nu op dezelfde manier **Attribuutsoort** toe en klik **_nog niet_** op _OK_.
 
  - Je hebt nu de twee nieuwe stereotypes toegevoeg aan de toolboxpagina:
 
 ```diff
-+ DISGEO::DSG-Objecttype(UML::Class)
-+ DISGEO::DSG-Attribuutsoort(UML::Attribute)
++ DISGEO::Objecttype(UML::Class)
++ DISGEO::Attribuutsoort(UML::Attribute)
 ```
 
  In de MIM-toolbox heeft deze pagina nog drie andere stereotypes. Deze kun je uit het package MIM-UML halen. Deze beschrijving gaat ervan uit dat je hierover beschikt.
@@ -156,8 +156,8 @@ In deze stap maak je de menupagina van de toolbox. Hiermee bepaal je hoe en welk
  - Klik nogmaals op de Add-button en navigeer nu naar het package `«MIM-UMLprofile»` en voeg de volgende elementen toe:
 
 ```diff
-DISGEO::DSG-Objecttype(UML::Class)
-DISGEO::DSG-Attribuutsoort(UML::Attribute)
+DISGEO::Objecttype(UML::Class)
+DISGEO::Attribuutsoort(UML::Attribute)
 + • MIM::Gegevensgroep(UML::Attribute)
 + • MIM::Gegevensgroeptype(UML::Class)
 + • MIM_Keuzeattribuut::Keuze(UML::Attribute)
@@ -169,8 +169,6 @@ DISGEO::DSG-Attribuutsoort(UML::Attribute)
  - Herhaal hiervoor de voorgaande stappen.
 
  Je hebt nu met succes het toolboxmenu gemaakt. Het is in alle gevallen mogelijk om de namen van de stereotypen met de hand op te voeren. De schrijfwijze luistert heel nauw, dus heeft het de voorkeur gebruik te maken van _Add Stereotype_.
-
->**Editorial note**: De naam van het stereotype komt in het modelelement terecht. Dus DSG-Objecttype is niet handig. Omdat het voor de gebruiker eruit moet zien als een MIM-type, is het toch beter dit stereotype `«Objecttype»` te noemen.
 
 ## Stap 5: Modelleer het diagram
 
