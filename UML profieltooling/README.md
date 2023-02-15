@@ -1,7 +1,7 @@
 # Handleiding - MIM-Profiel, -Toolbox & -MDG Genereren
 
 | Software/Standaard | Versie |
-|-- | -- |
+| --- | --- |
 | MIM-standaard | 1.1.1 |
 | Enterprise Architect | 15.2 |
 | Subversion (SVN) | 1.14.1 |
