@@ -1,7 +1,7 @@
 # Handleiding - Importeren en toepassen MIM-toolbox in Enterprise Architect
 
 | Software/Standaard | Versie |
-| --- | --- |
+| --- | ---: |
 | MIM-standaard | 1.1.1 |
 | MIM-toolbox | 1.1.1 b04 |
 | Enterprise Architect | 15.2 |
