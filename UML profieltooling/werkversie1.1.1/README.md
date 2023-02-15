@@ -2,15 +2,10 @@
 
 | Software/Standaard | Versie |
 |-- | -- |
-| MIM | 1.1.1 |
+| MIM-standaard | 1.1.1 |
+| MIM-toolbox | 1.1.1 b04 |
 | Enterprise Architect | 15.2 |
 | Subversion (SVN) | 1.14.1 |
-
-MIM-versie: 1.1.1
-
-Enterprise Architect versie: 15.2
-
-Laatste update: 15 februari 2023
 
 ## Inhoud
  1. [Importeren MIM-toolbox](#1-importeren-mim-toolbox)
