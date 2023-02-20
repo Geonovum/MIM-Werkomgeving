@@ -236,6 +236,10 @@ De gegevensregels (structuur) voor de metagegevens zijn wel specifiek per klasse
 | type | [`mim:type`](http://bp4mc2.org/def/mim#type) | owl:ObjectProperty | [grondslag](#metagegeven-type-domein-van-een-waarde-een-gegeven) |
 | unidirectioneel | [`mim:unidirectioneel`](http://bp4mc2.org/def/mim#unidirectioneel) | owl:DatatypeProperty | [grondslag](#metagegeven-unidirectioneel) |
 | waarde | [`mim:waarde`](http://bp4mc2.org/def/mim#waarde) | owl:ObjectProperty | [grondslag](#metagegeven-waarde) |
+| Minimumwaarde inclusief | [`mim:minimumwaardeInclusief`](http://bp4mc2.org/def/mim#minimumwaardeInclusief) | owl:DatatypeProperty  |  [grondslag](#metagegeven-minimumwaarde-inclusief) |
+| Minimumwaarde exclusief | [`mim:minimumwaardeExclusief`](http://bp4mc2.org/def/mim#minimumwaardeExclusief) | owl:DatatypeProperty  |  [grondslag](#metagegeven-minimumwaarde-exclusief) |
+| Maximumwaarde inclusief | [`mim:maximumwaardeInclusief`](http://bp4mc2.org/def/mim#maximumwaardeInclusief) | owl:DatatypeProperty  |  [grondslag](#metagegeven-maximumwaarde-inclusief) |
+| Maximumwaarde exclusief | [`mim:maximumwaardeExclusief`](http://bp4mc2.org/def/mim#maximumwaardeExclusief) | owl:DatatypeProperty  |  [grondslag](#metagegeven-maximumwaarde-exclusief) |
 
 ### Modellering metagegevens voor objecten en attributen in LD
 
@@ -288,6 +292,10 @@ De attribuutsoorten worden naar de volgende aspecten gespecificeerd:
 | Indicatie classificerend     | [`mim:indicatieAfleidbaar`](http://bp4mc2.org/def/mim#indicatieAfleidbaar) | 1 | boolean |
 | Mogelijk geen waarde         | [`mim:mogelijkGeenWaarde`](http://bp4mc2.org/def/mim#mogelijkGeenWaarde) | 1 | boolean |
 | Identificerend               | [`mim:identificerend`](http://bp4mc2.org/def/mim#identificerend) | 0..1 | boolean |
+| Minimumwaarde inclusief      | [`mim:minimumwaardeInclusief`](http://bp4mc2.org/def/mim#minimumwaardeInclusief) | 0..1 | tekst |
+| Minimumwaarde exclusief      | [`mim:minimumwaardeExclusief`](http://bp4mc2.org/def/mim#minimumwaardeExclusief) | 0..1 | tekst |
+| Maximumwaarde inclusief      | [`mim:maximumwaardeInclusief`](http://bp4mc2.org/def/mim#maximumwaardeInclusief) | 0..1 | tekst |
+| Maximumwaarde exclusief      | [`mim:maximumwaardeExclusief`](http://bp4mc2.org/def/mim#maximumwaardeExclusief) | 0..1 | tekst |
 
 Het veld `mim:authentiek` verwijst naar één van de volgende mogelijke waarden:
 
@@ -646,6 +654,10 @@ De data-elementen worden naar de volgende aspecten gespecificeerd:
 | Patroon                      | [`mim:patroon`](http://bp4mc2.org/def/mim#patroon) | 0..1 | tekst |
 | Formeel patroon              | [`mim:formeelPatroon`](http://bp4mc2.org/def/mim#formeelPatroon) | 0..1 | tekst |
 | Kardinaliteit                | [`mim:kardinaliteit`](http://bp4mc2.org/def/mim#kardinaliteit) | 1 | tekst |
+| Minimumwaarde inclusief      | [`mim:minimumwaardeInclusief`](http://bp4mc2.org/def/mim#minimumwaardeInclusief) | 0..1 | tekst |
+| Minimumwaarde exclusief      | [`mim:minimumwaardeExclusief`](http://bp4mc2.org/def/mim#minimumwaardeExclusief) | 0..1 | tekst |
+| Maximumwaarde inclusief      | [`mim:maximumwaardeInclusief`](http://bp4mc2.org/def/mim#maximumwaardeInclusief) | 0..1 | tekst |
+| Maximumwaarde exclusief      | [`mim:maximumwaardeExclusief`](http://bp4mc2.org/def/mim#maximumwaardeExclusief) | 0..1 | tekst |
 
 ### Specificatie metagegevens voor packages
 

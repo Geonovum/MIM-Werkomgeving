@@ -57,6 +57,7 @@ In de SPARQL rules wordt gebruik gemaakt van een aantal SPARQL functies. In onde
 |t:concepturi|Formuleert de uri voor een concept op basis van de naam van een MIM resource. De concept URI is opgebouwd als `{namespace}/id/concept/{t:CamelCase(naam)}`. De `{namespace}` is een vooraf vastgestelde waarde die gelijk is aan de locatie van de package.|
 |t:mincount|Formuleert de minimum kardinaliteit op basis van een kardinaliteitsaanduiding (zie bij mim:kardinaliteit). De waarde kan ook unbound zijn, in dat geval wordt ook de variable niet gebound en daardoor de betreffende triple niet opgevoerd.|
 |t:maxcount|Formuleert de maximum kardinaliteit op basis van een kardinaliteitsaanduiding (zie bij mim:kardinaliteit). De waarde kan ook unbound zijn, in dat geval wordt ook de variable niet gebound en daardoor de betreffende triple niet opgevoerd.|
+|t:cast | Transformeert het datatype van een waarde naar het gegeven datatype. Deze functie verwacht twee parameters: `t:cast(?waarde, ?datatype)`. De `?waarde` parameter is de waarde waarvoor een datatype gezet moet worden. `?datatype` is het datatype wat `?waarde` moet krijgen. Op basis van `?datatype` bepaalt deze functie het juiste datatype om te zetten. |
 
 <aside id='trans-1' class='note'>
 Om een unieke URI op te bouwen, is naast de naam van een modelelement, `mim:naam`, ook een namespace noodzakelijk. Deze namespace wordt afgeleid van het veld `mim:locatie` van de package waartoe het modelelement behoord. Deze namespace kan gelijk zijn aan de naam van deze package. Een vertaling is ook denkbaar, bijvoorbeeld als hetzelfde veld ook gebruikt wordt voor het bepalen van de namespace van een XSD, die vaak anders zal zijn dan de URI namespace.
@@ -1662,6 +1663,82 @@ WHERE {
   ?package mim:equivalent ?ontology.
   ?subpackage mim:equivalent ?importedontology.
   ?importedontology a owl:Ontology.
+}
+</pre>
+
+### transformatie: minimumwaarde inclusief
+
+> De ondergrens van het waardebereik voor een attribuutsoort of data element getypeerd met een primitief datatype, inclusief die waarde zelf. De minimumwaarde moet van hetzelfde primitieve datatype zijn als het datatype van het modelelement waar het voor geldt.
+
+De `mim:minimumwaardeInclusief ` wordt vertaald naar `sh:minInclusive`. De datatype van de waarde van `sh:minInclusive` wordt afgeleid op basis van het primitief datatype wat het `mim:type` is van het modelelement waarvoor de `mim:minimumwaardeInclusief ` gespecificeerd is.
+
+<pre class='ex-sparql'>
+CONSTRUCT {
+  ?propertyshape sh:minInclusive ?minInclusive.
+}
+WHERE {
+  ?modelelement mim:minimumwaardeInclusief ?minimumwaardeInclusief .
+  ?modelelement mim:type ?datatype .
+  ?propertyshape mim:equivalent ?modelelement .
+  ?datatype a mim:PrimitiefDatatype .
+  bind(t:cast(?minimumwaardeInclusief, ?datatype) as ?minInclusive)
+}
+</pre>
+
+### transformatie: minimumwaarde exclusief
+
+> De ondergrens van het waardebereik voor een attribuutsoort of data element getypeerd met een primitief datatype, exclusief die waarde zelf. De minimumwaarde moet van hetzelfde primitieve datatype zijn als het datatype van het modelelement waar het voor geldt.
+
+De `mim:minimumwaardeExclusief ` wordt vertaald naar `sh:minExclusive`. De datatype van de waarde van `sh:minExclusive` wordt afgeleid op basis van het primitief datatype wat het `mim:type` is van het modelelement waarvoor de `mim:minimumwaardeExclusief ` gespecificeerd is.
+
+<pre class='ex-sparql'>
+CONSTRUCT {
+  ?propertyshape sh:minExclusive ?minExclusive.
+}
+WHERE {
+  ?modelelement mim:minimumwaardeExclusief ?minimumwaardeExclusief .
+  ?modelelement mim:type ?datatype .
+  ?propertyshape mim:equivalent ?modelelement .
+  ?datatype a mim:PrimitiefDatatype .
+  bind(t:cast(?minimumwaardeExclusief, ?datatype) as ?minExclusive)
+}
+</pre>
+
+### transformatie: maximumwaarde inclusief
+
+> De bovengrens van het waardebereik voor een attribuutsoort of data element getypeerd met een primitief datatype, inclusief die waarde zelf. De maximumwaarde moet van hetzelfde primitieve datatype zijn als het datatype van het modelelement waar het voor geldt.
+
+De `mim:maximumwaardeInclusief ` wordt vertaald naar `sh:maxInclusive`. De datatype van de waarde van `sh:maxInclusive` wordt afgeleid op basis van het primitief datatype wat het `mim:type` is van het modelelement waarvoor de `mim:maximumwaardeInclusief ` gespecificeerd is.
+
+<pre class='ex-sparql'>
+CONSTRUCT {
+  ?propertyshape sh:maxInclusive ?maxInclusive.
+}
+WHERE {
+  ?modelelement mim:maximumwaardeInclusief ?maximumwaardeInclusief .
+  ?modelelement mim:type ?datatype .
+  ?propertyshape mim:equivalent ?modelelement .
+  ?datatype a mim:PrimitiefDatatype .
+  bind(t:cast(?maximumwaardeInclusief, ?datatype) as ?maxInclusive)
+}
+</pre>
+
+### transformatie: maximumwaarde exclusief
+
+> De bovengrens van het waardebereik voor een attribuutsoort of data element getypeerd met een primitief datatype, exclusief die waarde zelf. De maximumwaarde moet van hetzelfde primitieve datatype zijn als het datatype van het modelelement waar het voor geldt.
+
+De `mim:maximumwaardeExclusief ` wordt vertaald naar `sh:maxExclusive`. De datatype van de waarde van `sh:maxExclusive` wordt afgeleid op basis van het primitief datatype wat het `mim:type` is van het modelelement waarvoor de `mim:maximumwaardeExclusief ` gespecificeerd is.
+
+<pre class='ex-sparql'>
+CONSTRUCT {
+  ?propertyshape sh:maxExclusive ?maxExclusive.
+}
+WHERE {
+  ?modelelement mim:maximumwaardeExclusief ?maximumwaardeExclusief .
+  ?modelelement mim:type ?datatype .
+  ?propertyshape mim:equivalent ?modelelement .
+  ?datatype a mim:PrimitiefDatatype .
+  bind(t:cast(?maximumwaardeExclusief, ?datatype) as ?maxExclusive)
 }
 </pre>
 

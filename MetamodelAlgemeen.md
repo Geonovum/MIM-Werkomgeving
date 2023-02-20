@@ -1655,6 +1655,97 @@ Hier kan in tekst een beschrijving opgenomen worden over de kwaliteit van de inw
 
 *Toepassing:* Objecttype
 
+#### Metagegeven: **Minimumwaarde inclusief**
+
+> **Definitie Minimumwaarde inclusief**
+>
+> Minimumwaarde inclusief (`<=`) is de ondergrens van het waardebereik voor een attribuutsoort of data element getypeerd met een primitief datatype, inclusief die waarde zelf. De minimumwaarde moet van hetzelfde primitieve datatype zijn als het datatype van het modelelement waar het voor geldt.
+
+*Toelichting*
+
+Bijvoorbeeld de minimale waarde voor een geldigheidsdatum.
+
+*Toepassing*
+
+Gebruik op attribuutsoorten en data elementen met een primitief datatype van het type:
+- Integer
+- Decimal
+- Float
+- Real
+- DateTime
+- Date
+
+Een modelelement mag maar één voorkomen van metagegeven **Minimumwaarde inclusief** of **Minimumwaarde exclusief** hebben.
+
+#### Metagegeven: **Minimumwaarde exclusief**
+
+> **Definitie Minimumwaarde exclusief**
+>
+> Minimumwaarde exclusief (`<`) is de ondergrens van het waardebereik voor een attribuutsoort of data element getypeerd met een primitief datatype, exclusief die waarde zelf. De minimumwaarde moet van hetzelfde primitieve datatype zijn als het datatype van het modelelement waar het voor geldt.
+
+*Toelichting*
+
+Bijvoorbeeld de minimale inhoud van een bouwwerk.
+
+*Toepassing*
+
+Gebruik op attribuutsoorten en data elementen met een primitief datatype van het type:
+- Integer
+- Decimal
+- Float
+- Real
+- DateTime
+- Date
+
+Een modelelement mag maar één voorkomen van metagegeven **Minimumwaarde inclusief** of **Minimumwaarde exclusief** hebben.
+
+#### Metagegeven: **Maximumwaarde inclusief**
+
+> **Definitie Maximumwaarde inclusief**
+>
+> Maximumwaarde inclusief (`>=`) is de bovengrens van het waardebereik voor een attribuutsoort of data element getypeerd met een primitief datatype, inclusief die waarde zelf. De maximumwaarde moet van hetzelfde primitieve datatype zijn als het datatype van het modelelement waar het voor geldt.
+
+*Toelichting*
+
+Bijvoorbeeld de minimale waarde voor een geldigheidsdatum.
+
+*Toepassing*
+
+Gebruik op attribuutsoorten en data elementen met een primitief datatype van het type:
+- Integer
+- Decimal
+- Float
+- Real
+- DateTime
+- Date
+
+Een modelelement mag maar één voorkomen van metagegeven **Maximumwaarde inclusief** of **Maximumwaarde exclusief** hebben.
+
+#### Metagegeven: **Maximumwaarde exclusief**
+
+Bijvoorbeeld de maximale waarde voor de leeftijd van een persoon.
+
+> **Definitie Maximumwaarde exclusief**
+>
+> Maximumwaarde exclusief (`>`) is de bovengrens van het waardebereik voor een attribuutsoort of data element getypeerd met een primitief datatype, exclusief die waarde zelf. De maximumwaarde moet van hetzelfde primitieve datatype zijn als het datatype van het modelelement waar het voor geldt.
+
+*Toelichting*
+
+Bijvoorbeeld de maximale waarde voor een geldigheidsdatum.
+TODO
+
+*Toepassing*
+
+Gebruik op attribuutsoorten en data elementen met een primitief datatype van het type:
+- Integer
+- Decimal
+- Float
+- Real
+- DateTime
+- Date
+
+Een modelelement mag maar één voorkomen van metagegeven **Maximumwaarde inclusief** of **Maximumwaarde exclusief** hebben.
+
 ### Specificatie metagegevens modelelement bindingen
 
 Bindingen geven aan hoe modelelementen met elkaar verbonden kunnen en mogen worden.

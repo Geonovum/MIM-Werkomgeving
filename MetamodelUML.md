@@ -325,6 +325,10 @@ De attribuutsoorten worden naar de volgende aspecten gespecificeerd:
 | **Mogelijk geen waarde**                    | 1                  | Algemeen metagegeven.                                        |                                                              |      | *Tagged value* |            |
 | **Identificerend**                          | 0..1               | Algemeen metagegeven.                                        | *isID bij de metaclass Property*                             |      | *isID*         |            |
 | heeft **datatype**  | 1       | Binding aan een datatype.     | *datatype* = UML-datatype |    | *type* = datatype          |     |
+| **Minimumwaarde inclusief** | 0..1          | Algemeen metagegeven. Een attribuutsoort mag maar één voorkomen van metagegeven **Minimumwaarde inclusief** of **Minimumwaarde exclusief** hebben. | |  | _Tagged value_ |            |
+| **Minimumwaarde exclusief** | 0..1          | Algemeen metagegeven. Een attribuutsoort mag maar één voorkomen van metagegeven **Minimumwaarde inclusief** of **Minimumwaarde exclusief** hebben. | |  | _Tagged value_ |            |
+| **Maximumwaarde inclusief** | 0..1          | Algemeen metagegeven. Een attribuutsoort mag maar één voorkomen van metagegeven **Maximumwaarde inclusief** of **Maximumwaarde exclusief** hebben. | |  | _Tagged value_ |            |
+| **Maximumwaarde exclusief** | 0..1          | Algemeen metagegeven. Een attribuutsoort mag maar één voorkomen van metagegeven **Maximumwaarde inclusief** of **Maximumwaarde exclusief** hebben. | |  | _Tagged value_ |            |
 
 **Specificatie voor «Gegevensgroep»**
 
@@ -675,6 +679,10 @@ De data-elementen worden naar de volgende aspecten gespecificeerd:
 | **- Formeel patroon**  | 0..1    | Algemeen metagegeven. |                                                                 |      | *Tagged value*    |     |
 | **Kardinaliteit**      | 1       | Algemeen metagegeven. | *lowerValue en upperValue van de metaclass MultiplicityElement* |      | *Multiplicity*    |     |
 | heeft **datatype**     | 1       | Binding aan een datatype.  | *datatype* = UML-datatype       |      | *type* = datatype |     |
+| **Minimumwaarde inclusief** | 0..1 | Algemeen metagegeven. Een data element mag maar één voorkomen van metagegeven **Minimumwaarde inclusief** of **Minimumwaarde exclusief** hebben. | | | _Tagged value_ | |
+| **Minimumwaarde exclusief** | 0..1 | Algemeen metagegeven. Een data element mag maar één voorkomen van metagegeven **Minimumwaarde inclusief** of **Minimumwaarde exclusief** hebben. | | | _Tagged value_ | |
+| **Maximumwaarde inclusief** | 0..1 | Algemeen metagegeven. Een data element mag maar één voorkomen van metagegeven **Maximumwaarde inclusief** of **Maximumwaarde exclusief** hebben. | | | _Tagged value_ | |
+| **Maximumwaarde exclusief** | 0..1 | Algemeen metagegeven. Een data element mag maar één voorkomen van metagegeven **Maximumwaarde inclusief** of **Maximumwaarde exclusief** hebben. | | | _Tagged value_ | |
 
 
 
