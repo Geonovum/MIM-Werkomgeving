@@ -1,123 +1,46 @@
 ## Analyse
 
-### Context 
+### Aanleiding 
 
-*Beschrijf hier de context van het rapport, waar gaat het over, waarom wordt het geschrevenm, welke vragen worden beantwoord, enz ...* 
+De NEN 2660:2022, NEN 3610:2022 en de MIM standaard hebben allemaal hun specifieke toepassingsgebied. Dit toepassinggebied is welliswaard overlappend en afstemming tussen de standaarden is nagestreefd maar legacy en dynamiek van het beheerproces maakt dat ze niet in complete samenhang zijn ontwikkeld. Bij het toepassen in de praktijk is door Geonovum, TNO, Rijkswaterstaat, NEN, Informatiehuis Water en CROW geconstateerd dat gebruikers tegen uitdagingen en onbeantwoorde vragen aanlopen waardoor men gedwongen wordt te kiezen. Deze keuze tussen bijvoorbeeld een NEN 2660 of een NEN 3610 aanpak zou niet moeten hoeven. Het voegt namelijk waarde toe als deze standaarden in samenhang gebruikt kunnen worden. Allen dienen namelijk een specifieke doel, perspectief of context en binnen gebruikende organisaties kunnen deze door elkaar lopen.
 
-Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. 
-Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, 
-ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, 
-aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.
-Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. 
-Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. 
-Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. 
-Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. 
-Curabitur ullamcorper ultricies nisi. Nam eget dui.
+### Doel
 
-### Scope
+Vanuit meerdere gebruikende organisaties wordt nu de vraag gesteld ‘hoe men iets kan maken wat conform de NEN2660, NEN3610 én het MIM is’.  Vanuit de deelnemende organisaties aan dit initiatief willen we antwoord kunnen geven op die vraag doormiddel van een publicatie waar we naar kunnen verwijzen. Het is evident dat de ontwikkeling van dit antwoord tijd kost en dat het belangrijk is dat het niet door één organisatie ontwikkeld wordt, maar juist door de beheerders van de betreffende standaarden én de gebruikers. Nu draaien de gebruikers op voor het feit dat de standaarden niet afgestemd zijn, dat moet anders. Vandaar deze best practice om voor meer samenhang en integratie te zorgen op een hoger niveau.
 
-*Beschrijf hier de scope van het rapport, wat wordt wel en niet uitgewerkt en waarom, enz ...* 
+###	Relaties, afstemmingsvlakken tussen standaarden
 
-Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. 
-Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, 
-ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, 
-aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.
-Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. 
-Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. 
-Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. 
-Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. 
-Curabitur ullamcorper ultricies nisi. Nam eget dui.
+Uit de reeds gevoerde gesprekken blijkt dat het lastig te definiëren is op welke ‘niveau’ de afstemming of het missen daarvan nu speelt. Grofweg onderscheiden we voor nu drie niveaus van discussies:
 
-###	Werkproces
+A.	‘Metadiscussie’: hoe verhoudt de terminologie uit de verschillende standaarden zich tot elkaar? (Dit betreffen vooral MIM en NEN 2660-1)  
 
-*Beschrijf hier wat het gevolgde proces is om te komen tot het rapport, denk aan desktop research, expertsessies, consultatierondes, enz ...*
+B.	‘Topleveldiscussie’: hoe verhouden de toplevelstructuren uit de verschillende standaarden zich tot elkaar? (Dit betreffen vooral NEN 2660 en NEN 3610)  
 
-Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. 
-Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, 
-ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, 
-aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.
-Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. 
-Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. 
-Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. 
-Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. 
-Curabitur ullamcorper ultricies nisi. Nam eget dui.
+C.	‘LinkedData-discussie’: hoe verhouden modellen, gemaakt of uitgedrukt in de verschillende standaarden bij gebruik van LinkedData, zich tot elkaar? (Dit betreft vooral het gebruik van MIM en NEN 2660-2)  
 
-###	Stakeholders
 
-*Geef een overzicht van de Stakeholders, hun rollen, hun belangen enz ...*
-Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. 
-Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, 
-ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, 
-aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.
-Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. 
-Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. 
-Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. 
-Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. 
-Curabitur ullamcorper ultricies nisi. Nam eget dui.
+###	Methode
 
-###	Bestaande registraties
+Om het overzichtelijke te houden gaan we van ‘beneden naar boven’ werken. We voorzien nu een aanpak dat we starten met IMBOR als case en kijken hoe we deze correct in MIM en NEN 2660-2 uitdrukken. Dit heeft dus betrekking op discussie C. We zijn ons er van bewust dat we voor de praktische toets hier de NEN 2660-2 nemen, maar om compleet te zijn de gehele NEN 2660 zouden moeten behandelen. Indien we zaken missen bij de praktische toets gaan we kijken naar de NEN 2660-1. 
 
-*Indien van toepassing: Welke bestaande registraties worden geraakt in het rapport, en hoe ...*
+Om tot een realisatie van het doel te komen voorzien we op dit moment de volgende activiteiten én bijbehorende deliverables (in sub cijfers): 
 
-Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. 
-Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, 
-ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, 
-aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.
-Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. 
-Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. 
-Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. 
-Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. 
-Curabitur ullamcorper ultricies nisi. Nam eget dui.
+**NOTE**
+Deze lijst moet nog bijgewerkt worden.
 
-###	Wettelijk kader  
+- Overeenstemming krijgen over de verschillende dimensies waarop de genoemde standaarden ontwikkeld zijn met als doel een gezamenlijk begrippenkader te ontwikkelen.
+	- Derefereerbare (SKOS) vocabulaire per standaard 
+	- Derefereerbare (SKOS) vocabulaire die de samenhang beschrijft
+	- Uiteenzetting in ReSpec formaat over de verschillende dimensies
+- Voorbeeld case uitwerken hoe een model/ontologie kan voldoen  aan alle drie de standaarden.
+	- Voor nu is de case IMBOR2022 geïdentificeerd als logisch startpunt
+	- Uiteenzetting resultaat case IMBOR in ReSpec
+- Generieke methode bepalen hoe een model de drie standaarden in samenhang kan toepassen
+	- Uiteenzetting resultaat in ReSpec als ‘best practice’ 
+	- Inclusief toepassingsvoorbeelden op Aquo
+- Onderzoeken welke manieren voor governance er zijn om de afstemming tussen de standaarden te (blijven) beheren
+	- Uiteenzetting resultaat governance methode in ReSpec als ‘best practice’ 
 
-*Indien van toepassing: Welke wettelijk geldt voor het rapport?*
+We zien dit als een ‘verticale’ integratie. We geven hiermee aan hoe ‘hogere standaarden’ in samenhang toegepast kunnen worden om (onderliggende) sectormodellen te maken. Er is ook nog de kwestie van ‘horizontale integratie’, ofwel: hoe leg je relaties/mappingen tussen sectormodellen vast en hoe beheer je deze. Dit is vooralsnog buiten scope. 
 
-Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. 
-Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, 
-ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, 
-aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.
-Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. 
-Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. 
-Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. 
-Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. 
-Curabitur ullamcorper ultricies nisi. Nam eget dui.
-
-###	Relevante standaarden en modellen
-
-*Indien van toepassing: Beschrijf de voor het rapport relevante standaarden en eventuele (reken)modellen*
-
-Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. 
-Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, 
-ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, 
-aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.
-Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. 
-Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. 
-Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. 
-Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. 
-Curabitur ullamcorper ultricies nisi. Nam eget dui.
-
-###	Relevante documentatie 
-
-*Geef een overzicht van de relvante bestaande docuementatie en hoe die wordt gebruikt in het rapport*
-
-Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. 
-Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, 
-ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, 
-aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.
-Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. 
-Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. 
-Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. 
-Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. 
-Curabitur ullamcorper ultricies nisi. Nam eget dui.
-
-<aside class='note'>
-    NB: gebruik de in config.js gedefinieerde localBiblio!
-</aside> 
-
-| Verwijzing | Kolom-2 | Kolom-3 | Kolom 4 | Kolom-n | 
-|------------|---------|---------|---------|---------| 
-| [[PUB-1]]  |         |         |         |         |
-| [[PUB-2]]  |         |         |         |         |
-| [[PUB-3]]  |         |         |         |         |
-| [[PUB-4]]  |         |         |         |         |
+We zijn voornemens om dit per case uit te werken en het zodoende te zien als een groeimodel. Geen enkele toepassing zal alle aspecten, van alle standaarden in z’n geheel toepassen. 
