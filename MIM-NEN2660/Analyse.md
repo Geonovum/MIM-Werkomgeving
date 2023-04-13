@@ -2,7 +2,7 @@
 
 ### Aanleiding 
 
-De NEN 2660:2022, NEN 3610:2022 en de MIM standaard hebben allemaal hun specifieke toepassingsgebied. Dit toepassinggebied is welliswaard overlappend en afstemming tussen de standaarden is nagestreefd maar legacy en dynamiek van het beheerproces maakt dat ze niet in complete samenhang zijn ontwikkeld. Bij het toepassen in de praktijk is door Geonovum, TNO, Rijkswaterstaat, NEN, Informatiehuis Water en CROW geconstateerd dat gebruikers tegen uitdagingen en onbeantwoorde vragen aanlopen waardoor men gedwongen wordt te kiezen. Deze keuze tussen bijvoorbeeld een NEN 2660 of een NEN 3610 aanpak zou niet moeten hoeven. Het voegt namelijk waarde toe als deze standaarden in samenhang gebruikt kunnen worden. Allen dienen namelijk een specifieke doel, perspectief of context en binnen gebruikende organisaties kunnen deze door elkaar lopen.
+De NEN 2660:2022, NEN 3610:2022 en de MIM standaard hebben allemaal hun specifieke toepassingsgebied. Dit toepassinggebied is welliswaard overlappend en afstemming tussen de standaarden is nagestreefd maar legacy en dynamiek van het beheerproces maakt dat ze niet in complete samenhang zijn ontwikkeld. Bij het toepassen in de praktijk is door Geonovum, TNO, Rijkswaterstaat, NEN, Informatiehuis Water en CROW geconstateerd dat gebruikers tegen uitdagingen en onbeantwoorde vragen aanlopen waardoor men vaak gedwongen wordt te kiezen. Deze keuze tussen bijvoorbeeld een NEN 2660 of een NEN 3610 aanpak zou niet moeten hoeven. Het voegt namelijk waarde toe als deze standaarden in samenhang gebruikt kunnen worden. Allen dienen namelijk een specifieke doel, perspectief of context en binnen gebruikende organisaties kunnen deze door elkaar lopen.
 
 ### Doel
 
@@ -21,12 +21,12 @@ C.	‘LinkedData-discussie’: hoe verhouden modellen, gemaakt of uitgedrukt in 
 
 ###	Methode
 
-Om het overzichtelijke te houden gaan we van ‘beneden naar boven’ werken. We voorzien nu een aanpak dat we starten met IMBOR als case en kijken hoe we deze correct in MIM en NEN 2660-2 uitdrukken. Dit heeft dus betrekking op discussie C. We zijn ons er van bewust dat we voor de praktische toets hier de NEN 2660-2 nemen, maar om compleet te zijn de gehele NEN 2660 zouden moeten behandelen. Indien we zaken missen bij de praktische toets gaan we kijken naar de NEN 2660-1. 
+Om het overzichtelijke te houden gaan we van ‘beneden naar boven’ werken. Er wordt gestart met IMBOR als case en we kijken hoe we deze correct in MIM en NEN 2660-2 uitdrukken en tegelijkertijd het temporele aspecten model, het netwerkmodel en het semantisch model van de NEN 3610 gebruiken. Dit heeft dus betrekking op discussie C. We zijn ons er van bewust dat we voor de praktische toets hier de NEN 2660-2 nemen, maar om compleet te zijn de gehele NEN 2660 zouden moeten behandelen. Indien we zaken missen bij de praktische toets gaan we kijken naar de NEN 2660-1. 
 
-Om tot een realisatie van het doel te komen voorzien we op dit moment de volgende activiteiten én bijbehorende deliverables (in sub cijfers): 
+Om tot een realisatie van het doel te komen doorlopen we de volgende activiteiten én bijbehorende deliverables: 
 
 **NOTE**
-Deze lijst moet nog bijgewerkt worden.
+_Deze lijst moet nog bijgewerkt worden. Het tweede punt (met de twee subpunten is nu de scope)_
 
 - Overeenstemming krijgen over de verschillende dimensies waarop de genoemde standaarden ontwikkeld zijn met als doel een gezamenlijk begrippenkader te ontwikkelen.
 	- Derefereerbare (SKOS) vocabulaire per standaard 
@@ -41,6 +41,6 @@ Deze lijst moet nog bijgewerkt worden.
 - Onderzoeken welke manieren voor governance er zijn om de afstemming tussen de standaarden te (blijven) beheren
 	- Uiteenzetting resultaat governance methode in ReSpec als ‘best practice’ 
 
-We zien dit als een ‘verticale’ integratie. We geven hiermee aan hoe ‘hogere standaarden’ in samenhang toegepast kunnen worden om (onderliggende) sectormodellen te maken. Er is ook nog de kwestie van ‘horizontale integratie’, ofwel: hoe leg je relaties/mappingen tussen sectormodellen vast en hoe beheer je deze. Dit is vooralsnog buiten scope. 
+We zien dit als een ‘verticale’ integratie. We geven hiermee aan hoe ‘hogere standaarden’ in samenhang toegepast kunnen worden om (onderliggende) sectormodellen te maken. Er is ook nog de kwestie van ‘horizontale integratie’, ofwel: hoe leg je relaties/mappingen tussen sectormodellen vast en hoe beheer je deze. Dit is buiten scope, maar [hier wordt wel aan gewerkt](https://docs.crow.nl/ontology-alignment/whitepaper/)) in een ander initiatief. 
 
 We zijn voornemens om dit per case uit te werken en het zodoende te zien als een groeimodel. Geen enkele toepassing zal alle aspecten, van alle standaarden in z’n geheel toepassen. 

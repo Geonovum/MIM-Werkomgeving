@@ -5,4 +5,5 @@ Dit document is aan verandering onderhevig. Het versiebeheer van het document ge
 | **Versie** | **Datum**      | **Status** | **Bewerking**                   | **Toelichting**                   |
 |------------|----------------|------------|---------------------------------|-----------------------------------| 
 | 0.1        | dd-mm-yyyy     | concept    | Initieel document               | "Kapstok" document aangemaakt     |
+| 0.2        | 20-04-2023     | concept    | Initieel best practice          | "Invullen hoofdstuk"              |
                            

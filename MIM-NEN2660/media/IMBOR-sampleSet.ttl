@@ -1,0 +1,197 @@
+@prefix imbor:              <https://data.crow.nl/imbor/def/> .
+@prefix imbor-domeinwaarde: <https://data.crow.nl/imbor/id/domeinwaarden/> .
+@prefix imbor-mim:          <https://data.crow.nl/imbor/mim/> .
+@prefix imbor-term:         <https://data.crow.nl/imbor/term/> .
+@prefix mim:                <http://bp4mc2.org/def/mim#> .
+@prefix nen2660:            <https://w3id.org/nen2660/def#> .
+@prefix nen2660-term:       <https://w3id.org/nen2660/term#> .
+@prefix nen3610:            <http://definities.geostandaarden.nl/def/nen3610#> .
+@prefix rdf:                <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:               <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh:                 <http://www.w3.org/ns/shacl#> .
+@prefix dash:               <http://datashapes.org/dash#> .
+@prefix skos:               <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd:                <http://www.w3.org/2001/XMLSchema#> .
+@prefix quantitykind:       <http://qudt.org/vocab/quantitykind/> .
+@prefix unit:               <http://qudt.org/vocab/unit/> .
+
+imbor:83a942f7-5291-42f0-afb1-9a57d0fb2f15
+        rdf:type         sh:NodeShape , rdfs:Class ;
+        rdfs:seeAlso     imbor-term:eecb9687-2dc9-43d3-b6f2-2c5ff35da666 ;
+        rdfs:subClassOf  imbor:761406d1-87bc-4dc1-b1b7-bd3bb7ab54a7 ;
+        mim:equivalent   imbor-mim:mim-83a942f7-5291-42f0-afb1-9a57d0fb2f15 ;
+        dash:abstract    false ;
+        skos:definition  "Een houtachtig gewas (loofboom of conifeer) met een wortelgestel en een enkele, stevige en houtige stam, die zich boven de grond vertakt."@nl ;
+        skos:prefLabel   "Boom"@nl ;
+        sh:property      imbor:80a326eb-96da-4a34-a299-5191d89b87ae, imbor:f4b80a70-ef80-49e3-b28a-f4737afff678, imbor:6a3e82d1-ef13-49de-91a4-29b3cb797846 .
+    
+imbor-term:eecb9687-2dc9-43d3-b6f2-2c5ff35da666
+        rdf:type         skos:Concept ;
+        skos:definition  "Een houtachtig gewas (loofboom of conifeer) met een wortelgestel en een enkele, stevige en houtige stam, die zich boven de grond vertakt."@nl ;
+        skos:prefLabel   "Boom"@nl .
+
+imbor:761406d1-87bc-4dc1-b1b7-bd3bb7ab54a7
+        rdf:type         sh:NodeShape , rdfs:Class ;
+        rdfs:subClassOf  nen3610:Begroeiing ;
+        rdfs:seeAlso     imbor-term:54c784e0-420b-48ac-8798-18eb7fc9a861 ;
+        mim:equivalent   imbor-mim:mim-761406d1-87bc-4dc1-b1b7-bd3bb7ab54a7 ;
+        dash:abstract    true ;
+        skos:definition  "Solitair vegetatieobject of lijn- of vlakvormige groep gelijksoortige vegetatieobjecten met een beperkte omvang."@nl ;
+        skos:prefLabel   "Vegetatieobject"@nl .
+
+imbor-term:54c784e0-420b-48ac-8798-18eb7fc9a861
+        rdf:type         skos:Concept ;
+        skos:definition  "Solitair vegetatieobject of lijn- of vlakvormige groep gelijksoortige vegetatieobjecten met een beperkte omvang."@nl ;
+        skos:note        "IMGeo"@nl ;
+        skos:prefLabel   "Vegetatieobject"@nl .
+
+nen3610:Begroeiing  rdf:type  sh:NodeShape , rdfs:Class, skos:Concept ;
+        rdfs:seeAlso     nen3610:Begroeiing ;
+        rdfs:subClassOf  nen2660:DiscreteObject ;
+        mim:equivalent   imbor-mim:mim-Begroeiing ;
+        dash:abstract    true ;
+        skos:definition  "Planten die op natuurlijke wijze zijn ontstaan of door mensen zijn aangeplant."@nl ;
+        skos:note        "NEN3610"@nl ;
+        skos:prefLabel   "Begroeiing"@nl .
+
+nen2660:DiscreteObject
+        rdf:type         rdfs:Class , sh:NodeShape ;
+        rdfs:seeAlso     nen2660-term:DiscreteObject ;
+        mim:equivalent   imbor-mim:mim-DiscreteObject ;
+        dash:abstract    true ;
+        skos:definition  "A real object consisting of a contiguous amount of form-retaining matter, held together primarily by internal forces (gravity or electromagnetic force)"@en , "Reëel object dat bestaat uit een aaneengesloten hoeveelheid vormvaste materie, primair bijeengehouden door interne krachten (zwaartekracht of elektromagnetische kracht)."@nl ;
+        skos:note        "NEN2660"@nl ;
+        skos:prefLabel   "Discrete object"@en , "DiscreetObject"@nl .
+
+nen2660-term:DiscreteObject
+        rdf:type         skos:Concept ;
+        skos:definition  "A real object consisting of a contiguous amount of form-retaining matter, held together primarily by internal forces (gravity or electromagnetic force)"@en , "Een reëel object dat bestaat uit een aaneengesloten hoeveelheid vormvaste materie, primair bijeengehouden door interne krachten (zwaartekracht of elektromagnetische kracht)"@nl , "Reëel object dat bestaat uit een aaneengesloten hoeveelheid vormvaste materie, primair bijeengehouden door interne krachten (zwaartekracht of elektromagnetische kracht)."@nl ;
+        skos:note        "NEN2660"@nl ;
+        skos:prefLabel   "DiscreetObject"@nl , "Discreet object"@nl , "Discrete object"@en .
+
+imbor:80a326eb-96da-4a34-a299-5191d89b87ae
+        rdf:type            sh:PropertyShape ;
+        skos:prefLabel      "boomhoogte actueel vastgezet op Boom"@nl ;
+        sh:datatype         xsd:decimal ;
+        sh:maxCount         1 ;
+        sh:path             imbor:fe4e8ac7-4e55-4641-a288-330526cc8be9 ;
+        nen2660:hasUnit     unit:M .
+
+imbor:fe4e8ac7-4e55-4641-a288-330526cc8be9
+        rdf:type                 rdf:Property ;
+        rdfs:seeAlso             imbor-term:9f7bba5a-2b51-4b0c-879b-ecd488caf60d ;
+        mim:equivalent           imbor-mim:mim-fe4e8ac7-4e55-4641-a288-330526cc8be9 ;
+        skos:definition          "Hoogte van de boom in meters."@nl ;
+        skos:prefLabel           "boomhoogte actueel"@nl ;
+        nen2660:hasQuantityKind  quantitykind:Length .
+
+imbor-term:9f7bba5a-2b51-4b0c-879b-ecd488caf60d
+        rdf:type         skos:Concept ;
+        skos:definition  "Hoogte van de boom in meters."@nl ;
+        skos:prefLabel   "boomhoogte actueel"@nl .
+
+imbor:f4b80a70-ef80-49e3-b28a-f4737afff678
+        rdf:type                sh:PropertyShape ;
+        mim:equivalent          imbor-mim:mim-f4b80a70-ef80-49e3-b28a-f4737afff678 ;
+        skos:prefLabel          "Boom is verbonden met Boomrooster"@nl ;
+        sh:path                 nen2660:isConnectedTo ;
+        sh:qualifiedMaxCount    1 ;
+        sh:qualifiedValueShape  [ sh:class  imbor:6b021f79-ad6c-431e-a205-9eb4b9dc3b3c ] .
+
+imbor:6b021f79-ad6c-431e-a205-9eb4b9dc3b3c
+        rdf:type         sh:NodeShape , rdfs:Class ;
+        rdfs:seeAlso     imbor-term:42ee92eb-3324-4ac5-8fb8-49df4fa53666 ;
+        mim:equivalent   imbor-mim:mim-6b021f79-ad6c-431e-a205-9eb4b9dc3b3c ;
+        dash:abstract    false ;
+        skos:definition  "Een rooster dat rondom de voet van de boom wordt aangebracht en aansluit op de omringende verharding."@nl ;
+        skos:prefLabel   "Boomrooster"@nl .
+
+imbor-term:42ee92eb-3324-4ac5-8fb8-49df4fa53666
+        rdf:type         skos:Concept ;
+        skos:definition  "Een rooster dat rondom de voet van de boom wordt aangebracht en aansluit op de omringende verharding."@nl ;
+        skos:prefLabel   "Boomrooster"@nl .
+
+imbor:6a3e82d1-ef13-49de-91a4-29b3cb797846
+        rdf:type                sh:PropertyShape ;
+        skos:prefLabel          "vrije takval vastgezet op Boom"@nl ;
+        sh:in                   imbor:1e29b693-f9d4-4a88-ab41-6a741effcd95-list-0 ;
+        sh:path                 imbor:c7da7cf4-ea1f-4f4d-8fd5-b3bd8a2147fd ;
+        sh:qualifiedMaxCount    1 ;
+        sh:qualifiedValueShape  [ sh:class  imbor:1e29b693-f9d4-4a88-ab41-6a741effcd95 ] .
+
+imbor:1e29b693-f9d4-4a88-ab41-6a741effcd95-list-0
+        rdf:type   rdf:List ;
+        rdf:first  imbor-domeinwaarde:0ee748e8-8509-4813-be3c-b9e569a51434 ;
+        rdf:rest   imbor:1e29b693-f9d4-4a88-ab41-6a741effcd95-list-1 .
+
+imbor:1e29b693-f9d4-4a88-ab41-6a741effcd95-list-1
+        rdf:type   rdf:List ;
+        rdf:first  imbor-domeinwaarde:b57417cf-4bf4-43c1-9c19-b5378037ec60 ;
+        rdf:rest   imbor:1e29b693-f9d4-4a88-ab41-6a741effcd95-list-2 .
+
+imbor:1e29b693-f9d4-4a88-ab41-6a741effcd95-list-2
+        rdf:type   rdf:List ;
+        rdf:first  imbor-domeinwaarde:f066df1f-8c4b-4d9d-b29a-6955b75508c9 ;
+        rdf:rest   () .
+
+imbor:c7da7cf4-ea1f-4f4d-8fd5-b3bd8a2147fd
+        rdf:type         rdf:Property ;
+        rdfs:seeAlso     imbor-term:41704b79-4a81-4f17-90a5-f977b5e0acd5 ;
+        mim:equivalent   imbor-mim:mim-c7da7cf4-ea1f-4f4d-8fd5-b3bd8a2147fd ;
+        skos:definition  "Aanduiding of vrije takval toegestaan is."@nl ;
+        skos:prefLabel   "vrije takval"@nl .
+
+imbor-term:41704b79-4a81-4f17-90a5-f977b5e0acd5
+        rdf:type         skos:Concept ;
+        skos:definition  "Aanduiding of vrije takval toegestaan is."@nl ;
+        skos:prefLabel   "vrije takval"@nl .
+
+imbor:1e29b693-f9d4-4a88-ab41-6a741effcd95
+        rdf:type         rdfs:Class ;
+        rdfs:seeAlso     imbor-term:9fe5b3c4-62df-4b20-835b-8ee2096da877 ;
+        rdfs:subClassOf  nen2660:EnumerationType ;
+        mim:equivalent   imbor-mim:mim-1e29b693-f9d4-4a88-ab41-6a741effcd95 ;
+        skos:definition  "Het enumeratietype BoomVrijeTakval is de naam voor de domeinwaardenlijst van de klasse Boom en het attribuut vrije takval."@nl ;
+        skos:prefLabel   "BoomVrijeTakval"@nl .
+
+imbor-term:9fe5b3c4-62df-4b20-835b-8ee2096da877
+        rdf:type         skos:Concept ;
+        skos:definition  "Het enumeratietype BoomVrijeTakval is de naam voor de domeinwaardenlijst van de klasse Boom en het attribuut vrije takval."@nl ;
+        skos:inScheme    imbor-term:term-schema ;
+        skos:prefLabel   "BoomVrijeTakval"@nl .
+
+imbor-domeinwaarde:0ee748e8-8509-4813-be3c-b9e569a51434
+        rdf:type         imbor:1e29b693-f9d4-4a88-ab41-6a741effcd95 ;
+        rdfs:seeAlso     imbor-term:073e7fd4-c739-47c7-81f3-765ac1a97801 ;
+        mim:equivalent   imbor-mim:mim-0ee748e8-8509-4813-be3c-b9e569a51434 ;
+        skos:definition  "De waarde onbekend bij dit attribuut komt overeen met een leeg veld bij het gebruik van de boolean als gegevenstype. Bij deze waarde moet nader onderzoek uitwijzen of de waarde ja of nee moet zijn."@nl ;
+        skos:prefLabel   "Onbekend"@nl .
+
+imbor-term:073e7fd4-c739-47c7-81f3-765ac1a97801
+        rdf:type         skos:Concept ;
+        skos:definition  "De waarde onbekend bij dit attribuut komt overeen met een leeg veld bij het gebruik van de boolean als gegevenstype. Bij deze waarde moet nader onderzoek uitwijzen of de waarde ja of nee moet zijn."@nl ;
+        skos:prefLabel   "Onbekend"@nl .
+
+imbor-domeinwaarde:b57417cf-4bf4-43c1-9c19-b5378037ec60
+        rdf:type         imbor:1e29b693-f9d4-4a88-ab41-6a741effcd95 ;
+        rdfs:seeAlso     imbor-term:bb9ec39f-9c15-4908-b47a-a98dcfbdcf34 ;
+        mim:equivalent   imbor-mim:mim-b57417cf-4bf4-43c1-9c19-b5378037ec60 ;
+        skos:definition  "De directe omgeving van de boom laat toe dat takken onbegeleid uit de boomkroon vallen."@nl ;
+        skos:prefLabel   "Vrije takval mogelijk"@nl .
+
+imbor-term:bb9ec39f-9c15-4908-b47a-a98dcfbdcf34
+        rdf:type         skos:Concept ;
+        skos:definition  "De directe omgeving van de boom laat toe dat takken onbegeleid uit de boomkroon vallen."@nl ;
+        skos:prefLabel   "Vrije takval mogelijk"@nl .
+
+imbor-domeinwaarde:f066df1f-8c4b-4d9d-b29a-6955b75508c9
+        rdf:type         imbor:1e29b693-f9d4-4a88-ab41-6a741effcd95 ;
+        rdfs:seeAlso     imbor-term:94801d13-672c-4b40-84c8-b5a34c554b74 ;
+        mim:equivalent   imbor-mim:mim-f066df1f-8c4b-4d9d-b29a-6955b75508c9 ;
+        skos:definition  "De directe omgeving van de boom laat niet toe takken onbegeleid uit de boomkroon vallen."@nl ;
+        skos:prefLabel   "Geen vrije takval mogelijk"@nl .
+
+imbor-term:94801d13-672c-4b40-84c8-b5a34c554b74
+        rdf:type         skos:Concept ;
+        skos:definition  "De directe omgeving van de boom laat niet toe takken onbegeleid uit de boomkroon vallen."@nl ;
+        skos:prefLabel   "Geen vrije takval mogelijk"@nl .
