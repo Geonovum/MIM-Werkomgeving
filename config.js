@@ -14,10 +14,10 @@
 var respecConfig =
 {
   //-- specStatus is verplicht! (activeer 1 van de volgende) --------------------------
-  //specStatus: "GN-WV",              // Werk Versie
+  specStatus: "GN-WV",              // Werk Versie
   //specStatus: "GN-CV",              // Consultatie Versie
   //specStatus: "GN-VV",              // Vaststellings Versie
-  specStatus: "GN-DEF",             // Definitieve Versie
+  //specStatus: "GN-DEF",             // Definitieve Versie
   //-- specType is verplicht! (activeer 1 van de volgende) ----------------------------
   //specType: "NO",                   // Norm
   specType: "ST",                     // Standaard
@@ -43,6 +43,11 @@ var respecConfig =
     },
     {
       name:       "Paul Janssen",
+      company:    "Geonovum",
+      companyURL: "https://www.geonovum.nl"
+    },
+    {
+      name:       "Gerard Trouborst",
       company:    "Geonovum",
       companyURL: "https://www.geonovum.nl"
     },
