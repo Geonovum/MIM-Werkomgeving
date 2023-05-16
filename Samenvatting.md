@@ -1,4 +1,8 @@
-Metamodel voor het beschrijven van informatiemodellen (MIM), **versie 1.1.1**.
+Metamodel voor het beschrijven van informatiemodellen (MIM), <del>versie 1.1.1</del> <ins>versie 1.2</ins>.
+
+<aside class="ednote" title="MIM-versienummer aanpassen in md-bestanden">
+   De huidige werkversie is <code>1.2</code>. In onderstaande samenvatting ook aangeven <i>wat</i> er gewijzigd is in <code>MIM 1.2</code> t.o.v. <code>MIM 1.1.1</code>.
+</aside>
 
 Met MIM, het Metamodel voor Informatie Modellering, wordt een metamodel beschreven waar informatiemodellen mee gemaakt kunnen worden. Het beschrijft de metaklassen, metastructuur en metagegevens als grondslag voor een informatiemodel. Doel hiervan is standaardiseren van de methode van informatiemodelleren waarmee afstemming tussen informatiemodellen, vergelijkbaarheid in publicatie en gebruik van gemeenschappelijke tooling mogelijk wordt. MIM faciliteert hiermee het ontstaan van een stelsel van samenhangende informatiemodellen. 
 
