@@ -239,65 +239,45 @@ het maken van een informatiemodel. Bij elk modelelement is een definitie en een 
 Voordat het modelelement objecttype gedefinieerd wordt, en andere modelelementen,
 wordt eerst beschreven wat objecten en gegevens zijn en hoe deze zich verhouden tot modelelementen.
 
-**Objecten en gegevens**
+**Object en gegeven**
 
-Een objecttype is een groep van gelijksoortige objecten. Zo zijn Jan en Katrien
-allebei objecten die gelijksoortig zijn en beide getypeerd kunnen worden als persoon.
-Het zijn allebei personen, oftewel het objecttype van beiden is Persoon.
-In het informatiemodel nemen we Persoon op met behulp van het modelelement Objecttype.  
+Een objecttype is een groep van gelijksoortige objecten. Zo zijn `Jan` en `Katrien` allebei objecten die gelijksoortig zijn en beide getypeerd kunnen worden als `persoon`. Het zijn allebei personen, oftewel het objecttype van beiden is `Persoon`. In het informatiemodel nemen we `Persoon` op met behulp van het modelelement `Objecttype`.
 
 Diagram: [Kern](#kern)
 
 Om duidelijk(er) te maken wat wordt bedoeld kijken we eerst naar het begrip ‘object’.
 
-**Objecten**
+**Object**
+
+<aside class="note" title="Definitie Object">
+   Een ding, een tastbaar iets, in de werkelijkheid, zoals daarnaar gekeken wordt vanuit een bepaald domein.
+</aside>
+
 
 >   **Definitie Object**  
 >   Een ding, een tastbaar iets, in de werkelijkheid, zoals daarnaar gekeken
 >   wordt vanuit een bepaald domein.
 
-NB. Een object is geen modelelement in een informatiemodel.
 
-*Toelichting:* Met in de werkelijkheid wordt bedoeld dat het om de daadwerkelijke onderwerpen van gesprek gaat, de verzameling van de concrete tastbare dingen waarover we het hebben. Bijvoorbeeld, de persoon Jan, Paleis 't Loo.
-Het wordt veelal als niet politiek correct beschouwd mensen als
-objecten te zien. In dit kader, de informatievoorziening, beschouwen we evenwel
-natuurlijke en niet-natuurlijke personen wel als objecten. ‘Tastbaar’ moet
-hierbij ruim geïnterpreteerd worden. Het gaat niet alleen om fysiek herkenbare
-objecten zoals auto’s, gebouwen en mensen, ook om zogenaamde virtuele objecten
-waarover binnen het domein door betrokkenen gecommuniceerd wordt zoals
-kadastrale percelen, (maatschappelijke) activiteiten en processen. Hoe een
-‘tastbaar iets’ als een object beschouwd wordt, hangt af van het domein waarvoor
-dat ‘tastbaar iets’ relevant is. Zo wordt de gebouwde omgeving in het ene domein
-beschouwd als een verzameling gebouwen terwijl een ander domein daarin panden
-onderscheidt. Een object is voor een domein relevant als eigenschappen
-(kenmerken) daarvan van belang zijn voor het functioneren van dat domein.
+NB. **Een object is geen modelelement** in een informatiemodel. Die worden aangeduid met het MIM-stereotype [«Objecttype»](#objecttype).
 
-**Gegevens**
+*Toelichting:* Met in de werkelijkheid wordt bedoeld dat het om de daadwerkelijke onderwerpen van gesprek gaat, de verzameling van de concrete tastbare dingen waarover we het hebben. Bijvoorbeeld, de persoon Jan, Paleis 't Loo. Het wordt veelal als niet politiek correct beschouwd mensen als objecten te zien. In dit kader, de informatievoorziening, beschouwen we evenwel natuurlijke en niet-natuurlijke personen wel als objecten. ‘Tastbaar’ moet hierbij ruim geïnterpreteerd worden. Het gaat niet alleen om fysiek herkenbare objecten zoals auto’s, gebouwen en mensen, ook om zogenaamde virtuele objecten waarover binnen het domein door betrokkenen gecommuniceerd wordt zoals kadastrale percelen, (maatschappelijke) activiteiten en processen. Hoe een ‘tastbaar iets’ als een object beschouwd wordt, hangt af van het domein waarvoor dat ‘tastbaar iets’ relevant is. Zo wordt de gebouwde omgeving in het ene domein beschouwd als een verzameling gebouwen terwijl een ander domein daarin panden onderscheidt. Een object is voor een domein relevant als eigenschappen (kenmerken) daarvan van belang zijn voor het functioneren van dat domein.
 
-Een object heeft kenmerken/eigenschappen waarvoor gegevens over bekend zijn.
+**Gegeven**
+
+Een object heeft kenmerken waarover gegevens bekend zijn.
 
 >   **Definitie Gegeven**  
 >   De betekenisvolle formulering van een waargenomen feit, waaraan een waarde
 >   kan worden toegekend.
 
-NB. Een gegeven is geen modelelement in een informatiemodel.
+NB. **Een gegeven is geen modelelement in een informatiemodel**.
 
 *Toelichting:*
 
-Voorbeelden van gegevens zijn de waardes ‘Jan’ en ‘1-1-1970’ betreffende de naam en
-de geboortedatum van een object van het type Persoon. Een informatiemodel specificeert
-niet de gegevens zelf. Een gegeven zoals '1-1-1970' noemen we een attribuut van Jan.
-In het informatiemodel wordt dit het attribuutsoort 'geboortedatum' of 'overlijdensdatum'
-van een objecttype Persoon. Merk op dat een gegeven ‘1-1-1970’ zonder duidelijkheid over
-het soort gegeven c.q. het attribuutsoort 'geboortedatum' of 'overlijdensdatum' geen informatie biedt.
+Voorbeelden van gegevens zijn de waardes ‘Jan’ en ‘1-1-1970’ betreffende de naam en de geboortedatum van een object van het type Persoon. Een informatiemodel specificeert niet de gegevens zelf. Een gegeven zoals '1-1-1970' noemen we een attribuut van Jan. In het informatiemodel wordt dit het attribuutsoort 'geboortedatum' of 'overlijdensdatum' van een objecttype Persoon. Merk op dat een gegeven ‘1-1-1970’ zonder duidelijkheid over het soort gegeven c.q. het attribuutsoort 'geboortedatum' of 'overlijdensdatum' geen informatie biedt.
 
-Gegevens zijn de objectief waarneembare neerslag of registratie
-van feiten op een bepaald medium, zodanig dat deze gegevens uitgewisseld en voor
-langere tijd bewaard kunnen worden. Dat kan op papier, in digitale vorm, et
-cetera. Met deze gegevens wordt een model (een selectief deel dus) van de
-werkelijkheid vastgelegd in de tijd. Ofschoon de werkelijkheid nooit stilstaat,
-kan deze door het vastleggen van de gegevens toch worden bevroren.
-
+Gegevens zijn de objectief waarneembare neerslag of registratie van feiten op een bepaald medium, zodanig dat deze gegevens uitgewisseld en voor langere tijd bewaard kunnen worden. Dat kan op papier, in digitale vorm, et cetera. Met deze gegevens wordt een model (een selectief deel dus) van de werkelijkheid vastgelegd in de tijd. Ofschoon de werkelijkheid nooit stilstaat, kan deze door het vastleggen van de gegevens toch worden bevroren. 
 Het waargenomen feit dat twee objecten een relatie hebben wordt ook gezien als een gegeven.
 
 #### Objecttype
