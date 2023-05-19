@@ -98,6 +98,17 @@ div#remark
   color: darkblue;
 }
 
+/*-- Definite van code---------- -------------------------------------------------------*/
+code 
+{
+  color:red;
+  background-color:hsl(0, 100%, 96%);
+  border-radius:4px;
+  padding: 2px 5px;
+/*  font-family: lucida console;
+  font-size: 90%;*/
+}
+
 /*-- Definite turtle example -------------------------------------------------------*/
 pre.ex-turtle {
   margin-left: 0;

@@ -13,8 +13,7 @@
 //-------------------------------------------------------------------------------------
 var respecConfig =
 {
-  //-- specStatus is verplicht! (activeer 1 van de volgende) --------------------------
-  specStatus: "GN-WV",              // Werk Versie
+  specStatus: "wv",                   // Werk Versie
   //specStatus: "GN-CV",              // Consultatie Versie
   //specStatus: "GN-VV",              // Vaststellings Versie
   //specStatus: "GN-DEF",             // Definitieve Versie

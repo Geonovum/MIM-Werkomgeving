@@ -1,4 +1,4 @@
-## Inleiding
+# Inleiding
 
 Voor u ligt het metamodel voor informatiemodellering (MIM), voor het beschrijven 
 van informatiemodellen. Met het metamodel hebben we een gemeenschappelijk
@@ -10,7 +10,7 @@ aan het model is dat de afspraken over meerdere bestuurslagen heen gaan.
 Dit document is opgesteld met kennis die is aangedragen door de MIM-community.
 Kadaster, Geonovum, VNG Realisatie, DUO en andere partijen hebben hun bijdrage geleverd.
 
-### Toepassingsgebied
+## Toepassingsgebied
 Het metamodel biedt de modelleringstaal waarmee een informatiemodel gemaakt,
 gelezen en begrepen kan worden. Het doel hiervan is:
 -   de leesbaarheid en eenduidigheid van informatiemodellen te vergroten;
@@ -31,29 +31,29 @@ Voor informatiemodellen die op basis van dit metamodel zijn beschreven geldt:
     voor publicatie;
 -   ze kunnen als basis gebruikt worden voor (bij voorkeur model-driven
     generatie van) afgeleide modellen en producten voor een specifiek
-    toepassingsgebied/domein zoals bijvoorbeeld [[!NEN3610]] of het gemeentelijke
+    toepassingsgebied/domein zoals bijvoorbeeld [[NEN3610]] of het gemeentelijke
     domein;
 -   ze kunnen als basis gebruikt worden voor (bij voorkeur model-driven
     generatie van) afgeleide modellen voor specifieke services en
     informatieproducten (implementatieschema’s, registers, validatieservices
     e.d.).
 
-### Doelgroep
+## Doelgroep
 Dit document is primair bestemd voor informatiemodelleurs en informatiearchitecten 
 die deze informatiemodellen maken; informatieanalisten die willen weten wat de betekenis
 en definitie van informatieobjecten is, en mensen die model-driven verder werken
 op basis van het informatiemodel en er implementaties van maken. Kennis van
-informatiemodellering is een vereiste. Enige kennis van UML [[!UML]] of [[!Linked-Data]] is een pré maar niet
+informatiemodellering is een vereiste. Enige kennis van UML [[UML]] of [[Linked-Data]] is een pré maar niet
 noodzakelijk. Dit metamodel richt zich in het bijzonder op de informatievoorziening binnen
 het overheidsdomein, al is het ook in bredere context inzetbaar.
 
-### Leeswijzer
+## Leeswijzer
 Het metamodel beschrijven we in vijf hoofdstukken en een bijlage.
 
 Lees de [Inleiding](#inleiding) verder voor inzicht in wat we onder een
 informatiemodel en onder een metamodel verstaan, hoe deze modellen zich
 verhouden tot UML en de vier lagen metamodel architectuur van de Object
-Management Group [[!OMG]], Linked Data en de internetstandaarden van de W3C en welke overige standaarden worden toegepast. 
+Management Group [[OMG]], Linked Data en de internetstandaarden van de W3C en welke overige standaarden worden toegepast. 
 
 Het hoofdstuk [Metamodel Algemeen](#metamodel-algemeen) bevat de beschrijving van alle
 bouwstenen c.q. de modelelementen van het metamodel, in de vorm van definities en specificaties.
@@ -62,12 +62,12 @@ modelspecificatie kan worden opgesteld. De afbeeldingen in dit algemene hoofdstu
 zich zeker niet tot UML. Er zijn aparte hoofdstukken voor de implementatie van MIM in UML en Linked Data.
 
 Het hoofdstuk [Metamodel in UML](#metamodel-in-uml) beschrijft hoe de implementatie van MIM in
-[[!UML]] er uit ziet. In dit hoofdstuk wordt beschreven hoe het metamodel zich verhoudt tot het UML
+[[UML]] er uit ziet. In dit hoofdstuk wordt beschreven hoe het metamodel zich verhoudt tot het UML
 metamodel, welke uitbreidingen c.q. verbijzonderingen van het UML metamodel zijn
 aangebracht.
 
 Het hoofdstuk [Metamodel in Linked Data (LD)](#metamodel-in-linked-data-ld) beschrijft hoe de implementatie van MIM in
-[[!Linked-Data]] er uit ziet. In dit hoofdstuk wordt beschreven hoe het metamodel zich verhoudt tot het Linked Data
+[[Linked-Data]] er uit ziet. In dit hoofdstuk wordt beschreven hoe het metamodel zich verhoudt tot het Linked Data
 metamodel. Daarbij is een strikte vertaling gemaakt. Dit betekent dat het betreffende Linked Data model alleen als MIM model te gebruiken is. Voor een model dat gebruikt kan worden om daadwerkelijk Linked Data in uit te drukken, is een vertaalslag nodig die beschreven is in de bijlage [Transformatie MIM - RDFS/OWL/SHACL](#transformatie-mim-rdfs-owl-shacl). Op deze wijze kan een dergelijk RDFS/OWL/SHACL model ook gezien worden als een MIM model.
 
 In het hoofdstuk [Afspraken & Regels](#afspraken-regels) gaan we in detail in op een
@@ -79,7 +79,7 @@ Er zijn een aantal bijlages, dit zijn hulpmiddelen of aanvullingen op MIM.
 - De bijlage [Template naamgeving conventies](#template-naamgeving-conventies) verschaft een invulmogelijkheid om eigen naamgevingsconventies te documenteren, per in dit metamodel genoemd modelelement.
 - De bijlage [Transformatie MIM - RDFS/OWL/SHACL](#transformatie-mim-rdfs-owl-shacl) beschrijft hoe een MIM model getransformeerd kan worden naar een RDF model dat gebruikt kan worden om daadwerkelijk Linked Data in uit te drukken en vice versa (op instantie niveau, waarbij dit in overeenstemming is met de specificatie op informatiemodel niveau).
  
-### Gebruikswijzer 
+## Gebruikswijzer 
 Met de bouwstenen oftewel de modelelementen die in dit metamodel beschreven zijn is een informatiemodel te maken. 
 Om zo'n informatiemodel te maken volstaat het veelal om het hoofdstuk [Metamodel Algemeen](#metamodel-algemeen) door te nemen, 
 te kiezen voor modellering met ofwel UML ofwel linked data, en het bijbehorende hoofdstuk te lezen. 
@@ -90,7 +90,7 @@ kan valideren of je model correct het MIM volgt (wat automatisch gaat als je de 
 Tot slot is het mogelijk om naar informatiemodellen te kijken van organisaties die al een MIM informatiemodel hebben gepubliceerd. 
 Voor specifieke modelleringen en vragen zullen er ook uitgewerkte voorbeelden worden gemaakt. 
 
-### Wat is een informatiemodel
+## Wat is een informatiemodel
 Wanneer we informatie over bepaalde onderwerpen willen inwinnen, registreren of uitwisselen, dan is het van belang om deze informatie  eerst goed te beschrijven. We doen dit zodat het voor eenieder die met de informatie aan de slag gaat helder en eenduidig is:
 - waarover de informatie gaat, bv. informatie over een persoon of een gebouw, we noemen dit de objecten, de onderwerpen van gesprek
 - dat deze onderwerpen van gesprek gemodelleerd zijn als informatieobjecten 
@@ -142,7 +142,7 @@ opgeslagen, beheerd en uitgewisseld worden.
 De opname in een registratie kent vaak een inwinningsproces om gegevenswaarden over de feitelijke dingen in de werkelijkheid conform het
 informatiemodel in de registratie op te nemen. Dit is een belangrijk proces, maar valt buiten scope van het informatiemodel (scheiding proces en informatie, het proces is niet in scope van deze standaard).
 
-### Typering van modellen en wat wel en niet in scope is van deze standaard
+## Typering van modellen en wat wel en niet in scope is van deze standaard
 Bij het modelleren van een domein zijn er een aantal beschouwingsniveaus, variërend van een zo 
 getrouw mogelijke beschrijving van de betekenis en bedoeling van de woorden en termen die mensen gebruiken 
 als ze het ergens over hebben tot een specificatie van de wijze van registratie en uitwisseling van data.
@@ -176,7 +176,7 @@ De aangegeven niveaus zijn vooral bedoeld om de scope van MIM duidelijk aan geve
 te weten niveau 2 en 3. Hieronder worden de niveaus nader toegelicht.
 
 
-#### Niveau 1: Model van begrippen 
+### Niveau 1: Model van begrippen 
 
 Dit niveau beschrijft de werkelijkheid binnen het beschouwde domein (de ‘universe of discourse’) 
 door middel van de beschrijving van de daarin gehanteerde begrippen en hun relaties tot elkaar. 
@@ -207,7 +207,7 @@ aangebracht die data gericht is, maar bij het modelleren van begrippen wordt dit
 De samenhang tussen informatie is hierbij vaak (bewust) beperkter dan de samenhang tussen begrippen. 
 
 
-#### Niveau 2: Conceptueel informatiemodel
+### Niveau 2: Conceptueel informatiemodel
 
 Een conceptueel informatiemodel beschrijft de modellering van de werkelijkheid binnen het beschouwde domein door 
 middel van de beschrijving van welke informatie (data met betekenis en structuur) een rol speelt. 
@@ -236,7 +236,7 @@ Ten aanzien van logische informatiemodellen:
 oftewel is keten of koppelvlak overstijgend. Een logisch informatiemodel is specifiek voor een koppelvlak of keten of een 
 bepaalde toepassing (met bijbehorende implementatie, database en interfaces).
 
-#### Niveau 3: Logisch informatie- of gegevensmodel
+### Niveau 3: Logisch informatie- of gegevensmodel
 
 Beschrijft hoe de, in het conceptuele informatiemodel onderscheiden, concepten gebruikt
 worden bij de interactie tussen systemen en hun gebruikers en tussen systemen
@@ -256,12 +256,12 @@ Ten aanzien van fysieke of technische datamodellen:
 - Een logisch informatiemodel is implementatie onafhankelijk en kan in meerdere technische modellen of formaten worden geïmplementeerd.
   Een fysiek of technisch datamodel is afhankelijk van de gekozen techniek of tooling die wordt gebruikt en wordt daadwerkelijk technische geïmplementeerd.
 
-#### Niveau 4: Fysiek of technisch gegevens- of datamodel
+### Niveau 4: Fysiek of technisch gegevens- of datamodel
 Specificeert de structuur en eigenschappen van de technologie waarin de
 informatie wordt vastgelegd of uitgewisseld. Dit is sterk afhankelijk van de
 gebruikte opslagtechnologie zoals een specifieke database of de
-servicetechnologie zoals [[!xml]], [[!gml]], [[!SOAP]], REST, [[!GeoJSON]],
-[[!Linked-Data]] e.d. Het kan tevens informatie bevatten over de manier waarop
+servicetechnologie zoals [[xml]], [[gml]], [[SOAP]], REST, [[GeoJSON]],
+[[Linked-Data]] e.d. Het kan tevens informatie bevatten over de manier waarop
 berichten ‘verpakt’ worden, het (internet)protocol en de logistiek van het
 berichtenverkeer. De technische specificaties worden over het algemeen zoveel
 als mogelijk gegenereerd uit het logisch informatiemodel.  
@@ -271,7 +271,7 @@ als mogelijk gegenereerd uit het logisch informatiemodel.
 Dit niveau is **niet** in scope van MIM. Dit niveau is niet volledig beschreven maar is ter illustratie 
 in deze paragraaf opgenomen. Er kan meer in zitten dan hier beschreven en er kan meer na volgen.   
 
-#### Aanvullende opmerkingen bij de onderkende niveaus
+### Aanvullende opmerkingen bij de onderkende niveaus
 
 - In algemeenheid geldt dat het begrijpen van onderwerpen of dingen die een rol spelen in een 'universe of discourse' altijd vooraf gaat aan de modellering ervan, welk niveau deze modellering ook betreft en welke modellen je  besluit om wel of niet toe te maken of op te leveren. 
 - Deze standaard geeft niet normatief een volgorde of werkwijze aan voor de invulling van de 4 niveaus. Je kan bijvoorbeeld besluiten om wel of niet begrippen te definiëren en/of te modelleren. Wanneer je dan later een informatiemodel gaat maken dan is het nuttig om deze hierbij mee te nemen als input en hiermee consistent te blijven. Let wel, de definities op beide niveaus zijn niet altijd hetzelfde. De definitie in het informatiemodel moet soms preciezer zijn om preciezer de betekenis van de geregistreerde of uitgewisselde data te definiëren. 
@@ -294,7 +294,7 @@ het conceptuele informatiemodel dan zijn ze allemaal naar elkaar transformeerbaa
 - Een organisatie kan er voor kiezen om alleen een logisch informatiemodel op te stellen of om een conceptueel 
 informatiemodel als basis te nemen en enkel uit te breiden met logische aspecten. 
 
-### Wat is het metamodel voor informatiemodellering
+## Wat is het metamodel voor informatiemodellering
 Een metamodel is een model van een model. Het definieert een verzameling van
 modelleerconstructies in de vorm van bouwstenen, oftewel modelelementen zoals een objecttype, 
 relatiesoort en attribuutsoort, met bijbehorende betekenis en met bijbehorende afspraken 
@@ -309,20 +309,20 @@ basis daarvan gegevens uit te wisselen. Beschrijving van het metamodel is daarom
 een randvoorwaarde indien er sprake is van een stelsel van samenhangende
 informatiemodellen. Anders gezegd, met (alleen) de in het metamodel opgenomen
 set van modelleerconstructies worden informatiemodellen gemaakt. Door het
-schrijven van modelleertalen (zoals [[!UML]]) in een metataal (zoals MOF) wordt
+schrijven van modelleertalen (zoals [[UML]]) in een metataal (zoals MOF) wordt
 gegarandeerd dat alle toepassingen van die talen op een standaard manier zijn
 opgebouwd en daardoor alom te begrijpen zijn. De metataal beschrijft als het
 ware de grammatica van de modelleertaal. Het metamodel in dit document is
 uitgewerkt voor modellering met UML en voor modellering met linked data.
 
-### Uitdrukken in UML
+## Uitdrukken in UML
 Zowel het metamodel als informatiemodellen kan worden uitgedrukt in UML.
 Registraties en afnemers hiervan kunnen deze gebruiken voor de inrichting van
 hun situatiespecifieke gegevenshuishouding. Belangrijk is dat de lezer eerst
 begrijpt wat we onder een informatiemodel en een metamodel verstaan en verder is
 het van belang om de modellen in de juiste context te plaatsen. Dit laatste doen we
 aan de hand van de vier lagen metamodel architectuur van de Object Management
-Group [[!OMG]]. In deze paragaaf gaan we op deze concepten in.
+Group [[OMG]]. In deze paragaaf gaan we op deze concepten in.
 
 **Vier lagen metamodel architectuur OMG**  
 Voor de specificatie van het metamodel is gebruik gemaakt van dezelfde formele
@@ -384,9 +384,9 @@ Nadrukkelijk moet daarbij worden vermeld dat het MIM metamodel **geen** semantie
 Met het uitdrukken van het MIM metamodel in een UML profiel wordt het alleen mogelijk
 gemaakt om, zonder verlies van de originele semantiek van het MIM, een MIM model uit
 te drukken in UML. Met dit gebruik van een UML profiel volgen wij het gebruik van een UML profiel
-zoals de OMG zelf heeft op gesteld voor het Ontology Definition Metamodel [[!ODM]]: "*The goal of a UML profile from the ODM perspective is to provide a bridge between the UML and knowledge representation communities on a well-grounded, semantic basis, with a broader goal of relating software and logical approaches to representing information. Profiles facilitate implementation using common notation on existing UML tools. They support renaming and specializing UML model elements in consistent ways, so that an instance of a UML model can be seen as an extended metamodel. Profiles allow a developer to leverage UML experience and tools while moving to integrating with an ontology represented in another metamodel.*" (sectie 8.4.2).
+zoals de OMG zelf heeft op gesteld voor het Ontology Definition Metamodel [[ODM]]: "*The goal of a UML profile from the ODM perspective is to provide a bridge between the UML and knowledge representation communities on a well-grounded, semantic basis, with a broader goal of relating software and logical approaches to representing information. Profiles facilitate implementation using common notation on existing UML tools. They support renaming and specializing UML model elements in consistent ways, so that an instance of a UML model can be seen as an extended metamodel. Profiles allow a developer to leverage UML experience and tools while moving to integrating with an ontology represented in another metamodel.*" (sectie 8.4.2).
 
-### Uitdrukken in Linked Data
+## Uitdrukken in Linked Data
 
 Zowel het metamodel als informatiemodellen kan worden uitgedrukt in Linked Data.
 Registraties en afnemers hiervan kunnen deze gebruiken voor de inrichting van
@@ -450,7 +450,7 @@ Een informatiemodel uitgedrukt in Linked Data wordt geacht te voldoen aan het MI
 1. Het informatiemodel is uitgedrukt in de MIM vocabulaire, zoals beschreven in het hoofdstuk [Metamodel in Linked Data (LD)](#metamodel-in-linked-data-ld);
 2. Het informatiemodel is uitgedrukt in RDF, RDFS, OWL en SHACL en is te transformeren naar de MIM vocabulaire op basis van de transformatieregels beschreven in de bijlage, [Transformatie MIM - RDFS/OWL/SHACL](#transformatie-mim-rdfs-owl-shacl).
 
-### Een eigen extensie op het metamodel
+## Een eigen extensie op het metamodel
 Indien er extra metamodelconstructies nodig zijn voor een informatiemodel, 
 zoals een extra metamodel element of extra metagegevens, dan
 kan dit metamodel uitgebreid worden met een aanvulling oftewel extensie (in de
@@ -481,7 +481,7 @@ Desgewenst kan een extensie gepubliceerd worden bij MIM-beheer of kan ernaar ver
     om het metamodel, of delen ervan, te hergebruiken op dit niveau.
 </aside>
 
-### Alternatieven
+## Alternatieven
 In dit metamodel is op één punt sprake van een keuze tussen twee alternatieven,
 waarvan de modelleur van een informatiemodel één van beide alternatieven kiest.
 Welke je kiest geef je aan bij je eigen informatiemodel, in je eigen extensie
@@ -493,29 +493,29 @@ verplicht/leidend (zie [Specificatie metagegevens voor relaties](#specificatie-m
 Indien gewenst kun je hier vragen over stellen aan de beheerders van dit
 metamodel voordat je een keuze maakt.
 
-### Beheer
+## Beheer
 Het beheer van dit metamodel vindt plaats door Geonovum met ondersteuning van het Kadaster. 
 Voor vragen, suggesties of opmerkingen kunt u contact opnemen met de MIM helpdesk van Geonovum: mim@geonovum.nl
 
-### Normreferenties
+## Normreferenties
 
 | \#  | Naam                                                | **Referentie** |
 |-----|-----------------------------------------------------|----------------|
-| 1.  | Unified Modeling Language (UML)                     | [[!UML]]       |
-| 2.  | OMG Unified Modeling Language TM versie 2.5         | [[!OMG]]       |
+| 1.  | Unified Modeling Language (UML)                     | [[UML]]       |
+| 2.  | OMG Unified Modeling Language TM versie 2.5         | [[OMG]]       |
 | 3.  | RDF Concepts and abstract syntax                    | [[RDF11-CONCEPTS]] |
 | 4.  | Shape Constraint Language                           | [[SHACL]]      |
-| 5.  | Stelselcatalogus                                    | [[!SCAT]]      |
-| 6.  | GAB                                                 | [[!GAB]]       |
-| 7.  | Handreiking gegevensbeschrijving (NORA)             | [[!NORA]]      |
-| 8.  | ISO 11404                                           | [[!iso-11404]] |
-| 9.  | ISO 8601                                            | [[!iso-8601]]  |
-| 10. | Formeel patroon (Reguliere Expressies)              | [[!REGEXP]]    |
-| 11. | OCL                                                 | [[!OCL]]       |
-| 12. | NEN 3610 Basismodel Geo-informatie (vanaf /A1:2016) | [[!NEN3610]]   |
+| 5.  | Stelselcatalogus                                    | [[SCAT]]      |
+| 6.  | GAB                                                 | [[GAB]]       |
+| 7.  | Handreiking gegevensbeschrijving (NORA)             | [[NORA]]      |
+| 8.  | ISO 11404                                           | [[iso-11404]] |
+| 9.  | ISO 8601                                            | [[iso-8601]]  |
+| 10. | Formeel patroon (Reguliere Expressies)              | [[REGEXP]]    |
+| 11. | OCL                                                 | [[OCL]]       |
+| 12. | NEN 3610 Basismodel Geo-informatie (vanaf /A1:2016) | [[NEN3610]]   |
 
-De Stelselcatalogus [[!SCAT]], het GAB [[!GAB]] en de Handreiking gegevensbeschrijving
-[[!NORA]] raken elkaar op een aantal vlakken maar er kunnen op deze raakvlakken verschillen zijn
+De Stelselcatalogus [[SCAT]], het GAB [[GAB]] en de Handreiking gegevensbeschrijving
+[[NORA]] raken elkaar op een aantal vlakken maar er kunnen op deze raakvlakken verschillen zijn
 in de gemaakte afspraken. Voor het metamodel hanteren we daarom de volgende spelregel:
 de Stelselcatalogus is zoveel als mogelijk leidend, vervolgens het GAB en als
 laatste de handreiking.

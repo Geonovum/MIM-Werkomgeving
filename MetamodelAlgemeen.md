@@ -1,4 +1,4 @@
-## Metamodel Algemeen
+# Metamodel Algemeen
 
 Dit hoofdstuk beschrijft het metamodel in diagramvorm en in tekst.
 
@@ -38,7 +38,7 @@ Bij het maken van een informatiemodel modelleer je in feite gewoon met de modele
 
 Hierna volgen eerst diagrammen met de modelelementen, als overzicht. In de paragrafen erna wordt de betekenis van elk van deze modelelementen beschreven, met een definitie en een toelichting en een voorbeeld. Tot slot volgt een paragraaf met metadata die bijgehouden wordt, of kan worden, bij een modelelement.
 
-### Structuur metamodel
+## Structuur metamodel
 
 Deze paragraaf bevat een overzicht van het metamodel voor informatiemodellen, kortweg MIM, en geeft alle
 modelelementen weer. De beschrijving van de modelelementen staat in de volgende paragraaf.
@@ -60,7 +60,7 @@ Bij de modelelementen zijn in deze diagrammen geen beschrijvende kenmerken opgen
 metagegevens zoals naam, definitie enzovoorts. In de diagrammen in de bijlage zijn deze wel
 opgenomen.
 
-#### Kern
+### Kern
 
 View 1: De kern van een informatiemodel. Deze bestaat uit de volgende modelelementen:
 
@@ -91,7 +91,7 @@ De verbindingen tussen de modelelementen geven aan welke combinaties kunnen voor
 - Een objecttype kan verbonden worden met een gegevensgroep en deze gegevensgroep kan weer verbonden worden met een gegevensgroeptype. Een objecttype kan dus *niet* rechtstreeks verbonden worden met een gegevensgroeptype. In een informatiemodel is een gegevensgroep een eigenschap van het objecttype en kan je aangeven dat deze gegevensgroep als type een gegevensgroeptype heeft.
 
 
-#### Datatypen
+### Datatypen
 
 View 2: Datatypen. De verschillende soorten datatypen en bijbehorende modelelementen:
 
@@ -114,7 +114,7 @@ In diagramvorm:
 
 Diagram: Datatypen zonder Metagegevens
 
-#### Overige
+### Overige
 
 View 3a: constraint en keuze.
 
@@ -232,6 +232,8 @@ In diagramvorm:
 
 Diagram: groepering
 
+## Modelelementen
+
 ### Objecttypen en attribuutsoorten  
 In deze paragraaf staan alle modelelementen gespecificeerd die gebruikt worden bij
 het maken van een informatiemodel. Bij elk modelelement is een definitie en een toelichting opgenomen.
@@ -249,6 +251,8 @@ Om duidelijk(er) te maken wat wordt bedoeld kijken we eerst naar het begrip ‘o
 
 **Object**
 
+<dfn>Object</dfn>: Een ding, een tastbaar iets, in de werkelijkheid, zoals daarnaar gekeken wordt vanuit een bepaald domein.
+
 >   **Definitie Object**  
 >   Een ding, een tastbaar iets, in de werkelijkheid, zoals daarnaar gekeken
 >   wordt vanuit een bepaald domein.
@@ -259,6 +263,8 @@ NB. **Een object is geen modelelement** in een informatiemodel. Die worden aange
 *Toelichting:* Met in de werkelijkheid wordt bedoeld dat het om de daadwerkelijke onderwerpen van gesprek gaat, de verzameling van de concrete tastbare dingen waarover we het hebben. Bijvoorbeeld, de persoon Jan, Paleis 't Loo. Het wordt veelal als niet politiek correct beschouwd mensen als objecten te zien. In dit kader, de informatievoorziening, beschouwen we evenwel natuurlijke en niet-natuurlijke personen wel als objecten. ‘Tastbaar’ moet hierbij ruim geïnterpreteerd worden. Het gaat niet alleen om fysiek herkenbare objecten zoals auto’s, gebouwen en mensen, ook om zogenaamde virtuele objecten waarover binnen het domein door betrokkenen gecommuniceerd wordt zoals kadastrale percelen, (maatschappelijke) activiteiten en processen. Hoe een ‘tastbaar iets’ als een object beschouwd wordt, hangt af van het domein waarvoor dat ‘tastbaar iets’ relevant is. Zo wordt de gebouwde omgeving in het ene domein beschouwd als een verzameling gebouwen terwijl een ander domein daarin panden onderscheidt. Een object is voor een domein relevant als eigenschappen (kenmerken) daarvan van belang zijn voor het functioneren van dat domein.
 
 **Gegeven**
+
+<dfn>Gegeven</dfn>: De betekenisvolle formulering van een waargenomen feit, waaraan een waarde kan worden toegekend.
 
 Een object heeft kenmerken waarover gegevens bekend zijn.
 
@@ -716,7 +722,7 @@ Een domein package bevat de modelelementen waaruit een informatiemodel is sameng
 </aside>
 
 
-#### Extern
+##### Extern
 
 >   **Definitie Extern**  
 >   Een groepering van constructies die een externe instantie beheert en
@@ -814,7 +820,7 @@ We modelleren daarom een *Keuze* 'BetalingskenmerkOfOmschrijving' met daarin een
 
 In dit voorbeeld vormt BetalingskenmerkOfOmschrijving de *Keuze* als geheel. De attribuutsoorten zelf zijn de keuze mogelijkheden, maar blijven in de modellering van de metaclass attribuutsoort en behoren in deze zin niet tot de modellering van de metaclass keuze.  
 
-*Opmerking: use case 2 en 3 zijn voor een groot deel overeenkomstig. De overeenkomst is dat de keuze tussen de twee attribuutsoorten betalingskenmerk en omschrijving hetzelfde gemodelleerd wordt, als een keuze, met bijvoorbeeld de naam BetalingskemerkOfOmschrijving. Het verschil zit in de aanhaking.
+*Opmerking: use case 2 en 3 zijn voor een groot deel overeenkomstig. De overeenkomst is dat de keuze tussen de twee attribuutsoorten betalingskenmerk en omschrijving hetzelfde gemodelleerd wordt, als een keuze, met bijvoorbeeld de naam BetalingskemerkOfOmschrijving. Het verschil zit in de aanhaking.*
 
 
 **Use case 4: een keuze tussen relatiedoelen, als nadere invulling van een betekenisvolle relatiesoort van een objecttype**  
@@ -834,15 +840,9 @@ In het voorbeeld vormen EigenaarKeuze en de twee relatiedoelen tezamen de keuze 
 
 ## Specificatie metagegevens
 
-Bij de modelelementen in een informatiemodel kunnen metagegevens, zoals 'naam' van het modelelement, of 'datum opname' van het modelelement, worden bijgehouden. Dit zijn geen eigenschappen van een object en worden daarom niet als bijvoorbeeld een attribuutsoort van een objecttype gemodelleerd.
+Bij de modelelementen in een informatiemodel kunnen metagegevens, zoals 'naam' van het modelelement, of 'datum opname' van het modelelement, worden bijgehouden. Dit zijn geen eigenschappen van een object en worden daarom niet als bijvoorbeeld een attribuutsoort van een objecttype gemodelleerd. In de volgende paragrafen worden de metagegevens in tekst beschreven. Bij elk metagegeven is de definitie opgenomen, een toelichting en de toepassing ervan bij modelelementen. In [bijlage 6.1.2](#modelelementen-en-metagegevens-als-diagram) is de koppeling tussen metagegevens en de modelelementen beschreven door middel van UML diagrammen. Er is daarin ook opgenomen of ze verplicht of optioneel zijn. In [paragraaf 2.9](#toegestane-waarden-voor-bepaalde-metagegevens) is het waardebereik en defaultwaarden voor een aantal metagegevens opgenomen.
 
-In de volgende paragrafen worden de metagegevens in tekst beschreven. Bij elk metagegeven is de definitie opgenomen, een toelichting en de toepassing ervan bij modelelementen.
-
-In [bijlage 6.1.2](#modelelementen-en-metagegevens-als-diagram) is de koppeling tussen metagegevens en de modelelementen beschreven door middel van UML diagrammen. Er is daarin ook opgenomen of ze verplicht of optioneel zijn.
-
-In [paragraaf 2.9](#toegestane-waarden-voor-bepaalde-metagegevens) is het waardebereik en defaultwaarden voor een aantal metagegevens opgenomen.
-
-### Specificatie metagegevens informatiemodel
+### Informatiemodel - metagegevens
 
 We onderkennen een aantal specifieke metagegevens op het niveau van het informatiemodel zelf. Deze staan beschreven in deze paragaaf.   
 
@@ -917,7 +917,7 @@ Bijvoorbeeld: Kadaster of NEN3610:2020
 
 *Toepassing*: informatiemodel (optioneel)
 
-### Specificatie metagegevens modelelementen
+### Modelelementen - metagegevens
 
 We onderkennen een aantal specifieke metagegevens op het niveau van de modelelementen waarmee
 een informatiemodel wordt samengesteld. Deze staan beschreven in deze paragaaf.    
@@ -1588,7 +1588,7 @@ betreft, zoals een CharacterString.
 
 #### Metagegeven: **Indicatie abstract object**
 
->   **Definitie Indicatie abstract object**  
+>   **Defin#itie Indicatie abstract object**  
 >   Een indicatie die aangeeft of er objecten _kunnen_ bestaan die getypeerd worden als zijnde objecten (instanties) van alleen dit objecttype. Een abstract objecttype moet altijd de generalisatie zijn van één of meerdere objecttypes die niet abstract zijn.
 
 N.B. Eén informatiemodel kan een abstract objecttype bevatten die _binnen dit informatiemodel_ een generalisatie is van geen enkel objecttype. Deze niet abstracte objecttypen kunnen zich immers ook buiten het informatiemodel bevinden en aldaar worden gespecificeerd. Dit komt voor bij informatiemodellen die een abstracte typering definiëren waarop (concretere) informatiemodellen willen aansluiten en nadere invulling aan geven.  
@@ -1630,7 +1630,7 @@ Hier kan in tekst een beschrijving opgenomen worden over de kwaliteit van de inw
 
 *Toepassing:* Objecttype
 
-### Specificatie metagegevens modelelement bindingen
+### Modelelementbindingen - metagegevens
 
 Bindingen geven aan hoe modelelementen met elkaar verbonden kunnen en mogen worden.
 
@@ -1646,8 +1646,6 @@ Omdat dit hoofdstuk los van een modelleertaal is beschreven zijn de namen van de
 Mocht het relevant zijn om de namen van de verbindingen ergens te gebruiken: er zijn twee schrijfwijzen aangegeven die equivalent zijn, gescheiden door een `/`.
 
 De bindingen zijn ook in diagram vorm te lezen aan het begin van dit hoofdstuk, in [Diagrammen van modelelementen](#structuur-metamodel).
-
-### Structuur metamodel
 
 #### Metagegeven: **heeft attribuut** 
 Verkorte schrijfwijze: **attribuut**
@@ -1823,9 +1821,11 @@ Een constraint is gekoppeld aan de context van modelelement waarop ze van toepas
 Dit modelelement kan zijn: objecttype, gegevensgroeptype of relatieklasse.
 
 
-## Toegestane waarden voor (bepaalde) metagegevens
+### Toegestane waarden metagegevens
 
-### Waardebereik metagegevens
+Toelichting op de toegestane waarden van (bepaalde) metagegevens.
+
+#### Waardebereik
 
 Een aantal metagegevens hebben als datatype CharacterString. Aanvullend geldt:
 
@@ -1850,7 +1850,7 @@ NB: Geef bij de toepassing van `overig` in een informatiemodel aan wat er onder 
 
 De metagegevens met Ja en Nee zijn semantisch bedoeld als een boolean (er zijn geen andere waarden mogelijk zoals onbekend, overig of geen waarde (leeg)). Voor technische implementatiedoeleinden is het toegestaan om Ja en Nee te interpreteren en eventueel te vervangen door een Boolean. Let wel, voor mens-leesbare functionele documentatie horen altijd de in de tabel aangegeven waarden Ja en Nee te worden gebruikt.
 
-### Defaultwaarden voor metagegevens modelelementen
+#### Defaultwaarden
 
 Er zijn metagegevens die een defaultwaarde hebben. Het is echter niet nodig om deze defaultwaarde expliciet aan te geven in het informatiemodel. De default staat hier aangegeven. Alleen wanneer er afgeweken wordt van deze default wordt dit in het informatiemodel aangegeven.
 

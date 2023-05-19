@@ -248,31 +248,28 @@ De alternatieve weergave van de naam.
 
 Verdere toelichting voor UML modellen:
 
--   De alias is te specificeren voor NamedElements (zoals UML-Class, ML-association, UML-UML-Datatype en
-    UML-property). De alias is in UML gespecificeerd bij de metaclass **Element Import]**.
-    Element import wordt in UML ingezet voor het importeren van een NamedElement uit een ander package.
-    In dit metamodel wordt de alias (nog) niet zo gebruikt.  
+De alias is te specificeren voor `NamedElements` (zoals `UML-Class`, `UML-association`, `UML-Datatype` en `UML-property`). De alias is in UML gespecificeerd bij de metaclass `Element Import`. Dit wordt in UML ingezet voor het importeren van een `NamedElement` uit een ander package. In dit metamodel wordt de alias (nog) niet zo gebruikt.  
 
-In Enterprise Architect is de alternatieve weergave aan te zetten in de properties van een Diagram,
-via: use alias if available.
+In Enterprise Architect is de alternatieve weergave aan te zetten in de _properties_ van een _Diagram_,
+via: `use alias if available`.
 
 
 >   **Identificerend**
 
-Als een attribuutsoort identificerend is, dan krijgt dit kenmerk in UML isId =
-true.
+Als een attribuutsoort identificerend is, dan krijgt dit kenmerk in UML `isId =
+true`.
 
 Als een relatiesoort identificerend is, dan krijgt dit kenmerk in UML een
-stereotype «id»
+stereotype `«id»`
 
 <aside class='note'>
-  <p>In de hierna volgende paragrafen worden de metagegevens per modelelement gespecificeerd in tabellen. Per metagegeven zijn de volgende onderdelen gespecificeerd</p>:
+  <p>In de hierna volgende paragrafen worden de metagegevens per modelelement gespecificeerd in tabellen. Per metagegeven zijn de volgende onderdelen gespecificeerd:</p>
   <ul>
-    <li><b>Aspect</b>: Het benoemde metagegeven. Met aanduiding <code>√</code> is conform stelselafspraken voor basisregistraties. Een <code>*</code> is conform de stelselcatalogus. Zie ook de paragraaf in H3 hierover.</li>  
+    <li><b>Aspect</b>: Het benoemde metagegeven. De aanduiding <code>√</code> betekent: conform stelselafspraken voor basisregistraties. Een <code>*</code> betekent: conform de stelselcatalogus. Zie ook de paragraaf in H3 hierover.</li>  
     <li><b>Kardinaliteit</b>: Aantal maal dat een metagegeven opgenomen kan worden bij dit modelelement.</li>
     <li><b>Toelichting</b>: Nadere uitleg over het metagegeven.</li>
     <li><b>In UML 2.5</b>: De naam waarmee het metagegeven in UML2.5 is benoemd. Het betreft veelal overerving van een metagegeven van een UML metaclass die niet in dit document is benoemd.</li>
-    <li><b>In EA></b>: Aanduiding hoe het metagegeven in Sparx Enterprise Architect (EA) is aangegeven.</li>
+    <li><b>In EA</b>: Aanduiding hoe het metagegeven in Sparx Enterprise Architect (EA) is aangegeven.</li>
   <p>Rode tekst betreft een standaardelement binnen EA. Zwarte tekst in de kolom betreft een uitbreiding op het UML Metamodel, via tagged values of aanvullende stereotypes.</p>
   </ul>
 </aside>
