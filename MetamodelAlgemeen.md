@@ -251,7 +251,13 @@ Om duidelijk(er) te maken wat wordt bedoeld kijken we eerst naar het begrip ‘o
 
 **Object**
 
-<dfn>Object</dfn>: Een ding, een tastbaar iets, in de werkelijkheid, zoals daarnaar gekeken wordt vanuit een bepaald domein.
+<aside class="definition">
+    <div class="marker">
+      <a class="self-link" href="#example-2">Voorbeeld 2</a>
+    <p><dfn>Object</dfn>: Een ding, een tastbaar iets, in de werkelijkheid, zoals daarnaar gekeken wordt vanuit een bepaald domein.</p>
+</aside>
+
+<!--<dfn>Object</dfn>: Een ding, een tastbaar iets, in de werkelijkheid, zoals daarnaar gekeken wordt vanuit een bepaald domein.-->
 
 >   **Definitie Object**  
 >   Een ding, een tastbaar iets, in de werkelijkheid, zoals daarnaar gekeken
