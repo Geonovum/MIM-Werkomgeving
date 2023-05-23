@@ -1,16 +1,16 @@
-span.example-title {
+/*span.example-title {
     text-transform: none;
-}
+}*/
 
-:is(aside,div).example,
-/*div.illegal-example {
+:is(aside,div).definition,
+div.illegal-example {
     padding: 0.5em;
     margin: 1em 0;
     position: relative;
     clear: both;
 }
 
-div.illegal-example {
+/*div.illegal-example {
     color: red;
 }
 
@@ -18,20 +18,19 @@ div.illegal-example {
         color: black;
     }*/
 
-:is(aside,div).example {
+:is(aside,div).definition {
     border-left-width: 0.5em;
     border-left-style: solid;
-    border-color: #e0cb52;
-    background: #fcfaee;
+    border-color: #a87efc;
+    background: #eae1fc;
 }
 
-aside.example div.example {
+aside.definition div.definition {
     border-left-width: 0.1em;
     border-color: #999;
     background: #fff;
 }
 
-
-.example pre {
+.definition pre {
     background-color: rgba(0, 0, 0, 0.03);
 }

@@ -253,7 +253,7 @@ Om duidelijk(er) te maken wat wordt bedoeld kijken we eerst naar het begrip ‘o
 
 <aside class="definition">
     <div class="marker">
-      <a class="self-link" href="#example-2">Voorbeeld 2</a>
+      <a class="self-link" href="#example-2">Defintie</a>
     <p><dfn>Object</dfn>: Een ding, een tastbaar iets, in de werkelijkheid, zoals daarnaar gekeken wordt vanuit een bepaald domein.</p>
 </aside>
 
@@ -262,7 +262,6 @@ Om duidelijk(er) te maken wat wordt bedoeld kijken we eerst naar het begrip ‘o
 >   **Definitie Object**  
 >   Een ding, een tastbaar iets, in de werkelijkheid, zoals daarnaar gekeken
 >   wordt vanuit een bepaald domein.
-
 
 NB. **Een object is geen modelelement** in een informatiemodel. Die worden aangeduid met het MIM-stereotype [«Objecttype»](#objecttype).
 
