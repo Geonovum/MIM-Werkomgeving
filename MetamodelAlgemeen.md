@@ -253,8 +253,9 @@ Om duidelijk(er) te maken wat wordt bedoeld kijken we eerst naar het begrip ‘o
 
 <aside class="definition">
     <div class="marker">
-      <a class="self-link" href="#example-2">Defintie</a>
-    <p><dfn>Object</dfn>: Een ding, een tastbaar iets, in de werkelijkheid, zoals daarnaar gekeken wordt vanuit een bepaald domein.</p>
+      Defintie: <dfn>Object</dfn>
+    </div>
+    <p>Een ding, een tastbaar iets, in de werkelijkheid, zoals daarnaar gekeken wordt vanuit een bepaald domein.</p>
 </aside>
 
 <!--<dfn>Object</dfn>: Een ding, een tastbaar iets, in de werkelijkheid, zoals daarnaar gekeken wordt vanuit een bepaald domein.-->
