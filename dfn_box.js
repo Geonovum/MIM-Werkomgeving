@@ -6,13 +6,13 @@
 // find html-elements with class="definition"
 
 
-
+// OPTION 1
 const nodeList = document.querySelectorAll(".definition");
 for (let i = 0; i < nodeList.length; i++) {
   nodeList[i].style.backgroundColor = "red";
 }
 
-
+// OPTION 2
 // Wait until resources have loaded, including ReSpec
 // document.addEventListener("load", function () {
 //   document.respec.ready.then(function () {
