@@ -5,7 +5,22 @@
 
 // find html-elements with class="definition"
 
+
+
 const nodeList = document.querySelectorAll(".definition");
 for (let i = 0; i < nodeList.length; i++) {
   nodeList[i].style.backgroundColor = "red";
 }
+
+
+// Wait until resources have loaded, including ReSpec
+// document.addEventListener("load", function () {
+//   document.respec.ready.then(function () {
+//     // Do things
+//     const collection = document.getElementsByClassName("definition");
+
+//     for (let i = 0; i < collection.length; i++) {
+//       collection[i].style.backgroundColor = "red";
+//     };
+//   });
+// });
