@@ -10,14 +10,6 @@ div.illegal-example {
     clear: both;
 }
 
-/*div.illegal-example {
-    color: red;
-}
-
-    div.illegal-example p {
-        color: black;
-    }*/
-
 :is(aside,div).definition {
     border-left-width: 0.5em;
     border-left-style: solid;
