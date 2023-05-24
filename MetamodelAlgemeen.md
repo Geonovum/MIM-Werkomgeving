@@ -251,14 +251,14 @@ Om duidelijk(er) te maken wat wordt bedoeld kijken we eerst naar het begrip ‘o
 
 **Object**
 
-<aside class="definition">
+<!-- <aside class="definition">
     <div class="marker">
       Defintie: <dfn>Object</dfn>
     </div>
     <div>
       <p>Een ding, een tastbaar iets, in de werkelijkheid, zoals daarnaar gekeken wordt vanuit een bepaald domein.</p>
     </div>
-</aside>
+</aside> -->
 
 <aside class="definition">
   <dfn>Object (test)</dfn>: Definition of that Object (test)
