@@ -255,10 +255,15 @@ Om duidelijk(er) te maken wat wordt bedoeld kijken we eerst naar het begrip ‘o
     <div class="marker">
       Defintie: <dfn>Object</dfn>
     </div>
-    <p>Een ding, een tastbaar iets, in de werkelijkheid, zoals daarnaar gekeken wordt vanuit een bepaald domein.</p>
+    <div>
+      <p>Een ding, een tastbaar iets, in de werkelijkheid, zoals daarnaar gekeken wordt vanuit een bepaald domein.</p>
+    </div>
 </aside>
 
-<!--<dfn>Object</dfn>: Een ding, een tastbaar iets, in de werkelijkheid, zoals daarnaar gekeken wordt vanuit een bepaald domein.-->
+<aside class="definition">
+  <dfn>Object (test)</dfn>: Definition of that Object (test)
+</aside>
+
 
 >   **Definitie Object**  
 >   Een ding, een tastbaar iets, in de werkelijkheid, zoals daarnaar gekeken
@@ -270,7 +275,9 @@ NB. **Een object is geen modelelement** in een informatiemodel. Die worden aange
 
 **Gegeven**
 
-<dfn>Gegeven</dfn>: De betekenisvolle formulering van een waargenomen feit, waaraan een waarde kan worden toegekend.
+<aside class="definition">
+  <dfn>Gegeven (test)</dfn>: Definition of that Gegeven (test)
+</aside>
 
 Een object heeft kenmerken waarover gegevens bekend zijn.
 
