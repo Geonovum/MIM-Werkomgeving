@@ -30,6 +30,7 @@ __OWL vs. SHACL__
 De NEN2660-2 schrijft een relatief strikte scheiding voor tussen het gebruik van OWL en SHACL. Dit is terecht onderwerp van debat. IMBOR heeft echter gekozen voor een RDFS/SHACL implementatie. Daarmee is het onduidelijk of deze best practice ook een-op-een toegepast kan worden op een model dat OWL gebruikt.
 
 __Modellering van geometrie nog te onderzoeken__
+
 De NEN2660-2 zegt niets over hoe een geometrie vastgelegd moet worden. Bij het opstellen van de best practice werd geconcludeerd dat door bij IMBOR niet de OGC splitsing gevolgd wordt het enigzins onduidelijk is hoe de geometrie behandeld moet worden. Momenteel wordt daar de `geo:wktLiteral` vertaald naar een string. Dit is niet fout, maar de discussie kan gevoerd worden of dit waardevol is. De conclusie is echter dat dit nog verder onderzocht moet worden. 
 
 ### Conclusies
