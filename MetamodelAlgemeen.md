@@ -261,7 +261,7 @@ Om duidelijk(er) te maken wat wordt bedoeld kijken we eerst naar het begrip ‘o
 </aside> -->
 
 <aside class="definition">
-  <dfn>Object (test)</dfn>: Definition of that Object (test)
+  <dfn>Object (test)</dfn>: Hier komt de definitie van "Object" (test)
 </aside>
 
 
@@ -276,7 +276,7 @@ NB. **Een object is geen modelelement** in een informatiemodel. Die worden aange
 **Gegeven**
 
 <aside class="definition">
-  <dfn>Gegeven (test)</dfn>: Definition of that Gegeven (test)
+  <dfn>Gegeven (test)</dfn>: Hier komt de definitie van "Gegeven" (test)
 </aside>
 
 Een object heeft kenmerken waarover gegevens bekend zijn.

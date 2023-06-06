@@ -7,20 +7,20 @@
 
 
 // OPTION 1
-const nodeList = document.querySelectorAll(".definition");
-for (let i = 0; i < nodeList.length; i++) {
-  nodeList[i].style.backgroundColor = "red";
-}
+// const nodeList = document.querySelectorAll(".definition");
+// for (let i = 0; i < nodeList.length; i++) {
+//   nodeList[i].style.backgroundColor = "red";
+// }
 
 // OPTION 2
-// Wait until resources have loaded, including ReSpec
-// document.addEventListener("load", function () {
-//   document.respec.ready.then(function () {
-//     // Do things
-//     const collection = document.getElementsByClassName("definition");
+Wait until resources have loaded, including ReSpec
+document.addEventListener("load", function () {
+  document.respec.ready.then(function () {
+    // Do things
+    const collection = document.getElementsByClassName("definition");
 
-//     for (let i = 0; i < collection.length; i++) {
-//       collection[i].style.backgroundColor = "red";
-//     };
-//   });
-// });
+    for (let i = 0; i < collection.length; i++) {
+      collection[i].style.backgroundColor = "red";
+    };
+  });
+});
