@@ -19,15 +19,14 @@ let respecConfig = {
   //specType: "BD",                 // Beheer Documentatie
   //specType: "AL",                 // Algemeen document
   //specType: "BP",                 // Best Practice
-  specType: "HR",
   //-- pubDomain is verplicht! (komt in de URL) -------------------------------------
-  pubDomain: "dk",
+  pubDomain: "mim",
   //-- license: voor de geldende gebruiksvoorwaarden. Default is cc-by.
   //licence: "cc-by-nd",            // bronvermelding, geen afgeleide werken (default)
   //licence: "cc0",                 // Public Domain Dedication
   licence: "cc-by",                 // Attribution, met bronvermelding
   //-- shortName is verplicht! (komt in de URL: kies logische afkorting)--------------
-  shortName: "NL-ReSpec-GN-template",
+  shortName: "def-st-mim-20220217",
   //-- publishDate is verplicht -------------------------------------------------------
   //-- NB: in de werkversie uitzetten, want dan pakt Respec de pushdate ---------------
   //publishDate: "2023-03-28",
@@ -104,21 +103,21 @@ let respecConfig = {
   //-- edDraftURI: de URI van de werkversie van het document
   edDraftURI: "https://geonovum.github.io/MIM-Werkomgeving/",
   //-- license: voor de geldende gebruiksvoorwaarden
-  licence: "cc-by-nd",              //-- bronvermelding, geen afgeleide werken (default)
-  // licence: "cc0",                //-- Public Domain Dedication
-  // licence: "cc-by",              //-- Attribution, met bronvermelding
+  licence: "cc-by-nd",                        //-- bronvermelding, geen afgeleide werken (default)
+  // licence: "cc0",                          //-- Public Domain Dedication
+  // licence: "cc-by",                        //-- Attribution, met bronvermelding
 
 
   //-- Voor dit blok geldt: alleen als er eerdere versies zijn en altijd beiden aan/uit!
   previousPublishDate: "2020-02-25",          // Format is "YYYY-MM-DD"
-  //reviousMaturity: "GN-DEF",                 // kies 1 van deze 3 regels
-  //previousMaturity: "GN-CV",                   // kies 1 van deze 3 regels
-  previousMaturity: "GN-VV",                    // kies 1 van deze 3 regels
+  //reviousMaturity: "GN-DEF",                // kies 1 van deze 3 regels
+  //previousMaturity: "GN-CV",                // kies 1 van deze 3 regels
+  previousMaturity: "GN-VV",                  // kies 1 van deze 3 regels
 
   //-- Optionele parameters:
   //emailComments: "mim@geonovum.nl",         // reactie mailadres, alleen bij CV!
   //subtitle: "iets",                         // Subtitel van het document
-  //maxTocLevel: 4,                             // Aantal niveau's ToC, default is 0
+  //maxTocLevel: 4,                           // Aantal niveau's ToC, default is 0
 
   // Create PDF and link to file in header (optional):
   // alternateFormats: [
