@@ -126,4 +126,30 @@ let respecConfig = {
   //         uri: "template.pdf",
   //     },
   // ],
+
+// Tijdelijk opnemen: localBiblio, nog uitzoeken op welke plek dit uiteindelijk moet landen
+  localBiblio: {
+    NEN3610: 
+    {
+      title: "NEN-3610 Basismodel geo-informatie",
+      href: "https://www.nen.nl/nen-3610-2011-a1-2016-nl-217738",
+      status: "BG-FINAL",
+      publisher: "Nederlandse Norm (NEN)",
+    },
+    OMG: 
+    {
+      title: "Object Management Group Unified Modeling Language TM",
+      href: "http://www.omg.org/spec/UML/2.5",
+      version: "2.5",
+      status: "BG-FINAL",
+      publisher: "Object Management Group",
+    },
+    ODM: 
+    {
+      title: "Ontology Definition Metamodel",
+      href: "https://www.omg.org/spec/ODM/1.1",
+      status: "BG-FINAL",
+      publisher: "Object Management Group",
+    },
+  },
 };
