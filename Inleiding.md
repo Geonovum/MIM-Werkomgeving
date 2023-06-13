@@ -508,9 +508,9 @@ Voor vragen, suggesties of opmerkingen kunt u contact opnemen met de MIM helpdes
 | 5.  | Stelselcatalogus                                    | [[SCAT]]      |
 | 6.  | GAB                                                 | [[GAB]]       |
 | 7.  | Handreiking gegevensbeschrijving (NORA)             | [[NORA]]      |
-| 8.  | ISO 11404                                           | [[iso-11404]] |
-| 9.  | ISO 8601                                            | [[iso-8601]]  |
-| 10. | Formeel patroon (Reguliere Expressies)              | [[REGEXP]]    |
+| 8.  | ISO 11404                                           | [[ISO 11404]] |
+| 9.  | ISO 8601                                            | [[ISO 8601]]  |
+| 10. | Formeel patroon (Reguliere Expressies)              | [[PERLRE]]    |
 | 11. | OCL                                                 | [[OCL]]       |
 | 12. | NEN 3610 Basismodel Geo-informatie (vanaf /A1:2016) | [[NEN3610]]   |
 

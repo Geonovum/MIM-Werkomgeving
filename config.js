@@ -142,7 +142,7 @@ let respecConfig = {
       href: "http://www.omg.org/spec/UML/2.5",
       version: "2.5",
       status: "BG-FINAL",
-      publisher: "Object Management Group",
+      publisher: "Object Management Group (OMG)",
     },
     ODM: 
     {
@@ -151,5 +151,48 @@ let respecConfig = {
       status: "BG-FINAL",
       publisher: "Object Management Group",
     },
+    GAB: 
+    {
+      title: "Gemeenschappelijke Afspraken Berichten",
+      href: "https://www.noraonline.nl/wiki/Gemeenschappelijke_Afspraken_Berichten",
+      status: "LD",
+      publisher: "Nederlandse Overheid Referentie Architectuur (NORA)",
+    },
+    SCAT: 
+    {
+      title: "Stelselcatalogus",
+      href: "http://www.stelselcatalogus.nl/",
+      // status: "LD",
+      publisher: "Logius",
+    },
+    NORA: 
+    {
+      title: "Handreiking Gegevensbeschrijvingen",
+      href: "https://www.noraonline.nl/wiki/Gegevensbeschrijvingen/Handreiking",
+      status: "LD",
+      publisher: "Nederlandse Overheid Referentie Architectuur (NORA)",
+    },
+   ISO 11404: 
+    {
+      title: "Information Technology - General Purpose Datatypes (GPD)",
+      href: "https://www.nen.nl/nen-iso-iec-11404-2008-en-122652",
+      status: "BG-FINAL",
+      publisher: "Nederlandse Norm (NEN)",
+    },
+   OCL: 
+    {
+      title: "Object Constraint Language",
+      version: "2.4";
+      href: "https://www.omg.org/spec/OCL/2.4/",
+      status: "BG-FINAL",
+      publisher: "Object Management Group (OMG)",
+    },    
+   GeoJSON: 
+    {
+      title: "The GeoJSON Specification (RFC 7946)",
+      href: "https://geojson.org/",
+      status: "BG-FINAL",
+      publisher: "Internet Engineering Task Force (IETF)",
+    },  
   },
 };
