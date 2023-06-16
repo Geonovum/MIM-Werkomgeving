@@ -912,6 +912,49 @@ Bijvoorbeeld: Kadaster of NEN3610:2020
 
 *Toepassing*: informatiemodel (optioneel)
 
+*Om een MIM-model uit te drukken in een linked data ontologie is het noodzakelijk om de modelelementen als linked data te kunnen identificeren. De metagegevens Basis-URI, Ontologie-URI, Schema basis-URI en Schema URI maken het mogelijk om de modelelementen in een linked data ontologie te identificeren.*
+
+#### Metagegeven: **Basis-URI**
+
+>   **Definitie Basis-URI**  
+>   De standaard basis URI voor elk element in dit informatiemodel.
+
+*Toelichting* Een uniform resource identifier (URI) is een compacte reeks tekens die een abstracte of fysieke bron identificeert. Een basis-URI is een het gemeenschappelijke deel van deze reeks tekens die voor alle elementen in het informatiemodel geldig is. Dit metagegeven is noodzakelijk wanneer een model ook als ontologie beschikbaar moet komen. De basis-URI moet absoluut zijn (inclusief het protocol (http(s)://)) en eindigen met een "/". Bijvoorbeeld: http://bag.basisregristraties.overheid.nl/
+
+*Toepassing*: informatiemodel, domein, view (optioneel)
+
+#### Metagegeven: **Ontologie URI**
+
+>   **Definitie Ontologie URI**  
+>   De standaard URI voor de ontlogie waar de elementen uit dit informatiemodel in zijn opgenomen. 
+
+*Toelichting* De ontologie URI is over het algemeen gelijk aan de basis-URI minus het laatste karakter. Bijvoorbeeld: http://bag.basisregristraties.overheid.nl
+
+*Toepassing*: informatiemodel, domein, view (optioneel)
+
+#### Metagegeven: **Schema basis-URI**
+
+>   **Definitie Schema basis-URI**  
+>   De standaard URI voor de elementen die in de shapes graph (an owl:Ontology) van het informatiemodel zijn opgenomen.
+
+*Toelichting* De Schema basis-URI is over het algemeen gelijk aan de basis-URI. Bijvoorbeeld: http://bag.basisregristraties.overheid.nl/
+
+*Toepassing*: informatiemodel, domein, view (optioneel)
+
+#### Metagegeven: **Schema URI**
+
+>   **Definitie Schema URI**  
+>   De standaard URI voor het schema (de shapes graph (an owl:Ontology)) zelf.
+
+*Toelichting* De schema base uri is over het algemeen gelijk aan de base URI minus het laatste karakter. Bijvoorbeeld: http://bag.basisregristraties.overheid.nl. 
+
+*Toepassing*: informatiemodel, domein, view (optioneel)
+
+
+
+<!--Einde "Specificatie metagegevens informatiemodel" -->
+
+
 ### Modelelementen - metagegevens
 
 We onderkennen een aantal specifieke metagegevens op het niveau van de modelelementen waarmee
