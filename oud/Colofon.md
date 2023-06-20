@@ -7,7 +7,7 @@ op het gebied van informatiemodellering meegewerkt:
 | Naam                      | Organisatie  | Rol en achtergrond                                                                                                                                              |
 |---------------------------|--------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Ir. Ellen Debats          | KING         | Beheerder KKG. KKG kerngroep. Expert gegevenstandaarden. Gemma standaarden, RSGB/RGBZ/imZTC.                                                                    |
-| Ir. Lennart van Bergen    | Kadaster     | Beheerder KKG. KKG kerngroep. Expert informatiemodellering. Modellenbureau Kadaster, IMKAD, IMBAG. Vanuit DSO betrokken bij LVBB (PR30) en de catalogus (PR06). |
+| Ir. Lennart van Bergen    | Kadaster     | Beheerder KKG. KKG kerngroep. Expert informatiemodellering. Modellenbureau Kadaster, IMKAD, IMBAG. Vanuit DSO betrokken bij LVBB (PR30) en de catalogus (PR06) |
 | Ir. Paul Janssen          | Geonovum     | Beheerder KKG. KKG kerngroep. Expert GEO standaarden. NEN3610. IMRO, IMKL. Vanuit DSO betrokken bij informatiemodel standaarden Omgevingswet (PR04).            |
 | Ir. Arjan C. Kloosterboer | KING         | KKG kerngroep. Gegevensarchitect GEMMA.                                                                                                                         |
 | Ing. Peter Lentjes        | Kadaster     | KKG kerngroep. Modellenbureau Kadaster, IMBRT, IMGEO (BGT)                                                                                                      |
