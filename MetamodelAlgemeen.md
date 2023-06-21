@@ -1807,14 +1807,11 @@ Verkorte schrijfwijze: **constraint**
 >   **Definitie heef constraint** 
 >   De binding van een constraint aan een modelelement.
 
-Het modelelement die een constraint heeft kan zijn: objecttype, relatieklasse, gegevensgroeptype.
+Het modelelement die een constraint heeft kan zijn: `Objecttype`, `Relatieklasse`, `Gegevensgroeptype`.
 
 *Toelichting*
 
-Een constraint is gekoppeld aan de context van modelelement waarop ze van toepassing is.
-
-Dit modelelement kan zijn: objecttype, gegevensgroeptype of relatieklasse.
-
+Een constraint is gekoppeld aan de context van modelelement waarop ze van toepassing is. Dit modelelement kan zijn: `Objecttype`, `Gegevensgroeptype` of `Relatieklasse`.
 
 ### Toegestane waarden metagegevens
 
@@ -1822,14 +1819,14 @@ Toelichting op de toegestane waarden van (bepaalde) metagegevens.
 
 #### Waardebereik
 
-Een aantal metagegevens hebben als datatype CharacterString. Aanvullend geldt:
+Een aantal metagegevens hebben als datatype `CharacterString`. Aanvullend geldt:
 
 -   Voor lengtes geldt dat er alleen getallen in mogen (van het datatype
-    Integer).
+    `Integer`).
 
--   Voor datums geldt dat deze het volgende patroon volgen: jjjjmmdd
+-   Voor datums geldt dat deze het volgende patroon volgen: `jjjjmmdd`
 
--   Voor de metagegevens Definitie en Toelichting geldt dat hiervoor tekst met opmaak (zoals vet, cursief, onderstreept en opsommingen) gebruikt mag worden. Welke opmaak precies gebruikt kan worden is afhankelijk van de mogelijkheden van de modelleeromgeving en de beoogde toepassing van het model.
+-   Voor de metagegevens `Definitie` en `Toelichting` geldt dat hiervoor tekst met opmaak (zoals _vet_, _cursief_, _onderstreept_ en _opsommingen_) gebruikt mag worden. Welke opmaak precies gebruikt kan worden, is afhankelijk van de mogelijkheden van de modelleeromgeving en de beoogde toepassing van het model.
 
 Voor de volgende metagegevens geldt een specifiek waardebereik.
 
