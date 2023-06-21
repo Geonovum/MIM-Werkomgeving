@@ -1829,6 +1829,8 @@ Een aantal metagegevens hebben als datatype CharacterString. Aanvullend geldt:
 
 -   Voor datums geldt dat deze het volgende patroon volgen: jjjjmmdd
 
+-   Voor de metagegevens Definitie en Toelichting geldt dat hiervoor tekst met opmaak (zoals vet, cursief, onderstreept en opsommingen) gebruikt mag worden. Welke opmaak precies gebruikt kan worden is afhankelijk van de mogelijkheden van de modelleeromgeving en de beoogde toepassing van het model.
+
 Voor de volgende metagegevens geldt een specifiek waardebereik.
 
 | **Metagegeven**                     | **Waardenbereik**                                                          |
