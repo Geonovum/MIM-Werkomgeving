@@ -717,7 +717,7 @@ Een domein package bevat de modelelementen waaruit een informatiemodel is sameng
 </aside>
 
 
-##### Extern
+#### Extern
 
 >   **Definitie Extern**  
 >   Een groepering van constructies die een externe instantie beheert en

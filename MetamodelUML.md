@@ -712,8 +712,6 @@ De data-elementen worden naar de volgende aspecten gespecificeerd:
 | **Kardinaliteit**      | 1       | Algemeen metagegeven. | *lowerValue en upperValue van de metaclass MultiplicityElement* |      | *Multiplicity*    |     |
 | heeft **datatype**     | 1       | Binding aan een datatype.  | *datatype* = UML-datatype       |      | *type* = datatype |     |
 
-
-
 #### «Keuze»
 
 Een Keuze worden naar de volgende aspecten gespecificeerd:
@@ -764,6 +762,7 @@ Externe packages worden naar de volgende aspecten gespecificeerd:
 | **Toelichting**  | 0..1          | Algemeen metagegeven.    |                |      | *tagged value* |            |
 | **Datum opname** | 1             | Algemeen metagegeven.    |                |      | *tagged value* |            |
 | **Locatie**      | 1             | Algemeen metagegeven.    |                |      | *Tagged value* |            |
+
 #### «Informatiemodel»
 
 Informatiemodel packages worden naar de volgende aspecten gespecificeerd:
