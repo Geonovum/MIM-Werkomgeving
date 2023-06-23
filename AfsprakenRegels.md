@@ -135,11 +135,11 @@ Datatypen Generalisatie
 De gele datatypen zijn extern aan het model.
 
 Het type modelelement (stereotype) verandert niet door de generalisatie. Een
-zelf gedefinieerd primitief datatype zal een generalisatie hebben met een ander
-primitief datatype. Een zelf gedefinieerd gestructureerd datatype zal een
+zelf-gedefinieerd primitief datatype zal een generalisatie hebben met een ander
+primitief datatype. Een zelf-gedefinieerd gestructureerd datatype zal een
 generalisatie hebben met een ander gestructureerd datatype.
 
-Het komt voor dat het zelf gedefinieerde datatype een generalisatie heeft naar
+Het komt voor dat het zelf-gedefinieerde datatype een generalisatie heeft naar
 een extern gedefinieerd datatype, waarvan het modelelement (stereotype) niet is
 gespecificeerd. Maak dan zelf een inschatting. Let hierbij op bij een
 «Gestructureerd datatype». Deze hoort altijd twee of meer data elementen te
