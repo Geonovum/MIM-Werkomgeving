@@ -389,7 +389,7 @@ gelden worden in een generiek objecttype, het supertype, gemodelleerd en deze
 worden overerft door elk subtype (minimaal twee) die de generalisatie relatie
 legt naar dit generieke objecttype.
 
-Generalisatie tussen datatypes:
+Generalisatie tussen datatypen:
 
 Het meer specifieke datatype brengt een verbijzondering aan in de vorm van een
 meer restrictieve definitie, of een meer restrictief patroon/formeel patroon.
@@ -399,7 +399,7 @@ DMO en dient als basis voor een zelf te definiëren datatype (zie [Datatype zelf
 definiëren](#datatype-zelf-definieren)), zoals een CharacterString Postcode, of
 een NietNegatiefGetal.
 
-Deze generalisatie is van toepassing op de volgende datatypes: «Primitief
+Deze generalisatie is van toepassing op de volgende datatypen: «Primitief
 datatype», «Gestructureerd datatype», «Referentielijst», «Codelijst»,
 «Enumeratie».
 
@@ -585,7 +585,7 @@ Bij elke «Attribuutsoort» wordt gespecificeerd aan welk datatype de data c.q. 
 waarde die hiervoor vastgelegd wordt moet voldoen. Het datatype wordt gebruikt
 als type van een attribuutsoort.
 
-Datatypes zijn veelal op vele plekken (her)bruikbaar en kunnen daarom gespecificeerd
+Datatypen zijn veelal op vele plekken (her)bruikbaar en kunnen daarom gespecificeerd
 worden bij diverse «Attribuutsoort»-en.
 
 Diagram: [Datatypen](#datatypen)
@@ -602,14 +602,14 @@ zelf geen eigen modelelementen zoals een «Data element». Ook is er geen sprake
 
 Een primitief datatype kan een standaard datatype zijn, zoals CharacterString, Integer enz. Het metamodel volgt hierbij de definities zoals beschreven in de ISO standaarden (zie
 §3.1).
-* Deze datatypes hebben altijd al een naam en definitie gekregen vanuit deze standaarden en deze worden gebruikt.
-* Deze datatypes hebben geen MIM metaclass.
+* Deze datatypen hebben altijd al een naam en definitie gekregen vanuit deze standaarden en deze worden gebruikt.
+* Deze datatypen hebben geen MIM metaclass.
 
 Een primitief datatype kan ook in het eigen informatiemodel zelf gedefinieerd zijn, zoals bijvoorbeeld een primitief datatype AN: een alfanumerieke CharacterString conform de MES-1 specificatie (oftewel zonder bijzondere karakters zoals een smiley en zonder bijzondere tekens uit niet Europese talen).
-* Dit is een zelf gedefinieerde variant die als basis een van de voorgaande standaard datatypes heeft, zoals CharacterString. Dit standaard datatype moet eenduidig aangegeven worden (zie generalisatie bij datatypes, of door in een extensie aan te geven wat de default is, bv. CharacterString).
+* Dit is een zelf gedefinieerde variant die als basis een van de voorgaande standaard datatypen heeft, zoals CharacterString. Dit standaard datatype moet eenduidig aangegeven worden (zie generalisatie bij datatypen, of door in een extensie aan te geven wat de default is, bv. CharacterString).
 * Hierbij hoort de MIM metaclass gespecificeerd te worden: `primitief datatype`.
 
-Een informatiemodel definieert zelf datatypes als er behoefte is aan een datatype dat
+Een informatiemodel definieert zelf datatypen als er behoefte is aan een datatype dat
 eenmalig gedefinieerd wordt en op meerdere plekken in het model gebruikt moet
 kunnen worden met altijd exact dezelfde structuur en waardenbereik (zie ook
 ‘patroon’ in [Domeinwaarden of lijsten](#domeinwaarden-of-lijsten)). Dit
@@ -781,7 +781,7 @@ Een objecttype heeft een attribuutsoort en het datatype hiervan is ofwel datatyp
 Voorbeeld: *Attribuutsoort* geometrie als kenmerk van een objecttype. Dit is een keuze uit *Datatype* Line of *Datatype* Polygon. De opsomming van beide keuzemogelijkheden noemen we de *Keuze* LineOrPolygon. De aanhaking aan het attribuutsoort geometrie gebeurt door aan te geven dat LineOrPolygon het type is van geometrie.
 </aside>
 
-In dit voorbeeld vormt LineOrPolygon de *Keuze* als geheel. De datatypes zelf zijn de keuze mogelijkheden, maar blijven in de modellering van de metaclass datatype en behoren in deze zin niet tot de modellering van de metaclass keuze.  
+In dit voorbeeld vormt LineOrPolygon de *Keuze* als geheel. De datatypen zelf zijn de keuze mogelijkheden, maar blijven in de modellering van de metaclass datatype en behoren in deze zin niet tot de modellering van de metaclass keuze.  
 
 Het is niet de bedoeling om twee attribuutsoorten te modelleren met elk een datatype en de attribuutsoorten optioneel te maken.
 

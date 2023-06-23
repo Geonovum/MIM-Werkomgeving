@@ -134,7 +134,7 @@ Dit UML is uitgewerkt voor Objecttype. Voor Gegevensgroeptype en Relatieklasse g
 
 Modellering van deze Keuze in een informatiemodel: 
 - Modelleer een _UML-Datatype_ met stereotype _keuze_. 
-- Modelleer hierin 2 of meer MIM-Datatypes: neem hiervoor eerst een _UML-attribute_ met stereotype _keuze_ op in de Keuze zoals gemodelleerd in punt 1, dit UML-attribute krijgt als typering het gewenste (MIM) Datatype. Merk op dat dit extra UML-attribute is zelf geen keuze mogelijkheid is, de keuze is immers tussen de datatypes. 
+- Modelleer hierin 2 of meer MIM-Datatypen: neem hiervoor eerst een _UML-attribute_ met stereotype _keuze_ op in de Keuze zoals gemodelleerd in punt 1, dit UML-attribute krijgt als typering het gewenste (MIM) Datatype. Merk op dat dit extra UML-attribute is zelf geen keuze mogelijkheid is, de keuze is immers tussen de datatypen. 
 
 Gebruik de Keuze voor een (MIM) Attrituutsoort: 
 - Kies een _MIM-Attribuutsoort_ en koppel de hiervoor gemodelleerde Keuze hieraan via een typering, zoals gebruikelijk. 
@@ -192,7 +192,7 @@ Er zijn drie metaklassen met de naam Keuze maar elke keer als extensie van een a
 | Keuze             | Keuze          | (UML) Property        |      | Attribute    |            |
 
 - Als een UML Class met stereotype keuze is gebruikt, dan zitten hierin alleen attribuutsoorten en/of relatiedoelen, de attribuutsoorten en relatiedoelen waaruit gekozen kan worden. 
-- Als een UML Datatype met stereotype keuze is gebruikt, dan zitten hierin alleen datatypes, de datatypes waaruit gekozen kan worden. 
+- Als een UML Datatype met stereotype keuze is gebruikt, dan zitten hierin alleen datatypen, de datatypen waaruit gekozen kan worden. 
 - Als een UML Property met stereotype keuze is gebruikt, dan is er sprake van een hulpconstructie om het modelelement Keuze aan te koppelen aan het MIM-modelelement waarvoor de keuze geldt.
 
 Merk op dat deze tabel niet gaat over de modelelementen waaruit een keuze gemaakt moet worden. Dat zijn immers de modelelementen datatype, attribuutsoort en relatiesoort. Deze tabel gaat over de modellering van Keuze in UML oftewel de extra hulpconstructies die in UML nodig zijn om de modelelementen waaruit een keuze gemaakt moet worden aan te koppelen aan het MIM-modelelement waarvoor de keuze geldt. Deze extra hulpconstructies krijgen als stereotype _keuze_ en dit geeft aan dat de betekenis hiervan anders is dan de betekenis van de MIM-elementen datatype, attirbuutsoort en relatiesoort. 
@@ -488,7 +488,7 @@ De generalisaties worden naar het volgende aspect gespecificeerd:
 | **Datum opname** | 1               | Algemeen metagegeven                                         |                     |      | *Tagged value* |            |
 
 
-#### «Generalisatie» tussen datatypes
+#### «Generalisatie» tussen datatypen
 
 De generalisaties worden naar het volgende aspect gespecificeerd:
 
