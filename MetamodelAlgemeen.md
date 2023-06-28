@@ -1496,7 +1496,7 @@ Referentie naar het profiel dat de technische implementatie van de codelijst bes
 
 *Toelichting*
 
-Mogelijk is er een profielspecifiactie die de specifieke technische toepassing van de codelijst beschrijft.
+Mogelijk is er een profielspecificatie die de specifieke technische toepassing van de codelijst beschrijft. Bij voorkeur is de referentie door middel van een url.
 
 *Toepassing:* Codelijst
 
