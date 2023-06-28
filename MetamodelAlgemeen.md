@@ -1625,6 +1625,24 @@ Hier kan in tekst een beschrijving opgenomen worden over de kwaliteit van de inw
 
 *Toepassing:* Objecttype
 
+#### Metagegeven: **Eenheid**
+
+>   **Definitie Eenheid**  
+Aanduiding van de eenheid die bij een meting of waarneming hoort. De waarde van Eenheid is een waarde uit de lijst gepubliceerd op https://units-of-measurement.org/.
+
+*Toelichting*
+
+In essentie zijn er vier componenten die een meting of een waarneming beschrijven:
+
+het onderwerp (wat wordt er gemeten)
+de waarde (de waarde die gemeten is)
+het datatype van die waarde (kwalitatief (characterstring), kwantitatief (integer of real))
+de eenheid van de waarde
+
+De eerste drie zijn informatie technisch uit te drukken met het informatie-element attribuutsoort en datatype. Voor Eenheid is een apart metagegeven gecreëerd dat gekoppeld wordt aan een attribuutsoort.
+
+*Toepassing:* Relatiesoort
+
 ### Modelelementbindingen - metagegevens
 
 Bindingen geven aan hoe modelelementen met elkaar verbonden kunnen en mogen worden.
