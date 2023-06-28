@@ -1456,6 +1456,50 @@ Bijvoorbeeld: 'http://www.organisatie.nl/schemas/waardelijsten/NaamWaardelijst'
 
 *Toepassing*: de modelelementen die een waardelijst zijn.
 
+#### Metagegeven: **Doelformaat**
+
+>   **Definitie Doelformaat**  
+Het fomaat waarin een waardelijst is gepubliceerd.
+
+*Toelichting*
+
+Voor de hand liggende formaten waarin een waardelijst is gepubliceerd zijn onder andere SKOS en CSV.
+
+*Toepassing:* Codelijst
+
+#### Metagegeven: **Datatype**
+
+>   **Definitie Datatype**  
+Datatype van de waarden in een waardelijst
+
+*Toelichting*
+
+Voorbeelden hiervan zijn characterstring , integer
+
+*Toepassing:* Codelijst
+
+#### Metagegeven: **Waarde item**
+
+>   **Definitie Waarde item**  
+Het item (of element) van de lijst dat de waarde representeert.
+
+*Toelichting*
+
+Als een Codelijst een structuur heeft wordt hiermee aangegeven welke item in de codelijst de waarde representeert.
+
+*Toepassing:* Codelijst
+
+#### Metagegeven: **Profielspecificatie**
+
+>   **Definitie Profielspecificatie**  
+Referentie naar het profiel dat de technische implementatie van de codelijst beschrijft.
+
+*Toelichting*
+
+Mogelijk is er een profielspecifiactie die de specifieke technische toepassing van de codelijst beschrijft.
+
+*Toepassing:* Codelijst
+
 #### Metagegeven: **Type** (domein van een waarde een gegeven)
 
 >   **Definitie Type**  
@@ -1624,6 +1668,8 @@ Beschrijving van de mate waarin in de registratie opgenomen objecten van het des
 Hier kan in tekst een beschrijving opgenomen worden over de kwaliteit van de inwinning van gegevens bij dit objecttype.
 
 *Toepassing:* Objecttype
+
+
 
 ### Modelelementbindingen - metagegevens
 
