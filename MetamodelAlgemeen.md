@@ -1485,7 +1485,7 @@ Het item (of element) van de lijst dat de waarde representeert.
 
 *Toelichting*
 
-Ale een Codelijst een structuur heeft wordt hiermee aangegeven welke item in de codelijst de waarde representeert.
+Als een Codelijst een structuur heeft wordt hiermee aangegeven welke item in de codelijst de waarde representeert.
 
 *Toepassing:* Codelijst
 
