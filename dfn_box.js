@@ -13,14 +13,15 @@
 // }
 
 // OPTION 2
-Wait until resources have loaded, including ReSpec
+// Wait until resources have loaded, including ReSpec
 document.addEventListener("load", function () {
   document.respec.ready.then(function () {
     // Do things
-    const collection = document.getElementsByClassName("definition");
+    console.log("This is a TEST!!!")
+    // const collection = document.getElementsByClassName("definition");
 
-    for (let i = 0; i < collection.length; i++) {
-      collection[i].style.backgroundColor = "red";
-    };
+    // for (let i = 0; i < collection.length; i++) {
+    //   collection[i].style.backgroundColor = "red";
+    // };
   });
 });
