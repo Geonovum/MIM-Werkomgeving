@@ -251,19 +251,9 @@ Om duidelijk(er) te maken wat wordt bedoeld kijken we eerst naar het begrip ‘o
 
 **Object**
 
-<!-- <aside class="definition">
-    <div class="marker">
-      Defintie: <dfn>Object</dfn>
-    </div>
-    <div>
-      <p>Een ding, een tastbaar iets, in de werkelijkheid, zoals daarnaar gekeken wordt vanuit een bepaald domein.</p>
-    </div>
-</aside> -->
-
 <aside class="definition">
   <dfn>Object (test)</dfn>: Hier komt de definitie van "Object" (test)
 </aside>
-
 
 >   **Definitie Object**  
 >   Een ding, een tastbaar iets, in de werkelijkheid, zoals daarnaar gekeken
@@ -407,7 +397,7 @@ gelden worden in een generiek objecttype, het supertype, gemodelleerd en deze
 worden overerft door elk subtype (minimaal twee) die de generalisatie relatie
 legt naar dit generieke objecttype.
 
-Generalisatie tussen datatypes:
+Generalisatie tussen datatypen:
 
 Het meer specifieke datatype brengt een verbijzondering aan in de vorm van een
 meer restrictieve definitie, of een meer restrictief patroon/formeel patroon.
@@ -417,7 +407,7 @@ DMO en dient als basis voor een zelf te definiëren datatype (zie [Datatype zelf
 definiëren](#datatype-zelf-definieren)), zoals een CharacterString Postcode, of
 een NietNegatiefGetal.
 
-Deze generalisatie is van toepassing op de volgende datatypes: «Primitief
+Deze generalisatie is van toepassing op de volgende datatypen: «Primitief
 datatype», «Gestructureerd datatype», «Referentielijst», «Codelijst»,
 «Enumeratie».
 
@@ -603,7 +593,7 @@ Bij elke «Attribuutsoort» wordt gespecificeerd aan welk datatype de data c.q. 
 waarde die hiervoor vastgelegd wordt moet voldoen. Het datatype wordt gebruikt
 als type van een attribuutsoort.
 
-Datatypes zijn veelal op vele plekken (her)bruikbaar en kunnen daarom gespecificeerd
+Datatypen zijn veelal op vele plekken (her)bruikbaar en kunnen daarom gespecificeerd
 worden bij diverse «Attribuutsoort»-en.
 
 Diagram: [Datatypen](#datatypen)
@@ -620,14 +610,14 @@ zelf geen eigen modelelementen zoals een «Data element». Ook is er geen sprake
 
 Een primitief datatype kan een standaard datatype zijn, zoals CharacterString, Integer enz. Het metamodel volgt hierbij de definities zoals beschreven in de ISO standaarden (zie
 §3.1).
-* Deze datatypes hebben altijd al een naam en definitie gekregen vanuit deze standaarden en deze worden gebruikt.
-* Deze datatypes hebben geen MIM metaclass.
+* Deze datatypen hebben altijd al een naam en definitie gekregen vanuit deze standaarden en deze worden gebruikt.
+* Deze datatypen hebben geen MIM metaclass.
 
 Een primitief datatype kan ook in het eigen informatiemodel zelf gedefinieerd zijn, zoals bijvoorbeeld een primitief datatype AN: een alfanumerieke CharacterString conform de MES-1 specificatie (oftewel zonder bijzondere karakters zoals een smiley en zonder bijzondere tekens uit niet Europese talen).
-* Dit is een zelf gedefinieerde variant die als basis een van de voorgaande standaard datatypes heeft, zoals CharacterString. Dit standaard datatype moet eenduidig aangegeven worden (zie generalisatie bij datatypes, of door in een extensie aan te geven wat de default is, bv. CharacterString).
+* Dit is een zelf gedefinieerde variant die als basis een van de voorgaande standaard datatypen heeft, zoals CharacterString. Dit standaard datatype moet eenduidig aangegeven worden (zie generalisatie bij datatypen, of door in een extensie aan te geven wat de default is, bv. CharacterString).
 * Hierbij hoort de MIM metaclass gespecificeerd te worden: `primitief datatype`.
 
-Een informatiemodel definieert zelf datatypes als er behoefte is aan een datatype dat
+Een informatiemodel definieert zelf datatypen als er behoefte is aan een datatype dat
 eenmalig gedefinieerd wordt en op meerdere plekken in het model gebruikt moet
 kunnen worden met altijd exact dezelfde structuur en waardenbereik (zie ook
 ‘patroon’ in [Domeinwaarden of lijsten](#domeinwaarden-of-lijsten)). Dit
@@ -735,7 +725,7 @@ Een domein package bevat de modelelementen waaruit een informatiemodel is sameng
 </aside>
 
 
-##### Extern
+#### Extern
 
 >   **Definitie Extern**  
 >   Een groepering van constructies die een externe instantie beheert en
@@ -799,7 +789,7 @@ Een objecttype heeft een attribuutsoort en het datatype hiervan is ofwel datatyp
 Voorbeeld: *Attribuutsoort* geometrie als kenmerk van een objecttype. Dit is een keuze uit *Datatype* Line of *Datatype* Polygon. De opsomming van beide keuzemogelijkheden noemen we de *Keuze* LineOrPolygon. De aanhaking aan het attribuutsoort geometrie gebeurt door aan te geven dat LineOrPolygon het type is van geometrie.
 </aside>
 
-In dit voorbeeld vormt LineOrPolygon de *Keuze* als geheel. De datatypes zelf zijn de keuze mogelijkheden, maar blijven in de modellering van de metaclass datatype en behoren in deze zin niet tot de modellering van de metaclass keuze.  
+In dit voorbeeld vormt LineOrPolygon de *Keuze* als geheel. De datatypen zelf zijn de keuze mogelijkheden, maar blijven in de modellering van de metaclass datatype en behoren in deze zin niet tot de modellering van de metaclass keuze.  
 
 Het is niet de bedoeling om twee attribuutsoorten te modelleren met elk een datatype en de attribuutsoorten optioneel te maken.
 
@@ -1474,6 +1464,50 @@ Bijvoorbeeld: 'http://www.organisatie.nl/schemas/waardelijsten/NaamWaardelijst'
 
 *Toepassing*: de modelelementen die een waardelijst zijn.
 
+#### Metagegeven: **Doelformaat**
+
+>   **Definitie Doelformaat**  
+Het fomaat waarin een waardelijst is gepubliceerd.
+
+*Toelichting*
+
+Voor de hand liggende formaten waarin een waardelijst is gepubliceerd zijn onder andere SKOS en CSV.
+
+*Toepassing:* Codelijst
+
+#### Metagegeven: **Datatype**
+
+>   **Definitie Datatype**  
+Datatype van de waarden in een waardelijst
+
+*Toelichting*
+
+Voorbeelden hiervan zijn characterstring , integer
+
+*Toepassing:* Codelijst
+
+#### Metagegeven: **Waarde item**
+
+>   **Definitie Waarde item**  
+Het item (of element) van de lijst dat de waarde representeert.
+
+*Toelichting*
+
+Als een Codelijst een structuur heeft wordt hiermee aangegeven welke item in de codelijst de waarde representeert.
+
+*Toepassing:* Codelijst
+
+#### Metagegeven: **Profielspecificatie**
+
+>   **Definitie Profielspecificatie**  
+Referentie naar het profiel dat de technische implementatie van de codelijst beschrijft.
+
+*Toelichting*
+
+Mogelijk is er een profielspecificatie die de specifieke technische toepassing van de codelijst beschrijft. Bij voorkeur is de referentie door middel van een url.
+
+*Toepassing:* Codelijst
+
 #### Metagegeven: **Type** (domein van een waarde een gegeven)
 
 >   **Definitie Type**  
@@ -1642,6 +1676,8 @@ Beschrijving van de mate waarin in de registratie opgenomen objecten van het des
 Hier kan in tekst een beschrijving opgenomen worden over de kwaliteit van de inwinning van gegevens bij dit objecttype.
 
 *Toepassing:* Objecttype
+
+
 
 ### Modelelementbindingen - metagegevens
 
@@ -1825,14 +1861,11 @@ Verkorte schrijfwijze: **constraint**
 >   **Definitie heef constraint** 
 >   De binding van een constraint aan een modelelement.
 
-Het modelelement die een constraint heeft kan zijn: objecttype, relatieklasse, gegevensgroeptype.
+Het modelelement die een constraint heeft kan zijn: `Objecttype`, `Relatieklasse`, `Gegevensgroeptype`.
 
 *Toelichting*
 
-Een constraint is gekoppeld aan de context van modelelement waarop ze van toepassing is.
-
-Dit modelelement kan zijn: objecttype, gegevensgroeptype of relatieklasse.
-
+Een constraint is gekoppeld aan de context van modelelement waarop ze van toepassing is. Dit modelelement kan zijn: `Objecttype`, `Gegevensgroeptype` of `Relatieklasse`.
 
 ### Toegestane waarden metagegevens
 
@@ -1840,12 +1873,14 @@ Toelichting op de toegestane waarden van (bepaalde) metagegevens.
 
 #### Waardebereik
 
-Een aantal metagegevens hebben als datatype CharacterString. Aanvullend geldt:
+Een aantal metagegevens hebben als datatype `CharacterString`. Aanvullend geldt:
 
 -   Voor lengtes geldt dat er alleen getallen in mogen (van het datatype
-    Integer).
+    `Integer`).
 
--   Voor datums geldt dat deze het volgende patroon volgen: jjjjmmdd
+-   Voor datums geldt dat deze het volgende patroon volgen: `jjjjmmdd`
+
+-   Voor de metagegevens `Definitie` en `Toelichting` geldt dat hiervoor tekst met opmaak (zoals _vet_, _cursief_, _onderstreept_ en _opsommingen_) gebruikt mag worden. Welke opmaak precies gebruikt kan worden, is afhankelijk van de mogelijkheden van de modelleeromgeving en de beoogde toepassing van het model.
 
 Voor de volgende metagegevens geldt een specifiek waardebereik.
 

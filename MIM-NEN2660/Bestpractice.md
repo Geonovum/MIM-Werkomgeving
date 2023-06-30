@@ -32,15 +32,16 @@ En een ander belangrijk onderdeel van de NEN2660-2 betreft de taalbinding naar d
 De [NEN 3610 vormt tevens een belangrijke leidraad voor IMBOR](https://docs.crow.nl/imbor/techdoc/#nen3610) omdat het semantisch model uit de NEN 3610 hiërarchisch gezien het NEN 2660-2 praktisch toplevelmodel verder specialiseert. Zo wordt dit ook aangegeven in de NEN 2660-2. Daarnaast wordt de NEN 3610 ook gebruikt om de identificatie attributen te declareren en worden de temporele aspecten en het netwerkmodel volledig geïmplementeerd. 
 
 #### Semantisch model
-In het bovenstaande diagram zijn in groen de NEN3610 semantische klassen te zien. Deze worden (zoals in de NEN2660-2 gespecificeerd) gehangen onder het NEN2660-2 praktisch toplevelmodel. Deze indeling is geadopteerd in IMBOR en vervolgens is IMBOR verder gaan specialiseren onder de NEN3610. Zo is te zien dat bijna elke klasse uit IMBOR een subklasse (soms via meerdere tussen klassen) is van `nen3610:GeoObject`.
+In het bovenstaande diagram zijn in groen de NEN3610 semantische klassen te zien. Deze worden (zoals in de NEN2660-2 gespecificeerd) gehangen onder het NEN2660-2 praktisch toplevelmodel. Deze indeling is geadopteerd in IMBOR en vervolgens is IMBOR verder gaan specialiseren onder de NEN3610. Zo is te zien dat bijna elke klasse uit IMBOR een subklasse (soms via meerdere tussen klassen) is van `nen3610:GeoObject`. Hiervoor wordt ook gebruik gemaakt van de NEN3610 ontologie om live te verwijzen naar de juiste klassen.
 
 #### Identificatie, Temporele aspecten en Netwerk model
+Naast het semantisch model wordt in IMBOR2022 de NEN3610:2022 gebruikt voor het toewijzen van de identificatie attributen. De attributen `identificatie` en `domein` worden toegepast zoals in de norm geschreven is. In de werkversie van IMBOR* is de NEN3610 nog consistenter toegepast door ook het temporele aspecten model en het netwerk model volledig te implementeren binnen IMBOR. Voor de temporele aspecten betekent dat de attributen `beginGeldigheid`, `eindGeldigheid`, `tijdstipRegistrate`, `eindRegistratie`, `objectBegintijd` en `objectEindtijd` en de corresponderende klassen verwerkt zijn in IMBOR (zie ook [IMBOR issue #1075](https://github.com/Stichting-CROW/imbor/issues/1075)). Hiermee worden alle modellen die op de NEN3610 gebaseerd zijn beter in samenhang te gebruiken. Voor het netwerkmodel betekent dit dat het netwerkmodel uit de NEN3610 de basis vormt voor de topologische klassen in IMBOR (zie ook [IMBOR issue #997](https://github.com/Stichting-CROW/imbor/issues/1075)).
 
 ### Relatie met MIM
 Zowel IMBOR als de NEN 3610 zijn beschreven volgens het MIM. Het IMBOR gebruikt vooralsnog alleen de LinkedData serialisatie van het MIM. Het [MIM wordt zodoende bij IMBOR gebruikt](https://docs.crow.nl/imbor/techdoc/#mim) om de IMBOR ontologie volledig in MIM-LD uit te drukken. Dit heeft als voordeel dat IMBOR vergeleken en gebruikt kan worden in samenhang met andere informatiemodellen die in MIM uitgedrukt worden. Dit is zowel voor de informatiemodelleurs als voor softwareleveranciers handig. Deze uitdrukking is het onderwerp van deze best practice. 
 
-**NOTE**
-_ToDo_
+#### Informatiemodel niveaus
+Het scheiden van soort informatiemodellen in niveaus wordt door MIM voorgeschreven. In de context vormt dit het onderscheid tussen het Begrippenkader en het Kernmodel.
 
 #### Drie lagen IMBOR-MIM
 Binnen de IMBOR-MIM uitdrukking zijn drie lagen te onderscheiden waarbij elke onderliggende laag in de bovenliggende laag beschreven wordt:
@@ -55,7 +56,7 @@ Onderstaande diagram illustreert dit (versimpeld). Waarbij in oranje het<font co
 <figcaption>IMBOR-MIM op Class niveau (open op nieuw tabblad voor grotere weergave)</figcaption>
 
 ##### MIM Model
-IMBOR is een relatief overzichtelijk model. In essentie bestaat het alleen uit _klassen_, hun onderlinge relaties_, informatiebehoeften in de vorm van _attributen_ en waarden bij die attributen in de vorm van _datatypen_ en _enumeraties_. Deze essentie is ook terug te zien in de klassen die gebruikt worden uit het MIM:
+IMBOR is een relatief overzichtelijk model. In essentie bestaat het alleen uit _klassen_, hun onderlinge _relaties_, informatiebehoeften in de vorm van _attributen_ en waarden bij die attributen in de vorm van _datatypen_ en _enumeraties_. Deze essentie is ook terug te zien in de klassen die gebruikt worden uit het MIM:
 * `mim:Objecttype`
 * `mim:Relatiesoort` en `mim:Generalisatie`
 * `mim:Attribuutsoort`
@@ -67,7 +68,7 @@ De relaties/properties die tussen deze klassen gedefinieerd worden in het MIM wo
 Vanuit het MIM worden ook (verplichte) attributen toegeschreven aan de MIM klassen. Deze zijn niet opgenomen in bovenstaand schema, maar worden wel in de voorbeelden meegenomen. Uitgangspunt daarbij is dat wanneer de kardinaliteit in het MIM gezet is op minimaal 1 dit attribuut sowieso ingevuld wordt. Verder worden alleen (niet verplichte) attributen gebruikt indien ze passen binnen de toepassingscope van IMBOR.
 
 ##### IMBOR in MIM-LD
-Omdat MIM-LD 1-op-1 wordt toegepast spiegelt /instantieert de laag het MIM model op klasse niveau. 
+Omdat MIM-LD 1-op-1 wordt toegepast spiegelt/instantieert de laag het MIM model op klasse niveau. 
 
 ##### IMBOR Ontologie
 De IMBOR ontologie wordt uitvoerig beschreven [hier](https://docs.crow.nl/imbor/techdoc/#imbor-in-linkeddata). In essentie is het wederom simpel en ligt het dicht tegen het MIM model aan. IMBOR gebruikt de NEN2660-2 en NEN3610 klassen en relaties. Deze worden ook in MIM uitgedrukt. 
@@ -76,7 +77,7 @@ De IMBOR ontologie wordt uitvoerig beschreven [hier](https://docs.crow.nl/imbor/
 _Hier moet NEN2660-abs bij komen_
 
 ### Voorbeeld in RDF
-IMBOR wordt verstrekt in RDF middels Turtle files en SPARQL-Endpoints. De beschrijving in MIM is daar onderdeel van. Voor deze best practice is een representatieve sample set gebruikt. Deze is te zien in onderstaande twee voorbeelden. Deze set is tevenbs in Turtle te vinden in de repository die bij deze best practice hoort. In de sample set is tevens de NEN2660-2 taalbinding te zien en hoe de concepten uit de NEN3610 gebruikt worden. 
+IMBOR wordt verstrekt in RDF middels Turtle files en SPARQL-Endpoints. De beschrijving in MIM is daar onderdeel van. Voor deze best practice is een representatieve sample set gebruikt. Deze is te zien in onderstaande twee voorbeelden. Deze set is tevens in Turtle te vinden in de repository die bij deze best practice hoort. In de sample set is tevens de NEN2660-2 taalbinding te zien en hoe de concepten uit de NEN3610 gebruikt worden. 
 
 **NOTE**
 _Juiste link toevoegen_

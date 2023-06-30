@@ -85,7 +85,7 @@ imbor-mim:mim-decimal
         mim:definitie    "Zie corresponderende specificatie"@nl ;
         mim:herkomst     "https://www.w3.org/2001/XMLSchema" ;
         mim:locatie      "https://www.w3.org/2001/XMLSchema" ;
-         mim:naam         "Decimal"@nl .   
+        mim:naam         "Decimal"@nl .   
 
 imbor-mim:mim-c7da7cf4-ea1f-4f4d-8fd5-b3bd8a2147fd
         rdf:type                     mim:Attribuutsoort ;
