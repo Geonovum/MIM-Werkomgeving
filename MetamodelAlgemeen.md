@@ -1456,6 +1456,50 @@ Bijvoorbeeld: 'http://www.organisatie.nl/schemas/waardelijsten/NaamWaardelijst'
 
 *Toepassing*: de modelelementen die een waardelijst zijn.
 
+#### Metagegeven: **Doelformaat**
+
+>   **Definitie Doelformaat**  
+Het fomaat waarin een waardelijst is gepubliceerd.
+
+*Toelichting*
+
+Voor de hand liggende formaten waarin een waardelijst is gepubliceerd zijn onder andere SKOS en CSV.
+
+*Toepassing:* Codelijst
+
+#### Metagegeven: **Datatype**
+
+>   **Definitie Datatype**  
+Datatype van de waarden in een waardelijst
+
+*Toelichting*
+
+Voorbeelden hiervan zijn characterstring , integer
+
+*Toepassing:* Codelijst
+
+#### Metagegeven: **Waarde item**
+
+>   **Definitie Waarde item**  
+Het item (of element) van de lijst dat de waarde representeert.
+
+*Toelichting*
+
+Als een Codelijst een structuur heeft wordt hiermee aangegeven welke item in de codelijst de waarde representeert.
+
+*Toepassing:* Codelijst
+
+#### Metagegeven: **Profielspecificatie**
+
+>   **Definitie Profielspecificatie**  
+Referentie naar het profiel dat de technische implementatie van de codelijst beschrijft.
+
+*Toelichting*
+
+Mogelijk is er een profielspecificatie die de specifieke technische toepassing van de codelijst beschrijft. Bij voorkeur is de referentie door middel van een url.
+
+*Toepassing:* Codelijst
+
 #### Metagegeven: **Type** (domein van een waarde een gegeven)
 
 >   **Definitie Type**  
@@ -1628,18 +1672,18 @@ Hier kan in tekst een beschrijving opgenomen worden over de kwaliteit van de inw
 #### Metagegeven: **Eenheid**
 
 >   **Definitie Eenheid**  
-Aanduiding van de eenheid die bij een meting of waarneming hoort. De waarde van Eenheid is een waarde uit de lijst gepubliceerd op https://units-of-measurement.org/.
+Aanduiding van de eenheid die bij een meting of waarneming hoort. De waarde van `Eenheid` is een waarde uit de lijst gepubliceerd op https://units-of-measurement.org/.
 
 *Toelichting*
 
 In essentie zijn er vier componenten die een meting of een waarneming beschrijven:
 
-het onderwerp (wat wordt er gemeten)
-de waarde (de waarde die gemeten is)
-het datatype van die waarde (kwalitatief (characterstring), kwantitatief (integer of real))
-de eenheid van de waarde
+1. het **onderwerp** (wat wordt er gemeten)
+1. de **waarde** (de waarde die gemeten is)
+1. het **datatype** van die waarde (kwalitatief (characterstring), kwantitatief (integer of real))
+1. de **eenheid** van de waarde
 
-De eerste drie zijn informatie technisch uit te drukken met het informatie-element attribuutsoort en datatype. Voor Eenheid is een apart metagegeven gecreëerd dat gekoppeld wordt aan een attribuutsoort.
+De eerste drie zijn informatie-technisch uit te drukken met het informatie-element `Attribuutsoort` en `Datatype`. Voor `Eenheid` is een apart metagegeven gecreëerd dat gekoppeld wordt aan een `Attribuutsoort`.
 
 *Toepassing:* Relatiesoort
 

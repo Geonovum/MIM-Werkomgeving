@@ -563,6 +563,7 @@ Externe koppelingen worden naar de volgende aspecten gespecificeerd.
 
 ### Specificatie metagegevens voor waardenlijsten
 
+
 #### «Codelijst»
 
 Voor codelijst worden de volgende aspecten gespecificeerd:
@@ -578,6 +579,10 @@ Voor codelijst worden de volgende aspecten gespecificeerd:
 | **Toelichting**  | 0..1               | Algemeen metagegeven.    |                |      | *tagged value* |            |
 | **Datum opname** | 1                  | Algemeen metagegeven.    |                |      | *tagged value* |            |
 | **Locatie**      | 1..1               | Algemeen metagegeven.    |                |      | *tagged value* |            |
+| **Doelformaat**  | 1..1               | Algemeen metagegeven.    |                |      | *tagged value* |            |
+| **Datatype**     | 1..1               | Algemeen metagegeven.    |                |      | *tagged value* |            |
+| **Waarde item**  | 0..1               | Algemeen metagegeven.    |                |      | *tagged value* |            |
+| **Profielspecificatie**      | 0..1               | Algemeen metagegeven.    |                |      | *tagged value* |            |
 
 
 #### «Enumeratie»
@@ -652,6 +657,7 @@ De referentie-elementen worden naar de volgende aspecten gespecificeerd:
 | **Kardinaliteit**                           | 1                  | Algemeen metagegeven. | *lowerValue en upperValue van de metaclass Multiplicity Element* |      | *Multiplicity van de de target role* |            |
 | **Identificerend**                          | 0..1               | Algemeen metagegeven. | *isID van de metaclass Property*                             |      | *isID bij de betreffende class*      |            |
 | heeft **datatype**       | 1       | Binding aan een datatype.     | *datatype* = UML-datatype |    | *type* = datatype          |     |
+
 
 ### Specificatie metagegevens voor datatypen
 
