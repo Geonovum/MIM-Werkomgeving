@@ -2,8 +2,10 @@
 
 ### Overzicht toegepaste UML metaclasses
  
-![](media/OverzichtToegepasteUMLmetaclasses.png)
-
+<figure id="OverzichtToegepasteUMLmetaclasses.png">
+  <img src="media/OverzichtToegepasteUMLmetaclasses.png" alt="" />
+  <figcaption>[BIJSCHRIFT OPNEMEN]</figcaption>
+</figure>
 
 ### Modelelementen en metagegevens als diagram
 
@@ -11,56 +13,73 @@ Deze bijlage bevat alle modelelementen en metagegevens in één diagram.
 
 *Kern - [Relatiesoort is leidend](#relatiesoort-leidend-alternatief-1)*
 
-![](media/KernMetMetagegevens_Alt1.png)
- 
+<figure id="KernMetMetagegevens_Alt1.png">
+  <img src="media/KernMetMetagegevens_Alt1.png" alt="" />
+  <figcaption>[BIJSCHRIFT OPNEMEN]</figcaption>
+</figure>
   
-  
- 
 *Kern - [Relatierol is leidend](#relatierol-is-leidend-alternatief-2)*
 
-![](media/KernMetMetagegevens_Alt2.png)
- 
-  
-  
+<figure id="KernMetMetagegevens_Alt2.png">
+  <img src="media/KernMetMetagegevens_Alt2.png" alt="" />
+  <figcaption>[BIJSCHRIFT OPNEMEN]</figcaption>
+</figure>
+   
 *Datatypen*
 
-![](media/DatatypenMetMetagegevens.png)
- 
- 
+<figure id="DatatypenMetMetagegevens.png">
+  <img src="media/DatatypenMetMetagegevens.png" alt="" />
+  <figcaption>[BIJSCHRIFT OPNEMEN]</figcaption>
+</figure>
  
 *Constraints*
 
-![](media/ConstraintsMetMetagegevens.png)
+<figure id="ConstraintsMetMetagegevens.png">
+  <img src="media/ConstraintsMetMetagegevens.png" alt="" />
+  <figcaption>[BIJSCHRIFT OPNEMEN]</figcaption>
+</figure>
 
 *Keuze*
 
 *Keuze tussen datatypen*
 
 Dit UML is uitgewerkt voor Objecttype. Voor Gegevensgroeptype en Relatieklasse geldt hetzelfde patroon.
-![](media/KeuzeDatatype1metMeta.png)
 
+<figure id="KeuzeDatatype1metMeta.png">
+  <img src="media/KeuzeDatatype1metMeta.png" alt="" />
+  <figcaption>[BIJSCHRIFT OPNEMEN]</figcaption>
+</figure>
 
 *Keuze tussen attribuutsoorten*
 
 Dit UML is uitgewerkt voor Objecttype. Voor Gegevensgroeptype en Relatieklasse geldt hetzelfde patroon.
-![](media/KeuzeAttribuutsoort2metMetaUML.png)
 
+<figure id="KeuzeAttribuutsoort2metMetaUML.png">
+  <img src="media/KeuzeAttribuutsoort2metMetaUML.png" alt="" />
+  <figcaption>[BIJSCHRIFT OPNEMEN]</figcaption>
+</figure>
 
 *Keuze tussen attribuutsoorten binnen de context van een attribuutsoort*
 
 Dit UML is uitgewerkt voor Objecttype. Voor Gegevensgroeptype en Relatieklasse geldt hetzelfde patroon.
-![](media/KeuzeAttribuutsoort3metMetaUML.png)
 
+<figure id="KeuzeAttribuutsoort3metMetaUML.png">
+  <img src="media/KeuzeAttribuutsoort3metMetaUML.png" alt="" />
+  <figcaption>[BIJSCHRIFT OPNEMEN]</figcaption>
+</figure>
 
 *Keuze tussen relatiedoelen*
 
 Dit UML is uitgewerkt voor Objecttype. Voor Gegevensgroeptype geldt hetzelfde patroon, behalve dat een Gegevensgroeptype geen doel mag zijn voor een Relatiesoort.
-![](media/KeuzeRelatiedoel4metMetaUML.png)
- 
- 
- 
 
-
+<figure id="KeuzeRelatiedoel4metMetaUML.png">
+  <img src="media/KeuzeRelatiedoel4metMetaUML.png" alt="" />
+  <figcaption>[BIJSCHRIFT OPNEMEN]</figcaption>
+</figure>
+ 
 *Packages*
 
-![](media/PackagesMetMetagegevens.png)
+<figure id="PackagesMetMetagegevens.png">
+  <img src="media/PackagesMetMetagegevens.png" alt="" />
+  <figcaption>[BIJSCHRIFT OPNEMEN]</figcaption>
+</figure>
