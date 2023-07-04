@@ -81,6 +81,7 @@ Kern zonder Metagegevens
 
 ### Datatypen
 
+
 <figure id="DatatypenZonderMetagegevens">
   <img src="media/DatatypenZonderMetagegevens.png" alt="" />
   <figcaption>[BIJSCHRIFT OPNEMEN]</figcaption>
@@ -102,7 +103,6 @@ View 2: Datatypen
 | Referentielijst         | «Referentielijst»       | (UML) Datatype           |      | Datatype           |            |
 | Referentie element      | «Referentie element»    | (UML) Property           |      | Attribute          |            |
 | Codelijst               | «Codelijst»             | (UML) Datatype           |      | Datatype           |            |
-
 
 ### Overige
 
