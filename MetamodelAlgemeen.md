@@ -1175,7 +1175,7 @@ geleid tot verandering van de attribuutwaarde. Verdere toelichting,
 zie het hoofdstuk [Afspraken & Regels](#afspraken-regels)
 
 *Toepassing*: alle modelelementen die een kenmerk (kunnen) zijn van een
-objecttype, waarvoor data kan worden bijgehouden: attribuutsoort en relaties (relatiesoort, relatieklasse, externe koppeling).
+objecttype, waarvoor data kan worden bijgehouden: attribuutsoort en relaties (relatiesoort of relatiedoel, relatieklasse, externe koppeling).
 
 #### Metagegeven: **Indicatie formele historie**
 
@@ -1199,7 +1199,7 @@ Formele historie geeft aan wanneer in de administratie een verandering bekend
 is, en is verwerkt. Verdere toelichting, zie het hoofdstuk [Afspraken &Regels](#afspraken-regels).
 
 *Toepassing*: alle modelelementen die een kenmerk (kunnen) zijn van een
-objecttype waarvoor data kan worden bijgehouden: attribuutsoort en relaties (relatiesoort, relatieklasse, externe koppeling).
+objecttype waarvoor data kan worden bijgehouden: attribuutsoort en relaties (relatiesoort of relatiedoel, relatieklasse, externe koppeling).
 
 #### Metagegeven: **Kardinaliteit**
 
