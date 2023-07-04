@@ -335,21 +335,24 @@ De attribuutsoorten worden naar de volgende aspecten gespecificeerd:
 
 De gegevensgroeptypen worden naar de volgende aspecten gespecificeerd:
 
-| **Aspect**                  | **Kardinaliteit** | **Toelichting**                | **In UML 2.5**                        |    | **In EA**      | **In ...** |
-| -------------------------------- | -------- | ---------------------------------------- | ------------------------------------- | -- | -------------- | -------- |
-| **Naam**             | 1            | Algemeen metagegeven. | *name van de metaclass Named element* |    | *Name*         |     |
-| **Alias**            | 0..1         | Algemeen metagegeven. | *UML-Property*                        |    | *Alias*        |     |
-| **Herkomst**         | 1            | Algemeen metagegeven. |                                       |    | *tagged value* |     |
-| **Begrip**           | 0..\*        | Algemeen metagegeven. |                                       |    | *Tagged value* |     |
-| **Definitie**        | 1            | Algemeen metagegeven. | *Body van de metaclass Comment*       |    | *Notes*        |     |
-| **Herkomst definitie** | 1          | Algemeen metagegeven. |                                       |    | *Tagged value* |     |
-| **Toelichting√**     | 0..1         | Algemeen metagegeven. |                                       |    | *Tagged value* |     |
-| **Datum opname**     | 1            | Algemeen metagegeven. |                                       |    | *Tagged value* |     |
-| heeft **attribuut**      | 0..*     | Binding aan een attribuutsoort.                | *owned element* = UML-property     |    | *attribute*          |     |
-| heeft **gegevensgroep**  | 0..*     | Binding aan een gegevensgroep.                 | *owned element* = UML-property     |    | *attribute*          |     |
-| heeft **relatiesoort**   | 0..*     | Binding aan een relatiesoort of relatieklasse. | *owned element* = UML-Relationship |    | *association*        |     |
-| heeft **externe koppeling** | 0..*  | Binding aan een externe koppeling.             | *owned element* = UML-Relationship |    | *association*        |     |
-| verwijst naar **supertype** | 0..*  | Binding aan een generalisatie (naar een ander gegevensgroeptype).  | *owned element* = UML-Relationship |    | *association*        |     |
+| **Aspect**                        | **Kardinaliteit**  | **Toelichting**                                                    | **In UML 2.5**                                                  |     | **In EA**      | **In ...** |
+| --------------------------------- | ------------------ | ------------------------------------------------------------------ | --------------------------------------------------------------- | --- | -------------- | ---------- |
+| **Naam**                          | 1                  | Algemeen metagegeven.                                              | *name van de metaclass Named element*                           |     | *Name*         |            |
+| **Alias**                         | 0..1               | Algemeen metagegeven.                                              | *UML-Property*                                                  |     | *Alias*        |            |
+| **Herkomst**                      | 1                  | Algemeen metagegeven.                                              |                                                                 |     | *tagged value* |            |
+| **Begrip**                        | 0..\*              | Algemeen metagegeven.                                              |                                                                 |     | *Tagged value* |            |
+| **Definitie**                     | 1                  | Algemeen metagegeven.                                              | *Body van de metaclass Comment*                                 |     | *Notes*        |            |
+| **Herkomst definitie**            | 1                  | Algemeen metagegeven.                                              |                                                                 |     | *Tagged value* |            |
+| **Toelichting√**                  | 0..1               | Algemeen metagegeven.                                              |                                                                 |     | *Tagged value* |            |
+| **Datum opname**                  | 1                  | Algemeen metagegeven.                                              |                                                                 |     | *Tagged value* |            |
+| **Kardinaliteit**                 | 1                  | Algemeen metagegeven.                                              | *lowerValue en upperValue van metaclass Multiplicity Element*   |     | *Multiplicity van de source role van de bijbehorende composite relatie* |            |
+| **Authentiek**                    | 1                  | Algemeen metagegeven.                                              |                                                                 |     | *Tagged value* |            |
+| heeft **gegevensgroeptype**       | 1                  | Binding aan een gegevensgroeptype.                                 | *owned element* = UML-Class                                     |     | *type* = Class |            |
+| heeft **attribuut**               | 0..*               | Binding aan een attribuutsoort.                                    | *owned element* = UML-property                                  |     | *attribute*    |            |
+| heeft **gegevensgroep**           | 0..*               | Binding aan een gegevensgroep.                                     | *owned element* = UML-property                                  |     | *attribute*    |            |
+| heeft **relatiesoort**            | 0..*               | Binding aan een relatiesoort of relatieklasse.                     | *owned element* = UML-Relationship                              |     | *association*  |            |
+| heeft **externe koppeling**       | 0..*               | Binding aan een externe koppeling.                                 | *owned element* = UML-Relationship                              |     | *association*  |            |
+| verwijst naar **supertype**       | 0..*               | Binding aan een generalisatie (naar een ander gegevensgroeptype).  | *owned element* = UML-Relationship                              |     | *association*  |            |
 
 #### «Gegevensgroep»
 
