@@ -125,7 +125,7 @@ We visualiseren het voorgaande in onderstaande figuur, voor de situatie dat er e
 
 <figure id="informatiemodel">
   <img src="media/informatiemodel.png" alt="" />
-  <figcaption>[BIJSCHRIFT OPNEMEN]</figcaption>
+  <figcaption>[Wat beschrijft een informatiemodel]</figcaption>
 </figure>
 
 Als een andere registratie op haar eigen manier tegen dezelfde ‘Jan uit de werkelijkheid’ aankijkt, dan is ook in die registratie een (eigen, apart) object voor Jan aanwezig en Jan kan in dit (eigen, aparte) informatiemodel anders gemodelleerd zijn. Bijvoorbeeld in het ene domein als werknemer en in het andere domein als persoon of partner. Beide objecten Jan representeren natuurlijk dezelfde ‘Jan uit

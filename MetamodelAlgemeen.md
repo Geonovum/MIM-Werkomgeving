@@ -83,7 +83,7 @@ In diagramvorm:
 
 <figure id="KernZonderUML">
   <img src="media/KernZonderUML.png" alt="" />
-  <figcaption>[BIJSCHRIFT OPNEMEN]</figcaption>
+  <figcaption>[Kern van een informatiemodel]</figcaption>
 </figure>
 
 Kern zonder Metagegevens
@@ -115,7 +115,7 @@ In diagramvorm:
 
 <figure id="DatatypenZonderUML">
   <img src="media/DatatypenZonderUML.png" alt="" />
-  <figcaption>[BIJSCHRIFT OPNEMEN]</figcaption>
+  <figcaption>[Datatypen]</figcaption>
 </figure>
 
 Diagram: Datatypen zonder Metagegevens
@@ -134,7 +134,7 @@ De betekenis van deze modelelementen en de beschrijvingen ervan staan in [Overig
 In diagram vorm:
 <figure id="ConstraintsZonderUML">
   <img src="media/ConstraintsZonderUML.png" alt="" />
-  <figcaption>[BIJSCHRIFT OPNEMEN]</figcaption>
+  <figcaption>[Constraint]</figcaption>
 </figure>
 
 Diagram: Constraint
@@ -165,7 +165,7 @@ Dit diagram is uitgewerkt voor Objecttype. Voor Gegevensgroeptype en Relatieklas
 
 <figure id="KeuzeDatatype1">
   <img src="media/KeuzeDatatype1.png" alt="" />
-  <figcaption>[BIJSCHRIFT OPNEMEN]</figcaption>
+  <figcaption>[Keuzen tussen datatypen]</figcaption>
 </figure>
 
 Diagram: Keuze tussen datatypen
@@ -178,7 +178,7 @@ Een objecttype of gegevensgroep kan normaal een attribuutsoort hebben met een da
 
 <figure id="KeuzeAttribuutsoort2">
   <img src="media/KeuzeAttribuutsoort2.png" alt="" />
-  <figcaption>[BIJSCHRIFT OPNEMEN]</figcaption>
+  <figcaption>[Keuze tussen attribuutsoorten]</figcaption>
 </figure>
 
 Diagram: Keuze tussen attribuutsoorten. Patroon geldt ook voor Gegevensgroeptype en Relatieklasse
@@ -191,7 +191,7 @@ Een objecttype of gegevensgroep kan normaal een attribuutsoort hebben met een da
 
 <figure id="KeuzeAttribuutsoort3">
   <img src="media/KeuzeAttribuutsoort3.png" alt="" />
-  <figcaption>[BIJSCHRIFT OPNEMEN]</figcaption>
+  <figcaption>[Keuze tussen attribuutsoorten binnen een attribuutsoort]</figcaption>
 </figure>
 
 Diagram: Keuze tussen attribuutsoorten binnen een attribuutsoort. Patroon geldt ook voor Gegevensgroeptype en Relatieklasse
@@ -204,7 +204,7 @@ Een objecttype of gegevensgroep kan normaal een relatiesoort hebben, die gekoppe
 
 <figure id="KeuzeRelatiedoel4">
   <img src="media/KeuzeRelatiedoel4.png" alt="" />
-  <figcaption>[BIJSCHRIFT OPNEMEN]</figcaption>
+  <figcaption>[Keuze tussen relatiedoelen]</figcaption>
 </figure>
 
 Diagram: Keuze tussen relatiedoelen. Patroon geldt ook voor Gegevensgroeptype, behalve dat een Gegevensgroeptype geen doel mag zijn van een Relatiesoort.
@@ -223,7 +223,7 @@ In diagramvorm:
 
 <figure id="AssociatierollenZonderUml">
   <img src="media/AssociatierollenZonderUml.png" alt="" />
-  <figcaption>[BIJSCHRIFT OPNEMEN]</figcaption>
+  <figcaption>[Relatierol]</figcaption>
 </figure>
 
 Diagram: Relatierol
@@ -256,7 +256,7 @@ In diagramvorm:
 
 <figure id="PackageZonderUml">
   <img src="media/PackageZonderUml.png" alt="" />
-  <figcaption>[BIJSCHRIFT OPNEMEN]</figcaption>
+  <figcaption>[groepering]</figcaption>
 </figure>
 
 Diagram: groepering
