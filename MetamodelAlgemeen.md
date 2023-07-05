@@ -858,7 +858,7 @@ Het is bij deze use case niet de bedoeling om twee nieuwe relatiesoorten, eigena
 
 <figure id="relatiedoelkeuze">
   <img src="media/relatiedoelkeuze.png" alt="" />
-  <figcaption>[BIJSCHRIFT OPNEMEN]</figcaption>
+  <figcaption>[Voorbeeld van keuze tussen relatiedoelen uitgewerkt in een UML diagram]</figcaption>
 </figure>
 
 
