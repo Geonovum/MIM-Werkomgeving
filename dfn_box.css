@@ -2,6 +2,10 @@
     text-transform: none;
 }*/
 
+section {
+    counter-reset: css-counter none;
+}
+
 :is(aside,div).definition,
 div.illegal-example {
     padding: 0.5em;
@@ -15,14 +19,25 @@ div.illegal-example {
     border-left-style: solid;
     border-color: #a87efc;
     background: #efe8fa;
+    counter-increment: css-counter 1;
 }
 
-aside.definition div.definition {
+/*aside.definition div.definition {
     border-left-width: 0.1em;
     border-color: #999;
     background: #fff;
+}*/
+
+/*dfn:before {
+    content:"DEFINITIE " counter(css-counter) ": ";
+    font-weight: normal;
+}*/
+
+dfn {
+    font-style: normal;
 }
 
-.definition pre {
-    background-color: rgba(0, 0, 0, 0.03);
-}
+/*dfn:after {
+    content: "\A";
+    white-space: pre-wrap;
+}*/

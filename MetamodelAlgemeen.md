@@ -241,7 +241,7 @@ het maken van een informatiemodel. Bij elk modelelement is een definitie en een 
 Voordat het modelelement objecttype gedefinieerd wordt, en andere modelelementen,
 wordt eerst beschreven wat objecten en gegevens zijn en hoe deze zich verhouden tot modelelementen.
 
-**Object en gegeven**
+#### Object en gegeven
 
 Een objecttype is een groep van gelijksoortige objecten. Zo zijn `Jan` en `Katrien` allebei objecten die gelijksoortig zijn en beide getypeerd kunnen worden als `persoon`. Het zijn allebei personen, oftewel het objecttype van beiden is `Persoon`. In het informatiemodel nemen we `Persoon` op met behulp van het modelelement `Objecttype`.
 
@@ -249,33 +249,45 @@ Diagram: [Kern](#kern)
 
 Om duidelijk(er) te maken wat wordt bedoeld kijken we eerst naar het begrip ‘object’.
 
-**Object**
+#### Object
 
-<aside class="definition">
-  <dfn>Object (test)</dfn>: Hier komt de definitie van "Object" (test)
+<dfn>Object</dfn>Een ding, een tastbaar iets, in de werkelijkheid, zoals daarnaar gekeken wordt vanuit een bepaald domein.
+
+<!-- <aside class="definition">
+  <dfn>Object</dfn>Een ding, een tastbaar iets, in de werkelijkheid, zoals daarnaar gekeken wordt vanuit een bepaald domein.
 </aside>
 
->   **Definitie Object**  
->   Een ding, een tastbaar iets, in de werkelijkheid, zoals daarnaar gekeken
->   wordt vanuit een bepaald domein.
+<aside class="definition">
+  <dfn>Object-kopie</dfn>Een ding, een tastbaar iets, in de werkelijkheid, zoals daarnaar gekeken wordt vanuit een bepaald domein.
+</aside> -->
 
-NB. **Een object is geen modelelement** in een informatiemodel. Die worden aangeduid met het MIM-stereotype [«Objecttype»](#objecttype).
+<!-- >   **Definitie Object**  
+>   Een ding, een tastbaar iets, in de werkelijkheid, zoals daarnaar gekeken
+>   wordt vanuit een bepaald domein. -->
+
+<aside class="note" title="Object vs. Objecttype">
+  Een object is geen modelelement in een informatiemodel. Die worden aangeduid met het MIM-stereotype <a href="#objecttype">«Objecttype»</a>.
+</aside>
 
 *Toelichting:* Met in de werkelijkheid wordt bedoeld dat het om de daadwerkelijke onderwerpen van gesprek gaat, de verzameling van de concrete tastbare dingen waarover we het hebben. Bijvoorbeeld, de persoon Jan, Paleis 't Loo. Het wordt veelal als niet politiek correct beschouwd mensen als objecten te zien. In dit kader, de informatievoorziening, beschouwen we evenwel natuurlijke en niet-natuurlijke personen wel als objecten. ‘Tastbaar’ moet hierbij ruim geïnterpreteerd worden. Het gaat niet alleen om fysiek herkenbare objecten zoals auto’s, gebouwen en mensen, ook om zogenaamde virtuele objecten waarover binnen het domein door betrokkenen gecommuniceerd wordt zoals kadastrale percelen, (maatschappelijke) activiteiten en processen. Hoe een ‘tastbaar iets’ als een object beschouwd wordt, hangt af van het domein waarvoor dat ‘tastbaar iets’ relevant is. Zo wordt de gebouwde omgeving in het ene domein beschouwd als een verzameling gebouwen terwijl een ander domein daarin panden onderscheidt. Een object is voor een domein relevant als eigenschappen (kenmerken) daarvan van belang zijn voor het functioneren van dat domein.
 
 **Gegeven**
 
+Een object heeft kenmerken waarover gegevens bekend zijn.
+
 <aside class="definition">
-  <dfn>Gegeven (test)</dfn>: Hier komt de definitie van "Gegeven" (test)
+  <dfn>Gegeven</dfn>De betekenisvolle formulering van een waargenomen feit, waaraan een waarde kan worden toegekend.
 </aside>
 
-Een object heeft kenmerken waarover gegevens bekend zijn.
+<aside class="definition">
+  <dfn>Gegeven-kopie</dfn>De betekenisvolle formulering van een waargenomen feit, waaraan een waarde kan worden toegekend.
+</aside>
 
 >   **Definitie Gegeven**  
 >   De betekenisvolle formulering van een waargenomen feit, waaraan een waarde
 >   kan worden toegekend.
 
-NB. **Een gegeven is geen modelelement in een informatiemodel**.
+<aside class="note" title="Gegeven">Een gegeven is geen modelelement in een informatiemodel.</aside>
 
 *Toelichting:*
 
