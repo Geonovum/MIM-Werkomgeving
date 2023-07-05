@@ -1,9 +1,11 @@
-/*span.example-title {
-    text-transform: none;
-}*/
+/*This css code defines the styling of a dfn block*/
+/*It is based on the styling of an example block */
+/*from the w3c code*/
+/*It uses a css counter to number the elements*/
 
-section {
-    counter-reset: css-counter none;
+/*Set the scope of the counter to body of ReSpec Doc*/
+body.h-entry {
+    counter-reset: dfn-counter 0;
 }
 
 :is(aside,div).definition,
@@ -17,27 +19,27 @@ div.illegal-example {
 :is(aside,div).definition {
     border-left-width: 0.5em;
     border-left-style: solid;
-    border-color: #a87efc;
-    background: #efe8fa;
-    counter-increment: css-counter 1;
+    border-color: #829fb3;
+    background: #f5f8fa;
+    /*set the counter interval value*/
+    counter-increment: dfn-counter 1;
 }
 
-/*aside.definition div.definition {
-    border-left-width: 0.1em;
-    border-color: #999;
-    background: #fff;
-}*/
-
-/*dfn:before {
-    content:"DEFINITIE " counter(css-counter) ": ";
+/*Add string "DEFINITIE" and counter to dfn block*/
+dfn:before {
+    /*call the counter*/
+    content:"DEFINITIE " counter(dfn-counter) ": ";
+    /*overide w3c font-weight*/
     font-weight: normal;
-}*/
+}
 
 dfn {
+    /*overide w3c font-weight*/
     font-style: normal;
 }
 
-/*dfn:after {
+/*Put the explanation on the next line*/
+dfn:after {
     content: "\A";
     white-space: pre-wrap;
-}*/
+}
