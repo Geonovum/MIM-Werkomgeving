@@ -4,7 +4,7 @@
  
 <figure id="OverzichtToegepasteUMLmetaclasses.png">
   <img src="media/OverzichtToegepasteUMLmetaclasses.png" alt="" />
-  <figcaption>[BIJSCHRIFT OPNEMEN]</figcaption>
+  <figcaption>[overzicht toegepaste UML metaclasses]</figcaption>
 </figure>
 
 ### Modelelementen en metagegevens als diagram
@@ -15,28 +15,28 @@ Deze bijlage bevat alle modelelementen en metagegevens in één diagram.
 
 <figure id="KernMetMetagegevens_Alt1.png">
   <img src="media/KernMetMetagegevens_Alt1.png" alt="" />
-  <figcaption>[BIJSCHRIFT OPNEMEN]</figcaption>
+  <figcaption>[Relatiesoort is leidend]</figcaption>
 </figure>
   
 *Kern - [Relatierol is leidend](#relatierol-is-leidend-alternatief-2)*
 
 <figure id="KernMetMetagegevens_Alt2.png">
   <img src="media/KernMetMetagegevens_Alt2.png" alt="" />
-  <figcaption>[BIJSCHRIFT OPNEMEN]</figcaption>
+  <figcaption>[Relatierol is leidend]</figcaption>
 </figure>
    
 *Datatypen*
 
 <figure id="DatatypenMetMetagegevens.png">
   <img src="media/DatatypenMetMetagegevens.png" alt="" />
-  <figcaption>[BIJSCHRIFT OPNEMEN]</figcaption>
+  <figcaption>[Datatypen]</figcaption>
 </figure>
  
 *Constraints*
 
 <figure id="ConstraintsMetMetagegevens.png">
   <img src="media/ConstraintsMetMetagegevens.png" alt="" />
-  <figcaption>[BIJSCHRIFT OPNEMEN]</figcaption>
+  <figcaption>[Constraints]</figcaption>
 </figure>
 
 *Keuze*
@@ -47,7 +47,7 @@ Dit UML is uitgewerkt voor Objecttype. Voor Gegevensgroeptype en Relatieklasse g
 
 <figure id="KeuzeDatatype1metMeta.png">
   <img src="media/KeuzeDatatype1metMeta.png" alt="" />
-  <figcaption>[BIJSCHRIFT OPNEMEN]</figcaption>
+  <figcaption>[keuze tussen datatypen]</figcaption>
 </figure>
 
 *Keuze tussen attribuutsoorten*
@@ -56,7 +56,7 @@ Dit UML is uitgewerkt voor Objecttype. Voor Gegevensgroeptype en Relatieklasse g
 
 <figure id="KeuzeAttribuutsoort2metMetaUML.png">
   <img src="media/KeuzeAttribuutsoort2metMetaUML.png" alt="" />
-  <figcaption>[BIJSCHRIFT OPNEMEN]</figcaption>
+  <figcaption>[keuze tussen attribuutsoorten]</figcaption>
 </figure>
 
 *Keuze tussen attribuutsoorten binnen de context van een attribuutsoort*
@@ -65,7 +65,7 @@ Dit UML is uitgewerkt voor Objecttype. Voor Gegevensgroeptype en Relatieklasse g
 
 <figure id="KeuzeAttribuutsoort3metMetaUML.png">
   <img src="media/KeuzeAttribuutsoort3metMetaUML.png" alt="" />
-  <figcaption>[BIJSCHRIFT OPNEMEN]</figcaption>
+  <figcaption>[Keuze tussen attribuutsoorten binnen de context van een attribuutsoort]</figcaption>
 </figure>
 
 *Keuze tussen relatiedoelen*
@@ -74,12 +74,12 @@ Dit UML is uitgewerkt voor Objecttype. Voor Gegevensgroeptype geldt hetzelfde pa
 
 <figure id="KeuzeRelatiedoel4metMetaUML.png">
   <img src="media/KeuzeRelatiedoel4metMetaUML.png" alt="" />
-  <figcaption>[BIJSCHRIFT OPNEMEN]</figcaption>
+  <figcaption>[Keuze tussen relatiedoelen]</figcaption>
 </figure>
  
 *Packages*
 
 <figure id="PackagesMetMetagegevens.png">
   <img src="media/PackagesMetMetagegevens.png" alt="" />
-  <figcaption>[BIJSCHRIFT OPNEMEN]</figcaption>
+  <figcaption>[Packages]</figcaption>
 </figure>

@@ -130,7 +130,7 @@ aangeeft dat het om een 2 dimensionale geometrie gaat.
 
 <figure id="DatatypenGeneralisatie">
   <img src="media/47002e9ebd60742cec8111996ea22fbc.png" alt="" />
-  <figcaption>[BIJSCHRIFT OPNEMEN]</figcaption>
+  <figcaption>[Datatypen Generalisatie]</figcaption>
 </figure>
 
 Datatypen Generalisatie
