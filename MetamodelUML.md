@@ -56,7 +56,12 @@ De ten opzichte van MIM versie 1.0.1 gewijzigde modelelementen zijn in rood aang
 
 ### Kern
 
-![](media/KernZonderMetagegevens.png)
+<figure id="KernZonderMetagegevens">
+  <img src="media/KernZonderMetagegevens.png" alt="" />
+  <figcaption>Kern zonder metagegevens</figcaption>
+</figure>
+
+media/KernZonderMetagegevens.png
 
 Kern zonder Metagegevens
 
@@ -76,7 +81,13 @@ Kern zonder Metagegevens
 
 ### Datatypen
 
-![](media/DatatypenZonderMetagegevens.png)
+
+<figure id="DatatypenZonderMetagegevens">
+  <img src="media/DatatypenZonderMetagegevens.png" alt="" />
+  <figcaption>Datatypen zonder metagegevens</figcaption>
+</figure>
+
+media/DatatypenZonderMetagegevens.png
 
 Datatypen zonder Metagegevens
 
@@ -93,12 +104,16 @@ View 2: Datatypen
 | Referentie element      | «Referentie element»    | (UML) Property           |      | Attribute          |            |
 | Codelijst               | «Codelijst»             | (UML) Datatype           |      | Datatype           |            |
 
-
 ### Overige
 
 Constraint
 
-![](media/ConstraintsZonderMetagegevens.png)
+<figure id="ConstraintsZonderMetagegevens">
+  <img src="media/ConstraintsZonderMetagegevens.png" alt="" />
+  <figcaption>Constraint zonder metagegevens</figcaption>
+</figure>
+
+media/ConstraintsZonderMetagegevens.png
 
 *Constraint*
 
@@ -129,7 +144,12 @@ Merk op dat de diagrammen op metamodel niveau zijn gemodelleerd. Hoe dit op info
 
 Dit UML is uitgewerkt voor Objecttype. Voor Gegevensgroeptype en Relatieklasse geldt hetzelfde patroon.
 
-![](media/KeuzeDatatype1UML.png)
+<figure id="KeuzeDatatype1UML">
+  <img src="media/KeuzeDatatype1UML.png" alt="" />
+  <figcaption>Keuze tussen datatypen</figcaption>
+</figure>
+
+media/KeuzeDatatype1UML.png
 
 
 Modellering van deze Keuze in een informatiemodel: 
@@ -143,7 +163,12 @@ Gebruik de Keuze voor een (MIM) Attrituutsoort:
 
 Dit UML is uitgewerkt voor Objecttype. Voor Gegevensgroeptype en Relatieklasse geldt hetzelfde patroon.
 
-![](media/KeuzeAttribuutsoort2UML.png)
+<figure id="KeuzeAttribuutsoort2UML">
+  <img src="media/KeuzeAttribuutsoort2UML.png" alt="" />
+  <figcaption>Keuze tussen 2 of meer attribuutsoorten</figcaption>
+</figure>
+
+media/KeuzeAttribuutsoort2UML.png
 
 Modellering van het Keuze in een informatiemodel: 
 - Modelleer in UML een _UML-Class_ met stereotype _keuze_. 
@@ -158,7 +183,12 @@ Er is hier voor de aankoppeling gekozen voor een UML-Attribute en niet voor een 
 
 Dit UML is uitgewerkt voor Objecttype. Voor Gegevensgroeptype en Relatieklasse geldt hetzelfde patroon.
 
-![](media/KeuzeAttribuutsoort3UML.png)
+<figure id="KeuzeAttribuutsoort3UML">
+  <img src="media/KeuzeAttribuutsoort3UML.png" alt="" />
+  <figcaption>Keuze tussen meerdere manieren om 1 betekenisvol attribuutsoort in te vullen</figcaption>
+</figure>
+
+media/KeuzeAttribuutsoort3UML.png
 
 Modellering van de Keuze in een informatiemodel: 
 - Modelleer in UML een _UML-Class_ met stereotype _keuze_. 
@@ -172,7 +202,12 @@ Gebruik de Keuze voor de (MIM) Attribuutsoort:
 
 Dit UML is uitgewerkt voor Objecttype. Voor Gegevensgroeptype geldt hetzelfde patroon, behalve dat een Gegevensgroeptype geen doel mag zijn van een Relatiesoort.
 
-![](media/KeuzeRelatiedoel4UML.png)
+<figure id="KeuzeRelatiedoel4UML">
+  <img src="media/KeuzeRelatiedoel4UML.png" alt="" />
+  <figcaption>Keuze tussen relatiedoelen, als nadere invulling van 1 betekenisvolle relatiesoort</figcaption>
+</figure>
+
+media/KeuzeRelatiedoel4UML.png
 
 Modellering van het Keuze in een informatiemodel: 
 - Modelleer in UML een _UML-Class_ met stereotype _keuze_. 
@@ -197,10 +232,14 @@ Er zijn drie metaklassen met de naam Keuze maar elke keer als extensie van een a
 
 Merk op dat deze tabel niet gaat over de modelelementen waaruit een keuze gemaakt moet worden. Dat zijn immers de modelelementen datatype, attribuutsoort en relatiesoort. Deze tabel gaat over de modellering van Keuze in UML oftewel de extra hulpconstructies die in UML nodig zijn om de modelelementen waaruit een keuze gemaakt moet worden aan te koppelen aan het MIM-modelelement waarvoor de keuze geldt. Deze extra hulpconstructies krijgen als stereotype _keuze_ en dit geeft aan dat de betekenis hiervan anders is dan de betekenis van de MIM-elementen datatype, attirbuutsoort en relatiesoort. 
 
-
 *Relatierol*
 
-![](media/AssociatierollenZonderMetagegevens.png)
+<figure id="AssociatierollenZonderMetagegevens">
+  <img src="media/AssociatierollenZonderMetagegevens.png" alt="" />
+  <figcaption>Relatierol</figcaption>
+</figure>
+
+media/AssociatierollenZonderMetagegevens.png
 
 Relatierol
 
@@ -226,7 +265,12 @@ View 3c: Groepering
 
 *Packages*
 
-![](media/PackagesZonderMetagegevens.png)
+<figure id="PackagesZonderMetagegevens">
+  <img src="media/PackagesZonderMetagegevens.png" alt="" />
+  <figcaption>Packages</figcaption>
+</figure>
+
+media/PackagesZonderMetagegevens.png
 
 | **MIM metaclass**     | **Stereotype**    | **Metaclass UML 2.5** |      | **In EA** | **In ...** |
 | --------------------- | ----------------- | --------------------- | ---- | --------- | ---------- |
