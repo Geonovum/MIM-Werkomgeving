@@ -81,7 +81,10 @@ De betekenis van deze modelelementen en de beschrijvingen ervan staat in [Object
 
 In diagramvorm:
 
-![](media/KernZonderUML.png)
+<figure id="KernZonderUML">
+  <img src="media/KernZonderUML.png" alt="" />
+  <figcaption>Kern van een informatiemodel</figcaption>
+</figure>
 
 Kern zonder Metagegevens
 
@@ -110,7 +113,10 @@ De betekenis van deze modelelementen en de beschrijvingen ervan staan in [Dataty
 
 In diagramvorm:
 
-![](media/DatatypenZonderUML.png)
+<figure id="DatatypenZonderUML">
+  <img src="media/DatatypenZonderUML.png" alt="" />
+  <figcaption>Datatypen</figcaption>
+</figure>
 
 Diagram: Datatypen zonder Metagegevens
 
@@ -126,7 +132,10 @@ View 3a: constraint en keuze.
 De betekenis van deze modelelementen en de beschrijvingen ervan staan in [Overige modelelementen](#Overige-modelelementen)
 
 In diagram vorm:
-![](media/ConstraintsZonderUML.png)
+<figure id="ConstraintsZonderUML">
+  <img src="media/ConstraintsZonderUML.png" alt="" />
+  <figcaption>Constraint</figcaption>
+</figure>
 
 Diagram: Constraint
 
@@ -154,7 +163,11 @@ Dit diagram is uitgewerkt voor Objecttype. Voor Gegevensgroeptype en Relatieklas
 
 1 attribuutsoort heeft normaal 1 datatype. Als er sprake is van een keuze, dan is het attribuutsoort gekoppeld met een keuze en de keuze geeft 2 of meer datatypen aan.
 
-![](media/KeuzeDatatype1.png)
+<figure id="KeuzeDatatype1">
+  <img src="media/KeuzeDatatype1.png" alt="" />
+  <figcaption>Keuzen tussen datatypen</figcaption>
+</figure>
+
 Diagram: Keuze tussen datatypen
 
 *Use case 2: Keuze tussen 2 of meer attribuutsoorten*
@@ -163,7 +176,10 @@ Dit diagram is uitgewerkt voor Objecttype. Voor Gegevensgroeptype en Relatieklas
 
 Een objecttype of gegevensgroep kan normaal een attribuutsoort hebben met een datatype (de lijn links onder). Als een objecttype meerdere op zichzelf staande attribuutsoorten heeft en er sprake is van een keuze tussen een aantal van deze attribuutsoorten, dan is het objecttype gekoppeld met een keuze (de lijn links boven) en de keuze geeft 2 of meer attribuutsoorten aan (met elk een eigen datatype).
 
-![](media/KeuzeAttribuutsoort2.png)
+<figure id="KeuzeAttribuutsoort2">
+  <img src="media/KeuzeAttribuutsoort2.png" alt="" />
+  <figcaption>Keuze tussen attribuutsoorten</figcaption>
+</figure>
 
 Diagram: Keuze tussen attribuutsoorten. Patroon geldt ook voor Gegevensgroeptype en Relatieklasse
 
@@ -173,7 +189,10 @@ Dit diagram is uitgewerkt voor Objecttype. Voor Gegevensgroeptype en Relatieklas
 
 Een objecttype of gegevensgroep kan normaal een attribuutsoort hebben met een datatype (de lijn links). Als er sprake is van een attribuutsoort die op meerdere manieren ingevuld kan worden met een keuze hiertussen, dan is het attribuutsoort niet gekoppeld met een datatype, maar dan is het attribuutsoort gekoppeld met een keuze en de keuze geeft 2 of meer attribuutsoorten aan (met elk een eigen datatype).
 
-![](media/KeuzeAttribuutsoort3.png)
+<figure id="KeuzeAttribuutsoort3">
+  <img src="media/KeuzeAttribuutsoort3.png" alt="" />
+  <figcaption>Keuze tussen attribuutsoorten binnen een attribuutsoort</figcaption>
+</figure>
 
 Diagram: Keuze tussen attribuutsoorten binnen een attribuutsoort. Patroon geldt ook voor Gegevensgroeptype en Relatieklasse
 
@@ -183,7 +202,11 @@ Dit diagram is uitgewerkt voor Objecttype. Voor Gegevensgroeptype geldt hetzelfd
 
 Een objecttype of gegevensgroep kan normaal een relatiesoort hebben, die gekoppeld is aan een objecttype. Als er sprake is van een relatiesoort met een keuze, dan is het relatiedoel van de relatiesoort niet gekoppeld aan 1 objecttype, maar dan is het objecttype gekoppeld aan een keuze en deze keuze geeft 2 of meer relatiedoelen aan.
 
-![](media/KeuzeRelatiedoel4.png)
+<figure id="KeuzeRelatiedoel4">
+  <img src="media/KeuzeRelatiedoel4.png" alt="" />
+  <figcaption>Keuze tussen relatiedoelen</figcaption>
+</figure>
+
 Diagram: Keuze tussen relatiedoelen. Patroon geldt ook voor Gegevensgroeptype, behalve dat een Gegevensgroeptype geen doel mag zijn van een Relatiesoort.
 
 *Relatierol*
@@ -198,7 +221,10 @@ View 3b: Relatiesoort en relatierol
 
 In diagramvorm:
 
-![](media/AssociatierollenZonderUml.png)
+<figure id="AssociatierollenZonderUml">
+  <img src="media/AssociatierollenZonderUml.png" alt="" />
+  <figcaption>Relatierol</figcaption>
+</figure>
 
 Diagram: Relatierol
 
@@ -228,7 +254,10 @@ De betekenis van deze modelelementen en de beschrijvingen ervan staan in [Packag
 
 In diagramvorm:
 
-![](media/PackageZonderUml.png)
+<figure id="PackageZonderUml">
+  <img src="media/PackageZonderUml.png" alt="" />
+  <figcaption>Groepering</figcaption>
+</figure>
 
 Diagram: groepering
 
@@ -777,7 +806,11 @@ Er is sprake van een relatiesoort R0 en aanvullend hierbij een keuze tussen rela
 
 Het is bij deze use case niet de bedoeling om twee nieuwe relatiesoorten, eigenaar_persoon en eigenaar_bedrijf, te introduceren en al zeker niet om de relatiesoort eigenaar kwijt te raken. We modelleren daarom 1 relatiesoort met de naam eigenaar en een *Keuze* tussen relatiedoelen.
 
-![](media/relatiedoelkeuze.png)
+<figure id="relatiedoelkeuze">
+  <img src="media/relatiedoelkeuze.png" alt="" />
+  <figcaption>Voorbeeld van keuze tussen relatiedoelen uitgewerkt in een UML-diagram</figcaption>
+</figure>
+
 
 Diagram: Voorbeeld van keuze tussen relatiedoelen uitgewerkt in een UML diagram.
 
@@ -1063,6 +1096,13 @@ values](#toegestane-waarden-voor-bepaalde-metadata-gegevens). Materiële histori
 
 *Toepassing*: alle modelelementen die een kenmerk (kunnen) zijn van een objecttype, waarvoor data kan worden bijgehouden: attribuutsoort en relaties (relatiesoort, relatieklasse, externe koppeling).
 
+De in te vullen waarde komt uit: zie [Tagged values en waardenbereik tagged
+values](#toegestane-waarden-voor-bepaalde-metadata-gegevens)
+
+Materiële historie geeft aan wanneer een verandering is opgetreden in de werkelijkheid die heeft geleid tot verandering van de attribuutwaarde. Verdere toelichting, zie het hoofdstuk [Afspraken & Regels](#afspraken-regels)
+
+*Toepassing*: alle modelelementen die een kenmerk (kunnen) zijn van een objecttype, waarvoor data kan worden bijgehouden: attribuutsoort en relaties (relatiesoort of relatiedoel, relatieklasse, externe koppeling).
+
 #### Metagegeven: **Indicatie formele historie**
 
 <aside class="definition">
@@ -1077,6 +1117,12 @@ Met te bevragen wordt bedoeld, er wordt historie bijgehouden op enerlei wijze, w
 values](#toegestane-waarden-voor-bepaalde-metadata-gegevens). Formele historie geeft aan wanneer in de administratie een verandering bekend is, en is verwerkt. Verdere toelichting, zie het hoofdstuk [Afspraken &Regels](#afspraken-regels).
 
 *Toepassing*: alle modelelementen die een kenmerk (kunnen) zijn van een objecttype waarvoor data kan worden bijgehouden: attribuutsoort en relaties (relatiesoort, relatieklasse, externe koppeling).
+
+De in te vullen waarde komt uit: zie [Tagged values en waardenbereik tagged values](#toegestane-waarden-voor-bepaalde-metadata-gegevens)
+
+Formele historie geeft aan wanneer in de administratie een verandering bekend is, en is verwerkt. Verdere toelichting, zie het hoofdstuk [Afspraken &Regels](#afspraken-regels).
+
+*Toepassing*: alle modelelementen die een kenmerk (kunnen) zijn van een objecttype waarvoor data kan worden bijgehouden: attribuutsoort en relaties (relatiesoort of relatiedoel, relatieklasse, externe koppeling).
 
 #### Metagegeven: **Kardinaliteit**
 
