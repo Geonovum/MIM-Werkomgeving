@@ -305,9 +305,9 @@ De objecten die in het beschouwde domein onderkend worden zijn zelf nooit abstra
 Een attribuutsoort is de metaklasse waarmee kenmerken van een objecttype worden vastgelegd. Het zijn de kenmerken waarvoor gegevens worden bijgehouden.  
 Voordat we attribuutsoort definiëren kijken we eerst naar het begrip ‘gegeven’.
 
->   **Definitie Attribuutsoort**  
->   De typering van gelijksoortige gegevens die voor een objecttype van
->   toepassing is.
+<aside class="definition">
+  <dfn>Attribuutsoort</dfn>De typering van gelijksoortige gegevens die voor een objecttype van toepassing is.
+</aside>
 
 *Toelichting*
 De gegevens Jan en Katrien worden als gelijksoortig gezien en worden daarom ondergebracht in attribuutsoort 'naam'.
@@ -321,9 +321,9 @@ andere kenmerken, zo is een relatiesoort ook een kenmerk of eigenschap.
 
 #### Gegevensgroep
 
->   **Definitie Gegevensgroep**  
->   Een typering van een groep van gelijksoortige gegevens die voor een
->   objecttype van toepassing is.
+<aside class="definition">
+  <dfn>Gegevensgroep</dfn>Een typering van een groep van gelijksoortige gegevens die voor een objecttype van toepassing is.
+</aside>
 
 *Toelichting:* Dit modelelement verzorgt de modelmatige aankoppeling van een
 gegevensgroeptype aan het objecttype waartoe een gegevensgroeptype onlosmakelijk
@@ -335,9 +335,9 @@ een gegevensgroeptype.
 
 #### Gegevensgroeptype
 
->   **Definitie Gegevensgroeptype**  
->   Een groep van met elkaar samenhangende attribuutsoorten. Een
->   gegevensgroeptype is altijd een type van een gegevensgroep.
+<aside class="definition">
+  <dfn>Gegevensgroeptype</dfn>Een groep van met elkaar samenhangende attribuutsoorten. Een gegevensgroeptype is altijd een type van een gegevensgroep.
+</aside>
 
 *Toelichting:* De attribuutsoorten van het gegevensgroeptype zijn semantisch
 gezien eigenschappen van het objecttype. Echter, vanwege samenhangend gedrag (ze
