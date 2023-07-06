@@ -58,7 +58,7 @@ De ten opzichte van MIM versie 1.0.1 gewijzigde modelelementen zijn in rood aang
 
 <figure id="KernZonderMetagegevens">
   <img src="media/KernZonderMetagegevens.png" alt="" />
-  <figcaption>[Kern zonder metagegevens]</figcaption>
+  <figcaption>Kern zonder metagegevens</figcaption>
 </figure>
 
 media/KernZonderMetagegevens.png
@@ -84,7 +84,7 @@ Kern zonder Metagegevens
 
 <figure id="DatatypenZonderMetagegevens">
   <img src="media/DatatypenZonderMetagegevens.png" alt="" />
-  <figcaption>[Datatypen zonder Metagegevens]</figcaption>
+  <figcaption>Datatypen zonder metagegevens</figcaption>
 </figure>
 
 media/DatatypenZonderMetagegevens.png
@@ -110,7 +110,7 @@ Constraint
 
 <figure id="ConstraintsZonderMetagegevens">
   <img src="media/ConstraintsZonderMetagegevens.png" alt="" />
-  <figcaption>[Constraint zonder metagegevens]</figcaption>
+  <figcaption>Constraint zonder metagegevens</figcaption>
 </figure>
 
 media/ConstraintsZonderMetagegevens.png
@@ -146,7 +146,7 @@ Dit UML is uitgewerkt voor Objecttype. Voor Gegevensgroeptype en Relatieklasse g
 
 <figure id="KeuzeDatatype1UML">
   <img src="media/KeuzeDatatype1UML.png" alt="" />
-  <figcaption>[Keuze tussen datatypen]</figcaption>
+  <figcaption>Keuze tussen datatypen</figcaption>
 </figure>
 
 media/KeuzeDatatype1UML.png
@@ -165,7 +165,7 @@ Dit UML is uitgewerkt voor Objecttype. Voor Gegevensgroeptype en Relatieklasse g
 
 <figure id="KeuzeAttribuutsoort2UML">
   <img src="media/KeuzeAttribuutsoort2UML.png" alt="" />
-  <figcaption>[Keuze tussen 2 of meer attribuutsoorten]</figcaption>
+  <figcaption>Keuze tussen 2 of meer attribuutsoorten</figcaption>
 </figure>
 
 media/KeuzeAttribuutsoort2UML.png
@@ -185,7 +185,7 @@ Dit UML is uitgewerkt voor Objecttype. Voor Gegevensgroeptype en Relatieklasse g
 
 <figure id="KeuzeAttribuutsoort3UML">
   <img src="media/KeuzeAttribuutsoort3UML.png" alt="" />
-  <figcaption>[Keuze tussen meerdere manieren om 1 betekenisvol attribuutsoort in te vullen]</figcaption>
+  <figcaption>Keuze tussen meerdere manieren om 1 betekenisvol attribuutsoort in te vullen</figcaption>
 </figure>
 
 media/KeuzeAttribuutsoort3UML.png
@@ -204,7 +204,7 @@ Dit UML is uitgewerkt voor Objecttype. Voor Gegevensgroeptype geldt hetzelfde pa
 
 <figure id="KeuzeRelatiedoel4UML">
   <img src="media/KeuzeRelatiedoel4UML.png" alt="" />
-  <figcaption>[Keuze tussen relatiedoelen, als nadere invulling van 1 betekenisvolle relatiesoort]</figcaption>
+  <figcaption>Keuze tussen relatiedoelen, als nadere invulling van 1 betekenisvolle relatiesoort</figcaption>
 </figure>
 
 media/KeuzeRelatiedoel4UML.png
@@ -236,7 +236,7 @@ Merk op dat deze tabel niet gaat over de modelelementen waaruit een keuze gemaak
 
 <figure id="AssociatierollenZonderMetagegevens">
   <img src="media/AssociatierollenZonderMetagegevens.png" alt="" />
-  <figcaption>[Relatierol]</figcaption>
+  <figcaption>Relatierol</figcaption>
 </figure>
 
 media/AssociatierollenZonderMetagegevens.png
@@ -267,7 +267,7 @@ View 3c: Groepering
 
 <figure id="PackagesZonderMetagegevens">
   <img src="media/PackagesZonderMetagegevens.png" alt="" />
-  <figcaption>[Packages]</figcaption>
+  <figcaption>Packages</figcaption>
 </figure>
 
 media/PackagesZonderMetagegevens.png
