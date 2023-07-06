@@ -793,8 +793,9 @@ We onderkennen een aantal specifieke metagegevens op het niveau van het informat
 
 #### Metagegeven: **Informatiedomein**
 
->   **Definitie Informatiedomein**  
->   Aanduiding van het functionele domein waartoe het informatiemodel behoort.
+<aside class="definition">
+  <dfn>Informatiedomein</dfn>Aanduiding van het functionele domein waartoe het informatiemodel behoort.
+</aside>
 
 *Toelichting* Bijvoorbeeld: BRK. Wanneer bepaalde definities of identificaties van het informatiemodel in de wereld niet uniek zijn, omdat een ander informatiemodel dezelfde naam hanteert voor een modelelement, of eenzelfde structuur voor een identificerende eigenschap, dan is het mogelijk om deze uniek te maken met behulp van deze aanduiding.   
 
@@ -802,9 +803,9 @@ We onderkennen een aantal specifieke metagegevens op het niveau van het informat
 
 #### Metagegeven: **Informatiemodel type**
 
->   **Definitie Informatiemodel type**  
->   De beschrijving van de aard van het informatiemodel, hoe het geïnterpreteerd
->   moet worden.
+<aside class="definition">
+  <dfn>Informatiemodel type</dfn>De beschrijving van de aard van het informatiemodel, hoe het geïnterpreteerd moet worden.
+</aside>
 
 *Toelichting*
 Dit kan zijn: "conceptueel" of "logisch". Zoals bedoeld in: [Typen Informatiemodellen](#typen-informatiemodellen). Er moet een keuze gemaakt worden.
@@ -815,9 +816,9 @@ Dit kan bijvoorbeeld uitgebreid worden met: "technisch" wanneer er behoefte is o
 
 #### Metagegeven: **Relatiemodelleringstype**
 
->   **Definitie Relatiemodelleringstype**  
->   Aanduiding van een in MIM gedefinieerd alternatief voor een
->   modelleringswijze, en welke keuze hierbij is gemaakt.
+<aside class="definition">
+  <dfn>Relatiemodelleringstype</dfn>Aanduiding van een in MIM gedefinieerd alternatief voor een modelleringswijze, en welke keuze hierbij is gemaakt.
+</aside>
 
 *Toelichting*
 Dit kan zijn "Relatiesoort leidend" of "Relatierol leidend". Dit
@@ -826,39 +827,36 @@ alternatief. Er moet een keuze gemaakt worden. Deze keuze geldt primair voor de 
 
 *Toepassing*: informatiemodel (verplicht)
 
-#### Metagegeven: **MIM versie**
+#### Metagegeven: **MIM-versie**
 
->   **Definitie MIM versie**  
->   De versie van de MIM specificatie die gebruikt is om het informatiemodel in
->   uit te drukken.
+<aside class="definition">
+  <dfn>MIM-versie</dfn>De versie van de MIM-specificatie die gebruikt is om het informatiemodel in uit te drukken.
+</aside>
 
 *Toelichting* Neem hiervoor een door MIM in gebruik zijnde MIM-versie.
 Kies bij voorkeur een zo recent mogelijke versie.
 
-Bijvoorbeeld: 1.0.1 of 1.1 of 1.1.1
+Bijvoorbeeld: `1.0.1` of `1.1` of `1.1.1`
 
 *Toepassing*: informatiemodel (verplicht)
 
-#### Metagegeven: **MIM extensie**
+#### Metagegeven: **MIM-extensie**
 
->   **Definitie MIM extensie**  
->   De aanduiding van een extensie op MIM.
+<aside class="definition">
+  <dfn>MIM-extensie</dfn>De aanduiding van een extensie op MIM.
+</aside>
 
-*Toelichting* Dit metagegeven is optioneel en alleen van toepassing als er sprake is van een extensie zoals bedoeld in
-[Een eigen extensie](#een-eigen-extensie-op-het-metamodel).
-
-Neem hiervoor een in gebruik zijnde extensie.
-
-Bijvoorbeeld: Kadaster of NEN3610:2020
+*Toelichting* Dit metagegeven is optioneel en alleen van toepassing als er sprake is van een extensie zoals bedoeld in[een eigen extensie maken](#een-eigen-extensie-op-het-metamodel). Neem hiervoor een in gebruik zijnde extensie. Bijvoorbeeld: _Kadaster_ of _NEN3610:2022_.
 
 *Toepassing*: informatiemodel (optioneel)
 
-#### Metagegeven: **MIM taal**
+#### Metagegeven: **MIM-taal**
 
->   **Definitie MIM taal**  
->   De aanduiding van de taal die gebruikt is voor de modelelementen.
+<aside class="definition">
+  <dfn>MIM-taal</dfn>De aanduiding van de taal die gebruikt is voor de modelelementen.
+</aside>
 
-*Toelichting* Bijvoorbeeld: NL, EN
+*Toelichting* Bijvoorbeeld: `NL`, `EN`
 
 *Toepassing*: informatiemodel (optioneel)
 
@@ -867,51 +865,24 @@ Bijvoorbeeld: Kadaster of NEN3610:2020
 We onderkennen een aantal specifieke metagegevens op het niveau van de modelelementen waarmee
 een informatiemodel wordt samengesteld. Deze staan beschreven in deze paragaaf.    
 
-Zo is er de *naam* van het modelelement, bijvoorbeeld
-het objecttype met als *naam* Pand en een bijbehorende *definitie*, of de *Datum
-opname* van het modelelement in het informatiemodel, bijvoorbeeld 1-1-2012.
+Zo is er de `Naam` van het modelelement, bijvoorbeeld het objecttype met als `Naam` `Pand` en een bijbehorende `Definitie`, of de `Datum opname` van het modelelement in het informatiemodel, bijvoorbeeld `1-1-2012`. Welke metagegevens verplicht zijn per modelelement en welke niet staat beschreven in het diagram in [Metagegevens per modelelement](#modelelementen-en-metagegevens-als-diagram). Dit diagram is een onderdeel van de specificatie.
 
-Welke metagegevens verplicht zijn per modelelement en welke niet staat beschreven
-in het diagram in [Metagegevens per modelelement](#modelelementen-en-metagegevens-als-diagram).
-Dit diagram is een onderdeel van de specificatie.
+Elk modelelement kent een eigen set van metagegevens, die bepaalde aspecten van het modelelement specificeren. Metagegevens kunnen dus verplicht zijn en kunnen optioneel zijn. Zo is een definitie altijd verplicht voor elk modelelement die de betekenis van gegevens omschrijft, zoals een attribuutsoort of relatiesoort, maar ook voor het objecttype die de context hiervan is. Bij de meeste datatypen is de definitie daarentegen optioneel, deze worden alleen ingevuld indien nodig.
 
-Elk modelelement kent een eigen set van metagegevens, die bepaalde aspecten van het
-modelelement specificeren. Metagegevens kunnen dus verplicht zijn en kunnen optioneel zijn.
-Zo is een definitie altijd verplicht voor elk modelelement die de betekenis van
-gegevens omschrijft, zoals een attribuutsoort of relatiesoort, maar ook voor
-het objecttype die de context hiervan is. Bij de meeste datatypen is de definitie
-daarentegen optioneel, deze worden alleen ingevuld indien nodig.
+Merk op dat een aantal van deze metagegevens al meegenomen worden in een specificatietaal. Bijvoorbeeld het objecttype met de naam Pand wordt in UML gemodelleerd als `Named element` met als `Name` `Pand` (in UML 1.4 heette dit nog `UML-Class`, met een property  `Name`). Een aantal andere metagegevens, zoals de eerder genoemde `Datum opname` met waarde `1-1-2012`. worden als aparte data vastgelegd, in UML gebeurt dit in een `Tagged value`. In Linked data gebeurt dit met een `owl:DatatypeProperty`.
 
-Merk op dat een aantal van deze metagegevens al meegenomen worden in een
-specificatietaal. Bijvoorbeeld het objecttype met de naam Pand wordt in UML gemodelleerd als
-‘*Named element’* met als ‘*Name’* Pand (in UML 1.4 heette dit nog UML-Class, met een property ‘*Name’*).
-
-Een aantal andere metagegevens, zoals de eerder genoemde *Datum opname* met
-waarde 1-1-2012. worden als aparte data vastgelegd, in UML gebeurt dit in een
-‘*Tagged value*’. In Linked data gebeurt dit met een ‘*owl:DatatypeProperty*’.
-
-Merk op, de metadata aspecten zijn specifiek voor elk modelelement apart. Dus
-als er in H2.2 sprake is van een generalisatie, dan worden deze metadata niet
-overerft (en de ingevulde waardes worden uiteraard zeker niet overerft). De MIM
-metaclass Referentielijst erft dus geen metagegevens, zoals patroon, van MIM metaclass
+Merk op, de metadata aspecten zijn specifiek voor elk modelelement apart. Dus als er in H2.2 sprake is van een generalisatie, dan worden deze metadata niet overerft (en de ingevulde waardes worden uiteraard zeker niet overerft). De MIM metaclass Referentielijst erft dus geen metagegevens, zoals patroon, van MIM metaclass
 Datatype.
 
-Voor de eenduidigheid zijn een aantal metagegevens verplicht gemaakt om te
-voorkomen dat het onduidelijk is wat een niet ingevulde waarde betekent.
-De betekenis hoort te zijn: 'niet aan de orde', wat zo is bij optionele gegevens.
-Wat iets anders is dan: 'nog niet ingevuld', 'zie default waarde', of 'onbekend'.
+Voor de eenduidigheid zijn een aantal metagegevens verplicht gemaakt om te voorkomen dat het onduidelijk is wat een niet ingevulde waarde betekent. De betekenis hoort te zijn: 'niet aan de orde', wat zo is bij optionele gegevens. Wat iets anders is dan: 'nog niet ingevuld', 'zie default waarde', of 'onbekend'.
 
-Hieronder volgen eerst de algemene metagegevens. Dit zijn metagegevens zoals
-*Naam*, *Definitie* en *Populatie* met een definitie en een toelichting.
-In de paragrafen hierna wordt vervolgens naar deze paragraaf
-verwezen. Specifieke metagegevens die maar één keer voorkomen zijn bij het
-modelelement zelf beschreven en zijn niet opgenomen in deze algemene lijst.
-
+Hieronder volgen eerst de algemene metagegevens. Dit zijn metagegevens zoals `Naam`, `Definitie` en `Populatie` met een definitie en een toelichting. In de paragrafen hierna wordt vervolgens naar deze paragraaf verwezen. Specifieke metagegevens die maar één keer voorkomen zijn bij het modelelement zelf beschreven en zijn niet opgenomen in deze algemene lijst.
 
 #### Metagegeven: **Naam**
 
->   **Definitie Naam**  
->   De naam van een modelelement.
+<aside class="definition">
+  <dfn>Naam</dfn>De naam van een modelelement.
+</aside>
 
 *Toelichting*
 
@@ -922,35 +893,27 @@ opgesomd in het hoofdstuk [Betekenis modelelementen](#betekenis-modelelementen).
 
 *Toepassing*: alle modelelementen.
 
-
 #### Metagegeven: **Alias**
 
->   **Definitie Alias**  
->   De weergave van de naam van een modelelement in natuurlijke taal (niet technisch).
+<aside class="definition">
+  <dfn>Alias</dfn>De weergave van de naam van een modelelement in natuurlijke taal (niet technisch).
+</aside>
 
 *Toelichting*
 
-Als de naam van iets wat in het informatiemodel gemodelleerd wordt spaties, diakrieten of verbindingstreepjes bevat, zoals een objecttype 'Onroerende zaak' of een attribuutsoort 'geïnspireerd op', dan kan er gekozen worden om deze naam in het informatiemodel zo op te schrijven dat hier in de techniek makkelijker mee te werken is. Denk aan: 'geinspireerd op' (geen diakrieten) of 'OnroerendeZaak' (camelcase notatiewijze). Wanneer de originele schrijfwijze in natuurlijke taal van belang is kan deze worden opgenomen in het metagegeven alias.
-
-Het is niet de bedoeling om (andersom) in de alias de technische makkelijkere naam op te nemen.
+Als de naam van iets wat in het informatiemodel gemodelleerd wordt spaties, diakrieten of verbindingstreepjes bevat, zoals een objecttype 'Onroerende zaak' of een attribuutsoort 'geïnspireerd op', dan kan er gekozen worden om deze naam in het informatiemodel zo op te schrijven dat hier in de techniek makkelijker mee te werken is. Denk aan: 'geinspireerd op' (geen diakrieten) of 'OnroerendeZaak' (camelcase notatiewijze). Wanneer de originele schrijfwijze in natuurlijke taal van belang is kan deze worden opgenomen in het metagegeven alias. Het is niet de bedoeling om (andersom) in de alias de technische makkelijkere naam op te nemen.
 
 De alias wordt ook gebruikt voor een alternatieve weergave van een enumeratie waarde. De ‘naam’ betreft hier een daadwerkelijk waarde, zoals 'Nederlands', waarin de naam gelijk staat aan de waarde en dit moet zo blijven, maar als er sprake is van een voor documentatie doeleinden bedoelde codering van deze enumeratie waarde dan kan deze code in de alias worden opgenomen.
 
 Toepassing: objecttype, attribuutsoort, gegevensgroep, relatiesoort, relatierol, relatieklasse, externe koppeling, keuze, enumeratie, primitief datatype, gestructureerd datatype, dataelement en expliciet niet voor packages, enumeratiewaarde, en constraint.
 
-Opmerking: een uitzondering is gemaakt voor UML modellen voor de UML-EnumerationLiteral.
-De ‘naam’ betreft hier een daadwerkelijk waarde, waarin
-de naam gelijk staat aan de waarde. Het is daarom expliciet ongewenst om
-hiervoor een _alias_ te gebruiken. De alias wordt hier, mede
-daarom, gebruikt voor (alleen) de modellering van het metadata aspect Code,
-welke aanvullend is op naam (niet een alternatief van naam).
+Opmerking: een uitzondering is gemaakt voor UML modellen voor de UML-EnumerationLiteral. De ‘naam’ betreft hier een daadwerkelijk waarde, waarin de naam gelijk staat aan de waarde. Het is daarom expliciet ongewenst om hiervoor een _alias_ te gebruiken. De alias wordt hier, mede daarom, gebruikt voor (alleen) de modellering van het metadata aspect Code, welke aanvullend is op naam (niet een alternatief van naam).
 
 #### Metagegeven: **Begrip**
 
->   **Definitie Begrip**  
->   Verwijzing naar een begrip, vanuit een modelelement, waarmee wordt
->   aangegeven op welk begrip, of begrippen, het informatiemodel element is
->   gebaseerd. De verwijzing heeft de vorm van een term of een URI.
+<aside class="definition">
+  <dfn>Begrip</dfn>Verwijzing naar een begrip, vanuit een modelelement, waarmee wordt aangegeven op welk begrip, of begrippen, het informatiemodel element is gebaseerd. De verwijzing heeft de vorm van een term of een URI.
+</aside>
 
 *Toelichting*
 
@@ -964,17 +927,16 @@ http://brk.basisregistraties.overheid.nl/id/begrip/Perceel
 *Toepassing*: alle modelelementen met een naam, met uitzondering van packages en
 constraint.
 
-
 #### Metagegeven: **Herkomst**
 
->   **Definitie Herkomst**  
->   De registratie of het informatiemodel waaraan het modelelement ontleend is
->   dan wel de eigen organisatie indien het door de eigen organisatie toegevoegd is.
+<aside class="definition">
+  <dfn>Herkomst</dfn>De registratie of het informatiemodel waaraan het modelelement ontleend is dan wel de eigen organisatie indien het door de eigen organisatie toegevoegd is.
+</aside>
 
 *Toelichting*
 
 Bijvoorbeeld: de herkomst van het kenmerk *begrenzing* van een Perceel heeft als
-waarde: ‘BRK’. BRK staat dan bijvoorbeeld in de bijbehorende documentatie
+waarde: `BRK`. BRK staat dan bijvoorbeeld in de bijbehorende documentatie
 uitgelegd als: de basisregistratie Kadaster.
 
 Er wordt expliciet niet bedoeld van welke informatievoorziening of registratie
@@ -1003,33 +965,21 @@ informatiemodel het objecttype).
 
 #### Metagegeven: **Definitie**
 
->   **Definitie Definitie**  
->   De beschrijving van de betekenis van dit modelelement.
+<aside class="definition">
+  <dfn>Definitie</dfn>De beschrijving van de betekenis van dit modelelement.
+</aside>
 
 *Toelichting*
 
-Bijvoorbeeld: Een Pand is de kleinste, bij de totstandkoming functioneel en
-bouwkundig-constructief zelfstandige eenheid die direct en duurzaam met de aarde
-is verbonden en betreedbaar en afsluitbaar is.
-
-De definitie volgt, indien aanwezig, de catalogus van de desbetreffende
-(basis)registratie of informatiemodel, mits deze het modelelement definieert
-vanuit een informatie en informatiemodel perspectief (er zijn ook andere
-definities mogelijk vanuit andere perspectieven, zoals vanuit een juridisch
-perspectief, of vanuit het perspectief van een model van begrippen, zoals
-genoemd in de paragraaf [Typen informatiemodellen](#typen-informatiemodellen).
-Dergelijke definities kunnen hetzelfde zijn, of op het moment hetzelfde, of
-verschillend, of aanvullend op elkaar. Het is aan de beheerder van het
-informatiemodel om hier zorgvuldig mee om te gaan).
+Bijvoorbeeld: Een Pand is de kleinste, bij de totstandkoming functioneel en bouwkundig-constructief zelfstandige eenheid die direct en duurzaam met de aarde is verbonden en betreedbaar en afsluitbaar is.De definitie volgt, indien aanwezig, de catalogus van de desbetreffende (basis)registratie of informatiemodel, mits deze het modelelement definieert vanuit een informatie en informatiemodel perspectief (er zijn ook andere definities mogelijk vanuit andere perspectieven, zoals vanuit een juridisch perspectief, of vanuit het perspectief van een model van begrippen, zoals genoemd in de paragraaf [Typen informatiemodellen](#typen-informatiemodellen). Dergelijke definities kunnen hetzelfde zijn, of op het moment hetzelfde, of verschillend, of aanvullend op elkaar. Het is aan de beheerder van het informatiemodel om hier zorgvuldig mee om te gaan).
 
 *Toepassing*: alle modelelementen.
 
 #### Metagegeven: **Herkomst definitie**
 
->   **Definitie Herkomst definitie**  
->   De registratie of het informatiemodel waaruit de **definitie** is
->   overgenomen dan wel een aanduiding die aangeeft uit welke bronnen de
->   definitie is samengesteld.
+<aside class="definition">
+  <dfn>Herkomst definitie</dfn>De registratie of het informatiemodel waaruit de **definitie** is overgenomen dan wel een aanduiding die aangeeft uit welke bronnen de definitie is samengesteld.
+</aside>
 
 *Toelichting*
 
@@ -1056,17 +1006,16 @@ duidelijkheid in.
 
 #### Metagegeven: **Toelichting**
 
->   **Definitie Toelichting**  
->   Een inhoudelijke toelichting op de definitie, ter verheldering of nadere duiding.
+<aside class="definition">
+  <dfn>Toelichting</dfn>Een inhoudelijke toelichting op de definitie, ter verheldering of nadere duiding.
+</aside>
 
 *Toelichting*
 
 Bijvoorbeeld: een aantal treffende voorbeelden (waardes) van het kenmerk van het
 object of een aanduiding van wat er niet onder de definitie valt.
 
-Het is niet de bedoeling om andere metagegevens in de toelichting op te nemen, zoals populatie of begrip.
-
-De toelichting is op zichzelf helder en te begrijpen en is gericht op de betekenis
+Het is niet de bedoeling om andere metagegevens in de toelichting op te nemen, zoals populatie of begrip.De toelichting is op zichzelf helder en te begrijpen en is gericht op de betekenis
 van gegevens en/of de context van deze gegevens. De toelichting is niet gericht op
 de inwinning van de gegevens maar beschrijft de betekenis van hetgeen wat ingewonnen
 is, zodat het voor de gebruikers van de gegevens helder is wat de betekenis ervan is.
@@ -1078,8 +1027,9 @@ en antwoorden "verborgen" zit een plek te geven in de toelichting.
 
 #### Metagegeven: **Datum opname**
 
->   **Definitie Datum opname**  
->   De datum waarop het modelelement is opgenomen in het informatiemodel.
+<aside class="definition">
+  <dfn>Datum opname</dfn>De datum waarop het modelelement is opgenomen in het informatiemodel.
+</aside>
 
 *Toelichting*
 
@@ -1090,11 +1040,9 @@ overig.
 
 #### Metagegeven: **Identificerend**
 
->   **Definitie Identificerend**  
->	Een aanduiding dat een kenmerk of een combinatie van kenmerken van een
->	objecttype uniek identificerend is voor alle objecten in de populatie van
->	objecten van dit objecttype, of de aanduiding dat een referentie-element
->	uniek identificerend is voor alle lijst items in een referentielijst.
+<aside class="definition">
+  <dfn>Identificerend</dfn>Een aanduiding dat een kenmerk of een combinatie van kenmerken van een objecttype uniek identificerend is voor alle objecten in de populatie van	objecten van dit objecttype, of de aanduiding dat een referentie-element uniek identificerend is voor alle lijst items in een referentielijst.
+</aside>
 
 Toelichting: objecten hebben, of krijgen, in een administratie of gegevensvoorziening vaak één identificerend kenmerk. Het kan ook zijn dat een aantal kenmerken in combinatie identificerend zijn, zoals twee attribuutsoorten of een attribuutsoort en een relatiesoort. De combinatie met een relatiesoort wordt alleen gedaan voor objecttypes die zelf geen unieke aanduiding hebben en daarom deze moeten samenstellen met de unieke aanduiding van een gerelateerde objecttype.
 
