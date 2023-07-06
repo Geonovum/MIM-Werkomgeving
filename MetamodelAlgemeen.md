@@ -375,60 +375,31 @@ Diagram: [Kern](#kern)
 
 #### Generalisatie
 
->   **Definitie Generalisatie tussen objecttypes**  
->   De typering van het hiërarchische verband tussen een meer generiek en een
->   meer specifiek modelelement van hetzelfde soort, waarbij het meer specifieke
->   modelelement eigenschappen van het meer generieke modelelement overerft. Dit
->   verband is alleen gedefinieerd voor objecttypen en datatypen.
+<aside class="definition">
+  <dfn>Generalisatie</dfn>De typering van het hiërarchische verband tussen een meer generiek en een meer specifiek modelelement van hetzelfde soort, waarbij het meer specifieke modelelement eigenschappen van het meer generieke modelelement overerft. Dit verband is alleen gedefinieerd voor objecttypen en datatypen.
+</aside>
 
 *Toelichting:*
 
 Generalisatie tussen objecttypes:
 
-Een generalisatierelatie geeft aan dat bepaalde eigenschappen van een objecttype
-(vaak attribuutsoorten en/of relatiesoorten) ook gelden voor de gerelateerde
-objecttypen, én dat deze qua semantiek, structuur en syntax gelijk zijn. We
-spreken dan van een supertype met subtypen. De modelelementen die generiek
-gelden worden in een generiek objecttype, het supertype, gemodelleerd en deze
-worden overerft door elk subtype (minimaal twee) die de generalisatie relatie
-legt naar dit generieke objecttype.
+Een generalisatierelatie geeft aan dat bepaalde eigenschappen van een objecttype (vaak attribuutsoorten en/of relatiesoorten) ook gelden voor de gerelateerde objecttypen, én dat deze qua semantiek, structuur en syntax gelijk zijn. We spreken dan van een supertype met subtypen. De modelelementen die generiek gelden worden in een generiek objecttype, het supertype, gemodelleerd en deze worden overerft door elk subtype (minimaal twee) die de `«Generalisatie»` legt naar dit generieke `«Objecttype»`.
 
 Generalisatie tussen datatypen:
 
-Het meer specifieke datatype brengt een verbijzondering aan in de vorm van een
-meer restrictieve definitie, of een meer restrictief patroon/formeel patroon.
-
-Het andere datatype is bijvoorbeeld een CharacterString, Integer, GM Surface of
-DMO en dient als basis voor een zelf te definiëren datatype (zie [Datatype zelf
-definiëren](#datatype-zelf-definieren)), zoals een CharacterString Postcode, of
-een NietNegatiefGetal.
-
-Deze generalisatie is van toepassing op de volgende datatypen: «Primitief
-datatype», «Gestructureerd datatype», «Referentielijst», «Codelijst»,
-«Enumeratie».
+Het meer specifieke datatype brengt een verbijzondering aan in de vorm van een meer restrictieve definitie, of een meer restrictief patroon/formeel patroon. Het andere datatype is bijvoorbeeld een `CharacterString`, `Integer`, `GM_Surface` of`DMO` en dient als basis voor een zelf te definiëren datatype (zie [Datatype zelf definiëren](#datatype-zelf-definieren)), zoals een `CharacterString` `Postcode`, of een `NietNegatiefGetal`.Deze generalisatie is van toepassing op de volgende datatypen: `«Primitief datatype»`, `«Gestructureerd datatype»`, `«Referentielijst»`, `«Codelijst»`,`«Enumeratie»`.
 
 Meervoudige overerving of multiple-inheritance:
 
-Een subtype kan meerdere objecttypen als generalisatie hebben. In het diagram [Kern](#kern) is dit aangegeven door een Objecttype als subtype naar o..* Generalisaties te laten verwijzen. Dat impliceert dat een subtype 0..* supertypen kan hebben.
-
-
+Een subtype kan meerdere objecttypen als generalisatie hebben. In het diagram [Kern](#kern) is dit aangegeven door een `«Objecttype»` als subtype naar `0..*` `«Generalisaties»` te laten verwijzen. Dat impliceert dat een subtype `0..*` supertypen kan hebben.
 
 #### Relatiesoort
 
->   **Definitie Relatiesoort**  
->   De typering van het structurele verband tussen een object van een objecttype
->   en een (ander) object van een ander (of hetzelfde) objecttype.
+<aside class="definition">
+  <dfn>Relatiesoort</dfn>De typering van het structurele verband tussen een object van een objecttype en een (ander) object van een ander (of hetzelfde) objecttype.
+</aside>
 
-*Toelichting:* Objecten hebben eigenschappen die gemodelleerd kunnen worden met
-attribuutsoorten maar ook met relatiesoorten naar andere objecttypen. Relatiesoort is de metaklasse waarmee deze eigenschappen worden beschreven. Als het
-voor het desbetreffende domein van belang is om die eigenschap te modelleren als
-onderdeel van een ander objecttype, dan maakt de relatiesoort die eigenschap
-beschikbaar voor het eerstgenoemde objecttype. Bijvoorbeeld, een attribuutsoort
-van het objecttype PERSOON zou kunnen zijn ‘Naam geregistreerd partner’ (naast
-de attribuutsoort ‘Naam’ van PERSOON). De naam van de geregistreerde partner
-komt evenwel ook beschikbaar met een relatiesoort van PERSOON naar PERSOON:
-“heeft geregistreerd partnerschap met”. Zie ook het eerder genoemde voorbeeld
-van SCHIP en MOTOR.
+*Toelichting:* Objecten hebben eigenschappen die gemodelleerd kunnen worden met attribuutsoorten maar ook met relatiesoorten naar andere objecttypen. Relatiesoort is de metaklasse waarmee deze eigenschappen worden beschreven. Als het voer het desbetreffende domein van belang is om die eigenschap te modelleren als onderdeel van een ander objecttype, dan maakt de relatiesoort die eigenschap beschikbaar voor het eerstgenoemde objecttype. Bijvoorbeeld, een attribuutsoort van het objecttype PERSOON zou kunnen zijn ‘Naam geregistreerd partner’ (naast de attribuutsoort ‘Naam’ van PERSOON). De naam van de geregistreerde partner komt evenwel ook beschikbaar met een relatiesoort van PERSOON naar PERSOON: “heeft geregistreerd partnerschap met”. Zie ook het eerder genoemde voorbeeld van SCHIP en MOTOR.
 
 Wanneer een relatie gebruikt wordt om objecten aan elkaar te verbinden, zonder
 dat er eigenschappen over deze relatie worden vastgelegd, dan betreft dit de
@@ -436,8 +407,9 @@ MIM-metaclass «Relatiesoort».
 
 #### Relatieklasse
 
->   **Definitie Relatieklasse**  
->   Een relatiesoort met eigenschappen.
+<aside class="definition">
+  <dfn>Relatieklasse</dfn>Een relatiesoort met eigenschappen.
+</aside>
 
 *Toelichting:* De relatieklasse geeft aan dat er een relatie is tussen twee
 objecten, waarbij er gegevens over deze relatie vastgelegd moeten worden. De
@@ -455,11 +427,9 @@ wanneer één van de SUBJECTen niet meer bestaat.
 
 #### Externe Koppeling
 
->   **Definitie Externe koppeling**  
->   Een associatie waarmee vanuit het perspectief van het eigen informatiemodel
->   een objecttype uit het ‘eigen’ informatiemodel gekoppeld wordt aan een
->   objecttype van een extern informatiemodel. De relatie zelf hoort bij het
->   ‘eigen’ objecttype.
+<aside class="definition">
+  <dfn>Externe koppeling</dfn>Een associatie waarmee vanuit het perspectief van het eigen informatiemodel een objecttype uit het ‘eigen’ informatiemodel gekoppeld wordt aan een objecttype van een extern informatiemodel. De relatie zelf hoort bij het ‘eigen’ objecttype.
+</aside>
 
 *Toelichting:*  
 Hiermee wordt aangegeven dat er een relatie ligt naar een informatiemodel van een ander domein.
@@ -472,22 +442,23 @@ Zie [Koppelen met een ander informatiemodel](#koppelen-met-een-ander-informatiem
 
 #### Relatierol
 
->   **Definitie Relatierol**  
->   De benaming van de manier waarop een object deelneemt aan een relatie met
->   een ander object.
+<aside class="definition">
+  <dfn>Relatierol</dfn>De benaming van de manier waarop een object deelneemt aan een relatie met een ander object.
+</aside>
 
-*Toelichting:* Met relatie wordt in deze de volgende bedoeld: *«Relatiesoort»*,
-*«Relatieklasse»* of *«Externe koppeling»*. Voor *«*Generalisatie*»* speelt het
-niet. Een relatie heeft een bron kant, die de eigenaar is van de relatie, en
-is gericht naar de doel kant. De relatierol kan aan beide kanten een naam en
-een definitie krijgen.
+*Toelichting:* Met relatie wordt in deze de volgende bedoeld: `«Relatiesoort»`,
+`«Relatieklasse»` of `«Externe koppeling»`. Voor `«Generalisatie»` speelt het
+niet. Een relatie heeft een bronkant, die de eigenaar is van de relatie, en
+is gericht naar de doelkant. De relatierol kan aan beide kanten een `Naam` en
+een `Definitie` krijgen.
 
->   **Definitie Relatierol bron**  
->   De relatierol die de rol beschrijft van de bron van de relatie.
+<aside class="definition">
+  <dfn>Relatierol bron</dfn>De relatierol die de rol beschrijft van de bron van de relatie.
+</aside>
 
->   **Definitie Relatierol doel**  
->   De relatierol die de rol beschrijft van het doel van de relatie.
-
+<aside class="definition">
+  <dfn>Relatierol doel</dfn>De relatierol die de rol beschrijft van het doel van de relatie.
+</aside>
 
 ### Waardelijsten
 
@@ -497,13 +468,9 @@ waardenlijst.
 
 #### Referentielijst
 
->   **Definitie Referentielijst**  
->   De representatie van een lijst met een opsomming van de mogelijke domeinwaarden van een
->   attribuutsoort, die buiten het model in een externe waardenlijst worden
->   beheerd. De domeinwaarden in de lijst kunnen in de loop van de tijd
->   aangepast, uitgebreid, of verwijderd worden, zonder dat het informatiemodel
->   aangepast wordt (in tegenstelling tot bij een enumeratie).
->   De representatie bevat een aantal kenmerken, die overgenomen zijn van de specificatie van de externe waardelijst.
+<aside class="definition">
+  <dfn>Referentielijst</dfn>De representatie van een lijst met een opsomming van de mogelijke domeinwaarden van een attribuutsoort, die buiten het model in een externe waardenlijst worden beheerd. De domeinwaarden in de lijst kunnen in de loop van de tijd aangepast, uitgebreid, of verwijderd worden, zonder dat het informatiemodel aangepast wordt (in tegenstelling tot bij een enumeratie). De representatie bevat een aantal kenmerken, die overgenomen zijn van de specificatie van de externe waardelijst.
+</aside>
 
 *Toelichting:*
 De referentielijst bevat representaties van objecten, die in het informatiemodel
@@ -515,30 +482,32 @@ niet als objecttype. Maar we willen wel de structuur en betekenis van LAND
 vastleggen, zodat we er naar kunnen refereren. Een object dat is opgenomen in
 een referentielijst heeft daarom veelal meerdere attributen, zoals de naam, de
 ontstaansdatum, een omschrijving en de ISO code, die zijn opgenomen in de
-referentie lijst.
+referentielijst.
 
 Alle attributen van gerefereerde objecten uit de referentielijst gelden in de
-context van het informatiemodel, mits opgenomen in de *«Referentielijst»*. In de
+context van het informatiemodel, mits opgenomen in de `«Referentielijst»`. In de
 registratie wordt vaak alleen de referentie ernaartoe opgenomen, omdat het niet
 de bedoeling is om alle gegevens over te nemen. De gegevens staan immers al in
 de referentielijst en er is bewust gekozen om een referentielijst te modelleren.
 Het attribuut van een objecttype dat als type een referentielijst heeft bevat in
 de registratie daarom (vaak) alleen een referentie naar een object uit de lijst.
 
-#### Referentie element
+#### Referentie-element
 
->   **Definitie Referentie element**  
->   Een eigenschap van een object in een referentielijst in de vorm van een gegeven.
+<aside class="definition">
+  <dfn>Referentie-element</dfn>Een eigenschap van een object in een referentielijst in de vorm van een gegeven.
+</aside>
 
 *Toelichting:*
-Een referentie element kan uniek zijn, zoals een code, en is dan op zichzelf
+Een referentie-element kan uniek zijn, zoals een code, en is dan op zichzelf
 geschikt om gebruikt te worden als referentie (zoals bedoeld in de definitie van
-Referentielijst). Bij het referentie element kan een definitie en toelichting worden opgenomen, die aangeven hoe de externe waardelijst in het eigen informatiemodel gebruikt wordt.
+[Referentielijst](#referentielijst)). Bij het referentie-element kan een definitie en toelichting worden opgenomen, die aangeven hoe de externe waardelijst in het eigen informatiemodel gebruikt wordt.
 
 #### Enumeratie
 
->   **Definitie Enumeratie**  
->   Een datatype waarvan de mogelijke waarden limitatief zijn opgesomd in een statische lijst.
+<aside class="definition">
+  <dfn>Enumeratie</dfn>Een datatype waarvan de mogelijke waarden limitatief zijn opgesomd in een statische lijst.
+</aside>
 
 *Toelichting:* In de registratie krijgt een attribuut één van deze waarden. De
 lijst is een statische lijst met constanten (meerdere attributen, zoals bij een
@@ -546,8 +515,9 @@ referentielijst, zijn nooit aan de orde).
 
 #### Enumeratiewaarde
 
->   **Definitie Enumeratiewaarde**  
->   Een gedefinieerde waarde, in de vorm van een eenmalig vastgesteld constant gegeven.
+<aside class="definition">
+  <dfn>Enumeratiewaarde</dfn>Een gedefinieerde waarde, in de vorm van een eenmalig vastgesteld constant gegeven.
+</aside>
 
 *Toelichting:*
 De waarde van de data zelf. Bijvoorbeeld: Plein, Brug, Spoor, M (man).  
@@ -556,48 +526,31 @@ Alleen deze waarde mag gebruiken worden.
 
 #### Codelijst
 
->   **Definitie Codelijst**  
->   De representatie van een lijst met een opsomming van de mogelijke domeinwaarden van een
->   attribuutsoort, die buiten het model in een externe waardenlijst worden
->   beheerd. De domeinwaarden in de lijst kunnen in de loop van de tijd
->   aangepast, uitgebreid, of verwijderd worden, zonder dat het informatiemodel
->   aangepast wordt (in tegenstelling tot bij een enumeratie).
->   De representatie bevat geen kenmerken, voor alle kenmerken wordt verwezen naar de specificatie van de externe waardelijst.
+<aside class="definition">
+  <dfn>Codelijst</dfn>De representatie van een lijst met een opsomming van de mogelijke domeinwaarden van een attribuutsoort, die buiten het model in een externe waardenlijst worden beheerd. De domeinwaarden in de lijst kunnen in de loop van de tijd aangepast, uitgebreid, of verwijderd worden, zonder dat het informatiemodel aangepast wordt (in tegenstelling tot bij een enumeratie). De representatie bevat geen kenmerken, voor alle kenmerken wordt verwezen naar de specificatie van de externe waardelijst.
+</aside>
 
-*Toelichting:* Zowel referentielijsten als codelijsten zijn in feite
-waardenlijsten. In tegenstelling echter tot de referentielijst wordt een
-codelijst *niet* in het informatiemodel beschreven, omdat de definitie en
-semantiek geheel in de externe waardenlijst staat en niet (nader) geduid hoeft
-te worden in het informatiemodel zelf. Een codelijst heeft in het informatiemodel
-daarom geen attributen (en zou voor de definitie alleen hoeven te refereren naar
-de definitie bij de extern gepubliceerde waardenlijst, maar voor het gemak is de
-definitie wel opgenomen als metagegeven in dit metamodel). De extern
-gepubliceerde waardenlijst bevat, naast gewone attributen, ook altijd één
-specifiek attribuut, met daarin de domeinwaarden die gebruikt mogen/moeten
-worden in de registratie. In het gebruik is een Codelijst daarom analoog aan een
-Enumeratie. Welk specifiek attribuut dit is en wat de betekenis daarvan is staat
-in de codelijst zelf gedefinieerd.
-
+*Toelichting:* Zowel referentielijsten als codelijsten zijn in feite waardenlijsten. In tegenstelling echter tot de referentielijst wordt een codelijst *niet* in het informatiemodel beschreven, omdat de definitie en semantiek geheel in de externe waardenlijst staat en niet (nader) geduid hoeft te worden in het informatiemodel zelf. Een codelijst heeft in het informatiemodel daarom geen attributen (en zou voor de definitie alleen hoeven te refereren naar de definitie bij de extern gepubliceerde waardenlijst, maar voor het gemak is de definitie wel opgenomen als metagegeven in dit metamodel). De extern gepubliceerde waardenlijst bevat, naast gewone attributen, ook altijd één specifiek attribuut, met daarin de domeinwaarden die gebruikt mogen/moeten worden in de registratie. In het gebruik is een Codelijst daarom analoog aan een Enumeratie. Welk specifiek attribuut dit is en wat de betekenis daarvan is staat in de codelijst zelf gedefinieerd.
 
 ### Datatypen
 
->   **Definitie Datatype**  
->   Een beschrijving van de structuur waaraan een waarde, oftewel de data zelf, aan moet voldoen.
+<aside class="definition">
+  <dfn>Datatype</dfn>Een beschrijving van de structuur waaraan een waarde, oftewel de data zelf, aan moet voldoen.
+</aside>
 
 *Toelichting:* Zie ook [Objecttypen en attribuutsoorten](#objecttypen-en-attribuutsoorten).
 Bij elke «Attribuutsoort» wordt gespecificeerd aan welk datatype de data c.q. de
 waarde die hiervoor vastgelegd wordt moet voldoen. Het datatype wordt gebruikt
-als type van een attribuutsoort.
-
-Datatypen zijn veelal op vele plekken (her)bruikbaar en kunnen daarom gespecificeerd
+als type van een attribuutsoort. Datatypen zijn veelal op vele plekken (her)bruikbaar en kunnen daarom gespecificeerd
 worden bij diverse «Attribuutsoort»-en.
 
 Diagram: [Datatypen](#datatypen)
 
 #### Primitief datatype
 
->   **Definitie Primitief datatype**  
->   Een primitief datatype is een datatype met een eenvoudige basisstructuur, oftewel enkelvoudig en zonder gelaagdheid.
+<aside class="definition">
+  <dfn>Primitief datatype</dfn>Een datatype met een eenvoudige basisstructuur, oftewel enkelvoudig en zonder gelaagdheid.
+</aside>
 
 *Toelichting:* Een primitief datatype is een datatype zonder verdere
 specificatie over de structuur. Dit datatype is enkelvoudig, oftewel niet
@@ -626,9 +579,9 @@ in het eigen model opgenomen te worden.
 
 #### Gestructureerd datatype
 
->   **Definitie Gestructureerd datatype**  
->   Specifiek benoemd datatype dat de structuur van een gegeven beschrijft,
->   samengesteld uit minimaal twee elementen die in samenhang betekenisvol zijn.
+<aside class="definition">
+  <dfn>Gestructureerd datatype</dfn>Specifiek benoemd datatype dat de structuur van een gegeven beschrijft, samengesteld uit minimaal twee elementen die in samenhang betekenisvol zijn.
+</aside>
 
 *Toelichting:*
 
@@ -642,34 +595,30 @@ Gestructureerd datatype “identificeert zichzelf”, zoals er maar per definiti
 één “1 liter” bestaat, één 35 euro en één datum 6 april 2017, met per definitie
 altijd dezelfde betekenis:
 
--   Een blik olie heeft een inhoud van **7 liter**, kost **35 euro**, en is
-    verkocht op **6 april 2017**.
+-   Een blik olie heeft een inhoud van `7 liter`, kost `35 euro`, en is
+    verkocht op `6 april 2017`.
 
--   Piet heeft **1 liter** bloed gedoneerd, daarvoor **35 euro** vergoeding
-    gekregen, op **6 april 2017**.
+-   Piet heeft `1 liter` bloed gedoneerd, daarvoor `35 euro` vergoeding
+    gekregen, op `6 april 2017`.
 
 Het identificerend zijn geldt bijvoorbeeld niet voor Jan Jansen. Er zijn
 meerdere personen met deze naam en dat zijn verschillende personen (Jan Jansen
 is dan ook een gegevensgroeptype Naam met voornaam Jan en achternaam Jansen en
 geen Gestructureerd datatype).
 
-#### Data element
+#### Data-element
 
->   **Definitie Data element**  
->   Een onderdeel/element van een Gestructureerd datatype die als type een datatype heeft.
+<aside class="definition">
+  <dfn>Data-element</dfn>Een onderdeel/element van een Gestructureerd datatype die als type een datatype heeft.
+</aside>
 
-*Toelichting:* Het data element is een eigenschap van een Gestructureerd
-datatype en beschrijft de structuur van een gegeven. Het is niet een eigenschap
-van een object en niet hetzelfde als een attribuutsoort.
-
-Het data element beschrijft in combinatie met andere data-elementen de structuur
-van een gegeven en heeft zelf een datatype. Dit datatype is meestal een
-primitief datatype.
+*Toelichting:* Het data-element is een eigenschap van een Gestructureerd datatype en beschrijft de structuur van een gegeven. Het is niet een eigenschap van een object en niet hetzelfde als een attribuutsoort. Het data-element beschrijft in combinatie met andere data-elementen de structuur van een gegeven en heeft zelf een datatype. Dit datatype is meestal een primitief datatype.
 
 ### Packages
 
->   **Definitie Package**  
->   Een package is een benoemde en begrensde verzameling/groepering van modelelementen.
+<aside class="definition">
+  <dfn>Package</dfn>Een benoemde en begrensde verzameling/groepering van modelelementen.
+</aside>
 
 Er zijn verschillende modelelementen van het type package:
 - Informatiemodel
@@ -693,8 +642,9 @@ De verschillende package-typen worden hier beneden uitgelegd.
 
 #### Informatiemodel
 
->   **Definitie Informatiemodel**  
->   De groepering van alle modelelementen waaruit het informatiemodel is opgebouwd. Het informatiemodel als geheel.
+<aside class="definition">
+  <dfn>Informatiemodel</dfn>De groepering van alle modelelementen waaruit het informatiemodel is opgebouwd. Het informatiemodel als geheel.
+</aside>
 
 *Toelichting:*
 Het informatiemodel is een package, te weten het hoofdpackage van het informatiemodel, waar alle
@@ -709,9 +659,9 @@ Het informatiemodel wordt verder beschreven met metadata, zoals de aanduiding va
 Een informatiemodel kan onderverdeeld worden in meerdere packages, waarbij aangegeven wordt dat
 deze de modellering van de informatie van het domein bevatten.
 
->   **Definitie Domein**  
->   Een groepering van constructies die een semantisch samenhangend gedeelte van
->   een informatiemodel beschrijven.
+<aside class="definition">
+  <dfn>Domein</dfn>Een groepering van constructies die een semantisch samenhangend gedeelte van een informatiemodel beschrijven.
+</aside>
 
 *Toelichting:*
 Een domein package bevat de modelelementen waaruit een informatiemodel is samengesteld, zoals het objecttype Persoon en het objecttype Nummeraanduiding en de relatiesoort woonadres. Een informatiemodel is het hoofdpackage, en kent een aantal domein packages als subpackage. Er zijn meerdere soorten packages. Om onderscheid te maken tussen packages waarin het domein gemodelleerd is, en andere packages, heeft dit modelelement de naam Domein gekregen. Je zou ook kunnen zeggen, het informatiemodel bestaat uit de volgende subdomeinen.
@@ -720,13 +670,11 @@ Een domein package bevat de modelelementen waaruit een informatiemodel is sameng
     Voorbeeld: Recht, of Stukken. De BRK houdt deze domeininformatie in aparte packages apart bij, voor het overzicht, en om de packages afzonderlijke te kunnen aanpassen, zonder impact op de andere packages.     
 </aside>
 
-
 #### Extern
 
->   **Definitie Extern**  
->   Een groepering van constructies die een externe instantie beheert en
->   beschikbaar stelt aan een informatiemodel en die in het informatiemodel
->   ongewijzigd gebruikt worden.
+<aside class="definition">
+  <dfn>Extern</dfn>Een groepering van constructies die een externe instantie beheert en beschikbaar stelt aan een informatiemodel en die in het informatiemodel ongewijzigd gebruikt worden.
+</aside>
 
 <aside class='example'>
     Voorbeeld: het Externe package NEN3610 met datatype NEN3610ID. Het datatype van
@@ -736,11 +684,9 @@ Een domein package bevat de modelelementen waaruit een informatiemodel is sameng
 
 #### View
 
->   **Definitie View**  
->   Een groepering van objecttypen die gespecificeerd zijn in een extern
->   informatiemodel en vanuit het perspectief van het eigen informatiemodel
->   inzicht geeft welke gegevens van deze objecttypen relevant zijn binnen het
->   eigen informatiemodel.
+<aside class="definition">
+  <dfn>View</dfn>Een groepering van objecttypen die gespecificeerd zijn in een extern informatiemodel en vanuit het perspectief van het eigen informatiemodel inzicht geeft welke gegevens van deze objecttypen relevant zijn binnen het eigen informatiemodel.
+</aside>
 
 <aside class='example'>
     IMKAD-BRP. Een aantal van de gegevens uit de basisregistratie personen (BRP) zijn relevant voor de basisregistratie Kadaster. Deze relevante subset is door de beheerder van IMKAD ondergebracht in de view IMKAD-BRP. Vanuit modelleringsperspectief wordt dit
@@ -753,9 +699,9 @@ Diagram: [Overige](#overige)
 
 #### Constraint
 
->   **Definitie Constraint**  
->   Een constraint is een conditie of een beperking, die over een of meerdere
->   modelelementen uit het informatiemodel geldt.
+<aside class="definition">
+  <dfn>Constraint</dfn>Een conditie of een beperking, die over een of meerdere modelelementen uit het informatiemodel geldt.
+</aside>
 
 *Toelichting:* Een constraint kan vastgelegd worden bij alle modelelementen. Echter, meestal
 komt een constraint voor bij een objecttype, om te aan te geven dat de
@@ -766,11 +712,13 @@ Een constraint wordt altijd in gewone tekst omschreven en kan optioneel als form
 
 #### Keuze
 
-Een *Keuze* is een opsomming van meerdere modelelementen, waarbij er maar van één tegelijkertijd sprake kan zijn.
+<aside class="definition">
+  <dfn>Keuze</dfn>Een opsomming van meerdere modelelementen, waarbij er maar van één tegelijkertijd sprake kan zijn.
+</aside>
 
-*Toelichting:* Er kan altijd maar één van de mogelijkheden gekozen worden. De keuze is voor een aantal use cases een alternatieve manier voor het modelleren van een constraint.
+*Toelichting:* Er kan altijd maar één van de mogelijkheden gekozen worden. De `Keuze` is voor een aantal use cases een alternatieve manier voor het modelleren van een constraint.
 
-Een *Keuze* kan op meerdere plekken gebruikt worden, en maakt het mogelijk waar in het metamodel normaal gesproken maar één mogelijkheid bestaat, een opsomming te geven van meerdere mogelijkheden, waarbij in een concreet geval altijd precies één van deze mogelijkheden wordt gebruikt.
+Een `Keuze` kan op meerdere plekken gebruikt worden, en maakt het mogelijk waar in het metamodel normaal gesproken maar één mogelijkheid bestaat, een opsomming te geven van meerdere mogelijkheden, waarbij in een concreet geval altijd precies één van deze mogelijkheden wordt gebruikt.
 
 Een belangrijk voordeel van deze modellering is dat de kardinaliteiten zuiver gehouden kunnen worden. Anders gezegd, er kan mee voorkomen worden dat een kardinaliteit van bijvoorbeeld twee kenmerken eerst optioneel gemaakt moet worden en dat hierna via een constraint deze toch weer verplicht gemaakt moeten worden, voor precies één van de mogelijkheden. Het is aan de modelleur om te kiezen voor een constraint of een Keuze.
 
@@ -782,21 +730,20 @@ Bij de use cases gaat het over meerdere kenmerken, waartussen een keuze gemaakt 
 Een objecttype heeft een attribuutsoort en het datatype hiervan is ofwel datatype D1 ofwel datatype D2. In MIM modelleren we daarom 1  attribuutsoort met als datatype een keuze tussen het datatype D1 en het datatype D2. Het maken van deze keuze is verplicht.
 
 <aside class='example'>
-Voorbeeld: *Attribuutsoort* geometrie als kenmerk van een objecttype. Dit is een keuze uit *Datatype* Line of *Datatype* Polygon. De opsomming van beide keuzemogelijkheden noemen we de *Keuze* LineOrPolygon. De aanhaking aan het attribuutsoort geometrie gebeurt door aan te geven dat LineOrPolygon het type is van geometrie.
+  Voorbeeld: *Attribuutsoort* geometrie als kenmerk van een objecttype. Dit is een keuze uit *Datatype* Line of *Datatype* Polygon. De opsomming van beide keuzemogelijkheden noemen we de *Keuze* LineOrPolygon. De aanhaking aan het attribuutsoort geometrie gebeurt door aan te geven dat LineOrPolygon het type is van geometrie.
 </aside>
 
 In dit voorbeeld vormt LineOrPolygon de *Keuze* als geheel. De datatypen zelf zijn de keuze mogelijkheden, maar blijven in de modellering van de metaclass datatype en behoren in deze zin niet tot de modellering van de metaclass keuze.  
 
 Het is niet de bedoeling om twee attribuutsoorten te modelleren met elk een datatype en de attribuutsoorten optioneel te maken.
 
-Zonder de mogelijkheid van keuze, zou je te maken krijgen met twee attribuutsoorten met bijbehorend datatype. Echter, in dat geval mogen de attribuutsoorten niet dezelfde naam hebben, aangezien deze bij hetzelfde objecttype horen. Ook zou de kardinaliteit niet kloppen: die zou dan [0..1] moeten worden, maar dat doet geen recht aan het feit dat er één verplicht aanwezig moet zijn, en er ook geen twee naast elkaar mogen zijn. De werkelijke kardinaliteit is [1..1].
-
+Zonder de mogelijkheid van keuze, zou je te maken krijgen met twee attribuutsoorten met bijbehorend datatype. Echter, in dat geval mogen de attribuutsoorten niet dezelfde naam hebben, aangezien deze bij hetzelfde objecttype horen. Ook zou de kardinaliteit niet kloppen: die zou dan `0..1` moeten worden, maar dat doet geen recht aan het feit dat er één verplicht aanwezig moet zijn, en er ook geen twee naast elkaar mogen zijn. De werkelijke kardinaliteit is `1..1`.
 
 **Use case 2: een keuze tussen 2 of meer attribuutsoorten**  
 Er is sprake van ofwel attribuutsoort A1 ofwel attribuutsoort A2. In MIM modelleren we daarom een keuze tussen de 2 attribuutsoorten A1 en A2. Het maken van deze keuze is verplicht.
 
 <aside class='example'>
-Voorbeeld: bij een objecttype "Betalingsopdracht" moet naast het bedrag ook een betalingskenmerk worden opgenomen of een omschrijving. Eén van beide moet worden ingevuld. Het is niet toegestaan dat beide velden worden ingevuld.
+  Voorbeeld: bij een objecttype "Betalingsopdracht" moet naast het bedrag ook een betalingskenmerk worden opgenomen of een omschrijving. Eén van beide moet worden ingevuld. Het is niet toegestaan dat beide velden worden ingevuld.
 </aside>
 
 We modelleren daarom een *Keuze* 'BetalingskenmerkOfOmschrijving' met daarin een *Attribuutsoort* betalingskenmerk en een *Attribuutsoort* omschrijving.
@@ -807,12 +754,11 @@ In dit voorbeeld vormt BetalingskenmerkOfOmschrijving en de aanhaking ervan op h
 
 Zonder de mogelijkheid van keuze zouden beide attribuutsoorten opgenomen zijn bij het objecttype als optionele velden, met een constraint dat een van beide gevuld moet zijn. Nadeel hiervan is dat de kardinaliteit dan niet erg duidelijk gemodelleerd is: die zou dan voor beide attribuutsoorten [0..1] moeten worden, maar dat doet geen recht aan het feit dat er één verplicht aanwezig moet zijn, en er ook geen twee naast elkaar mogen zijn. De werkelijke kardinaliteit voor een gekozen attribuutsoort is [1..1]. Met een constraint is dit te specificeren en derhalve ook op zich wel correct te modelleren, maar met een modellering van een keuze is dit veel duidelijker.
 
-
 **Use case 3: een keuze tussen meerdere manieren om invulling te geven aan 1 betekenisvol attribuutsoort van een objecttype**  
 Er is sprake van ofwel attribuutsoort A0 en aanvullend hierbij een keuze tussen ofwel attribuutsoort A1 ofwel attribuutsoort A2. In MIM modelleren we daarom voor A1 en A2 een keuze tussen de 2 attribuutsoorten. Het maken van deze keuze is verplicht.
 
 <aside class='example'>
-Bij een objecttype "Betalingsopdracht" moet een bedrag en een *beschrijving* worden opgenomen. Deze beschrijving heeft betekenis voor het objecttype, als eigenschap. Verder moet er voor de beschrijving aanvullend een keuze worden gemaakt tussen een *beschrijving in de vorm van een betalingskenmerk* OF een *beschrijving in de vorm van een omschrijving*. Beide worden (ook) gezien als attribuutsoorten. Het is niet toegestaan dat beide velden worden ingevuld: alleen een betalingskenmerk, of alleen een omschrijving.
+  Bij een objecttype "Betalingsopdracht" moet een bedrag en een *beschrijving* worden opgenomen. Deze beschrijving heeft betekenis voor het objecttype, als eigenschap. Verder moet er voor de beschrijving aanvullend een keuze worden gemaakt tussen een *beschrijving in de vorm van een betalingskenmerk* OF een *beschrijving in de vorm van een omschrijving*. Beide worden (ook) gezien als attribuutsoorten. Het is niet toegestaan dat beide velden worden ingevuld: alleen een betalingskenmerk, of alleen een omschrijving.
 </aside>
 
 We modelleren daarom een *Keuze* 'BetalingskenmerkOfOmschrijving' met daarin een *Attribuutsoort* betalingskenmerk en een *Attribuutsoort* omschrijving. Het is bij deze use case niet de bedoeling om het attribuutsoort beschrijving kwijt te raken in de modellering. De aanhaking van de *Keuze* 'BetalingskenmerkOfOmschrijving' is daarom aan het **attribuutsoort**. De aanhaking aan het attribuutsoort beschrijving gebeurt door aan te geven dat BetalingskenmerkOfOmschrijving het type is van beschrijving.
@@ -826,7 +772,7 @@ In dit voorbeeld vormt BetalingskenmerkOfOmschrijving de *Keuze* als geheel. De 
 Er is sprake van een relatiesoort R0 en aanvullend hierbij een keuze tussen relatiedoel D1 of relatiedoel D2. In MIM modelleren we daarom een keuze tussen de 2 relatiedoelen D1 en D2. Het maken van deze keuze is verplicht.
 
 <aside class='example'>
-Voorbeeld: een objecttype "Vervoermiddel" heeft een eigenaar. Dit kan een persoon zijn, of een bedrijf, maar niet beiden. Er is sprake van één eigenaar" en een keuze tussen relatiedoel persoon (naar objecttype Persoon) en relatiedoel bedrijf (naar objecttype Bedrijf). We modelleren daarom 1 *Relatiesoort* eigenaar en aanvullend met een *Keuze* EigenaarKeuze met twee relatiedoelen, een naar persoon en een naar bedrijf.  
+  Voorbeeld: een objecttype "Vervoermiddel" heeft een eigenaar. Dit kan een persoon zijn, of een bedrijf, maar niet beiden. Er is sprake van één eigenaar" en een keuze tussen relatiedoel persoon (naar objecttype Persoon) en relatiedoel bedrijf (naar objecttype Bedrijf). We modelleren daarom 1 *Relatiesoort* eigenaar en aanvullend met een *Keuze* EigenaarKeuze met twee relatiedoelen, een naar persoon en een naar bedrijf.  
 </aside>
 
 Het is bij deze use case niet de bedoeling om twee nieuwe relatiesoorten, eigenaar_persoon en eigenaar_bedrijf, te introduceren en al zeker niet om de relatiesoort eigenaar kwijt te raken. We modelleren daarom 1 relatiesoort met de naam eigenaar en een *Keuze* tussen relatiedoelen.
@@ -1147,14 +1093,14 @@ overig.
 >   **Definitie Identificerend**  
 >	Een aanduiding dat een kenmerk of een combinatie van kenmerken van een
 >	objecttype uniek identificerend is voor alle objecten in de populatie van
->	objecten van dit objecttype, of de aanduiding dat een referentie element
+>	objecten van dit objecttype, of de aanduiding dat een referentie-element
 >	uniek identificerend is voor alle lijst items in een referentielijst.
 
 Toelichting: objecten hebben, of krijgen, in een administratie of gegevensvoorziening vaak één identificerend kenmerk. Het kan ook zijn dat een aantal kenmerken in combinatie identificerend zijn, zoals twee attribuutsoorten of een attribuutsoort en een relatiesoort. De combinatie met een relatiesoort wordt alleen gedaan voor objecttypes die zelf geen unieke aanduiding hebben en daarom deze moeten samenstellen met de unieke aanduiding van een gerelateerde objecttype.
 
 Referentielijsten is het enige type waardelijst die dit metagegeven kan hebben, omdat de enumeratie zelf identificerend is en de uniek identificerende code van een codelijst zich buiten het informatiemodel bevindt.
 
-Toepassing: attribuutsoort, alle relaties (relatiesoort, relatierol, relatieklasse, externe koppeling), referentie element.
+Toepassing: attribuutsoort, alle relaties (relatiesoort, relatierol, relatieklasse, externe koppeling), referentie-element.
 
 #### Metagegeven: **Indicatie materiële historie**
 
@@ -1514,7 +1460,7 @@ Mogelijk is er een profielspecificatie die de specifieke technische toepassing v
 Bijvoorbeeld: het type van het kenmerk geometrie is het datatype VlakOfMultivlak, het type van het kenmerk achternaam is het datatype CharacterString
 
 Een attribuutsoort heeft een datatype voor de specificatie van het toegestane
-waardetype. Hetzelfde geldt voor een data element, een referentie element en
+waardetype. Hetzelfde geldt voor een data-element, een referentie-element en
 keuze elementen.
 
 Dit is altijd conform een datatype uit dit metamodel (of een extensie ervan) of
@@ -1525,7 +1471,7 @@ statische opsomming van waarden betreft, dan wordt de naam van de desbetreffende
 enumeratie als type vermeld.
 
 *Toepassing*: Alle informatie elementen die een attribuut modelleren:
-attribuutsoort, data element, referentie element, datatypekeuze, doelkeuze.
+attribuutsoort, data-element, referentie-element, datatypekeuze, doelkeuze.
 
 #### Metagegeven: **Lengte**
 
@@ -1555,7 +1501,7 @@ Andere getallen dan 1 of 2 of 3 of 9 kunnen uiteraard gebruikt worden om er de l
 
 Het gaat bij deze lengte om hoe lang een gegeven in functionele zin mag zijn. Dus, hoeveel karakters en hoeveel getallen voor en na de komma.
 
-De lengte heeft betrekking op data waar een modelelement over gaat. Bij een attribuutsoort gaat het om de lengte van de data van het attribuut. Bij een gestructureerd datatype krijgt elk data element een eigen lengte en gaat het om de lengte van alleen dit data element.  
+De lengte heeft betrekking op data waar een modelelement over gaat. Bij een attribuutsoort gaat het om de lengte van de data van het attribuut. Bij een gestructureerd datatype krijgt elk data-element een eigen lengte en gaat het om de lengte van alleen dit data-element.  
 
 Bijvoorbeeld:
 * Een naam van een persoon met minimale lengte 2 en onbegrensd: CharacterString, lengte 2..
@@ -1584,8 +1530,7 @@ Niet alle eisen aan een gegevens kunnen gespecificeerd worden met een lengte. Ge
 * het waardenbereik van een gegeven, "binnen" deze lengte
 * of een getal negatief of positief mag zijn.
 
-*Toepassing*: Attribuutsoort, primitief datatype (alleen als dit datatype in het IM zelf gedefinieerd is), data
-element, referentie element.
+*Toepassing*: Attribuutsoort, primitief datatype (alleen als dit datatype in het IM zelf gedefinieerd is), data-element, referentie-element.
 
 #### Metagegeven: **Patroon**
 
@@ -1753,7 +1698,7 @@ Verkorte schrijfwijze: **datatype**
 
 Een datatype wordt onder andere toegekend aan een attribuutsoort.
 
-*Toepassing*: Attribuutsoort, keuze, referentie element, data element
+*Toepassing*: Attribuutsoort, keuze, referentie-element, data-element
 
 #### Metagegeven: **heeft relatiesoort**
 Verkorte schrijfwijze: **relatiesoort**
@@ -1779,15 +1724,15 @@ Een objecttype kan een relatie hebben met en objecttype in een extern package.
 
 *Toepassing*: Objecttype, Gegevensgroeptype.
 
-#### Metagegeven: **heeft data element**
-Verkorte schrijfwijze: **data element**
+#### Metagegeven: **heeft data-element**
+Verkorte schrijfwijze: **data-element**
 
->   **Definitie heeft data element**  
->   De binding van een data element aan een gestructureerd datatype.
+>   **Definitie heeft data-element**  
+>   De binding van een data-element aan een gestructureerd datatype.
 
 *Toelichting*
 
-Een gestructureerd datatype bevat meerdere data elementen.
+Een gestructureerd datatype bevat meerdere data-elementen.
 
 *Toepassing*: gestructureerd datatype.
 
@@ -1803,15 +1748,15 @@ Een enumeratie bevat enumeratiewaarden.
 
 *Toepassing*: enumeratie.
 
-#### Metagegeven: **bevat referentie element**
-Verkorte schrijfwijze: **referentie element**
+#### Metagegeven: **bevat referentie-element**
+Verkorte schrijfwijze: **referentie-element**
 
->   **Definitie bevat referentie element**  
->   De binding van een referentie element aan een referentielijst.
+>   **Definitie bevat referentie-element**  
+>   De binding van een referentie-element aan een referentielijst.
 
 *Toelichting*
 
-Een referentie lijst bevat referentie elementen.
+Een referentielijst bevat referentie-elementen.
 
 *Toepassing*: Referentielijst.
 
