@@ -64,7 +64,10 @@ Ten opzichte van de UML weergave van het MIM metamodel kent het MIM in RDF allee
 
 ### Kern
 
-![](media/rdf-kern.png)
+<figure id="media/rdf-kern">
+  <img src="media/rdf-kern.png" alt="" />
+  <figcaption>Kern metamodel in LD</figcaption>
+</figure>
 
 Als prefix wordt voor de vocabulaire gebruik gemaakt van `mim`, met de namespace `http://bp4mc2.org/def/mim#`. Voor de shapes wordt als prefix gebruik gemaakt van `shape`, met als namespace `http://bp4mc2.org/def/mim-shapes#`.
 
@@ -80,11 +83,17 @@ Als prefix wordt voor de vocabulaire gebruik gemaakt van `mim`, met de namespace
 
 In bovenstaand figuur zijn niet alle bindingen getekend rondom `mim:Relatiesoort`: dit zou het figuur onnodig complex maken. De bindingen met `mim:Gegevensgroeptype` zijn niet getekend. Dit is afgebeeld in onderstaand figuur. Daarbij is zichtbaar dat een `mim:Gegevensgroeptype` wel uitgaande relaties kan hebben, maar geen inkomende relaties: dat is altijd een `mim:Objecttype`.
 
-![](media/rdf-relatiekern.png)
+<figure id="media/rdf-relatiekern">
+  <img src="media/rdf-relatiekern.png" alt="" />
+  <figcaption>Bindingen met mim:Gegevensgroeptype</figcaption>
+</figure>
 
 ### Datatypen
 
-![](media/rdf-datatype.png)
+<figure id="media/rdf-datatype">
+  <img src="media/rdf-datatype.png" alt="" />
+  <figcaption>Datatypen</figcaption>
+</figure>
 
 | **MIM metaclass** | **Metaclass in RDF** | **Shape in RDF** | **Grondslag** |
 |-------------------|----------------------|------------------|---------------|
@@ -102,7 +111,10 @@ In bovenstaand figuur zijn niet alle bindingen getekend rondom `mim:Relatiesoort
 
 #### Constraint
 
-![](media/rdf-constraint.png)
+<figure id="media/rdf-constraint">
+  <img src="media/rdf-constraint.png" alt="" />
+  <figcaption>Constraint</figcaption>
+</figure>
 
 | **MIM metaclass** | **Metaclass in RDF** | **Shape in RDF** | **Grondslag** |
 |-------------------|----------------------|------------------|---------------|
@@ -126,31 +138,46 @@ De "keuze constructie" maakt een keuze mogelijk tussen meerdere attribuutsoorten
 
 *Datatypekeuze*
 
-![](media/rdf-keuze-datatype.png)
+<figure id="media/rdf-keuze-datatype">
+  <img src="media/rdf-keuze-datatype.png" alt="" />
+  <figcaption>Datatypekeuze</figcaption>
+</figure>
 
 Aangezien een `mim:Keuze` een specialisatie is van een `mim:Datatype`, mag een attribuutsoort via een `mim:type` een verwijzen naar een Keuze. Een dergelijk keuze heeft in dit geval zelf minimaal twee `mim:type` verwijzingen naar de 2 (of meer) datatypen waaruit gekozen wordt.
 
 *Attribuutkeuze*
 
-![](media/rdf-keuze-attribuut.png)
+<figure id="media/rdf-keuze-attribuut">
+  <img src="media/rdf-keuze-attribuut.png" alt="" />
+  <figcaption>Attribuutkeuze</figcaption>
+</figure>
 
 Indien een `mim:Keuze` wordt gebruikt voor een keuze tussen attribuutsoorten, dan wordt vanuit een objecttype via een `mim:attribuut` niet verwezen naar een attribuutsoort, maar naar de keuze. De keuze zelf verwijst op zijn beurt naar de attribuutsoorten waartussen gekozen wordt.
 
 *Relatiedoelkeuze*
 
-![](media/rdf-keuze-relatiedoel.png)
+<figure id="media/rdf-keuze-relatiedoel">
+  <img src="media/rdf-keuze-relatiedoel.png" alt="" />
+  <figcaption>Relatiedoelkeuze</figcaption>
+</figure>
 
 Indien een `mim:Keuze` wordt gebruikt voor een keuze tussen objecttypen die de relatiedoelen zijn voor een relatiesoort, dan wordt vanuit een relatiesoort via een `mim:doel` niet verwezen naar een objecttype, maar naar de keuze. De keuze zelf verwijst op zijn beurt naar de objecttypen waartussen gekozen wordt.
 
 *Relatiesoortkeuze*
 
-![](media/rdf-keuze-relatiesoort.png)
+<figure id="media/rdf-keuze-relatiesoort">
+  <img src="media/rdf-keuze-relatiesoort.png" alt="" />
+  <figcaption>Relatiesoortkeuze</figcaption>
+</figure>
 
 Een keuze tussen relatiesoorten wordt gedaan op basis van een keuzeconstraint. Een keuzeconstraint is geen datatype, maar juist een constraint die in dit geval aangeeft dat er een keuze gemaakt moet worden tussen twee relatiesoorten.
 
 #### Relatierol
 
-![](media/rdf-relatie.png)
+<figure id="media/rdf-relatie">
+  <img src="media/rdf-relatie.png" alt="" />
+  <figcaption>Relatierol</figcaption>
+</figure>
 
 | **MIM metaclass** | **Metaclass in RDF** | **Shape in RDF** | **Grondslag** |
 |-------------------|----------------------|------------------|---------------|
@@ -166,7 +193,10 @@ Een keuze tussen relatiesoorten wordt gedaan op basis van een keuzeconstraint. E
 
 #### Packages
 
-![](media/rdf-packages.png)
+<figure id="media/rdf-packages">
+  <img src="media/rdf-packages.png" alt="" />
+  <figcaption>Packages</figcaption>
+</figure>
 
 De relatie bevatModelelement geeft aan dat packages modelelementen kunnen bevatten. Welke modelelementen precies toegestaan zijn, wordt in het plaatje niet tot uitdrukking gebracht. Zie hiervoor [sectie 2.6](#packages).
 
