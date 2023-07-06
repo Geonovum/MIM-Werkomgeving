@@ -1267,8 +1267,9 @@ Voor de hand liggende formaten waarin een waardelijst is gepubliceerd zijn onder
 
 #### Metagegeven: **Datatype**
 
->   **Definitie Datatype**  
-Datatype van de waarden in een waardelijst
+<aside class="definition">
+  <dfn>Datatype</dfn>Datatype van de waarden in een waardelijst.
+</aside>
 
 *Toelichting*
 
@@ -1280,6 +1281,7 @@ Voorbeelden hiervan zijn `Characterstring` , `Integer`
 
 <aside class="definition">
   <dfn>Waarde-item</dfn>Het item (of element) van de lijst dat de waarde representeert.
+</aside>
 
 *Toelichting*
 
@@ -1301,31 +1303,23 @@ Mogelijk is er een profielspecificatie die de specifieke technische toepassing v
 
 #### Metagegeven: **Type** (domein van een waarde een gegeven)
 
->   **Definitie Type**  
->   Het datatype waarmee waarden van dit modelelement worden vastgelegd.
+<aside class="definition">
+  <dfn>Type</dfn>Het datatype waarmee waarden van dit modelelement worden vastgelegd.
+</aside>
 
 *Toelichting*
 
 Bijvoorbeeld: het type van het kenmerk geometrie is het datatype VlakOfMultivlak, het type van het kenmerk achternaam is het datatype CharacterString
 
-Een attribuutsoort heeft een datatype voor de specificatie van het toegestane
-waardetype. Hetzelfde geldt voor een data-element, een referentie-element en
-keuze elementen.
+Een attribuutsoort heeft een datatype voor de specificatie van het toegestane waardetype. Hetzelfde geldt voor een data-element, een referentie-element en keuze elementen. Dit is altijd conform een datatype uit dit metamodel (of een extensie ervan) of een primitief datatype die extern is aan dit model. Betreft het een waarde uit een dynamische waardentabel, dan wordt de naam van de desbetreffende referentielijst of codelijst als type vermeld. Indien het een waarde uit een statische opsomming van waarden betreft, dan wordt de naam van de desbetreffende enumeratie als type vermeld.
 
-Dit is altijd conform een datatype uit dit metamodel (of een extensie ervan) of
-een primitief datatype die extern is aan dit model. Betreft het een waarde uit
-een dynamische waardentabel, dan wordt de naam van de desbetreffende
-referentielijst of codelijst als type vermeld. Indien het een waarde uit een
-statische opsomming van waarden betreft, dan wordt de naam van de desbetreffende
-enumeratie als type vermeld.
-
-*Toepassing*: Alle informatie elementen die een attribuut modelleren:
-attribuutsoort, data-element, referentie-element, datatypekeuze, doelkeuze.
+*Toepassing*: Alle informatie elementen die een attribuut modelleren: attribuutsoort, data-element, referentie-element, datatypekeuze, doelkeuze.
 
 #### Metagegeven: **Lengte**
 
->   **Definitie Lengte**  
->   De aanduiding van de lengte van een gegeven, volgens de aangegeven notatiewijze.
+<aside class="definition">
+  <dfn>Lengte</dfn>De aanduiding van de lengte van een gegeven, volgens de aangegeven notatiewijze.
+</aside>
 
 De notatiewijze en de betekenis is als volgt:
 
@@ -1333,18 +1327,18 @@ Voor karakters:
 
 | **Notatie** | **Betekenis**                                                                              |
 |-------------|--------------------------------------------------------------------------------------------|
-| 1           | De lengte is precies 1                                                                     |
-| 2..         | De lengte is minimaal 2 (inclusief 2) of meer (onbegrensd)                                 |
-| 2..9        | De lengte is minimaal 2 en maximaal 9 (inclusief 9)                                        |
+| `1`         | De lengte is precies 1                                                                     |
+| `2..`       | De lengte is minimaal 2 (inclusief 2) of meer (onbegrensd)                                 |
+| `2..9`      | De lengte is minimaal 2 en maximaal 9 (inclusief 9)                                        |
 
 Voor getallen:
 
 | **Notatie** | **Betekenis**                                                                              |
 |-------------|--------------------------------------------------------------------------------------------|
-| 3           | De lengte is maximaal 3 (inclusief 3, dus 1, 2 of 3) voor de komma      |  
-| 3,2         | De lengte is maximaal 3 (inclusief 3, dus 1, 2 of 3) voor de komma, en maximaal 2 getallen na de komma  |    
+| `3`         | De lengte is maximaal 3 (inclusief 3, dus 1, 2 of 3) voor de komma      |  
+| `3,2`       | De lengte is maximaal 3 (inclusief 3, dus 1, 2 of 3) voor de komma, en maximaal 2 getallen na de komma  |    
 
-Andere getallen dan 1 of 2 of 3 of 9 kunnen uiteraard gebruikt worden om er de lengte mee te specificeren.
+Andere getallen dan `1`, `2`, `3` of `9` kunnen uiteraard gebruikt worden om er de lengte mee te specificeren.
 
 *Toelichting*
 
@@ -1383,34 +1377,27 @@ Niet alle eisen aan een gegevens kunnen gespecificeerd worden met een lengte. Ge
 
 #### Metagegeven: **Patroon**
 
->   **Definitie Patroon**  
->   De verzameling van waarden die gegevens van deze attribuutsoort kunnen
->   hebben, oftewel het waardenbereik, uitgedrukt in een specifieke structuur.
+<aside class="definition">
+  <dfn>Patroon</dfn>De verzameling van waarden die gegevens van deze attribuutsoort kunnen hebben, oftewel het waardenbereik, uitgedrukt in een specifieke structuur.
+</aside>
 
 *Toelichting*
 
-De structuur is in woorden beschreven.
-
-Bijvoorbeeld: conform de Nederlandse standaard voor het beschrijven van een
-postcode.
-
-Het specificeren van een patroon is alleen van toepassing wanneer de
-specificatie aangeeft dat de waarde (direct of indirect) een primitief datatype
-betreft, zoals een CharacterString.
+De structuur is in woorden beschreven. Bijvoorbeeld: conform de Nederlandse standaard voor het beschrijven van een postcode. Het specificeren van een patroon is alleen van toepassing wanneer de specificatie aangeeft dat de waarde (direct of indirect) een primitief datatype betreft, zoals een CharacterString.
 
 *Toepassing*: De modelelementen uit de groep datatype en attribuutsoort.
 
 #### Metagegeven: **Formeel patroon**
 
->   **Definitie Formeel patroon**  
->   Zoals patroon, formeel vastgelegd, uitgedrukt in een formele taal die door
->   de computer wordt herkend.
+<aside class="definition">
+  <dfn>Formeel patroon</dfn>Zoals patroon, formeel vastgelegd, uitgedrukt in een formele taal die door de computer wordt herkend.
+</aside>
 
 *Toelichting*
 
 De structuur is in een reguliere expressie beschreven.
 
-Bijvoorbeeld: [1-9][0-9][0-9][0-9][A-Z][A-Z]
+Bijvoorbeeld: `[1-9][0-9][0-9][0-9][A-Z][A-Z]`
 
 Het specificeren van een patroon is alleen van toepassing wanneer de
 specificatie aangeeft dat de waarde (direct of indirect) een primitief datatype
@@ -1420,15 +1407,18 @@ betreft, zoals een CharacterString.
 
 #### Metagegeven: **Code**
 
->   **Definitie Code**  
->   De in een registratie of informatiemodel aan de enumeratiewaarde toegekend unieke code
+<aside class="definition">
+  <dfn>Code</dfn>De in een registratie of informatiemodel aan de enumeratiewaarde toegekend unieke code.
+</aside>
 
 #### Metagegeven: **Indicatie abstract object**
+<aside class="definition">
+  <dfn>Indicatie abstract object</dfn>Een indicatie die aangeeft of er objecten _kunnen_ bestaan die getypeerd worden als zijnde objecten (instanties) van alleen dit objecttype. Een abstract objecttype moet altijd de generalisatie zijn van één of meerdere objecttypes die niet abstract zijn.
+</aside>
 
->   **Defin#itie Indicatie abstract object**  
->   Een indicatie die aangeeft of er objecten _kunnen_ bestaan die getypeerd worden als zijnde objecten (instanties) van alleen dit objecttype. Een abstract objecttype moet altijd de generalisatie zijn van één of meerdere objecttypes die niet abstract zijn.
-
-N.B. Eén informatiemodel kan een abstract objecttype bevatten die _binnen dit informatiemodel_ een generalisatie is van geen enkel objecttype. Deze niet abstracte objecttypen kunnen zich immers ook buiten het informatiemodel bevinden en aldaar worden gespecificeerd. Dit komt voor bij informatiemodellen die een abstracte typering definiëren waarop (concretere) informatiemodellen willen aansluiten en nadere invulling aan geven.  
+<aside class="note">
+  Eén informatiemodel kan een abstract objecttype bevatten die _binnen dit informatiemodel_ een generalisatie is van geen enkel objecttype. Deze niet abstracte objecttypen kunnen zich immers ook buiten het informatiemodel bevinden en aldaar worden gespecificeerd. Dit komt voor bij informatiemodellen die een abstracte typering definiëren waarop (concretere) informatiemodellen willen aansluiten en nadere invulling aan geven.
+</aside>
 
 *Toelichting*
 
@@ -1447,8 +1437,9 @@ een nadere uitleg wordt gegeven van het fenomeen abstract objecttypen.
 
 #### Metagegeven: **Populatie**
 
->   **Definitie Populatie**  
-Voor objecttypen die deel uitmaken van een (basis)registratie betreft dit de beschrijving van de exemplaren van het gedefinieerde objecttype die in de desbetreffende (basis)­registratie voorhanden zijn.
+<aside class="definition">
+  <dfn>Populatie</dfn>Voor objecttypen die deel uitmaken van een (basis)registratie betreft dit de beschrijving van de exemplaren van het gedefinieerde objecttype die in de desbetreffende (basis) registratie voorhanden zijn.
+</aside>
 
 *Toelichting*
 
@@ -1458,8 +1449,9 @@ Dit is de beschrijving van de subset van de verzameling van alle instanties van 
 
 #### Metagegeven: **Kwaliteit**
 
->   **Definitie Kwaliteit**  
-Beschrijving van de mate waarin in de registratie opgenomen objecten van het desbetreffende type volledig, juist, actueel, nauwkeurig en betrouwbaar zijn.
+<aside class="definition">
+  <dfn>Kwaliteit</dfn>Beschrijving van de mate waarin in de registratie opgenomen objecten van het desbetreffende type volledig, juist, actueel, nauwkeurig en betrouwbaar zijn.
+</aside>
 
 *Toelichting*
 
@@ -1467,30 +1459,20 @@ Hier kan in tekst een beschrijving opgenomen worden over de kwaliteit van de inw
 
 *Toepassing:* Objecttype
 
-
-
 ### Modelelementbindingen - metagegevens
 
 Bindingen geven aan hoe modelelementen met elkaar verbonden kunnen en mogen worden.
 
-Voorbeeld: de binding tussen een objecttype en een attribuutsoort, om aan te geven dat een attribuutsoort
-gemodelleerd kan worden als eigenschap van een objecttype. Een voorbeeld van wat niet mag is de verbinding van een attribuutsoort aan een relatiesoort.
-Andere voorbeelden zijn de binding tussen een objecttype en een generalisatie, of tussen een enumeratie en een enumeratiewaarde.
+Voorbeeld: de binding tussen een objecttype en een attribuutsoort, om aan te geven dat een attribuutsoort gemodelleerd kan worden als eigenschap van een objecttype. Een voorbeeld van wat niet mag is de verbinding van een attribuutsoort aan een relatiesoort. Andere voorbeelden zijn de binding tussen een objecttype en een generalisatie, of tussen een enumeratie en een enumeratiewaarde.
 
-Deze metagegevens zijn alleen nodig voor de binding van modelelementen aan elkaar
-en zijn vrijwel altijd een onderdeel van een modelleertaal (waarmee een informatiemodel gemaakt kan worden).
-In modelleertalen is de binding niet altijd benoemd en is dan impliciet aanwezig. Het metagegeven hoeft dan in die modelleertaal niet expliciet te worden opgenomen.
-Omdat dit hoofdstuk los van een modelleertaal is beschreven zijn de namen van de bindingen wel opgenomen.
-
-Mocht het relevant zijn om de namen van de verbindingen ergens te gebruiken: er zijn twee schrijfwijzen aangegeven die equivalent zijn, gescheiden door een `/`.
-
-De bindingen zijn ook in diagram vorm te lezen aan het begin van dit hoofdstuk, in [Diagrammen van modelelementen](#structuur-metamodel).
+Deze metagegevens zijn alleen nodig voor de binding van modelelementen aan elkaar en zijn vrijwel altijd een onderdeel van een modelleertaal (waarmee een informatiemodel gemaakt kan worden). In modelleertalen is de binding niet altijd benoemd en is dan impliciet aanwezig. Het metagegeven hoeft dan in die modelleertaal niet expliciet te worden opgenomen. Omdat dit hoofdstuk los van een modelleertaal is beschreven zijn de namen van de bindingen wel opgenomen. Mocht het relevant zijn om de namen van de verbindingen ergens te gebruiken: er zijn twee schrijfwijzen aangegeven die equivalent zijn, gescheiden door een `/`. De bindingen zijn ook in diagram vorm te lezen aan het begin van dit hoofdstuk, in [Diagrammen van modelelementen](#structuur-metamodel).
 
 #### Metagegeven: **heeft attribuut** 
 Verkorte schrijfwijze: **attribuut**
 
->   **Definitie heeft attribuut**  
->   De binding van een attribuutsoort als eigenschap aan een objecttype.
+<aside class="definition">
+  <dfn>heeft attribuut</dfn>De binding van een attribuutsoort als eigenschap aan een objecttype.
+</aside>
 
 *Toelichting*
 
@@ -1501,9 +1483,9 @@ Objecttypen, gegevensgroeptypen of relatieklassen hebben attributsoorten (0,1,n)
 #### Metagegeven: **heeft gegevensgroep** 
 Verkorte schrijfwijze: **gegevensgroep**
 
->   **Definitie heeft gegevensgroep**  
->   De binding van een gegevensgroep als groep van eigenschappen aan een
->   objecttype of gegevensgroeptype.
+<aside class="definition">
+  <dfn>heeft gegevensgroep</dfn>De binding van een gegevensgroep als groep van eigenschappen aan een objecttype of gegevensgroeptype.
+</aside>
 
 *Toelichting*
 
@@ -1515,8 +1497,9 @@ weer een gegevensgroeptype bevat.
 #### Metagegeven: **heeft gegevensgroeptype** 
 Verkorte schrijfwijze: **gegevensgroeptype**
 
->   **Definitie heeft gegevensgroeptype**  
->   De binding van een gegevensgroeptype als waardetype aan een gegevensgroep.
+<aside class="definition">
+  <dfn>heeft gegevensgroeptype</dfn>De binding van een gegevensgroeptype als waardetype aan een gegevensgroep.
+</aside>
 
 *Toelichting*
 
@@ -1528,8 +1511,9 @@ gegevensgroeptype.
 #### Metagegeven: **verwijst naar supertype** 
 Verkorte schrijfwijze: **supertype**
 
->   **Definitie verwijst naar supertype**  
->   De binding van een supertype aan een subtype middels een generalisatie.
+<aside class="definition">
+  <dfn>verwijst naar supertype</dfn>De binding van een supertype aan een subtype middels een generalisatie.
+</aside>
 
 *Toelichting*
 
@@ -1540,8 +1524,9 @@ Een subtype verwijst met een generalisatie naar een supertype.
 #### Metagegeven: **heeft datatype**
 Verkorte schrijfwijze: **datatype**
 
->   **Definitie heeft datatype**  
->   De binding van een datatype aan een eigenschap.
+<aside class="definition">
+  <dfn>heeft datatype</dfn>De binding van een datatype aan een eigenschap.
+</aside>
 
 *Toelichting*
 
@@ -1552,8 +1537,9 @@ Een datatype wordt onder andere toegekend aan een attribuutsoort.
 #### Metagegeven: **heeft relatiesoort**
 Verkorte schrijfwijze: **relatiesoort**
 
->   **Definitie heeft relatiesoort**  
->   De binding van een objecttype aan een objecttype middels een relatiesoort.
+<aside class="definition">
+  <dfn>heeft relatiesoort</dfn>De binding van een objecttype aan een objecttype middels een relatiesoort.
+</aside>
 
 *Toelichting*
 
@@ -1564,8 +1550,9 @@ Een objecttype kan een relatie hebben naar zichzelf of een ander objecttype.
 #### Metagegeven: **heeft externe koppeling**
 Verkorte schrijfwijze: **externe koppeling**
 
->   **Definitie heeft externe koppeling**  
->   De binding van een objecttype uit een extern package aan een objecttype.
+<aside class="definition">
+  <dfn>heeft externe koppeling</dfn>De binding van een objecttype uit een extern package aan een objecttype.
+</aside>
 
 *Toelichting*
 
@@ -1576,8 +1563,9 @@ Een objecttype kan een relatie hebben met en objecttype in een extern package.
 #### Metagegeven: **heeft data-element**
 Verkorte schrijfwijze: **data-element**
 
->   **Definitie heeft data-element**  
->   De binding van een data-element aan een gestructureerd datatype.
+<aside class="definition">
+  <dfn>heeft data-element</dfn>De binding van een data-element aan een gestructureerd datatype.
+</aside>
 
 *Toelichting*
 
@@ -1588,8 +1576,9 @@ Een gestructureerd datatype bevat meerdere data-elementen.
 #### Metagegeven: **bevat enumeratiewaarde**
 Verkorte schrijfwijze: **enumeratiewaarde**
 
->   **Definitie bevat enumeratie waarde**  
->   De binding van een enumeratiewaarde aan een enumeratie.
+<aside class="definition">
+  <dfn>bevat enumeratie waarde</dfn>De binding van een enumeratiewaarde aan een enumeratie.
+</aside>
 
 *Toelichting*
 
@@ -1600,8 +1589,9 @@ Een enumeratie bevat enumeratiewaarden.
 #### Metagegeven: **bevat referentie-element**
 Verkorte schrijfwijze: **referentie-element**
 
->   **Definitie bevat referentie-element**  
->   De binding van een referentie-element aan een referentielijst.
+<aside class="definition">
+  <dfn>bevat referentie-element</dfn>De binding van een referentie-element aan een referentielijst.
+</aside>
 
 *Toelichting*
 
@@ -1612,8 +1602,9 @@ Een referentielijst bevat referentie-elementen.
 #### Metagegeven: **heeft datatypekeuze**
 Verkorte schrijfwijze: **datatypekeuze**
 
->   **Definitie heeft keuzedatatype**  
->   De binding van een keuze uit datatypen aan een attribuutsoort.
+<aside class="definition">
+  <dfn>heeft keuzedatatype</dfn>De binding van een keuze uit datatypen aan een attribuutsoort.
+</aside>
 
 *Toelichting*
 
@@ -1624,8 +1615,9 @@ Een attribuutsoort kan als datatype een keuze uit datatypen hebben.
 #### Metagegeven: **heeft keuzeattribuut**
 Verkorte schrijfwijze: **keuzeattribuut**
 
->   **Definitie heeft keuzeattribuut**  
->   De binding van een keuze uit attributen aan een attribuutsoort of keuze.
+<aside class="definition">
+  <dfn>heeft keuzeattribuut</dfn>De binding van een keuze uit attributen aan een attribuutsoort of keuze.
+</aside>
 
 *Toelichting*
 
@@ -1636,8 +1628,9 @@ Een keuze tussen attribuutsoorten kan als eigenschap aan een objecttype, gegeven
 #### Metagegeven: **heeft keuzerelatiedoel**
 Verkorte schrijfwijze: **keuzerelatiedoel**
 
->   **Definitie heeft keuzerelatiedoel**  
->   De binding van een keuze uit relatiedoelen aan een objecttype.
+<aside class="definition">
+  <dfn>heeft keuzerelatiedoel</dfn>De binding van een keuze uit relatiedoelen aan een objecttype.
+</aside>
 
 *Toelichting*
 
@@ -1648,8 +1641,9 @@ Een keuze tussen relatiedoelen kan als eigenschap aan een objecttype of gegevens
 #### Metagegeven: **heeft constraint**
 Verkorte schrijfwijze: **constraint**
 
->   **Definitie heef constraint** 
->   De binding van een constraint aan een modelelement.
+<aside class="definition">
+  <dfn>heeft constraint</dfn>De binding van een constraint aan een modelelement.
+</aside>
 
 Het modelelement die een constraint heeft kan zijn: `Objecttype`, `Relatieklasse`, `Gegevensgroeptype`.
 
@@ -1684,9 +1678,11 @@ Voor de volgende metagegevens geldt een specifiek waardebereik.
 | [Aggregatietype](#metagegeven-aggregatietype) | `Compositie`, `Gedeeld`, `Geen`                                  |
 | [Authentiek](#authentieke-gegevens) | `Authentiek`, `Basisgegeven`, `Wettelijk gegeven`, `Landelijk kerngegeven`, `Overig` |
 
-NB: Geef bij de toepassing van `overig` in een informatiemodel aan wat er onder wordt verstaan.
+<aside class="note">
+  Geef bij de toepassing van <code>overig</code> in een informatiemodel aan wat er onder wordt verstaan.
+</aside>
 
-De metagegevens met Ja en Nee zijn semantisch bedoeld als een boolean (er zijn geen andere waarden mogelijk zoals onbekend, overig of geen waarde (leeg)). Voor technische implementatiedoeleinden is het toegestaan om Ja en Nee te interpreteren en eventueel te vervangen door een Boolean. Let wel, voor mens-leesbare functionele documentatie horen altijd de in de tabel aangegeven waarden Ja en Nee te worden gebruikt.
+De metagegevens met `Ja` en `Nee` zijn semantisch bedoeld als een boolean (er zijn geen andere waarden mogelijk zoals onbekend, overig of geen waarde (leeg)). Voor technische implementatiedoeleinden is het toegestaan om `Ja` en `Nee` te interpreteren en eventueel te vervangen door een `Boolean`. Let wel, voor mens-leesbare functionele documentatie horen altijd de in de tabel aangegeven waarden `Ja` en `Nee` te worden gebruikt.
 
 #### Defaultwaarden
 
