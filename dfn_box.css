@@ -19,8 +19,8 @@ div.illegal-example {
 :is(aside,div).definition {
     border-left-width: 0.5em;
     border-left-style: solid;
-    border-color: #829fb3;
-    background: #f5f8fa;
+    border-color: #0F80CC;
+    background: #e8f3fa;
     /*set the counter interval value*/
     counter-increment: dfn-counter 1;
 }
