@@ -1044,111 +1044,72 @@ overig.
   <dfn>Identificerend</dfn>Een aanduiding dat een kenmerk of een combinatie van kenmerken van een objecttype uniek identificerend is voor alle objecten in de populatie van	objecten van dit objecttype, of de aanduiding dat een referentie-element uniek identificerend is voor alle lijst items in een referentielijst.
 </aside>
 
-Toelichting: objecten hebben, of krijgen, in een administratie of gegevensvoorziening vaak één identificerend kenmerk. Het kan ook zijn dat een aantal kenmerken in combinatie identificerend zijn, zoals twee attribuutsoorten of een attribuutsoort en een relatiesoort. De combinatie met een relatiesoort wordt alleen gedaan voor objecttypes die zelf geen unieke aanduiding hebben en daarom deze moeten samenstellen met de unieke aanduiding van een gerelateerde objecttype.
-
-Referentielijsten is het enige type waardelijst die dit metagegeven kan hebben, omdat de enumeratie zelf identificerend is en de uniek identificerende code van een codelijst zich buiten het informatiemodel bevindt.
+Toelichting: objecten hebben, of krijgen, in een administratie of gegevensvoorziening vaak één identificerend kenmerk. Het kan ook zijn dat een aantal kenmerken in combinatie identificerend zijn, zoals twee attribuutsoorten of een attribuutsoort en een relatiesoort. De combinatie met een relatiesoort wordt alleen gedaan voor objecttypes die zelf geen unieke aanduiding hebben en daarom deze moeten samenstellen met de unieke aanduiding van een gerelateerde objecttype. Het modelelement `«Referentielijst»` is het enige type waardelijst die dit metagegeven kan hebben, omdat de enumeratiezelf identificerend is en de uniek identificerende code van een codelijst zich buiten het informatiemodel bevindt.
 
 Toepassing: attribuutsoort, alle relaties (relatiesoort, relatierol, relatieklasse, externe koppeling), referentie-element.
 
 #### Metagegeven: **Indicatie materiële historie**
 
->   **Definitie Indicatie materiele historie**  
->   Indicatie of de materiële historie van het kenmerk van het object te
->   bevragen is.
+<aside class="definition">
+  <dfn>Indicatie materiele historie</dfn>Indicatie of de materiële historie van het kenmerk van het object te bevragen is.
+</aside>
 
 *Toelichting*
 
-Bijvoorbeeld: Ja.
+Bijvoorbeeld: `Ja`.
 
-Met te bevragen wordt bedoeld, er wordt historie bijgehouden
-op enerlei wijze, welke op enerlei wijze te bevragen is.
+Met te bevragen wordt bedoeld, er wordt historie bijgehouden op enerlei wijze, welke op enerlei wijze te bevragen is. Dit metagegeven is alleen betekenisvol voor kenmerken waarvoor data wordt bijgehouden. De in te vullen waarde komt uit: zie [Tagged values en waardenbereik tagged
+values](#toegestane-waarden-voor-bepaalde-metadata-gegevens). Materiële historie geeft aan wanneer een verandering is opgetreden in de werkelijkheid die heeft geleid tot verandering van de attribuutwaarde. Verdere toelichting, zie het hoofdstuk [Afspraken & Regels](#afspraken-regels)
 
-Dit metagegeven is alleen betekenisvol voor kenmerken waarvoor data wordt bijgehouden.
-
-De in te vullen waarde komt uit: zie [Tagged values en waardenbereik tagged
-values](#toegestane-waarden-voor-bepaalde-metadata-gegevens)
-
-Materiële historie geeft aan wanneer een verandering is opgetreden in de werkelijkheid die heeft
-geleid tot verandering van de attribuutwaarde. Verdere toelichting,
-zie het hoofdstuk [Afspraken & Regels](#afspraken-regels)
-
-*Toepassing*: alle modelelementen die een kenmerk (kunnen) zijn van een
-objecttype, waarvoor data kan worden bijgehouden: attribuutsoort en relaties (relatiesoort, relatieklasse, externe koppeling).
+*Toepassing*: alle modelelementen die een kenmerk (kunnen) zijn van een objecttype, waarvoor data kan worden bijgehouden: attribuutsoort en relaties (relatiesoort, relatieklasse, externe koppeling).
 
 #### Metagegeven: **Indicatie formele historie**
 
->   **Definitie Indicatie formele historie**  
->   Indicatie of de formele historie van het kenmerk van het object
->   bijgehouden wordt en te bevragen is.
+<aside class="definition">
+  <dfn>Indicatie formele historie</dfn>Indicatie of de formele historie van het kenmerk van het object bijgehouden wordt en te bevragen is.
+</aside>
 
 *Toelichting*
 
-Bijvoorbeeld: Nee.
+Bijvoorbeeld: `Nee`.
 
-Met te bevragen wordt bedoeld, er wordt historie bijgehouden
-op enerlei wijze, welke op enerlei wijze te bevragen is.
+Met te bevragen wordt bedoeld, er wordt historie bijgehouden op enerlei wijze, welke op enerlei wijze te bevragen is. Dit metagegeven is alleen betekenisvol voor kenmerken waarvoor data wordt bijgehouden. De in te vullen waarde komt uit: zie [Tagged values en waardenbereik tagged
+values](#toegestane-waarden-voor-bepaalde-metadata-gegevens). Formele historie geeft aan wanneer in de administratie een verandering bekend is, en is verwerkt. Verdere toelichting, zie het hoofdstuk [Afspraken &Regels](#afspraken-regels).
 
-Dit metagegeven is alleen betekenisvol voor kenmerken waarvoor data wordt bijgehouden.
-
-De in te vullen waarde komt uit: zie [Tagged values en waardenbereik tagged
-values](#toegestane-waarden-voor-bepaalde-metadata-gegevens)
-
-Formele historie geeft aan wanneer in de administratie een verandering bekend
-is, en is verwerkt. Verdere toelichting, zie het hoofdstuk [Afspraken &Regels](#afspraken-regels).
-
-*Toepassing*: alle modelelementen die een kenmerk (kunnen) zijn van een
-objecttype waarvoor data kan worden bijgehouden: attribuutsoort en relaties (relatiesoort, relatieklasse, externe koppeling).
+*Toepassing*: alle modelelementen die een kenmerk (kunnen) zijn van een objecttype waarvoor data kan worden bijgehouden: attribuutsoort en relaties (relatiesoort, relatieklasse, externe koppeling).
 
 #### Metagegeven: **Kardinaliteit**
 
->   **Definitie Kardinaliteit**  
->   De kardinaliteit geeft aan hoeveel keer waarden van dit kenmerk van een
->   object kunnen voorkomen bij een object van het betreffende objecttype.
+<aside class="definition">
+  <dfn>Kardinaliteit</dfn>De kardinaliteit geeft aan hoeveel keer waarden van dit kenmerk van een object kunnen voorkomen bij een object van het betreffende objecttype.
+</aside>
 
 *Toelichting*
 
-1 : een object heeft altijd dit kenmerk. Bijvoorbeeld: geboortedatum persoon.
+ 1. Waarde: `1..1`: Een object heeft altijd dit kenmerk. Bijvoorbeeld: geboortedatum persoon.
+ 1. Waarde: `1..*`: Een object heeft altijd dit kenmerk en het kenmerk kan meerdere malen voorkomen. Bijvoorbeeld: aantal hoofdstukken in een boek (in dit domein is dat er altijd minimaal `1`).
+ 1. Waarde: `0..1`: Is soms niet beschikbaar. Bijvoorbeeld: tussenvoegsel achternaam.
+ 1. Waarde: `0..*`: Is niet altijd beschikbaar maar het kenmerk kan ook meerdere malen voorkomen. Bijvoorbeeld: verblijfsobjecten die gelegen zijn in een pand (`garagebox: 0`, `huis: 1`, `flat: *`). Andere getallen dan `0`, `1` en `*` zijn ook toegestaan, bijvoorbeeld `2..*` of `0..2`. De notatie van `*` verschilt per modelleertaal. Met `*` wordt bedoeld, _veel_ of _vele_ (niet nader gespecificeerd maar bijvoorbeeld `10` of `100` is toegestaan).
 
-1..\*: een object heeft altijd dit kenmerk, het kenmerk kan meerdere malen
-voorkomen. Bijvoorbeeld: aantal hoofdstukken in een boek (in dit domein is dat
-er altijd minimaal 1).
+Indien een `«Attribuutsoort»` deel uit maakt van een `«Gegevensgroeptype»`, dan wordt de kardinaliteit vermeld van het `«Attribuutsoort»` binnen het `«Gegevensgroeptype»`. Voor de uiteindelijke kardinaliteit van hoe vaak een gegeven voorkomt bij het object moet rekening gehouden worden met de kardinaliteit van de gegevensgroep en met de kardinaliteit van de `«Attribuutsoort»`.
 
-0..1: is soms niet beschikbaar. Bijvoorbeeld: tussenvoegsel achternaam.
+Merk op dat het zo kan zijn dat een object het kenmerk wel degelijk heeft/zou moeten hebben, maar dat het vooralsnog niet gelukt is om dit gegeven in te winnen of te achterhalen. Het is dan bekend dat het object dit kenmerk wel degelijk heeft, maar de waarde ervan is onbekend. De kardinaliteit wordt dan niet van `1` naar `0` gezet, maar er wordt aangegeven dat er sprake is van mogelijk geen waarde. Meer hierover is beschreven in het hoofdstuk [Afspraken & Regels](#afspraken-regels).
 
-0..\*: is niet altijd beschikbaar, kan meerdere malen voorkomen.  
-Bijvoorbeeld: verblijfsobjecten die gelegen zijn in een pand (garagebox 0, huis
-1, flat \*).
-
-Andere getallen dan 0, 1 en * zijn ook toegestaan, bijvoorbeeld 2 .. * of 0 .. 2
-De notatie van * verschilt per modelleertaal. Met * wordt bedoeld, veel of vele (niet nader gespecificeerd maar bijvoorbeeld 10 of 100 is toegestaan).
-
-Indien een attribuutsoort deel uit maakt van een gegevensgroeptype, dan wordt de
-kardinaliteit vermeld van het attribuutsoort binnen het gegevensgroeptype. Voor
-de uiteindelijke kardinaliteit van hoe vaak een gegeven voorkomt bij het object
-moet rekening gehouden worden met de kardinaliteit van de gegevensgroep en met
-de kardinaliteit van de attribuutsoort.
-
-Merk op dat het zo kan zijn dat een object het kenmerk wel degelijk heeft/zou
-moeten hebben, maar dat het vooralsnog niet gelukt is om dit gegeven in te
-winnen of te achterhalen. Het is dan bekend dat het object dit kenmerk wel
-degelijk heeft, maar de waarde ervan is onbekend. De kardinaliteit wordt dan
-niet van 1 naar 0 gezet, maar er wordt aangegeven dat er sprake is van mogelijk
-geen waarde. Meer hierover is beschreven in het hoofdstuk [Afspraken & Regels](#afspraken-regels).
-
-Een generalisatie is een bijzondere vorm van een relatie. De kardinaliteit van de bron en van het doel is hier altijd en per definitie 1..1. Dit hoeft daarom nooit via een aanduiding van een kardinaliteit te worden aangegeven.
+Een `«Generalisatie»` is een bijzondere vorm van een relatie. De kardinaliteit van de bron en van het doel is hier altijd en per definitie `1..1`. Dit hoeft daarom nooit via een aanduiding van een kardinaliteit te worden aangegeven.
 
 *Toepassing*: alle modelelementen die een kenmerk (kunnen) zijn van een
 objecttype.
 
 #### Metagegeven: **Kardinaliteit relatie bron**
 
->   **Definitie Kardinaliteit relatie bron**  
-De kardinaliteit relatie bron geeft bij een relatiesoort aan hoeveel instanties van het bron objecttype in een relatie met één instantie van het doel objecttype verbonden kunnen zijn.
+<aside class="definition">
+  <dfn>Kardinaliteit relatie bron</dfn>De kardinaliteit relatie bron geeft bij een relatiesoort aan hoeveel instanties van het bron objecttype in een relatie met één instantie van het doel objecttype verbonden kunnen zijn.
+</aside>
 
 Voorbeeld: een verblijfsobject ligt in een pand. De eigenaar van de relatie is het verblijfsobject (de bron van de relatie) en het doel van de relatie is een pand.
 
-- De kardinaliteit van het doel van de relatie geeft aan: in hoeveel panden kan 1 verblijfsobject liggen. Antwoord: 1..*
-- De kardinaliteit van de bron geeft aan: hoeveel verblijfsobjecten kunnen er in 1 pand liggen. Antwoord: 0..*
+- De kardinaliteit van het doel van de relatie geeft aan: in hoeveel panden kan één verblijfsobject liggen. Antwoord: `1..*`
+- De kardinaliteit van de bron geeft aan: hoeveel verblijfsobjecten kunnen er in één pand liggen. Antwoord: `0..*`
 
 Deze kardinaliteit is vooral nuttig voor controles, deze komt op data niveau echter (meestal) niet terug omdat relaties in MIM gericht zijn.  
 
@@ -1160,76 +1121,51 @@ Toepassing: relatiesoort, externe koppeling en relatieklasse
 
 #### Metagegeven: **Authentiek**
 
->   **Definitie Authentiek**  
->   Aanduiding of het kenmerk een authentiek gegeven betreft.
+<aside class="definition">
+  <dfn>Authentiek</dfn>Aanduiding of het kenmerk een authentiek gegeven betreft.
+</aside>
 
 *Toelichting*
 
-Bijvoorbeeld: Authentiek, Basisgegeven, Landelijk kerngegeven, Gemeentelijk
-kerngegeven, Overig.
+Bijvoorbeeld: Authentiek, Basisgegeven, Landelijk kerngegeven, Gemeentelijk kerngegeven, Overig.
 
-Authentiek is van toepassing voor bijvoorbeeld het burger service nummer van een
-natuurlijk persoon. In de wet van bijvoorbeeld een basisregistratie ligt vast
-welke gegevens authentiek zijn. Een kenmerk is authentiek indien de juistheid
-(hoogwaardige kwaliteit) van het gegeven gewaarborgd wordt via formele
-inwinningsprocessen en wettelijk regelingen. Authentieke gegevens moeten door
-alle overheidsinstellingen verplicht en zonder nader onderzoek, worden gebruikt
-bij de uitvoering van publiekrechtelijke taken.
+Authentiek is van toepassing voor bijvoorbeeld het burger service nummer van een natuurlijk persoon. In de wet van bijvoorbeeld een basisregistratie ligt vast welke gegevens authentiek zijn. Een kenmerk is authentiek indien de juistheid (hoogwaardige kwaliteit) van het gegeven gewaarborgd wordt via formele inwinningsprocessen en wettelijk regelingen. Authentieke gegevens moeten door alle overheidsinstellingen verplicht en zonder nader onderzoek, worden gebruikt bij de uitvoering van publiekrechtelijke taken.
 
-De in te vullen waarde komt uit: zie [Tagged values en waardenbereik tagged
-values](#toegestane-waarden-voor-bepaalde-metadata-gegevens)
+De in te vullen waarde komt uit: zie [Tagged values en waardenbereik tagged values](#toegestane-waarden-voor-bepaalde-metadata-gegevens)
 
-*Toepassing*: alle modelelementen die een kenmerk (kunnen) zijn van een
-objecttype.
+*Toepassing*: alle modelelementen die een kenmerk (kunnen) zijn van een objecttype.
 
 #### Metagegeven: **Indicatie afleidbaar**
 
->   **Definitie Indicatie afleidbaar**  
->   Aanduiding dat gegeven afleidbaar is uit andere attribuut- en/of
->   relatiesoorten.
+<aside class="definition">
+  <dfn>Indicatie afleidbaar</dfn>Aanduiding dat gegeven afleidbaar is uit andere attribuut- en/of relatiesoorten.
+</aside>
 
 *Toelichting*
 
-Bijvoorbeeld: de ‘naam’ van een openbare ruimte, zoals *Burgemeester Baron van
-Voerst van Lyndenstraat* , wordt in de verkorte schrijfwijze de ‘verkorte naam’
-*Burg Bar v V v Lyndenstr* – dit is een afgeleid gegeven. Bijvoorbeeld de
-‘eigenaar’ van een huis kan worden afgeleid uit bepaalde andere gegevens die
-binnen het informatiemodel zijn vastgelegd. Het afgeleide gegeven is zelf geen
-brongegeven, en moet aangepast worden als de brongegevens aangepast worden. In
-de beschrijving van het kenmerk zal aangegeven zijn om welke gegevens het gaat
-en eventueel hoe de afleiding plaatsvindt.
+Bijvoorbeeld: de ‘naam’ van een openbare ruimte, zoals *Burgemeester Baron van Voerst van Lyndenstraat* , wordt in de verkorte schrijfwijze de ‘verkorte naam’ *Burg Bar v V v Lyndenstr* – dit is een afgeleid gegeven. Bijvoorbeeld de ‘eigenaar’ van een huis kan worden afgeleid uit bepaalde andere gegevens die binnen het informatiemodel zijn vastgelegd. Het afgeleide gegeven is zelf geen brongegeven, en moet aangepast worden als de brongegevens aangepast worden. In de beschrijving van het kenmerk zal aangegeven zijn om welke gegevens het gaat en eventueel hoe de afleiding plaatsvindt.
 
-*Toepassing*: de modelelementen waarvoor een waarde ingevuld kan worden, te
-weten de modelelementen attribuutsoort en relatiesoort.
+*Toepassing*: de modelelementen waarvoor een waarde ingevuld kan worden, te weten de modelelementen attribuutsoort en relatiesoort.
 
 #### Metagegeven: **Indicatie classificerend**
 
->   **Definitie Indicatie classificerend**  
->   Indicatie dat een attribuutsoort het objecttype waar het bij hoort classificeert in (sub)typen.
+<aside class="definition">
+  <dfn>Indicatie classificerend</dfn>Indicatie dat een attribuutsoort het objecttype waar het bij hoort classificeert in (sub)typen.
+</aside>
 
 *Toelichting*
 
-Een objecttype kan middels een attribuutsoort geclassificeerd worden in subtypen.
-Bijvoorbeeld: type gebouw. Een toren, kerk, bunker, zwembad zijn allemaal typen gebouwen.
-In een model op niveau 2 kunnen dergelijke typen als objecttypen en specialisaties van het
-objecttype gebouw zijn gemodelleerd. Met name op niveau 3 kan het relevant zijn om deze informatie
-daadwerkelijk te structureren door expliciet een aspect op te nemen waarmee direct
-het type gebouw kan worden vastgelegd, los van de modellering van objecttypen.
+Een objecttype kan middels een attribuutsoort geclassificeerd worden in subtypen. Bijvoorbeeld: type gebouw. Een toren, kerk, bunker, zwembad zijn allemaal typen gebouwen. In een model op niveau 2 kunnen dergelijke typen als objecttypen en specialisaties van het objecttype gebouw zijn gemodelleerd. Met name op niveau 3 kan het relevant zijn om deze informatie daadwerkelijk te structureren door expliciet een aspect op te nemen waarmee direct het type gebouw kan worden vastgelegd, los van de modellering van objecttypen.
 
-Praktisch gezien kan vervolgens gekozen worden om de onderliggende objecttypen niet meer in het model
-op te nemen, en slechts dit aspect op te nemen. Ook kan, in combinatie met **indicatie afleidbaar**
-dit aspect afgeleid worden uit het meest concrete objecttype, indien dergelijke objecttypen wel zijn gemodelleerd.
-
-De in te vullen waarde komt uit: zie [Tagged values en waardenbereik tagged
-values](#toegestane-waarden-voor-bepaalde-metadata-gegevens)
+Praktisch gezien kan vervolgens gekozen worden om de onderliggende objecttypen niet meer in het model op te nemen, en slechts dit aspect op te nemen. Ook kan, in combinatie met `Indicatie afleidbaar`, dit aspect afgeleid worden uit het meest concrete objecttype, indien dergelijke objecttypen wel zijn gemodelleerd. De in te vullen waarde komt uit: zie [Tagged values en waardenbereik tagged values](#toegestane-waarden-voor-bepaalde-metadata-gegevens)
 
 *Toepassing*: attribuutsoort.
 
 #### Metagegeven: **Mogelijk geen waarde**
 
->   **Definitie Mogelijk geen waarde**  
->   Aanduiding dat van een aspect geen waarde is geregistreerd, maar dat
->   onduidelijk is of de waarde er werkelijk ook niet is.
+<aside class="definition">
+  <dfn>Mogelijk geen waarde</dfn>Aanduiding dat van een aspect geen waarde is geregistreerd, maar dat onduidelijk is of de waarde er werkelijk ook niet is.
+</aside>
 
 *Toelichting*
 
@@ -1250,114 +1186,78 @@ weten de modelelementen attribuutsoort en relatiesoort.
 
 #### Metagegeven: **Bron**
 
->   **Definitie Bron**  
->   Aanduiding van het bronobject in een relatie tussen objecten. Een bronobject
->   heeft middels een relatiesoort een relatie met een doelobject.
+<aside class="definition">
+  <dfn>Bron</dfn>Aanduiding van het bronobject in een relatie tussen objecten. Een bronobject heeft middels een relatiesoort een relatie met een doelobject.
+</aside>
 
 *Toelichting*
 
-Bijvoorbeeld: een persoon heeft een postadres. Het postadres is een kenmerk van
-een persoon. De persoon is in deze het bronobject van de relatie. Het postadres
-is de naam van het kenmerk c.q. de relatie tussen een persoon en een adres en
-geeft betekenis aan deze relatie. Het adres is er gewoon en wie hem allemaal
-gebruikt als adres en of dit als postadres is of als woonadres of nog iets
-anders is voor het adres niet van belang.
+Bijvoorbeeld: een persoon heeft een postadres. Het postadres is een kenmerk van een persoon. De persoon is in deze het bronobject van de relatie. Het postadres is de naam van het kenmerk c.q. de relatie tussen een persoon en een adres en geeft betekenis aan deze relatie. Het adres is er gewoon en wie hem allemaal gebruikt als adres en of dit als postadres is of als woonadres of nog iets anders is voor het adres niet van belang.
 
-*Toepassing*: relaties, oftewel de modelelementen Relatiesoort en Externe
-koppeling.
+*Toepassing*: relaties, oftewel de modelelementen Relatiesoort en Externe koppeling.
 
 #### Metagegeven: **Doel**
-
->   **Definitie Doel**  
->   Aanduiding van het gerelateerde objecttype die het eindpunt van de relatie
->   aangeeft. Naar objecten van dit objecttype wordt verwezen.
+<aside class="definition">
+  <dfn>Doel</dfn>Aanduiding van het gerelateerde objecttype die het eindpunt van de relatie aangeeft. Naar objecten van dit objecttype wordt verwezen.
+</aside>
 
 *Toelichting*
 
-Bijvoorbeeld: een persoon heeft een postadres. Het postadres is de naam van de
-relatie tussen een persoon en een adres. Het adres is het doel van deze relatie.
-
-Dit metagegeven wordt vaak ook relatiedoel genoemd (Engels: target).   
+Bijvoorbeeld: een persoon heeft een postadres. Het postadres is de naam van de relatie tussen een persoon en een adres. Het adres is het doel van deze relatie. Dit metagegeven wordt vaak ook relatiedoel genoemd (Engels: target).
 
 *Toepassing*: relaties, oftewel de modelelementen Relatiesoort en Externe
 koppeling.
 
 #### Metagegeven: **Unidirectioneel**
 
->   **Definitie Unidirectioneel**  
->   De richting van een relatie, welke betekenis geeft aan de relatie vanuit het
->   perspectief van de eigenaar van de relatie.
+<aside class="definition">
+  <dfn>Unidirectioneel</dfn>De richting van een relatie, welke betekenis geeft aan de relatie vanuit het perspectief van de eigenaar van de relatie.
+</aside>
 
 *Toelichting*
 
-Bijvoorbeeld: een persoon heeft een postadres. De richting van de relatie is van
-persoon naar adres. De eigenaar van de relatie (de bron) heeft kennis van de
-het gerelateerde objecttype (het doel). In een modelleertaal wordt dit vaak
-aangegeven met een pijl. De pijl heeft als vertrekpunt de bron en heeft als
-pijlpunt, waar de relatie naar wijst, het gerelateerde objecttype. Alle relaties
-zijn altijd gericht van het objecttype (bron) naar het gerelateerde objecttype
-(doel).
+Bijvoorbeeld: een persoon heeft een postadres. De richting van de relatie is van persoon naar adres. De eigenaar van de relatie (de bron) heeft kennis van de het gerelateerde objecttype (het doel). In een modelleertaal wordt dit vaak aangegeven met een pijl. De pijl heeft als vertrekpunt de bron en heeft als pijlpunt, waar de relatie naar wijst, het gerelateerde objecttype. Alle relaties zijn altijd gericht van het objecttype (bron) naar het gerelateerde objecttype (doel).
 
-Het is gebruikelijk om een richting aan te geven, enerzijds omdat de betekenis
-van A naar B een andere is dan van B naar A, anderzijds omdat het van belang is
-bij welke objecttype het kenmerk wordt bijgehouden, oftewel wie de eigenaar is.
+Het is gebruikelijk om een richting aan te geven, enerzijds omdat de betekenis van A naar B een andere is dan van B naar A, anderzijds omdat het van belang is bij welke objecttype het kenmerk wordt bijgehouden, oftewel wie de eigenaar is.
 
 *Toepassing*: relaties, oftewel de modelelementen Relatiesoort en Externe
 koppeling.
 
 #### Metagegeven: **Aggregatietype**
 
->   **Definitie Aggregatietype**  
->   Aanduiding of het objecttype die de eigenaar is van een relatie het doel van
->   relatie ziet als een samen te voegen onderdeel die bij het objecttype hoort.
+<aside class="definition">
+  <dfn>Aggregatietype</dfn>Aanduiding of het objecttype die de eigenaar is van een relatie het doel van relatie ziet als een samen te voegen onderdeel die bij het objecttype hoort.
+</aside>
 
-*Toelichting* Bijvoorbeeld: een auto heeft verschillende onderdelen, waaronder
-een motor. In het informatiemodel gaat het vooral om de auto en is de motor
-alleen relevant vanuit het perspectief van dat het een onderdeel is van de auto.
+*Toelichting*
 
-De aggregatie is in de basis een relatie en het aggregratietype geeft aanvullend hierop extra informatie.
+Bijvoorbeeld: een auto heeft verschillende onderdelen, waaronder een motor. In het informatiemodel gaat het vooral om de auto en is de motor alleen relevant vanuit het perspectief van dat het een onderdeel is van de auto. De aggregatie is in de basis een relatie en het aggregratietype geeft aanvullend hierop extra informatie. Standaard is er bij een relatie geen sprake van een aggregatie, (aggregatietype "Geen"). Er is dan sprake van een relatie tussen objecten van beide objecttypes, en deze kan conditioneel zijn, maar de objecten worden gezien als dat ze zelfstandig bestaansrecht hebben en daarnaast ook een relatie met elkaar hebben en verder niets.
 
-Standaard is er bij een relatie geen sprake van een aggregatie, (aggregatietype "Geen").
-Er is dan sprake van een relatie tussen objecten van beide objecttypes,
-en deze kan conditioneel zijn, maar de objecten worden gezien als dat ze zelfstandig
-bestaansrecht hebben en daarnaast ook een relatie met elkaar hebben en verder niets.
+Als er wel sprake is van een aggregatie, dan geeft het aggregratietype aan dat het objecttype die doel is van de relatie, in functionele zin en in aanvulling op de relatie zelf, ook een onderdeel (component) is van het objecttype die de eigenaar is van de relatie. De eigenaar geeft hierbij aan hoe de aggregatie in gezien moet worden. Dit kan zijn:
 
-Als er wel sprake is van een aggregatie, dan geeft het aggregratietype aan dat het objecttype die doel is van
-de relatie, in functionele zin en in aanvulling op de relatie zelf, ook een onderdeel (component)
-is van het objecttype die de eigenaar is van de relatie. De eigenaar geeft hierbij aan hoe de
-aggregatie in gezien moet worden. Dit kan zijn:
-
-- 'Compositie' (Engels: composite): het doel object is een integraal onderdeel van het eigenaar object
-en dit onderdeel wordt niet gedeeld met anderen. De eigenaar is volledig verantwoordelijk voor het beheer
-van de bijhouding van informatie over het onderdeel. Als de eigenaar vervalt, dan vervallen automatisch
-ook de onderdelen mee. Het doel object kan als onderdeel niet zelfstandig bestaan: het doel vervalt als de eigenaar vervalt.
-Wel kan je een onderdeel vervangen met behoud van het eigenaar object.
-- 'Gedeeld' (Engels: shared): het onderdeel kan gebruikt en gedeeld worden door meerdere eigenaren.
-Bijvoorbeeld: een betaalrekening.
+- 'Compositie' (Engels: composite): het doel object is een integraal onderdeel van het eigenaar object en dit onderdeel wordt niet gedeeld met anderen. De eigenaar is volledig verantwoordelijk voor het beheer van de bijhouding van informatie over het onderdeel. Als de eigenaar vervalt, dan vervallen automatisch ook de onderdelen mee. Het doel object kan als onderdeel niet zelfstandig bestaan: het doel vervalt als de eigenaar vervalt. Wel kan je een onderdeel vervangen met behoud van het eigenaar object.
+- 'Gedeeld' (Engels: shared): het onderdeel kan gebruikt en gedeeld worden door meerdere eigenaren. Bijvoorbeeld: een betaalrekening.
 
 *Toepassing*: relaties, oftewel de modelelementen Relatiesoort en Externe
 koppeling.
 
 #### Metagegeven: **Locatie**
 
->   **Definitie Locatie**  
->   Als het type van het attribuutsoort een waardenlijst is, dan wordt hier de
->   locatie waar deze te vinden is opgegeven.
+<aside class="definition">
+  <dfn>Locatie</dfn>Als het type van het attribuutsoort een waardenlijst is, dan wordt hier de locatie waar deze te vinden is opgegeven.
+</aside>
 
 *Toelichting*
 
-Indien mogelijk is de verwijzing een URI of een URL (als er geen URI is, dan kan
-dit een URL zijn, waar de waardenlijst op basis van de naam van de waardenlijst
-te vinden is).
-
-Bijvoorbeeld: 'http://www.organisatie.nl/schemas/waardelijsten/NaamWaardelijst'
+Indien mogelijk is de verwijzing een URI of een URL (als er geen URI is, dan kan dit een URL zijn, waar de waardenlijst op basis van de naam van de waardenlijst te vinden is). Bijvoorbeeld: 'http://www.organisatie.nl/schemas/waardelijsten/NaamWaardelijst'
 
 *Toepassing*: de modelelementen die een waardelijst zijn.
 
 #### Metagegeven: **Doelformaat**
 
->   **Definitie Doelformaat**  
-Het fomaat waarin een waardelijst is gepubliceerd.
+<aside class="definition">
+  <dfn>Doelformaat</dfn>Het fomaat waarin een waardelijst is gepubliceerd.
+</aside>
 
 *Toelichting*
 
@@ -1372,25 +1272,26 @@ Datatype van de waarden in een waardelijst
 
 *Toelichting*
 
-Voorbeelden hiervan zijn characterstring , integer
+Voorbeelden hiervan zijn `Characterstring` , `Integer`
 
 *Toepassing:* Codelijst
 
 #### Metagegeven: **Waarde item**
 
->   **Definitie Waarde item**  
-Het item (of element) van de lijst dat de waarde representeert.
+<aside class="definition">
+  <dfn>Waarde-item</dfn>Het item (of element) van de lijst dat de waarde representeert.
 
 *Toelichting*
 
-Als een Codelijst een structuur heeft wordt hiermee aangegeven welke item in de codelijst de waarde representeert.
+Als een Codelijst een structuur heeft wordt hiermee aangegeven welk item in de codelijst de waarde representeert.
 
 *Toepassing:* Codelijst
 
 #### Metagegeven: **Profielspecificatie**
 
->   **Definitie Profielspecificatie**  
-Referentie naar het profiel dat de technische implementatie van de codelijst beschrijft.
+<aside class="definition">
+  <dfn>Profielspecificatie</dfn>Referentie naar het profiel dat de technische implementatie van de codelijst beschrijft.
+</aside>
 
 *Toelichting*
 
