@@ -10,4 +10,4 @@ In **versie 1.2** zijn de volgende issues verwerkt:
 | [310](https://github.com/Geonovum/MIM-Werkomgeving/issues/310)  | MIM 1.1.1 bevatte twee paragrafen met waardelijsten. Deze zijn nu samengevoegd.               |
 | [224](https://github.com/Geonovum/MIM-Werkomgeving/issues/224)  | Verwijderen metagegevens `formele historie` en `materiële historie` bij `Gegevensgroep`       |
 | [318](https://github.com/Geonovum/MIM-Werkomgeving/issues/318)  | Alle figuren voorzien van `<figure>` tags en bijschriften. Nu vindbaar in ToF.                |
-| [322](https://github.com/Geonovum/MIM-Werkomgeving/issues/322)  | Alle definities voorzien van <dfn> tag en zichtbaar format.                                   |
+| [322](https://github.com/Geonovum/MIM-Werkomgeving/issues/322)  | Alle definities voorzien van `<dfn>` tag en zichtbaar format.                                   |
