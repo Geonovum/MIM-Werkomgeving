@@ -1,0 +1,45 @@
+/*This css code defines the styling of a dfn block*/
+/*It is based on the styling of an example block */
+/*from the w3c code*/
+/*It uses a css counter to number the elements*/
+
+/*Set the scope of the counter to body of ReSpec Doc*/
+body.h-entry {
+    counter-reset: dfn-counter 0;
+}
+
+:is(aside,div).definition,
+div.illegal-example {
+    padding: 0.5em;
+    margin: 1em 0;
+    position: relative;
+    clear: both;
+}
+
+:is(aside,div).definition {
+    border-left-width: 0.5em;
+    border-left-style: solid;
+    border-color: #0F80CC;
+    background: #e8f3fa;
+    /*set the counter interval value*/
+    counter-increment: dfn-counter 1;
+}
+
+/*Add string "DEFINITIE" and counter to dfn block*/
+dfn:before {
+    /*call the counter*/
+    content:"DEFINITIE " counter(dfn-counter) ": ";
+    /*overide w3c font-weight*/
+    font-weight: normal;
+}
+
+dfn {
+    /*overide w3c font-weight*/
+    font-style: normal;
+}
+
+/*Put the explanation on the next line*/
+dfn:after {
+    content: "\A";
+    white-space: pre-wrap;
+}
