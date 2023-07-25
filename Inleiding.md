@@ -103,12 +103,8 @@ gebruiken (door mensen en machines) bij het communiceren over deze werkelijkheid
 
 Het beschrijven vindt plaats door de informatie van de objecten die we beschouwden te modelleren als informatieobjecten, met hun kenmerken en hun onderlinge relaties.
 
-<aside class='example'>
-    Jan en Katrien zijn bijvoorbeeld ‘dingen in de werkelijkheid’. Zij hebben
-    bepaalde kenmerken, zoals een naam en een geboortedatum. In een informatiemodel
-    komen Jan en Katrien zelf niet zelf voor. Zij worden in het informatiemodel gemodelleerd als een Persoon.
-    Ook hun gegevens, zoals het feit dat 10-10-1970 de geboortedatum van Jan is, komen niet voor in het informatiemodel.
-    In het informatiemodel is alleen het kenmerk geboortedatum gemodelleerd, als een kenmerk van een Persoon, met een definitie een toelichting. 
+<aside class='example' title="Modelbeschrijving van dingen in de werkelijkheid">
+    Jan en Katrien zijn bijvoorbeeld ‘dingen in de werkelijkheid’. Zij hebben bepaalde kenmerken, zoals een naam en een geboortedatum. In een informatiemodel komen Jan en Katrien zelf niet zelf voor. Zij worden in het informatiemodel gemodelleerd als een Persoon. Ook hun gegevens, zoals het feit dat 10-10-1970 de geboortedatum van Jan is, komen niet voor in het informatiemodel. In het informatiemodel is alleen het kenmerk geboortedatum gemodelleerd, als een kenmerk van een Persoon, met een definitie een toelichting. 
 </aside>
 
 De Persoon in het informatiemodel is ene beschrijving vanuit het perspectief van het informatiedomein van waaruit we Jan en Katrien beschouwen. We bekijken Jan en Katrien dan ook wel als een van de *objecten* binnen een domein, die we vervolgens gaan modelleren als informatieobjecten.
@@ -476,8 +472,8 @@ met de beheerder van deze extensie. Wanneer meerdere organisaties gebruik willen
 die in extensies beschreven zijn dan kan er gekeken worden of het wenselijk is om deze op te nemen in MIM. 
 Desgewenst kan een extensie gepubliceerd worden bij MIM-beheer of kan ernaar verwezen worden vanuit MIM-beheer. 
 
-<aside class='note'>
-    Een metamodel extensie is expliciet niet bedoeld voor aanvullende constructies
+<aside class='note' title="Scope van extensies op het metamodel informatiemodelleren">
+    Een metamodelextensie is expliciet niet bedoeld voor aanvullende constructies
     die alleen spelen op het niveau van implementatie, of op het niveau van afgeleide
     technische modellen t.b.v. specifieke interfaces. Deze vallen buiten scope van dit
     metamodel en ook buiten scope van extensies hierop. Wel is het mogelijk en toegestaan 
@@ -523,6 +519,6 @@ in de gemaakte afspraken. Voor het metamodel hanteren we daarom de volgende spel
 de Stelselcatalogus is zoveel als mogelijk leidend, vervolgens het GAB en als
 laatste de handreiking.
 
-<aside class='note'>
+<aside class='note' title="Versienummer normreferenties">
     De versies van de genoemde referenties zijn bewust niet opgenomen, zodat het mogelijk is om gebruik te maken van nieuwere versies van deze referenties. Wanneer er nieuwe versies uitkomen van de genoemde normreferenties dan wordt er gecheckt of MIM hier nog mee in lijn is. Wanneer dit niet zo is, dan wordt eraan gewerkt om dit weer met elkaar in lijn te brengen, zodat MIM 'upward compatible' is en blijft.
 </aside>
