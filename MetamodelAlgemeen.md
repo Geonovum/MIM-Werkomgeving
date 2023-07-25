@@ -1,64 +1,39 @@
 # Metamodel Algemeen
 
-Dit hoofdstuk beschrijft het metamodel in diagramvorm en in tekst.
+Dit hoofdstuk beschrijft de modelelementen van het MIM voor het maken van een informatiemodel. De eerste paragraaf bevat enkele **diagrammen** die een overzicht geven van de modelelementen die op metamodelniveau worden onderkend en hun onderlinge verhouding. De paragraaf geeft een algemene **beschrijving alle modelelementen**, dat wil zeggen: onhankelijk van een modelleertaal. Wanneer u liever de beschrijvingen eerst leest, kunt u ook met de paragraaf [objecttypen en attribuutsoorten](#objecttypen-en-attribuutsoorten) beginnen. De laatste paragraaf bevat de **metagegevens** die worden bijgehouden over de modelelementen in een informatiemodel.
 
-Het metamodel beschrijft de modelelementen die worden gebruikt bij het maken van een informatiemodel. Voorbeelden van modelelementen zijn: objecttype, attribuutsoort, relatiesoort, maar denk ook datatypen of aan metagegevens. In de paragrafen hierna worden alle modelelementen beschreven en toegelicht.
+Ter illustratie van de relatie tussen een _metamodel_ en een _informatiemodel_: in de Basisregistratie Kadaster (BRK) wordt een `Perceel` gemodelleerd als een <code>«<a>Objecttype</a>»</code>. De `grens` van een perceel wordt gemodelleerd als een <code>«<a>Attribuutsoort</a>»</code>. «Objecttype» en «Attribuutsoort» zijn de modelelementen uit het metamodel informatiemodellering. 'Perceel' en 'grens' zijn de modelleringen op het niveau van het specifieke informatiemodel. In dit geval de BRK. Door 'Perceel' een `«Objecttype»` te noemen en 'grens' een `«Attribuutsoort»`, is aangegeven hoe ze geïnterpreteerd moeten worden.
 
-Bijvoorbeeld: in de basisregistratie Kadaster wordt een perceel gemodelleerd als een objecttype. De grens van een perceel wordt gemodelleerd als een attribuutsoort. Objecttype en attribuutsoort zijn de modelelementen op metamodel niveau, het perceel en de grens zijn de modelleringen van het informatiemodel niveau. Door 'perceel' een _objecttype_ te noemen en 'begrenzing' een _attribuutsoort_ is het bij elk duidelijk hoe deze geïnterpreteerd moet worden. 
+## Uitgangspunten voor het metamodel
 
-- De eerste paragraaf bevat diagrammen, die kort een overzicht geven van de modelelementen die op metamodel niveau worden onderkend, alsmede hun onderlinge verhouding
-- De paragrafen erna bevat de beschrijvingen in tekst van de modelelementen die op metamodel niveau worden onderkend. Wanneer u liever de beschrijvingen eerst leest, kunt u ook met deze paragraaf starten. Dit begint bij [Objecttypen en attribuutsoorten](#objecttypen-en-attribuutsoorten)
-- De laatste paragraaf bevat de metagegevens die worden bijgehouden over de modelelementen in een informatiemodel. Dit metamodel geeft aan welke metagegevens er zijn.  
+Het metamodel informatiemodellering hanteert een aantal uitgangspunten die aan de basis liggen van de totstandkoming en het gebruik van het model.
 
-**Uitgangspunten voor het metamodel**
-
-- Elk modelelement heeft een naam en een eigen MIM metaclass, waaraan je het modelelement overal kan herkennen.
-- De modelelementen worden eerst uitgelegd zonder een specifieke specificatietaal te
+1. Elk modelelement heeft een naam en een eigen MIM-metaclass, waaraan je het modelelement overal kan herkennen.
+1. De modelelementen worden eerst uitgelegd zonder een specifieke specificatietaal te
 gebruiken. Dit is zodat we hierna kunnen aangeven hoe je het modelelement uitdrukt per specifieke specificatietaal, te weten in UML of in W3C-specificatietechnieken.
-- Een toolonafhankelijke beschrijving van het metamodel.
-Verder is er, omdat VNG Realisatie, Kadaster en Geonovum en veel andere organisaties Sparx EA
-gebruiken, aanvullend aangegeven hoe het metamodel in Enterprise Architect
-toegepast wordt. Hierdoor borgen we deze relatie.
-- Uniforme toepassing van het metamodel in informatiemodellen. Anders gezegd, uitbreiden mag, afwijken niet,
-maak voor hetzelfde doel geen alternatieve constructies.
-- Datatypen zijn onderdeel van het metamodel en beschrijven de structuur van de data, maar niet
-de semantiek/betekenis. De aanbeveling is dan ook om eerst een informatiemodel
-te maken zonder datatypen. De regel is dat als alle datatypen uit het model.
-worden weggelaten, er geen semantische betekenis verloren mag gaan.
+1. Een toolonafhankelijke beschrijving van het metamodel. Wel is er, omdat VNG Realisatie, Kadaster en Geonovum en veel andere organisaties Sparx Enterprise Architect gebruiken, aanvullend aangegeven hoe het metamodel in Enterprise Architect toegepast wordt. Hierdoor borgen we deze relatie.
+1. Uniforme toepassing van het metamodel in informatiemodellen. Anders gezegd, uitbreiden mag, afwijken niet. Maak voor hetzelfde doel geen alternatieve constructies.
+1. Datatypen zijn onderdeel van het metamodel en beschrijven de structuur van de data, maar niet de semantiek/betekenis. De aanbeveling is dan ook om eerst een informatiemodel
+te maken zonder datatypen. De regel is dat als alle datatypen uit het model worden weggelaten, er geen semantische betekenis verloren mag gaan.
 
-*Toelichting metaclass*   
-Alle modelelementen zijn een metaklasse in het metamodel. Hiermee wordt aangegeven dat het niet een klasse betreft
-in een informatiemodel, zoals de klasse Persoon, maar dat het om de classificatie gaat dat de Persoon een Objecttype is,
-oftewel dat de klasse Persoon van de metaklasse Objecttype is. Vandaar de term metaclass.
+<!-- ### Toelichting MIM-metaclass
+Alle modelelementen zijn een metaklasse in het metamodel. Hiermee wordt aangegeven dat het niet een klasse betreft in een informatiemodel (zoals bijvoorbeeld de klasse `Perceel`), maar dat het om de classificatie gaat dat de klasse `Persoon` van de metaklasse `«Objecttype»` is. Vandaar de term _metaclass_. Daarnaast verhouden de MIM-metaklassen zich ook weer tot metaklassen van UML en W3C,
 
 De metaklassen worden ook gebruikt om aan te geven hoe deze zich verhouden tot de metaklassen
 van UML en W3C, in de volgende hoofdstukken.
 
-Bij het maken van een informatiemodel modelleer je in feite gewoon met de modelelementen, en geef je aan dat een Persoon een Objecttype is en een geboortedatum een attribuutsoort.  
+Bij het maken van een informatiemodel modelleer je in feite gewoon met de modelelementen, en geef je aan dat een Persoon een Objecttype is en een geboortedatum een attribuutsoort. -->  
 
-Hierna volgen eerst diagrammen met de modelelementen, als overzicht. In de paragrafen erna wordt de betekenis van elk van deze modelelementen beschreven, met een definitie en een toelichting en een voorbeeld. Tot slot volgt een paragraaf met metadata die bijgehouden wordt, of kan worden, bij een modelelement.
+Hierna volgen eerst diagrammen met een overzicht van de modelelementen. In de paragrafen erna wordt de betekenis van elk van deze modelelementen beschreven met een definitie en een toelichting en een voorbeeld. Tot slot volgt een paragraaf met metadata die bijgehouden wordt, of kan worden, bij een modelelement.
 
 ## Structuur metamodel
 
-Deze paragraaf bevat een overzicht van het metamodel voor informatiemodellen, kortweg MIM, en geeft alle
-modelelementen weer. De beschrijving van de modelelementen staat in de volgende paragraaf.
+Deze paragraaf bevat een overzicht van het metamodel voor informatiemodellen, kortweg MIM, en geeft alle modelelementen weer. De beschrijving van de modelelementen staat in de volgende paragraaf. De modelelementen zijn verdeeld over een aantal diagrammen, die elk een eigen _view_ op een deel van het metamodel tonen. Elk _view_ toont een aantal van de modelelementen, inclusief hun onderlinge samenhang. Alle _views_ samen vormen het metamodel als geheel:
+- **Kern**: belangrijkste modelelementen in onderlinge samenhang.
+- **Datatypen**: de in het model te onderkennen soorten datatypen.
+- **Overige modelelementen**: elementen die niet altijd aan de orde zijn
 
-De modelelementen zijn verdeeld over een aantal diagrammen, die elk een eigen
-view op een deel van het metamodel tonen. Elk view toont een aantal van de
-modelelementen, inclusief hun onderlinge samenhang.
-
-Alle views samen vormen het metamodel als geheel:
-- KERN, met de belangrijkste modelelementen in onderlinge samenhang.
-- DATATYPEN, met de in het model te onderkennen soorten datatypen.
-- OVERIGE modelelementen, die niet altijd aan de orde zijn
-
-Elk modelelement heeft een MIM metaclass met een naam. Hieraan is elk
-modelelement te herkennen in alle diagrammen en in de tekst en in elke
-specificatietaal die een uitdrukking is van dit metamodel.
-
-Bij de modelelementen zijn in deze diagrammen geen beschrijvende kenmerken opgenomen, de
-metagegevens zoals naam, definitie enzovoorts. In de diagrammen in de bijlage zijn deze wel
-opgenomen.
+Elk modelelement heeft een MIM-metaclass met een naam. Hieraan is elk modelelement te herkennen in alle diagrammen en in de tekst en in elke specificatietaal die een uitdrukking is van dit metamodel. Bij de modelelementen zijn in deze diagrammen geen beschrijvende kenmerken opgenomen (bijvoorbeeld metagegevens zoals: naam, definitie, enzovoorts). In de [diagrammen](#diagrammen) in de bijlage zijn deze wel opgenomen.
 
 ### Kern
 
@@ -285,7 +260,7 @@ Om duidelijk(er) te maken wat wordt bedoeld kijken we eerst naar het begrip ‘o
 </aside>
 
 <aside class="note" title="Object vs. Objecttype">
-  Een object is geen modelelement in een informatiemodel. Die worden aangeduid met het MIM-stereotype <a href="#objecttype">«Objecttype»</a>.
+  Een object is <strong>geen modelelement</strong> in een informatiemodel. Die worden aangeduid met het MIM-stereotype <a href="#objecttype">«Objecttype»</a>.
 </aside>
 
 *Toelichting:* Met in de werkelijkheid wordt bedoeld dat het om de daadwerkelijke onderwerpen van gesprek gaat, de verzameling van de concrete tastbare dingen waarover we het hebben. Bijvoorbeeld, de persoon Jan, Paleis 't Loo. Het wordt veelal als niet politiek correct beschouwd mensen als objecten te zien. In dit kader, de informatievoorziening, beschouwen we evenwel natuurlijke en niet-natuurlijke personen wel als objecten. ‘Tastbaar’ moet hierbij ruim geïnterpreteerd worden. Het gaat niet alleen om fysiek herkenbare objecten zoals auto’s, gebouwen en mensen, ook om zogenaamde virtuele objecten waarover binnen het domein door betrokkenen gecommuniceerd wordt zoals kadastrale percelen, (maatschappelijke) activiteiten en processen. Hoe een ‘tastbaar iets’ als een object beschouwd wordt, hangt af van het domein waarvoor dat ‘tastbaar iets’ relevant is. Zo wordt de gebouwde omgeving in het ene domein beschouwd als een verzameling gebouwen terwijl een ander domein daarin panden onderscheidt. Een object is voor een domein relevant als eigenschappen (kenmerken) daarvan van belang zijn voor het functioneren van dat domein.
@@ -299,7 +274,7 @@ Een object heeft kenmerken waarover gegevens bekend zijn.
 </aside>
 
 <aside class="note" title="Gegeven">
-  Een gegeven is geen modelelement in een informatiemodel.
+  Een gegeven is <strong>geen modelelement</strong> in een informatiemodel.
 </aside>
 
 *Toelichting:*
