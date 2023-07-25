@@ -260,7 +260,7 @@ Om duidelijk(er) te maken wat wordt bedoeld kijken we eerst naar het begrip ‘o
 </aside>
 
 <aside class="note" title="Object vs. Objecttype">
-  Een object is <strong>geen modelelement</strong> in een informatiemodel. Die worden aangeduid met het MIM-stereotype <a href="#objecttype">«Objecttype»</a>.
+  Een <strong>object is geen modelelement</strong> in een informatiemodel. Die worden aangeduid met het MIM-stereotype <a href="#objecttype">«Objecttype»</a>.
 </aside>
 
 *Toelichting:* Met in de werkelijkheid wordt bedoeld dat het om de daadwerkelijke onderwerpen van gesprek gaat, de verzameling van de concrete tastbare dingen waarover we het hebben. Bijvoorbeeld, de persoon Jan, Paleis 't Loo. Het wordt veelal als niet politiek correct beschouwd mensen als objecten te zien. In dit kader, de informatievoorziening, beschouwen we evenwel natuurlijke en niet-natuurlijke personen wel als objecten. ‘Tastbaar’ moet hierbij ruim geïnterpreteerd worden. Het gaat niet alleen om fysiek herkenbare objecten zoals auto’s, gebouwen en mensen, ook om zogenaamde virtuele objecten waarover binnen het domein door betrokkenen gecommuniceerd wordt zoals kadastrale percelen, (maatschappelijke) activiteiten en processen. Hoe een ‘tastbaar iets’ als een object beschouwd wordt, hangt af van het domein waarvoor dat ‘tastbaar iets’ relevant is. Zo wordt de gebouwde omgeving in het ene domein beschouwd als een verzameling gebouwen terwijl een ander domein daarin panden onderscheidt. Een object is voor een domein relevant als eigenschappen (kenmerken) daarvan van belang zijn voor het functioneren van dat domein.
@@ -274,7 +274,7 @@ Een object heeft kenmerken waarover gegevens bekend zijn.
 </aside>
 
 <aside class="note" title="Gegeven">
-  Een gegeven is <strong>geen modelelement</strong> in een informatiemodel.
+  Een <strong>gegeven is geen modelelement</strong> in een informatiemodel.
 </aside>
 
 *Toelichting:*
