@@ -914,10 +914,9 @@ Een informatiemodel moet echter ook gebruikt kunnen worden zonder dat er vastges
   <dfn>URI</dfn>De identificatie van een modelelement.
 </aside>
 
-*Toelichting* De URI kan een urn-URI (<urn:object:Pand> of een http-URI (<http://.../def#Pand>) zijn. De URI kan bepaald worden aan de hand van de naam van het modelelement en de basis-URI van de package waarin het modelelement zich bevindt. 
-Dit kunnen we opbouwen op basis van de Basis-URI samen met de naam van het modelelement (op logisch niveau conform de naamgevingsconventies. In de meeste gevallen zal een modelleur dit metagegeven daarom niet invullen. 
+*Toelichting* De URI kan een **urn-URI** `<urn:object:Pand` of een **http-URI** `<http://.../def#Pand>` zijn. De `URI` kan bepaald worden aan de hand van de `Naam` van het modelelement en de `Basis-URI` van de _package_ waarin het modelelement zich bevindt. Dit kunnen we opbouwen op basis van de `Basis-URI` samen met de `Naam` van het modelelement (op logisch niveau conform de naamgevingsconventies). In de meeste gevallen zal een modelleur dit metagegeven daarom niet invullen. 
 
-In sommige gevallen kan de URI van een modelelement niet bepaald worden aan de hand van de basis-URI van de bijbehorende package en de naam van een modelelement. Bijvoorbeeld als gevolg van de gekozen URI-strategie of wanneer een attribuutsoort uit een ander informatiemodel hergebruikt wordt (e.g. nen3610-2022:identificatie). In dit geval zal de modelleur het metagegeven URI wel invullen.
+In sommige gevallen kan de `URI` van een modelelement niet bepaald worden aan de hand van de `Basis-URI` van de bijbehorende _package_ en de `Naam` van een modelelement. Bijvoorbeeld als gevolg van de gekozen URI-strategie of wanneer een `Attribuutsoort` uit een ander informatiemodel hergebruikt wordt (e.g. `nen3610-2022:identificatie`). In dit geval zal de modelleur het metagegeven `URI` wel invullen.
 
 *Toepassing*:  alle modelelementen (optioneel)
 
@@ -927,7 +926,7 @@ In sommige gevallen kan de URI van een modelelement niet bepaald worden aan de h
   <dfn>is gedefinieerd in</dfn>De package waarin het modelelement gedefinieerd is.
 </aside>
 
-*Toelichting* De definiërende package is meestal de package die het modelelement bevat. De waarde voor dit metagegeven kan wanneer dit het geval is afgeleid worden. In afwijkende situaties moet de URI van de betreffende package ingevuld worden. Een view package definieert nooit de modelelementen die het bevat, dit is altijd een ander domein package. Het verschil met het metagegeven herkomst is dat dit een directe verwijzing is naar een informatiemodel of een package daarbinnen. 
+*Toelichting* De definiërende _package_ is meestal de _package_ die het modelelement bevat. De waarde voor dit metagegeven kan wanneer dit het geval is afgeleid worden. In afwijkende situaties moet de `URI` van de betreffende _package_ ingevuld worden. Een _package_ van het type `View` <a>View</a> definieert nooit de modelelementen die het bevat, dit is altijd een ander _package_ van het type `Domein`. Het verschil met het metagegeven herkomst is dat dit een directe verwijzing is naar een informatiemodel of een _package_ daarbinnen. 
 
 *Toepassing*: alle modelelementen
 
