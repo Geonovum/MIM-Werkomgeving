@@ -893,18 +893,17 @@ Bijvoorbeeld: `1.0.1` of `1.1` of `1.1.1`
 
  ### Modelelementidentificatie - metagegevens
 
-Informatiemodellen staan vaak niet op zichzelf. Ze kunnen elementen bevatten die refereren aan externe standaarden, waarin deze elementen een eigen identificatie hebben. Ook moeten de gemodelleerde elementen herbruikbaar zijn in andere modellen. Daarom is het nodig om de modelelementen uniek te kunnen identificeren. Wanneer een MIM-model uitgedrukt wordt in een Linked Data-ontologie is het zelfs noodzakelijk om de modelelementen identificeren als Linked Data. De metagegevens `Basis-URI`, `URI` en `is gedefinieerd in` maken het mogelijk om de modelelementen in een Linked Data-ontologie te identificeren.
+Informatiemodellen staan vaak niet op zichzelf. Ze kunnen elementen bevatten die refereren aan externe standaarden, waarin deze elementen een eigen identificatie hebben. Ook moeten de gemodelleerde elementen herbruikbaar zijn in andere modellen. Daarom is het nodig om de modelelementen uniek te kunnen identificeren. Wanneer een MIM-model uitgedrukt wordt in een Linked Data-ontologie is het zelfs noodzakelijk om de modelelementen identificeren als Linked Data. De metagegevens <code><a>Basis-URI</a></code>, <code><a>URI</a></code> en <code><a>is gedefinieerd in</a></code> maken het mogelijk om de modelelementen in een Linked Data-ontologie te identificeren.
 
-Een informatiemodel moet echter ook gebruikt kunnen worden zonder dat er vastgestelde (http-)uri's beschikbaar zijn (bijvoorbeeld tijdens de ontwikkelfase). In dit geval kan een `URN` op basis van de package alias en de naam van het modelelement bepaald worden. De defaultwaarde voor de `Basis-URI` van een informatiemodel is dan `urn:` + `informatiemodel.naam`, bijvoorbeeld `urn:imbag`. De identificatie van een objecttype Pand uit het IMBAG model wordt dan `urn:imbag:pand`.
+Een informatiemodel moet echter ook gebruikt kunnen worden zonder dat er vastgestelde (http-)uri's beschikbaar zijn (bijvoorbeeld tijdens de ontwikkelfase). In dit geval kan een `URN` op basis van de package alias en de naam van het modelelement bepaald worden. De defaultwaarde voor de `Basis-URI` van een informatiemodel is dan `urn:` + `informatiemodel.naam`, bijvoorbeeld `"urn:imbag"`. De identificatie van een objecttype Pand uit het IMBAG model wordt dan `"urn:imbag:pand"`.
 
 #### Metagegeven: **Basis-URI**
 
 <aside class="definition">
   <dfn>Basis-URI</dfn>De standaard basis-URI voor elk element in dit informatiemodel.
-</aside>
-> 
+</aside> 
 
-*Toelichting* Een uniform resource identifier (URI) is een compacte reeks tekens die een abstracte of fysieke bron identificeert. Een basis-URI is een het gemeenschappelijke deel van deze reeks tekens die voor alle elementen in het informatiemodel geldig is. Dit metagegeven is verplicht. De basis-URI bevat altijd een 'scheme', dit kan bijvoorbeeld "http://" of "urn" zijn. En voldoet aan een gekozen URI-strategie.
+*Toelichting* Een _uniform resource identifier_ (URI) is een compacte reeks tekens die een abstracte of fysieke bron identificeert. Een `Basis-URI` is het gemeenschappelijke deel van deze reeks tekens die voor alle elementen in het informatiemodel geldig is. Dit metagegeven is verplicht. De `Basis-URI` bevat altijd een `scheme`, dit kan bijvoorbeeld `http://` of `urn` zijn. En voldoet aan een gekozen URI-strategie.
 
 *Toepassing*: informatiemodel (verplicht), domein, view (optioneel)
 
@@ -914,9 +913,9 @@ Een informatiemodel moet echter ook gebruikt kunnen worden zonder dat er vastges
   <dfn>URI</dfn>De identificatie van een modelelement.
 </aside>
 
-*Toelichting* De URI kan een **urn-URI** `<urn:object:Pand` of een **http-URI** `<http://.../def#Pand>` zijn. De `URI` kan bepaald worden aan de hand van de `Naam` van het modelelement en de `Basis-URI` van de _package_ waarin het modelelement zich bevindt. Dit kunnen we opbouwen op basis van de `Basis-URI` samen met de `Naam` van het modelelement (op logisch niveau conform de naamgevingsconventies). In de meeste gevallen zal een modelleur dit metagegeven daarom niet invullen. 
+*Toelichting* De URI kan op twee manieren voorkomen, als **urn-URI**: `<urn:object:Pand` of als **http-URI**: `<http://.../def#Pand>`. De `URI` kan bepaald worden aan de hand van de <code><a>Naam</a></code> van het modelelement en de `Basis-URI` van de _package_ waarin het modelelement zich bevindt. Dit kunnen we opbouwen op basis van de `Basis-URI` samen met de `Naam` van het modelelement (op logisch niveau conform de naamgevingsconventies). In de meeste gevallen zal een modelleur dit metagegeven daarom niet invullen. 
 
-In sommige gevallen kan de `URI` van een modelelement niet bepaald worden aan de hand van de `Basis-URI` van de bijbehorende _package_ en de `Naam` van een modelelement. Bijvoorbeeld als gevolg van de gekozen URI-strategie of wanneer een `Attribuutsoort` uit een ander informatiemodel hergebruikt wordt (e.g. `nen3610-2022:identificatie`). In dit geval zal de modelleur het metagegeven `URI` wel invullen.
+In sommige gevallen kan de `URI` van een modelelement niet bepaald worden aan de hand van de `Basis-URI` van de bijbehorende _package_ en de `Naam` van een modelelement. Bijvoorbeeld als gevolg van de gekozen URI-strategie of wanneer een <code><a>Attribuutsoort</a></code> uit een ander informatiemodel hergebruikt wordt (e.g. `nen3610-2022:identificatie`). In dit geval zal de modelleur het metagegeven `URI` wel invullen.
 
 *Toepassing*:  alle modelelementen (optioneel)
 
@@ -926,24 +925,22 @@ In sommige gevallen kan de `URI` van een modelelement niet bepaald worden aan de
   <dfn>is gedefinieerd in</dfn>De package waarin het modelelement gedefinieerd is.
 </aside>
 
-*Toelichting* De definiërende _package_ is meestal de _package_ die het modelelement bevat. De waarde voor dit metagegeven kan wanneer dit het geval is afgeleid worden. In afwijkende situaties moet de `URI` van de betreffende _package_ ingevuld worden. Een _package_ van het type `View` <a>View</a> definieert nooit de modelelementen die het bevat, dit is altijd een ander _package_ van het type `Domein`. Het verschil met het metagegeven herkomst is dat dit een directe verwijzing is naar een informatiemodel of een _package_ daarbinnen. 
+*Toelichting* De definiërende _package_ is meestal de _package_ die het modelelement bevat. De waarde voor dit metagegeven kan wanneer dit het geval is afgeleid worden. In afwijkende situaties moet de `URI` van de betreffende _package_ ingevuld worden. Een _package_ van het type <code><a>View</a></code> definieert nooit de modelelementen die het bevat, dit is altijd een ander _package_ van het type <code><a>Domein</a></code>. Het verschil met het metagegeven <code><a>Herkomst</a></code> is dat dit een directe verwijzing is naar een informatiemodel of een _package_ daarbinnen. 
 
 *Toepassing*: alle modelelementen
 
-
 <!--Einde "Specificatie metagegevens informatiemodel" -->
-
 
 ### Modelelementen - metagegevens
 
 We onderkennen een aantal specifieke metagegevens op het niveau van de modelelementen waarmee
 een informatiemodel wordt samengesteld. Deze staan beschreven in deze paragaaf.    
 
-Zo is er de `Naam` van het modelelement, bijvoorbeeld het objecttype met als `Naam` `Pand` en een bijbehorende `Definitie`, of de `Datum opname` van het modelelement in het informatiemodel, bijvoorbeeld `1-1-2012`. Welke metagegevens verplicht zijn per modelelement en welke niet staat beschreven in het diagram in [Metagegevens per modelelement](#modelelementen-en-metagegevens-als-diagram). Dit diagram is een onderdeel van de specificatie.
+Zo is er de `Naam` van het modelelement, bijvoorbeeld het objecttype met als `Naam` `"Pand"` en een bijbehorende `Definitie`, of de `Datum opname` van het modelelement in het informatiemodel, bijvoorbeeld `1-1-2012`. Welke metagegevens verplicht zijn per modelelement en welke niet staat beschreven in het diagram in [Metagegevens per modelelement](#modelelementen-en-metagegevens-als-diagram). Dit diagram is een onderdeel van de specificatie.
 
 Elk modelelement kent een eigen set van metagegevens, die bepaalde aspecten van het modelelement specificeren. Metagegevens kunnen dus verplicht zijn en kunnen optioneel zijn. Zo is een definitie altijd verplicht voor elk modelelement die de betekenis van gegevens omschrijft, zoals een attribuutsoort of relatiesoort, maar ook voor het objecttype die de context hiervan is. Bij de meeste datatypen is de definitie daarentegen optioneel, deze worden alleen ingevuld indien nodig.
 
-Merk op dat een aantal van deze metagegevens al meegenomen worden in een specificatietaal. Bijvoorbeeld het objecttype met de naam Pand wordt in UML gemodelleerd als `Named element` met als `Name` `Pand` (in UML 1.4 heette dit nog `UML-Class`, met een property  `Name`). Een aantal andere metagegevens, zoals de eerder genoemde `Datum opname` met waarde `1-1-2012`. worden als aparte data vastgelegd, in UML gebeurt dit in een `Tagged value`. In Linked data gebeurt dit met een `owl:DatatypeProperty`.
+Merk op dat een aantal van deze metagegevens al meegenomen worden in een specificatietaal. Bijvoorbeeld het objecttype met de naam Pand wordt in UML gemodelleerd als `Named element` met als `Name` `Pand` (in UML 1.4 heette dit nog `UML-Class`, met een property  `Name`). Een aantal andere metagegevens, zoals de eerder genoemde `Datum opname` met waarde `"1-1-2012"`. worden als aparte data vastgelegd, in UML gebeurt dit in een `Tagged value`. In Linked data gebeurt dit met een `owl:DatatypeProperty`.
 
 Merk op, de metadata aspecten zijn specifiek voor elk modelelement apart. Dus als er in H2.2 sprake is van een generalisatie, dan worden deze metadata niet overerft (en de ingevulde waardes worden uiteraard zeker niet overerft). De MIM metaclass Referentielijst erft dus geen metagegevens, zoals patroon, van MIM metaclass
 Datatype.
@@ -960,10 +957,7 @@ Hieronder volgen eerst de algemene metagegevens. Dit zijn metagegevens zoals `Na
 
 *Toelichting*
 
-Bijvoorbeeld: Pand is de naam van het modelelement objecttype, bouwjaar is de
-naam van het modelelement attribuutsoort. De modelelementen zijn limitatief
-opgesomd in het hoofdstuk [Betekenis modelelementen](#betekenis-modelelementen).  
-(en eventueel zijn in een uitbreiding extra modelelementen limitatief opgesomd).
+Bijvoorbeeld: `"Pand"` is de naam van het modelelement `Objecttype`, `"bouwjaar"` is de naam van het modelelement `Attribuutsoort`. De modelelementen zijn limitatief opgesomd in het hoofdstuk [Betekenis modelelementen](#betekenis-modelelementen) (en eventueel zijn in een uitbreiding extra modelelementen limitatief opgesomd).
 
 *Toepassing*: alle modelelementen.
 
