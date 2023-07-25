@@ -747,9 +747,9 @@ Een constraint wordt altijd in gewone tekst omschreven en kan optioneel als form
 
 *Toelichting:* Er kan altijd maar één van de mogelijkheden gekozen worden. De `Keuze` is voor een aantal use cases een alternatieve manier voor het modelleren van een constraint.
 
-Een `Keuze` kan op meerdere plekken gebruikt worden, en maakt het mogelijk waar in het metamodel normaal gesproken maar één mogelijkheid bestaat, een opsomming te geven van meerdere mogelijkheden, waarbij in een concreet geval altijd precies één van deze mogelijkheden wordt gebruikt.
+Een `Keuze` maakt het mogelijk een opsomming te geven van meerdere mogelijkheden, waarbij in een concreet geval altijd precies één van deze mogelijkheden wordt gebruikt. Er zijn verschillende plekken waar dit gebruikt kan worden.
 
-Een belangrijk voordeel van deze modellering is dat de kardinaliteiten zuiver gehouden kunnen worden. Anders gezegd, er kan mee voorkomen worden dat een kardinaliteit van bijvoorbeeld twee kenmerken eerst optioneel gemaakt moet worden en dat hierna via een constraint deze toch weer verplicht gemaakt moeten worden, voor precies één van de mogelijkheden. Het is aan de modelleur om te kiezen voor een constraint of een Keuze.
+Een belangrijk voordeel van het gebruik van de Keuze ten opzichte van een constraint is dat de kardinaliteiten zuiver gehouden kunnen worden. Bij het gebruik van een constraint zie je vaak dat de kardinaliteit van bijvoorbeeld twee kenmerken optioneel gemaakt is en om vervolgens via de constraint toch weer verplicht gemaakt te worden, voor precies één van de mogelijkheden.
 
 Dit document beschrijft een aantal use cases waarin het modelleren met een *Keuze* van toegevoegde waarde is. Zonder een dergelijke modelconstructie zou het nodig moeten zijn om met een expliciete constraint de keuze aan te geven.
 
@@ -762,11 +762,9 @@ Een objecttype heeft een attribuutsoort en het datatype hiervan is ofwel datatyp
   Voorbeeld: *Attribuutsoort* geometrie als kenmerk van een objecttype. Dit is een keuze uit *Datatype* Line of *Datatype* Polygon. De opsomming van beide keuzemogelijkheden noemen we de *Keuze* LineOrPolygon. De aanhaking aan het attribuutsoort geometrie gebeurt door aan te geven dat LineOrPolygon het type is van geometrie.
 </aside>
 
-In dit voorbeeld vormt LineOrPolygon de *Keuze* als geheel. De datatypen zelf zijn de keuze mogelijkheden, maar blijven in de modellering van de metaclass datatype en behoren in deze zin niet tot de modellering van de metaclass keuze.  
+In dit voorbeeld vormt `LineOrPolygon` de `Keuze` als geheel. De datatypen zelf zijn de keuzemogelijkheden, maar blijven in de modellering van de metaclass `Datatype` en behoren in deze zin niet tot de modellering van de metaclass `Keuze`.  
 
-Het is niet de bedoeling om twee attribuutsoorten te modelleren met elk een datatype en de attribuutsoorten optioneel te maken.
-
-Zonder de mogelijkheid van keuze, zou je te maken krijgen met twee attribuutsoorten met bijbehorend datatype. Echter, in dat geval mogen de attribuutsoorten niet dezelfde naam hebben, aangezien deze bij hetzelfde objecttype horen. Ook zou de kardinaliteit niet kloppen: die zou dan `0..1` moeten worden, maar dat doet geen recht aan het feit dat er één verplicht aanwezig moet zijn, en er ook geen twee naast elkaar mogen zijn. De werkelijke kardinaliteit is `1..1`.
+Bij een modellering zonder `Keuze` zou je te maken krijgen met een `Attribuutsoort` per `Datatype`, maar met een verschillende naam, hoewel ze betrekking hebben op hetzelfde kenmerk. Ook zou de kardinialiteit niet kloppen: die zou dan `0..1` moeten worden, maar dat doet geen recht aan het feit dat er één verplicht aanwezig moet zijn, en er ook geen twee naast elkaar mogen zijn. De werkelijke kardinaliteit is `1..1`.
 
 **Use case 2: een keuze tussen 2 of meer attribuutsoorten**  
 Er is sprake van ofwel attribuutsoort A1 ofwel attribuutsoort A2. In MIM modelleren we daarom een keuze tussen de 2 attribuutsoorten A1 en A2. Het maken van deze keuze is verplicht.
