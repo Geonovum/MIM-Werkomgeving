@@ -969,13 +969,13 @@ Bijvoorbeeld: `"Pand"` is de naam van het modelelement `Objecttype`, `"bouwjaar"
 
 *Toelichting*
 
-Als de naam van iets wat in het informatiemodel gemodelleerd wordt spaties, diakrieten of verbindingstreepjes bevat, zoals een objecttype 'Onroerende zaak' of een attribuutsoort 'geïnspireerd op', dan kan er gekozen worden om deze naam in het informatiemodel zo op te schrijven dat hier in de techniek makkelijker mee te werken is. Denk aan: 'geinspireerd op' (geen diakrieten) of 'OnroerendeZaak' (camelcase notatiewijze). Wanneer de originele schrijfwijze in natuurlijke taal van belang is kan deze worden opgenomen in het metagegeven alias. Het is niet de bedoeling om (andersom) in de alias de technische makkelijkere naam op te nemen.
+Als de naam van iets wat in het informatiemodel gemodelleerd wordt spaties, diakrieten of verbindingstreepjes bevat, zoals een <code><a>Objecttype</a></code> `"Onroerende zaak"` of een <code><a>Attribuutsoort</a></code> `"geïnspireerd op"`, dan kan er gekozen worden om deze naam in het informatiemodel zo op te schrijven dat hier in de techniek makkelijker mee te werken is. Denk aan: `"geinspireerd op"` (geen diakrieten) of `"OnroerendeZaak"` (notitewijze: camelcase). Wanneer de originele schrijfwijze in natuurlijke taal van belang is kan deze worden opgenomen in het metagegeven `Alias`. Het is niet de bedoeling om (andersom) in de `Alias` de technische makkelijkere naam op te nemen.
 
-De alias wordt ook gebruikt voor een alternatieve weergave van een enumeratie waarde. De ‘naam’ betreft hier een daadwerkelijk waarde, zoals 'Nederlands', waarin de naam gelijk staat aan de waarde en dit moet zo blijven, maar als er sprake is van een voor documentatie doeleinden bedoelde codering van deze enumeratie waarde dan kan deze code in de alias worden opgenomen.
+De `Alias` wordt ook gebruikt voor een alternatieve weergave van een enumeratie waarde. De ‘naam’ betreft hier een daadwerkelijk waarde, zoals 'Nederlands', waarin de naam gelijk staat aan de waarde en dit moet zo blijven, maar als er sprake is van een voor documentatie doeleinden bedoelde codering van deze enumeratie waarde dan kan deze code in de `Alias` worden opgenomen.
 
 Toepassing: objecttype, attribuutsoort, gegevensgroep, relatiesoort, relatierol, relatieklasse, externe koppeling, keuze, enumeratie, primitief datatype, gestructureerd datatype, dataelement en expliciet niet voor packages, enumeratiewaarde, en constraint.
 
-Opmerking: een uitzondering is gemaakt voor UML modellen voor de UML-EnumerationLiteral. De ‘naam’ betreft hier een daadwerkelijk waarde, waarin de naam gelijk staat aan de waarde. Het is daarom expliciet ongewenst om hiervoor een _alias_ te gebruiken. De alias wordt hier, mede daarom, gebruikt voor (alleen) de modellering van het metadata aspect Code, welke aanvullend is op naam (niet een alternatief van naam).
+Opmerking: een uitzondering is gemaakt voor UML-modellen voor de UML-EnumerationLiteral. De ‘naam’ betreft hier een daadwerkelijk waarde, waarin de naam gelijk staat aan de waarde. Het is daarom expliciet ongewenst om hiervoor een _Alias_ te gebruiken. De `Alias` wordt hier, mede daarom, gebruikt voor (alleen) de modellering van het metadata aspect Code die aanvullend is op naam (niet een alternatief van naam).
 
 #### Metagegeven: **Begrip**
 
