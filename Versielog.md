@@ -13,3 +13,4 @@ In **versie 1.2** zijn de volgende issues verwerkt:
 | [322](https://github.com/Geonovum/MIM-Werkomgeving/issues/322)  | Alle definities voorzien van `<dfn>` tag en zichtbaar format.                                 |
 | [015](https://github.com/Geonovum/MIM-Werkomgeving/issues/15)   | Toevoegen metagegeven `Eenheid` aan documentatie.                                             |
 | [171](https://github.com/Geonovum/MIM-Werkomgeving/issues/171)  | Aanpassen structuur tekst en figuren m.b.t. `Keuze`                                           |
+| [188](https://github.com/Geonovum/MIM-Werkomgeving/issues/188)  | Toevoegen van `URI` van model en modelelementen voor publicatie op het web.                   |
