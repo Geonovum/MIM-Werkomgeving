@@ -12,3 +12,4 @@ In **versie 1.2** zijn de volgende issues verwerkt:
 | [318](https://github.com/Geonovum/MIM-Werkomgeving/issues/318)  | Alle figuren voorzien van `<figure>` tags en bijschriften. Nu vindbaar in ToF.                |
 | [322](https://github.com/Geonovum/MIM-Werkomgeving/issues/322)  | Alle definities voorzien van `<dfn>` tag en zichtbaar format.                                 |
 | [015](https://github.com/Geonovum/MIM-Werkomgeving/issues/15)   | Toevoegen metagegeven `Eenheid` aan documentatie.                                             |
+| [171](https://github.com/Geonovum/MIM-Werkomgeving/issues/171)  | Aanpassen structuur tekst en figuren m.b.t. `Keuze`                                           |
