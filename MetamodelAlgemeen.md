@@ -891,27 +891,28 @@ Bijvoorbeeld: `1.0.1` of `1.1` of `1.1.1`
 
 *Toepassing*: informatiemodel (optioneel)
 
- ### Identificatie van modelelementen
+ ### Modelelementidentificatie - metagegevens
 
-Informatiemodellen staan vaak niet op zichzelf. Ze kunnen elementen bevatten die refereren aan externe standaarden, waarin deze elementen een eigen identificatie hebben. Ook moeten de gemodelleerde elementen herbruikbaar zijn in andere modellen. Daarom is het nodig om de modelelementen uniek te kunnen identificeren. Wanneer een MIM-model uitgedrukt wordt in een linked data ontologie is het zelfs noodzakelijk om de modelelementen identificeren als linked data. De metagegevens Basis-URI, URI en 'is gedefinieerd in' maken het mogelijk om de modelelementen in een linked data ontologie te identificeren.
+Informatiemodellen staan vaak niet op zichzelf. Ze kunnen elementen bevatten die refereren aan externe standaarden, waarin deze elementen een eigen identificatie hebben. Ook moeten de gemodelleerde elementen herbruikbaar zijn in andere modellen. Daarom is het nodig om de modelelementen uniek te kunnen identificeren. Wanneer een MIM-model uitgedrukt wordt in een Linked Data-ontologie is het zelfs noodzakelijk om de modelelementen identificeren als Linked Data. De metagegevens `Basis-URI`, `URI` en `is gedefinieerd in` maken het mogelijk om de modelelementen in een Linked Data-ontologie te identificeren.
 
-Een informatiemodel moet echter ook gebruikt kunnen worden zonder dat er vastgestelde (http-)uri's beschikbaar zijn (bijvoorbeeld tijdens de ontwikkelfase). In dit geval kan een urn op basis van de package alias en de naam van het modelelement bepaald worden.
-De default waarde voor de Basis-URI van een informatiemodel is dan "urn: + informatiemodel.naam", dus bijvoorbeeld "urn:imbag". De identificatie van een objecttype Pand uit het IMBAG model wordt dan "urn:imbag:pand".
-
+Een informatiemodel moet echter ook gebruikt kunnen worden zonder dat er vastgestelde (http-)uri's beschikbaar zijn (bijvoorbeeld tijdens de ontwikkelfase). In dit geval kan een `URN` op basis van de package alias en de naam van het modelelement bepaald worden. De defaultwaarde voor de `Basis-URI` van een informatiemodel is dan `urn:` + `informatiemodel.naam`, bijvoorbeeld `urn:imbag`. De identificatie van een objecttype Pand uit het IMBAG model wordt dan `urn:imbag:pand`.
 
 #### Metagegeven: **Basis-URI**
 
->   **Definitie Basis-URI**  
->   De standaard basis URI voor elk element in dit informatiemodel.
+<aside class="definition">
+  <dfn>Basis-URI</dfn>De standaard basis-URI voor elk element in dit informatiemodel.
+</aside>
 > 
+
 *Toelichting* Een uniform resource identifier (URI) is een compacte reeks tekens die een abstracte of fysieke bron identificeert. Een basis-URI is een het gemeenschappelijke deel van deze reeks tekens die voor alle elementen in het informatiemodel geldig is. Dit metagegeven is verplicht. De basis-URI bevat altijd een 'scheme', dit kan bijvoorbeeld "http://" of "urn" zijn. En voldoet aan een gekozen URI-strategie.
 
 *Toepassing*: informatiemodel (verplicht), domein, view (optioneel)
 
 #### Metagegeven: **URI**
 
->   **Definitie URI**  
->   De identificatie van een modelelement.
+<aside class="definition">
+  <dfn>URI</dfn>De identificatie van een modelelement.
+</aside>
 
 *Toelichting* De URI kan een urn-URI (<urn:object:Pand> of een http-URI (<http://.../def#Pand>) zijn. De URI kan bepaald worden aan de hand van de naam van het modelelement en de basis-URI van de package waarin het modelelement zich bevindt. 
 Dit kunnen we opbouwen op basis van de Basis-URI samen met de naam van het modelelement (op logisch niveau conform de naamgevingsconventies. In de meeste gevallen zal een modelleur dit metagegeven daarom niet invullen. 
@@ -922,8 +923,9 @@ In sommige gevallen kan de URI van een modelelement niet bepaald worden aan de h
 
 #### Metagegeven: **is gedefinieerd in**
 
->   **Definitie is gedefinieerd in**  
->   De package waarin het modelelement gedefinieerd is. 
+<aside class="definition">
+  <dfn>is gedefinieerd in</dfn>De package waarin het modelelement gedefinieerd is.
+</aside>
 
 *Toelichting* De definiërende package is meestal de package die het modelelement bevat. De waarde voor dit metagegeven kan wanneer dit het geval is afgeleid worden. In afwijkende situaties moet de URI van de betreffende package ingevuld worden. Een view package definieert nooit de modelelementen die het bevat, dit is altijd een ander domein package. Het verschil met het metagegeven herkomst is dat dit een directe verwijzing is naar een informatiemodel of een package daarbinnen. 
 
