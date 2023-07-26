@@ -128,7 +128,7 @@ Je kunt de Quick Linker op drie manieren inzetten, namelijk voor het:
 
 Hieronder beschrijven we elke methode afzonderlijk.
 
-### 3.1 | Verbinden bestaande modelelementen
+### 3.1 Verbinden bestaande modelelementen
  - Klik met de muis op het icoon.
  - Houd de muisknop ingedrukt en trek een lijn naar het object waarmee je het wilt verbinden.
  - Er verschijnt een stippellijn en een menu.
@@ -139,7 +139,7 @@ Hieronder beschrijven we elke methode afzonderlijk.
 
 ![](Media/mim_ql_generalization.jpg)
 
-### 3.2 | Nieuw modelelement
+### 3.2 Nieuw modelelement
 Je kunt ook vanuit een bestaand element een nieuw modelelement creëren. Dat gaat als volgt:
 
  - Klik met de muis op het icoon.
@@ -153,7 +153,7 @@ Je kunt ook vanuit een bestaand element een nieuw modelelement creëren. Dat gaa
 
 ![](Media/mim_ql_generalization.jpg)
 
-### 3.3 | Meerdere nieuwe modelelementen
+### 3.3 Meerdere nieuwe modelelementen
 Ook is het mogelijk om vanuit een bestaand element meerdere én verschillende soorten modelelementen in één keer te creëren. Dat gaat als volgt:
 
  - Klik met de muis op het icoon.
@@ -174,18 +174,28 @@ Ook is het mogelijk om vanuit een bestaand element meerdere én verschillende so
 
 ## 4: Toepassen toolbox-item 'Relatierol'
 
-Net als alle andere relatie-elementen uit de MIM-toolbox, kun je `«Relatierol»` naar het diagram slepen. Dit werkt alleen als je dit naar het uiteinde van een reeds bestaande `«Relatiesoort»` sleept. Wanneer je in EA het stereotype `«Relatierol»` toewijst aan een relatie, worden de bijbehorende '_Tagged Values_' niet automatisch meegenomen. Hieronder staat bschreven hoe je de tagged values voor alle in het model aanwezige stereotypen `«Relatierol»` in het model kunt synchroniseren.
+Net als alle andere modelelementen uit de MIM-toolbox, kun je ook de `«Relatierol»` in het diagram slepen. Je doet dit door een `«Relatierol»` naar uiteinde van een reeds bestaande `«Relatiesoort»` te slepen. Wanneer je in EA het stereotype `«Relatierol»` toewijst aan een relatie, worden de bijbehorende '_Tagged Values_' automatisch meegenomen.
 
- - Indien je twee modelelementen met elkaar verbindt door middel van een «Relatiesoort», kun je de relatierol van de target toevoegen door middel van het toolbox-item «Relatierol».
- - Klik op het toolbox-item «Relatierol» en sleep het item met de muisknop ingedrukt naar de target-kant van de associatie en laat hier de muisknop weer los.
+> **NOTE**: In eerdere versies van de MIM1.1.1-toolbox ontbraken de _Tagged Values_ bij de `«Relatierol»` na toewijzing. Dit is opgelost in build 5: [`MDG_MIM_Toolbox_v1.1.1_build05`](https://register.geostandaarden.nl/informatiemodel/mim/1.1.1/).
+
+ - Indien je twee modelelementen met elkaar verbindt door middel van een «Relatiesoort», kun je de relatierol van de target toevoegen door middel van het toolbox-item `«Relatierol»`.
+ - Klik op het toolbox-item `«Relatierol»` en sleep het item met de muisknop ingedrukt naar de target-kant van de associatie en laat hier de muisknop weer los.
  - Er verschijnt een popup-venster.
 
 ![](Media/mim_relatierol_name.jpg)
 
  - Vul bij '_Enter value_' de naam van de relatierol in en klik op '_Ok_'.
  - Klik vervolgens in het '_Properties_' venster op het '_Target_' tabblad.
- - Hierin ontbreken de bijbehorende tagged values voor [alternatief 1](https://docs.geostandaarden.nl/mim/mim/#relatiesoort-is-leidend-alternatief-1) of [alternatief 2](https://docs.geostandaarden.nl/mim/mim/#relatierol-is-leidend-alternatief-2).
+ - Vervolgens zie je de bijbehorende _Tagged Values_ voor [alternatief 1](https://docs.geostandaarden.nl/mim/mim/#relatiesoort-is-leidend-alternatief-1) of [alternatief 2](https://docs.geostandaarden.nl/mim/mim/#relatierol-is-leidend-alternatief-2).
 
+
+## 5: Updaten MIM-versie in bestaand informatiemodel
+
+Er zijn verschillende situaties denkbaar waarin je één of meerdere type modelelementen van een informatiemodel wilt updaten. Bijvoorbeeld omdat er een bug-fix is geweest. Zoals hierboven beschreven, kreeg een `«Relatierol»` in de eerste versies van de MIM1.1.1-toolbox (build01-build04) geen Tagged values mee. Maar het kan ook zijn dat je alle modelelementen in een model naar de nieuwste versie van toolbox wilt updaten. Hiervoor moet je het stereotype (het modelelement) synchroniseren. De volgende stappen beschrijven hoe dat werkt.
+
+[Verwijder de oude toolbox](#5-verwijderen-oudere-toolbox) eerst en [importeer vervolgens de nieuwe versie](#1-importeren-mim-toolbox). Doorloop daarna de volgende stappen. Hieronder gebruiken we het updaten van `«Relatierol»` als voorbeeld, maar je kunt dit voor elk gewenst modelelement uit de toolbox toepassen.
+
+Als je een bestaand informatiemodel wilt updaten naar een nieuwere versie van MIM 
 ![](Media/mim_relatierol_target_menu.jpg)
 
  - Ga naar het toolbox-item Relatierol en klik hier met de rechtermuisknop op.
