@@ -12,6 +12,7 @@
  1. [Toepassen MIM-diagram](#2-toepassen-mim-diagram)
  1. [Toepassen Quick Linker](#3-toepassen-quick-linker)
  1. [Toepassen toolbox-item 'Relatierol'](#4-toepassen-toolbox-item-relatierol)
+ 1. [Updaten MIM-versie in bestaand informatiemodel](#5-updaten-mim-versie-in-bestaand-informatiemodel)
  1. [Verwijderen oudere toolbox](#6-verwijderen-oudere-toolbox)
  1. [Toolboxen beheren](#7-toolboxen-beheren)
 
