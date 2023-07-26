@@ -22,7 +22,7 @@
  - Verwijder eventueel eerst de oudere versie van de toolbox als je die niet meer nodig hebt ([Toolbox verwijderen](#5-verwijderen-oudere-toolbox)).
  - Open Enterprise Architect
  - Open '_Resources_'
-    - Kies rechts in beeld op '_Portals_'
+    - Kies rechts in beeld op '_Portals_', of direct op het gelijknamige tablad in de '_Project Browser_'
     - Selecteer in het dropdown-menu '_Windows_'
     - Kies '_Resources_' (onder '_Explore_')
 
@@ -34,7 +34,7 @@
 
 > **Note**<br>
 > Hier moet je de keuze maken of je de toolbox op model- of gebruikersniveau importeert. Beide hebben voor- en nadelen:
->  - **Model**: alleen te gebruiken binnen één EA-project. Voor elke project moet je apart de toolbox importeren. Indien je dit project met een andere gebruiker deelt, beschikt deze gebruiker ook over de toolbox.
+>  - **Model**: alleen te gebruiken binnen één EA-project. Voor elke project moet je apart de toolbox importeren. Indien je dit project met een andere gebruiker deelt, beschikt deze gebruiker ook over de toolbox. Dit is de **aanbevolen optie**. Dit geeft de minste kans op conflicten. 
 >  - **User**: Je hoeft de toolbox slechts éénmalig te importeren. Vervolgens is de toolbox automatisch beschikbaar voor alle EA-projecten waar je als gebruiker aan werkt. Het nadeel is dat bij het delen van projecten de toolbox niet mee komt. Bovendien kunnen er conflicten tussen toolboxen ontstaan (zie: volgende informatiekader).
 
  > **Warning**<br>
