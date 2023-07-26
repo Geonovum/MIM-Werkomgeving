@@ -204,13 +204,13 @@ Er zijn verschillende situaties denkbaar waarin je één of meerdere type modele
 
 ![](Media/mim_relatierol_target_menu.jpg)
 
- - Ga naar het toolbox-item Relatierol en klik hier met de rechtermuisknop op.
+ - Ga naar het toolbox-item `Relatierol` en klik hier met de rechtermuisknop op.
 
 ![](Media/mim_relatierol_sync_select.jpg)
 
  - Klik op '_Synchronize Stereotype_'.
  - Er opent een nieuw venster
- - Hierin staat in het veld '_stereotype_' 'relatierol' al geselecteerd.
+ - Hierin staat in het veld '_stereotype_' `Relatierol` al geselecteerd.
  - Klik op '_Ok_'.
 
 ![](Media/mim_relatierol_sync_menu.jpg)
