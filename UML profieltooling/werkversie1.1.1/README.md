@@ -32,11 +32,13 @@
 
 ![](Media/mim_import_find_mdg_tech.jpg)
 
-> :information_source: <br>Hier moet je de keuze maken of je de toolbox op model- of gebruikersniveau importeert. Beide hebben voor- en nadelen: 
-> **Model**: alleen te gebruiken binnen één EA-project. Voor elke project moet je apart de toolbox importeren. Indien je dit project met een andere gebruiker deelt, beschikt deze gebruiker ook over de toolbox.
-> **User**: Je hoeft de toolbox slechts éénmalig te importeren. Vervolgens is de toolbox automatisch beschikbaar voor alle EA-projecten waar je als gebruiker aan werkt. Het nadeel is dat bij het delen van projecten de toolbox niet mee komt. Bovendien kunnen er conflicten tussen toolboxen ontstaan (zie: volgende informatiekader).
+> :information_source: **Note**<br>
+> Hier moet je de keuze maken of je de toolbox op model- of gebruikersniveau importeert. Beide hebben voor- en nadelen:
+> **Model**: alleen te gebruiken binnen één EA-project. Voor elke project moet je apart de toolbox importeren. Indien je dit project met een andere gebruiker deelt, beschikt deze gebruiker ook over de toolbox.<br>
+> **User**: Je hoeft de toolbox slechts éénmalig te importeren. Vervolgens is de toolbox automatisch beschikbaar voor alle EA-projecten waar je als gebruiker aan werkt. Het nadeel is dat bij het delen van projecten de toolbox niet mee komt. Bovendien kunnen er conflicten tussen toolboxen ontstaan (zie: volgende informatiekader).<br>
 
- > :information_source: Indien binnen jouw EA-omgeving ook een toolbox van een extensie op het MIM aanwezig is (bijvoorbeeld voor de BRO), dan is het raadzaam om de toolboxen alleen op model-niveau te importeren. Indien tenminste één van de twee op user-niveau is geïmporteerd, kan dit bij het toewijzen van stereotypen verwarring opleveren. Veel stereotypen hebben exact dezelfde naam en voor EA is het dan onduidelijk welke _MDG Technology_ het moet kiezen. De bovenstaande aanpak houdt de werkwijze zuiverder.
+ > :information_source: **Note**<br>
+ > Indien binnen jouw EA-omgeving ook een toolbox van een extensie op het MIM aanwezig is (bijvoorbeeld voor de BRO), dan is het raadzaam om de toolboxen alleen op model-niveau te importeren. Indien tenminste één van de twee op user-niveau is geïmporteerd, kan dit bij het toewijzen van stereotypen verwarring opleveren. Veel stereotypen hebben exact dezelfde naam en voor EA is het dan onduidelijk welke _MDG Technology_ het moet kiezen. De bovenstaande aanpak houdt de werkwijze zuiverder.
 
  - Klik met de rechtermuisknop op '_Model Technologies_' of '_User Technologies_'.
 
@@ -64,7 +66,8 @@
  - Instructie voor het [gebruik van de Quick Linker](#3-toepassen-quick-linker).
  - Instructie voor het [gebruik van toolbox-item «Relatierol»](#4-toepassen-toolbox-item-relatierol).
 
- > :information_source: De MIM-toolbox heeft een versienummer. Deze staat niet in de naam. Indien je besloten hebt om oudere versies van de MIM-toolbox niet te verwijderen, komt de naam 'MIM' mogelijk meerdere malen voor. Het [beheren van toolboxen](#6-toolboxen-beheren) in Enterprise Architect doe je op deze manier.
+ > :information_source: **Note**<br>
+ > De MIM-toolbox heeft een versienummer. Deze staat niet in de naam. Indien je besloten hebt om oudere versies van de MIM-toolbox niet te verwijderen, komt de naam 'MIM' mogelijk meerdere malen voor. Het [beheren van toolboxen](#6-toolboxen-beheren) in Enterprise Architect doe je op deze manier.
 
 ## 2: Toepassen MIM-diagram
 
@@ -78,7 +81,8 @@ Dit probleem wordt veroorzaakt doordat een diagram en een toolbox aan elkaar gek
 
 ![](Media/mim_diagram_create.jpg)
 
- > :information_source: Dit kan alleen als je onder model al een package hebt aangemaakt. Als je dat nog niet hebt, maak dan eerst een nieuw package aan.
+ > :information_source: **Note**<br>
+ > Dit kan alleen als je onder model al een package hebt aangemaakt. Als je dat nog niet hebt, maak dan eerst een nieuw package aan.
 
  - Er opent nu een venster.
  - Geef het diagram een naam.
@@ -94,7 +98,8 @@ Dit probleem wordt veroorzaakt doordat een diagram en een toolbox aan elkaar gek
  - Nu verschijnt in het deelvenster '_Diagram Types_' het '_MIM Diagram_'.
  - Selecteer het diagram en klik op '_Ok_'.
 
- > :information_source: Het is belangrijk dat je het diagram daadwerkelijk selecteert. Je kunt herkennen of dit gelukt is, doordat in het onderste deelvenster een toelichtende tekst op het diagram verschijnt (anders staat er alleen 'MIM').
+ > :information_source: **Note**<br>
+ > Het is belangrijk dat je het diagram daadwerkelijk selecteert. Je kunt herkennen of dit gelukt is, doordat in het onderste deelvenster een toelichtende tekst op het diagram verschijnt (anders staat er alleen 'MIM').
 
 ![](Media/mim_diagram_select_diagram.jpg) 
 
@@ -177,7 +182,8 @@ Ook is het mogelijk om vanuit een bestaand element meerdere én verschillende so
 
 Net als alle andere modelelementen uit de MIM-toolbox, kun je ook de `«Relatierol»` in het diagram slepen. Je doet dit door een `«Relatierol»` naar uiteinde van een reeds bestaande `«Relatiesoort»` te slepen. Wanneer je in EA het stereotype `«Relatierol»` toewijst aan een relatie, worden de bijbehorende '_Tagged Values_' automatisch meegenomen.
 
-> :information_source: In eerdere versies van de MIM1.1.1-toolbox ontbraken de _Tagged Values_ bij de `«Relatierol»` na toewijzing. Dit is opgelost in build 5: [`MDG_MIM_Toolbox_v1.1.1_build05`](https://register.geostandaarden.nl/informatiemodel/mim/1.1.1/).
+> :information_source: **Note**<br>
+> In eerdere versies van de MIM1.1.1-toolbox ontbraken de _Tagged Values_ bij de `«Relatierol»` na toewijzing. Dit is opgelost in build 5: [`MDG_MIM_Toolbox_v1.1.1_build05`](https://register.geostandaarden.nl/informatiemodel/mim/1.1.1/).
 
  - Indien je twee modelelementen met elkaar verbindt door middel van een `«Relatiesoort»`, kun je de relatierol van de target toevoegen door middel van het toolbox-item `«Relatierol»`.
  - Klik op het toolbox-item `«Relatierol»` en sleep het item met de muisknop ingedrukt naar de target-kant van de associatie en laat hier de muisknop weer los.
@@ -247,8 +253,10 @@ Deze instructie is bedoeld voor het verwijderen van toolboxen die je niet meer w
  - Met het checkbox in de kolom '_Enabled_' kun je ervoor kiezen om bepaalde bepaalde toolboxen uit te zetten. Dit doe je door het vinkje te verwijderen.
  - Ga verder met de laatste stappen van het [importeren van de MIM-toolbox](#1-importeren-mim-toolbox).
 
- > :information_source: Indien je toolboxen gebruikt met gelijknamige modelelementen, bijvoorbeeld oudere MIM-toolboxen of NEN3610 BRO Grouping-NL, dan kan dit bij het toewijzen van het stereotype «Relatierol» leiden tot een verwijzing naar het 'verkeerde' profiel. Enterprise Architect doet dit automatisch. Hierdoor beschikt het stereotype bijvoorbeeld niet over de gewenste tagged values.
+ > :information_source: **Note**<br>
+ > Indien je toolboxen gebruikt met gelijknamige modelelementen, bijvoorbeeld oudere MIM-toolboxen of NEN3610 BRO Grouping-NL, dan kan dit bij het toewijzen van het stereotype «Relatierol» leiden tot een verwijzing naar het 'verkeerde' profiel. Enterprise Architect doet dit automatisch. Hierdoor beschikt het stereotype bijvoorbeeld niet over de gewenste tagged values.
 
 ## 8: Workspaces gebruiken
 
-> :information_source: Nog schrijven.
+> :information_source: **Note**<br>
+> Nog schrijven.
