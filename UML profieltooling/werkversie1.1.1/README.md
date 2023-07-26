@@ -198,9 +198,9 @@ Net als alle andere modelelementen uit de MIM-toolbox, kun je ook de `«Relatier
 
 ## 5: Updaten MIM-versie in bestaand informatiemodel
 
-Er zijn verschillende situaties denkbaar waarin je één of meerdere type modelelementen van een informatiemodel wilt updaten. Bijvoorbeeld omdat er een bug-fix is geweest. Zoals hierboven beschreven, kreeg een `«Relatierol»` in de eerste versies van de MIM1.1.1-toolbox (build01-build04) geen Tagged values mee. Maar het kan ook zijn dat je alle modelelementen in een model naar de nieuwste versie van toolbox wilt updaten. Hiervoor moet je het stereotype (het modelelement) synchroniseren. De volgende stappen beschrijven hoe dat werkt.
+Er zijn verschillende situaties denkbaar waarin je één of meerdere type modelelementen van een informatiemodel wilt updaten. Bijvoorbeeld omdat er een bug-fix is geweest. Zoals hierboven beschreven, kreeg een `«Relatierol»` in de eerste versies van de MIM1.1.1-toolbox (build01-build04) geen _Tagged Values_ mee. Maar het kan ook zijn dat je alle modelelementen in een model naar de nieuwste versie van toolbox wilt updaten. Hiervoor moet je het stereotype (het modelelement) synchroniseren. De volgende stappen beschrijven hoe dat werkt.
 
-[Verwijder de oude toolbox](#5-verwijderen-oudere-toolbox) eerst en [importeer vervolgens de nieuwe versie](#1-importeren-mim-toolbox). Doorloop daarna de volgende stappen. Hieronder gebruiken we het updaten van `«Relatierol»` als voorbeeld, maar je kunt dit voor elk gewenst modelelement uit de toolbox toepassen.
+[Verwijder de oude toolbox](#6-verwijderen-oudere-toolbox) eerst en [importeer vervolgens de nieuwe versie](#1-importeren-mim-toolbox). Doorloop daarna de volgende stappen. Hieronder gebruiken we het updaten van `«Relatierol»` als voorbeeld, maar je kunt dit voor elk gewenst modelelement uit de toolbox toepassen.
 
 ![](Media/mim_relatierol_target_menu.jpg)
 
