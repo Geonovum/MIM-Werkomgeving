@@ -1,11 +1,11 @@
 # Handleiding - Importeren en toepassen MIM-toolbox in Enterprise Architect
 
 | Software/Standaard | Versie |
-| --- | ---: |
-| MIM-standaard | 1.1.1 |
-| MIM-toolbox | 1.1.1 |
-| Enterprise Architect | 15.2 |
-| Subversion (SVN) | 1.14.1 |
+| --------------------- | --------------: |
+| MIM-standaard         | 1.1.1           |
+| MIM-toolbox           | 1.1.1, build 5  |
+| Enterprise Architect  | 15.2            |
+| Subversion (SVN)      | 1.14.1          |
 
 ## Inhoud
  1. [Importeren MIM-toolbox](#1-importeren-mim-toolbox)
