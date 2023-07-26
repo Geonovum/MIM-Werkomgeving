@@ -66,7 +66,7 @@
  - Instructie voor het [gebruik van de Quick Linker](#3-toepassen-quick-linker).
  - Instructie voor het [gebruik van toolbox-item «Relatierol»](#4-toepassen-toolbox-item-relatierol).
 
- > :information_source: **Note**<br>
+ > :information_source: **Warning**<br>
  > De MIM-toolbox heeft een versienummer. Deze staat niet in de naam. Indien je besloten hebt om oudere versies van de MIM-toolbox niet te verwijderen, komt de naam 'MIM' mogelijk meerdere malen voor. Het [beheren van toolboxen](#6-toolboxen-beheren) in Enterprise Architect doe je op deze manier.
 
 ## 2: Toepassen MIM-diagram
@@ -254,7 +254,7 @@ Deze instructie is bedoeld voor het verwijderen van toolboxen die je niet meer w
  - Ga verder met de laatste stappen van het [importeren van de MIM-toolbox](#1-importeren-mim-toolbox).
 
  > :information_source: **Note**<br>
- > Indien je toolboxen gebruikt met gelijknamige modelelementen, bijvoorbeeld oudere MIM-toolboxen of NEN3610 BRO Grouping-NL, dan kan dit bij het toewijzen van het stereotype «Relatierol» leiden tot een verwijzing naar het 'verkeerde' profiel. Enterprise Architect doet dit automatisch. Hierdoor beschikt het stereotype bijvoorbeeld niet over de gewenste tagged values.
+ > Indien je toolboxen gebruikt met gelijknamige modelelementen, bijvoorbeeld oudere MIM-toolboxen of NEN3610 BRO Grouping-NL (dat een extensie is op MIM), dan kan dit leiden tot een verwijzing naar het 'verkeerde' profiel. Enterprise Architect doet dit automatisch. Hierdoor beschikt het stereotype bijvoorbeeld niet over de gewenste tagged values.
 
 ## 8: Workspaces gebruiken
 
