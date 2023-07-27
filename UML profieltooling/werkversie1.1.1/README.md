@@ -259,3 +259,8 @@ Deze instructie is bedoeld voor het verwijderen van toolboxen die je niet meer w
 
 > **Note**<br>
 > Nog schrijven.
+
+### Lijst van mogelijke onderwerpen
+ - Overzicht handige vensters bij het modelleren
+ - Waar je ze vind
+ - En hoe je een workspace maakt en waarom dat handig kan zijn
