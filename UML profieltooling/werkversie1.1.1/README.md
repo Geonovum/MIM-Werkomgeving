@@ -262,5 +262,5 @@ Deze instructie is bedoeld voor het verwijderen van toolboxen die je niet meer w
 
 ### Lijst van mogelijke onderwerpen
  - Overzicht handige vensters bij het modelleren
- - Waar je ze vind
+ - Waar je ze vindt
  - En hoe je een workspace maakt en waarom dat handig kan zijn
