@@ -185,16 +185,15 @@ Net als alle andere modelelementen uit de MIM-toolbox, kun je ook de `«Relatier
 > **Note**<br>
 > In eerdere versies van de MIM1.1.1-toolbox ontbraken de _Tagged Values_ bij de `«Relatierol»` na toewijzing. Dit is opgelost in build 5: [`MDG_MIM_Toolbox_v1.1.1_build05`](https://register.geostandaarden.nl/informatiemodel/mim/1.1.1/).
 
- - Indien je twee modelelementen met elkaar verbindt door middel van een `«Relatiesoort»`, kun je de relatierol van de target toevoegen door middel van het toolbox-item `«Relatierol»`.
- - Klik op het toolbox-item `«Relatierol»` en sleep het item met de muisknop ingedrukt naar de target-kant van de associatie en laat hier de muisknop weer los.
+ - Indien je twee modelelementen met elkaar verbindt door middel van een `«Relatiesoort»`, kun je de `«Relatierol»` aan de _target end_ (of de _source end_) toevoegen door middel van het toolbox-item `«Relatierol»`.
+ - Klik op het toolbox-item `«Relatierol»` en sleep het item met de muisknop ingedrukt naar de _target end_ van de associatie en laat hier de muisknop weer los.
  - Er verschijnt een popup-venster.
 
 ![](Media/mim_relatierol_name.jpg)
 
- - Vul bij '_Enter value_' de naam van de relatierol in en klik op '_Ok_'.
+ - Vul bij '_Enter value_' de naam van de `«Relatierol»` in en klik op '_Ok_'.
  - Klik vervolgens in het '_Properties_' venster op het '_Target_' tabblad.
  - Vervolgens zie je de bijbehorende _Tagged Values_ voor [alternatief 1](https://docs.geostandaarden.nl/mim/mim/#relatiesoort-is-leidend-alternatief-1) of [alternatief 2](https://docs.geostandaarden.nl/mim/mim/#relatierol-is-leidend-alternatief-2).
-
 
 ## 5: Updaten MIM-versie in bestaand informatiemodel
 
