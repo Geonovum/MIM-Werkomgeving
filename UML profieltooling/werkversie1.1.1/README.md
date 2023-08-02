@@ -273,13 +273,14 @@ Deze instructie is bedoeld voor het verwijderen van toolboxen die je niet meer w
  - Pan & Zoom
  - Relationships
  - Relationship Matrix
+ - Toolbox
 
 ### 8.2 Waar je ze vindt
 
 Ga allereerst naar
 Klik rechtsboven op _Portals_ en selecteer _Windows_.
 
-De venster uit 8.1 vind je terug in de volgende deelmenu's:
+De meeste vensters uit 8.1 vind je terug in de volgende deelmenu's:
 
 Explore
  - _Project Browser_
@@ -298,6 +299,11 @@ Trace
  - _Relationships_
  - _Relationship Matrix_
 
+Het venster Toolbox vind je in de taakbalk bovenin. Ga naar:
+
+_Design_ > _Diagram_ > _Toolbox_ (`Ctrl`+`Shift`+`3`)
+
 ### 8.3 En hoe je een workspace maakt en waarom dat handig kan zijn
 
-
+> **Note**
+> To do: tekst schrijven
