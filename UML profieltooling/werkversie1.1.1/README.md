@@ -258,12 +258,46 @@ Deze instructie is bedoeld voor het verwijderen van toolboxen die je niet meer w
 ## 8: Workspaces gebruiken
 
 > **Note**<br>
-> Nog schrijven.
+> Onderstaande tekst is nog in concept
 
 > **Warning**<br>
 > Dit onderwerp hoort niet in deze handleiding thuis, maar in handleiding over EA. Het kan wel handig zijn om vanuit deze handleiding ernaar te verwijzen.
 
-### Lijst van mogelijke onderwerpen
- - Overzicht handige vensters bij het modelleren
- - Waar je ze vindt
- - En hoe je een workspace maakt en waarom dat handig kan zijn
+### 8.1 Overzicht handige vensters bij het modelleren
+
+ - Project Browser
+ - Resources
+ - Notes
+ - Tagged Values
+ - Features
+ - Pan & Zoom
+ - Relationships
+ - Relationship Matrix
+
+### 8.2 Waar je ze vindt
+
+Ga allereerst naar
+Klik rechtsboven op _Portals_ en selecteer _Windows_.
+
+De venster uit 8.1 vind je terug in de volgende deelmenu's:
+
+Explore
+ - _Project Browser_
+ - _Resources_
+
+Properties
+ - _Properties_
+ - _Notes_
+ - _Tagged Values_
+ - _Features_
+
+Diagram
+ - _Pan & Zoom_
+
+Trace
+ - _Relationships_
+ - _Relationship Matrix_
+
+### 8.3 En hoe je een workspace maakt en waarom dat handig kan zijn
+
+
