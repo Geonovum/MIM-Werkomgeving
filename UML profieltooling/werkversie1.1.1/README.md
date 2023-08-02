@@ -15,6 +15,7 @@
  1. [Updaten MIM-versie in bestaand informatiemodel](#5-updaten-mim-versie-in-bestaand-informatiemodel)
  1. [Verwijderen oudere toolbox](#6-verwijderen-oudere-toolbox)
  1. [Toolboxen beheren](#7-toolboxen-beheren)
+ 1. [Workspaces gebruiken](#8-workspaces-gebruiken)
 
 ## 1: Importeren MIM-toolbox
 
