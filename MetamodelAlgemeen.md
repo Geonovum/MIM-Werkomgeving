@@ -29,104 +29,106 @@ Hierna volgen eerst diagrammen met een overzicht van de modelelementen. In de pa
 ## Structuur metamodel
 
 Deze paragraaf bevat een overzicht van het metamodel voor informatiemodellen, kortweg MIM, en geeft alle modelelementen weer. De beschrijving van de modelelementen staat in de volgende paragraaf. De modelelementen zijn verdeeld over een aantal diagrammen, die elk een eigen _view_ op een deel van het metamodel tonen. Elk _view_ toont een aantal van de modelelementen, inclusief hun onderlinge samenhang. Alle _views_ samen vormen het metamodel als geheel:
-- **Kern**: belangrijkste modelelementen in onderlinge samenhang.
-- **Datatypen**: de in het model te onderkennen soorten datatypen.
-- **Overige modelelementen**: elementen die niet altijd aan de orde zijn
+- [Kern](#kern): belangrijkste modelelementen in onderlinge samenhang.
+- [Datatypen](#datatypen): de in het model te onderkennen soorten datatypen.
+- [Overige modelelementen](#overige-modelelementen): elementen die niet altijd aan de orde zijn
 
-Elk modelelement heeft een MIM-metaclass met een naam. Hieraan is elk modelelement te herkennen in alle diagrammen en in de tekst en in elke specificatietaal die een uitdrukking is van dit metamodel. Bij de modelelementen zijn in deze diagrammen geen beschrijvende kenmerken opgenomen (bijvoorbeeld metagegevens zoals: naam, definitie, enzovoorts). In de [diagrammen](#diagrammen) in de bijlage zijn deze wel opgenomen.
+Elk modelelement heeft een `«MIM metaclass»` met een naam. Hieraan is elk modelelement te herkennen in alle diagrammen en in de tekst en in elke specificatietaal die een uitdrukking is van dit metamodel. Bij de modelelementen zijn in deze diagrammen geen beschrijvende kenmerken opgenomen (bijvoorbeeld metagegevens zoals: naam, definitie, enzovoorts). In de [diagrammen](#diagrammen) in de bijlage zijn deze wel opgenomen.
 
 ### Kern
 
-View 1: De kern van een informatiemodel. Deze bestaat uit de volgende modelelementen:
+De kern van het informatiemodel bestaat uit de volgende modelelementen. Het diagram toont hoe ze onderling met elkaar samenghangen. Een uitgebreide beschrijving per element is opgenomen in de paragraaf [modelelementen](#modelelementen).
 
-| **MIM metaclass** |
-|-------------------|
-| Objecttype        |
-| Attribuutsoort    |
-| Gegevensgroep     |
-| Gegevensgroeptype |
-| Generalisatie     |
-| Relatiesoort      |
-| Relatieklasse     |
-| Relatierol        |
-| Relatierol doel   |
-| Datatypen         |
+ 1. `«MIM metaclass»`: <a>Objecttype</a>
+ 1. `«MIM metaclass»`: <a>Attribuutsoort</a>
+ 1. `«MIM metaclass»`: <a>Gegevensgroep</a>
+ 1. `«MIM metaclass»`: <a>Gegevensgroeptype</a>
+ 1. `«MIM metaclass»`: <a>Generalisatie</a>
+ 1. `«MIM metaclass»`: <a>Relatiesoort</a>
+ 1. `«MIM metaclass»`: <a>Relatieklasse</a>
+ 1. `«MIM metaclass»`: <a>Relatierol</a>
+ 1. `«MIM metaclass»`: <a>Relatierol doel</a>
+ 1. `«MIM metaclass»`: <a>Datatype</a>
 
-De betekenis van deze modelelementen en de beschrijvingen ervan staat in [Objecttypen en attribuutsoorten](#Objecttypen-en-attribuutsoorten) en in [Relaties](#Relaties) en in [Datatypen](#datatypen-0).
-
-In diagramvorm:
+<!-- In diagramvorm: -->
 
 <figure id="KernZonderUML">
   <img src="media/KernZonderUML.png" alt="" />
-  <figcaption>Kern van een informatiemodel</figcaption>
+  <figcaption>MIM - kern zonder metagegevens</figcaption>
 </figure>
 
-Kern zonder Metagegevens
-
-De verbindingen tussen de modelelementen geven aan welke combinaties kunnen voorkomen op metamodelniveau, oftewel welke modelelementen in een informatiemodel met elkaar gecombineerd kunnen worden. Bijvoorbeeld:
-- Een objecttype kan verbonden worden met een attribuutsoort. In een informatiemodel kan je attribuutsoorten dus aan een objecttype toekennen. Een attribuutsoort kan in het informatiemodel vervolgens weer als type een datatype krijgen.
-- Een objecttype kan verbonden worden met een relatiesoort en deze relatiesoort kan weer verbonden worden met een objecttype. Dit geeft aan dat de relatiesoort een modelelement is dat twee objecttypen met elkaar verbindt. Een objecttype kan dus *niet* rechtstreeks verbonden worden met een ander objecttype.
-- Een objecttype kan verbonden worden met een gegevensgroep en deze gegevensgroep kan weer verbonden worden met een gegevensgroeptype. Een objecttype kan dus *niet* rechtstreeks verbonden worden met een gegevensgroeptype. In een informatiemodel is een gegevensgroep een eigenschap van het objecttype en kan je aangeven dat deze gegevensgroep als type een gegevensgroeptype heeft.
+In het diagram geven de verbindingen tussen de modelelementen aan welke combinaties kunnen voorkomen op metamodelniveau, oftewel welke modelelementen in een informatiemodel met elkaar gecombineerd kunnen worden. Bijvoorbeeld:
+- Een <code><a>Objecttype</a></code> kan verbonden worden met een <code><a>Attribuutsoort</a></code>. In een informatiemodel kan je attribuutsoorten dus aan een `Objecttype` toekennen. Een `Attribuutsoort` kan in het informatiemodel vervolgens weer als type een <code><a>Datatype</a></code> krijgen.
+- Een `Objecttype` kan verbonden worden met een <code><a>Relatiesoort</a></code> en deze `Relatiesoort` kan weer verbonden worden met een `Objecttype`. Dit geeft aan dat de `Relatiesoort` een modelelement is dat twee objecttypen met elkaar verbindt. Een `Objecttype` kan dus *niet* rechtstreeks verbonden worden met een ander `Objecttype`.
+- Een `Objecttype` kan verbonden worden met een <code><a>Gegevensgroep</a></code> en deze `Gegevensgroep` kan weer verbonden worden met een <code><a>Gegevensgroeptype</a></code>. Een `Objecttype` kan dus *niet* rechtstreeks verbonden worden met een `Gegevensgroeptype`. In een informatiemodel is een `Gegevensgroep` een eigenschap van het `Objecttype` en kan je aangeven dat deze `Gegevensgroep` als type een `Gegevensgroeptype` heeft.
 
 
 ### Datatypen
 
-View 2: Datatypen. De verschillende soorten datatypen en bijbehorende modelelementen:
+Het MIM kent verschillende manieren om een datatype toe te kennen aan een modelelement. Het onderstaande overzicht toont welke typen beschikbaar zijn, inclusief de onderdelen waaruit sommige typen worden opgebouwd.
 
-| **MIM metaclass**       |
-|-------------------------|
-| Primitief datatype      |
-| Gestructureerd datatype |
-| Data element            |
-| Enumeratie              |
-| Enumeratiewaarde        |
-| Referentielijst         |
-| Referentie element      |
-| Codelijst               |
+1. `«MIM metaclass»`: <code><a>Primitief datatype</a></code>
+1. `«MIM metaclass»`: <code><a>Gestructureerd datatype</a></code>
+1. `«MIM metaclass»`: <code><a>Data-element</a></code>
+1. `«MIM metaclass»`: <code><a>Enumeratie</a></code>
+1. `«MIM metaclass»`: <code><a>Enumeratiewaarde</a></code>
+1. `«MIM metaclass»`: <code><a>Referentielijst</a></code>
+1. `«MIM metaclass»`: <code><a>Referentie-element</a></code>
+1. `«MIM metaclass»`: <code><a>Codelijst</a></code>
 
-De betekenis van deze modelelementen en de beschrijvingen ervan staan in [Datatypen](#datatypen-1) en in [Waardelijsten](#waardelijsten).
-
-In diagramvorm:
+Het diagram toont de onderlinge samenhang en structuur. Een `Gestructureerd datatype` wordt opgebouwd uit twee of meer `Data-elementen`. Een `Enumeratie` bestaat uit `Enumeratiewaarden` en een `Referentielijst` uit `Referentie-elementen`. In de paragrafen [datatypen](#datatypen-1) en [waardelijsten](#waardelijsten) worden deze typen uitgebreid toelicht.
 
 <figure id="DatatypenZonderUML">
   <img src="media/DatatypenZonderUML.png" alt="" />
-  <figcaption>Datatypen</figcaption>
+  <figcaption>MIM - datatypen zonder metagegevens</figcaption>
 </figure>
 
-Diagram: Datatypen zonder Metagegevens
+### Overige modelelementen
 
-### Overige
+Naast de kernelementen en de datatypen, kent het MIM nog een aantal andere datatypen. Deze modelelementen vallen uiteen in een aantal categorieën die in de volgende paragrafen verder worden toegelicht.
 
-View 3a: constraint en keuze.
+1. `«MIM metaclass»`: <code><a>Constraint</a></code>
+1. `«MIM metaclass»`: <code><a>Keuze</a></code>
+1. `«MIM metaclass»`: <code><a>Relatierol</a></code>
+1. `«MIM metaclass»`: <code><a>Relatierol bron</a></code>
+1. `«MIM metaclass»`: <code><a>Relatierol doel</a></code>
+1. `«MIM metaclass»`: <code><a>Externe koppeling</a></code>
+1. `«MIM metaclass»`: <code><a>Informatiemodel</a></code>
+1. `«MIM metaclass»`: <code><a>Domein</a></code>
+1. `«MIM metaclass»`: <code><a>Extern</a></code>
+1. `«MIM metaclass»`: <code><a>View</a></code>
 
-| **MIM metaclass** |
-|-------------------|
-| Constraint        |
-| Keuze             |
+#### Constraint en Keuze
 
-De betekenis van deze modelelementen en de beschrijvingen ervan staan in [Overige modelelementen](#Overige-modelelementen)
+De `Keuze` en de `Constraint` zijn verschillende manieren om voorwaarden op te leggen aan modelelementen in een informatiemodel. Beide methoden hebben voor- en nadelen die worden uitgewerkt in de paragrafen [constraint](#constraint) en [keuze](#keuze). Hieronder wordt in het kort uitgelegd `...`
 
-In diagram vorm:
+<aside class="issue" title="Alinea aanvullen. Wat is het doel?"></aside>
+
+##### Constraint in het kort
+
+Een `Constraint` legt voorwaarden of beperkingen op aan een modelelement. Meer informatie vind je in de paragraaf over <code><a>Constraint</a></code>. Het diagram toont in welke situaties een `Contraint` kan worden toegepast.
+
 <figure id="ConstraintsZonderUML">
   <img src="media/ConstraintsZonderUML.png" alt="" />
   <figcaption>Constraint</figcaption>
 </figure>
 
-Diagram: Constraint
+##### Keuze in het kort
 
-**Keuze**
+<aside class="issue" title="Use cases staan ook uitgewerkt in de paragraaf Keuze. Dubbel?"></aside>
 
-Er zijn vier situaties/use cases waarin een keuze toegepast wordt:
+Een keuze bepaalt dat er meerdere opties mogelijk zijn, waarvan er één gekozen moet worden. Er zijn vier situaties mogelijk waarin een keuze toegepast wordt. Keuze tussen:
+- een keuze tussen datatypen ([Use case 1](link))
+- een keuze tussen 2 of meer attribuutsoorten ([Use case 2](link))
+- een keuze tussen meerdere manieren om 1 betekenisvol attribuutsoort in te vullen ([Use case 3](link))
+- een keuze tussen relatiedoelen, als nadere invulling van 1 betekenisvolle relatiesoort ([Use case 4](link))
 
-Beschrijving: [Keuze](#keuze)
+Voor elke mogelijkheid is een aparte `«MIM metaclass»` beschikbaar in het metamodel.
+ 1. `«MIM metaclass»`: <code>Keuze</code>
+ 1. `«MIM metaclass»`: <code>Keuze(attribuut)</code>
+ 1. `«MIM metaclass»`: <code>Keuze(relatie)</code>
+ 1. `«MIM metaclass»`: <code>Datatype(keuze)</code>
 
-Keuze tussen:
-- Use case 1: een keuze tussen datatypen
-- Use case 2: een keuze tussen 2 of meer attribuutsoorten
-- Use case 3: een keuze tussen meerdere manieren om 1 betekenisvol attribuutsoort in te vullen
-- Use case 4: een keuze tussen relatiedoelen, als nadere invulling van 1 betekenisvolle relatiesoort
-
-Voor elk geldt een eigen subset van het metamodel.
 
 Merk op dat een keuze tussen relatiesoorten ook een mogelijke keuze is, maar deze is vooralsnog niet uitgewerkt en daarom nog niet opgenomen in deze versie.
 
@@ -184,7 +186,7 @@ Een objecttype of gegevensgroep kan normaal een relatiesoort hebben, die gekoppe
 
 Diagram: Keuze tussen relatiedoelen. Patroon geldt ook voor Gegevensgroeptype, behalve dat een Gegevensgroeptype geen doel mag zijn van een Relatiesoort.
 
-*Relatierol*
+#### Relatiesoort en relatierol
 
 View 3b: Relatiesoort en relatierol
 
@@ -203,7 +205,7 @@ In diagramvorm:
 
 Diagram: Relatierol
 
-*Externe koppeling*
+#### Externe koppeling
 
 View 3c: Externe koppelingen. Deze bestaat uit de volgende modelelementen:
 
@@ -213,7 +215,7 @@ View 3c: Externe koppelingen. Deze bestaat uit de volgende modelelementen:
 
 In diagramvorm:
 
-*Groepering*
+#### Groepering
 
 View 3d: Groepering. Deze bestaat uit de volgende modelelementen:
 
