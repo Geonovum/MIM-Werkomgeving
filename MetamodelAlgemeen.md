@@ -28,7 +28,7 @@ Hierna volgen eerst diagrammen met een overzicht van de modelelementen. In de pa
 
 ## Structuur metamodel
 
-Deze paragraaf bevat een overzicht van het metamodel voor informatiemodellen, kortweg MIM, en geeft alle modelelementen weer. De beschrijving van de modelelementen staat in de volgende paragraaf. De modelelementen zijn verdeeld over een aantal diagrammen, die elk een eigen _view_ op een deel van het metamodel tonen. Elk _view_ toont een aantal van de modelelementen, inclusief hun onderlinge samenhang. Alle _views_ samen vormen het metamodel als geheel:
+Deze paragraaf bevat een overzicht van het metamodel voor informatiemodellering, kortweg MIM, en geeft alle modelelementen weer. De beschrijving van de modelelementen staat in de volgende paragraaf. De modelelementen zijn verdeeld over een aantal diagrammen, die elk een eigen _view_ op een deel van het metamodel tonen. Elk _view_ toont een aantal van de modelelementen, inclusief hun onderlinge samenhang. Alle _views_ samen vormen het metamodel als geheel:
 - [Kern](#kern): belangrijkste modelelementen in onderlinge samenhang.
 - [Datatypen](#datatypen): de in het model te onderkennen soorten datatypen.
 - [Overige modelelementen](#overige-modelelementen): elementen die niet altijd aan de orde zijn
@@ -50,8 +50,6 @@ De kern van het informatiemodel bestaat uit de volgende modelelementen. Het diag
  1. `«MIM metaclass»`: <a>Relatierol doel</a>
  1. `«MIM metaclass»`: <a>Datatype</a>
 
-<!-- In diagramvorm: -->
-
 <figure id="KernZonderUML">
   <img src="media/KernZonderUML.png" alt="" />
   <figcaption>MIM - kern zonder metagegevens</figcaption>
@@ -61,7 +59,6 @@ In het diagram geven de verbindingen tussen de modelelementen aan welke combinat
 - Een <code><a>Objecttype</a></code> kan verbonden worden met een <code><a>Attribuutsoort</a></code>. In een informatiemodel kan je attribuutsoorten dus aan een `Objecttype` toekennen. Een `Attribuutsoort` kan in het informatiemodel vervolgens weer als type een <code><a>Datatype</a></code> krijgen.
 - Een `Objecttype` kan verbonden worden met een <code><a>Relatiesoort</a></code> en deze `Relatiesoort` kan weer verbonden worden met een `Objecttype`. Dit geeft aan dat de `Relatiesoort` een modelelement is dat twee objecttypen met elkaar verbindt. Een `Objecttype` kan dus *niet* rechtstreeks verbonden worden met een ander `Objecttype`.
 - Een `Objecttype` kan verbonden worden met een <code><a>Gegevensgroep</a></code> en deze `Gegevensgroep` kan weer verbonden worden met een <code><a>Gegevensgroeptype</a></code>. Een `Objecttype` kan dus *niet* rechtstreeks verbonden worden met een `Gegevensgroeptype`. In een informatiemodel is een `Gegevensgroep` een eigenschap van het `Objecttype` en kan je aangeven dat deze `Gegevensgroep` als type een `Gegevensgroeptype` heeft.
-
 
 ### Datatypen
 
@@ -76,7 +73,7 @@ Het MIM kent verschillende manieren om een datatype toe te kennen aan een modele
 1. `«MIM metaclass»`: <code><a>Referentie-element</a></code>
 1. `«MIM metaclass»`: <code><a>Codelijst</a></code>
 
-Het diagram toont de onderlinge samenhang en structuur. Een `Gestructureerd datatype` wordt opgebouwd uit twee of meer `Data-elementen`. Een `Enumeratie` bestaat uit `Enumeratiewaarden` en een `Referentielijst` uit `Referentie-elementen`. In de paragrafen [datatypen](#datatypen-1) en [waardelijsten](#waardelijsten) worden deze typen uitgebreid toelicht.
+Het diagram toont de onderlinge samenhang en structuur. Daarin is zichtbaar dat een `Gestructureerd datatype` wordt opgebouwd uit twee of meer `Data-elementen`, een `Enumeratie` bestaat uit `Enumeratiewaarden` en een `Referentielijst` uit `Referentie-elementen`. In de paragrafen [datatypen](#datatypen-1) en [waardelijsten](#waardelijsten) worden deze typen uitgebreid toelicht.
 
 <figure id="DatatypenZonderUML">
   <img src="media/DatatypenZonderUML.png" alt="" />
@@ -100,7 +97,7 @@ Naast de kernelementen en de datatypen, kent het MIM nog een aantal andere datat
 
 #### Constraint en Keuze
 
-De `Keuze` en de `Constraint` zijn verschillende manieren om voorwaarden op te leggen aan modelelementen in een informatiemodel. Beide methoden hebben voor- en nadelen die worden uitgewerkt in de paragrafen [constraint](#constraint) en [keuze](#keuze). Hieronder wordt in het kort uitgelegd `...`
+De `Keuze` en de `Constraint` zijn verschillende manieren om een voorwaarde op te leggen aan een modelelement in een informatiemodel. Beide methoden hebben voor- en nadelen. Meer daarover vind je in de paragrafen [constraint](#constraint) en [keuze](#keuze). Hieronder wordt in het kort uitgelegd `...`
 
 <aside class="issue" title="Alinea aanvullen. Wat is het doel?"></aside>
 
@@ -117,11 +114,11 @@ Een `Constraint` legt voorwaarden of beperkingen op aan een modelelement. Meer i
 
 <aside class="issue" title="Use cases staan ook uitgewerkt in de paragraaf Keuze. Dubbel?"></aside>
 
-Een keuze bepaalt dat er meerdere opties mogelijk zijn, waarvan er één gekozen moet worden. Er zijn vier situaties mogelijk waarin een keuze toegepast wordt. Keuze tussen:
-- een keuze tussen datatypen ([Use case 1](link))
-- een keuze tussen 2 of meer attribuutsoorten ([Use case 2](link))
-- een keuze tussen meerdere manieren om 1 betekenisvol attribuutsoort in te vullen ([Use case 3](link))
-- een keuze tussen relatiedoelen, als nadere invulling van 1 betekenisvolle relatiesoort ([Use case 4](link))
+Een keuze bepaalt dat er meerdere opties mogelijk zijn, waarvan er één gekozen moet worden. Er zijn vier situaties mogelijk waarin een keuze toegepast wordt die in deze paragraaf elk aan de hand van een voorbeeld worden uitgewerkt. Keuze tussen:
+ 1. een keuze tussen datatypen ([voorbeeld](#example-keuze-tussen-datatypen))
+ 1. een keuze tussen 2 of meer attribuutsoorten ([voorbeeld](#example-keuze-tussen-twee-of-meer-attribuutsoorten))
+ 1. een keuze tussen meerdere manieren om 1 betekenisvol attribuutsoort in te vullen ([voorbeeld](#example-keuze-tussen-meerdere-manieren-om-een-betekenisvol-attribuutsoort-in-te-vullen))
+ 1. een keuze tussen relatiedoelen, als nadere invulling van 1 betekenisvolle relatiesoort ([voorbeeld](#example-keuze-tussen-relatiedoelen))
 
 Voor elke mogelijkheid is een aparte `«MIM metaclass»` beschikbaar in het metamodel.
  1. `«MIM metaclass»`: <code>Keuze</code>
@@ -129,62 +126,50 @@ Voor elke mogelijkheid is een aparte `«MIM metaclass»` beschikbaar in het meta
  1. `«MIM metaclass»`: <code>Keuze(relatie)</code>
  1. `«MIM metaclass»`: <code>Datatype(keuze)</code>
 
+<aside class="note" title="Keuze tussen relatiesoorten">
+  Merk op dat een <strong>keuze tussen relatiesoorten</strong> óók een mogelijke keuze is. Deze opties is vooralsnog niet uitgewerkt en daarom nog niet opgenomen in deze versie.
+</aside>
 
-Merk op dat een keuze tussen relatiesoorten ook een mogelijke keuze is, maar deze is vooralsnog niet uitgewerkt en daarom nog niet opgenomen in deze versie.
+<aside class="example" title="Keuze tussen datatypen">
+  <p>
+    Dit diagram is uitgewerkt voor <code>Objecttype</code>. Voor <code>Gegevensgroeptype</code> en <code>Relatieklasse</code> geldt hetzelfde patroon. Een <code>Attribuutsoort</code> heeft normaal één <code>Datatype</code>. Als er sprake is van een <code>Keuze</code>, dan is het <code>Attribuutsoort</code> gekoppeld met een <code>Keuze</code> en de <code>Keuze</code> geeft twee of 
+    meer <code>Datatypen</code> aan.
+  </p>
+  <figure id="KeuzeDatatype1">
+    <img src="media/KeuzeDatatype1.png" alt="" />
+    <figcaption>Keuzen tussen datatypen</figcaption>
+  </figure>
+</aside>
 
-In diagramvorm:
+<aside class="example" title="Keuze tussen twee of meer attribuutsoorten">
+  <p>
+    Dit diagram is uitgewerkt voor <code>Objecttype</code>. Voor <code>Gegevensgroeptype</code> en <code>Relatieklasse</code> geldt hetzelfde patroon. Een <code>Objecttype</code> of <code>Gegevensgroep</code> kan normaal een <code>Attribuutsoort</code> hebben met een datatype (de lijn links onder). Als een <code>Objecttype</code> meerdere op zichzelf staande <code>Attribuutsoorten</code> heeft en er sprake is van een <code>Keuze</code> tussen een aantal van deze <code>Attribuutsoorten</code>, dan is het <code>Objecttype</code> gekoppeld met een <code>Keuze</code> (de lijn links boven) en de <code>Keuze</code> geeft 2 of meer <code>Attribuutsoorten</code> aan (met elk een eigen <code>Datatype</code>).
+  </p>
+  <figure id="KeuzeAttribuutsoort2">
+    <img src="media/KeuzeAttribuutsoort2.png" alt="" />
+    <figcaption>Keuze tussen attribuutsoorten</figcaption>
+  </figure>
+</aside>
 
-*Use case 1: Keuze tussen datatypen*
+<aside class="example" title="Keuze tussen meerdere manieren om één betekenisvol attribuutsoort in te vullen">
+  <p>
+    Dit diagram is uitgewerkt voor <code>Objecttype</code>. Voor <code>Gegevensgroeptype</code> en <code>Relatieklasse</code> geldt hetzelfde patroon. Een <code>Objecttype</code> of <code>Gegevensgroep</code> kan normaal een <code>Attribuutsoort</code> hebben met een <code>Datatype</code> (de lijn links). Als er sprake is van een <code>Attribuutsoort</code> die op meerdere manieren ingevuld kan worden met een <code>Keuze</code> hiertussen, dan is het <code>Attribuutsoort</code> niet gekoppeld met een <code>Datatype</code>, maar dan is het <code>Attribuutsoort</code> gekoppeld met een <code>Keuze</code> en de <code>Keuze</code> geeft twee of meer <code>Attribuutsoorten</code> aan (met elk een eigen <code>Datatype</code>).
+  </p>
+  <figure id="KeuzeAttribuutsoort3">
+    <img src="media/KeuzeAttribuutsoort3.png" alt="" />
+    <figcaption>Keuze tussen attribuutsoorten binnen een attribuutsoort</figcaption>
+  </figure>
+</aside>
 
-Dit diagram is uitgewerkt voor Objecttype. Voor Gegevensgroeptype en Relatieklasse geldt hetzelfde patroon.
-
-1 attribuutsoort heeft normaal 1 datatype. Als er sprake is van een keuze, dan is het attribuutsoort gekoppeld met een keuze en de keuze geeft 2 of meer datatypen aan.
-
-<figure id="KeuzeDatatype1">
-  <img src="media/KeuzeDatatype1.png" alt="" />
-  <figcaption>Keuzen tussen datatypen</figcaption>
-</figure>
-
-Diagram: Keuze tussen datatypen
-
-*Use case 2: Keuze tussen 2 of meer attribuutsoorten*
-
-Dit diagram is uitgewerkt voor Objecttype. Voor Gegevensgroeptype en Relatieklasse geldt hetzelfde patroon.
-
-Een objecttype of gegevensgroep kan normaal een attribuutsoort hebben met een datatype (de lijn links onder). Als een objecttype meerdere op zichzelf staande attribuutsoorten heeft en er sprake is van een keuze tussen een aantal van deze attribuutsoorten, dan is het objecttype gekoppeld met een keuze (de lijn links boven) en de keuze geeft 2 of meer attribuutsoorten aan (met elk een eigen datatype).
-
-<figure id="KeuzeAttribuutsoort2">
-  <img src="media/KeuzeAttribuutsoort2.png" alt="" />
-  <figcaption>Keuze tussen attribuutsoorten</figcaption>
-</figure>
-
-Diagram: Keuze tussen attribuutsoorten. Patroon geldt ook voor Gegevensgroeptype en Relatieklasse
-
-*Use case 3: Keuze tussen meerdere manieren om 1 betekenisvol attribuutsoort in te vullen*
-
-Dit diagram is uitgewerkt voor Objecttype. Voor Gegevensgroeptype en Relatieklasse geldt hetzelfde patroon.
-
-Een objecttype of gegevensgroep kan normaal een attribuutsoort hebben met een datatype (de lijn links). Als er sprake is van een attribuutsoort die op meerdere manieren ingevuld kan worden met een keuze hiertussen, dan is het attribuutsoort niet gekoppeld met een datatype, maar dan is het attribuutsoort gekoppeld met een keuze en de keuze geeft 2 of meer attribuutsoorten aan (met elk een eigen datatype).
-
-<figure id="KeuzeAttribuutsoort3">
-  <img src="media/KeuzeAttribuutsoort3.png" alt="" />
-  <figcaption>Keuze tussen attribuutsoorten binnen een attribuutsoort</figcaption>
-</figure>
-
-Diagram: Keuze tussen attribuutsoorten binnen een attribuutsoort. Patroon geldt ook voor Gegevensgroeptype en Relatieklasse
-
-*Use case 4: Keuze tussen relatiedoelen, als nadere invulling van 1 betekenisvolle relatiesoort*
-
-Dit diagram is uitgewerkt voor Objecttype. Voor Gegevensgroeptype geldt hetzelfde patroon, behalve dat een Gegevensgroeptype geen doel mag zijn van een Relatiesoort.
-
-Een objecttype of gegevensgroep kan normaal een relatiesoort hebben, die gekoppeld is aan een objecttype. Als er sprake is van een relatiesoort met een keuze, dan is het relatiedoel van de relatiesoort niet gekoppeld aan 1 objecttype, maar dan is het objecttype gekoppeld aan een keuze en deze keuze geeft 2 of meer relatiedoelen aan.
-
-<figure id="KeuzeRelatiedoel4">
-  <img src="media/KeuzeRelatiedoel4.png" alt="" />
-  <figcaption>Keuze tussen relatiedoelen</figcaption>
-</figure>
-
-Diagram: Keuze tussen relatiedoelen. Patroon geldt ook voor Gegevensgroeptype, behalve dat een Gegevensgroeptype geen doel mag zijn van een Relatiesoort.
+<aside class="example" title="Keuze tussen relatiedoelen">
+  <p>
+    Als nadere invulling van één betekenisvolle <code>Relatiesoort</code>. Dit diagram is uitgewerkt voor <code>Objecttype</code>. Voor <code>Gegevensgroeptype</code> geldt hetzelfde patroon, behalve dat een <code>Gegevensgroeptype</code> geen doel mag zijn van een <code>Relatiesoort</code>. Een <code>Objecttype</code> of <code>Gegevensgroep</code> kan normaal een <code>Relatiesoort</code> hebben, die gekoppeld is aan een <code>Objecttype</code>. Als er sprake is van een <code>Relatiesoort</code> met een <code>Keuze</code>, dan is het <code>Relatiedoel</code> van de <code>Relatiesoort</code> niet gekoppeld aan 1 <code>Objecttype</code>, maar dan is het <code>Objecttype</code> gekoppeld aan een <code>Keuze</code> en deze <code>Keuze</code> geeft 2 of meer <code>Relatiedoelen</code> aan.
+  </p>
+  <figure id="KeuzeRelatiedoel4">
+    <img src="media/KeuzeRelatiedoel4.png" alt="" />
+    <figcaption>Keuze tussen relatiedoelen</figcaption>
+  </figure>
+</aside>
 
 #### Relatiesoort en relatierol
 
@@ -712,9 +697,7 @@ Diagram: [Overige](#overige)
 *Toelichting:* Een constraint kan vastgelegd worden bij alle modelelementen. Echter, meestal
 komt een constraint voor bij een objecttype, om te aan te geven dat de
 constraint geldt voor 2 (of meer) eigenschappen van een objecttype, of om een
-bijzondere specificatie toe te voegen die niet via de bestaande modelelementen gelegd kan worden zoals een 11-proef.
-
-Een constraint wordt altijd in gewone tekst omschreven en kan optioneel als formele specificatie worden aangegeven.
+bijzondere specificatie toe te voegen die niet via de bestaande modelelementen gelegd kan worden zoals een 11-proef. Een constraint wordt altijd in gewone tekst omschreven en kan optioneel als formele specificatie worden aangegeven.
 
 #### Keuze
 
