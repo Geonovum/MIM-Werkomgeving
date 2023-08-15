@@ -33,7 +33,7 @@ Deze paragraaf bevat een overzicht van het metamodel voor informatiemodellering,
 - [Datatypen](#datatypen): de in het model te onderkennen soorten datatypen.
 - [Overige modelelementen](#overige-modelelementen): elementen die niet altijd aan de orde zijn
 
-Elk modelelement heeft een `«MIM metaclass»` met een naam. Hieraan is elk modelelement te herkennen in alle diagrammen en in de tekst en in elke specificatietaal die een uitdrukking is van dit metamodel. Bij de modelelementen zijn in deze diagrammen geen beschrijvende kenmerken opgenomen (bijvoorbeeld metagegevens zoals: naam, definitie, enzovoorts). In de [diagrammen](#diagrammen) in de bijlage zijn deze wel opgenomen.
+Elk modelelement heeft een `«MIM metaclass»` met een naam. Hieraan is elk modelelement te herkennen in alle diagrammen, in de tekst én in elke specificatietaal die een uitdrukking is van dit metamodel. Bij de modelelementen zijn in deze diagrammen geen beschrijvende kenmerken opgenomen (bijvoorbeeld [metagegevens](#specificatie-metagegevens) zoals: naam, definitie, enzovoorts). In de [diagrammen](#diagrammen) in de bijlage zijn deze wel opgenomen.
 
 ### Kern
 
@@ -82,7 +82,9 @@ Het diagram toont de onderlinge samenhang en structuur. Daarin is zichtbaar dat 
 
 ### Overige modelelementen
 
-Naast de kernelementen en de datatypen, kent het MIM nog een aantal andere datatypen. Deze modelelementen vallen uiteen in een aantal categorieën die in de volgende paragrafen verder worden toegelicht.
+Naast de kernelementen en de datatypen, kent het MIM nog een aantal andere datatypen. Deze modelelementen vallen uiteen in een aantal categorieën. 
+
+ waarvan de functie en struc in het MIM in de volgende paragrafen verder worden toegelicht.
 
 1. `«MIM metaclass»`: <code><a>Constraint</a></code>
 1. `«MIM metaclass»`: <code><a>Keuze</a></code>
@@ -97,7 +99,7 @@ Naast de kernelementen en de datatypen, kent het MIM nog een aantal andere datat
 
 #### Constraint en Keuze
 
-De `Keuze` en de `Constraint` zijn verschillende manieren om een voorwaarde op te leggen aan een modelelement in een informatiemodel. Beide methoden hebben voor- en nadelen. Meer daarover vind je in de paragrafen [constraint](#constraint) en [keuze](#keuze). Hieronder wordt in het kort uitgelegd `...`
+De `Keuze` en de `Constraint` zijn verschillende manieren om een voorwaarde of een beperking op te leggen aan een modelelement. Beide methoden hebben voor- en nadelen. Meer daarover vind je in de paragrafen [constraint](#constraint) en [keuze](#keuze). Aan de hand van diagrammen wordt hieronder `...`
 
 <aside class="issue" title="Alinea aanvullen. Wat is het doel?"></aside>
 
@@ -126,10 +128,6 @@ Voor elke mogelijkheid is een aparte `«MIM metaclass»` beschikbaar in het meta
  1. `«MIM metaclass»`: <code>Keuze(relatie)</code>
  1. `«MIM metaclass»`: <code>Datatype(keuze)</code>
 
-<aside class="note" title="Keuze tussen relatiesoorten">
-  Merk op dat een <strong>keuze tussen relatiesoorten</strong> óók een mogelijke keuze is. Deze opties is vooralsnog niet uitgewerkt en daarom nog niet opgenomen in deze versie.
-</aside>
-
 <aside class="example" title="Keuze tussen datatypen">
   <p>
     Dit diagram is uitgewerkt voor <code>Objecttype</code>. Voor <code>Gegevensgroeptype</code> en <code>Relatieklasse</code> geldt hetzelfde patroon. Een <code>Attribuutsoort</code> heeft normaal één <code>Datatype</code>. Als er sprake is van een <code>Keuze</code>, dan is het <code>Attribuutsoort</code> gekoppeld met een <code>Keuze</code> en de <code>Keuze</code> geeft twee of 
@@ -137,13 +135,13 @@ Voor elke mogelijkheid is een aparte `«MIM metaclass»` beschikbaar in het meta
   </p>
   <figure id="KeuzeDatatype1">
     <img src="media/KeuzeDatatype1.png" alt="" />
-    <figcaption>Keuzen tussen datatypen</figcaption>
+    <figcaption>Keuze tussen datatypen</figcaption>
   </figure>
 </aside>
 
 <aside class="example" title="Keuze tussen twee of meer attribuutsoorten">
   <p>
-    Dit diagram is uitgewerkt voor <code>Objecttype</code>. Voor <code>Gegevensgroeptype</code> en <code>Relatieklasse</code> geldt hetzelfde patroon. Een <code>Objecttype</code> of <code>Gegevensgroep</code> kan normaal een <code>Attribuutsoort</code> hebben met een datatype (de lijn links onder). Als een <code>Objecttype</code> meerdere op zichzelf staande <code>Attribuutsoorten</code> heeft en er sprake is van een <code>Keuze</code> tussen een aantal van deze <code>Attribuutsoorten</code>, dan is het <code>Objecttype</code> gekoppeld met een <code>Keuze</code> (de lijn links boven) en de <code>Keuze</code> geeft 2 of meer <code>Attribuutsoorten</code> aan (met elk een eigen <code>Datatype</code>).
+    Dit diagram is uitgewerkt voor <code>Objecttype</code>. Voor <code>Gegevensgroeptype</code> en <code>Relatieklasse</code> geldt hetzelfde patroon. Een <code>Objecttype</code> of <code>Gegevensgroep</code> kan normaal een <code>Attribuutsoort</code> hebben met een datatype (de lijn links onder). Als een <code>Objecttype</code> meerdere op zichzelf staande <code>Attribuutsoorten</code> heeft en er sprake is van een <code>Keuze</code> tussen een aantal van deze <code>Attribuutsoorten</code>, dan is het <code>Objecttype</code> gekoppeld met een <code>Keuze</code> (de lijn links boven) en de <code>Keuze</code> geeft twee of meer <code>Attribuutsoorten</code> aan (met elk een eigen <code>Datatype</code>).
   </p>
   <figure id="KeuzeAttribuutsoort2">
     <img src="media/KeuzeAttribuutsoort2.png" alt="" />
@@ -171,15 +169,17 @@ Voor elke mogelijkheid is een aparte `«MIM metaclass»` beschikbaar in het meta
   </figure>
 </aside>
 
+<aside class="note" title="Keuze tussen relatiesoorten">
+  Merk op dat een <strong>keuze tussen relatiesoorten</strong> óók een mogelijke keuze is. Deze opties is vooralsnog niet uitgewerkt en daarom nog niet opgenomen in deze versie.
+</aside>
+
 #### Relatiesoort en relatierol
 
-View 3b: Relatiesoort en relatierol
+Uitwerking van de structuur en samenhang van relatierol, bron en doel.
 
-| **MIM metaclass**     |
-|-----------------------|
-| Relatierol (abstract) |
-| Relatierol bron       |
-| Relatierol doel       |
+ 1. `MIM metaclass`: <code><a>Relatierol</a></code> (abstract)
+ 1. `MIM metaclass`: <code><a>Relatierol bron</a></code>
+ 1. `MIM metaclass`: <code><a>Relatierol doel</a></code>
 
 In diagramvorm:
 
@@ -188,29 +188,22 @@ In diagramvorm:
   <figcaption>Relatierol</figcaption>
 </figure>
 
-Diagram: Relatierol
-
 #### Externe koppeling
 
 View 3c: Externe koppelingen. Deze bestaat uit de volgende modelelementen:
 
-| **MIM metaclass** |
-|-------------------|
-| Externe koppeling |
+ 1. `MIM metaclass`: <code><a>Externe koppeling</a></code>
 
-In diagramvorm:
+<aside class="issue" title="Hier mist een diagram"></aside>
 
 #### Groepering
 
 View 3d: Groepering. Deze bestaat uit de volgende modelelementen:
 
-
-| **MIM metaclass** |
-|-------------------|
-| Informatiemodel   |
-| Domein            |
-| Extern            |
-| View              |
+ 1. `MIM metaclass`: <code><a>Informatiemodel</a></code>
+ 1. `MIM metaclass`: <code><a>Domein</a></code>
+ 1. `MIM metaclass`: <code><a>Extern</a></code>
+ 1. `MIM metaclass`: <code><a>View</a></code>
 
 De betekenis van deze modelelementen en de beschrijvingen ervan staan in [Packages](#packages).
 
@@ -220,8 +213,6 @@ In diagramvorm:
   <img src="media/PackageZonderUml.png" alt="" />
   <figcaption>Groepering</figcaption>
 </figure>
-
-Diagram: groepering
 
 ## Modelelementen
 
