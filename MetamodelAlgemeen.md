@@ -309,7 +309,7 @@ Voorbeelden van gegevens zijn de waardes ‘Jan’ en ‘1-1-1970’ betreffende
 Gegevens zijn de objectief waarneembare neerslag of registratie van feiten op een bepaald medium, zodanig dat deze gegevens uitgewisseld en voor langere tijd bewaard kunnen worden. Dat kan op papier, in digitale vorm, et cetera. Met deze gegevens wordt een model (een selectief deel dus) van de werkelijkheid vastgelegd in de tijd. Ofschoon de werkelijkheid nooit stilstaat, kan deze door het vastleggen van de gegevens toch worden bevroren. 
 Het waargenomen feit dat twee objecten een relatie hebben wordt ook gezien als een gegeven.
 
-Zodra een gegeven geregistreerd wordt of uitgewisseld wordt noemen we deze ook wel data. Het is deze data die waarde/data van een eigenschap van een object is, bv. 'Jan' is de waarde/data van de eigenschap voornaam van een Natuurlijk persoon. Data aangevuld met de betekenis uit het informatiemodel, waarin de definitie van wat een voornaam is staat, noemen we informatie.
+Zodra een gegeven vastgelegd wordt of uitgewisseld wordt noemen we deze ook wel data. Het is deze data die waarde/data van een eigenschap van een object is, bv. 'Jan' is de waarde/data van de eigenschap voornaam van een Natuurlijk persoon. Data aangevuld met de betekenis uit het informatiemodel, waarin de definitie van wat een voornaam is staat, noemen we informatie.
 
 Er zijn een aantal modelelementen waar gegevens "in" zitten, oftewel waarvoor een feit waargenomen kan worden die wel als een waarde/data kunnen vastleggen. Dit zijn: _attribuutsoort_, _relatiesoort_ en _externe koppeling_. Elk gegeven kan:
 - een enkelvoudige structuur hebben, zoals bij de voornaam 'Jan', of het object Natuurlijk persoon met identificatie '123';
