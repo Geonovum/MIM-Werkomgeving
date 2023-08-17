@@ -150,6 +150,7 @@ Keuze tussen:
 - Use case 2: een keuze tussen 2 of meer attribuutsoorten
 - Use case 3: een keuze tussen meerdere manieren om 1 betekenisvol attribuutsoort in te vullen
 - Use case 4: een keuze tussen relatiedoelen, als nadere invulling van 1 betekenisvolle relatiesoort
+- Use case 5: een keuze tussen 2 or meer relatiesoorten/relatierollen (elk afzonderlijk betekenisvol)  
 
 Voor elk geldt een eigen subset van het metamodel.
 
@@ -198,16 +199,47 @@ Diagram: Keuze tussen attribuutsoorten binnen een attribuutsoort. Patroon geldt 
 
 *Use case 4: Keuze tussen relatiedoelen, als nadere invulling van 1 betekenisvolle relatiesoort*
 
-Dit diagram is uitgewerkt voor Objecttype. Voor Gegevensgroeptype geldt hetzelfde patroon, behalve dat een Gegevensgroeptype geen doel mag zijn van een Relatiesoort.
+Deze use case komt in de praktijk weinig voor, maar het kan wel, daarom is deze opgenomen. 
 
-Een objecttype of gegevensgroep kan normaal een relatiesoort hebben, die gekoppeld is aan een objecttype. Als er sprake is van een relatiesoort met een keuze, dan is het relatiedoel van de relatiesoort niet gekoppeld aan 1 objecttype, maar dan is het objecttype gekoppeld aan een keuze en deze keuze geeft 2 of meer relatiedoelen aan.
+Het bron object heeft 1 relatie, en heeft 1 gerelateerd doel object, maar dit doel object kan van verschillende objecttypes zijn. Het bron objecttype kent slechts 1 relatiesoort/relatierol, met een eigen betekenis, en deze relatiesoort/rol verwijst naar 2 of meer objecttypes. 
+
+Dit kan voorkomen wanneer vanuit het bron objecttype gezien er maar sprake is van 1 concern dat ingevuld moet worden, ongeacht welk objecttype dit concern zal gaan invullen. 
+
+Dit diagram is uitgewerkt voor Objecttype. Voor Gegevensgroeptype geldt hetzelfde patroon (1 relatiesoort vanuit een gegevensgroeptype naar een objecttype). 
 
 <figure id="KeuzeRelatiedoel4">
   <img src="media/KeuzeRelatiedoel4.png" alt="" />
   <figcaption>Keuze tussen relatiedoelen</figcaption>
 </figure>
 
-Diagram: Keuze tussen relatiedoelen. Patroon geldt ook voor Gegevensgroeptype, behalve dat een Gegevensgroeptype geen doel mag zijn van een Relatiesoort.
+Diagram: Keuze tussen relatiedoelen. 
+
+Uitwerking met een keuze constructie: een bron objecttype of gegevensgroeptype kan normaal een relatiesoort/relatierol hebben, die gekoppeld is aan (verwijst naar) een doel objecttype. Als er sprake is van een relatiesoort/relatierol met een relatiedoel keuze, dan is de relatiesoort niet gekoppeld aan 1 objecttype, maar dan is de relatiesoort gekoppeld aan een keuze en deze keuze is gekoppeld aan 2 of meer doel objecttypen. Elk objecttype is een afzonderlijk relatiedoel. Er moet voor deze ene relatiesoort/relatierol een keuze gemaakt worden voor 1 van de relatiedoelen. Het gerelateerde object is 1 van deze objecttypen, maar de betekenis van de relatie is hetzelfde, ongeacht van welk objecttype het object is. 
+
+Opmerkingen: 
+- de relatiesoort kan een eigen relatienaam hebben en elk relatiedoel kan een eigen rolnaam kan hebben
+- een gegevensgroeptype mag zelf geen doel zijn 
+
+*Use case 5: Keuze tussen 2 or meer relatiesoorten/relatierollen (elk afzonderlijk betekenisvol)  
+
+Analoog aan use case 2, maar dan voor relatiesoorten/relatierollen. Het objecttype kent 2 of meer relatiesoorten/relatierollen, met elk een eigen betekenis, en precies 1 hiervan is verplicht. 
+
+Het bron object heeft meerdere relaties die aan de orde/gevuld zouden kunnen zijn, maar er mag er altijd maar 1 aan de orde/gevuld zijn. Het bron objecttype kent 2 of meer relatiesoorten/relatierollen, met elk een eigen betekenis, en elk van deze relatiesoorten/relatierollen is gekoppeld aan (verwijst naar) een eigen doel objecttype.  
+
+Dit diagram is uitgewerkt voor Objecttype. Voor Gegevensgroeptype geldt hetzelfde patroon (2 of meer relatiesoorten vanuit een gegevensgroeptype naar een objecttype). 
+
+<figure id="KeuzeRelatiedoel4">
+  <img src="media/KeuzeRelatiesoort5.png" alt="" />
+  <figcaption>Keuze tussen relatiesoorten</figcaption>
+</figure>
+
+Diagram: Keuze tussen relatiesoorten/relatierollen. Patroon geldt ook voor Gegevensgroeptype, de relatiesoorten kunnen ook vanuit het gegevensgroeptype verwijzen naar de gekoppelde objecttypes. 
+
+Uitwerking met een keuze constructie: een bron objecttype of gegevensgroeptype kan normaal een relatiesoort/relatierol hebben, die gekoppeld is aan (verwijst naar) een doel objecttype. Als er sprake is van een relatiesoort/relatierol keuze, dan heeft het _objecttype_ 1 koppeling met een _relatiesoort/relatierol keuze_ en deze keuze heeft 2 of meer relatiesoorten/relatierollen naar de doel objecttypes. Er moet een keuze gemaakt worden voor 1 van de relatiesoorten/relatierollen en daarmee voor het aan deze relatie gerelateerde doel objecttype. 
+
+Opmerkingen: 
+- elke relatiesoort kan een eigen relatienaam hebben en heeft een relatiedoel die een eigen rolnaam kan hebben
+- een gegevensgroeptype mag zelf geen doel zijn
 
 *Relatierol*
 
