@@ -1288,7 +1288,7 @@ Indien mogelijk is de verwijzing een URI of een URL (als er geen URI is, dan kan
 #### Metagegeven: **Doelformaat**
 
 <aside class="definition">
-  <dfn>Doelformaat</dfn>Het fomaat waarin een waardelijst is gepubliceerd.
+  <dfn>Doelformaat</dfn>Het formaat waarin een waardelijst is gepubliceerd.
 </aside>
 
 *Toelichting*
@@ -1309,7 +1309,7 @@ Voorbeelden hiervan zijn `Characterstring` , `Integer`
 
 *Toepassing:* Codelijst
 
-#### Metagegeven: **Waarde item**
+#### Metagegeven: **Waarde-item**
 
 <aside class="definition">
   <dfn>Waarde-item</dfn>Het item (of element) van de lijst dat de waarde representeert.
@@ -1333,7 +1333,9 @@ Mogelijk is er een profielspecificatie die de specifieke technische toepassing v
 
 *Toepassing:* Codelijst
 
-#### Metagegeven: **Type** (domein van een waarde een gegeven)
+#### Metagegeven: **Type**
+
+Het domein van een waarde van een gegeven.
 
 <aside class="definition">
   <dfn>Type</dfn>Het datatype waarmee waarden van dit modelelement worden vastgelegd.
