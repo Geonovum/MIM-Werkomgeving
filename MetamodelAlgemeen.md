@@ -220,8 +220,8 @@ In diagramvorm:
 In deze paragraaf staan alle modelelementen gespecificeerd die gebruikt worden bij
 het maken van een informatiemodel. Bij elk modelelement is een definitie en een toelichting opgenomen.
 
-Voordat het modelelement objecttype gedefinieerd wordt, en andere modelelementen,
-wordt eerst beschreven wat objecten en gegevens zijn en hoe deze zich verhouden tot modelelementen.
+<del>Voordat het modelelement objecttype gedefinieerd wordt, en andere modelelementen,
+wordt eerst beschreven wat objecten en gegevens zijn en hoe deze zich verhouden tot modelelementen.</del>
 
 #### Object en gegeven
 
@@ -234,14 +234,14 @@ Om duidelijk(er) te maken wat wordt bedoeld kijken we eerst naar het begrip ‘o
 #### Object
 
 <aside class="definition">
-  <dfn>Object</dfn>Een ding, een tastbaar iets, in de werkelijkheid, zoals daarnaar gekeken wordt vanuit een bepaald domein.
+  <dfn data-lt="objecten">Object</dfn>Een ding, een tastbaar iets, in de werkelijkheid, zoals daarnaar gekeken wordt vanuit een bepaald domein.
 </aside>
 
 <aside class="note" title="Object vs. Objecttype">
   Een <strong>object is geen modelelement</strong> in een informatiemodel. Die worden aangeduid met het MIM-stereotype <a href="#objecttype">«Objecttype»</a>.
 </aside>
 
-*Toelichting:* Met in de werkelijkheid wordt bedoeld dat het om de daadwerkelijke onderwerpen van gesprek gaat, de verzameling van de concrete tastbare dingen waarover we het hebben. Bijvoorbeeld, de persoon Jan, Paleis 't Loo. Het wordt veelal als niet politiek correct beschouwd mensen als objecten te zien. In dit kader, de informatievoorziening, beschouwen we evenwel natuurlijke en niet-natuurlijke personen wel als objecten. ‘Tastbaar’ moet hierbij ruim geïnterpreteerd worden. Het gaat niet alleen om fysiek herkenbare objecten zoals auto’s, gebouwen en mensen, ook om zogenaamde virtuele objecten waarover binnen het domein door betrokkenen gecommuniceerd wordt zoals kadastrale percelen, (maatschappelijke) activiteiten en processen. Hoe een ‘tastbaar iets’ als een object beschouwd wordt, hangt af van het domein waarvoor dat ‘tastbaar iets’ relevant is. Zo wordt de gebouwde omgeving in het ene domein beschouwd als een verzameling gebouwen terwijl een ander domein daarin panden onderscheidt. Een object is voor een domein relevant als eigenschappen (kenmerken) daarvan van belang zijn voor het functioneren van dat domein.
+**Toelichting**: Met in de werkelijkheid wordt bedoeld dat het om de daadwerkelijke onderwerpen van gesprek gaat, de verzameling van de concrete tastbare dingen waarover we het hebben. Bijvoorbeeld, de persoon Jan, Paleis 't Loo. Het wordt veelal als niet politiek correct beschouwd mensen als objecten te zien. In dit kader, de informatievoorziening, beschouwen we evenwel natuurlijke en niet-natuurlijke personen wel als objecten. ‘Tastbaar’ moet hierbij ruim geïnterpreteerd worden. Het gaat niet alleen om fysiek herkenbare objecten zoals auto’s, gebouwen en mensen, ook om zogenaamde virtuele objecten waarover binnen het domein door betrokkenen gecommuniceerd wordt zoals kadastrale percelen, (maatschappelijke) activiteiten en processen. Hoe een ‘tastbaar iets’ als een object beschouwd wordt, hangt af van het domein waarvoor dat ‘tastbaar iets’ relevant is. Zo wordt de gebouwde omgeving in het ene domein beschouwd als een verzameling gebouwen terwijl een ander domein daarin panden onderscheidt. Een object is voor een domein relevant als eigenschappen (kenmerken) daarvan van belang zijn voor het functioneren van dat domein.
 
 #### Gegeven
 
@@ -255,9 +255,7 @@ Een object heeft kenmerken waarover gegevens bekend zijn.
   Een <strong>gegeven is geen modelelement</strong> in een informatiemodel.
 </aside>
 
-*Toelichting:*
-
-Voorbeelden van gegevens zijn de waardes ‘Jan’ en ‘1-1-1970’ betreffende de naam en de geboortedatum van een object van het type Persoon. Een informatiemodel specificeert niet de gegevens zelf. Een gegeven zoals '1-1-1970' noemen we een attribuut van Jan. In het informatiemodel wordt dit het attribuutsoort 'geboortedatum' of 'overlijdensdatum' van een objecttype Persoon. Merk op dat een gegeven ‘1-1-1970’ zonder duidelijkheid over het soort gegeven c.q. het attribuutsoort 'geboortedatum' of 'overlijdensdatum' geen informatie biedt.
+**Toelichting**: Voorbeelden van gegevens zijn de waardes `"Jan"` en `"1-1-1970"` betreffende de `naam` en de `geboortedatum` van een `«Objecttype»` `Persoon`. Een informatiemodel specificeert niet de gegevens zelf. Een gegeven zoals `"1-1-1970"` noemen we een <a>attribuut</a> van Jan. In het informatiemodel wordt dit het `«Attribuutsoort»` `geboortedatum` of `overlijdensdatum` van een `«Objecttype»` `Persoon`. Merk op dat een gegeven `"1-1-1970"` zonder duidelijkheid over het soort gegeven c.q. het `«Attribuutsoort»` `geboortedatum` of `overlijdensdatum` geen informatie biedt.
 
 Gegevens zijn de objectief waarneembare neerslag of registratie van feiten op een bepaald medium, zodanig dat deze gegevens uitgewisseld en voor langere tijd bewaard kunnen worden. Dat kan op papier, in digitale vorm, et cetera. Met deze gegevens wordt een model (een selectief deel dus) van de werkelijkheid vastgelegd in de tijd. Ofschoon de werkelijkheid nooit stilstaat, kan deze door het vastleggen van de gegevens toch worden bevroren. 
 Het waargenomen feit dat twee objecten een relatie hebben wordt ook gezien als een gegeven.
@@ -268,38 +266,23 @@ Het waargenomen feit dat twee objecten een relatie hebben wordt ook gezien als e
   <dfn>Objecttype</dfn>De typering van een groep objecten die binnen een domein relevant zijn en als gelijksoortig worden beschouwd.
 </aside>
 
-*Toelichting* Jan, Piet en Marie zijn mensen die vanuit het Burgerzaken-domein
-beschouwd worden als objecten van het type ‘natuurlijk persoon’. In een ander
-domein, ‘de volksmond’, noemen we dit ‘mens’ wat ook een objecttype is. In weer
-een ander domein is Jan van het type ‘vergunninghouder’ en Piet en Marie niet,
-omdat aan hen (nog) nooit een vergunning verleend is. Objecttypen zijn een
-abstractie van de werkelijkheid oftewel we beogen hiermee de werkelijkheid zo
-getrouw mogelijk te beschrijven, binnen de context van het domein. Dit staat
-geheel los van het vastleggen van gegevens over objecten van een type in een
-registratie. Daartoe is veelal een interpretatie nodig (van die werkelijkheid
-cq. die objecttypen) naar eenheden die in een registratie vastgelegd kunnen
-worden (records, entiteiten e.d.) op basis van andere overwegingen.
+**Toelichting**: Jan, Piet en Marie zijn mensen die vanuit het Burgerzaken-domein beschouwd worden als <a>objecten</a> van het `«Objecttype»` `NatuurlijkPersoon`. In een ander domein, ‘de volksmond’, noemen we dit `Mens` wat ook een `«Objecttype»` is. In weer een ander domein is Jan van het `«Objecttype»` `Vergunninghouder` en Piet en Marie niet, omdat aan hen (nog) nooit een vergunning verleend is. Objecttypen zijn een abstractie van de werkelijkheid oftewel we beogen hiermee de werkelijkheid zo getrouw mogelijk te beschrijven, binnen de context van het domein. Dit staat geheel los van het vastleggen van gegevens over objecten van een type in een registratie. Daartoe is veelal een interpretatie nodig (van die werkelijkheid cq. die objecttypen) naar eenheden die in een registratie vastgelegd kunnen worden (records, entiteiten e.d.) op basis van andere overwegingen.
 
-De objecten die in het beschouwde domein onderkend worden zijn zelf nooit abstract. Ze behoren altijd tot een concreet objecttype, en niet tot een abstract objecttype. Abstracte objecttypes worden wel gebruikt in de modellering, om generalisaties aan te duiden en de definitie. Zo kan bij het objecttype Pand bijvoorbeeld aangegeven worden dat dit een 'Element in de fysieke leefomgeving' is, en dat deze laatste als een abstract objecttype gezien moet worden (in ons domein). Meer over abstracte objecttypes is beschreven in [Abstracte objecttypes en concrete objecten](#abstracte-objecttypes-en-concrete-objecten).  
+De objecten die in het beschouwde domein onderkend worden zijn zelf nooit abstract. Ze behoren altijd tot een concreet `«Objecttype»`, en niet tot een abstract `«Objecttype»`. Een abstract `«Objecttype»` wordt wel gebruikt in de modellering, om generalisatie aan te duiden en de definitie. Zo kan bij het `«Objecttype»` `Pand` bijvoorbeeld aangegeven worden dat dit een 'Element in de fysieke leefomgeving' is, en dat deze laatste als een abstract `«Objecttype»` gezien moet worden (in ons domein). Meer over abstracte objecttypen is beschreven in [Abstracte Objecttypen en concrete objecten](#abstracte-objecttypes-en-concrete-objecten).  
 
 #### Attribuutsoort  
 
-Een attribuutsoort is de metaklasse waarmee kenmerken van een objecttype worden vastgelegd. Het zijn de kenmerken waarvoor gegevens worden bijgehouden.  
-Voordat we attribuutsoort definiëren kijken we eerst naar het begrip ‘gegeven’.
+Een `«Attribuutsoort»` is de metaklasse waarmee kenmerken van een `«Objecttype»` worden vastgelegd. Het zijn de kenmerken waarvoor gegevens worden bijgehouden. Voordat we `«Attribuutsoort»` definiëren kijken we eerst naar het begrip <a>gegeven</a>.
 
-<aside class="definition">
-  <dfn>Attribuutsoort</dfn>De typering van gelijksoortige gegevens die voor een objecttype van toepassing is.
+<aside class="issue" title="Ontbrekende tekst of referentie">
+  Hier lijkt uitleg over <i>gegeven</i> te missen. Maar misschien volstaat het om een link op te nemen naar de term <i>gegeven</i>.
 </aside>
 
-*Toelichting*
-De gegevens Jan en Katrien worden als gelijksoortig gezien en worden daarom ondergebracht in attribuutsoort 'naam'.
-Je kan ook zeggen, het objecttype Persoon heeft een attribuutsoort 'naam' en deze is geschikt om gegevens in te plaatsen.
+<aside class="definition">
+  <dfn data-lt="attribuut">Attribuutsoort</dfn>De typering van gelijksoortige gegevens die voor een objecttype van toepassing is.
+</aside>
 
-Aan elk objecttype worden nul, één of meer Attribuutsoorten toegekend. In een informatiemodel
-worden alleen voor het domein relevante attribuutsoorten opgenomen bij een objecttype.
-
-Attribuutsoorten worden ook wel kenmerken of eigenschappen genoemd. Dit zijn het ook, maar er zijn
-andere kenmerken, zo is een relatiesoort ook een kenmerk of eigenschap.  
+**Toelichting**: De gegevens `"Jan"` en `"Katrien"` worden als gelijksoortig gezien en worden daarom ondergebracht in `«Attribuutsoort»` `naam`. Je kan ook zeggen, het `«Objecttype»` `Persoon` heeft een Attribuutsoort `naam` en deze is geschikt om gegevens in te plaatsen. Aan elk `«Objecttype»` worden nul, één, of meer attribuutsoorten toegekend. In een informatiemodel wordt alleen een voor het domein relevant `«Attribuutsoort»` opgenomen bij een `«Objecttype»`. Attribuutsoorten worden ook wel _kenmerken_ of _eigenschappen_ genoemd. Dit zijn het ook, maar ook andere modelelementen vallen onder deze omschrijving. Zo is een `«Relatiesoort»` ook een kenmerk of eigenschap.  
 
 #### Gegevensgroep
 
@@ -307,13 +290,11 @@ andere kenmerken, zo is een relatiesoort ook een kenmerk of eigenschap.
   <dfn>Gegevensgroep</dfn>Een typering van een groep van gelijksoortige gegevens die voor een objecttype van toepassing is.
 </aside>
 
-*Toelichting:* Dit modelelement verzorgt de modelmatige aankoppeling van een
-gegevensgroeptype aan het objecttype waartoe een gegevensgroeptype onlosmakelijk
-behoort.
+<aside class="issue" title="Wat hoort bij de defintie?">
+  Hoort de tweede zin nog bij de definitie, of hoort dat eigenlijk thuis in de toelichting?
+</aside>
 
-De groep van gegevens is een kenmerk van een object. De gegevensgroep is een
-betekenisvol kenmerk van een objecttype. De gegevensgroep heeft altijd als type
-een gegevensgroeptype.
+**Toelichting**: Dit modelelement verzorgt de modelmatige aankoppeling van een <code>«<a>Gegevensgroeptype</a>»</code> aan het <code>«<a>Objecttype</a>»</code> waartoe een `«Gegevensgroeptype»` onlosmakelijk behoort. De groep van gegevens is een kenmerk van een object. De `«Gegevensgroep»` is een betekenisvol kenmerk van een `«Objecttype»`. De `«Gegevensgroep»` heeft altijd als type een `«Gegevensgroeptype»`.
 
 #### Gegevensgroeptype
 
@@ -321,8 +302,12 @@ een gegevensgroeptype.
   <dfn>Gegevensgroeptype</dfn>Een groep van met elkaar samenhangende attribuutsoorten. Een gegevensgroeptype is altijd een type van een gegevensgroep.
 </aside>
 
-*Toelichting:* De attribuutsoorten van het gegevensgroeptype zijn semantisch
-gezien eigenschappen van het objecttype. Echter, vanwege samenhangend gedrag (ze
+<aside class="issue" title="Later aanpassen">
+  Deze tekst nog niet redigeren: er volgen nog inhoudelijke wijzigingen.
+</aside>
+
+**Toelichting**: Een `«Attribuutsoort»` van een `«Gegevensgroeptype»` is semantisch
+gezien een eigenschap van een `«Objecttype»`. Echter, vanwege samenhangend gedrag (ze
 horen semantisch bij elkaar, ze wijzigen bijvoorbeeld gelijktijdig e.d.) zijn
 deze ondergebracht in een apart modelelement. Het onderbrengen van
 attribuutsoorten in een groep c.q. in het modelelement gegevensgroeptype, is een
@@ -332,17 +317,11 @@ dus attribuutsoorten van het objecttype, maar dan ondergebracht in een
 gegevensgroeptype. De gegevensgroep als geheel wordt daarom expliciet niet
 gezien als zijnde één attribuutsoort van een object.
 
-*Toelichting:* bijvoorbeeld: in de BRK heeft een schip een motor en de motor en de motor heeft een aantal eigenschappen. De BRK beschouwt een persoon als eigenaar van een schip, er kunnen geen afzonderlijke eigenaren zijn van elk van de motoren van een schip. In de BRK kan het eigendom van een Motor dan ook niet worden overgedragen aan een ander persoon. Een motor wordt daarom gezien als een eigenschap van het object schip, en omdat de motor meerdere eigenschappen heeft, worden deze ondergebracht in een gegevensgroeptype. In een ander informatiemodel, zoals van een motorfabriek, zou de Motor wel een objecttype kunnen zijn, omdat het daar wel hét onderwerp van gesprek is.
+**Toelichting**: bijvoorbeeld: in de BRK heeft een schip een motor en de motor en de motor heeft een aantal eigenschappen. De BRK beschouwt een persoon als eigenaar van een schip, er kunnen geen afzonderlijke eigenaren zijn van elk van de motoren van een schip. In de BRK kan het eigendom van een Motor dan ook niet worden overgedragen aan een ander persoon. Een motor wordt daarom gezien als een eigenschap van het object schip, en omdat de motor meerdere eigenschappen heeft, worden deze ondergebracht in een gegevensgroeptype. In een ander informatiemodel, zoals van een motorfabriek, zou de Motor wel een objecttype kunnen zijn, omdat het daar wel hét onderwerp van gesprek is.
 
-Een gegevensgroeptype is meestal het type van slechts één gegevensgroep, omdat
-de semantiek meestal exclusief is voor één objecttype. Echter, hergebruik is
-mogelijk (als de semantiek niet exclusief is voor één objecttype). Voorwaarde
-voor hergebruik is dat de definitie (de definitie en toelichting, inclusief alle
-metadata aspecten) dan inderdaad gelijk zijn, voor alle objecttypes die
-hergebruik maken van het gegevensgroeptype.
+Een gegevensgroeptype is meestal het type van slechts één gegevensgroep, omdat de semantiek meestal exclusief is voor één objecttype. Echter, hergebruik is mogelijk (als de semantiek niet exclusief is voor één objecttype). Voorwaarde voor hergebruik is dat de definitie (de definitie en toelichting, inclusief alle metadata aspecten) dan inderdaad gelijk zijn, voor alle objecttypes die hergebruik maken van het gegevensgroeptype.
 
-Een gegevensgroeptype kan, naast attribuutsoorten en relatiesoorten, ook zelf weer gegevensgroeptypen
-bevatten.
+Een gegevensgroeptype kan, naast attribuutsoorten en relatiesoorten, ook zelf weer gegevensgroeptypen bevatten.
 
 Een gegevensgroeptype is verbonden met een objecttype, via het modelelement
 Gegevensgroep.
