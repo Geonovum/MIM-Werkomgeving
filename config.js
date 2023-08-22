@@ -116,8 +116,8 @@ let respecConfig = {
 
   //-- Optionele parameters:
   //emailComments: "mim@geonovum.nl",         // reactie mailadres, alleen bij CV!
-  //subtitle: "iets",                         // Subtitel van het document
-  maxTocLevel: 4,                           // Aantal niveau's ToC, default is 0
+  subtitle: "Versie 1.2",                         // Subtitel van het document
+  //maxTocLevel: 4,                           // Aantal niveau's ToC, default is 0
 
   // Create PDF and link to file in header (optional):
   // alternateFormats: [

@@ -1,94 +1,44 @@
 # Inleiding
 
-Voor u ligt het metamodel voor informatiemodellering (MIM), voor het beschrijven 
-van informatiemodellen. Met het metamodel hebben we een gemeenschappelijk
-vertrekpunt opgesteld voor het maken van informatiemodellen. Het model bevat
-duidelijke afspraken over het vastleggen van gegevensspecificaties en biedt
-tegelijkertijd ruimte aan de verschillende niveaus van modellering. Bijzonder
-aan het model is dat de afspraken over meerdere bestuurslagen heen gaan.
-
-Dit document is opgesteld met kennis die is aangedragen door de MIM-community.
+Voor u ligt het metamodel voor informatiemodellering (MIM), voor het beschrijven van informatiemodellen. Met het metamodel hebben we een gemeenschappelijk vertrekpunt opgesteld voor het maken van informatiemodellen. Het model bevat duidelijke afspraken over het vastleggen van gegevensspecificaties en biedt tegelijkertijd ruimte aan de verschillende niveaus van modellering. Bijzonder aan het model is dat de afspraken over meerdere bestuurslagen heen gaan. Dit document is opgesteld met kennis die is aangedragen door de MIM-community.
 Kadaster, Geonovum, VNG Realisatie, DUO en andere partijen hebben hun bijdrage geleverd.
 
 ## Toepassingsgebied
-Het metamodel biedt de modelleringstaal waarmee een informatiemodel gemaakt,
-gelezen en begrepen kan worden. Het doel hiervan is:
+Het metamodel biedt de modelleringstaal waarmee een informatiemodel gemaakt, gelezen en begrepen kan worden. Het doel hiervan is:
 -   de leesbaarheid en eenduidigheid van informatiemodellen te vergroten;
--   informatiemodellen op zowel conceptueel als op logisch niveau te kunnen
-    opstellen (zie [Wat is een informatiemodel](#wat-is-een-informatiemodel)) <!-- (zie par. 1.4); -->
--   informatiemodellen goed aan elkaar te kunnen koppelen op conceptueel en
-    logisch niveau;
--   tooling te kunnen ontwikkelen en (her)gebruiken voor resp. door alle
-    partijen die kiezen voor dit metamodel;
+-   informatiemodellen op zowel conceptueel als op logisch niveau te kunnen opstellen (zie [Wat is een informatiemodel](#wat-is-een-informatiemodel)) <!-- (zie par. 1.4); -->
+-   informatiemodellen goed aan elkaar te kunnen koppelen op conceptueel en logisch niveau;
+-   tooling te kunnen ontwikkelen en (her)gebruiken voor resp. door alle partijen die kiezen voor dit metamodel;
 -   kennis uit verschillende organisaties te bundelen;
--   en in het verlengde hiervan, om op een meer geautomatiseerde werkwijze
-    sneller en beter voorspelbaar uitwisselingsstandaarden op kunnen stellen. en
+-   en in het verlengde hiervan, om op een meer geautomatiseerde werkwijze sneller en beter voorspelbaar uitwisselingsstandaarden op kunnen stellen. en
 -   om interoperabiliteit tussen registraties te bevorderen.
 
 Voor informatiemodellen die op basis van dit metamodel zijn beschreven geldt:
 -   ze zijn eenduidig te interpreteren en goed te vergelijken;
--   er kan documentatie mee opgesteld of gegenereerd worden welke geschikt is
-    voor publicatie;
--   ze kunnen als basis gebruikt worden voor (bij voorkeur model-driven
-    generatie van) afgeleide modellen en producten voor een specifiek
-    toepassingsgebied/domein zoals bijvoorbeeld [[NEN3610]] of het gemeentelijke
-    domein;
--   ze kunnen als basis gebruikt worden voor (bij voorkeur model-driven
-    generatie van) afgeleide modellen voor specifieke services en
-    informatieproducten (implementatieschema’s, registers, validatieservices
-    e.d.).
+-   er kan documentatie mee opgesteld of gegenereerd worden welke geschikt is voor publicatie;
+-   ze kunnen als basis gebruikt worden voor (bij voorkeur model-driven generatie van) afgeleide modellen en producten voor een specifiek toepassingsgebied/domein zoals bijvoorbeeld [[NEN3610]] of het gemeentelijke domein;
+-   ze kunnen als basis gebruikt worden voor (bij voorkeur model-driven generatie van) afgeleide modellen voor specifieke services en informatieproducten (implementatieschema’s, registers, validatieservices e.d.).
 
 ## Doelgroep
-Dit document is primair bestemd voor informatiemodelleurs en informatiearchitecten 
-die deze informatiemodellen maken; informatieanalisten die willen weten wat de betekenis
-en definitie van informatieobjecten is, en mensen die model-driven verder werken
-op basis van het informatiemodel en er implementaties van maken. Kennis van
-informatiemodellering is een vereiste. Enige kennis van UML [[UML]] of [[Linked-Data]] is een pré maar niet
-noodzakelijk. Dit metamodel richt zich in het bijzonder op de informatievoorziening binnen
-het overheidsdomein, al is het ook in bredere context inzetbaar.
+Dit document is primair bestemd voor informatiemodelleurs en informatiearchitecten  die deze informatiemodellen maken; informatieanalisten die willen weten wat de betekenis en definitie van informatieobjecten is, en mensen die model-driven verder werken op basis van het informatiemodel en er implementaties van maken. Kennis van informatiemodellering is een vereiste. Enige kennis van UML [[UML]] of [[Linked-Data]] is een pré maar niet noodzakelijk. Dit metamodel richt zich in het bijzonder op de informatievoorziening binnen het overheidsdomein, al is het ook in bredere context inzetbaar.
 
 ## Leeswijzer
-Het metamodel beschrijven we in vijf hoofdstukken en een bijlage.
+Het metamodel beschrijven we in vijf hoofdstukken en een bijlage. Lees de [Inleiding](#inleiding) verder voor inzicht in wat we onder een informatiemodel en onder een metamodel verstaan, hoe deze modellen zich verhouden tot UML en de vier lagen metamodel architectuur van de Object Management Group [[OMG]], Linked Data en de internetstandaarden van de W3C en welke overige standaarden worden  oegepast. 
 
-Lees de [Inleiding](#inleiding) verder voor inzicht in wat we onder een
-informatiemodel en onder een metamodel verstaan, hoe deze modellen zich
-verhouden tot UML en de vier lagen metamodel architectuur van de Object
-Management Group [[OMG]], Linked Data en de internetstandaarden van de W3C en welke overige standaarden worden toegepast. 
+Het hoofdstuk [Metamodel Algemeen](#metamodel-algemeen) bevat de beschrijving van alle bouwstenen c.q. de modelelementen van het metamodel, in de vorm van definities en specificaties. De betekenis en toelichting van de modelelementen van het metamodel vormt het materiaal waarmee een uitputtende modelspecificatie kan worden opgesteld. De afbeeldingen in dit algemene hoofdstuk zijn weliswaar gemaakt in UML,  aar het metamodel beperkt zich zeker niet tot UML. Er zijn aparte hoofdstukken voor de implementatie van MIM in UML en Linked Data.
 
-Het hoofdstuk [Metamodel Algemeen](#metamodel-algemeen) bevat de beschrijving van alle
-bouwstenen c.q. de modelelementen van het metamodel, in de vorm van definities en specificaties.
-De betekenis en toelichting van de modelelementen van het metamodel vormt het materiaal waarmee een uitputtende
-modelspecificatie kan worden opgesteld. De afbeeldingen in dit algemene hoofdstuk zijn weliswaar gemaakt in UML, maar het metamodel beperkt
-zich zeker niet tot UML. Er zijn aparte hoofdstukken voor de implementatie van MIM in UML en Linked Data.
+Het hoofdstuk [Metamodel in UML](#metamodel-in-uml) beschrijft hoe de implementatie van MIM in [[UML]] er uit ziet. In dit hoofdstuk wordt beschreven hoe het metamodel zich verhoudt tot het UML metamodel, welke uitbreidingen c.q. verbijzonderingen van het UML metamodel zijn aangebracht.
 
-Het hoofdstuk [Metamodel in UML](#metamodel-in-uml) beschrijft hoe de implementatie van MIM in
-[[UML]] er uit ziet. In dit hoofdstuk wordt beschreven hoe het metamodel zich verhoudt tot het UML
-metamodel, welke uitbreidingen c.q. verbijzonderingen van het UML metamodel zijn
-aangebracht.
+Het hoofdstuk [Metamodel in Linked Data (LD)](#metamodel-in-linked-data-ld) beschrijft hoe de implementatie van MIM in [[Linked-Data]] er uit ziet. In dit hoofdstuk wordt beschreven hoe het metamodel zich verhoudt tot het Linked Data metamodel. Daarbij is een strikte vertaling gemaakt. Dit betekent dat het betreffende Linked Data model alleen als MIM model te gebruiken is. Voor een model dat gebruikt kan worden om daadwerkelijk Linked Data in uit te drukken, is een vertaalslag nodig die beschreven is in de bijlage [Transformatie MIM - RDFS/OWL/SHACL](#transformatie-mim-rdfs-owl-shacl). Op deze wijze kan een dergelijk RDFS/OWL/SHACL model ook gezien worden als een MIM model.
 
-Het hoofdstuk [Metamodel in Linked Data (LD)](#metamodel-in-linked-data-ld) beschrijft hoe de implementatie van MIM in
-[[Linked-Data]] er uit ziet. In dit hoofdstuk wordt beschreven hoe het metamodel zich verhoudt tot het Linked Data
-metamodel. Daarbij is een strikte vertaling gemaakt. Dit betekent dat het betreffende Linked Data model alleen als MIM model te gebruiken is. Voor een model dat gebruikt kan worden om daadwerkelijk Linked Data in uit te drukken, is een vertaalslag nodig die beschreven is in de bijlage [Transformatie MIM - RDFS/OWL/SHACL](#transformatie-mim-rdfs-owl-shacl). Op deze wijze kan een dergelijk RDFS/OWL/SHACL model ook gezien worden als een MIM model.
+In het hoofdstuk [Afspraken & Regels](#afspraken-regels) gaan we in detail in op een aantal aspecten. Het is een uitgebreidere toelichting, in aanvulling op het hoofdstuk [Metamodel Algemeen](#metamodel-algemeen), bestaande uit nadere afspraken, regels, richtlijnen en aanbevelingen bij het toepassen van het metamodel.
 
-In het hoofdstuk [Afspraken & Regels](#afspraken-regels) gaan we in detail in op een
-aantal aspecten. Het is een uitgebreidere toelichting, in aanvulling op het
-hoofdstuk [Metamodel Algemeen](#metamodel-algemeen), bestaande uit nadere afspraken, regels, richtlijnen en
-aanbevelingen bij het toepassen van het metamodel.
-
-Er zijn een aantal bijlages, dit zijn hulpmiddelen of aanvullingen op MIM.
+Tot slot zijn er een aantal bijlagen beschikbaar. Dit zijn hulpmiddelen of aanvullingen op het MIM.
 - De bijlage [Template naamgeving conventies](#template-naamgeving-conventies) verschaft een invulmogelijkheid om eigen naamgevingsconventies te documenteren, per in dit metamodel genoemd modelelement.
 - De bijlage [Transformatie MIM - RDFS/OWL/SHACL](#transformatie-mim-rdfs-owl-shacl) beschrijft hoe een MIM model getransformeerd kan worden naar een RDF model dat gebruikt kan worden om daadwerkelijk Linked Data in uit te drukken en vice versa (op instantie niveau, waarbij dit in overeenstemming is met de specificatie op informatiemodel niveau).
  
 ## Gebruikswijzer 
-Met de bouwstenen oftewel de modelelementen die in dit metamodel beschreven zijn is een informatiemodel te maken. 
-Om zo'n informatiemodel te maken volstaat het veelal om het hoofdstuk [Metamodel Algemeen](#metamodel-algemeen) door te nemen, 
-te kiezen voor modellering met ofwel UML ofwel linked data, en het bijbehorende hoofdstuk te lezen. 
-De andere hoofdstukken kan je behandelen als naslagwerk, voor als er tijdens het modelleren vragen ontstaan. 
-Neem vervolgens uw favoriete modelleertool en ga aan de slag. Voor bepaalde modelleertools zijn er hulpmiddelen gemaakt, 
-zodat je met deze hulpmiddelen de modelelementen kan aanmaken door erop te klikken en bijvoorbeeld naar een diagram kan slepen en ook 
-kan valideren of je model correct het MIM volgt (wat automatisch gaat als je de hulpmiddelen gebruikt). 
-Tot slot is het mogelijk om naar informatiemodellen te kijken van organisaties die al een MIM informatiemodel hebben gepubliceerd. 
-Voor specifieke modelleringen en vragen zullen er ook uitgewerkte voorbeelden worden gemaakt. 
+Met de bouwstenen oftewel de modelelementen die in dit metamodel beschreven zijn is een informatiemodel te maken.  Om zo'n informatiemodel te maken volstaat het veelal om het hoofdstuk [Metamodel Algemeen](#metamodel-algemeen) door te nemen, te kiezen voor modellering met ofwel UML ofwel linked data, en het bijbehorende hoofdstuk te lezen.  De andere hoofdstukken kan je behandelen als naslagwerk, voor als er tijdens het modelleren vragen ontstaan. Neem vervolgens uw favoriete modelleertool en ga aan de slag. Voor bepaalde modelleertools zijn er hulpmiddelen gemaakt, zodat je met deze hulpmiddelen de modelelementen kan aanmaken door erop te klikken en bijvoorbeeld naar een diagram kan slepen en ook kan valideren of je model correct het MIM volgt (wat automatisch gaat als je de hulpmiddelen gebruikt). Tot slot is het mogelijk om naar informatiemodellen te kijken van organisaties die al een MIM informatiemodel hebben gepubliceerd. Voor specifieke modelleringen en vragen zullen er ook uitgewerkte voorbeelden worden gemaakt. 
 
 ## Wat is een informatiemodel
 Wanneer we informatie over bepaalde onderwerpen willen inwinnen, registreren of uitwisselen, dan is het van belang om deze informatie  eerst goed te beschrijven. We doen dit zodat het voor eenieder die met de informatie aan de slag gaat helder en eenduidig is:
@@ -98,86 +48,40 @@ Wanneer we informatie over bepaalde onderwerpen willen inwinnen, registreren of 
 - wat de betekenis is van die informatie, de semantiek
 - hoe deze informatie qua structuur in elkaar zit, qua onderlinge relaties en qua interne structuur van de data
 
-We doen dit door een model te maken van de informatie. Een informatiemodel beschrijft daarom de structuur, semantiek en de eigenschappen van informatie over dingen in de werkelijkheid. De beschrijving van de informatie heeft de vorm van een model dat een gestructureerde weergave is van die werkelijkheid. Een dergelijk model is noodzakelijk om deze informatie te kunnen beheren en
-gebruiken (door mensen en machines) bij het communiceren over deze werkelijkheid, in registraties of anderszins, zoals het specificeren van de tussen registraties uit te wisselen gegevens of van de te bevragen informatie uit een registratie.
+We doen dit door een model te maken van de informatie. Een informatiemodel beschrijft daarom de structuur, semantiek en de eigenschappen van informatie over dingen in de werkelijkheid. De beschrijving van de informatie heeft de vorm van een model dat een gestructureerde weergave is van die werkelijkheid. Een dergelijk model is noodzakelijk om deze informatie te kunnen beheren en gebruiken (door mensen en machines) bij het communiceren over deze werkelijkheid, in registraties of anderszins, zoals het specificeren van de tussen registraties uit te wisselen gegevens of van de te bevragen informatie uit een registratie.
 
-Het beschrijven vindt plaats door de informatie van de objecten die we beschouwden te modelleren als informatieobjecten, met hun kenmerken en hun onderlinge relaties.
+### Uitwerking Modelbeschrijving van dingen in de werkelijkheid
+Het beschrijven vindt plaats door de informatie van de objecten die we beschouwden te modelleren als informatieobjecten, met hun kenmerken en hun onderlinge relaties. Aan de hand van een voorbeeld werken we dit principe verder uit.
 
-<aside class='example'>
-    Jan en Katrien zijn bijvoorbeeld ‘dingen in de werkelijkheid’. Zij hebben
-    bepaalde kenmerken, zoals een naam en een geboortedatum. In een informatiemodel
-    komen Jan en Katrien zelf niet zelf voor. Zij worden in het informatiemodel gemodelleerd als een Persoon.
-    Ook hun gegevens, zoals het feit dat 10-10-1970 de geboortedatum van Jan is, komen niet voor in het informatiemodel.
-    In het informatiemodel is alleen het kenmerk geboortedatum gemodelleerd, als een kenmerk van een Persoon, met een definitie een toelichting. 
+<aside class='example' title="Modelbeschrijving van dingen in de werkelijkheid">
+    <p>Jan en Katrien zijn bijvoorbeeld ‘dingen in de werkelijkheid’. Zij hebben bepaalde kenmerken, zoals een naam en een geboortedatum. In een informatiemodel komen Jan en Katrien zelf niet zelf voor. Zij worden in het informatiemodel gemodelleerd als een <code>Persoon</code>. Ook hun gegevens, zoals het feit dat 10-10-1970 de geboortedatum van Jan is, komen niet voor in het informatiemodel. In het informatiemodel is alleen het kenmerk <code>geboortedatum</code> gemodelleerd, als een kenmerk van een <code>Persoon</code>, met een definitie een toelichting.</p> 
+    <p>De persoon in het informatiemodel is een beschrijving vanuit het perspectief van het informatiedomein van waaruit we Jan en Katrien beschouwen. We bekijken Jan en Katrien dan ook wel als een van de objecten binnen een domein, die we vervolgens gaan modelleren als informatieobjecten. In het informatiemodel is hiervoor het objecttype <code>Persoon</code> gedefinieerd en Jan en Katrien zijn dus objecten van het objecttype <code>Persoon</code>. De objecten 'Domtoren' en 'Paleis Het Loo' kunnen we typeren tot het objecttype <code>Gebouw</code>.Objecttypen in een informatiemodel <i>representeren</i> dus de dingen in de werkelijkheid. Het informatiemodel is een model van de werkelijkheid en richt zich op de informatie erover.</p>
+    <p>De kenmerken zoals de <code>naam</code> en <code>geboortedatum</code>, maar bijvoorbeeld ook <code>identificatie</code> en <code>registratietijdstip</code>, worden gezien als attributen van dit objecttype. We noemen een dergelijk kenmerk een <code>Attribuutsoort</code>. Sommige kenmerken geven relaties tussen objecten weer, zoals het gegeven dat Jan in Paleis Het Loo woont. Deze modelleren we door middel van een <code>Relatiesoort</code>, tussen objecttypen, in dit geval tussen de informatieobjecten <code>Persoon</code> en <code>Gebouw</code>.</p>
+    <p>Samengevat beschouwen we alle objecten die we als gelijksoortig beschouwen in het informatiemodel als een objecttype, de relaties tussen de objecten typeren we in het informatiemodel als een relatiesoort en de kenmerken van de objecten typeren we in het informatiemodel als attribuutsoorten. Op deze manier ontstaat een informatiemodel. In de van het informatiemodel afgeleide registratie kunnen vervolgens de objecten Jan en Katrien en de gegevens ervan, zoals de geboortedatum 10-10-1970, worden vastgelegd, en vervolgens uitgewisseld. We visualiseren dit in onderstaande figuur, voor de situatie dat er een, van het informatiemodel afgeleide, registratie is.</p>
+    <figure id="informatiemodel">
+      <img src="media/informatiemodel.png" alt="" />
+      <figcaption>Wat beschrijft een informatiemodel</figcaption>
+    </figure>
+    <p>Als een andere registratie op haar eigen manier tegen dezelfde ‘Jan uit de werkelijkheid’ aankijkt, dan is ook in die registratie een (eigen, apart) object voor Jan aanwezig en Jan kan in dit (eigen, aparte) informatiemodel anders gemodelleerd zijn. Bijvoorbeeld in het ene domein als <code>Werknemer</code> en in het andere domein als <code>Persoon</code> of <code>Partner</code>. Beide objecten Jan representeren natuurlijk dezelfde ‘Jan uit de werkelijkheid’, elk vanuit het perspectief van het eigen domein bekeken.</p>
 </aside>
 
-De Persoon in het informatiemodel is ene beschrijving vanuit het perspectief van het informatiedomein van waaruit we Jan en Katrien beschouwen. We bekijken Jan en Katrien dan ook wel als een van de *objecten* binnen een domein, die we vervolgens gaan modelleren als informatieobjecten.
+### Belangrijke aandachtspunten
+Merk op dat we hier veelal spreken over een registratie, omdat dit in de praktijk vaak voorkomt. Er zijn echter ook toepassingen van een informatiemodel waarin er alleen gegevens worden uitgewisseld, of waarbij er sprake is van gewoon de beschrijving van informatie, ongeacht of deze wel of niet in een registratie is opgenomen.
 
-In het informatiemodel is hiervoor het *objecttype* Persoon gedefinieerd en Jan en Katrien zijn dus objecten van het objecttype Persoon. De objecten 'Domtoren' en 'Paleis Het Loo' typeren we tot het objecttype Gebouw. Objecttypen in een informatiemodel _representeren_ dus de dingen in de werkelijkheid. Het informatiemodel is een model van de werkelijkheid en richt zich op de informatie erover. 
+Alleen dingen en kenmerken die relevant zijn voor een bepaald domein worden in het informatiemodel beschreven, zoals gebouwen binnen het domein Basisregistratie Topografie en personen binnen het domein Basisregistratie Personen. Een domein kan van alles zijn maar in het kader van dit metamodel gaat het om (beleids-)sectoren die omwille van bestuurlijke en beheersmatige redenen geïdentificeerd en georganiseerd zijn. Voorbeelden: ruimtelijke ordening, grootschalige topografie, kadastrale informatie of gemeentelijk domein.
 
-De kenmerken zoals de naam en geboortedatum, maar bijvoorbeeld ook identificatie en registratietijdstip, worden gezien als attributen van dit objecttype. We noemen een dergelijk kenmerk een *attribuutsoort*. 
+Het is de bedoeling dat een informatiemodel de betekenis en definitie van de informatie zelf beschrijft, onafhankelijk van een mogelijke (technische) implementatie of toepassingsomgeving. Zodat het primair helder is wat de informatie betekent, ongeacht waar je deze informatie tegenkomt en ongeacht de gebruikte techniek. Anders gezegd, in koppelvlakken, ketens en implementaties is het vrij om de elk technisch uitwisselingsformaat of bijvoorbeeld database-technologie te kiezen, door het informatiemodel daarin uit te drukken. Er worden geen regels toegepast die gerelateerd zijn aan de manier waarop de gegevens ingewonnen, opgeslagen, beheerd en uitgewisseld worden.
 
-Sommige kenmerken geven relaties tussen objecten weer, zoals het gegeven dat Jan in Paleis Het Loo woont. Deze modelleren we door middel van een *relatiesoort*, tussen *objecttypen*, in dit geval tussen de informatieobjecten Persoon en Gebouw.
-
-Alle objecten die we als gelijksoortig beschouwen typeren we in het informatiemodel tot een objecttype, de relaties tussen de objecten typeren we in het informatiemodel als een relatiesoort en de kenmerken van de objecten typeren we in het informatiemodel als attribuutsoorten. Op deze manier ontstaat een informatiemodel. In de van het informatiemodel afgeleide registratie kunnen vervolgens de objecten Jan en Katrien en de gegevens ervan, zoals de geboortedatum 10-10-1970, worden vastgelegd, en vervolgens uitgewisseld.
-
-We visualiseren het voorgaande in onderstaande figuur, voor de situatie dat er een, van het informatiemodel afgeleide, registratie is.
-
-<figure id="informatiemodel">
-  <img src="media/informatiemodel.png" alt="" />
-  <figcaption>Wat beschrijft een informatiemodel</figcaption>
-</figure>
-
-Als een andere registratie op haar eigen manier tegen dezelfde ‘Jan uit de werkelijkheid’ aankijkt, dan is ook in die registratie een (eigen, apart) object voor Jan aanwezig en Jan kan in dit (eigen, aparte) informatiemodel anders gemodelleerd zijn. Bijvoorbeeld in het ene domein als werknemer en in het andere domein als persoon of partner. Beide objecten Jan representeren natuurlijk dezelfde ‘Jan uit
-de werkelijkheid’, elk vanuit het perspectief van het eigen domein bekeken.
-
-*Belangrijke aandachtspunten*  
-Merk op dat we hier veelal spreken over een registratie, omdat dit vaak zo is. Er zijn echter ook toepassingen van een informatiemodel waarin er alleen gegevens worden uitgewisseld, of waarbij er sprake is van gewoon de beschrijving van informatie, ongeacht of deze wel of niet in een registratie is opgenomen.
-
-Alleen dingen en kenmerken die relevant zijn voor een bepaald domein worden in het informatiemodel beschreven, zoals gebouwen binnen
-het domein Basisregistratie Topografie en personen binnen het domein Basisregistratie Personen. Een domein kan van alles zijn maar in het kader van dit metamodel gaat het om (beleids-)sectoren die omwille van bestuurlijke en beheersmatige redenen geïdentificeerd en georganiseerd zijn. Voorbeelden: ruimtelijke ordening, grootschalige topografie, kadastrale informatie of gemeentelijk domein.
-
-Het is hierbij de bedoeling dat een informatiemodel de betekenis en definitie van de informatie zelf beschrijft, onafhankelijk van een
-mogelijke (technische) implementatie of toepassingsomgeving. Zodat het primair helder is wat de informatie betekent, ongeacht waar je deze informatie tegenkomt en ongeacht de gebruikte techniek. Anders gezegd, in koppelvlakken, ketens en implementaties is het vrij om de elk technisch uitwisselingsformaat of bijvoorbeeld database technologie te kiezen, door het informatiemodel daarin uit te drukken.
-Er worden geen regels toegepast die gerelateerd zijn aan de manier waarop de gegevens ingewonnen,
-opgeslagen, beheerd en uitgewisseld worden.
-
-De opname in een registratie kent vaak een inwinningsproces om gegevenswaarden over de feitelijke dingen in de werkelijkheid conform het
-informatiemodel in de registratie op te nemen. Dit is een belangrijk proces, maar valt buiten scope van het informatiemodel (scheiding proces en informatie, het proces is niet in scope van deze standaard).
+De opname in een registratie kent vaak een inwinningsproces om gegevenswaarden over de feitelijke dingen in de werkelijkheid conform het informatiemodel in de registratie op te nemen. Dit is een belangrijk proces, maar valt buiten scope van het informatiemodel (scheiding proces en informatie, het proces is niet in scope van deze standaard).
 
 ## Typering van modellen en wat wel en niet in scope is van deze standaard
-Bij het modelleren van een domein zijn er een aantal beschouwingsniveaus, variërend van een zo 
-getrouw mogelijke beschrijving van de betekenis en bedoeling van de woorden en termen die mensen gebruiken 
-als ze het ergens over hebben tot een specificatie van de wijze van registratie en uitwisseling van data.
+Bij het modelleren van een domein zijn er een aantal beschouwingsniveaus, variërend van een zo getrouw mogelijke beschrijving van de betekenis en bedoeling van de woorden en termen die mensen gebruiken als ze het ergens over hebben tot een specificatie van de wijze van registratie en uitwisseling van data. In het MIM onderscheiden we variaties in vier verschillende niveaus. Dit is vooral bedoeld om de scope van MIM duidelijk af te bakenen. Het MIM concentreert zich namelijk op het tweede en derde niveau. Hieronder lichten we de verschillende niveaus verder toe.
 
-De modellering van een bepaald domein start in principe met het beschrijven van kennis, 
-te weten de begrippen die een rol spelen in een domein, uitgedrukt in een (meestal) 
-domein specifieke terminologie. In MIM wordt dit niveau 1 genoemd en voor MIM heeft dit 
-niveau 1 niet de focus en is dit niveau buiten scope. Op dit niveau is de notie van 
-welke informatie er geregistreerd en uitgewisseld moet worden nog niet aanwezig of op de 
-achtergrond. Op dit niveau is er nog geen sprake van een informatiemodel, omdat deze 
-modellen kennis modelleren en zich (nog) niet richten op het modelleren van informatie 
-(informatie, zoals bedoeld in [Wat is een informatiemodel](#wat-is-een-informatiemodel)).
+De modellering van een bepaald domein start in principe met het beschrijven van kennis, te weten de begrippen die een rol spelen in een domein, uitgedrukt in een (meestal)  domein specifieke terminologie. In MIM wordt dit niveau 1 genoemd en voor MIM heeft dit  niveau 1 niet de focus en is dit niveau buiten scope. Op dit niveau is de notie van  welke informatie er geregistreerd en uitgewisseld moet worden nog niet aanwezig of op de achtergrond. Op dit niveau is er nog geen sprake van een informatiemodel, omdat deze  modellen kennis modelleren en zich (nog) niet richten op het modelleren van informatie (informatie, zoals bedoeld in [Wat is een informatiemodel](#wat-is-een-informatiemodel)).
 
-Het modelleren van informatie gebeurt met en in een informatiemodel. Hierin wordt aangegeven 
-welke objecten welke kenmerken/eigenschappen hebben en of deze kenmerken/eigenschappen in het 
-beschouwde domein verplicht zijn of optioneel zijn enzovoorts. Het informatiemodel geeft 
-hierbij aan welke informatie wordt geregistreerd of uitgewisseld kan worden. Het beschrijft alle 
-informatie, en het beschrijft ook niet meer dan dat. Hierbij kan er ook gekozen worden om het domein 
-te onderverdelen in meerdere informatie domeinen en voor een informatiedomein scherp te definiëren,
-meestal door aan te geven welke informatieobjecten in scope zijn van een informatiemodel en welke niet. 
-In MIM valt een informatiemodel onder niveau 2 of 3. MIM richt zich primair op niveau 2 en 3. 
-Het informatiemodel is hierbij altijd techniek onafhankelijk.
+Het modelleren van informatie gebeurt met en in een informatiemodel. Hierin wordt aangegeven welke objecten welke kenmerken/eigenschappen hebben en of deze kenmerken/eigenschappen in het beschouwde domein verplicht zijn of optioneel zijn enzovoorts. Het informatiemodel geeft  hierbij aan welke informatie wordt geregistreerd of uitgewisseld kan worden. Het beschrijft alle informatie, en het beschrijft ook niet meer dan dat. Hierbij kan er ook gekozen worden om het domein te onderverdelen in meerdere informatie domeinen en voor een informatiedomein scherp te definiëren, meestal door aan te geven welke informatieobjecten in scope zijn van een informatiemodel en welke niet. In MIM valt een informatiemodel onder niveau 2 of 3. MIM richt zich primair op niveau 2 en 3.  Het informatiemodel is hierbij altijd techniek onafhankelijk.
 
-Het informatiemodel kan vervolgens uitgewerkt worden in verschillende soorten technische 
-datamodellen en schema's (zoals XML of JSON of specifieke invullingen hiervan). In MIM wordt 
-dit niveau 4 genoemd en voor MIM heeft dit niveau 4 niet de focus en is dit niveau buiten scope. 
-Wel staat MIM een model-gedreven werkwijze voor waarbij de modellen van niveau 4 gegenereerd 
-kunnen worden vanuit niveau 2 of 3.
-
-De aangegeven niveaus zijn vooral bedoeld om de scope van MIM duidelijk aan geven, 
-te weten niveau 2 en 3. Hieronder worden de niveaus nader toegelicht.
-
+Het informatiemodel kan vervolgens uitgewerkt worden in verschillende soorten technische datamodellen en schema's (zoals XML of JSON of specifieke invullingen hiervan). In MIM wordt dit niveau 4 genoemd. Dit niveau heeft voor MIM niet de focus en valt buiten de scope. Wel staat MIM een model-gedreven werkwijze voor waarbij de modellen van niveau 4 gegenereerd kunnen worden vanuit niveau 2 of 3.
 
 ### Niveau 1: Model van begrippen 
 
@@ -188,27 +92,13 @@ Er zijn verschillende manieren om begrippen te beschrijven, zoals in een woorden
 een formele taal of vocabulaire, of in een taxonomie of in een model van begrippen waarin 
 de onderlinge samenhang is aangegeven en er zijn nog andere manieren - maar geen van allen zijn een informatiemodel. 
 
-*Doel is dat de actoren binnen een domein elkaar begrijpen en één taal spreken. 
-Een model van begrippen wordt opgesteld voor gebruik door mensen, met name ‘de business’.*
+> Het doel is dat actoren binnen een domein elkaar begrijpen en dezelfde taal spreken. Een model van begrippen wordt opgesteld voor gebruik door mensen, met name ‘de business’.
 
-Dit niveau is **niet** in scope van MIM. Dit niveau is niet volledig beschreven maar is ter illustratie 
-in deze paragraaf opgenomen. Er kan meer in zitten dan hier beschreven en er gaat meer aan vooraf. 
+Dit niveau valt **niet** binnen de scope van MIM. Dit niveau wordt om die reden slechts beknopt beschreven. Het dient vooral ter afbakening van de scope. Er kan meer in zitten dan hier beschreven en er gaat meer aan vooraf. Ten aanzien van begrippen en informatiemodellen en het verschil hiertussen zijn de belangrijkste punten:
 
-Ten aanzien van begrippen en informatiemodellen en het verschil hiertussen:
-
-- Een begrip is de combinatie van een term of woord en een definitie. Begrippen worden door 
-mensen gebruikt om mentaal de werkelijkheid te beschouwen en te begrijpen. 
-Een begrip omvat niet de betekenis en structuur van data. 
-- Van een aantal begrippen ('concepten') zal later blijken dat het een eigenschap is van een object 
-waarover we informatie zullen gaan bijgehouden, maar dit zal zeker niet voor alle begrippen 
-zo zijn, begrippen beschrijven een domein vaak veel breder dan een informatiemodel dit doet. 
-Een aantal begrippen zullen in het informatiemodel beschouwd gaan worden als informatieobjecten, 
-een aantal begrippen worden een kenmerk/eigenschap van deze informatieobjecten, 
-en een heel aantal begrippen zullen geen rol spelen in het informatiemodel omdat er geen data van is of komt.  
-- Voor het bijhouden van informatie wordt een gedetailleerde eenduidige structuur en betekenis 
-aangebracht die data gericht is, maar bij het modelleren van begrippen wordt dit nog niet gedaan. 
-De samenhang tussen informatie is hierbij vaak (bewust) beperkter dan de samenhang tussen begrippen. 
-
+- Een begrip is de combinatie van een term of woord en een definitie. Begrippen worden door mensen gebruikt om mentaal de werkelijkheid te beschouwen en te begrijpen. Een begrip omvat niet de betekenis en structuur van data. 
+- Van een aantal begrippen ('concepten') zal later blijken dat het een eigenschap is van een object waarover we informatie zullen gaan bijgehouden, maar dit zal zeker niet voor alle begrippen zo zijn, begrippen beschrijven een domein vaak veel breder dan een informatiemodel dit doet. Een aantal begrippen zullen in het informatiemodel beschouwd gaan worden als informatieobjecten, een aantal begrippen worden een kenmerk/eigenschap van deze informatieobjecten, en een heel aantal begrippen zullen geen rol spelen in het informatiemodel omdat er geen data van is of komt.  
+- Voor het bijhouden van informatie wordt een gedetailleerde eenduidige structuur en betekenis aangebracht die data gericht is, maar bij het modelleren van begrippen wordt dit nog niet gedaan. De samenhang tussen informatie is hierbij vaak (bewust) beperkter dan de samenhang tussen begrippen. 
 
 ### Niveau 2: Conceptueel informatiemodel
 
@@ -476,8 +366,8 @@ met de beheerder van deze extensie. Wanneer meerdere organisaties gebruik willen
 die in extensies beschreven zijn dan kan er gekeken worden of het wenselijk is om deze op te nemen in MIM. 
 Desgewenst kan een extensie gepubliceerd worden bij MIM-beheer of kan ernaar verwezen worden vanuit MIM-beheer. 
 
-<aside class='note'>
-    Een metamodel extensie is expliciet niet bedoeld voor aanvullende constructies
+<aside class='note' title="Scope van extensies op het metamodel informatiemodelleren">
+    Een metamodelextensie is expliciet niet bedoeld voor aanvullende constructies
     die alleen spelen op het niveau van implementatie, of op het niveau van afgeleide
     technische modellen t.b.v. specifieke interfaces. Deze vallen buiten scope van dit
     metamodel en ook buiten scope van extensies hierop. Wel is het mogelijk en toegestaan 
@@ -523,6 +413,6 @@ in de gemaakte afspraken. Voor het metamodel hanteren we daarom de volgende spel
 de Stelselcatalogus is zoveel als mogelijk leidend, vervolgens het GAB en als
 laatste de handreiking.
 
-<aside class='note'>
+<aside class='note' title="Versienummer normreferenties">
     De versies van de genoemde referenties zijn bewust niet opgenomen, zodat het mogelijk is om gebruik te maken van nieuwere versies van deze referenties. Wanneer er nieuwe versies uitkomen van de genoemde normreferenties dan wordt er gecheckt of MIM hier nog mee in lijn is. Wanneer dit niet zo is, dan wordt eraan gewerkt om dit weer met elkaar in lijn te brengen, zodat MIM 'upward compatible' is en blijft.
 </aside>
