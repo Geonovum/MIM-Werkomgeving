@@ -208,13 +208,9 @@ De relatie bevatModelelement geeft aan dat packages modelelementen kunnen bevatt
 | Extern                | [`mim:Extern`](http://bp4mc2.org/def/mim#Extern) | shape:Extern | [grondslag](#extern) |
 | View                  | [`mim:View`](http://bp4mc2.org/def/mim#View) | shape:View | [grondslag](#view) |
 
-## Nadere specificatie metagegevens in LD
+## Specificatie metagegevens in LD
 
-Deze paragraaf is een aanvulling op de paragraaf *'Specificatie metagegevens'* in het hoofdstuk [Metamodel Algemeen](#metamodel-algemeen).
-
-De betekenis van de metagegevens worden in LD gespecificeerd los van de klasse waartoe deze metagegevens behoren. Hieronder is een opsomming gegeven van alle metagegevens en de overeenkomstige meta-eigenschap in RDF.
-
-De gegevensregels (structuur) voor de metagegevens zijn wel specifiek per klasse, en worden in de betreffende paragraaf behandeld.
+Deze paragraaf is een aanvulling op de paragraaf *'Specificatie metagegevens'* in het hoofdstuk [Metamodel Algemeen](#metamodel-algemeen). De betekenis van de metagegevens worden in LD gespecificeerd los van de klasse waartoe deze metagegevens behoren. Hieronder is een opsomming gegeven van alle metagegevens en de overeenkomstige meta-eigenschap in RDF. De gegevensregels (structuur) voor de metagegevens zijn wel specifiek per klasse, en worden in de betreffende paragraaf behandeld.
 
 | **MIM metagegeven** | **Meta-eigenschap in RDF** | **RDF type** | **Grondslag** |
 |---------------------|----------------------------|--------------|---------------|
@@ -267,9 +263,9 @@ De gegevensregels (structuur) voor de metagegevens zijn wel specifiek per klasse
 | unidirectioneel | [`mim:unidirectioneel`](http://bp4mc2.org/def/mim#unidirectioneel) | owl:DatatypeProperty | [grondslag](#metagegeven-unidirectioneel) |
 | waarde | [`mim:waarde`](http://bp4mc2.org/def/mim#waarde) | owl:ObjectProperty | [grondslag](#metagegeven-waarde) |
 
-### Modellering metagegevens voor objecten en attributen in LD
+### Objecten en attributen in LD
 
-**Specificatie voor mim:Objecttype**
+#### mim:Objecttype
 
 De objecttypen worden naar de volgende aspecten gespecificeerd:
 
@@ -291,7 +287,7 @@ De objecttypen worden naar de volgende aspecten gespecificeerd:
 | Gegevensgroep             | [`mim:gegevensgroep`](http://bp4mc2.org/def/mim#gegevensgroep) | 0..n | [`mim:Gegevensgroep`](http://bp4mc2.org/def/mim#Gegevensgroep) |
 | Constraint                | [`mim:constraint`](http://bp4mc2.org/def/mim#constraint) | 0..n | [`mim:Constraint`](http://bp4mc2.org/def/mim#Constraint) |
 
-**Specificatie voor mim:Attribuutsoort**
+#### mim:Attribuutsoort
 
 De attribuutsoorten worden naar de volgende aspecten gespecificeerd:
 
@@ -329,7 +325,7 @@ Het veld `mim:authentiek` verwijst naar één van de volgende mogelijke waarden:
 | [`mim:LandelijkKerngegeven`](http://bp4mc2.org/def/mim#LandelijkKerngegeven) | Indien het een gegeven of een als relatiesoort gemodelleerd gegeven is in een landelijk sector- en domein-overstijgend informatiemodel en geen authentiek gegeven en geen basisgegeven is. |
 | [`mim:OverigeAuthenticiteit`](http://bp4mc2.org/def/mim#OverigeAuthenticiteit) | Indien het géén van de voorgaande categorieën betreft. Veelal gaat het dan om proces-, taakveld- of domeinspecifieke gegevens. |
 
-**Specificatie voor mim:Gegevensgroep**
+#### mim:Gegevensgroep
 
 De gegevensgroepen worden naar de volgende aspecten gespecificeerd:
 
@@ -348,7 +344,7 @@ De gegevensgroepen worden naar de volgende aspecten gespecificeerd:
 | Kardinaliteit                | [`mim:kardinaliteit`](http://bp4mc2.org/def/mim#kardinaliteit) | 1 | tekst |
 | Authentiek                   | [`mim:authentiek`](http://bp4mc2.org/def/mim#authentiek) | 1 | Authenticiteit |
 
-**Specificatie voor mim:Gegevensgroeptype**
+#### mim:Gegevensgroeptype
 
 De gegevensgroeptypen worden naar de volgende aspecten gespecificeerd:
 
@@ -366,35 +362,21 @@ De gegevensgroeptypen worden naar de volgende aspecten gespecificeerd:
 | Gegevensgroep             | [`mim:gegevensgroep`](http://bp4mc2.org/def/mim#gegevensgroep) | 0..n | [`mim:Gegevensgroep`](http://bp4mc2.org/def/mim#Gegevensgroep) |
 | Constraint                | [`mim:constraint`](http://bp4mc2.org/def/mim#constraint) | 0..n | [`mim:Constraint`](http://bp4mc2.org/def/mim#Constraint) |
 
-### Specificatie metagegevens voor relaties
+### Relaties in LD
 
-**Relatiesoort en relatierol**
+Het metamodel heeft twee manieren om een relatie tussen twee objecttypen te beschrijven. Deze keuze wordt aangegeven in de eigen extensie, zoals beschreven in paragraaf 1.8. Alleen het gekozen alternatief is relevant voor de modellering in uw informatiemodel.
 
-Het metamodel heeft twee manieren om een relatie tussen twee objecttypen te
-beschrijven. Deze keuze wordt aangegeven in de eigen extensie, zoals beschreven
-in paragraaf 1.8. Alleen het gekozen alternatief is relevant voor de modellering
-in uw informatiemodel.
+- Alternatief 1: Verplichte benoeming van de naam van de relatie met de bijbehorende metagegevens
+- Alternatief 2: Verplichte benoeming van de rol van het doel in een relatie met de bijbehorende metagegevens en optioneel de benoeming van de naam van de relatie.
 
-- Alternatief 1: Verplichte benoeming van de naam van de
-relatie met de bijbehorende metagegevens
-- Alternatief 2: Verplichte
-benoeming van de rol van het doel in een relatie met de bijbehorende
-metagegevens en optioneel de benoeming van de naam van de relatie.
+Beide alternatieven gebruiken relatiesoort en relatierol, maar met andere regels voor gebruik.
 
-Beide alternatieven gebruiken relatiesoort en relatierol, maar met andere regels
-voor gebruik.
-
+<!-- Onderstaande tekst weglaten: dubbelop, staat in hoofdstuk MetamodelAlgemeend.md
 #### Relatiesoort leidend (alternatief 1)
 
-Relatiesoort is verplicht, met een naam en met een definitie en deze is leidend.
-Metadata aspecten worden hierbij altijd vastgelegd. Het gebruik van relatierol
-is optioneel (zowel bij bron en doel). Áls er een relatierol doel wordt
-vastgelegd, dan is de metadata hierbij wel verplicht.
+Relatiesoort is verplicht, met een naam en met een definitie en deze is leidend. Metadata aspecten worden hierbij altijd vastgelegd. Het gebruik van relatierol is optioneel (zowel bij bron en doel). Áls er een relatierol doel wordt vastgelegd, dan is de metadata hierbij wel verplicht. Merk op dat bij het modelleren op deze wijze, alleen de kardinaliteit voor het doel aangegeven kan worden. De kardinaliteit aan de bron kant wordt open gelaten. -->
 
-Merk op dat bij het modelleren op deze wijze, alleen de kardinaliteit voor het doel
-aangegeven kan worden. De kardinaliteit aan de bron kant wordt open gelaten.
-
-**Specificatie voor «Relatiesoort»**
+#### mim:Relatiesoort (alt 1: soort leidend)
 
 De relatiesoorten worden naar de volgende aspecten gespecificeerd.
 
@@ -430,24 +412,7 @@ Het veld `mim:aggregatietype` verwijst naar één van de volgende mogelijke waar
 | [`mim:Compositie`](http://bp4mc2.org/def/mim#Compositie) | Compositie (gesloten wiebertje) |
 | [`mim:Gedeeld`](http://bp4mc2.org/def/mim#Gedeeld) | Gedeelde aggregatie (open wiebertje) |
 
-**Specificatie voor mim:Relatierol**
-
-Voor relatierollen worden naar de volgende aspecten gespecificeerd.
-
-| **Aspect**                   | **Eigenschap** | **Kardinaliteit** | **Datatype of klasse** |
-|------------------------------|----------------|-------------------|--------------|
-| Naam                         | [`mim:naam`](http://bp4mc2.org/def/mim#naam) | 0..1 | tekst |
-| Alias                        | [`mim:alias`](http://bp4mc2.org/def/mim#alias) | 0..1 | tekst |
-| Begrip                    | [`mim:begrip`](http://bp4mc2.org/def/mim#begrip) | 0..* | [`skos:Concept`](http://www.w3.org/2004/02/skos/core#Concept) |
-| Begripsterm               | [`mim:begripsterm`](http://bp4mc2.org/def/mim#begripsterm) | 0..* | tekst |
-| Definitie                    | [`mim:definitie`](http://bp4mc2.org/def/mim#definitie) | 0..1 | tekst |
-
-#### Relatierol is leidend (alternatief 2)
-
-Verplichte benoeming van de rol van het doel in een relatie met de bijbehorende
-metagegevens en optioneel de benoeming van de naam van de relatie.
-
-**Specificatie voor «Relatiesoort»**
+#### mim:Relatiesoort (alt 2: rol leidend)
 
 De relatiesoorten worden naar de volgende aspecten gespecificeerd.
 
@@ -460,7 +425,25 @@ De relatiesoorten worden naar de volgende aspecten gespecificeerd.
 | Definitie                    | [`mim:definitie`](http://bp4mc2.org/def/mim#definitie) | 0..1 | tekst |
 | Relatierol                   | [`mim:relatierol`](http://bp4mc2.org/def/mim#relatierol) | 1..2 | [`Relatierol`](http://bp4mc2.org/def/mim#Relatierol) |
 
-**Specificatie voor «Relatierol»**
+#### mim:Relatierol (alt 1: soort leidend)
+
+Voor relatierollen worden naar de volgende aspecten gespecificeerd.
+
+| **Aspect**                   | **Eigenschap** | **Kardinaliteit** | **Datatype of klasse** |
+|------------------------------|----------------|-------------------|--------------|
+| Naam                         | [`mim:naam`](http://bp4mc2.org/def/mim#naam) | 0..1 | tekst |
+| Alias                        | [`mim:alias`](http://bp4mc2.org/def/mim#alias) | 0..1 | tekst |
+| Begrip                    | [`mim:begrip`](http://bp4mc2.org/def/mim#begrip) | 0..* | [`skos:Concept`](http://www.w3.org/2004/02/skos/core#Concept) |
+| Begripsterm               | [`mim:begripsterm`](http://bp4mc2.org/def/mim#begripsterm) | 0..* | tekst |
+| Definitie                    | [`mim:definitie`](http://bp4mc2.org/def/mim#definitie) | 0..1 | tekst |
+
+<!-- Herhaling van uitleg in hoofdstuk MetamodelAlgemeen.md
+#### Relatierol is leidend (alternatief 2)
+
+Verplichte benoeming van de rol van het doel in een relatie met de bijbehorende
+metagegevens en optioneel de benoeming van de naam van de relatie. -->
+
+#### mim:Relatierol (alt 2: rol leidend)
 
 Voor relatierol worden bij het doel rol van een relatiesoort de volgende
 aspecten gespecificeerd.
@@ -483,9 +466,7 @@ aspecten gespecificeerd.
 | Authentiek                   | [`mim:authentiek`](http://bp4mc2.org/def/mim#authentiek) | 1 | Authenticiteit |
 | Mogelijk geen waarde         | [`mim:mogelijkGeenWaarde`](http://bp4mc2.org/def/mim#mogelijkGeenWaarde) | 1 | boolean |
 
-### Specificatie metagegevens voor overige relaties
-
-**Specificatie voor mim:Generalisatie bij objecttypen**
+#### mim:Generalisatie bij objecttypen
 
 De generalisaties worden naar het volgende aspect gespecificeerd:
 
@@ -495,7 +476,7 @@ De generalisaties worden naar het volgende aspect gespecificeerd:
 | Supertype                      | [`mim:definitie`](http://bp4mc2.org/def/mim#supertype) | 1 | [`mim:Objecttype`](http://bp4mc2.org/def/mim#Objecttype) |
 | Datum opname                 | [`mim:datumOpname`](http://bp4mc2.org/def/mim#datumOpname) | 1 | datum |
 
-**Specificatie voor mim:Generalisatie bij datatypen**
+#### mim:Generalisatie bij datatypen
 
 De generalisaties worden naar het volgende aspect gespecificeerd:
 
@@ -504,7 +485,7 @@ De generalisaties worden naar het volgende aspect gespecificeerd:
 | Subtype                      | [`mim:definitie`](http://bp4mc2.org/def/mim#subtype) | 1 | [`mim:Datatype`](http://bp4mc2.org/def/mim#Datatype) |
 | Supertype                      | [`mim:definitie`](http://bp4mc2.org/def/mim#supertype) | 1 | [`mim:Datatype`](http://bp4mc2.org/def/mim#Datatype) |
 
-**Specificatie voor mim:Relatieklasse**
+#### mim:Relatieklasse
 
 De relatieklassen worden naar de volgende aspecten gespecificeerd:
 
@@ -529,7 +510,7 @@ De relatieklassen worden naar de volgende aspecten gespecificeerd:
 | Indicatie afleidbaar         | [`mim:indicatieAfleidbaar`](http://bp4mc2.org/def/mim#indicatieAfleidbaar) | 1 | boolean |
 | Mogelijk geen waarde         | [`mim:mogelijkGeenWaarde`](http://bp4mc2.org/def/mim#mogelijkGeenWaarde) | 1 | boolean |
 
-**Specificatie voor mim:ExterneKoppeling**
+#### mim:ExterneKoppeling
 
 Externe koppelingen worden naar de volgende aspecten gespecificeerd.
 
@@ -555,11 +536,11 @@ Externe koppelingen worden naar de volgende aspecten gespecificeerd.
 | Indicatie afleidbaar         | [`mim:indicatieAfleidbaar`](http://bp4mc2.org/def/mim#indicatieAfleidbaar) | 1 | boolean |
 | Mogelijk geen waarde         | [`mim:mogelijkGeenWaarde`](http://bp4mc2.org/def/mim#mogelijkGeenWaarde) | 1 | boolean |
 
-### Specificatie metagegevens voor waardelijsten
+### Waardelijsten in LD
 
 Waar in onderstaande specificaties sprake is van een locatie, wordt in Linked Data termen veronderstelt dat op deze locatie de waardelijst te vinden is. Concreet betekent dit dat via content negotiation de waardelijst in een specifieke serialisatie van Linked Data is op te halen (zoals: JSON-LD, RDF/XML, Turtle). Vervolgens wordt verondersteld dat de resources in dit bestand de afzonderlijke waarden van de waardelijst zijn, of andere metagegevens van de waardelijst. Zo ligt voor de hand dat het bestand een resource bevat met dezelfde URL als opgegeven in de locatie, waarmee nadere informatie kan worden aangegeven.
 
-**Specificatie voor mim:Referentielijst**
+#### mim:Referentielijst
 
 Voor referentielijsten worden de volgende aspecten gespecificeerd:
 
@@ -577,7 +558,7 @@ Voor referentielijsten worden de volgende aspecten gespecificeerd:
 | Locatie                      | [`mim:locatie`](http://bp4mc2.org/def/mim#locatie) | 1 | tekst |
 | Referentie-element           | [`mim:referentieElement`](http://bp4mc2.org/def/mim#referentieElement) | 1..* | [`mim:ReferentieElement`](http://bp4mc2.org/def/mim#ReferentieElement) |
 
-**Specificatie voor mim:ReferentieElement**
+#### mim:ReferentieElement
 
 De referentie-elementen worden naar de volgende aspecten gespecificeerd:
 
@@ -597,7 +578,7 @@ De referentie-elementen worden naar de volgende aspecten gespecificeerd:
 | Identificerend               | [`mim:identificerend`](http://bp4mc2.org/def/mim#identificerend) | 0..1 | tekst |
 | Toelichting                  | [`mim:toelichting`](http://bp4mc2.org/def/mim#toelichting) | 0..1 | tekst |
 
-**Specificatie voor mim:Codelijst**
+#### mim:Codelijst
 
 Voor codelijst worden de volgende aspecten gespecificeerd:
 
@@ -613,13 +594,13 @@ Voor codelijst worden de volgende aspecten gespecificeerd:
 | Toelichting                  | [`mim:toelichting`](http://bp4mc2.org/def/mim#toelichting) | 0..1 | tekst |
 | Locatie                      | [`mim:locatie`](http://bp4mc2.org/def/mim#locatie) | 1 | tekst |
 
-### Specificatie metagegevens voor datatypen
+### Datatypen in LD
 
 Het betreft metagegevens voor in het informatiemodel gedefinieerde datatypen,
 oftewel exclusief datatypen die al buiten het model bestaan, zoals Integer,
 DateTime, Surface.
 
-**Specificatie voor mim:PrimitiefDatatype**
+#### mim:PrimitiefDatatype
 
 De datatypen worden naar de volgende aspecten gespecificeerd:
 
@@ -638,7 +619,7 @@ De datatypen worden naar de volgende aspecten gespecificeerd:
 | Herkomst                     | [`mim:herkomst`](http://bp4mc2.org/def/mim#herkomst) | 1 | tekst |
 | Datum opname                 | [`mim:datumOpname`](http://bp4mc2.org/def/mim#datumOpname) | 1 | datum |
 
-**Specificatie voor mim:GestructureerdDatatype**
+#### mim:GestructureerdDatatype
 
 Voor Gestructureerde datatypen worden de volgende aspecten gespecificeerd:
 
@@ -656,7 +637,7 @@ Voor Gestructureerde datatypen worden de volgende aspecten gespecificeerd:
 | Datum opname                 | [`mim:datumOpname`](http://bp4mc2.org/def/mim#datumOpname) | 1 | datum |
 | Data-element                 | [`mim:dataElement`](http://bp4mc2.org/def/mim#dataElement) | 0..* | [`mim:DataElement`](http://bp4mc2.org/def/mim#DataElement) |
 
-**Specificatie voor mim:DataElement**
+#### mim:DataElement
 
 De data-elementen worden naar de volgende aspecten gespecificeerd:
 
@@ -675,9 +656,9 @@ De data-elementen worden naar de volgende aspecten gespecificeerd:
 | Formeel patroon              | [`mim:formeelPatroon`](http://bp4mc2.org/def/mim#formeelPatroon) | 0..1 | tekst |
 | Kardinaliteit                | [`mim:kardinaliteit`](http://bp4mc2.org/def/mim#kardinaliteit) | 1 | tekst |
 
-### Specificatie metagegevens voor packages
+### Packages in LD
 
-**Specificatie voor mim:Informatiemodel**
+#### mim:Informatiemodel
 
 Informatiemodel packages worden naar de volgende aspecten gespecificeerd:
 
@@ -710,7 +691,7 @@ Het veld `mim:relatiemodelleringtype` verwijst naar één van de volgende mogeli
 | [`mim:RelatiesoortLeidend`](http://bp4mc2.org/def/mim#RelatiesoortLeidend) | Relatiesoort leidend, conform [deze](#relatiesoort-leidend-alternatief-1-0) sectie  |
 | [`mim:RelatierolLeidend`](http://bp4mc2.org/def/mim#RelatierolLeidend) | Relatierol leidend, conform [deze](#relatierol-is-leidend-alternatief-2-0) sectie |
 
-**Specificatie voor mim:Domein**
+#### mim:Domein
 
 Domein packages worden naar de volgende aspecten gespecificeerd:
 
@@ -720,7 +701,7 @@ Domein packages worden naar de volgende aspecten gespecificeerd:
 | Alias                        | [`mim:alias`](http://bp4mc2.org/def/mim#alias) | 0..1 | tekst |
 | Datum opname                 | [`mim:datumOpname`](http://bp4mc2.org/def/mim#datumOpname) | 1 | datum |
 
-**Specificatie voor mim:Extern**
+#### mim:Extern
 
 Externe packages worden naar de volgende aspecten gespecificeerd:
 
@@ -734,7 +715,7 @@ Externe packages worden naar de volgende aspecten gespecificeerd:
 | Herkomst                     | [`mim:herkomst`](http://bp4mc2.org/def/mim#herkomst) | 1 | tekst |
 | Datum opname                 | [`mim:datumOpname`](http://bp4mc2.org/def/mim#datumOpname) | 1 | datum |
 
-**Specificatie voor mim:View**
+#### mim:View
 
 View packages worden naar de volgende aspecten gespecificeerd:
 
@@ -748,9 +729,9 @@ View packages worden naar de volgende aspecten gespecificeerd:
 | Herkomst                     | [`mim:herkomst`](http://bp4mc2.org/def/mim#herkomst) | 1 | tekst |
 | Datum opname                 | [`mim:datumOpname`](http://bp4mc2.org/def/mim#datumOpname) | 1 | datum |
 
-### Specificatie metagegevens - overig
+### Overige modelelementen in LD
 
-#### Specificatie voor Enumeratie
+#### mim:Enumeratie
 
 Enumeraties betreffen de metaclass Enumeration en worden naar de volgende
 aspecten gespecificeerd:
@@ -766,7 +747,7 @@ aspecten gespecificeerd:
 | Datum opname                 | [`mim:datumOpname`](http://bp4mc2.org/def/mim#datumOpname) | 1 | datum |
 | Waarde                       | [`mim:waarde`](http://bp4mc2.org/def/mim#Enumeratiewaarde) | 1..* | [`mim:Waarde`](http://bp4mc2.org/def/mim#Enumeratiewaarde)
 
-#### Specificatie voor Enumeratiewaarde
+#### mim:Enumeratiewaarde
 
 De enumeratiewaarde zelf betreft de metaclass UML-EnumerationLiteral en kent
 volgende aspecten:
@@ -783,7 +764,7 @@ volgende aspecten:
 
 Een enumeratiewaarde mag geen alias hebben, omdat in UML het alias-veld wordt gebruikt voor de mim:code. Mocht toch een `mim:alias` zijn opgegeven voor een enumeratiewaarde, dan dient deze gelezen te worden als een `mim:code`. In het RDF model is `mim:code` een subproperty van een `mim:alias`.
 
-#### Specificatie voor een Constraint
+#### mim:Constraint
 
 De enumeratiewaarde zelf betreft de metaclass UML-EnumerationLiteral en kent
 volgende aspecten:
@@ -794,10 +775,9 @@ volgende aspecten:
 | Specificatie-tekst           | [`mim:specificatieTekst`](http://bp4mc2.org/def/mim#specificatieTekst) | 0..1 | tekst |
 | Specificatie-formeel         | [`mim:specificatieFormeel`](http://bp4mc2.org/def/mim#specificatieFormeel) | 0..1 | tekst |
 
-# Linked Data Tooling
+## Linked Data Tooling
 
 Het metamodel van MIM is specifiek voor het MIM opgesteld. Hiervoor zijn niet direct tools beschikbaar. Wel zijn er twee alternatieve opties die modelleurs kunnen volgen:
 
 1. Modelleurs kunnen een MIM model met behulp van Enterprise Architect opstellen. Er is een tool *Imvertor*, waarmee het mogelijk is om een MIM Model opgesteld in Enterprise Architect te transformeren naar een Linked Data model. Deze tool is open source en is te vinden op [www.imvertor.org](http://www.imvertor.org).
-
 2. Modelleurs kunnen ook direct in een Linked Data model (in OWL en SHACL) opstellen. Een dergelijk model kan, indien het voldoet aan de transformatieregels, gezien worden als een MIM informatiemodel. Om expliciet de link naar het MIM duidelijk te maken, kan gebruik worden gemaakt van deze [SPARQL constructieregels](media/rdf2mim.sparql), die een RDF/RDFS/OWL/SHACL model "terugvertalen" naar een MIM model. De terugvertaalregels zijn beschreven in [sectie 6.4.9](#transformatie-vanuit-rdfs-owl-shacl). Er zijn diverse tools beschikbaar om een dergelijk model op te stellen. De meest bekende tools zijn [Protege](https://protege.stanford.edu) (open source), [Topbraid Composer](https://www.topquadrant.com/topbraid-composer-install/) en [Poolparty](https://www.poolparty.biz) (de laatste twee zijn commerciële producten). Daarnaast zijn er ook veel modelleurs die gebruik maken van generieke IDE's voor het maken van Linked Data modellen, vaak op basis van de voor mensen leesbare [Turtle syntax](https://www.w3.org/TR/turtle).

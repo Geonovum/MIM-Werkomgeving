@@ -104,39 +104,34 @@ View 2: Datatypen
 
 ### Overige
 
-Constraint
+#### Constraint
 
 <figure id="ConstraintsZonderMetagegevens">
   <img src="media/ConstraintsZonderMetagegevens.png" alt="" />
   <figcaption>Constraint zonder metagegevens</figcaption>
 </figure>
 
-*Constraint*
-
 View 3a: Constraint
+<aside class="issue" title="View?">
+  Waarvoor dienen: <i>View 3a: Constraint</i>, <i>View 3b: ~ </i>, etc? Zijn dit diagramtitels? Zo ja, waarom worden de Keuze-diagrammen daarin dan niet meegenomen? Dan is het ook neter om ze in de <code>figcaption</code> op te nemen.
+</aside>
 
 | **MIM metaclass** | **Stereotype** | **Metaclass UML 2.5** |      | **In EA**  | **In ...** |
 | ----------------- | -------------- | --------------------- | ---- | ---------- | ---------- |
 | Constraint        | \-             | (UML) Constraint      |      | Constraint |            |
 
-
-*Keuze*
+#### Keuze
 
 Er zijn vier situaties waarin een keuze toegepast wordt: 
 
 - Use case 1: een keuze tussen datatypen
-- Use case 2: een keuze tussen 2 of meer attribuutsoorten
-- Use case 3: een keuze tussen meerdere manieren om 1 betekenisvol attribuutsoort in te vullen
-- Use case 4: een keuze tussen relatiedoelen, als nadere invulling van 1 betekenisvolle relatiesoort
+- Use case 2: een keuze tussen twee of meer attribuutsoorten
+- Use case 3: een keuze tussen meerdere manieren om één betekenisvol attribuutsoort in te vullen
+- Use case 4: een keuze tussen relatiedoelen, als nadere invulling van één betekenisvolle relatiesoort
 
-Voor elk geldt een eigen subset van het metamodel.
+Voor elke toepassing geldt een aparte subset van het metamodel. De 'keuzeconstructie' maakt een keuze mogelijk tussen meerdere datatypen, attribuutsoorten, en relatiedoelen. In UML behouden we dezelfde modellering, een datatype blijft dus een datatype, een attribuutsoort een attribuutsoort en een relatiesoort een relatiesoort. De UML elementen die het stereotype keuze krijgen zijn zelf geen datatype, attribuutsoort of relatiedoel. Merk op dat de diagrammen op metamodelniveau zijn gemodelleerd. Hoe dit op informatiemodelniveau uitpakt is onder het diagram beschreven in tekst. 
 
-De 'keuze constructie' maakt een keuze mogelijk tussen meerdere datatypen, attribuutsoorten, en relatiedoelen. In UML behouden we dezelfde modellering, een datatype blijft dus een datatype, een attribuutsoort een attribuutsoort en een relatiesoort een relatiesoort. De UML elementen die het stereotype keuze krijgen zijn zelf geen datatype, attribuutsoort of relatiedoel.
-
-Merk op dat de diagrammen op metamodel niveau zijn gemodelleerd. Hoe dit op informatiemodel niveau uitpakt is onder het diagram beschreven in tekst. 
-
-
-#### Use case 1: Keuze tussen datatypen
+**Use case 1: Keuze tussen datatypen**
 
 Dit UML is uitgewerkt voor Objecttype. Voor Gegevensgroeptype en Relatieklasse geldt hetzelfde patroon.
 
@@ -152,7 +147,7 @@ Modellering van deze Keuze in een informatiemodel:
 Gebruik de Keuze voor een (MIM) Attrituutsoort: 
 - Kies een _MIM-Attribuutsoort_ en koppel de hiervoor gemodelleerde Keuze hieraan via een typering, zoals gebruikelijk. 
 
-#### Use case 2: Keuze tussen 2 of meer attribuutsoorten
+**Use case 2: Keuze tussen 2 of meer attribuutsoorten**
 
 Dit UML is uitgewerkt voor Objecttype. Voor Gegevensgroeptype en Relatieklasse geldt hetzelfde patroon.
 
@@ -170,7 +165,7 @@ Gebruik de Keuze voor het (MIM) Objecttype of het (MIM) Gegevensgroeptype:
 
 Er is hier voor de aankoppeling gekozen voor een UML-Attribute en niet voor een UML-Association in navolging van de modellering van de gegevensgroep en het gegevensgroeptype. 
 
-#### Use case 3: Keuze tussen meerdere manieren om 1 betekenisvol attribuutsoort in te vullen
+**Use case 3: Keuze tussen meerdere manieren om 1 betekenisvol attribuutsoort in te vullen**
 
 Dit UML is uitgewerkt voor Objecttype. Voor Gegevensgroeptype en Relatieklasse geldt hetzelfde patroon.
 
@@ -187,7 +182,7 @@ Gebruik de Keuze voor de (MIM) Attribuutsoort:
 - Modelleer in een (MIM) Objecttype of in een (MIM) Gegevensgroeptype een MIM-Attribuutsoort zoals gebruikelijk, en koppel de hiervoor gemodelleerde Keuze hieraan, via een typering, zoals gebruikelijk.  
 
 
-#### Use case 4: Keuze tussen relatiedoelen, als nadere invulling van 1 betekenisvolle relatiesoort
+**Use case 4: Keuze tussen relatiedoelen, als nadere invulling van 1 betekenisvolle relatiesoort**
 
 Dit UML is uitgewerkt voor Objecttype. Voor Gegevensgroeptype geldt hetzelfde patroon, behalve dat een Gegevensgroeptype geen doel mag zijn van een Relatiesoort.
 
@@ -195,7 +190,6 @@ Dit UML is uitgewerkt voor Objecttype. Voor Gegevensgroeptype geldt hetzelfde pa
   <img src="media/KeuzeRelatiedoel4UML.png" alt="" />
   <figcaption>Keuze tussen relatiedoelen, als nadere invulling van één betekenisvolle relatiesoort</figcaption>
 </figure>
-
 
 Modellering van het Keuze in een informatiemodel: 
 - Modelleer in UML een _UML-Class_ met stereotype _keuze_. 
@@ -220,15 +214,12 @@ Er zijn drie metaklassen met de naam Keuze maar elke keer als extensie van een a
 
 Merk op dat deze tabel niet gaat over de modelelementen waaruit een keuze gemaakt moet worden. Dat zijn immers de modelelementen datatype, attribuutsoort en relatiesoort. Deze tabel gaat over de modellering van Keuze in UML oftewel de extra hulpconstructies die in UML nodig zijn om de modelelementen waaruit een keuze gemaakt moet worden aan te koppelen aan het MIM-modelelement waarvoor de keuze geldt. Deze extra hulpconstructies krijgen als stereotype _keuze_ en dit geeft aan dat de betekenis hiervan anders is dan de betekenis van de MIM-elementen datatype, attirbuutsoort en relatiesoort. 
 
-*Relatierol*
+#### Relatierol
 
 <figure id="AssociatierollenZonderMetagegevens">
   <img src="media/AssociatierollenZonderMetagegevens.png" alt="" />
   <figcaption>Relatierol</figcaption>
 </figure>
-
-
-Relatierol
 
 View 3b: Relatiesoort en relatierol
 
@@ -238,7 +229,7 @@ View 3b: Relatiesoort en relatierol
 | Relatierol source     | «Relatierol»   | Property              |      | AssociationEnd |            |
 | Relatierol target     | «Relatierol»   | Property              |      | AssociationEnd |            |
 
-
+#### Externe koppeling
 
 *Externe koppeling*
 
@@ -246,17 +237,14 @@ View 3b: Relatiesoort en relatierol
 | ----------------- | ------------------- | --------------------- | ---- | ----------- | ---------- |
 | Externe koppeling | «Externe koppeling» | (UML) Association     |      | Association |            |
 
-
-
 View 3c: Groepering
 
-*Packages*
+#### Packages
 
 <figure id="PackagesZonderMetagegevens">
   <img src="media/PackagesZonderMetagegevens.png" alt="" />
   <figcaption>Packages</figcaption>
 </figure>
-
 
 | **MIM metaclass**     | **Stereotype**    | **Metaclass UML 2.5** |      | **In EA** | **In ...** |
 | --------------------- | ----------------- | --------------------- | ---- | --------- | ---------- |
@@ -265,7 +253,7 @@ View 3c: Groepering
 | Extern                | «Extern»          | (UML) Package         |      | Package   |            |
 | View                  | «View»            | (UML) Package         |      | Package   |            |
 
-## Nadere specificatie metagegevens in UML
+## Specificatie metagegevens in UML
 
 Deze paragraaf is een aanvulling op de paragraaf *'Specificatie metagegevens'*
 in het hoofdstuk [Metamodel Algemeen](#metamodel-algemeen).
@@ -306,8 +294,8 @@ stereotype `«id»`
 
 
 
-### Modellering metagegevens voor objecten en attributen in UML
-
+<!-- ### Modellering metagegevens voor objecten en attributen in UML -->
+### Objecten en attributen in UML
 
 #### «Objecttype»
 
@@ -409,7 +397,7 @@ De gegevensgroeptypen worden naar de volgende aspecten gespecificeerd:
 | verwijst naar **supertype**       | 0..*               | Binding aan een generalisatie (naar een ander gegevensgroeptype).  | *owned element* = UML-Relationship                              |     | *association*  |            |
 
 
-### Specificatie metagegevens voor relaties
+### Relaties in UML
 
 <aside class="note" title="Aanvullen met uitleg Generalisatie">
   <p>Deze paragraaf bevat de specificaties van <code>«Relatiesoort»</code>, <code>«Relatierol»</code>, <code>«Relatieklasse»</code> en <code>«Generalisatie»</code>, maar onderstaande alinea's vertellen enkel iets over alternatieven met betrekking tot <code>«Relatiesoort»</code> en <code>«Relatierol»</code>. Je verwacht hier ook iets van uitleg over de toepassing van andere stereotypen (of een verwijzing ernaar).
@@ -593,7 +581,7 @@ Externe koppelingen worden naar de volgende aspecten gespecificeerd.
 | **Mogelijk geen waarde**          | 1                  | Algemeen metagegeven. |                                                              |      | *Tagged value*                                               |            |
 | verwijst naar **relatiedoel**     | 0..*       | Binding aan een objecttype. | */target: related Element bij Relationship Element* = UML-Class |    | *association target* = Class       |     |
 
-### Specificatie metagegevens voor waardelijsten
+### Waardelijsten in UML
 
 
 #### «Codelijst»
@@ -691,7 +679,7 @@ De referentie-elementen worden naar de volgende aspecten gespecificeerd:
 | heeft **datatype**       | 1       | Binding aan een datatype.     | *datatype* = UML-datatype |    | *type* = datatype          |     |
 
 
-### Specificatie metagegevens voor datatypen
+### Datatypen in UML
 
 Het betreft metagegevens voor in het informatiemodel gedefinieerde datatypen,
 oftewel exclusief datatypen die al buiten het model bestaan, zoals Integer,
@@ -776,7 +764,7 @@ Een Keuze worden naar de volgende aspecten gespecificeerd:
 
 *Opmerking: de modelelementen waaruit gekozen kan worden heten sinds MIM 1.1 geen keuze elementen meer. Keuze element is komen te vervallen.*
 
-### Specificatie metagegevens voor packages
+### Packages in UML
 
 #### «Domein»
 
@@ -845,7 +833,7 @@ View packages worden naar de volgende aspecten gespecificeerd, analoog aan
 | **Datum opname** | 1             | Algemeen metagegeven.    |                |      | *tagged value* |            |
 | **Locatie**      | 1             | Algemeen metagegeven.    |                |      | *Tagged value* |            |
 
-### Specificatie metagegevens - overig
+### Overige modelelementen in UML
 
 #### «Constraint»
 

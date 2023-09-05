@@ -82,9 +82,7 @@ Het diagram toont de onderlinge samenhang en structuur. Daarin is zichtbaar dat 
 
 ### Overige modelelementen
 
-Naast de kernelementen en de datatypen, kent het MIM nog een aantal andere datatypen. Deze modelelementen vallen uiteen in een aantal categorieën. 
-
- waarvan de functie en struc in het MIM in de volgende paragrafen verder worden toegelicht.
+Naast de kernelementen en de datatypen, kent het MIM nog een aantal andere datatypen. Deze modelelementen vallen uiteen in een aantal categorieën, waarvan de functie en structuur binnen het MIM in de volgende paragrafen verder wordt toegelicht.
 
 1. `«MIM metaclass»`: <code><a>Constraint</a></code>
 1. `«MIM metaclass»`: <code><a>Keuze</a></code>
@@ -103,7 +101,7 @@ De `Keuze` en de `Constraint` zijn verschillende manieren om een voorwaarde of e
 
 <aside class="issue" title="Alinea aanvullen. Wat is het doel?"></aside>
 
-##### Constraint in het kort
+**Constraint in het kort**
 
 Een `Constraint` legt voorwaarden of beperkingen op aan een modelelement. Meer informatie vind je in de paragraaf over <code><a>Constraint</a></code>. Het diagram toont in welke situaties een `Contraint` kan worden toegepast.
 
@@ -112,7 +110,7 @@ Een `Constraint` legt voorwaarden of beperkingen op aan een modelelement. Meer i
   <figcaption>Constraint</figcaption>
 </figure>
 
-##### Keuze in het kort
+**Keuze in het kort**
 
 <aside class="issue" title="Use cases staan ook uitgewerkt in de paragraaf Keuze. Dubbel?"></aside>
 
@@ -654,7 +652,7 @@ Een domein package bevat de modelelementen waaruit een informatiemodel is sameng
     gezien als een view.
 </aside>
 
-### Overige modelelementen
+### Constraint en Keuze
 
 Diagram: [Overige](#overige)
 
