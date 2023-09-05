@@ -1456,7 +1456,41 @@ een nadere uitleg wordt gegeven van het fenomeen abstract objecttypen.
 
 *Toelichting*
 
-Dit is de beschrijving van de subset van de verzameling van alle instanties van dit objecttype. De subset bevat de instanties die opgenomen zijn in de registratie die met het informatiemodel wordt beschreven. Wordt bijvoorbeeld gebruikt bij basisregistraties om aan te geven dat niet alle instanties van een objecttype opgenomen zijn in de registratie maar alleen die welke voldoen aan een conditie.
+*Toelichting*
+
+De definitie van een objecttype geeft aan welke exemplaren in de werkelijkheid bedoeld worden, 
+te weten die exemplaren die aan de definitie voldoen. 
+
+De populatie in een (basis)registratie kan in het gebruik echter beperkter zijn, 
+omdat niet alle examplaren die aan de definitie voldoen worden geregistreerd. 
+Er zijn dan dus examplaren die wel aan de definitie voldoen, maar die niet worden geregistreerd 
+en dus ook niet opgevraagd kunnen worden. 
+
+De populatie is een nadere afbakening op de definitie, een beschrijving van de _subset_ van de verzameling van 
+alle _exemplaren_ van dit objecttype die:
+- wel geregistreerd of uitgewisseld worden en/of
+- wel aan de definitie voldoen, maar die niet geregistreerd of uitgewisseld worden. 
+
+Wanneer alle exemplaren die onder de definitie vallen geregistreerd zijn en/of uitgewisseld kunnen worden, 
+dan mag de populatie worden leeggelaten. 
+
+De populatie kan ook gebruikt worden om aan te geven dat niet alle exemplaren van een objecttype opgenomen zijn 
+in de registratie maar alleen die welke voldoen aan een conditie. De conditie heeft verder geen effect heeft op de definitie. 
+
+<aside class='example'>
+    Het Kadaster is opgericht in 1832 en kent sindsdien kadastrale aktes, die ingeschreven worden. De definitie van een kadastrale akte omvat alle aktes, en deze zijn op te vragen bij het Kadaster, maar niet alle aktes zijn als data (digitaal) op te vragen vanuit de BRK. Dit laatste kan dan in de populatie worden opgenomen. 
+
+Populatie: alle kadastrale aktes die horen bij kadastrale objecten waarop op 1 januari 1980 een zakelijk recht rustte, en alle van kadastrale objecten die erna zijn ontstaan, zitten in de BRK. Dit is een voorbeeld van een conditie.   
+</aside>
+
+<aside class='example'>
+    Er zijn panden in Nederland die een militaire functie hebben en waarvan het niet wenselijk is dat deze in de registratie worden opgenomen en op aangeven van het ministratie van Defensie daarom ook niet zijn opgenomen. 
+
+  Populatie: alle panden op het Nederlands grondgebied, die voldoen aan de objectdefinitie, behalve een aantal militaire panden zoals bedoeld in  bepaling [1].
+
+  [1]: Memorie van toelichting bij de Wet basisregistraties adressen en gebouwen, kamerstuk, 2006/07, 30 968,
+nr. 3, 28 februari 2007. Zie: https://zoek.officielebekendmakingen.nl/kst-30968-3.html
+</aside>
 
 *Toepassing:* Objecttype
 
