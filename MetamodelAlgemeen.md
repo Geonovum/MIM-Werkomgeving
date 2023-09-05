@@ -1,223 +1,185 @@
 # Metamodel Algemeen
 
-Dit hoofdstuk beschrijft het metamodel in diagramvorm en in tekst.
+Dit hoofdstuk beschrijft de modelelementen van het MIM voor het maken van een informatiemodel. De eerste paragraaf bevat enkele **diagrammen** die een overzicht geven van de modelelementen die op metamodelniveau worden onderkend en hun onderlinge verhouding. De paragraaf geeft een algemene **beschrijving alle modelelementen**, dat wil zeggen: onhankelijk van een modelleertaal. Wanneer u liever de beschrijvingen eerst leest, kunt u ook met de paragraaf [objecttypen en attribuutsoorten](#objecttypen-en-attribuutsoorten) beginnen. De laatste paragraaf bevat de **metagegevens** die worden bijgehouden over de modelelementen in een informatiemodel.
 
-Het metamodel beschrijft de modelelementen die worden gebruikt bij het maken van een informatiemodel. Voorbeelden van modelelementen zijn: objecttype, attribuutsoort, relatiesoort, maar denk ook datatypen of aan metagegevens. In de paragrafen hierna worden alle modelelementen beschreven en toegelicht.
+Ter illustratie van de relatie tussen een _metamodel_ en een _informatiemodel_: in de Basisregistratie Kadaster (BRK) wordt een `Perceel` gemodelleerd als een <code>«<a>Objecttype</a>»</code>. De `grens` van een perceel wordt gemodelleerd als een <code>«<a>Attribuutsoort</a>»</code>. «Objecttype» en «Attribuutsoort» zijn de modelelementen uit het metamodel informatiemodellering. 'Perceel' en 'grens' zijn de modelleringen op het niveau van het specifieke informatiemodel. In dit geval de BRK. Door 'Perceel' een `«Objecttype»` te noemen en 'grens' een `«Attribuutsoort»`, is aangegeven hoe ze geïnterpreteerd moeten worden.
 
-Bijvoorbeeld: in de basisregistratie Kadaster wordt een perceel gemodelleerd als een objecttype. De grens van een perceel wordt gemodelleerd als een attribuutsoort. Objecttype en attribuutsoort zijn de modelelementen op metamodel niveau, het perceel en de grens zijn de modelleringen van het informatiemodel niveau. Door 'perceel' een _objecttype_ te noemen en 'begrenzing' een _attribuutsoort_ is het bij elk duidelijk hoe deze geïnterpreteerd moet worden. 
+## Uitgangspunten voor het metamodel
 
-- De eerste paragraaf bevat diagrammen, die kort een overzicht geven van de modelelementen die op metamodel niveau worden onderkend, alsmede hun onderlinge verhouding
-- De paragrafen erna bevat de beschrijvingen in tekst van de modelelementen die op metamodel niveau worden onderkend. Wanneer u liever de beschrijvingen eerst leest, kunt u ook met deze paragraaf starten. Dit begint bij [Objecttypen en attribuutsoorten](#objecttypen-en-attribuutsoorten)
-- De laatste paragraaf bevat de metagegevens die worden bijgehouden over de modelelementen in een informatiemodel. Dit metamodel geeft aan welke metagegevens er zijn.  
+Het metamodel informatiemodellering hanteert een aantal uitgangspunten die aan de basis liggen van de totstandkoming en het gebruik van het model.
 
-**Uitgangspunten voor het metamodel**
-
-- Elk modelelement heeft een naam en een eigen MIM metaclass, waaraan je het modelelement overal kan herkennen.
-- De modelelementen worden eerst uitgelegd zonder een specifieke specificatietaal te
+1. Elk modelelement heeft een naam en een eigen MIM-metaclass, waaraan je het modelelement overal kan herkennen.
+1. De modelelementen worden eerst uitgelegd zonder een specifieke specificatietaal te
 gebruiken. Dit is zodat we hierna kunnen aangeven hoe je het modelelement uitdrukt per specifieke specificatietaal, te weten in UML of in W3C-specificatietechnieken.
-- Een toolonafhankelijke beschrijving van het metamodel.
-Verder is er, omdat VNG Realisatie, Kadaster en Geonovum en veel andere organisaties Sparx EA
-gebruiken, aanvullend aangegeven hoe het metamodel in Enterprise Architect
-toegepast wordt. Hierdoor borgen we deze relatie.
-- Uniforme toepassing van het metamodel in informatiemodellen. Anders gezegd, uitbreiden mag, afwijken niet,
-maak voor hetzelfde doel geen alternatieve constructies.
-- Datatypen zijn onderdeel van het metamodel en beschrijven de structuur van de data, maar niet
-de semantiek/betekenis. De aanbeveling is dan ook om eerst een informatiemodel
-te maken zonder datatypen. De regel is dat als alle datatypen uit het model.
-worden weggelaten, er geen semantische betekenis verloren mag gaan.
+1. Een toolonafhankelijke beschrijving van het metamodel. Wel is er, omdat VNG Realisatie, Kadaster en Geonovum en veel andere organisaties Sparx Enterprise Architect gebruiken, aanvullend aangegeven hoe het metamodel in Enterprise Architect toegepast wordt. Hierdoor borgen we deze relatie.
+1. Uniforme toepassing van het metamodel in informatiemodellen. Anders gezegd, uitbreiden mag, afwijken niet. Maak voor hetzelfde doel geen alternatieve constructies.
+1. Datatypen zijn onderdeel van het metamodel en beschrijven de structuur van de data, maar niet de semantiek/betekenis. De aanbeveling is dan ook om eerst een informatiemodel
+te maken zonder datatypen. De regel is dat als alle datatypen uit het model worden weggelaten, er geen semantische betekenis verloren mag gaan.
 
-*Toelichting metaclass*   
-Alle modelelementen zijn een metaklasse in het metamodel. Hiermee wordt aangegeven dat het niet een klasse betreft
-in een informatiemodel, zoals de klasse Persoon, maar dat het om de classificatie gaat dat de Persoon een Objecttype is,
-oftewel dat de klasse Persoon van de metaklasse Objecttype is. Vandaar de term metaclass.
+<!-- ### Toelichting MIM-metaclass
+Alle modelelementen zijn een metaklasse in het metamodel. Hiermee wordt aangegeven dat het niet een klasse betreft in een informatiemodel (zoals bijvoorbeeld de klasse `Perceel`), maar dat het om de classificatie gaat dat de klasse `Persoon` van de metaklasse `«Objecttype»` is. Vandaar de term _metaclass_. Daarnaast verhouden de MIM-metaklassen zich ook weer tot metaklassen van UML en W3C,
 
 De metaklassen worden ook gebruikt om aan te geven hoe deze zich verhouden tot de metaklassen
 van UML en W3C, in de volgende hoofdstukken.
 
-Bij het maken van een informatiemodel modelleer je in feite gewoon met de modelelementen, en geef je aan dat een Persoon een Objecttype is en een geboortedatum een attribuutsoort.  
+Bij het maken van een informatiemodel modelleer je in feite gewoon met de modelelementen, en geef je aan dat een Persoon een Objecttype is en een geboortedatum een attribuutsoort. -->  
 
-Hierna volgen eerst diagrammen met de modelelementen, als overzicht. In de paragrafen erna wordt de betekenis van elk van deze modelelementen beschreven, met een definitie en een toelichting en een voorbeeld. Tot slot volgt een paragraaf met metadata die bijgehouden wordt, of kan worden, bij een modelelement.
+Hierna volgen eerst diagrammen met een overzicht van de modelelementen. In de paragrafen erna wordt de betekenis van elk van deze modelelementen beschreven met een definitie en een toelichting en een voorbeeld. Tot slot volgt een paragraaf met metadata die bijgehouden wordt, of kan worden, bij een modelelement.
 
 ## Structuur metamodel
 
-Deze paragraaf bevat een overzicht van het metamodel voor informatiemodellen, kortweg MIM, en geeft alle
-modelelementen weer. De beschrijving van de modelelementen staat in de volgende paragraaf.
+Deze paragraaf bevat een overzicht van het metamodel voor informatiemodellering, kortweg MIM, en geeft alle modelelementen weer. De beschrijving van de modelelementen staat in de volgende paragraaf. De modelelementen zijn verdeeld over een aantal diagrammen, die elk een eigen _view_ op een deel van het metamodel tonen. Elk _view_ toont een aantal van de modelelementen, inclusief hun onderlinge samenhang. Alle _views_ samen vormen het metamodel als geheel:
+- [Kern](#kern): belangrijkste modelelementen in onderlinge samenhang.
+- [Datatypen](#datatypen): de in het model te onderkennen soorten datatypen.
+- [Overige modelelementen](#overige-modelelementen): elementen die niet altijd aan de orde zijn
 
-De modelelementen zijn verdeeld over een aantal diagrammen, die elk een eigen
-view op een deel van het metamodel tonen. Elk view toont een aantal van de
-modelelementen, inclusief hun onderlinge samenhang.
-
-Alle views samen vormen het metamodel als geheel:
-- KERN, met de belangrijkste modelelementen in onderlinge samenhang.
-- DATATYPEN, met de in het model te onderkennen soorten datatypen.
-- OVERIGE modelelementen, die niet altijd aan de orde zijn
-
-Elk modelelement heeft een MIM metaclass met een naam. Hieraan is elk
-modelelement te herkennen in alle diagrammen en in de tekst en in elke
-specificatietaal die een uitdrukking is van dit metamodel.
-
-Bij de modelelementen zijn in deze diagrammen geen beschrijvende kenmerken opgenomen, de
-metagegevens zoals naam, definitie enzovoorts. In de diagrammen in de bijlage zijn deze wel
-opgenomen.
+Elk modelelement heeft een `«MIM metaclass»` met een naam. Hieraan is elk modelelement te herkennen in alle diagrammen, in de tekst én in elke specificatietaal die een uitdrukking is van dit metamodel. Bij de modelelementen zijn in deze diagrammen geen beschrijvende kenmerken opgenomen (bijvoorbeeld [metagegevens](#specificatie-metagegevens) zoals: naam, definitie, enzovoorts). In de [diagrammen](#diagrammen) in de bijlage zijn deze wel opgenomen.
 
 ### Kern
 
-View 1: De kern van een informatiemodel. Deze bestaat uit de volgende modelelementen:
+De kern van het informatiemodel bestaat uit de volgende modelelementen. Het diagram toont hoe ze onderling met elkaar samenghangen. Een uitgebreide beschrijving per element is opgenomen in de paragraaf [modelelementen](#modelelementen).
 
-| **MIM metaclass** |
-|-------------------|
-| Objecttype        |
-| Attribuutsoort    |
-| Gegevensgroep     |
-| Gegevensgroeptype |
-| Generalisatie     |
-| Relatiesoort      |
-| Relatieklasse     |
-| Relatierol        |
-| Relatierol doel   |
-| Datatypen         |
-
-De betekenis van deze modelelementen en de beschrijvingen ervan staat in [Objecttypen en attribuutsoorten](#Objecttypen-en-attribuutsoorten) en in [Relaties](#Relaties) en in [Datatypen](#datatypen-0).
-
-In diagramvorm:
+ 1. `«MIM metaclass»`: <a>Objecttype</a>
+ 1. `«MIM metaclass»`: <a>Attribuutsoort</a>
+ 1. `«MIM metaclass»`: <a>Gegevensgroep</a>
+ 1. `«MIM metaclass»`: <a>Gegevensgroeptype</a>
+ 1. `«MIM metaclass»`: <a>Generalisatie</a>
+ 1. `«MIM metaclass»`: <a>Relatiesoort</a>
+ 1. `«MIM metaclass»`: <a>Relatieklasse</a>
+ 1. `«MIM metaclass»`: <a>Relatierol</a>
+ 1. `«MIM metaclass»`: <a>Relatierol doel</a>
+ 1. `«MIM metaclass»`: <a>Datatype</a>
 
 <figure id="KernZonderUML">
   <img src="media/KernZonderUML.png" alt="" />
-  <figcaption>Kern van een informatiemodel</figcaption>
+  <figcaption>MIM - kern zonder metagegevens</figcaption>
 </figure>
 
-Kern zonder Metagegevens
-
-De verbindingen tussen de modelelementen geven aan welke combinaties kunnen voorkomen op metamodelniveau, oftewel welke modelelementen in een informatiemodel met elkaar gecombineerd kunnen worden. Bijvoorbeeld:
-- Een objecttype kan verbonden worden met een attribuutsoort. In een informatiemodel kan je attribuutsoorten dus aan een objecttype toekennen. Een attribuutsoort kan in het informatiemodel vervolgens weer als type een datatype krijgen.
-- Een objecttype kan verbonden worden met een relatiesoort en deze relatiesoort kan weer verbonden worden met een objecttype. Dit geeft aan dat de relatiesoort een modelelement is dat twee objecttypen met elkaar verbindt. Een objecttype kan dus *niet* rechtstreeks verbonden worden met een ander objecttype.
-- Een objecttype kan verbonden worden met een gegevensgroep en deze gegevensgroep kan weer verbonden worden met een gegevensgroeptype. Een objecttype kan dus *niet* rechtstreeks verbonden worden met een gegevensgroeptype. In een informatiemodel is een gegevensgroep een eigenschap van het objecttype en kan je aangeven dat deze gegevensgroep als type een gegevensgroeptype heeft.
-
+In het diagram geven de verbindingen tussen de modelelementen aan welke combinaties kunnen voorkomen op metamodelniveau, oftewel welke modelelementen in een informatiemodel met elkaar gecombineerd kunnen worden. Bijvoorbeeld:
+- Een <code><a>Objecttype</a></code> kan verbonden worden met een <code><a>Attribuutsoort</a></code>. In een informatiemodel kan je attribuutsoorten dus aan een `Objecttype` toekennen. Een `Attribuutsoort` kan in het informatiemodel vervolgens weer als type een <code><a>Datatype</a></code> krijgen.
+- Een `Objecttype` kan verbonden worden met een <code><a>Relatiesoort</a></code> en deze `Relatiesoort` kan weer verbonden worden met een `Objecttype`. Dit geeft aan dat de `Relatiesoort` een modelelement is dat twee objecttypen met elkaar verbindt. Een `Objecttype` kan dus *niet* rechtstreeks verbonden worden met een ander `Objecttype`.
+- Een `Objecttype` kan verbonden worden met een <code><a>Gegevensgroep</a></code> en deze `Gegevensgroep` kan weer verbonden worden met een <code><a>Gegevensgroeptype</a></code>. Een `Objecttype` kan dus *niet* rechtstreeks verbonden worden met een `Gegevensgroeptype`. In een informatiemodel is een `Gegevensgroep` een eigenschap van het `Objecttype` en kan je aangeven dat deze `Gegevensgroep` als type een `Gegevensgroeptype` heeft.
 
 ### Datatypen
 
-View 2: Datatypen. De verschillende soorten datatypen en bijbehorende modelelementen:
+Het MIM kent verschillende manieren om een datatype toe te kennen aan een modelelement. Het onderstaande overzicht toont welke typen beschikbaar zijn, inclusief de onderdelen waaruit sommige typen worden opgebouwd.
 
-| **MIM metaclass**       |
-|-------------------------|
-| Primitief datatype      |
-| Gestructureerd datatype |
-| Data element            |
-| Enumeratie              |
-| Enumeratiewaarde        |
-| Referentielijst         |
-| Referentie element      |
-| Codelijst               |
+1. `«MIM metaclass»`: <code><a>Primitief datatype</a></code>
+1. `«MIM metaclass»`: <code><a>Gestructureerd datatype</a></code>
+1. `«MIM metaclass»`: <code><a>Data-element</a></code>
+1. `«MIM metaclass»`: <code><a>Enumeratie</a></code>
+1. `«MIM metaclass»`: <code><a>Enumeratiewaarde</a></code>
+1. `«MIM metaclass»`: <code><a>Referentielijst</a></code>
+1. `«MIM metaclass»`: <code><a>Referentie-element</a></code>
+1. `«MIM metaclass»`: <code><a>Codelijst</a></code>
 
-De betekenis van deze modelelementen en de beschrijvingen ervan staan in [Datatypen](#datatypen-1) en in [Waardelijsten](#waardelijsten).
-
-In diagramvorm:
+Het diagram toont de onderlinge samenhang en structuur. Daarin is zichtbaar dat een `Gestructureerd datatype` wordt opgebouwd uit twee of meer `Data-elementen`, een `Enumeratie` bestaat uit `Enumeratiewaarden` en een `Referentielijst` uit `Referentie-elementen`. In de paragrafen [datatypen](#datatypen-1) en [waardelijsten](#waardelijsten) worden deze typen uitgebreid toelicht.
 
 <figure id="DatatypenZonderUML">
   <img src="media/DatatypenZonderUML.png" alt="" />
-  <figcaption>Datatypen</figcaption>
+  <figcaption>MIM - datatypen zonder metagegevens</figcaption>
 </figure>
 
-Diagram: Datatypen zonder Metagegevens
+### Overige modelelementen
 
-### Overige
+Naast de kernelementen en de datatypen, kent het MIM nog een aantal andere datatypen. Deze modelelementen vallen uiteen in een aantal categorieën. 
 
-View 3a: constraint en keuze.
+ waarvan de functie en struc in het MIM in de volgende paragrafen verder worden toegelicht.
 
-| **MIM metaclass** |
-|-------------------|
-| Constraint        |
-| Keuze             |
+1. `«MIM metaclass»`: <code><a>Constraint</a></code>
+1. `«MIM metaclass»`: <code><a>Keuze</a></code>
+1. `«MIM metaclass»`: <code><a>Relatierol</a></code>
+1. `«MIM metaclass»`: <code><a>Relatierol bron</a></code>
+1. `«MIM metaclass»`: <code><a>Relatierol doel</a></code>
+1. `«MIM metaclass»`: <code><a>Externe koppeling</a></code>
+1. `«MIM metaclass»`: <code><a>Informatiemodel</a></code>
+1. `«MIM metaclass»`: <code><a>Domein</a></code>
+1. `«MIM metaclass»`: <code><a>Extern</a></code>
+1. `«MIM metaclass»`: <code><a>View</a></code>
 
-De betekenis van deze modelelementen en de beschrijvingen ervan staan in [Overige modelelementen](#Overige-modelelementen)
+#### Constraint en Keuze
 
-In diagram vorm:
+De `Keuze` en de `Constraint` zijn verschillende manieren om een voorwaarde of een beperking op te leggen aan een modelelement. Beide methoden hebben voor- en nadelen. Meer daarover vind je in de paragrafen [constraint](#constraint) en [keuze](#keuze). Aan de hand van diagrammen wordt hieronder `...`
+
+<aside class="issue" title="Alinea aanvullen. Wat is het doel?"></aside>
+
+##### Constraint in het kort
+
+Een `Constraint` legt voorwaarden of beperkingen op aan een modelelement. Meer informatie vind je in de paragraaf over <code><a>Constraint</a></code>. Het diagram toont in welke situaties een `Contraint` kan worden toegepast.
+
 <figure id="ConstraintsZonderUML">
   <img src="media/ConstraintsZonderUML.png" alt="" />
   <figcaption>Constraint</figcaption>
 </figure>
 
-Diagram: Constraint
+##### Keuze in het kort
 
-**Keuze**
+<aside class="issue" title="Use cases staan ook uitgewerkt in de paragraaf Keuze. Dubbel?"></aside>
 
-Er zijn vier situaties/use cases waarin een keuze toegepast wordt:
+Een keuze bepaalt dat er meerdere opties mogelijk zijn, waarvan er één gekozen moet worden. Er zijn vier situaties mogelijk waarin een keuze toegepast wordt die in deze paragraaf elk aan de hand van een voorbeeld worden uitgewerkt. Keuze tussen:
+ 1. een keuze tussen datatypen ([voorbeeld](#example-keuze-tussen-datatypen))
+ 1. een keuze tussen 2 of meer attribuutsoorten ([voorbeeld](#example-keuze-tussen-twee-of-meer-attribuutsoorten))
+ 1. een keuze tussen meerdere manieren om 1 betekenisvol attribuutsoort in te vullen ([voorbeeld](#example-keuze-tussen-meerdere-manieren-om-een-betekenisvol-attribuutsoort-in-te-vullen))
+ 1. een keuze tussen relatiedoelen, als nadere invulling van 1 betekenisvolle relatiesoort ([voorbeeld](#example-keuze-tussen-relatiedoelen))
 
-Beschrijving: [Keuze](#keuze)
+Voor elke mogelijkheid is een aparte `«MIM metaclass»` beschikbaar in het metamodel.
+ 1. `«MIM metaclass»`: <code>Keuze</code>
+ 1. `«MIM metaclass»`: <code>Keuze(attribuut)</code>
+ 1. `«MIM metaclass»`: <code>Keuze(relatie)</code>
+ 1. `«MIM metaclass»`: <code>Datatype(keuze)</code>
 
-Keuze tussen:
-- Use case 1: een keuze tussen datatypen
-- Use case 2: een keuze tussen 2 of meer attribuutsoorten
-- Use case 3: een keuze tussen meerdere manieren om 1 betekenisvol attribuutsoort in te vullen
-- Use case 4: een keuze tussen relatiedoelen, als nadere invulling van 1 betekenisvolle relatiesoort
+<aside class="example" title="Keuze tussen datatypen">
+  <p>
+    Dit diagram is uitgewerkt voor <code>Objecttype</code>. Voor <code>Gegevensgroeptype</code> en <code>Relatieklasse</code> geldt hetzelfde patroon. Een <code>Attribuutsoort</code> heeft normaal één <code>Datatype</code>. Als er sprake is van een <code>Keuze</code>, dan is het <code>Attribuutsoort</code> gekoppeld met een <code>Keuze</code> en de <code>Keuze</code> geeft twee of 
+    meer <code>Datatypen</code> aan.
+  </p>
+  <figure id="KeuzeDatatype1">
+    <img src="media/KeuzeDatatype1.png" alt="" />
+    <figcaption>Keuze tussen datatypen</figcaption>
+  </figure>
+</aside>
 
-Voor elk geldt een eigen subset van het metamodel.
+<aside class="example" title="Keuze tussen twee of meer attribuutsoorten">
+  <p>
+    Dit diagram is uitgewerkt voor <code>Objecttype</code>. Voor <code>Gegevensgroeptype</code> en <code>Relatieklasse</code> geldt hetzelfde patroon. Een <code>Objecttype</code> of <code>Gegevensgroep</code> kan normaal een <code>Attribuutsoort</code> hebben met een datatype (de lijn links onder). Als een <code>Objecttype</code> meerdere op zichzelf staande <code>Attribuutsoorten</code> heeft en er sprake is van een <code>Keuze</code> tussen een aantal van deze <code>Attribuutsoorten</code>, dan is het <code>Objecttype</code> gekoppeld met een <code>Keuze</code> (de lijn links boven) en de <code>Keuze</code> geeft twee of meer <code>Attribuutsoorten</code> aan (met elk een eigen <code>Datatype</code>).
+  </p>
+  <figure id="KeuzeAttribuutsoort2">
+    <img src="media/KeuzeAttribuutsoort2.png" alt="" />
+    <figcaption>Keuze tussen attribuutsoorten</figcaption>
+  </figure>
+</aside>
 
-Merk op dat een keuze tussen relatiesoorten ook een mogelijke keuze is, maar deze is vooralsnog niet uitgewerkt en daarom nog niet opgenomen in deze versie.
+<aside class="example" title="Keuze tussen meerdere manieren om één betekenisvol attribuutsoort in te vullen">
+  <p>
+    Dit diagram is uitgewerkt voor <code>Objecttype</code>. Voor <code>Gegevensgroeptype</code> en <code>Relatieklasse</code> geldt hetzelfde patroon. Een <code>Objecttype</code> of <code>Gegevensgroep</code> kan normaal een <code>Attribuutsoort</code> hebben met een <code>Datatype</code> (de lijn links). Als er sprake is van een <code>Attribuutsoort</code> die op meerdere manieren ingevuld kan worden met een <code>Keuze</code> hiertussen, dan is het <code>Attribuutsoort</code> niet gekoppeld met een <code>Datatype</code>, maar dan is het <code>Attribuutsoort</code> gekoppeld met een <code>Keuze</code> en de <code>Keuze</code> geeft twee of meer <code>Attribuutsoorten</code> aan (met elk een eigen <code>Datatype</code>).
+  </p>
+  <figure id="KeuzeAttribuutsoort3">
+    <img src="media/KeuzeAttribuutsoort3.png" alt="" />
+    <figcaption>Keuze tussen attribuutsoorten binnen een attribuutsoort</figcaption>
+  </figure>
+</aside>
 
-In diagramvorm:
+<aside class="example" title="Keuze tussen relatiedoelen">
+  <p>
+    Als nadere invulling van één betekenisvolle <code>Relatiesoort</code>. Dit diagram is uitgewerkt voor <code>Objecttype</code>. Voor <code>Gegevensgroeptype</code> geldt hetzelfde patroon, behalve dat een <code>Gegevensgroeptype</code> geen doel mag zijn van een <code>Relatiesoort</code>. Een <code>Objecttype</code> of <code>Gegevensgroep</code> kan normaal een <code>Relatiesoort</code> hebben, die gekoppeld is aan een <code>Objecttype</code>. Als er sprake is van een <code>Relatiesoort</code> met een <code>Keuze</code>, dan is het <code>Relatiedoel</code> van de <code>Relatiesoort</code> niet gekoppeld aan 1 <code>Objecttype</code>, maar dan is het <code>Objecttype</code> gekoppeld aan een <code>Keuze</code> en deze <code>Keuze</code> geeft 2 of meer <code>Relatiedoelen</code> aan.
+  </p>
+  <figure id="KeuzeRelatiedoel4">
+    <img src="media/KeuzeRelatiedoel4.png" alt="" />
+    <figcaption>Keuze tussen relatiedoelen</figcaption>
+  </figure>
+</aside>
 
-*Use case 1: Keuze tussen datatypen*
+<aside class="note" title="Keuze tussen relatiesoorten">
+  Merk op dat een <strong>keuze tussen relatiesoorten</strong> óók een mogelijke keuze is. Deze opties is vooralsnog niet uitgewerkt en daarom nog niet opgenomen in deze versie.
+</aside>
 
-Dit diagram is uitgewerkt voor Objecttype. Voor Gegevensgroeptype en Relatieklasse geldt hetzelfde patroon.
+#### Relatiesoort en relatierol
 
-1 attribuutsoort heeft normaal 1 datatype. Als er sprake is van een keuze, dan is het attribuutsoort gekoppeld met een keuze en de keuze geeft 2 of meer datatypen aan.
+Uitwerking van de structuur en samenhang van relatierol, bron en doel.
 
-<figure id="KeuzeDatatype1">
-  <img src="media/KeuzeDatatype1.png" alt="" />
-  <figcaption>Keuzen tussen datatypen</figcaption>
-</figure>
-
-Diagram: Keuze tussen datatypen
-
-*Use case 2: Keuze tussen 2 of meer attribuutsoorten*
-
-Dit diagram is uitgewerkt voor Objecttype. Voor Gegevensgroeptype en Relatieklasse geldt hetzelfde patroon.
-
-Een objecttype of gegevensgroep kan normaal een attribuutsoort hebben met een datatype (de lijn links onder). Als een objecttype meerdere op zichzelf staande attribuutsoorten heeft en er sprake is van een keuze tussen een aantal van deze attribuutsoorten, dan is het objecttype gekoppeld met een keuze (de lijn links boven) en de keuze geeft 2 of meer attribuutsoorten aan (met elk een eigen datatype).
-
-<figure id="KeuzeAttribuutsoort2">
-  <img src="media/KeuzeAttribuutsoort2.png" alt="" />
-  <figcaption>Keuze tussen attribuutsoorten</figcaption>
-</figure>
-
-Diagram: Keuze tussen attribuutsoorten. Patroon geldt ook voor Gegevensgroeptype en Relatieklasse
-
-*Use case 3: Keuze tussen meerdere manieren om 1 betekenisvol attribuutsoort in te vullen*
-
-Dit diagram is uitgewerkt voor Objecttype. Voor Gegevensgroeptype en Relatieklasse geldt hetzelfde patroon.
-
-Een objecttype of gegevensgroep kan normaal een attribuutsoort hebben met een datatype (de lijn links). Als er sprake is van een attribuutsoort die op meerdere manieren ingevuld kan worden met een keuze hiertussen, dan is het attribuutsoort niet gekoppeld met een datatype, maar dan is het attribuutsoort gekoppeld met een keuze en de keuze geeft 2 of meer attribuutsoorten aan (met elk een eigen datatype).
-
-<figure id="KeuzeAttribuutsoort3">
-  <img src="media/KeuzeAttribuutsoort3.png" alt="" />
-  <figcaption>Keuze tussen attribuutsoorten binnen een attribuutsoort</figcaption>
-</figure>
-
-Diagram: Keuze tussen attribuutsoorten binnen een attribuutsoort. Patroon geldt ook voor Gegevensgroeptype en Relatieklasse
-
-*Use case 4: Keuze tussen relatiedoelen, als nadere invulling van 1 betekenisvolle relatiesoort*
-
-Dit diagram is uitgewerkt voor Objecttype. Voor Gegevensgroeptype geldt hetzelfde patroon, behalve dat een Gegevensgroeptype geen doel mag zijn van een Relatiesoort.
-
-Een objecttype of gegevensgroep kan normaal een relatiesoort hebben, die gekoppeld is aan een objecttype. Als er sprake is van een relatiesoort met een keuze, dan is het relatiedoel van de relatiesoort niet gekoppeld aan 1 objecttype, maar dan is het objecttype gekoppeld aan een keuze en deze keuze geeft 2 of meer relatiedoelen aan.
-
-<figure id="KeuzeRelatiedoel4">
-  <img src="media/KeuzeRelatiedoel4.png" alt="" />
-  <figcaption>Keuze tussen relatiedoelen</figcaption>
-</figure>
-
-Diagram: Keuze tussen relatiedoelen. Patroon geldt ook voor Gegevensgroeptype, behalve dat een Gegevensgroeptype geen doel mag zijn van een Relatiesoort.
-
-*Relatierol*
-
-View 3b: Relatiesoort en relatierol
-
-| **MIM metaclass**     |
-|-----------------------|
-| Relatierol (abstract) |
-| Relatierol bron       |
-| Relatierol doel       |
+ 1. `MIM metaclass`: <code><a>Relatierol</a></code> (abstract)
+ 1. `MIM metaclass`: <code><a>Relatierol bron</a></code>
+ 1. `MIM metaclass`: <code><a>Relatierol doel</a></code>
 
 In diagramvorm:
 
@@ -226,29 +188,22 @@ In diagramvorm:
   <figcaption>Relatierol</figcaption>
 </figure>
 
-Diagram: Relatierol
-
-*Externe koppeling*
+#### Externe koppeling
 
 View 3c: Externe koppelingen. Deze bestaat uit de volgende modelelementen:
 
-| **MIM metaclass** |
-|-------------------|
-| Externe koppeling |
+ 1. `MIM metaclass`: <code><a>Externe koppeling</a></code>
 
-In diagramvorm:
+<aside class="issue" title="Hier mist een diagram"></aside>
 
-*Groepering*
+#### Groepering
 
 View 3d: Groepering. Deze bestaat uit de volgende modelelementen:
 
-
-| **MIM metaclass** |
-|-------------------|
-| Informatiemodel   |
-| Domein            |
-| Extern            |
-| View              |
+ 1. `MIM metaclass`: <code><a>Informatiemodel</a></code>
+ 1. `MIM metaclass`: <code><a>Domein</a></code>
+ 1. `MIM metaclass`: <code><a>Extern</a></code>
+ 1. `MIM metaclass`: <code><a>View</a></code>
 
 De betekenis van deze modelelementen en de beschrijvingen ervan staan in [Packages](#packages).
 
@@ -259,16 +214,14 @@ In diagramvorm:
   <figcaption>Groepering</figcaption>
 </figure>
 
-Diagram: groepering
-
 ## Modelelementen
 
 ### Objecttypen en attribuutsoorten  
 In deze paragraaf staan alle modelelementen gespecificeerd die gebruikt worden bij
 het maken van een informatiemodel. Bij elk modelelement is een definitie en een toelichting opgenomen.
 
-Voordat het modelelement objecttype gedefinieerd wordt, en andere modelelementen,
-wordt eerst beschreven wat objecten en gegevens zijn en hoe deze zich verhouden tot modelelementen.
+<del>Voordat het modelelement objecttype gedefinieerd wordt, en andere modelelementen,
+wordt eerst beschreven wat objecten en gegevens zijn en hoe deze zich verhouden tot modelelementen.</del>
 
 #### Object en gegeven
 
@@ -281,14 +234,14 @@ Om duidelijk(er) te maken wat wordt bedoeld kijken we eerst naar het begrip ‘o
 #### Object
 
 <aside class="definition">
-  <dfn>Object</dfn>Een ding, een tastbaar iets, in de werkelijkheid, zoals daarnaar gekeken wordt vanuit een bepaald domein.
+  <dfn data-lt="objecten">Object</dfn>Een ding, een tastbaar iets, in de werkelijkheid, zoals daarnaar gekeken wordt vanuit een bepaald domein.
 </aside>
 
 <aside class="note" title="Object vs. Objecttype">
-  Een object is geen modelelement in een informatiemodel. Die worden aangeduid met het MIM-stereotype <a href="#objecttype">«Objecttype»</a>.
+  Een <strong>object is geen modelelement</strong> in een informatiemodel. Die worden aangeduid met het MIM-stereotype <a href="#objecttype">«Objecttype»</a>.
 </aside>
 
-*Toelichting:* Met in de werkelijkheid wordt bedoeld dat het om de daadwerkelijke onderwerpen van gesprek gaat, de verzameling van de concrete tastbare dingen waarover we het hebben. Bijvoorbeeld, de persoon Jan, Paleis 't Loo. Het wordt veelal als niet politiek correct beschouwd mensen als objecten te zien. In dit kader, de informatievoorziening, beschouwen we evenwel natuurlijke en niet-natuurlijke personen wel als objecten. ‘Tastbaar’ moet hierbij ruim geïnterpreteerd worden. Het gaat niet alleen om fysiek herkenbare objecten zoals auto’s, gebouwen en mensen, ook om zogenaamde virtuele objecten waarover binnen het domein door betrokkenen gecommuniceerd wordt zoals kadastrale percelen, (maatschappelijke) activiteiten en processen. Hoe een ‘tastbaar iets’ als een object beschouwd wordt, hangt af van het domein waarvoor dat ‘tastbaar iets’ relevant is. Zo wordt de gebouwde omgeving in het ene domein beschouwd als een verzameling gebouwen terwijl een ander domein daarin panden onderscheidt. Een object is voor een domein relevant als eigenschappen (kenmerken) daarvan van belang zijn voor het functioneren van dat domein.
+**Toelichting**: Met in de werkelijkheid wordt bedoeld dat het om de daadwerkelijke onderwerpen van gesprek gaat, de verzameling van de concrete tastbare dingen waarover we het hebben. Bijvoorbeeld, de persoon Jan, Paleis 't Loo. Het wordt veelal als niet politiek correct beschouwd mensen als objecten te zien. In dit kader, de informatievoorziening, beschouwen we evenwel natuurlijke en niet-natuurlijke personen wel als objecten. ‘Tastbaar’ moet hierbij ruim geïnterpreteerd worden. Het gaat niet alleen om fysiek herkenbare objecten zoals auto’s, gebouwen en mensen, ook om zogenaamde virtuele objecten waarover binnen het domein door betrokkenen gecommuniceerd wordt zoals kadastrale percelen, (maatschappelijke) activiteiten en processen. Hoe een ‘tastbaar iets’ als een object beschouwd wordt, hangt af van het domein waarvoor dat ‘tastbaar iets’ relevant is. Zo wordt de gebouwde omgeving in het ene domein beschouwd als een verzameling gebouwen terwijl een ander domein daarin panden onderscheidt. Een object is voor een domein relevant als eigenschappen (kenmerken) daarvan van belang zijn voor het functioneren van dat domein.
 
 #### Gegeven
 
@@ -299,12 +252,10 @@ Een object heeft kenmerken waarover gegevens bekend zijn.
 </aside>
 
 <aside class="note" title="Gegeven">
-  Een gegeven is geen modelelement in een informatiemodel.
+  Een <strong>gegeven is geen modelelement</strong> in een informatiemodel.
 </aside>
 
-*Toelichting:*
-
-Voorbeelden van gegevens zijn de waardes ‘Jan’ en ‘1-1-1970’ betreffende de naam en de geboortedatum van een object van het type Persoon. Een informatiemodel specificeert niet de gegevens zelf. Een gegeven zoals '1-1-1970' noemen we een attribuut van Jan. In het informatiemodel wordt dit het attribuutsoort 'geboortedatum' of 'overlijdensdatum' van een objecttype Persoon. Merk op dat een gegeven ‘1-1-1970’ zonder duidelijkheid over het soort gegeven c.q. het attribuutsoort 'geboortedatum' of 'overlijdensdatum' geen informatie biedt.
+**Toelichting**: Voorbeelden van gegevens zijn de waardes `"Jan"` en `"1-1-1970"` betreffende de `naam` en de `geboortedatum` van een `«Objecttype»` `Persoon`. Een informatiemodel specificeert niet de gegevens zelf. Een gegeven zoals `"1-1-1970"` noemen we een <a>attribuut</a> van Jan. In het informatiemodel wordt dit het `«Attribuutsoort»` `geboortedatum` of `overlijdensdatum` van een `«Objecttype»` `Persoon`. Merk op dat een gegeven `"1-1-1970"` zonder duidelijkheid over het soort gegeven c.q. het `«Attribuutsoort»` `geboortedatum` of `overlijdensdatum` geen informatie biedt.
 
 Gegevens zijn de objectief waarneembare neerslag of registratie van feiten op een bepaald medium, zodanig dat deze gegevens uitgewisseld en voor langere tijd bewaard kunnen worden. Dat kan op papier, in digitale vorm, et cetera. Met deze gegevens wordt een model (een selectief deel dus) van de werkelijkheid vastgelegd in de tijd. Ofschoon de werkelijkheid nooit stilstaat, kan deze door het vastleggen van de gegevens toch worden bevroren. 
 Het waargenomen feit dat twee objecten een relatie hebben wordt ook gezien als een gegeven.
@@ -315,38 +266,23 @@ Het waargenomen feit dat twee objecten een relatie hebben wordt ook gezien als e
   <dfn>Objecttype</dfn>De typering van een groep objecten die binnen een domein relevant zijn en als gelijksoortig worden beschouwd.
 </aside>
 
-*Toelichting* Jan, Piet en Marie zijn mensen die vanuit het Burgerzaken-domein
-beschouwd worden als objecten van het type ‘natuurlijk persoon’. In een ander
-domein, ‘de volksmond’, noemen we dit ‘mens’ wat ook een objecttype is. In weer
-een ander domein is Jan van het type ‘vergunninghouder’ en Piet en Marie niet,
-omdat aan hen (nog) nooit een vergunning verleend is. Objecttypen zijn een
-abstractie van de werkelijkheid oftewel we beogen hiermee de werkelijkheid zo
-getrouw mogelijk te beschrijven, binnen de context van het domein. Dit staat
-geheel los van het vastleggen van gegevens over objecten van een type in een
-registratie. Daartoe is veelal een interpretatie nodig (van die werkelijkheid
-cq. die objecttypen) naar eenheden die in een registratie vastgelegd kunnen
-worden (records, entiteiten e.d.) op basis van andere overwegingen.
+**Toelichting**: Jan, Piet en Marie zijn mensen die vanuit het Burgerzaken-domein beschouwd worden als <a>objecten</a> van het `«Objecttype»` `NatuurlijkPersoon`. In een ander domein, ‘de volksmond’, noemen we dit `Mens` wat ook een `«Objecttype»` is. In weer een ander domein is Jan van het `«Objecttype»` `Vergunninghouder` en Piet en Marie niet, omdat aan hen (nog) nooit een vergunning verleend is. Objecttypen zijn een abstractie van de werkelijkheid oftewel we beogen hiermee de werkelijkheid zo getrouw mogelijk te beschrijven, binnen de context van het domein. Dit staat geheel los van het vastleggen van gegevens over objecten van een type in een registratie. Daartoe is veelal een interpretatie nodig (van die werkelijkheid cq. die objecttypen) naar eenheden die in een registratie vastgelegd kunnen worden (records, entiteiten e.d.) op basis van andere overwegingen.
 
-De objecten die in het beschouwde domein onderkend worden zijn zelf nooit abstract. Ze behoren altijd tot een concreet objecttype, en niet tot een abstract objecttype. Abstracte objecttypes worden wel gebruikt in de modellering, om generalisaties aan te duiden en de definitie. Zo kan bij het objecttype Pand bijvoorbeeld aangegeven worden dat dit een 'Element in de fysieke leefomgeving' is, en dat deze laatste als een abstract objecttype gezien moet worden (in ons domein). Meer over abstracte objecttypes is beschreven in [Abstracte objecttypes en concrete objecten](#abstracte-objecttypes-en-concrete-objecten).  
+De objecten die in het beschouwde domein onderkend worden zijn zelf nooit abstract. Ze behoren altijd tot een concreet `«Objecttype»`, en niet tot een abstract `«Objecttype»`. Een abstract `«Objecttype»` wordt wel gebruikt in de modellering, om generalisatie aan te duiden en de definitie. Zo kan bij het `«Objecttype»` `Pand` bijvoorbeeld aangegeven worden dat dit een 'Element in de fysieke leefomgeving' is, en dat deze laatste als een abstract `«Objecttype»` gezien moet worden (in ons domein). Meer over abstracte objecttypen is beschreven in [Abstracte Objecttypen en concrete objecten](#abstracte-objecttypes-en-concrete-objecten).  
 
 #### Attribuutsoort  
 
-Een attribuutsoort is de metaklasse waarmee kenmerken van een objecttype worden vastgelegd. Het zijn de kenmerken waarvoor gegevens worden bijgehouden.  
-Voordat we attribuutsoort definiëren kijken we eerst naar het begrip ‘gegeven’.
+Een `«Attribuutsoort»` is de metaklasse waarmee kenmerken van een `«Objecttype»` worden vastgelegd. Het zijn de kenmerken waarvoor gegevens worden bijgehouden. Voordat we `«Attribuutsoort»` definiëren kijken we eerst naar het begrip <a>gegeven</a>.
 
-<aside class="definition">
-  <dfn>Attribuutsoort</dfn>De typering van gelijksoortige gegevens die voor een objecttype van toepassing is.
+<aside class="issue" title="Ontbrekende tekst of referentie">
+  Hier lijkt uitleg over <i>gegeven</i> te missen. Maar misschien volstaat het om een link op te nemen naar de term <i>gegeven</i>.
 </aside>
 
-*Toelichting*
-De gegevens Jan en Katrien worden als gelijksoortig gezien en worden daarom ondergebracht in attribuutsoort 'naam'.
-Je kan ook zeggen, het objecttype Persoon heeft een attribuutsoort 'naam' en deze is geschikt om gegevens in te plaatsen.
+<aside class="definition">
+  <dfn data-lt="attribuut">Attribuutsoort</dfn>De typering van gelijksoortige gegevens die voor een objecttype van toepassing is.
+</aside>
 
-Aan elk objecttype worden nul, één of meer Attribuutsoorten toegekend. In een informatiemodel
-worden alleen voor het domein relevante attribuutsoorten opgenomen bij een objecttype.
-
-Attribuutsoorten worden ook wel kenmerken of eigenschappen genoemd. Dit zijn het ook, maar er zijn
-andere kenmerken, zo is een relatiesoort ook een kenmerk of eigenschap.  
+**Toelichting**: De gegevens `"Jan"` en `"Katrien"` worden als gelijksoortig gezien en worden daarom ondergebracht in `«Attribuutsoort»` `naam`. Je kan ook zeggen, het `«Objecttype»` `Persoon` heeft een Attribuutsoort `naam` en deze is geschikt om gegevens in te plaatsen. Aan elk `«Objecttype»` worden nul, één, of meer attribuutsoorten toegekend. In een informatiemodel wordt alleen een voor het domein relevant `«Attribuutsoort»` opgenomen bij een `«Objecttype»`. Attribuutsoorten worden ook wel _kenmerken_ of _eigenschappen_ genoemd. Dit zijn het ook, maar ook andere modelelementen vallen onder deze omschrijving. Zo is een `«Relatiesoort»` ook een kenmerk of eigenschap.  
 
 #### Gegevensgroep
 
@@ -354,13 +290,11 @@ andere kenmerken, zo is een relatiesoort ook een kenmerk of eigenschap.
   <dfn>Gegevensgroep</dfn>Een typering van een groep van gelijksoortige gegevens die voor een objecttype van toepassing is.
 </aside>
 
-*Toelichting:* Dit modelelement verzorgt de modelmatige aankoppeling van een
-gegevensgroeptype aan het objecttype waartoe een gegevensgroeptype onlosmakelijk
-behoort.
+<aside class="issue" title="Wat hoort bij de defintie?">
+  Hoort de tweede zin nog bij de definitie, of hoort dat eigenlijk thuis in de toelichting?
+</aside>
 
-De groep van gegevens is een kenmerk van een object. De gegevensgroep is een
-betekenisvol kenmerk van een objecttype. De gegevensgroep heeft altijd als type
-een gegevensgroeptype.
+**Toelichting**: Dit modelelement verzorgt de modelmatige aankoppeling van een <code>«<a>Gegevensgroeptype</a>»</code> aan het <code>«<a>Objecttype</a>»</code> waartoe een `«Gegevensgroeptype»` onlosmakelijk behoort. De groep van gegevens is een kenmerk van een object. De `«Gegevensgroep»` is een betekenisvol kenmerk van een `«Objecttype»`. De `«Gegevensgroep»` heeft altijd als type een `«Gegevensgroeptype»`.
 
 #### Gegevensgroeptype
 
@@ -368,8 +302,12 @@ een gegevensgroeptype.
   <dfn>Gegevensgroeptype</dfn>Een groep van met elkaar samenhangende attribuutsoorten. Een gegevensgroeptype is altijd een type van een gegevensgroep.
 </aside>
 
-*Toelichting:* De attribuutsoorten van het gegevensgroeptype zijn semantisch
-gezien eigenschappen van het objecttype. Echter, vanwege samenhangend gedrag (ze
+<aside class="issue" title="Later aanpassen">
+  Deze tekst nog niet redigeren: er volgen nog inhoudelijke wijzigingen.
+</aside>
+
+**Toelichting**: Een `«Attribuutsoort»` van een `«Gegevensgroeptype»` is semantisch
+gezien een eigenschap van een `«Objecttype»`. Echter, vanwege samenhangend gedrag (ze
 horen semantisch bij elkaar, ze wijzigen bijvoorbeeld gelijktijdig e.d.) zijn
 deze ondergebracht in een apart modelelement. Het onderbrengen van
 attribuutsoorten in een groep c.q. in het modelelement gegevensgroeptype, is een
@@ -379,17 +317,11 @@ dus attribuutsoorten van het objecttype, maar dan ondergebracht in een
 gegevensgroeptype. De gegevensgroep als geheel wordt daarom expliciet niet
 gezien als zijnde één attribuutsoort van een object.
 
-*Toelichting:* bijvoorbeeld: in de BRK heeft een schip een motor en de motor en de motor heeft een aantal eigenschappen. De BRK beschouwt een persoon als eigenaar van een schip, er kunnen geen afzonderlijke eigenaren zijn van elk van de motoren van een schip. In de BRK kan het eigendom van een Motor dan ook niet worden overgedragen aan een ander persoon. Een motor wordt daarom gezien als een eigenschap van het object schip, en omdat de motor meerdere eigenschappen heeft, worden deze ondergebracht in een gegevensgroeptype. In een ander informatiemodel, zoals van een motorfabriek, zou de Motor wel een objecttype kunnen zijn, omdat het daar wel hét onderwerp van gesprek is.
+**Toelichting**: bijvoorbeeld: in de BRK heeft een schip een motor en de motor en de motor heeft een aantal eigenschappen. De BRK beschouwt een persoon als eigenaar van een schip, er kunnen geen afzonderlijke eigenaren zijn van elk van de motoren van een schip. In de BRK kan het eigendom van een Motor dan ook niet worden overgedragen aan een ander persoon. Een motor wordt daarom gezien als een eigenschap van het object schip, en omdat de motor meerdere eigenschappen heeft, worden deze ondergebracht in een gegevensgroeptype. In een ander informatiemodel, zoals van een motorfabriek, zou de Motor wel een objecttype kunnen zijn, omdat het daar wel hét onderwerp van gesprek is.
 
-Een gegevensgroeptype is meestal het type van slechts één gegevensgroep, omdat
-de semantiek meestal exclusief is voor één objecttype. Echter, hergebruik is
-mogelijk (als de semantiek niet exclusief is voor één objecttype). Voorwaarde
-voor hergebruik is dat de definitie (de definitie en toelichting, inclusief alle
-metadata aspecten) dan inderdaad gelijk zijn, voor alle objecttypes die
-hergebruik maken van het gegevensgroeptype.
+Een gegevensgroeptype is meestal het type van slechts één gegevensgroep, omdat de semantiek meestal exclusief is voor één objecttype. Echter, hergebruik is mogelijk (als de semantiek niet exclusief is voor één objecttype). Voorwaarde voor hergebruik is dat de definitie (de definitie en toelichting, inclusief alle metadata aspecten) dan inderdaad gelijk zijn, voor alle objecttypes die hergebruik maken van het gegevensgroeptype.
 
-Een gegevensgroeptype kan, naast attribuutsoorten en relatiesoorten, ook zelf weer gegevensgroeptypen
-bevatten.
+Een gegevensgroeptype kan, naast attribuutsoorten en relatiesoorten, ook zelf weer gegevensgroeptypen bevatten.
 
 Een gegevensgroeptype is verbonden met een objecttype, via het modelelement
 Gegevensgroep.
@@ -735,9 +667,7 @@ Diagram: [Overige](#overige)
 *Toelichting:* Een constraint kan vastgelegd worden bij alle modelelementen. Echter, meestal
 komt een constraint voor bij een objecttype, om te aan te geven dat de
 constraint geldt voor 2 (of meer) eigenschappen van een objecttype, of om een
-bijzondere specificatie toe te voegen die niet via de bestaande modelelementen gelegd kan worden zoals een 11-proef.
-
-Een constraint wordt altijd in gewone tekst omschreven en kan optioneel als formele specificatie worden aangegeven.
+bijzondere specificatie toe te voegen die niet via de bestaande modelelementen gelegd kan worden zoals een 11-proef. Een constraint wordt altijd in gewone tekst omschreven en kan optioneel als formele specificatie worden aangegeven.
 
 #### Keuze
 
@@ -1337,7 +1267,7 @@ Indien mogelijk is de verwijzing een URI of een URL (als er geen URI is, dan kan
 #### Metagegeven: **Doelformaat**
 
 <aside class="definition">
-  <dfn>Doelformaat</dfn>Het fomaat waarin een waardelijst is gepubliceerd.
+  <dfn>Doelformaat</dfn>Het formaat waarin een waardelijst is gepubliceerd.
 </aside>
 
 *Toelichting*
@@ -1358,7 +1288,7 @@ Voorbeelden hiervan zijn `Characterstring` , `Integer`
 
 *Toepassing:* Codelijst
 
-#### Metagegeven: **Waarde item**
+#### Metagegeven: **Waarde-item**
 
 <aside class="definition">
   <dfn>Waarde-item</dfn>Het item (of element) van de lijst dat de waarde representeert.
@@ -1382,7 +1312,9 @@ Mogelijk is er een profielspecificatie die de specifieke technische toepassing v
 
 *Toepassing:* Codelijst
 
-#### Metagegeven: **Type** (domein van een waarde een gegeven)
+#### Metagegeven: **Type**
+
+Het domein van een waarde van een gegeven.
 
 <aside class="definition">
   <dfn>Type</dfn>Het datatype waarmee waarden van dit modelelement worden vastgelegd.
