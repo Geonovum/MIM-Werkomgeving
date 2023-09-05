@@ -470,7 +470,7 @@ WHERE {
 
 ### Transformatie: Referentielijst
 
-> Een lijst met een opsomming van de mogelijke domeinwaarden van een attribuutsoort, die buiten het model in een externe waardenlijst worden beheerd. De domeinwaarden in de lijst kunnen in de loop van de tijd aangepast, uitgebreid, of verwijderd worden, zonder dat het informatiemodel aangepast wordt (in tegenstelling tot bij een enumeratie).
+> Een lijst met een opsomming van de mogelijke domeinwaarden van een attribuutsoort, die buiten het model in een externe waardelijst worden beheerd. De domeinwaarden in de lijst kunnen in de loop van de tijd aangepast, uitgebreid, of verwijderd worden, zonder dat het informatiemodel aangepast wordt (in tegenstelling tot bij een enumeratie).
 
 Een waardelijst kan verschillende soorten dingen opsommen. Een lijst met waardes, bijv. een opsomming van nummers, maar ook een lijst met concepten, datatypen, of objecten. Het is dan ook niet triviaal om een goede automatische vertaling te bepalen die een waardelijst kan vertalen naar Linked Data.
 
@@ -1207,9 +1207,9 @@ WHERE {
 </pre>
 
 ### transformatie: locatie
-> Als het type van het attribuutsoort een waardenlijst is, dan wordt hier de locatie waar deze te vinden is opgegeven.
+> Als het type van het attribuutsoort een waardelijst is, dan wordt hier de locatie waar deze te vinden is opgegeven.
 
-Een `mim:locatie` wordt direct, zonder aanpassing, overgenomen in het vertaalde model. Daarnaast wordt dit veld gebruikt bij het munten van de URI's van de verschillende modelelementen en het achterhalen van de inhoud van een waardenlijst.
+Een `mim:locatie` wordt direct, zonder aanpassing, overgenomen in het vertaalde model. Daarnaast wordt dit veld gebruikt bij het munten van de URI's van de verschillende modelelementen en het achterhalen van de inhoud van een waardelijst.
 
 ### transformatie: type
 > Het datatype waarmee waarden van deze attribuutsoort worden vastgelegd.

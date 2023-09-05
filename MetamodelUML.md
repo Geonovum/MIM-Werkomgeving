@@ -608,7 +608,7 @@ Externe koppelingen worden naar de volgende aspecten gespecificeerd.
 | **Mogelijk geen waarde**          | 1                  | Algemeen metagegeven. |                                                              |      | *Tagged value*                                               |            |
 | verwijst naar **relatiedoel**     | 0..*       | Binding aan een objecttype. | */target: related Element bij Relationship Element* = UML-Class |    | *association target* = Class       |     |
 
-### Specificatie metagegevens voor waardenlijsten
+### Specificatie metagegevens voor waardelijsten
 
 
 #### «Codelijst»

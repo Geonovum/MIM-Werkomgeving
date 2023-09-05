@@ -493,12 +493,12 @@ een `Definitie` krijgen.
 
 Een datatype waarvan de mogelijke waarden zijn opgesomd in een lijst. De waarde
 van een attribuutsoort moet één van de waarden zijn uit de gespecificeerde
-waardenlijst.
+waardelijst.
 
 #### Referentielijst
 
 <aside class="definition">
-  <dfn>Referentielijst</dfn>De representatie van een lijst met een opsomming van de mogelijke domeinwaarden van een attribuutsoort, die buiten het model in een externe waardenlijst worden beheerd. De domeinwaarden in de lijst kunnen in de loop van de tijd aangepast, uitgebreid, of verwijderd worden, zonder dat het informatiemodel aangepast wordt (in tegenstelling tot bij een enumeratie). De representatie bevat een aantal kenmerken, die overgenomen zijn van de specificatie van de externe waardelijst.
+  <dfn>Referentielijst</dfn>De representatie van een lijst met een opsomming van de mogelijke domeinwaarden van een attribuutsoort, die buiten het model in een externe waardelijst worden beheerd. De domeinwaarden in de lijst kunnen in de loop van de tijd aangepast, uitgebreid, of verwijderd worden, zonder dat het informatiemodel aangepast wordt (in tegenstelling tot bij een enumeratie). De representatie bevat een aantal kenmerken, die overgenomen zijn van de specificatie van de externe waardelijst.
 </aside>
 
 *Toelichting:*
@@ -556,10 +556,10 @@ Alleen deze waarde mag gebruiken worden.
 #### Codelijst
 
 <aside class="definition">
-  <dfn>Codelijst</dfn>De representatie van een lijst met een opsomming van de mogelijke domeinwaarden van een attribuutsoort, die buiten het model in een externe waardenlijst worden beheerd. De domeinwaarden in de lijst kunnen in de loop van de tijd aangepast, uitgebreid, of verwijderd worden, zonder dat het informatiemodel aangepast wordt (in tegenstelling tot bij een enumeratie). De representatie bevat geen kenmerken, voor alle kenmerken wordt verwezen naar de specificatie van de externe waardelijst.
+  <dfn>Codelijst</dfn>De representatie van een lijst met een opsomming van de mogelijke domeinwaarden van een attribuutsoort, die buiten het model in een externe waardelijst worden beheerd. De domeinwaarden in de lijst kunnen in de loop van de tijd aangepast, uitgebreid, of verwijderd worden, zonder dat het informatiemodel aangepast wordt (in tegenstelling tot bij een enumeratie). De representatie bevat geen kenmerken, voor alle kenmerken wordt verwezen naar de specificatie van de externe waardelijst.
 </aside>
 
-*Toelichting:* Zowel referentielijsten als codelijsten zijn in feite waardenlijsten. In tegenstelling echter tot de referentielijst wordt een codelijst *niet* in het informatiemodel beschreven, omdat de definitie en semantiek geheel in de externe waardenlijst staat en niet (nader) geduid hoeft te worden in het informatiemodel zelf. Een codelijst heeft in het informatiemodel daarom geen attributen (en zou voor de definitie alleen hoeven te refereren naar de definitie bij de extern gepubliceerde waardenlijst, maar voor het gemak is de definitie wel opgenomen als metagegeven in dit metamodel). De extern gepubliceerde waardenlijst bevat, naast gewone attributen, ook altijd één specifiek attribuut, met daarin de domeinwaarden die gebruikt mogen/moeten worden in de registratie. In het gebruik is een Codelijst daarom analoog aan een Enumeratie. Welk specifiek attribuut dit is en wat de betekenis daarvan is staat in de codelijst zelf gedefinieerd.
+*Toelichting:* Zowel referentielijsten als codelijsten zijn in feite waardelijsten. In tegenstelling echter tot de referentielijst wordt een codelijst *niet* in het informatiemodel beschreven, omdat de definitie en semantiek geheel in de externe waardelijst staat en niet (nader) geduid hoeft te worden in het informatiemodel zelf. Een codelijst heeft in het informatiemodel daarom geen attributen (en zou voor de definitie alleen hoeven te refereren naar de definitie bij de extern gepubliceerde waardelijst, maar voor het gemak is de definitie wel opgenomen als metagegeven in dit metamodel). De extern gepubliceerde waardelijst bevat, naast gewone attributen, ook altijd één specifiek attribuut, met daarin de domeinwaarden die gebruikt mogen/moeten worden in de registratie. In het gebruik is een Codelijst daarom analoog aan een Enumeratie. Welk specifiek attribuut dit is en wat de betekenis daarvan is staat in de codelijst zelf gedefinieerd.
 
 ### Datatypen
 
@@ -1325,12 +1325,12 @@ koppeling.
 #### Metagegeven: **Locatie**
 
 <aside class="definition">
-  <dfn>Locatie</dfn>Als het type van het attribuutsoort een waardenlijst is, dan wordt hier de locatie waar deze te vinden is opgegeven.
+  <dfn>Locatie</dfn>Als het type van het attribuutsoort een waardelijst is, dan wordt hier de locatie waar deze te vinden is opgegeven.
 </aside>
 
 *Toelichting*
 
-Indien mogelijk is de verwijzing een URI of een URL (als er geen URI is, dan kan dit een URL zijn, waar de waardenlijst op basis van de naam van de waardenlijst te vinden is). Bijvoorbeeld: 'http://www.organisatie.nl/schemas/waardelijsten/NaamWaardelijst'
+Indien mogelijk is de verwijzing een URI of een URL (als er geen URI is, dan kan dit een URL zijn, waar de waardelijst op basis van de naam van de waardelijst te vinden is). Bijvoorbeeld: 'http://www.organisatie.nl/schemas/waardelijsten/NaamWaardelijst'
 
 *Toepassing*: de modelelementen die een waardelijst zijn.
 
