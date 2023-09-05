@@ -11,9 +11,10 @@ In **versie 1.2** zijn de volgende issues verwerkt:
 | [245](https://github.com/Geonovum/MIM-Werkomgeving/issues/245)  | In 2.3.4 beschreven dat de velden `Definitie` en `Toelichting` rijke tekst mogen bevatten.    | 
 | [305](https://github.com/Geonovum/MIM-Werkomgeving/issues/305)  | Toevoegen binding `heeft gegevensgroep` aan tabel metagegevens `«Relatieklasse»`              |
 | [310](https://github.com/Geonovum/MIM-Werkomgeving/issues/310)  | MIM 1.1.1 bevatte twee paragrafen met waardelijsten. Deze zijn nu samengevoegd.               |
-| [314](https://github.com/Geonovum/MIM-Werkomgeving/issues/314)  | Schrijfwijze meervoud _datatype_ nu consistent met uitgang `-n`: _datatypen_.                 |
+| [314](https://github.com/Geonovum/MIM-Werkomgeving/issues/314)  | Schrijfwijze meervoud _datatype_ nu eenduidig met uitgang `-n`: _datatypen_.                  |
 | [318](https://github.com/Geonovum/MIM-Werkomgeving/issues/318)  | Alle figuren voorzien van `<figure>` tags en bijschriften. Nu vindbaar in ToF.                |
 | [322](https://github.com/Geonovum/MIM-Werkomgeving/issues/322)  | Alle definities voorzien van `<dfn>` tag en zichtbaar format.                                 |
+| [333](https://github.com/Geonovum/MIM-Werkomgeving/issues/333)  | Schrijfwijze `Waardelijst` nu eenduidig zonder `-n`: (_waarde_, i.p.v. _waarden_)             |
 
 <!-- | [148](https://github.com/Geonovum/MIM-Werkomgeving/issues/148)  | Toevoegen beschrijving uitzondering: wanneer `Relatieklasse` modelleren als `Objecttype`.     | -->
 <!-- | [202](https://github.com/Geonovum/MIM-Werkomgeving/issues/202)  | Aanpassen beschrijving `Populatie` & `Kwaliteit`, toevoegen voorbeelden toepassing `Populatie`|  -->
