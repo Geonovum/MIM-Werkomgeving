@@ -61,7 +61,6 @@ De ten opzichte van MIM versie 1.0.1 gewijzigde modelelementen zijn in rood aang
   <figcaption>Kern zonder metagegevens</figcaption>
 </figure>
 
-media/KernZonderMetagegevens.png
 
 Kern zonder Metagegevens
 
@@ -87,7 +86,6 @@ Kern zonder Metagegevens
   <figcaption>Datatypen zonder metagegevens</figcaption>
 </figure>
 
-media/DatatypenZonderMetagegevens.png
 
 Datatypen zonder Metagegevens
 
@@ -112,8 +110,6 @@ Constraint
   <img src="media/ConstraintsZonderMetagegevens.png" alt="" />
   <figcaption>Constraint zonder metagegevens</figcaption>
 </figure>
-
-media/ConstraintsZonderMetagegevens.png
 
 *Constraint*
 
@@ -149,9 +145,6 @@ Dit UML is uitgewerkt voor Objecttype. Voor Gegevensgroeptype en Relatieklasse g
   <figcaption>Keuze tussen datatypen</figcaption>
 </figure>
 
-media/KeuzeDatatype1UML.png
-
-
 Modellering van deze Keuze in een informatiemodel: 
 - Modelleer een _UML-Datatype_ met stereotype _keuze_. 
 - Modelleer hierin 2 of meer MIM-Datatypen: neem hiervoor eerst een _UML-attribute_ met stereotype _keuze_ op in de Keuze zoals gemodelleerd in punt 1, dit UML-attribute krijgt als typering het gewenste (MIM) Datatype. Merk op dat dit extra UML-attribute is zelf geen keuze mogelijkheid is, de keuze is immers tussen de datatypen. 
@@ -165,10 +158,8 @@ Dit UML is uitgewerkt voor Objecttype. Voor Gegevensgroeptype en Relatieklasse g
 
 <figure id="KeuzeAttribuutsoort2UML">
   <img src="media/KeuzeAttribuutsoort2UML.png" alt="" />
-  <figcaption>Keuze tussen 2 of meer attribuutsoorten</figcaption>
+  <figcaption>Keuze tussen twee of meer attribuutsoorten</figcaption>
 </figure>
-
-media/KeuzeAttribuutsoort2UML.png
 
 Modellering van het Keuze in een informatiemodel: 
 - Modelleer in UML een _UML-Class_ met stereotype _keuze_. 
@@ -185,14 +176,12 @@ Dit UML is uitgewerkt voor Objecttype. Voor Gegevensgroeptype en Relatieklasse g
 
 <figure id="KeuzeAttribuutsoort3UML">
   <img src="media/KeuzeAttribuutsoort3UML.png" alt="" />
-  <figcaption>Keuze tussen meerdere manieren om 1 betekenisvol attribuutsoort in te vullen</figcaption>
+  <figcaption>Keuze tussen meerdere manieren om één betekenisvol attribuutsoort in te vullen</figcaption>
 </figure>
-
-media/KeuzeAttribuutsoort3UML.png
 
 Modellering van de Keuze in een informatiemodel: 
 - Modelleer in UML een _UML-Class_ met stereotype _keuze_. 
-- Modelleer hierin 2 of meer keuze mogelijkheden door voor elke keuze mogelijkheid een UML-Property (attribute) te modelleren met stereotype _keuze_ (en deze UML-Property heeft als datatype een MIM-Datatype). Aan dit stereotype _keuze_ is te zien dat deze _UML-Property (attribute)_ zelf **geen** (MIM) Attribuutsoort is van het objecttype. Immers, alleen een met stereotype Attribuutsoort aangeduid UML-attribute is een (MIM) Attribuutsoort. 
+- Modelleer hierin twee of meer keuze mogelijkheden door voor elke keuze mogelijkheid een UML-Property (attribute) te modelleren met stereotype _keuze_ (en deze UML-Property heeft als datatype een MIM-Datatype). Aan dit stereotype _keuze_ is te zien dat deze _UML-Property (attribute)_ zelf **geen** (MIM) Attribuutsoort is van het objecttype. Immers, alleen een met stereotype Attribuutsoort aangeduid UML-attribute is een (MIM) Attribuutsoort. 
 
 Gebruik de Keuze voor de (MIM) Attribuutsoort: 
 - Modelleer in een (MIM) Objecttype of in een (MIM) Gegevensgroeptype een MIM-Attribuutsoort zoals gebruikelijk, en koppel de hiervoor gemodelleerde Keuze hieraan, via een typering, zoals gebruikelijk.  
@@ -204,10 +193,9 @@ Dit UML is uitgewerkt voor Objecttype. Voor Gegevensgroeptype geldt hetzelfde pa
 
 <figure id="KeuzeRelatiedoel4UML">
   <img src="media/KeuzeRelatiedoel4UML.png" alt="" />
-  <figcaption>Keuze tussen relatiedoelen, als nadere invulling van 1 betekenisvolle relatiesoort</figcaption>
+  <figcaption>Keuze tussen relatiedoelen, als nadere invulling van één betekenisvolle relatiesoort</figcaption>
 </figure>
 
-media/KeuzeRelatiedoel4UML.png
 
 Modellering van het Keuze in een informatiemodel: 
 - Modelleer in UML een _UML-Class_ met stereotype _keuze_. 
@@ -239,7 +227,6 @@ Merk op dat deze tabel niet gaat over de modelelementen waaruit een keuze gemaak
   <figcaption>Relatierol</figcaption>
 </figure>
 
-media/AssociatierollenZonderMetagegevens.png
 
 Relatierol
 
@@ -270,7 +257,6 @@ View 3c: Groepering
   <figcaption>Packages</figcaption>
 </figure>
 
-media/PackagesZonderMetagegevens.png
 
 | **MIM metaclass**     | **Stereotype**    | **Metaclass UML 2.5** |      | **In EA** | **In ...** |
 | --------------------- | ----------------- | --------------------- | ---- | --------- | ---------- |
