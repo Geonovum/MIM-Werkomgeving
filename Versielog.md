@@ -2,7 +2,7 @@
 
 In **versie 1.2** zijn de volgende issues verwerkt:
 
-| Issue                                                           | Omschrijving                                                                                  |
+| Issue                                                           | Samenvatting                                                                                  |
 |-----------------------------------------------------------------|-----------------------------------------------------------------------------------------------|
 | [015](https://github.com/Geonovum/MIM-Werkomgeving/issues/15)   | Toevoegen metagegeven `Eenheid` aan documentatie.                                             |
 | [171](https://github.com/Geonovum/MIM-Werkomgeving/issues/171)  | Aanpassen structuur tekst en figuren m.b.t. `Keuze`                                           |
