@@ -367,6 +367,24 @@ Alleen toevoegen als het attribuutsoort een waarde van een meting of waarnemimg 
 | -------------------------------- | -------- | ---------------------------------------- | ------------------------------------- | -- | -------------- | -------- |
 | **Eenheid**  |0..1      | Alleen opnemen bij een meetgegeven of waarneming     | |    | *Tagged value*          |     |
 
+#### «Gegevensgroep»
+
+De gegevensgroepen worden naar de volgende aspecten gespecificeerd:
+
+| **Aspect**                  | **Kardinaliteit** | **Toelichting**                | **In UML 2.5**                        |    | **In EA**      | **In ...** |
+| -------------------------------- | -------- | ---------------------------------------- | ------------------------------------- | -- | -------------- | -------- |
+| **Naam**             | 1            | Algemeen metagegeven. | *name van de metaclass Named element* |    | *Name*         |     |
+| **Alias**            | 0..1         | Algemeen metagegeven. | *UML-Property*                        |    | *Alias*        |     |
+| **Herkomst**         | 1            | Algemeen metagegeven. |                                       |    | *tagged value* |     |
+| **Begrip**           | 0..\*        | Algemeen metagegeven. |                                       |    | *Tagged value* |     |
+| **Definitie**        | 1            | Algemeen metagegeven. | *Body van de metaclass Comment*       |    | *Notes*        |     |
+| **Herkomst definitie** | 1          | Algemeen metagegeven. |                                       |    | *Tagged value* |     |
+| **Toelichting√**     | 0..1         | Algemeen metagegeven. |                                       |    | *Tagged value* |     |
+| **Datum opname**     | 1            | Algemeen metagegeven. |                                       |    | *Tagged value* |     |
+| **Kardinaliteit**    | 1            | Algemeen metagegeven. | *lowerValue en upperValue van de metaclass Multiplicity Element* |      | *Multiplicity van de source role van de bijbehorende composite relatie* |            |
+| **Authentiek**       | 1            | Algemeen metagegeven. |                                       |    | *Tagged value* |     |
+| heeft **gegevensgroeptype**   | 1   | Binding aan een gegevensgroeptype. | *owned element* = UML-Class | | *type* = Class |     |
+
 #### «Gegevensgroeptype»
 
 De gegevensgroeptypen worden naar de volgende aspecten gespecificeerd:
@@ -390,25 +408,6 @@ De gegevensgroeptypen worden naar de volgende aspecten gespecificeerd:
 | heeft **externe koppeling**       | 0..*               | Binding aan een externe koppeling.                                 | *owned element* = UML-Relationship                              |     | *association*  |            |
 | verwijst naar **supertype**       | 0..*               | Binding aan een generalisatie (naar een ander gegevensgroeptype).  | *owned element* = UML-Relationship                              |     | *association*  |            |
 
-#### «Gegevensgroep»
-
-De gegevensgroepen worden naar de volgende aspecten gespecificeerd:
-
-| **Aspect**                  | **Kardinaliteit** | **Toelichting**                | **In UML 2.5**                        |    | **In EA**      | **In ...** |
-| -------------------------------- | -------- | ---------------------------------------- | ------------------------------------- | -- | -------------- | -------- |
-| **Naam**             | 1            | Algemeen metagegeven. | *name van de metaclass Named element* |    | *Name*         |     |
-| **Alias**            | 0..1         | Algemeen metagegeven. | *UML-Property*                        |    | *Alias*        |     |
-| **Herkomst**         | 1            | Algemeen metagegeven. |                                       |    | *tagged value* |     |
-| **Begrip**           | 0..\*        | Algemeen metagegeven. |                                       |    | *Tagged value* |     |
-| **Definitie**        | 1            | Algemeen metagegeven. | *Body van de metaclass Comment*       |    | *Notes*        |     |
-| **Herkomst definitie** | 1          | Algemeen metagegeven. |                                       |    | *Tagged value* |     |
-| **Toelichting√**     | 0..1         | Algemeen metagegeven. |                                       |    | *Tagged value* |     |
-| **Datum opname**     | 1            | Algemeen metagegeven. |                                       |    | *Tagged value* |     |
-| **Kardinaliteit**    | 1                  | Algemeen metagegeven.                                  | *lowerValue en upperValue van de metaclass Multiplicity Element* |      | *Multiplicity van de source role van de bijbehorende composite relatie* |            |
-| **Authentiek**                   | 1                  | Algemeen metagegeven.                                  |                                                              |      | *Tagged value*                                               |            |
-| **Indicatie materiële historie √**          | 0..1                  | Algemeen metagegeven - vereist een duiding in een extentie hoe dit zich verhoudt tot ditzelfde metagegeven in de kenmerken in het gegevensgroeptype.    |      | *Tagged value* |            |
-| **Indicatie formele historie √**            | 0..1                  | Algemeen metagegeven - vereist een duiding in een extentie hoe dit zich verhoudt tot ditzelfde metagegeven in de kenmerken in het gegevensgroeptype.                                        |                                                              |      | *Tagged value* |            |
-| heeft **gegevensgroeptype**   | 1       | Binding aan een gegevensgroeptype.     | *owned element* = UML-Class |    | *type* = Class          |     |
 
 ### Specificatie metagegevens voor relaties
 
