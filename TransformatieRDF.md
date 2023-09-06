@@ -138,7 +138,7 @@ Onderstaande tabellen geven een overzicht van alle transformaties en een referen
 |`mim:lengte`|`sh:minLength`, `sh:maxLength`|[lengte](#transformatie-lengte)|
 |`mim:patroon`|`mim:patroon`|[patroon](#transformatie-patroon)|
 |`mim:formeelPatroon`|`sh:pattern`|[formeel patroon](#transformatie-formeel-patroon)|
-|`mim:uniekeAanduiding`|`mim:uniekeAanduiding`|[unieke aanduiding](#transformatie-uniekeaanduiding)
+|`mim:uniekeAanduiding`|`mim:uniekeAanduiding`|[unieke aanduiding](#transformatie-unieke-aanduiding)
 |`mim:populatie`|`mim:populatie`|[populatie](#transformatie-populatie)|
 |`mim:kwaliteit`|`mim:kwaliteit`|[kwaliteit](#transformatie-kwaliteit)|
 |`mim:indicatieAbstractObject`|`sh:propertyShape` en `mim:indicatieAbstractObject`|[indicatie abstract object](#transformatie-indicatie-abstract-object)|
