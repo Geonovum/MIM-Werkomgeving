@@ -258,6 +258,8 @@ View 3c: Groepering
 Deze paragraaf is een aanvulling op de paragraaf *'Specificatie metagegevens'*
 in het hoofdstuk [Metamodel Algemeen](#metamodel-algemeen).
 
+<aside class="issue" title="Tekst verplaatsen naar andere plek in dit hoofdstuk">
+
 >   **Alias**
 
 De alternatieve weergave van de naam.
@@ -279,6 +281,8 @@ true`.
 
 Als een relatiesoort identificerend is, dan krijgt dit kenmerk in UML een
 stereotype `«id»`
+
+</aside>
 
 <aside class='note'>
   <p>In de hierna volgende paragrafen worden de metagegevens per modelelement gespecificeerd in tabellen. Per metagegeven zijn de volgende onderdelen gespecificeerd:</p>
