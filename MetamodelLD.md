@@ -215,7 +215,7 @@ Deze paragraaf is een aanvulling op de paragraaf *'Specificatie metagegevens'* i
 | **MIM metagegeven** | **Meta-eigenschap in RDF** | **RDF type** | **Grondslag** |
 |---------------------|----------------------------|--------------|---------------|
 | aggregatietype | [`mim:aggregatietype`](http://bp4mc2.org/def/mim#aggregatietype) | owl:ObjectProperty | [grondslag](#metagegeven-aggregatietype) |
-| alias | [`mim:naam`](http://bp4mc2.org/def/mim#naam) | owl:DatatypeProperty | [grondslag](#metagegeven-alias) |
+| alias | [`mim:alias`](http://bp4mc2.org/def/mim#alias) | owl:DatatypeProperty | [grondslag](#metagegeven-alias) |
 | attribuut | [`mim:attribuut`](http://bp4mc2.org/def/mim#attribuut) | owl:ObjectProperty | [grondslag](#metagegeven-attribuut) |
 | authentiek | [`mim:authentiek`](http://bp4mc2.org/def/mim#authentiek) | owl:ObjectProperty | [grondslag](#metagegeven-authentiek) |
 | begrip | [`mim:begrip`](http://bp4mc2.org/def/mim#begrip) | owl:ObjectProperty | [grondslag](#metagegeven-begrip) |
