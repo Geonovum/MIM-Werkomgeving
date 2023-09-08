@@ -17,8 +17,8 @@ In **versie 1.2** zijn de volgende issues verwerkt:
 | [321](https://github.com/Geonovum/MIM-Werkomgeving/issues/321)  | Structureren document door toevoegen tussenkoppen met tag, zodat ze terugkomen in de index    |
 | [322](https://github.com/Geonovum/MIM-Werkomgeving/issues/322)  | Alle definities voorzien van `<dfn>` tag en zichtbaar format.                                 |
 | [333](https://github.com/Geonovum/MIM-Werkomgeving/issues/333)  | Schrijfwijze `Waardelijst` nu eenduidig zonder `-n`: (_waarde_, i.p.v. _waarden_)             |
+| [336](https://github.com/Geonovum/MIM-Werkomgeving/issues/336)  | Aanpassen naamgeving en verwijzing van `Alias` in tabel specificatie metagegevens in LD       |
 
 <!-- | [148](https://github.com/Geonovum/MIM-Werkomgeving/issues/148)  | Toevoegen beschrijving uitzondering: wanneer `Relatieklasse` modelleren als `Objecttype`.     | -->
 <!-- | [224](https://github.com/Geonovum/MIM-Werkomgeving/issues/224)  | Metagegevens historie niet meer van toepassing op `Gegevensgroep`.                            | -->
 <!-- | [238](https://github.com/Geonovum/MIM-Werkomgeving/issues/238)  | Opnemen toelichting hoe omgaan met een gegeven dat uit meerdere 'data-delen' bestaat.         |  -->
-
