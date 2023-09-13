@@ -317,6 +317,7 @@ De objecttypen worden naar de volgende aspecten gespecificeerd:
 | heeft **relatiesoort**        | 0..*       | Binding aan een relatiesoort of relatieklasse. | *owned element* = UML-Relationship |    | *association*        |     |
 | heeft **externe koppeling**   | 0..*    | Binding aan een externe koppeling.             | *owned element* = UML-Relationship |    | *association*        |     |
 | verwijst naar **supertype** * | 0..*    | Binding aan een generalisatie (naar een ander objecttype).                 | *owned element* = UML-Relationship |    | *association*        |     |
+| heeft **Constraint** | 0..* | Binding aan een constraint. |   | | *Constraint* | | 
 
 #### «Attribuutsoort»
 
@@ -345,6 +346,7 @@ De attribuutsoorten worden naar de volgende aspecten gespecificeerd:
 | **Mogelijk geen waarde**                    | 1                  | Algemeen metagegeven.                                        |                                                              |      | *Tagged value* |            |
 | **Identificerend**                          | 0..1               | Algemeen metagegeven.                                        | *isID bij de metaclass Property*                             |      | *isID*         |            |
 | heeft **datatype**  | 1       | Binding aan een datatype.     | *datatype* = UML-datatype |    | *type* = datatype          |     |
+| heeft **Constraint** | 0..* | Binding aan een constraint. |   | | *Constraint* | | 
 
 Alleen toevoegen als het attribuutsoort een waarde van een meting of waarnemimg betreft en de eenheid als metagegeven opgenomen moet worden.
 
@@ -369,6 +371,7 @@ De gegevensgroepen worden naar de volgende aspecten gespecificeerd:
 | **Kardinaliteit**    | 1            | Algemeen metagegeven. | *lowerValue en upperValue van de metaclass Multiplicity Element* |      | *Multiplicity van de source role van de bijbehorende composite relatie* |            |
 | **Authentiek**       | 1            | Algemeen metagegeven. |                                       |    | *Tagged value* |     |
 | heeft **gegevensgroeptype**   | 1   | Binding aan een gegevensgroeptype. | *owned element* = UML-Class | | *type* = Class |     |
+| heeft **Constraint** | 0..* | Binding aan een constraint. |   | | *Constraint* | | 
 
 #### «Gegevensgroeptype»
 
@@ -392,7 +395,7 @@ De gegevensgroeptypen worden naar de volgende aspecten gespecificeerd:
 | heeft **relatiesoort**            | 0..*               | Binding aan een relatiesoort of relatieklasse.                     | *owned element* = UML-Relationship                              |     | *association*  |            |
 | heeft **externe koppeling**       | 0..*               | Binding aan een externe koppeling.                                 | *owned element* = UML-Relationship                              |     | *association*  |            |
 | verwijst naar **supertype**       | 0..*               | Binding aan een generalisatie (naar een ander gegevensgroeptype).  | *owned element* = UML-Relationship                              |     | *association*  |            |
-
+| heeft **Constraint** | 0..* | Binding aan een constraint. |   | | *Constraint* | | 
 
 ### Relaties in UML
 
@@ -445,6 +448,7 @@ De relatiesoorten worden naar de volgende aspecten gespecificeerd.
 | **Indicatie afleidbaar**          | 1                  | Algemeen metagegeven. | *isDerived bij UML metaclass Assocation*                     |      | *isDerived*                                                  |            |
 | **Mogelijk geen waarde**          | 1                  | Algemeen metagegeven. |                                                              |      | *Tagged value*                                               |            |
 | verwijst naar **relatiedoel**   | 0..*  | Binding aan een objecttype. | */target: related Element bij Relationship Element* = UML-Class |    | *association target* = Class       |     |
+| heeft **Constraint** | 0..* | Binding aan een constraint. |   | | *Constraint* | | 
 
 #### «Relatiesoort» (alt 2: rol leidend)
 
@@ -461,6 +465,7 @@ De relatiesoorten worden naar de volgende aspecten gespecificeerd.
 | **Toelichting**      | 0..1         | Algemeen metagegeven. |                                       |    | *Tagged value* |     |
 | **Datum opname**     | 1            | Algemeen metagegeven. |                                       |    | *Tagged value* |     |
 | verwijst naar **relatiedoel** | 0..*  | Binding aan een objecttype. | */target: related Element bij Relationship Element* = UML-Class |    | *association target* = Class       |     |
+| heeft **Constraint** | 0..* | Binding aan een constraint. |   | | *Constraint* | | 
 
 #### «Relatierol» (alt 1: soort leidend)
 
@@ -476,6 +481,7 @@ Voor relatierollen worden naar de volgende aspecten gespecificeerd.
 | **Herkomst definitie** | 1          | Algemeen metagegeven. |                                       |    | *Tagged value* |     |
 | **Toelichting**      | 0..1         | Algemeen metagegeven. |                                       |    | *Tagged value* |     |
 | **Datum opname**     | 1            | Algemeen metagegeven. |                                       |    | *Tagged value* |     |
+| heeft **Constraint** | 0..* | Binding aan een constraint. |   | | *Constraint* | | 
 
 #### «Relatierol» (alt 2: rol leidend)
 
@@ -499,6 +505,7 @@ aspecten gespecificeerd.
 | **Indicatie formele historie√**   | 1                  | Algemeen metagegeven. |                                                              |      | *Tagged value* |            |
 | **Authentiek√ \***                | 1                  | Algemeen metagegeven. |                                                              |      | *Tagged value* |            |
 | **Mogelijk geen waarde**          | 1                  | Algemeen metagegeven. |                                                              |      | *Tagged value* |            |
+| heeft **Constraint** | 0..* | Binding aan een constraint. |   | | *Constraint* | | 
 
 #### «Generalisatie» tussen objecttypes
 
@@ -509,7 +516,7 @@ De generalisaties worden naar het volgende aspect gespecificeerd:
 | **Subtype**   | 1                  | De generalisatie relatie kent twee kanten, de bron kant (source) van de relatie en de doel kant (target) van de relatie. De bron kant van deze generalisatie relatie specificeert een _objecttype_ die een subtype/specialisatie is van het via deze generalisatie relatie aangegeven supertype (zie verwijst naar supertype). Kortweg, het subtype is een specialisatie van het supertype. Het objecttype dat het subtype is van deze generalisatie is verbonden met deze generalisatie. | */source: related Element bij Relationship Element* |      | *Source*  |            |
 | verwijst naar **supertype**  | 1    | Binding van deze generalisatie aan een objecttype. De generalisatie relatie kent twee kanten, de bron kant (source) van de relatie en de doel kant (target) van de relatie. De doel kant van deze generalisatie relatie specificeert een _objecttype_ die het supertype/de generalisatie is van het via deze generalisatie aangegeven subtype. Kortweg, het supertype is een generalisatie van het subtype. | */target: related Element bij Relationship Element* = UML-Class |      | *Target*  |                 |
 | **Datum opname** | 1               | Algemeen metagegeven                                         |                     |      | *Tagged value* |            |
-
+| heeft **Constraint** | 0..* | Binding aan een constraint. |   | | *Constraint* | | 
 
 #### «Generalisatie» tussen datatypen
 
@@ -521,6 +528,7 @@ De generalisaties worden naar het volgende aspect gespecificeerd:
  | */source: related Element bij Relationship Element* |      |      | *Source*  |            |
 | verwijst naar **supertype**  | 1    | Binding van deze generalisatie aan een datatype. De generalisatie relatie kent twee kanten, de bron kant (source) van de relatie en de doel kant (target) van de relatie. De doel kant van deze generalisatie relatie specificeert een _datatype_ die het supertype/de generalisatie is van het via deze generalisatie aangegeven subtype. Kortweg, het supertype is een generalisatie van het subtype. | */target: related Element bij Relationship Element* = UML-datatype |      |      | *Target*  |                 |
 | **Datum opname** | 1               | Algemeen metagegeven                                         |                     |      | *Tagged value* |            |
+| heeft **Constraint** | 0..* | Binding aan een constraint. |   | | *Constraint* | | 
 
 #### «Relatieklasse»
 
@@ -550,6 +558,7 @@ De relatieklassen worden naar de volgende aspecten gespecificeerd:
 | **heeft attribuut**               | 0..*              | Binding aan een attribuutsoort.  | *owned element* = UML-property     |    | *attribute*           |     |
 | **verwijst naar relatiedoel**     | 0..*              | Binding aan een objecttype.      | */target: related Element bij Relationship Element* = UML-Class |    | *association target* = Class       ||
 | **heeft gegegevensgroep**         | 0..*              | Binding aan gegevensgroep.       | *owned element* = UML-property|                                 | *attribute*    ||
+| heeft **Constraint** | 0..* | Binding aan een constraint. |   | | *Constraint* | | 
 
 #### «Externe koppeling»
 
@@ -577,6 +586,7 @@ Externe koppelingen worden naar de volgende aspecten gespecificeerd.
 | **Indicatie afleidbaar**          | 1                  | Algemeen metagegeven. | *isDerived bij UML metaclass Assocation*                     |      | *isDerived*                                                  |            |
 | **Mogelijk geen waarde**          | 1                  | Algemeen metagegeven. |                                                              |      | *Tagged value*                                               |            |
 | verwijst naar **relatiedoel**     | 0..*       | Binding aan een objecttype. | */target: related Element bij Relationship Element* = UML-Class |    | *association target* = Class       |     |
+| heeft **Constraint** | 0..* | Binding aan een constraint. |   | | *Constraint* | | 
 
 ### Waardelijsten in UML
 
@@ -600,7 +610,7 @@ Voor codelijst worden de volgende aspecten gespecificeerd:
 | **Datatype**     | 1..1               | Algemeen metagegeven.    |                |      | *tagged value* |            |
 | **Waarde item**  | 0..1               | Algemeen metagegeven.    |                |      | *tagged value* |            |
 | **Profielspecificatie**      | 0..1               | Algemeen metagegeven.    |                |      | *tagged value* |            |
-
+| heeft **Constraint** | 0..* | Binding aan een constraint. |   | | *Constraint* | | 
 
 #### «Enumeratie»
 
@@ -618,6 +628,7 @@ aspecten gespecificeerd:
 | **Toelichting**  | 0..1       | Algemeen metagegeven.    |                                       |      | *tagged value* | |
 | **Datum opname** | 1          | Algemeen metagegeven.    |                                       |      | *tagged value* | |
 | bevat **enumeratiewaarde** | 1..* | Binding van een enumeratiewaarde. | *owned element* = UML-EnumerationLiteral |    | *association*        |     |
+| heeft **Constraint** | 0..* | Binding aan een constraint. |   | | *Constraint* | | 
 
 #### «Enumeratiewaarde»
 
@@ -633,7 +644,7 @@ De enumeratiewaarde zelf betreft de metaclass `UML-EnumerationLiteral` en kent d
 | **Herkomst definitie** | 0..1 | Algemeen metagegeven.    |                |      | *Tagged value* |            |
 | **Toelichting**  | 0..1       | Algemeen metagegeven.    |                |      | *tagged value* |            |
 | **Datum opname** | 1          | Algemeen metagegeven.    |                |      | *tagged value* |            |
-
+| heeft **Constraint** | 0..* | Binding aan een constraint. |   | | *Constraint* | | 
 
 #### «Referentielijst»
 
@@ -652,6 +663,7 @@ Voor referentielijsten worden de volgende aspecten gespecificeerd:
 | **Locatie**          | 1..1         | Algemeen metagegeven. |                                       |    | *Tagged value* |     |
 | bevat **referentie-element** | 1..* | Binding aan een referentie-element. | *owned element* = UML-property  | | *attribute*   | |
 | verwijst naar **supertype**  | 0..* | Binding aan een generalisatie (naar een andere referentie lijst). | *owned element* = UML-Relationship |    | *association*   |   |
+| heeft **Constraint** | 0..* | Binding aan een constraint. |   | | *Constraint* | | 
 
 #### «Referentie-element»
 
@@ -674,7 +686,7 @@ De referentie-elementen worden naar de volgende aspecten gespecificeerd:
 | **Kardinaliteit**                           | 1                  | Algemeen metagegeven. | *lowerValue en upperValue van de metaclass Multiplicity Element* |      | *Multiplicity van de de target role* |            |
 | **Identificerend**                          | 0..1               | Algemeen metagegeven. | *isID van de metaclass Property*                             |      | *isID bij de betreffende class*      |            |
 | heeft **datatype**       | 1       | Binding aan een datatype.     | *datatype* = UML-datatype |    | *type* = datatype          |     |
-
+| heeft **Constraint** | 0..* | Binding aan een constraint. |   | | *Constraint* | | 
 
 ### Datatypen in UML
 
@@ -700,6 +712,7 @@ De datatypen worden naar de volgende aspecten gespecificeerd:
 | **- Lengte**                                | 0..1               | Algemeen metagegeven, in principe wordt dit metagegeven bij het attribuutsoort gespecificeerd, behalve als het generiek gespecificeerd moet worden. |                                       |      | *Tagged value* |            |
 | **- Patroon**                               | 0..1               | Algemeen metagegeven, in principe wordt dit metagegeven bij het attribuutsoort gespecificeerd, behalve als het generiek gespecificeerd moet worden. |                                       |      | *Tagged value* |            |
 | **- Formeel patroon**                       | 0..1               | Algemeen metagegeven, in principe wordt dit metagegeven bij het attribuutsoort gespecificeerd, behalve als het generiek gespecificeerd moet worden. |                                       |      | *Tagged value* |            |
+| heeft **Constraint** | 0..* | Binding aan een constraint. |   | | *Constraint* | | 
 
 #### «Gestructureerd datatype»
 
@@ -718,7 +731,7 @@ Voor Gestructureerde datatypen worden de volgende aspecten gespecificeerd:
 | **Patroon**      | 0..1          | Algemeen metagegeven.    |                |      | *Tagged value* |            |
 | **Formeel patroon**      | 0..1  | Algemeen metagegeven.    |                |      | *Tagged value* |            |
 | bevat **data-element**   | 0..*  | Binding aan een data-element, 2 of meer tenzij via generalisatie verkregen. | *owned element* = UML-property     |  | *attribute* |   |
-
+| heeft **Constraint** | 0..* | Binding aan een constraint. |   | | *Constraint* | | 
 
 #### «Data-element»
 
@@ -740,6 +753,7 @@ De data-elementen worden naar de volgende aspecten gespecificeerd:
 | **- Formeel patroon**  | 0..1    | Algemeen metagegeven. |                                                                 |      | *Tagged value*    |     |
 | **Kardinaliteit**      | 1       | Algemeen metagegeven. | *lowerValue en upperValue van de metaclass MultiplicityElement* |      | *Multiplicity*    |     |
 | heeft **datatype**     | 1       | Binding aan een datatype.  | *datatype* = UML-datatype       |      | *type* = datatype |     |
+| heeft **Constraint** | 0..* | Binding aan een constraint. |   | | *Constraint* | | 
 
 #### «Keuze»
 
@@ -758,6 +772,7 @@ Een Keuze worden naar de volgende aspecten gespecificeerd:
 | **heeft datatypekeuze**   | 0..* | Binding van een datatype, in UML via een additionale UML-property met stereotype keuze | *owned element* = UML-property en deze heeft en *datatype*     |   | *attribute*          |     |
 | heeft **attribuutkeuze**  | 0..* | Binding aan een attribuutsoort.  | *owned element* = UML-Property     |    | *attribute*          |     |
 | heeft **relatiedoelkeuze**| 0..* | Binding aan een relatiesoort.    | *owned element* = UML-Relationship |    | *association*        |     |
+| heeft **Constraint** | 0..* | Binding aan een constraint. |   | | *Constraint* | | 
 
 *Opmerking: de modelelementen waaruit gekozen kan worden heten sinds MIM 1.1 geen keuze-elementen meer. Keuze-element is komen te vervallen.*
 
@@ -776,6 +791,7 @@ Domein packages worden naar de volgende aspecten gespecificeerd:
 | **Herkomst definitie**  | 1      | Algemeen metagegeven.    |                |      | *Tagged value* |            |
 | **Toelichting**  | 0..1          | Algemeen metagegeven.    |                |      | *tagged value* |            |
 | **Datum opname** | 1             | Algemeen metagegeven.    |                |      | *tagged value* |            |
+| heeft **Constraint** | 0..* | Binding aan een constraint. |   | | *Constraint* | | 
 
 #### «Extern»
 
@@ -791,6 +807,7 @@ Externe packages worden naar de volgende aspecten gespecificeerd:
 | **Toelichting**  | 0..1          | Algemeen metagegeven.    |                |      | *tagged value* |            |
 | **Datum opname** | 1             | Algemeen metagegeven.    |                |      | *tagged value* |            |
 | **Locatie**      | 1             | Algemeen metagegeven.    |                |      | *Tagged value* |            |
+| heeft **Constraint** | 0..* | Binding aan een constraint. |   | | *Constraint* | | 
 
 #### «Informatiemodel»
 
@@ -813,6 +830,7 @@ Informatiemodel packages worden naar de volgende aspecten gespecificeerd:
 |                            |                    | *Bijvoorbeeld: Kadaster of NEN3610:2020*                     |                                      |      |                |            |
 | **MIM taal**               | 0..1               | *De aanduiding van de taal die gebruikt is voor de modelelementen.*  *Bijvoorbeeld: EN of NL* |                                      |      | *Tagged value* |            |
 | **Relatiemodelleringtype** | 1                  | Algemeen metagegeven.    Toelichting Type informatiemodel: zoals bedoeld in paragraaf 1.5. Alle packages, oftewel «Domein» en «View», binnen het informatiemodel hebben hetzelfde type als het informatiemodel zelf. |                                      |      | *Tagged value* |            |
+| heeft **Constraint** | 0..* | Binding aan een constraint. |   | | *Constraint* | | 
 
 #### «View»
 
@@ -829,6 +847,7 @@ View packages worden naar de volgende aspecten gespecificeerd, analoog aan
 | **Toelichting**  | 0..1          | Algemeen metagegeven.    |                |      | *tagged value* |            |
 | **Datum opname** | 1             | Algemeen metagegeven.    |                |      | *tagged value* |            |
 | **Locatie**      | 1             | Algemeen metagegeven.    |                |      | *Tagged value* |            |
+| heeft **Constraint** | 0..* | Binding aan een constraint. |   | | *Constraint* | | 
 
 ### Overige modelelementen in UML
 
