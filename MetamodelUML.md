@@ -292,9 +292,6 @@ stereotype `«id»`
   </ul>
 </aside>
 
-
-
-<!-- ### Modellering metagegevens voor objecten en attributen in UML -->
 ### Objecten en attributen in UML
 
 #### «Objecttype»
