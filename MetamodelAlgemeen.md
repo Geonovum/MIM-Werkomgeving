@@ -1709,11 +1709,9 @@ Verkorte schrijfwijze: **constraint**
   <dfn>heeft constraint</dfn>De binding van een constraint aan een modelelement.
 </aside>
 
-Het modelelement die een constraint heeft kan zijn: `Objecttype`, `Relatieklasse`, `Gegevensgroeptype`.
-
 *Toelichting*
 
-Een constraint is gekoppeld aan de context van modelelement waarop ze van toepassing is. Dit modelelement kan zijn: `Objecttype`, `Gegevensgroeptype` of `Relatieklasse`.
+Een `Constraint` is gekoppeld aan de context van modelelement waarop ze van toepassing is. Een `Constraint` kan op alle typen modelelementen worden toegepast.
 
 ### Toegestane waarden metagegevens
 
