@@ -95,11 +95,11 @@ View 2: Datatypen
 | ----------------------- | ----------------------- | ------------------------ | ---- | ------------------ | ---------- |
 | Primitief datatype      | «Primitief datatype»    | (UML) Primitive Type     |      | Datatype           |            |
 | Gestructureerd datatype | «Gestructuurd datatype» | (UML) Datatype           |      | Datatype           |            |
-| Data element            | «Data element»          | (UML) Property           |      | Attribute          |            |
+| Data-element            | «Data-element»          | (UML) Property           |      | Attribute          |            |
 | Enumeratie              | \-                      | (UML) Enumeration        |      | Enumeration        |            |
 | Enumeratiewaarde        | \-                      | (UML) EnumerationLiteral |      | EnumerationLiteral |            |
 | Referentielijst         | «Referentielijst»       | (UML) Datatype           |      | Datatype           |            |
-| Referentie element      | «Referentie element»    | (UML) Property           |      | Attribute          |            |
+| Referentie-element      | «Referentie-element»    | (UML) Property           |      | Attribute          |            |
 | Codelijst               | «Codelijst»             | (UML) Datatype           |      | Datatype           |            |
 
 ### Overige
@@ -129,7 +129,7 @@ Er zijn vier situaties waarin een keuze toegepast wordt:
 - Use case 3: een keuze tussen meerdere manieren om één betekenisvol attribuutsoort in te vullen
 - Use case 4: een keuze tussen relatiedoelen, als nadere invulling van één betekenisvolle relatiesoort
 
-Voor elke toepassing geldt een aparte subset van het metamodel. De 'keuzeconstructie' maakt een keuze mogelijk tussen meerdere datatypen, attribuutsoorten, en relatiedoelen. In UML behouden we dezelfde modellering, een datatype blijft dus een datatype, een attribuutsoort een attribuutsoort en een relatiesoort een relatiesoort. De UML elementen die het stereotype keuze krijgen zijn zelf geen datatype, attribuutsoort of relatiedoel. Merk op dat de diagrammen op metamodelniveau zijn gemodelleerd. Hoe dit op informatiemodelniveau uitpakt is onder het diagram beschreven in tekst. 
+Voor elke toepassing geldt een aparte subset van het metamodel. De 'keuzeconstructie' maakt een keuze mogelijk tussen meerdere datatypen, attribuutsoorten, en relatiedoelen. In UML behouden we dezelfde modellering, een datatype blijft dus een datatype, een attribuutsoort een attribuutsoort en een relatiesoort een relatiesoort. De UML-elementen die het stereotype keuze krijgen zijn zelf geen datatype, attribuutsoort of relatiedoel. Merk op dat de diagrammen op metamodelniveau zijn gemodelleerd. Hoe dit op informatiemodelniveau uitpakt is onder het diagram beschreven in tekst. 
 
 **Use case 1: Keuze tussen datatypen**
 
@@ -653,7 +653,7 @@ Voor referentielijsten worden de volgende aspecten gespecificeerd:
 | **Toelichting**      | 0..1         | Algemeen metagegeven. |                                       |    | *Tagged value* |     |
 | **Datum opname**     | 1            | Algemeen metagegeven. |                                       |    | *Tagged value* |     |
 | **Locatie**          | 1..1         | Algemeen metagegeven. |                                       |    | *Tagged value* |     |
-| bevat **referentie element** | 1..* | Binding aan een referentie element. | *owned element* = UML-property  | | *attribute*   | |
+| bevat **referentie-element** | 1..* | Binding aan een referentie-element. | *owned element* = UML-property  | | *attribute*   | |
 | verwijst naar **supertype**  | 0..* | Binding aan een generalisatie (naar een andere referentie lijst). | *owned element* = UML-Relationship |    | *association*   |   |
 
 #### «Referentie-element»
@@ -720,10 +720,10 @@ Voor Gestructureerde datatypen worden de volgende aspecten gespecificeerd:
 | **Datum opname** | 1             | Algemeen metagegeven.    |                |      | *tagged value* |            |
 | **Patroon**      | 0..1          | Algemeen metagegeven.    |                |      | *Tagged value* |            |
 | **Formeel patroon**      | 0..1  | Algemeen metagegeven.    |                |      | *Tagged value* |            |
-| bevat **data element**   | 0..*  | Binding aan een data element, 2 of meer tenzij via generalisatie verkregen. | *owned element* = UML-property     |  | *attribute* |   |
+| bevat **data-element**   | 0..*  | Binding aan een data-element, 2 of meer tenzij via generalisatie verkregen. | *owned element* = UML-property     |  | *attribute* |   |
 
 
-#### «Data element»
+#### «Data-element»
 
 De data-elementen worden naar de volgende aspecten gespecificeerd:
 
@@ -762,7 +762,7 @@ Een Keuze worden naar de volgende aspecten gespecificeerd:
 | heeft **attribuutkeuze**  | 0..* | Binding aan een attribuutsoort.  | *owned element* = UML-Property     |    | *attribute*          |     |
 | heeft **relatiedoelkeuze**| 0..* | Binding aan een relatiesoort.    | *owned element* = UML-Relationship |    | *association*        |     |
 
-*Opmerking: de modelelementen waaruit gekozen kan worden heten sinds MIM 1.1 geen keuze elementen meer. Keuze element is komen te vervallen.*
+*Opmerking: de modelelementen waaruit gekozen kan worden heten sinds MIM 1.1 geen keuze-elementen meer. Keuze-element is komen te vervallen.*
 
 ### Packages in UML
 
@@ -840,14 +840,33 @@ View packages worden naar de volgende aspecten gespecificeerd, analoog aan
 Constraint betreft de metaclass UML Constraint en wordt naar de volgende
 aspecten gespecificeerd:
 
-| **Aspect**                  | **Kardinaliteit** | **Toelichting**                | **In UML 2.5**                        |    | **In EA**      | **In ...** |
-| -------------------------------- | -------- | ---------------------------------------- | ------------------------------------- | -- | -------------- | -------- |
-| **Naam√**                  | 1         | Algemeen metagegeven.                    | *name van de metaclass Named element* |    | *Name*         |          |
-| **Specificatie tekst**     | 0..1      | De specificatie van de constraint in normale tekst.                       |      |    | *Notes (type = invariant)*  |          |
-| **Specificatie formeel**   | 0..1      | De beschrijving van de constraint in een formele specificatietaal, in OCL |      |    | *Notes (type =OCL)*         |          |
-| van toepassing op **objecttype**        | 0..1  | Binding aan een objecttype      |                     |    |                |          |
-| van toepassing op **gegevensgroeptype** | 0..1  | Binding aan een gegevensgroeptype                 |                     |    |                |          |
-| van toepassing op **relatieklasse**     | 0..1  | Binding aan een relatieklasse                     |                     |    |                |          |
+| **Aspect**                                      | **Kardinaliteit** | **Toelichting**                                                                   | **In UML 2.5**                        |    | **In EA**                    | **In ...**  |
+| ----------------------------------------------- | ----------------- | ----------------------------------------------------------------------------------| ------------------------------------- | -- | ---------------------------- | ----------- |
+| **Naam√**                                       | 1                 | Algemeen metagegeven.                                                             | *name van de metaclass Named element* |    | *Name*                       |             |
+| **Specificatie tekst**                          | 0..1              | De specificatie van de constraint in normale tekst.                               |                                       |    | *Notes (type = invariant)*   |             |
+| **Specificatie formeel**                        | 0..1              | De beschrijving van de constraint in een formele specificatietaal, in OCL.        |                                       |    | *Notes (type =OCL)*          |             |
+| van toepassing op **Objecttype**                | 0..1              | Bindinding aan een Objecttype                                                     |                                       |    |                              |             |
+| van toepassing op **Attribuutsoort**            | 0..1              | Bindinding aan een Attribuutsoort                                                 |                                       |    |                              |             |
+| van toepassing op **Gegevensgroep**             | 0..1              | Bindinding aan een Gegevensgroep                                                  |                                       |    |                              |             |
+| van toepassing op **Gegevensgroeptype**         | 0..1              | Bindinding aan een Gegevensgroeptype                                              |                                       |    |                              |             |
+| van toepassing op **Relatiesoort**              | 0..1              | Bindinding aan een Relatiesoort                                                   |                                       |    |                              |             |
+| van toepassing op **Relatierol**                | 0..1              | Bindinding aan een Relatierol                                                     |                                       |    |                              |             |
+| van toepassing op **Generalisatie**             | 0..1              | Bindinding aan een Generalisatie                                                  |                                       |    |                              |             |
+| van toepassing op **Relatieklasse**             | 0..1              | Bindinding aan een Relatieklasse                                                  |                                       |    |                              |             |
+| van toepassing op **Externe koppeling**         | 0..1              | Bindinding aan een Externe koppeling                                              |                                       |    |                              |             |
+| van toepassing op **Codelijst**                 | 0..1              | Bindinding aan een Codelijst                                                      |                                       |    |                              |             | 
+| van toepassing op **Enumeratie**                | 0..1              | Bindinding aan een Enumeratie                                                     |                                       |    |                              |             |
+| van toepassing op **Enumeratiewaarde**          | 0..1              | Bindinding aan een Enumeratiewaarde                                               |                                       |    |                              |             |
+| van toepassing op **Referentielijst**           | 0..1              | Bindinding aan een Referentielijst                                                |                                       |    |                              |             |
+| van toepassing op **Referentie-element**        | 0..1              | Bindinding aan een Referentie-element                                             |                                       |    |                              |             |
+| van toepassing op **Primitief datatype**        | 0..1              | Bindinding aan een Primitief datatype                                             |                                       |    |                              |             |
+| van toepassing op **Gestructureerd datatype**   | 0..1              | Bindinding aan een Gestructureerd datatype                                        |                                       |    |                              |             |
+| van toepassing op **Data-element**              | 0..1              | Bindinding aan een Data-element                                                   |                                       |    |                              |             |
+| van toepassing op **Keuze**                     | 0..1              | Bindinding aan een Keuze                                                          |                                       |    |                              |             |
+| van toepassing op **Domein**                    | 0..1              | Bindinding aan een Domein                                                         |                                       |    |                              |             |
+| van toepassing op **Extern**                    | 0..1              | Bindinding aan een Extern                                                         |                                       |    |                              |             |
+| van toepassing op **Informatiemodel**           | 0..1              | Bindinding aan een Informatiemodel                                                |                                       |    |                              |             |
+| van toepassing op **View**                      | 0..1              | Bindinding aan een View                                                           |                                       |    |                              |             |
 
 ## UML Tooling
 
