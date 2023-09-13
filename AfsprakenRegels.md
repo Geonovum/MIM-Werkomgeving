@@ -427,9 +427,9 @@ beschreven wordt wat er moet gebeuren wanneer één van de SUBJECTen niet meer
 bestaat.
 </aside>
 
-## Constraint
+## Constraint toepassen
 
-Deze paragraaf gaat dieper in op hoe een Constraint toegepast wordt. Twee constraints die gedefinieerd zijn op hetzelfde modelelement mogen niet dezelfde naam hebben.
+Deze paragraaf gaat dieper in op hoe een <a>Constraint</a> toegepast wordt. Twee constraints die gedefinieerd zijn op hetzelfde modelelement mogen niet dezelfde naam hebben.
 
 Een Constraint wordt beschreven met een: 
 - Naam (UML-constraint name): een naam c.q. label, vaak in steekwoorden. 

@@ -837,14 +837,14 @@ View packages worden naar de volgende aspecten gespecificeerd, analoog aan
 
 #### «Constraint»
 
-Constraint betreft de metaclass UML Constraint en wordt naar de volgende
+<a>Constraint</a> betreft de metaclass UML Constraint en wordt naar de volgende
 aspecten gespecificeerd:
 
 | **Aspect**                                      | **Kardinaliteit** | **Toelichting**                                                                   | **In UML 2.5**                        |    | **In EA**                    | **In ...**  |
 | ----------------------------------------------- | ----------------- | ----------------------------------------------------------------------------------| ------------------------------------- | -- | ---------------------------- | ----------- |
 | **Naam√**                                       | 1                 | Algemeen metagegeven.                                                             | *name van de metaclass Named element* |    | *Name*                       |             |
-| **Specificatie tekst**                          | 0..1              | De specificatie van de constraint in normale tekst.                               |                                       |    | *Notes (type = invariant)*   |             |
-| **Specificatie formeel**                        | 0..1              | De beschrijving van de constraint in een formele specificatietaal, in OCL.        |                                       |    | *Notes (type =OCL)*          |             |
+| **Specificatie tekst**                          | 0..1              | De specificatie van de Constraint in normale tekst.                               |                                       |    | *Notes (type = invariant)*   |             |
+| **Specificatie formeel**                        | 0..1              | De beschrijving van de Constraint in een formele specificatietaal, in OCL.        |                                       |    | *Notes (type =OCL)*          |             |
 | van toepassing op **Objecttype**                | 0..1              | Bindinding aan een Objecttype                                                     |                                       |    |                              |             |
 | van toepassing op **Attribuutsoort**            | 0..1              | Bindinding aan een Attribuutsoort                                                 |                                       |    |                              |             |
 | van toepassing op **Gegevensgroep**             | 0..1              | Bindinding aan een Gegevensgroep                                                  |                                       |    |                              |             |
