@@ -47,11 +47,10 @@ In de SPARQL rules wordt gebruik gemaakt van een aantal SPARQL functies. In onde
 |t:CamelCase|Codeert een tekstveld naar een URI-vorm op basis van (upper) CamelCase regels|
 |t:camelCase|Codeert een tekstveld naar een URI-vorm op basis van (lower) camelCase regels|
 |t:kebabcase|Codeert een tekstveld naar een URI-vorm op basis van kebabcase regels (een `-` voor spaties)|
-|t:classuri|Formuleert de uri voor een klasse op basis van de naam van een MIM resource. De class URI is opgebouwd als `{namespace}#{t:CamelCase(naam)}`. De `{namespace}` is een vooraf vastgestelde waarde die gelijk is aan de te maken ontologie.|
+|t:uri|Formuleert de uri voor een modelelement op basis van de naam van het modelelement en de baseURI van de package waartoe het modelelement behoort. De URI is opgebouwd als `{basisURI}{naam}`.|
 |t:nodeshapeuri|Formuleert de uri voor een nodeshape op basis van de naam van een MIM resource. De nodeshape URI is opgebouwd als `{shape-namespace}#{t:CamelCase(term)}`. De `{shape-namespace}` is een vooraf vastgestelde waarde die gelijk is aan de te maken shapesgraph.|
-|t:propertyuri|Formuleert de uri voor een property op basis van de naam van een MIM resource. De property URI is opgebouwd als `{namespace}#{t:camelCase(naam)}`. Zie ook `t:classuri`.|
 |t:propertyshapeuri|Formuleert de uri voor een propertyshape op basis van de naam van een MIM resource en de naam van de MIM resource die hiervan de "bezitter" is. De propertyshape URI is opgebouwd als `{shape-namespace}#{t:CamelCase(bezittersnaam)}-{t:camelCase(naam)}`. Zie ook `t:nodeshapeuri`.|
-|t:nodepropertyuri|Formuleert de uri voor een property op basis van de naam van een MIM resource en de naam van de MIM resource die hiervan de "bezitter" is. De property URI is opgebouwd als `{namespace}#{t:CamelCase(bezittersnaam)}-{t:camelCase(naam)}`. Zie ook `t:classuri`.|
+|t:nodepropertyuri|Formuleert de uri voor een property op basis van de naam van een MIM resource en de naam van de MIM resource die hiervan de "bezitter" is. De property URI is opgebouwd als `{namespace}#{t:CamelCase(bezittersnaam)}-{t:camelCase(naam)}`.|
 |t:statementuri|Formuleert de uri voor een rdf:Statement op basis van zijn afzonderlijke elementen. Mogelijke invulling kan het maken van een hash zijn op basis van de aaneenschakeling van subject, predicate en object.|
 |t:schemeuri|Formuleert de uri voor een concept-scheme op basis van de naam van een MIM resource. De concept-scheme URI is opgebouwd als `{namespace}/id/scheme/{t:CamelCase(naam)}`. De `{namespace}` is een vooraf vastgestelde waarde die gelijk is aan de locatie van de package.|
 |t:concepturi|Formuleert de uri voor een concept op basis van de naam van een MIM resource. De concept URI is opgebouwd als `{namespace}/id/concept/{t:CamelCase(naam)}`. De `{namespace}` is een vooraf vastgestelde waarde die gelijk is aan de locatie van de package.|
@@ -59,7 +58,7 @@ In de SPARQL rules wordt gebruik gemaakt van een aantal SPARQL functies. In onde
 |t:maxcount|Formuleert de maximum kardinaliteit op basis van een kardinaliteitsaanduiding (zie bij mim:kardinaliteit). De waarde kan ook unbound zijn, in dat geval wordt ook de variable niet gebound en daardoor de betreffende triple niet opgevoerd.|
 
 <aside id='trans-1' class='note'>
-Om een unieke URI op te bouwen, is naast de naam van een modelelement, `mim:naam`, ook een namespace noodzakelijk. Deze namespace wordt afgeleid van het veld `mim:locatie` van de package waartoe het modelelement behoord. Deze namespace kan gelijk zijn aan de naam van deze package. Een vertaling is ook denkbaar, bijvoorbeeld als hetzelfde veld ook gebruikt wordt voor het bepalen van de namespace van een XSD, die vaak anders zal zijn dan de URI namespace.
+Om een unieke URI op te bouwen, is naast de naam van een modelelement, `mim:naam`, ook een namespace noodzakelijk. Deze namespace wordt bepaald in het veld `mim:basisURI` van de package waartoe het modelelement behoord. Deze basisURI is niet hetzelfde als de namespace van een gegenereerde XSD.
 </aside>
 
 <aside id='trans-2' class='note'>
@@ -70,12 +69,12 @@ Het MIM model kent geen volgorde. Ondanks dat in de weergave attribuutsoorten in
 
 Een belangrijk gegeven in Linked Data is het munten van URI's. Bij de vertaling van een MIM modelelement naar een overeenkomstige resource in Linked Data vocabulaires zullen ook nieuwe URI's gemunt moeten worden. Enerzijds omdat er (soms) sprake is van meer dan één resource voor één modelelement, maar ook omdat een Linked Data resource wel equivalent is met een MIM modelelement, maar niet exact gelijk: we willen niet dat de formele semantiek van de Linked Data vocabulaires vermengd wordt met de formele semantiek van het MIM metamodel.
 
-Daarnaast geldt dat het in Linked Data gebruikelijk is om URI's over te nemen van andere (externe) vocabulaires c.q. modellen. Ook het MIM ondersteund dit, in de vorm van de mim metamodelklassen `mim:Extern` en `mim:View`. Echter, anders dan bij UML, behoren de modelementen uit deze externe modellen ook de URI's te krijgen die horen bij deze externe modellen.
+Daarnaast geldt dat het in Linked Data gebruikelijk is om URI's over te nemen van andere (externe) vocabulaires c.q. modellen. Ook het MIM ondersteund dit, in de vorm van de mim metamodelklassen `mim:Extern` en `mim:View`. Echter, anders dan bij UML, behoren de modelementen uit deze externe modellen ook de URI's te krijgen die horen bij deze externe modellen. 
 
-Het metamodelelement `mim:locatie` heeft een belangrijke rol bij het bepalen van de URI. De waarde van dit metamodelelement wordt gezien als de namespace-prefix van de URI. Dit betekent dan ook dat alle modelelementen binnen één package normaal gesproken dezelfde namespace krijgen. Gebruikelijk is dan ook dat externe packages de namespace krijgen die behoren bij het externe vocabulaire en de eigen domein-packages de namespace krijgen die behoort bij de eigen vocabulaire. Hierop zijn een aantal uitzonderingen:
+Het metamodelelement `mim:basisURI` heeft een belangrijke rol bij het bepalen van de URI. De waarde van dit metamodelelement wordt gezien als de namespace-prefix van de URI. Dit betekent dan ook dat alle modelelementen binnen één package normaal gesproken dezelfde namespace krijgen. Gebruikelijk is dan ook dat externe packages de namespace krijgen die behoren bij het externe vocabulaire en de eigen domein-packages de namespace krijgen die behoort bij de eigen vocabulaire. Hierop zijn een aantal uitzonderingen:
 
-1. Indien sprake is van het hergebruiken van een attribuutsoort die ook gedefinieerd is in een externe of view package, dan wordt de `mim:locatie` gebruikt van deze externe of view package. Hierdoor is het mogelijk om een attribuutsoort "label" op te nemen die gemunt wordt met de URI `http://www.w3.org/2000/01/rdf-schema#` (rdfs:label).
-2. Indien sprake is van een view package, dan wordt de `mim:locatie` van deze view package alleen gebruikt voor de vocabulaire URI's (voorkomens van `owl:Class`, `owl:DatatypeProperty` en `owl:ObjectProperty`). Voor de voorkomens van shapes (`sh:NodeShape` en `sh:PropertyShape`) wordt juist gebruik gemaakt van de `mim:locatie` zoals deze bij de eigen domein-package is opgegeven. Rationale hierachter is dat bij view-packages de "view" lokaal gedefinieerd is, maar de elementen wel afkomstig zijn uit een externe vocabulaire.
+1. Indien sprake is van het hergebruiken van een attribuutsoort die ook gedefinieerd is in een externe of view package, dan wordt de `mim:uri` van dit attribuutsoort met een waarde die overeenkomt met de `basisURI` van deze externe of view package. Hierdoor is het mogelijk om een attribuutsoort "label" op te nemen die gemunt wordt met de URI `http://www.w3.org/2000/01/rdf-schema#` (rdfs:label). Ook moet `mim:isGedefinieerdIn` expiciet gevuld worden met de URI van het definierende informatiemodel.
+2. Indien sprake is van een view package, dan wordt de `mim:basisURI` van deze view package alleen gebruikt voor de vocabulaire URI's (voorkomens van `owl:Class`, `owl:DatatypeProperty` en `owl:ObjectProperty`). Voor de voorkomens van shapes (`sh:NodeShape` en `sh:PropertyShape`) wordt juist gebruik gemaakt van de `mim:basisURI` zoals deze bij de eigen informatiemodel is opgegeven. Rationale hierachter is dat bij view-packages de "view" lokaal gedefinieerd is, maar de elementen wel afkomstig zijn uit een externe vocabulaire.
 
 ## Overzicht
 
@@ -188,7 +187,7 @@ Omdat het getransformeerde model daadwerkelijk een nieuw model is, zullen de ele
 Een `mim:Objecttype` wordt vertaald naar een `owl:Class` in combinatie met een `sh:NodeShape`.
 
 <aside id='trans-3' class='note'>
-De identificatie van een objecttype is afgeleid van de naam van het objecttype en de namespace die afgeleid is van aspecten van de package waartoe het objecttype behoord. Aangezien een objecttype binnen een package uniek behoord te zijn conform het MIM, zal hiermee ook een unieke identificatie worden verkregen. Indien in meerdere packages dezelfde namespace wordt gehanteerd, dan dienen over al deze packages ook de namen van objecttypen uniek te zijn. Een dergelijke regel geldt ook voor andere modelelementen die binnen een package vallen.
+De identificatie van een objecttype is afgeleid van de naam van het objecttype en de basis uri die afgeleid is de package waartoe het objecttype behoord. Aangezien een objecttype binnen een package uniek behoord te zijn conform het MIM, zal hiermee ook een unieke identificatie worden verkregen. Indien in meerdere packages dezelfde namespace wordt gehanteerd, dan dienen over al deze packages ook de namen van objecttypen uniek te zijn. Een dergelijke regel geldt ook voor andere modelelementen die binnen een package vallen.
 </aside>
 
 <pre class='ex-sparql'>
@@ -202,7 +201,15 @@ CONSTRUCT {
 WHERE {
   ?objecttype a mim:Objecttype.
   ?objecttype mim:naam ?objecttypenaam.
-  BIND (t:classuri(?objecttypenaam) as ?class)
+# 
+  OPTIONAL { ?objecttype mim:uri ?uri }
+
+  ?package mim:bevatModelelement ?objecttype ;
+           mim:baseURI ?baseURI .
+  BIND (IRI(COALESCE(?uri, t:uri(?baseURI,?objecttypenaam))) as ?class)
+# simpeler maken door dit allemaal 'als onderdeel' van de t:uri functie te zien?
+# BIND(t:uri(?objecttypenaam) as ?class). waar de functie magisch de baseURI bij de juiste package vandaan haalt
+
   BIND (t:nodeshapeuri(?objecttypenaam) as ?nodeshape)
 }
 </pre>
