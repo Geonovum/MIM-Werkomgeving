@@ -56,7 +56,7 @@ Dit UML is uitgewerkt voor Objecttype. Voor Gegevensgroeptype en Relatieklasse g
 
 <figure id="KeuzeAttribuutsoort2metMetaUML.png">
   <img src="media/KeuzeAttribuutsoort2metMetaUML.png" alt="" />
-  <figcaption>Diagram Keuze tussen attribuutsoorten met metagegevens</figcaption>
+  <figcaption>Diagram: Keuze tussen attribuutsoorten met metagegevens</figcaption>
 </figure>
 
 *Keuze tussen attribuutsoorten binnen de context van een attribuutsoort*
