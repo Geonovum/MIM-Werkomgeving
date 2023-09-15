@@ -167,7 +167,7 @@ Indien een `mim:Keuze` wordt gebruikt voor een keuze tussen objecttypen die de r
 
 <figure id="media/rdf-keuze-relatiesoort">
   <img src="media/rdf-keuze-relatiesoort.png" alt="" />
-  <figcaption>Digagram: Relatiesoortkeuze in LD</figcaption>
+  <figcaption>Diagram: Relatiesoortkeuze in LD</figcaption>
 </figure>
 
 Een keuze tussen relatiesoorten wordt gedaan op basis van een keuzeconstraint. Een keuzeconstraint is geen datatype, maar juist een constraint die in dit geval aangeeft dat er een keuze gemaakt moet worden tussen twee relatiesoorten.
