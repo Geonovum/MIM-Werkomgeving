@@ -126,7 +126,7 @@ Het is ook mogelijk om in het eigen informatiemodel een eigen datatype te defini
 
 <figure id="DatatypenGeneralisatie">
   <img src="media/47002e9ebd60742cec8111996ea22fbc.png" alt="" />
-  <figcaption>Datatypen Generalisatie</figcaption>
+  <figcaption>Diagram: Datatypen Generalisatie</figcaption>
 </figure>
 
 Datatypen Generalisatie
