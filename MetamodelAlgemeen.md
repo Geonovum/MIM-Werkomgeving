@@ -52,7 +52,7 @@ De kern van het informatiemodel bestaat uit de volgende modelelementen. Het diag
 
 <figure id="KernZonderUML">
   <img src="media/KernZonderUML.png" alt="" />
-  <figcaption>MIM - kern zonder metagegevens</figcaption>
+  <figcaption>Diagram: kern zonder UML en metagegevens</figcaption>
 </figure>
 
 In het diagram geven de verbindingen tussen de modelelementen aan welke combinaties kunnen voorkomen op metamodelniveau, oftewel welke modelelementen in een informatiemodel met elkaar gecombineerd kunnen worden. Bijvoorbeeld:
@@ -77,7 +77,7 @@ Het diagram toont de onderlinge samenhang en structuur. Daarin is zichtbaar dat 
 
 <figure id="DatatypenZonderUML">
   <img src="media/DatatypenZonderUML.png" alt="" />
-  <figcaption>MIM - datatypen zonder metagegevens</figcaption>
+  <figcaption>Diagram: Datatypen zonder UML en metagegevens</figcaption>
 </figure>
 
 ### Overige modelelementen
@@ -107,7 +107,7 @@ Een `Constraint` legt voorwaarden of beperkingen op aan een modelelement. Meer i
 
 <figure id="ConstraintsZonderUML">
   <img src="media/ConstraintsZonderUML.png" alt="" />
-  <figcaption>Constraint</figcaption>
+  <figcaption>Diagram: Constraint zonder UML en metagegevens</figcaption>
 </figure>
 
 **Keuze in het kort**
@@ -133,7 +133,7 @@ Voor elke mogelijkheid is een aparte `«MIM metaclass»` beschikbaar in het meta
   </p>
   <figure id="KeuzeDatatype1">
     <img src="media/KeuzeDatatype1.png" alt="" />
-    <figcaption>Keuze tussen datatypen</figcaption>
+    <figcaption>Diagram: keuze tussen datatypen</figcaption>
   </figure>
 </aside>
 
@@ -143,7 +143,7 @@ Voor elke mogelijkheid is een aparte `«MIM metaclass»` beschikbaar in het meta
   </p>
   <figure id="KeuzeAttribuutsoort2">
     <img src="media/KeuzeAttribuutsoort2.png" alt="" />
-    <figcaption>Keuze tussen attribuutsoorten</figcaption>
+    <figcaption>Diagram: keuze tussen attribuutsoorten</figcaption>
   </figure>
 </aside>
 
@@ -153,7 +153,7 @@ Voor elke mogelijkheid is een aparte `«MIM metaclass»` beschikbaar in het meta
   </p>
   <figure id="KeuzeAttribuutsoort3">
     <img src="media/KeuzeAttribuutsoort3.png" alt="" />
-    <figcaption>Keuze tussen attribuutsoorten binnen een attribuutsoort</figcaption>
+    <figcaption>Diagram: keuze tussen attribuutsoorten binnen een attribuutsoort</figcaption>
   </figure>
 </aside>
 
@@ -163,7 +163,7 @@ Voor elke mogelijkheid is een aparte `«MIM metaclass»` beschikbaar in het meta
   </p>
   <figure id="KeuzeRelatiedoel4">
     <img src="media/KeuzeRelatiedoel4.png" alt="" />
-    <figcaption>Keuze tussen relatiedoelen</figcaption>
+    <figcaption>Diagram: keuze tussen relatiedoelen</figcaption>
   </figure>
 </aside>
 
@@ -183,7 +183,7 @@ In diagramvorm:
 
 <figure id="AssociatierollenZonderUml">
   <img src="media/AssociatierollenZonderUml.png" alt="" />
-  <figcaption>Relatierol</figcaption>
+  <figcaption>Diagram: associatierollen zonder UML en metagegevens</figcaption>
 </figure>
 
 #### Externe koppeling
@@ -209,7 +209,7 @@ In diagramvorm:
 
 <figure id="PackageZonderUml">
   <img src="media/PackageZonderUml.png" alt="" />
-  <figcaption>Groepering</figcaption>
+  <figcaption>Diagram: Packages zonder UML</figcaption>
 </figure>
 
 ## Modelelementen
@@ -734,7 +734,7 @@ Het is bij deze use case niet de bedoeling om twee nieuwe relatiesoorten, eigena
 
 <figure id="relatiedoelkeuze">
   <img src="media/relatiedoelkeuze.png" alt="" />
-  <figcaption>Voorbeeld van keuze tussen relatiedoelen uitgewerkt in een UML-diagram</figcaption>
+  <figcaption>Diagram: voorbeeld van keuze tussen relatiedoelen</figcaption>
 </figure>
 
 
