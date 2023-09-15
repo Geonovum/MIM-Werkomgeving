@@ -243,7 +243,7 @@ View 3c: Groepering
 
 <figure id="PackagesZonderMetagegevens">
   <img src="media/PackagesZonderMetagegevens.png" alt="" />
-  <figcaption>Packages</figcaption>
+  <figcaption>Diagram: Packages zonder metagegevens</figcaption>
 </figure>
 
 | **MIM metaclass**     | **Stereotype**    | **Metaclass UML 2.5** |      | **In EA** | **In ...** |
