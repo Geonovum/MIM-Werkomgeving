@@ -52,7 +52,7 @@ De kern van het informatiemodel bestaat uit de volgende modelelementen. Het diag
 
 <figure id="KernZonderUML">
   <img src="media/KernZonderUML.png" alt="" />
-  <figcaption>Diagram: kern zonder UML en metagegevens</figcaption>
+  <figcaption>Diagram: Kern zonder UML en metagegevens</figcaption>
 </figure>
 
 In het diagram geven de verbindingen tussen de modelelementen aan welke combinaties kunnen voorkomen op metamodelniveau, oftewel welke modelelementen in een informatiemodel met elkaar gecombineerd kunnen worden. Bijvoorbeeld:
@@ -133,7 +133,7 @@ Voor elke mogelijkheid is een aparte `«MIM metaclass»` beschikbaar in het meta
   </p>
   <figure id="KeuzeDatatype1">
     <img src="media/KeuzeDatatype1.png" alt="" />
-    <figcaption>Diagram: keuze tussen datatypen</figcaption>
+    <figcaption>Diagram: Keuze tussen datatypen</figcaption>
   </figure>
 </aside>
 
@@ -143,7 +143,7 @@ Voor elke mogelijkheid is een aparte `«MIM metaclass»` beschikbaar in het meta
   </p>
   <figure id="KeuzeAttribuutsoort2">
     <img src="media/KeuzeAttribuutsoort2.png" alt="" />
-    <figcaption>Diagram: keuze tussen attribuutsoorten</figcaption>
+    <figcaption>Diagram: Keuze tussen attribuutsoorten</figcaption>
   </figure>
 </aside>
 
@@ -153,7 +153,7 @@ Voor elke mogelijkheid is een aparte `«MIM metaclass»` beschikbaar in het meta
   </p>
   <figure id="KeuzeAttribuutsoort3">
     <img src="media/KeuzeAttribuutsoort3.png" alt="" />
-    <figcaption>Diagram: keuze tussen attribuutsoorten binnen een attribuutsoort</figcaption>
+    <figcaption>Diagram: Keuze tussen attribuutsoorten binnen een attribuutsoort</figcaption>
   </figure>
 </aside>
 
@@ -163,7 +163,7 @@ Voor elke mogelijkheid is een aparte `«MIM metaclass»` beschikbaar in het meta
   </p>
   <figure id="KeuzeRelatiedoel4">
     <img src="media/KeuzeRelatiedoel4.png" alt="" />
-    <figcaption>Diagram: keuze tussen relatiedoelen</figcaption>
+    <figcaption>Diagram: Keuze tussen relatiedoelen</figcaption>
   </figure>
 </aside>
 
@@ -183,7 +183,7 @@ In diagramvorm:
 
 <figure id="AssociatierollenZonderUml">
   <img src="media/AssociatierollenZonderUml.png" alt="" />
-  <figcaption>Diagram: associatierollen zonder UML en metagegevens</figcaption>
+  <figcaption>Diagram: Associatierollen zonder UML en metagegevens</figcaption>
 </figure>
 
 #### Externe koppeling
@@ -734,7 +734,7 @@ Het is bij deze use case niet de bedoeling om twee nieuwe relatiesoorten, eigena
 
 <figure id="relatiedoelkeuze">
   <img src="media/relatiedoelkeuze.png" alt="" />
-  <figcaption>Diagram: voorbeeld van keuze tussen relatiedoelen</figcaption>
+  <figcaption>Diagram: Voorbeeld van keuze tussen relatiedoelen</figcaption>
 </figure>
 
 
