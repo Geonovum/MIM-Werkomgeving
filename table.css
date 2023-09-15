@@ -5,6 +5,12 @@ table
   min-width: 90%;
 }
 
+/* geef table head minder gewicht*/
+th
+{ 
+  font-weight: normal;
+}
+
 /* lege kolommen hebben deze minimale breedte */
 td
 {
