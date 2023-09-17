@@ -1,0 +1,12 @@
+/*-- Definite van tabellen ---------------------------------------------------------*/
+table
+{
+  empty-cells: show;
+  min-width: 90%;
+}
+
+/* lege kolommen hebben deze minimale breedte */
+td
+{
+  min-width: 100px;     
+}

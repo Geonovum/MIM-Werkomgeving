@@ -1,0 +1,25 @@
+/*-- Definite van BlockQuotes (uitgelichte tekstblokken) ----------------------------*/
+blockquote
+{
+  font-style: italic;
+  font-size: 95%;
+  background-color: whitesmoke !important;
+}
+
+blockquote::before {
+  content: open-quote;
+  margin-right: -0.2em;
+}
+
+blockquote::after {
+  content: close-quote;
+  margin-left: -0.3em;
+}
+
+blockquote {
+  quotes: "“" "”"  ;
+}
+
+blockquote p {
+  display: inline;
+}

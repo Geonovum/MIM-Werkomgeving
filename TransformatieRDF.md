@@ -139,7 +139,7 @@ Onderstaande tabellen geven een overzicht van alle transformaties en een referen
 |`mim:lengte`|`sh:minLength`, `sh:maxLength`|[lengte](#transformatie-lengte)|
 |`mim:patroon`|`mim:patroon`|[patroon](#transformatie-patroon)|
 |`mim:formeelPatroon`|`sh:pattern`|[formeel patroon](#transformatie-formeel-patroon)|
-|`mim:uniekeAanduiding`|`mim:uniekeAanduiding`|[unieke aanduiding](#transformatie-uniekeaanduiding)
+|`mim:uniekeAanduiding`|`mim:uniekeAanduiding`|[unieke aanduiding](#transformatie-unieke-aanduiding)
 |`mim:populatie`|`mim:populatie`|[populatie](#transformatie-populatie)|
 |`mim:kwaliteit`|`mim:kwaliteit`|[kwaliteit](#transformatie-kwaliteit)|
 |`mim:indicatieAbstractObject`|`sh:propertyShape` en `mim:indicatieAbstractObject`|[indicatie abstract object](#transformatie-indicatie-abstract-object)|
@@ -325,7 +325,7 @@ WHERE {
 
 > De typering van het hiërarchische verband tussen een meer generiek en een meer specifiek modelelement van hetzelfde soort, waarbij het meer specifieke modelelement eigenschappen van het meer generieke modelelement overerft.
 
-Generalisatie kan gebruikt worden tussen objecttypen, maar ook tussen datatypes. Aangezien zowel objecttypen als datatypen in het RDFS gebaseerde model worden getransformeerd naar een subklasse van `rdfs:Class`, kan in beide gevallen gebruik worden gemaakt van dezelfde transformatie.
+Generalisatie kan gebruikt worden tussen objecttypen, maar ook tussen datatypen. Aangezien zowel objecttypen als datatypen in het RDFS gebaseerde model worden getransformeerd naar een subklasse van `rdfs:Class`, kan in beide gevallen gebruik worden gemaakt van dezelfde transformatie.
 
 Een `mim:Generalisatie` wordt vertaald naar een `rdfs:subClassOf`.
 
@@ -471,9 +471,9 @@ WHERE {
 
 ### Transformatie: Referentielijst
 
-> Een lijst met een opsomming van de mogelijke domeinwaarden van een attribuutsoort, die buiten het model in een externe waardenlijst worden beheerd. De domeinwaarden in de lijst kunnen in de loop van de tijd aangepast, uitgebreid, of verwijderd worden, zonder dat het informatiemodel aangepast wordt (in tegenstelling tot bij een enumeratie).
+> Een lijst met een opsomming van de mogelijke domeinwaarden van een attribuutsoort, die buiten het model in een externe waardelijst worden beheerd. De domeinwaarden in de lijst kunnen in de loop van de tijd aangepast, uitgebreid, of verwijderd worden, zonder dat het informatiemodel aangepast wordt (in tegenstelling tot bij een enumeratie).
 
-Een waardelijst kan verschillende soorten dingen opsommen. Een lijst met waardes, bijv. een opsomming van nummers, maar ook een lijst met concepten, datatypes, of objecten. Het is dan ook niet triviaal om een goede automatische vertaling te bepalen die een waardelijst kan vertalen naar Linked Data.
+Een waardelijst kan verschillende soorten dingen opsommen. Een lijst met waardes, bijv. een opsomming van nummers, maar ook een lijst met concepten, datatypen, of objecten. Het is dan ook niet triviaal om een goede automatische vertaling te bepalen die een waardelijst kan vertalen naar Linked Data.
 
 Het MIM biedt echt aanknopingspunten hoe een waardelijst gemodelleerd dient te worden:
 
@@ -1208,17 +1208,17 @@ WHERE {
 </pre>
 
 ### transformatie: locatie
-> Als het type van het attribuutsoort een waardenlijst is, dan wordt hier de locatie waar deze te vinden is opgegeven.
+> Als het type van het attribuutsoort een waardelijst is, dan wordt hier de locatie waar deze te vinden is opgegeven.
 
-Een `mim:locatie` wordt direct, zonder aanpassing, overgenomen in het vertaalde model. Daarnaast wordt dit veld gebruikt bij het munten van de URI's van de verschillende modelelementen en het achterhalen van de inhoud van een waardenlijst.
+Een `mim:locatie` wordt direct, zonder aanpassing, overgenomen in het vertaalde model. Daarnaast wordt dit veld gebruikt bij het munten van de URI's van de verschillende modelelementen en het achterhalen van de inhoud van een waardelijst.
 
 ### transformatie: type
 > Het datatype waarmee waarden van deze attribuutsoort worden vastgelegd.
 
 De vertaling van een `mim:type` hangt af van de vertaling van het datatype waar naar wordt verwezen:
 
-- Voor primitieve datatypes wordt vertaald naar een `sh:datatype`;
-- Voor gestructureerde datatypes wordt vertaald naar een `sh:node`;
+- Voor primitieve datatypen wordt vertaald naar een `sh:datatype`;
+- Voor gestructureerde datatypen wordt vertaald naar een `sh:node`;
 - Voor een enumeratie wordt vertaald naar een `sh:node`;
 - Voor een referentielijst wordt vertaald naar een `sh:node`;
 - Voor een codelijst wordt vertaald naar een `sh:node`;

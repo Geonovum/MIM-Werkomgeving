@@ -46,7 +46,7 @@ var respecConfig =
   //specStatus: "GN-DEF",             // Definitieve Versie
   //-- specType is verplicht bij alle andere dan BASIS ---------------------------------
   //specType: "NO",                   // Norm
-  specType: "ST",                   // Standaard
+  specType: "HR",                   // Standaard
   //specType: "IM",                   // Informatie Model
   //specType: "PR",                   // Praktijkrichtlijn
   //specType: "HR",                   // HandReiking
@@ -58,22 +58,17 @@ var respecConfig =
   //-- NB: in de werkversie uitzetten, want dan pakt Respec de pushdate ---------------
   //publishDate: "2019-10-08",  	    // Format is "YYYY-MM-DD"
   //-- Repositorynaam op GitHub -------------------------------------------------------
-  github: "https://github.com/geonovum/<naam van de repository>",
+  github: "https://github.com/geonovum/MIM-Werkomgeving",
   //-- Repositorynaam/issues op GitHub ------------------------------------------------
-  issueBase: "https://github.com/geonovum/<naam van de repository>/issues",
+  issueBase: "https://github.com/geonovum/MIM-Werkomgeving/issues",
   //-- edDraftURI: de URI van de werkversie van het document
-  edDraftURI: "https://github/geonovum/<naam van de repository>",
+  edDraftURI: "https://github/geonovum/MIM-Werkomgeving",
   //-- de namen van de Editor(s) ------------------------------------------------------
   //-- vul in: per Editor: name:, company:, companyURL: -------------------------------
   editors: 
  [
     {
-      name:       "Naam Editor-1",
-      company:    "Geonovum",
-      companyURL: "https://www.geonovum.nl"
-    }, 
-    {
-      name:       "Naam Editor-n",
+      name:       "Dick Krijtenburg",
       company:    "Geonovum",
       companyURL: "https://www.geonovum.nl"
     }, 
@@ -83,15 +78,20 @@ var respecConfig =
   authors: 
   [
     {
-      name:       "Naam Auteur-1",
-      company:    "Geonovum",
-      companyURL: "https://www.geonovum.nl"
+      name:       "Rik",
+      company:    "CROW",
+      companyURL: "https://www.crow.nl"
     }, 
     {
-      name:       "Naam Auteur-2",
+      name:       "Paul Janssen",
       company:    "Geonovum",
       companyURL: "https://www.geonovum.nl"
-    }, 
+    },
+    {
+      name:       "Marco Brattinga",
+      company:    "Geonovum",
+      companyURL: "https://www.geonovum.nl"
+    },  
   ],
   //-- shortName is verplicht! (komt in de URL: kies logische naam) --------------------
   shortName: "et",  	              // Wordt gebruikt in de document URL
@@ -161,7 +161,7 @@ var respecConfig =
 
   //-- Optionele parameters:
   //emailComments: "mim@geonovum.nl",         // reactie mailadres, alleen bij CV!
-  //subtitle: "iets",                         // Subtitel van het document
+  subtitle: "Een samenwerking van CROW, Geonovum, IHW en TNO",                         // Subtitel van het document
   //maxTocLevel: 3,                           // Aantal niveau's ToC, default is 0
   //-- LOGO: Hier kan je een ander logo opgeven indien nodig
   //logos: [{
