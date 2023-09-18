@@ -288,11 +288,15 @@ Om duidelijk(er) te maken wat wordt bedoeld kijken we eerst naar het begrip ‘o
   Een object is geen modelelement in een informatiemodel. Die worden aangeduid met het MIM-stereotype <a href="#objecttype">«Objecttype»</a>.
 </aside>
 
-*Toelichting:* Met in de werkelijkheid wordt bedoeld dat het om de daadwerkelijke onderwerpen van gesprek gaat, de verzameling van de concrete tastbare dingen waarover we het hebben. Bijvoorbeeld, de persoon Jan, Paleis 't Loo. Het wordt veelal als niet politiek correct beschouwd mensen als objecten te zien. In dit kader, de informatievoorziening, beschouwen we evenwel natuurlijke en niet-natuurlijke personen wel als objecten. ‘Tastbaar’ moet hierbij ruim geïnterpreteerd worden. Het gaat niet alleen om fysiek herkenbare objecten zoals auto’s, gebouwen en mensen, ook om zogenaamde virtuele objecten waarover binnen het domein door betrokkenen gecommuniceerd wordt zoals kadastrale percelen, (maatschappelijke) activiteiten en processen. Hoe een ‘tastbaar iets’ als een object beschouwd wordt, hangt af van het domein waarvoor dat ‘tastbaar iets’ relevant is. Zo wordt de gebouwde omgeving in het ene domein beschouwd als een verzameling gebouwen terwijl een ander domein daarin panden onderscheidt. Een object is voor een domein relevant als eigenschappen (kenmerken) daarvan van belang zijn voor het functioneren van dat domein.
+*Toelichting:* 
+
+Met in de werkelijkheid wordt bedoeld dat het om de daadwerkelijke onderwerpen van gesprek gaat, de verzameling van de concrete tastbare dingen waarover we het hebben. Bijvoorbeeld, de persoon Jan, Paleis 't Loo. Een object wordt ook wel een *exemplaar* van een objecttype genoemd (vele soortgelijke exemplaren samen zijn getypeerd naar een objecttype). 
+
+Het wordt veelal als niet politiek correct beschouwd mensen als objecten te zien. In dit kader, de informatievoorziening, beschouwen we evenwel natuurlijke en niet-natuurlijke personen wel als objecten. ‘Tastbaar’ moet hierbij ruim geïnterpreteerd worden. Het gaat niet alleen om fysiek herkenbare objecten zoals auto’s, gebouwen en mensen, ook om zogenaamde virtuele objecten waarover binnen het domein door betrokkenen gecommuniceerd wordt zoals kadastrale percelen, (maatschappelijke) activiteiten en processen. Hoe een ‘tastbaar iets’ als een object beschouwd wordt, hangt af van het domein waarvoor dat ‘tastbaar iets’ relevant is. Zo wordt de gebouwde omgeving in het ene domein beschouwd als een verzameling gebouwen terwijl een ander domein daarin panden onderscheidt. Een object is voor een domein relevant als eigenschappen (kenmerken) daarvan van belang zijn voor het functioneren van dat domein. 
 
 #### Gegeven
 
-Een object heeft kenmerken waarover gegevens bekend zijn.
+Een object heeft kenmerken waarvoor gegevens bekend zijn. 
 
 <aside class="definition">
   <dfn>Gegeven</dfn>De betekenisvolle formulering van een waargenomen feit, waaraan een waarde kan worden toegekend.
@@ -304,16 +308,19 @@ Een object heeft kenmerken waarover gegevens bekend zijn.
 
 *Toelichting:*
 
-Voorbeelden van gegevens zijn de waardes ‘Jan’ en ‘1-1-1970’ betreffende de naam en de geboortedatum van een object van het type Persoon. Een informatiemodel specificeert niet de gegevens zelf. Een gegeven zoals '1-1-1970' noemen we een attribuut van Jan. In het informatiemodel wordt dit het attribuutsoort 'geboortedatum' of 'overlijdensdatum' van een objecttype Persoon. Merk op dat een gegeven ‘1-1-1970’ zonder duidelijkheid over het soort gegeven c.q. het attribuutsoort 'geboortedatum' of 'overlijdensdatum' geen informatie biedt.
+Voorbeelden van gegevens zijn de waardes ‘Jan’ en ‘1-1-1970’ betreffende de naam en de geboortedatum van een object van het type Persoon. 
 
-Gegevens zijn de objectief waarneembare neerslag of registratie van feiten op een bepaald medium, zodanig dat deze gegevens uitgewisseld en voor langere tijd bewaard kunnen worden. Dat kan op papier, in digitale vorm, et cetera. Met deze gegevens wordt een model (een selectief deel dus) van de werkelijkheid vastgelegd in de tijd. Ofschoon de werkelijkheid nooit stilstaat, kan deze door het vastleggen van de gegevens toch worden bevroren. 
-Het waargenomen feit dat twee objecten een relatie hebben wordt ook gezien als een gegeven.
+Een informatiemodel specificeert niet de gegevens zelf. Een gegeven zoals '1-1-1970' noemen we een waarde voor een attribuut van Jan. In het informatiemodel wordt dit het attribuutsoort 'geboortedatum' of 'overlijdensdatum' van een objecttype Persoon genoemd. Het is dus ook van belang om welk kenmerk van Jan het gaat. Merk op dat een gegeven ‘1-1-1970’ geen informatie biedt zonder dat er eerst duidelijkheid is over het kenmerk c.q. het attribuutsoort 'geboortedatum' of 'overlijdensdatum' het gaat en om welke object van het objecttype Persoon het gaat. Het waargenomen feit dat twee objecten een relatie hebben wordt ook gezien als een een modelelement waarvoor een gegeven bekend kan zijn.
 
-Zodra een gegeven vastgelegd wordt of uitgewisseld wordt noemen we deze ook wel data. Het is deze data die waarde/data van een eigenschap van een object is, bv. 'Jan' is de waarde/data van de eigenschap voornaam van een Natuurlijk persoon. Data aangevuld met de betekenis uit het informatiemodel, waarin de definitie van wat een voornaam is staat, noemen we informatie.
+Een gegeven kan al bekend zijn zodra deze wordt waargenomen, maar in een informatievoorziening zijn gegevens de objectief waarneembare neerslag of registratie van feiten op een bepaald medium, zodanig dat deze gegevens uitgewisseld en voor langere tijd bewaard kunnen worden. Dat kan op papier, in digitale vorm, et cetera. Een gegeven in een informatievoorziening is dus een vastgelegde waarde voor een waargenomen feit dat toegekend is aan een kenmerk van een specifiek object. 
 
-Er zijn een aantal modelelementen waar gegevens "in" zitten, oftewel waarvoor een feit waargenomen kan worden die wel als een waarde/data kunnen vastleggen. Dit zijn: _attribuutsoort_, _relatiesoort_ en _externe koppeling_. Elk gegeven kan:
+Er zijn waardes die:
 - een enkelvoudige structuur hebben, zoals bij de voornaam 'Jan', of het object Natuurlijk persoon met identificatie '123';
-- een interne structuur kennen die nader onderverdeeld is, zoals bijvoorbeeld een geometrie (die bestaat uit meerdere coördinaten, een coördinaten referentiesysteem, enzovoorts). Het gegeven, oftewel het waargenomen feit voor de enkele eigenschap van het onderwerp van gesprek/het object, bestaat dan uit meerdere data delen, met voor elk een apart data element, die tezamen het gegeven als geheel vormen.
+- een interne structuur kennen die nader onderverdeeld is, zoals bijvoorbeeld een geometrie die bestaat uit meerdere coördinaten, een coördinaten referentiesysteem, enzovoorts. De onderdelen vormen samen de waarde (de onderdelen zijn zelf niet een gegeven, maar zijn slechts een onderdeel ervan).
+
+Er zijn slechts een aantal modelelementen waarmee een gegeven gemodelleerd kan worden. Dit zijn: _attribuutsoort_, _relatiesoort_ en _externe koppeling_. Hier kunnen gegevens voor bekend zijn. Andere modelelementen, zoals een objecttype of een datatype kunnen geen gegevens "bevatten". 
+
+Met de vastlegging van gegevens in een informatievoorziening wordt een model van de werkelijkheid bevroren in de tijd. Hoewel de werkelijkheid nooit stil staat, kan deze door het vastleggen van de gegevens toch worden bevroren. Bij een gegeven kunnen ook metagegevens worden vastgelegd, voor het bijhouden van *historie*, zoals de tijdslijn geldigheid en de tijdslijn registratie. Zodat we weten wanneer het gegeven geldig is (of is geweest) en wanneer het gegeven is vastgelegd op een bepaald medium. Het is (meestal) niet zinvol om voor onderdelen van een gegeven historie bij te houden. Immers een onderdeel van een gegeven representeert niet de gehele waarde van een feit en gebruikers van de informatievoorziening zijn meestal niet geinteresseerd in gedeeltes zijn feiten. 
 
 #### Objecttype
 
