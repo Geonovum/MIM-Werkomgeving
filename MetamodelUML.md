@@ -352,10 +352,10 @@ De attribuutsoorten worden naar de volgende aspecten gespecificeerd:
 | **Mogelijk geen waarde**                    | 1                  | Algemeen metagegeven.                                        |                                                              |      | *Tagged value* |            |
 | **Identificerend**                          | 0..1               | Algemeen metagegeven.                                        | *isID bij de metaclass Property*                             |      | *isID*         |            |
 | heeft **datatype**  | 1       | Binding aan een datatype.     | *datatype* = UML-datatype |    | *type* = datatype          |     |
-| **Minimumwaarde inclusief** | 0..1          | Algemeen metagegeven. Een attribuutsoort mag maar één voorkomen van metagegeven **Minimumwaarde inclusief** of **Minimumwaarde exclusief** hebben. | |  | _Tagged value_ |            |
-| **Minimumwaarde exclusief** | 0..1          | Algemeen metagegeven. Een attribuutsoort mag maar één voorkomen van metagegeven **Minimumwaarde inclusief** of **Minimumwaarde exclusief** hebben. | |  | _Tagged value_ |            |
-| **Maximumwaarde inclusief** | 0..1          | Algemeen metagegeven. Een attribuutsoort mag maar één voorkomen van metagegeven **Maximumwaarde inclusief** of **Maximumwaarde exclusief** hebben. | |  | _Tagged value_ |            |
-| **Maximumwaarde exclusief** | 0..1          | Algemeen metagegeven. Een attribuutsoort mag maar één voorkomen van metagegeven **Maximumwaarde inclusief** of **Maximumwaarde exclusief** hebben. | |  | _Tagged value_ |            |
+| **Minimumwaarde inclusief** | 0..1          | Algemeen metagegeven. Een attribuutsoort mag of een metagegeven **Minimumwaarde inclusief** of **Minimumwaarde exclusief** hebben, niet beide. | |  | _Tagged value_ |            |
+| **Minimumwaarde exclusief** | 0..1          | Algemeen metagegeven. Een attribuutsoort mag of een metagegeven **Minimumwaarde inclusief** of **Minimumwaarde exclusief** hebben, niet beide. | |  | _Tagged value_ |            |
+| **Maximumwaarde inclusief** | 0..1          | Algemeen metagegeven. Een attribuutsoort mag of een metagegeven **Maximumwaarde inclusief** of **Maximumwaarde exclusief** hebben, niet beide. | |  | _Tagged value_ |            |
+| **Maximumwaarde exclusief** | 0..1          | Algemeen metagegeven. Een attribuutsoort mag of een metagegeven **Maximumwaarde inclusief** of **Maximumwaarde exclusief** hebben, niet beide. | |  | _Tagged value_ |            |
 
 Alleen toevoegen als het attribuutsoort een waarde van een meting of waarneming betreft en de eenheid als metagegeven opgenomen moet worden.
 
@@ -685,10 +685,10 @@ De referentie-elementen worden naar de volgende aspecten gespecificeerd:
 | **Kardinaliteit**                           | 1                  | Algemeen metagegeven. | *lowerValue en upperValue van de metaclass Multiplicity Element* |      | *Multiplicity van de de target role* |            |
 | **Identificerend**                          | 0..1               | Algemeen metagegeven. | *isID van de metaclass Property*                             |      | *isID bij de betreffende class*      |            |
 | heeft **datatype**       | 1       | Binding aan een datatype.     | *datatype* = UML-datatype |    | *type* = datatype          |     |
-| **Minimumwaarde inclusief** | 0..1          | Algemeen metagegeven. Een attribuutsoort mag maar één voorkomen van metagegeven **Minimumwaarde inclusief** of **Minimumwaarde exclusief** hebben. | |  | _Tagged value_ |            |
-| **Minimumwaarde exclusief** | 0..1          | Algemeen metagegeven. Een attribuutsoort mag maar één voorkomen van metagegeven **Minimumwaarde inclusief** of **Minimumwaarde exclusief** hebben. | |  | _Tagged value_ |            |
-| **Maximumwaarde inclusief** | 0..1          | Algemeen metagegeven. Een attribuutsoort mag maar één voorkomen van metagegeven **Maximumwaarde inclusief** of **Maximumwaarde exclusief** hebben. | |  | _Tagged value_ |            |
-| **Maximumwaarde exclusief** | 0..1          | Algemeen metagegeven. Een attribuutsoort mag maar één voorkomen van metagegeven **Maximumwaarde inclusief** of **Maximumwaarde exclusief** hebben. | |  | _Tagged value_ |            |
+| **Minimumwaarde inclusief** | 0..1          | Algemeen metagegeven. Een referentie-element mag of een metagegeven **Minimumwaarde inclusief** of **Minimumwaarde exclusief** hebben, niet beide. | |  | _Tagged value_ |            |
+| **Minimumwaarde exclusief** | 0..1          | Algemeen metagegeven. Een referentie-element mag of een metagegeven **Minimumwaarde inclusief** of **Minimumwaarde exclusief** hebben, niet beide. | |  | _Tagged value_ |            |
+| **Maximumwaarde inclusief** | 0..1          | Algemeen metagegeven. Een referentie-element mag of een metagegeven **Maximumwaarde inclusief** of **Maximumwaarde exclusief** hebben, niet beide. | |  | _Tagged value_ |            |
+| **Maximumwaarde exclusief** | 0..1          | Algemeen metagegeven. Een referentie-element mag of een metagegeven **Maximumwaarde inclusief** of **Maximumwaarde exclusief** hebben, niet beide. | |  | _Tagged value_ |            |
 
 
 ### Datatypen in UML
@@ -755,10 +755,10 @@ De data-elementen worden naar de volgende aspecten gespecificeerd:
 | **- Formeel patroon**  | 0..1    | Algemeen metagegeven. |                                                                 |      | *Tagged value*    |     |
 | **Kardinaliteit**      | 1       | Algemeen metagegeven. | *lowerValue en upperValue van de metaclass MultiplicityElement* |      | *Multiplicity*    |     |
 | heeft **datatype**     | 1       | Binding aan een datatype.  | *datatype* = UML-datatype       |      | *type* = datatype |     |
-| **Minimumwaarde inclusief** | 0..1 | Algemeen metagegeven. Een data element mag maar één voorkomen van metagegeven **Minimumwaarde inclusief** of **Minimumwaarde exclusief** hebben. | | | _Tagged value_ | |
-| **Minimumwaarde exclusief** | 0..1 | Algemeen metagegeven. Een data element mag maar één voorkomen van metagegeven **Minimumwaarde inclusief** of **Minimumwaarde exclusief** hebben. | | | _Tagged value_ | |
-| **Maximumwaarde inclusief** | 0..1 | Algemeen metagegeven. Een data element mag maar één voorkomen van metagegeven **Maximumwaarde inclusief** of **Maximumwaarde exclusief** hebben. | | | _Tagged value_ | |
-| **Maximumwaarde exclusief** | 0..1 | Algemeen metagegeven. Een data element mag maar één voorkomen van metagegeven **Maximumwaarde inclusief** of **Maximumwaarde exclusief** hebben. | | | _Tagged value_ | |
+| **Minimumwaarde inclusief** | 0..1 | Algemeen metagegeven. Een data element mag of een metagegeven **Minimumwaarde inclusief** of **Minimumwaarde exclusief** hebben, niet beide. | | | _Tagged value_ | |
+| **Minimumwaarde exclusief** | 0..1 | Algemeen metagegeven. Een data element mag of een metagegeven **Minimumwaarde inclusief** of **Minimumwaarde exclusief** hebben, niet beide. | | | _Tagged value_ | |
+| **Maximumwaarde inclusief** | 0..1 | Algemeen metagegeven. Een data element mag of een metagegeven **Maximumwaarde inclusief** of **Maximumwaarde exclusief** hebben, niet beide. | | | _Tagged value_ | |
+| **Maximumwaarde exclusief** | 0..1 | Algemeen metagegeven. Een data element mag of een metagegeven **Maximumwaarde inclusief** of **Maximumwaarde exclusief** hebben, niet beide. | | | _Tagged value_ | |
 
 #### «Keuze»
 
