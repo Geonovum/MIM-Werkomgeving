@@ -428,22 +428,22 @@ mim:kwaliteit a owl:DatatypeProperty;
 .
 mim:minimumwaardeInclusief a owl:DatatypeProperty ;
   rdfs:label "minimumwaarde inclusief"@nl ;
-  rdfs:comment "Minimumwaarde inclusief (`<=`) is de ondergrens van het waardebereik voor een attribuutsoort of data element getypeerd met een primitief datatype, inclusief die waarde zelf. De minimumwaarde moet van hetzelfde primitieve datatype zijn als het datatype van het modelelement waar het voor geldt."@nl ;
+  rdfs:comment "Minimumwaarde inclusief (`>=`) is de ondergrens van het waardebereik voor een attribuutsoort of data element getypeerd met een primitief datatype, inclusief die waarde zelf. De minimumwaarde moet van hetzelfde primitieve datatype zijn als het datatype van het modelelement waar het voor geldt."@nl ;
   dct:source mimdoc:sectie2.8.2.36;
 .
 mim:minimumwaardeExclusief a owl:DatatypeProperty ;
   rdfs:label "minimumwaarde exclusief"@nl ;
-  rdfs:comment "Minimumwaarde exclusief (`<`) is de ondergrens van het waardebereik voor een attribuutsoort of data element getypeerd met een primitief datatype, exclusief die waarde zelf. De minimumwaarde moet van hetzelfde primitieve datatype zijn als het datatype van het modelelement waar het voor geldt."@nl ;
+  rdfs:comment "Minimumwaarde exclusief (`>`) is de ondergrens van het waardebereik voor een attribuutsoort of data element getypeerd met een primitief datatype, exclusief die waarde zelf. De minimumwaarde moet van hetzelfde primitieve datatype zijn als het datatype van het modelelement waar het voor geldt."@nl ;
   dct:source mimdoc:sectie2.8.2.37;
 .
 mim:maximumwaardeInclusief a owl:DatatypeProperty ;
   rdfs:label "maximumwaarde inclusief"@nl ;
-  rdfs:comment "Maximumwaarde inclusief (`>=`) is de bovengrens van het waardebereik voor een attribuutsoort of data element getypeerd met een primitief datatype, inclusief die waarde zelf. De maximumwaarde moet van hetzelfde primitieve datatype zijn als het datatype van het modelelement waar het voor geldt."@nl ;
+  rdfs:comment "Maximumwaarde inclusief (`<=`) is de bovengrens van het waardebereik voor een attribuutsoort of data element getypeerd met een primitief datatype, inclusief die waarde zelf. De maximumwaarde moet van hetzelfde primitieve datatype zijn als het datatype van het modelelement waar het voor geldt."@nl ;
   dct:source mimdoc:sectie2.8.2.38;
 .
 mim:maximumwaardeExclusief a owl:DatatypeProperty ;
   rdfs:label "maximumwaarde exclusief"@nl ;
-  rdfs:comment "Maximumwaarde exclusief (`>`) is de bovengrens van het waardebereik voor een attribuutsoort of data element getypeerd met een primitief datatype, exclusief die waarde zelf. De maximumwaarde moet van hetzelfde primitieve datatype zijn als het datatype van het modelelement waar het voor geldt."@nl ;
+  rdfs:comment "Maximumwaarde exclusief (`<`) is de bovengrens van het waardebereik voor een attribuutsoort of data element getypeerd met een primitief datatype, exclusief die waarde zelf. De maximumwaarde moet van hetzelfde primitieve datatype zijn als het datatype van het modelelement waar het voor geldt."@nl ;
   dct:source mimdoc:sectie2.8.2.39;
 .
 

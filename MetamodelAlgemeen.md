@@ -1527,7 +1527,7 @@ De eerste drie zijn informatie-technisch uit te drukken met het informatie-eleme
 
 <aside class="definition">
   <dfn>Minimumwaarde inclusief</dfn>
-  Minimumwaarde inclusief (`<=`) is de ondergrens van het waardebereik voor een attribuutsoort of data element getypeerd met een primitief datatype, inclusief die waarde zelf. De minimumwaarde moet van hetzelfde primitieve datatype zijn als het datatype van het modelelement waar het voor geldt.
+  Minimumwaarde inclusief (`>=`) is de ondergrens van het waardebereik voor een attribuutsoort of data element getypeerd met een primitief datatype, inclusief die waarde zelf. De minimumwaarde moet van hetzelfde primitieve datatype zijn als het datatype van het modelelement waar het voor geldt.
 </aside>
 
 *Toelichting*
@@ -1550,7 +1550,7 @@ Een modelelement mag maar één voorkomen van metagegeven **Minimumwaarde inclus
 
 <aside class="definition">
   <dfn>Minimumwaarde exclusief</dfn>
-  Minimumwaarde exclusief (`<`) is de ondergrens van het waardebereik voor een attribuutsoort of data element getypeerd met een primitief datatype, exclusief die waarde zelf. De minimumwaarde moet van hetzelfde primitieve datatype zijn als het datatype van het modelelement waar het voor geldt.
+  Minimumwaarde exclusief (`>`) is de ondergrens van het waardebereik voor een attribuutsoort of data element getypeerd met een primitief datatype, exclusief die waarde zelf. De minimumwaarde moet van hetzelfde primitieve datatype zijn als het datatype van het modelelement waar het voor geldt.
 </aside>
 
 *Toelichting*
@@ -1573,7 +1573,7 @@ Een modelelement mag maar één voorkomen van metagegeven **Minimumwaarde inclus
 
 <aside class="definition">
   <dfn>Maximumwaarde inclusief</dfn>
-  Maximumwaarde inclusief (`>=`) is de bovengrens van het waardebereik voor een attribuutsoort of data element getypeerd met een primitief datatype, inclusief die waarde zelf. De maximumwaarde moet van hetzelfde primitieve datatype zijn als het datatype van het modelelement waar het voor geldt.
+  Maximumwaarde inclusief (`<=`) is de bovengrens van het waardebereik voor een attribuutsoort of data element getypeerd met een primitief datatype, inclusief die waarde zelf. De maximumwaarde moet van hetzelfde primitieve datatype zijn als het datatype van het modelelement waar het voor geldt.
 </aside>
 
 *Toelichting*
@@ -1596,7 +1596,7 @@ Een modelelement mag maar één voorkomen van metagegeven **Maximumwaarde inclus
 
 <aside class="definition">
   <dfn>Maximumwaarde exclusief</dfn>
-  Maximumwaarde exclusief (`>`) is de bovengrens van het waardebereik voor een attribuutsoort of data element getypeerd met een primitief datatype, exclusief die waarde zelf. De maximumwaarde moet van hetzelfde primitieve datatype zijn als het datatype van het modelelement waar het voor geldt.
+  Maximumwaarde exclusief (`<`) is de bovengrens van het waardebereik voor een attribuutsoort of data element getypeerd met een primitief datatype, exclusief die waarde zelf. De maximumwaarde moet van hetzelfde primitieve datatype zijn als het datatype van het modelelement waar het voor geldt.
 </aside>
 
 *Toelichting*

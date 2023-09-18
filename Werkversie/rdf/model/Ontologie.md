@@ -703,7 +703,7 @@
 
 |URI|http://modellen.mim-standaard.nl/def/mim#maximumwaardeExclusief|
 |-|-|
-|Definitie|Maximumwaarde exclusief (`>`) is de bovengrens van het waardebereik voor een attribuutsoort of data element getypeerd met een primitief datatype, exclusief die waarde zelf. De maximumwaarde moet van hetzelfde primitieve datatype zijn als het datatype van het modelelement waar het voor geldt.|
+|Definitie|Maximumwaarde exclusief (`<`) is de bovengrens van het waardebereik voor een attribuutsoort of data element getypeerd met een primitief datatype, exclusief die waarde zelf. De maximumwaarde moet van hetzelfde primitieve datatype zijn als het datatype van het modelelement waar het voor geldt.|
 |Bron|[Sectie 2.8.2.39 Metagegeven: maximumwaarde exclusief](https://docs.geostandaarden.nl/mim/mim/#metagegeven-maximumwaarde-exclusief)|
 |Eigenschap van|[mim:DataElement](#DataElement), [mim:ReferentieElement](#ReferentieElement), [mim:Attribuutsoort](#Attribuutsoort), |
 
@@ -711,7 +711,7 @@
 
 |URI|http://modellen.mim-standaard.nl/def/mim#maximumwaardeInclusief|
 |-|-|
-|Definitie|Maximumwaarde inclusief (`>=`) is de bovengrens van het waardebereik voor een attribuutsoort of data element getypeerd met een primitief datatype, inclusief die waarde zelf. De maximumwaarde moet van hetzelfde primitieve datatype zijn als het datatype van het modelelement waar het voor geldt.|
+|Definitie|Maximumwaarde inclusief (`<=`) is de bovengrens van het waardebereik voor een attribuutsoort of data element getypeerd met een primitief datatype, inclusief die waarde zelf. De maximumwaarde moet van hetzelfde primitieve datatype zijn als het datatype van het modelelement waar het voor geldt.|
 |Bron|[Sectie 2.8.2.38 Metagegeven: maximumwaarde inclusief](https://docs.geostandaarden.nl/mim/mim/#metagegeven-maximumwaarde-inclusief)|
 |Eigenschap van|[mim:DataElement](#DataElement), [mim:ReferentieElement](#ReferentieElement), [mim:Attribuutsoort](#Attribuutsoort), |
 
@@ -719,7 +719,7 @@
 
 |URI|http://modellen.mim-standaard.nl/def/mim#minimumwaardeExclusief|
 |-|-|
-|Definitie|Minimumwaarde exclusief (`<`) is de ondergrens van het waardebereik voor een attribuutsoort of data element getypeerd met een primitief datatype, exclusief die waarde zelf. De minimumwaarde moet van hetzelfde primitieve datatype zijn als het datatype van het modelelement waar het voor geldt.|
+|Definitie|Minimumwaarde exclusief (`>`) is de ondergrens van het waardebereik voor een attribuutsoort of data element getypeerd met een primitief datatype, exclusief die waarde zelf. De minimumwaarde moet van hetzelfde primitieve datatype zijn als het datatype van het modelelement waar het voor geldt.|
 |Bron|[Sectie 2.8.2.37 Metagegeven: minimumwaarde exclusief](https://docs.geostandaarden.nl/mim/mim/#metagegeven-minimumwaarde-exclusief)|
 |Eigenschap van|[mim:DataElement](#DataElement), [mim:ReferentieElement](#ReferentieElement), [mim:Attribuutsoort](#Attribuutsoort), |
 
@@ -727,7 +727,7 @@
 
 |URI|http://modellen.mim-standaard.nl/def/mim#minimumwaardeInclusief|
 |-|-|
-|Definitie|Minimumwaarde inclusief (`<=`) is de ondergrens van het waardebereik voor een attribuutsoort of data element getypeerd met een primitief datatype, inclusief die waarde zelf. De minimumwaarde moet van hetzelfde primitieve datatype zijn als het datatype van het modelelement waar het voor geldt.|
+|Definitie|Minimumwaarde inclusief (`>=`) is de ondergrens van het waardebereik voor een attribuutsoort of data element getypeerd met een primitief datatype, inclusief die waarde zelf. De minimumwaarde moet van hetzelfde primitieve datatype zijn als het datatype van het modelelement waar het voor geldt.|
 |Bron|[Sectie 2.8.2.36 Metagegeven: minimumwaarde inclusief](https://docs.geostandaarden.nl/mim/mim/#metagegeven-minimumwaarde-inclusief)|
 |Eigenschap van|[mim:DataElement](#DataElement), [mim:ReferentieElement](#ReferentieElement), [mim:Attribuutsoort](#Attribuutsoort), |
 
