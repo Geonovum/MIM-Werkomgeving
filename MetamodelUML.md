@@ -605,7 +605,7 @@ Voor codelijst worden de volgende aspecten gespecificeerd:
 | **Locatie**      | 1..1               | Algemeen metagegeven.    |                |      | *tagged value* |            |
 | **Doelformaat**  | 1..1               | Algemeen metagegeven.    |                |      | *tagged value* |            |
 | **Datatype**     | 1..1               | Algemeen metagegeven.    |                |      | *tagged value* |            |
-| **Waarde item**  | 0..1               | Algemeen metagegeven.    |                |      | *tagged value* |            |
+| **Waarde-item**  | 0..1               | Algemeen metagegeven.    |                |      | *tagged value* |            |
 | **Profielspecificatie**      | 0..1               | Algemeen metagegeven.    |                |      | *tagged value* |            |
 
 
