@@ -4,20 +4,7 @@ Dit hoofdstuk beschrijft hoe je met de modelelementen uit het hoofdstuk [Metamod
 
 ## Structuur metamodel in UML
 
-De eerste paragraaf bevat UML-diagrammen. Elk diagram toont een aantal modelelementen. Het geheel van diagrammen, in samenhang, is opgenomen in de bijlage [Template naamgeving conventies](#template-naamgeving-conventies).
-
-<aside class="issue" title="Diagrammen in samenhang ontbreekt">
-  <p>Via deze link verwacht je een diagram met alle modelelementen erin te krijgen. In plaats daarvan kom je terecht bij een tabel/template, waar niet alle (actuele) modelelementen in staan. Wekt de tekst verkeerde verwachtingen, of ontbreekt het diagram?</p>
-</aside>
-
-Uitgangspunten voor het metamodel in UML zijn:
-
-<aside class="issue" title="Kanttekeningen bij uitgangspunten">
-  <ul>
-    <li>Bullet 1: Waarnaar wordt met '<i>dit</i>' verwezen?</li>
-    <li>bullet 3: Neem een verwijzing op naar de betreffende bijlage.</li>
-  </ul>
-</aside>
+De eerste paragraaf bevat UML-diagrammen. Elk diagram toont een aantal modelelementen. Het geheel van diagrammen, in samenhang, is opgenomen in de [bijlagen](#diagrammen). Uitgangspunten voor het metamodel in UML zijn:
 
  - UML 2.5 als de basis voor de conceptuele beschrijving.
  - Gebruik maken van de bestaande UML-modelelementen conform UML van OMG. OMG noemt dit een UML metaclass. Een voorbeeld hiervan is UML-Class.
@@ -29,6 +16,13 @@ Uitgangspunten voor het metamodel in UML zijn:
  - Elk modelelement heeft een MIM metaclass. Deze wordt met UML in een
 informatiemodel gemodelleerd als een extensie van een Metaclass van UML 2.5 en een bijbehorende
 stereotype.
+
+<aside class="issue" title="Kanttekeningen bij uitgangspunten">
+  <ul>
+    <li>Bullet 1: Waarnaar wordt met '<i>dit</i>' verwezen?</li>
+    <li>bullet 3: Neem een verwijzing op naar de betreffende bijlage.</li>
+  </ul>
+</aside>
 
 <aside class='example' title="Objecttype als UML-Class">
   <p>Het MIM-modelelement <code>«Objecttype»</code> wordt gemodelleerd als een <code>UML-Class</code> met stereotype <code>«Objecttype»</code>. Niet alle MIM-metaklassen hebben een stereotype (nodig). In de kolom staat dan: <code>-</code>.</p>
