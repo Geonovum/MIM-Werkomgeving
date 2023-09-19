@@ -44,10 +44,6 @@ De links kolom bevat het MIM modelelement, zoals bedoeld in het hoofdstuk [Metam
 
 Bijna alle modelelementen hebben een UML-metaclass (UML 2.5) als basis. In het diagram heeft een UML-metaclass een lichtblauwe kleur. Dit is ook opgenomen in diagramvorm. Een overzicht van de diagrammen met metadata is beschikbaar in de [bijlagen](#diagrammen).
 
-<aside class="issue" title="Opmerking verwijderen?"></aside>
-
-De ten opzichte van MIM versie 1.0.1 gewijzigde modelelementen zijn in rood aangegeven.
-
 ### Kern
 
 <figure id="KernZonderMetagegevens">
