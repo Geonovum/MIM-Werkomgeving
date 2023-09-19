@@ -839,10 +839,7 @@ anders voorschrijft, dan wordt deze gevolgd, en niet vertaald. Bijvoorbeeld:
 codeList. Deze conventies gelden ook als in een eigen extensie
 metamodelelementen worden toegevoegd.
 
-In de bijlage is een template opgenomen om de naamgevingsconventies in te
-specificeren. Dit is een hulptabel, die u over kunt nemen naar uw eigen extensie
-(zoals bedoeld in paragraaf 1.8) en in kunt vullen voor uw eigen informatiemodel
-(of organisatie).
+Het is mogelijk om eigen naamgevingsconventie te hanteren. In de bijlage is een [template](#template-naamgevingsconventies) opgenomen om  naamgevingsconventies in te specificeren. Het verschaft een invulmogelijkheid om, per in dit metamodel genoemd modelelement, eigen naamgevingsconventies te documenteren. Dit is een hulptabel, die u over kunt nemen naar uw eigen extensie (zoals bedoeld in paragraaf 1.8) en in kunt vullen voor uw eigen informatiemodel (of organisatie).
 
 ## Verwijzing van een modelelement naar een begrip uit het begrippenkader
 
