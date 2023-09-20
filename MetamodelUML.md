@@ -85,7 +85,7 @@ View 2: Datatypen
 | ----------------------- | ----------------------- | ------------------------ | ---- | ------------------ | ---------- |
 | Primitief datatype      | «Primitief datatype»    | (UML) Primitive Type     |      | Datatype           |            |
 | Gestructureerd datatype | «Gestructuurd datatype» | (UML) Datatype           |      | Datatype           |            |
-| Data element            | «Data element»          | (UML) Property           |      | Attribute          |            |
+| Data-element            | «Data-element»          | (UML) Property           |      | Attribute          |            |
 | Enumeratie              | \-                      | (UML) Enumeration        |      | Enumeration        |            |
 | Enumeratiewaarde        | \-                      | (UML) EnumerationLiteral |      | EnumerationLiteral |            |
 | Referentielijst         | «Referentielijst»       | (UML) Datatype           |      | Datatype           |            |
@@ -285,8 +285,6 @@ stereotype `«id»`
   <p>Rode tekst betreft een standaardelement binnen EA. Zwarte tekst in de kolom betreft een uitbreiding op het UML Metamodel, via tagged values of aanvullende stereotypes.</p>
   </ul>
 </aside>
-
-
 
 <!-- ### Modellering metagegevens voor objecten en attributen in UML -->
 ### Objecten en attributen in UML
@@ -722,10 +720,10 @@ Voor Gestructureerde datatypen worden de volgende aspecten gespecificeerd:
 | **Datum opname** | 1             | Algemeen metagegeven.    |                |      | *tagged value* |            |
 | **Patroon**      | 0..1          | Algemeen metagegeven.    |                |      | *Tagged value* |            |
 | **Formeel patroon**      | 0..1  | Algemeen metagegeven.    |                |      | *Tagged value* |            |
-| bevat **data element**   | 0..*  | Binding aan een data element, 2 of meer tenzij via generalisatie verkregen. | *owned element* = UML-property     |  | *attribute* |   |
+| bevat **data-element**   | 0..*  | Binding aan een data-element, 2 of meer tenzij via generalisatie verkregen. | *owned element* = UML-property     |  | *attribute* |   |
 
 
-#### «Data element»
+#### «Data-element»
 
 De data-elementen worden naar de volgende aspecten gespecificeerd:
 
@@ -745,10 +743,10 @@ De data-elementen worden naar de volgende aspecten gespecificeerd:
 | **- Formeel patroon**  | 0..1    | Algemeen metagegeven. |                                                                 |      | *Tagged value*    |     |
 | **Kardinaliteit**      | 1       | Algemeen metagegeven. | *lowerValue en upperValue van de metaclass MultiplicityElement* |      | *Multiplicity*    |     |
 | heeft **datatype**     | 1       | Binding aan een datatype.  | *datatype* = UML-datatype       |      | *type* = datatype |     |
-| **Minimumwaarde inclusief** | 0..1 | Algemeen metagegeven. Een data element mag of een metagegeven **Minimumwaarde inclusief** of **Minimumwaarde exclusief** hebben, niet beide. | | | _Tagged value_ | |
-| **Minimumwaarde exclusief** | 0..1 | Algemeen metagegeven. Een data element mag of een metagegeven **Minimumwaarde inclusief** of **Minimumwaarde exclusief** hebben, niet beide. | | | _Tagged value_ | |
-| **Maximumwaarde inclusief** | 0..1 | Algemeen metagegeven. Een data element mag of een metagegeven **Maximumwaarde inclusief** of **Maximumwaarde exclusief** hebben, niet beide. | | | _Tagged value_ | |
-| **Maximumwaarde exclusief** | 0..1 | Algemeen metagegeven. Een data element mag of een metagegeven **Maximumwaarde inclusief** of **Maximumwaarde exclusief** hebben, niet beide. | | | _Tagged value_ | |
+| **Minimumwaarde inclusief** | 0..1 | Algemeen metagegeven. Een data-element mag of een metagegeven **Minimumwaarde inclusief** of **Minimumwaarde exclusief** hebben, niet beide. | | | _Tagged value_ | |
+| **Minimumwaarde exclusief** | 0..1 | Algemeen metagegeven. Een data-element mag of een metagegeven **Minimumwaarde inclusief** of **Minimumwaarde exclusief** hebben, niet beide. | | | _Tagged value_ | |
+| **Maximumwaarde inclusief** | 0..1 | Algemeen metagegeven. Een data-element mag of een metagegeven **Maximumwaarde inclusief** of **Maximumwaarde exclusief** hebben, niet beide. | | | _Tagged value_ | |
+| **Maximumwaarde exclusief** | 0..1 | Algemeen metagegeven. Een data-element mag of een metagegeven **Maximumwaarde inclusief** of **Maximumwaarde exclusief** hebben, niet beide. | | | _Tagged value_ | |
 
 #### «Keuze»
 
