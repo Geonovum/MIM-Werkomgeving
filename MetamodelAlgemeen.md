@@ -659,13 +659,12 @@ Diagram: [Overige](#overige)
 #### Constraint
 
 <aside class="definition">
-  <dfn>Constraint</dfn>Een conditie of een beperking, die over een of meerdere modelelementen uit het informatiemodel geldt.
+  <dfn>Constraint</dfn>Een conditie of een beperking, die voor één of meerdere modelelementen uit het informatiemodel geldt.
 </aside>
 
-*Toelichting:* Een constraint kan vastgelegd worden bij alle modelelementen. Echter, meestal
-komt een constraint voor bij een objecttype, om te aan te geven dat de
-constraint geldt voor 2 (of meer) eigenschappen van een objecttype, of om een
-bijzondere specificatie toe te voegen die niet via de bestaande modelelementen gelegd kan worden zoals een 11-proef. Een constraint wordt altijd in gewone tekst omschreven en kan optioneel als formele specificatie worden aangegeven.
+*Toelichting:* Er zit een belangrijk verschil tussen modelelementen waarop je een `Constraint` kunt _**betrekken**_ en modelelementen waarop je een `Constraint` kunt _**vastleggen**_. Een `Constraint` _kan betrekking hebben op alle modelelementen_, maar een `Constraint` _kan niet op alle modelelementen vastgelegd worden_. Op een <code><a>Generalisatie</a></code> kun je een `Constraint` namelijk _niet vastleggen_. Wél kan een `Constraint` _betrekking hebben_ op een `Generalisatie`; die wordt dan toegepast op een betrokken sub- of superklasse (<code><a>Objecttype</a></code>) in de `Generalisatie`-relatie.
+
+Meestal komt een `Constraint` voor bij een `Objecttype`, om te aan te geven dat de `Constraint` geldt voor twee of meer _eigenschappen_ dan wel _specialisaties_ van een `Objecttype`, óf om een _bijzondere specificatie_ toe te voegen die niet via de bestaande modelelementen gelegd kan worden zoals [een 11-proef](https://nl.wikipedia.org/wiki/Elfproef). Een `Constraint` wordt altijd in _gewone tekst_ omschreven en kan _optioneel als formele specificatie_ worden aangegeven.
 
 #### Keuze
 
