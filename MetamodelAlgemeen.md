@@ -106,7 +106,7 @@ View 2: Datatypen. De verschillende soorten datatypen en bijbehorende modeleleme
 | Enumeratie              |
 | Enumeratiewaarde        |
 | Referentielijst         |
-| Referentie element      |
+| Referentie-element      |
 | Codelijst               |
 
 De betekenis van deze modelelementen en de beschrijvingen ervan staan in [Datatypen](#datatypen-1) en in [Waardelijsten](#waardelijsten).
@@ -1522,7 +1522,7 @@ In essentie zijn er vier componenten die een meting of een waarneming beschrijve
 
 De eerste drie zijn informatie-technisch uit te drukken met het informatie-element `Attribuutsoort` en `Datatype`. Voor `Eenheid` is een apart metagegeven gecreëerd dat gekoppeld wordt aan een `Attribuutsoort`.
 
-*Toepassing:* Relatiesoort
+*Toepassing:* Attribuutsoort, Referentie-element.
 
 ### Modelelementbindingen - metagegevens
 
