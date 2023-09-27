@@ -352,13 +352,14 @@ Meervoudige overerving of multiple-inheritance:
 
 Een subtype kan meerdere objecttypen als generalisatie hebben. In het diagram [Kern](#kern) is dit aangegeven door een `«Objecttype»` als subtype naar `0..*` `«Generalisaties»` te laten verwijzen. Dat impliceert dat een subtype `0..*` supertypen kan hebben.
 
-#### Static overervingsrelatie
+#### Mixin
 
 <aside class="definition">
-  <dfn>Static overervingsrelatie</dfn>Een overervingsrelatie waarin het subtype alléén structuur-eigenschappen overneemt van het supertype.
+  <dfn>Mixin</dfn>Metagegeven om bij een generalisatie aan te geven dat bij een implementatie die geen multiple inheritance ondersteund de eigenschappen van de superklasse worden overgenomen door de subklasse. De superklasse zelf komt niet in de implementatie voor. 
 </aside>
 
 *Toelichting:*
+Het metagegeven `Static`
 Een static overervingsrelatie of kortweg een static relatie wordt bij UML toegepast op een generalisatie. De aanleiding is meestal om multiple inheritance issues op te lossen in talen/specificaties die dit niet (of niet eenvoudig) ondersteunen. Het subtype neemt bij een static relatie de kenmerken van een supertype over (copy down), het supertype zelf komt in de implementatie van het technische model niet meer voor. Bijvoorbeeld een static relatie tussen een objecttype Document als static subtype van Juridische informatie geeft aan dat een document de eigenschappen van Juridische informatie overneemt maar dat het begrip Juridische informatie niet in de implementatie voorkomt. Omdat multiple inheritance op MIM niveau 2 wel is toegestaan zal een static relatie vrijwel alleen op MIM niveau 3 voorkomen, het is immers een constructie om in het logische model geen implementatie-issue te hebben. Voor MIM niveau 3 geldt dat het supertype in de static relatie abstract is. Er mogen immmers geen instanties van dat supertype voorkomen.
 
 Twee algemene use cases voor toepassing van `Static` op conceptueel en logisch model:
@@ -1636,6 +1637,22 @@ Gebruik op attribuutsoorten en data elementen met een primitief datatype van het
 
 Een modelelement mag maar één voorkomen van metagegeven **Maximumwaarde inclusief** of **Maximumwaarde exclusief** hebben.
 
+#### Metagegeven: **Mixin**
+
+<aside class="definition">
+  <dfn>Mixin</dfn>Metagegeven om bij een generalisatie aan te geven dat bij een implementatie die geen multiple inheritance ondersteunt de eigenschappen van de superklasse worden overgenomen door de subklasse. De superklasse zelf komt niet in de implementatie voor. 
+</aside>
+
+*Toelichting:*
+`Mixin` kan gebruikt worden als metagegeven bij een `Generalisatie` bij modellen op MIM niveau 3 indien er sprake is van multiple inheritance, d.w.z. meerdere superklassen op een subklasse. Het is opgenomen om multiple inheritance implementatie-issues op te lossen in talen/specificaties die dit niet (of niet eenvoudig) ondersteunen. Met `Mixin = Ja` wordt aangegeven dat deze generalisatie en ook de gerelateerde superklase niet in de implementatie voorkomt maar dat wel eigenschappen (attribuutsoorten en relatiesoorten/rollen) worden overgenomen door de subklasse. `Mixin = Ja` geeft de mogelijkheid om de multiple inheritance indien gewenst, in het MIM niveau 3 model te behouden maar er in de implementatie indien nodig rekening, mee te houden. De modelleur kan hiermee aangeven welke generalisatie op een alternatieve manier wordt geïmplementeerd. Talen die multiple inheritance wel ondersteunen negeren dit metagegeven.
+
+<figure id="Mixin">
+  <img src="media/Mixin.png" alt="" />
+  <figcaption>Voorbeeld van multiple inheritance met het metagegeven 'Mixin = Ja' op een generalisatie.</figcaption>
+</figure>
+
+*Toepassing:* Generalisatie en alleen bij MIM niveau 3. Niet gebruiken bij generalisaties tussen datatypen.
+
 ### Modelelementbindingen - metagegevens
 
 Bindingen geven aan hoe modelelementen met elkaar verbonden kunnen en mogen worden.
@@ -1852,6 +1869,7 @@ Voor de volgende metagegevens geldt een specifiek waardebereik.
 | Indicatie classificerend            | `Ja`, `Nee`                                                                |
 | Indicatie abstract object           | `Ja`, `Nee`                                                                |
 | Mogelijk geen waarde                | `Ja`, `Nee`                                                                |
+| Mixin                               | `Ja`, `Nee`                                                                |
 | [Aggregatietype](#metagegeven-aggregatietype) | `Compositie`, `Gedeeld`, `Geen`                                  |
 | [Authentiek](#authentieke-gegevens) | `Authentiek`, `Basisgegeven`, `Wettelijk gegeven`, `Landelijk kerngegeven`, `Overig` |
 
@@ -1878,5 +1896,6 @@ Aanwijzing MIM-beheerder: metagegevens met een defaultwaarde mogen niet optionee
 | Unidirectioneel                     | `Ja`              |  
 | Kardinaliteit attribuut             | `1`               |                                                        
 | Aggregatietype                      | `Geen`            |  
+| Mixin                               | `Nee`             | 
 
 Opmerking met betrekking tot de kardinaliteit van relaties: deze staat niet in de tabel. Deze kennen geen defaultwaarde. De kardinaliteit aan de doel kant altijd moet worden aangegeven. De kardinaliteit aan de bron/eigenaar kant van een relatie is optioneel om in te vullen, wanneer er niets is ingevuld dan wordt er niets over de kardinaliteit gezegd en kent deze geen default waarde (in de praktijk betekent dit dat een kardinaliteit aan de bron kant als 0..* geïmplementeerd wordt).
