@@ -58,7 +58,8 @@ In de SPARQL rules wordt gebruik gemaakt van een aantal SPARQL functies. In onde
 |t:maxcount|Formuleert de maximum kardinaliteit op basis van een kardinaliteitsaanduiding (zie bij mim:kardinaliteit). De waarde kan ook unbound zijn, in dat geval wordt ook de variable niet gebound en daardoor de betreffende triple niet opgevoerd.|
 
 <aside id='trans-1' class='note'>
-Om een unieke URI op te bouwen, is naast de naam van een modelelement, `mim:naam`, ook een namespace noodzakelijk. Deze namespace wordt bepaald in het veld `mim:basisURI` van de package waartoe het modelelement behoord. Deze basisURI is niet hetzelfde als de namespace van een gegenereerde XSD.
+Om een unieke URI op te bouwen, is naast de naam van een modelelement, `mim:naam`, ook een namespace noodzakelijk. Deze namespace wordt bepaald in het veld `mim:basisURI` van de package waartoe het modelelement behoord. Deze basis-URI is niet hetzelfde als de namespace van een gegenereerde XSD. 
+Als de basis-URI van het package niet is gespecificeerd, dan wordt de basis-URI geërfd van het package waartoe het package behoort. Dit werkt transitief. Als er geen enkele `basis-URI` wordt is gegeven, dan wordt de `basis-URI` gelijk aan `urn:modelelement:` aangevuld met de package structuur, bijvoorbeeld `urn:modelelement:imkad:recht:` of `urn:modelelement:imbaglv:objecten:`.
 </aside>
 
 <aside id='trans-2' class='note'>
@@ -1207,7 +1208,7 @@ WHERE {
 ### transformatie: locatie
 > Als het type van het attribuutsoort een waardelijst is, dan wordt hier de locatie waar deze te vinden is opgegeven.
 
-Een `mim:locatie` wordt direct, zonder aanpassing, overgenomen in het vertaalde model. Daarnaast wordt dit veld gebruikt bij het munten van de URI's van de verschillende modelelementen en het achterhalen van de inhoud van een waardelijst.
+Een `mim:locatie` wordt direct, zonder aanpassing, overgenomen in het vertaalde model. Daarnaast wordt dit veld gebruikt bij het achterhalen van de inhoud van een waardelijst.
 
 ### transformatie: type
 > Het datatype waarmee waarden van deze attribuutsoort worden vastgelegd.
@@ -1608,9 +1609,10 @@ WHERE {
   BIND (t:uri(?notation) as ?class)
 }
 </pre>
+
 ### transformatie: bevat modelement
 
-Een `mim:bevatModelelement` wordt vertaald naar een `mim:bevatModelelement` In geval er sprake is van een owl:Ontology, dan wordt vertaald naar `owl:imports`.
+Een `mim:bevatModelelement` wordt vertaald naar een `mim:bevatModelelement`. In geval er sprake is van een owl:Ontology, dan wordt vertaald naar `owl:imports`.
 
 In MIM is het niet nodig om voor alle modelelementen rechtstreeks aan te geven welke package dit modelelement bezit: het is ook mogelijk dat dit via andere modelelementen loopt. Als een rechtstreekse relatie niet aanwezig is, dan wordt deze afgeleide relatie gebruikt.
 <pre class='ex-sparql'>
@@ -1637,9 +1639,9 @@ WHERE {
 
 ### transformatie: is gedefinieerd in
 
-Een `mim:isGedefinieerdIn` wordt vertaald naar een `rdfs:isDefinedBy` voor zover modelelementen vertaald worden naar een owl:Class, owl:DatatypeProperty of owl:ObjectProperty. Merk op dat de vertaling in de omgekeerde richting is. Als bijvoorbeeld een Domein X modelelement Objecttype Y bevat, dan zal de relatie rdfs:isDefinedBy gaan lopen vanaf de klasse Y naar de Ontology X.
+Een `mim:isGedefinieerdIn` wordt vertaald naar een `rdfs:isDefinedBy` voor zover modelelementen vertaald worden naar een owl:Class, owl:DatatypeProperty of owl:ObjectProperty.
 
-In MIM is het niet nodig om voor alle modelelementen rechtstreeks aan te geven welke package dit modelelement definieert: meestal is dit namelijk de package die het modelelement bevat. Als een rechtstreekse relatie niet aanwezig is, dan wordt mim:bevatModelelement gebruikt.
+In MIM is het niet nodig om voor alle modelelementen rechtstreeks aan te geven welke package het modelelement definieert: meestal is dit namelijk de package die het modelelement bevat. Als een rechtstreekse relatie niet aanwezig is, dan wordt mim:bevatModelelement gebruikt. Merk op dat deze vertaling in de omgekeerde richting is. Als bijvoorbeeld een Domein X modelelement Objecttype Y bevat, dan zal de relatie rdfs:isDefinedBy gaan lopen vanaf de klasse Y naar de Ontology X.
 
 <pre class='ex-sparql'>
 CONSTRUCT {
@@ -1711,9 +1713,9 @@ Aspecten:
 
 |RDFS term | MIM-aspect | Uitleg |
 |----------|-------------|--------|
-| IRI | mim:uri | De URI van de resource wordt in mim vastgelegd als eigenschap van het modelelement |
+| IRI | mim:uri | De URI van het modelelement wordt in mim vastgelegd als eigenschap |
 | rdfs:label, sh:name | mim:naam | Het rdfs:label (of sh:name als een meer technische naam gewenst is) van een nodeshape of class betreft de naam |
-| skos:altLabel, skos:prefLabel, rdfs:label, sh:name | mim:alias | skos:altLabel is letterlijk een alias, sh:name is ook een alias en wordt met name gebruikt voor meer technische namen, terwijl skos:prefLabel of skos:altLabel vaak een meer functionele naam bevat.|
+| skos:altLabel, skos:prefLabel, rdfs:label, sh:name | mim:alias | skos:altLabel is letterlijk een alias, sh:name is ook een alias en wordt met name gebruikt voor meer technische namen, terwijl skos:prefLabel of skos:altLabel vaak een meer functionele naam bevat|
 | dct:subject | mim:begrip | dct:subject geeft dezelfde relatie weer als mim:begrip |
 | rdfs:comment | mim:definitie | rdfs:comment wordt in de praktijk gebruikt op de manier als de mim:definitie. Merk op dat skos:definition hier niet wordt toegepast, omdat vanuit het MIM aanbevolen wordt om hiervoor een afzonderlijk begrippenkader op te stellen (via dct:subject / mim:begrip)|
 | sh:minCount en sh:maxCount | mim:kardinaliteit | De kardinaliteit wordt bepaald door sh:minCount en sh:maxCount |
@@ -1736,7 +1738,7 @@ Er zijn ook MIM aspecten die niet een overeenkomstige tegenhanger kennen in RDFS
 | mim:authentiek | Specifiek MIM aspect, belangrijk voor stelselcatalogus |
 | mim:identificatieAfleidbaar | |
 | mim:kardinaliteitRelatieBron | Dit betreft de kardinaliteit van de inverse relatie die in het geval van het gebruik van dit aspect niet aanwezig is|
-| mim:locatie | Dit veld wordt wel gebruikt bij het opbouwen van de URI, maar verder niet vertaald |
+| mim:locatie | Dis aspect is alleen van toepassing op waardelijsten en wordt direct, zonder aanpassing, overgenomen in het vertaalde model. |
 | mim:patroon | Dit betreft een tekstuele variant van sh:pattern / mim:formeelPatroon |
 | mim:populatie | Specifiek MIM aspect, belangrijk voor stelselcatalogus |
 | mim:kwaliteit | Specifiek MIM aspect, belangrijk voor stelselcatalogus |

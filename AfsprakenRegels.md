@@ -775,13 +775,13 @@ informatiemodel zelf (zie ook [bijlage](#bijlagen)).
 * De naam van kenmerken van een objecttype hoeven niet uniek te zijn over objecttypen heen.
 * De naam van elementen van een datatype hoeven niet uniek te zijn over datatypen heen.
 
-### Dezelfde naam en/of definitie gebruiken voor meerdere modelelementen
+### Dezelfde uri, naam en/of definitie gebruiken voor meerdere modelelementen
 
-Er kan sprake zijn van 1 naam en/of definitie die voor meerdere modelelementen gelijk moeten zijn, omdat er inherent hetzelfde bedoeld wordt. Generalisatie is gedefinieerd voor Datatypen en Objecttypen en Datatypen en gegevensgroeptypen kunnen op meerdere plekken gebruikt worden.
+Er kan sprake zijn van een naam en/of definitie die voor meerdere modelelementen gelijk moeten zijn, omdat er inherent hetzelfde bedoeld wordt. Generalisatie is gedefinieerd voor Datatypen en Objecttypen en Datatypen en gegevensgroeptypen kunnen op meerdere plekken gebruikt worden.
 
 Echter, voor bijvoorbeeld voor een relatiesoort of een attribuutsoort kan het ook nodig zijn om dezelfde naam en/of definitie te specificeren. Dit is mogelijk, maar het is dan niet geheel duidelijk of er hetzelfde bedoeld wordt, of dat de (exacte) overeenkomt in een informatiemodel (zoals bv. in een UML informatiemodel) een toevalligheid is. Daarom gelden de volgende afspraken: 
 
-* Als de **uri** van twee of meer modelelementen EXACT hetzelfde is, dan wordt hiermee bedoeld dat het hetzelfde kenmerk is. Bijvoorbeeld bij objecttype Gebied met attribuutsoort identificatie met _uri_ "http://modellen.geostandaarden.nl/def/nen3610#identificatie" en een objecttype Boom met een attribuutsoort identificatie met _uri_ "http://modellen.geostandaarden.nl/def/nen3610#identificatie".
+* Als de **uri** van twee of meer modelelementen EXACT hetzelfde is, dan wordt hiermee bedoeld dat het dezelfde modelelementen zijn. Bijvoorbeeld bij objecttype Gebied met attribuutsoort identificatie met _uri_ "http://modellen.geostandaarden.nl/def/nen3610#identificatie" en een objecttype Boom met een attribuutsoort identificatie met _uri_ "http://modellen.geostandaarden.nl/def/nen3610#identificatie". De modelelementen kunnen verder wel verschillend beschreven zijn (bijvoorbeeld met een nauwer waardebereik bij een van de modelelementen). 
 
 * Als de **definitie** van twee of meer modelelementen EXACT hetzelfde is, dan wordt hiermee bedoeld dat het dezelfde definitie is. Bijvoorbeeld: attribuutsoort overboeking met _definitie_ "Het bedrag in euro's" en attribuutsoort koopsom met _definitie_ "Het bedrag in euro's".
 

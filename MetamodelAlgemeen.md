@@ -821,9 +821,9 @@ Bijvoorbeeld: `1.0.1` of `1.1` of `1.1.1`
 
  ### Modelelementidentificatie - metagegevens
 
-Informatiemodellen staan vaak niet op zichzelf. Ze kunnen elementen bevatten die refereren aan externe standaarden, waarin deze elementen een eigen identificatie hebben. Ook moeten de gemodelleerde elementen herbruikbaar zijn in andere modellen. Daarom is het nodig om de modelelementen uniek te kunnen identificeren. Wanneer een MIM-model uitgedrukt wordt in een Linked Data-ontologie is het zelfs noodzakelijk om de modelelementen identificeren als Linked Data. De metagegevens <code><a>Basis-URI</a></code>, <code><a>URI</a></code> en <code><a>is gedefinieerd in</a></code> maken het mogelijk om de modelelementen in een Linked Data-ontologie te identificeren.
+Informatiemodellen staan vaak niet op zichzelf. Ze kunnen elementen bevatten die refereren aan externe standaarden, waarin deze elementen een eigen identificatie hebben. Ook moeten de gemodelleerde elementen herbruikbaar zijn in andere modellen. Daarom is het nodig om de modelelementen uniek te kunnen identificeren. Wanneer een MIM-model uitgedrukt wordt in een Linked Data-model is het zelfs noodzakelijk om de modelelementen identificeren met een URI. De metagegevens <code><a>Basis-URI</a></code>, <code><a>URI</a></code> en <code><a>is gedefinieerd in</a></code> maken het mogelijk om de modelelementen in een Linked Data-model te identificeren.
 
-Een informatiemodel moet echter ook gebruikt kunnen worden zonder dat er vastgestelde (http-)uri's beschikbaar zijn (bijvoorbeeld tijdens de ontwikkelfase). In dit geval kan een `URN` op basis van de package alias en de naam van het modelelement bepaald worden. De defaultwaarde voor de `Basis-URI` van een informatiemodel is dan `urn:` + `informatiemodel.naam`, bijvoorbeeld `"urn:imbag"`. De identificatie van een objecttype Pand uit het IMBAG model wordt dan `"urn:imbag:pand"`.
+Een informatiemodel moet echter ook gebruikt kunnen worden zonder dat er vastgestelde (http-)uri's beschikbaar zijn (bijvoorbeeld tijdens de ontwikkelfase). In dit geval kan een `URN` op basis van de package alias en de naam van het modelelement bepaald worden. De defaultwaarde voor de `Basis-URI` van een informatiemodel is dan `urn:modelelement:` + `informatiemodel.naam`, bijvoorbeeld `"urn:modelelement:imbaglv"`. Iedere onderliggende package krijgt ook een default Basis-URI die gelijk is aan de basis-URI van het informatiemodel gevolgd door `package.naam`, bijvoorbeeld `"urn:modelelement:imbaglv:objecten`. Dit is noodzakelijk omdat niet alle namen binnen een informatiemodel per definitie uniek zijn (denk aan een objecttype "Locatie" in een domein "Locatie"). De `URI` van een attribuutsoort "huisnummer" bij een "nummeraanduiding" in domein "objecten" uit het IMBAGLV model wordt dan `"urn:modelelement:imbaglv:objecten:nummeraanduiding.huisnummer"`. 
 
 #### Metagegeven: **Basis-URI**
 
@@ -831,9 +831,9 @@ Een informatiemodel moet echter ook gebruikt kunnen worden zonder dat er vastges
   <dfn>Basis-URI</dfn>De standaard basis-URI voor elk element in dit informatiemodel.
 </aside> 
 
-*Toelichting* Een _uniform resource identifier_ (URI) is een compacte reeks tekens die een abstracte of fysieke bron identificeert. Een `Basis-URI` is het gemeenschappelijke deel van deze reeks tekens die voor alle elementen in het informatiemodel geldig is. Dit metagegeven is verplicht. De `Basis-URI` bevat altijd een `scheme`, dit kan bijvoorbeeld `http://` of `urn` zijn. En voldoet aan een gekozen URI-strategie.
+*Toelichting* Een _uniform resource identifier_ (URI) is een compacte reeks tekens die een abstracte of fysieke bron identificeert. Een `Basis-URI` is het gemeenschappelijke deel van deze reeks tekens die voor alle elementen in het informatiemodel geldig is. De `Basis-URI` bevat altijd een `scheme`, dit kan bijvoorbeeld `http://` of `urn` zijn. En voldoet aan een gekozen URI-strategie. Wanneer er geen basis-URI is gespecificeerd wordt deze over genomen van de eerst bovenliggende package met een basis-URI. Wanneer deze er niet is, wordt er een default waarde bepaald conform het patroon `urn:modelelement: + {informatiemodel.naam}: + {package.naam}:`
 
-*Toepassing*: informatiemodel (verplicht), domein, view (optioneel)
+*Toepassing*: informatiemodel, domein, view (optioneel)
 
 #### Metagegeven: **URI**
 
@@ -841,11 +841,11 @@ Een informatiemodel moet echter ook gebruikt kunnen worden zonder dat er vastges
   <dfn>URI</dfn>De identificatie van een modelelement.
 </aside>
 
-*Toelichting* De URI kan op twee manieren voorkomen, als **urn-URI**: `<urn:object:Pand` of als **http-URI**: `<http://.../def#Pand>`. De `URI` kan bepaald worden aan de hand van de <code><a>Naam</a></code> van het modelelement en de `Basis-URI` van de _package_ waarin het modelelement zich bevindt. Dit kunnen we opbouwen op basis van de `Basis-URI` samen met de `Naam` van het modelelement (op logisch niveau conform de naamgevingsconventies). In de meeste gevallen zal een modelleur dit metagegeven daarom niet invullen. 
+*Toelichting* De URI kan op twee manieren voorkomen, als **urn-URI**: `<urn:modelelement:imbaglv:objecten:Pand` of als **http-URI**: `<http://.../def#Pand>`. De `URI` kan bepaald worden aan de hand van de <code><a>Naam</a></code> van het modelelement en de `Basis-URI` van de _package_ waarin het modelelement zich bevindt. Dit kunnen we opbouwen op basis van de `Basis-URI` samen met de `Naam` van het modelelement (op logisch niveau conform de naamgevingsconventies). Dit is de default waarde. In de meeste gevallen zal een modelleur dit metagegeven daarom niet expliciet invullen.
 
 In sommige gevallen kan de `URI` van een modelelement niet bepaald worden aan de hand van de `Basis-URI` van de bijbehorende _package_ en de `Naam` van een modelelement. Bijvoorbeeld als gevolg van de gekozen URI-strategie of wanneer een <code><a>Attribuutsoort</a></code> uit een ander informatiemodel hergebruikt wordt (e.g. `nen3610-2022:identificatie`). In dit geval zal de modelleur het metagegeven `URI` wel invullen.
 
-*Toepassing*:  alle modelelementen (optioneel)
+*Toepassing*:  alle modelelementen
 
 #### Metagegeven: **is gedefinieerd in**
 
