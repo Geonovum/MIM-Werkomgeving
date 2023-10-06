@@ -1044,10 +1044,36 @@ Toelichting: objecten hebben, of krijgen, in een administratie of gegevensvoorzi
 
 Toepassing: attribuutsoort, alle relaties (relatiesoort, relatierol, relatieklasse, externe koppeling), referentie-element.
 
-#### Metagegeven: **Indicatie materiële historie**
+#### Metagegeven: **heeft tijdlijn geldigheid**
 
 <aside class="definition">
-  <dfn>Indicatie materiele historie</dfn>Indicatie of de materiële historie van het kenmerk van het object te bevragen is.
+  <dfn>heeft tijdslijn geldigheid</dfn>Indicatie of voor dit kenmerk een tijdslijn geldigheid bijgehouden wordt en te bevragen is.
+</aside>
+
+*Toelichting*
+
+Bijvoorbeeld: `Ja`.
+
+Met de tijdlijn geldigheid wordt bedoeld dat er op een tijdslijn wordt bijgehouden wanneer een verandering is opgetreden in de werkelijkheid die heeft geleid tot verandering van de waarde van een kenmerk van een object. Het gegeven is vanaf een bepaald tijdsmoment _geldig_ en dit tijdsmoment wordt op enerlei wijze als metagegeven bijgehouden bij het gegeven. 
+
+Het komt vaak voor dat er besloten wordt of bepaald wordt dat een gegeven al geldig is of werd vanaf een bepaald tijdsmoment in het verleden en het komt voor dat het gegeven pas geldig zal worden vanaf een bepaald tijdsmoment in de (nabije) toekomst. Verdere toelichting, zie het hoofdstuk [Afspraken & Regels](#afspraken-regels). 
+
+Met te bevragen wordt bedoeld: het tijdsmoment vanaf wanneer een gegeven als geldig wordt beschouwd (en vanaf wanneer het gegeven niet meer als geldig wordt beschouwd) wordt op enerlei wijze als historie bijgehouden, en deze wijze is te bevragen. Dit metagegeven is alleen betekenisvol voor kenmerken waarvoor een waarde wordt bijgehouden. De in te vullen waarde komt uit: zie [Tagged values en waardenbereik tagged
+values](#toegestane-waarden-voor-bepaalde-metadata-gegevens). 
+
+De in te vullen waarde komt uit: zie [Tagged values en waardenbereik tagged
+values](#toegestane-waarden-voor-bepaalde-metadata-gegevens)
+
+*Toepassing*: alle modelelementen die een kenmerk (kunnen) zijn van een objecttype, waarvoor data kan worden bijgehouden: attribuutsoort en relaties (relatiesoort, relatieklasse, externe koppeling).
+
+#### Metagegeven: **Indicatie materiële historie**
+
+Opmerkingen vooraf: 
+- Dit metagegeven is gelijkwaardig met het metagegeven heeft tijdlijn geldigheid.
+- In toekomstige versies van MIM, versie 2.x en later, wordt dit metagegeven uitgefaseerd. Vanwege backwards compatibility blijft op dit moment aanwezig in MIM 1.x
+
+<aside class="definition">
+  <dfn>Indicatie materiele historie</dfn>Indicatie of de materiële historie van het kenmerk van het object bijgehouden wordt en te bevragen is.
 </aside>
 
 *Toelichting*
@@ -1066,8 +1092,31 @@ Materiële historie geeft aan wanneer een verandering is opgetreden in de werkel
 
 *Toepassing*: alle modelelementen die een kenmerk (kunnen) zijn van een objecttype, waarvoor data kan worden bijgehouden: attribuutsoort en relaties (relatiesoort of relatiedoel, relatieklasse, externe koppeling).
 
+#### Metagegeven: **heeft tijdslijn registratie**
+
+<aside class="definition">
+  <dfn>heeft tijdslijn registratie</dfn>Indicatie of voor dit kenmerk een tijdslijn geldigheid bijgehouden wordt en te bevragen is.
+</aside>
+
+*Toelichting*
+
+Bijvoorbeeld: `Nee`.
+
+Met de tijdlijn registratie wordt bedoeld dat er op een tijdslijn wordt bijgehouden wanneer een bepaalde waarde voor een kenmerk van een object vastgelegd wordt, oftewel _geregistreerd_ wordt. Dit tijdsmoment wordt op enerlei wijze als metagegeven bijgehouden bij het gegeven. De vastlegging kan zijn op een bepaald medium of in een registratie van een informatievoorziening. Het tijdsmoment van vastlegging of registratie is altijd ten tijde van vastlegging van een gegeven in de echte tijd (de horloge tijd). Elke keer dat hetzelfde gegeven op een andere plek wordt vastgelegd is een apart tijdsmoment op de tijdslijn registatie dat relevant kan zijn om bij te houden. Verdere toelichting, zie het hoofdstuk [Afspraken & Regels](#afspraken-regels). 
+
+Met te bevragen wordt bedoeld: het tijdsmoment wanneer een gegeven geregistreerd is wordt op enerlei wijze als historie bijgehouden, en deze wijze is te bevragen. Dit metagegeven is alleen betekenisvol voor kenmerken waarvoor een waarde wordt bijgehouden. 
+
+De in te vullen waarde komt uit: zie [Tagged values en waardenbereik tagged
+values](#toegestane-waarden-voor-bepaalde-metadata-gegevens)
+
+*Toepassing*: alle modelelementen die een kenmerk (kunnen) zijn van een objecttype, waarvoor data kan worden bijgehouden: attribuutsoort en relaties (relatiesoort, relatieklasse, externe koppeling).
+
 #### Metagegeven: **Indicatie formele historie**
 
+Opmerkingen vooraf: 
+- Dit metagegeven is gelijkwaardig met het metagegeven heeft tijdlijn registratie.
+- In toekomstige versies van MIM, versie 2.x en later, wordt dit metagegeven uitgefaseerd. Vanwege backwards compatibility blijft op dit moment aanwezig in MIM 1.x
+- 
 <aside class="definition">
   <dfn>Indicatie formele historie</dfn>Indicatie of de formele historie van het kenmerk van het object bijgehouden wordt en te bevragen is.
 </aside>
@@ -1078,8 +1127,6 @@ Bijvoorbeeld: `Nee`.
 
 Met te bevragen wordt bedoeld, er wordt historie bijgehouden op enerlei wijze, welke op enerlei wijze te bevragen is. Dit metagegeven is alleen betekenisvol voor kenmerken waarvoor data wordt bijgehouden. De in te vullen waarde komt uit: zie [Tagged values en waardenbereik tagged
 values](#toegestane-waarden-voor-bepaalde-metadata-gegevens). Formele historie geeft aan wanneer in de administratie een verandering bekend is, en is verwerkt. Verdere toelichting, zie het hoofdstuk [Afspraken &Regels](#afspraken-regels).
-
-*Toepassing*: alle modelelementen die een kenmerk (kunnen) zijn van een objecttype waarvoor data kan worden bijgehouden: attribuutsoort en relaties (relatiesoort, relatieklasse, externe koppeling).
 
 De in te vullen waarde komt uit: zie [Tagged values en waardenbereik tagged values](#toegestane-waarden-voor-bepaalde-metadata-gegevens)
 
