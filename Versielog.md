@@ -4,6 +4,7 @@ In **versie 1.2** zijn de volgende issues verwerkt:
 
 | Issue                                                           | Samenvatting                                                                                  |
 |-----------------------------------------------------------------|-----------------------------------------------------------------------------------------------|
+| [015](https://github.com/Geonovum/MIM-Werkomgeving/issues/15)   | Toevoegen metagegeven `Eenheid` aan documentatie.                                             |
 | [109](https://github.com/Geonovum/MIM-Werkomgeving/issues/109)  | Toevoegen metagegevens `min-max inclusief` en `min-max exclusief`.                            |
 | [111](https://github.com/Geonovum/MIM-Werkomgeving/issues/111)  | Aanpassen samenhang `«Relatiesoort»`, `«Objecttype»` en `«Relatierol»` in het model (diagram) |
 | [156](https://github.com/Geonovum/MIM-Werkomgeving/issues/156)  | Afstemmen metaclasses tabellen en diagrammen.                                                 |
@@ -24,7 +25,6 @@ In **versie 1.2** zijn de volgende issues verwerkt:
 | [333](https://github.com/Geonovum/MIM-Werkomgeving/issues/333)  | Schrijfwijze `Waardelijst` nu eenduidig zonder `-n`: (_waarde_, i.p.v. _waarden_)             |
 | [336](https://github.com/Geonovum/MIM-Werkomgeving/issues/336)  | Aanpassen naamgeving en verwijzing van `Alias` in tabel specificatie metagegevens in LD.      |
 
-<!-- | [015](https://github.com/Geonovum/MIM-Werkomgeving/issues/15)   | Toevoegen metagegeven `Eenheid` aan documentatie.                                             | -->
 <!-- | [148](https://github.com/Geonovum/MIM-Werkomgeving/issues/148)  | Toevoegen beschrijving uitzondering: wanneer `Relatieklasse` modelleren als `Objecttype`.     | -->
 <!-- | [238](https://github.com/Geonovum/MIM-Werkomgeving/issues/238)  | Opnemen toelichting hoe omgaan met een gegeven dat uit meerdere 'data-delen' bestaat.         |  -->
 <!-- | [253](https://github.com/Geonovum/MIM-Werkomgeving/issues/253)  | Aanpassen definitie en toelichtring codelijst                                                 | -->
