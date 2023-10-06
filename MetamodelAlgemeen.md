@@ -551,14 +551,14 @@ dat som en valuta onlosmakelijk met elkaar zijn verbonden.
 
 De eigenschappen in het Gestructureerd datatype tezamen zijn identificerend (een
 Gestructureerd datatype “identificeert zichzelf”, zoals er maar per definitie
-één “1 liter” bestaat, één 35 euro en één datum 6 april 2017, met per definitie
+één '1 liter' bestaat, één '35 euro' en één datum '6 april 2017', met per definitie
 altijd dezelfde betekenis:
 
--   Een blik olie heeft een inhoud van `7 liter`, kost `35 euro`, en is
-    verkocht op `6 april 2017`.
+-   Een blik olie heeft een inhoud van `"7 liter"`, kost `"35 euro"`, en is
+    verkocht op `"6 april 2017"`.
 
--   Piet heeft `1 liter` bloed gedoneerd, daarvoor `35 euro` vergoeding
-    gekregen, op `6 april 2017`.
+-   Piet heeft `"1 liter"` bloed gedoneerd, daarvoor `"35 euro"` vergoeding
+    gekregen, op `"6 april 2017"`.
 
 Het identificerend zijn geldt bijvoorbeeld niet voor Jan Jansen. Er zijn
 meerdere personen met deze naam en dat zijn verschillende personen (Jan Jansen
