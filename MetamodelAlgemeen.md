@@ -352,27 +352,6 @@ Meervoudige overerving of multiple-inheritance:
 
 Een subtype kan meerdere objecttypen als generalisatie hebben. In het diagram [Kern](#kern) is dit aangegeven door een `«Objecttype»` als subtype naar `0..*` `«Generalisaties»` te laten verwijzen. Dat impliceert dat een subtype `0..*` supertypen kan hebben.
 
-#### Mixin
-
-<aside class="definition">
-  <dfn>Mixin</dfn>Metagegeven om bij een generalisatie aan te geven dat bij een implementatie die geen multiple inheritance ondersteund de eigenschappen van de superklasse worden overgenomen door de subklasse. De superklasse zelf komt niet in de implementatie voor. 
-</aside>
-
-*Toelichting:*
-Het metagegeven `Static`
-Een static overervingsrelatie of kortweg een static relatie wordt bij UML toegepast op een generalisatie. De aanleiding is meestal om multiple inheritance issues op te lossen in talen/specificaties die dit niet (of niet eenvoudig) ondersteunen. Het subtype neemt bij een static relatie de kenmerken van een supertype over (copy down), het supertype zelf komt in de implementatie van het technische model niet meer voor. Bijvoorbeeld een static relatie tussen een objecttype Document als static subtype van Juridische informatie geeft aan dat een document de eigenschappen van Juridische informatie overneemt maar dat het begrip Juridische informatie niet in de implementatie voorkomt. Omdat multiple inheritance op MIM niveau 2 wel is toegestaan zal een static relatie vrijwel alleen op MIM niveau 3 voorkomen, het is immers een constructie om in het logische model geen implementatie-issue te hebben. Voor MIM niveau 3 geldt dat het supertype in de static relatie abstract is. Er mogen immmers geen instanties van dat supertype voorkomen.
-
-Twee algemene use cases voor toepassing van `Static` op conceptueel en logisch model:
-
-- In het conceptuele model wordt een van de twee overervingsrelaties van `Static` voorzien. Dit geeft aan welke qua classificatie wel semantisch gezien blijft gelden maar op in het logische model doorgeknipt kan worden, oftewel de static relatie wordt verwijderd en vervangen door de attributen op te nemen in het subtype (copy down)
-- In het conceptuele model staan beide overervingsrelaties en in het logische wordt bij een relatie door de opsteller van dat model het `Static` element toegevoegd, om aan te geven dat bij het maken van technische modellen het supertype kan worden genegeerd en de static relatie wordt verwijderd en vervangen door de attributen op te nemen in het subtype (copy down).
-
-Voorbeeld. Een objecttype Onroerende zaak is een subtype van Kadastraal object en heeft een static relatie met Virtueel object. Het kadastrale object is waar het om gaat in de BRK implemenatie. De relatie naar Virtueel object wordt `Static` gemaakt om aan te geven dat alleen de attribuutsoorten worden overgenomen.
-
-<figure id="Static">
-  <img src="media/Static.png" alt="" />
-  <figcaption>Voorbeeld van een static overervingsrelatie</figcaption>
-</figure>
 
 #### Relatiesoort
 
