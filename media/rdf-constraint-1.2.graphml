@@ -14,7 +14,7 @@
   <key attr.name="description" attr.type="string" for="edge" id="d10"/>
   <key for="edge" id="d11" yfiles.type="edgegraphics"/>
   <graph edgedefault="directed" id="G">
-    <data key="d0"/>
+    <data key="d0" xml:space="preserve"/>
     <node id="n0">
       <data key="d4" xml:space="preserve"><![CDATA[http://bp4mc2.org/def/mim-shapes#Constraint]]></data>
       <data key="d6">
@@ -49,7 +49,6 @@ mim:specificatieFormeel (string) [0,1]<y:LabelModel><y:ErdAttributesNodeLabelMod
     </node>
     <node id="n2">
       <data key="d4" xml:space="preserve"/>
-      <data key="d5"/>
       <data key="d6">
         <y:UMLNoteNode>
           <y:Geometry height="63.0" width="168.80000000000007" x="821.0544877031666" y="156.6818258554353"/>
@@ -64,7 +63,6 @@ mim:specificatieFormeel (string) [0,1]<y:LabelModel><y:ErdAttributesNodeLabelMod
         <y:PortConstraint endpoint="source" side="north" strong="false"/>
         <y:PortConstraint endpoint="target" side="north" strong="false"/>
       </data>
-      <data key="d10"/>
       <data key="d11">
         <y:PolyLineEdge>
           <y:Path sx="-30.0" sy="0.0" tx="-30.0" ty="19.761666406374548"/>
@@ -79,7 +77,6 @@ mim:specificatieFormeel (string) [0,1]<y:LabelModel><y:ErdAttributesNodeLabelMod
         <y:PortConstraint endpoint="source" side="north" strong="false"/>
         <y:PortConstraint endpoint="target" side="north" strong="false"/>
       </data>
-      <data key="d10"/>
       <data key="d11">
         <y:PolyLineEdge>
           <y:Path sx="30.0" sy="0.0" tx="30.0" ty="-25.55938329730748"/>
@@ -91,7 +88,6 @@ mim:specificatieFormeel (string) [0,1]<y:LabelModel><y:ErdAttributesNodeLabelMod
       </data>
     </edge>
     <edge id="e2" source="n2" target="n1">
-      <data key="d10"/>
       <data key="d11">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
