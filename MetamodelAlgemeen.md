@@ -1519,7 +1519,7 @@ In essentie zijn er vier componenten die een meting of een waarneming beschrijve
 1. het **datatype** van die waarde (kwalitatief (characterstring), kwantitatief (integer of real))
 1. de **eenheid** van de waarde
 
-De eerste drie zijn informatie-technisch uit te drukken met het informatie-element `Attribuutsoort` en `Datatype`. Voor `Eenheid` is een apart metagegeven gecreëerd dat gekoppeld wordt aan een `Attribuutsoort`.
+De eerste drie zijn informatie-technisch uit te drukken met het informatie-element `Attribuutsoort` en `Datatype`. Voor `Eenheid` is een apart metagegeven gecreëerd dat gekoppeld wordt aan een `Attribuutsoort` of een `Referentie-element`.
 
 *Toepassing:* Attribuutsoort, Referentie-element.
 
