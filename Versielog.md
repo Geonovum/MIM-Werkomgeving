@@ -12,7 +12,7 @@ In **versie 1.2** zijn de volgende issues verwerkt:
 | [171](https://github.com/Geonovum/MIM-Werkomgeving/issues/171)  | Aanpassen structuur tekst en figuren m.b.t. `Keuze`                                           |
 | [188](https://github.com/Geonovum/MIM-Werkomgeving/issues/188)  | Toevoegen van `URI` van model en modelelementen voor publicatie op het web.                   |
 | [195](https://github.com/Geonovum/MIM-Werkomgeving/issues/195)  | Toevoegen metagegeven `«Mixin»` voor `«Generalisatie»` bij _multiple inheritance_.            |
-| [201](https://github.com/Geonovum/MIM-Werkomgeving/issues/202)  | Aanpassen beschrijving `Populatie` & `Kwaliteit`, toevoegen voorbeelden                       | 
+| [201](https://github.com/Geonovum/MIM-Werkomgeving/issues/202)  | Aanpassen beschrijving `Populatie` & `Kwaliteit`, toevoegen voorbeelden.                      | 
 | [224](https://github.com/Geonovum/MIM-Werkomgeving/issues/224)  | Verwijderen metagegevens `formele historie` en `materiële historie` bij `Gegevensgroep`       |
 | [245](https://github.com/Geonovum/MIM-Werkomgeving/issues/245)  | In 2.3.4 beschreven dat de velden `Definitie` en `Toelichting` rijke tekst mogen bevatten.    | 
 | [305](https://github.com/Geonovum/MIM-Werkomgeving/issues/305)  | Toevoegen binding `heeft gegevensgroep` aan tabel metagegevens `«Relatieklasse»`              |
