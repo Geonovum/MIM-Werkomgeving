@@ -436,7 +436,7 @@ Een Constraint wordt beschreven met een:
 - Specificatie in tekst (UML-Constraint Notes, type invariant): een uitgebreide heldere 
 beschrijving van de constraint in gewone tekst.
 
-en optioneel: 
+en optioneel:  
 - Specificatie formeel (UML-Constraint Notes, type OCL): formele
 specificatie in de Object Constraint Language. De formele specificatie bevat dus
 de uitgebreide heldere beschrijving van de constraint in gewone tekst EN de
