@@ -489,7 +489,7 @@ Alleen deze waarde mag gebruiken worden.
   <dfn>Codelijst</dfn>De representatie van een lijst met een opsomming van de mogelijke domeinwaarden van een attribuutsoort, die buiten het model in een externe waardelijst worden beheerd. De domeinwaarden in de lijst kunnen in de loop van de tijd aangepast, uitgebreid, of verwijderd worden, zonder dat het informatiemodel aangepast wordt (in tegenstelling tot bij een enumeratie). De representatie bevat geen kenmerken, voor alle kenmerken wordt verwezen naar de specificatie van de externe waardelijst.
 </aside>
 
-*Toelichting:* Zowel referentielijsten als codelijsten zijn in feite waardelijsten. In tegenstelling echter tot de referentielijst wordt een codelijst *niet* in het informatiemodel beschreven, omdat de definitie en semantiek geheel in de externe waardelijst staat en niet (nader) geduid hoeft te worden in het informatiemodel zelf. Een codelijst heeft in het informatiemodel daarom geen attributen (en zou voor de definitie alleen hoeven te refereren naar de definitie bij de extern gepubliceerde waardelijst, maar voor het gemak is de definitie wel opgenomen als metagegeven in dit metamodel). De extern gepubliceerde waardelijst bevat, naast gewone attributen, ook altijd één specifiek attribuut, met daarin de domeinwaarden die gebruikt mogen/moeten worden in de registratie. In het gebruik is een Codelijst daarom analoog aan een Enumeratie. Welk specifiek attribuut dit is en wat de betekenis daarvan is staat in de codelijst zelf gedefinieerd.
+*Toelichting:* Zowel referentielijsten als codelijsten zijn in feite waardelijsten. In tegenstelling echter tot de referentielijst wordt een codelijst *niet* in het informatiemodel beschreven, omdat de definitie en semantiek geheel in de externe waardelijst staat en niet (nader) geduid hoeft te worden in het informatiemodel zelf. Een codelijst heeft in het informatiemodel daarom geen attributen (en zou voor de definitie alleen hoeven te refereren naar de definitie bij de extern gepubliceerde waardelijst, maar voor het gemak is de definitie wel opgenomen als metagegeven in dit metamodel). De extern gepubliceerde waardelijst bevat, naast gewone attributen, ook altijd één specifiek attribuut, met daarin de domeinwaarden die gebruikt mogen/moeten worden in de registratie. In het gebruik is een Codelijst daarom analoog aan een Enumeratie. Welk specifiek attribuut dit is en wat de betekenis daarvan is staat in de codelijst zelf-gedefinieerd.
 
 ### Datatypen
 
@@ -521,8 +521,8 @@ Een primitief datatype kan een standaard datatype zijn, zoals CharacterString, I
 * Deze datatypen hebben altijd al een naam en definitie gekregen vanuit deze standaarden en deze worden gebruikt.
 * Deze datatypen hebben geen MIM metaclass.
 
-Een primitief datatype kan ook in het eigen informatiemodel zelf gedefinieerd zijn, zoals bijvoorbeeld een primitief datatype AN: een alfanumerieke CharacterString conform de MES-1 specificatie (oftewel zonder bijzondere karakters zoals een smiley en zonder bijzondere tekens uit niet Europese talen).
-* Dit is een zelf gedefinieerde variant die als basis een van de voorgaande standaard datatypen heeft, zoals CharacterString. Dit standaard datatype moet eenduidig aangegeven worden (zie generalisatie bij datatypen, of door in een extensie aan te geven wat de default is, bv. CharacterString).
+Een primitief datatype kan ook in het eigen informatiemodel zelf-gedefinieerd zijn, zoals bijvoorbeeld een primitief datatype AN: een alfanumerieke CharacterString conform de MES-1 specificatie (oftewel zonder bijzondere karakters zoals een smiley en zonder bijzondere tekens uit niet Europese talen).
+* Dit is een zelf-gedefinieerde variant die als basis een van de voorgaande standaard datatypen heeft, zoals CharacterString. Dit standaard datatype moet eenduidig aangegeven worden (zie generalisatie bij datatypen, of door in een extensie aan te geven wat de default is, bv. CharacterString).
 * Hierbij hoort de MIM metaclass gespecificeerd te worden: `primitief datatype`.
 
 Een informatiemodel definieert zelf datatypen als er behoefte is aan een datatype dat
@@ -1431,7 +1431,7 @@ Niet alle eisen aan een gegevens kunnen gespecificeerd worden met een lengte. Ge
 * het waardenbereik van een gegeven, "binnen" deze lengte
 * of een getal negatief of positief mag zijn.
 
-*Toepassing*: Attribuutsoort, primitief datatype (alleen als dit datatype in het IM zelf gedefinieerd is), data-element, referentie-element.
+*Toepassing*: Attribuutsoort, primitief datatype (alleen als dit datatype in het IM zelf-gedefinieerd is), data-element, referentie-element.
 
 #### Metagegeven: **Patroon**
 
