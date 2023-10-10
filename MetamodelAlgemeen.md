@@ -214,7 +214,7 @@ Dit diagram is uitgewerkt voor Objecttype. Voor Gegevensgroeptype geldt hetzelfd
 
 Diagram: Keuze tussen relatiedoelen. 
 
-Uitwerking met een keuze constructie: een bron objecttype of gegevensgroeptype kan normaal een relatiesoort/relatierol hebben, die gekoppeld is aan (verwijst naar) een doel objecttype. Als er sprake is van een relatiesoort/relatierol met een relatiedoel keuze, dan is de relatiesoort niet gekoppeld aan 1 objecttype, maar dan is de relatiesoort gekoppeld aan een keuze en deze keuze is gekoppeld aan 2 of meer doel objecttypen. Elk objecttype is een afzonderlijk relatiedoel. Er moet voor deze ene relatiesoort/relatierol een keuze gemaakt worden voor 1 van de relatiedoelen. Het gerelateerde object is 1 van deze objecttypen, maar de betekenis van de relatie is hetzelfde, ongeacht van welk objecttype het object is. 
+Uitwerking met een keuze constructie: een bron objecttype of gegevensgroeptype kan normaal een relatiesoort/relatierol hebben die verwijst naar een doelobjecttype. Als er sprake is van een relatiesoort/relatierol met een relatiedoel keuze, dan verwijst de relatiesoort niet naar 1 objecttype, maar dan verwijst de relatiesoort naar een keuze en deze keuze is uit 2 of meer doelobjecttypen. De naam van de relatiesoort/relatierol naar het keuze element is de naam van het kenmerk. Elk objecttype is een afzonderlijk relatiedoel. Er moet voor deze ene relatiesoort/relatierol een keuze gemaakt worden voor 1 van de relatiedoelen. Het gerelateerde object is 1 van deze objecttypen, maar de naam en betekenis van de relatiesoort/relatierol is hetzelfde, ongeacht van welk objecttype het object is. 
 
 Opmerkingen: 
 - de relatiesoort kan een eigen relatienaam hebben en elk relatiedoel kan een eigen rolnaam kan hebben
