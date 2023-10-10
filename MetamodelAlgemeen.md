@@ -220,7 +220,7 @@ Opmerkingen:
 - elke relatiesoort kan een eigen relatienaam hebben en heeft een relatiedoel die een eigen rolnaam kan hebben, maar dit hoeft niet. De naam van de relatiesoort/relatierol is immers al gespecificeerd bij de relatiesoort naar de Keuze.
 - een gegevensgroeptype mag zelf geen doel zijn 
 
-*Use case 5: Keuze tussen 2 or meer relatiesoorten/relatierollen (elk afzonderlijk betekenisvol)  
+*Use case 5: Keuze tussen 2 or meer relatiesoorten/relatierollen (elk afzonderlijk betekenisvol)*  
 
 Analoog aan use case 2, maar dan voor relatiesoorten/relatierollen. Het objecttype kent 2 of meer relatiesoorten/relatierollen, met elk een eigen betekenis, en precies 1 hiervan is verplicht. 
 
