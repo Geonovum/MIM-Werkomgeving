@@ -238,7 +238,7 @@ Diagram: Keuze tussen relatiesoorten/relatierollen. Patroon geldt ook voor Gegev
 Uitwerking met een keuze constructie: een bron objecttype of gegevensgroeptype kan normaal een relatiesoort/relatierol hebben, die gekoppeld is aan (verwijst naar) een doel objecttype. Als er sprake is van een relatiesoort/relatierol keuze, dan heeft het _objecttype_ 1 koppeling met een _relatiesoort/relatierol keuze_ en deze keuze heeft 2 of meer relatiesoorten/relatierollen naar de doel objecttypes. Er moet een keuze gemaakt worden voor 1 van de relatiesoorten/relatierollen en daarmee voor het aan deze relatie gerelateerde doel objecttype. 
 
 Opmerkingen: 
-- elke relatiesoort kan een eigen relatienaam hebben en heeft een relatiedoel die een eigen rolnaam kan hebben
+- elke relatiesoort of rol moet een eigen naam hebben.
 - een gegevensgroeptype mag zelf geen doel zijn
 
 *Relatierol*
