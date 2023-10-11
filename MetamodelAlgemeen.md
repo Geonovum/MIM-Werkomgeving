@@ -487,10 +487,12 @@ Alleen deze waarde mag gebruiken worden.
 #### Codelijst
 
 <aside class="definition">
-  <dfn>Codelijst</dfn>De representatie van een lijst met een opsomming van de mogelijke domeinwaarden van een attribuutsoort, die buiten het model in een externe waardelijst worden beheerd. De domeinwaarden in de lijst kunnen in de loop van de tijd aangepast, uitgebreid, of verwijderd worden, zonder dat het informatiemodel aangepast wordt (in tegenstelling tot bij een enumeratie). De representatie bevat geen kenmerken, voor alle kenmerken wordt verwezen naar de specificatie van de externe waardelijst.
+  <dfn>Codelijst</dfn>De representatie van een lijst met een opsomming van de mogelijke domeinwaarden van een attribuutsoort, die buiten het model in een externe waardelijst worden beheerd. De domeinwaarden in de lijst kunnen in de loop van de tijd aangepast, uitgebreid, of verwijderd worden, zonder dat het informatiemodel aangepast wordt. De representatie bevat in tegenstelling tot een referentielijst geen metagegevens die de structuur beschrijven.
 </aside>
 
-*Toelichting:* Zowel referentielijsten als codelijsten zijn in feite waardelijsten. In tegenstelling echter tot de referentielijst wordt een codelijst *niet* in het informatiemodel beschreven, omdat de definitie en semantiek geheel in de externe waardelijst staat en niet (nader) geduid hoeft te worden in het informatiemodel zelf. Een codelijst heeft in het informatiemodel daarom geen attributen (en zou voor de definitie alleen hoeven te refereren naar de definitie bij de extern gepubliceerde waardelijst, maar voor het gemak is de definitie wel opgenomen als metagegeven in dit metamodel). De extern gepubliceerde waardelijst bevat, naast gewone attributen, ook altijd één specifiek attribuut, met daarin de domeinwaarden die gebruikt mogen/moeten worden in de registratie. In het gebruik is een Codelijst daarom analoog aan een Enumeratie. Welk specifiek attribuut dit is en wat de betekenis daarvan is staat in de codelijst zelf-gedefinieerd.
+*Toelichting:* Zowel referentielijsten als codelijsten zijn in feite waardelijsten. In tegenstelling echter tot de referentielijst wordt de structuur van een codelijst *niet* in het informatiemodel beschreven, omdat die niet (nader) geduid hoeft te worden in het informatiemodel. De extern gepubliceerde waardelijst die de Codelijst representeert bevat een of meer attributen, waarvan altijd één specifiek attribuut met daarin de domeinwaarden die gebruikt mogen/moeten worden in het informatiemodel. Welk specifiek attribuut dat is staat in het metagegeven Waarde-item. In het gebruik is een Codelijst daarom analoog aan een Enumeratie.
+
+Als het wel van belang is om de structuur van een Codelijst in het model te definieren, dan moet een <a>«Referentielijst»</a> worden gebruikt.
 
 ### Datatypen
 
