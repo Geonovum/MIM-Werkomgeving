@@ -64,6 +64,8 @@ datatypen. Deze zijn allemaal gebaseerd op [[!GAB]]:
 Het is mogelijk om in de eigen extensie extra primitive datatypen op te nemen,
 zodat deze ook beschikbaar komen voor het informatiemodel.
 
+<aside class="issue" title="regel en link opnemen naar register.geostandaarden voor typen"></aside>
+
 #### Getallen en negatieve getallen
 
 Met een getal kan worden gerekend. Bijvoorbeeld: saldo, hoeveelheid, aantal,

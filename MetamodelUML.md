@@ -89,7 +89,7 @@ View 2: Datatypen
 | Enumeratie              | \-                      | (UML) Enumeration        |      | Enumeration        |            |
 | Enumeratiewaarde        | \-                      | (UML) EnumerationLiteral |      | EnumerationLiteral |            |
 | Referentielijst         | «Referentielijst»       | (UML) Datatype           |      | Datatype           |            |
-| Referentie element      | «Referentie element»    | (UML) Property           |      | Attribute          |            |
+| Referentie-element      | «Referentie-element»    | (UML) Property           |      | Attribute          |            |
 | Codelijst               | «Codelijst»             | (UML) Datatype           |      | Datatype           |            |
 
 ### Overige
@@ -344,12 +344,7 @@ De attribuutsoorten worden naar de volgende aspecten gespecificeerd:
 | **Minimumwaarde exclusief** | 0..1          | Algemeen metagegeven. Een attribuutsoort mag of een metagegeven **Minimumwaarde inclusief** of **Minimumwaarde exclusief** hebben, niet beide. | |  | _Tagged value_ |            |
 | **Maximumwaarde inclusief** | 0..1          | Algemeen metagegeven. Een attribuutsoort mag of een metagegeven **Maximumwaarde inclusief** of **Maximumwaarde exclusief** hebben, niet beide. | |  | _Tagged value_ |            |
 | **Maximumwaarde exclusief** | 0..1          | Algemeen metagegeven. Een attribuutsoort mag of een metagegeven **Maximumwaarde inclusief** of **Maximumwaarde exclusief** hebben, niet beide. | |  | _Tagged value_ |            |
-
-Alleen toevoegen als het attribuutsoort een waarde van een meting of waarneming betreft en de eenheid als metagegeven opgenomen moet worden.
-
-| **Aspect**                       | **Kardinaliteit** | **Toelichting**                | **In UML 2.5**                        |    | **In EA**      | **In ...** |
-| -------------------------------- | -------- | ---------------------------------------- | ------------------------------------- | -- | -------------- | -------- |
-| **Eenheid**  |0..1      | Alleen opnemen bij een meetgegeven of waarneming     | |    | *Tagged value*          |     |
+| **Eenheid**  |0..1      | Toevoegen als het attribuutsoort een waarde betreft en de eenheid als metagegeven opgenomen moet worden.    | |    | *Tagged value*          |     |
 
 #### «Gegevensgroep»
 
@@ -368,6 +363,12 @@ De gegevensgroepen worden naar de volgende aspecten gespecificeerd:
 | **Kardinaliteit**    | 1            | Algemeen metagegeven. | *lowerValue en upperValue van de metaclass Multiplicity Element* |      | *Multiplicity van de source role van de bijbehorende composite relatie* |            |
 | **Authentiek**       | 1            | Algemeen metagegeven. |                                       |    | *Tagged value* |     |
 | heeft **gegevensgroeptype**   | 1   | Binding aan een gegevensgroeptype. | *owned element* = UML-Class | | *type* = Class |     |
+
+Alleen toevoegen als het attribuutsoort een waarde van een meting of waarnemimg betreft en de eenheid als metagegeven opgenomen moet worden.
+
+| **Aspect**                       | **Kardinaliteit** | **Toelichting**                | **In UML 2.5**                        |    | **In EA**      | **In ...** |
+| -------------------------------- | -------- | ---------------------------------------- | ------------------------------------- | -- | -------------- | -------- |
+| **Eenheid**  |0..1      | Alleen opnemen bij een meetgegeven of waarneming     | |    | *Tagged value*          |     |
 
 #### «Gegevensgroeptype»
 
@@ -467,7 +468,7 @@ Voor relatierollen worden naar de volgende aspecten gespecificeerd.
 
 | **Aspect**                  | **Kardinaliteit** | **Toelichting**                | **In UML 2.5**                        |    | **In EA**      | **In ...** |
 | -------------------------------- | -------- | ---------------------------------------- | ------------------------------------- | -- | -------------- | -------- |
-| **Naam**             | 1            | Algemeen metagegeven. | *name van de metaclass Named element* |    | *Name*         |     |
+| **Naam**             | 1            | Algemeen metagegeven. De default naam is gelijk aan de naam van het doel-objecttype. | *name van de metaclass Named element* |    | *Name*         |     |
 | **Alias**            | 0..1         | Algemeen metagegeven. | *UML-Property*                        |    | *Alias*        |     |
 | **Herkomst**         | 1            | Algemeen metagegeven. |                                       |    | *tagged value* |     |
 | **Begrip**           | 0..\*        | Algemeen metagegeven. |                                       |    | *Tagged value* |     |
@@ -483,7 +484,7 @@ aspecten gespecificeerd.
 
 | **Aspect**                  | **Kardinaliteit** | **Toelichting**                | **In UML 2.5**                        |    | **In EA**      | **In ...** |
 | -------------------------------- | -------- | ---------------------------------------- | ------------------------------------- | -- | -------------- | -------- |
-| **Naam√**            | 1            | Algemeen metagegeven. | *name van de metaclass Named element* |    | *Name*         |     |
+| **Naam√**            | 1            | Algemeen metagegeven.  De default naam is gelijk aan de naam van het doel-objecttype. | *name van de metaclass Named element* |    | *Name*         |     |
 | **Alias**            | 0..1         | Algemeen metagegeven. | *UML-Property*                        |    | *Alias*        |     |
 | **Herkomst**         | 1            | Algemeen metagegeven. |                                       |    | *tagged value* |     |
 | **Begrip**           | 0..\*        | Algemeen metagegeven. |                                       |    | *Tagged value* |     |
@@ -508,6 +509,7 @@ De generalisaties worden naar het volgende aspect gespecificeerd:
 | **Subtype**   | 1                  | De generalisatie relatie kent twee kanten, de bron kant (source) van de relatie en de doel kant (target) van de relatie. De bron kant van deze generalisatie relatie specificeert een _objecttype_ die een subtype/specialisatie is van het via deze generalisatie relatie aangegeven supertype (zie verwijst naar supertype). Kortweg, het subtype is een specialisatie van het supertype. Het objecttype dat het subtype is van deze generalisatie is verbonden met deze generalisatie. | */source: related Element bij Relationship Element* |      | *Source*  |            |
 | verwijst naar **supertype**  | 1    | Binding van deze generalisatie aan een objecttype. De generalisatie relatie kent twee kanten, de bron kant (source) van de relatie en de doel kant (target) van de relatie. De doel kant van deze generalisatie relatie specificeert een _objecttype_ die het supertype/de generalisatie is van het via deze generalisatie aangegeven subtype. Kortweg, het supertype is een generalisatie van het subtype. | */target: related Element bij Relationship Element* = UML-Class |      | *Target*  |                 |
 | **Datum opname** | 1               | Algemeen metagegeven                                         |                     |      | *Tagged value* |            |
+| **Mixin** | 0..1               | Alleen bij MIM niveau 3, logische modellen                                         |                     |      | *Tagged value* |            |
 
 
 #### «Generalisatie» tussen datatypen
@@ -520,6 +522,7 @@ De generalisaties worden naar het volgende aspect gespecificeerd:
  | */source: related Element bij Relationship Element* |      |      | *Source*  |            |
 | verwijst naar **supertype**  | 1    | Binding van deze generalisatie aan een datatype. De generalisatie relatie kent twee kanten, de bron kant (source) van de relatie en de doel kant (target) van de relatie. De doel kant van deze generalisatie relatie specificeert een _datatype_ die het supertype/de generalisatie is van het via deze generalisatie aangegeven subtype. Kortweg, het supertype is een generalisatie van het subtype. | */target: related Element bij Relationship Element* = UML-datatype |      |      | *Target*  |                 |
 | **Datum opname** | 1               | Algemeen metagegeven                                         |                     |      | *Tagged value* |            |
+
 
 #### «Relatieklasse»
 
@@ -649,7 +652,7 @@ Voor referentielijsten worden de volgende aspecten gespecificeerd:
 | **Toelichting**      | 0..1         | Algemeen metagegeven. |                                       |    | *Tagged value* |     |
 | **Datum opname**     | 1            | Algemeen metagegeven. |                                       |    | *Tagged value* |     |
 | **Locatie**          | 1..1         | Algemeen metagegeven. |                                       |    | *Tagged value* |     |
-| bevat **referentie element** | 1..* | Binding aan een referentie element. | *owned element* = UML-property  | | *attribute*   | |
+| bevat **referentie-element** | 1..* | Binding aan een referentie-element. | *owned element* = UML-property  | | *attribute*   | |
 | verwijst naar **supertype**  | 0..* | Binding aan een generalisatie (naar een andere referentie lijst). | *owned element* = UML-Relationship |    | *association*   |   |
 
 #### «Referentie-element»
@@ -677,7 +680,7 @@ De referentie-elementen worden naar de volgende aspecten gespecificeerd:
 | **Minimumwaarde exclusief** | 0..1          | Algemeen metagegeven. Een referentie-element mag of een metagegeven **Minimumwaarde inclusief** of **Minimumwaarde exclusief** hebben, niet beide. | |  | _Tagged value_ |            |
 | **Maximumwaarde inclusief** | 0..1          | Algemeen metagegeven. Een referentie-element mag of een metagegeven **Maximumwaarde inclusief** of **Maximumwaarde exclusief** hebben, niet beide. | |  | _Tagged value_ |            |
 | **Maximumwaarde exclusief** | 0..1          | Algemeen metagegeven. Een referentie-element mag of een metagegeven **Maximumwaarde inclusief** of **Maximumwaarde exclusief** hebben, niet beide. | |  | _Tagged value_ |            |
-
+| **Eenheid**  |0..1      | Toevoegen als het referentie-element een waarde betreft en de eenheid als metagegeven opgenomen moet worden.
 
 ### Datatypen in UML
 
