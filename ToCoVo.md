@@ -36,7 +36,7 @@ informatiemodellen. Het voorziet enerzijds in duidelijke afspraken die over meer
 heen gaan over het vastleggen van gegevensspecificaties en biedt anderzijds ruimte aan de verschillende 
 niveaus van modellering.
 
-Versie 1.1.1 van MIM is uitgebracht om een aantal kleine aanpassingen te doen die vanuit de community waren aangedragen.
+Versie 1.2 van MIM is uitgebracht om een groot aantal aanpassingen te doen die vanuit de community waren aangedragen. Daarnaast is er een redactionele slag over het document gegaan om het geheel consistenter te maken. Een beknopt overzicht van de aanpassingen met verwijzingen naar de bijbehorende issues zijn terug te vinden in de [versielog](#versielog).
 
 Dick Krijtenburg, Geonovum
 
