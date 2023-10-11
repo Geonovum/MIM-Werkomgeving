@@ -389,42 +389,62 @@ mim:locatie a owl:DatatypeProperty;
 mim:type a owl:ObjectProperty;
   rdfs:label "type"@nl;
   rdfs:comment "Het datatype waarmee waarden van dit modelelement worden vastgelegd."@nl;
-  dct:source mimdoc:sectie2.8.2.23;
+  dct:source mimdoc:sectie2.8.2.27;
 .
 mim:lengte a owl:DatatypeProperty;
   rdfs:label "lengte"@nl;
   rdfs:comment "De aanduiding van de lengte van een gegeven, volgens de aangegeven notatiewijze."@nl;
-  dct:source mimdoc:sectie2.8.2.24;
+  dct:source mimdoc:sectie2.8.2.28;
 .
 mim:patroon a owl:DatatypeProperty;
   rdfs:label "patroon"@nl;
   rdfs:comment "De verzameling van waarden die gegevens van deze attribuutsoort kunnen hebben, oftewel het waardenbereik, uitgedrukt in een specifieke structuur."@nl;
-  dct:source mimdoc:sectie2.8.2.25;
+  dct:source mimdoc:sectie2.8.2.29;
 .
 mim:formeelPatroon a owl:DatatypeProperty;
   rdfs:label "formeel patroon"@nl;
   rdfs:comment "Zoals patroon, formeel vastgelegd, uitgedrukt in een formele taal die door de computer wordt herkend."@nl;
-  dct:source mimdoc:sectie2.8.2.26;
+  dct:source mimdoc:sectie2.8.2.30;
 .
 mim:code a owl:DatatypeProperty;
   rdfs:label "code"@nl;
   rdfs:comment "De in een registratie of informatiemodel aan de enumeratiewaarde toegekend unieke code"@nl;
-  dct:source mimdoc:sectie2.8.2.27;
+  dct:source mimdoc:sectie2.8.2.31;
 .
 mim:indicatieAbstractObject a owl:DatatypeProperty;
   rdfs:label "indicatie abstract object"@nl;
   rdfs:comment "Een indicatie die aangeeft of er objecten kunnen bestaan die getypeerd worden als zijnde objecten (instanties) van alleen dit objecttype. Een abstract objecttype moet altijd de generalisatie zijn van één of meerdere objecttypes die niet abstract zijn."@nl;
-  dct:source mimdoc:sectie2.8.2.28;
+  dct:source mimdoc:sectie2.8.2.32;
 .
 mim:populatie a owl:DatatypeProperty;
   rdfs:label "populatie"@nl;
   rdfs:comment "Voor objecttypen die deel uitmaken van een (basis)registratie betreft dit de beschrijving van de exemplaren van het gedefinieerde objecttype die in de desbetreffende (basis)­registratie voorhanden zijn."@nl;
-  dct:source mimdoc:sectie2.8.2.29;
+  dct:source mimdoc:sectie2.8.2.33;
 .
 mim:kwaliteit a owl:DatatypeProperty;
   rdfs:label "kwaliteit"@nl;
   rdfs:comment "Beschrijving van de mate waarin in de registratie opgenomen objecten van het desbetreffende type volledig, juist, actueel, nauwkeurig en betrouwbaar zijn."@nl;
-  dct:source mimdoc:sectie2.8.2.30;
+  dct:source mimdoc:sectie2.8.2.34;
+.
+mim:minimumwaardeInclusief a owl:DatatypeProperty ;
+  rdfs:label "minimumwaarde inclusief"@nl ;
+  rdfs:comment "Minimumwaarde inclusief (`>=`) is de ondergrens van het waardebereik voor een attribuutsoort of data element getypeerd met een primitief datatype, inclusief die waarde zelf. De minimumwaarde moet van hetzelfde primitieve datatype zijn als het datatype van het modelelement waar het voor geldt."@nl ;
+  dct:source mimdoc:sectie2.8.2.36;
+.
+mim:minimumwaardeExclusief a owl:DatatypeProperty ;
+  rdfs:label "minimumwaarde exclusief"@nl ;
+  rdfs:comment "Minimumwaarde exclusief (`>`) is de ondergrens van het waardebereik voor een attribuutsoort of data element getypeerd met een primitief datatype, exclusief die waarde zelf. De minimumwaarde moet van hetzelfde primitieve datatype zijn als het datatype van het modelelement waar het voor geldt."@nl ;
+  dct:source mimdoc:sectie2.8.2.37;
+.
+mim:maximumwaardeInclusief a owl:DatatypeProperty ;
+  rdfs:label "maximumwaarde inclusief"@nl ;
+  rdfs:comment "Maximumwaarde inclusief (`<=`) is de bovengrens van het waardebereik voor een attribuutsoort of data element getypeerd met een primitief datatype, inclusief die waarde zelf. De maximumwaarde moet van hetzelfde primitieve datatype zijn als het datatype van het modelelement waar het voor geldt."@nl ;
+  dct:source mimdoc:sectie2.8.2.38;
+.
+mim:maximumwaardeExclusief a owl:DatatypeProperty ;
+  rdfs:label "maximumwaarde exclusief"@nl ;
+  rdfs:comment "Maximumwaarde exclusief (`<`) is de bovengrens van het waardebereik voor een attribuutsoort of data element getypeerd met een primitief datatype, exclusief die waarde zelf. De maximumwaarde moet van hetzelfde primitieve datatype zijn als het datatype van het modelelement waar het voor geldt."@nl ;
+  dct:source mimdoc:sectie2.8.2.39;
 .
 
 #Metagegevens modelelementen met relaties naar andere modelelementen

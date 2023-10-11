@@ -34,7 +34,7 @@ Het hoofdstuk [Metamodel in Linked Data (LD)](#metamodel-in-linked-data-ld) besc
 In het hoofdstuk [Afspraken & Regels](#afspraken-regels) gaan we in detail in op een aantal aspecten. Het is een uitgebreidere toelichting, in aanvulling op het hoofdstuk [Metamodel Algemeen](#metamodel-algemeen), bestaande uit nadere afspraken, regels, richtlijnen en aanbevelingen bij het toepassen van het metamodel.
 
 Tot slot zijn er een aantal bijlagen beschikbaar. Dit zijn hulpmiddelen of aanvullingen op het MIM.
-- De bijlage [Template naamgeving conventies](#template-naamgeving-conventies) verschaft een invulmogelijkheid om eigen naamgevingsconventies te documenteren, per in dit metamodel genoemd modelelement.
+- De bijlage [Template naamgevingsconventies](#template-naamgevingsconventies) verschaft een invulmogelijkheid om eigen naamgevingsconventies te documenteren, per in dit metamodel genoemd modelelement.
 - De bijlage [Transformatie MIM - RDFS/OWL/SHACL](#transformatie-mim-rdfs-owl-shacl) beschrijft hoe een MIM model getransformeerd kan worden naar een RDF model dat gebruikt kan worden om daadwerkelijk Linked Data in uit te drukken en vice versa (op instantie niveau, waarbij dit in overeenstemming is met de specificatie op informatiemodel niveau).
  
 ## Gebruikswijzer 

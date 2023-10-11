@@ -52,7 +52,7 @@ De kern van het informatiemodel bestaat uit de volgende modelelementen. Het diag
 
 <figure id="KernZonderUML">
   <img src="media/KernZonderUML.png" alt="" />
-  <figcaption>MIM - kern zonder metagegevens</figcaption>
+  <figcaption>Diagram: Kern zonder UML en metagegevens</figcaption>
 </figure>
 
 In het diagram geven de verbindingen tussen de modelelementen aan welke combinaties kunnen voorkomen op metamodelniveau, oftewel welke modelelementen in een informatiemodel met elkaar gecombineerd kunnen worden. Bijvoorbeeld:
@@ -77,7 +77,7 @@ Het diagram toont de onderlinge samenhang en structuur. Daarin is zichtbaar dat 
 
 <figure id="DatatypenZonderUML">
   <img src="media/DatatypenZonderUML.png" alt="" />
-  <figcaption>MIM - datatypen zonder metagegevens</figcaption>
+  <figcaption>Diagram: Datatypen zonder UML en metagegevens</figcaption>
 </figure>
 
 ### Overige modelelementen
@@ -107,7 +107,7 @@ Een `Constraint` legt voorwaarden of beperkingen op aan een modelelement. Meer i
 
 <figure id="ConstraintsZonderUML">
   <img src="media/ConstraintsZonderUML.png" alt="" />
-  <figcaption>Constraint</figcaption>
+  <figcaption>Diagram: Constraint zonder UML en metagegevens</figcaption>
 </figure>
 
 **Keuze in het kort**
@@ -133,7 +133,7 @@ Voor elke mogelijkheid is een aparte `«MIM metaclass»` beschikbaar in het meta
   </p>
   <figure id="KeuzeDatatype1">
     <img src="media/KeuzeDatatype1.png" alt="" />
-    <figcaption>Keuze tussen datatypen</figcaption>
+    <figcaption>Diagram: Keuze tussen datatypen</figcaption>
   </figure>
 </aside>
 
@@ -143,7 +143,7 @@ Voor elke mogelijkheid is een aparte `«MIM metaclass»` beschikbaar in het meta
   </p>
   <figure id="KeuzeAttribuutsoort2">
     <img src="media/KeuzeAttribuutsoort2.png" alt="" />
-    <figcaption>Keuze tussen attribuutsoorten</figcaption>
+    <figcaption>Diagram: Keuze tussen attribuutsoorten</figcaption>
   </figure>
 </aside>
 
@@ -153,7 +153,7 @@ Voor elke mogelijkheid is een aparte `«MIM metaclass»` beschikbaar in het meta
   </p>
   <figure id="KeuzeAttribuutsoort3">
     <img src="media/KeuzeAttribuutsoort3.png" alt="" />
-    <figcaption>Keuze tussen attribuutsoorten binnen een attribuutsoort</figcaption>
+    <figcaption>Diagram: Keuze tussen attribuutsoorten binnen een attribuutsoort</figcaption>
   </figure>
 </aside>
 
@@ -163,7 +163,7 @@ Voor elke mogelijkheid is een aparte `«MIM metaclass»` beschikbaar in het meta
   </p>
   <figure id="KeuzeRelatiedoel4">
     <img src="media/KeuzeRelatiedoel4.png" alt="" />
-    <figcaption>Keuze tussen relatiedoelen</figcaption>
+    <figcaption>Diagram: Keuze tussen relatiedoelen</figcaption>
   </figure>
 </aside>
 
@@ -183,7 +183,7 @@ In diagramvorm:
 
 <figure id="AssociatierollenZonderUml">
   <img src="media/AssociatierollenZonderUml.png" alt="" />
-  <figcaption>Relatierol</figcaption>
+  <figcaption>Diagram: Associatierollen zonder UML en metagegevens</figcaption>
 </figure>
 
 #### Externe koppeling
@@ -209,7 +209,7 @@ In diagramvorm:
 
 <figure id="PackageZonderUml">
   <img src="media/PackageZonderUml.png" alt="" />
-  <figcaption>Groepering</figcaption>
+  <figcaption>Diagram: Packages zonder UML</figcaption>
 </figure>
 
 ## Modelelementen
@@ -352,6 +352,7 @@ Meervoudige overerving of multiple-inheritance:
 
 Een subtype kan meerdere objecttypen als generalisatie hebben. In het diagram [Kern](#kern) is dit aangegeven door een `«Objecttype»` als subtype naar `0..*` `«Generalisaties»` te laten verwijzen. Dat impliceert dat een subtype `0..*` supertypen kan hebben.
 
+
 #### Relatiesoort
 
 <aside class="definition">
@@ -491,7 +492,7 @@ Alleen deze waarde mag gebruiken worden.
 
 *Toelichting:* Zowel referentielijsten als codelijsten zijn in feite waardelijsten. In tegenstelling echter tot de referentielijst wordt de structuur van een codelijst *niet* in het informatiemodel beschreven, omdat die niet (nader) geduid hoeft te worden in het informatiemodel. De extern gepubliceerde waardelijst die de Codelijst representeert bevat een of meer attributen, waarvan altijd één specifiek attribuut met daarin de domeinwaarden die gebruikt mogen/moeten worden in het informatiemodel. Welk specifiek attribuut dat is staat in het metagegeven Waarde-item. In het gebruik is een Codelijst daarom analoog aan een Enumeratie.
 
-Als het wel van belang is om de structuur van een Codelijst in het model te definieren dan moet een Referentielijst worden gebruikt.
+Als het wel van belang is om de structuur van een Codelijst in het model te definieren, dan moet een <a>«Referentielijst»</a> worden gebruikt.
 
 ### Datatypen
 
@@ -523,8 +524,8 @@ Een primitief datatype kan een standaard datatype zijn, zoals CharacterString, I
 * Deze datatypen hebben altijd al een naam en definitie gekregen vanuit deze standaarden en deze worden gebruikt.
 * Deze datatypen hebben geen MIM metaclass.
 
-Een primitief datatype kan ook in het eigen informatiemodel zelf gedefinieerd zijn, zoals bijvoorbeeld een primitief datatype AN: een alfanumerieke CharacterString conform de MES-1 specificatie (oftewel zonder bijzondere karakters zoals een smiley en zonder bijzondere tekens uit niet Europese talen).
-* Dit is een zelf gedefinieerde variant die als basis een van de voorgaande standaard datatypen heeft, zoals CharacterString. Dit standaard datatype moet eenduidig aangegeven worden (zie generalisatie bij datatypen, of door in een extensie aan te geven wat de default is, bv. CharacterString).
+Een primitief datatype kan ook in het eigen informatiemodel zelf-gedefinieerd zijn, zoals bijvoorbeeld een primitief datatype AN: een alfanumerieke CharacterString conform de MES-1 specificatie (oftewel zonder bijzondere karakters zoals een smiley en zonder bijzondere tekens uit niet Europese talen).
+* Dit is een zelf-gedefinieerde variant die als basis een van de voorgaande standaard datatypen heeft, zoals CharacterString. Dit standaard datatype moet eenduidig aangegeven worden (zie generalisatie bij datatypen, of door in een extensie aan te geven wat de default is, bv. CharacterString).
 * Hierbij hoort de MIM metaclass gespecificeerd te worden: `primitief datatype`.
 
 Een informatiemodel definieert zelf datatypen als er behoefte is aan een datatype dat
@@ -553,14 +554,14 @@ dat som en valuta onlosmakelijk met elkaar zijn verbonden.
 
 De eigenschappen in het Gestructureerd datatype tezamen zijn identificerend (een
 Gestructureerd datatype “identificeert zichzelf”, zoals er maar per definitie
-één “1 liter” bestaat, één 35 euro en één datum 6 april 2017, met per definitie
+één '1 liter' bestaat, één '35 euro' en één datum '6 april 2017', met per definitie
 altijd dezelfde betekenis:
 
--   Een blik olie heeft een inhoud van `7 liter`, kost `35 euro`, en is
-    verkocht op `6 april 2017`.
+-   Een blik olie heeft een inhoud van `"7 liter"`, kost `"35 euro"`, en is
+    verkocht op `"6 april 2017"`.
 
--   Piet heeft `1 liter` bloed gedoneerd, daarvoor `35 euro` vergoeding
-    gekregen, op `6 april 2017`.
+-   Piet heeft `"1 liter"` bloed gedoneerd, daarvoor `"35 euro"` vergoeding
+    gekregen, op `"6 april 2017"`.
 
 Het identificerend zijn geldt bijvoorbeeld niet voor Jan Jansen. Er zijn
 meerdere personen met deze naam en dat zijn verschillende personen (Jan Jansen
@@ -736,7 +737,7 @@ Het is bij deze use case niet de bedoeling om twee nieuwe relatiesoorten, eigena
 
 <figure id="relatiedoelkeuze">
   <img src="media/relatiedoelkeuze.png" alt="" />
-  <figcaption>Voorbeeld van keuze tussen relatiedoelen uitgewerkt in een UML-diagram</figcaption>
+  <figcaption>Diagram: Voorbeeld van keuze tussen relatiedoelen</figcaption>
 </figure>
 
 
@@ -746,7 +747,7 @@ In het voorbeeld vormen EigenaarKeuze en de twee relatiedoelen tezamen de keuze 
 
 ## Specificatie metagegevens
 
-Bij de modelelementen in een informatiemodel kunnen metagegevens, zoals 'naam' van het modelelement, of 'datum opname' van het modelelement, worden bijgehouden. Dit zijn geen eigenschappen van een object en worden daarom niet als bijvoorbeeld een attribuutsoort van een objecttype gemodelleerd. In de volgende paragrafen worden de metagegevens in tekst beschreven. Bij elk metagegeven is de definitie opgenomen, een toelichting en de toepassing ervan bij modelelementen. In [bijlage 6.1.2](#modelelementen-en-metagegevens-als-diagram) is de koppeling tussen metagegevens en de modelelementen beschreven door middel van UML diagrammen. Er is daarin ook opgenomen of ze verplicht of optioneel zijn. In [paragraaf 2.9](#toegestane-waarden-voor-bepaalde-metagegevens) is het waardebereik en defaultwaarden voor een aantal metagegevens opgenomen.
+Bij de modelelementen in een informatiemodel kunnen metagegevens, zoals 'naam' van het modelelement, of 'datum opname' van het modelelement, worden bijgehouden. Dit zijn geen eigenschappen van een object en worden daarom niet als bijvoorbeeld een attribuutsoort van een objecttype gemodelleerd. In de volgende paragrafen worden de metagegevens in tekst beschreven. Bij elk metagegeven is de definitie opgenomen, een toelichting en de toepassing ervan bij modelelementen. In [bijlage 6.1.2](#modelelementen-en-metagegevens-als-diagram) is de koppeling tussen metagegevens en de modelelementen beschreven door middel van UML diagrammen. Er is daarin ook opgenomen of ze verplicht of optioneel zijn. In [paragraaf 2.9](#toegestane-waarden-metagegevens) is het waardebereik en defaultwaarden voor een aantal metagegevens opgenomen.
 
 ### Informatiemodel - metagegevens
 
@@ -1046,10 +1047,37 @@ Toelichting: objecten hebben, of krijgen, in een administratie of gegevensvoorzi
 
 Toepassing: attribuutsoort, alle relaties (relatiesoort, relatierol, relatieklasse, externe koppeling), referentie-element.
 
+#### Metagegeven: **heeft tijdslijn geldigheid**
+
+<aside class="definition">
+  <dfn>heeft tijdslijn geldigheid</dfn>Indicatie of voor dit kenmerk een tijdslijn geldigheid bijgehouden wordt en te bevragen is.
+</aside>
+
+*Toelichting*
+
+Bijvoorbeeld: `Ja`.
+
+Met de tijdlijn geldigheid wordt bedoeld dat er op een tijdslijn wordt bijgehouden wanneer een verandering is opgetreden in de werkelijkheid die heeft geleid tot verandering van de waarde van een kenmerk van een object. Het gegeven is vanaf een bepaald tijdsmoment _geldig_ en dit tijdsmoment wordt op enerlei wijze als metagegeven bijgehouden bij het gegeven. 
+
+Het komt vaak voor dat er besloten wordt of bepaald wordt dat een gegeven al geldig is of werd vanaf een bepaald tijdsmoment in het verleden en het komt voor dat het gegeven pas geldig zal worden vanaf een bepaald tijdsmoment in de (nabije) toekomst. Verdere toelichting, zie het hoofdstuk [Afspraken & Regels](#afspraken-regels). 
+
+Met te bevragen wordt bedoeld: het tijdsmoment vanaf wanneer een gegeven als geldig wordt beschouwd (en vanaf wanneer het gegeven niet meer als geldig wordt beschouwd) wordt op enerlei wijze als historie bijgehouden, en deze wijze is te bevragen. Dit metagegeven is alleen betekenisvol voor kenmerken waarvoor een waarde wordt bijgehouden. De in te vullen waarde komt uit: zie [Tagged values en waardenbereik tagged
+values](#toegestane-waarden-voor-bepaalde-metadata-gegevens). 
+
+De in te vullen waarde komt uit: [toegestane waarde metagegevens](#toegestane-waarden-metagegevens).
+
+*Toepassing*: alle modelelementen die een kenmerk (kunnen) zijn van een objecttype, waarvoor data kan worden bijgehouden: attribuutsoort en relaties (relatiesoort, relatieklasse, externe koppeling).
+
 #### Metagegeven: **Indicatie materiële historie**
 
 <aside class="definition">
-  <dfn>Indicatie materiele historie</dfn>Indicatie of de materiële historie van het kenmerk van het object te bevragen is.
+  <dfn>Indicatie materiele historie</dfn>Indicatie of de materiële historie van het kenmerk van het object bijgehouden wordt en te bevragen is.
+</aside>
+
+<aside class="note" title="Opmerkingen bij 'indicatie materiële historie'">
+<ol>
+  <li>Dit metagegeven is gelijkwaardig met het metagegeven <code><a>heeft tijdslijn geldigheid</a></code>;</li>
+  <li>In toekomstige versies van MIM, versie 2.x en later, wordt dit metagegeven uitgefaseerd. Vanwege backwards compatibility blijft op dit moment aanwezig in MIM 1.x</li>
 </aside>
 
 *Toelichting*
@@ -1068,10 +1096,35 @@ Materiële historie geeft aan wanneer een verandering is opgetreden in de werkel
 
 *Toepassing*: alle modelelementen die een kenmerk (kunnen) zijn van een objecttype, waarvoor data kan worden bijgehouden: attribuutsoort en relaties (relatiesoort of relatiedoel, relatieklasse, externe koppeling).
 
+#### Metagegeven: **heeft tijdslijn registratie**
+
+<aside class="definition">
+  <dfn>heeft tijdslijn registratie</dfn>Indicatie of voor dit kenmerk een tijdslijn geldigheid bijgehouden wordt en te bevragen is.
+</aside>
+
+*Toelichting*
+
+Bijvoorbeeld: `Nee`.
+
+Met de tijdlijn registratie wordt bedoeld dat er op een tijdslijn wordt bijgehouden wanneer een bepaalde waarde voor een kenmerk van een object vastgelegd wordt, oftewel _geregistreerd_ wordt. Dit tijdsmoment wordt op enerlei wijze als metagegeven bijgehouden bij het gegeven. De vastlegging kan zijn op een bepaald medium of in een registratie van een informatievoorziening. Het tijdsmoment van vastlegging of registratie is altijd ten tijde van vastlegging van een gegeven in de echte tijd (de horloge tijd). Elke keer dat hetzelfde gegeven op een andere plek wordt vastgelegd is een apart tijdsmoment op de tijdslijn registatie dat relevant kan zijn om bij te houden. Verdere toelichting, zie het hoofdstuk [Afspraken & Regels](#afspraken-regels). 
+
+Met te bevragen wordt bedoeld: het tijdsmoment wanneer een gegeven geregistreerd is wordt op enerlei wijze als historie bijgehouden, en deze wijze is te bevragen. Dit metagegeven is alleen betekenisvol voor kenmerken waarvoor een waarde wordt bijgehouden. 
+
+De in te vullen waarde komt uit: zie [Tagged values en waardenbereik tagged
+values](#toegestane-waarden-voor-bepaalde-metadata-gegevens)
+
+*Toepassing*: alle modelelementen die een kenmerk (kunnen) zijn van een objecttype, waarvoor data kan worden bijgehouden: attribuutsoort en relaties (relatiesoort, relatieklasse, externe koppeling).
+
 #### Metagegeven: **Indicatie formele historie**
 
 <aside class="definition">
   <dfn>Indicatie formele historie</dfn>Indicatie of de formele historie van het kenmerk van het object bijgehouden wordt en te bevragen is.
+</aside>
+
+<aside class="note" title="Opmerkingen bij 'indicatie formele historie'">
+<ol>
+  <li>Dit metagegeven is gelijkwaardig met het metagegeven <code><a>heeft tijdslijn registratie</a></code>;</li>
+  <li>In toekomstige versies van MIM, versie 2.x en later, wordt dit metagegeven uitgefaseerd. Vanwege backwards compatibility blijft op dit moment aanwezig in MIM 1.x</li>
 </aside>
 
 *Toelichting*
@@ -1080,8 +1133,6 @@ Bijvoorbeeld: `Nee`.
 
 Met te bevragen wordt bedoeld, er wordt historie bijgehouden op enerlei wijze, welke op enerlei wijze te bevragen is. Dit metagegeven is alleen betekenisvol voor kenmerken waarvoor data wordt bijgehouden. De in te vullen waarde komt uit: zie [Tagged values en waardenbereik tagged
 values](#toegestane-waarden-voor-bepaalde-metadata-gegevens). Formele historie geeft aan wanneer in de administratie een verandering bekend is, en is verwerkt. Verdere toelichting, zie het hoofdstuk [Afspraken &Regels](#afspraken-regels).
-
-*Toepassing*: alle modelelementen die een kenmerk (kunnen) zijn van een objecttype waarvoor data kan worden bijgehouden: attribuutsoort en relaties (relatiesoort, relatieklasse, externe koppeling).
 
 De in te vullen waarde komt uit: zie [Tagged values en waardenbereik tagged values](#toegestane-waarden-voor-bepaalde-metadata-gegevens)
 
@@ -1386,7 +1437,7 @@ Niet alle eisen aan een gegevens kunnen gespecificeerd worden met een lengte. Ge
 * het waardenbereik van een gegeven, "binnen" deze lengte
 * of een getal negatief of positief mag zijn.
 
-*Toepassing*: Attribuutsoort, primitief datatype (alleen als dit datatype in het IM zelf gedefinieerd is), data-element, referentie-element.
+*Toepassing*: Attribuutsoort, primitief datatype (alleen als dit datatype in het IM zelf-gedefinieerd is), data-element, referentie-element.
 
 #### Metagegeven: **Patroon**
 
@@ -1521,9 +1572,117 @@ In essentie zijn er vier componenten die een meting of een waarneming beschrijve
 1. het **datatype** van die waarde (kwalitatief (characterstring), kwantitatief (integer of real))
 1. de **eenheid** van de waarde
 
-De eerste drie zijn informatie-technisch uit te drukken met het informatie-element `Attribuutsoort` en `Datatype`. Voor `Eenheid` is een apart metagegeven gecreëerd dat gekoppeld wordt aan een `Attribuutsoort`.
+De eerste drie zijn informatie-technisch uit te drukken met het informatie-element `Attribuutsoort` en `Datatype`. Voor `Eenheid` is een apart metagegeven gecreëerd dat gekoppeld wordt aan een `Attribuutsoort` of een `Referentie-element`.
 
-*Toepassing:* Relatiesoort
+*Toepassing:* Attribuutsoort, Referentie-element.
+
+#### Metagegeven: **Minimumwaarde inclusief**
+
+<aside class="definition">
+  <dfn>Minimumwaarde inclusief</dfn>
+  Minimumwaarde inclusief (`>=`) is de ondergrens van het waardebereik voor een attribuutsoort of data element getypeerd met een primitief datatype, inclusief die waarde zelf. De minimumwaarde moet van hetzelfde primitieve datatype zijn als het datatype van het modelelement waar het voor geldt.
+</aside>
+
+*Toelichting*
+
+Bijvoorbeeld de minimale waarde voor een geldigheidsdatum.
+
+*Toepassing*
+
+Gebruik op attribuutsoorten en data elementen met een primitief datatype van het type:
+- Integer
+- Decimal
+- Float
+- Real
+- DateTime
+- Date
+
+Een modelelement mag maar één voorkomen van metagegeven **Minimumwaarde inclusief** of **Minimumwaarde exclusief** hebben.
+
+#### Metagegeven: **Minimumwaarde exclusief**
+
+<aside class="definition">
+  <dfn>Minimumwaarde exclusief</dfn>
+  Minimumwaarde exclusief (`>`) is de ondergrens van het waardebereik voor een attribuutsoort of data element getypeerd met een primitief datatype, exclusief die waarde zelf. De minimumwaarde moet van hetzelfde primitieve datatype zijn als het datatype van het modelelement waar het voor geldt.
+</aside>
+
+*Toelichting*
+
+Bijvoorbeeld de minimale inhoud van een bouwwerk.
+
+*Toepassing*
+
+Gebruik op attribuutsoorten en data elementen met een primitief datatype van het type:
+- Integer
+- Decimal
+- Float
+- Real
+- DateTime
+- Date
+
+Een modelelement mag maar één voorkomen van metagegeven **Minimumwaarde inclusief** of **Minimumwaarde exclusief** hebben.
+
+#### Metagegeven: **Maximumwaarde inclusief**
+
+<aside class="definition">
+  <dfn>Maximumwaarde inclusief</dfn>
+  Maximumwaarde inclusief (`<=`) is de bovengrens van het waardebereik voor een attribuutsoort of data element getypeerd met een primitief datatype, inclusief die waarde zelf. De maximumwaarde moet van hetzelfde primitieve datatype zijn als het datatype van het modelelement waar het voor geldt.
+</aside>
+
+*Toelichting*
+
+Bijvoorbeeld de minimale waarde voor een geldigheidsdatum.
+
+*Toepassing*
+
+Gebruik op attribuutsoorten en data elementen met een primitief datatype van het type:
+- Integer
+- Decimal
+- Float
+- Real
+- DateTime
+- Date
+
+Een modelelement mag maar één voorkomen van metagegeven **Maximumwaarde inclusief** of **Maximumwaarde exclusief** hebben.
+
+#### Metagegeven: **Maximumwaarde exclusief**
+
+<aside class="definition">
+  <dfn>Maximumwaarde exclusief</dfn>
+  Maximumwaarde exclusief (`<`) is de bovengrens van het waardebereik voor een attribuutsoort of data element getypeerd met een primitief datatype, exclusief die waarde zelf. De maximumwaarde moet van hetzelfde primitieve datatype zijn als het datatype van het modelelement waar het voor geldt.
+</aside>
+
+*Toelichting*
+
+Bijvoorbeeld de maximale waarde voor een geldigheidsdatum.
+
+*Toepassing*
+
+Gebruik op attribuutsoorten en data elementen met een primitief datatype van het type:
+- Integer
+- Decimal
+- Float
+- Real
+- DateTime
+- Date
+
+Een modelelement mag maar één voorkomen van metagegeven **Maximumwaarde inclusief** of **Maximumwaarde exclusief** hebben.
+
+#### Metagegeven: **Mixin**
+
+<aside class="definition">
+  <dfn>Mixin</dfn>Metagegeven om bij een generalisatie aan te geven dat bij een implementatie die geen multiple inheritance ondersteunt de eigenschappen van de superklasse worden overgenomen door de subklasse. De superklasse zelf komt niet in de implementatie voor. 
+</aside>
+
+*Toelichting:*
+`Mixin` kan gebruikt worden als metagegeven bij een `Generalisatie` bij modellen op MIM niveau 3 indien er sprake is van multiple inheritance, d.w.z. meerdere superklassen op een subklasse. Het is opgenomen om multiple inheritance implementatie-issues op te lossen in talen/specificaties die dit niet (of niet eenvoudig) ondersteunen. Met `Mixin = Ja` wordt aangegeven dat deze generalisatie en ook de gerelateerde superklasse niet in de implementatie voorkomt maar dat wel eigenschappen (attribuutsoorten en relatiesoorten/rollen) worden overgenomen door de subklasse. `Mixin = Ja` geeft de mogelijkheid om de multiple inheritance indien gewenst, in het MIM niveau 3 model te behouden maar er in de implementatie indien nodig rekening, mee te houden. De modelleur kan hiermee aangeven welke generalisatie op een alternatieve manier wordt geïmplementeerd. Talen die multiple inheritance wel ondersteunen negeren dit metagegeven.
+
+<figure id="Mixin">
+  <img src="media/Mixin.png" alt="" />
+  <figcaption>Voorbeeld van multiple inheritance met het metagegeven 'Mixin = Ja' op een generalisatie.</figcaption>
+</figure>
+
+*Toepassing:* Generalisatie en alleen bij MIM niveau 3. Niet gebruiken bij generalisaties tussen datatypen.
 
 ### Modelelementbindingen - metagegevens
 
@@ -1741,6 +1900,7 @@ Voor de volgende metagegevens geldt een specifiek waardebereik.
 | Indicatie classificerend            | `Ja`, `Nee`                                                                |
 | Indicatie abstract object           | `Ja`, `Nee`                                                                |
 | Mogelijk geen waarde                | `Ja`, `Nee`                                                                |
+| Mixin                               | `Ja`, `Nee`                                                                |
 | [Aggregatietype](#metagegeven-aggregatietype) | `Compositie`, `Gedeeld`, `Geen`                                  |
 | [Authentiek](#authentieke-gegevens) | `Authentiek`, `Basisgegeven`, `Wettelijk gegeven`, `Landelijk kerngegeven`, `Overig` |
 
@@ -1767,5 +1927,6 @@ Aanwijzing MIM-beheerder: metagegevens met een defaultwaarde mogen niet optionee
 | Unidirectioneel                     | `Ja`              |  
 | Kardinaliteit attribuut             | `1`               |                                                        
 | Aggregatietype                      | `Geen`            |  
+| Mixin                               | `Nee`             | 
 
 Opmerking met betrekking tot de kardinaliteit van relaties: deze staat niet in de tabel. Deze kennen geen defaultwaarde. De kardinaliteit aan de doel kant altijd moet worden aangegeven. De kardinaliteit aan de bron/eigenaar kant van een relatie is optioneel om in te vullen, wanneer er niets is ingevuld dan wordt er niets over de kardinaliteit gezegd en kent deze geen default waarde (in de praktijk betekent dit dat een kardinaliteit aan de bron kant als 0..* geïmplementeerd wordt).
