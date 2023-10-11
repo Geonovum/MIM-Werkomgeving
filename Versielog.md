@@ -15,6 +15,7 @@ In **versie 1.2** zijn de volgende issues verwerkt:
 | [195](https://github.com/Geonovum/MIM-Werkomgeving/issues/195)  | Toevoegen metagegeven `«Mixin»` voor `«Generalisatie»` bij _multiple inheritance_.            |
 | [201](https://github.com/Geonovum/MIM-Werkomgeving/issues/202)  | Aanpassen beschrijving `Populatie` & `Kwaliteit`, toevoegen voorbeelden.                      | 
 | [224](https://github.com/Geonovum/MIM-Werkomgeving/issues/224)  | Verwijderen metagegevens `formele historie` en `materiële historie` bij `Gegevensgroep`       |
+| [238](https://github.com/Geonovum/MIM-Werkomgeving/issues/238)  | Opnemen toelichting hoe omgaan met een gegeven dat uit meerdere 'data-delen' bestaat.         | 
 | [245](https://github.com/Geonovum/MIM-Werkomgeving/issues/245)  | In 2.3.4 beschreven dat de velden `Definitie` en `Toelichting` rijke tekst mogen bevatten.    | 
 | [305](https://github.com/Geonovum/MIM-Werkomgeving/issues/305)  | Toevoegen binding `heeft gegevensgroep` aan tabel metagegevens `«Relatieklasse»`              |
 | [310](https://github.com/Geonovum/MIM-Werkomgeving/issues/310)  | MIM 1.1.1 bevatte twee paragrafen met waardelijsten. Deze zijn nu samengevoegd.               |
@@ -26,5 +27,4 @@ In **versie 1.2** zijn de volgende issues verwerkt:
 | [336](https://github.com/Geonovum/MIM-Werkomgeving/issues/336)  | Aanpassen naamgeving en verwijzing van `Alias` in tabel specificatie metagegevens in LD.      |
 
 <!-- | [148](https://github.com/Geonovum/MIM-Werkomgeving/issues/148)  | Toevoegen beschrijving uitzondering: wanneer `Relatieklasse` modelleren als `Objecttype`.     | -->
-<!-- | [238](https://github.com/Geonovum/MIM-Werkomgeving/issues/238)  | Opnemen toelichting hoe omgaan met een gegeven dat uit meerdere 'data-delen' bestaat.         |  -->
 <!-- | [253](https://github.com/Geonovum/MIM-Werkomgeving/issues/253)  | Aanpassen definitie en toelichtring codelijst                                                 | -->
