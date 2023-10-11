@@ -97,9 +97,9 @@ Naast de kernelementen en de datatypen, kent het MIM nog een aantal andere datat
 
 #### Constraint en Keuze
 
-De `Keuze` en de `Constraint` zijn verschillende manieren om een voorwaarde of een beperking op te leggen aan een modelelement. Beide methoden hebben voor- en nadelen. Meer daarover vind je in de paragrafen [constraint](#constraint) en [keuze](#keuze). Aan de hand van diagrammen wordt hieronder `...`
+De `Keuze` en de `Constraint` zijn verschillende manieren om een voorwaarde of een beperking op te leggen aan een modelelement. Beide methoden hebben voor- en nadelen. Meer daarover vind je in de paragrafen [constraint](#constraint) en [keuze](#keuze). In de volgende alinea's wordt verder toegelicht hoe je ze toepast.
 
-<aside class="issue" title="Alinea aanvullen. Wat is het doel?"></aside>
+<!-- <aside class="issue" title="Alinea aanvullen. Wat is het doel?"></aside> -->
 
 **Constraint in het kort**
 
@@ -112,14 +112,14 @@ Een `Constraint` legt voorwaarden of beperkingen op aan een modelelement. Meer i
 
 **Keuze in het kort**
 
-<aside class="issue" title="Use cases staan ook uitgewerkt in de paragraaf Keuze. Dubbel?"></aside>
+<!-- <aside class="issue" title="Use cases staan ook uitgewerkt in de paragraaf Keuze. Dubbel?"></aside> -->
 
 Een keuze bepaalt dat er meerdere opties mogelijk zijn, waarvan er één gekozen moet worden. Er zijn vijf situaties mogelijk waarin een keuze toegepast wordt die in deze paragraaf elk aan de hand van een voorbeeld worden uitgewerkt:
  1. een keuze tussen datatypen ([voorbeeld](#example-keuze-tussen-datatypen))
  1. een keuze tussen twee of meer attribuutsoorten ([voorbeeld](#example-keuze-tussen-twee-of-meer-attribuutsoorten))
  1. een keuze tussen meerdere manieren om één betekenisvol attribuutsoort in te vullen ([voorbeeld](#example-keuze-tussen-meerdere-manieren-om-een-betekenisvol-attribuutsoort-in-te-vullen))
  1. een keuze tussen relatiedoelen, als nadere invulling van één betekenisvolle relatiesoort ([voorbeeld](#example-keuze-tussen-relatiedoelen))
- 1. een keuze tussen twee of meer relatiesoorten/relatierollen (elk afzonderlijk betekenisvol)([voorbeeld](#linkOpnemen))
+ 1. een keuze tussen twee of meer relatiesoorten/relatierollen (elk afzonderlijk betekenisvol) ([voorbeeld](#linkOpnemen))
 
 Voor elke mogelijkheid is een aparte `«MIM metaclass»` beschikbaar in het metamodel.
  1. `«MIM metaclass»`: <code>Keuze</code>
@@ -139,9 +139,11 @@ Voor elke mogelijkheid is een aparte `«MIM metaclass»` beschikbaar in het meta
   </figure>
 </aside>
 
-<aside class="issue" title="aanvullende tekst">
-  Het bronobject heeft één relatie en één gerelateerd doelobject, maar dit doelobject kan van verschillende objecttypes zijn. Het bronobjecttype kent slechts één relatiesoort/-rol, met een eigen betekenis en deze relatiesoort/-rol verwijst naar twee of meer objecttypes. Dit kan voorkomen wanneer er vanuit het bronobjecttype gezien, slechts sprake is van één kenmerk dat ingevuld moet worden, ongeacht welk objecttype dit concern zal gaan invullen. Dit diagram is uitgewerkt voor Objecttype. Voor Gegevensgroeptype geldt hetzelfde patroon (1 relatiesoort vanuit een gegevensgroeptype naar een objecttype).
-  </aside>
+<aside class="issue" title="Aanvullende tekst afkomstig uit de branch bij issue 190">
+  <p>Waar hoort deze tekst thuis? Afgaande op het onderwerp van issue 190 vermoed ik bij use case 5, maar het stond op een andere plek in het document.</p>
+  <p><blockquote><i>Het bronobject heeft één relatie en één gerelateerd doelobject, maar dit doelobject kan van verschillende objecttypes zijn. Het bronobjecttype kent slechts één relatiesoort/-rol, met een eigen betekenis en deze relatiesoort/-rol verwijst naar twee of meer objecttypes. Dit kan voorkomen wanneer er vanuit het bronobjecttype gezien, slechts sprake is van één kenmerk dat ingevuld moet worden, ongeacht welk objecttype dit kenmerk zal gaan invullen. Dit diagram is uitgewerkt voor Objecttype. Voor Gegevensgroeptype geldt hetzelfde patroon (1 relatiesoort vanuit een gegevensgroeptype naar een objecttype).</i></blockquote></p>
+  <p>Er wordt verwezen naar een diagram, maar die was geen onderdeel van de wijziging.</p>
+</aside>
 
 <aside class="example" title="Keuze tussen twee of meer attribuutsoorten">
   <p>
@@ -173,41 +175,49 @@ Voor elke mogelijkheid is een aparte `«MIM metaclass»` beschikbaar in het meta
   </figure>
 </aside>
 
-<aside class="issue" title="onderstaande tekst komt uit branch bij issue 190"></aside>
+<aside class="issue" title="Onderstaande tekst afkomstig uit de branch bij issue 190">
 
-Diagram: Keuze tussen relatiedoelen. 
+  <p>Diagram: Keuze tussen relatiedoelen.</p>
 
-Uitwerking met een keuze constructie: een bron objecttype of gegevensgroeptype kan normaal een relatiesoort/relatierol hebben, die gekoppeld is aan (verwijst naar) een doel objecttype. Als er sprake is van een relatiesoort/relatierol met een relatiedoel keuze, dan is de relatiesoort niet gekoppeld aan 1 objecttype, maar dan is de relatiesoort gekoppeld aan een keuze en deze keuze is gekoppeld aan 2 of meer doel objecttypen. Elk objecttype is een afzonderlijk relatiedoel. Er moet voor deze ene relatiesoort/relatierol een keuze gemaakt worden voor 1 van de relatiedoelen. Het gerelateerde object is 1 van deze objecttypen, maar de betekenis van de relatie is hetzelfde, ongeacht van welk objecttype het object is. 
+  <p>Uitwerking met een keuze constructie: een bron objecttype of gegevensgroeptype kan normaal een relatiesoort/relatierol hebben, die gekoppeld is aan (verwijst naar) een doel objecttype. Als er sprake is van een relatiesoort/relatierol met een relatiedoel keuze, dan is de relatiesoort niet gekoppeld aan 1 objecttype, maar dan is de relatiesoort gekoppeld aan een keuze en deze keuze is gekoppeld aan 2 of meer doel objecttypen. Elk objecttype is een afzonderlijk relatiedoel. Er moet voor deze ene relatiesoort/relatierol een keuze gemaakt worden voor 1 van de relatiedoelen. Het gerelateerde object is 1 van deze objecttypen, maar de betekenis van de relatie is hetzelfde, ongeacht van welk objecttype het object is.</p>
 
-Opmerkingen: 
-- elke relatiesoort kan een eigen relatienaam hebben en heeft een relatiedoel die een eigen rolnaam kan hebben, maar dit hoeft niet. De naam van de relatiesoort/relatierol is immers al gespecificeerd bij de relatiesoort naar de Keuze.
-- een gegevensgroeptype mag zelf geen doel zijn 
+  <p>Opmerkingen:
+    <ul>
+      <li>elke relatiesoort kan een eigen relatienaam hebben en heeft een relatiedoel die een eigen rolnaam kan hebben, maar dit hoeft niet. De naam van de relatiesoort/relatierol is immers al gespecificeerd bij de relatiesoort naar de Keuze.</li>
+      <li>een gegevensgroeptype mag zelf geen doel zijn</li>
+    </ul>
+  </p>
 
-*Use case 5: Keuze tussen 2 or meer relatiesoorten/relatierollen (elk afzonderlijk betekenisvol)*  
+  <strong>Use case 5: Keuze tussen 2 or meer relatiesoorten/relatierollen (elk afzonderlijk betekenisvol)</strong>
 
-Analoog aan use case 2, maar dan voor relatiesoorten/relatierollen. Het objecttype kent 2 of meer relatiesoorten/relatierollen, met elk een eigen betekenis, en precies 1 hiervan is verplicht. 
+  <p>Analoog aan use case 2, maar dan voor relatiesoorten/relatierollen. Het objecttype kent 2 of meer relatiesoorten/relatierollen, met elk een eigen betekenis, en precies 1 hiervan is verplicht.</p>
 
-Het bron object heeft meerdere relaties die aan de orde/gevuld zouden kunnen zijn, maar er mag er altijd maar 1 aan de orde/gevuld zijn. Het bron objecttype kent 2 of meer relatiesoorten/relatierollen, met elk een eigen betekenis, en elk van deze relatiesoorten/relatierollen is gekoppeld aan (verwijst naar) een eigen doel objecttype.  
+  <p>Het bron object heeft meerdere relaties die aan de orde/gevuld zouden kunnen zijn, maar er mag er altijd maar 1 aan de orde/gevuld zijn. Het bron objecttype kent 2 of meer relatiesoorten/relatierollen, met elk een eigen betekenis, en elk van deze relatiesoorten/relatierollen is gekoppeld aan (verwijst naar) een eigen doel objecttype.</p>
 
-Dit diagram is uitgewerkt voor Objecttype. Voor Gegevensgroeptype geldt hetzelfde patroon (2 of meer relatiesoorten vanuit een gegevensgroeptype naar een objecttype). 
+  <p>Dit diagram is uitgewerkt voor Objecttype. Voor Gegevensgroeptype geldt hetzelfde patroon (2 of meer relatiesoorten vanuit een gegevensgroeptype naar een objecttype).</p>
 
-<figure id="KeuzeRelatiedoel5">
-  <img src="media/KeuzeRelatiesoort5.png" alt="" />
-  <figcaption>Keuze tussen relatiesoorten</figcaption>
-</figure>
+  <figure id="KeuzeRelatiedoel5">
+    <img src="media/KeuzeRelatiesoort5.png" alt="" />
+    <figcaption>Keuze tussen relatiesoorten</figcaption>
+  </figure>
 
-Diagram: Keuze tussen relatiesoorten/relatierollen. Patroon geldt ook voor Gegevensgroeptype, de relatiesoorten kunnen ook vanuit het gegevensgroeptype verwijzen naar de gekoppelde objecttypes. 
+  <p>Diagram: Keuze tussen relatiesoorten/relatierollen. Patroon geldt ook voor Gegevensgroeptype, de relatiesoorten kunnen ook vanuit het gegevensgroeptype verwijzen naar de gekoppelde objecttypes. </p>
 
-Uitwerking met een keuze constructie: een bron objecttype of gegevensgroeptype kan normaal een relatiesoort/relatierol hebben, die gekoppeld is aan (verwijst naar) een doel objecttype. Als er sprake is van een relatiesoort/relatierol keuze, dan heeft het _objecttype_ 1 koppeling met een _relatiesoort/relatierol keuze_ en deze keuze heeft 2 of meer relatiesoorten/relatierollen naar de doel objecttypes. Er moet een keuze gemaakt worden voor 1 van de relatiesoorten/relatierollen en daarmee voor het aan deze relatie gerelateerde doel objecttype. 
+  <p>Uitwerking met een keuze constructie: een bron objecttype of gegevensgroeptype kan normaal een relatiesoort/relatierol hebben, die gekoppeld is aan (verwijst naar) een doel objecttype. Als er sprake is van een relatiesoort/relatierol keuze, dan heeft het _objecttype_ 1 koppeling met een _relatiesoort/relatierol keuze_ en deze keuze heeft 2 of meer relatiesoorten/relatierollen naar de doel objecttypes. Er moet een keuze gemaakt worden voor 1 van de relatiesoorten/relatierollen en daarmee voor het aan deze relatie gerelateerde doel objecttype. </p>
 
-Opmerkingen: 
-- elke relatiesoort of rol moet een eigen naam hebben.
-- een gegevensgroeptype mag zelf geen doel zijn
+  <p>Opmerkingen: 
+    <ul>
+      <li>elke relatiesoort of rol moet een eigen naam hebben.</li>
+      <li>een gegevensgroeptype mag zelf geen doel zijn</li>
+    </ul>
+  </p>
 
-<aside class="issue" title="onderstaande aside komt uit master"></aside>
- 
-<aside class="note" title="Keuze tussen relatiesoorten">
-  Merk op dat een <strong>keuze tussen relatiesoorten</strong> óók een mogelijke keuze is. Deze opties is vooralsnog niet uitgewerkt en daarom nog niet opgenomen in deze versie.
+</aside>
+
+<aside class="issue" title="Onderstaande noot komt uit master">
+  <aside class="note" title="Keuze tussen relatiesoorten">
+    Merk op dat een <strong>keuze tussen relatiesoorten</strong> óók een mogelijke keuze is. Deze opties is vooralsnog niet uitgewerkt en daarom nog niet opgenomen in deze versie.
+  </aside>
 </aside>
 
 #### Relatiesoort en relatierol
@@ -531,7 +541,7 @@ Alleen deze waarde mag gebruiken worden.
 
 *Toelichting:* Zowel referentielijsten als codelijsten zijn in feite waardelijsten. In tegenstelling echter tot de referentielijst wordt de structuur van een codelijst *niet* in het informatiemodel beschreven, omdat die niet (nader) geduid hoeft te worden in het informatiemodel. De extern gepubliceerde waardelijst die de Codelijst representeert bevat een of meer attributen, waarvan altijd één specifiek attribuut met daarin de domeinwaarden die gebruikt mogen/moeten worden in het informatiemodel. Welk specifiek attribuut dat is staat in het metagegeven Waarde-item. In het gebruik is een Codelijst daarom analoog aan een Enumeratie.
 
-Als het wel van belang is om de structuur van een Codelijst in het model te definieren, dan moet een <a>«Referentielijst»</a> worden gebruikt.
+Als het wel van belang is om de structuur van een Codelijst in het model te definieren, dan moet een <code>«<a>Referentielijst</a>»</code> worden gebruikt.
 
 ### Datatypen
 
