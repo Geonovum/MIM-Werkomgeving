@@ -114,17 +114,19 @@ Een `Constraint` legt voorwaarden of beperkingen op aan een modelelement. Meer i
 
 <aside class="issue" title="Use cases staan ook uitgewerkt in de paragraaf Keuze. Dubbel?"></aside>
 
-Een keuze bepaalt dat er meerdere opties mogelijk zijn, waarvan er één gekozen moet worden. Er zijn vier situaties mogelijk waarin een keuze toegepast wordt die in deze paragraaf elk aan de hand van een voorbeeld worden uitgewerkt. Keuze tussen:
+Een keuze bepaalt dat er meerdere opties mogelijk zijn, waarvan er één gekozen moet worden. Er zijn vijf situaties mogelijk waarin een keuze toegepast wordt die in deze paragraaf elk aan de hand van een voorbeeld worden uitgewerkt:
  1. een keuze tussen datatypen ([voorbeeld](#example-keuze-tussen-datatypen))
- 1. een keuze tussen 2 of meer attribuutsoorten ([voorbeeld](#example-keuze-tussen-twee-of-meer-attribuutsoorten))
- 1. een keuze tussen meerdere manieren om 1 betekenisvol attribuutsoort in te vullen ([voorbeeld](#example-keuze-tussen-meerdere-manieren-om-een-betekenisvol-attribuutsoort-in-te-vullen))
- 1. een keuze tussen relatiedoelen, als nadere invulling van 1 betekenisvolle relatiesoort ([voorbeeld](#example-keuze-tussen-relatiedoelen))
+ 1. een keuze tussen twee of meer attribuutsoorten ([voorbeeld](#example-keuze-tussen-twee-of-meer-attribuutsoorten))
+ 1. een keuze tussen meerdere manieren om één betekenisvol attribuutsoort in te vullen ([voorbeeld](#example-keuze-tussen-meerdere-manieren-om-een-betekenisvol-attribuutsoort-in-te-vullen))
+ 1. een keuze tussen relatiedoelen, als nadere invulling van één betekenisvolle relatiesoort ([voorbeeld](#example-keuze-tussen-relatiedoelen))
+ 1. een keuze tussen twee of meer relatiesoorten/relatierollen (elk afzonderlijk betekenisvol)([voorbeeld](#linkOpnemen))
 
 Voor elke mogelijkheid is een aparte `«MIM metaclass»` beschikbaar in het metamodel.
  1. `«MIM metaclass»`: <code>Keuze</code>
  1. `«MIM metaclass»`: <code>Keuze(attribuut)</code>
  1. `«MIM metaclass»`: <code>Keuze(relatie)</code>
  1. `«MIM metaclass»`: <code>Datatype(keuze)</code>
+ 1. `«MIM metaclass»`: <code>...</code>
 
 <aside class="example" title="Keuze tussen datatypen">
   <p>
@@ -136,6 +138,10 @@ Voor elke mogelijkheid is een aparte `«MIM metaclass»` beschikbaar in het meta
     <figcaption>Diagram: Keuze tussen datatypen</figcaption>
   </figure>
 </aside>
+
+<aside class="issue" title="aanvullende tekst">
+  Het bronobject heeft één relatie en één gerelateerd doelobject, maar dit doelobject kan van verschillende objecttypes zijn. Het bronobjecttype kent slechts één relatiesoort/-rol, met een eigen betekenis en deze relatiesoort/-rol verwijst naar twee of meer objecttypes. Dit kan voorkomen wanneer er vanuit het bronobjecttype gezien, slechts sprake is van één kenmerk dat ingevuld moet worden, ongeacht welk objecttype dit concern zal gaan invullen. Dit diagram is uitgewerkt voor Objecttype. Voor Gegevensgroeptype geldt hetzelfde patroon (1 relatiesoort vanuit een gegevensgroeptype naar een objecttype).
+  </aside>
 
 <aside class="example" title="Keuze tussen twee of meer attribuutsoorten">
   <p>
@@ -167,6 +173,39 @@ Voor elke mogelijkheid is een aparte `«MIM metaclass»` beschikbaar in het meta
   </figure>
 </aside>
 
+<aside class="issue" title="onderstaande tekst komt uit branch bij issue 190"></aside>
+
+Diagram: Keuze tussen relatiedoelen. 
+
+Uitwerking met een keuze constructie: een bron objecttype of gegevensgroeptype kan normaal een relatiesoort/relatierol hebben, die gekoppeld is aan (verwijst naar) een doel objecttype. Als er sprake is van een relatiesoort/relatierol met een relatiedoel keuze, dan is de relatiesoort niet gekoppeld aan 1 objecttype, maar dan is de relatiesoort gekoppeld aan een keuze en deze keuze is gekoppeld aan 2 of meer doel objecttypen. Elk objecttype is een afzonderlijk relatiedoel. Er moet voor deze ene relatiesoort/relatierol een keuze gemaakt worden voor 1 van de relatiedoelen. Het gerelateerde object is 1 van deze objecttypen, maar de betekenis van de relatie is hetzelfde, ongeacht van welk objecttype het object is. 
+
+Opmerkingen: 
+- elke relatiesoort kan een eigen relatienaam hebben en heeft een relatiedoel die een eigen rolnaam kan hebben, maar dit hoeft niet. De naam van de relatiesoort/relatierol is immers al gespecificeerd bij de relatiesoort naar de Keuze.
+- een gegevensgroeptype mag zelf geen doel zijn 
+
+*Use case 5: Keuze tussen 2 or meer relatiesoorten/relatierollen (elk afzonderlijk betekenisvol)*  
+
+Analoog aan use case 2, maar dan voor relatiesoorten/relatierollen. Het objecttype kent 2 of meer relatiesoorten/relatierollen, met elk een eigen betekenis, en precies 1 hiervan is verplicht. 
+
+Het bron object heeft meerdere relaties die aan de orde/gevuld zouden kunnen zijn, maar er mag er altijd maar 1 aan de orde/gevuld zijn. Het bron objecttype kent 2 of meer relatiesoorten/relatierollen, met elk een eigen betekenis, en elk van deze relatiesoorten/relatierollen is gekoppeld aan (verwijst naar) een eigen doel objecttype.  
+
+Dit diagram is uitgewerkt voor Objecttype. Voor Gegevensgroeptype geldt hetzelfde patroon (2 of meer relatiesoorten vanuit een gegevensgroeptype naar een objecttype). 
+
+<figure id="KeuzeRelatiedoel5">
+  <img src="media/KeuzeRelatiesoort5.png" alt="" />
+  <figcaption>Keuze tussen relatiesoorten</figcaption>
+</figure>
+
+Diagram: Keuze tussen relatiesoorten/relatierollen. Patroon geldt ook voor Gegevensgroeptype, de relatiesoorten kunnen ook vanuit het gegevensgroeptype verwijzen naar de gekoppelde objecttypes. 
+
+Uitwerking met een keuze constructie: een bron objecttype of gegevensgroeptype kan normaal een relatiesoort/relatierol hebben, die gekoppeld is aan (verwijst naar) een doel objecttype. Als er sprake is van een relatiesoort/relatierol keuze, dan heeft het _objecttype_ 1 koppeling met een _relatiesoort/relatierol keuze_ en deze keuze heeft 2 of meer relatiesoorten/relatierollen naar de doel objecttypes. Er moet een keuze gemaakt worden voor 1 van de relatiesoorten/relatierollen en daarmee voor het aan deze relatie gerelateerde doel objecttype. 
+
+Opmerkingen: 
+- elke relatiesoort of rol moet een eigen naam hebben.
+- een gegevensgroeptype mag zelf geen doel zijn
+
+<aside class="issue" title="onderstaande aside komt uit master"></aside>
+ 
 <aside class="note" title="Keuze tussen relatiesoorten">
   Merk op dat een <strong>keuze tussen relatiesoorten</strong> óók een mogelijke keuze is. Deze opties is vooralsnog niet uitgewerkt en daarom nog niet opgenomen in deze versie.
 </aside>
