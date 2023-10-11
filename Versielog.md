@@ -7,9 +7,10 @@ In **versie 1.2** zijn de volgende issues verwerkt:
 | [015](https://github.com/Geonovum/MIM-Werkomgeving/issues/15)   | Toevoegen metagegeven `Eenheid` aan documentatie.                                             |
 | [109](https://github.com/Geonovum/MIM-Werkomgeving/issues/109)  | Toevoegen metagegevens `min-max inclusief` en `min-max exclusief`.                            |
 | [111](https://github.com/Geonovum/MIM-Werkomgeving/issues/111)  | Aanpassen samenhang `«Relatiesoort»`, `«Objecttype»` en `«Relatierol»` in het model (diagram) |
+| [141](https://github.com/Geonovum/MIM-Werkomgeving/issues/141)  | Aanpassen lijst primitieve datatypen en genereren bestand voor operationeel gebruik ervan.    |
 | [156](https://github.com/Geonovum/MIM-Werkomgeving/issues/156)  | Afstemmen metaclasses tabellen en diagrammen.                                                 |
 | [171](https://github.com/Geonovum/MIM-Werkomgeving/issues/171)  | Aanpassen structuur tekst en figuren m.b.t. `Keuze`                                           |
-| [151](https://github.com/Geonovum/MIM-Werkomgeving/issues/151)  | Toevoegen twee metagegevens om aan te geven welke historie wordt bijgehouden.                 |
+| [156](https://github.com/Geonovum/MIM-Werkomgeving/issues/156)  | Afstemmen en actualiseren metaklassen in tabellen en diagrammen.                              |
 | [171](https://github.com/Geonovum/MIM-Werkomgeving/issues/171)  | Aanpassen structuur tekst en figuren m.b.t. `Keuze`                                           |
 | [188](https://github.com/Geonovum/MIM-Werkomgeving/issues/188)  | Toevoegen van `URI` van model en modelelementen voor publicatie op het web.                   |
 | [195](https://github.com/Geonovum/MIM-Werkomgeving/issues/195)  | Toevoegen metagegeven `«Mixin»` voor `«Generalisatie»` bij _multiple inheritance_.            |
@@ -26,5 +27,9 @@ In **versie 1.2** zijn de volgende issues verwerkt:
 | [333](https://github.com/Geonovum/MIM-Werkomgeving/issues/333)  | Schrijfwijze `Waardelijst` nu eenduidig zonder `-n`: (_waarde_, i.p.v. _waarden_)             |
 | [336](https://github.com/Geonovum/MIM-Werkomgeving/issues/336)  | Aanpassen naamgeving en verwijzing van `Alias` in tabel specificatie metagegevens in LD.      |
 
+
+
 <!-- | [148](https://github.com/Geonovum/MIM-Werkomgeving/issues/148)  | Toevoegen beschrijving uitzondering: wanneer `Relatieklasse` modelleren als `Objecttype`.     | -->
-<!-- | [253](https://github.com/Geonovum/MIM-Werkomgeving/issues/253)  | Aanpassen definitie en toelichtring codelijst                                                 | -->
+<!-- | [151](https://github.com/Geonovum/MIM-Werkomgeving/issues/151)  | Toevoegen twee metagegevens om aan te geven welke historie wordt bijgehouden.                 | -->
+<!-- | [253](https://github.com/Geonovum/MIM-Werkomgeving/issues/253)  | Aanpassen definitie en toelichtring codelijst  
+                                               | -->
