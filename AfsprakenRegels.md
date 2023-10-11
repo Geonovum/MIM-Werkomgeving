@@ -61,10 +61,9 @@ datatypen. Deze zijn allemaal gebaseerd op [[!GAB]]:
 | Month              | 2-cijferige maand uitgedrukt in mm conform https://en.wikipedia.org/wiki/ISO_8601  |
 | URI                | Unieke identificatie op internet conform RFC3986 en de URI-strategie Linked Open Data. Gestandaardiseerde manier om op het internet dingen (pagina's met informatie, objecten, datasets) uniek te identificeren. |
 
-Het is mogelijk om in de eigen extensie extra primitive datatypen op te nemen,
-zodat deze ook beschikbaar komen voor het informatiemodel.
+Het is mogelijk om in de eigen extensie extra primitive datatypen op te nemen, zodat deze ook beschikbaar komen voor het informatiemodel.
 
-<aside class="issue" title="regel en link opnemen naar register.geostandaarden voor typen"></aside>
+<aside class="issue" title="Extra tekstregel openen, incl. link naar register.geostandaarden voor typen"></aside>
 
 #### Getallen en negatieve getallen
 
