@@ -65,6 +65,10 @@ shape:Attribuutsoort a sh:NodeShape;
   sh:property shape:indicatieAfleidbaar;
   sh:property shape:indicatieClassificerend;
   sh:property shape:mogelijkGeenWaarde;
+  sh:property shape:minimumwaardeInclusief;
+  sh:property shape:minimumwaardeExclusief;
+  sh:property shape:maximumwaardeInclusief;
+  sh:property shape:maximumwaardeExclusief;
   # Eigenschappen alleen in de specificatietabel
   sh:property shape:identificerend;
 .
@@ -254,6 +258,10 @@ shape:ReferentieElement a sh:NodeShape;
   sh:property shape:kardinaliteit;
   sh:property shape:identificerend;
   sh:property shape:toelichting;
+  sh:property shape:minimumwaardeInclusief;
+  sh:property shape:minimumwaardeExclusief;
+  sh:property shape:maximumwaardeInclusief;
+  sh:property shape:maximumwaardeExclusief;
 .
 shape:Codelijst a sh:NodeShape;
   sh:targetClass mim:Codelijst;
@@ -326,6 +334,10 @@ shape:DataElement a sh:NodeShape;
   sh:property shape:formeelPatroon;
   sh:property shape:kardinaliteit;
   sh:property shape:datumOpname;
+  sh:property shape:minimumwaardeInclusief;
+  sh:property shape:minimumwaardeExclusief;
+  sh:property shape:maximumwaardeInclusief;
+  sh:property shape:maximumwaardeExclusief;
 .
 shape:Keuze a sh:NodeShape;
   sh:targetClass mim:Keuze;
@@ -927,13 +939,36 @@ shape:specificatieFormeel a sh:PropertyShape;
   sh:maxCount 1;
   sh:datatype xsd:string;
 .
-
 shape:modelelement a sh:PropertyShape;
   sh:path mim:modelelement;
   sh:name "mim:modelelement";
   sh:order 35;
   sh:class mim:Relatiesoort;
   sh:minCount 2;
+.
+shape:minimumwaardeInclusief a sh:PropertyShape;
+  sh:path mim:minimumwaardeInclusief;
+  sh:name "mim:minimumwaardeInclusief";
+  sh:order 36;
+  sh:maxCount 1;
+.
+shape:minimumwaardeExclusief a sh:PropertyShape;
+  sh:path mim:minimumwaardeExclusief;
+  sh:name "mim:minimumwaardeExclusief";
+  sh:order 37;
+  sh:maxCount 1;
+.
+shape:maximumwaardeInclusief a sh:PropertyShape;
+  sh:path mim:maximumwaardeInclusief;
+  sh:name "mim:maximumwaardeInclusief";
+  sh:order 38;
+  sh:maxCount 1;
+.
+shape:maximumwaardeExclusief a sh:PropertyShape;
+  sh:path mim:maximumwaardeExclusief;
+  sh:name "mim:maximumwaardeExclusief";
+  sh:order 39;
+  sh:maxCount 1;
 .
 
 # De volgende shapes zijn niet expliciet benoemd, maar bestaan wel (bv in diagram)
