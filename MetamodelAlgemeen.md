@@ -35,9 +35,19 @@ Deze paragraaf bevat een overzicht van het metamodel voor informatiemodellering,
 
 Elk modelelement heeft een `«MIM metaclass»` met een naam. Hieraan is elk modelelement te herkennen in alle diagrammen, in de tekst én in elke specificatietaal die een uitdrukking is van dit metamodel. Bij de modelelementen zijn in deze diagrammen geen beschrijvende kenmerken opgenomen (bijvoorbeeld [metagegevens](#specificatie-metagegevens) zoals: naam, definitie, enzovoorts). In de [diagrammen](#diagrammen) in de bijlage zijn deze wel opgenomen.
 
+### Modelelement
+
+Het modelelement is de superklasse van alle metaklassen in het MIM-metamodel.
+
+<aside class="definition">
+  <dfn>Modelelement</dfn>Een metaklasse van een metamodel.
+</aside>
+
+**Toelichting**: Modelelementen zijn de bouwstenen of metaklassen van het MIM-metamodel. Modelelement is de superklasse van alle metaklassen in het MIM.
+
 ### Kern
 
-De kern van het informatiemodel bestaat uit de volgende modelelementen. Het diagram toont hoe ze onderling met elkaar samenghangen. Een uitgebreide beschrijving per element is opgenomen in de paragraaf [modelelementen](#modelelementen).
+De kern van het metamodel bestaat uit de volgende modelelementen. Het diagram toont hoe ze onderling met elkaar samenghangen. Een uitgebreide beschrijving per element is opgenomen in de paragraaf [modelelementen](#modelelementen).
 
  1. `«MIM metaclass»`: <a>Objecttype</a>
  1. `«MIM metaclass»`: <a>Attribuutsoort</a>
@@ -247,6 +257,9 @@ View 3c: Externe koppelingen. Deze bestaat uit de volgende modelelementen:
 
 View 3d: Groepering. Deze bestaat uit de volgende modelelementen:
 
+
+ 1. `MIM metaclass`: <code><a>Package</a></code>
+ 1. `MIM metaclass`: <code><a>Modelelement</a></code>
  1. `MIM metaclass`: <code><a>Informatiemodel</a></code>
  1. `MIM metaclass`: <code><a>Domein</a></code>
  1. `MIM metaclass`: <code><a>Extern</a></code>
@@ -263,20 +276,14 @@ In diagramvorm:
 
 ## Modelelementen
 
-### Objecttypen en attribuutsoorten  
-In deze paragraaf staan alle modelelementen gespecificeerd die gebruikt worden bij
-het maken van een informatiemodel. Bij elk modelelement is een definitie en een toelichting opgenomen.
+In deze paragraaf staan alle modelelementen gespecificeerd die voorkomen in het MIM-metamodel. Bij elk modelelement is een definitie en een toelichting opgenomen. Voordat alle modelelementen worden gedefinieerd,
+wordt eerst beschreven wat objecten en gegevens zijn en hoe deze zich verhouden tot modelelementen.
 
-<del>Voordat het modelelement objecttype gedefinieerd wordt, en andere modelelementen,
-wordt eerst beschreven wat objecten en gegevens zijn en hoe deze zich verhouden tot modelelementen.</del>
+### Objecten en gegevens
 
-#### Object en gegeven
+MIM kent als belangrijk modelelement het objecttype. Een objecttype is een groep van gelijksoortige <strong>objecten</strong>. Zo zijn `Jan` en `Katrien` allebei objecten die gelijksoortig zijn en beide getypeerd kunnen worden als `persoon`. Het zijn allebei personen, oftewel het objecttype van beiden is `Persoon`. In het informatiemodel nemen we `Persoon` op met behulp van het modelelement `Objecttype`.
 
-Een objecttype is een groep van gelijksoortige objecten. Zo zijn `Jan` en `Katrien` allebei objecten die gelijksoortig zijn en beide getypeerd kunnen worden als `persoon`. Het zijn allebei personen, oftewel het objecttype van beiden is `Persoon`. In het informatiemodel nemen we `Persoon` op met behulp van het modelelement `Objecttype`.
-
-Diagram: [Kern](#kern)
-
-Om duidelijk(er) te maken wat wordt bedoeld kijken we eerst naar het begrip ‘object’.
+Om duidelijk(er) te maken wat wordt bedoeld kijken we eerst naar het begrip ‘object’ en het begrip 'gegeven'.
 
 #### Object
 
@@ -285,7 +292,7 @@ Om duidelijk(er) te maken wat wordt bedoeld kijken we eerst naar het begrip ‘o
 </aside>
 
 <aside class="note" title="Object vs. Objecttype">
-  Een <strong>object is geen modelelement</strong> in een informatiemodel. Die worden aangeduid met het MIM-stereotype <a href="#objecttype">«Objecttype»</a>.
+  Een <strong>object is geen modelelement</strong> in een informatiemodel. Een objecttype is wel een modelelement in een informatiemodel.</a>
 </aside>
 
 *Toelichting:* 
@@ -322,6 +329,8 @@ Er zijn waardes die:
 Er zijn slechts een aantal modelelementen waarmee een gegeven gemodelleerd kan worden. Dit zijn: _attribuutsoort_, _relatiesoort_ en _externe koppeling_. Hier kunnen gegevens voor bekend zijn. Andere modelelementen, zoals een objecttype of een datatype kunnen geen gegevens "bevatten". 
 
 Met de vastlegging van gegevens in een informatievoorziening wordt een model van de werkelijkheid bevroren in de tijd. Hoewel de werkelijkheid nooit stil staat, kan deze door het vastleggen van de gegevens toch worden bevroren. Bij een gegeven kunnen ook metagegevens worden vastgelegd, voor het bijhouden van *historie*, zoals de tijdslijn geldigheid en de tijdslijn registratie. Zodat we weten wanneer het gegeven geldig is (of is geweest) en wanneer het gegeven is vastgelegd op een bepaald medium. Het is (meestal) niet zinvol om voor onderdelen van een gegeven historie bij te houden. Immers een onderdeel van een gegeven representeert niet de gehele waarde van een feit en gebruikers van de informatievoorziening zijn meestal niet geinteresseerd in gedeeltes zijn feiten. 
+
+### Objecttypen en attribuutsoorten  
 
 #### Objecttype
 
