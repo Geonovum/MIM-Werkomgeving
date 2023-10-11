@@ -226,7 +226,7 @@ Het bron object heeft meerdere relaties die aan de orde/gevuld zouden kunnen zij
 
 Dit diagram is uitgewerkt voor Objecttype. Voor Gegevensgroeptype geldt hetzelfde patroon (2 of meer relatiesoorten vanuit een gegevensgroeptype naar een objecttype). 
 
-<figure id="KeuzeRelatiedoel4">
+<figure id="KeuzeRelatiedoel5">
   <img src="media/KeuzeRelatiesoort5.png" alt="" />
   <figcaption>Keuze tussen relatiesoorten</figcaption>
 </figure>
