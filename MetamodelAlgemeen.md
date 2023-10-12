@@ -92,7 +92,7 @@ Het diagram toont de onderlinge samenhang en structuur. Daarin is zichtbaar dat 
 
 ### Overige modelelementen
 
-Naast de kernelementen en de datatypen, kent het MIM nog een aantal andere datatypen. Deze modelelementen vallen uiteen in een aantal categorieën, waarvan de functie en structuur binnen het MIM in de volgende paragrafen verder wordt toegelicht.
+Naast de kernelementen en de datatypen, kent het MIM nog een aantal andere modelelement Deze modelelementen vallen uiteen in een aantal categorieën, waarvan de functie en structuur binnen het MIM in de volgende paragrafen verder wordt toegelicht.
 
 1. `«MIM metaclass»`: <code><a>Constraint</a></code>
 1. `«MIM metaclass»`: <code><a>Keuze</a></code>
@@ -113,7 +113,7 @@ De `Keuze` en de `Constraint` zijn verschillende manieren om een voorwaarde of e
 
 **Constraint in het kort**
 
-Een `Constraint` legt voorwaarden of beperkingen op aan een modelelement. Meer informatie vind je in de paragraaf over <code><a>Constraint</a></code>. Het diagram toont in welke situaties een `Contraint` kan worden toegepast.
+Een `Constraint` legt voorwaarden of beperkingen op aan een modelelement. Meer informatie vind je in de paragraaf over <code><a>Constraint</a></code>. Het diagram toont odat op alle modelelementen  een `Contraint` kan worden toegepast.
 
 <figure id="ConstraintsZonderUML">
   <img src="media/ConstraintsZonderUML.png" alt="" />
@@ -124,19 +124,19 @@ Een `Constraint` legt voorwaarden of beperkingen op aan een modelelement. Meer i
 
 <!-- <aside class="issue" title="Use cases staan ook uitgewerkt in de paragraaf Keuze. Dubbel?"></aside> -->
 
-Een keuze bepaalt dat er meerdere opties mogelijk zijn, waarvan er één gekozen moet worden. Er zijn vijf situaties mogelijk waarin een keuze toegepast wordt die in deze paragraaf elk aan de hand van een voorbeeld worden uitgewerkt:
- 1. een keuze tussen datatypen ([voorbeeld](#example-keuze-tussen-datatypen))
- 1. een keuze tussen twee of meer attribuutsoorten ([voorbeeld](#example-keuze-tussen-twee-of-meer-attribuutsoorten))
- 1. een keuze tussen meerdere manieren om één betekenisvol attribuutsoort in te vullen ([voorbeeld](#example-keuze-tussen-meerdere-manieren-om-een-betekenisvol-attribuutsoort-in-te-vullen))
- 1. een keuze tussen relatiedoelen, als nadere invulling van één betekenisvolle relatiesoort ([voorbeeld](#example-keuze-tussen-relatiedoelen))
- 1. een keuze tussen twee of meer relatiesoorten/relatierollen (elk afzonderlijk betekenisvol) ([voorbeeld](#linkOpnemen))
+Het modelelement keuze bepaalt dat er meerdere opties mogelijk zijn, waarvan er één gekozen moet worden. Er zijn vijf situaties mogelijk waarin een keuze toegepast wordt. Elke situatie heeft een eigen metamodel.
+ 1. een keuze tussen datatypen ([diagram](#example-keuze-tussen-datatypen))
+ 1. een keuze tussen twee of meer attribuutsoorten ([diagram](#example-keuze-tussen-twee-of-meer-attribuutsoorten))
+ 1. een keuze tussen meerdere manieren om één betekenisvol attribuutsoort in te vullen ([diagram](#example-keuze-tussen-meerdere-manieren-om-een-betekenisvol-attribuutsoort-in-te-vullen))
+ 1. een keuze tussen relatiedoelen, als nadere invulling van één betekenisvolle relatiesoort ([diagram](#example-keuze-tussen-relatiedoelen))
+ 1. een keuze tussen twee of meer relatiesoorten/relatierollen (elk afzonderlijk betekenisvol) ([diagram(#linkOpnemen))
 
 Voor elke mogelijkheid is een aparte `«MIM metaclass»` beschikbaar in het metamodel.
- 1. `«MIM metaclass»`: <code>Keuze</code>
+ 1. `«MIM metaclass»`: <code>Datatype(keuze)</code>
+ 1. `«MIM metaclass»`: <code>Keuze(attribuut)</code>
  1. `«MIM metaclass»`: <code>Keuze(attribuut)</code>
  1. `«MIM metaclass»`: <code>Keuze(relatie)</code>
- 1. `«MIM metaclass»`: <code>Datatype(keuze)</code>
- 1. `«MIM metaclass»`: <code>...</code>
+ 1. `«MIM metaclass»`: <code>Keuze(relatie)</code>
 
 <aside class="example" title="Keuze tussen datatypen">
   <p>
@@ -175,7 +175,7 @@ Voor elke mogelijkheid is een aparte `«MIM metaclass»` beschikbaar in het meta
   </figure>
 </aside>
 
-<aside class="example" title="Keuze tussen relatiedoelen">
+<aside class="example" title="Keuze tussen relatiedoelen met één betekenisvolle relatiesoort">
   <p>
     Als nadere invulling van één betekenisvolle <code>Relatiesoort</code>. Dit diagram is uitgewerkt voor <code>Objecttype</code>. Voor <code>Gegevensgroeptype</code> geldt hetzelfde patroon, behalve dat een <code>Gegevensgroeptype</code> geen doel mag zijn van een <code>Relatiesoort</code>. Een <code>Objecttype</code> of <code>Gegevensgroep</code> kan normaal een <code>Relatiesoort</code> hebben, die gekoppeld is aan een <code>Objecttype</code>. Als er sprake is van een <code>Relatiesoort</code> met een <code>Keuze</code>, dan is het <code>Relatiedoel</code> van de <code>Relatiesoort</code> niet gekoppeld aan 1 <code>Objecttype</code>, maar dan is het <code>Objecttype</code> gekoppeld aan een <code>Keuze</code> en deze <code>Keuze</code> geeft 2 of meer <code>Relatiedoelen</code> aan.
   </p>
@@ -183,6 +183,8 @@ Voor elke mogelijkheid is een aparte `«MIM metaclass»` beschikbaar in het meta
     <img src="media/KeuzeRelatiedoel4.png" alt="" />
     <figcaption>Diagram: Keuze tussen relatiedoelen</figcaption>
   </figure>
+  
+  <p>Toelichting: een bron objecttype of gegevensgroeptype kan normaal een relatiesoort/relatierol hebben, die gekoppeld is aan (verwijst naar) een doel objecttype. Als er sprake is van een relatiesoort/relatierol met een relatiedoel keuze, dan is de relatiesoort niet gekoppeld aan 1 objecttype, maar dan is de relatiesoort gekoppeld aan een keuze en deze keuze is gekoppeld aan 2 of meer doel objecttypen. Elk objecttype is een afzonderlijk relatiedoel. Er moet voor deze ene relatiesoort/relatierol een keuze gemaakt worden voor 1 van de relatiedoelen. Het gerelateerde object is 1 van deze objecttypen, maar de betekenis van de relatie is hetzelfde, ongeacht van welk objecttype het object is.</p>
 </aside>
 
 <aside class="issue" title="Onderstaande tekst afkomstig uit de branch bij issue 190">
@@ -198,9 +200,9 @@ Voor elke mogelijkheid is een aparte `«MIM metaclass»` beschikbaar in het meta
     </ul>
   </p>
 
-  <strong>Use case 5: Keuze tussen 2 or meer relatiesoorten/relatierollen (elk afzonderlijk betekenisvol)</strong>
+  <strong>Use case 5: Keuze tussen 2 of meer relatiesoorten/relatierollen (elk afzonderlijk betekenisvol)</strong>
 
-  <p>Analoog aan use case 2, maar dan voor relatiesoorten/relatierollen. Het objecttype kent 2 of meer relatiesoorten/relatierollen, met elk een eigen betekenis, en precies 1 hiervan is verplicht.</p>
+  <p>Analoog aan de keuze tussen attribuutsoorten 2, maar dan voor relatiesoorten/relatierollen. Het objecttype kent 2 of meer relatiesoorten/relatierollen, met elk een eigen betekenis, en precies 1 hiervan is verplicht.</p>
 
   <p>Het bron object heeft meerdere relaties die aan de orde/gevuld zouden kunnen zijn, maar er mag er altijd maar 1 aan de orde/gevuld zijn. Het bron objecttype kent 2 of meer relatiesoorten/relatierollen, met elk een eigen betekenis, en elk van deze relatiesoorten/relatierollen is gekoppeld aan (verwijst naar) een eigen doel objecttype.</p>
 
@@ -224,11 +226,29 @@ Voor elke mogelijkheid is een aparte `«MIM metaclass»` beschikbaar in het meta
 
 </aside>
 
-<aside class="issue" title="Onderstaande noot komt uit master">
-  <aside class="note" title="Keuze tussen relatiesoorten">
-    Merk op dat een <strong>keuze tussen relatiesoorten</strong> óók een mogelijke keuze is. Deze opties is vooralsnog niet uitgewerkt en daarom nog niet opgenomen in deze versie.
+<aside class="example" title="Keuze tussen 2 of meer relatiesoorten/relatierollen (elk afzonderlijk betekenisvol)">
+  <p>Analoog aan de keuze tussen attribuutsoorten 2, maar dan voor relatiesoorten/relatierollen. Het objecttype kent 2 of meer relatiesoorten/relatierollen, met elk een eigen betekenis, en precies 1 hiervan is verplicht.</p>
+
+  <p>Het bronobject heeft meerdere relaties die aan de orde/gevuld zouden kunnen zijn, maar er mag er altijd maar 1 aan de orde/gevuld zijn. Het bron objecttype kent 2 of meer relatiesoorten/relatierollen, met elk een eigen betekenis, en elk van deze relatiesoorten/relatierollen is gekoppeld aan (verwijst naar) een eigen doel objecttype.</p>
+
+  <p>Dit diagram is zonder de specificatie van de metagegevens hetzelfde als voor de keuze tussen relatiedoelen.Voor <code>Gegevensgroeptype</code> geldt hetzelfde patroon (2 of meer relatiesoorten vanuit een gegevensgroeptype naar een objecttype).</p>
+
+
+  <p>
+    <p>Toelichting: een bron objecttype of gegevensgroeptype kan normaal een relatiesoort/relatierol hebben, die gekoppeld is aan (verwijst naar) een doel objecttype. Als er sprake is van een relatiesoort/relatierol keuze, dan heeft het objecttype 1 koppeling met een _relatiesoort/relatierol keuze en deze keuze heeft 2 of meer relatiesoorten/relatierollen naar de doel objecttypes. Er moet een keuze gemaakt worden voor 1 van de relatiesoorten/relatierollen en daarmee voor het aan deze relatie gerelateerde doel objecttype. 
+	 <p>Opmerkingen: 
+    <ul>
+      <li>elke relatiesoort of rol moet een eigen naam hebben.</li>
+      <li>een gegevensgroeptype mag zelf geen doel zijn</li>
+    </ul>
+  </p>
+	
+
+  
+  
+  
   </aside>
-</aside>
+  
 
 #### Relatiesoort en relatierol
 
@@ -814,10 +834,24 @@ Het is bij deze use case niet de bedoeling om twee nieuwe relatiesoorten, eigena
   <figcaption>Diagram: Voorbeeld van keuze tussen relatiedoelen</figcaption>
 </figure>
 
+In het voorbeeld vormen EigenaarKeuze en de twee relatiedoelen tezamen de keuze als geheel. De relatiedoelen zelf zijn de keuze mogelijkheden. De modellering van de relatiesoort eigenaar blijft hetzelfde en behoort niet tot de modellering van de metaclass keuze.
 
-Diagram: Voorbeeld van keuze tussen relatiedoelen uitgewerkt in een UML diagram.
+**Use case 5: een keuze tussen twee of meer relatiesoorten/relatierollen (elk afzonderlijk betekenisvol)** 
 
-In het voorbeeld vormen EigenaarKeuze en de twee relatiedoelen tezamen de keuze als geheel. De relatiedoelen zelf zijn de keuze mogelijkheden. De modellering van de relatiesoort eigenaar blijft hetzelfde en behoort niet tot de modellering van de metaclass keuze.   
+Er is sprake van een relatiesoort R1 en een relatiesoort R2. R1 heeft als doel een object van objecttype D1 en R2 heeft als doel een object van objecttype 2. In MIM modelleren we daarom een keuze met als uitgaande relatiesoorten R1 en R2. Het maken van deze keuze is verplicht.
+
+<aside class='example'>
+  Voorbeeld: een objecttype "Vervoermiddel" heeft een relatie met een contact. Dit kan een persoon of een organisatie zijn., maar niet beide. De het contact loopt via een contacttpersoon of er is een vertegenwoordigende organisatie. Beide relatiesoorten zijn specifiek en van belang om te benoemen. We modelleren daarom 1 *Keuze(relatie)* naar een *Keuze* Contactkeuze. Deze heeft twee uitgaande relatiesoorten met elk een specifieke naam en/of relatiedoel naar Persoon en Organisatie. 
+</aside>
+
+<figure id="relatiedoelkeuzeMetBetekenis">
+  <img src="media/Relatiedoelkeuzemetbetekenis.png" alt="" />
+  <figcaption>Diagram: Voorbeeld van keuze tussen relatiesoorten die elk een betekenis hebben</figcaption>
+</figure>
+
+In het voorbeeld heeft Vervoermiddel de verplichte keuze tussen de relatiesoorten/rollen `heeft als contactpersoon/contactpersoon` en `wordt vertegenwoordigd door/organisatiecontact`.
+
+
 
 ## Specificatie metagegevens
 
