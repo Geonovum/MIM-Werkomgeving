@@ -4,20 +4,7 @@ Dit hoofdstuk beschrijft hoe je met de modelelementen uit het hoofdstuk [Metamod
 
 ## Structuur metamodel in UML
 
-De eerste paragraaf bevat UML-diagrammen. Elk diagram toont een aantal modelelementen. Het geheel van diagrammen, in samenhang, is opgenomen in de bijlage [Template naamgeving conventies](#template-naamgeving-conventies).
-
-<aside class="issue" title="Diagrammen in samenhang ontbreekt">
-  <p>Via deze link verwacht je een diagram met alle modelelementen erin te krijgen. In plaats daarvan kom je terecht bij een tabel/template, waar niet alle (actuele) modelelementen in staan. Wekt de tekst verkeerde verwachtingen, of ontbreekt het diagram?</p>
-</aside>
-
-Uitgangspunten voor het metamodel in UML zijn:
-
-<aside class="issue" title="Kanttekeningen bij uitgangspunten">
-  <ul>
-    <li>Bullet 1: Waarnaar wordt met '<i>dit</i>' verwezen?</li>
-    <li>bullet 3: Neem een verwijzing op naar de betreffende bijlage.</li>
-  </ul>
-</aside>
+De eerste paragraaf bevat UML-diagrammen. Elk diagram toont een aantal modelelementen. Het geheel van diagrammen, in samenhang, is opgenomen in de [bijlagen](#diagrammen). Uitgangspunten voor het metamodel in UML zijn:
 
  - UML 2.5 als de basis voor de conceptuele beschrijving.
  - Gebruik maken van de bestaande UML-modelelementen conform UML van OMG. OMG noemt dit een UML metaclass. Een voorbeeld hiervan is UML-Class.
@@ -29,6 +16,13 @@ Uitgangspunten voor het metamodel in UML zijn:
  - Elk modelelement heeft een MIM metaclass. Deze wordt met UML in een
 informatiemodel gemodelleerd als een extensie van een Metaclass van UML 2.5 en een bijbehorende
 stereotype.
+
+<aside class="issue" title="Kanttekeningen bij uitgangspunten">
+  <ul>
+    <li>Bullet 1: Waarnaar wordt met '<i>dit</i>' verwezen?</li>
+    <li>bullet 3: Neem een verwijzing op naar de betreffende bijlage.</li>
+  </ul>
+</aside>
 
 <aside class='example' title="Objecttype als UML-Class">
   <p>Het MIM-modelelement <code>«Objecttype»</code> wordt gemodelleerd als een <code>UML-Class</code> met stereotype <code>«Objecttype»</code>. Niet alle MIM-metaklassen hebben een stereotype (nodig). In de kolom staat dan: <code>-</code>.</p>
@@ -48,17 +42,13 @@ De links kolom bevat het MIM modelelement, zoals bedoeld in het hoofdstuk [Metam
   <p>Zie: eerdere opmerking over ontbreken diagram in modelelementen in samenhang.</p>
 </aside>
 
-Bijna alle modelelementen hebben een UML-metaclass (UML 2.5) als basis. In het diagram heeft een UML metaclass een lichtblauwe kleur. Dit is ook opgenomen in diagramvorm, in de bijlage [Template naamgeving conventies](#template-naamgeving-conventies).
-
-<aside class="issue" title="Opmerking verwijderen?"></aside>
-
-De ten opzichte van MIM versie 1.0.1 gewijzigde modelelementen zijn in rood aangegeven.
+Bijna alle modelelementen hebben een UML-metaclass (UML 2.5) als basis. In het diagram heeft een UML-metaclass een lichtblauwe kleur. Dit is ook opgenomen in diagramvorm. Een overzicht van de diagrammen met metadata is beschikbaar in de [bijlagen](#diagrammen).
 
 ### Kern
 
 <figure id="KernZonderMetagegevens">
   <img src="media/KernZonderMetagegevens.png" alt="" />
-  <figcaption>Kern zonder metagegevens</figcaption>
+  <figcaption>Diagram: Kern zonder metagegevens</figcaption>
 </figure>
 
 
@@ -83,7 +73,7 @@ Kern zonder Metagegevens
 
 <figure id="DatatypenZonderMetagegevens">
   <img src="media/DatatypenZonderMetagegevens.png" alt="" />
-  <figcaption>Datatypen zonder metagegevens</figcaption>
+  <figcaption>Diagram: Datatypen zonder metagegevens</figcaption>
 </figure>
 
 
@@ -108,7 +98,7 @@ View 2: Datatypen
 
 <figure id="ConstraintsZonderMetagegevens">
   <img src="media/ConstraintsZonderMetagegevens.png" alt="" />
-  <figcaption>Constraint zonder metagegevens</figcaption>
+  <figcaption>Diagram: Constraint zonder metagegevens</figcaption>
 </figure>
 
 View 3a: Constraint
@@ -137,7 +127,7 @@ Dit UML is uitgewerkt voor Objecttype. Voor Gegevensgroeptype en Relatieklasse g
 
 <figure id="KeuzeDatatype1UML">
   <img src="media/KeuzeDatatype1UML.png" alt="" />
-  <figcaption>Keuze tussen datatypen</figcaption>
+  <figcaption>Diagram: Keuze tussen datatypen met UML</figcaption>
 </figure>
 
 Modellering van deze Keuze in een informatiemodel: 
@@ -153,7 +143,7 @@ Dit UML is uitgewerkt voor Objecttype. Voor Gegevensgroeptype en Relatieklasse g
 
 <figure id="KeuzeAttribuutsoort2UML">
   <img src="media/KeuzeAttribuutsoort2UML.png" alt="" />
-  <figcaption>Keuze tussen twee of meer attribuutsoorten</figcaption>
+  <figcaption>Diagram: Keuze tussen twee of meer attribuutsoorten</figcaption>
 </figure>
 
 Modellering van het Keuze in een informatiemodel: 
@@ -171,7 +161,7 @@ Dit UML is uitgewerkt voor Objecttype. Voor Gegevensgroeptype en Relatieklasse g
 
 <figure id="KeuzeAttribuutsoort3UML">
   <img src="media/KeuzeAttribuutsoort3UML.png" alt="" />
-  <figcaption>Keuze tussen meerdere manieren om één betekenisvol attribuutsoort in te vullen</figcaption>
+  <figcaption>Diagram: Keuze tussen meerdere manieren om één betekenisvol attribuutsoort in te vullen</figcaption>
 </figure>
 
 Modellering van de Keuze in een informatiemodel: 
@@ -188,7 +178,7 @@ Dit UML is uitgewerkt voor Objecttype. Voor Gegevensgroeptype geldt hetzelfde pa
 
 <figure id="KeuzeRelatiedoel4UML">
   <img src="media/KeuzeRelatiedoel4UML.png" alt="" />
-  <figcaption>Keuze tussen relatiedoelen, als nadere invulling van één betekenisvolle relatiesoort</figcaption>
+  <figcaption>Diagram: Keuze tussen relatiedoelen, als nadere invulling van één betekenisvolle relatiesoort</figcaption>
 </figure>
 
 Modellering van het Keuze in een informatiemodel: 
@@ -218,7 +208,7 @@ Merk op dat deze tabel niet gaat over de modelelementen waaruit een keuze gemaak
 
 <figure id="AssociatierollenZonderMetagegevens">
   <img src="media/AssociatierollenZonderMetagegevens.png" alt="" />
-  <figcaption>Relatierol</figcaption>
+  <figcaption>Diagram: Associatierollen zonder metagegevens</figcaption>
 </figure>
 
 View 3b: Relatiesoort en relatierol
@@ -243,7 +233,7 @@ View 3c: Groepering
 
 <figure id="PackagesZonderMetagegevens">
   <img src="media/PackagesZonderMetagegevens.png" alt="" />
-  <figcaption>Packages</figcaption>
+  <figcaption>Diagram: Packages zonder metagegevens</figcaption>
 </figure>
 
 | **MIM metaclass**     | **Stereotype**    | **Metaclass UML 2.5** |      | **In EA** | **In ...** |
@@ -257,6 +247,8 @@ View 3c: Groepering
 
 Deze paragraaf is een aanvulling op de paragraaf *'Specificatie metagegevens'*
 in het hoofdstuk [Metamodel Algemeen](#metamodel-algemeen).
+
+<aside class="issue" title="Tekst verplaatsen naar andere plek in dit hoofdstuk">
 
 >   **Alias**
 
@@ -279,6 +271,8 @@ true`.
 
 Als een relatiesoort identificerend is, dan krijgt dit kenmerk in UML een
 stereotype `«id»`
+
+</aside>
 
 <aside class='note'>
   <p>In de hierna volgende paragrafen worden de metagegevens per modelelement gespecificeerd in tabellen. Per metagegeven zijn de volgende onderdelen gespecificeerd:</p>
@@ -345,14 +339,13 @@ De attribuutsoorten worden naar de volgende aspecten gespecificeerd:
 | **Indicatie classificerend**                | 1                  | Algemeen metagegeven.                                        |                           |      | *Tagged value*    |            |
 | **Mogelijk geen waarde**                    | 1                  | Algemeen metagegeven.                                        |                                                              |      | *Tagged value* |            |
 | **Identificerend**                          | 0..1               | Algemeen metagegeven.                                        | *isID bij de metaclass Property*                             |      | *isID*         |            |
+| **Minimumwaarde inclusief** | 0..1          | Algemeen metagegeven. Een attribuutsoort mag of een metagegeven **Minimumwaarde inclusief** of **Minimumwaarde exclusief** hebben, niet beide. | |  | _Tagged value_ |            |
+| **Minimumwaarde exclusief** | 0..1          | Algemeen metagegeven. Een attribuutsoort mag of een metagegeven **Minimumwaarde inclusief** of **Minimumwaarde exclusief** hebben, niet beide. | |  | _Tagged value_ |            |
+| **Maximumwaarde inclusief** | 0..1          | Algemeen metagegeven. Een attribuutsoort mag of een metagegeven **Maximumwaarde inclusief** of **Maximumwaarde exclusief** hebben, niet beide. | |  | _Tagged value_ |            |
+| **Maximumwaarde exclusief** | 0..1          | Algemeen metagegeven. Een attribuutsoort mag of een metagegeven **Maximumwaarde inclusief** of **Maximumwaarde exclusief** hebben, niet beide. | |  | _Tagged value_ |            |
+| **Eenheid**  |0..1      | Toevoegen als het attribuutsoort een waarde betreft en de eenheid als metagegeven opgenomen moet worden.    | |    | *Tagged value*          |     |
 | heeft **datatype**  | 1       | Binding aan een datatype.     | *datatype* = UML-datatype |    | *type* = datatype          |     |
 | heeft **Constraint** | 0..* | Binding aan een constraint. |   | | *Constraint* | | 
-
-Alleen toevoegen als het attribuutsoort een waarde van een meting of waarnemimg betreft en de eenheid als metagegeven opgenomen moet worden.
-
-| **Aspect**                       | **Kardinaliteit** | **Toelichting**                | **In UML 2.5**                        |    | **In EA**      | **In ...** |
-| -------------------------------- | -------- | ---------------------------------------- | ------------------------------------- | -- | -------------- | -------- |
-| **Eenheid**  |0..1      | Alleen opnemen bij een meetgegeven of waarneming     | |    | *Tagged value*          |     |
 
 #### «Gegevensgroep»
 
@@ -372,6 +365,12 @@ De gegevensgroepen worden naar de volgende aspecten gespecificeerd:
 | **Authentiek**       | 1            | Algemeen metagegeven. |                                       |    | *Tagged value* |     |
 | heeft **gegevensgroeptype**   | 1   | Binding aan een gegevensgroeptype. | *owned element* = UML-Class | | *type* = Class |     |
 | heeft **Constraint** | 0..* | Binding aan een constraint. |   | | *Constraint* | | 
+
+Alleen toevoegen als het attribuutsoort een waarde van een meting of waarnemimg betreft en de eenheid als metagegeven opgenomen moet worden.
+
+| **Aspect**                       | **Kardinaliteit** | **Toelichting**                | **In UML 2.5**                        |    | **In EA**      | **In ...** |
+| -------------------------------- | -------- | ---------------------------------------- | ------------------------------------- | -- | -------------- | -------- |
+| **Eenheid**  |0..1      | Alleen opnemen bij een meetgegeven of waarneming     | |    | *Tagged value*          |     |
 
 #### «Gegevensgroeptype»
 
@@ -473,7 +472,7 @@ Voor relatierollen worden naar de volgende aspecten gespecificeerd.
 
 | **Aspect**                  | **Kardinaliteit** | **Toelichting**                | **In UML 2.5**                        |    | **In EA**      | **In ...** |
 | -------------------------------- | -------- | ---------------------------------------- | ------------------------------------- | -- | -------------- | -------- |
-| **Naam**             | 1            | Algemeen metagegeven. | *name van de metaclass Named element* |    | *Name*         |     |
+| **Naam**             | 1            | Algemeen metagegeven. De default naam is gelijk aan de naam van het doel-objecttype. | *name van de metaclass Named element* |    | *Name*         |     |
 | **Alias**            | 0..1         | Algemeen metagegeven. | *UML-Property*                        |    | *Alias*        |     |
 | **Herkomst**         | 1            | Algemeen metagegeven. |                                       |    | *tagged value* |     |
 | **Begrip**           | 0..\*        | Algemeen metagegeven. |                                       |    | *Tagged value* |     |
@@ -490,7 +489,7 @@ aspecten gespecificeerd.
 
 | **Aspect**                  | **Kardinaliteit** | **Toelichting**                | **In UML 2.5**                        |    | **In EA**      | **In ...** |
 | -------------------------------- | -------- | ---------------------------------------- | ------------------------------------- | -- | -------------- | -------- |
-| **Naam√**            | 1            | Algemeen metagegeven. | *name van de metaclass Named element* |    | *Name*         |     |
+| **Naam√**            | 1            | Algemeen metagegeven.  De default naam is gelijk aan de naam van het doel-objecttype. | *name van de metaclass Named element* |    | *Name*         |     |
 | **Alias**            | 0..1         | Algemeen metagegeven. | *UML-Property*                        |    | *Alias*        |     |
 | **Herkomst**         | 1            | Algemeen metagegeven. |                                       |    | *tagged value* |     |
 | **Begrip**           | 0..\*        | Algemeen metagegeven. |                                       |    | *Tagged value* |     |
@@ -517,6 +516,7 @@ De generalisaties worden naar het volgende aspect gespecificeerd:
 | verwijst naar **supertype**  | 1    | Binding van deze generalisatie aan een objecttype. De generalisatie relatie kent twee kanten, de bron kant (source) van de relatie en de doel kant (target) van de relatie. De doel kant van deze generalisatie relatie specificeert een _objecttype_ die het supertype/de generalisatie is van het via deze generalisatie aangegeven subtype. Kortweg, het supertype is een generalisatie van het subtype. | */target: related Element bij Relationship Element* = UML-Class |      | *Target*  |                 |
 | **Datum opname** | 1               | Algemeen metagegeven                                         |                     |      | *Tagged value* |            |
 | heeft **Constraint** | 0..* | Binding aan een constraint. |   | | *Constraint* | | 
+| **Mixin** | 0..1               | Alleen bij MIM niveau 3, logische modellen                                         |                     |      | *Tagged value* |            |
 
 #### «Generalisatie» tussen datatypen
 
@@ -529,6 +529,7 @@ De generalisaties worden naar het volgende aspect gespecificeerd:
 | verwijst naar **supertype**  | 1    | Binding van deze generalisatie aan een datatype. De generalisatie relatie kent twee kanten, de bron kant (source) van de relatie en de doel kant (target) van de relatie. De doel kant van deze generalisatie relatie specificeert een _datatype_ die het supertype/de generalisatie is van het via deze generalisatie aangegeven subtype. Kortweg, het supertype is een generalisatie van het subtype. | */target: related Element bij Relationship Element* = UML-datatype |      |      | *Target*  |                 |
 | **Datum opname** | 1               | Algemeen metagegeven                                         |                     |      | *Tagged value* |            |
 | heeft **Constraint** | 0..* | Binding aan een constraint. |   | | *Constraint* | | 
+
 
 #### «Relatieklasse»
 
@@ -608,7 +609,7 @@ Voor codelijst worden de volgende aspecten gespecificeerd:
 | **Locatie**      | 1..1               | Algemeen metagegeven.    |                |      | *tagged value* |            |
 | **Doelformaat**  | 1..1               | Algemeen metagegeven.    |                |      | *tagged value* |            |
 | **Datatype**     | 1..1               | Algemeen metagegeven.    |                |      | *tagged value* |            |
-| **Waarde item**  | 0..1               | Algemeen metagegeven.    |                |      | *tagged value* |            |
+| **Waarde-item**  | 0..1               | Algemeen metagegeven.    |                |      | *tagged value* |            |
 | **Profielspecificatie**      | 0..1               | Algemeen metagegeven.    |                |      | *tagged value* |            |
 | heeft **Constraint** | 0..* | Binding aan een constraint. |   | | *Constraint* | | 
 
@@ -685,6 +686,11 @@ De referentie-elementen worden naar de volgende aspecten gespecificeerd:
 | **- Formeel patroon**                       | 0..1               | Algemeen metagegeven. |                                                              |      | *Tagged value*                       |            |
 | **Kardinaliteit**                           | 1                  | Algemeen metagegeven. | *lowerValue en upperValue van de metaclass Multiplicity Element* |      | *Multiplicity van de de target role* |            |
 | **Identificerend**                          | 0..1               | Algemeen metagegeven. | *isID van de metaclass Property*                             |      | *isID bij de betreffende class*      |            |
+| **Minimumwaarde inclusief** | 0..1          | Algemeen metagegeven. Een referentie-element mag of een metagegeven **Minimumwaarde inclusief** of **Minimumwaarde exclusief** hebben, niet beide. | |  | _Tagged value_ |            |
+| **Minimumwaarde exclusief** | 0..1          | Algemeen metagegeven. Een referentie-element mag of een metagegeven **Minimumwaarde inclusief** of **Minimumwaarde exclusief** hebben, niet beide. | |  | _Tagged value_ |            |
+| **Maximumwaarde inclusief** | 0..1          | Algemeen metagegeven. Een referentie-element mag of een metagegeven **Maximumwaarde inclusief** of **Maximumwaarde exclusief** hebben, niet beide. | |  | _Tagged value_ |            |
+| **Maximumwaarde exclusief** | 0..1          | Algemeen metagegeven. Een referentie-element mag of een metagegeven **Maximumwaarde inclusief** of **Maximumwaarde exclusief** hebben, niet beide. | |  | _Tagged value_ |            |
+| **Eenheid**  |0..1      | Toevoegen als het referentie-element een waarde betreft en de eenheid als metagegeven opgenomen moet worden.
 | heeft **datatype**       | 1       | Binding aan een datatype.     | *datatype* = UML-datatype |    | *type* = datatype          |     |
 | heeft **Constraint** | 0..* | Binding aan een constraint. |   | | *Constraint* | | 
 
@@ -752,6 +758,10 @@ De data-elementen worden naar de volgende aspecten gespecificeerd:
 | **- Patroon**    | 0..1          | Algemeen metagegeven. |                                                                 |      | *Tagged value*    |     |
 | **- Formeel patroon**  | 0..1    | Algemeen metagegeven. |                                                                 |      | *Tagged value*    |     |
 | **Kardinaliteit**      | 1       | Algemeen metagegeven. | *lowerValue en upperValue van de metaclass MultiplicityElement* |      | *Multiplicity*    |     |
+| **Minimumwaarde inclusief** | 0..1 | Algemeen metagegeven. Een data-element mag of een metagegeven **Minimumwaarde inclusief** of **Minimumwaarde exclusief** hebben, niet beide. | | | _Tagged value_ | |
+| **Minimumwaarde exclusief** | 0..1 | Algemeen metagegeven. Een data-element mag of een metagegeven **Minimumwaarde inclusief** of **Minimumwaarde exclusief** hebben, niet beide. | | | _Tagged value_ | |
+| **Maximumwaarde inclusief** | 0..1 | Algemeen metagegeven. Een data-element mag of een metagegeven **Maximumwaarde inclusief** of **Maximumwaarde exclusief** hebben, niet beide. | | | _Tagged value_ | |
+| **Maximumwaarde exclusief** | 0..1 | Algemeen metagegeven. Een data-element mag of een metagegeven **Maximumwaarde inclusief** of **Maximumwaarde exclusief** hebben, niet beide. | | | _Tagged value_ | |
 | heeft **datatype**     | 1       | Binding aan een datatype.  | *datatype* = UML-datatype       |      | *type* = datatype |     |
 | heeft **Constraint** | 0..* | Binding aan een constraint. |   | | *Constraint* | | 
 

@@ -417,52 +417,76 @@ mimdoc:sectie2.8.2.22 a dct:BibliographicResource;
   foaf:page <https://docs.geostandaarden.nl/mim/mim/#metagegeven-locatie>;
   dct:isPartof mimdoc:sectie2.8.2;
 .
-mimdoc:sectie2.8.2.23 a dct:BibliographicResource;
+mimdoc:sectie2.8.2.27 a dct:BibliographicResource;
   rdfs:label "Metagegeven: type";
-  dct:bibliographicCitation "Sectie 2.8.2.23 Metagegeven: type";
+  dct:bibliographicCitation "Sectie 2.8.2.27 Metagegeven: type";
   foaf:page <https://docs.geostandaarden.nl/mim/mim/#metagegeven-type-domein-van-een-waarde-een-gegeven>;
   dct:isPartof mimdoc:sectie2.8.2;
 .
-mimdoc:sectie2.8.2.24 a dct:BibliographicResource;
+mimdoc:sectie2.8.2.28 a dct:BibliographicResource;
   rdfs:label "Metagegeven: lengte";
-  dct:bibliographicCitation "Sectie 2.8.2.24 Metagegeven: lengte";
+  dct:bibliographicCitation "Sectie 2.8.2.28 Metagegeven: lengte";
   foaf:page <https://docs.geostandaarden.nl/mim/mim/#metagegeven-lengte>;
   dct:isPartof mimdoc:sectie2.8.2;
 .
-mimdoc:sectie2.8.2.25 a dct:BibliographicResource;
+mimdoc:sectie2.8.2.29 a dct:BibliographicResource;
   rdfs:label "Metagegeven: patroon";
-  dct:bibliographicCitation "Sectie 2.8.2.25 Metagegeven: patroon";
+  dct:bibliographicCitation "Sectie 2.8.2.29 Metagegeven: patroon";
   foaf:page <https://docs.geostandaarden.nl/mim/mim/#metagegeven-patroon>;
   dct:isPartof mimdoc:sectie2.8.2;
 .
-mimdoc:sectie2.8.2.26 a dct:BibliographicResource;
+mimdoc:sectie2.8.2.30 a dct:BibliographicResource;
   rdfs:label "Metagegeven: formeel patroon";
-  dct:bibliographicCitation "Sectie 2.8.2.26 Metagegeven: formeel patroon";
+  dct:bibliographicCitation "Sectie 2.8.2.30 Metagegeven: formeel patroon";
   foaf:page <https://docs.geostandaarden.nl/mim/mim/#metagegeven-formeel-patroon>;
   dct:isPartof mimdoc:sectie2.8.2;
 .
-mimdoc:sectie2.8.2.27 a dct:BibliographicResource;
+mimdoc:sectie2.8.2.31 a dct:BibliographicResource;
   rdfs:label "Metagegeven: code";
-  dct:bibliographicCitation "Sectie 2.8.2.27 Metagegeven: code";
+  dct:bibliographicCitation "Sectie 2.8.2.31 Metagegeven: code";
   foaf:page <https://docs.geostandaarden.nl/mim/mim/#metagegeven-code>;
   dct:isPartof mimdoc:sectie2.8.2;
 .
-mimdoc:sectie2.8.2.28 a dct:BibliographicResource;
+mimdoc:sectie2.8.2.32 a dct:BibliographicResource;
   rdfs:label "Metagegeven: indicatie abstract object";
-  dct:bibliographicCitation "Sectie 2.8.2.28 Metagegeven: indicatie abstract object";
+  dct:bibliographicCitation "Sectie 2.8.2.32 Metagegeven: indicatie abstract object";
   foaf:page <https://docs.geostandaarden.nl/mim/mim/#metagegeven-indicatie-abstract-object>;
   dct:isPartof mimdoc:sectie2.8.2;
 .
-mimdoc:sectie2.8.2.29 a dct:BibliographicResource;
+mimdoc:sectie2.8.2.33 a dct:BibliographicResource;
   rdfs:label "Metagegeven: populatie";
-  dct:bibliographicCitation "Sectie 2.8.2.29 Metagegeven: populatie";
+  dct:bibliographicCitation "Sectie 2.8.2.33 Metagegeven: populatie";
   foaf:page <https://docs.geostandaarden.nl/mim/mim/#metagegeven-populatie>;
   dct:isPartof mimdoc:sectie2.8.2;
 .
-mimdoc:sectie2.8.2.30 a dct:BibliographicResource;
+mimdoc:sectie2.8.2.34 a dct:BibliographicResource;
   rdfs:label "Metagegeven: kwaliteit";
-  dct:bibliographicCitation "Sectie 2.8.2.30 Metagegeven: kwaliteit";
+  dct:bibliographicCitation "Sectie 2.8.2.34 Metagegeven: kwaliteit";
   foaf:page <https://docs.geostandaarden.nl/mim/mim/#metagegeven-kwaliteit>;
+  dct:isPartof mimdoc:sectie2.8.2;
+.
+mimdoc:sectie2.8.2.36 a dct:BibliographicResource;
+  rdfs:label "Metagegeven: Minimumwaarde inclusief";
+  dct:bibliographicCitation "Sectie 2.8.2.36 Metagegeven: minimumwaarde inclusief";
+  foaf:page <https://docs.geostandaarden.nl/mim/mim/#metagegeven-minimumwaarde-inclusief>;
+  dct:isPartof mimdoc:sectie2.8.2;
+.
+mimdoc:sectie2.8.2.37 a dct:BibliographicResource;
+  rdfs:label "Metagegeven: Minimumwaarde exclusief";
+  dct:bibliographicCitation "Sectie 2.8.2.37 Metagegeven: minimumwaarde exclusief";
+  foaf:page <https://docs.geostandaarden.nl/mim/mim/#metagegeven-minimumwaarde-exclusief>;
+  dct:isPartof mimdoc:sectie2.8.2;
+.
+mimdoc:sectie2.8.2.38 a dct:BibliographicResource;
+  rdfs:label "Metagegeven: Maximumwaarde inclusief";
+  dct:bibliographicCitation "Sectie 2.8.2.38 Metagegeven: maximumwaarde inclusief";
+  foaf:page <https://docs.geostandaarden.nl/mim/mim/#metagegeven-maximumwaarde-inclusief>;
+  dct:isPartof mimdoc:sectie2.8.2;
+.
+mimdoc:sectie2.8.2.39 a dct:BibliographicResource;
+  rdfs:label "Metagegeven: Maximumwaarde exclusief";
+  dct:bibliographicCitation "Sectie 2.8.2.39 Metagegeven: maximumwaarde exclusief";
+  foaf:page <https://docs.geostandaarden.nl/mim/mim/#metagegeven-maximumwaarde-exclusief>;
   dct:isPartof mimdoc:sectie2.8.2;
 .
 

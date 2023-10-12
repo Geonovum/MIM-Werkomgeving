@@ -66,7 +66,7 @@ Ten opzichte van de UML weergave van het MIM metamodel kent het MIM in RDF allee
 
 <figure id="media/rdf-kern">
   <img src="media/rdf-kern.png" alt="" />
-  <figcaption>Kern metamodel in LD</figcaption>
+  <figcaption>Diagram: Kern metamodel in LD</figcaption>
 </figure>
 
 Als prefix wordt voor de vocabulaire gebruik gemaakt van `mim`, met de namespace `http://bp4mc2.org/def/mim#`. Voor de shapes wordt als prefix gebruik gemaakt van `shape`, met als namespace `http://bp4mc2.org/def/mim-shapes#`.
@@ -85,14 +85,14 @@ In bovenstaand figuur zijn niet alle bindingen getekend rondom `mim:Relatiesoort
 
 <figure id="media/rdf-relatiekern">
   <img src="media/rdf-relatiekern.png" alt="" />
-  <figcaption>Bindingen met mim:Gegevensgroeptype</figcaption>
+  <figcaption>Diagram: Bindingen met mim:Gegevensgroeptype in LD</figcaption>
 </figure>
 
 ### Datatypen
 
 <figure id="media/rdf-datatype">
   <img src="media/rdf-datatype.png" alt="" />
-  <figcaption>Datatypen</figcaption>
+  <figcaption>Diagram: Datatypen in LD</figcaption>
 </figure>
 
 | **MIM metaclass** | **Metaclass in RDF** | **Shape in RDF** | **Grondslag** |
@@ -113,7 +113,7 @@ In bovenstaand figuur zijn niet alle bindingen getekend rondom `mim:Relatiesoort
 
 <figure id="media/rdf-constraint">
   <img src="media/rdf-constraint.png" alt="" />
-  <figcaption>Constraint</figcaption>
+  <figcaption>Diagram: Constraint in LD</figcaption>
 </figure>
 
 | **MIM metaclass** | **Metaclass in RDF** | **Shape in RDF** | **Grondslag** |
@@ -140,7 +140,7 @@ De "keuze constructie" maakt een keuze mogelijk tussen meerdere attribuutsoorten
 
 <figure id="media/rdf-keuze-datatype">
   <img src="media/rdf-keuze-datatype.png" alt="" />
-  <figcaption>Datatypekeuze</figcaption>
+  <figcaption>Diagram: Datatypekeuze in LD</figcaption>
 </figure>
 
 Aangezien een `mim:Keuze` een specialisatie is van een `mim:Datatype`, mag een attribuutsoort via een `mim:type` een verwijzen naar een Keuze. Een dergelijk keuze heeft in dit geval zelf minimaal twee `mim:type` verwijzingen naar de 2 (of meer) datatypen waaruit gekozen wordt.
@@ -149,7 +149,7 @@ Aangezien een `mim:Keuze` een specialisatie is van een `mim:Datatype`, mag een a
 
 <figure id="media/rdf-keuze-attribuut">
   <img src="media/rdf-keuze-attribuut.png" alt="" />
-  <figcaption>Attribuutkeuze</figcaption>
+  <figcaption>Diagram: Attribuutkeuze in LD</figcaption>
 </figure>
 
 Indien een `mim:Keuze` wordt gebruikt voor een keuze tussen attribuutsoorten, dan wordt vanuit een objecttype via een `mim:attribuut` niet verwezen naar een attribuutsoort, maar naar de keuze. De keuze zelf verwijst op zijn beurt naar de attribuutsoorten waartussen gekozen wordt.
@@ -158,7 +158,7 @@ Indien een `mim:Keuze` wordt gebruikt voor een keuze tussen attribuutsoorten, da
 
 <figure id="media/rdf-keuze-relatiedoel">
   <img src="media/rdf-keuze-relatiedoel.png" alt="" />
-  <figcaption>Relatiedoelkeuze</figcaption>
+  <figcaption>Diagram: Relatiedoelkeuze in LD</figcaption>
 </figure>
 
 Indien een `mim:Keuze` wordt gebruikt voor een keuze tussen objecttypen die de relatiedoelen zijn voor een relatiesoort, dan wordt vanuit een relatiesoort via een `mim:doel` niet verwezen naar een objecttype, maar naar de keuze. De keuze zelf verwijst op zijn beurt naar de objecttypen waartussen gekozen wordt.
@@ -167,7 +167,7 @@ Indien een `mim:Keuze` wordt gebruikt voor een keuze tussen objecttypen die de r
 
 <figure id="media/rdf-keuze-relatiesoort">
   <img src="media/rdf-keuze-relatiesoort.png" alt="" />
-  <figcaption>Relatiesoortkeuze</figcaption>
+  <figcaption>Diagram: Relatiesoortkeuze in LD</figcaption>
 </figure>
 
 Een keuze tussen relatiesoorten wordt gedaan op basis van een keuzeconstraint. Een keuzeconstraint is geen datatype, maar juist een constraint die in dit geval aangeeft dat er een keuze gemaakt moet worden tussen twee relatiesoorten.
@@ -176,7 +176,7 @@ Een keuze tussen relatiesoorten wordt gedaan op basis van een keuzeconstraint. E
 
 <figure id="media/rdf-relatie">
   <img src="media/rdf-relatie.png" alt="" />
-  <figcaption>Relatierol</figcaption>
+  <figcaption>Diagram: Relatierol in LD</figcaption>
 </figure>
 
 | **MIM metaclass** | **Metaclass in RDF** | **Shape in RDF** | **Grondslag** |
@@ -195,7 +195,7 @@ Een keuze tussen relatiesoorten wordt gedaan op basis van een keuzeconstraint. E
 
 <figure id="media/rdf-packages">
   <img src="media/rdf-packages.png" alt="" />
-  <figcaption>Packages</figcaption>
+  <figcaption>Diagram: Packages in LD</figcaption>
 </figure>
 
 De relatie bevatModelelement geeft aan dat packages modelelementen kunnen bevatten. Welke modelelementen precies toegestaan zijn, wordt in het plaatje niet tot uitdrukking gebracht. Zie hiervoor [sectie 2.6](#packages).
@@ -215,7 +215,7 @@ Deze paragraaf is een aanvulling op de paragraaf *'Specificatie metagegevens'* i
 | **MIM metagegeven** | **Meta-eigenschap in RDF** | **RDF type** | **Grondslag** |
 |---------------------|----------------------------|--------------|---------------|
 | aggregatietype | [`mim:aggregatietype`](http://bp4mc2.org/def/mim#aggregatietype) | owl:ObjectProperty | [grondslag](#metagegeven-aggregatietype) |
-| alias | [`mim:naam`](http://bp4mc2.org/def/mim#naam) | owl:DatatypeProperty | [grondslag](#metagegeven-alias) |
+| alias | [`mim:alias`](http://bp4mc2.org/def/mim#alias) | owl:DatatypeProperty | [grondslag](#metagegeven-alias) |
 | attribuut | [`mim:attribuut`](http://bp4mc2.org/def/mim#attribuut) | owl:ObjectProperty | [grondslag](#metagegeven-attribuut) |
 | authentiek | [`mim:authentiek`](http://bp4mc2.org/def/mim#authentiek) | owl:ObjectProperty | [grondslag](#metagegeven-authentiek) |
 | begrip | [`mim:begrip`](http://bp4mc2.org/def/mim#begrip) | owl:ObjectProperty | [grondslag](#metagegeven-begrip) |
@@ -262,6 +262,10 @@ Deze paragraaf is een aanvulling op de paragraaf *'Specificatie metagegevens'* i
 | type | [`mim:type`](http://bp4mc2.org/def/mim#type) | owl:ObjectProperty | [grondslag](#metagegeven-type-domein-van-een-waarde-een-gegeven) |
 | unidirectioneel | [`mim:unidirectioneel`](http://bp4mc2.org/def/mim#unidirectioneel) | owl:DatatypeProperty | [grondslag](#metagegeven-unidirectioneel) |
 | waarde | [`mim:waarde`](http://bp4mc2.org/def/mim#waarde) | owl:ObjectProperty | [grondslag](#metagegeven-waarde) |
+| minimumwaarde inclusief | [`mim:minimumwaardeInclusief`](http://bp4mc2.org/def/mim#minimumwaardeInclusief) | owl:DatatypeProperty  |  [grondslag](#metagegeven-minimumwaarde-inclusief) |
+| minimumwaarde exclusief | [`mim:minimumwaardeExclusief`](http://bp4mc2.org/def/mim#minimumwaardeExclusief) | owl:DatatypeProperty  |  [grondslag](#metagegeven-minimumwaarde-exclusief) |
+| maximumwaarde inclusief | [`mim:maximumwaardeInclusief`](http://bp4mc2.org/def/mim#maximumwaardeInclusief) | owl:DatatypeProperty  |  [grondslag](#metagegeven-maximumwaarde-inclusief) |
+| maximumwaarde exclusief | [`mim:maximumwaardeExclusief`](http://bp4mc2.org/def/mim#maximumwaardeExclusief) | owl:DatatypeProperty  |  [grondslag](#metagegeven-maximumwaarde-exclusief) |
 
 ### Objecten en attributen in LD
 
@@ -315,6 +319,11 @@ De attribuutsoorten worden naar de volgende aspecten gespecificeerd:
 | Mogelijk geen waarde         | [`mim:mogelijkGeenWaarde`](http://bp4mc2.org/def/mim#mogelijkGeenWaarde) | 1 | boolean |
 | Identificerend               | [`mim:identificerend`](http://bp4mc2.org/def/mim#identificerend) | 0..1 | boolean |
 | Constraint                | [`mim:constraint`](http://bp4mc2.org/def/mim#constraint) | 0..n | [`mim:Constraint`](http://bp4mc2.org/def/mim#Constraint) |
+| Minimumwaarde inclusief      | [`mim:minimumwaardeInclusief`](http://bp4mc2.org/def/mim#minimumwaardeInclusief) | 0..1 | integer, decimal, float, real, dateTime, date |
+| Minimumwaarde exclusief      | [`mim:minimumwaardeExclusief`](http://bp4mc2.org/def/mim#minimumwaardeExclusief) | 0..1 | integer, decimal, float, real, dateTime, date |
+| Maximumwaarde inclusief      | [`mim:maximumwaardeInclusief`](http://bp4mc2.org/def/mim#maximumwaardeInclusief) | 0..1 | integer, decimal, float, real, dateTime, date |
+| Maximumwaarde exclusief      | [`mim:maximumwaardeExclusief`](http://bp4mc2.org/def/mim#maximumwaardeExclusief) | 0..1 | integer, decimal, float, real, dateTime, date |
+
 
 Het veld `mim:authentiek` verwijst naar één van de volgende mogelijke waarden:
 
@@ -588,6 +597,10 @@ De referentie-elementen worden naar de volgende aspecten gespecificeerd:
 | Identificerend               | [`mim:identificerend`](http://bp4mc2.org/def/mim#identificerend) | 0..1 | tekst |
 | Toelichting                  | [`mim:toelichting`](http://bp4mc2.org/def/mim#toelichting) | 0..1 | tekst |
 | Constraint                | [`mim:constraint`](http://bp4mc2.org/def/mim#constraint) | 0..n | [`mim:Constraint`](http://bp4mc2.org/def/mim#Constraint) |
+| Minimumwaarde inclusief      | [`mim:minimumwaardeInclusief`](http://bp4mc2.org/def/mim#minimumwaardeInclusief) | 0..1 | integer, decimal, float, real, dateTime, date |
+| Minimumwaarde exclusief      | [`mim:minimumwaardeExclusief`](http://bp4mc2.org/def/mim#minimumwaardeExclusief) | 0..1 | integer, decimal, float, real, dateTime, date |
+| Maximumwaarde inclusief      | [`mim:maximumwaardeInclusief`](http://bp4mc2.org/def/mim#maximumwaardeInclusief) | 0..1 | integer, decimal, float, real, dateTime, date |
+| Maximumwaarde exclusief      | [`mim:maximumwaardeExclusief`](http://bp4mc2.org/def/mim#maximumwaardeExclusief) | 0..1 | integer, decimal, float, real, dateTime, date |
 
 #### mim:Codelijst
 
@@ -670,6 +683,10 @@ De data-elementen worden naar de volgende aspecten gespecificeerd:
 | Formeel patroon              | [`mim:formeelPatroon`](http://bp4mc2.org/def/mim#formeelPatroon) | 0..1 | tekst |
 | Kardinaliteit                | [`mim:kardinaliteit`](http://bp4mc2.org/def/mim#kardinaliteit) | 1 | tekst |
 | Constraint                | [`mim:constraint`](http://bp4mc2.org/def/mim#constraint) | 0..n | [`mim:Constraint`](http://bp4mc2.org/def/mim#Constraint) |
+| Minimumwaarde inclusief      | [`mim:minimumwaardeInclusief`](http://bp4mc2.org/def/mim#minimumwaardeInclusief) | 0..1 | integer, decimal, float, real, dateTime, date |
+| Minimumwaarde exclusief      | [`mim:minimumwaardeExclusief`](http://bp4mc2.org/def/mim#minimumwaardeExclusief) | 0..1 | integer, decimal, float, real, dateTime, date |
+| Maximumwaarde inclusief      | [`mim:maximumwaardeInclusief`](http://bp4mc2.org/def/mim#maximumwaardeInclusief) | 0..1 | integer, decimal, float, real, dateTime, date |
+| Maximumwaarde exclusief      | [`mim:maximumwaardeExclusief`](http://bp4mc2.org/def/mim#maximumwaardeExclusief) | 0..1 | integer, decimal, float, real, dateTime, date |
 
 ### Packages in LD
 
