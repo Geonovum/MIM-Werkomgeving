@@ -59,7 +59,7 @@ In de SPARQL rules wordt gebruik gemaakt van een aantal SPARQL functies. In onde
 |t:cast | Transformeert het datatype van een waarde naar het gegeven datatype. Deze functie verwacht twee parameters: `t:cast(?waarde, ?datatype)`. De `?waarde` parameter is de waarde waarvoor een datatype gezet moet worden. `?datatype` is het datatype wat `?waarde` moet krijgen. Op basis van `?datatype` bepaalt deze functie het juiste datatype om te zetten. |
 
 <aside id='trans-1' class='note'>
-Om een unieke URI op te bouwen, is naast de naam van een modelelement, `mim:naam`, ook een namespace noodzakelijk. Deze namespace wordt bepaald in het veld `mim:basisURI` van de package waartoe het modelelement behoord. Deze basis-URI is niet hetzelfde als de namespace van een gegenereerde XSD. 
+Om een unieke URI op te bouwen, is naast de naam van een modelelement, `mim:naam`, ook een namespace noodzakelijk. Deze namespace wordt bepaald in het veld `mim:basisUri` van de package waartoe het modelelement behoord. Deze basis-URI is niet hetzelfde als de namespace van een gegenereerde XSD.
 Als de basis-URI van het package niet is gespecificeerd, dan wordt de basis-URI geërfd van het package waartoe het package behoort. Dit werkt transitief. Als er geen enkele `basis-URI` wordt is gegeven, dan wordt de `basis-URI` gelijk aan `urn:modelelement:` aangevuld met de package structuur, bijvoorbeeld `urn:modelelement:imkad:recht:` of `urn:modelelement:imbaglv:objecten:`.
 </aside>
 
