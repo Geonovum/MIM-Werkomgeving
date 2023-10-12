@@ -34,7 +34,7 @@ Het hoofdstuk [Metamodel in Linked Data (LD)](#metamodel-in-linked-data-ld) besc
 In het hoofdstuk [Afspraken & Regels](#afspraken-regels) gaan we in detail in op een aantal aspecten. Het is een uitgebreidere toelichting, in aanvulling op het hoofdstuk [Metamodel Algemeen](#metamodel-algemeen), bestaande uit nadere afspraken, regels, richtlijnen en aanbevelingen bij het toepassen van het metamodel.
 
 Tot slot zijn er een aantal bijlagen beschikbaar. Dit zijn hulpmiddelen of aanvullingen op het MIM.
-- De bijlage [Template naamgeving conventies](#template-naamgeving-conventies) verschaft een invulmogelijkheid om eigen naamgevingsconventies te documenteren, per in dit metamodel genoemd modelelement.
+- De bijlage [Template naamgevingsconventies](#template-naamgevingsconventies) verschaft een invulmogelijkheid om eigen naamgevingsconventies te documenteren, per in dit metamodel genoemd modelelement.
 - De bijlage [Transformatie MIM - RDFS/OWL/SHACL](#transformatie-mim-rdfs-owl-shacl) beschrijft hoe een MIM model getransformeerd kan worden naar een RDF model dat gebruikt kan worden om daadwerkelijk Linked Data in uit te drukken en vice versa (op instantie niveau, waarbij dit in overeenstemming is met de specificatie op informatiemodel niveau).
  
 ## Gebruikswijzer 
@@ -249,20 +249,9 @@ werkelijkheid op een specifiek tijdsmoment vormen.
 
 *Tabel 1 Vier lagen metamodel OMG*
 
-De informatiemodellen waarover we het hier in dit document hebben bevinden zich
-op de M1-laag.
+De informatiemodellen waarover we het hier in dit document hebben bevinden zich op de M1-laag. Dit metamodel is een UML profiel op basis van het UML metamodel (M2). Het UML metamodel is daarbij uitgebreid met speciale elementen, die geen onderdeel uitmaken van het basale UML-metamodel (M2). Deze nieuwe elementen zijn noodzakelijk voor het definiëren van de semantiek en syntax van de modelconstructies zoals we die in onze informatiemodellen hanteren. 
 
-Dit metamodel is een UML profiel op basis van het UML metamodel (M2). Het UML metamodel is
-daarbij uitgebreid met speciale elementen, die geen onderdeel uitmaken van het
-basale UML-metamodel (M2). Deze nieuwe elementen zijn noodzakelijk voor het
-definiëren van de semantiek en syntax van de modelconstructies zoals we die in
-onze informatiemodellen hanteren. 
-
-Zo is bijvoorbeeld de ene class de andere class niet. Bijvoorbeeld als een Persoon het 
-onderwerp van gesprek is waarover we een aantal eigenschappen willen bijhouden dan modelleer je 
-de Persoon als een class met als duiding dat dit een objecttype is, en bijvoorbeeld een 
-groepering van eigenschappen zoals geboortedatum en een geboorteplaats als een class 
-genaamd geboortegegevens met als duiding dat dit geen objecttype is. In veel specificatietalen, 
+Zo is bijvoorbeeld de ene class de andere class niet. Bijvoorbeeld als een Persoon het onderwerp van gesprek is waarover we een aantal eigenschappen willen bijhouden dan modelleer je de Persoon als een class met als duiding dat dit een objecttype is, en bijvoorbeeld een  groepering van eigenschappen zoals geboortedatum en een geboorteplaats als een Class genaamd geboortegegevens met als duiding dat dit geen objecttype is. In veel specificatietalen, 
 met name de generiekere en de technische, gaat dit onderscheid verloren.
 
 Het UML metamodel (M2) is een ‘read only’ model. Dat wil zeggen dat we geen
@@ -277,7 +266,9 @@ Nadrukkelijk moet daarbij worden vermeld dat het MIM metamodel **geen** semantie
 Met het uitdrukken van het MIM metamodel in een UML profiel wordt het alleen mogelijk
 gemaakt om, zonder verlies van de originele semantiek van het MIM, een MIM model uit
 te drukken in UML. Met dit gebruik van een UML profiel volgen wij het gebruik van een UML profiel
-zoals de OMG zelf heeft op gesteld voor het Ontology Definition Metamodel [[ODM]]: "*The goal of a UML profile from the ODM perspective is to provide a bridge between the UML and knowledge representation communities on a well-grounded, semantic basis, with a broader goal of relating software and logical approaches to representing information. Profiles facilitate implementation using common notation on existing UML tools. They support renaming and specializing UML model elements in consistent ways, so that an instance of a UML model can be seen as an extended metamodel. Profiles allow a developer to leverage UML experience and tools while moving to integrating with an ontology represented in another metamodel.*" (sectie 8.4.2).
+zoals de OMG zelf heeft op gesteld voor het Ontology Definition Metamodel [[ODM]]:
+
+> *The goal of a UML profile from the ODM perspective is to provide a bridge between the UML and knowledge representation communities on a well-grounded, semantic basis, with a broader goal of relating software and logical approaches to representing information. Profiles facilitate implementation using common notation on existing UML tools. They support renaming and specializing UML model elements in consistent ways, so that an instance of a UML model can be seen as an extended metamodel. Profiles allow a developer to leverage UML experience and tools while moving to integrating with an ontology represented in another metamodel.*" (sectie 8.4.2).
 
 ## Uitdrukken in Linked Data
 
@@ -296,22 +287,13 @@ Ook geeft Linked Data een specifieke invulling aan de niveaus waarin we informat
 
 Indien een MIM model wordt getypeerd als "logisch informatiemodel" dan kan dit model slechts zinvol in Linked Data worden uitgedrukt indien bij de opzet van dit model rekening gehouden is met de betekenis die dergelijke modelelementen in de standaard Linked Data vocabulaires hebben. Zie hiervoor de bijlage Transformatie van MIM modellen. Voor modellen die zowel een UML als een Linked Data implementatie vereisen kan beter gekozen worden voor het type "conceptueel informatiemodel".
 
-**Een ontologie voor het metamodel**  
+### Een ontologie voor het metamodel
 Met een ontologie bedoelen we een model waarin we betekenis geven aan de termen die
-in een specifiek domein worden gebruikt. In geval van het MIM metamodel betreft dit het MIM-domein zelf.
+in een specifiek domein worden gebruikt. In geval van het MIM metamodel betreft dit het MIM-domein zelf. We geven betekenis aan de termen door enerzijds een voor mensen leesbare definitie te koppelen aan een term (de "zachte semantiek") en anderzijds door relaties te leggen naar eerder gedefinieerde termen of relaties tussen termen in onze ontologie (de
+"harde semantiek"). We maken hierbij vooral gebruik van de bestaande wereldwijd geaccepteerde internetstandaarden [RDF](https://www.w3.org/TR/rdf11-primer), [RDFS](https://www.w3.org/TR/rdf-schema), [SKOS](https://www.w3.org/TR/skos-reference) en [OWL](https://www.w3.org/TR/owl2-primer). Daarnaast beschrijven we ook welke constructies we wel en niet willen toestaan op het moment dat een modelleur een MIM model in Linked Data opstelt. Hiervoor maken we gebruik van de wereldwijd geaccepteerde internetstandaard [SHACL](https://www.w3.org/TR/shacl).
 
-We geven betekenis aan de termen door enerzijds een voor mensen leesbare definitie te
-koppelen aan een term (de "zachte semantiek") en anderzijds door relaties te leggen
-naar eerder gedefinieerde termen of relaties tussen termen in onze ontologie (de
-"harde semantiek"). We maken hierbij vooral gebruik van de bestaande wereldwijd
-geaccepteerde internetstandaarden [RDF](https://www.w3.org/TR/rdf11-primer), [RDFS](https://www.w3.org/TR/rdf-schema), [SKOS](https://www.w3.org/TR/skos-reference) en [OWL](https://www.w3.org/TR/owl2-primer). Daarnaast beschrijven we
-ook welke constructies we wel en niet willen toestaan op het moment dat een modelleur
-een MIM model in Linked Data opstelt. Hiervoor maken we gebruik van de wereldwijd
-geaccepteerde internetstandaard [SHACL](https://www.w3.org/TR/shacl).
-
-**Een informatiemodel**  
-Het (conceptueel) informatiemodel zien we als een invulling van de MIM ontologie. Dit betekent dat
-de elementen in het informatiemodel exemplaren zijn van de klassen die in de MIM ontologie
+### Een informatiemodel
+Het (conceptueel) informatiemodel zien we als een invulling van de MIM ontologie. Dit betekent dat de elementen in het informatiemodel exemplaren zijn van de klassen die in de MIM ontologie
 zijn gedefinieerd. Zo is onderstaand voorbeeld een voorbeeld waarin het modelelement
 `vb:Schip` wordt gedefinieerd als exemplaar van de klasse `mim:Objecttype`. Een `vb:Schip`
 *is* dus een `mim:Objecttype`.
@@ -322,12 +304,8 @@ vb:Schip a mim:Objecttype;
 .
 </pre>
 
-**Een ontologie voor een informatiemodel**  
-Omdat een informatiemodel als invulling van de MIM ontologie zelf al exemplaren betreft, is het niet direct mogelijk om
-op basis van dit informatiemodel ook daadwerkelijk Linked Data in uit te drukken. Hiervoor
-is het nodig om de exemplaren uit het MIM informatiemodel zelf te transformeren, te "promoveren",
-naar klassen. Zo is onderstaand voorbeeld een voorbeeld van de transformatie van het exemplaar `vb:Schip` naar
-de klasse `vbo:Schip`. Vervolgens is het mogelijk om exemplaren van deze klasse te specificeren, zoals bijvoorbeeld de
+### Een ontologie voor een informatiemodel
+Omdat een informatiemodel als invulling van de MIM ontologie zelf al exemplaren betreft, is het niet direct mogelijk om op basis van dit informatiemodel ook daadwerkelijk Linked Data in uit te drukken. Hiervoor is het nodig om de exemplaren uit het MIM informatiemodel zelf te transformeren, te "promoveren", naar klassen. Zo is onderstaand voorbeeld een voorbeeld van de transformatie van het exemplaar `vb:Schip` naar de klasse `vbo:Schip`. Vervolgens is het mogelijk om exemplaren van deze klasse te specificeren, zoals bijvoorbeeld de
 pakjesboot van Sinterklaas.
 
 <pre class='ex-turtle'>
@@ -375,16 +353,7 @@ Desgewenst kan een extensie gepubliceerd worden bij MIM-beheer of kan ernaar ver
 </aside>
 
 ## Alternatieven
-In dit metamodel is op één punt sprake van een keuze tussen twee alternatieven,
-waarvan de modelleur van een informatiemodel één van beide alternatieven kiest.
-Welke je kiest geef je aan bij je eigen informatiemodel, in je eigen extensie
-(zoals bedoeld in de vorige paragraaf).
-
-Dit betreft: Relatiesoort en relatierol, beide te gebruiken, maar welke is
-verplicht/leidend (zie [Specificatie metagegevens voor relaties](#specificatie-metagegevens-voor-relaties)).
-
-Indien gewenst kun je hier vragen over stellen aan de beheerders van dit
-metamodel voordat je een keuze maakt.
+In dit metamodel is op één punt sprake van een keuze tussen twee alternatieven, waarvan de modelleur van een informatiemodel één van beide alternatieven kiest. Welke je kiest geef je aan bij je eigen informatiemodel, in je eigen extensie (zoals bedoeld in de vorige paragraaf). Dit betreft: Relatiesoort en relatierol, beide te gebruiken, maar welke is verplicht/leidend (zie [Specificatie metagegevens voor relaties](#specificatie-metagegevens-voor-relaties)). Indien gewenst kun je hier vragen over stellen aan de beheerders van dit metamodel voordat je een keuze maakt.
 
 ## Beheer
 Het beheer van dit metamodel vindt plaats door Geonovum met ondersteuning van het Kadaster. 

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:java="http://www.yworks.com/xml/yfiles-common/1.0/java" xmlns:sys="http://www.yworks.com/xml/yfiles-common/markup/primitives/2.0" xmlns:x="http://www.yworks.com/xml/yfiles-common/markup/2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:y="http://www.yworks.com/xml/graphml" xmlns:yed="http://www.yworks.com/xml/yed/3" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://www.yworks.com/xml/schema/graphml/1.1/ygraphml.xsd">
-  <!--Created by yEd 3.20-->
+  <!--Created by yEd 3.23.2-->
   <key for="port" id="d0" yfiles.type="portgraphics"/>
   <key for="port" id="d1" yfiles.type="portgeometry"/>
   <key for="port" id="d2" yfiles.type="portuserdata"/>
@@ -16,14 +16,13 @@
   <graph edgedefault="directed" id="G">
     <node id="n0">
       <data key="d3" xml:space="preserve"><![CDATA[http://bp4mc2.org/def/mim-shapes#Aggregatietypen]]></data>
-      <data key="d4"/>
       <data key="d5">
         <y:GenericNode configuration="com.yworks.entityRelationship.big_entity">
-          <y:Geometry height="92.0" width="125.0" x="591.8333333333333" y="320.6015502866077"/>
+          <y:Geometry height="84.09765625" width="125.0" x="591.8333333333333" y="324.5527221616077"/>
           <y:Fill color="#E8EEF7" color2="#B7C9E3" transparent="false"/>
           <y:BorderStyle color="#000000" type="dashed" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="node_width" configuration="CroppingLabel" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="20.1328125" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="t" textColor="#000000" verticalTextPosition="bottom" visible="true" width="125.0" x="0.0" xml:space="preserve" y="4.0">Aggregatietypen</y:NodeLabel>
-          <y:NodeLabel alignment="left" autoSizePolicy="content" configuration="com.yworks.entityRelationship.label.attributes" fontFamily="Dialog" fontSize="10" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="51.109375" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="80.3037109375" x="2.0" xml:space="preserve" y="32.1328125">Possible values:
+          <y:NodeLabel alignment="center" autoSizePolicy="node_width" configuration="CroppingLabel" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="21.09375" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="t" textColor="#000000" verticalTextPosition="bottom" visible="true" width="125.0" x="0.0" xml:space="preserve" y="4.0">Aggregatietypen</y:NodeLabel>
+          <y:NodeLabel alignment="left" autoSizePolicy="content" configuration="com.yworks.entityRelationship.label.attributes" fontFamily="Dialog" fontSize="10" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="53.00390625" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="76.2607421875" x="2.0" xml:space="preserve" y="33.09375">Possible values:
 √ Compositie
 √ Gedeeld
 √ Geen<y:LabelModel><y:ErdAttributesNodeLabelModel/></y:LabelModel><y:ModelParameter><y:ErdAttributesNodeLabelModelParameter/></y:ModelParameter></y:NodeLabel>
@@ -35,14 +34,13 @@
     </node>
     <node id="n1">
       <data key="d3" xml:space="preserve"><![CDATA[http://bp4mc2.org/def/mim-shapes#Attribuutsoort]]></data>
-      <data key="d4"/>
       <data key="d5">
         <y:GenericNode configuration="com.yworks.entityRelationship.big_entity">
-          <y:Geometry height="269.8044554455446" width="236.0" x="-471.5" y="-98.80445544554456"/>
+          <y:Geometry height="316.8662109375" width="236.0" x="-471.5" y="-122.33533319152227"/>
           <y:Fill color="#E8EEF7" color2="#B7C9E3" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="node_width" configuration="CroppingLabel" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="20.1328125" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="t" textColor="#000000" verticalTextPosition="bottom" visible="true" width="236.0" x="0.0" xml:space="preserve" y="4.0">mim:Attribuutsoort</y:NodeLabel>
-          <y:NodeLabel alignment="left" autoSizePolicy="content" configuration="com.yworks.entityRelationship.label.attributes" fontFamily="Dialog" fontSize="10" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="227.76953125" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="226.0068359375" x="2.0" xml:space="preserve" y="32.1328125">mim:naam [1,1]
+          <y:NodeLabel alignment="center" autoSizePolicy="node_width" configuration="CroppingLabel" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="21.09375" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="t" textColor="#000000" verticalTextPosition="bottom" visible="true" width="236.0" x="0.0" xml:space="preserve" y="4.0">mim:Attribuutsoort</y:NodeLabel>
+          <y:NodeLabel alignment="left" autoSizePolicy="content" configuration="com.yworks.entityRelationship.label.attributes" fontFamily="Dialog" fontSize="10" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="285.7724609375" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="204.6396484375" x="2.0" xml:space="preserve" y="33.09375">mim:naam [1,1]
 mim:alias [0,1]
 mim:begrip → skos:Concept [0,n]
 mim:begripsterm [0,n]
@@ -60,7 +58,11 @@ mim:kardinaliteit (string) [1,1]
 mim:indicatieAfleidbaar (boolean) [1,1]
 mim:indicatieClassificerend (boolean) [1,1]
 mim:mogelijkGeenWaarde (boolean) [1,1]
-mim:identificerend (boolean) [0,1]<y:LabelModel><y:ErdAttributesNodeLabelModel/></y:LabelModel><y:ModelParameter><y:ErdAttributesNodeLabelModelParameter/></y:ModelParameter></y:NodeLabel>
+mim:identificerend (boolean) [0,1]
+mim:minimumwaardeInclusief [0,1]
+mim:minimumwaardeExclusief [0,1]
+mim:maximumwaardeInclusief [0,1]
+mim:maximumwaardeExclusief [0,1]<y:LabelModel><y:ErdAttributesNodeLabelModel/></y:LabelModel><y:ModelParameter><y:ErdAttributesNodeLabelModelParameter/></y:ModelParameter></y:NodeLabel>
           <y:StyleProperties>
             <y:Property class="java.lang.Boolean" name="y.view.ShadowNodePainter.SHADOW_PAINTING" value="true"/>
           </y:StyleProperties>
@@ -69,14 +71,13 @@ mim:identificerend (boolean) [0,1]<y:LabelModel><y:ErdAttributesNodeLabelModel/>
     </node>
     <node id="n2">
       <data key="d3" xml:space="preserve"><![CDATA[http://bp4mc2.org/def/mim-shapes#Authenticiteit]]></data>
-      <data key="d4"/>
       <data key="d5">
         <y:GenericNode configuration="com.yworks.entityRelationship.big_entity">
-          <y:Geometry height="118.0" width="150.0" x="-261.5" y="234.5"/>
+          <y:Geometry height="108.599609375" width="150.0" x="-261.5" y="239.2001953125"/>
           <y:Fill color="#E8EEF7" color2="#B7C9E3" transparent="false"/>
           <y:BorderStyle color="#000000" type="dashed" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="node_width" configuration="CroppingLabel" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="20.1328125" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="t" textColor="#000000" verticalTextPosition="bottom" visible="true" width="150.0" x="0.0" xml:space="preserve" y="4.0">Authenticiteit</y:NodeLabel>
-          <y:NodeLabel alignment="left" autoSizePolicy="content" configuration="com.yworks.entityRelationship.label.attributes" fontFamily="Dialog" fontSize="10" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="74.6640625" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="121.79296875" x="2.0" xml:space="preserve" y="32.1328125">Possible values:
+          <y:NodeLabel alignment="center" autoSizePolicy="node_width" configuration="CroppingLabel" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="21.09375" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="t" textColor="#000000" verticalTextPosition="bottom" visible="true" width="150.0" x="0.0" xml:space="preserve" y="4.0">Authenticiteit</y:NodeLabel>
+          <y:NodeLabel alignment="left" autoSizePolicy="content" configuration="com.yworks.entityRelationship.label.attributes" fontFamily="Dialog" fontSize="10" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="77.505859375" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="114.2978515625" x="2.0" xml:space="preserve" y="33.09375">Possible values:
 √ Authentiek
 √ Basisgegeven
 √ LandelijkKerngegeven
@@ -90,14 +91,13 @@ mim:identificerend (boolean) [0,1]<y:LabelModel><y:ErdAttributesNodeLabelModel/>
     </node>
     <node id="n3">
       <data key="d3" xml:space="preserve"><![CDATA[http://bp4mc2.org/def/mim-shapes#Datatype]]></data>
-      <data key="d4"/>
       <data key="d5">
         <y:GenericNode configuration="com.yworks.entityRelationship.big_entity">
-          <y:Geometry height="66.0" width="200.0" x="-453.5" y="-223.9950495049505"/>
+          <y:Geometry height="35.09375" width="200.0" x="-453.5" y="-208.5419245049505"/>
           <y:Fill color="#E8EEF7" color2="#B7C9E3" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="node_width" configuration="CroppingLabel" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="20.1328125" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="t" textColor="#000000" verticalTextPosition="bottom" visible="true" width="200.0" x="0.0" xml:space="preserve" y="4.0">mim:Datatype</y:NodeLabel>
-          <y:NodeLabel alignment="left" autoSizePolicy="content" configuration="com.yworks.entityRelationship.label.attributes" fontFamily="Dialog" fontSize="10" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" hasText="false" height="4.0" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="4.0" x="2.0" y="32.1328125">
+          <y:NodeLabel alignment="center" autoSizePolicy="node_width" configuration="CroppingLabel" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="21.09375" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="t" textColor="#000000" verticalTextPosition="bottom" visible="true" width="200.0" x="0.0" xml:space="preserve" y="4.0">mim:Datatype</y:NodeLabel>
+          <y:NodeLabel alignment="left" autoSizePolicy="content" configuration="com.yworks.entityRelationship.label.attributes" fontFamily="Dialog" fontSize="10" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" hasText="false" height="4.0" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="4.0" x="2.0" y="33.09375">
             <y:LabelModel>
               <y:ErdAttributesNodeLabelModel/>
             </y:LabelModel>
@@ -113,14 +113,13 @@ mim:identificerend (boolean) [0,1]<y:LabelModel><y:ErdAttributesNodeLabelModel/>
     </node>
     <node id="n4">
       <data key="d3" xml:space="preserve"><![CDATA[http://bp4mc2.org/def/mim-shapes#ExterneKoppeling]]></data>
-      <data key="d4"/>
       <data key="d5">
         <y:GenericNode configuration="com.yworks.entityRelationship.big_entity">
-          <y:Geometry height="226.3440594059407" width="240.0" x="534.3333333333333" y="-77.07425742574262"/>
+          <y:Geometry height="231.109375" width="240.0" x="534.3333333333333" y="-79.45691522277227"/>
           <y:Fill color="#E8EEF7" color2="#B7C9E3" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="node_width" configuration="CroppingLabel" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="20.1328125" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="t" textColor="#000000" verticalTextPosition="bottom" visible="true" width="240.0" x="0.0" xml:space="preserve" y="4.0">mim:ExterneKoppeling</y:NodeLabel>
-          <y:NodeLabel alignment="left" autoSizePolicy="content" configuration="com.yworks.entityRelationship.label.attributes" fontFamily="Dialog" fontSize="10" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="192.4375" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="226.0068359375" x="2.0" xml:space="preserve" y="32.1328125">mim:naam [1,1]
+          <y:NodeLabel alignment="center" autoSizePolicy="node_width" configuration="CroppingLabel" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="21.09375" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="t" textColor="#000000" verticalTextPosition="bottom" visible="true" width="240.0" x="0.0" xml:space="preserve" y="4.0">mim:ExterneKoppeling</y:NodeLabel>
+          <y:NodeLabel alignment="left" autoSizePolicy="content" configuration="com.yworks.entityRelationship.label.attributes" fontFamily="Dialog" fontSize="10" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="200.015625" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="204.6396484375" x="2.0" xml:space="preserve" y="33.09375">mim:naam [1,1]
 mim:alias [0,1]
 mim:begrip → skos:Concept [0,n]
 mim:begripsterm [0,n]
@@ -144,14 +143,13 @@ mim:authentiek → Authenticiteit [1,1]<y:LabelModel><y:ErdAttributesNodeLabelMo
     </node>
     <node id="n5">
       <data key="d3" xml:space="preserve"><![CDATA[http://bp4mc2.org/def/mim-shapes#Gegevensgroep]]></data>
-      <data key="d4"/>
       <data key="d5">
         <y:GenericNode configuration="com.yworks.entityRelationship.big_entity">
-          <y:Geometry height="183.0" width="236.0" x="-304.5" y="536.5"/>
+          <y:Geometry height="182.10546875" width="236.0" x="-304.5" y="536.947265625"/>
           <y:Fill color="#E8EEF7" color2="#B7C9E3" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="node_width" configuration="CroppingLabel" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="20.1328125" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="t" textColor="#000000" verticalTextPosition="bottom" visible="true" width="236.0" x="0.0" xml:space="preserve" y="4.0">mim:Gegevensgroep</y:NodeLabel>
-          <y:NodeLabel alignment="left" autoSizePolicy="content" configuration="com.yworks.entityRelationship.label.attributes" fontFamily="Dialog" fontSize="10" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="145.328125" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="226.0068359375" x="2.0" xml:space="preserve" y="32.1328125">mim:naam [1,1]
+          <y:NodeLabel alignment="center" autoSizePolicy="node_width" configuration="CroppingLabel" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="21.09375" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="t" textColor="#000000" verticalTextPosition="bottom" visible="true" width="236.0" x="0.0" xml:space="preserve" y="4.0">mim:Gegevensgroep</y:NodeLabel>
+          <y:NodeLabel alignment="left" autoSizePolicy="content" configuration="com.yworks.entityRelationship.label.attributes" fontFamily="Dialog" fontSize="10" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="151.01171875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="204.6396484375" x="2.0" xml:space="preserve" y="33.09375">mim:naam [1,1]
 mim:alias [0,1]
 mim:begrip → skos:Concept [0,n]
 mim:begripsterm [0,n]
@@ -171,14 +169,13 @@ mim:kardinaliteit (string) [1,1]<y:LabelModel><y:ErdAttributesNodeLabelModel/></
     </node>
     <node id="n6">
       <data key="d3" xml:space="preserve"><![CDATA[http://bp4mc2.org/def/mim-shapes#Gegevensgroeptype]]></data>
-      <data key="d4"/>
       <data key="d5">
         <y:GenericNode configuration="com.yworks.entityRelationship.big_entity">
-          <y:Geometry height="146.14223132502366" width="200.0" x="-480.83273397739225" y="284.34900990099004"/>
+          <y:Geometry height="145.3525390625" width="200.0" x="-480.83273397739225" y="284.74385603225187"/>
           <y:Fill color="#E8EEF7" color2="#B7C9E3" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="node_width" configuration="CroppingLabel" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="20.1328125" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="t" textColor="#000000" verticalTextPosition="bottom" visible="true" width="200.0" x="0.0" xml:space="preserve" y="4.0">mim:Gegevensgroeptype</y:NodeLabel>
-          <y:NodeLabel alignment="left" autoSizePolicy="content" configuration="com.yworks.entityRelationship.label.attributes" fontFamily="Dialog" fontSize="10" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="109.99609375" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="194.458984375" x="2.0" xml:space="preserve" y="32.1328125">mim:naam [1,1]
+          <y:NodeLabel alignment="center" autoSizePolicy="node_width" configuration="CroppingLabel" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="21.09375" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="t" textColor="#000000" verticalTextPosition="bottom" visible="true" width="200.0" x="0.0" xml:space="preserve" y="4.0">mim:Gegevensgroeptype</y:NodeLabel>
+          <y:NodeLabel alignment="left" autoSizePolicy="content" configuration="com.yworks.entityRelationship.label.attributes" fontFamily="Dialog" fontSize="10" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="114.2587890625" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="172.671875" x="2.0" xml:space="preserve" y="33.09375">mim:naam [1,1]
 mim:alias [0,1]
 mim:begrip → skos:Concept [0,n]
 mim:begripsterm [0,n]
@@ -195,14 +192,13 @@ mim:constraint → mim:Constraint [0,n]<y:LabelModel><y:ErdAttributesNodeLabelMo
     </node>
     <node id="n7">
       <data key="d3" xml:space="preserve"><![CDATA[http://bp4mc2.org/def/mim-shapes#Generalisatie]]></data>
-      <data key="d4"/>
       <data key="d5">
         <y:GenericNode configuration="com.yworks.entityRelationship.big_entity">
-          <y:Geometry height="66.0" width="200.0" x="332.91979522184295" y="-229.9950495049505"/>
+          <y:Geometry height="47.3447265625" width="200.0" x="332.91979522184295" y="-220.6674127862005"/>
           <y:Fill color="#E8EEF7" color2="#B7C9E3" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="node_width" configuration="CroppingLabel" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="20.1328125" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="t" textColor="#000000" verticalTextPosition="bottom" visible="true" width="200.0" x="0.0" xml:space="preserve" y="4.0">mim:Generalisatie</y:NodeLabel>
-          <y:NodeLabel alignment="left" autoSizePolicy="content" configuration="com.yworks.entityRelationship.label.attributes" fontFamily="Dialog" fontSize="10" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="15.77734375" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="156.7978515625" x="2.0" xml:space="preserve" y="32.1328125">mim:datumOpname (date) [1,1]<y:LabelModel><y:ErdAttributesNodeLabelModel/></y:LabelModel><y:ModelParameter><y:ErdAttributesNodeLabelModelParameter/></y:ModelParameter></y:NodeLabel>
+          <y:NodeLabel alignment="center" autoSizePolicy="node_width" configuration="CroppingLabel" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="21.09375" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="t" textColor="#000000" verticalTextPosition="bottom" visible="true" width="200.0" x="0.0" xml:space="preserve" y="4.0">mim:Generalisatie</y:NodeLabel>
+          <y:NodeLabel alignment="left" autoSizePolicy="content" configuration="com.yworks.entityRelationship.label.attributes" fontFamily="Dialog" fontSize="10" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="16.2509765625" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="142.9453125" x="2.0" xml:space="preserve" y="33.09375">mim:datumOpname (date) [1,1]<y:LabelModel><y:ErdAttributesNodeLabelModel/></y:LabelModel><y:ModelParameter><y:ErdAttributesNodeLabelModelParameter/></y:ModelParameter></y:NodeLabel>
           <y:StyleProperties>
             <y:Property class="java.lang.Boolean" name="y.view.ShadowNodePainter.SHADOW_PAINTING" value="true"/>
           </y:StyleProperties>
@@ -211,14 +207,13 @@ mim:constraint → mim:Constraint [0,n]<y:LabelModel><y:ErdAttributesNodeLabelMo
     </node>
     <node id="n8">
       <data key="d3" xml:space="preserve"><![CDATA[http://bp4mc2.org/def/mim-shapes#Objecttype]]></data>
-      <data key="d4"/>
       <data key="d5">
         <y:GenericNode configuration="com.yworks.entityRelationship.big_entity">
-          <y:Geometry height="200.34405940594058" width="229.0" x="51.0" y="-64.07425742574256"/>
+          <y:Geometry height="194.3564453125" width="229.0" x="51.0" y="-61.08045037902227"/>
           <y:Fill color="#E8EEF7" color2="#B7C9E3" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="node_width" configuration="CroppingLabel" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="20.1328125" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="t" textColor="#000000" verticalTextPosition="bottom" visible="true" width="229.0" x="0.0" xml:space="preserve" y="4.0">mim:Objecttype</y:NodeLabel>
-          <y:NodeLabel alignment="left" autoSizePolicy="content" configuration="com.yworks.entityRelationship.label.attributes" fontFamily="Dialog" fontSize="10" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="157.10546875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="215.81640625" x="2.0" xml:space="preserve" y="32.1328125">mim:naam [1,1]
+          <y:NodeLabel alignment="center" autoSizePolicy="node_width" configuration="CroppingLabel" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="21.09375" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="t" textColor="#000000" verticalTextPosition="bottom" visible="true" width="229.0" x="0.0" xml:space="preserve" y="4.0">mim:Objecttype</y:NodeLabel>
+          <y:NodeLabel alignment="left" autoSizePolicy="content" configuration="com.yworks.entityRelationship.label.attributes" fontFamily="Dialog" fontSize="10" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="163.2626953125" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="195.1962890625" x="2.0" xml:space="preserve" y="33.09375">mim:naam [1,1]
 mim:alias [0,1]
 mim:begrip → skos:Concept [0,n]
 mim:begripsterm [0,n]
@@ -239,14 +234,13 @@ mim:constraint → mim:Constraint [0,n]<y:LabelModel><y:ErdAttributesNodeLabelMo
     </node>
     <node id="n9">
       <data key="d3" xml:space="preserve"><![CDATA[http://bp4mc2.org/def/mim-shapes#Relatieklasse]]></data>
-      <data key="d4"/>
       <data key="d5">
         <y:GenericNode configuration="com.yworks.entityRelationship.big_entity">
-          <y:Geometry height="238.7445934513346" width="240.0" x="123.5" y="575.2452158433467"/>
+          <y:Geometry height="243.3603515625" width="240.0" x="123.5" y="572.937336787764"/>
           <y:Fill color="#E8EEF7" color2="#B7C9E3" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="node_width" configuration="CroppingLabel" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="20.1328125" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="t" textColor="#000000" verticalTextPosition="bottom" visible="true" width="240.0" x="0.0" xml:space="preserve" y="4.0">mim:Relatieklasse</y:NodeLabel>
-          <y:NodeLabel alignment="left" autoSizePolicy="content" configuration="com.yworks.entityRelationship.label.attributes" fontFamily="Dialog" fontSize="10" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="204.21484375" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="226.0068359375" x="2.0" xml:space="preserve" y="32.1328125">mim:naam [1,1]
+          <y:NodeLabel alignment="center" autoSizePolicy="node_width" configuration="CroppingLabel" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="21.09375" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="t" textColor="#000000" verticalTextPosition="bottom" visible="true" width="240.0" x="0.0" xml:space="preserve" y="4.0">mim:Relatieklasse</y:NodeLabel>
+          <y:NodeLabel alignment="left" autoSizePolicy="content" configuration="com.yworks.entityRelationship.label.attributes" fontFamily="Dialog" fontSize="10" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="212.2666015625" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="204.6396484375" x="2.0" xml:space="preserve" y="33.09375">mim:naam [1,1]
 mim:alias [0,1]
 mim:begrip → skos:Concept [0,n]
 mim:begripsterm [0,n]
@@ -271,14 +265,13 @@ mim:authentiek → Authenticiteit [1,1]<y:LabelModel><y:ErdAttributesNodeLabelMo
     </node>
     <node id="n10">
       <data key="d3" xml:space="preserve"><![CDATA[http://bp4mc2.org/def/mim-shapes#Relatiesoort]]></data>
-      <data key="d4"/>
       <data key="d5">
         <y:GenericNode configuration="com.yworks.entityRelationship.big_entity">
-          <y:Geometry height="238.7445934513346" width="240.0" x="123.5" y="253.42952058363733"/>
+          <y:Geometry height="243.3603515625" width="240.0" x="123.5" y="251.12164152805462"/>
           <y:Fill color="#E8EEF7" color2="#B7C9E3" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="node_width" configuration="CroppingLabel" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="20.1328125" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="t" textColor="#000000" verticalTextPosition="bottom" visible="true" width="240.0" x="0.0" xml:space="preserve" y="4.0">mim:Relatiesoort</y:NodeLabel>
-          <y:NodeLabel alignment="left" autoSizePolicy="content" configuration="com.yworks.entityRelationship.label.attributes" fontFamily="Dialog" fontSize="10" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="204.21484375" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="226.0068359375" x="2.0" xml:space="preserve" y="32.1328125">mim:naam [1,1]
+          <y:NodeLabel alignment="center" autoSizePolicy="node_width" configuration="CroppingLabel" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="21.09375" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="t" textColor="#000000" verticalTextPosition="bottom" visible="true" width="240.0" x="0.0" xml:space="preserve" y="4.0">mim:Relatiesoort</y:NodeLabel>
+          <y:NodeLabel alignment="left" autoSizePolicy="content" configuration="com.yworks.entityRelationship.label.attributes" fontFamily="Dialog" fontSize="10" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="212.2666015625" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="204.6396484375" x="2.0" xml:space="preserve" y="33.09375">mim:naam [1,1]
 mim:alias [0,1]
 mim:begrip → skos:Concept [0,n]
 mim:begripsterm [0,n]
@@ -303,26 +296,24 @@ mim:unidirectioneel (boolean) [1,1]<y:LabelModel><y:ErdAttributesNodeLabelModel/
     </node>
     <node id="n11">
       <data key="d3" xml:space="preserve"><![CDATA[http://bp4mc2.org/def/mim#supertype?shape=http%3A%2F%2Fbp4mc2.org%2Fdef%2Fmim-shapes%23supertype&logic=xone]]></data>
-      <data key="d4"/>
       <data key="d5">
         <y:ShapeNode>
-          <y:Geometry height="30.0" width="40.0" x="111.44994311717858" y="-193.9950495049505"/>
+          <y:Geometry height="31.09375" width="40.0" x="111.44994311717858" y="-194.5419245049505"/>
           <y:Fill color="#FFFFFF" transparent="false"/>
           <y:BorderStyle color="#000000" raised="false" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="node_width" configuration="CroppingLabel" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="20.1328125" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="t" textColor="#000000" verticalTextPosition="bottom" visible="true" width="40.0" x="0.0" xml:space="preserve" y="4.0">xone</y:NodeLabel>
+          <y:NodeLabel alignment="center" autoSizePolicy="node_width" configuration="CroppingLabel" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="21.09375" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="t" textColor="#000000" verticalTextPosition="bottom" visible="true" width="40.0" x="0.0" xml:space="preserve" y="4.0">xone</y:NodeLabel>
           <y:Shape type="ellipse"/>
         </y:ShapeNode>
       </data>
     </node>
     <node id="n12">
       <data key="d3" xml:space="preserve"><![CDATA[http://bp4mc2.org/def/mim#subtype?shape=http%3A%2F%2Fbp4mc2.org%2Fdef%2Fmim-shapes%23subtype&logic=xone]]></data>
-      <data key="d4"/>
       <data key="d5">
         <y:ShapeNode>
-          <y:Geometry height="30.0" width="40.0" x="58.587030716723575" y="-223.9950495049505"/>
+          <y:Geometry height="31.09375" width="40.0" x="58.587030716723575" y="-224.5419245049505"/>
           <y:Fill color="#FFFFFF" transparent="false"/>
           <y:BorderStyle color="#000000" raised="false" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="node_width" configuration="CroppingLabel" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="20.1328125" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="t" textColor="#000000" verticalTextPosition="bottom" visible="true" width="40.0" x="0.0" xml:space="preserve" y="4.0">xone</y:NodeLabel>
+          <y:NodeLabel alignment="center" autoSizePolicy="node_width" configuration="CroppingLabel" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="21.09375" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="t" textColor="#000000" verticalTextPosition="bottom" visible="true" width="40.0" x="0.0" xml:space="preserve" y="4.0">xone</y:NodeLabel>
           <y:Shape type="ellipse"/>
         </y:ShapeNode>
       </data>
@@ -330,10 +321,9 @@ mim:unidirectioneel (boolean) [1,1]<y:LabelModel><y:ErdAttributesNodeLabelModel/
     <edge id="e0" source="n11" target="n8">
       <data key="d7" xml:space="preserve"><![CDATA[http://bp4mc2.org/def/mim#supertype?shape=http%3A%2F%2Fbp4mc2.org%2Fdef%2Fmim-shapes%23supertype&logic=xone]]></data>
       <data key="d8" xml:space="preserve"><![CDATA[http://bp4mc2.org/def/mim-shapes#Objecttype]]></data>
-      <data key="d10"/>
       <data key="d11">
         <y:PolyLineEdge>
-          <y:Path sx="0.0" sy="0.0" tx="-34.05005688282142" ty="-82.05700625523295"/>
+          <y:Path sx="0.0" sy="0.0" tx="-34.05005688282142" ty="-79.60459669252242"/>
           <y:LineStyle color="#000000" type="line" width="1.0"/>
           <y:Arrows source="none" target="standard"/>
           <y:BendStyle smoothed="false"/>
@@ -343,10 +333,9 @@ mim:unidirectioneel (boolean) [1,1]<y:LabelModel><y:ErdAttributesNodeLabelModel/
     <edge id="e1" source="n11" target="n3">
       <data key="d7" xml:space="preserve"><![CDATA[http://bp4mc2.org/def/mim#supertype?shape=http%3A%2F%2Fbp4mc2.org%2Fdef%2Fmim-shapes%23supertype&logic=xone]]></data>
       <data key="d8" xml:space="preserve"><![CDATA[http://bp4mc2.org/def/mim-shapes#Datatype]]></data>
-      <data key="d10"/>
       <data key="d11">
         <y:PolyLineEdge>
-          <y:Path sx="0.0" sy="0.0" tx="84.48862343572239" ty="11.693380942189833"/>
+          <y:Path sx="0.0" sy="0.0" tx="84.48862343572239" ty="6.217645264242037"/>
           <y:LineStyle color="#000000" type="line" width="1.0"/>
           <y:Arrows source="none" target="standard"/>
           <y:BendStyle smoothed="false"/>
@@ -356,10 +345,9 @@ mim:unidirectioneel (boolean) [1,1]<y:LabelModel><y:ErdAttributesNodeLabelModel/
     <edge id="e2" source="n12" target="n8">
       <data key="d7" xml:space="preserve"><![CDATA[http://bp4mc2.org/def/mim#subtype?shape=http%3A%2F%2Fbp4mc2.org%2Fdef%2Fmim-shapes%23subtype&logic=xone]]></data>
       <data key="d8" xml:space="preserve"><![CDATA[http://bp4mc2.org/def/mim-shapes#Objecttype]]></data>
-      <data key="d10"/>
       <data key="d11">
         <y:PolyLineEdge>
-          <y:Path sx="0.0" sy="0.0" tx="-86.91296928327642" ty="-100.15720001234331"/>
+          <y:Path sx="0.0" sy="0.0" tx="-86.91296928327642" ty="-97.16383617549339"/>
           <y:LineStyle color="#000000" type="line" width="1.0"/>
           <y:Arrows source="none" target="standard"/>
           <y:BendStyle smoothed="false"/>
@@ -369,10 +357,9 @@ mim:unidirectioneel (boolean) [1,1]<y:LabelModel><y:ErdAttributesNodeLabelModel/
     <edge id="e3" source="n12" target="n3">
       <data key="d7" xml:space="preserve"><![CDATA[http://bp4mc2.org/def/mim#subtype?shape=http%3A%2F%2Fbp4mc2.org%2Fdef%2Fmim-shapes%23subtype&logic=xone]]></data>
       <data key="d8" xml:space="preserve"><![CDATA[http://bp4mc2.org/def/mim-shapes#Datatype]]></data>
-      <data key="d10"/>
       <data key="d11">
         <y:PolyLineEdge>
-          <y:Path sx="0.0" sy="0.0" tx="75.79237770193402" ty="-18.0"/>
+          <y:Path sx="0.0" sy="0.0" tx="75.79237770193402" ty="-9.571022727272727"/>
           <y:LineStyle color="#000000" type="line" width="1.0"/>
           <y:Arrows source="none" target="standard"/>
           <y:BendStyle smoothed="false"/>
@@ -383,13 +370,12 @@ mim:unidirectioneel (boolean) [1,1]<y:LabelModel><y:ErdAttributesNodeLabelModel/
       <data key="d7" xml:space="preserve"><![CDATA[http://bp4mc2.org/def/mim-shapes#Attribuutsoort]]></data>
       <data key="d8" xml:space="preserve"><![CDATA[http://bp4mc2.org/def/mim-shapes#Authenticiteit]]></data>
       <data key="d9" xml:space="preserve"><![CDATA[http://bp4mc2.org/def/mim#authentiek]]></data>
-      <data key="d10"/>
       <data key="d11">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
           <y:LineStyle color="#000000" type="line" width="1.0"/>
           <y:Arrows source="none" target="standard"/>
-          <y:EdgeLabel alignment="center" backgroundColor="#FFFFFF" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasLineColor="false" height="18.1328125" horizontalTextPosition="center" iconTextGap="4" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" width="126.044921875" x="-42.41614770716649" xml:space="preserve" y="22.694732666015625">mim:authentiek [1,1]<y:LabelModel><y:SmartEdgeLabelModel autoRotationEnabled="false" defaultAngle="0.0" defaultDistance="10.0"/></y:LabelModel><y:ModelParameter><y:SmartEdgeLabelModelParameter angle="0.0" distance="30.0" distanceToCenter="true" position="center" ratio="0.5" segment="0"/></y:ModelParameter><y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" frozen="true" placement="anywhere" side="anywhere" sideReference="relative_to_edge_flow"/></y:EdgeLabel>
+          <y:EdgeLabel alignment="center" backgroundColor="#FFFFFF" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasLineColor="false" height="18.701171875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" width="112.052734375" x="-41.55134117722241" xml:space="preserve" y="12.960217315371693">mim:authentiek [1,1]<y:LabelModel><y:SmartEdgeLabelModel autoRotationEnabled="false" defaultAngle="0.0" defaultDistance="10.0"/></y:LabelModel><y:ModelParameter><y:SmartEdgeLabelModelParameter angle="0.0" distance="30.0" distanceToCenter="true" position="center" ratio="0.5" segment="0"/></y:ModelParameter><y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" frozen="true" placement="anywhere" side="anywhere" sideReference="relative_to_edge_flow"/></y:EdgeLabel>
           <y:BendStyle smoothed="false"/>
         </y:PolyLineEdge>
       </data>
@@ -398,13 +384,12 @@ mim:unidirectioneel (boolean) [1,1]<y:LabelModel><y:ErdAttributesNodeLabelModel/
       <data key="d7" xml:space="preserve"><![CDATA[http://bp4mc2.org/def/mim-shapes#Attribuutsoort]]></data>
       <data key="d8" xml:space="preserve"><![CDATA[http://bp4mc2.org/def/mim-shapes#Datatype]]></data>
       <data key="d9" xml:space="preserve"><![CDATA[http://bp4mc2.org/def/mim#type]]></data>
-      <data key="d10"/>
       <data key="d11">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
           <y:LineStyle color="#000000" type="line" width="1.0"/>
           <y:Arrows source="none" target="standard"/>
-          <y:EdgeLabel alignment="center" backgroundColor="#FFFFFF" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasLineColor="false" height="18.1328125" horizontalTextPosition="center" iconTextGap="4" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" width="89.2421875" x="-44.62109375" xml:space="preserve" y="-38.64440426968113">mim:type [1,1]<y:LabelModel><y:SmartEdgeLabelModel autoRotationEnabled="false" defaultAngle="0.0" defaultDistance="10.0"/></y:LabelModel><y:ModelParameter><y:SmartEdgeLabelModelParameter angle="0.0" distance="30.0" distanceToCenter="true" position="center" ratio="0.5" segment="0"/></y:ModelParameter><y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" frozen="true" placement="anywhere" side="anywhere" sideReference="relative_to_edge_flow"/></y:EdgeLabel>
+          <y:EdgeLabel alignment="center" backgroundColor="#FFFFFF" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasLineColor="false" height="18.701171875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" width="79.357421875" x="-39.6787109375" xml:space="preserve" y="-34.91293304745514">mim:type [1,1]<y:LabelModel><y:SmartEdgeLabelModel autoRotationEnabled="false" defaultAngle="0.0" defaultDistance="10.0"/></y:LabelModel><y:ModelParameter><y:SmartEdgeLabelModelParameter angle="0.0" distance="30.0" distanceToCenter="true" position="center" ratio="0.5" segment="0"/></y:ModelParameter><y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" frozen="true" placement="anywhere" side="anywhere" sideReference="relative_to_edge_flow"/></y:EdgeLabel>
           <y:BendStyle smoothed="false"/>
         </y:PolyLineEdge>
       </data>
@@ -413,13 +398,12 @@ mim:unidirectioneel (boolean) [1,1]<y:LabelModel><y:ErdAttributesNodeLabelModel/
       <data key="d7" xml:space="preserve"><![CDATA[http://bp4mc2.org/def/mim-shapes#ExterneKoppeling]]></data>
       <data key="d8" xml:space="preserve"><![CDATA[http://bp4mc2.org/def/mim#doel?shape=http%3A%2F%2Fbp4mc2.org%2Fdef%2Fmim-shapes%23doel&logic=xone]]></data>
       <data key="d9" xml:space="preserve"><![CDATA[http://bp4mc2.org/def/mim#doel]]></data>
-      <data key="d10"/>
       <data key="d11">
         <y:PolyLineEdge>
-          <y:Path sx="-7.755229194481558" sy="51.82746136763208" tx="61.78112449799198" ty="51.82746136763208"/>
+          <y:Path sx="-7.755229194481558" sy="52.918606461096815" tx="61.78112449799198" ty="50.278511830359804"/>
           <y:LineStyle color="#000000" type="line" width="1.0"/>
           <y:Arrows source="none" target="standard"/>
-          <y:EdgeLabel alignment="center" backgroundColor="#FFFFFF" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasLineColor="false" height="18.1328125" horizontalTextPosition="center" iconTextGap="4" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" width="89.32421875" x="-171.85323079427087" xml:space="preserve" y="-9.066404538733948">mim:doel [1,1]<y:LabelModel><y:SmartEdgeLabelModel autoRotationEnabled="false" defaultAngle="0.0" defaultDistance="10.0"/></y:LabelModel><y:ModelParameter><y:SmartEdgeLabelModelParameter angle="0.0" distance="30.0" distanceToCenter="true" position="center" ratio="0.5" segment="0"/></y:ModelParameter><y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" frozen="true" placement="anywhere" side="anywhere" sideReference="relative_to_edge_flow"/></y:EdgeLabel>
+          <y:EdgeLabel alignment="center" backgroundColor="#FFFFFF" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasLineColor="false" height="18.701171875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" width="79.36328125" x="-166.87276204427087" xml:space="preserve" y="-10.15144022521838">mim:doel [1,1]<y:LabelModel><y:SmartEdgeLabelModel autoRotationEnabled="false" defaultAngle="0.0" defaultDistance="10.0"/></y:LabelModel><y:ModelParameter><y:SmartEdgeLabelModelParameter angle="0.0" distance="30.0" distanceToCenter="true" position="center" ratio="0.5" segment="0"/></y:ModelParameter><y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" frozen="true" placement="anywhere" side="anywhere" sideReference="relative_to_edge_flow"/></y:EdgeLabel>
           <y:BendStyle smoothed="false"/>
         </y:PolyLineEdge>
       </data>
@@ -428,13 +412,12 @@ mim:unidirectioneel (boolean) [1,1]<y:LabelModel><y:ErdAttributesNodeLabelModel/
       <data key="d7" xml:space="preserve"><![CDATA[http://bp4mc2.org/def/mim-shapes#ExterneKoppeling]]></data>
       <data key="d8" xml:space="preserve"><![CDATA[http://bp4mc2.org/def/mim-shapes#Objecttype]]></data>
       <data key="d9" xml:space="preserve"><![CDATA[http://bp4mc2.org/def/mim#bron]]></data>
-      <data key="d10"/>
       <data key="d11">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
           <y:LineStyle color="#000000" type="line" width="1.0"/>
           <y:Arrows source="none" target="standard"/>
-          <y:EdgeLabel alignment="center" backgroundColor="#FFFFFF" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasLineColor="false" height="18.1328125" horizontalTextPosition="center" iconTextGap="4" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" width="91.52734375" x="-172.95967610677087" xml:space="preserve" y="-9.06640466369025">mim:bron [1,1]<y:LabelModel><y:SmartEdgeLabelModel autoRotationEnabled="false" defaultAngle="0.0" defaultDistance="10.0"/></y:LabelModel><y:ModelParameter><y:SmartEdgeLabelModelParameter angle="0.0" distance="30.0" distanceToCenter="true" position="center" ratio="0.5" segment="0"/></y:ModelParameter><y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" frozen="true" placement="anywhere" side="anywhere" sideReference="relative_to_edge_flow"/></y:EdgeLabel>
+          <y:EdgeLabel alignment="center" backgroundColor="#FFFFFF" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasLineColor="false" height="18.701171875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" width="80.693359375" x="-167.54268391927087" xml:space="preserve" y="-9.35058435119025">mim:bron [1,1]<y:LabelModel><y:SmartEdgeLabelModel autoRotationEnabled="false" defaultAngle="0.0" defaultDistance="10.0"/></y:LabelModel><y:ModelParameter><y:SmartEdgeLabelModelParameter angle="0.0" distance="30.0" distanceToCenter="true" position="center" ratio="0.5" segment="0"/></y:ModelParameter><y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" frozen="true" placement="anywhere" side="anywhere" sideReference="relative_to_edge_flow"/></y:EdgeLabel>
           <y:BendStyle smoothed="false"/>
         </y:PolyLineEdge>
       </data>
@@ -443,13 +426,12 @@ mim:unidirectioneel (boolean) [1,1]<y:LabelModel><y:ErdAttributesNodeLabelModel/
       <data key="d7" xml:space="preserve"><![CDATA[http://bp4mc2.org/def/mim-shapes#ExterneKoppeling]]></data>
       <data key="d8" xml:space="preserve"><![CDATA[http://bp4mc2.org/def/mim-shapes#Aggregatietypen]]></data>
       <data key="d9" xml:space="preserve"><![CDATA[http://bp4mc2.org/def/mim#aggregatietype]]></data>
-      <data key="d10"/>
       <data key="d11">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
           <y:LineStyle color="#000000" type="line" width="1.0"/>
           <y:Arrows source="none" target="standard"/>
-          <y:EdgeLabel alignment="center" backgroundColor="#FFFFFF" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasLineColor="false" height="18.1328125" horizontalTextPosition="center" iconTextGap="4" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" width="151.181640625" x="-75.59079996744799" xml:space="preserve" y="76.60462144590286">mim:aggregatietype [1,1]<y:LabelModel><y:SmartEdgeLabelModel autoRotationEnabled="false" defaultAngle="0.0" defaultDistance="10.0"/></y:LabelModel><y:ModelParameter><y:SmartEdgeLabelModelParameter angle="0.0" distance="30.0" distanceToCenter="true" position="center" ratio="0.5" segment="0"/></y:ModelParameter><y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" frozen="true" placement="anywhere" side="anywhere" sideReference="relative_to_edge_flow"/></y:EdgeLabel>
+          <y:EdgeLabel alignment="center" backgroundColor="#FFFFFF" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasLineColor="false" height="18.701171875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" width="136.0703125" x="-68.03513590494799" xml:space="preserve" y="77.06667177996457">mim:aggregatietype [1,1]<y:LabelModel><y:SmartEdgeLabelModel autoRotationEnabled="false" defaultAngle="0.0" defaultDistance="10.0"/></y:LabelModel><y:ModelParameter><y:SmartEdgeLabelModelParameter angle="0.0" distance="30.0" distanceToCenter="true" position="center" ratio="0.5" segment="0"/></y:ModelParameter><y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" frozen="true" placement="anywhere" side="anywhere" sideReference="relative_to_edge_flow"/></y:EdgeLabel>
           <y:BendStyle smoothed="false"/>
         </y:PolyLineEdge>
       </data>
@@ -458,13 +440,12 @@ mim:unidirectioneel (boolean) [1,1]<y:LabelModel><y:ErdAttributesNodeLabelModel/
       <data key="d7" xml:space="preserve"><![CDATA[http://bp4mc2.org/def/mim-shapes#Gegevensgroep]]></data>
       <data key="d8" xml:space="preserve"><![CDATA[http://bp4mc2.org/def/mim-shapes#Gegevensgroeptype]]></data>
       <data key="d9" xml:space="preserve"><![CDATA[http://bp4mc2.org/def/mim#gegevensgroeptype]]></data>
-      <data key="d10"/>
       <data key="d11">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
           <y:LineStyle color="#000000" type="line" width="1.0"/>
           <y:Arrows source="none" target="standard"/>
-          <y:EdgeLabel alignment="center" backgroundColor="#FFFFFF" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasLineColor="false" height="18.1328125" horizontalTextPosition="center" iconTextGap="4" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" width="178.041015625" x="-127.07038940757514" xml:space="preserve" y="-62.04527294168065">mim:gegevensgroeptype [1,1]<y:LabelModel><y:SmartEdgeLabelModel autoRotationEnabled="false" defaultAngle="0.0" defaultDistance="10.0"/></y:LabelModel><y:ModelParameter><y:SmartEdgeLabelModelParameter angle="0.0" distance="30.0" distanceToCenter="true" position="center" ratio="0.5" segment="0"/></y:ModelParameter><y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" frozen="true" placement="anywhere" side="anywhere" sideReference="relative_to_edge_flow"/></y:EdgeLabel>
+          <y:EdgeLabel alignment="center" backgroundColor="#FFFFFF" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasLineColor="false" height="18.701171875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" width="162.091796875" x="-119.40906351661374" xml:space="preserve" y="-62.765706261217815">mim:gegevensgroeptype [1,1]<y:LabelModel><y:SmartEdgeLabelModel autoRotationEnabled="false" defaultAngle="0.0" defaultDistance="10.0"/></y:LabelModel><y:ModelParameter><y:SmartEdgeLabelModelParameter angle="0.0" distance="30.0" distanceToCenter="true" position="center" ratio="0.5" segment="0"/></y:ModelParameter><y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" frozen="true" placement="anywhere" side="anywhere" sideReference="relative_to_edge_flow"/></y:EdgeLabel>
           <y:BendStyle smoothed="false"/>
         </y:PolyLineEdge>
       </data>
@@ -473,13 +454,12 @@ mim:unidirectioneel (boolean) [1,1]<y:LabelModel><y:ErdAttributesNodeLabelModel/
       <data key="d7" xml:space="preserve"><![CDATA[http://bp4mc2.org/def/mim-shapes#Gegevensgroep]]></data>
       <data key="d8" xml:space="preserve"><![CDATA[http://bp4mc2.org/def/mim-shapes#Authenticiteit]]></data>
       <data key="d9" xml:space="preserve"><![CDATA[http://bp4mc2.org/def/mim#authentiek]]></data>
-      <data key="d10"/>
       <data key="d11">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
           <y:LineStyle color="#000000" type="line" width="1.0"/>
           <y:Arrows source="none" target="standard"/>
-          <y:EdgeLabel alignment="center" backgroundColor="#FFFFFF" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasLineColor="false" height="18.1328125" horizontalTextPosition="center" iconTextGap="4" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" width="126.044921875" x="-63.0224609375" xml:space="preserve" y="-122.17982141311211">mim:authentiek [1,1]<y:LabelModel><y:SmartEdgeLabelModel autoRotationEnabled="false" defaultAngle="0.0" defaultDistance="10.0"/></y:LabelModel><y:ModelParameter><y:SmartEdgeLabelModelParameter angle="0.0" distance="30.0" distanceToCenter="true" position="center" ratio="0.6354941458261918" segment="-1"/></y:ModelParameter><y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" frozen="true" placement="anywhere" side="anywhere" sideReference="relative_to_edge_flow"/></y:EdgeLabel>
+          <y:EdgeLabel alignment="center" backgroundColor="#FFFFFF" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasLineColor="false" height="18.701171875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" width="112.052734375" x="-56.0263671875" xml:space="preserve" y="-125.70089763359942">mim:authentiek [1,1]<y:LabelModel><y:SmartEdgeLabelModel autoRotationEnabled="false" defaultAngle="0.0" defaultDistance="10.0"/></y:LabelModel><y:ModelParameter><y:SmartEdgeLabelModelParameter angle="0.0" distance="30.0" distanceToCenter="true" position="center" ratio="0.6354941458261918" segment="-1"/></y:ModelParameter><y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" frozen="true" placement="anywhere" side="anywhere" sideReference="relative_to_edge_flow"/></y:EdgeLabel>
           <y:BendStyle smoothed="false"/>
         </y:PolyLineEdge>
       </data>
@@ -488,15 +468,14 @@ mim:unidirectioneel (boolean) [1,1]<y:LabelModel><y:ErdAttributesNodeLabelModel/
       <data key="d7" xml:space="preserve"><![CDATA[http://bp4mc2.org/def/mim-shapes#Gegevensgroeptype]]></data>
       <data key="d8" xml:space="preserve"><![CDATA[http://bp4mc2.org/def/mim-shapes#Gegevensgroep]]></data>
       <data key="d9" xml:space="preserve"><![CDATA[http://bp4mc2.org/def/mim#gegevensgroep]]></data>
-      <data key="d10"/>
       <data key="d11">
         <y:PolyLineEdge>
-          <y:Path sx="-58.90136687031503" sy="73.09155926524501" tx="0.0" ty="0.0">
+          <y:Path sx="-58.90136687031503" sy="72.69660266519705" tx="0.0" ty="0.0">
             <y:Point x="-439.7341008477073" y="628.0"/>
           </y:Path>
           <y:LineStyle color="#000000" type="line" width="1.0"/>
           <y:Arrows source="none" target="standard"/>
-          <y:EdgeLabel alignment="center" backgroundColor="#FFFFFF" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasLineColor="false" height="18.1328125" horizontalTextPosition="center" iconTextGap="4" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" width="152.904296875" x="-76.4521489434104" xml:space="preserve" y="141.23743043886157">mim:gegevensgroep [0,n]<y:LabelModel><y:SmartEdgeLabelModel autoRotationEnabled="false" defaultAngle="0.0" defaultDistance="10.0"/></y:LabelModel><y:ModelParameter><y:SmartEdgeLabelModelParameter angle="0.0" distance="30.0" distanceToCenter="true" position="center" ratio="0.7427830900034552" segment="0"/></y:ModelParameter><y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" frozen="true" placement="anywhere" side="anywhere" sideReference="relative_to_edge_flow"/></y:EdgeLabel>
+          <y:EdgeLabel alignment="center" backgroundColor="#FFFFFF" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasLineColor="false" height="18.701171875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" width="139.41015625" x="-69.7050786309104" xml:space="preserve" y="141.3197439667506">mim:gegevensgroep [0,n]<y:LabelModel><y:SmartEdgeLabelModel autoRotationEnabled="false" defaultAngle="0.0" defaultDistance="10.0"/></y:LabelModel><y:ModelParameter><y:SmartEdgeLabelModelParameter angle="0.0" distance="30.0" distanceToCenter="true" position="center" ratio="0.7427830900034552" segment="0"/></y:ModelParameter><y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" frozen="true" placement="anywhere" side="anywhere" sideReference="relative_to_edge_flow"/></y:EdgeLabel>
           <y:BendStyle smoothed="false"/>
         </y:PolyLineEdge>
       </data>
@@ -505,13 +484,12 @@ mim:unidirectioneel (boolean) [1,1]<y:LabelModel><y:ErdAttributesNodeLabelModel/
       <data key="d7" xml:space="preserve"><![CDATA[http://bp4mc2.org/def/mim-shapes#Gegevensgroeptype]]></data>
       <data key="d8" xml:space="preserve"><![CDATA[http://bp4mc2.org/def/mim#attribuut?shape=http%3A%2F%2Fbp4mc2.org%2Fdef%2Fmim-shapes%23attribuut&logic=xone]]></data>
       <data key="d9" xml:space="preserve"><![CDATA[http://bp4mc2.org/def/mim#attribuut]]></data>
-      <data key="d10"/>
       <data key="d11">
         <y:PolyLineEdge>
-          <y:Path sx="0.0" sy="0.0" tx="-27.33273397739225" ty="94.23689974419128"/>
+          <y:Path sx="0.0" sy="0.0" tx="-27.33273397739225" ty="110.67455985160994"/>
           <y:LineStyle color="#000000" type="line" width="1.0"/>
           <y:Arrows source="none" target="standard"/>
-          <y:EdgeLabel alignment="center" backgroundColor="#FFFFFF" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasLineColor="false" height="18.1328125" horizontalTextPosition="center" iconTextGap="4" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" width="115.0234375" x="-57.51171957309538" xml:space="preserve" y="-65.71334294989558">mim:attribuut [0,n]<y:LabelModel><y:SmartEdgeLabelModel autoRotationEnabled="false" defaultAngle="0.0" defaultDistance="10.0"/></y:LabelModel><y:ModelParameter><y:SmartEdgeLabelModelParameter angle="0.0" distance="30.0" distanceToCenter="true" position="center" ratio="0.5" segment="0"/></y:ModelParameter><y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" frozen="true" placement="anywhere" side="anywhere" sideReference="relative_to_edge_flow"/></y:EdgeLabel>
+          <y:EdgeLabel alignment="center" backgroundColor="#FFFFFF" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasLineColor="false" height="18.701171875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" width="100.03515625" x="-50.01757894809538" xml:space="preserve" y="-54.44030034721331">mim:attribuut [0,n]<y:LabelModel><y:SmartEdgeLabelModel autoRotationEnabled="false" defaultAngle="0.0" defaultDistance="10.0"/></y:LabelModel><y:ModelParameter><y:SmartEdgeLabelModelParameter angle="0.0" distance="30.0" distanceToCenter="true" position="center" ratio="0.5" segment="0"/></y:ModelParameter><y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" frozen="true" placement="anywhere" side="anywhere" sideReference="relative_to_edge_flow"/></y:EdgeLabel>
           <y:BendStyle smoothed="false"/>
         </y:PolyLineEdge>
       </data>
@@ -520,13 +498,12 @@ mim:unidirectioneel (boolean) [1,1]<y:LabelModel><y:ErdAttributesNodeLabelModel/
       <data key="d7" xml:space="preserve"><![CDATA[http://bp4mc2.org/def/mim-shapes#Generalisatie]]></data>
       <data key="d8" xml:space="preserve"><![CDATA[http://bp4mc2.org/def/mim#supertype?shape=http%3A%2F%2Fbp4mc2.org%2Fdef%2Fmim-shapes%23supertype&logic=xone]]></data>
       <data key="d9" xml:space="preserve"><![CDATA[http://bp4mc2.org/def/mim#supertype]]></data>
-      <data key="d10"/>
       <data key="d11">
         <y:PolyLineEdge>
-          <y:Path sx="-99.98744246547568" sy="18.0" tx="0.0" ty="0.0"/>
+          <y:Path sx="-99.98744246547568" sy="12.91219815340909" tx="0.0" ty="0.0"/>
           <y:LineStyle color="#000000" type="line" width="1.0"/>
           <y:Arrows source="none" target="standard"/>
-          <y:EdgeLabel alignment="center" backgroundColor="#FFFFFF" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasLineColor="false" height="18.1328125" horizontalTextPosition="center" iconTextGap="4" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" width="121.955078125" x="-151.6758180863486" xml:space="preserve" y="-9.066399602606765">mim:supertype [1,1]<y:LabelModel><y:SmartEdgeLabelModel autoRotationEnabled="false" defaultAngle="0.0" defaultDistance="10.0"/></y:LabelModel><y:ModelParameter><y:SmartEdgeLabelModelParameter angle="0.0" distance="30.0" distanceToCenter="true" position="center" ratio="0.5" segment="0"/></y:ModelParameter><y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" frozen="true" placement="anywhere" side="anywhere" sideReference="relative_to_edge_flow"/></y:EdgeLabel>
+          <y:EdgeLabel alignment="center" backgroundColor="#FFFFFF" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasLineColor="false" height="18.701171875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" width="109.375" x="-145.3857790238486" xml:space="preserve" y="-7.06029222508181">mim:supertype [1,1]<y:LabelModel><y:SmartEdgeLabelModel autoRotationEnabled="false" defaultAngle="0.0" defaultDistance="10.0"/></y:LabelModel><y:ModelParameter><y:SmartEdgeLabelModelParameter angle="0.0" distance="30.0" distanceToCenter="true" position="center" ratio="0.5" segment="0"/></y:ModelParameter><y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" frozen="true" placement="anywhere" side="anywhere" sideReference="relative_to_edge_flow"/></y:EdgeLabel>
           <y:BendStyle smoothed="false"/>
         </y:PolyLineEdge>
       </data>
@@ -535,13 +512,12 @@ mim:unidirectioneel (boolean) [1,1]<y:LabelModel><y:ErdAttributesNodeLabelModel/
       <data key="d7" xml:space="preserve"><![CDATA[http://bp4mc2.org/def/mim-shapes#Generalisatie]]></data>
       <data key="d8" xml:space="preserve"><![CDATA[http://bp4mc2.org/def/mim#subtype?shape=http%3A%2F%2Fbp4mc2.org%2Fdef%2Fmim-shapes%23subtype&logic=xone]]></data>
       <data key="d9" xml:space="preserve"><![CDATA[http://bp4mc2.org/def/mim#subtype]]></data>
-      <data key="d10"/>
       <data key="d11">
         <y:PolyLineEdge>
-          <y:Path sx="-71.4533560864619" sy="-12.913043478260871" tx="0.0" ty="0.0"/>
+          <y:Path sx="-71.4533560864619" sy="-9.26309867527174" tx="0.0" ty="0.0"/>
           <y:LineStyle color="#000000" type="line" width="1.0"/>
           <y:Arrows source="none" target="standard"/>
-          <y:EdgeLabel alignment="center" backgroundColor="#FFFFFF" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasLineColor="false" height="18.1328125" horizontalTextPosition="center" iconTextGap="4" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" width="110.359375" x="-172.33542370063861" xml:space="preserve" y="-8.68826662055585">mim:subtype [1,1]<y:LabelModel><y:SmartEdgeLabelModel autoRotationEnabled="false" defaultAngle="0.0" defaultDistance="10.0"/></y:LabelModel><y:ModelParameter><y:SmartEdgeLabelModelParameter angle="0.0" distance="30.0" distanceToCenter="true" position="center" ratio="0.5" segment="0"/></y:ModelParameter><y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" frozen="true" placement="anywhere" side="anywhere" sideReference="relative_to_edge_flow"/></y:EdgeLabel>
+          <y:EdgeLabel alignment="center" backgroundColor="#FFFFFF" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasLineColor="false" height="18.701171875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" width="98.705078125" x="-166.50827526313861" xml:space="preserve" y="-10.484090733413467">mim:subtype [1,1]<y:LabelModel><y:SmartEdgeLabelModel autoRotationEnabled="false" defaultAngle="0.0" defaultDistance="10.0"/></y:LabelModel><y:ModelParameter><y:SmartEdgeLabelModelParameter angle="0.0" distance="30.0" distanceToCenter="true" position="center" ratio="0.5" segment="0"/></y:ModelParameter><y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" frozen="true" placement="anywhere" side="anywhere" sideReference="relative_to_edge_flow"/></y:EdgeLabel>
           <y:BendStyle smoothed="false"/>
         </y:PolyLineEdge>
       </data>
@@ -550,13 +526,12 @@ mim:unidirectioneel (boolean) [1,1]<y:LabelModel><y:ErdAttributesNodeLabelModel/
       <data key="d7" xml:space="preserve"><![CDATA[http://bp4mc2.org/def/mim-shapes#Objecttype]]></data>
       <data key="d8" xml:space="preserve"><![CDATA[http://bp4mc2.org/def/mim#attribuut?shape=http%3A%2F%2Fbp4mc2.org%2Fdef%2Fmim-shapes%23attribuut&logic=xone]]></data>
       <data key="d9" xml:space="preserve"><![CDATA[http://bp4mc2.org/def/mim#attribuut]]></data>
-      <data key="d10"/>
       <data key="d11">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="72.28313253012044" ty="0.0"/>
           <y:LineStyle color="#000000" type="line" width="1.0"/>
           <y:Arrows source="none" target="standard"/>
-          <y:EdgeLabel alignment="center" backgroundColor="#FFFFFF" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasLineColor="false" height="18.1328125" horizontalTextPosition="center" iconTextGap="4" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" width="115.0234375" x="-200.77416229248047" xml:space="preserve" y="-9.06640466369025">mim:attribuut [0,n]<y:LabelModel><y:SmartEdgeLabelModel autoRotationEnabled="false" defaultAngle="0.0" defaultDistance="10.0"/></y:LabelModel><y:ModelParameter><y:SmartEdgeLabelModelParameter angle="0.0" distance="30.0" distanceToCenter="true" position="center" ratio="0.5" segment="0"/></y:ModelParameter><y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" frozen="true" placement="anywhere" side="anywhere" sideReference="relative_to_edge_flow"/></y:EdgeLabel>
+          <y:EdgeLabel alignment="center" backgroundColor="#FFFFFF" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasLineColor="false" height="18.701171875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" width="100.03515625" x="-193.28002166748047" xml:space="preserve" y="-9.35058435119025">mim:attribuut [0,n]<y:LabelModel><y:SmartEdgeLabelModel autoRotationEnabled="false" defaultAngle="0.0" defaultDistance="10.0"/></y:LabelModel><y:ModelParameter><y:SmartEdgeLabelModelParameter angle="0.0" distance="30.0" distanceToCenter="true" position="center" ratio="0.5" segment="0"/></y:ModelParameter><y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" frozen="true" placement="anywhere" side="anywhere" sideReference="relative_to_edge_flow"/></y:EdgeLabel>
           <y:BendStyle smoothed="false"/>
         </y:PolyLineEdge>
       </data>
@@ -565,15 +540,14 @@ mim:unidirectioneel (boolean) [1,1]<y:LabelModel><y:ErdAttributesNodeLabelModel/
       <data key="d7" xml:space="preserve"><![CDATA[http://bp4mc2.org/def/mim-shapes#Objecttype]]></data>
       <data key="d8" xml:space="preserve"><![CDATA[http://bp4mc2.org/def/mim-shapes#Gegevensgroep]]></data>
       <data key="d9" xml:space="preserve"><![CDATA[http://bp4mc2.org/def/mim#gegevensgroep]]></data>
-      <data key="d10"/>
       <data key="d11">
         <y:PolyLineEdge>
-          <y:Path sx="-86.32468335538168" sy="100.13396910413722" tx="0.0" ty="0.0">
+          <y:Path sx="-86.32468335538168" sy="97.14129956146198" tx="0.0" ty="0.0">
             <y:Point x="79.17531664461832" y="628.0"/>
           </y:Path>
           <y:LineStyle color="#000000" type="line" width="1.0"/>
           <y:Arrows source="none" target="standard"/>
-          <y:EdgeLabel alignment="center" backgroundColor="#FFFFFF" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasLineColor="false" height="18.1328125" horizontalTextPosition="center" iconTextGap="4" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" width="152.904296875" x="-76.45214764981527" xml:space="preserve" y="372.58164579285494">mim:gegevensgroep [0,n]<y:LabelModel><y:SmartEdgeLabelModel autoRotationEnabled="false" defaultAngle="0.0" defaultDistance="10.0"/></y:LabelModel><y:ModelParameter><y:SmartEdgeLabelModelParameter angle="0.0" distance="30.0" distanceToCenter="true" position="center" ratio="0.769523667930388" segment="0"/></y:ModelParameter><y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" frozen="true" placement="anywhere" side="anywhere" sideReference="relative_to_edge_flow"/></y:EdgeLabel>
+          <y:EdgeLabel alignment="center" backgroundColor="#FFFFFF" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasLineColor="false" height="18.701171875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" width="139.41015625" x="-69.70507733731527" xml:space="preserve" y="374.66543854731856">mim:gegevensgroep [0,n]<y:LabelModel><y:SmartEdgeLabelModel autoRotationEnabled="false" defaultAngle="0.0" defaultDistance="10.0"/></y:LabelModel><y:ModelParameter><y:SmartEdgeLabelModelParameter angle="0.0" distance="30.0" distanceToCenter="true" position="center" ratio="0.769523667930388" segment="0"/></y:ModelParameter><y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" frozen="true" placement="anywhere" side="anywhere" sideReference="relative_to_edge_flow"/></y:EdgeLabel>
           <y:BendStyle smoothed="false"/>
         </y:PolyLineEdge>
       </data>
@@ -582,13 +556,12 @@ mim:unidirectioneel (boolean) [1,1]<y:LabelModel><y:ErdAttributesNodeLabelModel/
       <data key="d7" xml:space="preserve"><![CDATA[http://bp4mc2.org/def/mim-shapes#Relatieklasse]]></data>
       <data key="d8" xml:space="preserve"><![CDATA[http://bp4mc2.org/def/mim-shapes#Aggregatietypen]]></data>
       <data key="d9" xml:space="preserve"><![CDATA[http://bp4mc2.org/def/mim#aggregatietype]]></data>
-      <data key="d10"/>
       <data key="d11">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
           <y:LineStyle color="#000000" type="line" width="1.0"/>
           <y:Arrows source="none" target="standard"/>
-          <y:EdgeLabel alignment="center" backgroundColor="#FFFFFF" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasLineColor="false" height="18.1328125" horizontalTextPosition="center" iconTextGap="4" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" width="151.181640625" x="55.78930339675418" xml:space="preserve" y="-113.96242015767905">mim:aggregatietype [1,1]<y:LabelModel><y:SmartEdgeLabelModel autoRotationEnabled="false" defaultAngle="0.0" defaultDistance="10.0"/></y:LabelModel><y:ModelParameter><y:SmartEdgeLabelModelParameter angle="0.0" distance="30.0" distanceToCenter="true" position="center" ratio="0.5" segment="0"/></y:ModelParameter><y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" frozen="true" placement="anywhere" side="anywhere" sideReference="relative_to_edge_flow"/></y:EdgeLabel>
+          <y:EdgeLabel alignment="center" backgroundColor="#FFFFFF" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasLineColor="false" height="18.701171875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" width="136.0703125" x="67.26463456847335" xml:space="preserve" y="-117.3761253104704">mim:aggregatietype [1,1]<y:LabelModel><y:SmartEdgeLabelModel autoRotationEnabled="false" defaultAngle="0.0" defaultDistance="10.0"/></y:LabelModel><y:ModelParameter><y:SmartEdgeLabelModelParameter angle="0.0" distance="30.0" distanceToCenter="true" position="center" ratio="0.5" segment="0"/></y:ModelParameter><y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" frozen="true" placement="anywhere" side="anywhere" sideReference="relative_to_edge_flow"/></y:EdgeLabel>
           <y:BendStyle smoothed="false"/>
         </y:PolyLineEdge>
       </data>
@@ -597,16 +570,15 @@ mim:unidirectioneel (boolean) [1,1]<y:LabelModel><y:ErdAttributesNodeLabelModel/
       <data key="d7" xml:space="preserve"><![CDATA[http://bp4mc2.org/def/mim-shapes#Relatieklasse]]></data>
       <data key="d8" xml:space="preserve"><![CDATA[http://bp4mc2.org/def/mim#attribuut?shape=http%3A%2F%2Fbp4mc2.org%2Fdef%2Fmim-shapes%23attribuut&logic=xone]]></data>
       <data key="d9" xml:space="preserve"><![CDATA[http://bp4mc2.org/def/mim#attribuut]]></data>
-      <data key="d10"/>
       <data key="d11">
         <y:PolyLineEdge>
-          <y:Path sx="-0.5508701472557505" sy="69.55919425829529" tx="0.0" ty="0.0">
+          <y:Path sx="-0.5508701472557505" sy="70.90401388525494" tx="0.0" ty="0.0">
             <y:Point x="-551.8460508701473" y="764.1767068273093"/>
             <y:Point x="-551.8460508701473" y="36.097772277227705"/>
           </y:Path>
           <y:LineStyle color="#000000" type="line" width="1.0"/>
           <y:Arrows source="none" target="standard"/>
-          <y:EdgeLabel alignment="center" backgroundColor="#FFFFFF" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasLineColor="false" height="18.1328125" horizontalTextPosition="center" iconTextGap="4" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" width="115.0234375" x="-426.40849906788617" xml:space="preserve" y="-9.066396200034433">mim:attribuut [0,n]<y:LabelModel><y:SmartEdgeLabelModel autoRotationEnabled="false" defaultAngle="0.0" defaultDistance="10.0"/></y:LabelModel><y:ModelParameter><y:SmartEdgeLabelModelParameter angle="0.0" distance="30.0" distanceToCenter="true" position="center" ratio="0.5" segment="0"/></y:ModelParameter><y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" frozen="true" placement="anywhere" side="anywhere" sideReference="relative_to_edge_flow"/></y:EdgeLabel>
+          <y:EdgeLabel alignment="center" backgroundColor="#FFFFFF" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasLineColor="false" height="18.701171875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" width="100.03515625" x="-415.16728813038617" xml:space="preserve" y="-9.968406942695083">mim:attribuut [0,n]<y:LabelModel><y:SmartEdgeLabelModel autoRotationEnabled="false" defaultAngle="0.0" defaultDistance="10.0"/></y:LabelModel><y:ModelParameter><y:SmartEdgeLabelModelParameter angle="0.0" distance="30.0" distanceToCenter="true" position="center" ratio="0.5" segment="0"/></y:ModelParameter><y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" frozen="true" placement="anywhere" side="anywhere" sideReference="relative_to_edge_flow"/></y:EdgeLabel>
           <y:BendStyle smoothed="false"/>
         </y:PolyLineEdge>
       </data>
@@ -615,13 +587,12 @@ mim:unidirectioneel (boolean) [1,1]<y:LabelModel><y:ErdAttributesNodeLabelModel/
       <data key="d7" xml:space="preserve"><![CDATA[http://bp4mc2.org/def/mim-shapes#Relatieklasse]]></data>
       <data key="d8" xml:space="preserve"><![CDATA[http://bp4mc2.org/def/mim-shapes#Gegevensgroep]]></data>
       <data key="d9" xml:space="preserve"><![CDATA[http://bp4mc2.org/def/mim#gegevensgroep]]></data>
-      <data key="d10"/>
       <data key="d11">
         <y:PolyLineEdge>
-          <y:Path sx="0.0" sy="0.0" tx="19.232262382864747" ty="66.61751256901402"/>
+          <y:Path sx="0.0" sy="0.0" tx="19.232262382864747" ty="66.29187624775582"/>
           <y:LineStyle color="#000000" type="line" width="1.0"/>
           <y:Arrows source="none" target="standard"/>
-          <y:EdgeLabel alignment="center" backgroundColor="#FFFFFF" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasLineColor="false" height="18.1328125" horizontalTextPosition="center" iconTextGap="4" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" width="152.904296875" x="-172.43596649169922" xml:space="preserve" y="-9.066386356767339">mim:gegevensgroep [0,n]<y:LabelModel><y:SmartEdgeLabelModel autoRotationEnabled="false" defaultAngle="0.0" defaultDistance="10.0"/></y:LabelModel><y:ModelParameter><y:SmartEdgeLabelModelParameter angle="0.0" distance="30.0" distanceToCenter="true" position="center" ratio="0.5" segment="0"/></y:ModelParameter><y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" frozen="true" placement="anywhere" side="anywhere" sideReference="relative_to_edge_flow"/></y:EdgeLabel>
+          <y:EdgeLabel alignment="center" backgroundColor="#FFFFFF" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasLineColor="false" height="18.701171875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" width="139.41015625" x="-165.68889617919922" xml:space="preserve" y="-9.4267073745591">mim:gegevensgroep [0,n]<y:LabelModel><y:SmartEdgeLabelModel autoRotationEnabled="false" defaultAngle="0.0" defaultDistance="10.0"/></y:LabelModel><y:ModelParameter><y:SmartEdgeLabelModelParameter angle="0.0" distance="30.0" distanceToCenter="true" position="center" ratio="0.5" segment="0"/></y:ModelParameter><y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" frozen="true" placement="anywhere" side="anywhere" sideReference="relative_to_edge_flow"/></y:EdgeLabel>
           <y:BendStyle smoothed="false"/>
         </y:PolyLineEdge>
       </data>
@@ -630,13 +601,12 @@ mim:unidirectioneel (boolean) [1,1]<y:LabelModel><y:ErdAttributesNodeLabelModel/
       <data key="d7" xml:space="preserve"><![CDATA[http://bp4mc2.org/def/mim-shapes#Relatiesoort]]></data>
       <data key="d8" xml:space="preserve"><![CDATA[http://bp4mc2.org/def/mim#doel?shape=http%3A%2F%2Fbp4mc2.org%2Fdef%2Fmim-shapes%23doel&logic=xone]]></data>
       <data key="d9" xml:space="preserve"><![CDATA[http://bp4mc2.org/def/mim#doel]]></data>
-      <data key="d10"/>
       <data key="d11">
         <y:PolyLineEdge>
-          <y:Path sx="-101.21028037383178" sy="-76.78713106097342" tx="-23.21028037383178" ty="68.5983455273238"/>
+          <y:Path sx="-101.21028037383178" sy="-78.27169168663657" tx="-23.21028037383178" ty="66.54817033528647"/>
           <y:LineStyle color="#000000" type="line" width="1.0"/>
           <y:Arrows source="none" target="standard"/>
-          <y:EdgeLabel alignment="center" backgroundColor="#FFFFFF" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasLineColor="false" height="18.1328125" horizontalTextPosition="center" iconTextGap="4" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" width="89.32421875" x="-44.662108376761466" xml:space="preserve" y="-67.67986447491825">mim:doel [1,1]<y:LabelModel><y:SmartEdgeLabelModel autoRotationEnabled="false" defaultAngle="0.0" defaultDistance="10.0"/></y:LabelModel><y:ModelParameter><y:SmartEdgeLabelModelParameter angle="0.0" distance="30.0" distanceToCenter="true" position="center" ratio="0.5" segment="0"/></y:ModelParameter><y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" frozen="true" placement="anywhere" side="anywhere" sideReference="relative_to_edge_flow"/></y:EdgeLabel>
+          <y:EdgeLabel alignment="center" backgroundColor="#FFFFFF" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasLineColor="false" height="18.701171875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" width="79.36328125" x="-39.681639626761466" xml:space="preserve" y="-68.25497815595256">mim:doel [1,1]<y:LabelModel><y:SmartEdgeLabelModel autoRotationEnabled="false" defaultAngle="0.0" defaultDistance="10.0"/></y:LabelModel><y:ModelParameter><y:SmartEdgeLabelModelParameter angle="0.0" distance="30.0" distanceToCenter="true" position="center" ratio="0.5" segment="0"/></y:ModelParameter><y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" frozen="true" placement="anywhere" side="anywhere" sideReference="relative_to_edge_flow"/></y:EdgeLabel>
           <y:BendStyle smoothed="false"/>
         </y:PolyLineEdge>
       </data>
@@ -645,13 +615,12 @@ mim:unidirectioneel (boolean) [1,1]<y:LabelModel><y:ErdAttributesNodeLabelModel/
       <data key="d7" xml:space="preserve"><![CDATA[http://bp4mc2.org/def/mim-shapes#Relatiesoort]]></data>
       <data key="d8" xml:space="preserve"><![CDATA[http://bp4mc2.org/def/mim-shapes#Authenticiteit]]></data>
       <data key="d9" xml:space="preserve"><![CDATA[http://bp4mc2.org/def/mim#authentiek]]></data>
-      <data key="d10"/>
       <data key="d11">
         <y:PolyLineEdge>
-          <y:Path sx="-90.5" sy="-77.1065074543784" tx="0.0" ty="0.0"/>
+          <y:Path sx="-90.5" sy="-78.59724272951556" tx="0.0" ty="0.0"/>
           <y:LineStyle color="#000000" type="line" width="1.0"/>
           <y:Arrows source="none" target="standard"/>
-          <y:EdgeLabel alignment="center" backgroundColor="#FFFFFF" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasLineColor="false" height="18.1328125" horizontalTextPosition="center" iconTextGap="4" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" width="126.044921875" x="-214.71140758759404" xml:space="preserve" y="-10.04725913776474">mim:authentiek [1,1]<y:LabelModel><y:SmartEdgeLabelModel autoRotationEnabled="false" defaultAngle="0.0" defaultDistance="10.0"/></y:LabelModel><y:ModelParameter><y:SmartEdgeLabelModelParameter angle="0.0" distance="30.0" distanceToCenter="true" position="center" ratio="0.8451548788088059" segment="-1"/></y:ModelParameter><y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" frozen="true" placement="anywhere" side="anywhere" sideReference="relative_to_edge_flow"/></y:EdgeLabel>
+          <y:EdgeLabel alignment="center" backgroundColor="#FFFFFF" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasLineColor="false" height="18.701171875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" width="112.052734375" x="-212.54478561842663" xml:space="preserve" y="-9.675422796294129">mim:authentiek [1,1]<y:LabelModel><y:SmartEdgeLabelModel autoRotationEnabled="false" defaultAngle="0.0" defaultDistance="10.0"/></y:LabelModel><y:ModelParameter><y:SmartEdgeLabelModelParameter angle="0.0" distance="30.0" distanceToCenter="true" position="center" ratio="0.8451548788088059" segment="-1"/></y:ModelParameter><y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" frozen="true" placement="anywhere" side="anywhere" sideReference="relative_to_edge_flow"/></y:EdgeLabel>
           <y:BendStyle smoothed="false"/>
         </y:PolyLineEdge>
       </data>
@@ -660,13 +629,12 @@ mim:unidirectioneel (boolean) [1,1]<y:LabelModel><y:ErdAttributesNodeLabelModel/
       <data key="d7" xml:space="preserve"><![CDATA[http://bp4mc2.org/def/mim-shapes#Relatiesoort]]></data>
       <data key="d8" xml:space="preserve"><![CDATA[http://bp4mc2.org/def/mim-shapes#Aggregatietypen]]></data>
       <data key="d9" xml:space="preserve"><![CDATA[http://bp4mc2.org/def/mim#aggregatietype]]></data>
-      <data key="d10"/>
       <data key="d11">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
           <y:LineStyle color="#000000" type="line" width="1.0"/>
           <y:Arrows source="none" target="standard"/>
-          <y:EdgeLabel alignment="center" backgroundColor="#FFFFFF" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasLineColor="false" height="18.1328125" horizontalTextPosition="center" iconTextGap="4" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" width="151.181640625" x="38.590647379557254" xml:space="preserve" y="-10.789612692020341">mim:aggregatietype [1,1]<y:LabelModel><y:SmartEdgeLabelModel autoRotationEnabled="false" defaultAngle="0.0" defaultDistance="10.0"/></y:LabelModel><y:ModelParameter><y:SmartEdgeLabelModelParameter angle="0.0" distance="30.0" distanceToCenter="true" position="center" ratio="0.5" segment="0"/></y:ModelParameter><y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" frozen="true" placement="anywhere" side="anywhere" sideReference="relative_to_edge_flow"/></y:EdgeLabel>
+          <y:EdgeLabel alignment="center" backgroundColor="#FFFFFF" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasLineColor="false" height="18.701171875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" width="136.0703125" x="46.146311442057254" xml:space="preserve" y="-11.073792379520398">mim:aggregatietype [1,1]<y:LabelModel><y:SmartEdgeLabelModel autoRotationEnabled="false" defaultAngle="0.0" defaultDistance="10.0"/></y:LabelModel><y:ModelParameter><y:SmartEdgeLabelModelParameter angle="0.0" distance="30.0" distanceToCenter="true" position="center" ratio="0.5" segment="0"/></y:ModelParameter><y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" frozen="true" placement="anywhere" side="anywhere" sideReference="relative_to_edge_flow"/></y:EdgeLabel>
           <y:BendStyle smoothed="false"/>
         </y:PolyLineEdge>
       </data>
@@ -675,13 +643,12 @@ mim:unidirectioneel (boolean) [1,1]<y:LabelModel><y:ErdAttributesNodeLabelModel/
       <data key="d7" xml:space="preserve"><![CDATA[http://bp4mc2.org/def/mim-shapes#Relatiesoort]]></data>
       <data key="d8" xml:space="preserve"><![CDATA[http://bp4mc2.org/def/mim-shapes#Objecttype]]></data>
       <data key="d9" xml:space="preserve"><![CDATA[http://bp4mc2.org/def/mim#bron]]></data>
-      <data key="d10"/>
       <data key="d11">
         <y:PolyLineEdge>
-          <y:Path sx="0.0" sy="0.0" tx="75.93485632082502" ty="100.16717932236043"/>
+          <y:Path sx="0.0" sy="0.0" tx="75.93485632082502" ty="97.1735172372995"/>
           <y:LineStyle color="#000000" type="line" width="1.0"/>
           <y:Arrows source="none" target="standard"/>
-          <y:EdgeLabel alignment="center" backgroundColor="#FFFFFF" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasLineColor="false" height="18.1328125" horizontalTextPosition="center" iconTextGap="4" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" width="91.52734375" x="-46.1537170944373" xml:space="preserve" y="-53.741376117741964">mim:bron [1,1]<y:LabelModel><y:SmartEdgeLabelModel autoRotationEnabled="false" defaultAngle="0.0" defaultDistance="10.0"/></y:LabelModel><y:ModelParameter><y:SmartEdgeLabelModelParameter angle="0.0" distance="30.0" distanceToCenter="true" position="center" ratio="0.3440622385341965" segment="-1"/></y:ModelParameter><y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" frozen="true" placement="anywhere" side="anywhere" sideReference="relative_to_edge_flow"/></y:EdgeLabel>
+          <y:EdgeLabel alignment="center" backgroundColor="#FFFFFF" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasLineColor="false" height="18.701171875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" width="80.693359375" x="-40.734957343347276" xml:space="preserve" y="-54.386764200043075">mim:bron [1,1]<y:LabelModel><y:SmartEdgeLabelModel autoRotationEnabled="false" defaultAngle="0.0" defaultDistance="10.0"/></y:LabelModel><y:ModelParameter><y:SmartEdgeLabelModelParameter angle="0.0" distance="30.0" distanceToCenter="true" position="center" ratio="0.3440622385341965" segment="-1"/></y:ModelParameter><y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" frozen="true" placement="anywhere" side="anywhere" sideReference="relative_to_edge_flow"/></y:EdgeLabel>
           <y:BendStyle smoothed="false"/>
         </y:PolyLineEdge>
       </data>
@@ -689,7 +656,6 @@ mim:unidirectioneel (boolean) [1,1]<y:LabelModel><y:ErdAttributesNodeLabelModel/
     <edge id="e24" source="n9" target="n10">
       <data key="d7" xml:space="preserve"><![CDATA[http://bp4mc2.org/def/mim-shapes#Relatieklasse]]></data>
       <data key="d8" xml:space="preserve"><![CDATA[http://bp4mc2.org/def/mim-shapes#Relatiesoort]]></data>
-      <data key="d10"/>
       <data key="d11">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>

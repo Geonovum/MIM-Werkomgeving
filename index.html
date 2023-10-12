@@ -11,17 +11,22 @@
     <script>document.title = respecConfig.title</script>
     <title>Default</title>
     <link rel="shortcut icon" type="image/x-icon" href="https://tools.geostandaarden.nl/respec/style/logos/Geonovum.ico" />
-
-    <link rel="stylesheet" href="style.css"/>
+    <!-- <link rel="stylesheet" href="./media/style.css"/> -->
     <script src="https://gitdocumentatie.logius.nl/publicatie/respec/builds/respec-nlgov.js" class="remove" async></script>
-
+    
     <!-- Additional lines -->
-    <link rel="stylesheet" href="./dfn_box.css"/>
-    <script type="text/javascript" src="dfn_box.js"></script>
+    <link rel="stylesheet" href="./inline-code.css">
+    <link rel="stylesheet" href="./blockqoute.css"/>
+    <link rel="stylesheet" href="./table.css"/>
+    <link rel="stylesheet" href="./transformatie-rdf.css"/>
+    <link rel="stylesheet" href="./dfn-box.css"/>
     
   </head>
 
   <body>
+    <!-- Huisstijl Geonovum -->
+    <!-- tijdelijke oplossing om w3c base.css te overrulen -->
+    <!-- <link rel="stylesheet" href="https://tools.geostandaarden.nl/respec/style/base.css"> -->
 
     <!-- voeg hier je eigen hoofdstukken toe -->
     <section id='abstract' data-format="markdown" data-include="Samenvatting.md"><h2>Samenvatting</h2></section>
@@ -43,7 +48,7 @@
     <section data-include-format="markdown" data-include="AfsprakenRegels.md"><h2>AfsprakenRegels</h2></section>
     <section><h2>Bijlagen</h2>
       <section data-include-format="markdown" data-include="Diagrammen.md"></section>
-      <section data-include-format="markdown" data-include="TemplateNaamgevingConventies.md"></section>
+      <section data-include-format="markdown" data-include="TemplateNaamgevingsconventies.md"></section>
       <section data-include-format="markdown" data-include="VertalingEngels.md"></section>
       <section data-include-format="markdown" data-include="TransformatieRDF.md"></section>
       <section data-include-format="markdown" data-include="Versielog.md"></section>
