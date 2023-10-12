@@ -775,7 +775,7 @@ informatiemodel zelf (zie ook [bijlage](#bijlagen)).
 * De naam van kenmerken van een objecttype hoeven niet uniek te zijn over objecttypen heen.
 * De naam van elementen van een datatype hoeven niet uniek te zijn over datatypen heen.
 
-### Dezelfde uri, naam en/of definitie gebruiken voor meerdere modelelementen
+### Dezelfde URI, naam en/of definitie gebruiken voor meerdere modelelementen
 
 Er kan sprake zijn van een naam en/of definitie die voor meerdere modelelementen gelijk moeten zijn, omdat er inherent hetzelfde bedoeld wordt. Generalisatie is gedefinieerd voor Datatypen en Objecttypen en Datatypen en gegevensgroeptypen kunnen op meerdere plekken gebruikt worden.
 
