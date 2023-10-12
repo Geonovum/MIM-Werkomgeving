@@ -1045,7 +1045,7 @@ Toelichting: objecten hebben, of krijgen, in een administratie of gegevensvoorzi
 
 Toepassing: attribuutsoort, alle relaties (relatiesoort, relatierol, relatieklasse, externe koppeling), referentie-element.
 
-#### Metagegeven: **heeft tijdslijn geldigheid**
+#### Metagegeven: **heeft tijdlijn geldigheid**
 
 <aside class="definition">
   <dfn>heeft tijdlijn geldigheid</dfn>Indicatie of voor dit kenmerk een tijdlijn geldigheid bijgehouden wordt en te bevragen is.
@@ -1074,7 +1074,7 @@ De in te vullen waarde komt uit: [toegestane waarde metagegevens](#toegestane-wa
 
 <aside class="note" title="Opmerkingen bij 'indicatie materiële historie'">
 <ol>
-  <li>Dit metagegeven is gelijkwaardig met het metagegeven <code><a>heeft tijdslijn geldigheid</a></code>;</li>
+  <li>Dit metagegeven is gelijkwaardig met het metagegeven <code><a>heeft tijdlijn geldigheid</a></code>;</li>
   <li>In toekomstige versies van MIM, versie 2.x en later, wordt dit metagegeven uitgefaseerd. Vanwege backwards compatibility blijft op dit moment aanwezig in MIM 1.x</li>
 </aside>
 
@@ -1121,7 +1121,7 @@ values](#toegestane-waarden-voor-bepaalde-metadata-gegevens)
 
 <aside class="note" title="Opmerkingen bij 'indicatie formele historie'">
 <ol>
-  <li>Dit metagegeven is gelijkwaardig met het metagegeven <code><a>heeft tijdslijn registratie</a></code>;</li>
+  <li>Dit metagegeven is gelijkwaardig met het metagegeven <code><a>heeft tijdlijn registratie</a></code>;</li>
   <li>In toekomstige versies van MIM, versie 2.x en later, wordt dit metagegeven uitgefaseerd. Vanwege backwards compatibility blijft op dit moment aanwezig in MIM 1.x</li>
 </aside>
 
@@ -1882,23 +1882,21 @@ Een aantal metagegevens hebben als datatype `CharacterString`. Aanvullend geldt:
 
 -   Voor lengtes geldt dat er alleen getallen in mogen (van het datatype
     `Integer`).
-
 -   Voor datums geldt dat deze het volgende patroon volgen: `jjjjmmdd`
-
 -   Voor de metagegevens `Definitie` en `Toelichting` geldt dat hiervoor tekst met opmaak (zoals _vet_, _cursief_, _onderstreept_ en _opsommingen_) gebruikt mag worden. Welke opmaak precies gebruikt kan worden, is afhankelijk van de mogelijkheden van de modelleeromgeving en de beoogde toepassing van het model.
 
 Voor de volgende metagegevens geldt een specifiek waardebereik.
 
-| **Metagegeven**                               | **Waardenbereik**                                                                    |
-|-----------------------------------------------|--------------------------------------------------------------------------------------|
-| Indicatie materiële historie                  | `"Ja"`, `"Nee"`                                                                      |
-| Indicatie formele historie                    | `"Ja"`, `"Nee"`                                                                      |
-| Indicatie classificerend                      | `"Ja"`, `"Nee"`                                                                      |
-| Indicatie abstract object                     | `"Ja"`, `"Nee"`                                                                      |
-| Mogelijk geen waarde                          | `"Ja"`, `"Nee"`                                                                      |
-| Mixin                                         | `"Ja"`, `"Nee"`                                                                      |
-| [Aggregatietype](#metagegeven-aggregatietype) | `Compositie`, `Gedeeld`, `Geen`                                                      |
-| [Authentiek](#authentieke-gegevens)           | `Authentiek`, `Basisgegeven`, `Wettelijk gegeven`, `Landelijk kerngegeven`, `Overig` |
+| **Metagegeven**                               | **Waardenbereik**                                                                                     |
+|-----------------------------------------------|-------------------------------------------------------------------------------------------------------|
+| <a>Indicatie formele historie</a>                    | `"Ja"`, `"Nee"`                                                                                |
+| <a>Indicatie materiele historie</a>                  | `"Ja"`, `"Nee"`                                                                                |
+| <a>Indicatie classificerend</a>                      | `"Ja"`, `"Nee"`                                                                                |
+| <a>Indicatie abstract object</a>                     | `"Ja"`, `"Nee"`                                                                                |
+| <a>Mogelijk geen waarde</a>                          | `"Ja"`, `"Nee"`                                                                                |
+| <a>Mixin</a>                                         | `"Ja"`, `"Nee"`                                                                                |
+| <a>Aggregatietype</a>                                | `"Compositie"`, `"Gedeeld"`, `"Geen"`                                                          |
+| <a>Authentiek</a>                                    | `"Authentiek"`, `"Basisgegeven"`, `"Wettelijk gegeven"`, `"Landelijk kerngegeven"`, `"Overig"` |
 
 <aside class="note">
   Geef bij de toepassing van <code>overig</code> in een informatiemodel aan wat er onder wordt verstaan.
@@ -1914,15 +1912,15 @@ Aanwijzing MIM-beheerder: metagegevens met een defaultwaarde mogen niet optionee
 
 | **Metagegeven**                     | **Defaultwaarde** |
 |-------------------------------------|-------------------|
-| Indicatie materiële historie        | `"Nee"`           |                                                        
-| Indicatie formele historie          | `"Nee"`           |                                                        
-| Indicatie classificerend            | `"Nee"`           |
-| Indicatie abstract object           | `"Nee"`           |
-| Mogelijk geen waarde                | `"Nee"`           |                                                        
-| Identificerend                      | `"Nee"`           |                                                        
-| Unidirectioneel                     | `"Ja"`            |  
-| Kardinaliteit attribuut             | `"1"`               |                                                        
-| Aggregatietype                      | `"Geen"`            |  
-| Mixin                               | `"Nee"`             | 
+| <a>Indicatie materiele historie</a> | `"Nee"`           |                                                        
+| <a>Indicatie formele historie</a>   | `"Nee"`           |                                                        
+| <a>Indicatie classificerend</a>     | `"Nee"`           |
+| <a>Indicatie abstract object</a>    | `"Nee"`           |
+| <a>Mogelijk geen waarde</a>         | `"Nee"`           |                                                        
+| <a>Identificerend</a>               | `"Nee"`           |                                                        
+| <a>Unidirectioneel</a>              | `"Ja"`            |  
+| <a>Kardinaliteit</a> attribuut      | `"1"`             |
+| <a>Aggregatietype</a>               | `"Geen"`          |
+| <a>Mixin</a>                        | `"Nee"`           |
 
 Opmerking met betrekking tot de kardinaliteit van relaties: deze staat niet in de tabel. Deze kennen geen defaultwaarde. De kardinaliteit aan de doel kant altijd moet worden aangegeven. De kardinaliteit aan de bron/eigenaar kant van een relatie is optioneel om in te vullen, wanneer er niets is ingevuld dan wordt er niets over de kardinaliteit gezegd en kent deze geen default waarde (in de praktijk betekent dit dat een kardinaliteit aan de bron kant als 0..* geïmplementeerd wordt).
