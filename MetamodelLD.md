@@ -218,7 +218,7 @@ Deze paragraaf is een aanvulling op de paragraaf *'Specificatie metagegevens'* i
 | alias | [`mim:alias`](http://bp4mc2.org/def/mim#alias) | owl:DatatypeProperty | [grondslag](#metagegeven-alias) |
 | attribuut | [`mim:attribuut`](http://bp4mc2.org/def/mim#attribuut) | owl:ObjectProperty | [grondslag](#metagegeven-attribuut) |
 | authentiek | [`mim:authentiek`](http://bp4mc2.org/def/mim#authentiek) | owl:ObjectProperty | [grondslag](#metagegeven-authentiek) |
-| basis-uri | [`mim:basis-uri`](http://bp4mc2.org/def/mim#basis-uri) | owl:DatatypeProperty | [grondslag](#metagegeven-basis-uri) |
+| basis-URI | [`mim:basisUri`](http://bp4mc2.org/def/mim#basisUri) | owl:DatatypeProperty | [grondslag](#metagegeven-basis-uri) |
 | begrip | [`mim:begrip`](http://bp4mc2.org/def/mim#begrip) | owl:ObjectProperty | [grondslag](#metagegeven-begrip) |
 | begripsterm | [`mim:begripsterm`](http://bp4mc2.org/def/mim#begripsterm) | owl:DatatypeProperty | [grondslag](#metagegeven-begrip) |
 | bron | [`mim:bron`](http://bp4mc2.org/def/mim#bron) | owl:ObjectProperty | [grondslag](#metagegeven-bron) |
