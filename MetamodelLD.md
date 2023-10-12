@@ -413,7 +413,7 @@ De relatiesoorten worden naar de volgende aspecten gespecificeerd.
 | Kardinaliteit                | [`mim:kardinaliteit`](http://bp4mc2.org/def/mim#kardinaliteit) | 1 | tekst |
 | Kardinaliteit relatie bron   | [`mim:kardinaliteitRelatieBron`](http://bp4mc2.org/def/mim#kardinaliteitRelatieBron) | 0..1 | tekst |
 | Herkomst                     | [`mim:herkomst`](http://bp4mc2.org/def/mim#herkomst) | 1 | tekst |
-| Is gedefinieerd in        | [`mim:isGedefinieerdIn`](http://bp4mc2.org/def/mim#isGedefinieerdIn) | 0..1 | [`mim:Informatiemodel`](http://www.w3.org/2002/07/owl#Ontology) |
+| Is gedefinieerd in        | [`mim:isGedefinieerdIn`](http://bp4mc2.org/def/mim#isGedefinieerdIn) | 0..1 | [`mim:Informatiemodel`](http://bp4mc2.org/def/mim#Informatiemodel)
 | Definitie                    | [`mim:definitie`](http://bp4mc2.org/def/mim#definitie) | 1 | tekst |
 | Toelichting                  | [`mim:toelichting`](http://bp4mc2.org/def/mim#toelichting) | 0..1 | tekst |
 | Herkomst definitie           | [`mim:herkomstDefinitie`](http://bp4mc2.org/def/mim#herkomstDefinitie) | 1 | tekst |
