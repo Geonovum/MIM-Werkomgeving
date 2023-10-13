@@ -736,13 +736,12 @@ Diagram: [Overige](#overige)
 #### Constraint
 
 <aside class="definition">
-  <dfn>Constraint</dfn>Een conditie of een beperking, die over een of meerdere modelelementen uit het informatiemodel geldt.
+  <dfn>Constraint</dfn>Een conditie of een beperking, die voor één of meerdere modelelementen uit het informatiemodel geldt.
 </aside>
 
-*Toelichting:* Een constraint kan vastgelegd worden bij alle modelelementen. Echter, meestal
-komt een constraint voor bij een objecttype, om te aan te geven dat de
-constraint geldt voor 2 (of meer) eigenschappen van een objecttype, of om een
-bijzondere specificatie toe te voegen die niet via de bestaande modelelementen gelegd kan worden zoals een 11-proef. Een constraint wordt altijd in gewone tekst omschreven en kan optioneel als formele specificatie worden aangegeven.
+*Toelichting:* Een `Constraint` wordt opgenomen om een constructie uit te drukken die niet via bestaande modelelementen is uit te drukken. De `Constraint` wordt dan toegevoegd om de extra informatie formeel vast te leggen. Meestal wordt een `Constraint` vastgelegd op het niveau van een modelelement met eigenschappen zoals een <code><a>Objecttype</a></code>, <code><a>Gegevensgroeptype</a></code> en <code><a>Relatieklasse</a></code> om specifieke condities over die eigenschappen vast te leggen. Een voorbeeld is de [een 11-proef](https://nl.wikipedia.org/wiki/Elfproef) op een <code><a>Datatype</a></code> van een <code><a>Attribuutsoort</a></code>. Een `Constraint` wordt altijd in _gewone tekst_ omschreven en kan _optioneel als formele specificatie_ worden aangegeven.
+
+Er zit bij een `Constraint` een _belangrijk verschil tussen betrekken en vastleggen_: **_betrekken_** bepaalt de modelelementen waar de `Constraint` op van toepassing is en **_vastleggen_** bepaalt wat de context van de `Constraint` is, het modelelement vanuit waar de `Constraint` geldt. Zo kan een constraint die van toepassing is op toegestane waarden van een attribuutsoort vastgelegd worden bij het objecttype dat de attribuutsoort gebruikt.
 
 #### Keuze
 
@@ -1949,11 +1948,9 @@ Verkorte schrijfwijze: **constraint**
   <dfn>heeft constraint</dfn>De binding van een constraint aan een modelelement.
 </aside>
 
-Het modelelement die een constraint heeft kan zijn: `Objecttype`, `Relatieklasse`, `Gegevensgroeptype`.
-
 *Toelichting*
 
-Een constraint is gekoppeld aan de context van modelelement waarop ze van toepassing is. Dit modelelement kan zijn: `Objecttype`, `Gegevensgroeptype` of `Relatieklasse`.
+Een `Constraint` is gekoppeld aan de context van modelelement waarop ze van toepassing is. Een `Constraint` kan op alle typen modelelementen worden toegepast.
 
 ### Toegestane waarden metagegevens
 

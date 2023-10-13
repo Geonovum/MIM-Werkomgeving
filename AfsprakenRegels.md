@@ -426,23 +426,20 @@ beschreven wordt wat er moet gebeuren wanneer één van de SUBJECTen niet meer
 bestaat.
 </aside>
 
-## Constraint
+## Constraint toepassen
 
-Deze paragraaf gaat dieper in op hoe een Constraint toegepast wordt.
+Deze paragraaf gaat dieper in op hoe een <a>Constraint</a> toegepast wordt. Twee constraints die gedefinieerd zijn op hetzelfde modelelement mogen niet dezelfde naam hebben.
 
 Een Constraint wordt beschreven met een: 
 - Naam (UML-constraint name): een naam c.q. label, vaak in steekwoorden. 
 - Specificatie in tekst (UML-Constraint Notes, type invariant): een uitgebreide heldere 
 beschrijving van de constraint in gewone tekst.
 
-en optioneel: 
+en optioneel:  
 - Specificatie formeel (UML-Constraint Notes, type OCL): formele
 specificatie in de Object Constraint Language. De formele specificatie bevat dus
 de uitgebreide heldere beschrijving van de constraint in gewone tekst EN de
 formele specificatie in OCL.
-
-Twee constraints die gedefinieerd zijn op hetzelfde modelelement mogen niet
-dezelfde naam hebben.
 
 In Enterprise architect 12.x lijkt het helaas (nog) niet mogelijk om constraints
 zoals bedoeld in UML op te nemen, te weten als OpaqueExpression met een
@@ -467,14 +464,14 @@ beschrijven, maar ook in een formele taal (OCL), dan als volgt:
 constraint language (OCL). De uitgebreide heldere beschrijving van de constraint
 in gewone tekst wordt opgenomen als commentaar, tussen /\* \*/.
 
-Aanbeveling: als een eigenschap van één UML-attribute, of één UML-association
+**Aanbeveling**: als een eigenschap van één UML-attribute, of één UML-association
 met een patroon (zie patroon) of een lengte (zie metadata aspect) of een
 kardinaliteit van een relatiesoort vastgelegd kan worden, gebruik dan deze en
 geen UML-constraint. Als er sprake is van een eigenschap die over meerdere
 informatiemodelelementen heen gaat, dan is er altijd sprake van een regel die we
 modelleren met een UML-constraint.
 
-Aanbeveling: wees terughoudend met het gebruik van constraints in het
+**Aanbeveling**: wees terughoudend met het gebruik van constraints in het
 informatiemodel wanneer de kans reëel is dat het model hierdoor gaat wijzigen of
 als het niet direct over de semantiek, structuur of syntax van de te registreren
 gegevens gaat. Dit is bijvoorbeeld het geval wanneer er regels bestaan rondom

@@ -877,9 +877,9 @@ Deze constructie heeft ook consequenties voor de URI's van de modelelementen in 
 ## Overig
 
 ### Transformatie: Constraint
-> Een constraint is een conditie of een beperking, die over een of meerdere modelelementen uit het informatiemodel geldt.
+> Een <a>Constraint</a> is een conditie of een beperking, die over een of meerdere modelelementen uit het informatiemodel geldt.
 
-Een constraint (en bijbehorende gegevens) worden direct overgenomen in het vertaalde model als blank node. Het MIM kent voor een constraint twee aspecten: tekstueel en formeel. Het MIM doet daarbij geen uitspraak over de taal die voor het formele model moet worden gehanteerd. Daarmee is een transformatie niet op zijn plaats. Zie ook de [INSPIRE RDF Guidelines](http://inspire-eu-rdf.github.io/inspire-rdf-guidelines/#ref_cr_constraint) waar een vergelijkbare redenatie wordt gevolgd.
+Een Constraint (en bijbehorende gegevens) worden direct overgenomen in het vertaalde model als blank node. Het MIM kent voor een Constraint twee aspecten: tekstueel en formeel. Het MIM doet daarbij geen uitspraak over de taal die voor het formele model moet worden gehanteerd. Daarmee is een transformatie niet op zijn plaats. Zie ook de [INSPIRE RDF Guidelines](http://inspire-eu-rdf.github.io/inspire-rdf-guidelines/#ref_cr_constraint) waar een vergelijkbare redenatie wordt gevolgd.
 
 <pre class='ex-sparql'>
 CONSTRUCT {
