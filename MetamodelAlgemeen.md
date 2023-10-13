@@ -1535,7 +1535,7 @@ Populatie: alle kadastrale aktes die horen bij kadastrale objecten waarop op 1 j
 <aside class='example'>
     Er zijn panden in Nederland die een militaire functie hebben en waarvan het niet wenselijk is dat deze in de registratie worden opgenomen en op aangeven van het ministratie van Defensie daarom ook niet zijn opgenomen. 
 
-  Populatie: alle panden op het Nederlands grondgebied, die voldoen aan de objectdefinitie, behalve een aantal militaire panden, zoals bedoeld in de <a target="_blank" href="https://zoek.officielebekendmakingen.nl/kst-30968-3.html">memorie van toelichting bij de Wet basisregistraties adressen en gebouwen</a>.
+  Populatie: alle panden op het Nederlands grondgebied, die voldoen aan de objectdefinitie, behalve een aantal militaire panden, zoals bedoeld in de [memorie van toelichting bij de Wet basisregistraties adressen en gebouwen](https://zoek.officielebekendmakingen.nl/kst-30968-3.html).
 
 </aside>
 
