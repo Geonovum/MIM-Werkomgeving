@@ -1053,7 +1053,7 @@ Toepassing: attribuutsoort, alle relaties (relatiesoort, relatierol, relatieklas
 
 *Toelichting*
 
-Bijvoorbeeld: `"Ja"`.
+Bijvoorbeeld: `Ja`.
 
 Met de `tijdlijn geldigheid` wordt bedoeld dat er op een tijdlijn wordt bijgehouden wanneer een verandering is opgetreden in de werkelijkheid die heeft geleid tot verandering van de waarde van een kenmerk van een object. Het gegeven is vanaf een bepaald tijdsmoment _geldig_ en dit tijdsmoment wordt op enerlei wijze als metagegeven bijgehouden bij het gegeven. 
 
@@ -1080,7 +1080,7 @@ De in te vullen waarde komt uit: [toegestane waarde metagegevens](#toegestane-wa
 
 *Toelichting*
 
-Bijvoorbeeld: `"Ja"`.
+Bijvoorbeeld: `Ja`.
 
 Met te bevragen wordt bedoeld, er wordt historie bijgehouden op enerlei wijze, welke op enerlei wijze te bevragen is. Dit metagegeven is alleen betekenisvol voor kenmerken waarvoor data wordt bijgehouden. De in te vullen waarde komt uit: zie [Tagged values en waardenbereik tagged
 values](#toegestane-waarden-voor-bepaalde-metadata-gegevens). Materiële historie geeft aan wanneer een verandering is opgetreden in de werkelijkheid die heeft geleid tot verandering van de attribuutwaarde. Verdere toelichting, zie het hoofdstuk [Afspraken & Regels](#afspraken-regels)
@@ -1102,7 +1102,7 @@ Materiële historie geeft aan wanneer een verandering is opgetreden in de werkel
 
 *Toelichting*
 
-Bijvoorbeeld: `"Nee"`.
+Bijvoorbeeld: `Nee`.
 
 Met de tijdlijn registratie wordt bedoeld dat er op een tijdlijn wordt bijgehouden wanneer een bepaalde waarde voor een kenmerk van een object vastgelegd wordt, oftewel _geregistreerd_ wordt. Dit tijdsmoment wordt op enerlei wijze als metagegeven bijgehouden bij het gegeven. De vastlegging kan zijn op een bepaald medium of in een registratie van een informatievoorziening. Het tijdsmoment van vastlegging of registratie is altijd ten tijde van vastlegging van een gegeven in de echte tijd (de horloge tijd). Elke keer dat hetzelfde gegeven op een andere plek wordt vastgelegd is een apart tijdsmoment op de tijdlijn registatie dat relevant kan zijn om bij te houden. Verdere toelichting, zie het hoofdstuk [Afspraken & Regels](#afspraken-regels). 
 
@@ -1127,7 +1127,7 @@ values](#toegestane-waarden-voor-bepaalde-metadata-gegevens)
 
 *Toelichting*
 
-Bijvoorbeeld: `"Nee"`.
+Bijvoorbeeld: `Nee`.
 
 Met te bevragen wordt bedoeld, er wordt historie bijgehouden op enerlei wijze, welke op enerlei wijze te bevragen is. Dit metagegeven is alleen betekenisvol voor kenmerken waarvoor data wordt bijgehouden. De in te vullen waarde komt uit: zie [Tagged values en waardenbereik tagged
 values](#toegestane-waarden-voor-bepaalde-metadata-gegevens). Formele historie geeft aan wanneer in de administratie een verandering bekend is, en is verwerkt. Verdere toelichting, zie het hoofdstuk [Afspraken &Regels](#afspraken-regels).
@@ -1887,22 +1887,22 @@ Een aantal metagegevens hebben als datatype `CharacterString`. Aanvullend geldt:
 
 Voor de volgende metagegevens geldt een specifiek waardebereik.
 
-| **Metagegeven**                               | **Waardenbereik**                                                                                     |
-|-----------------------------------------------|-------------------------------------------------------------------------------------------------------|
-| <a>Indicatie formele historie</a>                    | `"Ja"`, `"Nee"`                                                                                |
-| <a>Indicatie materiele historie</a>                  | `"Ja"`, `"Nee"`                                                                                |
-| <a>Indicatie classificerend</a>                      | `"Ja"`, `"Nee"`                                                                                |
-| <a>Indicatie abstract object</a>                     | `"Ja"`, `"Nee"`                                                                                |
-| <a>Mogelijk geen waarde</a>                          | `"Ja"`, `"Nee"`                                                                                |
-| <a>Mixin</a>                                         | `"Ja"`, `"Nee"`                                                                                |
-| <a>Aggregatietype</a>                                | `"Compositie"`, `"Gedeeld"`, `"Geen"`                                                          |
-| <a>Authentiek</a>                                    | `"Authentiek"`, `"Basisgegeven"`, `"Wettelijk gegeven"`, `"Landelijk kerngegeven"`, `"Overig"` |
+| **Metagegeven**                               | **Waardenbereik**                                                                    |
+|-----------------------------------------------|--------------------------------------------------------------------------------------|
+| <a>Indicatie formele historie</a>             | `Ja`, `Nee`                                                                          |
+| <a>Indicatie materiele historie</a>           | `Ja`, `Nee`                                                                          |
+| <a>Indicatie classificerend</a>               | `Ja`, `Nee`                                                                          |
+| <a>Indicatie abstract object</a>              | `Ja`, `Nee`                                                                          |
+| <a>Mogelijk geen waarde</a>                   | `Ja`, `Nee`                                                                          |
+| <a>Mixin</a>                                  | `Ja`, `Nee`                                                                          |
+| <a>Aggregatietype</a>                         | `Compositie`, `Gedeeld`, `Geen`                                                      |
+| <a>Authentiek</a>                             | `Authentiek`, `Basisgegeven`, `Wettelijk gegeven`, `Landelijk kerngegeven`, `Overig` |
 
 <aside class="note">
   Geef bij de toepassing van <code>overig</code> in een informatiemodel aan wat er onder wordt verstaan.
 </aside>
 
-De metagegevens met `"Ja"` en `"Nee"` zijn semantisch bedoeld als een boolean (er zijn geen andere waarden mogelijk zoals onbekend, overig of geen waarde (leeg)). Voor technische implementatiedoeleinden is het toegestaan om `"Ja"` en `"Nee"` te interpreteren en eventueel te vervangen door een `Boolean`. Let wel, voor mens-leesbare functionele documentatie horen altijd de in de tabel aangegeven waarden `"Ja"` en `"Nee"` te worden gebruikt.
+De metagegevens met `Ja` en `Nee` zijn semantisch bedoeld als een boolean (er zijn geen andere waarden mogelijk zoals onbekend, overig of geen waarde (leeg)). Voor technische implementatiedoeleinden is het toegestaan om `Ja` en `Nee` te interpreteren en eventueel te vervangen door een `Boolean`. Let wel, voor mens-leesbare functionele documentatie horen altijd de in de tabel aangegeven waarden `Ja` en `Nee` te worden gebruikt.
 
 #### Defaultwaarden
 
@@ -1912,15 +1912,15 @@ Aanwijzing MIM-beheerder: metagegevens met een defaultwaarde mogen niet optionee
 
 | **Metagegeven**                     | **Defaultwaarde** |
 |-------------------------------------|-------------------|
-| <a>Indicatie materiele historie</a> | `"Nee"`           |                                                        
-| <a>Indicatie formele historie</a>   | `"Nee"`           |                                                        
-| <a>Indicatie classificerend</a>     | `"Nee"`           |
-| <a>Indicatie abstract object</a>    | `"Nee"`           |
-| <a>Mogelijk geen waarde</a>         | `"Nee"`           |                                                        
-| <a>Identificerend</a>               | `"Nee"`           |                                                        
-| <a>Unidirectioneel</a>              | `"Ja"`            |  
-| <a>Kardinaliteit</a> attribuut      | `"1"`             |
-| <a>Aggregatietype</a>               | `"Geen"`          |
-| <a>Mixin</a>                        | `"Nee"`           |
+| <a>Indicatie materiele historie</a> | `Nee`             |                                                        
+| <a>Indicatie formele historie</a>   | `Nee`             |                                                        
+| <a>Indicatie classificerend</a>     | `Nee`             |
+| <a>Indicatie abstract object</a>    | `Nee`             |
+| <a>Mogelijk geen waarde</a>         | `Nee`             |                                                        
+| <a>Identificerend</a>               | `Nee`             |                                                        
+| <a>Unidirectioneel</a>              | `Ja`              |  
+| <a>Kardinaliteit</a> attribuut      | `1`               |
+| <a>Aggregatietype</a>               | `Geen`            |
+| <a>Mixin</a>                        | `Nee`             |
 
 Opmerking met betrekking tot de kardinaliteit van relaties: deze staat niet in de tabel. Deze kennen geen defaultwaarde. De kardinaliteit aan de doel kant altijd moet worden aangegeven. De kardinaliteit aan de bron/eigenaar kant van een relatie is optioneel om in te vullen, wanneer er niets is ingevuld dan wordt er niets over de kardinaliteit gezegd en kent deze geen default waarde (in de praktijk betekent dit dat een kardinaliteit aan de bron kant als 0..* geïmplementeerd wordt).
