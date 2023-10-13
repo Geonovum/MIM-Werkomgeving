@@ -426,23 +426,20 @@ beschreven wordt wat er moet gebeuren wanneer één van de SUBJECTen niet meer
 bestaat.
 </aside>
 
-## Constraint
+## Constraint toepassen
 
-Deze paragraaf gaat dieper in op hoe een Constraint toegepast wordt.
+Deze paragraaf gaat dieper in op hoe een <a>Constraint</a> toegepast wordt. Twee constraints die gedefinieerd zijn op hetzelfde modelelement mogen niet dezelfde naam hebben.
 
 Een Constraint wordt beschreven met een: 
 - Naam (UML-constraint name): een naam c.q. label, vaak in steekwoorden. 
 - Specificatie in tekst (UML-Constraint Notes, type invariant): een uitgebreide heldere 
 beschrijving van de constraint in gewone tekst.
 
-en optioneel: 
+en optioneel:  
 - Specificatie formeel (UML-Constraint Notes, type OCL): formele
 specificatie in de Object Constraint Language. De formele specificatie bevat dus
 de uitgebreide heldere beschrijving van de constraint in gewone tekst EN de
 formele specificatie in OCL.
-
-Twee constraints die gedefinieerd zijn op hetzelfde modelelement mogen niet
-dezelfde naam hebben.
 
 In Enterprise architect 12.x lijkt het helaas (nog) niet mogelijk om constraints
 zoals bedoeld in UML op te nemen, te weten als OpaqueExpression met een
@@ -467,14 +464,14 @@ beschrijven, maar ook in een formele taal (OCL), dan als volgt:
 constraint language (OCL). De uitgebreide heldere beschrijving van de constraint
 in gewone tekst wordt opgenomen als commentaar, tussen /\* \*/.
 
-Aanbeveling: als een eigenschap van één UML-attribute, of één UML-association
+**Aanbeveling**: als een eigenschap van één UML-attribute, of één UML-association
 met een patroon (zie patroon) of een lengte (zie metadata aspect) of een
 kardinaliteit van een relatiesoort vastgelegd kan worden, gebruik dan deze en
 geen UML-constraint. Als er sprake is van een eigenschap die over meerdere
 informatiemodelelementen heen gaat, dan is er altijd sprake van een regel die we
 modelleren met een UML-constraint.
 
-Aanbeveling: wees terughoudend met het gebruik van constraints in het
+**Aanbeveling**: wees terughoudend met het gebruik van constraints in het
 informatiemodel wanneer de kans reëel is dat het model hierdoor gaat wijzigen of
 als het niet direct over de semantiek, structuur of syntax van de te registreren
 gegevens gaat. Dit is bijvoorbeeld het geval wanneer er regels bestaan rondom
@@ -776,11 +773,13 @@ informatiemodel zelf (zie ook [bijlage](#bijlagen)).
 * De naam van kenmerken van een objecttype hoeven niet uniek te zijn over objecttypen heen.
 * De naam van elementen van een datatype hoeven niet uniek te zijn over datatypen heen.
 
-### Dezelfde naam en/of definitie gebruiken voor meerdere modelelementen
+### Dezelfde URI, naam en/of definitie gebruiken voor meerdere modelelementen
 
-Er kan sprake zijn van 1 naam en/of definitie die voor meerdere modelelementen gelijk moeten zijn, omdat er inherent hetzelfde bedoeld wordt. Generalisatie is gedefinieerd voor Datatypen en Objecttypen en Datatypen en gegevensgroeptypen kunnen op meerdere plekken gebruikt worden.
+Er kan sprake zijn van een naam en/of definitie die voor meerdere modelelementen gelijk moeten zijn, omdat er inherent hetzelfde bedoeld wordt. Generalisatie is gedefinieerd voor Datatypen en Objecttypen en Datatypen en gegevensgroeptypen kunnen op meerdere plekken gebruikt worden.
 
 Echter, voor bijvoorbeeld voor een relatiesoort of een attribuutsoort kan het ook nodig zijn om dezelfde naam en/of definitie te specificeren. Dit is mogelijk, maar het is dan niet geheel duidelijk of er hetzelfde bedoeld wordt, of dat de (exacte) overeenkomt in een informatiemodel (zoals bv. in een UML informatiemodel) een toevalligheid is. Daarom gelden de volgende afspraken: 
+
+* Als de **URI** van twee of meer modelelementen EXACT hetzelfde is, dan wordt hiermee bedoeld dat het dezelfde modelelementen zijn. Bijvoorbeeld bij objecttype Gebied met attribuutsoort identificatie met _URI_ "http://modellen.geostandaarden.nl/def/nen3610#identificatie" en een objecttype Boom met een attribuutsoort identificatie met _URI_ "http://modellen.geostandaarden.nl/def/nen3610#identificatie". De modelelementen kunnen verder wel verschillend beschreven zijn (bijvoorbeeld met een nauwer waardebereik bij een van de modelelementen).
 
 * Als de **definitie** van twee of meer modelelementen EXACT hetzelfde is, dan wordt hiermee bedoeld dat het dezelfde definitie is. Bijvoorbeeld: attribuutsoort overboeking met _definitie_ "Het bedrag in euro's" en attribuutsoort koopsom met _definitie_ "Het bedrag in euro's".
 

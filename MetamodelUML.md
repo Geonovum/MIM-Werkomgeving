@@ -119,7 +119,7 @@ Er zijn vier situaties waarin een keuze toegepast wordt:
 - Use case 3: een keuze tussen meerdere manieren om één betekenisvol attribuutsoort in te vullen
 - Use case 4: een keuze tussen relatiedoelen, als nadere invulling van één betekenisvolle relatiesoort
 
-Voor elke toepassing geldt een aparte subset van het metamodel. De 'keuzeconstructie' maakt een keuze mogelijk tussen meerdere datatypen, attribuutsoorten, en relatiedoelen. In UML behouden we dezelfde modellering, een datatype blijft dus een datatype, een attribuutsoort een attribuutsoort en een relatiesoort een relatiesoort. De UML elementen die het stereotype keuze krijgen zijn zelf geen datatype, attribuutsoort of relatiedoel. Merk op dat de diagrammen op metamodelniveau zijn gemodelleerd. Hoe dit op informatiemodelniveau uitpakt is onder het diagram beschreven in tekst. 
+Voor elke toepassing geldt een aparte subset van het metamodel. De 'keuzeconstructie' maakt een keuze mogelijk tussen meerdere datatypen, attribuutsoorten, en relatiedoelen. In UML behouden we dezelfde modellering, een datatype blijft dus een datatype, een attribuutsoort een attribuutsoort en een relatiesoort een relatiesoort. De UML-elementen die het stereotype keuze krijgen zijn zelf geen datatype, attribuutsoort of relatiedoel. Merk op dat de diagrammen op metamodelniveau zijn gemodelleerd. Hoe dit op informatiemodelniveau uitpakt is onder het diagram beschreven in tekst. 
 
 **Use case 1: Keuze tussen datatypen**
 
@@ -286,7 +286,6 @@ stereotype `«id»`
   </ul>
 </aside>
 
-<!-- ### Modellering metagegevens voor objecten en attributen in UML -->
 ### Objecten en attributen in UML
 
 #### «Objecttype»
@@ -295,9 +294,11 @@ De objecttypen worden naar de volgende aspecten gespecificeerd:
 
 | **Aspect**                       | **Kardinaliteit** | **Toelichting**                | **In UML 2.5**                        |    | **In EA**      | **In ...** |
 | -------------------------------- | -------- | ---------------------------------------- | ------------------------------------- | -- | -------------- | -------- |
+| **URI**                           | 1         | Identificerend metagegeven. |                                       |    | *Tagged value* |     |
 | **Naam√**            | 1            | Algemeen metagegeven. | *name van de metaclass Named element* |    | *Name*         |     |
 | **Alias**            | 0..1         | Algemeen metagegeven. | *UML-Property*                        |    | *Alias*        |     |
 | **Herkomst**         | 1            | Algemeen metagegeven. |                                       |    | *tagged value* |     |
+| **Is gedefinieerd in** | 1       | Algemeen metagegeven. |                                       |    | *Tagged value* |     |
 | **Begrip**           | 0..\*        | Algemeen metagegeven. |                                       |    | *Tagged value* |     |
 | **Definitie√**       | 1            | Algemeen metagegeven. | *Body van de metaclass Comment*       |    | *Notes*        |     |
 | **Herkomst definitie√** | 1         | Algemeen metagegeven. |                                       |    | *Tagged value* |     |
@@ -312,6 +313,7 @@ De objecttypen worden naar de volgende aspecten gespecificeerd:
 | heeft **relatiesoort**        | 0..*       | Binding aan een relatiesoort of relatieklasse. | *owned element* = UML-Relationship |    | *association*        |     |
 | heeft **externe koppeling**   | 0..*    | Binding aan een externe koppeling.             | *owned element* = UML-Relationship |    | *association*        |     |
 | verwijst naar **supertype** * | 0..*    | Binding aan een generalisatie (naar een ander objecttype).                 | *owned element* = UML-Relationship |    | *association*        |     |
+| heeft **Constraint** | 0..* | Binding aan een constraint. |   | | *Constraint* | | 
 
 #### «Attribuutsoort»
 
@@ -319,9 +321,11 @@ De attribuutsoorten worden naar de volgende aspecten gespecificeerd:
 
 | **Aspect**                       | **Kardinaliteit** | **Toelichting**                | **In UML 2.5**                        |    | **In EA**      | **In ...** |
 | -------------------------------- | -------- | ---------------------------------------- | ------------------------------------- | -- | -------------- | -------- |
+| **URI**                           | 1         | Identificerend metagegeven. |                                       |    | *Tagged value* |     |
 | **Naam√**            | 1            | Algemeen metagegeven. | *name van de metaclass Named element* |    | *Name*         |     |
 | **Alias**            | 0..1         | Algemeen metagegeven. | *UML-Property*                        |    | *Alias*        |     |
 | **Herkomst**         | 1            | Algemeen metagegeven. |                                       |    | *tagged value* |     |
+| **Is gedefinieerd in** | 1       | Algemeen metagegeven. |                                       |    | *Tagged value* |     |
 | **Begrip**           | 0..\*        | Algemeen metagegeven. |                                       |    | *Tagged value* |     |
 | **Definitie√**       | 1            | Algemeen metagegeven. | *Body van de metaclass Comment*       |    | *Notes*        |     |
 | **Herkomst definitie√** | 1         | Algemeen metagegeven. |                                       |    | *Tagged value* |     |
@@ -339,12 +343,13 @@ De attribuutsoorten worden naar de volgende aspecten gespecificeerd:
 | **Indicatie classificerend**                | 1                  | Algemeen metagegeven.                                        |                           |      | *Tagged value*    |            |
 | **Mogelijk geen waarde**                    | 1                  | Algemeen metagegeven.                                        |                                                              |      | *Tagged value* |            |
 | **Identificerend**                          | 0..1               | Algemeen metagegeven.                                        | *isID bij de metaclass Property*                             |      | *isID*         |            |
-| heeft **datatype**  | 1       | Binding aan een datatype.     | *datatype* = UML-datatype |    | *type* = datatype          |     |
 | **Minimumwaarde inclusief** | 0..1          | Algemeen metagegeven. Een attribuutsoort mag of een metagegeven **Minimumwaarde inclusief** of **Minimumwaarde exclusief** hebben, niet beide. | |  | _Tagged value_ |            |
 | **Minimumwaarde exclusief** | 0..1          | Algemeen metagegeven. Een attribuutsoort mag of een metagegeven **Minimumwaarde inclusief** of **Minimumwaarde exclusief** hebben, niet beide. | |  | _Tagged value_ |            |
 | **Maximumwaarde inclusief** | 0..1          | Algemeen metagegeven. Een attribuutsoort mag of een metagegeven **Maximumwaarde inclusief** of **Maximumwaarde exclusief** hebben, niet beide. | |  | _Tagged value_ |            |
 | **Maximumwaarde exclusief** | 0..1          | Algemeen metagegeven. Een attribuutsoort mag of een metagegeven **Maximumwaarde inclusief** of **Maximumwaarde exclusief** hebben, niet beide. | |  | _Tagged value_ |            |
 | **Eenheid**  |0..1      | Toevoegen als het attribuutsoort een waarde betreft en de eenheid als metagegeven opgenomen moet worden.    | |    | *Tagged value*          |     |
+| heeft **datatype**  | 1       | Binding aan een datatype.     | *datatype* = UML-datatype |    | *type* = datatype          |     |
+| heeft **Constraint** | 0..* | Binding aan een constraint. |   | | *Constraint* | | 
 
 #### «Gegevensgroep»
 
@@ -352,9 +357,11 @@ De gegevensgroepen worden naar de volgende aspecten gespecificeerd:
 
 | **Aspect**                  | **Kardinaliteit** | **Toelichting**                | **In UML 2.5**                        |    | **In EA**      | **In ...** |
 | -------------------------------- | -------- | ---------------------------------------- | ------------------------------------- | -- | -------------- | -------- |
+| **URI**                           | 1         | Identificerend metagegeven. |                                       |    | *Tagged value* |     |
 | **Naam**             | 1            | Algemeen metagegeven. | *name van de metaclass Named element* |    | *Name*         |     |
 | **Alias**            | 0..1         | Algemeen metagegeven. | *UML-Property*                        |    | *Alias*        |     |
-| **Herkomst**         | 1            | Algemeen metagegeven. |                                       |    | *tagged value* |     |
+| **Herkomst**         | 0..1         | Algemeen metagegeven. |                                       |    | *tagged value* |     |
+| **Is gedefinieerd in** | 1       | Algemeen metagegeven. |                                       |    | *Tagged value* |     |
 | **Begrip**           | 0..\*        | Algemeen metagegeven. |                                       |    | *Tagged value* |     |
 | **Definitie**        | 1            | Algemeen metagegeven. | *Body van de metaclass Comment*       |    | *Notes*        |     |
 | **Herkomst definitie** | 1          | Algemeen metagegeven. |                                       |    | *Tagged value* |     |
@@ -363,6 +370,7 @@ De gegevensgroepen worden naar de volgende aspecten gespecificeerd:
 | **Kardinaliteit**    | 1            | Algemeen metagegeven. | *lowerValue en upperValue van de metaclass Multiplicity Element* |      | *Multiplicity van de source role van de bijbehorende composite relatie* |            |
 | **Authentiek**       | 1            | Algemeen metagegeven. |                                       |    | *Tagged value* |     |
 | heeft **gegevensgroeptype**   | 1   | Binding aan een gegevensgroeptype. | *owned element* = UML-Class | | *type* = Class |     |
+| heeft **Constraint** | 0..* | Binding aan een constraint. |   | | *Constraint* | | 
 
 Alleen toevoegen als het attribuutsoort een waarde van een meting of waarnemimg betreft en de eenheid als metagegeven opgenomen moet worden.
 
@@ -376,9 +384,11 @@ De gegevensgroeptypen worden naar de volgende aspecten gespecificeerd:
 
 | **Aspect**                        | **Kardinaliteit**  | **Toelichting**                                                    | **In UML 2.5**                                                  |     | **In EA**      | **In ...** |
 | --------------------------------- | ------------------ | ------------------------------------------------------------------ | --------------------------------------------------------------- | --- | -------------- | ---------- |
+| **URI**                           | 1               | Identificerend metagegeven.                                        |                                                                 |     | *Tagged value* |            |
 | **Naam**                          | 1                  | Algemeen metagegeven.                                              | *name van de metaclass Named element*                           |     | *Name*         |            |
 | **Alias**                         | 0..1               | Algemeen metagegeven.                                              | *UML-Property*                                                  |     | *Alias*        |            |
 | **Herkomst**                      | 1                  | Algemeen metagegeven.                                              |                                                                 |     | *tagged value* |            |
+| **Is gedefinieerd in** | 1               | Algemeen metagegeven. |                                       |    | *Tagged value* |     |
 | **Begrip**                        | 0..\*              | Algemeen metagegeven.                                              |                                                                 |     | *Tagged value* |            |
 | **Definitie**                     | 1                  | Algemeen metagegeven.                                              | *Body van de metaclass Comment*                                 |     | *Notes*        |            |
 | **Herkomst definitie**            | 1                  | Algemeen metagegeven.                                              |                                                                 |     | *Tagged value* |            |
@@ -392,7 +402,7 @@ De gegevensgroeptypen worden naar de volgende aspecten gespecificeerd:
 | heeft **relatiesoort**            | 0..*               | Binding aan een relatiesoort of relatieklasse.                     | *owned element* = UML-Relationship                              |     | *association*  |            |
 | heeft **externe koppeling**       | 0..*               | Binding aan een externe koppeling.                                 | *owned element* = UML-Relationship                              |     | *association*  |            |
 | verwijst naar **supertype**       | 0..*               | Binding aan een generalisatie (naar een ander gegevensgroeptype).  | *owned element* = UML-Relationship                              |     | *association*  |            |
-
+| heeft **Constraint** | 0..* | Binding aan een constraint. |   | | *Constraint* | | 
 
 ### Relaties in UML
 
@@ -424,9 +434,11 @@ De relatiesoorten worden naar de volgende aspecten gespecificeerd.
 
 | **Aspect**                  | **Kardinaliteit** | **Toelichting**                | **In UML 2.5**                        |    | **In EA**      | **In ...** |
 | -------------------------------- | -------- | ---------------------------------------- | ------------------------------------- | -- | -------------- | -------- |
+| **URI**                           | 1         | Identificerend metagegeven.  |                                      |    | *Tagged value* |     |
 | **Naam√**             | 1            | Algemeen metagegeven. | *name van de metaclass Named element* |    | *Name*         |     |
 | **Alias**            | 0..1         | Algemeen metagegeven. | *UML-Property*                        |    | *Alias*        |     |
 | **Herkomst**         | 1            | Algemeen metagegeven. |                                       |    | *tagged value* |     |
+| **Is gedefinieerd in** | 1       | Algemeen metagegeven. |                                       |    | *Tagged value* |     |
 | **Begrip**           | 0..\*        | Algemeen metagegeven. |                                       |    | *Tagged value* |     |
 | **Definitie√**       | 1            | Algemeen metagegeven. | *Body van de metaclass Comment*       |    | *Notes*        |     |
 | **Herkomst definitie√** | 1         | Algemeen metagegeven. |                                       |    | *Tagged value* |     |
@@ -445,6 +457,7 @@ De relatiesoorten worden naar de volgende aspecten gespecificeerd.
 | **Indicatie afleidbaar**          | 1                  | Algemeen metagegeven. | *isDerived bij UML metaclass Assocation*                     |      | *isDerived*                                                  |            |
 | **Mogelijk geen waarde**          | 1                  | Algemeen metagegeven. |                                                              |      | *Tagged value*                                               |            |
 | verwijst naar **relatiedoel**   | 0..*  | Binding aan een objecttype. | */target: related Element bij Relationship Element* = UML-Class |    | *association target* = Class       |     |
+| heeft **Constraint** | 0..* | Binding aan een constraint. |   | | *Constraint* | | 
 
 #### «Relatiesoort» (alt 2: rol leidend)
 
@@ -452,15 +465,18 @@ De relatiesoorten worden naar de volgende aspecten gespecificeerd.
 
 | **Aspect**                  | **Kardinaliteit** | **Toelichting**                | **In UML 2.5**                        |    | **In EA**      | **In ...** |
 | -------------------------------- | -------- | ---------------------------------------- | ------------------------------------- | -- | -------------- | -------- |
+| **URI**                           | 1         | Identificerend metagegeven. |                                       |    | *Tagged value* |     |
 | **Naam**             | 1            | Algemeen metagegeven. | *name van de metaclass Named element* |    | *Name*         |     |
 | **Alias**            | 0..1         | Algemeen metagegeven. | *UML-Property*                        |    | *Alias*        |     |
 | **Herkomst**         | 1            | Algemeen metagegeven. |                                       |    | *tagged value* |     |
+| **Is gedefinieerd in** | 1       | Algemeen metagegeven. |                                       |    | *Tagged value* |     |
 | **Begrip**           | 0..\*        | Algemeen metagegeven. |                                       |    | *Tagged value* |     |
 | **Definitie**        | 1            | Algemeen metagegeven. | *Body van de metaclass Comment*       |    | *Notes*        |     |
 | **Herkomst definitie** | 1          | Algemeen metagegeven. |                                       |    | *Tagged value* |     |
 | **Toelichting**      | 0..1         | Algemeen metagegeven. |                                       |    | *Tagged value* |     |
 | **Datum opname**     | 1            | Algemeen metagegeven. |                                       |    | *Tagged value* |     |
 | verwijst naar **relatiedoel** | 0..*  | Binding aan een objecttype. | */target: related Element bij Relationship Element* = UML-Class |    | *association target* = Class       |     |
+| heeft **Constraint** | 0..* | Binding aan een constraint. |   | | *Constraint* | | 
 
 #### «Relatierol» (alt 1: soort leidend)
 
@@ -468,14 +484,17 @@ Voor relatierollen worden naar de volgende aspecten gespecificeerd.
 
 | **Aspect**                  | **Kardinaliteit** | **Toelichting**                | **In UML 2.5**                        |    | **In EA**      | **In ...** |
 | -------------------------------- | -------- | ---------------------------------------- | ------------------------------------- | -- | -------------- | -------- |
+| **URI**                           | 1         | Identificerend metagegeven. |                                       |    | *Tagged value* |     |
 | **Naam**             | 1            | Algemeen metagegeven. De default naam is gelijk aan de naam van het doel-objecttype. | *name van de metaclass Named element* |    | *Name*         |     |
 | **Alias**            | 0..1         | Algemeen metagegeven. | *UML-Property*                        |    | *Alias*        |     |
 | **Herkomst**         | 1            | Algemeen metagegeven. |                                       |    | *tagged value* |     |
+| **Is gedefinieerd in** | 1       | Algemeen metagegeven. |                                       |    | *Tagged value* |     |
 | **Begrip**           | 0..\*        | Algemeen metagegeven. |                                       |    | *Tagged value* |     |
 | **Definitie**        | 1            | Algemeen metagegeven. | *Body van de metaclass Comment*       |    | *Notes*        |     |
 | **Herkomst definitie** | 1          | Algemeen metagegeven. |                                       |    | *Tagged value* |     |
 | **Toelichting**      | 0..1         | Algemeen metagegeven. |                                       |    | *Tagged value* |     |
 | **Datum opname**     | 1            | Algemeen metagegeven. |                                       |    | *Tagged value* |     |
+| heeft **Constraint** | 0..* | Binding aan een constraint. |   | | *Constraint* | | 
 
 #### «Relatierol» (alt 2: rol leidend)
 
@@ -484,9 +503,11 @@ aspecten gespecificeerd.
 
 | **Aspect**                  | **Kardinaliteit** | **Toelichting**                | **In UML 2.5**                        |    | **In EA**      | **In ...** |
 | -------------------------------- | -------- | ---------------------------------------- | ------------------------------------- | -- | -------------- | -------- |
+| **URI**                           | 1         | Identificerend metagegeven. |                                       |    | *Tagged value* |     |
 | **Naam√**            | 1            | Algemeen metagegeven.  De default naam is gelijk aan de naam van het doel-objecttype. | *name van de metaclass Named element* |    | *Name*         |     |
 | **Alias**            | 0..1         | Algemeen metagegeven. | *UML-Property*                        |    | *Alias*        |     |
 | **Herkomst**         | 1            | Algemeen metagegeven. |                                       |    | *tagged value* |     |
+| **Is gedefinieerd in** | 1       | Algemeen metagegeven. |                                       |    | *Tagged value* |     |
 | **Begrip**           | 0..\*        | Algemeen metagegeven. |                                       |    | *Tagged value* |     |
 | **Definitie√**       | 1            | Algemeen metagegeven. | *Body van de metaclass Comment*       |    | *Notes*        |     |
 | **Herkomst definitie√** | 1         | Algemeen metagegeven. |                                       |    | *Tagged value* |     |
@@ -499,6 +520,7 @@ aspecten gespecificeerd.
 | **Indicatie formele historie√**   | 1                  | Algemeen metagegeven. |                                                              |      | *Tagged value* |            |
 | **Authentiek√ \***                | 1                  | Algemeen metagegeven. |                                                              |      | *Tagged value* |            |
 | **Mogelijk geen waarde**          | 1                  | Algemeen metagegeven. |                                                              |      | *Tagged value* |            |
+| heeft **Constraint** | 0..* | Binding aan een constraint. |   | | *Constraint* | | 
 
 #### «Generalisatie» tussen objecttypes
 
@@ -509,8 +531,8 @@ De generalisaties worden naar het volgende aspect gespecificeerd:
 | **Subtype**   | 1                  | De generalisatie relatie kent twee kanten, de bron kant (source) van de relatie en de doel kant (target) van de relatie. De bron kant van deze generalisatie relatie specificeert een _objecttype_ die een subtype/specialisatie is van het via deze generalisatie relatie aangegeven supertype (zie verwijst naar supertype). Kortweg, het subtype is een specialisatie van het supertype. Het objecttype dat het subtype is van deze generalisatie is verbonden met deze generalisatie. | */source: related Element bij Relationship Element* |      | *Source*  |            |
 | verwijst naar **supertype**  | 1    | Binding van deze generalisatie aan een objecttype. De generalisatie relatie kent twee kanten, de bron kant (source) van de relatie en de doel kant (target) van de relatie. De doel kant van deze generalisatie relatie specificeert een _objecttype_ die het supertype/de generalisatie is van het via deze generalisatie aangegeven subtype. Kortweg, het supertype is een generalisatie van het subtype. | */target: related Element bij Relationship Element* = UML-Class |      | *Target*  |                 |
 | **Datum opname** | 1               | Algemeen metagegeven                                         |                     |      | *Tagged value* |            |
+| heeft **Constraint** | 0..* | Binding aan een constraint. |   | | *Constraint* | | 
 | **Mixin** | 0..1               | Alleen bij MIM niveau 3, logische modellen                                         |                     |      | *Tagged value* |            |
-
 
 #### «Generalisatie» tussen datatypen
 
@@ -522,6 +544,7 @@ De generalisaties worden naar het volgende aspect gespecificeerd:
  | */source: related Element bij Relationship Element* |      |      | *Source*  |            |
 | verwijst naar **supertype**  | 1    | Binding van deze generalisatie aan een datatype. De generalisatie relatie kent twee kanten, de bron kant (source) van de relatie en de doel kant (target) van de relatie. De doel kant van deze generalisatie relatie specificeert een _datatype_ die het supertype/de generalisatie is van het via deze generalisatie aangegeven subtype. Kortweg, het supertype is een generalisatie van het subtype. | */target: related Element bij Relationship Element* = UML-datatype |      |      | *Target*  |                 |
 | **Datum opname** | 1               | Algemeen metagegeven                                         |                     |      | *Tagged value* |            |
+| heeft **Constraint** | 0..* | Binding aan een constraint. |   | | *Constraint* | | 
 
 
 #### «Relatieklasse»
@@ -530,9 +553,11 @@ De relatieklassen worden naar de volgende aspecten gespecificeerd:
 
 | **Aspect**                        | **Kardinaliteit** | **Toelichting**                  | **In UML 2.5**                        |    | **In EA**      | **In ...** |
 | --------------------------------- | ----------------- | -------------------------------- | ------------------------------------- | -- | -------------- | ---------- |
+| **URI**                           | 1              | Identificerend metagegeven.      |                                       |    | *Tagged value* |            |
 | **Naam√**                         | 1                 | Algemeen metagegeven.            | *name van de metaclass Named element* |    | *Name*         |            |
 | **Alias**                         | 0..1              | Algemeen metagegeven.            | *UML-Property*                        |    | *Alias*        |            |
 | **Herkomst**                      | 1                 | Algemeen metagegeven.            |                                       |    | *tagged value* |            |
+| **Is gedefinieerd in** | 1              | Algemeen metagegeven.            |                                       |    | *Tagged value* |            |
 | **Begrip**                        | 0..\*             | Algemeen metagegeven.            |                                       |    | *Tagged value* |            |
 | **Definitie√**                    | 1                 | Algemeen metagegeven.            | *Body van de metaclass Comment*       |    | *Notes*        |            |
 | **Toelichting√**                  | 0..1              | Algemeen metagegeven.            |                                       |    | *Tagged value* |            |
@@ -552,6 +577,7 @@ De relatieklassen worden naar de volgende aspecten gespecificeerd:
 | **heeft attribuut**               | 0..*              | Binding aan een attribuutsoort.  | *owned element* = UML-property     |    | *attribute*           |     |
 | **verwijst naar relatiedoel**     | 0..*              | Binding aan een objecttype.      | */target: related Element bij Relationship Element* = UML-Class |    | *association target* = Class       ||
 | **heeft gegegevensgroep**         | 0..*              | Binding aan gegevensgroep.       | *owned element* = UML-property|                                 | *attribute*    ||
+| heeft **Constraint** | 0..* | Binding aan een constraint. |   | | *Constraint* | | 
 
 #### «Externe koppeling»
 
@@ -559,9 +585,11 @@ Externe koppelingen worden naar de volgende aspecten gespecificeerd.
 
 | **Aspect**                  | **Kardinaliteit** | **Toelichting**                | **In UML 2.5**                        |    | **In EA**      | **In ...** |
 | -------------------------------- | -------- | ---------------------------------------- | ------------------------------------- | -- | -------------- | -------- |
+| **URI**                           | 1         | Identificerend metagegeven. |                                       |    | *Tagged value* |     |
 | **Naam√**             | 1            | Algemeen metagegeven. | *name van de metaclass Named element* |    | *Name*         |     |
 | **Alias**            | 0..1         | Algemeen metagegeven. | *UML-Property*                        |    | *Alias*        |     |
 | **Herkomst**         | 1            | Algemeen metagegeven. |                                       |    | *tagged value* |     |
+| **Is gedefinieerd in** | 1       | Algemeen metagegeven. |                                       |    | *Tagged value* |     |
 | **Begrip**           | 0..\*        | Algemeen metagegeven. |                                       |    | *Tagged value* |     |
 | **Definitie√**       | 1            | Algemeen metagegeven. | *Body van de metaclass Comment*       |    | *Notes*        |     |
 | **Herkomst definitie√** | 1         | Algemeen metagegeven. |                                       |    | *Tagged value* |     |
@@ -579,6 +607,7 @@ Externe koppelingen worden naar de volgende aspecten gespecificeerd.
 | **Indicatie afleidbaar**          | 1                  | Algemeen metagegeven. | *isDerived bij UML metaclass Assocation*                     |      | *isDerived*                                                  |            |
 | **Mogelijk geen waarde**          | 1                  | Algemeen metagegeven. |                                                              |      | *Tagged value*                                               |            |
 | verwijst naar **relatiedoel**     | 0..*       | Binding aan een objecttype. | */target: related Element bij Relationship Element* = UML-Class |    | *association target* = Class       |     |
+| heeft **Constraint** | 0..* | Binding aan een constraint. |   | | *Constraint* | | 
 
 ### Waardelijsten in UML
 
@@ -589,9 +618,11 @@ Voor codelijst worden de volgende aspecten gespecificeerd:
 
 | **Aspect**                  | **Kardinaliteit** | **Toelichting**                | **In UML 2.5**                        |    | **In EA**      | **In ...** |
 | -------------------------------- | -------- | ---------------------------------------- | ------------------------------------- | -- | -------------- | -------- |
+| **URI**                           | 1               | Identificerend metagegeven.    |                |      | *Tagged value* |            |
 | **Naam**         | 1                  | Algemeen metagegeven. *De naam van de lijst zoals gespecificeerd in de catalogus van de desbetreffende registratie dan wel, indien het een door de eigen organisatie toegevoegde lijst betreft, de door de eigen organisatie vastgestelde naam.* | *name van de metaclass Named element* |      | *Name*         |      |
 | **Alias**        | 0..1               | Algemeen metagegeven.    | *UML-Property* |      | *Alias*        |            |
 | **Herkomst**     | 1                  | Algemeen metagegeven.    |                |      | *tagged value* |            |
+| **Is gedefinieerd in** | 1         | Algemeen metagegeven.    |                |      | *Tagged value* |            |
 | **Begrip**       | 0..\*              | Algemeen metagegeven.    |                |      | *Tagged value* |            |
 | **Definitie**    | 1                  | Algemeen metagegeven.    | *Body van de metaclass Comment*  |  | *Notes*    |  |
 | **Herkomst definitie**  | 1        | Algemeen metagegeven.    |                |      | *Tagged value* |            |
@@ -602,7 +633,7 @@ Voor codelijst worden de volgende aspecten gespecificeerd:
 | **Datatype**     | 1..1               | Algemeen metagegeven.    |                |      | *tagged value* |            |
 | **Waarde-item**  | 0..1               | Algemeen metagegeven.    |                |      | *tagged value* |            |
 | **Profielspecificatie**      | 0..1               | Algemeen metagegeven.    |                |      | *tagged value* |            |
-
+| heeft **Constraint** | 0..* | Binding aan een constraint. |   | | *Constraint* | | 
 
 #### «Enumeratie»
 
@@ -611,15 +642,18 @@ aspecten gespecificeerd:
 
 | **Aspect**                  | **Kardinaliteit** | **Toelichting**                | **In UML 2.5**                        |    | **In EA**      | **In ...** |
 | -------------------------------- | -------- | ---------------------------------------- | ------------------------------------- | -- | -------------- | -------- |
+| **URI**                           | 1       | Identificerend metagegeven.    |                                       |      | *Tagged value* | |
 | **Naam**         | 1          | Algemeen metagegeven.    | *name van de metaclass Named element* |      | *Name*         | |
 | **Alias**        | 0..1       | Algemeen metagegeven.    | *UML-Property*                        |      | *Alias*        | |
 | **Herkomst**     | 1          | Algemeen metagegeven.    |                                       |      | *tagged value* | |
+| **Is gedefinieerd in** | 1 | Algemeen metagegeven.    |                                       |      | *Tagged value* | |
 | **Begrip**       | 0..\*      | Algemeen metagegeven.    |                                       |      | *Tagged value* | |
 | **Definitie**    | 1          | Algemeen metagegeven.    | *Body van de metaclass Comment*       |      | *Notes*        | |
 | **Herkomst definitie** | 1    | Algemeen metagegeven.    |                                       |      | *Tagged value* | |
 | **Toelichting**  | 0..1       | Algemeen metagegeven.    |                                       |      | *tagged value* | |
 | **Datum opname** | 1          | Algemeen metagegeven.    |                                       |      | *tagged value* | |
 | bevat **enumeratiewaarde** | 1..* | Binding van een enumeratiewaarde. | *owned element* = UML-EnumerationLiteral |    | *association*        |     |
+| heeft **Constraint** | 0..* | Binding aan een constraint. |   | | *Constraint* | | 
 
 #### «Enumeratiewaarde»
 
@@ -627,15 +661,17 @@ De enumeratiewaarde zelf betreft de metaclass `UML-EnumerationLiteral` en kent d
 
 | **Aspect**                  | **Kardinaliteit** | **Toelichting**                | **In UML 2.5**                        |    | **In EA**      | **In ...** |
 | -------------------------------- | -------- | ---------------------------------------- | ------------------------------------- | -- | -------------- | -------- |
+| **URI**                           | 1       | Identificerend metagegeven.    |                                       | | *Tagged value* |     |
 | **Naam**         | 1          | Algemeen metagegeven.    | *name van de metaclass Named element* | | *Name*  | |
 | **Code**      | 0..1          | De in een registratie of informatiemodel aan de enumeratiewaarde toegekend unieke code (niet te verwarren met alias, zoals bedoeld in 2.8.2). | *Alias van de metaclass Element Import* |      | *Alias*   |            |
 | **Herkomst**     | 0..1       | Algemeen metagegeven.    |                |      | *tagged value* |            |
+| **Is gedefinieerd in** | 1 | Algemeen metagegeven.    |                |      | *Tagged value* |            |
 | **Begrip**       | 0..\*      | Algemeen metagegeven.    |                |      | *Tagged value* |            |
 | **Definitie**    | 0..1       | Algemeen metagegeven.    | *Body van de metaclass Comment*  |  | *Notes*    |  |
 | **Herkomst definitie** | 0..1 | Algemeen metagegeven.    |                |      | *Tagged value* |            |
 | **Toelichting**  | 0..1       | Algemeen metagegeven.    |                |      | *tagged value* |            |
 | **Datum opname** | 1          | Algemeen metagegeven.    |                |      | *tagged value* |            |
-
+| heeft **Constraint** | 0..* | Binding aan een constraint. |   | | *Constraint* | | 
 
 #### «Referentielijst»
 
@@ -643,9 +679,11 @@ Voor referentielijsten worden de volgende aspecten gespecificeerd:
 
 | **Aspect**                  | **Kardinaliteit** | **Toelichting**                | **In UML 2.5**                        |    | **In EA**      | **In ...** |
 | -------------------------------- | -------- | ---------------------------------------- | ------------------------------------- | -- | -------------- | -------- |
+| **URI**                           | 1         | Identificerend metagegeven. |                                       |    | *Tagged value* |     |
 | **Naam**             | 1            | Algemeen metagegeven. | *name van de metaclass Named element* |    | *Name*         |     |
 | **Alias**            | 0..1         | Algemeen metagegeven. | *UML-Property*                        |    | *Alias*        |     |
 | **Herkomst**         | 1            | Algemeen metagegeven. |                                       |    | *tagged value* |     |
+| **Is gedefinieerd in** | 1       | Algemeen metagegeven. |                                       |    | *Tagged value* |     |
 | **Begrip**           | 0..\*        | Algemeen metagegeven. |                                       |    | *Tagged value* |     |
 | **Definitie**        | 1            | Algemeen metagegeven. | *Body van de metaclass Comment*       |    | *Notes*        |     |
 | **Herkomst definitie**  | 1         | Algemeen metagegeven. |                                       |    | *Tagged value* |     |
@@ -654,6 +692,7 @@ Voor referentielijsten worden de volgende aspecten gespecificeerd:
 | **Locatie**          | 1..1         | Algemeen metagegeven. |                                       |    | *Tagged value* |     |
 | bevat **referentie-element** | 1..* | Binding aan een referentie-element. | *owned element* = UML-property  | | *attribute*   | |
 | verwijst naar **supertype**  | 0..* | Binding aan een generalisatie (naar een andere referentie lijst). | *owned element* = UML-Relationship |    | *association*   |   |
+| heeft **Constraint** | 0..* | Binding aan een constraint. |   | | *Constraint* | | 
 
 #### «Referentie-element»
 
@@ -661,9 +700,11 @@ De referentie-elementen worden naar de volgende aspecten gespecificeerd:
 
 | **Aspect**                  | **Kardinaliteit** | **Toelichting**                | **In UML 2.5**                        |    | **In EA**      | **In ...** |
 | -------------------------------- | -------- | ---------------------------------------- | ------------------------------------- | -- | -------------- | -------- |
+| **URI**                           | 1         | Identificerend metagegeven. |                                       |    | *Tagged value* |     |
 | **Naam**             | 1            | Algemeen metagegeven. | *name van de metaclass Named element* |    | *Name*         |     |
 | **Alias**            | 0..1         | Algemeen metagegeven. | *UML-Property*                        |    | *Alias*        |     |
 | **Herkomst**         | 1            | Algemeen metagegeven. |                                       |    | *tagged value* |     |
+| **Is gedefinieerd in** | 1       | Algemeen metagegeven. |                                       |    | *Tagged value* |     |
 | **Begrip**           | 0..\*        | Algemeen metagegeven. |                                       |    | *Tagged value* |     |
 | **Definitie**        | 1            | Algemeen metagegeven. | *Body van de metaclass Comment*       |    | *Notes*        |     |
 | **Herkomst definitie**  | 1         | Algemeen metagegeven. |                                       |    | *Tagged value* |     |
@@ -675,12 +716,13 @@ De referentie-elementen worden naar de volgende aspecten gespecificeerd:
 | **- Formeel patroon**                       | 0..1               | Algemeen metagegeven. |                                                              |      | *Tagged value*                       |            |
 | **Kardinaliteit**                           | 1                  | Algemeen metagegeven. | *lowerValue en upperValue van de metaclass Multiplicity Element* |      | *Multiplicity van de de target role* |            |
 | **Identificerend**                          | 0..1               | Algemeen metagegeven. | *isID van de metaclass Property*                             |      | *isID bij de betreffende class*      |            |
-| heeft **datatype**       | 1       | Binding aan een datatype.     | *datatype* = UML-datatype |    | *type* = datatype          |     |
 | **Minimumwaarde inclusief** | 0..1          | Algemeen metagegeven. Een referentie-element mag of een metagegeven **Minimumwaarde inclusief** of **Minimumwaarde exclusief** hebben, niet beide. | |  | _Tagged value_ |            |
 | **Minimumwaarde exclusief** | 0..1          | Algemeen metagegeven. Een referentie-element mag of een metagegeven **Minimumwaarde inclusief** of **Minimumwaarde exclusief** hebben, niet beide. | |  | _Tagged value_ |            |
 | **Maximumwaarde inclusief** | 0..1          | Algemeen metagegeven. Een referentie-element mag of een metagegeven **Maximumwaarde inclusief** of **Maximumwaarde exclusief** hebben, niet beide. | |  | _Tagged value_ |            |
 | **Maximumwaarde exclusief** | 0..1          | Algemeen metagegeven. Een referentie-element mag of een metagegeven **Maximumwaarde inclusief** of **Maximumwaarde exclusief** hebben, niet beide. | |  | _Tagged value_ |            |
 | **Eenheid**  |0..1      | Toevoegen als het referentie-element een waarde betreft en de eenheid als metagegeven opgenomen moet worden.
+| heeft **datatype**       | 1       | Binding aan een datatype.     | *datatype* = UML-datatype |    | *type* = datatype          |     |
+| heeft **Constraint** | 0..* | Binding aan een constraint. |   | | *Constraint* | | 
 
 ### Datatypen in UML
 
@@ -694,9 +736,11 @@ De datatypen worden naar de volgende aspecten gespecificeerd:
 
 | **Aspect**                  | **Kardinaliteit** | **Toelichting**                | **In UML 2.5**                        |    | **In EA**      | **In ...** |
 | -------------------------------- | -------- | ---------------------------------------- | ------------------------------------- | -- | -------------- | -------- |
+| **URI**                           | 1       | Identificerend metagegeven.    |                |      | *Tagged value* |            |
 | **Naam**         | 1          | Algemeen metagegeven.    | *name van de metaclass Named element* | | *Name*  | |
 | **Alias**        | 0..1       | Algemeen metagegeven.    | *UML-Property* |      | *Alias*        |            |
 | **Herkomst**     | 0..1       | Algemeen metagegeven.    |                |      | *tagged value* |            |
+| **Is gedefinieerd in** | 1 | Algemeen metagegeven.    |                |      | *Tagged value* |            |
 | **Begrip**       | 0..\*      | Algemeen metagegeven.    |                |      | *Tagged value* |            |
 | **Definitie**    | 0..1       | Algemeen metagegeven.    | *Body van de metaclass Comment*  |  | *Notes*    |  |
 | **Herkomst definitie** | 0..1 | Algemeen metagegeven.    |                |      | *Tagged value* |            |
@@ -706,6 +750,7 @@ De datatypen worden naar de volgende aspecten gespecificeerd:
 | **- Lengte**                                | 0..1               | Algemeen metagegeven, in principe wordt dit metagegeven bij het attribuutsoort gespecificeerd, behalve als het generiek gespecificeerd moet worden. |                                       |      | *Tagged value* |            |
 | **- Patroon**                               | 0..1               | Algemeen metagegeven, in principe wordt dit metagegeven bij het attribuutsoort gespecificeerd, behalve als het generiek gespecificeerd moet worden. |                                       |      | *Tagged value* |            |
 | **- Formeel patroon**                       | 0..1               | Algemeen metagegeven, in principe wordt dit metagegeven bij het attribuutsoort gespecificeerd, behalve als het generiek gespecificeerd moet worden. |                                       |      | *Tagged value* |            |
+| heeft **Constraint** | 0..* | Binding aan een constraint. |   | | *Constraint* | | 
 
 #### «Gestructureerd datatype»
 
@@ -713,9 +758,11 @@ Voor Gestructureerde datatypen worden de volgende aspecten gespecificeerd:
 
 | **Aspect**                  | **Kardinaliteit** | **Toelichting**                | **In UML 2.5**                        |    | **In EA**      | **In ...** |
 | -------------------------------- | -------- | ---------------------------------------- | ------------------------------------- | -- | -------------- | -------- |
+| **URI**                           | 1          | Identificerend metagegeven.    |                |      | *Tagged value* |            |
 | **Naam**         | 1             | Algemeen metagegeven. *De naam van het domein package.* | *name van de metaclass Namedelement* |      | *Name*    |            |
 | **Alias**        | 0..1          | Algemeen metagegeven.    | *UML-Property* |      | *Alias*        |            |
 | **Herkomst**     | 0..1          | Algemeen metagegeven.    |                |      | *tagged value* |            |
+| **Is gedefinieerd in** | 1    | Algemeen metagegeven.    |                |      | *Tagged value* |            |
 | **Begrip**       | 0..\*         | Algemeen metagegeven.    |                |      | *Tagged value* |            |
 | **Definitie**    | 0..1          | Algemeen metagegeven.    | *Body van de metaclass Comment*  |  | *Notes*    |  |
 | **Herkomst definitie**  | 0..1   | Algemeen metagegeven.    |                |      | *Tagged value* |            |
@@ -724,7 +771,7 @@ Voor Gestructureerde datatypen worden de volgende aspecten gespecificeerd:
 | **Patroon**      | 0..1          | Algemeen metagegeven.    |                |      | *Tagged value* |            |
 | **Formeel patroon**      | 0..1  | Algemeen metagegeven.    |                |      | *Tagged value* |            |
 | bevat **data-element**   | 0..*  | Binding aan een data-element, 2 of meer tenzij via generalisatie verkregen. | *owned element* = UML-property     |  | *attribute* |   |
-
+| heeft **Constraint** | 0..* | Binding aan een constraint. |   | | *Constraint* | | 
 
 #### «Data-element»
 
@@ -732,9 +779,11 @@ De data-elementen worden naar de volgende aspecten gespecificeerd:
 
 | **Aspect**                  | **Kardinaliteit** | **Toelichting**                | **In UML 2.5**                        |    | **In EA**      | **In ...** |
 | -------------------------------- | -------- | ---------------------------------------- | ------------------------------------- | -- | -------------- | -------- |
+| **URI**                           | 1          | Identificerend metagegeven.    |                |      | *Tagged value* |            |
 | **Naam**         | 1             | Algemeen metagegeven. *De naam van het domein package.* | *name van de metaclass Namedelement* |      | *Name*    |            |
 | **Alias**        | 0..1          | Algemeen metagegeven.    | *UML-Property* |      | *Alias*        |            |
 | **Herkomst**     | 0..1          | Algemeen metagegeven.    |                |      | *tagged value* |            |
+| **Is gedefinieerd in** | 1    | Algemeen metagegeven.    |                |      | *Tagged value* |            |
 | **Begrip**       | 0..\*         | Algemeen metagegeven.    |                |      | *Tagged value* |            |
 | **Definitie**    | 0..1          | Algemeen metagegeven.    | *Body van de metaclass Comment*  |  | *Notes*    |  |
 | **Herkomst definitie**  | 0..1   | Algemeen metagegeven.    |                |      | *Tagged value* |            |
@@ -745,11 +794,12 @@ De data-elementen worden naar de volgende aspecten gespecificeerd:
 | **- Patroon**    | 0..1          | Algemeen metagegeven. |                                                                 |      | *Tagged value*    |     |
 | **- Formeel patroon**  | 0..1    | Algemeen metagegeven. |                                                                 |      | *Tagged value*    |     |
 | **Kardinaliteit**      | 1       | Algemeen metagegeven. | *lowerValue en upperValue van de metaclass MultiplicityElement* |      | *Multiplicity*    |     |
-| heeft **datatype**     | 1       | Binding aan een datatype.  | *datatype* = UML-datatype       |      | *type* = datatype |     |
 | **Minimumwaarde inclusief** | 0..1 | Algemeen metagegeven. Een data-element mag of een metagegeven **Minimumwaarde inclusief** of **Minimumwaarde exclusief** hebben, niet beide. | | | _Tagged value_ | |
 | **Minimumwaarde exclusief** | 0..1 | Algemeen metagegeven. Een data-element mag of een metagegeven **Minimumwaarde inclusief** of **Minimumwaarde exclusief** hebben, niet beide. | | | _Tagged value_ | |
 | **Maximumwaarde inclusief** | 0..1 | Algemeen metagegeven. Een data-element mag of een metagegeven **Maximumwaarde inclusief** of **Maximumwaarde exclusief** hebben, niet beide. | | | _Tagged value_ | |
 | **Maximumwaarde exclusief** | 0..1 | Algemeen metagegeven. Een data-element mag of een metagegeven **Maximumwaarde inclusief** of **Maximumwaarde exclusief** hebben, niet beide. | | | _Tagged value_ | |
+| heeft **datatype**     | 1       | Binding aan een datatype.  | *datatype* = UML-datatype       |      | *type* = datatype |     |
+| heeft **Constraint** | 0..* | Binding aan een constraint. |   | | *Constraint* | | 
 
 #### «Keuze»
 
@@ -760,6 +810,7 @@ Een Keuze worden naar de volgende aspecten gespecificeerd:
 | **Naam**         | 1             | Algemeen metagegeven. *De naam van het domein package.* | *name van de metaclass Namedelement* |      | *Name*    |            |
 | **Alias**        | 0..1          | Algemeen metagegeven.    | *UML-Property* |      | *Alias*        |            |
 | **Herkomst**     | 0..1          | Algemeen metagegeven.    |                |      | *tagged value* |            |
+| **Is gedefinieerd in** | 1    | Algemeen metagegeven.    |                |      | *Tagged value* |            |
 | **Begrip**       | 0..\*         | Algemeen metagegeven.    |                |      | *Tagged value* |            |
 | **Definitie**    | 0..1          | Algemeen metagegeven.    | *Body van de metaclass Comment* |  | *Notes*   |    |
 | **Herkomst definitie**  | 0..1   | Algemeen metagegeven.    |                |      | *Tagged value* |            |
@@ -768,8 +819,9 @@ Een Keuze worden naar de volgende aspecten gespecificeerd:
 | **heeft datatypekeuze**   | 0..* | Binding van een datatype, in UML via een additionale UML-property met stereotype keuze | *owned element* = UML-property en deze heeft en *datatype*     |   | *attribute*          |     |
 | heeft **attribuutkeuze**  | 0..* | Binding aan een attribuutsoort.  | *owned element* = UML-Property     |    | *attribute*          |     |
 | heeft **relatiedoelkeuze**| 0..* | Binding aan een relatiesoort.    | *owned element* = UML-Relationship |    | *association*        |     |
+| heeft **Constraint** | 0..* | Binding aan een constraint. |   | | *Constraint* | | 
 
-*Opmerking: de modelelementen waaruit gekozen kan worden heten sinds MIM 1.1 geen keuze elementen meer. Keuze element is komen te vervallen.*
+*Opmerking: de modelelementen waaruit gekozen kan worden heten sinds MIM 1.1 geen keuze-elementen meer. Keuze-element is komen te vervallen.*
 
 ### Packages in UML
 
@@ -779,6 +831,7 @@ Domein packages worden naar de volgende aspecten gespecificeerd:
 
 | **Aspect**                  | **Kardinaliteit** | **Toelichting**                | **In UML 2.5**                        |    | **In EA**      | **In ...** |
 | -------------------------------- | -------- | ---------------------------------------- | ------------------------------------- | -- | -------------- | -------- |
+| **URI**                           | 1          | Identificerend metagegeven.    |                |      | *Tagged value* |            |
 | **Naam**         | 1             | Algemeen metagegeven. *De naam van het domein package.* | *name van de metaclass Namedelement* |      | *Name*    |            |
 | **Alias**        | 0..1          | Algemeen metagegeven.    | *UML-Property* |      | *Alias*        |            |
 | **Herkomst**     | 1             | Algemeen metagegeven.    |                |      | *tagged value* |            |
@@ -786,6 +839,8 @@ Domein packages worden naar de volgende aspecten gespecificeerd:
 | **Herkomst definitie**  | 1      | Algemeen metagegeven.    |                |      | *Tagged value* |            |
 | **Toelichting**  | 0..1          | Algemeen metagegeven.    |                |      | *tagged value* |            |
 | **Datum opname** | 1             | Algemeen metagegeven.    |                |      | *tagged value* |            |
+| heeft **Constraint** | 0..* | Binding aan een constraint. |   | | *Constraint* | | 
+| **Basis-URI**    | 0..1          | Algemeen metagegeven. *Het niet-unieke deel van de URI van ieder modelelement in deze package* |                |      | *Tagged value* |            |
 
 #### «Extern»
 
@@ -793,6 +848,7 @@ Externe packages worden naar de volgende aspecten gespecificeerd:
 
 | **Aspect**                  | **Kardinaliteit** | **Toelichting**                | **In UML 2.5**                        |    | **In EA**      | **In ...** |
 | -------------------------------- | -------- | ---------------------------------------- | ------------------------------------- | -- | -------------- | -------- |
+| **URI**                           | 1          | Identificerend metagegeven.    |                |      | *Tagged value* |            |
 | **Naam**         | 1             | Algemeen metagegeven. *De naam van het domein package.* | *name van de metaclass Namedelement* |      | *Name*    |            |
 | **Alias**        | 0..1          | Algemeen metagegeven.    | *UML-Property* |      | *Alias* |            |
 | **Herkomst**     | 1             | Algemeen metagegeven.    | *Bij een view is de herkomst nooit de eigen organisatie.* |      | *tagged value* |            |
@@ -801,6 +857,8 @@ Externe packages worden naar de volgende aspecten gespecificeerd:
 | **Toelichting**  | 0..1          | Algemeen metagegeven.    |                |      | *tagged value* |            |
 | **Datum opname** | 1             | Algemeen metagegeven.    |                |      | *tagged value* |            |
 | **Locatie**      | 1             | Algemeen metagegeven.    |                |      | *Tagged value* |            |
+| heeft **Constraint** | 0..* | Binding aan een constraint. |   | | *Constraint* | | 
+| **Basis-URI**    | 0..1          | Algemeen metagegeven. *Het niet-unieke deel van de URI van ieder modelelement in deze package* |                |      | *Tagged value* |            |
 
 #### «Informatiemodel»
 
@@ -808,6 +866,7 @@ Informatiemodel packages worden naar de volgende aspecten gespecificeerd:
 
 | **Aspect**                  | **Kardinaliteit** | **Toelichting**                | **In UML 2.5**                        |    | **In EA**      | **In ...** |
 | -------------------------------- | -------- | ---------------------------------------- | ------------------------------------- | -- | -------------- | -------- |
+| **URI**                           | 1       | Identificerend metagegeven.    |                |      | *Tagged value* |            |
 | **Naam**         | 1          | Algemeen metagegeven.    | *name van de metaclass Named element* | | *Name*  | |
 | **Alias**        | 0..1       | Algemeen metagegeven.    | *UML-Property* |      | *Alias*        |            |
 | **Herkomst**     | 1          | Algemeen metagegeven.    |                |      | *tagged value* |            |
@@ -823,6 +882,8 @@ Informatiemodel packages worden naar de volgende aspecten gespecificeerd:
 |                            |                    | *Bijvoorbeeld: Kadaster of NEN3610:2020*                     |                                      |      |                |            |
 | **MIM taal**               | 0..1               | *De aanduiding van de taal die gebruikt is voor de modelelementen.*  *Bijvoorbeeld: EN of NL* |                                      |      | *Tagged value* |            |
 | **Relatiemodelleringtype** | 1                  | Algemeen metagegeven.    Toelichting Type informatiemodel: zoals bedoeld in [[[#typering-van-modellen-en-wat-wel-en-niet-in-scope-is-van-deze-standaard]]]. Alle packages, oftewel «Domein» en «View», binnen het informatiemodel hebben hetzelfde type als het informatiemodel zelf. |                                      |      | *Tagged value* |            |
+| heeft **Constraint** | 0..* | Binding aan een constraint. |   | | *Constraint* | | 
+| **Basis-URI**    | 0..1    | Algemeen metagegeven. *Het niet-unieke deel van de URI van ieder modelelement in deze package* |                |      | *Tagged value* |            |                                      |      | *Tagged value* |            |
 
 #### «View»
 
@@ -831,6 +892,7 @@ View packages worden naar de volgende aspecten gespecificeerd, analoog aan
 
 | **Aspect**                  | **Kardinaliteit** | **Toelichting**                | **In UML 2.5**                        |    | **In EA**      | **In ...** |
 | -------------------------------- | -------- | ---------------------------------------- | ------------------------------------- | -- | -------------- | -------- |
+| **URI**                           | 1          | Identificerend metagegeven.    |                |      | *Tagged value* |            |
 | **Naam**        | 1                  | Algemeen metagegeven. *Deze is, indien mogelijk, analoog aan de naamgeving in het externe schema waar de view over gaat, eventueel met een prefix.* | *name van de metaclass Named element* |      | *Name*         |            |
 | **Alias**        | 0..1          | Algemeen metagegeven.    | *UML-Property* |      | *Alias*        |            |
 | **Herkomst**     | 1             | Algemeen metagegeven.    |                |      | *tagged value* |            |
@@ -839,22 +901,43 @@ View packages worden naar de volgende aspecten gespecificeerd, analoog aan
 | **Toelichting**  | 0..1          | Algemeen metagegeven.    |                |      | *tagged value* |            |
 | **Datum opname** | 1             | Algemeen metagegeven.    |                |      | *tagged value* |            |
 | **Locatie**      | 1             | Algemeen metagegeven.    |                |      | *Tagged value* |            |
+| heeft **Constraint** | 0..* | Binding aan een constraint. |   | | *Constraint* | | 
+| **Basis-URI**    | 0..1          | Algemeen metagegeven. *Het niet-unieke deel van de URI van ieder modelelement in deze package* |                |      | *Tagged value* |            |
 
 ### Overige modelelementen in UML
 
 #### «Constraint»
 
-Constraint betreft de metaclass UML Constraint en wordt naar de volgende
+<a>Constraint</a> betreft de metaclass UML Constraint en wordt naar de volgende
 aspecten gespecificeerd:
 
-| **Aspect**                  | **Kardinaliteit** | **Toelichting**                | **In UML 2.5**                        |    | **In EA**      | **In ...** |
-| -------------------------------- | -------- | ---------------------------------------- | ------------------------------------- | -- | -------------- | -------- |
-| **Naam√**                  | 1         | Algemeen metagegeven.                    | *name van de metaclass Named element* |    | *Name*         |          |
-| **Specificatie tekst**     | 0..1      | De specificatie van de constraint in normale tekst.                       |      |    | *Notes (type = invariant)*  |          |
-| **Specificatie formeel**   | 0..1      | De beschrijving van de constraint in een formele specificatietaal, in OCL |      |    | *Notes (type =OCL)*         |          |
-| van toepassing op **objecttype**        | 0..1  | Binding aan een objecttype      |                     |    |                |          |
-| van toepassing op **gegevensgroeptype** | 0..1  | Binding aan een gegevensgroeptype                 |                     |    |                |          |
-| van toepassing op **relatieklasse**     | 0..1  | Binding aan een relatieklasse                     |                     |    |                |          |
+| **Aspect**                                      | **Kardinaliteit** | **Toelichting**                                                                   | **In UML 2.5**                        |    | **In EA**                    | **In ...**  |
+| ----------------------------------------------- | ----------------- | ----------------------------------------------------------------------------------| ------------------------------------- | -- | ---------------------------- | ----------- |
+| **Naam√**                                       | 1                 | Algemeen metagegeven.                                                             | *name van de metaclass Named element* |    | *Name*                       |             |
+| **Specificatie tekst**                          | 0..1              | De specificatie van de Constraint in normale tekst.                               |                                       |    | *Notes (type = invariant)*   |             |
+| **Specificatie formeel**                        | 0..1              | De beschrijving van de Constraint in een formele specificatietaal, in OCL.        |                                       |    | *Notes (type =OCL)*          |             |
+| van toepassing op **Objecttype**                | 0..1              | Bindinding aan een Objecttype                                                     |                                       |    |                              |             |
+| van toepassing op **Attribuutsoort**            | 0..1              | Bindinding aan een Attribuutsoort                                                 |                                       |    |                              |             |
+| van toepassing op **Gegevensgroep**             | 0..1              | Bindinding aan een Gegevensgroep                                                  |                                       |    |                              |             |
+| van toepassing op **Gegevensgroeptype**         | 0..1              | Bindinding aan een Gegevensgroeptype                                              |                                       |    |                              |             |
+| van toepassing op **Relatiesoort**              | 0..1              | Bindinding aan een Relatiesoort                                                   |                                       |    |                              |             |
+| van toepassing op **Relatierol**                | 0..1              | Bindinding aan een Relatierol                                                     |                                       |    |                              |             |
+| van toepassing op **Generalisatie**             | 0..1              | Bindinding aan een Generalisatie                                                  |                                       |    |                              |             |
+| van toepassing op **Relatieklasse**             | 0..1              | Bindinding aan een Relatieklasse                                                  |                                       |    |                              |             |
+| van toepassing op **Externe koppeling**         | 0..1              | Bindinding aan een Externe koppeling                                              |                                       |    |                              |             |
+| van toepassing op **Codelijst**                 | 0..1              | Bindinding aan een Codelijst                                                      |                                       |    |                              |             | 
+| van toepassing op **Enumeratie**                | 0..1              | Bindinding aan een Enumeratie                                                     |                                       |    |                              |             |
+| van toepassing op **Enumeratiewaarde**          | 0..1              | Bindinding aan een Enumeratiewaarde                                               |                                       |    |                              |             |
+| van toepassing op **Referentielijst**           | 0..1              | Bindinding aan een Referentielijst                                                |                                       |    |                              |             |
+| van toepassing op **Referentie-element**        | 0..1              | Bindinding aan een Referentie-element                                             |                                       |    |                              |             |
+| van toepassing op **Primitief datatype**        | 0..1              | Bindinding aan een Primitief datatype                                             |                                       |    |                              |             |
+| van toepassing op **Gestructureerd datatype**   | 0..1              | Bindinding aan een Gestructureerd datatype                                        |                                       |    |                              |             |
+| van toepassing op **Data-element**              | 0..1              | Bindinding aan een Data-element                                                   |                                       |    |                              |             |
+| van toepassing op **Keuze**                     | 0..1              | Bindinding aan een Keuze                                                          |                                       |    |                              |             |
+| van toepassing op **Domein**                    | 0..1              | Bindinding aan een Domein                                                         |                                       |    |                              |             |
+| van toepassing op **Extern**                    | 0..1              | Bindinding aan een Extern                                                         |                                       |    |                              |             |
+| van toepassing op **Informatiemodel**           | 0..1              | Bindinding aan een Informatiemodel                                                |                                       |    |                              |             |
+| van toepassing op **View**                      | 0..1              | Bindinding aan een View                                                           |                                       |    |                              |             |
 
 ## UML Tooling
 
