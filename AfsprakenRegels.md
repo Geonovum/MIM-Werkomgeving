@@ -403,28 +403,52 @@ aanduiding gedefinieerd worden.
 
 ## Relatieklasse (uitzonderingen)
 
-De gegevens van de relatiesoort worden altijd voor één relatiesoort vastgelegd.
+Een «Relatiesoort» met kardinaliteit 1..* van «Objecttype» A naar «Objecttype» B betekent dat er op instantie niveau * relaties liggen van een bronobject naar een doelobject. Bv. een relatie van specifiek object a1 (van «Objecttype» A) naar een specifiek object b1 (van «Objecttype» B) en een andere relatie van hetzelfde object a1 (van «Objecttype» A) naar object b2 (van «Objecttype» B). 
+
+Voor een relatieklasse geldt dit eveneens. Een «Relatieklasse» met kardinaliteit 1..* van «Objecttype» C naar «Objecttype» D betekent dat er op instantie niveau * relaties liggen van een bronobject naar een doelobject. Bv. een relatie van specifiek object c1 (van «Objecttype» C) naar een specifiek object d1 (van «Objecttype» D) en een andere relatie van hetzelfde object c1 (van «Objecttype» C) naar object d2 (van «Objecttype» D). 
+
+Voor elk van deze relaties zijn er extra gegevens aan de orde. Deze gegevens worden als kenmerken (eigenschappen) gemodelleerd in een «Relatieklasse» met een bepaalde kardinaliteit. Deze gegevens kunnen dan worden vastgesteld en vastgelegd wanneer er sprake is van een relatie tussen een object van «Objecttype» C naar een object van «Objecttype» D. Merk op dat deze gegevens, dit setje gegevens, voor elke relatie apart vastgesteld en vastgelegd wordt. Zo kunnen voor de relatie van c1 naar d1 andere gegevens worden vastgesteld en vastgelegd dan voor de relatie van c1 naar d2. 
+
+Opmerkingen: 
+- een relatiesoort met kardinaliteit * van objecttype A naar objecttype B en een relatieklasse met kardinaliteit * van objecttype C naar objecttype D bestaat op instantie nivea uit * losse relaties (en niet uit 1 relatie van 1 bronobject naar * doelobjecten); 
+- de gegevens over de relatie bestaan alleen zolang de relatie tussen beide objecten bestaat en zolang elk van beide objecten zelf (nog) bestaan. wanneer een van beide niet meer bestaat, bestaat de relatie niet meer en hiermee komen ook de gegevens over de relatie te vervallen. 
+
+_Uitzondering situatie - dezelfde gegevens voor meerdere relaties_
+
 Het is echter mogelijk dat dezelfde gegevens voor meerdere relaties tegelijk
-gelden. Het is dan niet mogelijk om het te modelleren als relatieklasse. Wel
-gewenst, maar het kan niet als UML-associationClass. Als deze uitzondering het
-geval is, dan worden de relatieklasses gemodelleerd als «Objecttype», met één
-inkomende relatie en één uitgaande relatie. De oorspronkelijke kardinaliteit van
-de beoogde relatieklasse wordt hierbij behouden.
+gelden. 
 
-<aside class="example" title="Relatieklasse">
-    Een Perceel kan vanwege een Perceel splitsing overgaan in twee of meerdere andere Percelen. De ‘overgegaan in’ relatie wordt bijgehouden in een relatieklasse. Gegevens over de splitsing zijn voor al deze relaties gelijk.
-</aside>
+Het is dan niet mogelijk om het te modelleren als relatieklasse. Wel gewenst, 
+maar het kan niet als UML-associationClass. 
+Als deze uitzondering het geval is, dan worden de relatieklasses gemodelleerd als «Objecttype», 
+met één inkomende relatie en één uitgaande relatie. 
+De oorspronkelijke kardinaliteit van de beoogde relatieklasse wordt hierbij behouden. 
 
-Het metamodel ondersteunt (nog) geen relatieklassen tussen drie of meer
-objecttypen. Dit kan in uw eigen extensie toegevoegd worden.
+De relatie is geobjectiveerd. Elke betrokken relatie wordt in dit geval behandeld als een object met gegevens. 
 
-<aside class="example" title="Relatieklasse tussen dire of meer objecttypen">
+<pre class='example'>
+Een Perceel kan vanwege een Perceel splitsing overgaan in twee of meerdere
+andere Percelen. De ‘overgegaan in’ relatie wordt bijgehouden als een
+relatieklasse met eigen (splitsing) gegevens. Bij een splitsing ontstaan * nieuwe percelen 
+en er is daarom sprake van meerdere relaties. De gegevens over de splitsing zijn echter altijd 
+voor al deze relaties gelijk. Om deze reden wordt de relatieklasse 'overgegaan in' gemodelleerd als een objecttype.  
+</pre>
+
+<pre class='ex-generic'>
 Een CONTRACT kan bijvoorbeeld ook een afspraak zijn tussen twee
 óf méér SUBJECTen, waarbij de gegevens van de relatie voor alle betrokken
 objecten hetzelfde zijn. CONTRACT wordt dan gemodelleerd als objecttype, waarbij
-beschreven wordt wat er moet gebeuren wanneer één van de SUBJECTen niet meer
-bestaat.
-</aside>
+beschreven wordt wat er moet gebeuren wanneer één van de SUBJECTen niet meer bestaat.
+</pre>
+
+Opmerkingen: 
+- de gegevens over de relatie bestaan alleen zolang de relatie tussen beide objecten bestaat en zolang elk van beide objecten zelf (nog) bestaan. Dit is echter niet meer te zien aan de metaklasse, omdat dit «Objecttype» is geworden en niet meer «Relatieklasse» is. Geef daarom in de toelichting van het objecttype aan dat elk object van dit objecttype bestaansafhankelijk is van de beide objecttypen die verbonden zijn door deze geobjectiveerde relatie.  
+- normaal gesproken bij relaties tussen objecten wordt de relatie op instantie niveau geïdentificeerd door de identificaties van beide betrokken objecten. Er zijn geen aparte regels voor de opbouw van de identificatie van een relatieklasse (en ook niet voor geobjectiveerde relatieklassen die als objecttypen zijn gemodelleerd). Anders gezegd, een regel zoals dat de identificatie van een relatieklasse (of geobjectiveerde relatieklassen die als objecttypen zijn gemodelleerd) is opgebouwd uit de samenstelling van de identificatie van bron en doel objecten is niet aanwezig in de MIM specificatie. Evenzo bestaat er in MIM geen regel of best practise dat er een nieuwe betekenisloze identificatie toegekend moet worden. Het is aan de modelleur om hierin eigen afwegingen te maken. 
+
+_Uitzondering - relatieklasse tussen 3 of meer objecttypen._
+
+Het metamodel ondersteunt (nog) geen relatieklassen tussen drie of meer
+objecttypen. Dit kan in uw eigen extensie toegevoegd worden.
 
 ## Constraint toepassen
 
