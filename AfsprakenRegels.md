@@ -509,7 +509,7 @@ de besluitvorming al bekend waren.
 Dit betekent dus dat bekend moet zijn wat de waarde van een attribuut op een
 bepaald moment is.
 
-*Tijdslijnen* Er spelen twee tijdslijnen een rol bij het herleiden van
+*Tijdlijnen* Er spelen twee tijdlijnen een rol bij het herleiden van
 attribuutwaarden: 
 - Wanneer is iets gebeurd, in de werkelijkheid of volgens
 opgave (wanneer zijn de opgenomen gegevens geldig)? Dit valt binnen de tijdlijn
@@ -518,10 +518,10 @@ van de aangehouden werkelijkheid.
 waren? Dit valt binnen de tijdlijn van het administratieproces of de administratieve werkelijkheid.
 
 In de rapportage 'Architectuur van het stelsel' (Stroomlijning BasisGegevens,
-2006) wordt geadviseerd om beide tijdslijnen te registreren, om de
+2006) wordt geadviseerd om beide tijdlijnen te registreren, om de
 attribuutwaarden van een bepaald moment te kunnen reconstrueren. In de diverse
 registraties wordt hieraan op verschillende wijzen invulling gegeven. Dit
-metamodel schrijft derhalve niet voor welke bij de tijdslijnen behorende
+metamodel schrijft derhalve niet voor welke bij de tijdlijnen behorende
 attributen gebruikt moeten worden voor het vastleggen van historie.
 
 ### Historie op conceptueel niveau
@@ -556,15 +556,15 @@ wel in een registratie wil opnemen: ‘indicatie materiële historie’ Nee en
 
 Richtlijn: op conceptueel niveau worden voor historie alléén indicatie materiële
 historie en indicatie formele historie bij een attribuut of relatie vastgelegd,
-en dus géén bij de tijdslijnen behorende attributen die gebruikt moeten worden
-voor het vastleggen van historie. Deze bij de tijdslijn behorende attributen
+en dus géén bij de tijdlijnen behorende attributen die gebruikt moeten worden
+voor het vastleggen van historie. Deze bij de tijdlijn behorende attributen
 worden op het logische niveau vastgelegd.
 
 ### Historie op logisch niveau
 MIM schrijft geen implementatie van het conceptuele niveau voor.  Wel worden er aandachtspunten gegeven om rekening mee te houden. Denk bij de uitwerking o.a. aan de volgende aspecten:
 
 -   Het bijhouden van historie met specifieke attributen per objecttype, zoals
-    bijvoorbeeld: bouwjaar pand, of met generieke tijdslijnattributen attributen
+    bijvoorbeeld: bouwjaar pand, of met generieke tijdlijnattributen attributen
     die gelden voor alle objecttypes, zoals begindatum geldigheid. Denk aan de
     attribuutsoort en/of gegevensgroeptype (herbruikbaar);
 -   historie bijhouden per attribuut (en relatie) of per versie van een object.

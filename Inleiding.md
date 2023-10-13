@@ -124,7 +124,7 @@ Dit niveau is volledig in scope van MIM.
 
 Ten aanzien van logische informatiemodellen:
 - Een conceptueel informatiemodel is onafhankelijk van standaarden voor gegevensuitwisseling.
-  Een logisch informatiemodel past deze wel toe (denk aan identificaties, geometrie versies, tijdslijnen van historie)  
+  Een logisch informatiemodel past deze wel toe (denk aan identificaties, geometrie versies, tijdlijnen van historie)  
 - Een conceptueel informatiemodel beschrijft de informatie in een informatiemdomen en is onafhankelijk van een koppelvlak of keten, 
 oftewel is keten of koppelvlak overstijgend. Een logisch informatiemodel is specifiek voor een koppelvlak of keten of een 
 bepaalde toepassing (met bijbehorende implementatie, database en interfaces).
