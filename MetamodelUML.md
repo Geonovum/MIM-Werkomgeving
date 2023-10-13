@@ -4,12 +4,12 @@ Dit hoofdstuk beschrijft hoe je met de modelelementen uit het hoofdstuk [Metamod
 
 ## Structuur metamodel in UML
 
-De eerste paragraaf bevat UML-diagrammen. Elk diagram toont een aantal modelelementen. Het geheel van diagrammen, in samenhang, is opgenomen in de [bijlagen](#diagrammen). Uitgangspunten voor het metamodel in UML zijn:
+De eerste paragraaf bevat UML-diagrammen. Elk diagram toont een aantal modelelementen. Het geheel van diagrammen, in samenhang, is opgenomen in bijlage [[[#diagrammen]]]. Uitgangspunten voor het metamodel in UML zijn:
 
  - UML 2.5 als de basis voor de conceptuele beschrijving.
  - Gebruik maken van de bestaande UML-modelelementen conform UML van OMG. OMG noemt dit een UML metaclass. Een voorbeeld hiervan is UML-Class.
  - Daar waar (semantisch) nodig extensiemechanismen toepassen met
-  behoud van de betekenis van de UML-metaklassen. Het modelelement is dan een MIM-metaklasse. Hoe deze zich verhouden tot UML is weergegeven in de [bijlage](https://example.com).
+  behoud van de betekenis van de UML-metaklassen. Het modelelement is dan een MIM-metaklasse. Hoe deze zich verhouden tot UML is weergegeven in bijlage [[[#diagrammen]]].
  - Eén stereotype per modelelement hanteren.
  - Twee verschillende stereotypen hebben nooit dezelfde betekenis. 
  - Stereotypes worden toegepast als er een verbijzondering van een UML-constructie nodig is met behoud van de betekenis van de UML-metaklasse.
@@ -36,13 +36,13 @@ stereotype.
 | ----------------- | -------------- | --------------------- | ---- | --------- | ---------- |
 | Objecttype        | «Objecttype»   | (UML) Class           |      | Class     |            |
 
-De links kolom bevat het MIM modelelement, zoals bedoeld in het hoofdstuk [Metamodel Algemeen]. De 2e en 3e kolom bevatten de uitdrukking van het MIM in UML, versie 2.5. De 2e en 5e kolom bevatten de uitdrukking van het MIM in Sparx Enterprise Architect. Deze gebruikt Class (i.p.v. UML-Class). Deze UML tool is (uiteraard) geen onderdeel van de MIM specificatie. Het is zeker niet verplicht om deze te gebruiken, u kunt uw eigen tool gebruiken. Deze kolom staat erbij om illustratief aan te geven dat het soms nodig kan zijn om, afhankelijk van de tool, net iets specifieker aan te geven hoe het MIM in de tool exact uitgedrukt wordt. In de 6e kolom is ruimte gereserveerd om gebruik van een andere tool te duiden.
+De linker kolom bevat het MIM modelelement, zoals bedoeld in [[[#metamodel-algemeen]]]. De 2e en 3e kolom bevatten de uitdrukking van het MIM in UML, versie 2.5. De 2e en 5e kolom bevatten de uitdrukking van het MIM in Sparx Enterprise Architect. Deze gebruikt Class (i.p.v. UML-Class). Deze UML tool is (uiteraard) geen onderdeel van de MIM specificatie. Het is zeker niet verplicht om deze te gebruiken, u kunt uw eigen tool gebruiken. Deze kolom staat erbij om illustratief aan te geven dat het soms nodig kan zijn om, afhankelijk van de tool, net iets specifieker aan te geven hoe het MIM in de tool exact uitgedrukt wordt. In de 6e kolom is ruimte gereserveerd om gebruik van een andere tool te duiden.
 
 <aside class="issue" title="Diagram in samenhang">
   <p>Zie: eerdere opmerking over ontbreken diagram in modelelementen in samenhang.</p>
 </aside>
 
-Bijna alle modelelementen hebben een UML-metaclass (UML 2.5) als basis. In het diagram heeft een UML-metaclass een lichtblauwe kleur. Dit is ook opgenomen in diagramvorm. Een overzicht van de diagrammen met metadata is beschikbaar in de [bijlagen](#diagrammen).
+Bijna alle modelelementen hebben een UML-metaclass (UML 2.5) als basis. In het diagram heeft een UML-metaclass een lichtblauwe kleur. Dit is ook opgenomen in diagramvorm. Een overzicht van de diagrammen met metadata is beschikbaar in bijlage [[[#diagrammen]]].
 
 ### Kern
 
@@ -246,7 +246,7 @@ View 3c: Groepering
 ## Specificatie metagegevens in UML
 
 Deze paragraaf is een aanvulling op de paragraaf *'Specificatie metagegevens'*
-in het hoofdstuk [Metamodel Algemeen](#metamodel-algemeen).
+in [[[#metamodel-algemeen]]].
 
 <aside class="issue" title="Tekst verplaatsen naar andere plek in dit hoofdstuk">
 
@@ -413,7 +413,7 @@ De gegevensgroeptypen worden naar de volgende aspecten gespecificeerd:
 
 Het metamodel heeft twee manieren om een relatie tussen twee objecttypen te
 beschrijven. Deze keuze wordt aangegeven in de eigen extensie, zoals beschreven
-in paragraaf [alternatieven](#alternatieven). Alleen het gekozen alternatief is relevant voor de modellering in uw informatiemodel. Welke alternatief je ook kiest: beide hanteren <code>«Relatiesoort»</code> en <code>«Relatierol»</code>, maar met andere regels voor gebruik.
+in [[[#alternatieven]]]. Alleen het gekozen alternatief is relevant voor de modellering in uw informatiemodel. Welke alternatief je ook kiest: beide hanteren <code>«Relatiesoort»</code> en <code>«Relatierol»</code>, maar met andere regels voor gebruik.
 
 **Alternatief 1: Relatiesoort is leidend**
 
@@ -881,8 +881,8 @@ Informatiemodel packages worden naar de volgende aspecten gespecificeerd:
 | **MIM extensie**           | 0..1               | *De aanduiding van een extensie op MIM.*                     |                                      |      | *Tagged value* |            |
 |                            |                    | *Bijvoorbeeld: Kadaster of NEN3610:2020*                     |                                      |      |                |            |
 | **MIM taal**               | 0..1               | *De aanduiding van de taal die gebruikt is voor de modelelementen.*  *Bijvoorbeeld: EN of NL* |                                      |      | *Tagged value* |            |
+| **Relatiemodelleringtype** | 1                  | Algemeen metagegeven.    Toelichting Type informatiemodel: zoals bedoeld in [[[#typering-van-modellen-en-wat-wel-en-niet-in-scope-is-van-deze-standaard]]]. Alle packages, oftewel «Domein» en «View», binnen het informatiemodel hebben hetzelfde type als het informatiemodel zelf. |                                      |      | *Tagged value* |            |
 | heeft **Constraint** | 0..* | Binding aan een constraint. |   | | *Constraint* | | 
-| **Relatiemodelleringtype** | 1                  | Algemeen metagegeven.    Toelichting Type informatiemodel: zoals bedoeld in paragraaf 1.5. Alle packages, oftewel «Domein» en «View», binnen het informatiemodel hebben hetzelfde type als het informatiemodel zelf. |
 | **Basis-URI**    | 0..1    | Algemeen metagegeven. *Het niet-unieke deel van de URI van ieder modelelement in deze package* |                |      | *Tagged value* |            |                                      |      | *Tagged value* |            |
 
 #### «View»
