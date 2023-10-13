@@ -28,7 +28,6 @@ In **versie 1.2** zijn de volgende issues verwerkt:
 | [336](https://github.com/Geonovum/MIM-Werkomgeving/issues/336)  | Aanpassen naamgeving en verwijzing van `Alias` in tabel specificatie metagegevens in LD.      |
 
 
-
 <!-- | [148](https://github.com/Geonovum/MIM-Werkomgeving/issues/148)  | Toevoegen beschrijving uitzondering: wanneer `Relatieklasse` modelleren als `Objecttype`.     | -->
 <!-- | [151](https://github.com/Geonovum/MIM-Werkomgeving/issues/151)  | Toevoegen twee metagegevens om aan te geven welke historie wordt bijgehouden.                 | -->
 <!-- | [253](https://github.com/Geonovum/MIM-Werkomgeving/issues/253)  | Aanpassen definitie en toelichtring codelijst  
