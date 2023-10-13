@@ -33,7 +33,7 @@ Deze paragraaf bevat een overzicht van het metamodel voor informatiemodellering,
 - [Datatypen](#datatypen): de in het model te onderkennen soorten datatypen.
 - [Overige modelelementen](#overige-modelelementen): elementen die niet altijd aan de orde zijn
 
-Elk modelelement heeft een `«MIM metaclass»` met een naam. Hieraan is elk modelelement te herkennen in alle diagrammen, in de tekst én in elke specificatietaal die een uitdrukking is van dit metamodel. Bij de modelelementen zijn in deze diagrammen geen beschrijvende kenmerken opgenomen (bijvoorbeeld [metagegevens](#specificatie-metagegevens) zoals: naam, definitie, enzovoorts). In de [diagrammen](#diagrammen) in de bijlage zijn deze wel opgenomen.
+Elk modelelement heeft een `«MIM metaclass»` met een naam. Hieraan is elk modelelement te herkennen in alle diagrammen, in de tekst én in elke specificatietaal die een uitdrukking is van dit metamodel. Bij de modelelementen zijn in deze diagrammen geen beschrijvende kenmerken opgenomen (bijvoorbeeld [metagegevens](#specificatie-metagegevens) zoals: naam, definitie, enzovoorts). In bijlage [](#diagrammen) zijn deze wel opgenomen.
 
 ### Modelelement
 
@@ -858,8 +858,8 @@ Dit kan bijvoorbeeld uitgebreid worden met: "technisch" wanneer er behoefte is o
 
 *Toelichting*
 Dit kan zijn "Relatiesoort leidend" of "Relatierol leidend". Dit
-betreft de keuze die je maakt voor het in paragraaf [Alternatieven](#alternatieven) gekozen
-alternatief. Er moet een keuze gemaakt worden. Deze keuze geldt primair voor de modelelementen relatiesoort en relatiedoel zoals bedoeld in 3.2.2. maar geldt in het verlengde hiervan voor het modelelement externe koppeling.
+betreft de keuze die je maakt voor het in [](#alternatieven) gekozen
+alternatief. Er moet een keuze gemaakt worden. Deze keuze geldt primair voor de modelelementen relatiesoort en relatiedoel zoals bedoeld in [](#relaties-in-uml). maar geldt in het verlengde hiervan voor het modelelement externe koppeling.
 
 *Toepassing*: informatiemodel (verplicht)
 
@@ -962,7 +962,7 @@ Hieronder volgen eerst de algemene metagegevens. Dit zijn metagegevens zoals `Na
 
 *Toelichting*
 
-Bijvoorbeeld: `"Pand"` is de naam van het modelelement `Objecttype`, `"bouwjaar"` is de naam van het modelelement `Attribuutsoort`. De modelelementen zijn limitatief opgesomd in het hoofdstuk [Betekenis modelelementen](#betekenis-modelelementen) (en eventueel zijn in een uitbreiding extra modelelementen limitatief opgesomd).
+Bijvoorbeeld: `"Pand"` is de naam van het modelelement `Objecttype`, `"bouwjaar"` is de naam van het modelelement `Attribuutsoort`. De modelelementen zijn limitatief opgesomd in [](#metamodel-algemeen) (en eventueel zijn in een uitbreiding extra modelelementen limitatief opgesomd).
 
 *Toepassing*: alle modelelementen.
 
@@ -991,8 +991,8 @@ Opmerking: een uitzondering is gemaakt voor UML-modellen voor de UML-Enumeration
 *Toelichting*
 
 Hiermee wordt aangegeven hoe een informatiemodel element zich verhoudt tot de
-begrippen uit het begrippenkader, zoals genoemd in paragraaf [Typen Informatiemodellen](#typen-informatiemodellen).
-Dit is niet een 1 op 1 relatie. Voor meer informatie hierover, zie hoofdstuk [Afspraken & Regels](#afspraken-regels).
+begrippen uit het begrippenkader, zoals genoemd in [](#typering-van-modellen-en-wat-wel-en-niet-in-scope-is-van-deze-standaard).
+Dit is niet een 1 op 1 relatie. Voor meer informatie hierover, zie [](#afspraken-regels).
 
 Bijvoorbeeld: Perceel of
 http://brk.basisregistraties.overheid.nl/id/begrip/Perceel
@@ -1224,7 +1224,7 @@ Formele historie geeft aan wanneer in de administratie een verandering bekend is
 
 Indien een `«Attribuutsoort»` deel uit maakt van een `«Gegevensgroeptype»`, dan wordt de kardinaliteit vermeld van het `«Attribuutsoort»` binnen het `«Gegevensgroeptype»`. Voor de uiteindelijke kardinaliteit van hoe vaak een gegeven voorkomt bij het object moet rekening gehouden worden met de kardinaliteit van de gegevensgroep en met de kardinaliteit van de `«Attribuutsoort»`.
 
-Merk op dat het zo kan zijn dat een object het kenmerk wel degelijk heeft/zou moeten hebben, maar dat het vooralsnog niet gelukt is om dit gegeven in te winnen of te achterhalen. Het is dan bekend dat het object dit kenmerk wel degelijk heeft, maar de waarde ervan is onbekend. De kardinaliteit wordt dan niet van `1` naar `0` gezet, maar er wordt aangegeven dat er sprake is van mogelijk geen waarde. Meer hierover is beschreven in het hoofdstuk [Afspraken & Regels](#afspraken-regels).
+Merk op dat het zo kan zijn dat een object het kenmerk wel degelijk heeft/zou moeten hebben, maar dat het vooralsnog niet gelukt is om dit gegeven in te winnen of te achterhalen. Het is dan bekend dat het object dit kenmerk wel degelijk heeft, maar de waarde ervan is onbekend. De kardinaliteit wordt dan niet van `1` naar `0` gezet, maar er wordt aangegeven dat er sprake is van mogelijk geen waarde. Meer hierover is beschreven in [](#afspraken-regels).
 
 Een `«Generalisatie»` is een bijzondere vorm van een relatie. De kardinaliteit van de bron en van het doel is hier altijd en per definitie `1..1`. Dit hoeft daarom nooit via een aanduiding van een kardinaliteit te worden aangegeven.
 

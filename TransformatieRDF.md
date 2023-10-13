@@ -36,7 +36,7 @@ vb:Pakjesboot12 a vbo:Schip.
 
 Dit document beschrijft hoe deze vertaling van het MIM model in RDF naar een RDFS-gebaseerde ontologie plaatsvindt. Daarbij zal niet alleen gebruik worden gemaakt van RDFS, maar ook van de OWL, SHACL en SKOS vocabulaires. De vertaling wordt zo veel mogelijk als SPARQL rules beschreven, zodat een machinale vertaling mogelijk is.
 
-De vertaling is omkeerbaar. Op deze wijze kan een regulier Linked Data model in RDF/RDFS/OWL/SHACL worden gezien als een MIM compliant model. De SPARQL rules die vanuit een RDFS-gebaseerde ontologie de vertaling maken naar een MIM model in RDF, zijn daarom ook beschreven en opgenomen in paragraaf [Transformatie vanuit RDFS/OWL/SHACL](#transformatie-vanuit-rdfs-owl-shacl).
+De vertaling is omkeerbaar. Op deze wijze kan een regulier Linked Data model in RDF/RDFS/OWL/SHACL worden gezien als een MIM compliant model. De SPARQL rules die vanuit een RDFS-gebaseerde ontologie de vertaling maken naar een MIM model in RDF, zijn daarom ook beschreven en opgenomen in [](#transformatie-vanuit-rdfs-owl-shacl).
 
 ## Gebruikte functies
 
