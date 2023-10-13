@@ -41,12 +41,12 @@ let respecConfig = {
   editors:
   [
     {
-      name:       "Dick Krijtenburg",
+      name:       "Paul Janssen",
       company:    "Geonovum",
       companyURL: "https://www.geonovum.nl"
     },
     {
-      name:       "Paul Janssen",
+      name:       "Dick Krijtenburg",
       company:    "Geonovum",
       companyURL: "https://www.geonovum.nl"
     },
@@ -55,11 +55,6 @@ let respecConfig = {
       company:    "Geonovum",
       companyURL: "https://www.geonovum.nl"
     },
-    {
-      name:       "Lennart van Bergen",
-      company:    "Kadaster",
-      companyURL: "https://www.kadaster.nl"
-    },
   ],
   //-- de namen van de auteur(s) ------------------------------------------------------
   //-- vul in: per auteur: name:, company:, companyURL: -------------------------------
@@ -67,13 +62,13 @@ let respecConfig = {
   [
     {
       name:       "Lennart van Bergen",
-      company:    "Kadaster",
-      companyURL: "https://www.kadaster.nl"
+      company:    "Belastingdienst",
+      companyURL: "https://www.belastingdienst.nl"
     },
     {
-      name:       "Thies Mesdag",
-      company:    "Kadaster",
-      companyURL: "https://www.kadaster.nl"
+      name:       "Johan Boer",
+      company:    "VNG Realisatie",
+      companyURL: "https://www.vngrealisatie.nl/"
     },
     {
       name:       "Marco Brattinga",
@@ -91,9 +86,9 @@ let respecConfig = {
       companyURL: "https://www.geonovum.nl"
     },
     {
-      name:       "Johan Boer",
-      company:    "VNG Realisatie",
-      companyURL: "https://www.vngrealisatie.nl/"
+      name:       "Thies Mesdag",
+      company:    "Kadaster",
+      companyURL: "https://www.kadaster.nl"
     },
   ],
   //neem hier de URL van de github repository op waar het respec document in staat
