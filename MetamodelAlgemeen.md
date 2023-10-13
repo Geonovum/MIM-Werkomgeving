@@ -736,13 +736,12 @@ Diagram: [Overige](#overige)
 #### Constraint
 
 <aside class="definition">
-  <dfn>Constraint</dfn>Een conditie of een beperking, die over een of meerdere modelelementen uit het informatiemodel geldt.
+  <dfn>Constraint</dfn>Een conditie of een beperking, die voor één of meerdere modelelementen uit het informatiemodel geldt.
 </aside>
 
-*Toelichting:* Een constraint kan vastgelegd worden bij alle modelelementen. Echter, meestal
-komt een constraint voor bij een objecttype, om te aan te geven dat de
-constraint geldt voor 2 (of meer) eigenschappen van een objecttype, of om een
-bijzondere specificatie toe te voegen die niet via de bestaande modelelementen gelegd kan worden zoals een 11-proef. Een constraint wordt altijd in gewone tekst omschreven en kan optioneel als formele specificatie worden aangegeven.
+*Toelichting:* Een `Constraint` wordt opgenomen om een constructie uit te drukken die niet via bestaande modelelementen is uit te drukken. De `Constraint` wordt dan toegevoegd om de extra informatie formeel vast te leggen. Meestal wordt een `Constraint` vastgelegd op het niveau van een modelelement met eigenschappen zoals een <code><a>Objecttype</a></code>, <code><a>Gegevensgroeptype</a></code> en <code><a>Relatieklasse</a></code> om specifieke condities over die eigenschappen vast te leggen. Een voorbeeld is de [een 11-proef](https://nl.wikipedia.org/wiki/Elfproef) op een <code><a>Datatype</a></code> van een <code><a>Attribuutsoort</a></code>. Een `Constraint` wordt altijd in _gewone tekst_ omschreven en kan _optioneel als formele specificatie_ worden aangegeven.
+
+Er zit bij een `Constraint` een _belangrijk verschil tussen betrekken en vastleggen_: **_betrekken_** bepaalt de modelelementen waar de `Constraint` op van toepassing is en **_vastleggen_** bepaalt wat de context van de `Constraint` is, het modelelement vanuit waar de `Constraint` geldt. Zo kan een constraint die van toepassing is op toegestane waarden van een attribuutsoort vastgelegd worden bij het objecttype dat de attribuutsoort gebruikt.
 
 #### Keuze
 
@@ -898,9 +897,9 @@ Bijvoorbeeld: `1.0.1` of `1.1` of `1.1.1`
 
  ### Modelelementidentificatie - metagegevens
 
-Informatiemodellen staan vaak niet op zichzelf. Ze kunnen elementen bevatten die refereren aan externe standaarden, waarin deze elementen een eigen identificatie hebben. Ook moeten de gemodelleerde elementen herbruikbaar zijn in andere modellen. Daarom is het nodig om de modelelementen uniek te kunnen identificeren. Wanneer een MIM-model uitgedrukt wordt in een Linked Data-ontologie is het zelfs noodzakelijk om de modelelementen identificeren als Linked Data. De metagegevens <code><a>Basis-URI</a></code>, <code><a>URI</a></code> en <code><a>is gedefinieerd in</a></code> maken het mogelijk om de modelelementen in een Linked Data-ontologie te identificeren.
+Informatiemodellen staan vaak niet op zichzelf. Ze kunnen elementen bevatten die refereren aan externe standaarden, waarin deze elementen een eigen identificatie hebben. Ook moeten de gemodelleerde elementen herbruikbaar zijn in andere modellen. Daarom is het nodig om de modelelementen uniek te kunnen identificeren. Wanneer een MIM-model uitgedrukt wordt in een Linked Data-model is het zelfs noodzakelijk om de modelelementen identificeren met een [[URI]]. De metagegevens <code><a>Basis-URI</a></code>, <code><a>URI</a></code> en <code><a>is gedefinieerd in</a></code> maken het mogelijk om de modelelementen in een Linked Data-model te identificeren.
 
-Een informatiemodel moet echter ook gebruikt kunnen worden zonder dat er vastgestelde (http-)uri's beschikbaar zijn (bijvoorbeeld tijdens de ontwikkelfase). In dit geval kan een `URN` op basis van de package alias en de naam van het modelelement bepaald worden. De defaultwaarde voor de `Basis-URI` van een informatiemodel is dan `urn:` + `informatiemodel.naam`, bijvoorbeeld `"urn:imbag"`. De identificatie van een objecttype Pand uit het IMBAG model wordt dan `"urn:imbag:pand"`.
+
 
 #### Metagegeven: **Basis-URI**
 
@@ -908,9 +907,14 @@ Een informatiemodel moet echter ook gebruikt kunnen worden zonder dat er vastges
   <dfn>Basis-URI</dfn>De standaard basis-URI voor elk element in dit informatiemodel.
 </aside> 
 
-*Toelichting* Een _uniform resource identifier_ (URI) is een compacte reeks tekens die een abstracte of fysieke bron identificeert. Een `Basis-URI` is het gemeenschappelijke deel van deze reeks tekens die voor alle elementen in het informatiemodel geldig is. Dit metagegeven is verplicht. De `Basis-URI` bevat altijd een `scheme`, dit kan bijvoorbeeld `http://` of `urn` zijn. En voldoet aan een gekozen URI-strategie.
+*Toelichting* Een _uniform resource identifier_ (URI) is een compacte reeks tekens die een abstracte of fysieke resource identificeert. Een `Basis-URI` is het gemeenschappelijke deel van deze reeks tekens die voor alle elementen in het informatiemodel geldig is. De `Basis-URI` bevat altijd een `scheme`, dit kan bijvoorbeeld `http://` of `urn` zijn. En voldoet aan een gekozen URI-strategie. Wanneer er geen basis-URI is gespecificeerd wordt deze over genomen van de eerst bovenliggende package met een basis-URI.
 
-*Toepassing*: informatiemodel (verplicht), domein, view (optioneel)
+Een informatiemodel moet echter ook gebruikt kunnen worden zonder dat er vastgestelde (http-)uri's beschikbaar zijn (bijvoorbeeld tijdens de ontwikkelfase). In dit geval kan een [[URN]] op basis van de package alias en de naam van het modelelement bepaald worden. Wanneer er geen basis-URI is gespecificeerd wordt deze overgenomen van de eerst bovenliggende package met een basis-URI. Wanneer deze er niet is, wordt er een default waarde bepaald conform het patroon `urn:modelelement: + {informatiemodel.naam}: + {package.naam}:`. De defaultwaarde voor de `Basis-URI` van een informatiemodel is dan `urn:modelelement:` + `informatiemodel.naam`, bijvoorbeeld `"urn:modelelement:imbaglv"`. Iedere onderliggende package krijgt ook een default Basis-URI die gelijk is aan de basis-URI van het informatiemodel gevolgd door `package.naam`, bijvoorbeeld `"urn:modelelement:imbaglv:objecten`. Dit is noodzakelijk omdat niet alle namen binnen een informatiemodel per definitie uniek zijn (denk aan een objecttype "Locatie" in een domein "Locatie"). De `URI` van een attribuutsoort "huisnummer" bij een "nummeraanduiding" in domein "objecten" uit het IMBAGLV model wordt dan `"urn:modelelement:imbaglv:objecten:nummeraanduiding.huisnummer"`. 
+*Toepassing*: informatiemodel (verplicht), domein, view, extern
+
+<aside class="note">
+  Wanneer er gebruik wordt gemaakt van de defaultwaarde van de basis-URI is er geen garantie dat er een globaal unieke URI opgebouwd wordt. De defaultwaarde resulteert altijd in unieke URI's binnen het informatiemodel.
+</aside>
 
 #### Metagegeven: **URI**
 
@@ -918,11 +922,11 @@ Een informatiemodel moet echter ook gebruikt kunnen worden zonder dat er vastges
   <dfn>URI</dfn>De identificatie van een modelelement.
 </aside>
 
-*Toelichting* De URI kan op twee manieren voorkomen, als **urn-URI**: `<urn:object:Pand` of als **http-URI**: `<http://.../def#Pand>`. De `URI` kan bepaald worden aan de hand van de <code><a>Naam</a></code> van het modelelement en de `Basis-URI` van de _package_ waarin het modelelement zich bevindt. Dit kunnen we opbouwen op basis van de `Basis-URI` samen met de `Naam` van het modelelement (op logisch niveau conform de naamgevingsconventies). In de meeste gevallen zal een modelleur dit metagegeven daarom niet invullen. 
+*Toelichting* De URI kan bijvoorbeeld op de volgende twee manieren voorkomen, als **urn-URI**: `<urn:modelelement:imbaglv:objecten:Pand` of als **http-URI**: `<http://.../def#Pand>`. De `URI` kan bepaald worden aan de hand van de <code><a>Naam</a></code> van het modelelement en de `Basis-URI` van de _package_ waarin het modelelement zich bevindt (op logisch niveau conform de naamgevingsconventies). Dit vormt de default waarde. In de meeste gevallen zal een modelleur dit metagegeven niet expliciet invullen maar uitgaan van de defaultwaarde.
 
 In sommige gevallen kan de `URI` van een modelelement niet bepaald worden aan de hand van de `Basis-URI` van de bijbehorende _package_ en de `Naam` van een modelelement. Bijvoorbeeld als gevolg van de gekozen URI-strategie of wanneer een <code><a>Attribuutsoort</a></code> uit een ander informatiemodel hergebruikt wordt (e.g. `nen3610-2022:identificatie`). In dit geval zal de modelleur het metagegeven `URI` wel invullen.
 
-*Toepassing*:  alle modelelementen (optioneel)
+*Toepassing*:  alle modelelementen
 
 #### Metagegeven: **is gedefinieerd in**
 
@@ -930,7 +934,7 @@ In sommige gevallen kan de `URI` van een modelelement niet bepaald worden aan de
   <dfn>is gedefinieerd in</dfn>De package waarin het modelelement gedefinieerd is.
 </aside>
 
-*Toelichting* De definiërende _package_ is meestal de _package_ die het modelelement bevat. De waarde voor dit metagegeven kan wanneer dit het geval is afgeleid worden. In afwijkende situaties moet de `URI` van de betreffende _package_ ingevuld worden. Een _package_ van het type <code><a>View</a></code> definieert nooit de modelelementen die het bevat, dit is altijd een ander _package_ van het type <code><a>Domein</a></code>. Het verschil met het metagegeven <code><a>Herkomst</a></code> is dat dit een directe verwijzing is naar een informatiemodel of een _package_ daarbinnen. 
+*Toelichting* De definiërende _package_ is meestal de _package_ die het modelelement bevat. De waarde voor dit metagegeven kan, wanneer dit het geval is, afgeleid worden. In afwijkende situaties moet de `URI` van de betreffende _package_ ingevuld worden. Een _package_ van het type <code><a>View</a></code> definieert nooit de modelelementen die het bevat, dit is altijd een ander _package_ van het type <code><a>Domein</a></code>. Het verschil met het metagegeven <code><a>Herkomst</a></code> is dat `Is gedefinieerd in` een directe verwijzing is naar een informatiemodel of een _package_ daarbinnen door middel van een `URI`. 
 
 *Toepassing*: alle modelelementen
 
@@ -1944,11 +1948,9 @@ Verkorte schrijfwijze: **constraint**
   <dfn>heeft constraint</dfn>De binding van een constraint aan een modelelement.
 </aside>
 
-Het modelelement die een constraint heeft kan zijn: `Objecttype`, `Relatieklasse`, `Gegevensgroeptype`.
-
 *Toelichting*
 
-Een constraint is gekoppeld aan de context van modelelement waarop ze van toepassing is. Dit modelelement kan zijn: `Objecttype`, `Gegevensgroeptype` of `Relatieklasse`.
+Een `Constraint` is gekoppeld aan de context van modelelement waarop ze van toepassing is. Een `Constraint` kan op alle typen modelelementen worden toegepast.
 
 ### Toegestane waarden metagegevens
 
@@ -1992,6 +1994,7 @@ Aanwijzing MIM-beheerder: metagegevens met een defaultwaarde mogen niet optionee
 
 | **Metagegeven**                     | **Defaultwaarde** |
 |-------------------------------------|-------------------|
+| Basis-URI (Informatiemodel)         | `urn:modelelement: + {informatiemodel.naam}:` |
 | Indicatie materiële historie        | `Nee`             |                                                        
 | Indicatie formele historie          | `Nee`             |                                                        
 | Indicatie classificerend            | `Nee`             |

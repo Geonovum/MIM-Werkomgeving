@@ -71,6 +71,7 @@ shape:Attribuutsoort a sh:NodeShape;
   sh:property shape:maximumwaardeExclusief;
   # Eigenschappen alleen in de specificatietabel
   sh:property shape:identificerend;
+  sh:property shape:constraint;
 .
 shape:Gegevensgroep a sh:NodeShape;
   sh:targetClass mim:Gegevensgroep;
@@ -91,6 +92,7 @@ shape:Gegevensgroep a sh:NodeShape;
   sh:property shape:indicatieFormeleHistorie;
   sh:property shape:kardinaliteit;
   sh:property shape:authentiek;
+  sh:property shape:constraint;
 .
 shape:Gegevensgroeptype a sh:NodeShape;
   sh:targetClass mim:Gegevensgroeptype;
@@ -141,6 +143,7 @@ shape:Relatiesoort a sh:NodeShape;
   sh:property shape:mogelijkGeenWaarde;
   # Niet benoemed
   sh:property shape:relatierol;
+  sh:property shape:constraint;
 .
 shape:Relatierol a sh:NodeShape;
   sh:targetClass mim:Relatierol;
@@ -163,6 +166,7 @@ shape:Relatierol a sh:NodeShape;
   sh:property shape:indicatieFormeleHistorie;
   sh:property shape:authentiek;
   sh:property shape:mogelijkGeenWaarde;
+  sh:property shape:constraint;
 .
 shape:Generalisatie a sh:NodeShape;
   sh:targetClass mim:Generalisatie;
@@ -171,6 +175,7 @@ shape:Generalisatie a sh:NodeShape;
   sh:property shape:subtype;
   sh:property shape:supertype;
   sh:property shape:datumOpname;
+  sh:property shape:constraint;
 .
 shape:Relatieklasse a sh:NodeShape;
   sh:targetClass mim:Relatieklasse;
@@ -223,6 +228,7 @@ shape:ExterneKoppeling a sh:NodeShape;
   sh:property shape:aggregatietype;
   sh:property shape:doel;
   sh:property shape:unidirectioneel;
+  sh:property shape:constraint;
 .
 shape:Referentielijst a sh:NodeShape;
   sh:targetClass mim:Referentielijst;
@@ -239,6 +245,7 @@ shape:Referentielijst a sh:NodeShape;
   sh:property shape:toelichting;
   sh:property shape:locatie;
   sh:property shape:referentieElement;
+  sh:property shape:constraint;
 .
 shape:ReferentieElement a sh:NodeShape;
   sh:targetClass mim:ReferentieElement;
@@ -262,6 +269,7 @@ shape:ReferentieElement a sh:NodeShape;
   sh:property shape:minimumwaardeExclusief;
   sh:property shape:maximumwaardeInclusief;
   sh:property shape:maximumwaardeExclusief;
+  sh:property shape:constraint;
 .
 shape:Codelijst a sh:NodeShape;
   sh:targetClass mim:Codelijst;
@@ -277,6 +285,7 @@ shape:Codelijst a sh:NodeShape;
   sh:property shape:datumOpname;
   sh:property shape:toelichting;
   sh:property shape:locatie;
+  sh:property shape:constraint;
 .
 shape:Datatype a sh:NodeShape;
   #ISSUE Datatype zelf wordt niet gespecificeerd
@@ -299,6 +308,7 @@ shape:PrimitiefDatatype a sh:NodeShape;
   sh:property shape:formeelPatroon;
   sh:property shape:herkomst;
   sh:property shape:datumOpname;
+  sh:property shape:constraint;
 .
 shape:GestructureerdDatatype a sh:NodeShape;
   sh:targetClass mim:GestructureerdDatatype;
@@ -316,6 +326,7 @@ shape:GestructureerdDatatype a sh:NodeShape;
   sh:property shape:formeelPatroon;
   sh:property shape:datumOpname;
   sh:property shape:dataElement;
+  sh:property shape:constraint;
 .
 shape:DataElement a sh:NodeShape;
   sh:targetClass mim:DataElement;
@@ -338,6 +349,7 @@ shape:DataElement a sh:NodeShape;
   sh:property shape:minimumwaardeExclusief;
   sh:property shape:maximumwaardeInclusief;
   sh:property shape:maximumwaardeExclusief;
+  sh:property shape:constraint;
 .
 shape:Keuze a sh:NodeShape;
   sh:targetClass mim:Keuze;
@@ -351,6 +363,7 @@ shape:Keuze a sh:NodeShape;
   sh:property shape:definitie;
   sh:property shape:toelichting;
   sh:property shape:datumOpname;
+  sh:property shape:constraint;
 .
 shape:ISAKeuze a sh:PropertyShape;
   sh:name "ISA";
@@ -405,6 +418,7 @@ shape:Informatiemodel a sh:NodeShape;
   sh:property shape:mimextensie;
   sh:property shape:mimtaal;
   sh:property shape:datumOpname;
+  sh:property shape:constraint;
 .
 shape:Domein a sh:NodeShape;
   sh:targetClass mim:Domein;
@@ -412,6 +426,7 @@ shape:Domein a sh:NodeShape;
   sh:property shape:naam;
   sh:property shape:alias;
   sh:property shape:datumOpname;
+  sh:property shape:constraint;
 .
 shape:Extern a sh:NodeShape;
   sh:targetClass mim:Extern;
@@ -425,6 +440,7 @@ shape:Extern a sh:NodeShape;
   sh:property shape:toelichting;
   sh:property shape:herkomst;
   sh:property shape:datumOpname;
+  sh:property shape:constraint;
 .
 shape:View a sh:NodeShape;
   sh:targetClass mim:View;
@@ -438,6 +454,7 @@ shape:View a sh:NodeShape;
   sh:property shape:toelichting;
   sh:property shape:herkomst;
   sh:property shape:datumOpname;
+  sh:property shape:constraint;
 .
 shape:Enumeratie a sh:NodeShape;
   sh:targetClass mim:Enumeratie;
@@ -450,6 +467,7 @@ shape:Enumeratie a sh:NodeShape;
   sh:property shape:toelichting;
   sh:property shape:waarde;
   sh:property shape:datumOpname;
+  sh:property shape:constraint;
 .
 shape:Enumeratiewaarde a sh:NodeShape;
   sh:targetClass mim:Enumeratiewaarde;
@@ -461,6 +479,7 @@ shape:Enumeratiewaarde a sh:NodeShape;
   sh:property shape:begrip;
   sh:property shape:begripsterm;
   sh:property shape:datumOpname;
+  sh:property shape:constraint;
 .
 shape:Constraint a sh:NodeShape;
   sh:targetClass mim:Constraint;
