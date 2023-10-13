@@ -71,12 +71,9 @@ Het MIM model kent geen volgorde. Ondanks dat in de weergave attribuutsoorten in
 
 Een belangrijk gegeven in Linked Data is het munten van URI's. Bij de vertaling van een MIM modelelement naar een overeenkomstige resource in Linked Data vocabulaires zullen ook nieuwe URI's gemunt moeten worden. Enerzijds omdat er (soms) sprake is van meer dan één resource voor één modelelement, maar ook omdat een Linked Data resource wel equivalent is met een MIM modelelement, maar niet exact gelijk: we willen niet dat de formele semantiek van de Linked Data vocabulaires vermengd wordt met de formele semantiek van het MIM metamodel.
 
-Daarnaast geldt dat het in Linked Data gebruikelijk is om URI's over te nemen van andere (externe) vocabulaires c.q. modellen. Ook het MIM ondersteund dit, in de vorm van de mim metamodelklassen `mim:Extern` en `mim:View`. Echter, anders dan bij UML, behoren de modelementen uit deze externe modellen ook de URI's te krijgen die horen bij deze externe modellen. 
+Daarnaast geldt dat het in Linked Data gebruikelijk is om URI's over te nemen van andere (externe) vocabulaires c.q. modellen. Ook het MIM ondersteund dit, in de vorm van de mim metamodelklassen `mim:Extern` en `mim:View`. Echter, anders dan bij UML, behoren de modelementen uit deze externe modellen ook de URI's te krijgen die horen bij deze externe modellen. Ieder modelelement heeft dan ook een metagegeven `mim:uri` waar de vocabulaire URI's op gebasseerd worden.
 
-Het metamodelelement `mim:basisURI` heeft een belangrijke rol bij het bepalen van de URI. De waarde van dit metamodelelement wordt gezien als de namespace-prefix van de URI. Dit betekent dan ook dat alle modelelementen binnen één package normaal gesproken dezelfde namespace krijgen. Gebruikelijk is dan ook dat externe packages de namespace krijgen die behoren bij het externe vocabulaire en de eigen domein-packages de namespace krijgen die behoort bij de eigen vocabulaire. Hierop zijn een aantal uitzonderingen:
-
-1. Indien sprake is van het hergebruiken van een attribuutsoort die ook gedefinieerd is in een externe of view package, dan wordt de `mim:uri` van dit attribuutsoort met een waarde die overeenkomt met de `basisURI` van deze externe of view package. Hierdoor is het mogelijk om een attribuutsoort "label" op te nemen die gemunt wordt met de URI `http://www.w3.org/2000/01/rdf-schema#` (rdfs:label). Ook moet `mim:isGedefinieerdIn` expiciet gevuld worden met de URI van het definierende informatiemodel.
-2. Indien sprake is van een view package, dan wordt de `mim:basisURI` van deze view package alleen gebruikt voor de vocabulaire URI's (voorkomens van `owl:Class`, `owl:DatatypeProperty` en `owl:ObjectProperty`). Voor de voorkomens van shapes (`sh:NodeShape` en `sh:PropertyShape`) wordt juist gebruik gemaakt van de `mim:basisURI` zoals deze bij de eigen informatiemodel is opgegeven. Rationale hierachter is dat bij view-packages de "view" lokaal gedefinieerd is, maar de elementen wel afkomstig zijn uit een externe vocabulaire.
+Indien sprake is van een view package, dan wordt de `mim:basisUri` en/of de expliciet ingevulde `mim:uri` van deze view package alleen gebruikt voor de vocabulaire URI's (voorkomens van `owl:Class`, `owl:DatatypeProperty` en `owl:ObjectProperty`). Voor de voorkomens van shapes (`sh:NodeShape` en `sh:PropertyShape`) wordt juist gebruik gemaakt van de `mim:basisUri` zoals deze bij de eigen informatiemodel is opgegeven. Rationale hierachter is dat bij view-packages de "view" lokaal gedefinieerd is, maar de elementen wel afkomstig zijn uit een externe vocabulaire.
 
 ## Overzicht
 
@@ -188,10 +185,6 @@ Omdat het getransformeerde model daadwerkelijk een nieuw model is, zullen de ele
 
 Een `mim:Objecttype` wordt vertaald naar een `owl:Class` in combinatie met een `sh:NodeShape`.
 
-<aside id='trans-3' class='note'>
-De identificatie van een objecttype is afgeleid van de naam van het objecttype en de basis uri die afgeleid is de package waartoe het objecttype behoord. Aangezien een objecttype binnen een package uniek behoord te zijn conform het MIM, zal hiermee ook een unieke identificatie worden verkregen. Indien in meerdere packages dezelfde namespace wordt gehanteerd, dan dienen over al deze packages ook de namen van objecttypen uniek te zijn. Een dergelijke regel geldt ook voor andere modelelementen die binnen een package vallen.
-</aside>
-
 <pre class='ex-sparql'>
 CONSTRUCT {
   ?class a owl:Class.
@@ -213,7 +206,7 @@ WHERE {
 
 > De typering van gelijksoortige gegevens die voor een objecttype van toepassing is.
 
-Een `mim:Attribuutsoort` wordt vertaald naar een `owl:DatatypeProperty` in combinatie met een  `sh:PropertyShape`.
+Een `mim:Attribuutsoort` wordt vertaald naar een `owl:DatatypeProperty` in combinatie met een `sh:PropertyShape`.
 
 In OWL is een property anders dan in het MIM een *first class citizen*. Dit betekent dat als in twee objecttypen gebruik wordt gemaakt van een attribuutsoort die dezelfde naam heeft, dit leidt tot twee verschillende attribuutsoorten. In OWL zou dit echter leiden tot maar één attribuutsoort, tenzij daadwerkelijk sprake is van verschil in betekenis.
 
@@ -226,11 +219,7 @@ Mocht het veld `mim:begrip` niet gebruikt zijn, dan wordt gekeken naar het veld 
 </aside>
 
 <aside id='trans-5' class='note'>
-De identificatie van een attribuutsoort is afgeleid van de naam van het attribuutsoort en de basis-URI van de package waartoe het Attribuutsoort behoord. Voor de propertyshape geldt dat deze laatste ook nog afhankelijk is van de naam van het objecttype waartoe de attribuutsoort behoord. Aangezien een attribuutsoort binnen zijn objecttype uniek behoord te zijn conform het MIM, zal hiermee ook een unieke identificatie worden verkregen. Voor de identificatie van de propertyshape geldt dat deze uniek moet zijn binnen de package als sprake is van hetzelfde begrip. Een dergelijke regel geldt ook voor andere modelelementen die binnen een objecttype vallen.
-</aside>
-
-<aside id='trans-6' class='note'>
-In een RDF model wordt soms ook gebruik gemaakt van attribuutsoorten die afkomstig zijn uit andere modellen. Dit is mogelijk door de _mim:uri_ van het modelelement in te vullen. Hiermee geldt de basis-URI van de bijbehorende package niet meer en kan een URI uit een extern model overgenomen worden. 
+De identificatie van een attribuutsoort is afgeleid van de `mim:uri` van het attribuutsoort. Voor de propertyshape geldt dat deze ook nog afhankelijk is van de naam van het objecttype waartoe de attribuutsoort behoord. Aangezien een attribuutsoort binnen zijn objecttype uniek behoord te zijn conform het MIM, zal hiermee ook een unieke identificatie worden verkregen. Voor de identificatie van de propertyshape geldt dat deze uniek moet zijn binnen de package als sprake is van hetzelfde begrip. Een dergelijke regel geldt ook voor andere modelelementen die binnen een objecttype vallen.
 </aside>
 
 Indien het datatype van een attribuutsoort gelijk is aan PrimitiefDatatype (of een daarvan afgeleid datatype), dan is sprake van een `owl:DatatypeProperty` en een `sh:nodeKind sh:Literal`. In alle andere gevallen is sprake van een `owl:Objecttype` en een `sh:nodeKind sh:IRI`. Zie ook de transformatie van de eigenschapen `mim:type`.
@@ -275,7 +264,7 @@ WHERE {
 
 Een `mim:Gegevensgroep` wordt vertaald naar een `sh:PropertyShape` in combinatie met een `owl:ObjectProperty`. De nodekind van de propertyshape is een `sh:BlankNode`. Gedachte hierachter is dat de gegevensgroep de verbinding is tussen een objecttype en een gegevensgroeptype. Een gegevensgroeptype is vervolgens een groep van samenhangende attribuutsoorten, wat overeen komt met een class en een nodeshape (zie ook gegevensgroeptype). Omdat een gegevensgroeptype geen eigen identiteit heeft, zal dit gemodelleerd worden als blank node.
 
-De URI van de propertyshape wordt afgeleid van de naam van het modelelement dat de gegevensgroep "bezit" en de naam van de gegevensgroep. De URI van de objectproperty is gelijk aan de mim:uri van de gegevensgroep of wordt afgeleid van de naam van de gegevensgroep en de basis-URI van de bijbehorende package.
+De URI van de propertyshape wordt afgeleid van de naam van het modelelement dat de gegevensgroep "bezit" en de naam van de gegevensgroep. De URI van de `owl:objectProperty` is gelijk aan de mim:uri van de gegevensgroep.
 
 <pre class='ex-sparql'>
 CONSTRUCT {
@@ -332,7 +321,6 @@ Een `mim:Generalisatie` wordt vertaald naar een `rdfs:subClassOf`.
 Generalisatie is in Linked Data ook mogelijk op properties, en daar ook wel gebruikelijk. Dit wordt nu formeel niet door het MIM ondersteunt. Indien in een RDF model een dergelijke situatie zich voordoet, kan dit vertaald worden naar een MIM model waarbij de aspecten `mim:subtype` en `mim:supertype` verwijzen naar een attribuutsoort of relatieklasse.
 </aside>
 
-
 ### Transformatie: Relatiesoort
 
 > De typering van het structurele verband tussen een object van een objecttype en een (ander) object van een ander (of hetzelfde) objecttype.
@@ -341,7 +329,7 @@ In het MIM zijn er twee specificatievormen voor relaties: op basis van `mim:Rela
 
 Een `mim:Relatiesoort` wordt vertaald naar een `sh:PropertyShape` in combinatie met een `owl:ObjectProperty`. De nodekind van de propertyshape is een `sh:IRI`.
 
-De URI van de propertyshape wordt afgeleid van de naam van het modelelement dat de relatiesoort "bezit" en de naam van de relatiesoort. De URI van de objectproperty is gelijk aan de mim:uri van de relatiesoort of wordt afgeleid van de naam van de relatiesoort en de basis-URI van de bijbehorende package.
+De URI van de propertyshape wordt afgeleid van de naam van het modelelement dat de relatiesoort "bezit" en de naam van de relatiesoort. De URI van de `owl:objectProperty` is gelijk aan de mim:uri van de relatiesoort.
 
 <pre class='ex-sparql'>
 CONSTRUCT {
@@ -431,7 +419,7 @@ In het MIM zijn er twee specificatievormen voor relaties: op basis van `mim:Rela
 
 Een `mim:Relatiesoort` wordt vertaald naar een `sh:PropertyShape` in combinatie met een `owl:ObjectProperty`. De nodekind van de propertyshape is een `sh:IRI`.
 
-De URI van de propertyshape wordt afgeleid van de naam van het modelelement dat de relatierol "bezit" en de naam van de relatierol. De URI van de objectproperty is gelijk aan de mim:uri van de relatiesoort of wordt afgeleid van de naam van de relatiesoort en de basis-URI van de bijbehorende package. Aangezien er twee relatierollen gedefinieerd kunnen worden, kan ook sprake zijn van twee properties. In dat geval zijn deze twee properties elkaars inverse.
+De URI van de propertyshape wordt afgeleid van de naam van het modelelement dat de relatierol "bezit" en de naam van de relatierol. De URI van de `owl:objectProperty` is gelijk aan de mim:uri van de relatiesoort. Aangezien er twee relatierollen gedefinieerd kunnen worden, kan ook sprake zijn van twee properties. In dat geval zijn deze twee properties elkaars inverse.
 
 <pre class='ex-sparql'>
 CONSTRUCT {
@@ -880,7 +868,7 @@ De gedachte hierachter, is dat een externe package letterlijk is overgenomen van
 ### Transformatie: View
 > Een groepering van objecttypen die gespecificeerd zijn in een extern informatiemodel en vanuit het perspectief van het eigen informatiemodel inzicht geeft welke gegevens van deze objecttypen relevant zijn binnen het eigen informatiemodel.
 
-Een `mim:View` wordt omgezet naar een `owl:Ontology`. Daarbij geldt dat voor de locatie, de locatie wordt overgenomen uit de package van het type `mim:Domein`. Bovendien wordt een `owl:imports` relatie gelegd tussen de package van het type domein en deze view-package, EN er wordt een `owl:imports` gelegd van de view-package naar een externe locatie, op basis van de locatie bij deze view package.
+Een `mim:View` wordt omgezet naar een `owl:Ontology`. Daarbij geldt dat voor de locatie, de locatie wordt overgenomen uit de package van het type `mim:Informatiemodel`. Bovendien wordt een `owl:imports` relatie gelegd tussen de package van het type informatiemodel en deze view-package, EN er wordt een `owl:imports` gelegd van de view-package naar een externe locatie, op basis van de locatie bij deze view package.
 
 De gedachte hieracter, is dat een view package deels is overgenomen vanuit een extern model. Er zijn aanpassingen gedaan aan de structuur, maar niet aan de betekenis. Dit betekent dat er een "imports" relatie loopt van de domein-package naar de view-package, en vervolgens vanuit de view-package naar de externe package (die hier verder niet is opgenomen).
 
