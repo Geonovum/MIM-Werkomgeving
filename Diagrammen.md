@@ -68,13 +68,22 @@ Dit UML is uitgewerkt voor Objecttype. Voor Gegevensgroeptype en Relatieklasse g
   <figcaption>Diagram: Keuze tussen attribuutsoorten binnen de context van een attribuutsoort met metagegevens</figcaption>
 </figure>
 
-*Keuze tussen relatiedoelen*
+*Keuze tussen relatiedoelen, als nadere invulling van 1 betekenisvolle relatiesoort*
 
 Dit UML is uitgewerkt voor Objecttype. Voor Gegevensgroeptype geldt hetzelfde patroon, behalve dat een Gegevensgroeptype geen doel mag zijn voor een Relatiesoort.
 
 <figure id="KeuzeRelatiedoel4metMetaUML.png">
   <img src="media/KeuzeRelatiedoel4metMetaUML.png" alt="" />
   <figcaption>Diagram: Keuze tussen relatiedoelen met metagegevens</figcaption>
+</figure>
+
+*Keuze tussen relatiesoorten/relatierollen (elk afzonderlijk betekenisvol)*
+
+Dit UML is uitgewerkt voor Objecttype. Voor Gegevensgroeptype geldt hetzelfde patroon, behalve dat een Gegevensgroeptype geen doel mag zijn voor een Relatiesoort.
+
+<figure id="KeuzeRelatiedoel5metMetaUML.png">
+  <img src="media/KeuzeRelatiedoel5MetaUML.png" alt="" />
+  <figcaption>Diagram: Keuze tussen relatiesoorten/relatierollen met metagegevens</figcaption>
 </figure>
  
 *Packages*

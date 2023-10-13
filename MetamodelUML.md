@@ -118,6 +118,7 @@ Er zijn vier situaties waarin een keuze toegepast wordt:
 - Use case 2: een keuze tussen twee of meer attribuutsoorten
 - Use case 3: een keuze tussen meerdere manieren om één betekenisvol attribuutsoort in te vullen
 - Use case 4: een keuze tussen relatiedoelen, als nadere invulling van één betekenisvolle relatiesoort
+- Use case 5: een keuze tussen relatiesoorten/relatierollen (elk afzonderlijk betekenisvol)
 
 Voor elke toepassing geldt een aparte subset van het metamodel. De 'keuzeconstructie' maakt een keuze mogelijk tussen meerdere datatypen, attribuutsoorten, en relatiedoelen. In UML behouden we dezelfde modellering, een datatype blijft dus een datatype, een attribuutsoort een attribuutsoort en een relatiesoort een relatiesoort. De UML elementen die het stereotype keuze krijgen zijn zelf geen datatype, attribuutsoort of relatiedoel. Merk op dat de diagrammen op metamodelniveau zijn gemodelleerd. Hoe dit op informatiemodelniveau uitpakt is onder het diagram beschreven in tekst. 
 
@@ -146,7 +147,7 @@ Dit UML is uitgewerkt voor Objecttype. Voor Gegevensgroeptype en Relatieklasse g
   <figcaption>Diagram: Keuze tussen twee of meer attribuutsoorten</figcaption>
 </figure>
 
-Modellering van het Keuze in een informatiemodel: 
+Modellering van deze Keuze in een informatiemodel: 
 - Modelleer in UML een _UML-Class_ met stereotype _keuze_. 
 - Modelleer hierin 2 of meer MIM-Attribuutsoorten: elk (MIM) Attribuutsoort wordt gemodelleerd zoals gebruikelijk, door een _UML-Property_ (attribute) met stereotype _attribuutsoort_ (en deze UML-Property (attribute) heeft zelf weer als typering een MIM-Datatype). 
 
@@ -164,7 +165,7 @@ Dit UML is uitgewerkt voor Objecttype. Voor Gegevensgroeptype en Relatieklasse g
   <figcaption>Diagram: Keuze tussen meerdere manieren om één betekenisvol attribuutsoort in te vullen</figcaption>
 </figure>
 
-Modellering van de Keuze in een informatiemodel: 
+Modellering van deze Keuze in een informatiemodel: 
 - Modelleer in UML een _UML-Class_ met stereotype _keuze_. 
 - Modelleer hierin twee of meer keuze mogelijkheden door voor elke keuze mogelijkheid een UML-Property (attribute) te modelleren met stereotype _keuze_ (en deze UML-Property heeft als datatype een MIM-Datatype). Aan dit stereotype _keuze_ is te zien dat deze _UML-Property (attribute)_ zelf **geen** (MIM) Attribuutsoort is van het objecttype. Immers, alleen een met stereotype Attribuutsoort aangeduid UML-attribute is een (MIM) Attribuutsoort. 
 
@@ -181,12 +182,29 @@ Dit UML is uitgewerkt voor Objecttype. Voor Gegevensgroeptype geldt hetzelfde pa
   <figcaption>Diagram: Keuze tussen relatiedoelen, als nadere invulling van één betekenisvolle relatiesoort</figcaption>
 </figure>
 
-Modellering van het Keuze in een informatiemodel: 
+Modellering van deze Keuze in een informatiemodel: 
+- Modelleer in UML een _UML-Class_ met stereotype _Keuze_. 
+- Modelleer hierin 2 of meer uitgaande _UML-Association_ met stereotype _Keuze_ die elk een (MIM) Objecttype als relatiedoel hebben. Aan dit stereotype _Keuze_ is te zien dat deze _UML-Association_ zelf **geen** relatiesoort of externe koppeling is.
+
+Gebruik de Keuze voor het (MIM) Objecttype of het (MIM) Gegevensgroeptype: 
+- Modelleer in een (MIM) Objecttype of in een (MIM) Gegevensgroeptype een (MIM) Relatiesoort of (MIM) Externe koppeling. Deze worden gemodelleerd zoals gebruikelijk.
+
+**Use case 5: Keuze tussen relatiesoorten/relatierollen (elk afzonderlijk betekenisvol)**
+
+Dit UML is uitgewerkt voor Objecttype. Voor Gegevensgroeptype geldt hetzelfde patroon, behalve dat een Gegevensgroeptype geen doel mag zijn van een Relatiesoort.
+
+<figure id="KeuzeRelatiedoel4UML">
+  <img src="media/KeuzeRelatiedoel5UML.png" alt="" />
+  <figcaption>Diagram: Keuze tussen relatiedoelen, als nadere invulling van één betekenisvolle relatiesoort</figcaption>
+</figure>
+
+Modellering van deze Keuze in een informatiemodel: 
 - Modelleer in UML een _UML-Class_ met stereotype _keuze_. 
 - Modelleer hierin 2 of meer MIM-Relatiesoorten die elk een relatiedoel hebben. Elke (MIM) Relatiesoort wordt gemodelleerd zoals gebruikelijk, door een _UML-Property_ (association) met stereotype _relatiesoort_ of _externe koppeling_ en met een relatiedoel (een relatierol aan de doel/target kan van de relatie).  
 
 Gebruik de Keuze voor het (MIM) Objecttype of het (MIM) Gegevensgroeptype: 
-- Modelleer in een (MIM) Objecttype of in een (MIM) Gegevensgroeptype een _UML-Association_ met stereotype _keuze_ en koppel de hiervoor gemodelleerde Keuze hieraan, als target van de UML-association, zoals gebruikelijk. Aan dit stereotype _keuze_ is te zien dat deze _UML-Association_ zelf **geen** relatiesoort of externe koppeling is. 
+- Modelleer in een (MIM) Objecttype of in een (MIM) Gegevensgroeptype een _UML-Association_ met stereotype _keuze_ en koppel de hiervoor gemodelleerde Keuze hieraan, als target van de UML-association, zoals gebruikelijk. Aan dit stereotype _keuze_ is te zien dat deze _UML-Association_ zelf **geen** relatiesoort of externe koppeling is.
+
 
 **De modellering van een Keuze in UML**
 

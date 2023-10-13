@@ -128,8 +128,8 @@ Het modelelement keuze bepaalt dat er meerdere opties mogelijk zijn, waarvan er 
  1. een keuze tussen datatypen ([diagram](#example-keuze-tussen-datatypen))
  1. een keuze tussen twee of meer attribuutsoorten ([diagram](#example-keuze-tussen-twee-of-meer-attribuutsoorten))
  1. een keuze tussen meerdere manieren om één betekenisvol attribuutsoort in te vullen ([diagram](#example-keuze-tussen-meerdere-manieren-om-een-betekenisvol-attribuutsoort-in-te-vullen))
- 1. een keuze tussen relatiedoelen, als nadere invulling van één betekenisvolle relatiesoort ([diagram](#example-keuze-tussen-relatiedoelen-met-één-betekenisvolle-relatiesoort))
- 1. een keuze tussen twee of meer relatiesoorten/relatierollen (elk afzonderlijk betekenisvol) ([diagram](#example-keuze-tussen-2-of-meer-relatiesoorten/relatierollen-(elk-afzonderlijk-betekenisvol))
+ 1. een keuze tussen relatiedoelen, als nadere invulling van één betekenisvolle relatiesoort ([diagram](#example-keuze-tussen-relatiedoelen-met-een-betekenisvolle-relatiesoort))
+ 1. een keuze tussen twee of meer relatiesoorten/relatierollen (elk afzonderlijk betekenisvol) ([diagram](#example-keuze-tussen-2-of-meer-relatiesoorten-relatierollen-elk-afzonderlijk-betekenisvol))
 
 Voor elke mogelijkheid is een aparte `«MIM metaclass»` beschikbaar in het metamodel.
  1. `«MIM metaclass»`: <code>Datatype(keuze)</code>
@@ -140,8 +140,7 @@ Voor elke mogelijkheid is een aparte `«MIM metaclass»` beschikbaar in het meta
 
 <aside class="example" title="Keuze tussen datatypen">
   <p>
-    Dit diagram is uitgewerkt voor <code>Objecttype</code>. Voor <code>Gegevensgroeptype</code> en <code>Relatieklasse</code> geldt hetzelfde patroon. Een <code>Attribuutsoort</code> heeft normaal één <code>Datatype</code>. Als er sprake is van een <code>Keuze</code>, dan is het <code>Attribuutsoort</code> gekoppeld met een <code>Keuze</code> en de <code>Keuze</code> geeft twee of 
-    meer <code>Datatypen</code> aan.
+    Dit diagram is uitgewerkt voor <code>Objecttype</code>. Voor <code>Gegevensgroeptype</code> en <code>Relatieklasse</code> geldt hetzelfde patroon. Een <code>Attribuutsoort</code> heeft normaal één <code>Datatype</code>. Als er sprake is van een <code>Keuze</code>, dan is het <code>Attribuutsoort</code> gekoppeld met een <code>Keuze</code> en de <code>Keuze</code> geeft twee of meer <code>Datatypen</code> aan.
   </p>
   <figure id="KeuzeDatatype1">
     <img src="media/KeuzeDatatype1.png" alt="" />
@@ -149,11 +148,13 @@ Voor elke mogelijkheid is een aparte `«MIM metaclass»` beschikbaar in het meta
   </figure>
 </aside>
 
+<!---
 <aside class="issue" title="Aanvullende tekst afkomstig uit de branch bij issue 190">
   <p>Waar hoort deze tekst thuis? Afgaande op het onderwerp van issue 190 vermoed ik bij use case 5, maar het stond op een andere plek in het document.</p>
   <p><blockquote><i>Het bronobject heeft één relatie en één gerelateerd doelobject, maar dit doelobject kan van verschillende objecttypes zijn. Het bronobjecttype kent slechts één relatiesoort/-rol, met een eigen betekenis en deze relatiesoort/-rol verwijst naar twee of meer objecttypes. Dit kan voorkomen wanneer er vanuit het bronobjecttype gezien, slechts sprake is van één kenmerk dat ingevuld moet worden, ongeacht welk objecttype dit kenmerk zal gaan invullen. Dit diagram is uitgewerkt voor Objecttype. Voor Gegevensgroeptype geldt hetzelfde patroon (1 relatiesoort vanuit een gegevensgroeptype naar een objecttype).</i></blockquote></p>
   <p>Er wordt verwezen naar een diagram, maar die was geen onderdeel van de wijziging.</p>
 </aside>
+
 
 <aside class="example" title="Keuze tussen twee of meer attribuutsoorten">
   <p>
@@ -164,6 +165,7 @@ Voor elke mogelijkheid is een aparte `«MIM metaclass»` beschikbaar in het meta
     <figcaption>Diagram: Keuze tussen attribuutsoorten</figcaption>
   </figure>
 </aside>
+-->
 
 <aside class="example" title="Keuze tussen meerdere manieren om één betekenisvol attribuutsoort in te vullen">
   <p>
@@ -177,8 +179,7 @@ Voor elke mogelijkheid is een aparte `«MIM metaclass»` beschikbaar in het meta
 
 <aside class="example" title="Keuze tussen relatiedoelen met één betekenisvolle relatiesoort">
   <p>
-    Als nadere invulling van één betekenisvolle <code>Relatiesoort</code>. Dit diagram is uitgewerkt voor <code>Objecttype</code>. Voor <code>Gegevensgroeptype</code> geldt hetzelfde patroon, behalve dat een <code>Gegevensgroeptype</code> geen doel mag zijn van een <code>Relatiesoort</code>. Een <code>Objecttype</code> of <code>Gegevensgroep</code> kan normaal een <code>Relatiesoort</code> hebben, die gekoppeld is aan een <code>Objecttype</code>. Als er sprake is van een <code>Relatiesoort</code> met een <code>Keuze</code>, dan is het <code>Relatiedoel</code> van de <code>Relatiesoort</code> niet gekoppeld aan 1 <code>Objecttype</code>, maar dan is het <code>Objecttype</code> gekoppeld aan een <code>Keuze</code> en deze <code>Keuze</code> geeft 2 of meer <code>Relatiedoelen</code> aan.
-  </p>
+    Als nadere invulling van één betekenisvolle <code>Relatiesoort</code>. Dit diagram is uitgewerkt voor <code>Objecttype</code>. Voor <code>Gegevensgroeptype</code> geldt hetzelfde patroon, behalve dat een <code>Gegevensgroeptype</code> geen doel mag zijn van een <code>Relatiesoort</code>. Een <code>Objecttype</code> of <code>Gegevensgroep</code> kan normaal een <code>Relatiesoort</code> hebben, die gekoppeld is aan een <code>Objecttype</code>. Als er sprake is van een <code>Relatiesoort</code> met een <code>Keuze</code>, dan is het <code>Relatiedoel</code> van de <code>Relatiesoort</code> niet gekoppeld aan 1 <code>Objecttype</code>, maar dan is het <code>Objecttype</code> gekoppeld aan een <code>Keuze</code> en deze <code>Keuze</code> geeft 2 of meer <code>Relatiedoelen</code> aan.</p>
   <figure id="KeuzeRelatiedoel4">
     <img src="media/KeuzeRelatiedoel4.png" alt="" />
     <figcaption>Diagram: Keuze tussen relatiedoelen</figcaption>
@@ -187,6 +188,8 @@ Voor elke mogelijkheid is een aparte `«MIM metaclass»` beschikbaar in het meta
   <p>Toelichting: een bron objecttype of gegevensgroeptype kan normaal een relatiesoort/relatierol hebben, die gekoppeld is aan (verwijst naar) een doel objecttype. Als er sprake is van een relatiesoort/relatierol met een relatiedoel keuze, dan is de relatiesoort niet gekoppeld aan 1 objecttype, maar dan is de relatiesoort gekoppeld aan een keuze en deze keuze is gekoppeld aan 2 of meer doel objecttypen. Elk objecttype is een afzonderlijk relatiedoel. Er moet voor deze ene relatiesoort/relatierol een keuze gemaakt worden voor 1 van de relatiedoelen. Het gerelateerde object is 1 van deze objecttypen, maar de betekenis van de relatie is hetzelfde, ongeacht van welk objecttype het object is.</p>
 </aside>
 
+
+<!---
 <aside class="issue" title="Onderstaande tekst afkomstig uit de branch bij issue 190">
 
   <p>Diagram: Keuze tussen relatiedoelen.</p>
@@ -199,6 +202,7 @@ Voor elke mogelijkheid is een aparte `«MIM metaclass»` beschikbaar in het meta
       <li>een gegevensgroeptype mag zelf geen doel zijn</li>
     </ul>
   </p>
+  
 
   <strong>Use case 5: Keuze tussen 2 of meer relatiesoorten/relatierollen (elk afzonderlijk betekenisvol)</strong>
 
@@ -224,7 +228,9 @@ Voor elke mogelijkheid is een aparte `«MIM metaclass»` beschikbaar in het meta
     </ul>
   </p>
 
-</aside> -->
+</aside> 
+
+-->
 
 <aside class="example" title="Keuze tussen 2 of meer relatiesoorten/relatierollen (elk afzonderlijk betekenisvol)">
   <p>Analoog aan de keuze tussen attribuutsoorten 2, maar dan voor relatiesoorten/relatierollen. Het objecttype kent 2 of meer relatiesoorten/relatierollen, met elk een eigen betekenis, en precies 1 hiervan is verplicht.</p>
