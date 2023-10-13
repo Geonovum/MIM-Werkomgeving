@@ -128,8 +128,8 @@ Het modelelement keuze bepaalt dat er meerdere opties mogelijk zijn, waarvan er 
  1. een keuze tussen datatypen ([diagram](#example-keuze-tussen-datatypen))
  1. een keuze tussen twee of meer attribuutsoorten ([diagram](#example-keuze-tussen-twee-of-meer-attribuutsoorten))
  1. een keuze tussen meerdere manieren om één betekenisvol attribuutsoort in te vullen ([diagram](#example-keuze-tussen-meerdere-manieren-om-een-betekenisvol-attribuutsoort-in-te-vullen))
- 1. een keuze tussen relatiedoelen, als nadere invulling van één betekenisvolle relatiesoort ([diagram](#example-keuze-tussen-relatiedoelen))
- 1. een keuze tussen twee of meer relatiesoorten/relatierollen (elk afzonderlijk betekenisvol) ([diagram(#linkOpnemen))
+ 1. een keuze tussen relatiedoelen, als nadere invulling van één betekenisvolle relatiesoort ([diagram](#example-keuze-tussen-relatiedoelen-met-één-betekenisvolle-relatiesoort))
+ 1. een keuze tussen twee of meer relatiesoorten/relatierollen (elk afzonderlijk betekenisvol) ([diagram](#example-keuze-tussen-2-of-meer-relatiesoorten/relatierollen-(elk-afzonderlijk-betekenisvol))
 
 Voor elke mogelijkheid is een aparte `«MIM metaclass»` beschikbaar in het metamodel.
  1. `«MIM metaclass»`: <code>Datatype(keuze)</code>
@@ -224,18 +224,22 @@ Voor elke mogelijkheid is een aparte `«MIM metaclass»` beschikbaar in het meta
     </ul>
   </p>
 
-</aside>
+</aside> -->
 
 <aside class="example" title="Keuze tussen 2 of meer relatiesoorten/relatierollen (elk afzonderlijk betekenisvol)">
   <p>Analoog aan de keuze tussen attribuutsoorten 2, maar dan voor relatiesoorten/relatierollen. Het objecttype kent 2 of meer relatiesoorten/relatierollen, met elk een eigen betekenis, en precies 1 hiervan is verplicht.</p>
 
   <p>Het bronobject heeft meerdere relaties die aan de orde/gevuld zouden kunnen zijn, maar er mag er altijd maar 1 aan de orde/gevuld zijn. Het bron objecttype kent 2 of meer relatiesoorten/relatierollen, met elk een eigen betekenis, en elk van deze relatiesoorten/relatierollen is gekoppeld aan (verwijst naar) een eigen doel objecttype.</p>
 
-  <p>Dit diagram is zonder de specificatie van de metagegevens hetzelfde als voor de keuze tussen relatiedoelen.Voor <code>Gegevensgroeptype</code> geldt hetzelfde patroon (2 of meer relatiesoorten vanuit een gegevensgroeptype naar een objecttype).</p>
+  <p>Dit diagram is uitgewerkt voor <code>Objecttype</code>.Voor <code>Gegevensgroeptype</code> geldt hetzelfde patroon (2 of meer relatiesoorten vanuit een gegevensgroeptype naar een objecttype).</p>
 
+  <figure id="KeuzeRelatiedoel5">
+    <img src="media/KeuzeRelatiedoel5.png" alt="" />
+    <figcaption>Keuze tussen relatiesoorten</figcaption>
+  </figure>
 
   <p>
-    <p>Toelichting: een bron objecttype of gegevensgroeptype kan normaal een relatiesoort/relatierol hebben, die gekoppeld is aan (verwijst naar) een doel objecttype. Als er sprake is van een relatiesoort/relatierol keuze, dan heeft het objecttype 1 koppeling met een _relatiesoort/relatierol keuze en deze keuze heeft 2 of meer relatiesoorten/relatierollen naar de doel objecttypes. Er moet een keuze gemaakt worden voor 1 van de relatiesoorten/relatierollen en daarmee voor het aan deze relatie gerelateerde doel objecttype. 
+    <p>Toelichting: een bron objecttype of gegevensgroeptype kan normaal een relatiesoort/relatierol hebben, die gekoppeld is aan (verwijst naar) een doel objecttype. Als er sprake is van een relatiesoort/relatierol keuze, dan heeft het objecttype 1 koppeling met een 'keuze als relatie' naar een keuze. De 'keuze als relatie' heeft geen betekenis. De 'keuze tussen relaties' heeft 2 of meer relatiesoorten/relatierollen naar de doel objecttypes. Er moet een keuze gemaakt worden voor 1 van de relatiesoorten/relatierollen en daarmee voor het aan deze relatie gerelateerde doel objecttype. 
 	 <p>Opmerkingen: 
     <ul>
       <li>elke relatiesoort of rol moet een eigen naam hebben.</li>
@@ -830,7 +834,7 @@ Er is sprake van een relatiesoort R0 en aanvullend hierbij een keuze tussen rela
 Het is bij deze use case niet de bedoeling om twee nieuwe relatiesoorten, eigenaar_persoon en eigenaar_bedrijf, te introduceren en al zeker niet om de relatiesoort eigenaar kwijt te raken. We modelleren daarom 1 relatiesoort met de naam eigenaar en een *Keuze* tussen relatiedoelen.
 
 <figure id="relatiedoelkeuze">
-  <img src="media/relatiedoelkeuze.png" alt="" />
+  <img src="media/relatiedoelkeuze-4.png" alt="" />
   <figcaption>Diagram: Voorbeeld van keuze tussen relatiedoelen</figcaption>
 </figure>
 
@@ -841,15 +845,15 @@ In het voorbeeld vormen EigenaarKeuze en de twee relatiedoelen tezamen de keuze 
 Er is sprake van een relatiesoort R1 en een relatiesoort R2. R1 heeft als doel een object van objecttype D1 en R2 heeft als doel een object van objecttype 2. In MIM modelleren we daarom een keuze met als uitgaande relatiesoorten R1 en R2. Het maken van deze keuze is verplicht.
 
 <aside class='example'>
-  Voorbeeld: een objecttype "Vervoermiddel" heeft een relatie met een contact. Dit kan een persoon of een organisatie zijn., maar niet beide. De het contact loopt via een contacttpersoon of er is een vertegenwoordigende organisatie. Beide relatiesoorten zijn specifiek en van belang om te benoemen. We modelleren daarom 1 *Keuze(relatie)* naar een *Keuze* Contactkeuze. Deze heeft twee uitgaande relatiesoorten met elk een specifieke naam en/of relatiedoel naar Persoon en Organisatie. 
+  Voorbeeld: een objecttype "Vervoermiddel" heeft een eigenaar of wordt verhuurd door een verhuurbedrijf. Beide relatiesoorten zijn specifiek en van belang om te benoemen. We modelleren daarom 1 *Keuze(relatie)* naar een *Keuze* VerhuurbedrijfOfEigenaar. Deze heeft twee uitgaande relatiesoorten met elk een specifieke naam en/of relatiedoel naar Persoon en Organisatie. 
 </aside>
 
 <figure id="relatiedoelkeuzeMetBetekenis">
-  <img src="media/Relatiedoelkeuzemetbetekenis.png" alt="" />
+  <img src="media/Relatiedoelkeuze-5.png" alt="" />
   <figcaption>Diagram: Voorbeeld van keuze tussen relatiesoorten die elk een betekenis hebben</figcaption>
 </figure>
 
-In het voorbeeld heeft Vervoermiddel de verplichte keuze tussen de relatiesoorten/rollen `heeft als contactpersoon/contactpersoon` en `wordt vertegenwoordigd door/organisatiecontact`.
+In het voorbeeld heeft Vervoermiddel de verplichte keuze tussen de relatiesoorten/rollen `heeft als contactpersoon/eigenaar` en `wordt verhuurd door/verhuurbedrijf`.
 
 
 
