@@ -732,7 +732,7 @@ De metadata voor de stelselcatalogus en de metadata voor de stelselafspraken
 zijn beide verplicht voor basisregistraties. Als het informatiemodel géén
 basisregistratie is, kan je als organisatie zelf kiezen om (een aantal van) deze
 metadata buiten scope te plaatsen. Dit doe je in de eigen extensie, zoals
-beschreven in [](#een-eigen-extensie-op-het-metamodel). De rest van deze paragraaf gaat alleen nog in op de
+beschreven in [[[#een-eigen-extensie-op-het-metamodel]]]. De rest van deze paragraaf gaat alleen nog in op de
 metadata voor de stelselcatalogus.
 
 Het metamodel gaat als volgt met de metadata van de stelselcatalogus om:
@@ -840,7 +840,7 @@ anders voorschrijft, dan wordt deze gevolgd, en niet vertaald. Bijvoorbeeld:
 codeList. Deze conventies gelden ook als in een eigen extensie
 metamodelelementen worden toegevoegd.
 
-Het is mogelijk om eigen naamgevingsconventie te hanteren. In bijlage [](#template-naamgevingsconventies) is een template opgenomen om naamgevingsconventies in te specificeren. Het verschaft een invulmogelijkheid om, per in dit metamodel genoemd modelelement, eigen naamgevingsconventies te documenteren. Dit is een hulptabel, die u over kunt nemen naar uw eigen extensie (zoals bedoeld in [](#een-eigen-extensie-op-het-metamodel)) en in kunt vullen voor uw eigen informatiemodel (of organisatie).
+Het is mogelijk om eigen naamgevingsconventie te hanteren. In bijlage [[[#template-naamgevingsconventies]]] is een template opgenomen om naamgevingsconventies in te specificeren. Het verschaft een invulmogelijkheid om, per in dit metamodel genoemd modelelement, eigen naamgevingsconventies te documenteren. Dit is een hulptabel, die u over kunt nemen naar uw eigen extensie (zoals bedoeld in [[[#een-eigen-extensie-op-het-metamodel]]]) en in kunt vullen voor uw eigen informatiemodel (of organisatie).
 
 ## Verwijzing van een modelelement naar een begrip uit het begrippenkader
 
