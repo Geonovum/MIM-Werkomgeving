@@ -26,10 +26,12 @@
 
 <aside class="example" title="Invullen tabel Naamgevingsconventies">
 
+   Het invullen van de tabel, kan er bijvoorbeeld als volgt uitzien:
+
    | Modelelement       | Naamgevingsconventie  | Voorbeeld                   | 
    | ------------------ | --------------------- | --------------------------- |
    | «Objecttype»       | UpperCamelCase        | `BestuurlijkGebied`         | 
    | «Attribuutsoort»   | lowerCamelCase        | `geometrieReferentiepunt`   |
-   | etc.               |                       |                             |
+   | etc.               | etc.                  | etc.                        |
 
 </aside>
