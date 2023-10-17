@@ -403,28 +403,52 @@ aanduiding gedefinieerd worden.
 
 ## Relatieklasse (uitzonderingen)
 
-De gegevens van de relatiesoort worden altijd voor één relatiesoort vastgelegd.
+Een «Relatiesoort» met kardinaliteit 1..* van «Objecttype» A naar «Objecttype» B betekent dat er op instantie niveau * relaties liggen van een bronobject naar een doelobject. Bv. een relatie van specifiek object a1 (van «Objecttype» A) naar een specifiek object b1 (van «Objecttype» B) en een andere relatie van hetzelfde object a1 (van «Objecttype» A) naar object b2 (van «Objecttype» B). 
+
+Voor een relatieklasse geldt dit eveneens. Een «Relatieklasse» met kardinaliteit 1..* van «Objecttype» C naar «Objecttype» D betekent dat er op instantie niveau * relaties liggen van een bronobject naar een doelobject. Bv. een relatie van specifiek object c1 (van «Objecttype» C) naar een specifiek object d1 (van «Objecttype» D) en een andere relatie van hetzelfde object c1 (van «Objecttype» C) naar object d2 (van «Objecttype» D). 
+
+Voor elk van deze relaties zijn er extra gegevens aan de orde. Deze gegevens worden als kenmerken (eigenschappen) gemodelleerd in een «Relatieklasse» met een bepaalde kardinaliteit. Deze gegevens kunnen dan worden vastgesteld en vastgelegd wanneer er sprake is van een relatie tussen een object van «Objecttype» C naar een object van «Objecttype» D. Merk op dat deze gegevens, dit setje gegevens, voor elke relatie apart vastgesteld en vastgelegd wordt. Zo kunnen voor de relatie van c1 naar d1 andere gegevens worden vastgesteld en vastgelegd dan voor de relatie van c1 naar d2. 
+
+Opmerkingen: 
+- een relatiesoort met kardinaliteit * van objecttype A naar objecttype B en een relatieklasse met kardinaliteit * van objecttype C naar objecttype D bestaat op instantie nivea uit * losse relaties (en niet uit 1 relatie van 1 bronobject naar * doelobjecten); 
+- de gegevens over de relatie bestaan alleen zolang de relatie tussen beide objecten bestaat en zolang elk van beide objecten zelf (nog) bestaan. wanneer een van beide niet meer bestaat, bestaat de relatie niet meer en hiermee komen ook de gegevens over de relatie te vervallen. 
+
+_Uitzondering situatie - dezelfde gegevens voor meerdere relaties_
+
 Het is echter mogelijk dat dezelfde gegevens voor meerdere relaties tegelijk
-gelden. Het is dan niet mogelijk om het te modelleren als relatieklasse. Wel
-gewenst, maar het kan niet als UML-associationClass. Als deze uitzondering het
-geval is, dan worden de relatieklasses gemodelleerd als «Objecttype», met één
-inkomende relatie en één uitgaande relatie. De oorspronkelijke kardinaliteit van
-de beoogde relatieklasse wordt hierbij behouden.
+gelden. 
 
-<aside class="example" title="Relatieklasse">
-    Een Perceel kan vanwege een Perceel splitsing overgaan in twee of meerdere andere Percelen. De ‘overgegaan in’ relatie wordt bijgehouden in een relatieklasse. Gegevens over de splitsing zijn voor al deze relaties gelijk.
-</aside>
+Het is dan niet mogelijk om het te modelleren als relatieklasse. Wel gewenst, 
+maar het kan niet als UML-associationClass. 
+Als deze uitzondering het geval is, dan worden de relatieklasses gemodelleerd als «Objecttype», 
+met één inkomende relatie en één uitgaande relatie. 
+De oorspronkelijke kardinaliteit van de beoogde relatieklasse wordt hierbij behouden. 
 
-Het metamodel ondersteunt (nog) geen relatieklassen tussen drie of meer
-objecttypen. Dit kan in uw eigen extensie toegevoegd worden.
+De relatie is geobjectiveerd. Elke betrokken relatie wordt in dit geval behandeld als een object met gegevens. 
 
-<aside class="example" title="Relatieklasse tussen dire of meer objecttypen">
+<pre class='example'>
+Een Perceel kan vanwege een Perceel splitsing overgaan in twee of meerdere
+andere Percelen. De ‘overgegaan in’ relatie wordt bijgehouden als een
+relatieklasse met eigen (splitsing) gegevens. Bij een splitsing ontstaan * nieuwe percelen 
+en er is daarom sprake van meerdere relaties. De gegevens over de splitsing zijn echter altijd 
+voor al deze relaties gelijk. Om deze reden wordt de relatieklasse 'overgegaan in' gemodelleerd als een objecttype.  
+</pre>
+
+<pre class='ex-generic'>
 Een CONTRACT kan bijvoorbeeld ook een afspraak zijn tussen twee
 óf méér SUBJECTen, waarbij de gegevens van de relatie voor alle betrokken
 objecten hetzelfde zijn. CONTRACT wordt dan gemodelleerd als objecttype, waarbij
-beschreven wordt wat er moet gebeuren wanneer één van de SUBJECTen niet meer
-bestaat.
-</aside>
+beschreven wordt wat er moet gebeuren wanneer één van de SUBJECTen niet meer bestaat.
+</pre>
+
+Opmerkingen: 
+- de gegevens over de relatie bestaan alleen zolang de relatie tussen beide objecten bestaat en zolang elk van beide objecten zelf (nog) bestaan. Dit is echter niet meer te zien aan de metaklasse, omdat dit «Objecttype» is geworden en niet meer «Relatieklasse» is. Geef daarom in de toelichting van het objecttype aan dat elk object van dit objecttype bestaansafhankelijk is van de beide objecttypen die verbonden zijn door deze geobjectiveerde relatie.  
+- normaal gesproken bij relaties tussen objecten wordt de relatie op instantie niveau geïdentificeerd door de identificaties van beide betrokken objecten. Er zijn geen aparte regels voor de opbouw van de identificatie van een relatieklasse (en ook niet voor geobjectiveerde relatieklassen die als objecttypen zijn gemodelleerd). Anders gezegd, een regel zoals dat de identificatie van een relatieklasse (of geobjectiveerde relatieklassen die als objecttypen zijn gemodelleerd) is opgebouwd uit de samenstelling van de identificatie van bron en doel objecten is niet aanwezig in de MIM specificatie. Evenzo bestaat er in MIM geen regel of best practise dat er een nieuwe betekenisloze identificatie toegekend moet worden. Het is aan de modelleur om hierin eigen afwegingen te maken. 
+
+_Uitzondering - relatieklasse tussen 3 of meer objecttypen._
+
+Het metamodel ondersteunt (nog) geen relatieklassen tussen drie of meer
+objecttypen. Dit kan in uw eigen extensie toegevoegd worden.
 
 ## Constraint toepassen
 
@@ -509,7 +533,7 @@ de besluitvorming al bekend waren.
 Dit betekent dus dat bekend moet zijn wat de waarde van een attribuut op een
 bepaald moment is.
 
-*Tijdslijnen* Er spelen twee tijdslijnen een rol bij het herleiden van
+*Tijdlijnen* Er spelen twee tijdlijnen een rol bij het herleiden van
 attribuutwaarden: 
 - Wanneer is iets gebeurd, in de werkelijkheid of volgens
 opgave (wanneer zijn de opgenomen gegevens geldig)? Dit valt binnen de tijdlijn
@@ -518,10 +542,10 @@ van de aangehouden werkelijkheid.
 waren? Dit valt binnen de tijdlijn van het administratieproces of de administratieve werkelijkheid.
 
 In de rapportage 'Architectuur van het stelsel' (Stroomlijning BasisGegevens,
-2006) wordt geadviseerd om beide tijdslijnen te registreren, om de
+2006) wordt geadviseerd om beide tijdlijnen te registreren, om de
 attribuutwaarden van een bepaald moment te kunnen reconstrueren. In de diverse
 registraties wordt hieraan op verschillende wijzen invulling gegeven. Dit
-metamodel schrijft derhalve niet voor welke bij de tijdslijnen behorende
+metamodel schrijft derhalve niet voor welke bij de tijdlijnen behorende
 attributen gebruikt moeten worden voor het vastleggen van historie.
 
 ### Historie op conceptueel niveau
@@ -556,15 +580,15 @@ wel in een registratie wil opnemen: ‘indicatie materiële historie’ Nee en
 
 Richtlijn: op conceptueel niveau worden voor historie alléén indicatie materiële
 historie en indicatie formele historie bij een attribuut of relatie vastgelegd,
-en dus géén bij de tijdslijnen behorende attributen die gebruikt moeten worden
-voor het vastleggen van historie. Deze bij de tijdslijn behorende attributen
+en dus géén bij de tijdlijnen behorende attributen die gebruikt moeten worden
+voor het vastleggen van historie. Deze bij de tijdlijn behorende attributen
 worden op het logische niveau vastgelegd.
 
 ### Historie op logisch niveau
 MIM schrijft geen implementatie van het conceptuele niveau voor.  Wel worden er aandachtspunten gegeven om rekening mee te houden. Denk bij de uitwerking o.a. aan de volgende aspecten:
 
 -   Het bijhouden van historie met specifieke attributen per objecttype, zoals
-    bijvoorbeeld: bouwjaar pand, of met generieke tijdslijnattributen attributen
+    bijvoorbeeld: bouwjaar pand, of met generieke tijdlijnattributen attributen
     die gelden voor alle objecttypes, zoals begindatum geldigheid. Denk aan de
     attribuutsoort en/of gegevensgroeptype (herbruikbaar);
 -   historie bijhouden per attribuut (en relatie) of per versie van een object.
@@ -729,7 +753,7 @@ De metadata voor de stelselcatalogus en de metadata voor de stelselafspraken
 zijn beide verplicht voor basisregistraties. Als het informatiemodel géén
 basisregistratie is, kan je als organisatie zelf kiezen om (een aantal van) deze
 metadata buiten scope te plaatsen. Dit doe je in de eigen extensie, zoals
-beschreven in paragraf 1.8. De rest van deze paragraaf gaat alleen nog in op de
+beschreven in [[[#een-eigen-extensie-op-het-metamodel]]]. De rest van deze paragraaf gaat alleen nog in op de
 metadata voor de stelselcatalogus.
 
 Het metamodel gaat als volgt met de metadata van de stelselcatalogus om:
@@ -839,13 +863,13 @@ anders voorschrijft, dan wordt deze gevolgd, en niet vertaald. Bijvoorbeeld:
 codeList. Deze conventies gelden ook als in een eigen extensie
 metamodelelementen worden toegevoegd.
 
-Het is mogelijk om eigen naamgevingsconventie te hanteren. In de bijlage is een [template](#template-naamgevingsconventies) opgenomen om  naamgevingsconventies in te specificeren. Het verschaft een invulmogelijkheid om, per in dit metamodel genoemd modelelement, eigen naamgevingsconventies te documenteren. Dit is een hulptabel, die u over kunt nemen naar uw eigen extensie (zoals bedoeld in paragraaf 1.8) en in kunt vullen voor uw eigen informatiemodel (of organisatie).
+Het is mogelijk om eigen naamgevingsconventie te hanteren. In bijlage [[[#template-naamgevingsconventies]]] is een template opgenomen om naamgevingsconventies in te specificeren. Het verschaft een invulmogelijkheid om, per in dit metamodel genoemd modelelement, eigen naamgevingsconventies te documenteren. Dit is een hulptabel, die u over kunt nemen naar uw eigen extensie (zoals bedoeld in [[[#een-eigen-extensie-op-het-metamodel]]]) en in kunt vullen voor uw eigen informatiemodel (of organisatie).
 
 ## Verwijzing van een modelelement naar een begrip uit het begrippenkader
 
 Het metadata element “begrip” uit paragraaf [Datatypen](#datatypen)
 is bedoeld om de traceability tussen een modelelement in een informatiemodel en
-een begrip uit een model van begrippen (zoals bedoeld in paragraaf 
+een begrip uit een model van begrippen (zoals bedoeld in
 [Typen Informatiemodellen](#typen-informatiemodellen)) te borgen. Anders gezegd, 
 om aan te geven dát een modelelement een weergave is van het betreffende begrip op 
 IM niveau. Anders gezegd, het is niet de bedoeling om te verwijzen naar een begrip als het

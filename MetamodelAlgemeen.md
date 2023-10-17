@@ -33,7 +33,7 @@ Deze paragraaf bevat een overzicht van het metamodel voor informatiemodellering,
 - [Datatypen](#datatypen): de in het model te onderkennen soorten datatypen.
 - [Overige modelelementen](#overige-modelelementen): elementen die niet altijd aan de orde zijn
 
-Elk modelelement heeft een `«MIM metaclass»` met een naam. Hieraan is elk modelelement te herkennen in alle diagrammen, in de tekst én in elke specificatietaal die een uitdrukking is van dit metamodel. Bij de modelelementen zijn in deze diagrammen geen beschrijvende kenmerken opgenomen (bijvoorbeeld [metagegevens](#specificatie-metagegevens) zoals: naam, definitie, enzovoorts). In de [diagrammen](#diagrammen) in de bijlage zijn deze wel opgenomen.
+Elk modelelement heeft een `«MIM metaclass»` met een naam. Hieraan is elk modelelement te herkennen in alle diagrammen, in de tekst én in elke specificatietaal die een uitdrukking is van dit metamodel. Bij de modelelementen zijn in deze diagrammen geen beschrijvende kenmerken opgenomen (bijvoorbeeld [metagegevens](#specificatie-metagegevens) zoals: naam, definitie, enzovoorts). In bijlage [[[#diagrammen]]] zijn deze wel opgenomen.
 
 ### Modelelement
 
@@ -820,7 +820,7 @@ In het voorbeeld vormen EigenaarKeuze en de twee relatiedoelen tezamen de keuze 
 
 ## Specificatie metagegevens
 
-Bij de modelelementen in een informatiemodel kunnen metagegevens, zoals 'naam' van het modelelement, of 'datum opname' van het modelelement, worden bijgehouden. Dit zijn geen eigenschappen van een object en worden daarom niet als bijvoorbeeld een attribuutsoort van een objecttype gemodelleerd. In de volgende paragrafen worden de metagegevens in tekst beschreven. Bij elk metagegeven is de definitie opgenomen, een toelichting en de toepassing ervan bij modelelementen. In [bijlage 6.1.2](#modelelementen-en-metagegevens-als-diagram) is de koppeling tussen metagegevens en de modelelementen beschreven door middel van UML diagrammen. Er is daarin ook opgenomen of ze verplicht of optioneel zijn. In [paragraaf 2.9](#toegestane-waarden-metagegevens) is het waardebereik en defaultwaarden voor een aantal metagegevens opgenomen.
+Bij de modelelementen in een informatiemodel kunnen metagegevens, zoals 'naam' van het modelelement, of 'datum opname' van het modelelement, worden bijgehouden. Dit zijn geen eigenschappen van een object en worden daarom niet als bijvoorbeeld een attribuutsoort van een objecttype gemodelleerd. In de volgende paragrafen worden de metagegevens in tekst beschreven. Bij elk metagegeven is de definitie opgenomen, een toelichting en de toepassing ervan bij modelelementen. In bijlage [[[#modelelementen-en-metagegevens-als-diagram]]] is de koppeling tussen metagegevens en de modelelementen beschreven door middel van UML diagrammen. Er is daarin ook opgenomen of ze verplicht of optioneel zijn. In [[[#toegestane-waarden-metagegevens]]] is het waardebereik en defaultwaarden voor een aantal metagegevens opgenomen.
 
 ### Informatiemodel - metagegevens
 
@@ -857,8 +857,8 @@ Dit kan bijvoorbeeld uitgebreid worden met: "technisch" wanneer er behoefte is o
 
 *Toelichting*
 Dit kan zijn "Relatiesoort leidend" of "Relatierol leidend". Dit
-betreft de keuze die je maakt voor het in paragraaf [Alternatieven](#alternatieven) gekozen
-alternatief. Er moet een keuze gemaakt worden. Deze keuze geldt primair voor de modelelementen relatiesoort en relatiedoel zoals bedoeld in 3.2.2. maar geldt in het verlengde hiervan voor het modelelement externe koppeling.
+betreft de keuze die je maakt voor het in [[[#alternatieven]]] gekozen
+alternatief. Er moet een keuze gemaakt worden. Deze keuze geldt primair voor de modelelementen relatiesoort en relatiedoel zoals bedoeld in [[[#relaties-in-uml]]]. maar geldt in het verlengde hiervan voor het modelelement externe koppeling.
 
 *Toepassing*: informatiemodel (verplicht)
 
@@ -966,7 +966,7 @@ Hieronder volgen eerst de algemene metagegevens. Dit zijn metagegevens zoals `Na
 
 *Toelichting*
 
-Bijvoorbeeld: `"Pand"` is de naam van het modelelement `Objecttype`, `"bouwjaar"` is de naam van het modelelement `Attribuutsoort`. De modelelementen zijn limitatief opgesomd in het hoofdstuk [Betekenis modelelementen](#betekenis-modelelementen) (en eventueel zijn in een uitbreiding extra modelelementen limitatief opgesomd).
+Bijvoorbeeld: `"Pand"` is de naam van het modelelement `Objecttype`, `"bouwjaar"` is de naam van het modelelement `Attribuutsoort`. De modelelementen zijn limitatief opgesomd in [[[#metamodel-algemeen]]] (en eventueel zijn in een uitbreiding extra modelelementen limitatief opgesomd).
 
 *Toepassing*: alle modelelementen.
 
@@ -995,8 +995,8 @@ Opmerking: een uitzondering is gemaakt voor UML-modellen voor de UML-Enumeration
 *Toelichting*
 
 Hiermee wordt aangegeven hoe een informatiemodel element zich verhoudt tot de
-begrippen uit het begrippenkader, zoals genoemd in paragraaf [Typen Informatiemodellen](#typen-informatiemodellen).
-Dit is niet een 1 op 1 relatie. Voor meer informatie hierover, zie hoofdstuk [Afspraken & Regels](#afspraken-regels).
+begrippen uit het begrippenkader, zoals genoemd in [[[#typering-van-modellen-en-wat-wel-en-niet-in-scope-is-van-deze-standaard]]].
+Dit is niet een 1 op 1 relatie. Voor meer informatie hierover, zie [[[#afspraken-regels]]].
 
 Bijvoorbeeld: Perceel of
 http://brk.basisregistraties.overheid.nl/id/begrip/Perceel
@@ -1125,26 +1125,26 @@ Toelichting: objecten hebben, of krijgen, in een administratie of gegevensvoorzi
 
 Toepassing: attribuutsoort, alle relaties (relatiesoort, relatierol, relatieklasse, externe koppeling), referentie-element.
 
-#### Metagegeven: **heeft tijdslijn geldigheid**
+#### Metagegeven: **heeft tijdlijn geldigheid**
 
 <aside class="definition">
-  <dfn>heeft tijdslijn geldigheid</dfn>Indicatie of voor dit kenmerk een tijdslijn geldigheid bijgehouden wordt en te bevragen is.
+  <dfn>heeft tijdlijn geldigheid</dfn>Indicatie of voor dit kenmerk een tijdlijn geldigheid bijgehouden wordt en te bevragen is.
 </aside>
 
 *Toelichting*
 
 Bijvoorbeeld: `Ja`.
 
-Met de tijdlijn geldigheid wordt bedoeld dat er op een tijdslijn wordt bijgehouden wanneer een verandering is opgetreden in de werkelijkheid die heeft geleid tot verandering van de waarde van een kenmerk van een object. Het gegeven is vanaf een bepaald tijdsmoment _geldig_ en dit tijdsmoment wordt op enerlei wijze als metagegeven bijgehouden bij het gegeven. 
+Met de `tijdlijn geldigheid` wordt bedoeld dat er op een tijdlijn wordt bijgehouden wanneer een verandering is opgetreden in de werkelijkheid die heeft geleid tot verandering van de waarde van een kenmerk van een object. Het gegeven is vanaf een bepaald tijdsmoment _geldig_ en dit tijdsmoment wordt op enerlei wijze als metagegeven bijgehouden bij het gegeven. 
 
-Het komt vaak voor dat er besloten wordt of bepaald wordt dat een gegeven al geldig is of werd vanaf een bepaald tijdsmoment in het verleden en het komt voor dat het gegeven pas geldig zal worden vanaf een bepaald tijdsmoment in de (nabije) toekomst. Verdere toelichting, zie het hoofdstuk [Afspraken & Regels](#afspraken-regels). 
+Het komt vaak voor dat er besloten wordt of bepaald wordt dat een gegeven al geldig is of werd vanaf een bepaald tijdsmoment in het verleden en het komt voor dat het gegeven pas geldig zal worden vanaf een bepaald tijdsmoment in de (nabije) toekomst. Verdere toelichting, zie [[[#afspraken-regels]]]. 
 
 Met te bevragen wordt bedoeld: het tijdsmoment vanaf wanneer een gegeven als geldig wordt beschouwd (en vanaf wanneer het gegeven niet meer als geldig wordt beschouwd) wordt op enerlei wijze als historie bijgehouden, en deze wijze is te bevragen. Dit metagegeven is alleen betekenisvol voor kenmerken waarvoor een waarde wordt bijgehouden. De in te vullen waarde komt uit: zie [Tagged values en waardenbereik tagged
-values](#toegestane-waarden-voor-bepaalde-metadata-gegevens). 
+values](#toegestane-waarden-metadatagegevens). 
 
-De in te vullen waarde komt uit: [toegestane waarde metagegevens](#toegestane-waarden-metagegevens).
+De in te vullen waarde komt uit: [[[#toegestane-waarden-metagegevens]]].
 
-*Toepassing*: alle modelelementen die een kenmerk (kunnen) zijn van een objecttype, waarvoor data kan worden bijgehouden: attribuutsoort en relaties (relatiesoort, relatieklasse, externe koppeling).
+**Toepassing**: alle modelelementen die een kenmerk (kunnen) zijn van een `«Objecttype»`, waarvoor data kan worden bijgehouden: `«Attribuutsoort»` en relaties (`«Relatiesoort»`, `«Relatieklasse»`, `«Externe Koppeling»`).
 
 #### Metagegeven: **Indicatie materiële historie**
 
@@ -1154,7 +1154,7 @@ De in te vullen waarde komt uit: [toegestane waarde metagegevens](#toegestane-wa
 
 <aside class="note" title="Opmerkingen bij 'indicatie materiële historie'">
 <ol>
-  <li>Dit metagegeven is gelijkwaardig met het metagegeven <code><a>heeft tijdslijn geldigheid</a></code>;</li>
+  <li>Dit metagegeven is gelijkwaardig met het metagegeven <code><a>heeft tijdlijn geldigheid</a></code>;</li>
   <li>In toekomstige versies van MIM, versie 2.x en later, wordt dit metagegeven uitgefaseerd. Vanwege backwards compatibility blijft op dit moment aanwezig in MIM 1.x</li>
 </aside>
 
@@ -1162,36 +1162,33 @@ De in te vullen waarde komt uit: [toegestane waarde metagegevens](#toegestane-wa
 
 Bijvoorbeeld: `Ja`.
 
-Met te bevragen wordt bedoeld, er wordt historie bijgehouden op enerlei wijze, welke op enerlei wijze te bevragen is. Dit metagegeven is alleen betekenisvol voor kenmerken waarvoor data wordt bijgehouden. De in te vullen waarde komt uit: zie [Tagged values en waardenbereik tagged
-values](#toegestane-waarden-voor-bepaalde-metadata-gegevens). Materiële historie geeft aan wanneer een verandering is opgetreden in de werkelijkheid die heeft geleid tot verandering van de attribuutwaarde. Verdere toelichting, zie het hoofdstuk [Afspraken & Regels](#afspraken-regels)
+Met te bevragen wordt bedoeld, er wordt historie bijgehouden op enerlei wijze, welke op enerlei wijze te bevragen is. Dit metagegeven is alleen betekenisvol voor kenmerken waarvoor data wordt bijgehouden. De in te vullen waarde komt uit: zie [[[#toegestane-waarden-metagegevens]]]. Materiële historie geeft aan wanneer een verandering is opgetreden in de werkelijkheid die heeft geleid tot verandering van de attribuutwaarde. Verdere toelichting, zie [[[#afspraken-regels]]]
 
 *Toepassing*: alle modelelementen die een kenmerk (kunnen) zijn van een objecttype, waarvoor data kan worden bijgehouden: attribuutsoort en relaties (relatiesoort, relatieklasse, externe koppeling).
 
-De in te vullen waarde komt uit: zie [Tagged values en waardenbereik tagged
-values](#toegestane-waarden-voor-bepaalde-metadata-gegevens)
+De in te vullen waarde komt uit: zie [[[#toegestane-waarden-metagegevens]]]
 
 Materiële historie geeft aan wanneer een verandering is opgetreden in de werkelijkheid die heeft geleid tot verandering van de attribuutwaarde. Verdere toelichting, zie het hoofdstuk [Afspraken & Regels](#afspraken-regels)
 
-*Toepassing*: alle modelelementen die een kenmerk (kunnen) zijn van een objecttype, waarvoor data kan worden bijgehouden: attribuutsoort en relaties (relatiesoort of relatiedoel, relatieklasse, externe koppeling).
+**Toepassing**: alle modelelementen die een kenmerk (kunnen) zijn van een `«Objecttype»`, waarvoor data kan worden bijgehouden: `«Attribuutsoort»` en relaties (`«Relatiesoort»`, `«Relatieklasse»`, `«Externe Koppeling»`).
 
-#### Metagegeven: **heeft tijdslijn registratie**
+#### Metagegeven: **heeft tijdlijn registratie**
 
 <aside class="definition">
-  <dfn>heeft tijdslijn registratie</dfn>Indicatie of voor dit kenmerk een tijdslijn geldigheid bijgehouden wordt en te bevragen is.
+  <dfn>heeft tijdlijn registratie</dfn>Indicatie of voor dit kenmerk een tijdlijn geldigheid bijgehouden wordt en te bevragen is.
 </aside>
 
 *Toelichting*
 
 Bijvoorbeeld: `Nee`.
 
-Met de tijdlijn registratie wordt bedoeld dat er op een tijdslijn wordt bijgehouden wanneer een bepaalde waarde voor een kenmerk van een object vastgelegd wordt, oftewel _geregistreerd_ wordt. Dit tijdsmoment wordt op enerlei wijze als metagegeven bijgehouden bij het gegeven. De vastlegging kan zijn op een bepaald medium of in een registratie van een informatievoorziening. Het tijdsmoment van vastlegging of registratie is altijd ten tijde van vastlegging van een gegeven in de echte tijd (de horloge tijd). Elke keer dat hetzelfde gegeven op een andere plek wordt vastgelegd is een apart tijdsmoment op de tijdslijn registatie dat relevant kan zijn om bij te houden. Verdere toelichting, zie het hoofdstuk [Afspraken & Regels](#afspraken-regels). 
+Met de tijdlijn registratie wordt bedoeld dat er op een tijdlijn wordt bijgehouden wanneer een bepaalde waarde voor een kenmerk van een object vastgelegd wordt, oftewel _geregistreerd_ wordt. Dit tijdsmoment wordt op enerlei wijze als metagegeven bijgehouden bij het gegeven. De vastlegging kan zijn op een bepaald medium of in een registratie van een informatievoorziening. Het tijdsmoment van vastlegging of registratie is altijd ten tijde van vastlegging van een gegeven in de echte tijd (de horloge tijd). Elke keer dat hetzelfde gegeven op een andere plek wordt vastgelegd is een apart tijdsmoment op de tijdlijn registatie dat relevant kan zijn om bij te houden. Verdere toelichting, zie het hoofdstuk [Afspraken & Regels](#afspraken-regels). 
 
 Met te bevragen wordt bedoeld: het tijdsmoment wanneer een gegeven geregistreerd is wordt op enerlei wijze als historie bijgehouden, en deze wijze is te bevragen. Dit metagegeven is alleen betekenisvol voor kenmerken waarvoor een waarde wordt bijgehouden. 
 
-De in te vullen waarde komt uit: zie [Tagged values en waardenbereik tagged
-values](#toegestane-waarden-voor-bepaalde-metadata-gegevens)
+De in te vullen waarde komt uit: zie [[[#toegestane-waarden-metagegevens]]]
 
-*Toepassing*: alle modelelementen die een kenmerk (kunnen) zijn van een objecttype, waarvoor data kan worden bijgehouden: attribuutsoort en relaties (relatiesoort, relatieklasse, externe koppeling).
+**Toepassing**: alle modelelementen die een kenmerk (kunnen) zijn van een `«Objecttype»`, waarvoor data kan worden bijgehouden: `«Attribuutsoort»` en relaties (`«Relatiesoort»`, `«Relatieklasse»`, `«Externe Koppeling»`).
 
 #### Metagegeven: **Indicatie formele historie**
 
@@ -1201,7 +1198,7 @@ values](#toegestane-waarden-voor-bepaalde-metadata-gegevens)
 
 <aside class="note" title="Opmerkingen bij 'indicatie formele historie'">
 <ol>
-  <li>Dit metagegeven is gelijkwaardig met het metagegeven <code><a>heeft tijdslijn registratie</a></code>;</li>
+  <li>Dit metagegeven is gelijkwaardig met het metagegeven <code><a>heeft tijdlijn registratie</a></code>;</li>
   <li>In toekomstige versies van MIM, versie 2.x en later, wordt dit metagegeven uitgefaseerd. Vanwege backwards compatibility blijft op dit moment aanwezig in MIM 1.x</li>
 </aside>
 
@@ -1209,14 +1206,13 @@ values](#toegestane-waarden-voor-bepaalde-metadata-gegevens)
 
 Bijvoorbeeld: `Nee`.
 
-Met te bevragen wordt bedoeld, er wordt historie bijgehouden op enerlei wijze, welke op enerlei wijze te bevragen is. Dit metagegeven is alleen betekenisvol voor kenmerken waarvoor data wordt bijgehouden. De in te vullen waarde komt uit: zie [Tagged values en waardenbereik tagged
-values](#toegestane-waarden-voor-bepaalde-metadata-gegevens). Formele historie geeft aan wanneer in de administratie een verandering bekend is, en is verwerkt. Verdere toelichting, zie het hoofdstuk [Afspraken &Regels](#afspraken-regels).
+Met te bevragen wordt bedoeld, er wordt historie bijgehouden op enerlei wijze, welke op enerlei wijze te bevragen is. Dit metagegeven is alleen betekenisvol voor kenmerken waarvoor data wordt bijgehouden. De in te vullen waarde komt uit: zie [[[#toegestane-waarden-metagegevens]]]. Formele historie geeft aan wanneer in de administratie een verandering bekend is, en is verwerkt. Verdere toelichting, zie [[[#afspraken-regels]]].
 
-De in te vullen waarde komt uit: zie [Tagged values en waardenbereik tagged values](#toegestane-waarden-voor-bepaalde-metadata-gegevens)
+De in te vullen waarde komt uit: zie [[[#toegestane-waarden-metagegevens]]]
 
-Formele historie geeft aan wanneer in de administratie een verandering bekend is, en is verwerkt. Verdere toelichting, zie het hoofdstuk [Afspraken &Regels](#afspraken-regels).
+Formele historie geeft aan wanneer in de administratie een verandering bekend is, en is verwerkt. Verdere toelichting, zie [[[#afspraken-regels]]].
 
-*Toepassing*: alle modelelementen die een kenmerk (kunnen) zijn van een objecttype waarvoor data kan worden bijgehouden: attribuutsoort en relaties (relatiesoort of relatiedoel, relatieklasse, externe koppeling).
+**Toepassing**: alle modelelementen die een kenmerk (kunnen) zijn van een `«Objecttype»`, waarvoor data kan worden bijgehouden: `«Attribuutsoort»` en relaties (`«Relatiesoort»`, `«Relatieklasse»`, `«Externe Koppeling»`).
 
 #### Metagegeven: **Kardinaliteit**
 
@@ -1233,7 +1229,7 @@ Formele historie geeft aan wanneer in de administratie een verandering bekend is
 
 Indien een `«Attribuutsoort»` deel uit maakt van een `«Gegevensgroeptype»`, dan wordt de kardinaliteit vermeld van het `«Attribuutsoort»` binnen het `«Gegevensgroeptype»`. Voor de uiteindelijke kardinaliteit van hoe vaak een gegeven voorkomt bij het object moet rekening gehouden worden met de kardinaliteit van de gegevensgroep en met de kardinaliteit van de `«Attribuutsoort»`.
 
-Merk op dat het zo kan zijn dat een object het kenmerk wel degelijk heeft/zou moeten hebben, maar dat het vooralsnog niet gelukt is om dit gegeven in te winnen of te achterhalen. Het is dan bekend dat het object dit kenmerk wel degelijk heeft, maar de waarde ervan is onbekend. De kardinaliteit wordt dan niet van `1` naar `0` gezet, maar er wordt aangegeven dat er sprake is van mogelijk geen waarde. Meer hierover is beschreven in het hoofdstuk [Afspraken & Regels](#afspraken-regels).
+Merk op dat het zo kan zijn dat een object het kenmerk wel degelijk heeft/zou moeten hebben, maar dat het vooralsnog niet gelukt is om dit gegeven in te winnen of te achterhalen. Het is dan bekend dat het object dit kenmerk wel degelijk heeft, maar de waarde ervan is onbekend. De kardinaliteit wordt dan niet van `1` naar `0` gezet, maar er wordt aangegeven dat er sprake is van mogelijk geen waarde. Meer hierover is beschreven in [[[#afspraken-regels]]].
 
 Een `«Generalisatie»` is een bijzondere vorm van een relatie. De kardinaliteit van de bron en van het doel is hier altijd en per definitie `1..1`. Dit hoeft daarom nooit via een aanduiding van een kardinaliteit te worden aangegeven.
 
@@ -1271,7 +1267,7 @@ Bijvoorbeeld: Authentiek, Basisgegeven, Landelijk kerngegeven, Gemeentelijk kern
 
 Authentiek is van toepassing voor bijvoorbeeld het burger service nummer van een natuurlijk persoon. In de wet van bijvoorbeeld een basisregistratie ligt vast welke gegevens authentiek zijn. Een kenmerk is authentiek indien de juistheid (hoogwaardige kwaliteit) van het gegeven gewaarborgd wordt via formele inwinningsprocessen en wettelijk regelingen. Authentieke gegevens moeten door alle overheidsinstellingen verplicht en zonder nader onderzoek, worden gebruikt bij de uitvoering van publiekrechtelijke taken.
 
-De in te vullen waarde komt uit: zie [Tagged values en waardenbereik tagged values](#toegestane-waarden-voor-bepaalde-metadata-gegevens)
+De in te vullen waarde komt uit: zie [[[#toegestane-waarden-metagegevens]]]
 
 *Toepassing*: alle modelelementen die een kenmerk (kunnen) zijn van een objecttype.
 
@@ -1297,7 +1293,7 @@ Bijvoorbeeld: de ‘naam’ van een openbare ruimte, zoals *Burgemeester Baron v
 
 Een objecttype kan middels een attribuutsoort geclassificeerd worden in subtypen. Bijvoorbeeld: type gebouw. Een toren, kerk, bunker, zwembad zijn allemaal typen gebouwen. In een model op niveau 2 kunnen dergelijke typen als objecttypen en specialisaties van het objecttype gebouw zijn gemodelleerd. Met name op niveau 3 kan het relevant zijn om deze informatie daadwerkelijk te structureren door expliciet een aspect op te nemen waarmee direct het type gebouw kan worden vastgelegd, los van de modellering van objecttypen.
 
-Praktisch gezien kan vervolgens gekozen worden om de onderliggende objecttypen niet meer in het model op te nemen, en slechts dit aspect op te nemen. Ook kan, in combinatie met `Indicatie afleidbaar`, dit aspect afgeleid worden uit het meest concrete objecttype, indien dergelijke objecttypen wel zijn gemodelleerd. De in te vullen waarde komt uit: zie [Tagged values en waardenbereik tagged values](#toegestane-waarden-voor-bepaalde-metadata-gegevens)
+Praktisch gezien kan vervolgens gekozen worden om de onderliggende objecttypen niet meer in het model op te nemen, en slechts dit aspect op te nemen. Ook kan, in combinatie met `Indicatie afleidbaar`, dit aspect afgeleid worden uit het meest concrete objecttype, indien dergelijke objecttypen wel zijn gemodelleerd. De in te vullen waarde komt uit: zie [[[#toegestane-waarden-metagegevens]]]
 
 *Toepassing*: attribuutsoort.
 
@@ -1615,10 +1611,8 @@ Populatie: alle kadastrale aktes die horen bij kadastrale objecten waarop op 1 j
 <aside class='example'>
     Er zijn panden in Nederland die een militaire functie hebben en waarvan het niet wenselijk is dat deze in de registratie worden opgenomen en op aangeven van het ministratie van Defensie daarom ook niet zijn opgenomen. 
 
-  Populatie: alle panden op het Nederlands grondgebied, die voldoen aan de objectdefinitie, behalve een aantal militaire panden zoals bedoeld in  bepaling [1].
+  Populatie: alle panden op het Nederlands grondgebied, die voldoen aan de objectdefinitie, behalve een aantal militaire panden, zoals bedoeld in de [memorie van toelichting bij de Wet basisregistraties adressen en gebouwen](https://zoek.officielebekendmakingen.nl/kst-30968-3.html).
 
-  [1]: Memorie van toelichting bij de Wet basisregistraties adressen en gebouwen, kamerstuk, 2006/07, 30 968,
-nr. 3, 28 februari 2007. Zie: https://zoek.officielebekendmakingen.nl/kst-30968-3.html
 </aside>
 
 *Toepassing:* Objecttype
@@ -1962,23 +1956,21 @@ Een aantal metagegevens hebben als datatype `CharacterString`. Aanvullend geldt:
 
 -   Voor lengtes geldt dat er alleen getallen in mogen (van het datatype
     `Integer`).
-
 -   Voor datums geldt dat deze het volgende patroon volgen: `jjjjmmdd`
-
 -   Voor de metagegevens `Definitie` en `Toelichting` geldt dat hiervoor tekst met opmaak (zoals _vet_, _cursief_, _onderstreept_ en _opsommingen_) gebruikt mag worden. Welke opmaak precies gebruikt kan worden, is afhankelijk van de mogelijkheden van de modelleeromgeving en de beoogde toepassing van het model.
 
 Voor de volgende metagegevens geldt een specifiek waardebereik.
 
-| **Metagegeven**                     | **Waardenbereik**                                                          |
-|-------------------------------------|----------------------------------------------------------------------------|
-| Indicatie materiële historie        | `Ja`, `Nee`                                                                |
-| Indicatie formele historie          | `Ja`, `Nee`                                                                |
-| Indicatie classificerend            | `Ja`, `Nee`                                                                |
-| Indicatie abstract object           | `Ja`, `Nee`                                                                |
-| Mogelijk geen waarde                | `Ja`, `Nee`                                                                |
-| Mixin                               | `Ja`, `Nee`                                                                |
-| [Aggregatietype](#metagegeven-aggregatietype) | `Compositie`, `Gedeeld`, `Geen`                                  |
-| [Authentiek](#authentieke-gegevens) | `Authentiek`, `Basisgegeven`, `Wettelijk gegeven`, `Landelijk kerngegeven`, `Overig` |
+| **Metagegeven**                               | **Waardenbereik**                                                                    |
+|-----------------------------------------------|--------------------------------------------------------------------------------------|
+| <a>Indicatie formele historie</a>             | `Ja`, `Nee`                                                                          |
+| <a>Indicatie materiele historie</a>           | `Ja`, `Nee`                                                                          |
+| <a>Indicatie classificerend</a>               | `Ja`, `Nee`                                                                          |
+| <a>Indicatie abstract object</a>              | `Ja`, `Nee`                                                                          |
+| <a>Mogelijk geen waarde</a>                   | `Ja`, `Nee`                                                                          |
+| <a>Mixin</a>                                  | `Ja`, `Nee`                                                                          |
+| <a>Aggregatietype</a>                         | `Compositie`, `Gedeeld`, `Geen`                                                      |
+| <a>Authentiek</a>                             | `Authentiek`, `Basisgegeven`, `Wettelijk gegeven`, `Landelijk kerngegeven`, `Overig` |
 
 <aside class="note">
   Geef bij de toepassing van <code>overig</code> in een informatiemodel aan wat er onder wordt verstaan.
@@ -1994,16 +1986,15 @@ Aanwijzing MIM-beheerder: metagegevens met een defaultwaarde mogen niet optionee
 
 | **Metagegeven**                     | **Defaultwaarde** |
 |-------------------------------------|-------------------|
-| Basis-URI (Informatiemodel)         | `urn:modelelement: + {informatiemodel.naam}:` |
-| Indicatie materiële historie        | `Nee`             |                                                        
-| Indicatie formele historie          | `Nee`             |                                                        
-| Indicatie classificerend            | `Nee`             |
-| Indicatie abstract object           | `Nee`             |
-| Mogelijk geen waarde                | `Nee`             |                                                        
-| Identificerend                      | `Nee`             |                                                        
-| Unidirectioneel                     | `Ja`              |  
-| Kardinaliteit attribuut             | `1`               |                                                        
-| Aggregatietype                      | `Geen`            |  
-| Mixin                               | `Nee`             | 
+| <a>Indicatie materiele historie</a> | `Nee`             |                                                        
+| <a>Indicatie formele historie</a>   | `Nee`             |                                                        
+| <a>Indicatie classificerend</a>     | `Nee`             |
+| <a>Indicatie abstract object</a>    | `Nee`             |
+| <a>Mogelijk geen waarde</a>         | `Nee`             |                                                        
+| <a>Identificerend</a>               | `Nee`             |                                                        
+| <a>Unidirectioneel</a>              | `Ja`              |  
+| <a>Kardinaliteit</a> attribuut      | `1`               |
+| <a>Aggregatietype</a>               | `Geen`            |
+| <a>Mixin</a>                        | `Nee`             |
 
 Opmerking met betrekking tot de kardinaliteit van relaties: deze staat niet in de tabel. Deze kennen geen defaultwaarde. De kardinaliteit aan de doel kant altijd moet worden aangegeven. De kardinaliteit aan de bron/eigenaar kant van een relatie is optioneel om in te vullen, wanneer er niets is ingevuld dan wordt er niets over de kardinaliteit gezegd en kent deze geen default waarde (in de praktijk betekent dit dat een kardinaliteit aan de bron kant als 0..* geïmplementeerd wordt).

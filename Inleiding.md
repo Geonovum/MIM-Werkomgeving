@@ -124,7 +124,7 @@ Dit niveau is volledig in scope van MIM.
 
 Ten aanzien van logische informatiemodellen:
 - Een conceptueel informatiemodel is onafhankelijk van standaarden voor gegevensuitwisseling.
-  Een logisch informatiemodel past deze wel toe (denk aan identificaties, geometrie versies, tijdslijnen van historie)  
+  Een logisch informatiemodel past deze wel toe (denk aan identificaties, geometrie versies, tijdlijnen van historie)  
 - Een conceptueel informatiemodel beschrijft de informatie in een informatiemdomen en is onafhankelijk van een koppelvlak of keten, 
 oftewel is keten of koppelvlak overstijgend. Een logisch informatiemodel is specifiek voor een koppelvlak of keten of een 
 bepaalde toepassing (met bijbehorende implementatie, database en interfaces).
@@ -318,8 +318,8 @@ vb:Pakjesboot12 a vbo:Schip.
 
 Een informatiemodel uitgedrukt in Linked Data wordt geacht te voldoen aan het MIM als sprake is van één of beide van onderstaande criteria:
 
-1. Het informatiemodel is uitgedrukt in de MIM vocabulaire, zoals beschreven in het hoofdstuk [Metamodel in Linked Data (LD)](#metamodel-in-linked-data-ld);
-2. Het informatiemodel is uitgedrukt in RDF, RDFS, OWL en SHACL en is te transformeren naar de MIM vocabulaire op basis van de transformatieregels beschreven in de bijlage, [Transformatie MIM - RDFS/OWL/SHACL](#transformatie-mim-rdfs-owl-shacl).
+1. Het informatiemodel is uitgedrukt in de MIM vocabulaire, zoals beschreven in [[[#metamodel-in-linked-data-ld]]];
+2. Het informatiemodel is uitgedrukt in RDF, RDFS, OWL en SHACL en is te transformeren naar de MIM vocabulaire op basis van de transformatieregels beschreven in bijlage, [[[#transformatie-mim-rdfs-owl-shacl]]].
 
 ## Een eigen extensie op het metamodel
 Indien er extra metamodelconstructies nodig zijn voor een informatiemodel, 
