@@ -54,8 +54,6 @@ dfn{cursor:pointer}
 <script>document.title = respecConfig.title</script>
 <title>MIM - Metamodel Informatie Modellering</title>
     
-<!-- <title>Default</title> -->
-    
 <link rel="shortcut icon" type="image/x-icon" href="https://tools.geostandaarden.nl/respec/style/logos/Geonovum.ico">
     
     
@@ -174,7 +172,7 @@ ul.index code{color:inherit}
     background-color: #045D9F;
   }
 </style>
-<script type="text/javascript">
+<script>
    /* Any custom mermaid.js scripts will go here. */
   </script>
 <style>
@@ -355,19 +353,19 @@ ul.index code{color:inherit}
       "publisher": "Nederlandse Overheid Referentie Architectuur (NORA)",
       "id": "nora"
     },
-    "ISO 11404": {
+    "ISO-11404": {
       "title": "Information Technology - General Purpose Datatypes (GPD)",
       "href": "https://www.nen.nl/nen-iso-iec-11404-2008-en-122652",
       "status": "BG-FINAL",
       "publisher": "Nederlandse Norm (NEN)",
-      "id": "iso 11404"
+      "id": "iso-11404"
     },
-    "ISO 8601": {
+    "ISO-8601": {
       "title": "Representation Of Dates And Times. ISO 8601:2004",
       "href": "http://www.iso.org/iso/catalogue_detail?csnumber=40874",
       "status": "BG-FINAL",
       "publisher": "International Organization for Standardization (ISO)",
-      "id": "iso 8601"
+      "id": "iso-8601"
     },
     "OCL": {
       "title": "Object Constraint Language",
@@ -931,12 +929,12 @@ Voor vragen, suggesties of opmerkingen kunt u contact opnemen met de MIM helpdes
 <tr>
 <td>8.</td>
 <td>ISO 11404</td>
-<td>[<cite><a class="bibref" data-link-type="biblio" href="#bib-iso 11404" title="Information Technology - General Purpose Datatypes (GPD)">ISO11404</a></cite>]</td>
+<td>[<cite><a class="bibref" data-link-type="biblio" href="#bib-iso-11404" title="Information Technology - General Purpose Datatypes (GPD)">ISO-11404</a></cite>]</td>
 </tr>
 <tr>
 <td>9.</td>
 <td>ISO 8601</td>
-<td>[<cite><a class="bibref" data-link-type="biblio" href="#bib-iso 8601" title="Representation Of Dates And Times. ISO 8601:2004">ISO8601</a></cite>]</td>
+<td>[<cite><a class="bibref" data-link-type="biblio" href="#bib-iso-8601" title="Representation Of Dates And Times. ISO 8601:2004">ISO-8601</a></cite>]</td>
 </tr>
 <tr>
 <td>10.</td>
@@ -13420,7 +13418,7 @@ WHERE {
   ?subject mim:equivalent ?modelelement.
 }</code></pre>
 
-<div class="note" role="note" id="trans-99"><div role="heading" class="note-title marker" id="h-note-22" aria-level="6"><span>Noot</span></div><aside class="">
+<div class="note" role="note" id="trans-100"><div role="heading" class="note-title marker" id="h-note-22" aria-level="6"><span>Noot</span></div><aside class="">
 In Linked Data zal een indicatie formele historie altijd betekenen dat er een constructie wordt gerealiseerd waarbij de eigenschappen
 die betrekking hebben op de historie van het objecttype (zoals geldigheidsperiode, bron, herkomst) onderscheiden zijn van de
 eigenschappen van het objecttype zelf. Deze constructie is toegelicht in [NEN3610 Linked Data](https://geonovum.github.io/NEN3610-Linkeddata/#regels-attributen-formeleHistorie). Hoewel het denkbaar is om een dergelijke vertaling al direct mee te nemen bij het
@@ -13693,7 +13691,7 @@ WHERE {
 <p>Zoals patroon, formeel vastgelegd, uitgedrukt in een formele taal die door de computer wordt herkend.</p>
 </blockquote>
 <p><code>mim:formeelPatroon</code> wordt beschreven met <code>sh:pattern</code>.</p>
-<div class="note" role="note" id="trans-13"><div role="heading" class="note-title marker" id="h-note-23" aria-level="6"><span>Noot</span></div><aside class="">
+<div class="note" role="note" id="trans-14"><div role="heading" class="note-title marker" id="h-note-23" aria-level="6"><span>Noot</span></div><aside class="">
 Het MIM stelt dat het formeelPatroon door de computer moet worden herkend, zonder specifiek te zijn op welke manier. In het geval van een MIM in Linked Data model wordt uitgegaan dat hier sprake is van een reguliere expressie.
 </aside></div>
 
@@ -14500,7 +14498,7 @@ shape:geboorteVSoverlijden a sh:PropertyShape;
   </li><li class="tofline">
     <a class="tocxref" href="#KeuzeRelatiedoel4UML"><span class="self-link">Figuur <bdi class="figno">20</bdi></span> <span class="fig-title">Diagram: Keuze tussen relatiedoelen, als nadere invulling van één betekenisvolle relatiesoort</span></a>
   </li><li class="tofline">
-    <a class="tocxref" href="#KeuzeRelatiedoel4UML"><span class="self-link">Figuur <bdi class="figno">21</bdi></span> <span class="fig-title">Diagram: Keuze tussen relatiedoelen, als nadere invulling van één betekenisvolle relatiesoort</span></a>
+    <a class="tocxref" href="#KeuzeRelatiedoel5UML"><span class="self-link">Figuur <bdi class="figno">21</bdi></span> <span class="fig-title">Diagram: Keuze tussen relatiedoelen, als nadere invulling van één betekenisvolle relatiesoort</span></a>
   </li><li class="tofline">
     <a class="tocxref" href="#AssociatierollenZonderMetagegevens"><span class="self-link">Figuur <bdi class="figno">22</bdi></span> <span class="fig-title">Diagram: Associatierollen zonder metagegevens</span></a>
   </li><li class="tofline">
@@ -14767,12 +14765,12 @@ shape:geboorteVSoverlijden a sh:PropertyShape;
       <a href="https://geojson.org/"><cite>The GeoJSON Specification (RFC 7946)</cite></a>.  Internet Engineering Task Force (IETF). BG-FINAL. URL: <a href="https://geojson.org/">https://geojson.org/</a>
     </dd><dt id="bib-gml">[gml]</dt><dd>
       <a href="http://www.opengeospatial.org/standards/gml"><cite>Geography Markup Language (GML) Encoding Standard</cite></a>.  Open Geospatial Consortium Inc. URL: <a href="http://www.opengeospatial.org/standards/gml">http://www.opengeospatial.org/standards/gml</a>
-    </dd><dt id="bib-iso 11404">[ISO 11404]</dt><dd>
+    </dd><dt id="bib-iso-11404">[ISO-11404]</dt><dd>
       <a href="https://www.nen.nl/nen-iso-iec-11404-2008-en-122652"><cite>Information Technology - General Purpose Datatypes (GPD)</cite></a>.  Nederlandse Norm (NEN). BG-FINAL. URL: <a href="https://www.nen.nl/nen-iso-iec-11404-2008-en-122652">https://www.nen.nl/nen-iso-iec-11404-2008-en-122652</a>
-    </dd><dt id="bib-iso 8601">[ISO 8601]</dt><dd>
-      <a href="http://www.iso.org/iso/catalogue_detail?csnumber=40874"><cite>Representation Of Dates And Times. ISO 8601:2004</cite></a>.  International Organization for Standardization (ISO). BG-FINAL. URL: <a href="http://www.iso.org/iso/catalogue_detail?csnumber=40874">http://www.iso.org/iso/catalogue_detail?csnumber=40874</a>
     </dd><dt id="bib-iso-19103">[iso-19103]</dt><dd>
       <a href="https://www.iso.org/standard/56734.html"><cite>Geographic information -- Conceptual schema language</cite></a>. ISO/TC 211.  ISO. 2015. International Standard. URL: <a href="https://www.iso.org/standard/56734.html">https://www.iso.org/standard/56734.html</a>
+    </dd><dt id="bib-iso-8601">[ISO-8601]</dt><dd>
+      <a href="http://www.iso.org/iso/catalogue_detail?csnumber=40874"><cite>Representation Of Dates And Times. ISO 8601:2004</cite></a>.  International Organization for Standardization (ISO). BG-FINAL. URL: <a href="http://www.iso.org/iso/catalogue_detail?csnumber=40874">http://www.iso.org/iso/catalogue_detail?csnumber=40874</a>
     </dd><dt id="bib-linked-data">[Linked-Data]</dt><dd>
       <a href="https://www.w3.org/DesignIssues/LinkedData.html"><cite>Linked Data Design Issues</cite></a>. Tim Berners-Lee.  W3C. 27 July 2006. W3C-Internal Document. URL: <a href="https://www.w3.org/DesignIssues/LinkedData.html">https://www.w3.org/DesignIssues/LinkedData.html</a>
     </dd><dt id="bib-nen3610">[NEN3610]</dt><dd>
