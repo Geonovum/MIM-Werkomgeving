@@ -17,32 +17,34 @@ De eerste paragraaf bevat UML-diagrammen. Elk diagram toont een aantal modelelem
 informatiemodel gemodelleerd als een extensie van een Metaclass van UML 2.5 en een bijbehorende
 stereotype.
 
-<aside class="issue" title="Kanttekeningen bij uitgangspunten">
-  <ul>
-    <li>Bullet 1: Waarnaar wordt met '<i>dit</i>' verwezen?</li>
-    <li>bullet 3: Neem een verwijzing op naar de betreffende bijlage.</li>
-  </ul>
-</aside>
-
 <aside class='example' title="Objecttype als UML-Class">
-  <p>Het MIM-modelelement <code>«Objecttype»</code> wordt gemodelleerd als een <code>UML-Class</code> met stereotype <code>«Objecttype»</code>. Niet alle MIM-metaklassen hebben een stereotype (nodig). In de kolom staat dan: <code>-</code>.</p>
+  <p>
+    Het MIM-modelelement <code>«Objecttype»</code> wordt gemodelleerd als een <code>UML-Class</code> met stereotype <code>«Objecttype»</code>. Niet alle MIM-metaklassen hebben een stereotype (nodig). In de kolom staat dan: <code>-</code>.
+  </p>
+  <table>
+    <tr>
+      <th><strong>MIM metaclass</strong></th>
+      <th><strong>Stereotype</strong></th>
+      <th><strong>Metaclass UML 2.5</strong></th>
+      <th><strong></strong></th>
+      <th><strong>In EA</strong></th>
+      <th><strong>In ...</strong></th>
+    </tr>
+    <tr>
+      <td>Objecttype</td>
+      <td>«Objecttype»</td>
+      <td>(UML) Class</td>
+      <td></td>
+      <td>Class</td>
+      <td></td>
+    </tr>
+  </table>
+  <p>
+    De linker kolom bevat het MIM-modelelement, zoals bedoeld in [[[#metamodel-algemeen]]]. De 2e en 3e kolom bevatten de uitdrukking van het MIM in UML, versie 2.5. De 2e en 5e kolom bevatten de uitdrukking van het MIM in Sparx Enterprise Architect. Deze gebruikt Class (i.p.v. UML-Class). Deze UML tool is (uiteraard) geen onderdeel van de MIM-specificatie. Het is zeker niet verplicht om deze te gebruiken, u kunt uw eigen tool gebruiken. Deze kolom staat erbij om illustratief aan te geven dat het soms nodig kan zijn om, afhankelijk van de tool, net iets specifieker aan te geven hoe het MIM in de tool exact uitgedrukt wordt. In de 6e kolom is ruimte gereserveerd om gebruik van een andere tool te duiden.
+  </p>
 </aside>
 
-<aside class="issue" title="Reikwijdte voorbeeld">
-  Het lijkt erop dat onderstaande tabel en daaropvolgende alinea nog bij het voorbeeld horen. Klopt dat?
-</aside>
-
-| **MIM metaclass** | **Stereotype** | **Metaclass UML 2.5** |      | **In EA** | **In ...** |
-| ----------------- | -------------- | --------------------- | ---- | --------- | ---------- |
-| Objecttype        | «Objecttype»   | (UML) Class           |      | Class     |            |
-
-De linker kolom bevat het MIM modelelement, zoals bedoeld in [[[#metamodel-algemeen]]]. De 2e en 3e kolom bevatten de uitdrukking van het MIM in UML, versie 2.5. De 2e en 5e kolom bevatten de uitdrukking van het MIM in Sparx Enterprise Architect. Deze gebruikt Class (i.p.v. UML-Class). Deze UML tool is (uiteraard) geen onderdeel van de MIM specificatie. Het is zeker niet verplicht om deze te gebruiken, u kunt uw eigen tool gebruiken. Deze kolom staat erbij om illustratief aan te geven dat het soms nodig kan zijn om, afhankelijk van de tool, net iets specifieker aan te geven hoe het MIM in de tool exact uitgedrukt wordt. In de 6e kolom is ruimte gereserveerd om gebruik van een andere tool te duiden.
-
-<aside class="issue" title="Diagram in samenhang">
-  <p>Zie: eerdere opmerking over ontbreken diagram in modelelementen in samenhang.</p>
-</aside>
-
-Bijna alle modelelementen hebben een UML-metaclass (UML 2.5) als basis. In het diagram heeft een UML-metaclass een lichtblauwe kleur. Dit is ook opgenomen in diagramvorm. Een overzicht van de diagrammen met metadata is beschikbaar in bijlage [[[#diagrammen]]].
+Bijna alle modelelementen hebben een UML-metaclass (UML 2.5) als basis. In de navolgende diagrammen heeft een UML-metaclass een lichtblauwe kleur. Dit is ook opgenomen in diagramvorm. Een overzicht van de diagrammen met metadata is beschikbaar in bijlage [[[#diagrammen]]].
 
 ### Kern
 
@@ -79,7 +81,7 @@ Kern zonder Metagegevens
 
 Datatypen zonder Metagegevens
 
-View 2: Datatypen
+_Datatypen_
 
 | **MIM metaclass**       | **Stereotype**          | **Metaclass UML 2.5**    |      | **In EA**          | **In ...** |
 | ----------------------- | ----------------------- | ------------------------ | ---- | ------------------ | ---------- |
@@ -101,10 +103,7 @@ View 2: Datatypen
   <figcaption>Diagram: Constraint zonder metagegevens</figcaption>
 </figure>
 
-View 3a: Constraint
-<aside class="issue" title="View?">
-  Waarvoor dienen: <i>View 3a: Constraint</i>, <i>View 3b: ~ </i>, etc? Zijn dit diagramtitels? Zo ja, waarom worden de Keuze-diagrammen daarin dan niet meegenomen? Dan is het ook neter om ze in de <code>figcaption</code> op te nemen.
-</aside>
+_Constraint_
 
 | **MIM metaclass** | **Stereotype** | **Metaclass UML 2.5** |      | **In EA**  | **In ...** |
 | ----------------- | -------------- | --------------------- | ---- | ---------- | ---------- |
@@ -229,7 +228,7 @@ Merk op dat deze tabel niet gaat over de modelelementen waaruit een keuze gemaak
   <figcaption>Diagram: Associatierollen zonder metagegevens</figcaption>
 </figure>
 
-View 3b: Relatiesoort en relatierol
+_Relatiesoort en relatierol_
 
 | **MIM metaclass**     | **Stereotype** | **Metaclass UML 2.5** |      | **In EA**      | **In ...** |
 | --------------------- | -------------- | --------------------- | ---- | -------------- | ---------- |
@@ -239,13 +238,12 @@ View 3b: Relatiesoort en relatierol
 
 #### Externe koppeling
 
-*Externe koppeling*
+_Externe koppeling_
 
 | **MIM metaclass** | **Stereotype**      | **Metaclass UML 2.5** |      | **In EA**   | **In ...** |
 | ----------------- | ------------------- | --------------------- | ---- | ----------- | ---------- |
 | Externe koppeling | «Externe koppeling» | (UML) Association     |      | Association |            |
 
-View 3c: Groepering
 
 #### Packages
 
@@ -253,6 +251,8 @@ View 3c: Groepering
   <img src="media/PackagesZonderMetagegevens.png" alt="" />
   <figcaption>Diagram: Packages zonder metagegevens</figcaption>
 </figure>
+
+_Packages_
 
 | **MIM metaclass**     | **Stereotype**    | **Metaclass UML 2.5** |      | **In EA** | **In ...** |
 | --------------------- | ----------------- | --------------------- | ---- | --------- | ---------- |
@@ -263,46 +263,37 @@ View 3c: Groepering
 
 ## Specificatie metagegevens in UML
 
-Deze paragraaf is een aanvulling op de paragraaf *'Specificatie metagegevens'*
-in [[[#metamodel-algemeen]]].
+Deze paragraaf is een aanvulling op [[[#specificatie-metagegevens]]]. In de hierna volgende paragrafen worden de metagegevens per modelelement gespecificeerd in tabellen. Per metagegeven zijn de volgende onderdelen gespecificeerd:
 
-<aside class="issue" title="Tekst verplaatsen naar andere plek in dit hoofdstuk">
+ - **Aspect**: Het benoemde metagegeven. De aanduiding `√ `betekent: conform stelselafspraken voor basisregistraties. Een `*` betekent: conform de stelselcatalogus. Zie ook de paragraaf in H3 hierover. 
+ - **Kardinaliteit**: Aantal maal dat een metagegeven opgenomen kan worden bij dit modelelement.
+ - **Toelichting**: Nadere uitleg over het metagegeven.
+ - **In UML 2.5**: De naam waarmee het metagegeven in UML 2.5 is benoemd. Het betreft veelal overerving van een metagegeven van een UML metaclass die niet in dit document is benoemd.
+ - **In EA**: Aanduiding hoe het metagegeven in Sparx Enterprise Architect (EA) is aangegeven.
 
->   **Alias**
+Rode tekst betreft een standaardelement binnen EA. Zwarte tekst in de kolom betreft een uitbreiding op het UM-metamodel, via _tagged values_ of aanvullende stereotypes.
 
-De alternatieve weergave van de naam.
+<aside class="note" title="Nadere toelichting op het metagegeven Alias">
+  <p>
+    <strong>Alias</strong> (zie: [[[#metagegeven-alias]]])
+  </p>
 
-*Toelichting*
-
-Verdere toelichting voor UML modellen:
-
-De alias is te specificeren voor `NamedElements` (zoals `UML-Class`, `UML-association`, `UML-Datatype` en `UML-property`). De alias is in UML gespecificeerd bij de metaclass `Element Import`. Dit wordt in UML ingezet voor het importeren van een `NamedElement` uit een ander package. In dit metamodel wordt de alias (nog) niet zo gebruikt.  
-
-In Enterprise Architect is de alternatieve weergave aan te zetten in de _properties_ van een _Diagram_,
-via: `use alias if available`.
-
-
->   **Identificerend**
-
-Als een attribuutsoort identificerend is, dan krijgt dit kenmerk in UML `isId =
-true`.
-
-Als een relatiesoort identificerend is, dan krijgt dit kenmerk in UML een
-stereotype `«id»`
-
+  <p>
+    <strong>Toelichting</strong>: Verdere toelichting voor UML modellen: De alias is te specificeren voor `NamedElements` (zoals `UML-Class`, `UML-association`, `UML-Datatype` en `UML-property`). De alias is in UML gespecificeerd bij de metaclass `Element Import`. Dit wordt in UML ingezet voor het importeren van een `NamedElement` uit een ander package. In dit metamodel wordt de alias (nog) niet zo gebruikt. In Enterprise Architect is de alternatieve weergave aan te zetten in de <i>properties</i> van een <i>Diagram</i>, via: `use alias if available`.
+  </p>
 </aside>
 
-<aside class='note'>
-  <p>In de hierna volgende paragrafen worden de metagegevens per modelelement gespecificeerd in tabellen. Per metagegeven zijn de volgende onderdelen gespecificeerd:</p>
-  <ul>
-    <li><b>Aspect</b>: Het benoemde metagegeven. De aanduiding <code>√</code> betekent: conform stelselafspraken voor basisregistraties. Een <code>*</code> betekent: conform de stelselcatalogus. Zie ook de paragraaf in H3 hierover.</li>  
-    <li><b>Kardinaliteit</b>: Aantal maal dat een metagegeven opgenomen kan worden bij dit modelelement.</li>
-    <li><b>Toelichting</b>: Nadere uitleg over het metagegeven.</li>
-    <li><b>In UML 2.5</b>: De naam waarmee het metagegeven in UML2.5 is benoemd. Het betreft veelal overerving van een metagegeven van een UML metaclass die niet in dit document is benoemd.</li>
-    <li><b>In EA</b>: Aanduiding hoe het metagegeven in Sparx Enterprise Architect (EA) is aangegeven.</li>
-  <p>Rode tekst betreft een standaardelement binnen EA. Zwarte tekst in de kolom betreft een uitbreiding op het UML Metamodel, via tagged values of aanvullende stereotypes.</p>
-  </ul>
+<aside class="note" title="Nadere toelichting op het metagegeven Identficerend">
+  <p>
+    <strong>Identificerend</strong> (zie: [[[#metagegeven-identificerend]]])
+  </p>
+
+  <p>
+    <strong>Toelichting</strong>: Als een attribuutsoort identificerend is, dan krijgt dit kenmerk in UML `isId = true`. Als een <code>«<a>Relatiesoort</a>»</code> identificerend is, dan krijgt dit kenmerk in UML een stereotype `«id»`.
+  </p>
 </aside>
+
+
 
 ### Objecten en attributen in UML
 
