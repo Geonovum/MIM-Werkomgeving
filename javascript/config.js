@@ -159,14 +159,14 @@ let respecConfig = {
       status: "LD",
       publisher: "Nederlandse Overheid Referentie Architectuur (NORA)",
     },
-    "ISO 11404":
+    "ISO-11404":
     {
       title: "Information Technology - General Purpose Datatypes (GPD)",
       href: "https://www.nen.nl/nen-iso-iec-11404-2008-en-122652",
       status: "BG-FINAL",
       publisher: "Nederlandse Norm (NEN)",
     },
-    "ISO 8601":
+    "ISO-8601":
     {
       title: "Representation Of Dates And Times. ISO 8601:2004",
       href: "http://www.iso.org/iso/catalogue_detail?csnumber=40874",
