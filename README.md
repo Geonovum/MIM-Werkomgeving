@@ -8,4 +8,4 @@ Dit is de repository van het Metamodel Informatie Modellering (MIM). Hierin staa
 
 ## Publicatie definitieve versies
 
-Definitieve versies worden gepubliceerd op [docs.geostandaarden.nl](http://docs.geostandaarden.nl/mim).
+Definitieve versies worden gepubliceerd op [docs.geostandaarden.nl](http://docs.geostandaarden.nl/).
