@@ -188,50 +188,6 @@ Voor elke mogelijkheid is een aparte `«MIM metaclass»` beschikbaar in het meta
   <p>Toelichting: een bron objecttype of gegevensgroeptype kan normaal een relatiesoort/relatierol hebben, die gekoppeld is aan (verwijst naar) een doel objecttype. Als er sprake is van een relatiesoort/relatierol met een relatiedoel keuze, dan is de relatiesoort niet gekoppeld aan 1 objecttype, maar dan is de relatiesoort gekoppeld aan een keuze en deze keuze is gekoppeld aan 2 of meer doel objecttypen. Elk objecttype is een afzonderlijk relatiedoel. Er moet voor deze ene relatiesoort/relatierol een keuze gemaakt worden voor 1 van de relatiedoelen. Het gerelateerde object is 1 van deze objecttypen, maar de betekenis van de relatie is hetzelfde, ongeacht van welk objecttype het object is.</p>
 </aside>
 
-
-<!---
-<aside class="issue" title="Onderstaande tekst afkomstig uit de branch bij issue 190">
-
-  <p>Diagram: Keuze tussen relatiedoelen.</p>
-
-  <p>Uitwerking met een keuze constructie: een bron objecttype of gegevensgroeptype kan normaal een relatiesoort/relatierol hebben, die gekoppeld is aan (verwijst naar) een doel objecttype. Als er sprake is van een relatiesoort/relatierol met een relatiedoel keuze, dan is de relatiesoort niet gekoppeld aan 1 objecttype, maar dan is de relatiesoort gekoppeld aan een keuze en deze keuze is gekoppeld aan 2 of meer doel objecttypen. Elk objecttype is een afzonderlijk relatiedoel. Er moet voor deze ene relatiesoort/relatierol een keuze gemaakt worden voor 1 van de relatiedoelen. Het gerelateerde object is 1 van deze objecttypen, maar de betekenis van de relatie is hetzelfde, ongeacht van welk objecttype het object is.</p>
-
-  <p>Opmerkingen:
-    <ul>
-      <li>elke relatiesoort kan een eigen relatienaam hebben en heeft een relatiedoel die een eigen rolnaam kan hebben, maar dit hoeft niet. De naam van de relatiesoort/relatierol is immers al gespecificeerd bij de relatiesoort naar de Keuze.</li>
-      <li>een gegevensgroeptype mag zelf geen doel zijn</li>
-    </ul>
-  </p>
-  
-
-  <strong>Use case 5: Keuze tussen 2 of meer relatiesoorten/relatierollen (elk afzonderlijk betekenisvol)</strong>
-
-  <p>Analoog aan de keuze tussen attribuutsoorten 2, maar dan voor relatiesoorten/relatierollen. Het objecttype kent 2 of meer relatiesoorten/relatierollen, met elk een eigen betekenis, en precies 1 hiervan is verplicht.</p>
-
-  <p>Het bron object heeft meerdere relaties die aan de orde/gevuld zouden kunnen zijn, maar er mag er altijd maar 1 aan de orde/gevuld zijn. Het bron objecttype kent 2 of meer relatiesoorten/relatierollen, met elk een eigen betekenis, en elk van deze relatiesoorten/relatierollen is gekoppeld aan (verwijst naar) een eigen doel objecttype.</p>
-
-  <p>Dit diagram is uitgewerkt voor Objecttype. Voor Gegevensgroeptype geldt hetzelfde patroon (2 of meer relatiesoorten vanuit een gegevensgroeptype naar een objecttype).</p>
-
-  <figure id="KeuzeRelatiedoel5">
-    <img src="media/KeuzeRelatiesoort5.png" alt="" />
-    <figcaption>Keuze tussen relatiesoorten</figcaption>
-  </figure>
-
-  <p>Diagram: Keuze tussen relatiesoorten/relatierollen. Patroon geldt ook voor Gegevensgroeptype, de relatiesoorten kunnen ook vanuit het gegevensgroeptype verwijzen naar de gekoppelde objecttypes. </p>
-
-  <p>Uitwerking met een keuze constructie: een bron objecttype of gegevensgroeptype kan normaal een relatiesoort/relatierol hebben, die gekoppeld is aan (verwijst naar) een doel objecttype. Als er sprake is van een relatiesoort/relatierol keuze, dan heeft het _objecttype_ 1 koppeling met een _relatiesoort/relatierol keuze_ en deze keuze heeft 2 of meer relatiesoorten/relatierollen naar de doel objecttypes. Er moet een keuze gemaakt worden voor 1 van de relatiesoorten/relatierollen en daarmee voor het aan deze relatie gerelateerde doel objecttype. </p>
-
-  <p>Opmerkingen: 
-    <ul>
-      <li>elke relatiesoort of rol moet een eigen naam hebben.</li>
-      <li>een gegevensgroeptype mag zelf geen doel zijn</li>
-    </ul>
-  </p>
-
-</aside> 
-
--->
-
 <aside class="example" title="Keuze tussen 2 of meer relatiesoorten/relatierollen (elk afzonderlijk betekenisvol)">
   <p>Analoog aan de keuze tussen attribuutsoorten 2, maar dan voor relatiesoorten/relatierollen. Het objecttype kent 2 of meer relatiesoorten/relatierollen, met elk een eigen betekenis, en precies 1 hiervan is verplicht.</p>
 
@@ -244,20 +200,14 @@ Voor elke mogelijkheid is een aparte `«MIM metaclass»` beschikbaar in het meta
     <figcaption>Keuze tussen relatiesoorten</figcaption>
   </figure>
 
-  <p>
-    <p>Toelichting: een bron objecttype of gegevensgroeptype kan normaal een relatiesoort/relatierol hebben, die gekoppeld is aan (verwijst naar) een doel objecttype. Als er sprake is van een relatiesoort/relatierol keuze, dan heeft het objecttype 1 koppeling met een 'keuze als relatie' naar een keuze. De 'keuze als relatie' heeft geen betekenis. De 'keuze tussen relaties' heeft 2 of meer relatiesoorten/relatierollen naar de doel objecttypes. Er moet een keuze gemaakt worden voor 1 van de relatiesoorten/relatierollen en daarmee voor het aan deze relatie gerelateerde doel objecttype. 
+  <p><strong>Toelichting</strong>: een bron objecttype of gegevensgroeptype kan normaal een relatiesoort/relatierol hebben, die gekoppeld is aan (verwijst naar) een doel objecttype. Als er sprake is van een relatiesoort/relatierol keuze, dan heeft het objecttype 1 koppeling met een 'keuze als relatie' naar een keuze. De 'keuze als relatie' heeft geen betekenis. De 'keuze tussen relaties' heeft 2 of meer relatiesoorten/relatierollen naar de doel objecttypes. Er moet een keuze gemaakt worden voor 1 van de relatiesoorten/relatierollen en daarmee voor het aan deze relatie gerelateerde doel objecttype.</p> 
 	 <p>Opmerkingen: 
     <ul>
       <li>elke relatiesoort of rol moet een eigen naam hebben.</li>
       <li>een gegevensgroeptype mag zelf geen doel zijn</li>
     </ul>
   </p>
-	
-
-  
-  
-  
-  </aside>
+</aside>
   
 
 #### Relatiesoort en relatierol
@@ -277,15 +227,15 @@ In diagramvorm:
 
 #### Externe koppeling
 
-View 3c: Externe koppelingen. Deze bestaat uit de volgende modelelementen:
+Externe koppeling bestaat uit de volgende modelelementen:
 
  1. `MIM metaclass`: <code><a>Externe koppeling</a></code>
 
-<aside class="issue" title="Hier mist een diagram"></aside>
+Zie: [[[#KernZonderUML]]]
 
 #### Groepering
 
-View 3d: Groepering. Deze bestaat uit de volgende modelelementen:
+Groepering bestaat uit de volgende modelelementen:
 
 
  1. `MIM metaclass`: <code><a>Package</a></code>
@@ -374,11 +324,7 @@ De objecten die in het beschouwde domein onderkend worden zijn zelf nooit abstra
 
 #### Attribuutsoort  
 
-Een `«Attribuutsoort»` is de metaklasse waarmee kenmerken van een `«Objecttype»` worden vastgelegd. Het zijn de kenmerken waarvoor gegevens worden bijgehouden. Voordat we `«Attribuutsoort»` definiëren kijken we eerst naar het begrip <a>gegeven</a>.
-
-<aside class="issue" title="Ontbrekende tekst of referentie">
-  Hier lijkt uitleg over <i>gegeven</i> te missen. Maar misschien volstaat het om een link op te nemen naar de term <i>gegeven</i>.
-</aside>
+Een `«Attribuutsoort»` is de metaklasse waarmee kenmerken van een `«Objecttype»` worden vastgelegd. Het zijn de kenmerken waarvoor gegevens worden bijgehouden.
 
 <aside class="definition">
   <dfn data-lt="attribuut">Attribuutsoort</dfn>De typering van gelijksoortige gegevens die voor een objecttype van toepassing is.
@@ -392,20 +338,12 @@ Een `«Attribuutsoort»` is de metaklasse waarmee kenmerken van een `«Objecttyp
   <dfn>Gegevensgroep</dfn>Een typering van een groep van gelijksoortige gegevens die voor een objecttype van toepassing is.
 </aside>
 
-<aside class="issue" title="Wat hoort bij de defintie?">
-  Hoort de tweede zin nog bij de definitie, of hoort dat eigenlijk thuis in de toelichting?
-</aside>
-
 **Toelichting**: Dit modelelement verzorgt de modelmatige aankoppeling van een <code>«<a>Gegevensgroeptype</a>»</code> aan het <code>«<a>Objecttype</a>»</code> waartoe een `«Gegevensgroeptype»` onlosmakelijk behoort. De groep van gegevens is een kenmerk van een object. De `«Gegevensgroep»` is een betekenisvol kenmerk van een `«Objecttype»`. De `«Gegevensgroep»` heeft altijd als type een `«Gegevensgroeptype»`.
 
 #### Gegevensgroeptype
 
 <aside class="definition">
   <dfn>Gegevensgroeptype</dfn>Een groep van met elkaar samenhangende attribuutsoorten. Een gegevensgroeptype is altijd een type van een gegevensgroep.
-</aside>
-
-<aside class="issue" title="Later aanpassen">
-  Deze tekst nog niet redigeren: er volgen nog inhoudelijke wijzigingen.
 </aside>
 
 **Toelichting**: Een `«Attribuutsoort»` van een `«Gegevensgroeptype»` is semantisch
