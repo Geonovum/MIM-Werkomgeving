@@ -192,7 +192,7 @@ Gebruik de Keuze voor het (MIM) Objecttype of het (MIM) Gegevensgroeptype:
 
 Dit UML is uitgewerkt voor Objecttype. Voor Gegevensgroeptype geldt hetzelfde patroon, behalve dat een Gegevensgroeptype geen doel mag zijn van een Relatiesoort.
 
-<figure id="KeuzeRelatiedoel4UML">
+<figure id="KeuzeRelatiedoel5UML">
   <img src="media/KeuzeRelatiedoel5UML.png" alt="" />
   <figcaption>Diagram: Keuze tussen relatiedoelen, als nadere invulling van één betekenisvolle relatiesoort</figcaption>
 </figure>

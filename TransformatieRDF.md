@@ -1087,7 +1087,7 @@ WHERE {
 }
 </pre>
 
-<aside id='trans-99' class='note'>
+<aside id='trans-100' class='note'>
 In Linked Data zal een indicatie formele historie altijd betekenen dat er een constructie wordt gerealiseerd waarbij de eigenschappen
 die betrekking hebben op de historie van het objecttype (zoals geldigheidsperiode, bron, herkomst) onderscheiden zijn van de
 eigenschappen van het objecttype zelf. Deze constructie is toegelicht in [NEN3610 Linked Data](https://geonovum.github.io/NEN3610-Linkeddata/#regels-attributen-formeleHistorie). Hoewel het denkbaar is om een dergelijke vertaling al direct mee te nemen bij het
@@ -1294,7 +1294,7 @@ WHERE {
 
 `mim:formeelPatroon` wordt beschreven met `sh:pattern`.
 
-<aside id='trans-13' class='note'>
+<aside id='trans-14' class='note'>
 Het MIM stelt dat het formeelPatroon door de computer moet worden herkend, zonder specifiek te zijn op welke manier. In het geval van een MIM in Linked Data model wordt uitgegaan dat hier sprake is van een reguliere expressie.
 </aside>
 
