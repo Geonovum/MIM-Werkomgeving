@@ -1,5 +1,4 @@
 # MIM-Werkomgeving
-================
 
 Dit is de repository van het Metamodel Informatie Modellering (MIM). Hierin staat de werkversie van het MIM. Daarnaast bevat de repository bestanden die horen bij de werkversie van MIM.
 
