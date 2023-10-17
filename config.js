@@ -26,16 +26,38 @@ let respecConfig = {
   //licence: "cc0",                 // Public Domain Dedication
   licence: "cc-by",                 // Attribution, met bronvermelding
   //-- shortName is verplicht! (komt in de URL: kies logische afkorting)--------------
-  shortName: "cv-st-mim-20231017-test",
+  shortName: "mim",
   //-- publishDate is verplicht -------------------------------------------------------
   //-- NB: in de werkversie uitzetten, want dan pakt Respec de pushdate ---------------
-  publishDate: "2023-10-17",
+  publishDate: "2023-10-18",
   //eventueel is het mogelijk een versienummer mee te geven, maar bij Geonovum werken we gewoonlijk alleen met datum als onderdeel van de permanente URI.
   //publishVersion: "0.0.2",
   //previousVersion: "0.0.1",
   //-- Voor dit blok geldt: alleen als er eerdere versies zijn en altijd beiden aan/uit! 
-  previousPublishDate: "20220217",
-  previousMaturity: "vv",
+  previousPublishDate: "2022-02-17",
+  previousMaturity: "def",
+  
+  //neem hier de URL van de github repository op waar het respec document in staat
+  github: "https://github.com/Geonovum/MIM-Werkomgeving",
+  //-- Repositorynaam/issues op GitHub ------------------------------------------------
+  issueBase: "https://github.com/Geonovum/MIM-Werkomgeving/issues/",
+  //-- edDraftURI: de URI van de werkversie van het document
+  edDraftURI: "https://geonovum.github.io/MIM-Werkomgeving/",
+  //-- license: voor de geldende gebruiksvoorwaarden
+
+  //-- Optionele parameters:
+  //emailComments: "mim@geonovum.nl",         // reactie mailadres, alleen bij CV!
+  subtitle: "Versie 1.2",                         // Subtitel van het document
+  //maxTocLevel: 4,                           // Aantal niveau's ToC, default is 0
+
+  // Create PDF and link to file in header (optional):
+  // alternateFormats: [
+  //     {
+  //         label: "pdf",
+  //         uri: "template.pdf",
+  //     },
+  // ],
+
   //-- de namen van de Editor(s) / Redacteur(en)---------------------------------------
   //-- vul in: per Editor: name:, company:, companyURL: -------------------------------
   editors:
@@ -91,36 +113,6 @@ let respecConfig = {
       companyURL: "https://www.kadaster.nl"
     },
   ],
-  //neem hier de URL van de github repository op waar het respec document in staat
-  github: "https://github.com/Geonovum/MIM-Werkomgeving",
-  //-- Repositorynaam/issues op GitHub ------------------------------------------------
-  issueBase: "https://github.com/Geonovum/MIM-Werkomgeving/issues/",
-  //-- edDraftURI: de URI van de werkversie van het document
-  edDraftURI: "https://geonovum.github.io/MIM-Werkomgeving/",
-  //-- license: voor de geldende gebruiksvoorwaarden
-  licence: "cc-by-nd",                        //-- bronvermelding, geen afgeleide werken (default)
-  // licence: "cc0",                          //-- Public Domain Dedication
-  // licence: "cc-by",                        //-- Attribution, met bronvermelding
-
-
-  //-- Voor dit blok geldt: alleen als er eerdere versies zijn en altijd beiden aan/uit!
-  previousPublishDate: "2020-02-25",          // Format is "YYYY-MM-DD"
-  //reviousMaturity: "GN-DEF",                // kies 1 van deze 3 regels
-  //previousMaturity: "GN-CV",                // kies 1 van deze 3 regels
-  previousMaturity: "GN-VV",                  // kies 1 van deze 3 regels
-
-  //-- Optionele parameters:
-  //emailComments: "mim@geonovum.nl",         // reactie mailadres, alleen bij CV!
-  subtitle: "Versie 1.2",                         // Subtitel van het document
-  //maxTocLevel: 4,                           // Aantal niveau's ToC, default is 0
-
-  // Create PDF and link to file in header (optional):
-  // alternateFormats: [
-  //     {
-  //         label: "pdf",
-  //         uri: "template.pdf",
-  //     },
-  // ],
 
 // Tijdelijk opnemen: localBiblio, nog uitzoeken op welke plek dit uiteindelijk moet landen
   localBiblio: {
