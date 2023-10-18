@@ -540,7 +540,6 @@ Als het wel van belang is om de structuur van een Codelijst in het model te defi
 
 #### Datatype
 
-
 <aside class="definition">
   <dfn>Datatype</dfn>Een beschrijving van de structuur waaraan een waarde, oftewel de data zelf, aan moet voldoen.
 </aside>
