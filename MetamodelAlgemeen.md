@@ -538,6 +538,9 @@ Als het wel van belang is om de structuur van een Codelijst in het model te defi
 
 ### Datatypen
 
+#### Datatype
+
+
 <aside class="definition">
   <dfn>Datatype</dfn>Een beschrijving van de structuur waaraan een waarde, oftewel de data zelf, aan moet voldoen.
 </aside>
@@ -1367,7 +1370,7 @@ koppeling.
 
 *Toelichting*
 
-Indien mogelijk is de verwijzing een URI of een URL (als er geen URI is, dan kan dit een URL zijn, waar de waardelijst op basis van de naam van de waardelijst te vinden is). Bijvoorbeeld: 'http://www.organisatie.nl/schemas/waardelijsten/NaamWaardelijst'
+Indien mogelijk is de verwijzing een URI of een URL (als er geen URI is, dan kan dit een URL zijn, waar de waardelijst op basis van de naam van de waardelijst te vinden is). Bijvoorbeeld: `http://www.organisatie.nl/schemas/waardelijsten/NaamWaardelijst`.
 
 *Toepassing*: de modelelementen die een waardelijst zijn.
 
