@@ -126,7 +126,7 @@ Een `Constraint` legt voorwaarden of beperkingen op aan een modelelement. Meer i
 
 Het modelelement keuze bepaalt dat er meerdere opties mogelijk zijn, waarvan er één gekozen moet worden. Er zijn vijf situaties mogelijk waarin een keuze toegepast wordt. Elke situatie heeft een eigen metamodel.
  1. een keuze tussen datatypen ([diagram](#example-keuze-tussen-datatypen))
- 1. een keuze tussen twee of meer attribuutsoorten ([diagram](#example-keuze-tussen-twee-of-meer-attribuutsoorten))
+ 1. een keuze tussen twee of meer attribuutsoorten ([diagram](#example-keuze-tussen-meerdere-manieren-om-een-betekenisvol-attribuutsoort-in-te-vullen))
  1. een keuze tussen meerdere manieren om één betekenisvol attribuutsoort in te vullen ([diagram](#example-keuze-tussen-meerdere-manieren-om-een-betekenisvol-attribuutsoort-in-te-vullen))
  1. een keuze tussen relatiedoelen, als nadere invulling van één betekenisvolle relatiesoort ([diagram](#example-keuze-tussen-relatiedoelen-met-een-betekenisvolle-relatiesoort))
  1. een keuze tussen twee of meer relatiesoorten/relatierollen (elk afzonderlijk betekenisvol) ([diagram](#example-keuze-tussen-2-of-meer-relatiesoorten-relatierollen-elk-afzonderlijk-betekenisvol))
@@ -1123,10 +1123,7 @@ Met de `tijdlijn geldigheid` wordt bedoeld dat er op een tijdlijn wordt bijgehou
 
 Het komt vaak voor dat er besloten wordt of bepaald wordt dat een gegeven al geldig is of werd vanaf een bepaald tijdsmoment in het verleden en het komt voor dat het gegeven pas geldig zal worden vanaf een bepaald tijdsmoment in de (nabije) toekomst. Verdere toelichting, zie [[[#afspraken-regels]]]. 
 
-Met te bevragen wordt bedoeld: het tijdsmoment vanaf wanneer een gegeven als geldig wordt beschouwd (en vanaf wanneer het gegeven niet meer als geldig wordt beschouwd) wordt op enerlei wijze als historie bijgehouden, en deze wijze is te bevragen. Dit metagegeven is alleen betekenisvol voor kenmerken waarvoor een waarde wordt bijgehouden. De in te vullen waarde komt uit: zie [Tagged values en waardenbereik tagged
-values](#toegestane-waarden-metadatagegevens). 
-
-De in te vullen waarde komt uit: [[[#toegestane-waarden-metagegevens]]].
+Met te bevragen wordt bedoeld: het tijdsmoment vanaf wanneer een gegeven als geldig wordt beschouwd (en vanaf wanneer het gegeven niet meer als geldig wordt beschouwd) wordt op enerlei wijze als historie bijgehouden, en deze wijze is te bevragen. Dit metagegeven is alleen betekenisvol voor kenmerken waarvoor een waarde wordt bijgehouden. De in te vullen waarde komt uit [[[#toegestane-waarden-metagegevens]]].
 
 **Toepassing**: alle modelelementen die een kenmerk (kunnen) zijn van een `«Objecttype»`, waarvoor data kan worden bijgehouden: `«Attribuutsoort»` en relaties (`«Relatiesoort»`, `«Relatieklasse»`, `«Externe Koppeling»`).
 
