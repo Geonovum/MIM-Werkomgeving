@@ -157,7 +157,7 @@ Onderstaande tabellen geven een overzicht van alle transformaties en een referen
 |`mim:constraint`|`mim:constraint`|[Constraint](#transformatie-constraint)|
 |`mim:element`|`sh:property`|[Data element](#transformatie-data-element)|
 |`mim:indicatieClassificerend`|`rdfs:subClassOf` (onder meer)|[indicatie classificerend](#transformatie-indicatie-classificerend)|
-|`mim:bevatModelelement`|`rdfs:isDefinedBy`, `owl:imports`|[bevat modelelement](#transformatie-bevat-modelelement)|
+|`mim:bevatModelelement`|`rdfs:isDefinedBy`, `owl:imports`|[bevat modelelement](#transformatie-bevat-modelement)|
 
 ### Instanties (datatypen)
 
@@ -1172,7 +1172,7 @@ Een `mim:mogelijkGeenWaarde` wordt direct, zonder aanpassing, overgenomen in het
 
 Linked Data gaat in beginsel uit van een "open word assumptie". Dit houdt onder andere in dat Linked Data er van uitgaat dat elk aspect mogelijk geen waarde kan hebben. Met SHACL kan deze assumptie worden beperkt. Zo zal bij een verplicht veld (zoals kardinaliteit 1..* of 1..1) daadwerkelijk ook een waarde aanwezig moeten zijn. Het MIM gaat in beginsel  uit van een "closed world assumptie", het veld `mim:mogelijkGeenWaarde` is juist bedoeld om deze assumptie te verruimen. Doordat het veld `mim:mogelijkGeenWaarde` altijd een waarde heeft ("Ja" of "Nee"), kan het veld ook worden gelezen als *als de waarde in de werkelijkheid bestaat, dan is deze ook aanwezig*. Dit maakt dat het veld `mim:mogelijkGeenWaarde` feitelijk in de context van Linked Data het model in vele gevallen een gesloten model maakt, vandaar ook het gebruik van SHACL waarmee we deze beperkingen kunnen opleggen. Indien sprake is van een "mogelijk geen waarde" dan is het wel noodzakelijk om de transformatieregel voor `mim:kardinaliteit` aan te passen, conform onderstaande tabel:
 
-|`mim:mogelijkGeenWaarde`|`mim:kardinaliteit`|Aanpassing             |
+| mim:mogelijkGeenWaarde | mim:kardinaliteit |Aanpassing             |
 |------------------------|-------------------|-----------------------|
 | Nee                    | 0..x              |geen                   |
 | Nee                    | 1..x              |geen                   |
@@ -1180,7 +1180,7 @@ Linked Data gaat in beginsel uit van een "open word assumptie". Dit houdt onder 
 | Ja                     | 1..x              |sh:minCount verwijderd |
 | Ja                     | n..x (met n>1)    |sh:minCount verwijderd |
 
-"sh:minCount verwijderd" houdt in dat de kardinaliteit 0..x wordt. Deze aanpassing is opgenomen in de transformatieregel van [kardinaliteit](#kardinaliteit).
+"sh:minCount verwijderd" houdt in dat de kardinaliteit 0..x wordt. Deze aanpassing is opgenomen in de transformatieregel van [[[#transformatie-kardinaliteit]]].
 
 Zie ook het NEN3610 Linked Data Profiel [7.3.4.2.3 Attribuut met stereotype «voidable»](https://geonovum.github.io/NEN3610-Linkeddata/#regels-attributen-voidable) voor meer achtergrondinformatie.
 
@@ -1209,7 +1209,7 @@ De vertaling van een `mim:type` hangt af van de vertaling van het datatype waar 
 - Voor een enumeratie wordt vertaald naar een `sh:node`;
 - Voor een referentielijst wordt vertaald naar een `sh:node`;
 - Voor een codelijst wordt vertaald naar een `sh:node`;
-- Voor een union wordt de vertaling opgepakt bij de transformatieregel van union zelf (zie ook [Union](#union))
+- Voor een keuze wordt de vertaling opgepakt bij de transformatieregel van keuze zelf (zie:[[[#transformatie-keuze]]]);
 - In geval van zelfgespecificeerde datatypen wordt vertaald conform het betreffende supertype.
 
 <pre class='ex-sparql'>
