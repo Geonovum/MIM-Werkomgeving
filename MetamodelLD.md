@@ -133,7 +133,7 @@ De "keuze constructie" maakt een keuze mogelijk tussen meerdere attribuutsoorten
 |-------------------|----------------------|------------------|---------------|
 | Keuze             | [`mim:Keuze`](http://bp4mc2.org/def/mim#Keuze) | shape:Keuze | [grondslag](#keuze) |
 | Datatype          | [`mim:Datatype`](http://bp4mc2.org/def/mim#Datatype) | shape:Datatype | [grondslag](#datatype) |
-| Objecttype        | [`mim:Objecttype`](http://bp4mc2.org/def/mim#Objecttype) | shape:Objecttype | [grondslag](#objecten-en-objecttype) |
+| Objecttype        | [`mim:Objecttype`](http://bp4mc2.org/def/mim#Objecttype) | shape:Objecttype | [grondslag](#objecttype) |
 | Attribuutsoort    | [`mim:Attribuutsoort`](http://bp4mc2.org/def/mim#Attribuutsoort) | shape:Attribuutsoort | [grondslag](#attribuutsoort-en-een-groepering-ervan) |
 
 *Datatypekeuze*
@@ -216,21 +216,21 @@ Deze paragraaf is een aanvulling op de paragraaf [[[#specificatie-metagegevens]]
 |---------------------|----------------------------|--------------|---------------|
 | aggregatietype | [`mim:aggregatietype`](http://bp4mc2.org/def/mim#aggregatietype) | owl:ObjectProperty | [grondslag](#metagegeven-aggregatietype) |
 | alias | [`mim:alias`](http://bp4mc2.org/def/mim#alias) | owl:DatatypeProperty | [grondslag](#metagegeven-alias) |
-| attribuut | [`mim:attribuut`](http://bp4mc2.org/def/mim#attribuut) | owl:ObjectProperty | [grondslag](#metagegeven-attribuut) |
+| attribuut | [`mim:attribuut`](http://bp4mc2.org/def/mim#attribuut) | owl:ObjectProperty | [grondslag](#metagegeven-heeft-attribuut) |
 | authentiek | [`mim:authentiek`](http://bp4mc2.org/def/mim#authentiek) | owl:ObjectProperty | [grondslag](#metagegeven-authentiek) |
 | basis-URI | [`mim:basisUri`](http://bp4mc2.org/def/mim#basisUri) | owl:DatatypeProperty | [grondslag](#metagegeven-basis-uri) |
 | begrip | [`mim:begrip`](http://bp4mc2.org/def/mim#begrip) | owl:ObjectProperty | [grondslag](#metagegeven-begrip) |
 | begripsterm | [`mim:begripsterm`](http://bp4mc2.org/def/mim#begripsterm) | owl:DatatypeProperty | [grondslag](#metagegeven-begrip) |
 | bron | [`mim:bron`](http://bp4mc2.org/def/mim#bron) | owl:ObjectProperty | [grondslag](#metagegeven-bron) |
 | code | [`mim:code`](http://bp4mc2.org/def/mim#code) | owl:DatatypeProperty | [grondslag](#metagegeven-code) |
-| constraint | [`mim:constraint`](http://bp4mc2.org/def/mim#constraint) | owl:ObjectProperty | [grondslag](#metagegeven-constraint) |
-| data element | [`mim:dataElement`](http://bp4mc2.org/def/mim#dataElement) | owl:ObjectProperty | [grondslag](#metagegeven-data-element) |
+| constraint | [`mim:constraint`](http://bp4mc2.org/def/mim#constraint) | owl:ObjectProperty | [grondslag](#metagegeven-heeft-constraint) |
+| data-element | [`mim:dataElement`](http://bp4mc2.org/def/mim#dataElement) | owl:ObjectProperty | [grondslag](#metagegeven-heeft-data-element) |
 | datum opname | [`mim:datumOpname`](http://bp4mc2.org/def/mim#datumOpname) | owl:DatatypeProperty | [grondslag](#metagegeven-datum-opname) |
 | definitie | [`mim:definitie`](http://bp4mc2.org/def/mim#definitie) | owl:DatatypeProperty | [grondslag](#metagegeven-definitie) |
 | doel | [`mim:doel`](http://bp4mc2.org/def/mim#doel) | owl:ObjectProperty | [grondslag](#metagegeven-doel) |
 | formeel patroon | [`mim:formeelPatroon`](http://bp4mc2.org/def/mim#formeelPatroon) | owl:DatatypeProperty | [grondslag](#metagegeven-formeel-patroon) |
-| gegevensgroep | [`mim:gegevensgroep`](http://bp4mc2.org/def/mim#gegevensgroep) | owl:ObjectProperty | [grondslag](#metagegeven-gegevensgroep) |
-| groeptype | [`mim:groeptype`](http://bp4mc2.org/def/mim#groeptype) | owl:ObjectProperty | [grondslag](#metagegeven-groeptype) |
+| gegevensgroep | [`mim:gegevensgroep`](http://bp4mc2.org/def/mim#gegevensgroep) | owl:ObjectProperty | [grondslag](#metagegeven-heeft-gegevensgroep) |
+| groeptype | [`mim:groeptype`](http://bp4mc2.org/def/mim#groeptype) | owl:ObjectProperty | [grondslag](#metagegeven-heeft-gegevensgroeptype) |
 | herkomst | [`mim:herkomst`](http://bp4mc2.org/def/mim#herkomst) | owl:DatatypeProperty | [grondslag](#metagegeven-herkomst) |
 | herkomst definitie | [`mim:herkomstDefinitie`](http://bp4mc2.org/def/mim#herkomstDefinitie) | owl:DatatypeProperty | [grondslag](#metagegeven-herkomst-definitie) |
 | identificerend | [`mim:identificerend`](http://bp4mc2.org/def/mim#identificerend) | owl:DatatypeProperty | [grondslag](#metagegeven-identificerend) |
@@ -239,12 +239,12 @@ Deze paragraaf is een aanvulling op de paragraaf [[[#specificatie-metagegevens]]
 | indicatie classificerend | [`mim:indicatieClassificerend`](http://bp4mc2.org/def/mim#indicatieAfleidbaar) | owl:DatatypeProperty | [grondslag](#metagegeven-indicatie-classificerend) |
 | indicatie formele historie | [`mim:indicatieFormeleHistorie`](http://bp4mc2.org/def/mim#indicatieFormeleHistorie) | owl:DatatypeProperty | [grondslag](#metagegeven-indicatie-formele-historie) |
 | indicatie materiële historie | [`mim:indicatieMaterieleHistorie`](http://bp4mc2.org/def/mim#indicatieMaterieleHistorie) | owl:DatatypeProperty | [grondslag](#metagegeven-indicatie-materiele-historie) |
-| informatiedomein | [`mim:informatiedomein`](http://bp4mc2.org/def/mim#informatiedomein) | owl:DatatypeProperty | [grondslag](#metagegeven-domein) |
+| informatiedomein | [`mim:informatiedomein`](http://bp4mc2.org/def/mim#informatiedomein) | owl:DatatypeProperty | [grondslag](#metagegeven-informatiedomein) |
 | informatiemodeltype | [`mim:informatiemodeltype`](http://bp4mc2.org/def/mim#informatiemodeltype) | owl:ObjectProperty | [grondslag](#metagegeven-informatiemodel-type) |
 | is gedefinieerd in | [`mim:isGedefinieerdIn`](http://bp4mc2.org/def/mim#isGedefinieerdIn) | owl:ObjectProperty | [grondslag](#metagegeven-is-gedefinieerd-in) |
 | kardinaliteit | [`mim:kardinaliteit`](http://bp4mc2.org/def/mim#kardinaliteit) | owl:DatatypeProperty | [grondslag](#metagegeven-kardinaliteit)
 | kwaliteit | [`mim:kwaliteit`](http://bp4mc2.org/def/mim#kwaliteit) | owl:DatatypeProperty | |
-| lengte | [`mim:lengte`](http://bp4mc2.org/def/mim#lengte) | owl:DatatypeProperty | [grondslag](#metagegeven-lengte-domein-van-een-waarde-van-een-gegeven) |
+| lengte | [`mim:lengte`](http://bp4mc2.org/def/mim#lengte) | owl:DatatypeProperty | [grondslag](#metagegeven-lengte) |
 | locatie | [`mim:locatie`](http://bp4mc2.org/def/mim#locatie) | owl:DatatypeProperty | [grondslag](#metagegeven-locatie) |
 | mim extensie | [`mim:extensie`](http://bp4mc2.org/def/mim#extensie) | owl:DatatypeProperty | [grondslag](#metagegeven-mim-extensie)
 | mim taal | [`mim:taal`](http://bp4mc2.org/def/mim#taal) | owl:DatatypeProperty | [grondslag](#metagegeven-mim-taal) |
@@ -253,7 +253,7 @@ Deze paragraaf is een aanvulling op de paragraaf [[[#specificatie-metagegevens]]
 | naam | [`mim:naam`](http://bp4mc2.org/def/mim#naam) | owl:DatatypeProperty | [grondslag](#metagegeven-naam) |
 | patroon | [`mim:patroon`](http://bp4mc2.org/def/mim#patroon) | owl:DatatypeProperty | [grondslag](#metagegeven-patroon) |
 | populatie | [`mim:populatie`](http://bp4mc2.org/def/mim#populatie) | owl:DatatypeProperty | |
-| referentie element | [`mim:referentieElement`](http://bp4mc2.org/def/mim#referentieElement) | owl:ObjectProperty | [grondslag](#metagegeven-referentie-element) |
+| referentie-element | [`mim:referentieElement`](http://bp4mc2.org/def/mim#referentieElement) | owl:ObjectProperty | [grondslag](#metagegeven-bevat-referentie-element) |
 | relatiemodelleringstype | [`mim:relatiemodelleringstype`](http://bp4mc2.org/def/mim#relatiemodelleringstype) | owl:ObjectProperty | [grondslag](#metagegeven-relatiemodelleringstype) |
 | relatierol | [`mim:relatierol`](http://bp4mc2.org/def/mim#relatierol) | owl:ObjectProperty | |
 | specificatie formeel | [`mim:specificatieFormeel`](http://bp4mc2.org/def/mim#specificatieFormeel) | owl:DatatypeProperty | |
@@ -261,7 +261,7 @@ Deze paragraaf is een aanvulling op de paragraaf [[[#specificatie-metagegevens]]
 | subtype | [`mim:subtype`](http://bp4mc2.org/def/mim#subtype) | owl:ObjectProperty | |
 | supertype | [`mim:supertype`](http://bp4mc2.org/def/mim#supertype) | owl:ObjectProperty | |
 | toelichting | [`mim:toelichting`](http://bp4mc2.org/def/mim#toelichting) | owl:DatatypeProperty | [grondslag](#metagegeven-toelichting)
-| type | [`mim:type`](http://bp4mc2.org/def/mim#type) | owl:ObjectProperty | [grondslag](#metagegeven-type-domein-van-een-waarde-een-gegeven) |
+| type | [`mim:type`](http://bp4mc2.org/def/mim#type) | owl:ObjectProperty | [grondslag](#metagegeven-type) |
 | unidirectioneel | [`mim:unidirectioneel`](http://bp4mc2.org/def/mim#unidirectioneel) | owl:DatatypeProperty | [grondslag](#metagegeven-unidirectioneel) |
 | uri | [`mim:uri`](http://bp4mc2.org/def/mim#uri) | owl:DatatypeProperty | [grondslag](#metagegeven-uri) |
 | waarde | [`mim:waarde`](http://bp4mc2.org/def/mim#waarde) | owl:ObjectProperty | [grondslag](#metagegeven-waarde) |
@@ -758,8 +758,8 @@ Het veld `mim:relatiemodelleringtype` verwijst naar één van de volgende mogeli
 
 | **Relatiemodelleringtype** | **Definitie** |
 |----------------------------|---------------|
-| [`mim:RelatiesoortLeidend`](http://bp4mc2.org/def/mim#RelatiesoortLeidend) | Relatiesoort leidend, conform [deze](#relatiesoort-leidend-alternatief-1-0) sectie  |
-| [`mim:RelatierolLeidend`](http://bp4mc2.org/def/mim#RelatierolLeidend) | Relatierol leidend, conform [deze](#relatierol-is-leidend-alternatief-2-0) sectie |
+| [`mim:RelatiesoortLeidend`](http://bp4mc2.org/def/mim#RelatiesoortLeidend) | Relatiesoort leidend, conform [deze](#relatiesoort-alt-1-soort-leidend) en [deze](#relatierol-alt-1-soort-leidend) secties |
+| [`mim:RelatierolLeidend`](http://bp4mc2.org/def/mim#RelatierolLeidend) | Relatierol leidend, conform [deze](#relatiesoort-alt-2-rol-leidend) en [deze](#relatierol-alt-2-rol-leidend) secties |
 
 #### mim:Domein
 
