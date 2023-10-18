@@ -353,7 +353,7 @@ Desgewenst kan een extensie gepubliceerd worden bij MIM-beheer of kan ernaar ver
 </aside>
 
 ## Alternatieven
-In dit metamodel is op één punt sprake van een keuze tussen twee alternatieven, waarvan de modelleur van een informatiemodel één van beide alternatieven kiest. Welke je kiest geef je aan bij je eigen informatiemodel, in je eigen extensie (zoals bedoeld in de vorige paragraaf). Dit betreft: Relatiesoort en relatierol, beide te gebruiken, maar welke is verplicht/leidend (zie [Specificatie metagegevens voor relaties](#relaties-in-uml)). Indien gewenst kun je hier vragen over stellen aan de beheerders van dit metamodel voordat je een keuze maakt.
+In dit metamodel is op één punt sprake van een keuze tussen twee alternatieven, waarvan de modelleur van een informatiemodel één van beide alternatieven kiest. Welke je kiest geef je aan bij je eigen informatiemodel, in je eigen extensie (zoals bedoeld in de vorige paragraaf). Dit betreft: Relatiesoort en relatierol, beide te gebruiken, maar welke is verplicht/leidend [[[#relaties-in-uml]]]. Indien gewenst kun je hier vragen over stellen aan de beheerders van dit metamodel voordat je een keuze maakt.
 
 ## Beheer
 Het beheer van dit metamodel vindt plaats door Geonovum met ondersteuning van het Kadaster. 
