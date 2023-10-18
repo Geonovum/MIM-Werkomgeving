@@ -338,8 +338,7 @@ Gebruik een codelijst als in het informatiemodel de attributen, zoals bij een re
 
 ## Abstracte objecttypes en concrete objecten
 
-Een objecttype kan aangeduid worden als een abstract objecttype (zie paragraaf
-[Modellering metagegevens voor objecten en attributen in UML](#modellering-metagegevens-voor-objecten-en-attributen-in-uml)) door middel van
+Een objecttype kan aangeduid worden als een abstract objecttype (zie: [[[#objecttypen-en-attribuutsoorten]]]) door middel van
 indAbstract = J). Het betreft dan altijd een generalisatie waarbij de
 specialisaties van dit objecttype op het laagste niveau concrete objecttypen
 worden genoemd. Het is belangrijk te weten wanneer een objecttype als abstract
@@ -778,7 +777,7 @@ Het metamodel gaat als volgt met de metadata van de stelselcatalogus om:
 | *Gebruiksvoorwaarden*        | N                       | n.v.t.                             |
 
 ### Afspraken Waardenbereik
- - *Authentiek:* als in dit metamodel [‘Authentiek’](#authentiek) dan ‘Ja’ in stelselcatalogus, anders Nee.
+ - *Authentiek:* als in dit metamodel [[[#metagegeven-authentiek]]] dan ‘Ja’ in stelselcatalogus, anders Nee.
  - *Herkomst:* Zelf in te vullen. Afspraken hierbij: Als zelf ingewonnen: noem de inwinnende organisatie. Bijvoorbeeld: VNG Realisatie of Gemeentes. Als overgenomen uit andere bron, noem de directe bron. Bijvoorbeeld: BAG.
  - *Relatie:* dit is geen metagegeven in dit metamodel, maar een stereotype. Deze is wel af te leiden uit het metagegeven van relatiesoort: gerelateerd objecttype (de target van de relatie).
 
