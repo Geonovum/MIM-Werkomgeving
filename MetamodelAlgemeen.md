@@ -779,7 +779,7 @@ Er is sprake van een relatiesoort R0 en aanvullend hierbij een keuze tussen rela
 Het is bij deze use case niet de bedoeling om twee nieuwe relatiesoorten, eigenaar_persoon en eigenaar_bedrijf, te introduceren en al zeker niet om de relatiesoort eigenaar kwijt te raken. We modelleren daarom 1 relatiesoort met de naam eigenaar en een *Keuze* tussen relatiedoelen.
 
 <figure id="relatiedoelkeuze">
-  <img src="media/relatiedoelkeuze-4.png" alt="" />
+  <img src="media/Relatiedoelkeuze-4.png" alt="" />
   <figcaption>Diagram: Voorbeeld van keuze tussen relatiedoelen</figcaption>
 </figure>
 
