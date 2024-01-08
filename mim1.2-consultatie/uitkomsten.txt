@@ -1,1 +1,39 @@
+reactie Pier bresters - Geonovum:
+
+Hoi Dick,
+
+Niet alleen omdat er gevraagd was om een reactie in het beheeroverleg, maar ook omdat het heel leerzaam was voor mij, was ik voor de sluitingsdatum begonnen aan het lezen van de consultatie MIM2.0.
+Ik had het slechts 1x gelezen voor ik bij Geonovum ging werken en toen vond ik het zware kost, maar nu ik bijna 3 jaar informatiemodellen beheer snap ik het veel beter.
+Het was echter meer werk dan ik verwachtte. Helaas heb ik het niet afgekregen voor de sluitingsdatum van 1,5 week geleden.
+Toch hoop ik dat je nog wat hebt aan mijn reactie.
+
+Het meeste is tekstueel hieronder per paragraaf:
+•	1.1, 6e punt: er staat denk ik onbedoeld “. en” op het einde
+•	1.3 1e alinea: er staat “oegepast” en mist de t 
+•	1.3 2e alinea: er staat “aar” en mist de m
+•	1.6.5 4e punt: er is geen bijlage 3
+•	2 1e alinea: “beschrijving alle” moet zijn “beschrijving van alle”
+•	2.3.1.2 laatste alinea: de laatste zin loopt raar op het einde
+•	2.3.2.4 in toelichting: daar staat 2x “en de motor”
+•	2.3.3.2: “voer” moet zijn “voor”
+•	2.3.6.1: Figuur 10 in 2.2.4.4 komt niet helemaal overeen met deze Toelichting: “Het informatiemodel is een package, te weten het hoofdpackage van het informatiemodel, waar alle subpackages die een informatiemodel beschrijven onder vallen, zoals Domein en View en extern.”
+•	2.4.3.17: Mag dit ook voor een extern gegeven als bv de geometrie van een pand uit de BAG en is dit de plek om de conventie te melden dat je dan een “/” voor de naam van het afgeleide gegeven komt?
+•	2.4.5.2: “altijd moet” -> “moet altijd”
+•	5.1 2e punt: zoals wat?
+•	5.1 opsomming: ik mis de zelf gedefinieerde datatypen in deze opsomming en ik zou de opsomming beginnen met de naam van het soort, zoals die ook in de daaropvolgende hoofstukjes is.
+•	5.2 zou ik nummeren als 5.1.4, want die hoort bij de opsomming in par 5.1
+•	5.7 de 2 voorbeelden hebben een verschillende opmaak.
+•	5.8 is dit plaatje bruikbaar als voorbeeld:  
+•	5.9.3 Deze paragraaf gaat over het logische niveau. Waarom begint het dan over het conceptuele niveau? 
+•	5.10 De link naar par 2.4.2 klopt niet. Is nu denk ik 2.4.3.17
+•	5.12 2e alinea: “dit is vrijwel altijd is dit bij” is vreemd stukje tekst
+•	5.12 laatste alinea: “le beheerder”?
+•	5.18.1 misschien toevoegen dat de attribuut volgorde wel vaak invloed heeft op de volgorde in de schema’s en dat het er daarom toch vaak toe doet. Bij IMG hebben we een soort afspraak dat ID en geometrie altijd bovenin staan en daarna de rest in alfabetische volgorde. 
+
+Sorry dat ik 1,5 week te laat ben.
+
+Groet,
+Pieter,
+
+06-82899376
 
