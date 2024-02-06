@@ -10,7 +10,7 @@ Het metamodel biedt de modelleringstaal waarmee een informatiemodel gemaakt, gel
 -   informatiemodellen goed aan elkaar te kunnen koppelen op conceptueel en logisch niveau;
 -   tooling te kunnen ontwikkelen en (her)gebruiken voor resp. door alle partijen die kiezen voor dit metamodel;
 -   kennis uit verschillende organisaties te bundelen;
--   en in het verlengde hiervan, om op een meer geautomatiseerde werkwijze sneller en beter voorspelbaar uitwisselingsstandaarden op kunnen stellen. en
+-   en in het verlengde hiervan, om op een meer geautomatiseerde werkwijze sneller en beter voorspelbaar uitwisselingsstandaarden op kunnen stellen.
 -   om interoperabiliteit tussen registraties te bevorderen.
 
 Voor informatiemodellen die op basis van dit metamodel zijn beschreven geldt:
@@ -23,9 +23,9 @@ Voor informatiemodellen die op basis van dit metamodel zijn beschreven geldt:
 Dit document is primair bestemd voor informatiemodelleurs en informatiearchitecten  die deze informatiemodellen maken; informatieanalisten die willen weten wat de betekenis en definitie van informatieobjecten is, en mensen die model-driven verder werken op basis van het informatiemodel en er implementaties van maken. Kennis van informatiemodellering is een vereiste. Enige kennis van UML [[UML]] of [[Linked-Data]] is een pré maar niet noodzakelijk. Dit metamodel richt zich in het bijzonder op de informatievoorziening binnen het overheidsdomein, al is het ook in bredere context inzetbaar.
 
 ## Leeswijzer
-Het metamodel beschrijven we in vijf hoofdstukken en een bijlage. Lees de [Inleiding](#inleiding) verder voor inzicht in wat we onder een informatiemodel en onder een metamodel verstaan, hoe deze modellen zich verhouden tot UML en de vier lagen metamodel architectuur van de Object Management Group [[OMG]], Linked Data en de internetstandaarden van de W3C en welke overige standaarden worden  oegepast. 
+Het metamodel beschrijven we in vijf hoofdstukken en een bijlage. Lees de [Inleiding](#inleiding) verder voor inzicht in wat we onder een informatiemodel en onder een metamodel verstaan, hoe deze modellen zich verhouden tot UML en de vier lagen metamodel architectuur van de Object Management Group [[OMG]], Linked Data en de internetstandaarden van de W3C en welke overige standaarden worden toegepast. 
 
-Het hoofdstuk [Metamodel Algemeen](#metamodel-algemeen) bevat de beschrijving van alle bouwstenen c.q. de modelelementen van het metamodel, in de vorm van definities en specificaties. De betekenis en toelichting van de modelelementen van het metamodel vormt het materiaal waarmee een uitputtende modelspecificatie kan worden opgesteld. De afbeeldingen in dit algemene hoofdstuk zijn weliswaar gemaakt in UML,  aar het metamodel beperkt zich zeker niet tot UML. Er zijn aparte hoofdstukken voor de implementatie van MIM in UML en Linked Data.
+Het hoofdstuk [Metamodel Algemeen](#metamodel-algemeen) bevat de beschrijving van alle bouwstenen c.q. de modelelementen van het metamodel, in de vorm van definities en specificaties. De betekenis en toelichting van de modelelementen van het metamodel vormt het materiaal waarmee een uitputtende modelspecificatie kan worden opgesteld. De afbeeldingen in dit algemene hoofdstuk zijn weliswaar gemaakt in UML, maar het metamodel beperkt zich zeker niet tot UML. Er zijn aparte hoofdstukken voor de implementatie van MIM in UML en Linked Data.
 
 Het hoofdstuk [Metamodel in UML](#metamodel-in-uml) beschrijft hoe de implementatie van MIM in [[UML]] er uit ziet. In dit hoofdstuk wordt beschreven hoe het metamodel zich verhoudt tot het UML metamodel, welke uitbreidingen c.q. verbijzonderingen van het UML metamodel zijn aangebracht.
 
@@ -174,7 +174,7 @@ Het moge duidelijk zijn dat het altijd het één of het ander is, conceptueel of
 beide in één model leidt tot verwarring. Voor eenzelfde domein verschilt de structuur van het informatiemodel 
 naar gelang het type en bevat het logisch informatiemodel meer, vooral datagerichte, specificaties dan een 
 conceptueel informatiemodel. 
-- Bijlage 3 verschaft een overzicht van de metadata-constructen en -elementen die per type model van toepassing zijn.
+- [[[#modelelementen-en-metagegevens-als-diagram]]] verschaft een overzicht van de metadata-constructen en -elementen die per type model van toepassing zijn.
 Het is daarom van belang om voorafgaand aan het opstellen van een informatiemodel expliciet te bepalen welk van 
 beide typen beoogd is en de modellering conform het gekozen type te doen plaatsvinden. In de beschrijving van het
 informatiemodel moet vermeld worden om welk van beide typen het gaat. 
