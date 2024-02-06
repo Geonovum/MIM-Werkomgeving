@@ -310,7 +310,7 @@ Er zijn slechts een aantal modelelementen waarmee een gegeven gemodelleerd kan w
 
 Met de vastlegging van gegevens in een informatievoorziening wordt een model van de werkelijkheid bevroren in de tijd. Hoewel de werkelijkheid nooit stil staat, kan deze door het vastleggen van de gegevens toch worden bevroren. Bij een gegeven kunnen ook metagegevens worden vastgelegd, voor het bijhouden van *historie*, zoals de tijdslijn geldigheid en de tijdslijn registratie.
 
-Op deze manier weet een gebruiker van de informatievoorziening wanneer het gegeven geldig is (of is geweest) en wanneer het gegeven is vastgelegd op een bepaald medium. Het is (meestal) niet zinvol om voor onderdelen van een gegeven historie bij te houden. Immers: een onderdeel van een gegeven representeert niet de gehele waarde van een feit. <mark>Bovendien zijn gebruikers van een informatievoorziening meestal niet geïnteresseerd in gedeeltes zijn feiten</mark>. 
+Op deze manier weet een gebruiker van de informatievoorziening wanneer het gegeven geldig is (of is geweest) en wanneer het gegeven is vastgelegd op een bepaald medium. Het is (meestal) niet zinvol om voor onderdelen van een gegeven historie bij te houden. Immers: een onderdeel van een gegeven representeert niet de gehele waarde van een feit. <mark>Bovendien zijn gebruikers van een informatievoorziening meestal niet geïnteresseerd in gedeeltes zijn feiten</mark>.
 
 ### Objecttypen en attribuutsoorten  
 
