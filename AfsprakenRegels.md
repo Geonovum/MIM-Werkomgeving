@@ -14,35 +14,18 @@ attribuutsoort kan aannemen en de vorm waarin deze beschikbaar zijn.
 
 We onderscheiden de volgende soorten gedefinieerde categorieën voor datatypen:
 
-1.  Datatypen, primitief: data zoals “Amersfoort” of “10” worden vastgelegd als
-    CharacterString en Integer. Dit volgt de internationale standaarden voor
-    datatypen.
+1.  **Primitief datatype**: data zoals `"Amersfoort"` of `"10"` worden vastgelegd als `CharacterString` en `Integer`. Dit volgt de internationale standaarden voor datatypen.
+1.  **Landelijk datatype** (volgens het GAB): datatypen zoals: `Postcode`, `DMO` en `DTMO` (zie ook: [[[#landelijk-datatype]]]).
+1. **Zelfgedefinieerd datatype**: data zoals `NietNegatieveInteger`, `AN` (Alfanumerieke waarde) of een `Vlak`.
+1.  **Gestructureerd datatype**: een combinatie van data, zoals een `bedrag`: `"5 euro"`, opgebouwd uit `waarde` = `"5"` en `munteenheid` = `"euro"`), of een `GM_Surface`. Deze volgen ook internationale of nationale standaarden.
 
-2.  Datatypen (met een naam), landelijk volgens het GAB: datatypen zoals
+De primitieve datatypen uit onderstaande lijst moeten gebruikt worden. De landelijke en de Gestructureerde datatypen hoeven niet per sé gebruikt te worden, maar het gebruik hiervan wordt wel aanbevolen. Dit metamodel voorziet er vooral in dat dit soort datatypen gedefinieerd kunnen worden, conform de modellering zoals het metamodel aangeeft, maar dus zonder de specifieke datatypen voor te schrijven.
 
-3.  Gestructureerde datatypen: een combinatie van data, zoals een bedrag “5
-    euro”, of een GM_Surface. Deze volgen ook internationale of nationale
-    standaarden.
+Datatypen die niet in deze paragraaf (sub paragrafen) voor-gedefinieerd zijn worden in het eigen informatiemodel toegevoegd. Dit kan een organisatie zelf doen, door deze expliciet te beschrijven in de eigen extensie en daarna te gebruiken in het eigen informatiemodel. Deze gelden dan alleen voor het eigen informatiemodel.
 
-De primitieve datatypen uit onderstaande lijst moeten gebruikt worden. De
-landelijke en de Gestructureerde datatypen hoeven niet per sé gebruikt te
-worden, maar het gebruik hiervan wordt wel aanbevolen. Dit metamodel voorziet er
-vooral in dat dit soort datatypen gedefinieerd kunnen worden, conform de
-modellering zoals het metamodel aangeeft, maar dus zonder de specifieke
-datatypen voor te schrijven.
+Het is mogelijk om specifieke(re) restricties, zoals de lengte, toe te voegen. Dit wordt gedaan in een metagegeven lengte. De data van het attribuut moet dan voldoen aan het datatype én aan het metagegeven lengte. De lengte wordt dus niet in het datatype zelf vastgelegd.
 
-Datatypen die niet in deze paragraaf (sub paragrafen) voor-gedefinieerd zijn
-worden in het eigen informatiemodel toegevoegd. Dit kan een organisatie zelf
-doen, door deze expliciet te beschrijven in de eigen extensie en daarna te
-gebruiken in het eigen informatiemodel. Deze gelden dan alleen voor het eigen
-informatiemodel.
-
-Het is mogelijk om specifieke(re) restricties, zoals de lengte, toe te voegen.
-Dit wordt gedaan in een metagegeven lengte. De data van het attribuut moet dan
-voldoen aan het datatype én aan het metagegeven lengte. De lengte wordt dus niet
-in het datatype zelf vastgelegd.
-
-### Primitive datatypen
+### Primitief datatype
 
 Dit metamodel onderkend (momenteel) de volgende extern gedefinieerde primitive
 datatypen. Deze zijn allemaal gebaseerd op [[!GAB]]:
@@ -105,13 +88,12 @@ attribuut wordt in dat geval een `CharacterString`, met lengte (exact) `4` en he
 patroon voor het attribuut specificeert dat alleen numerieke getallen zijn
 toegestaan: `[0-9]{4}`.
 
-### Datatype zelf definiëren
+### Zelfgedefinieerd datatype
 
 Het is ook mogelijk om in het eigen informatiemodel een eigen datatype te definiëren in de vorm van een `«Primitief datatype»`, `«Codelijst»` of `«Referentielijst»`. Zelf-gedefinieerde datatypen hebben altijd een eigen definitie en optioneel een eigen patroon of formeel patroon.
 
-
 <aside class="example" title="Eigen datatype definiëren als primitief datatype, codelijst of referentielijst">
-    Ter illustratie enkele voorbeelden van zelf-gedefinieerde datatypen die niet tot MIM behoren:
+    Ter illustratie enkele voorbeelden van zelfgedefinieerde datatypen die niet tot MIM behoren:
     <ul>
     <li><code>NietNegatieveInteger</code>: een Integer die alleen de waarde ,<code>0</code> of
     groter mag hebben. Laat de naam van het primitieve type dan wel terugkomen in de
@@ -145,7 +127,7 @@ gespecificeerd. Maak dan zelf een inschatting. Let hierbij op bij een
 «Gestructureerd datatype». Deze hoort altijd twee of meer data elementen te
 hebben.
 
-### Datatypen landelijk
+### Landelijk Datatype
 
 Wanneer op landelijk niveau afspraken zijn gemaakt (bijvoorbeeld in GAB), voor
 algemene datatypen, die niet primitief zijn, zoals Postcode, dan worden deze
@@ -161,7 +143,7 @@ ter illustratie zijn opgenomen:
 | DMO      | Datum mogelijk onvolledig. De keuze («Keuze») van een periode in de Gregoriaanse kalender, al naar gelang de beschikbare datumelementen, uit de onderliggende subformaten alleen Year, Year en Month of Year, Month en Day. Dit is (nog steeds) overeenkomstig met https://en.wikipedia.org/wiki/ISO_8601 en [GAB DatumMogelijkOnvolledig]. |
 | DTMO     | Een volledige datum waarbij (alleen) de tijd mogelijk ontbreekt. De tijd wordt, zover bekend, ingevuld. Dus alleen de uren als de minuten onbekend zijn. DateTime, als de tijd wel volledig bekend is. Date, als alleen de Date bekend is |
 
-## Gestructureerd datatype
+### Gestructureerd datatype
 
 Een «Gestructureerd datatype» is veelal specifiek binnen een informatiemodel. Indien mogelijk wordt zoveel mogelijk hergebruik gemaakt van elders gedefinieerde «Gestructureerd datatype»n, denk bijvoorbeeld aan de Gestructureerd datatypen: NEN 3610 identificatie (NEN3610), Kadastrale aanduiding (BRK), Objectnummering (BAG) of Labelpositie.
 
