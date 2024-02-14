@@ -151,7 +151,7 @@ Gewone datatypen staan op zichzelf en worden niet beschreven in termen van een a
 
 Bijvoorbeeld een Bedrag, dat bestaat uit een hoeveelheid en een muntsoort. Het aantal zelf is nietszeggend, tenzij ook aangegeven wordt welke muntsoort het betreft. Elk data-element in een Gestructureerd datatype heeft zelf ook weer een datatype (in zeer bijzondere gevallen kan een data-element zelf ook weer een Gestructureerd datatype zijn).
 
-### Gestructureerd datatype representeren als één gegevenselement
+#### Gestructureerd datatype representeren als één gegevenselement
 
 Soms is er de behoefte om een combinatie van gegevens samengesteld te
 representeren, in één gegevenselement. Dit speelt specifiek bij gestructureerde
@@ -433,60 +433,29 @@ objecttypen. Dit kan in uw eigen extensie toegevoegd worden.
 
 ## Constraint toepassen
 
-Deze paragraaf gaat dieper in op hoe een <a>Constraint</a> toegepast wordt. Twee constraints die gedefinieerd zijn op hetzelfde modelelement mogen niet dezelfde naam hebben.
+Deze paragraaf gaat dieper in op hoe een <code>«<a>Constraint</a>»</code> toegepast wordt. Twee constraints die gedefinieerd zijn op hetzelfde modelelement mogen niet dezelfde naam hebben.
 
-Een Constraint wordt beschreven met een: 
-- Naam (UML-constraint name): een naam c.q. label, vaak in steekwoorden. 
-- Specificatie in tekst (UML-Constraint Notes, type invariant): een uitgebreide heldere 
-beschrijving van de constraint in gewone tekst.
+Een `«Constraint»` wordt beschreven met een: 
+1. **Naam** (`UML-constraint name`): een naam c.q. label, vaak in steekwoorden. 
+1. **Specificatie in tekst** (`UML-Constraint Notes`, `type invariant`): een uitgebreide heldere  beschrijving van de `«Constraint»` in gewone tekst.
+1. [Optioneel] **Specificatie formeel** (`UML-Constraint Notes`, `type OCL`): formele specificatie in de [[[OCL]]] (OCL). De formele specificatie bevat dus de uitgebreide heldere beschrijving van de constraint in (a.) _gewone tekst_ én (b.) de _formele specificatie in OCL_.
 
-en optioneel:  
-- Specificatie formeel (UML-Constraint Notes, type OCL): formele
-specificatie in de Object Constraint Language. De formele specificatie bevat dus
-de uitgebreide heldere beschrijving van de constraint in gewone tekst EN de
-formele specificatie in OCL.
+In Enterprise architect `12.x` lijkt het helaas (nog) niet mogelijk om constraints zoals bedoeld in UML op te nemen, te weten als `OpaqueExpression` met een `constraint string` en een aanduiding van de taal: natuurlijke taal, of OCL (of een andere zoals Java, maar deze wordt niet toegepast in dit metamodel). EA werkt met `UML Notes` en een `constraint type`.
 
-In Enterprise architect 12.x lijkt het helaas (nog) niet mogelijk om constraints
-zoals bedoeld in UML op te nemen, te weten als OpaqueExpression met een
-constraint string en een aanduiding van de taal: natuurlijke taal, of OCL (of
-een andere zoals Java, maar deze wordt niet toegepast in dit metamodel). EA
-werkt met UML Notes en een constraint type. Het is daarnaast niet mogelijk om de
-tekst en de OCL in dezelfde constraint op te nemen. Het worden dan twee aparte
-constraints, 1 met tekst en 1 met OCL, met verplicht ook een andere naam.
-Vandaar onderstaande aanpak:
-
-Als de modelleur kiest om de constraint alleen in gewone taal te beschrijven,
+Het is daarnaast niet mogelijk om de tekst en de OCL in dezelfde constraint op te nemen. Het worden dan twee aparte constraints: één met tekst en één met OCL, met verplicht ook een andere naam. Vandaar onderstaande aanpak.Als de modelleur kiest om de `«Constraint»` alleen in gewone taal te beschrijven,
 dan als volgt: 
-- Naam (UML-constraint name): een naam c.q. label, vaak in
+- **Naam** (`UML-constraint name`): een naam c.q. label, vaak in
 steekwoorden. 
-- Specificatie in tekst (UML-Constraint Notes, type invariant):
-een uitgebreide heldere beschrijving van de constraint in gewone tekst.
+- **Specificatie in tekst** (`UML-Constraint Notes`, `type invariant`):
+een uitgebreide heldere beschrijving van de `«Constraint»` in gewone tekst.
 
-Als de modelleur kiest om de constraint niet alleen in gewone taal te
-beschrijven, maar ook in een formele taal (OCL), dan als volgt: 
-- Naam (UML-constraint name): een naam c.q. label, vaak in steekwoorden. 
-- Specificatie formeel (UML-Constraint Notes, type OCL): formele specificatie in de object
-constraint language (OCL). De uitgebreide heldere beschrijving van de constraint
-in gewone tekst wordt opgenomen als commentaar, tussen /\* \*/.
+Als de modelleur kiest om de `«Constraint»` niet alleen in gewone taal te beschrijven, maar ook in een formele taal (OCL), dan als volgt: 
+- **Naam** (`UML-constraint name`): een naam c.q. label, vaak in steekwoorden. 
+- **Specificatie formeel** (`UML-Constraint Notes`, `type OCL`): formele specificatie in de [[[OCL]]] (OCL). De uitgebreide heldere beschrijving van de `«Constraint»` in gewone tekst wordt opgenomen als commentaar, tussen `/* <tekst> */`.
 
-**Aanbeveling**: als een eigenschap van één UML-attribute, of één UML-association
-met een patroon (zie patroon) of een lengte (zie metadata aspect) of een
-kardinaliteit van een relatiesoort vastgelegd kan worden, gebruik dan deze en
-geen UML-constraint. Als er sprake is van een eigenschap die over meerdere
-informatiemodelelementen heen gaat, dan is er altijd sprake van een regel die we
-modelleren met een UML-constraint.
+**Aanbeveling**: als een eigenschap van één `«UML-attribute`, of één `«UML-association»` met een <code>«<a>Patroon</a>»</code> of een <code>«<a>Lengte</a>»</code> of een <code>«<a>Kardinaliteit</a>»</code> van een <code>«<a>Relatiesoort</a>»</code> vastgelegd kan worden, gebruik die dan en geen `«UML-constraint»`. Als er sprake is van een eigenschap die over meerdere informatiemodelelementen heen gaat, dan is er altijd sprake van een regel die we modelleren met een `«UML-constraint»`.
 
-**Aanbeveling**: wees terughoudend met het gebruik van constraints in het
-informatiemodel wanneer de kans reëel is dat het model hierdoor gaat wijzigen of
-als het niet direct over de semantiek, structuur of syntax van de te registreren
-gegevens gaat. Dit is bijvoorbeeld het geval wanneer er regels bestaan rondom
-informatie die elke paar jaar kan wijzigen, of die per toepassingsgebied (net)
-anders toegepast moet worden. Bijvoorbeeld: wanneer een persoon 65 jaar of ouder
-is, mag deze geen uitkering aanvragen. Wanneer er veel van zulke constraints in
-het informatiemodel worden opgenomen, zal dit leiden tot een ongewenste dynamiek
-waardoor er (te) vaak nieuwe versies moeten worden uitgebracht. De aanbeveling
-is om de specificatie van dergelijke constraints buiten het informatiemodel te
-specificeren, bijvoorbeeld als validatieregel.
+**Aanbeveling**: wees terughoudend met het gebruik van constraints in het informatiemodel wanneer de kans reëel is dat het model hierdoor gaat wijzigen of als het niet direct over de _semantiek_, _structuur_ of _syntax_ van de te registreren gegevens gaat. Dit is bijvoorbeeld het geval wanneer er regels bestaan rondom informatie die elke paar jaar kan wijzigen, of die per toepassingsgebied (net) anders toegepast moet worden. Bijvoorbeeld: wanneer een persoon 65 jaar of ouder is, mag deze geen uitkering aanvragen. Wanneer er veel van zulke constraints in het informatiemodel worden opgenomen, zal dit leiden tot een ongewenste dynamiek waardoor er (te) vaak nieuwe versies moeten worden uitgebracht. De aanbeveling is om de specificatie van dergelijke constraints buiten het informatiemodel te specificeren, bijvoorbeeld als _validatieregel_.
 
 ## Historie
 
@@ -609,13 +578,7 @@ De conventie hiervoor wordt opgenomen in de eigen extensie. Bijvoorbeeld:
 
 ## Afleidbare gegevens
 
-In een informatiemodel kan de behoefte bestaan om afgeleide gegevens op te
-nemen: dit zijn gegevens die afleidbaar zijn uit andere attribuut- en/of
-relatiesoorten binnen het informatiemodel. Dit lijkt op redundantie. Toch hebben
-we deze gegevens daar opgenomen waar er ten eerste vraag is naar het afgeleide
-gegeven en ten tweede het gegeven niet eenvoudig af te leiden is (er moet sprake
-zijn van enige mate van complexiteit). Dit wordt in UML weergegeven via
-isDerived. Zie ook Attribuutsoort, §2.4.2 – is afleidbaar.
+In een informatiemodel kan de behoefte bestaan om afgeleide gegevens op te nemen: dit zijn gegevens die afleidbaar zijn uit andere attribuut- en/of relatiesoorten binnen het informatiemodel. Dit lijkt op redundantie. Toch hebben we deze gegevens daar opgenomen waar er ten eerste vraag is naar het afgeleide gegeven en ten tweede het gegeven niet eenvoudig af te leiden is (er moet sprake zijn van enige mate van complexiteit). Dit wordt in UML weergegeven via `isDerived`. Zie ook [[[#attribuutsoort-0]]] en [[[#metagegeven-indicatie-afleidbaar]]].
 
 <aside class="example" title="Datum vesiging in Nederland van een ingeschreven persoon">
     <code>Datum vestiging in Nederland</code> van een <code>Ingeschreven persoon</code>. De afleiding van dit gegeven is niet triviaal. Door het als afleidbaar gegeven op te nemen kan het opgevraagd worden zonder dat de historie of andere gegevens van het object opgevraagd hoeven te worden om daaruit dit gegeven af te leiden.
@@ -648,10 +611,9 @@ onderscheid in de volgende groepen van gegevens:
 
 ## Mogelijk geen waarde
 
-Bij het inwinnen van gegevens zal het regelmatig voorkomen dat voor een bepaald kenmerk er geen gegeven gevonden kan worden. Dit zal vaak zo zijn bij optionele gegevens. Bijvoorbeeld bij een tussenvoegsel van een achternaam. Maar het is ook mogelijk dat het gegeven er in de werkelijkheid wel is, of zou moeten zijn, maar dat waarde niet bekend is. Bijvoorbeeld omdat het gegeven niet gevonden kan worden, zoals een bouwjaar van een oud gebouw of de geboortedag van een persoon. Zo kan het niet hebben van een waarde van de overlijdensdatum van een persoon betekenen dat deze persoon nog leeft. Maar het kan ook betekenen dat de persoon is overleden, maar dat de datum waarop niet bekend is. Een ander voorbeeld is dat een registratie vroeger een bepaald gegeven niet registreerde, en tegenwoordig verplicht moet registreren. Het gegeven is dan bijvoorbeeld vanaf 1990 beschikbaar, en is daarvoor onbekend. 
-Deze voorbeelden geven aan dat er in de werkelijkheid wel een gegeven kan zijn, maar dat deze onbekend is. Voor deze gevallen is ‘mogelijk geen waarde’ bedoeld. Mogelijk is de waarde er in de werkelijkheid wel, mogelijk is deze er niet. 
+Bij het inwinnen van gegevens zal het regelmatig voorkomen dat voor een bepaald kenmerk er geen gegeven gevonden kan worden. Dit zal vaak zo zijn bij optionele gegevens. Bijvoorbeeld bij een tussenvoegsel van een achternaam. Maar het is ook mogelijk dat het gegeven er in de werkelijkheid wel is, of zou moeten zijn, maar dat waarde niet bekend is. Bijvoorbeeld omdat het gegeven niet gevonden kan worden, zoals een bouwjaar van een oud gebouw of de geboortedag van een persoon. Zo kan het niet hebben van een waarde van de overlijdensdatum van een persoon betekenen dat deze persoon nog leeft. Maar het kan ook betekenen dat de persoon is overleden, maar dat de datum waarop niet bekend is. Een ander voorbeeld is dat een registratie vroeger een bepaald gegeven niet registreerde, en tegenwoordig verplicht moet registreren. Het gegeven is dan bijvoorbeeld vanaf 1990 beschikbaar, en is daarvoor onbekend. Deze voorbeelden geven aan dat er in de werkelijkheid wel een gegeven kan zijn, maar dat deze onbekend is. Voor deze gevallen is ‘mogelijk geen waarde’ bedoeld. Mogelijk is de waarde er in de werkelijkheid wel, mogelijk is deze er niet. 
 
-In de modellering is het bij mogelijk geen waarde nodig om een modelleringconstructie te gebruiken om aan te geven wat er aan de hand is. Dit wordt in het informatiemodel gemodelleerd door een metagegeven op te nemen bij het desbetreffende modelelement. Er staat dan: mogelijk geen waarde: Ja. Dit is vrijwel altijd is dit bij een attribuutsoort, maar is ook mogelijk om het op te nemen bij een element van een datatype. Een voorbeeld bij een datatype is de geboorte datum van een persoon, als het zo kan zijn dat het jaar en de maand van geboorte wel bekend is, maar de dag niet. Dit datatype is ook gestandaardiseerd, en heet Datum Mogelijk Onvolledig. 
+In de modellering is het bij mogelijk geen waarde nodig om een modelleringconstructie te gebruiken om aan te geven wat er aan de hand is. Dit wordt in het informatiemodel gemodelleerd door een metagegeven op te nemen bij het desbetreffende modelelement. Er staat dan: mogelijk geen waarde: Ja. Dit is vrijwel altijd het geval bij een attribuutsoort, maar is ook mogelijk om het op te nemen bij een element van een datatype. Een voorbeeld bij een datatype is de geboorte datum van een persoon, als het zo kan zijn dat het jaar en de maand van geboorte wel bekend is, maar de dag niet. Dit datatype is ook gestandaardiseerd, en heet Datum Mogelijk Onvolledig. 
 
 Verder, wanneer er sprake is van mogelijk geen waarde dan het is expliciet niet de bedoeling om een verplicht veld optioneel maken. Dit is niet de juiste oplossing en kan bovendien de indruk geven dat het veld niet relevant is. De betekenis van een optioneel veld is daarom dat er inherent sprake is van dat de waarde een attribuutsoort van een objecttype mag ontbreken. Het ontbreken van een optionele waarde heeft daarom de betekenis dat het bekend is dat er in de betreffende situatie in de werkelijkheid geen waarde bestaat. Bij inherent optionele velden kan het immers ook voorkomen dat een waarde onbekend is. Het verschil tussen ‘het is bekend dat er geen waarde is’ en ‘het is onbekend of er een waarde is’ is alleen vast te leggen door onderscheid te maken. Daarom moet er expliciet worden aangegeven dat er sprake is van mogelijk geen waarde, middels het metagegeven Mogelijk geen waarde: Ja. 
 
@@ -661,58 +623,30 @@ Het verplicht of optioneel zijn van een waarde en het wel of niet mogen ontbreke
 - Het attribuut heeft in de werkelijkheid soms een waarde en die waarde moet dan zijn gevuld, bijvoorbeeld de officiële straatnaam. Waarde is optioneel, mogelijk geen waarde: Nee;
 - Het attribuut heeft in de werkelijkheid soms een waarde, maar die waarde en zelfs het bestaan ervan hoeven niet bekend te zijn, zoals de overlijdensdatum van een persoon. Waarde is optioneel, mogelijk geen waarde: ja. 
 
-Verder, wanneer er sprake is van mogelijk geen waarde dan kan het waardevol zijn om de reden waarom de waarde ontbreekt aan te geven. Ie beheerder van het informatiemodel bepaalt welke redenen hij of zij toestaat voor het ontbreken van waarden die in de werkelijkheid wel bestaan. Het is nuttig om deze redenen op informatiemodelniveau te beperken. Dit kan dan vastgelegd worden bij de attribuutsoort of bij relatiesoort, bijvoorbeeld in de toelichting. In de registratie mogen alleen deze redenen worden geregistreerd. Daarbij kan het zinvol zijn om te vermelden of een onbekende waarde mogelijk nog kan worden achterhaald of dat dat niet meer kan.
+Verder, wanneer er sprake is van mogelijk geen waarde dan kan het waardevol zijn om de reden waarom de waarde ontbreekt aan te geven. De beheerder van het informatiemodel bepaalt welke redenen hij of zij toestaat voor het ontbreken van waarden die in de werkelijkheid wel bestaan. Het is nuttig om deze redenen op informatiemodelniveau te beperken. Dit kan dan vastgelegd worden bij de attribuutsoort of bij relatiesoort, bijvoorbeeld in de toelichting. In de registratie mogen alleen deze redenen worden geregistreerd. Daarbij kan het zinvol zijn om te vermelden of een onbekende waarde mogelijk nog kan worden achterhaald of dat dat niet meer kan.
 Sommige informatiemodellen gebruiken enumeraties met daarin een waarde zoals 'onbekend'. In dit metamodel stellen we dat dit niet de bedoeling is bij de modellering van eigen gegevens in een eigen informatiemodel. Er geldt een uitzondering wanneer het gaat om gegevens die worden overgenomen uit een andere registratie die wel de waarde 'onbekend' gebruikt. Dan kan er worden gekozen voor het een-op-een overnemen van de gegevensdefinitie uit de andere registratie. 
 
 ## Externe schema’s (her) gebruiken
 
-In bepaalde situaties is het mogelijk dat een ander informatiemodel al één op
-één de specificaties in UML bevat die relevant zijn voor het eigen
-informatiemodel. Dit is in het bijzonder het geval als het andere
-informatiemodel ook dit metamodel volgt, maar kan ook het geval zijn bij
-gestandaardiseerde datatypen.  
-Het is dan wenselijk om hiernaar te kunnen verwijzen. Dit kan door deze packages
-over te nemen naar de eigen UML tool en het stereotype «extern» toe te kennen.
-Deze packages worden dan wel buiten het eigen informatiemodel gehouden. Ze zijn
-extern aan het eigen model. Het beheer en de definitie vindt dan ook buiten het
-eigen model plaats.
+In bepaalde situaties is het mogelijk dat een ander informatiemodel al één op één de specificaties in UML bevat die relevant zijn voor het eigen informatiemodel. Dit is in het bijzonder het geval als het andere informatiemodel ook dit metamodel volgt, maar kan ook het geval zijn bij gestandaardiseerde datatypen.   Het is dan wenselijk om hiernaar te kunnen verwijzen. Dit kan door deze packages over te nemen naar de eigen UML tool en het stereotype «extern» toe te kennen. Deze packages worden dan wel buiten het eigen informatiemodel gehouden. Ze zijn extern aan het eigen model. Het beheer en de definitie vindt dan ook buiten het eigen model plaats.
 
-In deze externe packages die aangeduid worden met het stereotype «extern» zijn
-de relevante specificaties opgenomen die binnen het informatiemodel hergebruikt
-worden. Deze specificaties zijn opgesteld door een externe partij die de UML (of
-ook de XML) schema’s beheert en beschikbaar stelt waarnaar vanuit deze
-specificaties wordt gerefereerd. De packages bevatten alleen de constructies die
-ook daadwerkelijk binnen het ‘eigen’ informatiemodel wordt gebruikt.
+In deze externe packages die aangeduid worden met het stereotype «extern» zijn de relevante specificaties opgenomen die binnen het informatiemodel hergebruikt worden. Deze specificaties zijn opgesteld door een externe partij die de UML (of ook de XML) schema’s beheert en beschikbaar stelt waarnaar vanuit deze specificaties wordt gerefereerd. De packages bevatten alleen de constructies die ook daadwerkelijk binnen het ‘eigen’ informatiemodel wordt gebruikt.
 
 <aside class="example" title="uitwisselen geografische informatie op basis van NEN 3610">
     Voor het uitwisselen van geografische informatie op basis van NEN 3610 is een  tweetal externe packages onderkend waarnaar vanuit de ‘eigen’ informatiemodellen  kan w.orden verwezen: NEN 3610 of GML3.2.
 </aside>
 
-Het is ook mogelijk om binnen een domein of binnen een organisatie een eigen
-«extern» package te definiëren voor datatypen, om over meerdere
-informatiemodellen heen hergebruik mogelijk te maken.
+Het is ook mogelijk om binnen een domein of binnen een organisatie een eigen «extern» package te definiëren voor datatypen, om over meerdere informatiemodellen heen hergebruik mogelijk te maken.
 
-Naast het beschikbaar maken van het externe package kan het modelelement uit het
-externe package gebruikt worden als datatype, maar er kan ook naar verwezen
-worden via een relatie. Dit laatst wordt nader uitgelegd in de volgende
-paragraaf.
+Naast het beschikbaar maken van het externe package kan het modelelement uit het externe package gebruikt worden als datatype, maar er kan ook naar verwezen worden via een relatie. Dit laatst wordt nader uitgelegd in de volgende paragraaf.
 
 ## Koppelen met een ander informatiemodel (externe koppeling)
 
-Bij registraties is het regelmatig noodzakelijk om te verwijzen vanuit het eigen
-model naar gegevens uit een andere informatiemodel. Denk aan het opnemen van de
-identificatie van een object uit een andere registratie, of aan het overnemen
-van een subset van gegevens van een object uit een ander model. Hiervoor zijn de
-stereotypes «view» en «externe koppeling» bedoeld.
+Bij registraties is het regelmatig noodzakelijk om te verwijzen vanuit het eigen model naar gegevens uit een andere informatiemodel. Denk aan het opnemen van de identificatie van een object uit een andere registratie, of aan het overnemen van een subset van gegevens van een object uit een ander model. Hiervoor zijn de stereotypes «view» en «externe koppeling» bedoeld.
 
-Deze stereotypes zijn alleen van toepassing binnen een informatiemodel in
-situaties waarbij het ene informatiemodel afhankelijk is van een andere
-informatiemodel.
+Deze stereotypes zijn alleen van toepassing binnen een informatiemodel in situaties waarbij het ene informatiemodel afhankelijk is van een andere informatiemodel.
 
-Uitgangspunten hierbij zijn dat de definitie van de structuur van gegevens van
-het andere informatiemodel één op één overgenomen wordt, waarbij expliciet
-gemaakt wordt welke gegevens tot het eigen model behoren en welke tot het andere
-model.
+Uitgangspunten hierbij zijn dat de definitie van de structuur van gegevens van het andere informatiemodel één op één overgenomen wordt, waarbij expliciet gemaakt wordt welke gegevens tot het eigen model behoren en welke tot het andere model.
 
 <aside class="example" title="Koppeling met een ander informatiemodel">
     <p>In IMKAD zit het objecttype: «Objecttype» Persoon. Hierin zitten de attributen waarvan de basisregistratie Kadaster de gegevens zelf inwint. In IMKAD zit het package: «view» BRP en hierin zit het «Objecttype» GeregistreerdPersoon. Hierin zitten de attributen die de basisregistratie BRP inwint en die het Kadaster overneemt. De relatie overstijgt de registratie, máár het blijft in het eigen informatiemodel. De aard van de relatie is echter anders dan bij een «relatiesoort». Daarom kennen we deze relatie het stereotype «externe koppeling» toe.</p>
@@ -722,20 +656,9 @@ model.
 
 ## Stelselcatalogus en stelselafspraken voor basisregistraties
 
-Dit metamodel ondersteunt de metadata die voorgeschreven wordt voor de
-stelselcatalogus [H1.11, referentie 3]. Deze paragraaf geeft aan hoe de metadata
-in dit metamodel zich verhoudt tot die van de stelselcatalogus, zodat deze
-vanuit uw informatiemodel geleverd kunnen worden aan de stelselcatalogus. Er
-zijn ook stelselafspraken rondom metadata. Een metadata aspect in H2.4 met
-aanduiding `√` is conform stelselafspraken voor basisregistraties. Beide
-gelden.
+Dit metamodel ondersteunt de metadata die voorgeschreven wordt voor de stelselcatalogus [H1.11, referentie 3]. Deze paragraaf geeft aan hoe de metadata in dit metamodel zich verhoudt tot die van de stelselcatalogus, zodat deze vanuit uw informatiemodel geleverd kunnen worden aan de stelselcatalogus. Er zijn ook stelselafspraken rondom metadata. Een metadata aspect in H2.4 met aanduiding `√` is conform stelselafspraken voor basisregistraties. Beide gelden.
 
-De metadata voor de stelselcatalogus en de metadata voor de stelselafspraken
-zijn beide verplicht voor basisregistraties. Als het informatiemodel géén
-basisregistratie is, kan je als organisatie zelf kiezen om (een aantal van) deze
-metadata buiten scope te plaatsen. Dit doe je in de eigen extensie, zoals
-beschreven in [[[#een-eigen-extensie-op-het-metamodel]]]. De rest van deze paragraaf gaat alleen nog in op de
-metadata voor de stelselcatalogus.
+De metadata voor de stelselcatalogus en de metadata voor de stelselafspraken zijn beide verplicht voor basisregistraties. Als het informatiemodel géén basisregistratie is, kan je als organisatie zelf kiezen om (een aantal van) deze metadata buiten scope te plaatsen. Dit doe je in de eigen extensie, zoals beschreven in [[[#een-eigen-extensie-op-het-metamodel]]]. De rest van deze paragraaf gaat alleen nog in op de metadata voor de stelselcatalogus.
 
 Het metamodel gaat als volgt met de metadata van de stelselcatalogus om:
  - Dit metamodel beschrijft de stelselcatalogus metadata alleen voor de metadata die op informatiemodel niveau speelt, niet de overige metadata.
@@ -765,10 +688,7 @@ Het metamodel gaat als volgt met de metadata van de stelselcatalogus om:
 
 ## Afspraken rondom naamgeving en definities
 
-Naamgevingsconventies zijn belangrijk om te specificeren. Onderstaande
-beschrijft enkele punten die op het niveau van dit metamodel zijn afgesproken.
-De verdere invulling van de naamgevingsconventies is aan de opsteller van het
-informatiemodel zelf (zie ook [bijlage](#bijlagen)).
+Naamgevingsconventies zijn belangrijk om te specificeren. Onderstaande beschrijft enkele punten die op het niveau van dit metamodel zijn afgesproken. De verdere invulling van de naamgevingsconventies is aan de opsteller van het informatiemodel zelf (zie ook [bijlage](#bijlagen)).
 
 ### Uniekheid van namen van modelelementen 
 
@@ -794,171 +714,58 @@ Dit betekent expliciet niet dat kernmerken van verschillende objecten, met dezel
 
 ### Naamgeving voor Alternatief 1: natuurlijke taal, die dichtbij de gebruiker staat
 
-Met natuurlijke taal wordt bedoeld, zoals de gebruikers erover praten, in
-normaal Nederlands. Veelal zijn dit alleen letters en cijfers, met spaties.
-Koppeltekens (`-` of `_`) kunnen gebruikt worden, indien gewenst, alsmede
-diakrieten.
+Met natuurlijke taal wordt bedoeld, zoals de gebruikers erover praten, in normaal Nederlands. Veelal zijn dit alleen letters en cijfers, met spaties. Koppeltekens (`-` of `_`) kunnen gebruikt worden, indien gewenst, alsmede diakrieten.
 
-Zo kan bijvoorbeeld gekozen worden dat de eerste letter een hoofdletter is voor
-namen van de modelelementen Objecttypen, Gegevensgroeptype en Datatypen en dat
-de eerste letter een kleine letter is voor attribuutsoorten,en data-elementen
-e.d. Bijvoorbeeld: ‘Natuurlijk persoon’ en ‘naam’ met type CharacterString.
+Zo kan bijvoorbeeld gekozen worden dat de eerste letter een hoofdletter is voor namen van de modelelementen Objecttypen, Gegevensgroeptype en Datatypen en dat de eerste letter een kleine letter is voor attribuutsoorten,en data-elementen e.d. Bijvoorbeeld: ‘Natuurlijk persoon’ en ‘naam’ met type CharacterString.
 
-Regel: voor conceptuele informatiemodellen wordt altijd alternatief 1
-gehanteerd.
+Regel: voor conceptuele informatiemodellen wordt altijd alternatief 1 gehanteerd.
 
 ### Naamgeving voor Alternatief 2: (ook) leesbaar door systemen
 
-Met machine leesbare taal wordt bedoeld dat deze eenvoudig door systemen te
-verwerken is. Veelal zijn dit alleen letters en cijfers, zonder spaties, zonder
-diakrieten. Koppeltekens (`-` of `_`) kunnen gebruikt worden, maar dit wordt
-veelal vermeden.
+Met machine leesbare taal wordt bedoeld dat deze eenvoudig door systemen te verwerken is. Veelal zijn dit alleen letters en cijfers, zonder spaties, zonder diakrieten. Koppeltekens (`-` of `_`) kunnen gebruikt worden, maar dit wordt veelal vermeden.
 
-Zo kan bijvoorbeeld gekozen worden voor UpperCamelCase voor namen van
-Objecttypen, Gegevensgroeptypen en Datatypen en lowerCamelCase voor
-attribuutsoorten, relatiesoorten, relatierollen, data-elementen e.d.
-Bijvoorbeeld: naam in een NatuurlijkPersoon. Combineer indien nodig
-verschillende woorden (uit bijvoorbeeld een begrippenkader of uit een
-conceptueel informatiemodel) om precieze en begrijpelijke namen te vormen.
+Zo kan bijvoorbeeld gekozen worden voor UpperCamelCase voor namen van Objecttypen, Gegevensgroeptypen en Datatypen en lowerCamelCase voor attribuutsoorten, relatiesoorten, relatierollen, data-elementen e.d. Bijvoorbeeld: naam in een NatuurlijkPersoon. Combineer indien nodig verschillende woorden (uit bijvoorbeeld een begrippenkader of uit een conceptueel informatiemodel) om precieze en begrijpelijke namen te vormen.
 
-Als er gekozen wordt voor CamelCase, volg hierin dan hoe deze in UML ook
-toegepast wordt (deze komt overeen met ISO19103): maak van de beginletter van
-ieder deelwoord van namen van attribuutsoorten, relatierollen een hoofdletter,
-behalve de beginletter van het eerste woord. Bij namen van objecttypen,
-gegevensattributen, keuze, datatypen, en relaties wordt ook de beginletter een
-hoofdletter.
+Als er gekozen wordt voor CamelCase, volg hierin dan hoe deze in UML ook toegepast wordt (deze komt overeen met ISO19103): maak van de beginletter van ieder deelwoord van namen van attribuutsoorten, relatierollen een hoofdletter, behalve de beginletter van het eerste woord. Bij namen van objecttypen, gegevensattributen, keuze, datatypen, en relaties wordt ook de beginletter een hoofdletter.
 
 Regel: voor logische informatiemodellen wordt altijd alternatief 2 gehanteerd.
 
-Neem aanvullend een verwijzing op naar het betreffende modelelement in het
-conceptuele informatiemodel. Dit kan bijvoorbeeld met een trace of door opname van de naam
-in de [alias](#metagegeven-alias), zodat lezers goed de overgang van conceptueel naar
-logisch kunnen volgen.
+Neem aanvullend een verwijzing op naar het betreffende modelelement in het conceptuele informatiemodel. Dit kan bijvoorbeeld met een trace of door opname van de naam in de [alias](#metagegeven-alias), zodat lezers goed de overgang van conceptueel naar logisch kunnen volgen.
 
 ### Naamgeving voor metamodel elementen
 
-Voor stereotypes en metagegevens worden dezelfde naamgevingsconventies toegepast
-als in alternatief 1 waarbij de eerste letter een hoofdletter is voor alle
-stereotypes en tagged values. Echter, als een internationale standaard het
-anders voorschrijft, dan wordt deze gevolgd, en niet vertaald. Bijvoorbeeld:
-codeList. Deze conventies gelden ook als in een eigen extensie
-metamodelelementen worden toegevoegd.
+Voor stereotypes en metagegevens worden dezelfde naamgevingsconventies toegepast als in alternatief 1 waarbij de eerste letter een hoofdletter is voor alle stereotypes en tagged values. Echter, als een internationale standaard het anders voorschrijft, dan wordt deze gevolgd, en niet vertaald. Bijvoorbeeld: codeList. Deze conventies gelden ook als in een eigen extensie metamodelelementen worden toegevoegd.
 
 Het is mogelijk om eigen naamgevingsconventie te hanteren. In bijlage [[[#template-naamgevingsconventies]]] is een template opgenomen om naamgevingsconventies in te specificeren. Het verschaft een invulmogelijkheid om, per in dit metamodel genoemd modelelement, eigen naamgevingsconventies te documenteren. Dit is een hulptabel, die u over kunt nemen naar uw eigen extensie (zoals bedoeld in [[[#een-eigen-extensie-op-het-metamodel]]]) en in kunt vullen voor uw eigen informatiemodel (of organisatie).
 
 ## Verwijzing van een modelelement naar een begrip uit het begrippenkader
 
-Het metadata element “begrip” uit paragraaf [Datatypen](#datatypen)
-is bedoeld om de traceability tussen een modelelement in een informatiemodel en
-een begrip uit een model van begrippen (zoals bedoeld in
-[Typen Informatiemodellen](#typen-informatiemodellen)) te borgen. Anders gezegd, 
-om aan te geven dát een modelelement een weergave is van het betreffende begrip op 
-IM niveau. Anders gezegd, het is niet de bedoeling om te verwijzen naar een begrip als het
-modelelement hier slechts een beetje mee te maken heeft. De verwijzing geeft aan
-dat het model element op informatiemodel niveau een invulling geeft aan het
-begrip. Het begrip zelf is opgenomen in een model van begrippen. Aldaar is meer
-informatie te vinden over het begrip zelf.
+Het metadata element “begrip” uit paragraaf [Datatypen](#datatypen) is bedoeld om de traceability tussen een modelelement in een informatiemodel en een begrip uit een model van begrippen (zoals bedoeld in [Typen Informatiemodellen](#typen-informatiemodellen)) te borgen. Anders gezegd,  om aan te geven dát een modelelement een weergave is van het betreffende begrip op  IM niveau. Anders gezegd, het is niet de bedoeling om te verwijzen naar een begrip als het modelelement hier slechts een beetje mee te maken heeft. De verwijzing geeft aan dat het model element op informatiemodel niveau een invulling geeft aan het begrip. Het begrip zelf is opgenomen in een model van begrippen. Aldaar is meer informatie te vinden over het begrip zelf.
 
-*Aanbeveling*: de verwijzing vanuit het eigen informatiemodel naar een begrip is
-altijd een verwijzing naar een begrip dat behoort tot het eigen model van
-begrippen. Voor begrippen die domein specifiek zijn is dit altijd zo en zal de
-aan URI van het begrip ook te herkennen zijn dat dit zo is. Er zijn echter
-situaties denkbaar waarin een begrip een URI heeft die extern is aan het eigen
-model van begrippen. Het begrip is dan klaarblijkelijk wel relevant voor het
-eigen domein, en behoort daarom dan ook tot het eigen model van begrippen,
-ondanks dat de URI extern is. Een externe URI kan bijvoorbeeld wel voorkomen als
-het eigen informatiemodel modelelementen uit een ander informatiemodel heeft
-overgenomen, zoals bedoeld bij het stereotype «view» of «extern». Of
-bijvoorbeeld omdat het begrip weliswaar in gebruik is binnen het eigen domein,
-maar ontleent is aan een ander domein c.q. een ander model van begrippen, met
-als doel om aan te geven dat de betekenis gelijk is. Dit is mogelijk en
-toegestaan. In de praktijk wordt een begrip dat ontleend is van een ander model
-van begrippen echter veelal met een eigen URI en een eigen beschrijving
-opgenomen in het eigen model van begrippen. Dit komt doordat in het eigen domein
-meestal op een eigen manier tegen het begrip wordt aangekeken, of omdat het niet
-de bedoeling is dat het eigen model van begrippen automatisch meebeweegt zodra
-de definitie uit het andere domein verandert. Merk op dat het MIM niet gaat over
-hoe een model van begrippen wordt gemodelleerd.
+*Aanbeveling*: de verwijzing vanuit het eigen informatiemodel naar een begrip is altijd een verwijzing naar een begrip dat behoort tot het eigen model van begrippen. Voor begrippen die domein specifiek zijn is dit altijd zo en zal de aan URI van het begrip ook te herkennen zijn dat dit zo is. Er zijn echter situaties denkbaar waarin een begrip een URI heeft die extern is aan het eigen model van begrippen. Het begrip is dan klaarblijkelijk wel relevant voor het eigen domein, en behoort daarom dan ook tot het eigen model van begrippen, ondanks dat de URI extern is. Een externe URI kan bijvoorbeeld wel voorkomen als het eigen informatiemodel modelelementen uit een ander informatiemodel heeft overgenomen, zoals bedoeld bij het stereotype «view» of «extern». Of bijvoorbeeld omdat het begrip weliswaar in gebruik is binnen het eigen domein, maar ontleent is aan een ander domein c.q. een ander model van begrippen, met als doel om aan te geven dat de betekenis gelijk is. Dit is mogelijk en toegestaan. In de praktijk wordt een begrip dat ontleend is van een ander model van begrippen echter veelal met een eigen URI en een eigen beschrijving opgenomen in het eigen model van begrippen. Dit komt doordat in het eigen domein meestal op een eigen manier tegen het begrip wordt aangekeken, of omdat het niet de bedoeling is dat het eigen model van begrippen automatisch meebeweegt zodra de definitie uit het andere domein verandert. Merk op dat het MIM niet gaat over hoe een model van begrippen wordt gemodelleerd.
 
-Het metadata element begrip mag achteraf toegevoegd worden. Het is immers
-mogelijk dat bijvoorbeeld het informatiemodel eerder opgesteld wordt dan het
-model van begrippen, of dat het initieel niet bekend is wat van een modelelement
-het bijbehorende begrip is, of dat een model van begrippen uitgebreid wordt met
-een extra begrip. Het criterium om een begrip op te nemen in een model van
-begrippen is geen onderdeel van dit metamodel. Het is zelfs mogelijk dat een
-modelelement initieel niet als een begrip gezien wordt, maar dat het
-modelelement op een gegeven moment zodanig een begrip wordt, dat deze wordt
-opgenomen in het model van begrippen. In alle gevallen geldt, neem de metadata
-op zodra dit mogelijk is. Als het metadata element begrip wordt weggelaten, of
-de metadata die erin op genomen kan worden wordt leeggelaten c.q. de verwijzing
-naar het begrip (nog) niet gemaakt kan worden, dan is de betekenis hiervan dat
-het niet bekend is of er sprake is van een begrip. Merk op dat het achteraf
-toevoegen van de verwijzing naar een begrip in principe niet iets veranderd aan
-het informatiemodel zelf (afgezien van deze metadata), al kan dit wel aanleiding
-geven tot het verbeteren of verhelderen van definities.
+Het metadata element begrip mag achteraf toegevoegd worden. Het is immers mogelijk dat bijvoorbeeld het informatiemodel eerder opgesteld wordt dan het model van begrippen, of dat het initieel niet bekend is wat van een modelelement het bijbehorende begrip is, of dat een model van begrippen uitgebreid wordt met een extra begrip. Het criterium om een begrip op te nemen in een model van begrippen is geen onderdeel van dit metamodel. Het is zelfs mogelijk dat een modelelement initieel niet als een begrip gezien wordt, maar dat het modelelement op een gegeven moment zodanig een begrip wordt, dat deze wordt opgenomen in het model van begrippen. In alle gevallen geldt, neem de metadata op zodra dit mogelijk is. Als het metadata element begrip wordt weggelaten, of de metadata die erin op genomen kan worden wordt leeggelaten c.q. de verwijzing naar het begrip (nog) niet gemaakt kan worden, dan is de betekenis hiervan dat het niet bekend is of er sprake is van een begrip. Merk op dat het achteraf toevoegen van de verwijzing naar een begrip in principe niet iets veranderd aan het informatiemodel zelf (afgezien van deze metadata), al kan dit wel aanleiding geven tot het verbeteren of verhelderen van definities.
 
 ### Term of URI
 
-In de definitie van metadata begrip staat dat de verwijzing de vorm heeft van
-een term of van een URI. - Als je kiest voor een term, vul dan de naam in van
-het begrip. Bijvoorbeeld: Natuurlijk persoon. Geef indien mogelijk ook deze naam
-een goede plek in de definitie en/of toelichting van het modelelement. - Als je
-kiest voor een URI, kies dan voor de URI dat dit begrip identificeert. Deze zal
-verwijzen naar een skos:Concept . Dit houdt in dat als iemand naar deze URI gaat
-(bijvoorbeeld met een browser, dit wordt “het resolven van een URI” genoemd),
-deze persoon informatie krijgt over het betreffende begrip. Bijvoorbeeld:
-http://brk.basisregistraties.overheid.nl/id/begrip/Perceel
+In de definitie van metadata begrip staat dat de verwijzing de vorm heeft van een term of van een URI. - Als je kiest voor een term, vul dan de naam in van het begrip. Bijvoorbeeld: Natuurlijk persoon. Geef indien mogelijk ook deze naam een goede plek in de definitie en/of toelichting van het modelelement. - Als je kiest voor een URI, kies dan voor de URI dat dit begrip identificeert. Deze zal verwijzen naar een skos:Concept . Dit houdt in dat als iemand naar deze URI gaat (bijvoorbeeld met een browser, dit wordt “het resolven van een URI” genoemd), deze persoon informatie krijgt over het betreffende begrip. Bijvoorbeeld: http://brk.basisregistraties.overheid.nl/id/begrip/Perceel
 
 ### Verwijzen naar 0, 1 of meer begrippen
 
 Veelal betreft één modelelement één begrip . De verwijzing naar dit begrip wordt
 dan opgenomen in deze metadata.
 
-Het is echter zeker niet zo dat elk modelelement een begrip is in het model van
-begrippen. Het metadata element mag daarom weggelaten worden en de metadata mag
-leeggelaten worden. Vaak kan bij objecttypes, gegevensgroepen en
-attribuutsoorten wel een verwijzing opgenomen naar een begrip en is dit niet
-zinvol bij datatypen, maar dit is geen harde regel. Bijvoorbeeld: een koopsom
-van een huis wordt uitgedrukt met een bedrag. In het domein is de koopsom wel
-een begrip, maar het modelelement bedrag bijvoorbeeld niet (en als bedrag al
-geen begrip is, dan is valuta dit vermoedelijk ook niet, evenals euro, aantal en
-Decimalen). In het geval dat bijvoorbeeld bedrag niet een begrip is, wordt het
-metadata element begrip weggelaten.
+Het is echter zeker niet zo dat elk modelelement een begrip is in het model van begrippen. Het metadata element mag daarom weggelaten worden en de metadata mag leeggelaten worden. Vaak kan bij objecttypes, gegevensgroepen en attribuutsoorten wel een verwijzing opgenomen naar een begrip en is dit niet zinvol bij datatypen, maar dit is geen harde regel. Bijvoorbeeld: een koopsom van een huis wordt uitgedrukt met een bedrag. In het domein is de koopsom wel een begrip, maar het modelelement bedrag bijvoorbeeld niet (en als bedrag al geen begrip is, dan is valuta dit vermoedelijk ook niet, evenals euro, aantal en Decimalen). In het geval dat bijvoorbeeld bedrag niet een begrip is, wordt het metadata element begrip weggelaten.
 
-Bij het opnemen van het begrip streven we ernaar om, waar mogelijk, precies te
-zijn. Bijvoorbeeld: het kan zijn dat in het model van begrippen een Natuurlijk
-persoon en een Niet natuurlijk persoon zijn opgenomen, terwijl in het
-informatiemodel alleen het modelelement Persoon is opgenomen, alsmede een
-attribuutsoort ‘type persoon’. De verwijzing naar het begrip Natuurlijk persoon
-hoort in dit geval gelegd te worden vanuit het attribuutsoort 'type persoon' en
-niet vanuit het objecttype Persoon. Het kan ook zo zijn dat het datatype van
-'type persoon' een codelijst is, met als mogelijke waarden ‘NP’ en ‘NNP’ en
-‘overig’. Het is dan preciezer om de verwijzing te leggen vanuit de waarde ‘NP’.
+Bij het opnemen van het begrip streven we ernaar om, waar mogelijk, precies te zijn. Bijvoorbeeld: het kan zijn dat in het model van begrippen een Natuurlijk persoon en een Niet natuurlijk persoon zijn opgenomen, terwijl in het informatiemodel alleen het modelelement Persoon is opgenomen, alsmede een attribuutsoort ‘type persoon’. De verwijzing naar het begrip Natuurlijk persoon hoort in dit geval gelegd te worden vanuit het attribuutsoort 'type persoon' en niet vanuit het objecttype Persoon. Het kan ook zo zijn dat het datatype van 'type persoon' een codelijst is, met als mogelijke waarden ‘NP’ en ‘NNP’ en ‘overig’. Het is dan preciezer om de verwijzing te leggen vanuit de waarde ‘NP’.
 
 ### Definitie van een modelelement en de definitie van een begrip
 
-De definitie van het modelelement is niet hetzelfde bedoeld als de definitie van
-een begrip. De definitie van een begrip in het begrippenkader is buiten scope
-van het informatiemodel, enerzijds omdat deze definitie anders kan zijn dan de
-definitie van het modelelement, en anderzijds omdat de definitie van het begrip
-aangepast kan worden, terwijl de informatievoorziening die het informatiemodel
-implementeert automatisch meebeweegt met deze definitie. Dit gezegd hebbende,
-wanneer er sprake is van een 1 op 1 relatie tussen begrip en modelelement, dan
-is dit een duidelijke aanleiding om te zorgen dat deze definities goed met
-elkaar overeenstemmen, of zelfs hetzelfde gehouden worden, waar mogelijk.
+De definitie van het modelelement is niet hetzelfde bedoeld als de definitie van een begrip. De definitie van een begrip in het begrippenkader is buiten scope van het informatiemodel, enerzijds omdat deze definitie anders kan zijn dan de definitie van het modelelement, en anderzijds omdat de definitie van het begrip aangepast kan worden, terwijl de informatievoorziening die het informatiemodel implementeert automatisch meebeweegt met deze definitie. Dit gezegd hebbende, wanneer er sprake is van een 1 op 1 relatie tussen begrip en modelelement, dan is dit een duidelijke aanleiding om te zorgen dat deze definities goed met elkaar overeenstemmen, of zelfs hetzelfde gehouden worden, waar mogelijk.
 
-Bij het metadata element definitie van een modelelement mag in de beschrijving
-gebruik gemaakt worden van een URI, om te verwijzen naar de nationaal of
-internationaal gepubliceerde definitie. Deze kan van een begrip zijn, maar dit
-hoeft niet. Let hiermee op wanneer u als beheerder van het informatiemodel deze
-definitie niet zelf beheert, want lezers van het informatiemodel en gebruikers
-van de informatie baseren zich wel op deze definitie. Het kan dan gebeuren dat
-de definitie veranderd, en de informatievoorziening hier niet mee in
-overeenstemming is. De aanbeveling is daarom een goede definitie voor het
-modelelement te kiezen, en in de metadata een verwijzing op te nemen naar het
-begrip en hierna handmatig de overeenstemming tussen de definities te beheren.
+Bij het metadata element definitie van een modelelement mag in de beschrijving gebruik gemaakt worden van een URI, om te verwijzen naar de nationaal of internationaal gepubliceerde definitie. Deze kan van een begrip zijn, maar dit hoeft niet. Let hiermee op wanneer u als beheerder van het informatiemodel deze definitie niet zelf beheert, want lezers van het informatiemodel en gebruikers van de informatie baseren zich wel op deze definitie. Het kan dan gebeuren dat de definitie veranderd, en de informatievoorziening hier niet mee in overeenstemming is. De aanbeveling is daarom een goede definitie voor het modelelement te kiezen, en in de metadata een verwijzing op te nemen naar het begrip en hierna handmatig de overeenstemming tussen de definities te beheren.
 
 ## Overig 
 
 ### Volgorde van kenmerken
-De volgorde van kenmerken in een objecttype, gegevensgroeptype, gestructureerd datatype in een visueel diagram van een informatiemodel kan voor de leesbaarheid van het diagram worden aangebracht, maar heeft in principe, buiten het diagram, geen betekenis.
+De volgorde van kenmerken in een `«Objecttype»`, `«Gegevensgroeptype»`, `«Gestructureerd datatype»` in een visueel diagram van een informatiemodel kan voor de leesbaarheid van het diagram worden aangebracht, maar heeft in principe, buiten het diagram, geen betekenis. Bij een fysiek, technisch gegevens- of datamodel (die buiten de scope van het MIM valt) heeft de attribuutvolgorde vaak invloed op de volgorde in de schema’s.

@@ -1246,13 +1246,13 @@ Toepassing: relatiesoort, externe koppeling en relatieklasse
 
 *Toelichting*
 
-Bijvoorbeeld: Authentiek, Basisgegeven, Landelijk kerngegeven, Gemeentelijk kerngegeven, Overig.
+Bijvoorbeeld: `"Authentiek"`, `"Basisgegeven"`, `"Landelijk kerngegeven"`, `"Gemeentelijk kerngegeven"`, `"Overig"`.
 
-Authentiek is van toepassing voor bijvoorbeeld het burger service nummer van een natuurlijk persoon. In de wet van bijvoorbeeld een basisregistratie ligt vast welke gegevens authentiek zijn. Een kenmerk is authentiek indien de juistheid (hoogwaardige kwaliteit) van het gegeven gewaarborgd wordt via formele inwinningsprocessen en wettelijk regelingen. Authentieke gegevens moeten door alle overheidsinstellingen verplicht en zonder nader onderzoek, worden gebruikt bij de uitvoering van publiekrechtelijke taken.
+`Authentiek` is van toepassing voor bijvoorbeeld het burgerservicenummer van een natuurlijk persoon. In de wet van bijvoorbeeld een basisregistratie ligt vast welke gegevens authentiek zijn. Een kenmerk is authentiek indien de juistheid (hoogwaardige kwaliteit) van het gegeven gewaarborgd wordt via formele inwinningsprocessen en wettelijk regelingen. Authentieke gegevens moeten door alle overheidsinstellingen verplicht en zonder nader onderzoek, worden gebruikt bij de uitvoering van publiekrechtelijke taken.
 
 De in te vullen waarde komt uit: zie [[[#toegestane-waarden-metagegevens]]]
 
-*Toepassing*: alle modelelementen die een kenmerk (kunnen) zijn van een objecttype.
+*Toepassing*: alle modelelementen die een kenmerk (kunnen) zijn van een `«Objecttype»`.
 
 #### Metagegeven: **Indicatie afleidbaar**
 
@@ -1262,9 +1262,14 @@ De in te vullen waarde komt uit: zie [[[#toegestane-waarden-metagegevens]]]
 
 *Toelichting*
 
-Bijvoorbeeld: de ‘naam’ van een openbare ruimte, zoals *Burgemeester Baron van Voerst van Lyndenstraat* , wordt in de verkorte schrijfwijze de ‘verkorte naam’ *Burg Bar v V v Lyndenstr* – dit is een afgeleid gegeven. Bijvoorbeeld de ‘eigenaar’ van een huis kan worden afgeleid uit bepaalde andere gegevens die binnen het informatiemodel zijn vastgelegd. Het afgeleide gegeven is zelf geen brongegeven, en moet aangepast worden als de brongegevens aangepast worden. In de beschrijving van het kenmerk zal aangegeven zijn om welke gegevens het gaat en eventueel hoe de afleiding plaatsvindt.
+Bijvoorbeeld: de `naam` van een openbare ruimte, zoals `"Burgemeester Baron van Voerst van Lyndenstraat"` , wordt in de verkorte schrijfwijze de `verkorte naam` `"Burg Bar v V v Lyndenstr"` – dit is een afgeleid gegeven. Bijvoorbeeld de `eigenaar` van een huis kan worden afgeleid uit bepaalde andere gegevens die binnen het informatiemodel zijn vastgelegd.
 
-*Toepassing*: de modelelementen waarvoor een waarde ingevuld kan worden, te weten de modelelementen attribuutsoort en relatiesoort.
+Het afgeleide gegeven is zelf geen brongegeven en moet aangepast worden als de brongegevens aangepast worden. In de beschrijving van het kenmerk zal aangegeven zijn om welke gegevens het gaat en eventueel hoe de afleiding plaatsvindt.
+
+Hoewel de definitie het niet duidelijk stelt, blijkt uit het voorbeeld dat het gaat om afgeleide gegevens _binnen_ de context van het model. Het metagegeven is dus met andere woorden bedoeld om een _afhankelijkheid_ binnen het model aan te geven.
+
+_Toepassing_: de modelelementen waarvoor een waarde ingevuld kan worden, te weten de modelelementen `«Attribuutsoort»` en `«Relatiesoort»`.
+
 
 #### Metagegeven: **Indicatie classificerend**
 
