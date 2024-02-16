@@ -75,7 +75,14 @@ Het is de bedoeling dat een informatiemodel de betekenis en definitie van de inf
 De opname in een registratie kent vaak een inwinningsproces om gegevenswaarden over de feitelijke dingen in de werkelijkheid conform het informatiemodel in de registratie op te nemen. Dit is een belangrijk proces, maar valt buiten scope van het informatiemodel (scheiding proces en informatie, het proces is niet in scope van deze standaard).
 
 ## Typering van modellen en scope
-Bij het modelleren van een domein zijn er een aantal beschouwingsniveaus, variërend van een zo getrouw mogelijke beschrijving van de betekenis en bedoeling van de woorden en termen die mensen gebruiken als ze het ergens over hebben tot een specificatie van de wijze van registratie en uitwisseling van data. In het MIM onderscheiden we variaties in vier verschillende niveaus. Dit is vooral bedoeld om de scope van MIM duidelijk af te bakenen. Het MIM concentreert zich namelijk op het tweede en derde niveau. Hieronder lichten we de verschillende niveaus verder toe.
+
+<aside class="warning" title="Niveaus aanpassen in types">
+  <p>
+    Naar aanleiding van <a href=https://github.com/Geonovum/MIM-Werkomgeving/issues/465>issue #465</a> en <a href=https://github.com/Geonovum/MIM-Werkomgeving/issues/325>issue #325</a> de tekst in deze paragraaf aanpassen. Niet meer spreken over niveaus, maar over typen, zodat er een duidelijker onderscheid is tussen modeltypen en niveaus uit OMG.
+  </p>
+</aside>
+
+Het modelleren van een domein varieert van _een zo getrouw mogelijke beschrijving van de betekenis en bedoeling van de woorden en termen die mensen gebruiken als ze het ergens over hebben_, tot _een specificatie van de wijze van registratie en uitwisseling van data_. Het MIM onderscheidt vier verschillende typen. Dit onderscheid is in eerste instantie bedoeld om de scope van MIM duidelijk af te bakenen. Het MIM concentreert zich namelijk op conceptuele (type 2) en logische informatiemodellen (type 3). Hieronder lichten we de verschillende typen modellen verder toe.
 
 De modellering van een bepaald domein start in principe met het beschrijven van kennis, te weten de begrippen die een rol spelen in een domein, uitgedrukt in een (meestal)  domein specifieke terminologie. In MIM wordt dit niveau 1 genoemd en voor MIM heeft dit  niveau 1 niet de focus en is dit niveau buiten scope. Op dit niveau is de notie van  welke informatie er geregistreerd en uitgewisseld moet worden nog niet aanwezig of op de achtergrond. Op dit niveau is er nog geen sprake van een informatiemodel, omdat deze  modellen kennis modelleren en zich (nog) niet richten op het modelleren van informatie (informatie, zoals bedoeld in [Wat is een informatiemodel](#wat-is-een-informatiemodel)).
 
