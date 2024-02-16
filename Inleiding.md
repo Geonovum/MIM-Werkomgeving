@@ -23,7 +23,7 @@ Voor informatiemodellen die op basis van dit metamodel zijn beschreven geldt:
 Dit document is primair bestemd voor informatiemodelleurs en informatiearchitecten  die deze informatiemodellen maken; informatieanalisten die willen weten wat de betekenis en definitie van informatieobjecten is, en mensen die model-driven verder werken op basis van het informatiemodel en er implementaties van maken. Kennis van informatiemodellering is een vereiste. Enige kennis van UML [[UML]] of [[Linked-Data]] is een pré maar niet noodzakelijk. Dit metamodel richt zich in het bijzonder op de informatievoorziening binnen het overheidsdomein, al is het ook in bredere context inzetbaar.
 
 ## Leeswijzer
-Het metamodel beschrijven we in vijf hoofdstukken en een bijlage. Lees de [Inleiding](#inleiding) verder voor inzicht in wat we onder een informatiemodel en onder een metamodel verstaan, hoe deze modellen zich verhouden tot UML en de vier lagen metamodel architectuur van de Object Management Group [[OMG]], Linked Data en de internetstandaarden van de W3C en welke overige standaarden worden toegepast. 
+Het metamodel beschrijven we in vijf hoofdstukken en een bijlage. Lees de [Inleiding](#inleiding) verder voor inzicht in wat we onder een informatiemodel en onder een metamodel verstaan, hoe deze modellen zich verhouden tot UML en de vier-lagen-metamodel-architectuur van de Object Management Group [[OMG]], Linked Data en de internetstandaarden van de W3C en welke overige standaarden worden toegepast. 
 
 Het hoofdstuk [Metamodel Algemeen](#metamodel-algemeen) bevat de beschrijving van alle bouwstenen c.q. de modelelementen van het metamodel, in de vorm van definities en specificaties. De betekenis en toelichting van de modelelementen van het metamodel vormt het materiaal waarmee een uitputtende modelspecificatie kan worden opgesteld. De afbeeldingen in dit algemene hoofdstuk zijn weliswaar gemaakt in UML, maar het metamodel beperkt zich zeker niet tot UML. Er zijn aparte hoofdstukken voor de implementatie van MIM in UML en Linked Data.
 
@@ -74,7 +74,7 @@ Het is de bedoeling dat een informatiemodel de betekenis en definitie van de inf
 
 De opname in een registratie kent vaak een inwinningsproces om gegevenswaarden over de feitelijke dingen in de werkelijkheid conform het informatiemodel in de registratie op te nemen. Dit is een belangrijk proces, maar valt buiten scope van het informatiemodel (scheiding proces en informatie, het proces is niet in scope van deze standaard).
 
-## Typering van modellen en wat wel en niet in scope is van deze standaard
+## Typering van modellen en scope
 Bij het modelleren van een domein zijn er een aantal beschouwingsniveaus, variërend van een zo getrouw mogelijke beschrijving van de betekenis en bedoeling van de woorden en termen die mensen gebruiken als ze het ergens over hebben tot een specificatie van de wijze van registratie en uitwisseling van data. In het MIM onderscheiden we variaties in vier verschillende niveaus. Dit is vooral bedoeld om de scope van MIM duidelijk af te bakenen. Het MIM concentreert zich namelijk op het tweede en derde niveau. Hieronder lichten we de verschillende niveaus verder toe.
 
 De modellering van een bepaald domein start in principe met het beschrijven van kennis, te weten de begrippen die een rol spelen in een domein, uitgedrukt in een (meestal)  domein specifieke terminologie. In MIM wordt dit niveau 1 genoemd en voor MIM heeft dit  niveau 1 niet de focus en is dit niveau buiten scope. Op dit niveau is de notie van  welke informatie er geregistreerd en uitgewisseld moet worden nog niet aanwezig of op de achtergrond. Op dit niveau is er nog geen sprake van een informatiemodel, omdat deze  modellen kennis modelleren en zich (nog) niet richten op het modelleren van informatie (informatie, zoals bedoeld in [Wat is een informatiemodel](#wat-is-een-informatiemodel)).
@@ -83,7 +83,7 @@ Het modelleren van informatie gebeurt met en in een informatiemodel. Hierin word
 
 Het informatiemodel kan vervolgens uitgewerkt worden in verschillende soorten technische datamodellen en schema's (zoals XML of JSON of specifieke invullingen hiervan). In MIM wordt dit niveau 4 genoemd. Dit niveau heeft voor MIM niet de focus en valt buiten de scope. Wel staat MIM een model-gedreven werkwijze voor waarbij de modellen van niveau 4 gegenereerd kunnen worden vanuit niveau 2 of 3.
 
-### Niveau 1: Model van begrippen 
+### Model van begrippen 
 
 Dit niveau beschrijft de werkelijkheid binnen het beschouwde domein (de ‘universe of discourse’) 
 door middel van de beschrijving van de daarin gehanteerde begrippen en hun relaties tot elkaar. 
@@ -100,7 +100,7 @@ Dit niveau valt niet binnen de scope van MIM en wordt om die reden slechts bekno
 - Van een aantal begrippen ('concepten') zal later blijken dat het een eigenschap is van een object waarover we informatie zullen gaan bijgehouden, maar dit zal zeker niet voor alle begrippen zo zijn, begrippen beschrijven een domein vaak veel breder dan een informatiemodel dit doet. Een aantal begrippen zullen in het informatiemodel beschouwd gaan worden als informatieobjecten, een aantal begrippen worden een kenmerk/eigenschap van deze informatieobjecten, en een heel aantal begrippen zullen geen rol spelen in het informatiemodel omdat er geen data van is of komt.  
 - Voor het bijhouden van informatie wordt een gedetailleerde eenduidige structuur en betekenis aangebracht die data gericht is, maar bij het modelleren van begrippen wordt dit nog niet gedaan. De samenhang tussen informatie is hierbij vaak (bewust) beperkter dan de samenhang tussen begrippen. 
 
-### Niveau 2: Conceptueel informatiemodel
+### Conceptueel informatiemodel
 
 Een conceptueel informatiemodel beschrijft de modellering van de werkelijkheid binnen het beschouwde domein door 
 middel van de beschrijving van welke informatie (data met betekenis en structuur) een rol speelt. 
@@ -129,37 +129,19 @@ Ten aanzien van logische informatiemodellen:
 oftewel is keten of koppelvlak overstijgend. Een logisch informatiemodel is specifiek voor een koppelvlak of keten of een 
 bepaalde toepassing (met bijbehorende implementatie, database en interfaces).
 
-### Niveau 3: Logisch informatie- of gegevensmodel
+### Logisch informatiemodel
 
-Beschrijft hoe de, in het conceptuele informatiemodel onderscheiden, concepten gebruikt
-worden bij de interactie tussen systemen en hun gebruikers en tussen systemen
-onderling. Anders gezegd, een model van de representatie van informatie over de
-werkelijkheid in digitale registraties en in de uitwisseling daartussen. Het
-gaat hierbij, in tegenstelling tot een conceptueel model, dus veel meer om het
-**‘hoe’**. Het slaat de brug tussen werkelijkheid en systemen maar beschrijft nog
-niet de implementatie in die systemen. Een dergelijk model wordt in een formele
-taal beschreven en wordt waar mogelijk gegenereerd vanuit het conceptueel model.  
+Het logisch informatiemodel, of gegevensmodel beschrijft hoe de, in het conceptuele informatiemodel onderscheiden concepten, gebruikt worden bij de interactie tussen systemen en hun gebruikers en tussen systemen onderling. Anders gezegd: een model van de representatie van informatie over de werkelijkheid in digitale registraties en in de uitwisseling daartussen. Het gaat hierbij, in tegenstelling tot een conceptueel model, dus veel meer om het **‘hoe’**. Het slaat de brug tussen werkelijkheid en systemen maar beschrijft nog niet de implementatie in die systemen. Een dergelijk model wordt in een formele taal beschreven en wordt waar mogelijk gegenereerd vanuit het conceptueel model.  
 
-*Het logisch model wordt opgesteld voor ICT-interoperabiliteit, voor gebruik door
-met name de ontwerpers, ontwikkelaars en beheerders van ICT-voorzieningen.*
+*Het logisch model wordt opgesteld voor ICT-interoperabiliteit, voor gebruik door met name de ontwerpers, ontwikkelaars en beheerders van ICT-voorzieningen.*
 
 Dit niveau is volledig in scope van MIM. 
 
 Ten aanzien van fysieke of technische datamodellen:
-- Een logisch informatiemodel is implementatie onafhankelijk en kan in meerdere technische modellen of formaten worden geïmplementeerd.
-  Een fysiek of technisch datamodel is afhankelijk van de gekozen techniek of tooling die wordt gebruikt en wordt daadwerkelijk technische geïmplementeerd.
+- Een logisch informatiemodel is implementatie onafhankelijk en kan in meerdere technische modellen of formaten worden geïmplementeerd. Een fysiek of technisch datamodel is afhankelijk van de gekozen techniek of tooling die wordt gebruikt en wordt daadwerkelijk technische geïmplementeerd.
 
-### Niveau 4: Fysiek of technisch gegevens- of datamodel
-Specificeert de structuur en eigenschappen van de technologie waarin de
-informatie wordt vastgelegd of uitgewisseld. Dit is sterk afhankelijk van de
-gebruikte opslagtechnologie zoals een specifieke database of de
-servicetechnologie zoals [[xml]], [[gml]], [[SOAP]], REST, [[GeoJSON]],
-[[Linked-Data]] e.d. Het kan tevens informatie bevatten over de manier waarop
-berichten ‘verpakt’ worden, het (internet)protocol en de logistiek van het
-berichtenverkeer. De technische specificaties worden over het algemeen zoveel
-als mogelijk gegenereerd uit het logisch informatiemodel.  
-
-*Deze specificaties worden opgesteld voor ‘machines’, te gebruiken door softwareontwikkelaars.*
+### Fysiek of technisch gegevens- of datamodel
+Specificeert de structuur en eigenschappen van de technologie waarin de informatie wordt vastgelegd of uitgewisseld. Dit is sterk afhankelijk van de gebruikte opslagtechnologie zoals een specifieke database of de servicetechnologie zoals [[xml]], [[gml]], [[SOAP]], REST, [[GeoJSON]], [[Linked-Data]] e.d. Het kan tevens informatie bevatten over de manier waarop berichten ‘verpakt’ worden, het (internet)protocol en de logistiek van het berichtenverkeer. De technische specificaties worden over het algemeen zoveel als mogelijk gegenereerd uit het logisch informatiemodel. Deze specificaties worden opgesteld voor ‘machines’, te gebruiken door softwareontwikkelaars.
 
 Dit niveau is **niet** in scope van MIM. Dit niveau is niet volledig beschreven maar is ter illustratie 
 in deze paragraaf opgenomen. Er kan meer in zitten dan hier beschreven en er kan meer na volgen.   
