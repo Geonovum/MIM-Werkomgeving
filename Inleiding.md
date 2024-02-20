@@ -76,23 +76,23 @@ De opname in een registratie kent vaak een inwinningsproces om gegevenswaarden o
 
 ## Typering van modellen en scope
 
-<aside class="warning" title="Niveaus aanpassen in types">
+<!-- <aside class="warning" title="Niveaus aanpassen in types">
   <p>
-    Naar aanleiding van <a href=https://github.com/Geonovum/MIM-Werkomgeving/issues/465>issue #465</a> en <a href=https://github.com/Geonovum/MIM-Werkomgeving/issues/325>issue #325</a> de tekst in deze paragraaf aanpassen. Niet meer spreken over niveaus, maar over typen, zodat er een duidelijker onderscheid is tussen modeltypen en niveaus uit OMG.
+    Naar aanleiding van <a href=https://github.com/Geonovum/MIM-Werkomgeving/issues/465>issue #465</a> en <a href=https://github.com/Geonovum/MIM-Werkomgeving/issues/325>issue #325</a> de tekst in deze paragraaf aanpassen. Niet meer spreken over <strong>niveaus</strong>, maar over <strong>typen</strong>, zodat er een duidelijker onderscheid is tussen modeltypen en niveaus uit OMG.
   </p>
-</aside>
+</aside> -->
 
-Het modelleren van een domein varieert van _een zo getrouw mogelijke beschrijving van de betekenis en bedoeling van de woorden en termen die mensen gebruiken als ze het ergens over hebben_, tot _een specificatie van de wijze van registratie en uitwisseling van data_. Het MIM onderscheidt vier verschillende typen. Dit onderscheid is in eerste instantie bedoeld om de scope van MIM duidelijk af te bakenen. Het MIM concentreert zich namelijk op conceptuele (type 2) en logische informatiemodellen (type 3). Hieronder lichten we de verschillende typen modellen verder toe.
+Het modelleren van een domein varieert van: een zo getrouw mogelijke beschrijving van de betekenis en bedoeling van de woorden en termen die mensen gebruiken als ze het ergens over hebben, tot een specificatie van de wijze van registratie en uitwisseling van data. Het MIM onderscheidt vier verschillende <del>niveaus</del> <ins>typen</ins>. Dit onderscheid is in eerste instantie bedoeld om de scope van MIM duidelijk af te bakenen. Het MIM concentreert zich namelijk op conceptuele (<del>niveau</del> <ins>type</ins> 2) en logische informatiemodellen (<del>niveau</del> <ins>type</ins> 3). Hieronder lichten we de verschillende <del>niveau</del> <ins>typen</ins> modellen verder toe.
 
-De modellering van een bepaald domein start in principe met het beschrijven van kennis, te weten de begrippen die een rol spelen in een domein, uitgedrukt in een (meestal)  domein specifieke terminologie. In MIM wordt dit niveau 1 genoemd en voor MIM heeft dit  niveau 1 niet de focus en is dit niveau buiten scope. Op dit niveau is de notie van  welke informatie er geregistreerd en uitgewisseld moet worden nog niet aanwezig of op de achtergrond. Op dit niveau is er nog geen sprake van een informatiemodel, omdat deze  modellen kennis modelleren en zich (nog) niet richten op het modelleren van informatie (informatie, zoals bedoeld in [Wat is een informatiemodel](#wat-is-een-informatiemodel)).
+De modellering van een bepaald domein start in principe met het beschrijven van kennis. Het gaat in het bijzonder om de begrippen die een rol spelen in het domein uitgedrukt in een (meestal) domeinspecifieke terminologie. In MIM wordt dit <del>niveau</del> <ins>type</ins> 1 genoemd en voor MIM heeft dit <del>niveau</del> <ins>type</ins> 1 niet de focus en is dit <del>niveau</del> <ins>type</ins> buiten scope. Bij dit <del>niveau</del> <ins>type</ins> is de notie van  welke informatie er geregistreerd en uitgewisseld moet worden nog niet aanwezig of op de achtergrond. Bij dit <del>niveau</del> <ins>type</ins> is er nog geen sprake van een informatiemodel, omdat deze  modellen kennis modelleren en zich (nog) niet richten op het modelleren van informatie (informatie, zoals bedoeld in [Wat is een informatiemodel](#wat-is-een-informatiemodel)).
 
-Het modelleren van informatie gebeurt met en in een informatiemodel. Hierin wordt aangegeven welke objecten welke kenmerken/eigenschappen hebben en of deze kenmerken/eigenschappen in het beschouwde domein verplicht zijn of optioneel zijn enzovoorts. Het informatiemodel geeft  hierbij aan welke informatie wordt geregistreerd of uitgewisseld kan worden. Het beschrijft alle informatie, en het beschrijft ook niet meer dan dat. Hierbij kan er ook gekozen worden om het domein te onderverdelen in meerdere informatie domeinen en voor een informatiedomein scherp te definiëren, meestal door aan te geven welke informatieobjecten in scope zijn van een informatiemodel en welke niet. In MIM valt een informatiemodel onder niveau 2 of 3. MIM richt zich primair op niveau 2 en 3.  Het informatiemodel is hierbij altijd techniek onafhankelijk.
+Het modelleren van informatie gebeurt met en in een informatiemodel. Hierin wordt aangegeven welke objecten welke kenmerken/eigenschappen hebben en of deze kenmerken/eigenschappen in het beschouwde domein verplicht zijn of optioneel zijn enzovoorts. Het informatiemodel geeft  hierbij aan welke informatie wordt geregistreerd of uitgewisseld kan worden. Het beschrijft alle informatie, en het beschrijft ook niet meer dan dat. Hierbij kan er ook gekozen worden om het domein te onderverdelen in meerdere informatie domeinen en voor een informatiedomein scherp te definiëren, meestal door aan te geven welke informatieobjecten in scope zijn van een informatiemodel en welke niet. In MIM valt een informatiemodel onder <del>niveau</del> 2 of 3. MIM richt zich primair op <del>niveau</del> 2 en 3.  Het informatiemodel is hierbij altijd techniek onafhankelijk.
 
-Het informatiemodel kan vervolgens uitgewerkt worden in verschillende soorten technische datamodellen en schema's (zoals XML of JSON of specifieke invullingen hiervan). In MIM wordt dit niveau 4 genoemd. Dit niveau heeft voor MIM niet de focus en valt buiten de scope. Wel staat MIM een model-gedreven werkwijze voor waarbij de modellen van niveau 4 gegenereerd kunnen worden vanuit niveau 2 of 3.
+Het informatiemodel kan vervolgens uitgewerkt worden in verschillende soorten technische datamodellen en schema's (zoals XML of JSON of specifieke invullingen hiervan). In MIM wordt dit <del>niveau</del> 4 genoemd. Dit <del>niveau</del> heeft voor MIM niet de focus en valt buiten de scope. Wel staat MIM een model-gedreven werkwijze voor waarbij de modellen van <del>niveau</del> 4 gegenereerd kunnen worden vanuit <del>niveau</del> 2 of 3.
 
 ### Model van begrippen 
 
-Dit niveau beschrijft de werkelijkheid binnen het beschouwde domein (de ‘universe of discourse’) 
+Dit <del>niveau</del> beschrijft de werkelijkheid binnen het beschouwde domein (de ‘universe of discourse’) 
 door middel van de beschrijving van de daarin gehanteerde begrippen en hun relaties tot elkaar. 
 Een begrip wordt ook wel een _concept_ genoemd, iets waar mensen aan denken en over praten. 
 Er zijn verschillende manieren om begrippen te beschrijven, zoals in een woordenboek, of in 
@@ -101,7 +101,7 @@ de onderlinge samenhang is aangegeven en er zijn nog andere manieren - maar geen
 
 > Het doel is dat actoren binnen een domein elkaar begrijpen en dezelfde taal spreken. Een model van begrippen wordt opgesteld voor gebruik door mensen, met name ‘de business’.
 
-Dit niveau valt niet binnen de scope van MIM en wordt om die reden slechts beknopt beschreven. Het dient vooral ter afbakening van de scope. Er kan meer in zitten dan hier beschreven en er gaat meer aan vooraf. Ten aanzien van begrippen en informatiemodellen en het verschil hiertussen zijn de belangrijkste punten:
+Dit <del>niveau</del> valt niet binnen de scope van MIM en wordt om die reden slechts beknopt beschreven. Het dient vooral ter afbakening van de scope. Er kan meer in zitten dan hier beschreven en er gaat meer aan vooraf. Ten aanzien van begrippen en informatiemodellen en het verschil hiertussen zijn de belangrijkste punten:
 
 - Een begrip is de combinatie van een term of woord en een definitie. Begrippen worden door mensen gebruikt om mentaal de werkelijkheid te beschouwen en te begrijpen. Een begrip omvat niet de betekenis en structuur van data. 
 - Van een aantal begrippen ('concepten') zal later blijken dat het een eigenschap is van een object waarover we informatie zullen gaan bijgehouden, maar dit zal zeker niet voor alle begrippen zo zijn, begrippen beschrijven een domein vaak veel breder dan een informatiemodel dit doet. Een aantal begrippen zullen in het informatiemodel beschouwd gaan worden als informatieobjecten, een aantal begrippen worden een kenmerk/eigenschap van deze informatieobjecten, en een heel aantal begrippen zullen geen rol spelen in het informatiemodel omdat er geen data van is of komt.  
@@ -127,7 +127,7 @@ Met conceptueel wordt niet bedoeld abstract of hoog over, de beschrijvingen van 
 zodat ‘de business’ en de ICT-specialisten elkaar (gaan) begrijpen voor wat betreft 
 de informatie die in het domein wordt geregistreerd en/of kan worden uitgewisseld.*
 
-Dit niveau is volledig in scope van MIM. 
+Dit <del>niveau</del> is volledig in scope van MIM. 
 
 Ten aanzien van logische informatiemodellen:
 - Een conceptueel informatiemodel is onafhankelijk van standaarden voor gegevensuitwisseling.
@@ -142,7 +142,7 @@ Het logisch informatiemodel, of gegevensmodel beschrijft hoe de, in het conceptu
 
 *Het logisch model wordt opgesteld voor ICT-interoperabiliteit, voor gebruik door met name de ontwerpers, ontwikkelaars en beheerders van ICT-voorzieningen.*
 
-Dit niveau is volledig in scope van MIM. 
+Dit <del>niveau</del> is volledig in scope van MIM. 
 
 Ten aanzien van fysieke of technische datamodellen:
 - Een logisch informatiemodel is implementatie onafhankelijk en kan in meerdere technische modellen of formaten worden geïmplementeerd. Een fysiek of technisch datamodel is afhankelijk van de gekozen techniek of tooling die wordt gebruikt en wordt daadwerkelijk technische geïmplementeerd.
@@ -150,15 +150,15 @@ Ten aanzien van fysieke of technische datamodellen:
 ### Fysiek of technisch gegevens- of datamodel
 Specificeert de structuur en eigenschappen van de technologie waarin de informatie wordt vastgelegd of uitgewisseld. Dit is sterk afhankelijk van de gebruikte opslagtechnologie zoals een specifieke database of de servicetechnologie zoals [[xml]], [[gml]], [[SOAP]], REST, [[GeoJSON]], [[Linked-Data]] e.d. Het kan tevens informatie bevatten over de manier waarop berichten ‘verpakt’ worden, het (internet)protocol en de logistiek van het berichtenverkeer. De technische specificaties worden over het algemeen zoveel als mogelijk gegenereerd uit het logisch informatiemodel. Deze specificaties worden opgesteld voor ‘machines’, te gebruiken door softwareontwikkelaars.
 
-Dit niveau is **niet** in scope van MIM. Dit niveau is niet volledig beschreven maar is ter illustratie 
+Dit <del>niveau</del> is **niet** in scope van MIM. Dit <del>niveau</del> is niet volledig beschreven maar is ter illustratie 
 in deze paragraaf opgenomen. Er kan meer in zitten dan hier beschreven en er kan meer na volgen.   
 
-### Aanvullende opmerkingen bij de onderkende niveaus
+### Aanvullende opmerkingen bij de onderkende <del>niveaus</del>
 
-- In algemeenheid geldt dat het begrijpen van onderwerpen of dingen die een rol spelen in een 'universe of discourse' altijd vooraf gaat aan de modellering ervan, welk niveau deze modellering ook betreft en welke modellen je  besluit om wel of niet toe te maken of op te leveren. 
-- Deze standaard geeft niet normatief een volgorde of werkwijze aan voor de invulling van de 4 niveaus. Je kan bijvoorbeeld besluiten om wel of niet begrippen te definiëren en/of te modelleren. Wanneer je dan later een informatiemodel gaat maken dan is het nuttig om deze hierbij mee te nemen als input en hiermee consistent te blijven. Let wel, de definities op beide niveaus zijn niet altijd hetzelfde. De definitie in het informatiemodel moet soms preciezer zijn om preciezer de betekenis van de geregistreerde of uitgewisselde data te definiëren. 
-- Het voorliggende metamodel voor het modelleren van informatie (MIM) is bedoeld voor niveau 2 en 
-niveau 3: t.b.v. een zuiver conceptueel informatiemodel (2) en t.b.v. een logisch informatiemodel (3). 
+- In algemeenheid geldt dat het begrijpen van onderwerpen of dingen die een rol spelen in een 'universe of discourse' altijd vooraf gaat aan de modellering ervan, welk <del>niveau</del> deze modellering ook betreft en welke modellen je  besluit om wel of niet toe te maken of op te leveren. 
+- Deze standaard geeft niet normatief een volgorde of werkwijze aan voor de invulling van de 4 <del>niveaus</del>. Je kan bijvoorbeeld besluiten om wel of niet begrippen te definiëren en/of te modelleren. Wanneer je dan later een informatiemodel gaat maken dan is het nuttig om deze hierbij mee te nemen als input en hiermee consistent te blijven. Let wel, de definities op beide <del>niveaus</del> zijn niet altijd hetzelfde. De definitie in het informatiemodel moet soms preciezer zijn om preciezer de betekenis van de geregistreerde of uitgewisselde data te definiëren. 
+- Het voorliggende metamodel voor het modelleren van informatie (MIM) is bedoeld voor <del>niveau</del> 2 en 
+<del>niveau</del> 3: t.b.v. een zuiver conceptueel informatiemodel (2) en t.b.v. een logisch informatiemodel (3). 
 Het moge duidelijk zijn dat het altijd het één of het ander is, conceptueel of logisch. Een combinatie van 
 beide in één model leidt tot verwarring. Voor eenzelfde domein verschilt de structuur van het informatiemodel 
 naar gelang het type en bevat het logisch informatiemodel meer, vooral datagerichte, specificaties dan een 
