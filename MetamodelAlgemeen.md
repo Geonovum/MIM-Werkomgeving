@@ -725,9 +725,9 @@ Er zit bij een `Constraint` een _belangrijk verschil tussen betrekken en vastleg
 
 Een `Keuze` maakt het mogelijk een opsomming te geven van meerdere mogelijkheden, waarbij in een concreet geval altijd precies één van deze mogelijkheden wordt gebruikt. Er zijn verschillende plekken waar dit gebruikt kan worden.
 
-Een belangrijk voordeel van het gebruik van de Keuze ten opzichte van een constraint is dat de kardinaliteiten zuiver gehouden kunnen worden. Bij het gebruik van een constraint zie je vaak dat de kardinaliteit van bijvoorbeeld twee kenmerken optioneel gemaakt is en om vervolgens via de constraint toch weer verplicht gemaakt te worden, voor precies één van de mogelijkheden.
+Een belangrijk voordeel van het gebruik van de `Keuze` ten opzichte van een constraint is dat de kardinaliteiten zuiver gehouden kunnen worden. Bij het gebruik van een constraint zie je vaak dat de kardinaliteit van bijvoorbeeld twee kenmerken optioneel gemaakt is en om vervolgens via de constraint toch weer verplicht gemaakt te worden, voor precies één van de mogelijkheden.
 
-Dit document beschrijft een aantal use cases waarin het modelleren met een *Keuze* van toegevoegde waarde is. Zonder een dergelijke modelconstructie zou het nodig moeten zijn om met een expliciete constraint de keuze aan te geven.
+Dit document beschrijft een aantal use cases waarin het modelleren met een `Keuze` van toegevoegde waarde is. Zonder een dergelijke modelconstructie zou het nodig moeten zijn om met een expliciete constraint de keuze aan te geven.
 
 Bij de use cases gaat het over meerdere kenmerken, waartussen een keuze gemaakt moet worden omdat er van precies 1 sprake is/mag zijn. Dit is in MIM een keuze tussen twee (of meer) modelelementen. In de verzamelingenleer noemen we dit een XOR situatie. Hierbij is het vooral van belang dat er als gevolg van de modellering van een keuze in plaats van constraint er geen nieuwe kenmerken mogen ontstaan en ook geen kenmerken mogen wegvallen. De kenmerken van het object blijven gelijk.
 
@@ -735,64 +735,79 @@ Bij de use cases gaat het over meerdere kenmerken, waartussen een keuze gemaakt 
 Een objecttype heeft een attribuutsoort en het datatype hiervan is ofwel datatype D1 ofwel datatype D2. In MIM modelleren we daarom 1  attribuutsoort met als datatype een keuze tussen het datatype D1 en het datatype D2. Het maken van deze keuze is verplicht.
 
 <aside class='example'>
-  Voorbeeld: *Attribuutsoort* geometrie als kenmerk van een objecttype. Dit is een keuze uit *Datatype* Line of *Datatype* Polygon. De opsomming van beide keuzemogelijkheden noemen we de *Keuze* LineOrPolygon. De aanhaking aan het attribuutsoort geometrie gebeurt door aan te geven dat LineOrPolygon het type is van geometrie.
+  Voorbeeld: Attribuutsoort `geometrie` als kenmerk van een objecttype `Weg`. Dit is een keuze uit `Datatype` `GM_Curve` of `Datatype` `GM_Surface`. De opsomming van beide keuzemogelijkheden noemen we de `Keuze` `LijnOfVlak`. De binding aan het attribuutsoort `geometrie` gebeurt door aan te geven dat `LijnOfVlak` het type is van `geometrie`.
 </aside>
 
-In dit voorbeeld vormt `LineOrPolygon` de `Keuze` als geheel. De datatypen zelf zijn de keuzemogelijkheden, maar blijven in de modellering van de metaclass `Datatype` en behoren in deze zin niet tot de modellering van de metaclass `Keuze`.  
+<figure id="datatypekeuze">
+  <img src="media/datatypekeuze-1.png" alt="" />
+  <figcaption>Diagram: Voorbeeld van keuze tussen datatypen</figcaption>
+</figure>
 
-Bij een modellering zonder `Keuze` zou je te maken krijgen met een `Attribuutsoort` per `Datatype`, maar met een verschillende naam, hoewel ze betrekking hebben op hetzelfde kenmerk. Ook zou de kardinialiteit niet kloppen: die zou dan `0..1` moeten worden, maar dat doet geen recht aan het feit dat er één verplicht aanwezig moet zijn, en er ook geen twee naast elkaar mogen zijn. De werkelijke kardinaliteit is `1..1`.
+In dit voorbeeld vormt `LijnOfVlak` de `Keuze` als geheel. De datatypen zelf zijn de keuzemogelijkheden, maar blijven in de modellering van de metaclass `Datatype` en behoren in deze zin niet tot de modellering van de metaclass `Keuze`.  
+
+Bij een modellering zonder `Keuze` zou je te maken krijgen met een attribuutsoort per datatype, maar met een verschillende naam, hoewel ze betrekking hebben op hetzelfde kenmerk. Ook zou de kardinialiteit niet kloppen: die zou dan `0..1` moeten worden, maar dat doet geen recht aan het feit dat er één verplicht aanwezig moet zijn, en er ook geen twee naast elkaar mogen zijn. De werkelijke kardinaliteit is `1..1`.
 
 **Use case 2: een keuze tussen 2 of meer attribuutsoorten**  
 Er is sprake van ofwel attribuutsoort A1 ofwel attribuutsoort A2. In MIM modelleren we daarom een keuze tussen de 2 attribuutsoorten A1 en A2. Het maken van deze keuze is verplicht.
 
 <aside class='example'>
-  Voorbeeld: bij een objecttype "Betalingsopdracht" moet naast het bedrag ook een betalingskenmerk worden opgenomen of een omschrijving. Eén van beide moet worden ingevuld. Het is niet toegestaan dat beide velden worden ingevuld.
+  Voorbeeld: bij een objecttype `Betalingsopdracht` moet naast het `bedrag` ook een `betalingskenmerk` worden opgenomen of een `omschrijving`. Eén van beide moet worden gebruikt. Het is niet toegestaan dat beide attributen worden toegepast.
 </aside>
 
-We modelleren daarom een *Keuze* 'BetalingskenmerkOfOmschrijving' met daarin een *Attribuutsoort* betalingskenmerk en een *Attribuutsoort* omschrijving.
+<figure id="attribuutkeuze_v1">
+  <img src="media/attribuutkeuze-2.png" alt="" />
+  <figcaption>Diagram: Voorbeeld van keuze tussen attribuutsoorten</figcaption>
+</figure>
 
-Het is bij deze use case niet de bedoeling om een derde attribuutsoort, zoals BetalingskenmerkOfOmschrijving, te introduceren als attribuutsoort van het objecttype. De aanhaking van de *Keuze* 'BetalingskenmerkOfOmschrijving' is daarom aan het objecttype.
+We modelleren daarom een `Keuze` `BetalingskenmerkOfOmschrijving` met daarin een attribuutsoort `betalingskenmerk` en een attribuutsoort `omschrijving`.
 
-In dit voorbeeld vormt BetalingskenmerkOfOmschrijving en de aanhaking ervan op het objecttype de *Keuze* als geheel. De attribuutsoorten zelf zijn de keuze mogelijkheden, maar blijven in de modellering van de metaclass attribuutsoort en behoren in deze zin niet tot de modellering van de metaclass keuze.  
+Het is bij deze use case niet de bedoeling om een derde attribuutsoort, zoals kenmerkOfOmschrijving, te introduceren als attribuutsoort van het objecttype. `kenmerkOfOmschrijving` staat er wel maar is geen attribuutsoort maar een `Keuze`. De naam daarvan is arbitrair omdat het geen betekenis heeft en bij de implementatie in data niet voorkomt. De binding van de `Keuze` `BetalingskenmerkOfOmschrijving` is daarom aan het objecttype en niet aan een attribuutsoort.
 
-Zonder de mogelijkheid van keuze zouden beide attribuutsoorten opgenomen zijn bij het objecttype als optionele velden, met een constraint dat een van beide gevuld moet zijn. Nadeel hiervan is dat de kardinaliteit dan niet erg duidelijk gemodelleerd is: die zou dan voor beide attribuutsoorten [0..1] moeten worden, maar dat doet geen recht aan het feit dat er één verplicht aanwezig moet zijn, en er ook geen twee naast elkaar mogen zijn. De werkelijke kardinaliteit voor een gekozen attribuutsoort is [1..1]. Met een constraint is dit te specificeren en derhalve ook op zich wel correct te modelleren, maar met een modellering van een keuze is dit veel duidelijker.
+In dit voorbeeld vormt `BetalingskenmerkOfOmschrijving` en de binding ervan aan het objecttype de `Keuze` als geheel. De attribuutsoorten zelf zijn de keuze mogelijkheden, maar blijven in de modellering van de metaclass attribuutsoort en behoren in deze zin niet tot de modellering van de metaclass keuze.  
+
+Zonder de mogelijkheid van `Keuze` zouden beide attribuutsoorten opgenomen zijn bij het objecttype als optionele velden, met een constraint dat een van beide gevuld moet zijn. Nadeel hiervan is dat de kardinaliteit dan niet erg duidelijk gemodelleerd is: die zou dan voor beide attribuutsoorten [0..1] moeten worden, maar dat doet geen recht aan het feit dat er één verplicht aanwezig moet zijn, en er ook geen twee naast elkaar mogen zijn. De werkelijke kardinaliteit voor een gekozen attribuutsoort is [1..1]. Met een constraint is dit te specificeren en derhalve ook op zich wel correct te modelleren, maar met een modellering van een keuze is dit veel duidelijker.
 
 **Use case 3: een keuze tussen meerdere manieren om invulling te geven aan 1 betekenisvol attribuutsoort van een objecttype**  
 Er is sprake van ofwel attribuutsoort A0 en aanvullend hierbij een keuze tussen ofwel attribuutsoort A1 ofwel attribuutsoort A2. In MIM modelleren we daarom voor A1 en A2 een keuze tussen de 2 attribuutsoorten. Het maken van deze keuze is verplicht.
 
 <aside class='example'>
-  Bij een objecttype "Betalingsopdracht" moet een bedrag en een *beschrijving* worden opgenomen. Deze beschrijving heeft betekenis voor het objecttype, als eigenschap. Verder moet er voor de beschrijving aanvullend een keuze worden gemaakt tussen een *beschrijving in de vorm van een betalingskenmerk* OF een *beschrijving in de vorm van een omschrijving*. Beide worden (ook) gezien als attribuutsoorten. Het is niet toegestaan dat beide velden worden ingevuld: alleen een betalingskenmerk, of alleen een omschrijving.
+  Bij een objecttype `Betalingsopdracht` moet een bedrag en een `beschrijving` worden opgenomen. Deze beschrijving heeft betekenis voor het objecttype, als eigenschap. Verder moet er voor de beschrijving aanvullend een keuze worden gemaakt tussen een beschrijving in de vorm van een betalingskenmerk OF een beschrijving in de vorm van een omschrijving. Beide worden (ook) gezien als attribuutsoorten. Het is niet toegestaan dat beide attributen worden gebruikt: alleen een `betalingskenmerk`, of alleen een `omschrijving`.
 </aside>
 
-We modelleren daarom een *Keuze* 'BetalingskenmerkOfOmschrijving' met daarin een *Attribuutsoort* betalingskenmerk en een *Attribuutsoort* omschrijving. Het is bij deze use case niet de bedoeling om het attribuutsoort beschrijving kwijt te raken in de modellering. De aanhaking van de *Keuze* 'BetalingskenmerkOfOmschrijving' is daarom aan het **attribuutsoort**. De aanhaking aan het attribuutsoort beschrijving gebeurt door aan te geven dat BetalingskenmerkOfOmschrijving het type is van beschrijving.
+<figure id="attribuutkeuze_v2">
+  <img src="media/Attribuutkeuze-metBetekenis-3.png" alt="" />
+  <figcaption>Diagram: Voorbeeld van een attribuutsoort gekoppeld aan een keuze tussen attribuutsoorten</figcaption>
+</figure>
 
-In dit voorbeeld vormt BetalingskenmerkOfOmschrijving de *Keuze* als geheel. De attribuutsoorten zelf zijn de keuze mogelijkheden, maar blijven in de modellering van de metaclass attribuutsoort en behoren in deze zin niet tot de modellering van de metaclass keuze.  
+We modelleren daarom een `Keuze` `BetalingskenmerkOfOmschrijving` met daarin een attribuutsoort `betalingskenmerk` en een attribuutsoort `omschrijving`. Het is bij deze use case niet de bedoeling om het attribuutsoort `beschrijving` kwijt te raken in de modellering. De binding van de `Keuze` `BetalingskenmerkOfOmschrijving` is daarom aan het attribuutsoort. De binding van het attribuutsoort `beschrijving` gebeurt door aan te geven dat `BetalingskenmerkOfOmschrijving` het type is van `beschrijving`.
 
-*Opmerking: use case 2 en 3 zijn voor een groot deel overeenkomstig. De overeenkomst is dat de keuze tussen de twee attribuutsoorten betalingskenmerk en omschrijving hetzelfde gemodelleerd wordt, als een keuze, met bijvoorbeeld de naam BetalingskemerkOfOmschrijving. Het verschil zit in de aanhaking.*
+In dit voorbeeld vormt `BetalingskenmerkOfOmschrijving` de `Keuze` als geheel. De attribuutsoorten zelf zijn de keuze mogelijkheden, maar blijven in de modellering van de metaclass attribuutsoort en behoren in deze zin niet tot de modellering van de metaclass keuze.  
+
+*Opmerking: use case 2 en 3 zijn voor een groot deel overeenkomstig. De overeenkomst is dat de keuze tussen de twee attribuutsoorten betalingskenmerk en omschrijving hetzelfde gemodelleerd wordt, als een keuze, met bijvoorbeeld de naam BetalingskemerkOfOmschrijving. Het verschil zit in de binding tussen de keuze en het objecttype.*
 
 
 **Use case 4: een keuze tussen relatiedoelen, als nadere invulling van een betekenisvolle relatiesoort van een objecttype**  
 Er is sprake van een relatiesoort R0 en aanvullend hierbij een keuze tussen relatiedoel D1 of relatiedoel D2. In MIM modelleren we daarom een keuze tussen de 2 relatiedoelen D1 en D2. Het maken van deze keuze is verplicht.
 
 <aside class='example'>
-  Voorbeeld: een objecttype "Vervoermiddel" heeft een eigenaar. Dit kan een persoon zijn, of een bedrijf, maar niet beiden. Er is sprake van één eigenaar" en een keuze tussen relatiedoel persoon (naar objecttype Persoon) en relatiedoel bedrijf (naar objecttype Bedrijf). We modelleren daarom 1 *Relatiesoort* eigenaar en aanvullend met een *Keuze* EigenaarKeuze met twee relatiedoelen, een naar persoon en een naar bedrijf.  
+  Voorbeeld: een objecttype `Vervoermiddel` heeft een `eigenaar`. Dit kan een `Persoon` zijn, of een `Bedrijf`, maar niet beiden. Er is sprake van één eigenaar" en een keuze tussen relatiedoel `persoon` (naar objecttype `Persoon`) en relatiedoel `bedrijf` (naar objecttype `Bedrijf`). We modelleren daarom 1 relatiesoort `eigenaar` en aanvullend met een `Keuze` `EigenaarKeuze` met twee relatiedoelen, een naar `Persoon` en een naar `Bedrijf`.  
 </aside>
 
-Het is bij deze use case niet de bedoeling om twee nieuwe relatiesoorten, eigenaar_persoon en eigenaar_bedrijf, te introduceren en al zeker niet om de relatiesoort eigenaar kwijt te raken. We modelleren daarom 1 relatiesoort met de naam eigenaar en een *Keuze* tussen relatiedoelen.
+Het is bij deze use case niet de bedoeling om twee nieuwe relatiesoorten, eigenaar_persoon en eigenaar_bedrijf, te introduceren en al zeker niet om de relatiesoort `eigenaar` kwijt te raken. We modelleren daarom 1 relatiesoort met de naam eigenaar en een `Keuze` tussen relatiedoelen.
 
 <figure id="relatiedoelkeuze">
   <img src="media/Relatiedoelkeuze-4.png" alt="" />
   <figcaption>Diagram: Voorbeeld van keuze tussen relatiedoelen</figcaption>
 </figure>
 
-In het voorbeeld vormen EigenaarKeuze en de twee relatiedoelen tezamen de keuze als geheel. De relatiedoelen zelf zijn de keuze mogelijkheden. De modellering van de relatiesoort eigenaar blijft hetzelfde en behoort niet tot de modellering van de metaclass keuze.
+In het voorbeeld vormen `EigenaarKeuze` en de twee relatiedoelen tezamen de keuze als geheel. De relatiedoelen zelf zijn de keuze mogelijkheden. De modellering van de relatiesoort `eigenaar` blijft hetzelfde en behoort niet tot de modellering van de metaclass keuze.
 
 **Use case 5: een keuze tussen twee of meer relatiesoorten/relatierollen (elk afzonderlijk betekenisvol)** 
 
 Er is sprake van een relatiesoort R1 en een relatiesoort R2. R1 heeft als doel een object van objecttype D1 en R2 heeft als doel een object van objecttype 2. In MIM modelleren we daarom een keuze met als uitgaande relatiesoorten R1 en R2. Het maken van deze keuze is verplicht.
 
 <aside class='example'>
-  Voorbeeld: een objecttype "Vervoermiddel" heeft een eigenaar of wordt verhuurd door een verhuurbedrijf. Beide relatiesoorten zijn specifiek en van belang om te benoemen. We modelleren daarom 1 *Keuze(relatie)* naar een *Keuze* VerhuurbedrijfOfEigenaar. Deze heeft twee uitgaande relatiesoorten met elk een specifieke naam en/of relatiedoel naar Persoon en Organisatie. 
+  Voorbeeld: een objecttype `Vervoermiddel` heeft een `eigenaar` of wordt verhuurd door een `verhuurbedrijf`. Beide relatiesoorten zijn specifiek en van belang om te benoemen. We modelleren daarom 1 *Keuze(relatie)* naar een `Keuze` `VerhuurbedrijfOfEigenaar`. Deze heeft twee uitgaande relatiesoorten met elk een specifieke naam en/of relatiedoel naar `Persoon` en `Organisatie`. 
 </aside>
 
 <figure id="relatiedoelkeuzeMetBetekenis">
@@ -800,7 +815,7 @@ Er is sprake van een relatiesoort R1 en een relatiesoort R2. R1 heeft als doel e
   <figcaption>Diagram: Voorbeeld van keuze tussen relatiesoorten die elk een betekenis hebben</figcaption>
 </figure>
 
-In het voorbeeld heeft Vervoermiddel de verplichte keuze tussen de relatiesoorten/rollen `heeft als contactpersoon/eigenaar` en `wordt verhuurd door/verhuurbedrijf`.
+In het voorbeeld heeft `Vervoermiddel` de verplichte keuze tussen de relatiesoorten/rollen `heeft als contactpersoon`/`eigenaar` en `wordt verhuurd door`/`verhuurbedrijf`.
 
 
 
