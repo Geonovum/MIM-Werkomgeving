@@ -125,7 +125,9 @@ Onderstaande tabellen geven een overzicht van alle transformaties en een referen
 |`mim:herkomst`|`mim:herkomst`|[herkomst](#transformatie-herkomst)|
 |`mim:herkomstDefinitie`|`mim:herkomstDefinitie`|[herkomst definitie](#transformatie-herkomst-definitie)|
 |`mim:datumOpname`|`mim:datumOpname`|[datum opname](#transformatie-datum-opname)|
+|`mim:heeftTijdlijnGeldigheid`|`mim:heeftTijdlijnGeldigheid`|[heeft tijdlijn geldigheid](#transformatie-heeft-tijdlijn-geldigheid)|
 |`mim:indicatieMaterieleHistorie`|`mim:indicatieMaterieleHistorie`|[indicatie materiële historie](#transformatie-indicatie-materiele-historie)|
+|`mim:heeftTijdlijnRegistratie`|`mim:heeftTijdlijnRegistratie`|[heeft tijdlijn registratie](#transformatie-heeft-tijdlijn-registratie)|
 |`mim:indicatieFormeleHistorie`|`mim:indicatieFormeleHistorie`|[indicatie formele historie](#transformatie-indicatie-formele-historie)|
 |`mim:kardinaliteit`|`sh:minCount`, `sh:maxCount`|[kardinaliteit](#transformatie-kardinaliteit)|
 |`mim:authentiek`|`mim:authentiek`|[authentiek](#transformatie-authentiek)|
@@ -1047,6 +1049,30 @@ WHERE {
 }
 </pre>
 
+### transformatie: heeft tijdlijn geldigheid
+
+> Indicatie of voor dit kenmerk een tijdlijn geldigheid bijgehouden wordt en te bevragen is.
+
+Een `mim:heeftTijdlijnGeldigheid` wordt direct, zonder aanpassing, overgenomen in het vertaalde model.
+
+<pre class='ex-sparql'>
+CONSTRUCT {
+  ?subject mim:heeftTijdlijnGeldigheid ?heeftTijdlijnGeldigheid
+}
+WHERE {
+  ?modelelement mim:heeftTijdlijnGeldigheid ?heeftTijdlijnGeldigheid.
+  ?subject mim:equivalent ?modelelement.
+}
+</pre>
+
+<aside id='trans-99-a' class='note'>
+In Linked Data zal een het hebben van een tijdlijn geldigheid altijd betekenen dat er een constructie wordt gerealiseerd waarbij de eigenschappen
+die betrekking hebben op de tijdlijn van de objectgegevens van het objecttype (zoals geldigheidsperiode, bron, herkomst) onderscheiden zijn van de
+eigenschappen van het objecttype zelf. Deze constructie is toegelicht in <a href="https://geonovum.github.io/NEN3610-Linkeddata/#regels-attributen-materieleHistorie">NEN3610 Linked Data</a>. Hoewel het denkbaar is om een dergelijke vertaling al direct mee te nemen bij het
+vertalen van het metagegeven "heeft tijdlijn geldigheid" is hier niet voor gekozen, omdat een dergelijke vertaling ook met zich
+meebrengt dat zichtbaar is gemaakt welke eigenschappen behoren tot het objecttype en welke eigenschappen tot de tijdlijn van de gegevens van het objecttype. Beter zou zijn als een dergelijk onderscheid al direct in het model is opgenomen.
+</aside>
+
 ### transformatie: indicatie materiële historie
 
 > Indicatie of de materiële historie van het kenmerk van het object te bevragen is.
@@ -1066,9 +1092,33 @@ WHERE {
 <aside id='trans-99' class='note'>
 In Linked Data zal een indicatie materiële historie altijd betekenen dat er een constructie wordt gerealiseerd waarbij de eigenschappen
 die betrekking hebben op de historie van het objecttype (zoals geldigheidsperiode, bron, herkomst) onderscheiden zijn van de
-eigenschappen van het objecttype zelf. Deze constructie is toegelicht in [NEN3610 Linked Data](https://geonovum.github.io/NEN3610-Linkeddata/#regels-attributen-materieleHistorie). Hoewel het denkbaar is om een dergelijke vertaling al direct mee te nemen bij het
+eigenschappen van het objecttype zelf. Deze constructie is toegelicht in <a href="https://geonovum.github.io/NEN3610-Linkeddata/#regels-attributen-materieleHistorie">NEN3610 Linked Data</a>. Hoewel het denkbaar is om een dergelijke vertaling al direct mee te nemen bij het
 vertalen van het metagegeven "indicatie materiële historie" is hier niet voor gekozen, omdat een dergelijke vertaling ook met zich
 meebrengt dat zichtbaar is gemaakt welke eigenschappen behoren tot het objecttype en welke eigenschappen tot de historie van het objecttype. Beter zou zijn als een dergelijk onderscheid al direct in het model is opgenomen.
+</aside>
+
+### transformatie: heeft tijdlijn registratie
+
+> Indicatie of voor dit kenmerk een tijdlijn geldigheid bijgehouden wordt en te bevragen is.
+
+Een `mim:heeftTijdlijnRegistratie` wordt direct, zonder aanpassing, overgenomen in het vertaalde model.
+
+<pre class='ex-sparql'>
+CONSTRUCT {
+  ?subject mim:heeftTijdlijnRegistratie ?heeftTijdlijnRegistratie
+}
+WHERE {
+  ?modelelement mim:heeftTijdlijnRegistratie ?heeftTijdlijnRegistratie.
+  ?subject mim:equivalent ?modelelement.
+}
+</pre>
+
+<aside id='trans-100-a' class='note'>
+In Linked Data zal een het hebben van een tijdlijn registratie altijd betekenen dat er een constructie wordt gerealiseerd waarbij de eigenschappen
+die betrekking hebben op de tijdlijnen van de objectgegevens van het objecttype (zoals geldigheidsperiode, bron, herkomst) onderscheiden zijn van de
+eigenschappen van het objecttype zelf. Deze constructie is toegelicht in <a href="https://geonovum.github.io/NEN3610-Linkeddata/#regels-attributen-materieleHistorie">NEN3610 Linked Data</a>. Hoewel het denkbaar is om een dergelijke vertaling al direct mee te nemen bij het
+vertalen van het metagegeven "heeft tijdlijn registratie" is hier niet voor gekozen, omdat een dergelijke vertaling ook met zich
+meebrengt dat zichtbaar is gemaakt welke eigenschappen behoren tot het objecttype en welke eigenschappen tot de tijdlijn van de gegevens van het objecttype. Beter zou zijn als een dergelijk onderscheid al direct in het model is opgenomen.
 </aside>
 
 ### transformatie: indicatie formele historie
@@ -1090,7 +1140,7 @@ WHERE {
 <aside id='trans-100' class='note'>
 In Linked Data zal een indicatie formele historie altijd betekenen dat er een constructie wordt gerealiseerd waarbij de eigenschappen
 die betrekking hebben op de historie van het objecttype (zoals geldigheidsperiode, bron, herkomst) onderscheiden zijn van de
-eigenschappen van het objecttype zelf. Deze constructie is toegelicht in [NEN3610 Linked Data](https://geonovum.github.io/NEN3610-Linkeddata/#regels-attributen-formeleHistorie). Hoewel het denkbaar is om een dergelijke vertaling al direct mee te nemen bij het
+eigenschappen van het objecttype zelf. Deze constructie is toegelicht in <a href="https://geonovum.github.io/NEN3610-Linkeddata/#regels-attributen-materieleHistorie">NEN3610 Linked Data</a>. Hoewel het denkbaar is om een dergelijke vertaling al direct mee te nemen bij het
 vertalen van het metagegeven "indicatie formele historie" is hier niet voor gekozen, omdat een dergelijke vertaling ook met zich
 meebrengt dat zichtbaar is gemaakt welke eigenschappen behoren tot het objecttype en welke eigenschappen tot de historie van het objecttype. Beter zou zijn als een dergelijk onderscheid al direct in het model is opgenomen.
 </aside>

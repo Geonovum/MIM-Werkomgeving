@@ -339,11 +339,23 @@ mimdoc:sectie2.8.2.9 a dct:BibliographicResource;
   foaf:page <https://docs.geostandaarden.nl/mim/mim/#metagegeven-identificerend>;
   dct:isPartof mimdoc:sectie2.8.2;
 .
+mimdoc:metagegeven-heeft-tijdlijn-geldigheid a dct:BibliographicResource;
+  rdfs:label "Metagegeven: heeft tijdlijn geldigheid";
+  dct:bibliographicCitation "Metagegeven: heeft tijdlijn geldigheid" ;
+  foaf:page <https://docs.geostandaarden.nl/mim/mim/#metagegeven-heeft-tijdlijn-geldigheid>;
+  # dct:isPartOf TODO oppakken met https://github.com/Geonovum/MIM-Werkomgeving/issues/484
+.
 mimdoc:sectie2.8.2.10 a dct:BibliographicResource;
   rdfs:label "Metagegeven: indicatie materiële historie";
   dct:bibliographicCitation "Sectie 2.8.2.10 Metagegeven: indicatie materiële historie";
   foaf:page <https://docs.geostandaarden.nl/mim/mim/#metagegeven-indicatie-materiele-historie>;
   dct:isPartof mimdoc:sectie2.8.2;
+.
+mimdoc:metagegeven-heeft-tijdlijn-registratie a dct:BibliographicResource;
+  rdfs:label "Metagegeven: heeft tijdlijn registratie";
+  dct:bibliographicCitation "Metagegeven: heeft tijdlijn registratie" ;
+  foaf:page <https://docs.geostandaarden.nl/mim/mim/#metagegeven-heeft-tijdlijn-registratie>; 
+  # dct:isPartOf TODO oppakken met https://github.com/Geonovum/MIM-Werkomgeving/issues/484
 .
 mimdoc:sectie2.8.2.11 a dct:BibliographicResource;
   rdfs:label "Metagegeven: indicatie formele historie";
