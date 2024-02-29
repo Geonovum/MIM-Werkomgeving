@@ -40,10 +40,10 @@ Elk modelelement heeft een `«MIM metaclass»` met een naam. Hieraan is elk mode
 Het modelelement is de superklasse van alle metaklassen in het MIM-metamodel.
 
 <aside class="definition">
-  <dfn>Modelelement</dfn>Een metaklasse van een metamodel.
+  <dfn>Modelelement</dfn>Een onderdeel van een model.
 </aside>
 
-**Toelichting**: Modelelementen zijn de bouwstenen of metaklassen van het MIM-metamodel. Modelelement is de superklasse van alle metaklassen in het MIM.
+**Toelichting**: Alle metaklassen in het MIM zijn modelelementen. Alles wat we met MIM uitdrukken zijn modelelementen. Als een modelelement een klasse van modelelementen beschrijft noemen we dit ook wel een metaklasse.
 
 ### Kern
 
