@@ -1173,7 +1173,7 @@ Materiële historie geeft aan wanneer een verandering is opgetreden in de werkel
 #### Metagegeven: **heeft tijdlijn registratie**
 
 <aside class="definition">
-  <dfn>heeft tijdlijn registratie</dfn>Indicatie of voor dit kenmerk een tijdlijn geldigheid bijgehouden wordt en te bevragen is.
+  <dfn>heeft tijdlijn registratie</dfn>Indicatie of voor dit kenmerk een tijdlijn registratie bijgehouden wordt en te bevragen is.
 </aside>
 
 *Toelichting*
@@ -1182,7 +1182,7 @@ Bijvoorbeeld: `Nee`.
 
 Met de tijdlijn registratie wordt bedoeld dat er op een tijdlijn wordt bijgehouden wanneer een bepaalde waarde voor een kenmerk van een object vastgelegd wordt, oftewel _geregistreerd_ wordt. Dit tijdsmoment wordt op enerlei wijze als metagegeven bijgehouden bij het gegeven. De vastlegging kan zijn op een bepaald medium of in een registratie van een informatievoorziening. Het tijdsmoment van vastlegging of registratie is altijd ten tijde van vastlegging van een gegeven in de echte tijd (de horloge tijd). Elke keer dat hetzelfde gegeven op een andere plek wordt vastgelegd is een apart tijdsmoment op de tijdlijn registatie dat relevant kan zijn om bij te houden. Verdere toelichting, zie het hoofdstuk [Afspraken & Regels](#afspraken-regels). 
 
-Met te bevragen wordt bedoeld: het tijdsmoment wanneer een gegeven geregistreerd is wordt op enerlei wijze als historie bijgehouden, en deze wijze is te bevragen. Dit metagegeven is alleen betekenisvol voor kenmerken waarvoor een waarde wordt bijgehouden. 
+Met te bevragen wordt bedoeld: het tijdsmoment wanneer een gegeven geregistreerd is wordt op enerlei wijze als historie bijgehouden, en deze wijze is te bevragen. Dit metagegeven is alleen betekenisvol voor kenmerken waarvoor een waarde wordt bijgehouden. Merk hierbij op dat het moment van registreren in de praktijk vaak, maar niet per definitie, gelijk is aan het moment van beschikbaar komen van een gegeven voor gebruikers van de informatievoorziening. 
 
 De in te vullen waarde komt uit: zie [[[#toegestane-waarden-metagegevens]]]
 
