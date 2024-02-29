@@ -1404,18 +1404,6 @@ Voor de hand liggende formaten waarin een waardelijst is gepubliceerd zijn onder
 
 *Toepassing:* Codelijst
 
-#### Metagegeven: **Datatype**
-
-<aside class="definition">
-  <dfn>Datatype</dfn>Datatype van de waarden in een waardelijst.
-</aside>
-
-*Toelichting*
-
-Voorbeelden hiervan zijn `Characterstring` , `Integer`
-
-*Toepassing:* Codelijst
-
 #### Metagegeven: **Waarde-item**
 
 <aside class="definition">
