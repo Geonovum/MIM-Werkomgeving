@@ -1331,7 +1331,11 @@ weten de modelelementen attribuutsoort en relatiesoort.
 
 *Toelichting*
 
-Bijvoorbeeld: een persoon heeft een postadres. Het postadres is een kenmerk van een persoon. De persoon is in deze het bronobject van de relatie. Het postadres is de naam van het kenmerk c.q. de relatie tussen een persoon en een adres en geeft betekenis aan deze relatie. Het adres is er gewoon en wie hem allemaal gebruikt als adres en of dit als postadres is of als woonadres of nog iets anders is voor het adres niet van belang.
+Bijvoorbeeld: een persoon werkt bij een organisatie, oftewel het objecttype Persoon is de bron entiteit in deze relatie en het objecttype Organisatie is niet de bron entiteit. De relatie 'werkt bij' wordt in deze gemodelleerd vanuit de persoon (de organisatie werkt niet bij de persoon). Je kan ook stellen: de persoon werkt bij een organisatie in de rol van werkenemer. 
+
+Modelleertechnisch wordt de relatietype getrokken van Persoon (de bron van het relatietype) naar Organisatie (het doel van het relatietype) en de naam van het relatietype houdt rekening met deze richting. 
+
+Het relatietype 'werkt bij' of de rol 'werknemer' hoort bij Persoon (de bron) kan gezien worden een kenmerk van persoon. Een kenmerk die als waarde de verwijzing naar de Organisatie (de organisatie zelf of de identificatie van de organisatie is uiteraard niet een kenmerk van de persoon). Merk op dat het relatietype twee objecttypen kan relateren die in twee aparte informatiedomeinen voorkomen. Het objecttype dat de bron is in het relatietype en het relatietype zelf worden dan in samenhang gedefinieerd, zonder dat het andere informatiedomein hier perse kennis van heeft. De definitie van dit relatietype wordt dan opgesteld vanuit het "eigen" informatiedomein, oftewel bekeken vanuit het objecttype dat de bron is in dit relatietype, in het voorbeeld het objecttype Persoon. 
 
 *Toepassing*: relaties, oftewel de modelelementen Relatiesoort en Externe koppeling.
 
