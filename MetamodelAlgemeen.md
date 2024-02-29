@@ -1436,7 +1436,7 @@ Als een Codelijst een structuur heeft wordt hiermee aangegeven welk item in de c
 
 *Toelichting*
 
-Mogelijk is er een profielspecificatie die de specifieke technische toepassing van de codelijst beschrijft. Bij voorkeur is de referentie door middel van een url.
+MIM zegt niets over de technische implementatie van de codelijst. Om een referentie naar informatie over de technische implementatie wel in het model op te nemen is er de mogelijkheid om met het metagegeven Profielspecificatie de specifieke technische toepassing van de codelijst te beschrijven. Bij voorkeur is de referentie door middel van een url.
 
 *Toepassing:* Codelijst
 
