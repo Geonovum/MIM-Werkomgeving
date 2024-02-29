@@ -1383,12 +1383,12 @@ koppeling.
 #### Metagegeven: **Locatie**
 
 <aside class="definition">
-  <dfn>Locatie</dfn>Als het type van het attribuutsoort een waardelijst is, dan wordt hier de locatie waar deze te vinden is opgegeven.
+  <dfn>Locatie</dfn>Als het type van het attribuutsoort een waardelijst is, dan wordt hier de plek waar deze te vinden is opgegeven.
 </aside>
 
 *Toelichting*
 
-Indien mogelijk is de verwijzing een URI of een URL (als er geen URI is, dan kan dit een URL zijn, waar de waardelijst op basis van de naam van de waardelijst te vinden is). Bijvoorbeeld: `http://www.organisatie.nl/schemas/waardelijsten/NaamWaardelijst`.
+De plek is een gepubliceerde plek waar gebruikers bij kunnen. Indien mogelijk is dit metagegeven gevuld met (heeft als waarde) een URI of een URL (als er geen URI is, dan kan dit een URL zijn, waar de waardelijst op basis van de naam van de waardelijst te vinden is). Bijvoorbeeld: `http://www.organisatie.nl/schemas/waardelijsten/NaamWaardelijst`.
 
 *Toepassing*: de modelelementen die een waardelijst zijn.
 
