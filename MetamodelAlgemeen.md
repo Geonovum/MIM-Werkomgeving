@@ -1903,7 +1903,7 @@ Een referentielijst bevat referentie-elementen.
 Verkorte schrijfwijze: **datatypekeuze**
 
 <aside class="definition">
-  <dfn>heeft keuzedatatype</dfn>De binding van een keuze uit datatypen aan een attribuutsoort.
+  <dfn>heeft datatypekeuze</dfn>De binding van een keuze uit datatypen aan een attribuutsoort.
 </aside>
 
 *Toelichting*
@@ -1912,11 +1912,11 @@ Een attribuutsoort kan als datatype een keuze uit datatypen hebben.
 
 *Toepassing*: Attribuutsoort.
 
-#### Metagegeven: **heeft keuzeattribuut**
-Verkorte schrijfwijze: **keuzeattribuut**
+#### Metagegeven: **heeft attribuutkeuze**
+Verkorte schrijfwijze: **attribuutkeuze**
 
 <aside class="definition">
-  <dfn>heeft keuzeattribuut</dfn>De binding van een keuze uit attributen aan een attribuutsoort of keuze.
+  <dfn>heeft attribuutkeuze</dfn>De binding van een keuze uit attributen aan een attribuutsoort.
 </aside>
 
 *Toelichting*
@@ -1925,16 +1925,42 @@ Een keuze tussen attribuutsoorten kan als eigenschap aan een objecttype, gegeven
 
 *Toepassing*: Objecttype, Gegevensgroeptype, Relatieklasse, Attribuutsoort.
 
-#### Metagegeven: **heeft keuzerelatiedoel**
-Verkorte schrijfwijze: **keuzerelatiedoel**
+#### Metagegeven: **heeft keuzeattribuut**
+Verkorte schrijfwijze: **keuzeattribuut**
 
 <aside class="definition">
-  <dfn>heeft keuzerelatiedoel</dfn>De binding van een keuze uit relatiedoelen aan een objecttype.
+  <dfn>heeft keuzeattribuut</dfn>De binding van een attribuutsoort aan een Keuze.
+</aside>
+
+*Toelichting*
+
+Een keuze tussen attribuutsoorten bindt 2 of meer attribuutsoorten.
+
+*Toepassing*: Keuze.
+
+#### Metagegeven: **heeft relatiedoelkeuze**
+Verkorte schrijfwijze: **relatiedoelkeuze**
+
+<aside class="definition">
+  <dfn>heeft relatiedoelkeuze</dfn>De binding van een keuze uit relatiedoelen aan een objecttype.
 </aside>
 
 *Toelichting*
 
 Een keuze tussen relatiedoelen kan als eigenschap aan een objecttype of gegevensgroeptype worden gekoppeld.
+
+*Toepassing*: Objecttype, Gegevensgroeptype, Keuze.
+
+#### Metagegeven: **heeft relatiesoortkeuze**
+Verkorte schrijfwijze: **relatiesoortkeuze**
+
+<aside class="definition">
+  <dfn>heeft relatiesoortkeuze</dfn>De binding van een keuze uit relatiesoorten aan een objecttype.
+</aside>
+
+*Toelichting*
+
+Een keuze tussen relatiesoorten kan als eigenschap aan een objecttype of gegevensgroeptype worden gekoppeld.
 
 *Toepassing*: Objecttype, Gegevensgroeptype, Keuze.
 
