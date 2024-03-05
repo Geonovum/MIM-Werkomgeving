@@ -1574,7 +1574,7 @@ Wanneer een objecttype wel abstract is, dan kunnen er geen objecten bestaan die 
 Zie ook sectie [Abstracte objecttypes en concrete objecten](#abstracte-objecttypes-en-concrete-objecten) waar
 een nadere uitleg wordt gegeven van het fenomeen abstract objecttypen.
 
-*Toepassing:* Enumeratiewaarde
+*Toepassing:* Objecttype
 
 #### Metagegeven: **Populatie**
 
