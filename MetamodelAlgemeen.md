@@ -837,10 +837,10 @@ We onderkennen een aantal specifieke metagegevens op het niveau van het informat
 
 *Toepassing*: informatiemodel (verplicht)
 
-#### Metagegeven: **Informatiemodel type**
+#### Metagegeven: **Informatiemodeltype**
 
 <aside class="definition">
-  <dfn>Informatiemodel type</dfn>De beschrijving van de aard van het informatiemodel, hoe het geïnterpreteerd moet worden.
+  <dfn>Informatiemodeltype</dfn>De beschrijving van de aard van het informatiemodel, hoe het geïnterpreteerd moet worden.
 </aside>
 
 *Toelichting*

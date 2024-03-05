@@ -741,7 +741,7 @@ Informatiemodel packages worden naar de volgende aspecten gespecificeerd:
 | MIM extensie                 | [`mim:mimextensie`](http://bp4mc2.org/def/mim#mimextensie) | 0..1 | tekst |
 | MIM taal                     | [`mim:mimtaal`](http://bp4mc2.org/def/mim#mimtaal) | 0..1 | tekst |
 | Informatiedomein             | [`mim:informatiedomein`](http://bp4mc2.org/def/mim#informatiedomein) | 1..1 | tekst |
-| Informatiemodel type         | [`mim:informatiemodeltype`](http://bp4mc2.org/def/mim#informatiemodeltype) | 1..1 | Informatiemodeltypen |
+| Informatiemodeltype         | [`mim:informatiemodeltype`](http://bp4mc2.org/def/mim#informatiemodeltype) | 1..1 | Informatiemodeltypen |
 | Relatiemodelleringtype       | [`mim:relatiemodelleringtype`](http://bp4mc2.org/def/mim#relatiemodelleringtype) | 1..1 | Relatiemodelleringtypen |
 | Constraint                | [`mim:constraint`](http://bp4mc2.org/def/mim#constraint) | 0..n | [`mim:Constraint`](http://bp4mc2.org/def/mim#Constraint) |
 | Basis-URI                    | [`mim:basisUri`](http://bp4mc2.org/def/mim#basisUri) | 0..1 | tekst |

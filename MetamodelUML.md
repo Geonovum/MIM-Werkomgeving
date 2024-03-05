@@ -889,7 +889,7 @@ Informatiemodel packages worden naar de volgende aspecten gespecificeerd:
 | **Herkomst definitie**  | 1   | Algemeen metagegeven.    |                |      | *Tagged value* |            |
 | **Toelichting**  | 0..1       | Algemeen metagegeven.    |                |      | *tagged value* |            |
 | **Datum opname** | 1          | Algemeen metagegeven.    |                |      | *tagged value* |            |
-| **Informatiemodel type**   | 1                  | Algemeen metagegeven. *De beschrijving van de aard van het informatiemodel: conceptueel, logisch, technisch.* |                                      |      | *Tagged value* |            |
+| **Informatiemodeltype**   | 1                  | Algemeen metagegeven. *De beschrijving van de aard van het informatiemodel: conceptueel, logisch, technisch.* |                                      |      | *Tagged value* |            |
 | **Informatiedomein**       | 1                  | Algemeen metagegeven. *Aanduiding van het functionele domein waartoe het informatiemodel behoort.* |                                      |      | *Tagged value* |            |
 | **MIM versie**             | 1                  | *De versie van de MIM specificatie die gebruikt is om het informatiemodel in uit te drukken.* |                                      |      | *Tagged value* |            |
 |                            |                    | *Bijvoorbeeld: 1.0.1 of 1.1*                                 |                                      |      |                |            |
