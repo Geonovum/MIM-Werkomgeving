@@ -835,7 +835,7 @@ We onderkennen een aantal specifieke metagegevens op het niveau van het informat
 
 *Toelichting* Bijvoorbeeld: BRK. Wanneer bepaalde definities of identificaties van het informatiemodel in de wereld niet uniek zijn, omdat een ander informatiemodel dezelfde naam hanteert voor een modelelement, of eenzelfde structuur voor een identificerende eigenschap, dan is het mogelijk om deze uniek te maken met behulp van deze aanduiding.   
 
-*Toepassing*: informatiemodel (verplicht)
+*Toepassing*: Informatiemodel (verplicht)
 
 #### Metagegeven: **Informatiemodeltype**
 
@@ -844,11 +844,9 @@ We onderkennen een aantal specifieke metagegevens op het niveau van het informat
 </aside>
 
 *Toelichting*
-Dit kan zijn: "conceptueel" of "logisch". Zoals bedoeld in: [Typen Informatiemodellen](#typen-informatiemodellen). Er moet een keuze gemaakt worden.
+Dit kan zijn: `"Conceptueel"` of `"Logisch"`. Zoals bedoeld in: [[[#typering-van-modellen-en-wat-wel-en-niet-in-scope-is-van-deze-standaard]]]. Er moet een keuze gemaakt worden. Dit kan bijvoorbeeld uitgebreid worden met: `"Technisch"` wanneer er behoefte is om niveau 4 aan te geven.
 
-Dit kan bijvoorbeeld uitgebreid worden met: "technisch" wanneer er behoefte is om niveau 4 aan te geven.
-
-*Toepassing*: informatiemodel (verplicht)
+*Toepassing*: Informatiemodel (verplicht)
 
 #### Metagegeven: **Relatiemodelleringstype**
 
@@ -857,11 +855,9 @@ Dit kan bijvoorbeeld uitgebreid worden met: "technisch" wanneer er behoefte is o
 </aside>
 
 *Toelichting*
-Dit kan zijn "Relatiesoort leidend" of "Relatierol leidend". Dit
-betreft de keuze die je maakt voor het in [[[#alternatieven]]] gekozen
-alternatief. Er moet een keuze gemaakt worden. Deze keuze geldt primair voor de modelelementen relatiesoort en relatiedoel zoals bedoeld in [[[#relaties-in-uml]]]. maar geldt in het verlengde hiervan voor het modelelement externe koppeling.
+Dit kan zijn `"Relatiesoort leidend"` of `"Relatierol leidend"`. Dit betreft de keuze die je maakt voor het in [[[#alternatieven]]] gekozen alternatief. Er moet een keuze gemaakt worden. Deze keuze geldt primair voor de modelelementen <code>«Relatiesoort»</code> en <code>«Relatierol»</code> zoals bedoeld in [[[#relaties-in-uml]]]. maar geldt in het verlengde hiervan voor het modelelement externe koppeling.
 
-*Toepassing*: informatiemodel (verplicht)
+*Toepassing*: Informatiemodel (verplicht)
 
 #### Metagegeven: **MIM-versie**
 
@@ -872,9 +868,9 @@ alternatief. Er moet een keuze gemaakt worden. Deze keuze geldt primair voor de 
 *Toelichting* Neem hiervoor een door MIM in gebruik zijnde MIM-versie.
 Kies bij voorkeur een zo recent mogelijke versie.
 
-Bijvoorbeeld: `1.0.1` of `1.1` of `1.1.1`
+Bijvoorbeeld: `"1.0.1"` of `"1.1"` of `"1.1.1"`
 
-*Toepassing*: informatiemodel (verplicht)
+*Toepassing*: Informatiemodel (verplicht)
 
 #### Metagegeven: **MIM-extensie**
 
@@ -882,9 +878,9 @@ Bijvoorbeeld: `1.0.1` of `1.1` of `1.1.1`
   <dfn>MIM-extensie</dfn>De aanduiding van een extensie op MIM.
 </aside>
 
-*Toelichting* Dit metagegeven is optioneel en alleen van toepassing als er sprake is van een extensie zoals bedoeld in[een eigen extensie maken](#een-eigen-extensie-op-het-metamodel). Neem hiervoor een in gebruik zijnde extensie. Bijvoorbeeld: _Kadaster_ of _NEN3610:2022_.
+*Toelichting* Dit metagegeven is optioneel en alleen van toepassing als er sprake is van een extensie zoals bedoeld in [[[#een-eigen-extensie-op-het-metamodel]]]. Neem hiervoor een in gebruik zijnde extensie. Bijvoorbeeld: `"Kadaster"` of `"NEN3610:2022"`.
 
-*Toepassing*: informatiemodel (optioneel)
+*Toepassing*: Informatiemodel (optioneel)
 
 #### Metagegeven: **MIM-taal**
 
@@ -892,9 +888,9 @@ Bijvoorbeeld: `1.0.1` of `1.1` of `1.1.1`
   <dfn>MIM-taal</dfn>De aanduiding van de taal die gebruikt is voor de modelelementen.
 </aside>
 
-*Toelichting* Bijvoorbeeld: `NL`, `EN`
+*Toelichting* Bijvoorbeeld: `"NL"`, `"EN"`
 
-*Toepassing*: informatiemodel (optioneel)
+*Toepassing*: Informatiemodel (optioneel)
 
  ### Modelelementidentificatie - metagegevens
 
@@ -910,7 +906,7 @@ Informatiemodellen staan vaak niet op zichzelf. Ze kunnen elementen bevatten die
 
 *Toelichting* Een _uniform resource identifier_ (URI) is een compacte reeks tekens die een abstracte of fysieke resource identificeert. Een `Basis-URI` is het gemeenschappelijke deel van deze reeks tekens die voor alle elementen in het informatiemodel geldig is. De `Basis-URI` bevat altijd een `scheme`, dit kan bijvoorbeeld `http://` of `urn` zijn. En voldoet aan een gekozen URI-strategie. Wanneer er geen basis-URI is gespecificeerd wordt deze over genomen van de eerst bovenliggende package met een basis-URI.
 
-Een informatiemodel moet echter ook gebruikt kunnen worden zonder dat er vastgestelde (http-)uri's beschikbaar zijn (bijvoorbeeld tijdens de ontwikkelfase). In dit geval kan een [[URN]] op basis van de package alias en de naam van het modelelement bepaald worden. Wanneer er geen basis-URI is gespecificeerd wordt deze overgenomen van de eerst bovenliggende package met een basis-URI. Wanneer deze er niet is, wordt er een default waarde bepaald conform het patroon `urn:modelelement: + {informatiemodel.naam}: + {package.naam}:`. De defaultwaarde voor de `Basis-URI` van een informatiemodel is dan `urn:modelelement:` + `informatiemodel.naam`, bijvoorbeeld `"urn:modelelement:imbaglv"`. Iedere onderliggende package krijgt ook een default Basis-URI die gelijk is aan de basis-URI van het informatiemodel gevolgd door `package.naam`, bijvoorbeeld `"urn:modelelement:imbaglv:objecten`. Dit is noodzakelijk omdat niet alle namen binnen een informatiemodel per definitie uniek zijn (denk aan een objecttype "Locatie" in een domein "Locatie"). De `URI` van een attribuutsoort "huisnummer" bij een "nummeraanduiding" in domein "objecten" uit het IMBAGLV model wordt dan `"urn:modelelement:imbaglv:objecten:nummeraanduiding.huisnummer"`. 
+Een informatiemodel moet echter ook gebruikt kunnen worden zonder dat er vastgestelde (http-)uri's beschikbaar zijn (bijvoorbeeld tijdens de ontwikkelfase). In dit geval kan een [[URN]] op basis van de package alias en de naam van het modelelement bepaald worden. Wanneer er geen basis-URI is gespecificeerd wordt deze overgenomen van de eerst bovenliggende package met een basis-URI. Wanneer deze er niet is, wordt er een default waarde bepaald conform het patroon `urn:modelelement:` + `{informatiemodel.naam}:` + `{package.naam}:`. De defaultwaarde voor de `Basis-URI` van een informatiemodel is dan `urn:modelelement:` + `informatiemodel.naam`, bijvoorbeeld `"urn:modelelement:imbaglv"`. Iedere onderliggende package krijgt ook een default Basis-URI die gelijk is aan de basis-URI van het informatiemodel gevolgd door `package.naam`, bijvoorbeeld `"urn:modelelement:imbaglv:objecten`. Dit is noodzakelijk omdat niet alle namen binnen een informatiemodel per definitie uniek zijn (denk aan een objecttype "Locatie" in een domein "Locatie"). De `URI` van een attribuutsoort "huisnummer" bij een "nummeraanduiding" in domein "objecten" uit het IMBAGLV model wordt dan `"urn:modelelement:imbaglv:objecten:nummeraanduiding.huisnummer"`. 
 *Toepassing*: informatiemodel (verplicht), domein, view, extern
 
 <aside class="note">
@@ -923,7 +919,11 @@ Een informatiemodel moet echter ook gebruikt kunnen worden zonder dat er vastges
   <dfn>URI</dfn>De identificatie van een modelelement.
 </aside>
 
-*Toelichting* De URI kan bijvoorbeeld op de volgende twee manieren voorkomen, als **urn-URI**: `<urn:modelelement:imbaglv:objecten:Pand` of als **http-URI**: `<http://.../def#Pand>`. De `URI` kan bepaald worden aan de hand van de <code><a>Naam</a></code> van het modelelement en de `Basis-URI` van de _package_ waarin het modelelement zich bevindt (op logisch niveau conform de naamgevingsconventies). Dit vormt de default waarde. In de meeste gevallen zal een modelleur dit metagegeven niet expliciet invullen maar uitgaan van de defaultwaarde.
+*Toelichting* De URI kan bijvoorbeeld op de volgende twee manieren voorkomen:
+ - **urn-URI**: `<urn:modelelement:imbaglv:objecten:Pand`;
+ - **http-URI**: `<http://.../def#Pand>`.
+
+De `URI` kan bepaald worden aan de hand van de <code><a>Naam</a></code> van het modelelement en de `Basis-URI` van de _package_ waarin het modelelement zich bevindt (op logisch niveau conform de naamgevingsconventies). Dit vormt de default waarde. In de meeste gevallen zal een modelleur dit metagegeven niet expliciet invullen maar uitgaan van de defaultwaarde.
 
 In sommige gevallen kan de `URI` van een modelelement niet bepaald worden aan de hand van de `Basis-URI` van de bijbehorende _package_ en de `Naam` van een modelelement. Bijvoorbeeld als gevolg van de gekozen URI-strategie of wanneer een <code><a>Attribuutsoort</a></code> uit een ander informatiemodel hergebruikt wordt (e.g. `nen3610-2022:identificatie`). In dit geval zal de modelleur het metagegeven `URI` wel invullen.
 
@@ -967,7 +967,7 @@ Hieronder volgen eerst de algemene metagegevens. Dit zijn metagegevens zoals `Na
 
 *Toelichting*
 
-Bijvoorbeeld: `"Pand"` is de naam van het modelelement `Objecttype`, `"bouwjaar"` is de naam van het modelelement `Attribuutsoort`. De modelelementen zijn limitatief opgesomd in [[[#metamodel-algemeen]]] (en eventueel zijn in een uitbreiding extra modelelementen limitatief opgesomd).
+Bijvoorbeeld: `"Pand"` is de naam van het modelelement `«Objecttype»`, `"bouwjaar"` is de naam van het modelelement `«Attribuutsoort»`. De modelelementen zijn limitatief opgesomd in [[[#metamodel-algemeen]]] (en eventueel zijn in een uitbreiding extra modelelementen limitatief opgesomd).
 
 *Toepassing*: alle modelelementen.
 
@@ -979,9 +979,9 @@ Bijvoorbeeld: `"Pand"` is de naam van het modelelement `Objecttype`, `"bouwjaar"
 
 *Toelichting*
 
-Als de naam van iets wat in het informatiemodel gemodelleerd wordt spaties, diakrieten of verbindingstreepjes bevat, zoals een <code><a>Objecttype</a></code> `"Onroerende zaak"` of een <code><a>Attribuutsoort</a></code> `"geïnspireerd op"`, dan kan er gekozen worden om deze naam in het informatiemodel zo op te schrijven dat hier in de techniek makkelijker mee te werken is. Denk aan: `"geinspireerd op"` (geen diakrieten) of `"OnroerendeZaak"` (notitewijze: camelcase). Wanneer de originele schrijfwijze in natuurlijke taal van belang is kan deze worden opgenomen in het metagegeven `Alias`. Het is niet de bedoeling om (andersom) in de `Alias` de technische makkelijkere naam op te nemen.
+Als de naam van iets wat in het informatiemodel gemodelleerd wordt spaties, diakrieten of verbindingstreepjes bevat, zoals een <code>«<a>Objecttype</a>»</code> `"Onroerende zaak"` of een <code>«<a>Attribuutsoort</a>»</code> `"geïnspireerd op"`, dan kan er gekozen worden om deze naam in het informatiemodel zo op te schrijven dat hier in de techniek makkelijker mee te werken is. Denk aan: `"geinspireerd op"` (geen diakrieten) of `"OnroerendeZaak"` (notitewijze: camelcase). Wanneer de originele schrijfwijze in natuurlijke taal van belang is kan deze worden opgenomen in het metagegeven `Alias`. Het is niet de bedoeling om (andersom) in de `Alias` de technische makkelijkere naam op te nemen.
 
-De `Alias` wordt ook gebruikt voor een alternatieve weergave van een <code><a>Enumeratiewaarde</a></code>. De ‘naam’ betreft hier een daadwerkelijk waarde, zoals `"Nederlands"`, waarin de naam gelijk staat aan de waarde en dit moet zo blijven, maar als er sprake is van een voor documentatiedoeleinde bedoelde codering van deze `Enumeratiewaarde` dan kan deze code in de `Alias` worden opgenomen.
+De `Alias` wordt ook gebruikt voor een alternatieve weergave van een <code>«<a>Enumeratiewaarde</a>»</code>. De ‘naam’ betreft hier een daadwerkelijk waarde, zoals `"Nederlands"`, waarin de naam gelijk staat aan de waarde en dit moet zo blijven, maar als er sprake is van een voor documentatiedoeleinde bedoelde codering van deze <code>«<a>Enumeratiewaarde</a>»</code> dan kan deze code in de `Alias` worden opgenomen.
 
 Toepassing: Objecttype, Attribuutsoort, Gegevensgroep, Relatiesoort, Relatierol, Relatieklasse, Externe Koppeling, Keuze, Enumeratie, Primitief datatype, Gestructureerd datatype, Data-element en _expliciet niet_ voor Packages, Enumeratiewaarde, en Constraint.
 
@@ -999,11 +999,12 @@ Hiermee wordt aangegeven hoe een informatiemodel element zich verhoudt tot de
 begrippen uit het begrippenkader, zoals genoemd in [[[#typering-van-modellen-en-wat-wel-en-niet-in-scope-is-van-deze-standaard]]].
 Dit is niet een 1 op 1 relatie. Voor meer informatie hierover, zie [[[#afspraken-regels]]].
 
-Bijvoorbeeld: Perceel of
-http://brk.basisregistraties.overheid.nl/id/begrip/Perceel
+Bijvoorbeeld:
+ - `"Perceel"`;
+ - `"http://brk.basisregistraties.overheid.nl/id/begrip/Perceel"`
 
-*Toepassing*: alle modelelementen met een naam, met uitzondering van packages en
-constraint.
+*Toepassing*: alle modelelementen met een naam, met uitzondering van Package en
+Constraint.
 
 #### Metagegeven: **Herkomst**
 
@@ -1013,31 +1014,13 @@ constraint.
 
 *Toelichting*
 
-Bijvoorbeeld: de herkomst van het kenmerk *begrenzing* van een Perceel heeft als
-waarde: `BRK`. BRK staat dan bijvoorbeeld in de bijbehorende documentatie
-uitgelegd als: de basisregistratie Kadaster.
+Bijvoorbeeld: de herkomst van het kenmerk *begrenzing* van een Perceel heeft als waarde: `"BRK"`. BRK staat dan bijvoorbeeld in de bijbehorende documentatie uitgelegd als: de basisregistratie Kadaster.
 
-Er wordt expliciet niet bedoeld van welke informatievoorziening of registratie
-de *data* is overgenomen. Het gaat er bij dit metagegeven expliciet om uit welk
-domein of bron het **modelelement** zijn herkomst vindt. Voor basisregistraties is
-de herkomst altijd het eigen informatiemodel. Dit metagegeven is vooral van
-belang als het modelelement is overgenomen uit een ander informatiemodel.
+Er wordt expliciet niet bedoeld van welke informatievoorziening of registratie de *data* is overgenomen. Het gaat er bij dit metagegeven expliciet om uit welk domein of bron het _modelelement_ zijn herkomst vindt. Voor basisregistraties is de herkomst altijd het eigen informatiemodel. Dit metagegeven is vooral van belang als het modelelement is overgenomen uit een ander informatiemodel.
 
-Bijvoorbeeld: de herkomst van het kenmerk *woonadres*, wat bijvoorbeeld een
-«Relatiesoort» is van een Persoon in de basisregistratie Personen naar een
-Nummeraanduiding in de basisregistratie Adressen en Gebouwen (BAG), heeft als
-herkomst: ‘BRP’ (de basisregistratie Kadaster). Dit kenmerk *woonadres* wordt
-bijgehouden in de BRP en de bron kant van de relatie zit in de BRP. De
-Nummeraanduiding zelf heeft in de BAG veelal als herkomst: BAG. Mochten echter
-de adresgegevens niet (direct of indirect) uit de BAG komen, maar bijvoorbeeld
-via een eigen inwinningsproces in een eigen registratie worden bijgehouden, dan
-de herkomst niet de BAG.
+Bijvoorbeeld: de herkomst van het kenmerk *woonadres*, wat bijvoorbeeld een `«Relatiesoort»` is van een `Persoon` in de basisregistratie Personen naar een `Nummeraanduiding` in de basisregistratie Adressen en Gebouwen (BAG), heeft als herkomst: `"BRP"` (de basisregistratie Kadaster). Dit kenmerk `woonadres` wordt bijgehouden in de BRP en de bron kant van de relatie zit in de BRP. De `Nummeraanduiding` zelf heeft in de BAG veelal als herkomst: `"BAG"`. Mochten echter de adresgegevens niet (direct of indirect) uit de BAG komen, maar bijvoorbeeld via een eigen inwinningsproces in een eigen registratie worden bijgehouden, dan de herkomst niet de BAG.
 
-Deze definitie omvat ook de definitie van herkomst van de stelselcatalogus (De
-registratie in wiens catalogus het objecttype is gespecificeerd (oftewel de
-registratie waar het objecttype deel van uitmaakt). Deze specificatie is
-toegevoegd omdat het wel duidelijk moet zijn in welke (basis)registratie of
-informatiemodel het objecttype).
+Deze definitie omvat ook de definitie van herkomst van de stelselcatalogus (De registratie in wiens catalogus het objecttype is gespecificeerd (oftewel de registratie waar het objecttype deel van uitmaakt). Deze specificatie is toegevoegd omdat het wel duidelijk moet zijn in welke (basis)registratie of informatiemodel het objecttype).
 
 *Toepassing*: alle modelelementen.
 
@@ -1056,31 +1039,20 @@ Bijvoorbeeld: Een Pand is de kleinste, bij de totstandkoming functioneel en bouw
 #### Metagegeven: **Herkomst definitie**
 
 <aside class="definition">
-  <dfn>Herkomst definitie</dfn>De registratie of het informatiemodel waaruit de **definitie** is overgenomen dan wel een aanduiding die aangeeft uit welke bronnen de definitie is samengesteld.
+  <dfn>Herkomst definitie</dfn>De registratie of het informatiemodel waaruit de definitie is overgenomen dan wel een aanduiding die aangeeft uit welke bronnen de definitie is samengesteld.
 </aside>
 
 *Toelichting*
 
-Meestal staat in dit metagegeven aangegeven 'mijn IM', bijvoorbeeld BRK als
-het om het informatiemodel van de BRK gaat.
+Meestal staat in dit metagegeven aangegeven `"mijn IM"`, bijvoorbeeld `"BRK"` als het om het informatiemodel van de BRK gaat.
 
-Maar de herkomst van de definitie van het kenmerk *adres* kan ook als waarde
-hebben: ‘BAG’. Of ‘BAG en BRK’, waarbij in de documentatie verder uitgelegd
-wordt wat dit betekent, zoals dat de definitie is overgenomen en vervolgens
-binnen het eigen informatiemodel verder aangescherpt is, of nader opgesplitst is
-in twee aparte definities.
+Maar de herkomst van de definitie van het kenmerk `adres` kan ook als waarde hebben: `"BAG"`. Of `"BAG en BRK"`, waarbij in de documentatie verder uitgelegd wordt wat dit betekent, zoals dat de definitie is overgenomen en vervolgens binnen het eigen informatiemodel verder aangescherpt is, of nader opgesplitst is in twee aparte definities.
 
-Dit metagegeven is niet bedoeld voor gevallen waarin een definitie alleen
-geïnspireerd is door een andere definitie, of de andere definitie daadwerkelijke
-dermate herdefinieerd dat de oorspronkelijke definitie niet meer van toepassing
-is.
+Dit metagegeven is niet bedoeld voor gevallen waarin een definitie alleen geïnspireerd is door een andere definitie, of de andere definitie daadwerkelijke dermate herdefinieerd dat de oorspronkelijke definitie niet meer van toepassing is.
 
-Het gaat erom dat het voor gebruikers helder is hoe informatie die aan dit
-informatiemodel voldoet zich verhoudt tot informatie die aan het andere
-informatiemodel voldoet. Het metagegeven *herkomst definitie* schept hier
-duidelijkheid in.
+Het gaat erom dat het voor gebruikers helder is hoe informatie die aan dit informatiemodel voldoet zich verhoudt tot informatie die aan het andere informatiemodel voldoet. Het metagegeven `Herkomst definitie` schept hier duidelijkheid in.
 
-*Toepassing*: alle modelelementen die het metagegeven **definitie** kennen.
+*Toepassing*: alle modelelementen die het metagegeven `Definitie` kennen.
 
 #### Metagegeven: **Toelichting**
 
@@ -1090,16 +1062,9 @@ duidelijkheid in.
 
 *Toelichting*
 
-Bijvoorbeeld: een aantal treffende voorbeelden (waardes) van het kenmerk van het
-object of een aanduiding van wat er niet onder de definitie valt.
+Bijvoorbeeld: een aantal treffende voorbeelden (waardes) van het kenmerk van het object of een aanduiding van wat er niet onder de definitie valt.
 
-Het is niet de bedoeling om andere metagegevens in de toelichting op te nemen, zoals populatie of begrip.De toelichting is op zichzelf helder en te begrijpen en is gericht op de betekenis
-van gegevens en/of de context van deze gegevens. De toelichting is niet gericht op
-de inwinning van de gegevens maar beschrijft de betekenis van hetgeen wat ingewonnen
-is, zodat het voor de gebruikers van de gegevens helder is wat de betekenis ervan is.
-Het is daarom niet de bedoeling om inwinregels of veelgestelde vragen zelf in de
-toelichting op te nemen. Uiteraard is het wel goed om kennis die in de inwinregels
-en antwoorden "verborgen" zit een plek te geven in de toelichting.
+Het is niet de bedoeling om andere metagegevens in de toelichting op te nemen, zoals populatie of begrip.De toelichting is op zichzelf helder en te begrijpen en is gericht op de betekenis van gegevens en/of de context van deze gegevens. De toelichting is niet gericht op de inwinning van de gegevens maar beschrijft de betekenis van hetgeen wat ingewonnen is, zodat het voor de gebruikers van de gegevens helder is wat de betekenis ervan is. Het is daarom niet de bedoeling om inwinregels of veelgestelde vragen zelf in de toelichting op te nemen. Uiteraard is het wel goed om kennis die in de inwinregels en antwoorden "verborgen" zit een plek te geven in de toelichting.
 
 *Toepassing*: alle modelelementen die het metagegeven **definitie** kennen.
 
@@ -1111,7 +1076,7 @@ en antwoorden "verborgen" zit een plek te geven in de toelichting.
 
 *Toelichting*
 
-Bijvoorbeeld: 1-1-2012.
+Bijvoorbeeld: `"1-1-2012"`.
 
 *Toepassing*: alle modelelementen, uitgezonderd datatype elementen, packages en
 overig.
@@ -1134,7 +1099,7 @@ Toepassing: attribuutsoort, alle relaties (relatiesoort, relatierol, relatieklas
 
 *Toelichting*
 
-Bijvoorbeeld: `Ja`.
+Bijvoorbeeld: `"Ja"`, `"Nee"`.
 
 Met de `tijdlijn geldigheid` wordt bedoeld dat er op een tijdlijn wordt bijgehouden wanneer een verandering is opgetreden in de werkelijkheid die heeft geleid tot verandering van de waarde van een kenmerk van een object. Het gegeven is vanaf een bepaald tijdsmoment _geldig_ en dit tijdsmoment wordt op enerlei wijze als metagegeven bijgehouden bij het gegeven. 
 
@@ -1142,7 +1107,7 @@ Het komt vaak voor dat er besloten wordt of bepaald wordt dat een gegeven al gel
 
 Met te bevragen wordt bedoeld: het tijdsmoment vanaf wanneer een gegeven als geldig wordt beschouwd (en vanaf wanneer het gegeven niet meer als geldig wordt beschouwd) wordt op enerlei wijze als historie bijgehouden, en deze wijze is te bevragen. Dit metagegeven is alleen betekenisvol voor kenmerken waarvoor een waarde wordt bijgehouden. De in te vullen waarde komt uit [[[#toegestane-waarden-metagegevens]]].
 
-**Toepassing**: alle modelelementen die een kenmerk (kunnen) zijn van een `«Objecttype»`, waarvoor data kan worden bijgehouden: `«Attribuutsoort»` en relaties (`«Relatiesoort»`, `«Relatieklasse»`, `«Externe Koppeling»`).
+**Toepassing**: alle modelelementen die een kenmerk (kunnen) zijn van een Objecttype, waarvoor data kan worden bijgehouden: Attribuutsoort en relaties (Relatiesoort, Relatieklasse, Externe Koppeling).
 
 #### Metagegeven: **Indicatie materiële historie**
 
@@ -1158,17 +1123,13 @@ Met te bevragen wordt bedoeld: het tijdsmoment vanaf wanneer een gegeven als gel
 
 *Toelichting*
 
-Bijvoorbeeld: `Ja`.
+Bijvoorbeeld: `"Ja"`, `"Nee"`.
 
-Met te bevragen wordt bedoeld, er wordt historie bijgehouden op enerlei wijze, welke op enerlei wijze te bevragen is. Dit metagegeven is alleen betekenisvol voor kenmerken waarvoor data wordt bijgehouden. De in te vullen waarde komt uit: zie [[[#toegestane-waarden-metagegevens]]]. Materiële historie geeft aan wanneer een verandering is opgetreden in de werkelijkheid die heeft geleid tot verandering van de attribuutwaarde. Verdere toelichting, zie [[[#afspraken-regels]]]
-
-*Toepassing*: alle modelelementen die een kenmerk (kunnen) zijn van een objecttype, waarvoor data kan worden bijgehouden: attribuutsoort en relaties (relatiesoort, relatieklasse, externe koppeling).
-
-De in te vullen waarde komt uit: zie [[[#toegestane-waarden-metagegevens]]]
+Met te bevragen wordt bedoeld, er wordt historie bijgehouden op enerlei wijze, welke op enerlei wijze te bevragen is. Dit metagegeven is alleen betekenisvol voor kenmerken waarvoor data wordt bijgehouden. De in te vullen waarde komt uit: zie [[[#toegestane-waarden-metagegevens]]]. Materiële historie geeft aan wanneer een verandering is opgetreden in de werkelijkheid die heeft geleid tot verandering van de attribuutwaarde. Verdere toelichting, zie [[[#afspraken-regels]]]. De in te vullen waarde komt uit: zie [[[#toegestane-waarden-metagegevens]]]
 
 Materiële historie geeft aan wanneer een verandering is opgetreden in de werkelijkheid die heeft geleid tot verandering van de attribuutwaarde. Verdere toelichting, zie het hoofdstuk [Afspraken & Regels](#afspraken-regels)
 
-**Toepassing**: alle modelelementen die een kenmerk (kunnen) zijn van een `«Objecttype»`, waarvoor data kan worden bijgehouden: `«Attribuutsoort»` en relaties (`«Relatiesoort»`, `«Relatieklasse»`, `«Externe Koppeling»`).
+**Toepassing**: alle modelelementen die een kenmerk (kunnen) zijn van een Objecttype, waarvoor data kan worden bijgehouden: Attribuutsoort en relaties (Relatiesoort, Relatieklasse, Externe Koppeling).
 
 #### Metagegeven: **heeft tijdlijn registratie**
 
@@ -1178,15 +1139,13 @@ Materiële historie geeft aan wanneer een verandering is opgetreden in de werkel
 
 *Toelichting*
 
-Bijvoorbeeld: `Nee`.
+Bijvoorbeeld: `"Ja"`, `"Nee"`.
 
 Met de tijdlijn registratie wordt bedoeld dat er op een tijdlijn wordt bijgehouden wanneer een bepaalde waarde voor een kenmerk van een object vastgelegd wordt, oftewel _geregistreerd_ wordt. Dit tijdsmoment wordt op enerlei wijze als metagegeven bijgehouden bij het gegeven. De vastlegging kan zijn op een bepaald medium of in een registratie van een informatievoorziening. Het tijdsmoment van vastlegging of registratie is altijd ten tijde van vastlegging van een gegeven in de echte tijd (de horloge tijd). Elke keer dat hetzelfde gegeven op een andere plek wordt vastgelegd is een apart tijdsmoment op de tijdlijn registatie dat relevant kan zijn om bij te houden. Verdere toelichting, zie het hoofdstuk [Afspraken & Regels](#afspraken-regels). 
 
-Met te bevragen wordt bedoeld: het tijdsmoment wanneer een gegeven geregistreerd is wordt op enerlei wijze als historie bijgehouden, en deze wijze is te bevragen. Dit metagegeven is alleen betekenisvol voor kenmerken waarvoor een waarde wordt bijgehouden. Merk hierbij op dat het moment van registreren in de praktijk vaak, maar niet per definitie, gelijk is aan het moment van beschikbaar komen van een gegeven voor gebruikers van de informatievoorziening. 
+Met te bevragen wordt bedoeld: het tijdsmoment wanneer een gegeven geregistreerd is wordt op enerlei wijze als historie bijgehouden, en deze wijze is te bevragen. Dit metagegeven is alleen betekenisvol voor kenmerken waarvoor een waarde wordt bijgehouden. Merk hierbij op dat het moment van registreren in de praktijk vaak, maar niet per definitie, gelijk is aan het moment van beschikbaar komen van een gegeven voor gebruikers van de informatievoorziening. De in te vullen waarde komt uit: zie [[[#toegestane-waarden-metagegevens]]]
 
-De in te vullen waarde komt uit: zie [[[#toegestane-waarden-metagegevens]]]
-
-**Toepassing**: alle modelelementen die een kenmerk (kunnen) zijn van een `«Objecttype»`, waarvoor data kan worden bijgehouden: `«Attribuutsoort»` en relaties (`«Relatiesoort»`, `«Relatieklasse»`, `«Externe Koppeling»`).
+**Toepassing**: alle modelelementen die een kenmerk (kunnen) zijn van een Objecttype, waarvoor data kan worden bijgehouden: Attribuutsoort en relaties (Relatiesoort, Relatieklasse, Externe Koppeling).
 
 #### Metagegeven: **Indicatie formele historie**
 
@@ -1202,15 +1161,13 @@ De in te vullen waarde komt uit: zie [[[#toegestane-waarden-metagegevens]]]
 
 *Toelichting*
 
-Bijvoorbeeld: `Nee`.
+Bijvoorbeeld: `"Ja"`, `"Nee"`.
 
-Met te bevragen wordt bedoeld, er wordt historie bijgehouden op enerlei wijze, welke op enerlei wijze te bevragen is. Dit metagegeven is alleen betekenisvol voor kenmerken waarvoor data wordt bijgehouden. De in te vullen waarde komt uit: zie [[[#toegestane-waarden-metagegevens]]]. Formele historie geeft aan wanneer in de administratie een verandering bekend is, en is verwerkt. Verdere toelichting, zie [[[#afspraken-regels]]].
-
-De in te vullen waarde komt uit: zie [[[#toegestane-waarden-metagegevens]]]
+Met te bevragen wordt bedoeld, er wordt historie bijgehouden op enerlei wijze, welke op enerlei wijze te bevragen is. Dit metagegeven is alleen betekenisvol voor kenmerken waarvoor data wordt bijgehouden. De in te vullen waarde komt uit: zie [[[#toegestane-waarden-metagegevens]]]. Formele historie geeft aan wanneer in de administratie een verandering bekend is, en is verwerkt. Verdere toelichting, zie [[[#afspraken-regels]]]. De in te vullen waarde komt uit: zie [[[#toegestane-waarden-metagegevens]]]
 
 Formele historie geeft aan wanneer in de administratie een verandering bekend is, en is verwerkt. Verdere toelichting, zie [[[#afspraken-regels]]].
 
-**Toepassing**: alle modelelementen die een kenmerk (kunnen) zijn van een `«Objecttype»`, waarvoor data kan worden bijgehouden: `«Attribuutsoort»` en relaties (`«Relatiesoort»`, `«Relatieklasse»`, `«Externe Koppeling»`).
+**Toepassing**: alle modelelementen die een kenmerk (kunnen) zijn van een Objecttype, waarvoor data kan worden bijgehouden: Attribuutsoort en relaties (Relatiesoort, Relatieklasse, Externe Koppeling).
 
 #### Metagegeven: **Kardinaliteit**
 
@@ -1231,8 +1188,7 @@ Merk op dat het zo kan zijn dat een object het kenmerk wel degelijk heeft/zou mo
 
 Een `«Generalisatie»` is een bijzondere vorm van een relatie. De kardinaliteit van de bron en van het doel is hier altijd en per definitie `1..1`. Dit hoeft daarom nooit via een aanduiding van een kardinaliteit te worden aangegeven.
 
-*Toepassing*: alle modelelementen die een kenmerk (kunnen) zijn van een
-objecttype.
+*Toepassing*: alle modelelementen die een kenmerk (kunnen) zijn van een Objecttype.
 
 #### Metagegeven: **Kardinaliteit relatie bron**
 
@@ -1261,13 +1217,13 @@ Toepassing: relatiesoort, externe koppeling en relatieklasse
 
 *Toelichting*
 
-Bijvoorbeeld: `"Authentiek"`, `"Basisgegeven"`, `"Landelijk kerngegeven"`, `"Gemeentelijk kerngegeven"`, `"Overig"`.
+Bijvoorbeeld:`"Authentiek"`,`"Basisgegeven"`,`"Landelijk kerngegeven"`,`"Gemeentelijk kerngegeven"`,`"Overig"`.
 
 `Authentiek` is van toepassing voor bijvoorbeeld het burgerservicenummer van een natuurlijk persoon. In de wet van bijvoorbeeld een basisregistratie ligt vast welke gegevens authentiek zijn. Een kenmerk is authentiek indien de juistheid (hoogwaardige kwaliteit) van het gegeven gewaarborgd wordt via formele inwinningsprocessen en wettelijk regelingen. Authentieke gegevens moeten door alle overheidsinstellingen verplicht en zonder nader onderzoek, worden gebruikt bij de uitvoering van publiekrechtelijke taken.
 
 De in te vullen waarde komt uit: zie [[[#toegestane-waarden-metagegevens]]]
 
-*Toepassing*: alle modelelementen die een kenmerk (kunnen) zijn van een `«Objecttype»`.
+*Toepassing*: alle modelelementen die een kenmerk (kunnen) zijn van een Objecttype.
 
 #### Metagegeven: **Indicatie afleidbaar**
 
@@ -1277,13 +1233,13 @@ De in te vullen waarde komt uit: zie [[[#toegestane-waarden-metagegevens]]]
 
 *Toelichting*
 
-Bijvoorbeeld: de `naam` van een openbare ruimte, zoals `"Burgemeester Baron van Voerst van Lyndenstraat"` , wordt in de verkorte schrijfwijze de `verkorte naam` `"Burg Bar v V v Lyndenstr"` – dit is een afgeleid gegeven. Bijvoorbeeld de `eigenaar` van een huis kan worden afgeleid uit bepaalde andere gegevens die binnen het informatiemodel zijn vastgelegd.
+Bijvoorbeeld: de `naam` van een openbare ruimte, zoals `"Burgemeester Baron van Voerst van Lyndenstraat"` , wordt in de verkorte schrijfwijze de verkorte naam: `"Burg Bar v V v Lyndenstr"` – dit is een afgeleid gegeven. Bijvoorbeeld de `eigenaar` van een huis kan worden afgeleid uit bepaalde andere gegevens die binnen het informatiemodel zijn vastgelegd.
 
 Het afgeleide gegeven is zelf geen brongegeven en moet aangepast worden als de brongegevens aangepast worden. In de beschrijving van het kenmerk zal aangegeven zijn om welke gegevens het gaat en eventueel hoe de afleiding plaatsvindt.
 
 Hoewel de definitie het niet duidelijk stelt, blijkt uit het voorbeeld dat het gaat om afgeleide gegevens _binnen_ de context van het model. Het metagegeven is dus met andere woorden bedoeld om een _afhankelijkheid_ binnen het model aan te geven.
 
-_Toepassing_: de modelelementen waarvoor een waarde ingevuld kan worden, te weten de modelelementen `«Attribuutsoort»` en `«Relatiesoort»`.
+_Toepassing_: de modelelementen waarvoor een waarde ingevuld kan worden, te weten de modelelementen Attribuutsoort en Relatiesoort.
 
 
 #### Metagegeven: **Indicatie classificerend**
