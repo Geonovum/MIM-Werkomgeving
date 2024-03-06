@@ -1250,11 +1250,11 @@ _Toepassing_: de modelelementen waarvoor een waarde ingevuld kan worden, te wete
 
 *Toelichting*
 
-Een objecttype kan middels een attribuutsoort geclassificeerd worden in subtypen. Bijvoorbeeld: type gebouw. Een toren, kerk, bunker, zwembad zijn allemaal typen gebouwen. In een model op niveau 2 kunnen dergelijke typen als objecttypen en specialisaties van het objecttype gebouw zijn gemodelleerd. Met name op niveau 3 kan het relevant zijn om deze informatie daadwerkelijk te structureren door expliciet een aspect op te nemen waarmee direct het type gebouw kan worden vastgelegd, los van de modellering van objecttypen.
+Een `«Objecttype»` kan middels een `«Attribuutsoort»` geclassificeerd worden in subtypen. Bijvoorbeeld: `type gebouw`. Een `"Toren"`, `"Kerk"`, `"Bunker"`, `"Zwembad"` zijn allemaal typen gebouwen. In een model op niveau 2 kunnen dergelijke typen als objecttypen en specialisaties van het `«Objecttype»` gebouw zijn gemodelleerd. Met name op niveau 3 kan het relevant zijn om deze informatie daadwerkelijk te structureren door expliciet een aspect op te nemen waarmee direct het type gebouw kan worden vastgelegd, los van de modellering van objecttypen.
 
-Praktisch gezien kan vervolgens gekozen worden om de onderliggende objecttypen niet meer in het model op te nemen, en slechts dit aspect op te nemen. Ook kan, in combinatie met `Indicatie afleidbaar`, dit aspect afgeleid worden uit het meest concrete objecttype, indien dergelijke objecttypen wel zijn gemodelleerd. De in te vullen waarde komt uit: zie [[[#toegestane-waarden-metagegevens]]]
+Praktisch gezien kan vervolgens gekozen worden om de onderliggende objecttypen niet meer in het model op te nemen, en slechts dit aspect op te nemen. Ook kan, in combinatie met `Indicatie afleidbaar`, dit aspect afgeleid worden uit het meest concrete `«Objecttype»`, indien dergelijke objecttypen wel zijn gemodelleerd. De in te vullen waarde komt uit: zie [[[#toegestane-waarden-metagegevens]]]
 
-*Toepassing*: attribuutsoort.
+*Toepassing*: Attribuutsoort.
 
 #### Metagegeven: **Mogelijk geen waarde**
 
@@ -1264,20 +1264,18 @@ Praktisch gezien kan vervolgens gekozen worden om de onderliggende objecttypen n
 
 *Toelichting*
 
-Bijvoorbeeld: land van herkomst. Elk mens komt uit een land, maar het kan op het
-moment onduidelijk zijn welk land dit is. Bijvoorbeeld: RSIN van een
-organisatie, voor gegevens in de registratie die ingewonnen zijn voordat het
-RSIN bestond. Het RSIN is een verplicht veld in het actuele informatiemodel,
-maar voor oude gegevens is de waarde onbekend.
-
 Het gaat er hier om dat het onduidelijk is of de waarde er is, of als het wel
-duidelijk is dat er een waarde is/zou moeten zijn, dat het onduidelijk is wat de
+duidelijk is dat er een waarde is, of zou moeten zijn, dat het onduidelijk is wat de
 waarde dan is. Dit metagegeven geeft dan aan dat het toegestaan is dat deze
 onduidelijkheid mag (blijven) bestaan. Veelal mag dit alleen onder bepaalde
 voorwaarden, met een opgaaf van reden.
 
+ - Bijvoorbeeld: `land van herkomst`. Elk mens komt uit een land, maar het kan op het moment onduidelijk zijn welk land dit is;
+ - Bijvoorbeeld: `RSIN` van een organisatie, voor gegevens in de registratie die ingewonnen zijn voordat het RSIN bestond. Het RSIN is een verplicht veld in het actuele informatiemodel, maar voor oude gegevens is de waarde onbekend.
+
+
 *Toepassing*: de modelelementen waarvoor een waarde ingevuld kan worden, te
-weten de modelelementen attribuutsoort en relatiesoort.
+weten de modelelementen Attribuutsoort en Relatiesoort.
 
 #### Metagegeven: **Bron**
 
@@ -1287,7 +1285,7 @@ weten de modelelementen attribuutsoort en relatiesoort.
 
 *Toelichting*
 
-Bijvoorbeeld: een persoon heeft een postadres. Het postadres is een kenmerk van een persoon. De persoon is in deze het bronobject van de relatie. Het postadres is de naam van het kenmerk c.q. de relatie tussen een persoon en een adres en geeft betekenis aan deze relatie. Het adres is er gewoon en wie hem allemaal gebruikt als adres en of dit als postadres is of als woonadres of nog iets anders is voor het adres niet van belang.
+Bijvoorbeeld: een persoon heeft een postadres. Dit kun je modelleren door middel van een `«Relatiesoort»` tussen een `«Objecttype»` `Persoon` en een `«Objecttype»` `Adres`. Het `postadres` is een kenmerk van het `Persoon`, dat in deze het bronobject van de relatie is. Dit metagegeven wordt vaak ook relatiebron genoemd (Engels: _source_). Het `postadres` is de naam van het kenmerk c.q. de relatie tussen een `Persoon` en `Adres` en geeft betekenis aan deze relatie. Het adres is er gewoon en wie hem allemaal gebruikt als adres en of dit als `postadres` is, als `woonadres` of iets anders, is voor het adres niet van belang.
 
 *Toepassing*: relaties, oftewel de modelelementen Relatiesoort en Externe koppeling.
 
@@ -1298,7 +1296,7 @@ Bijvoorbeeld: een persoon heeft een postadres. Het postadres is een kenmerk van 
 
 *Toelichting*
 
-Bijvoorbeeld: een persoon heeft een postadres. Het postadres is de naam van de relatie tussen een persoon en een adres. Het adres is het doel van deze relatie. Dit metagegeven wordt vaak ook relatiedoel genoemd (Engels: target).
+Bijvoorbeeld: een persoon heeft een postadres. Het postadres is de naam van de relatie tussen een persoon en een adres. Het adres is het doel van deze relatie. Dit metagegeven wordt vaak ook relatiedoel genoemd (Engels: _target_).
 
 *Toepassing*: relaties, oftewel de modelelementen Relatiesoort en Externe
 koppeling.
@@ -1311,9 +1309,9 @@ koppeling.
 
 *Toelichting*
 
-Bijvoorbeeld: een persoon heeft een postadres. De richting van de relatie is van persoon naar adres. De eigenaar van de relatie (de bron) heeft kennis van de het gerelateerde objecttype (het doel). In een modelleertaal wordt dit vaak aangegeven met een pijl. De pijl heeft als vertrekpunt de bron en heeft als pijlpunt, waar de relatie naar wijst, het gerelateerde objecttype. Alle relaties zijn altijd gericht van het objecttype (bron) naar het gerelateerde objecttype (doel).
+Bijvoorbeeld: een persoon heeft een postadres. De richting van de relatie is van het `«Objecttype»` `Persoon` naar het `«Objecttype»` `Adres`. De eigenaar van de relatie (de bron) heeft kennis van de het gerelateerde objecttype (het doel). In een modelleertaal wordt dit vaak aangegeven met een pijl. De pijl heeft als vertrekpunt de bron en heeft als pijlpunt, waar de relatie naar wijst, het gerelateerde `«Objecttype»`. Alle relaties zijn altijd gericht van het `«Objecttype»` (bron) naar het gerelateerde `«Objecttype»` (doel).
 
-Het is gebruikelijk om een richting aan te geven, enerzijds omdat de betekenis van A naar B een andere is dan van B naar A, anderzijds omdat het van belang is bij welke objecttype het kenmerk wordt bijgehouden, oftewel wie de eigenaar is.
+Het is gebruikelijk om een richting aan te geven, enerzijds omdat de betekenis van `A` naar `B` een andere is dan van `B` naar `A`, anderzijds omdat het van belang is bij welke `«Objecttype»` het kenmerk wordt bijgehouden, oftewel wie de eigenaar is.
 
 *Toepassing*: relaties, oftewel de modelelementen Relatiesoort en Externe
 koppeling.
@@ -1326,12 +1324,12 @@ koppeling.
 
 *Toelichting*
 
-Bijvoorbeeld: een auto heeft verschillende onderdelen, waaronder een motor. In het informatiemodel gaat het vooral om de auto en is de motor alleen relevant vanuit het perspectief van dat het een onderdeel is van de auto. De aggregatie is in de basis een relatie en het aggregratietype geeft aanvullend hierop extra informatie. Standaard is er bij een relatie geen sprake van een aggregatie, (aggregatietype "Geen"). Er is dan sprake van een relatie tussen objecten van beide objecttypes, en deze kan conditioneel zijn, maar de objecten worden gezien als dat ze zelfstandig bestaansrecht hebben en daarnaast ook een relatie met elkaar hebben en verder niets.
+Bijvoorbeeld: een auto heeft verschillende onderdelen, waaronder een motor. In het informatiemodel gaat het vooral om de auto en is de motor alleen relevant omdat het een onderdeel is van de auto. De aggregatie is in de basis een relatie en het aggregratietype geeft aanvullende informatie. Standaard is er bij een relatie geen sprake van een aggregatie, (`Aggregatietype`: `"Geen"`). Er is dan sprake van een relatie tussen objecten van beide objecttypes, en deze kan conditioneel zijn, maar de objecten worden gezien als dat ze zelfstandig bestaansrecht hebben en daarnaast ook een relatie met elkaar hebben en verder niets.
 
-Als er wel sprake is van een aggregatie, dan geeft het aggregratietype aan dat het objecttype die doel is van de relatie, in functionele zin en in aanvulling op de relatie zelf, ook een onderdeel (component) is van het objecttype die de eigenaar is van de relatie. De eigenaar geeft hierbij aan hoe de aggregatie in gezien moet worden. Dit kan zijn:
+Als er wel sprake is van een aggregatie, dan geeft het `Aggregatietype` aan dat het `«Objecttype»` die doel is van de relatie, in functionele zin en in aanvulling op de relatie zelf, ook een onderdeel (component) is van het `«Objecttype»` die de eigenaar is van de relatie. De eigenaar geeft hierbij aan hoe de aggregatie in gezien moet worden. Dit kan zijn:
 
-- 'Compositie' (Engels: composite): het doel object is een integraal onderdeel van het eigenaar object en dit onderdeel wordt niet gedeeld met anderen. De eigenaar is volledig verantwoordelijk voor het beheer van de bijhouding van informatie over het onderdeel. Als de eigenaar vervalt, dan vervallen automatisch ook de onderdelen mee. Het doel object kan als onderdeel niet zelfstandig bestaan: het doel vervalt als de eigenaar vervalt. Wel kan je een onderdeel vervangen met behoud van het eigenaar object.
-- 'Gedeeld' (Engels: shared): het onderdeel kan gebruikt en gedeeld worden door meerdere eigenaren. Bijvoorbeeld: een betaalrekening.
+- `"Compositie"` (Engels: _"composite"_): het doel object is een integraal onderdeel van het eigenaarobject en dit onderdeel wordt niet gedeeld met anderen. De eigenaar is volledig verantwoordelijk voor het beheer van de bijhouding van informatie over het onderdeel. Als de eigenaar vervalt, dan vervallen automatisch ook de onderdelen mee. Het doel object kan als onderdeel niet zelfstandig bestaan: het doel vervalt als de eigenaar vervalt. Wel kan je een onderdeel vervangen met behoud van het eigenaar object.
+- `"Gedeeld"` (Engels: _"shared"_): het onderdeel kan gebruikt en gedeeld worden door meerdere eigenaren. Bijvoorbeeld: een betaalrekening.
 
 *Toepassing*: relaties, oftewel de modelelementen Relatiesoort en Externe
 koppeling.
@@ -1344,7 +1342,7 @@ koppeling.
 
 *Toelichting*
 
-De plek is een gepubliceerde plek waar gebruikers bij kunnen. Indien mogelijk is dit metagegeven gevuld met (heeft als waarde) een URI of een URL (als er geen URI is, dan kan dit een URL zijn, waar de waardelijst op basis van de naam van de waardelijst te vinden is). Bijvoorbeeld: `http://www.organisatie.nl/schemas/waardelijsten/NaamWaardelijst`.
+De plek is een gepubliceerde plek waar gebruikers bij kunnen. Indien mogelijk is dit metagegeven gevuld met (heeft als waarde) een URI of een URL (als er geen URI is, dan kan dit een URL zijn, waar de waardelijst op basis van de naam van de waardelijst te vinden is), bijvoorbeeld: `Locatie`: `http://www.organisatie.nl/schemas/waardelijsten/NaamWaardelijst`.
 
 *Toepassing*: de modelelementen die een waardelijst zijn.
 
@@ -1368,7 +1366,7 @@ Voor de hand liggende formaten waarin een waardelijst is gepubliceerd zijn onder
 
 *Toelichting*
 
-Voorbeelden hiervan zijn `Characterstring` , `Integer`
+Voorbeelden hiervan zijn `"Characterstring"` , `"Integer"`
 
 *Toepassing:* Codelijst
 
@@ -1380,7 +1378,7 @@ Voorbeelden hiervan zijn `Characterstring` , `Integer`
 
 *Toelichting*
 
-Als een Codelijst een structuur heeft wordt hiermee aangegeven welk item in de codelijst de waarde representeert.
+Als een `«Codelijst»` een structuur heeft wordt hiermee aangegeven welk item in de `«Codelijst»` de waarde representeert.
 
 *Toepassing:* Codelijst
 
@@ -1392,7 +1390,7 @@ Als een Codelijst een structuur heeft wordt hiermee aangegeven welk item in de c
 
 *Toelichting*
 
-Mogelijk is er een profielspecificatie die de specifieke technische toepassing van de codelijst beschrijft. Bij voorkeur is de referentie door middel van een url.
+Mogelijk is er een profielspecificatie die de specifieke technische toepassing van de codelijst beschrijft. Bij voorkeur is de referentie door middel van een URL.
 
 *Toepassing:* Codelijst
 
@@ -1406,11 +1404,12 @@ Het domein van een waarde van een gegeven.
 
 *Toelichting*
 
-Bijvoorbeeld: het type van het kenmerk geometrie is het datatype VlakOfMultivlak, het type van het kenmerk achternaam is het datatype CharacterString
+ - Bijvoorbeeld: het `Type` van het kenmerk `geometrie` is het `«Datatype»` `VlakOfMultivlak`;
+ - Bijvoorbeeld: het `Type` van het kenmerk `achternaam` is het `«Datatype»` `CharacterString`.
 
-Een attribuutsoort heeft een datatype voor de specificatie van het toegestane waardetype. Hetzelfde geldt voor een data-element, een referentie-element en keuze elementen. Dit is altijd conform een datatype uit dit metamodel (of een extensie ervan) of een primitief datatype die extern is aan dit model. Betreft het een waarde uit een dynamische waardentabel, dan wordt de naam van de desbetreffende referentielijst of codelijst als type vermeld. Indien het een waarde uit een statische opsomming van waarden betreft, dan wordt de naam van de desbetreffende enumeratie als type vermeld.
+Een `«Attribuutsoort»` heeft een `«Datatype»` voor de specificatie van het toegestane waardetype. Hetzelfde geldt voor een `«Data-element»`, een `«Referentie-element»` en een `«Keuze»`. Dit is altijd conform een datatype uit dit metamodel (of een extensie ervan) of een `«Primitief datatype»` die extern is aan dit model. Betreft het een waarde uit een dynamische waardentabel, dan wordt de naam van de desbetreffende `«Referentielijst»` of `«Codelijst»` als type vermeld. Indien het een waarde uit een statische opsomming van waarden betreft, dan wordt de naam van de desbetreffende `«Enumeratie»` als type vermeld.
 
-*Toepassing*: Alle informatie elementen die een attribuut modelleren: attribuutsoort, data-element, referentie-element, datatypekeuze, doelkeuze.
+*Toepassing*: Alle informatie elementen die een attribuut modelleren: Attribuutsoort, Data-element, Referentie-element, Datatypekeuze, Doelkeuze.
 
 #### Metagegeven: **Lengte**
 
@@ -1424,53 +1423,51 @@ Voor karakters:
 
 | **Notatie** | **Betekenis**                                                                              |
 |-------------|--------------------------------------------------------------------------------------------|
-| `1`         | De lengte is precies 1                                                                     |
-| `2..`       | De lengte is minimaal 2 (inclusief 2) of meer (onbegrensd)                                 |
-| `2..9`      | De lengte is minimaal 2 en maximaal 9 (inclusief 9)                                        |
+| `"1"`         | De lengte is precies 1                                                                     |
+| `"2.."`       | De lengte is minimaal 2 (inclusief 2) of meer (onbegrensd)                                 |
+| `"2..9"`      | De lengte is minimaal 2 en maximaal 9 (inclusief 9)                                        |
 
 Voor getallen:
 
 | **Notatie** | **Betekenis**                                                                              |
 |-------------|--------------------------------------------------------------------------------------------|
-| `3`         | De lengte is maximaal 3 (inclusief 3, dus 1, 2 of 3) voor de komma      |  
-| `3,2`       | De lengte is maximaal 3 (inclusief 3, dus 1, 2 of 3) voor de komma, en maximaal 2 getallen na de komma  |    
+| `"3"`         | De lengte is maximaal 3 (inclusief 3, dus 1, 2 of 3) voor de komma      |  
+| `"3,2"`       | De lengte is maximaal 3 (inclusief 3, dus 1, 2 of 3) voor de komma, en maximaal 2 getallen na de komma  |    
 
-Andere getallen dan `1`, `2`, `3` of `9` kunnen uiteraard gebruikt worden om er de lengte mee te specificeren.
+Andere getallen dan `"1"`, `"2"`, `"3"` of `"9"` kunnen uiteraard gebruikt worden om er de lengte mee te specificeren.
 
 *Toelichting*
 
-Het gaat bij deze lengte om hoe lang een gegeven in functionele zin mag zijn. Dus, hoeveel karakters en hoeveel getallen voor en na de komma.
-
-De lengte heeft betrekking op data waar een modelelement over gaat. Bij een attribuutsoort gaat het om de lengte van de data van het attribuut. Bij een gestructureerd datatype krijgt elk data-element een eigen lengte en gaat het om de lengte van alleen dit data-element.  
+Het gaat bij deze lengte om hoe lang een gegeven in functionele zin mag zijn. Dus, hoeveel karakters en hoeveel getallen voor en na de komma. De lengte heeft betrekking op data waar een modelelement over gaat. Bij een `«Attribuutsoort»` gaat het om de lengte van de data van het attribuut. Bij een `«Gestructureerd datatype»` krijgt elk `«Data-element»` een eigen lengte en gaat het om de lengte van alleen dit `«Data-element»`.  
 
 Bijvoorbeeld:
-* Een naam van een persoon met minimale lengte 2 en onbegrensd: CharacterString, lengte 2..
-* Een naam van een openbare ruimte met minimale lengte 2 en maximale lengte 80: CharacterString, lengte 2..80
-* Een identificatie als getal, van maximaal lengte 16: Integer, lengte 16
-* Een identificatie van precies lengte 16, met voorloopnullen: CharacterString, lengte 16
-* Een percentage met 2 getallen achter de komma: Decimal, lengte 3,2
+* Een naam van een persoon met minimale lengte 2 en onbegrensd: `CharacterString`, `lengte`: `"2.."`
+* Een naam van een openbare ruimte met minimale lengte 2 en maximale lengte 80: `CharacterString`, `lengte`: `"2..80"`
+* Een identificatie als getal, van maximaal lengte 16: `Integer`, `lengte`: `"16"`
+* Een identificatie van precies lengte 16, met voorloopnullen: `CharacterString`, `lengte`: `"16"`
+* Een percentage met 2 getallen achter de komma: Decimal, `lengte`: `"3,2"`
 
 Voorheen vaak gebruikt:
-* AN80 komt overeen met CharacterString, lengte 1..80  
-* N8 komt overeen met Integer, lengte 8 (dus van -99999999 tot en met +99999999)
-* N3,2 komt overeen met Decimal, lengte 3,2
+* `AN80` komt overeen met `CharacterString`, `lengte`: `"1..80"`
+* `N8` komt overeen met `Integer`, `lengte`: `"8"` (dus van `"-99999999"` tot en met `"+99999999"`)
+* `N3,2` komt overeen met `Decimal`, `lengte`: `"3,2"`
 
-Veel voorkomende maximum waarden voor CharacterString zijn: 80, 200, 4000.
+Veel voorkomende maximumwaarden voor `CharacterString` zijn: `"80"`, `"200"`, `"4000"`.
 
-Een getal wat voorloopnullen mag hebben, zoals gemeentecode 0060, wordt gespecificeerd als een CharacterString. Het getal 0001 bestaat niet, dit is het getal 1.
+Een getal dat voorloopnullen mag hebben, zoals `gemeentecode`:  `"0060"`, wordt gespecificeerd als een `CharacterString`. Het _getal_ `"0001"` bestaat namelijk niet, dit is het getal `"1"`.
 
-De lengte geldt voor gegevens _indien_ er sprake is van een gegeven. Gegevens die optioneel zijn worden leeggelaten, het is daarom niet de bedoeling om voor optionele gegevens een lengte van minimaal 0 te specificeren. Specificeer: als het gegeven ingevuld is, dan is de lengte minimaal 1.  
+De lengte geldt voor gegevens _indien_ er sprake is van een gegeven. Gegevens die optioneel zijn worden leeggelaten, het is daarom niet de bedoeling om voor optionele gegevens een lengte van minimaal `"0"` te specificeren. Als het gegeven ingevuld is, dan is de lengte minimaal `"1"`.  
 
-Het - teken bij een negatief heeft geen gevolgen voor de specificatie van de lengte.
+Het `"-"`-teken bij een negatief heeft geen gevolgen voor de specificatie van de lengte.
 
-Niet alle eisen aan een gegevens kunnen gespecificeerd worden met een lengte. Gebruik dan een patroon of formeel patroon of een andere specificatie van de minimale en/of maximale waarde. Bijvoorbeeld:
+Niet alle eisen aan een gegevens kunnen gespecificeerd worden met een lengte. Gebruik dan <code><a>Patroon</a></code> of <code><a>Formeel patroon</a></code> of een andere specificatie van de minimale en/of maximale waarde. Bijvoorbeeld:
 * 1 of 2 cijfers achter de komma kan niet gespecificeerd worden met lengte
 * 1 of 2 cijfers voor de komma kan niet gespecificeerd worden met lengte  
 * een exacte lengte voor een getal, oftewel lengte precies 16 waarbij lengte 1 of 15 niet mag
 * het waardenbereik van een gegeven, "binnen" deze lengte
 * of een getal negatief of positief mag zijn.
 
-*Toepassing*: Attribuutsoort, primitief datatype (alleen als dit datatype in het IM zelf-gedefinieerd is), data-element, referentie-element.
+*Toepassing*: Attribuutsoort, Primitief datatype (alleen als dit datatype in het IM zelf-gedefinieerd is), Data-element, Referentie-element.
 
 #### Metagegeven: **Patroon**
 
