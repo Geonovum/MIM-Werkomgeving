@@ -8,7 +8,7 @@ Het metamodel biedt de modelleringstaal waarmee een informatiemodel gemaakt, gel
 -   de leesbaarheid en eenduidigheid van informatiemodellen te vergroten;
 -   informatiemodellen op zowel conceptueel als op logisch niveau te kunnen opstellen (zie [Wat is een informatiemodel](#wat-is-een-informatiemodel)) <!-- (zie par. 1.4); -->
 -   informatiemodellen goed aan elkaar te kunnen koppelen op conceptueel en logisch niveau;
--   tooling te kunnen ontwikkelen en (her)gebruiken voor resp. door alle partijen die kiezen voor dit metamodel;
+-   tooling te kunnen ontwikkelen en (her)gebruiken voor en door alle partijen die kiezen voor dit metamodel;
 -   kennis uit verschillende organisaties te bundelen;
 -   en in het verlengde hiervan, om op een meer geautomatiseerde werkwijze sneller en beter voorspelbaar uitwisselingsstandaarden op kunnen stellen.
 -   om interoperabiliteit tussen registraties te bevorderen.
