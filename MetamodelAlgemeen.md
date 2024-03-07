@@ -92,7 +92,7 @@ Het diagram toont de onderlinge samenhang en structuur. Daarin is zichtbaar dat 
 
 ### Overige modelelementen
 
-Naast de kernelementen en de datatypen, kent het MIM nog een aantal andere modelelement Deze modelelementen vallen uiteen in een aantal categorieën, waarvan de functie en structuur binnen het MIM in de volgende paragrafen verder wordt toegelicht.
+Naast de kernelementen en de datatypen, kent het MIM nog een aantal andere modelelementen. Deze modelelementen vallen uiteen in een aantal categorieën, waarvan de functie en structuur binnen het MIM in de volgende paragrafen verder wordt toegelicht.
 
 1. `«MIM metaclass»`: <code><a>Constraint</a></code>
 1. `«MIM metaclass»`: <code><a>Keuze</a></code>
