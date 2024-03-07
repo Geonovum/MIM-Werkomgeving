@@ -62,7 +62,7 @@ Het beschrijven vindt plaats door de informatie van de objecten die we beschouwd
       <img src="media/informatiemodel.png" alt="" />
       <figcaption>Wat beschrijft een informatiemodel</figcaption>
     </figure>
-    <p>Als een andere registratie op haar eigen manier tegen dezelfde ‘Jan uit de werkelijkheid’ aankijkt, dan is ook in die registratie een (eigen, apart) object voor Jan aanwezig en Jan kan in dit (eigen, aparte) informatiemodel anders gemodelleerd zijn. Bijvoorbeeld in het ene domein als <code>Werknemer</code> en in het andere domein als <code>Persoon</code> of <code>Partner</code>. Beide objecten Jan representeren natuurlijk dezelfde ‘Jan uit de werkelijkheid’, elk vanuit het perspectief van het eigen domein bekeken.</p>
+    <p>Als een andere registratie op haar eigen manier tegen dezelfde ‘Jan uit de werkelijkheid’ aankijkt, dan is ook in die registratie een (eigen, apart) object voor Jan aanwezig en Jan kan in dit (eigen, aparte) informatiemodel anders gemodelleerd zijn. Bijvoorbeeld in het ene domein als <code>Werknemer</code> en in het andere domein als <code>Persoon</code> of <code>Partner</code>. Beide objecten over Jan representeren natuurlijk dezelfde ‘Jan uit de werkelijkheid’, elk vanuit het perspectief van het eigen domein bekeken.</p>
 </aside>
 
 ### Belangrijke aandachtspunten
