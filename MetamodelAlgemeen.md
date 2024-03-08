@@ -1620,7 +1620,7 @@ Bijvoorbeeld de minimale waarde voor een geldigheidsdatum.
 
 *Toepassing*
 
-Gebruik op attribuutsoorten en data elementen met een primitief datatype van het type:
+Gebruik op attribuutsoorten, data elementen en referentie-elementen met een primitief datatype van het type:
 - Integer
 - Decimal
 - Float
@@ -1643,7 +1643,7 @@ Bijvoorbeeld de minimale inhoud van een bouwwerk.
 
 *Toepassing*
 
-Gebruik op attribuutsoorten en data elementen met een primitief datatype van het type:
+Gebruik op attribuutsoorten, data elementen en referentie-elementen met een primitief datatype van het type:
 - Integer
 - Decimal
 - Float
@@ -1666,7 +1666,7 @@ Bijvoorbeeld de minimale waarde voor een geldigheidsdatum.
 
 *Toepassing*
 
-Gebruik op attribuutsoorten en data elementen met een primitief datatype van het type:
+Gebruik op attribuutsoorten, data elementen en referentie-elementen met een primitief datatype van het type:
 - Integer
 - Decimal
 - Float
@@ -1689,7 +1689,7 @@ Bijvoorbeeld de maximale waarde voor een geldigheidsdatum.
 
 *Toepassing*
 
-Gebruik op attribuutsoorten en data elementen met een primitief datatype van het type:
+Gebruik op attribuutsoorten, data elementen en referentie-elementen met een primitief datatype van het type:
 - Integer
 - Decimal
 - Float
