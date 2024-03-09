@@ -1552,7 +1552,7 @@ De `Populatie` kan ook gebruikt worden om aan te geven dat niet alle exemplaren 
 
 <aside class='example'>
     <p>Er zijn panden in Nederland die een militaire functie hebben en waarvan het niet wenselijk is dat deze in de registratie worden opgenomen en op aangeven van het ministratie van Defensie daarom ook niet zijn opgenomen. Bij <code>Populatie</code> is het volgende opgenomen:</p>
-    <p><code>"Alle panden op het Nederlands grondgebied, die voldoen aan de objectdefinitie, behalve een aantal militaire panden, zoals bedoeld in de <a href="https://zoek.officielebekendmakingen.nl/kst-30968-3.html">memorie van toelichting bij de Wet basisregistraties adressen en gebouwen</a>.</code></p>".
+    <p><code>"Alle panden op het Nederlands grondgebied, die voldoen aan de objectdefinitie, behalve een aantal militaire panden, zoals bedoeld in de <a href="https://zoek.officielebekendmakingen.nl/kst-30968-3.html">memorie van toelichting bij de Wet basisregistraties adressen en gebouwen</a>."</code></p>
 
 </aside>
 
@@ -1573,7 +1573,7 @@ Hier kan in tekst een beschrijving opgenomen worden over de kwaliteit van de inw
 #### Metagegeven: **Eenheid**
 
 <aside class="definition">
-  <dfn>Eenheid</dfn>Aanduiding van de eenheid die bij een meting of waarneming hoort. De waarde van `Eenheid` is een waarde uit de lijst gepubliceerd op https://units-of-measurement.org/.
+  <dfn>Eenheid</dfn>Aanduiding van de eenheid die bij een meting of waarneming hoort. De waarde van Eenheid is een waarde uit de lijst gepubliceerd op https://units-of-measurement.org/.
 </aside>
 
 *Toelichting*
@@ -1585,7 +1585,7 @@ In essentie zijn er vier componenten die een meting of een waarneming beschrijve
 1. het **datatype** van die waarde (kwalitatief (characterstring), kwantitatief (integer of real))
 1. de **eenheid** van de waarde
 
-De eerste drie zijn informatie-technisch uit te drukken met het informatie-element `Attribuutsoort` en `Datatype`. Voor `Eenheid` is een apart metagegeven gecreëerd dat gekoppeld wordt aan een `Attribuutsoort` of een `Referentie-element`.
+De eerste drie zijn informatie-technisch uit te drukken met het informatie-element `«Attribuutsoort»` en `«Datatype»`. Voor `Eenheid` is een apart metagegeven gecreëerd dat gekoppeld wordt aan een `«Attribuutsoort»` of een `«Referentie-element»`.
 
 *Toepassing:* Attribuutsoort, Referentie-element.
 
@@ -1602,15 +1602,15 @@ Bijvoorbeeld de minimale waarde voor een geldigheidsdatum.
 
 *Toepassing*
 
-Gebruik op attribuutsoorten en data elementen met een primitief datatype van het type:
-- Integer
-- Decimal
-- Float
-- Real
-- DateTime
-- Date
+Gebruik op `«Attribuutsoort»` en `«Data-element»` met een `«Primitief datatype»` van het type:
+- `Integer`
+- `Decimal`
+- `Float`
+- `Real`
+- `DateTime`
+- `Date`
 
-Een modelelement mag maar één voorkomen van metagegeven **Minimumwaarde inclusief** of **Minimumwaarde exclusief** hebben.
+Een modelelement mag maar één voorkomen van metagegeven `Minimumwaarde inclusief` of `Minimumwaarde exclusief` hebben.
 
 #### Metagegeven: **Minimumwaarde exclusief**
 
@@ -1625,15 +1625,15 @@ Bijvoorbeeld de minimale inhoud van een bouwwerk.
 
 *Toepassing*
 
-Gebruik op attribuutsoorten en data elementen met een primitief datatype van het type:
-- Integer
-- Decimal
-- Float
-- Real
-- DateTime
-- Date
+Gebruik op `«Attribuutsoort»` en `«Data-element»` met een `«Primitief datatype»` van het type:
+- `Integer`
+- `Decimal`
+- `Float`
+- `Real`
+- `DateTime`
+- `Date`
 
-Een modelelement mag maar één voorkomen van metagegeven **Minimumwaarde inclusief** of **Minimumwaarde exclusief** hebben.
+Een modelelement mag maar één voorkomen van metagegeven `Minimumwaarde inclusief` of `Minimumwaarde exclusief` hebben.
 
 #### Metagegeven: **Maximumwaarde inclusief**
 
@@ -1648,15 +1648,15 @@ Bijvoorbeeld de minimale waarde voor een geldigheidsdatum.
 
 *Toepassing*
 
-Gebruik op attribuutsoorten en data elementen met een primitief datatype van het type:
-- Integer
-- Decimal
-- Float
-- Real
-- DateTime
-- Date
+Gebruik op `«Attribuutsoort»` en `«Data-element»` met een `«Primitief datatype»` van het type:
+- `Integer`
+- `Decimal`
+- `Float`
+- `Real`
+- `DateTime`
+- `Date`
 
-Een modelelement mag maar één voorkomen van metagegeven **Maximumwaarde inclusief** of **Maximumwaarde exclusief** hebben.
+Een modelelement mag maar één voorkomen van metagegeven `Maximumwaarde inclusief` of `Maximumwaarde exclusief` hebben.
 
 #### Metagegeven: **Maximumwaarde exclusief**
 
@@ -1671,15 +1671,15 @@ Bijvoorbeeld de maximale waarde voor een geldigheidsdatum.
 
 *Toepassing*
 
-Gebruik op attribuutsoorten en data elementen met een primitief datatype van het type:
-- Integer
-- Decimal
-- Float
-- Real
-- DateTime
-- Date
+Gebruik op `«Attribuutsoort»` en `«Data-element»` met een `«Primitief datatype»` van het type:
+- `Integer`
+- `Decimal`
+- `Float`
+- `Real`
+- `DateTime`
+- `Date`
 
-Een modelelement mag maar één voorkomen van metagegeven **Maximumwaarde inclusief** of **Maximumwaarde exclusief** hebben.
+Een modelelement mag maar één voorkomen van metagegeven `Maximumwaarde inclusief` of `Maximumwaarde exclusief` hebben.
 
 #### Metagegeven: **Mixin**
 
@@ -1688,11 +1688,11 @@ Een modelelement mag maar één voorkomen van metagegeven **Maximumwaarde inclus
 </aside>
 
 *Toelichting:*
-`Mixin` kan gebruikt worden als metagegeven bij een `Generalisatie` bij modellen op MIM niveau 3 indien er sprake is van multiple inheritance, d.w.z. meerdere superklassen op een subklasse. Het is opgenomen om multiple inheritance implementatie-issues op te lossen in talen/specificaties die dit niet (of niet eenvoudig) ondersteunen. Met `Mixin = Ja` wordt aangegeven dat deze generalisatie en ook de gerelateerde superklasse niet in de implementatie voorkomt maar dat wel eigenschappen (attribuutsoorten en relatiesoorten/rollen) worden overgenomen door de subklasse. `Mixin = Ja` geeft de mogelijkheid om de multiple inheritance indien gewenst, in het MIM niveau 3 model te behouden maar er in de implementatie indien nodig rekening, mee te houden. De modelleur kan hiermee aangeven welke generalisatie op een alternatieve manier wordt geïmplementeerd. Talen die multiple inheritance wel ondersteunen negeren dit metagegeven.
+`Mixin` kan gebruikt worden als metagegeven bij een `«Generalisatie»` bij modellen op: [[[#niveau-3-logisch-informatie-of-gegevensmodel]]], indien er sprake is van _multiple inheritance_, d.w.z. meerdere superklassen op een subklasse. Het is opgenomen om multiple-inheritance-implementatie-issues op te lossen in talen/specificaties die dit niet (of niet eenvoudig) ondersteunen. Met `Mixin = "Ja"` wordt aangegeven dat deze generalisatie en ook de gerelateerde superklasse niet in de implementatie voorkomt maar dat wel eigenschappen (attribuutsoorten en relatiesoorten/-rollen) worden overgenomen door de subklasse. `Mixin = "Ja"` geeft de mogelijkheid om de _multiple inheritance_ indien gewenst, in het MIM niveau 3 model te behouden maar er in de implementatie indien nodig rekening, mee te houden. De modelleur kan hiermee aangeven welke `«Generalisatie»` op een alternatieve manier wordt geïmplementeerd. Talen die _multiple inheritance_ wel ondersteunen negeren dit metagegeven.
 
 <figure id="Mixin">
   <img src="media/Mixin.png" alt="" />
-  <figcaption>Voorbeeld van multiple inheritance met het metagegeven 'Mixin = Ja' op een generalisatie.</figcaption>
+  <figcaption>Voorbeeld van multiple inheritance met het metagegeven 'Mixin = "Ja"' op een generalisatie.</figcaption>
 </figure>
 
 *Toepassing:* Generalisatie en alleen bij MIM niveau 3. Niet gebruiken bij generalisaties tussen datatypen.
@@ -1701,9 +1701,15 @@ Een modelelement mag maar één voorkomen van metagegeven **Maximumwaarde inclus
 
 Bindingen geven aan hoe modelelementen met elkaar verbonden kunnen en mogen worden.
 
-Voorbeeld: de binding tussen een objecttype en een attribuutsoort, om aan te geven dat een attribuutsoort gemodelleerd kan worden als eigenschap van een objecttype. Een voorbeeld van wat niet mag is de verbinding van een attribuutsoort aan een relatiesoort. Andere voorbeelden zijn de binding tussen een objecttype en een generalisatie, of tussen een enumeratie en een enumeratiewaarde.
+Enkele voorbeelden:
+ - Binding tussen een `«Objecttype»` en een `«Attribuutsoort»`, om aan te geven dat een `«Attribuutsoort»` gemodelleerd kan worden als eigenschap van een `«Objecttype»`
+ - Binding tussen een `«Objecttype»` en een `«Generalisatie»`;
+ - Binding tussen een `«Enumeratie»` en een `«Enumeratiewaarde»`.
 
-Deze metagegevens zijn alleen nodig voor de binding van modelelementen aan elkaar en zijn vrijwel altijd een onderdeel van een modelleertaal (waarmee een informatiemodel gemaakt kan worden). In modelleertalen is de binding niet altijd benoemd en is dan impliciet aanwezig. Het metagegeven hoeft dan in die modelleertaal niet expliciet te worden opgenomen. Omdat dit hoofdstuk los van een modelleertaal is beschreven zijn de namen van de bindingen wel opgenomen. Mocht het relevant zijn om de namen van de verbindingen ergens te gebruiken: er zijn twee schrijfwijzen aangegeven die equivalent zijn, gescheiden door een `/`. De bindingen zijn ook in diagram vorm te lezen aan het begin van dit hoofdstuk, in [Diagrammen van modelelementen](#structuur-metamodel).
+Een voorbeeld van wat niet mag:
+ - Binding tussen een `«Attribuutsoort»` en een `«Relatiesoort»`.
+
+Deze metagegevens zijn alleen nodig voor de binding van modelelementen aan elkaar en zijn vrijwel altijd een onderdeel van een modelleertaal (waarmee een informatiemodel gemaakt kan worden). In modelleertalen is de binding niet altijd benoemd en is dan impliciet aanwezig. Het metagegeven hoeft dan in die modelleertaal niet expliciet te worden opgenomen. Omdat dit hoofdstuk los van een modelleertaal is beschreven zijn de namen van de bindingen wel opgenomen. Mocht het relevant zijn om de namen van de verbindingen ergens te gebruiken: er zijn twee schrijfwijzen aangegeven die equivalent zijn, gescheiden door een `/` (_forward slash_). De bindingen zijn ook in diagram vorm te lezen aan het begin van dit hoofdstuk, in [[[#structuur-metamodel]]].
 
 #### Metagegeven: **heeft attribuut** 
 Verkorte schrijfwijze: **attribuut**
@@ -1716,7 +1722,7 @@ Verkorte schrijfwijze: **attribuut**
 
 Objecttypen, gegevensgroeptypen of relatieklassen hebben attributsoorten (0,1,n) voor het specificeren van eigenschappen.
 
-*Toepassing*: Objecttype, gegevensgroeptype en relatieklasse.
+*Toepassing*: Objecttype, Gegevensgroeptype en Relatieklasse.
 
 #### Metagegeven: **heeft gegevensgroep** 
 Verkorte schrijfwijze: **gegevensgroep**
@@ -1729,8 +1735,8 @@ Verkorte schrijfwijze: **gegevensgroep**
 
 Objecttypen en relatieklassen hebben gegevensgroepen (0,1,n) voor het specificeren van groepen van eigenschappen.
 
-*Toepassing*: Objecttypen met gegevensgroepen of een gegevensgroeptype dat zelf ook
-weer een gegevensgroeptype bevat.
+*Toepassing*: Objecttypen met Gegevensgroepen of een Gegevensgroeptype dat zelf ook
+weer een Gegevensgroeptype bevat.
 
 #### Metagegeven: **heeft gegevensgroeptype** 
 Verkorte schrijfwijze: **gegevensgroeptype**
@@ -1757,7 +1763,7 @@ Verkorte schrijfwijze: **supertype**
 
 Een subtype verwijst met een generalisatie naar een supertype.
 
-*Toepassing*: Objecttype en datatype.
+*Toepassing*: Objecttype en Datatype.
 
 #### Metagegeven: **heeft datatype**
 Verkorte schrijfwijze: **datatype**
@@ -1770,7 +1776,7 @@ Verkorte schrijfwijze: **datatype**
 
 Een datatype wordt onder andere toegekend aan een attribuutsoort.
 
-*Toepassing*: Attribuutsoort, keuze, referentie-element, data-element
+*Toepassing*: Attribuutsoort, Keuze, Referentie-element, Data-element
 
 #### Metagegeven: **heeft relatiesoort**
 Verkorte schrijfwijze: **relatiesoort**
@@ -1809,7 +1815,7 @@ Verkorte schrijfwijze: **data-element**
 
 Een gestructureerd datatype bevat meerdere data-elementen.
 
-*Toepassing*: gestructureerd datatype.
+*Toepassing*: Gestructureerd datatype.
 
 #### Metagegeven: **bevat enumeratiewaarde**
 Verkorte schrijfwijze: **enumeratiewaarde**
@@ -1820,9 +1826,9 @@ Verkorte schrijfwijze: **enumeratiewaarde**
 
 *Toelichting*
 
-Een enumeratie bevat enumeratiewaarden.
+Een `«Enumeratie»` bevat `«Enumeratiewaarden»`.
 
-*Toepassing*: enumeratie.
+*Toepassing*: Enumeratie.
 
 #### Metagegeven: **bevat referentie-element**
 Verkorte schrijfwijze: **referentie-element**
@@ -1913,8 +1919,8 @@ Voor de volgende metagegevens geldt een specifiek waardebereik.
 | <a>Aggregatietype</a>                         | `Compositie`, `Gedeeld`, `Geen`                                                      |
 | <a>Authentiek</a>                             | `Authentiek`, `Basisgegeven`, `Wettelijk gegeven`, `Landelijk kerngegeven`, `Overig` |
 
-<aside class="note">
-  Geef bij de toepassing van <code>overig</code> in een informatiemodel aan wat er onder wordt verstaan.
+<aside class="note" title="Waarde = Overig">
+  Geef als modelleur bij de toepassing van <code>Overig</code> in een informatiemodel aan wat er onder wordt verstaan.
 </aside>
 
 De metagegevens met `Ja` en `Nee` zijn semantisch bedoeld als een boolean (er zijn geen andere waarden mogelijk zoals onbekend, overig of geen waarde (leeg)). Voor technische implementatiedoeleinden is het toegestaan om `Ja` en `Nee` te interpreteren en eventueel te vervangen door een `Boolean`. Let wel, voor mens-leesbare functionele documentatie horen altijd de in de tabel aangegeven waarden `Ja` en `Nee` te worden gebruikt.
@@ -1923,19 +1929,24 @@ De metagegevens met `Ja` en `Nee` zijn semantisch bedoeld als een boolean (er zi
 
 Er zijn metagegevens die een defaultwaarde hebben. Het is echter niet nodig om deze defaultwaarde expliciet aan te geven in het informatiemodel. De default staat hier aangegeven. Alleen wanneer er afgeweken wordt van deze default wordt dit in het informatiemodel aangegeven.
 
-Aanwijzing MIM-beheerder: metagegevens met een defaultwaarde mogen niet optioneel zijn. Kies de defaultwaarde defensief.
+| **Metagegeven**                           | **Defaultwaarde** |
+|-------------------------------------------|-------------------|
+| <a>Indicatie materiele historie</a>       | `Nee`             |
+| <a>Indicatie formele historie</a>         | `Nee`             |
+| <a>Indicatie classificerend</a>           | `Nee`             |
+| <a>Indicatie abstract object</a>          | `Nee`             |
+| <a>Mogelijk geen waarde</a>               | `Nee`             |
+| <a>Identificerend</a>                     | `Nee`             |
+| <a>Unidirectioneel</a>                    | `Ja`              |  
+| <a>Kardinaliteit</a> (`«Attribuutsoort»`) | `1`               |
+| <a>Aggregatietype</a>                     | `Geen`            |
+| <a>Mixin</a>                              | `Nee`             |
 
-| **Metagegeven**                     | **Defaultwaarde** |
-|-------------------------------------|-------------------|
-| <a>Indicatie materiele historie</a> | `Nee`             |                                                        
-| <a>Indicatie formele historie</a>   | `Nee`             |                                                        
-| <a>Indicatie classificerend</a>     | `Nee`             |
-| <a>Indicatie abstract object</a>    | `Nee`             |
-| <a>Mogelijk geen waarde</a>         | `Nee`             |                                                        
-| <a>Identificerend</a>               | `Nee`             |                                                        
-| <a>Unidirectioneel</a>              | `Ja`              |  
-| <a>Kardinaliteit</a> attribuut      | `1`               |
-| <a>Aggregatietype</a>               | `Geen`            |
-| <a>Mixin</a>                        | `Nee`             |
+<aside class="note" title="Metagegevens met een defaultwaarde">
+  Metagegevens met een defaultwaarde mogen niet optioneel zijn. Kies de defaultwaarde defensief.
+</aside>
 
-Opmerking met betrekking tot de kardinaliteit van relaties: deze staat niet in de tabel. Deze kennen geen defaultwaarde. De kardinaliteit aan de doelkant moet altijd worden aangegeven. De kardinaliteit aan de bron/eigenaar kant van een relatie is optioneel om in te vullen, wanneer er niets is ingevuld dan wordt er niets over de kardinaliteit gezegd en kent deze geen default waarde (in de praktijk betekent dit dat een kardinaliteit aan de bron kant als 0..* geïmplementeerd wordt).
+<aside class="note" title="Kardinaliteit van Relaties">
+  <p>De kardinaliteit van een relatie staat niet in de tabel, omdat hiervoor defaultwaarden bestaan. De kardinaliteit aan de doelkant moet altijd worden aangegeven. De kardinaliteit aan de bron/eigenaar kant van een relatie is optioneel om in te vullen.</p>
+  <p>Wanneer er niets is ingevuld dan wordt er niets over de kardinaliteit gezegd en kent deze geen default waarde. In de praktijk betekent dit dat een kardinaliteit aan de bron kant als `0..*` geïmplementeerd wordt.</p>
+</aside>
