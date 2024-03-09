@@ -1461,11 +1461,11 @@ De lengte geldt voor gegevens _indien_ er sprake is van een gegeven. Gegevens di
 Het `"-"`-teken bij een negatief heeft geen gevolgen voor de specificatie van de lengte.
 
 Niet alle eisen aan een gegevens kunnen gespecificeerd worden met een lengte. Gebruik dan <code><a>Patroon</a></code> of <code><a>Formeel patroon</a></code> of een andere specificatie van de minimale en/of maximale waarde. Bijvoorbeeld:
-* 1 of 2 cijfers achter de komma kan niet gespecificeerd worden met lengte
-* 1 of 2 cijfers voor de komma kan niet gespecificeerd worden met lengte  
-* een exacte lengte voor een getal, oftewel lengte precies 16 waarbij lengte 1 of 15 niet mag
-* het waardenbereik van een gegeven, "binnen" deze lengte
-* of een getal negatief of positief mag zijn.
+* Één of twee cijfers achter de komma kan niet gespecificeerd worden met lengte;
+* Één of twee cijfers voor de komma kan niet gespecificeerd worden met lengte;
+* Een exacte lengte voor een getal, oftewel lengte precies 16 waarbij lengte 1 of 15 niet mag;
+* Het waardenbereik van een gegeven, "binnen" deze lengte;
+* Of een getal negatief of positief mag zijn.
 
 *Toepassing*: Attribuutsoort, Primitief datatype (alleen als dit datatype in het IM zelf-gedefinieerd is), Data-element, Referentie-element.
 
@@ -1477,9 +1477,9 @@ Niet alle eisen aan een gegevens kunnen gespecificeerd worden met een lengte. Ge
 
 *Toelichting*
 
-De structuur is in woorden beschreven. Bijvoorbeeld: conform de Nederlandse standaard voor het beschrijven van een postcode. Het specificeren van een patroon is alleen van toepassing wanneer de specificatie aangeeft dat de waarde (direct of indirect) een primitief datatype betreft, zoals een CharacterString.
+De structuur is in woorden beschreven. Bijvoorbeeld: `"Conform de Nederlandse standaard voor het beschrijven van een postcode"`. Het specificeren van een patroon is alleen van toepassing wanneer de specificatie aangeeft dat de waarde (direct of indirect) een `«Primitief datatype»` betreft, zoals een `CharacterString`.
 
-*Toepassing*: De modelelementen uit de groep datatype en attribuutsoort.
+*Toepassing*: De modelelementen uit de groep Datatype en Attribuutsoort.
 
 #### Metagegeven: **Formeel patroon**
 
@@ -1491,13 +1491,13 @@ De structuur is in woorden beschreven. Bijvoorbeeld: conform de Nederlandse stan
 
 De structuur is in een reguliere expressie beschreven.
 
-Bijvoorbeeld: `[1-9][0-9][0-9][0-9][A-Z][A-Z]`
+Bijvoorbeeld: `"[1-9][0-9][0-9][0-9][A-Z][A-Z]"`
 
 Het specificeren van een patroon is alleen van toepassing wanneer de
-specificatie aangeeft dat de waarde (direct of indirect) een primitief datatype
-betreft, zoals een CharacterString.
+specificatie aangeeft dat de waarde (direct of indirect) een `«Primitief datatype»`
+betreft, zoals een `CharacterString`.
 
-*Toepassing*: De modelelementen uit de groep datatype en attribuutsoort.
+*Toepassing*: De modelelementen uit de groep Datatype en Attribuutsoort.
 
 #### Metagegeven: **Code**
 
@@ -1511,20 +1511,18 @@ betreft, zoals een CharacterString.
 </aside>
 
 <aside class="note">
-  Eén informatiemodel kan een abstract objecttype bevatten die _binnen dit informatiemodel_ een generalisatie is van geen enkel objecttype. Deze niet abstracte objecttypen kunnen zich immers ook buiten het informatiemodel bevinden en aldaar worden gespecificeerd. Dit komt voor bij informatiemodellen die een abstracte typering definiëren waarop (concretere) informatiemodellen willen aansluiten en nadere invulling aan geven.
+  Eén informatiemodel kan een abstract objecttype bevatten die <i>binnen dit informatiemodel</i> een <code>«Generalisatie»</code> is van geen enkel <code>«Objecttype»</code>. Deze niet abstracte objecttypen kunnen zich immers ook buiten het informatiemodel bevinden en aldaar worden gespecificeerd. Dit komt voor bij informatiemodellen die een abstracte typering definiëren waarop (concretere) informatiemodellen willen aansluiten en nadere invulling aan geven.
 </aside>
 
 *Toelichting*
 
-Niet abstract wordt ook vaak wel genoemd: concreet.
+Niet-abstract wordt ook wel _concreet_ genoemd. Bijvoorbeeld het abstracte `«Objecttype»` `"Voertuig"`, met concrete specialisaties `"Auto"`, `"Fiets"` en `"Bromfiets"`. Dit betekent dat er geen voertuigen mogen bestaan die alleen maar een voertuig zijn en waarbij in het midden gelaten mag worden of het een auto, fiets, bromfiets betreft. Als het `"Voertuig"` daarentegen niet als abstract is gemodelleerd, dan mogen er wel voertuigen bestaan die alleen maar een voertuig zijn en niet een auto, fiets of bromfiets. In beide gevallen kan er over de objecten gesproken worden als zijnde een voertuig en kunnen deze objecten in algemene zin als zodanig behandeld worden (zoals een `«Generalisatie»` bedoeld is).
 
-Bijvoorbeeld het abstract objecttype "Voertuig", met concrete specialisaties "Auto", "Fiets" en "Bromfiets". Dit betekent dat er geen voertuigen mogen bestaan die alleen maar een voertuig zijn en waarbij in het midden gelaten mag worden of het een Auto, Fiets, Bromfiets betreft. Als het "Voertuig" daarentegen niet als abstract is gemodelleerd, dan mogen er wel voertuigen bestaan die alleen maar een voertuig zijn en niet een Auto, Fiets of Bromfiets. In beide gevallen kan er over de objecten gesproken worden als zijnde een voertuig en kunnen deze objecten in algemene zin als zodanig behandeld worden (zoals een generalisatie bedoeld is).
+Wanneer een `«Objecttype»` niet abstract is, oftewel concreet, dan kunnen er objecten bestaan die een instantie van `«Objecttype»` zijn.
 
-Wanneer een objecttype niet abstract is, oftewel concreet, dan kunnen er objecten bestaan die een instantie van objecttype zijn.
+Wanneer een `«Objecttype»` wel abstract is, dan kunnen er geen objecten bestaan die een instantie van dit `«Objecttype»` zijn. Er moet dan altijd sprake zijn van een concreet (niet abstract) `«Objecttype»` die het abstracte `«Objecttype»` als `«Generalisatie»` heeft. Objecten zijn dan instanties van dit concrete `«Objecttype»` en geen instanties van het abstracte `«Objecttype»`. Wel voldoen deze objecten beide `«Objecttype»` definities en kunnen deze objecten in algemene zin als zodanig behandeld worden.
 
-Wanneer een objecttype wel abstract is, dan kunnen er geen objecten bestaan die een instantie van dit objecttype zijn. Er moet dan altijd sprake zijn van een concreet (niet abstract) objecttype die het abstracte objecttype als generalisatie heeft. Objecten zijn dan instanties van dit concrete objecttype en geen instanties van het abstracte objecttype. Wel voldoen deze objecten beide objecttype definities en kunnen deze objecten in algemene zin als zodanig behandeld worden.
-
-Zie ook sectie [Abstracte objecttypes en concrete objecten](#abstracte-objecttypes-en-concrete-objecten) waar
+Zie ook sectie [[[#abstracte-objecttypes-en-concrete-objecten]]] waar
 een nadere uitleg wordt gegeven van het fenomeen abstract objecttypen.
 
 *Toepassing:* Objecttype
@@ -1537,37 +1535,24 @@ een nadere uitleg wordt gegeven van het fenomeen abstract objecttypen.
 
 *Toelichting*
 
-*Toelichting*
+De definitie van een `«Objecttype»` geeft aan welke exemplaren in de werkelijkheid bedoeld worden, te weten die exemplaren die aan de definitie voldoen. Het metagegeven `Populatie` in een (basis)registratie kan in het gebruik echter beperkter zijn, omdat niet alle examplaren die aan de definitie voldoen, worden geregistreerd. Er zijn dan dus examplaren die wel aan de definitie voldoen, maar die niet worden geregistreerd en dus ook niet opgevraagd kunnen worden. 
 
-De definitie van een objecttype geeft aan welke exemplaren in de werkelijkheid bedoeld worden, 
-te weten die exemplaren die aan de definitie voldoen. 
+De `Populatie` is een _nadere afbakening op de definitie_, een beschrijving van de _subset_ van de verzameling van alle _exemplaren_ van dit `«Objecttype»` die:
+ - wel geregistreerd of uitgewisseld worden en/of
+ - wel aan de definitie voldoen, maar die niet geregistreerd of uitgewisseld worden. 
+Wanneer alle exemplaren die onder de definitie vallen geregistreerd zijn en/of uitgewisseld kunnen worden, dan mag de `Populatie` worden leeggelaten. 
 
-De populatie in een (basis)registratie kan in het gebruik echter beperkter zijn, 
-omdat niet alle examplaren die aan de definitie voldoen worden geregistreerd. 
-Er zijn dan dus examplaren die wel aan de definitie voldoen, maar die niet worden geregistreerd 
-en dus ook niet opgevraagd kunnen worden. 
-
-De populatie is een nadere afbakening op de definitie, een beschrijving van de _subset_ van de verzameling van 
-alle _exemplaren_ van dit objecttype die:
-- wel geregistreerd of uitgewisseld worden en/of
-- wel aan de definitie voldoen, maar die niet geregistreerd of uitgewisseld worden. 
-
-Wanneer alle exemplaren die onder de definitie vallen geregistreerd zijn en/of uitgewisseld kunnen worden, 
-dan mag de populatie worden leeggelaten. 
-
-De populatie kan ook gebruikt worden om aan te geven dat niet alle exemplaren van een objecttype opgenomen zijn 
-in de registratie maar alleen die welke voldoen aan een conditie. De conditie heeft verder geen effect heeft op de definitie. 
+De `Populatie` kan ook gebruikt worden om aan te geven dat niet alle exemplaren van een `«Objecttype»` opgenomen zijn in de registratie maar alleen die welke voldoen aan een conditie. De conditie heeft verder geen effect heeft op de definitie.
 
 <aside class='example'>
-    Het Kadaster is opgericht in 1832 en kent sindsdien kadastrale aktes, die ingeschreven worden. De definitie van een kadastrale akte omvat alle aktes, en deze zijn op te vragen bij het Kadaster, maar niet alle aktes zijn als data (digitaal) op te vragen vanuit de BRK. Dit laatste kan dan in de populatie worden opgenomen. 
-
-Populatie: alle kadastrale aktes die horen bij kadastrale objecten waarop op 1 januari 1980 een zakelijk recht rustte, en alle van kadastrale objecten die erna zijn ontstaan, zitten in de BRK. Dit is een voorbeeld van een conditie.   
+    <p>Het Kadaster is opgericht in 1832 en kent sindsdien kadastrale aktes, die ingeschreven worden. De definitie van een kadastrale akte omvat alle aktes, en deze zijn op te vragen bij het Kadaster, maar niet alle aktes zijn als data (digitaal) op te vragen vanuit de BRK. Bij <code>Populatie</code> is het volgende opgenomen:</p>
+    <p><code>"Alle kadastrale aktes die horen bij kadastrale objecten waarop op 1 januari 1980 een zakelijk recht rustte, en alle van kadastrale objecten die erna zijn ontstaan, zitten in de BRK.</code>"</p> 
+    <p>Dit is een voorbeeld van een conditie.</p>
 </aside>
 
 <aside class='example'>
-    Er zijn panden in Nederland die een militaire functie hebben en waarvan het niet wenselijk is dat deze in de registratie worden opgenomen en op aangeven van het ministratie van Defensie daarom ook niet zijn opgenomen. 
-
-  Populatie: alle panden op het Nederlands grondgebied, die voldoen aan de objectdefinitie, behalve een aantal militaire panden, zoals bedoeld in de [memorie van toelichting bij de Wet basisregistraties adressen en gebouwen](https://zoek.officielebekendmakingen.nl/kst-30968-3.html).
+    <p>Er zijn panden in Nederland die een militaire functie hebben en waarvan het niet wenselijk is dat deze in de registratie worden opgenomen en op aangeven van het ministratie van Defensie daarom ook niet zijn opgenomen. Bij <code>Populatie</code> is het volgende opgenomen:</p>
+    <p><code>"Alle panden op het Nederlands grondgebied, die voldoen aan de objectdefinitie, behalve een aantal militaire panden, zoals bedoeld in de <a href="https://zoek.officielebekendmakingen.nl/kst-30968-3.html">memorie van toelichting bij de Wet basisregistraties adressen en gebouwen</a>.</code></p>".
 
 </aside>
 
