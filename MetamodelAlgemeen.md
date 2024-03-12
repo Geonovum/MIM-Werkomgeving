@@ -681,7 +681,7 @@ Een domein package bevat de modelelementen waaruit een informatiemodel is sameng
 #### Extern
 
 <aside class="definition">
-  <dfn>Extern</dfn>Een groepering van constructies die een externe instantie beheert en beschikbaar stelt aan een informatiemodel en die in het informatiemodel ongewijzigd gebruikt worden.
+  <dfn>Extern</dfn>Een groepering van modelelementen die een externe instantie beheert en beschikbaar stelt aan een informatiemodel en die in het informatiemodel ongewijzigd gebruikt worden.
 </aside>
 
 <aside class='example'>
@@ -693,7 +693,7 @@ Een domein package bevat de modelelementen waaruit een informatiemodel is sameng
 #### View
 
 <aside class="definition">
-  <dfn>View</dfn>Een groepering van objecttypen die gespecificeerd zijn in een extern informatiemodel en vanuit het perspectief van het eigen informatiemodel inzicht geeft welke gegevens van deze objecttypen relevant zijn binnen het eigen informatiemodel.
+  <dfn>View</dfn>Een groepering van modelelementen die gespecificeerd zijn in een extern informatiemodel en vanuit het perspectief van het eigen informatiemodel inzicht geeft welke gegevens van deze objecttypen relevant zijn binnen het eigen informatiemodel.
 </aside>
 
 <aside class='example'>
