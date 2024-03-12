@@ -1285,9 +1285,9 @@ weten de modelelementen Attribuutsoort en Relatiesoort.
 
 *Toelichting*
 
-Bijvoorbeeld: een persoon heeft een postadres. Dit kun je modelleren door middel van een `«Relatiesoort»` tussen een `«Objecttype»` `Persoon` en een `«Objecttype»` `Adres`. Het `postadres` is een kenmerk van het `Persoon`, dat in deze het bronobject van de relatie is. Dit metagegeven wordt vaak ook relatiebron genoemd (Engels: _source_). Het `postadres` is de naam van het kenmerk c.q. de relatie tussen een `Persoon` en `Adres` en geeft betekenis aan deze relatie. Het adres is er gewoon en wie hem allemaal gebruikt als adres en of dit als `postadres` is, als `woonadres` of iets anders, is voor het adres niet van belang.
+Bijvoorbeeld: een persoon heeft een adres. Dit kun je modelleren door middel van een `«Relatiesoort»` tussen een `«Objecttype»` `Persoon` en een `«Objecttype»` `Adres`. Het metagegeven `Bron` van de `«Relatiesoort»` bevat dan als waarde: `"Persoon"`.
 
-*Toepassing*: relaties, oftewel de modelelementen Relatiesoort en Externe koppeling.
+*Toepassing*: Relatiesoort en Externe koppeling.
 
 #### Metagegeven: **Doel**
 <aside class="definition">
@@ -1296,10 +1296,9 @@ Bijvoorbeeld: een persoon heeft een postadres. Dit kun je modelleren door middel
 
 *Toelichting*
 
-Bijvoorbeeld: een persoon heeft een postadres. Het postadres is de naam van de relatie tussen een persoon en een adres. Het adres is het doel van deze relatie. Dit metagegeven wordt vaak ook relatiedoel genoemd (Engels: _target_).
+Bijvoorbeeld: een persoon heeft een adres. Dit kun je modelleren door middel van een `«Relatiesoort»` tussen een `«Objecttype»` `Persoon` en een `«Objecttype»` `Adres`. Het metagegeven `Doel` van de `«Relatiesoort»` bevat dan als waarde: `"Adres"`.
 
-*Toepassing*: relaties, oftewel de modelelementen Relatiesoort en Externe
-koppeling.
+*Toepassing*: Relatiesoort en Externe koppeling.
 
 #### Metagegeven: **Unidirectioneel**
 
@@ -1309,11 +1308,14 @@ koppeling.
 
 *Toelichting*
 
-Bijvoorbeeld: een persoon heeft een postadres. De richting van de relatie is van het `«Objecttype»` `Persoon` naar het `«Objecttype»` `Adres`. De eigenaar van de relatie (de bron) heeft kennis van de het gerelateerde objecttype (het doel). In een modelleertaal wordt dit vaak aangegeven met een pijl. De pijl heeft als vertrekpunt de bron en heeft als pijlpunt, waar de relatie naar wijst, het gerelateerde `«Objecttype»`. Alle relaties zijn altijd gericht van het `«Objecttype»` (bron) naar het gerelateerde `«Objecttype»` (doel).
+Het is gebruikelijk om een richting aan te geven. De betekenis van `A` naar `B` is een andere dan van `B` naar `A`. Bovendien geeft het aan bij welk `«Objecttype»` het kenmerk wordt bijgehouden, oftewel wie de eigenaar is.
 
-Het is gebruikelijk om een richting aan te geven, enerzijds omdat de betekenis van `A` naar `B` een andere is dan van `B` naar `A`, anderzijds omdat het van belang is bij welke `«Objecttype»` het kenmerk wordt bijgehouden, oftewel wie de eigenaar is.
+Bijvoorbeeld: een persoon heeft een postadres. De richting van de relatie is van het `«Objecttype»` `Persoon` naar het `«Objecttype»` `Adres`. De eigenaar van de relatie (de bron, in dit voorbeeld: `Persoon`) heeft kennis van de het gerelateerde objecttype (het doel, in dit voorbeeld: `Adres`).
 
-*Toepassing*: relaties, oftewel de modelelementen Relatiesoort en Externe
+In een modelleertaal wordt dit vaak aangegeven met een pijl. De pijl heeft als vertrekpunt de bron en heeft als pijlpunt, waar de relatie naar wijst, het gerelateerde `«Objecttype»`. Alle relaties zijn altijd gericht van het bronobject naar het gerelateerde doelobject.
+
+
+*Toepassing*: Relatiesoort en Externe
 koppeling.
 
 #### Metagegeven: **Aggregatietype**
@@ -1344,7 +1346,7 @@ koppeling.
 
 De plek is een gepubliceerde plek waar gebruikers bij kunnen. Indien mogelijk is dit metagegeven gevuld met (heeft als waarde) een URI of een URL (als er geen URI is, dan kan dit een URL zijn, waar de waardelijst op basis van de naam van de waardelijst te vinden is), bijvoorbeeld: `Locatie`: `http://www.organisatie.nl/schemas/waardelijsten/NaamWaardelijst`.
 
-*Toepassing*: de modelelementen die een waardelijst zijn.
+*Toepassing*: Codelijst en Referentielijst.
 
 #### Metagegeven: **Doelformaat**
 
@@ -1356,7 +1358,7 @@ De plek is een gepubliceerde plek waar gebruikers bij kunnen. Indien mogelijk is
 
 Voor de hand liggende formaten waarin een waardelijst is gepubliceerd zijn onder andere SKOS en CSV.
 
-*Toepassing:* Codelijst
+*Toepassing:* Codelijst en Referentielijst.
 
 #### Metagegeven: **Datatype**
 
@@ -1505,6 +1507,8 @@ betreft, zoals een `CharacterString`.
   <dfn>Code</dfn>De in een registratie of informatiemodel aan de enumeratiewaarde toegekend unieke code.
 </aside>
 
+*Toepassing*: Enumeratiewaarde.
+
 #### Metagegeven: **Indicatie abstract object**
 <aside class="definition">
   <dfn>Indicatie abstract object</dfn>Een indicatie die aangeeft of er objecten _kunnen_ bestaan die getypeerd worden als zijnde objecten (instanties) van alleen dit objecttype. Een abstract objecttype moet altijd de generalisatie zijn van één of meerdere objecttypes die niet abstract zijn.
@@ -1566,7 +1570,7 @@ De `Populatie` kan ook gebruikt worden om aan te geven dat niet alle exemplaren 
 
 *Toelichting*
 
-Hier kan in tekst een beschrijving opgenomen worden over de kwaliteit van de inwinning van gegevens bij dit objecttype.
+Dit metagegeven kan een beschrijving bevattten over de kwaliteit van de inwinning van gegevens bij dit objecttype.
 
 *Toepassing:* Objecttype
 
