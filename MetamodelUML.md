@@ -963,4 +963,4 @@ Er is door de MIM-beheerder een metamodel *profiel* gemaakt in Sparx Enterprise 
 Het is niet vereist om dit profiel te gebruiken. Bovendien is het ook mogelijk om het profiel uit te breiden, naar de behoefte van de eigen organisatie. Maar, het is niet toegestaan om het profiel te wijzigen; dan wordt niet meer aan MIM voldaan. De reden hiervoor is dat een dergelijk aanpassing niet beheerd kan worden door de MIM-beheerder en er ambiguïteit zal ontstaan bij de interpretatie van het model. Voor andere UML tools kan ook een MIM-profiel gemaakt worden. 
 
 ### Imvertor
-Er is een tool *Imvertor*, waarmee je onder andere kunt controleren of een informatiemodel voldoet aan het MIM en zo niet, wat de reden daarvan is. Deze tool is open source en is te vinden op [www.imvertor.org](http://www.imvertor.org).
+Er is een tool *Imvertor*, waarmee je onder andere kunt controleren of een informatiemodel voldoet aan het MIM en zo niet, wat de reden daarvan is. Deze tool is open source en is te vinden op [www.imvertor.org](https://github.com/Imvertor/Imvertor-Maven).
