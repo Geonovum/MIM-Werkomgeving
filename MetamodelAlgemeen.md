@@ -668,7 +668,7 @@ Een informatiemodel kan onderverdeeld worden in meerdere packages, waarbij aange
 deze de modellering van de informatie van het domein bevatten.
 
 <aside class="definition">
-  <dfn>Domein</dfn>Een groepering van constructies die een semantisch samenhangend gedeelte van een informatiemodel beschrijven.
+  <dfn>Domein</dfn>Een groepering van modelelementen die een semantisch samenhangend gedeelte van een informatiemodel beschrijven.
 </aside>
 
 *Toelichting:*
