@@ -119,7 +119,7 @@ Er zijn vijf situaties waarin een keuze toegepast wordt:
 - Use case 4: een keuze tussen relatiedoelen, als nadere invulling van één betekenisvolle relatiesoort
 - Use case 5: een keuze tussen relatiesoorten/relatierollen (elk afzonderlijk betekenisvol)
 
-Voor elke toepassing geldt een aparte subset van het metamodel. De 'keuzeconstructie' maakt een keuze mogelijk tussen meerdere datatypen, attribuutsoorten, en relatiedoelen. In UML behouden we dezelfde modellering, een datatype blijft dus een datatype, een attribuutsoort een attribuutsoort en een relatiesoort een relatiesoort. De UML-elementen die het stereotype keuze krijgen zijn zelf geen datatype, attribuutsoort of relatiedoel. Merk op dat de diagrammen op metamodelniveau zijn gemodelleerd. Hoe dit op informatiemodelniveau uitpakt is onder het diagram beschreven in tekst. 
+Voor elke toepassing geldt een aparte subset van het metamodel. De keuzeconstructie maakt een keuze mogelijk tussen meerdere datatypen, attribuutsoorten en relatiedoelen. In UML behouden we dezelfde modellering: een datatype blijft dus een datatype, een attribuutsoort een attribuutsoort en een relatiesoort een relatiesoort. De UML-elementen die het stereotype keuze krijgen zijn zelf geen datatype, attribuutsoort of relatiedoel. Merk op dat de diagrammen op metamodelniveau zijn gemodelleerd. Hoe dit op informatiemodelniveau uitpakt is onder het diagram beschreven in tekst. 
 
 **Use case 1: Keuze tussen datatypen**
 
