@@ -1314,7 +1314,6 @@ Bijvoorbeeld: een persoon heeft een postadres. De richting van de relatie is van
 
 In een modelleertaal wordt dit vaak aangegeven met een pijl. De pijl heeft als vertrekpunt de bron en heeft als pijlpunt, waar de relatie naar wijst, het gerelateerde `«Objecttype»`. Alle relaties zijn altijd gericht van het bronobject naar het gerelateerde doelobject.
 
-
 *Toepassing*: Relatiesoort en Externe
 koppeling.
 
