@@ -1583,12 +1583,24 @@ Dit metagegeven kan een beschrijving bevattten over de kwaliteit van de inwinnin
 
 In essentie zijn er vier componenten die een meting of een waarneming beschrijven:
 
-1. het **onderwerp** (wat wordt er gemeten)
-1. de **waarde** (de waarde die gemeten is)
-1. het **datatype** van die waarde (kwalitatief (characterstring), kwantitatief (integer of real))
-1. de **eenheid** van de waarde
+1. het _onderwerp_ (wat wordt er gemeten)
+1. de _waarde_ (de waarde die gemeten is)
+1. het _datatype_ van die waarde (kwalitatief (`Characterstring`), kwantitatief (`Integer` of `Real`))
+1. de _eenheid_ van de waarde
 
-De eerste drie zijn informatie-technisch uit te drukken met het informatie-element `«Attribuutsoort»` en `«Datatype»`. Voor `Eenheid` is een apart metagegeven gecreëerd dat gekoppeld wordt aan een `«Attribuutsoort»` of een `«Referentie-element»`.
+De eerste drie zijn informatie-technisch uit te drukken met de informatie-elementen `«Attribuutsoort»` en `«Datatype»`. Voor `Eenheid` is een apart metagegeven gecreëerd dat gekoppeld wordt aan een `«Attribuutsoort»` of een `«Referentie-element»`.
+
+
+
+De waarde van `Eenheid` is een waarde uit de lijst gepubliceerd op:
+ - https://units-of-measurement.org/
+ - https://github.com/ucum-org/ucum/blob/main/common-units/TableOfExampleUcumCodesForElectronicMessagingwithPreface.pdf</p>
+
+Dit is een waarde in de vorm van een UCUM-code (niet de URL). Bijvoorbeeld: 
+
+ - Meter: `Eenheid`: `"m"`
+ - Decibel:  `Eenheid`: `"dB"`
+ - Kilogram per minuut: `Eenheid`: `"kg/min"`
 
 *Toepassing:* Attribuutsoort, Referentie-element.
 
