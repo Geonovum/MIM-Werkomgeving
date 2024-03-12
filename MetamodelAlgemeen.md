@@ -1576,7 +1576,7 @@ Dit metagegeven kan een beschrijving bevattten over de kwaliteit van de inwinnin
 #### Metagegeven: **Eenheid**
 
 <aside class="definition">
-  <dfn>Eenheid</dfn>Aanduiding van de eenheid die bij een meting of waarneming hoort. De waarde van Eenheid is een waarde uit de lijst gepubliceerd op https://units-of-measurement.org/.
+  <dfn>Eenheid</dfn>Aanduiding van de eenheid die bij een meting of waarneming hoort.
 </aside>
 
 *Toelichting*
