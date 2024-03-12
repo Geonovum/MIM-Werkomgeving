@@ -1590,7 +1590,7 @@ In essentie zijn er vier componenten die een meting of een waarneming beschrijve
 
 De eerste drie zijn informatie-technisch uit te drukken met de informatie-elementen `«Attribuutsoort»` en `«Datatype»`. Voor `Eenheid` is een apart metagegeven gecreëerd dat gekoppeld wordt aan een `«Attribuutsoort»` of een `«Referentie-element»`.
 
-De waarde van `Eenheid` is een waarde uit de lijst gepubliceerd op:https://units-of-measurement.org/ (handige lijst gepubliceerd in PDF door UCUM: https://github.com/ucum-org/ucum/blob/main/common-units/TableOfExampleUcumCodesForElectronicMessagingwithPreface.pdf.
+De waarde van `Eenheid` is een waarde uit de lijst gepubliceerd op:https://units-of-measurement.org/. [Handig overzicht gepubliceerd in PDF door UCUM](https://github.com/ucum-org/ucum/blob/main/common-units/TableOfExampleUcumCodesForElectronicMessagingwithPreface.pdf)).
 
 Dit is een waarde in de vorm van een UCUM-code (niet de URL). Bijvoorbeeld: 
 
