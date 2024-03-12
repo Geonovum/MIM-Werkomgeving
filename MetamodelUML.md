@@ -111,7 +111,7 @@ _Constraint_
 
 #### Keuze
 
-Er zijn vier situaties waarin een keuze toegepast wordt: 
+Er zijn vijf situaties waarin een keuze toegepast wordt: 
 
 - Use case 1: een keuze tussen datatypen
 - Use case 2: een keuze tussen twee of meer attribuutsoorten
