@@ -1934,6 +1934,8 @@ Er zijn metagegevens die een defaultwaarde hebben. Het is echter niet nodig om d
 
 | **Metagegeven**                           | **Defaultwaarde** |
 |-------------------------------------------|-------------------|
+| <a>Heeft tijdlijn geldigheid</a>          | `Nee`             |
+| <a>Heeft tijdlijn registratie</a>         | `Nee`             |
 | <a>Indicatie materiele historie</a>       | `Nee`             |
 | <a>Indicatie formele historie</a>         | `Nee`             |
 | <a>Indicatie classificerend</a>           | `Nee`             |
