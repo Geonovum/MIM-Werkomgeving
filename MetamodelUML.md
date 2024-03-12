@@ -275,21 +275,13 @@ Rode tekst betreft een standaardelement binnen EA. Zwarte tekst in de kolom betr
 
 <aside class="note" title="Nadere toelichting op het metagegeven Alias">
   <p>
-    <strong>Alias</strong> (zie: [[[#metagegeven-alias]]])
-  </p>
-
-  <p>
-    <strong>Toelichting</strong>: Verdere toelichting voor UML modellen: De alias is te specificeren voor `NamedElements` (zoals `UML-Class`, `UML-association`, `UML-Datatype` en `UML-property`). De alias is in UML gespecificeerd bij de metaclass `Element Import`. Dit wordt in UML ingezet voor het importeren van een `NamedElement` uit een ander package. In dit metamodel wordt de alias (nog) niet zo gebruikt. In Enterprise Architect is de alternatieve weergave aan te zetten in de <i>properties</i> van een <i>Diagram</i>, via: `use alias if available`.
+    De `Alias` is te specificeren voor `NamedElements` (zoals `UML-Class`, `UML-association`, `UML-Datatype` en `UML-property`). De `Alias` is in UML gespecificeerd bij de metaclass `Element Import`. Dit wordt in UML ingezet voor het importeren van een `NamedElement` uit een ander package. In dit metamodel wordt de `Alias` (nog) niet zo gebruikt. In Enterprise Architect is de alternatieve weergave aan te zetten in de <i>properties</i> van een <i>Diagram</i>, via: `use alias if available`. Voor de definitie van en algemene toelichting op `Alias`, zie: [[[#metagegeven-alias]]].
   </p>
 </aside>
 
 <aside class="note" title="Nadere toelichting op het metagegeven Identficerend">
   <p>
-    <strong>Identificerend</strong> (zie: [[[#metagegeven-identificerend]]])
-  </p>
-
-  <p>
-    <strong>Toelichting</strong>: Als een attribuutsoort identificerend is, dan krijgt dit kenmerk in UML `isId = true`. Als een <code>«<a>Relatiesoort</a>»</code> identificerend is, dan krijgt dit kenmerk in UML een stereotype `«id»`.
+    Als een attribuutsoort identificerend is, dan krijgt dit kenmerk in UML `isId = true`. Als een <code>«<a>Relatiesoort</a>»</code> identificerend is, dan krijgt dit kenmerk in UML een stereotype `«id»`. Voor de definitie van en algemene toelichting op `Identificerend`, zie: [[[#metagegeven-identificerend]]].
   </p>
 </aside>
 
