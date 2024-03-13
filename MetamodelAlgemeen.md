@@ -1827,6 +1827,19 @@ Een gestructureerd datatype bevat meerdere data-elementen.
 
 *Toepassing*: Gestructureerd datatype.
 
+#### Metagegeven: **bevat modelelement**
+Verkorte schrijfwijze: **modelelement**
+
+<aside class="definition">
+  <dfn>bevat modelelement</dfn>De binding tussen een package en een modelelement dat zich in dat package bevindt.
+</aside>
+
+*Toelichting*
+
+Een package `«Domein»` met de naam `Activiteiten` bevat `«Objecttype»` `Werken`, `Wonen` etc.
+
+*Toepassing*: Package, Informatiemodel, Domein, Extern, View.
+
 #### Metagegeven: **bevat enumeratiewaarde**
 Verkorte schrijfwijze: **enumeratiewaarde**
 
