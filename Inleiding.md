@@ -42,18 +42,18 @@ Met de bouwstenen oftewel de modelelementen die in dit metamodel beschreven zijn
 
 ## Wat is een informatiemodel
 Wanneer we informatie over bepaalde onderwerpen willen inwinnen, registreren of uitwisselen, dan is het van belang om deze informatie eerst goed te beschrijven. We doen dit zodat het voor eenieder die met de informatie aan de slag gaat helder en eenduidig is:
-- waarover de informatie gaat. Bv. informatie over een persoon of een gebouw. Persoon en gebouw noemen dit de objecten, de onderwerpen van gesprek
+- waarover de informatie gaat, bijvoorbeeld informatie over een persoon of een gebouw. Persoon en gebouw noemen dit de objecten, de onderwerpen van gesprek
 - dat deze onderwerpen van gesprek gemodelleerd zijn als informatieobjecten
-- de eigenschappen/kenmerken zelf, waarvan we informatie bijhouden, bv. de naam van een persoon of het bouwjaar van een gebouw
+- de eigenschappen/kenmerken zelf, waarvan we informatie bijhouden, bv. de naam van een persoon of het bouwjaar van een gebouw;
 - wat de betekenis is van die informatie, de semantiek
-- hoe deze informatie qua structuur in elkaar zit, qua onderlinge relaties en qua interne structuur van de data
+- hoe deze informatie qua structuur in elkaar zit, qua onderlinge relaties en qua interne structuur van de data.
 
 We doen dit door een model te maken van de informatie. Een informatiemodel beschrijft daarom de structuur, semantiek en de eigenschappen van informatie over dingen in de werkelijkheid. De beschrijving van de informatie heeft de vorm van een model dat een gestructureerde weergave is van die werkelijkheid. Een dergelijk model is noodzakelijk om deze informatie te kunnen beheren en gebruiken (door mensen en machines) bij het communiceren over deze werkelijkheid, in registraties of anderszins, zoals het specificeren van de tussen registraties uit te wisselen gegevens of van de te bevragen informatie uit een registratie.
 
-### Uitwerking Modelbeschrijving van dingen in de werkelijkheid
+### Modelbeschrijving
 Het beschrijven vindt plaats door de informatie van de objecten die we beschouwden te modelleren als informatieobjecten, met hun kenmerken en hun onderlinge relaties. Aan de hand van een voorbeeld werken we dit principe verder uit.
 
-<aside class='example' title="Modelbeschrijving van dingen in de werkelijkheid">
+<aside class='example' title="Modelmatige beschrijving van dingen in de werkelijkheid">
     <p>Jan en Katrien zijn bijvoorbeeld ‘dingen in de werkelijkheid’. Zij hebben bepaalde kenmerken, zoals een naam en een geboortedatum. In een informatiemodel komen Jan en Katrien zelf niet zelf voor. Zij worden in het informatiemodel gemodelleerd als een <code>Persoon</code>. Ook hun gegevens, zoals het feit dat 10-10-1970 de geboortedatum van Jan is, komen niet voor in het informatiemodel. In het informatiemodel is alleen het kenmerk <code>geboortedatum</code> gemodelleerd, als een kenmerk van een <code>Persoon</code>, met een definitie een toelichting.</p> 
     <p>De persoon in het informatiemodel is een beschrijving vanuit het perspectief van het informatiedomein van waaruit we Jan en Katrien beschouwen. We bekijken Jan en Katrien dan ook wel als een van de objecten binnen een domein, die we vervolgens gaan modelleren als informatieobjecten. In het informatiemodel is hiervoor het objecttype <code>Persoon</code> gedefinieerd en Jan en Katrien zijn dus objecten van het objecttype <code>Persoon</code>. De objecten 'Domtoren' en 'Paleis Het Loo' kunnen we typeren als het objecttype <code>Gebouw</code>.Objecttypen in een informatiemodel <i>representeren</i> dus de dingen in de werkelijkheid. Het informatiemodel is een model van de werkelijkheid en richt zich op de informatie erover.</p>
     <p>De kenmerken zoals de <code>naam</code> en <code>geboortedatum</code>, maar bijvoorbeeld ook <code>identificatie</code> en <code>registratietijdstip</code>, worden gezien als attributen van dit objecttype. We noemen een dergelijk kenmerk een <code>Attribuutsoort</code>. Sommige kenmerken geven relaties tussen objecten weer, zoals het gegeven dat Jan in Paleis Het Loo woont. Deze modelleren we door middel van een <code>Relatiesoort</code>, tussen objecttypen, in dit geval tussen de informatieobjecten <code>Persoon</code> en <code>Gebouw</code>.</p>
