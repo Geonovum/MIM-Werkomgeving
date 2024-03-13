@@ -1320,20 +1320,19 @@ koppeling.
 #### Metagegeven: **Aggregatietype**
 
 <aside class="definition">
-  <dfn>Aggregatietype</dfn>Aanduiding of het objecttype die de eigenaar is van een relatie het doel van relatie ziet als een samen te voegen onderdeel die bij het objecttype hoort.
+  <dfn>Aggregatietype</dfn>Aanduiding of het objecttype die de eigenaar is van een relatie het doel van relatie ziet als een samenstellend deel dat bij het objecttype hoort en wat de type van die samenstellingsrelatie is.
 </aside>
 
 *Toelichting*
 
-Bijvoorbeeld: een auto heeft verschillende onderdelen, waaronder een motor. In het informatiemodel gaat het vooral om de auto en is de motor alleen relevant omdat het een onderdeel is van de auto. De aggregatie is in de basis een relatie en het aggregratietype geeft aanvullende informatie. Standaard is er bij een relatie geen sprake van een aggregatie, (`Aggregatietype`: `"Geen"`). Er is dan sprake van een relatie tussen objecten van beide objecttypes, en deze kan conditioneel zijn, maar de objecten worden gezien als dat ze zelfstandig bestaansrecht hebben en daarnaast ook een relatie met elkaar hebben en verder niets.
+Een object kan samengesteld zijn uit samenstellende delen die ook individueel in het informatiemodel als objecttypen herkenbaar zijn. Dit wordt een aggregatie genoemd. Dit wordt gemodelleerd met een `Attribuutsoort` waarbij dit metagegeven is ingevuld met een type aggregatie. Er zijn twee typen: een compositie aggregatie en een gedeelde aggregatie. De aggregatie is in de basis een relatie en het aggregratietype geeft aanvullende informatie. Standaard is er bij een relatie geen sprake van een aggregatie, dan wordt bij dit metagegeven `Geen` ingevuld.
 
-Als er wel sprake is van een aggregatie, dan geeft het `Aggregatietype` aan dat het `«Objecttype»` die doel is van de relatie, in functionele zin en in aanvulling op de relatie zelf, ook een onderdeel (component) is van het `«Objecttype»` die de eigenaar is van de relatie. De eigenaar geeft hierbij aan hoe de aggregatie in gezien moet worden. Dit kan zijn:
+- `"Compositie"` (Engels: _"composite"_): het doel object is een integraal onderdeel van het eigenaarobject en dit onderdeel wordt niet gedeeld met anderen. De eigenaar is volledig verantwoordelijk voor het beheer van de bijhouding van informatie over het onderdeel. Als de eigenaar vervalt, dan vervallen automatisch ook de onderdelen. Het doel object kan als onderdeel niet zelfstandig bestaan: het doel vervalt als de eigenaar vervalt. Wel kan je een onderdeel vervangen met behoud van het eigenaar object.
+- `"Gedeeld"` (Engels: _"shared"_): het onderdeel kan gebruikt en gedeeld worden door meerdere eigenaren. Bijvoorbeeld: een leerling maakt deel uit van verschillende klassen.
 
-- `"Compositie"` (Engels: _"composite"_): het doel object is een integraal onderdeel van het eigenaarobject en dit onderdeel wordt niet gedeeld met anderen. De eigenaar is volledig verantwoordelijk voor het beheer van de bijhouding van informatie over het onderdeel. Als de eigenaar vervalt, dan vervallen automatisch ook de onderdelen mee. Het doel object kan als onderdeel niet zelfstandig bestaan: het doel vervalt als de eigenaar vervalt. Wel kan je een onderdeel vervangen met behoud van het eigenaar object.
-- `"Gedeeld"` (Engels: _"shared"_): het onderdeel kan gebruikt en gedeeld worden door meerdere eigenaren. Bijvoorbeeld: een betaalrekening.
+Bijvoorbeeld: een auto heeft verschillende onderdelen, waaronder een motor. In het informatiemodel gaat het vooral om de auto en is de motor alleen relevant omdat het een onderdeel is van de auto. Een motor kan in dit geval maar door één auto worden gebruikt en als een auto verdwijnt verdwijnt ook de motor. Met andere woorden een motor is een onlosmakelijk onderdeel van een auto en kan niet door een ander object worden gebruikt of zelfstandig bestaan, het is een aggregatie van het type compositie. (`Aggregatietype`: `"Compositie"`).
 
-*Toepassing*: relaties, oftewel de modelelementen Relatiesoort en Externe
-koppeling.
+*Toepassing*: Relatiesoort en Externe koppeling.
 
 #### Metagegeven: **Locatie**
 
