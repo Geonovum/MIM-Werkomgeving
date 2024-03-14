@@ -924,10 +924,9 @@ Een informatiemodel moet echter ook gebruikt kunnen worden zonder dat er vastges
   <dfn>Modelelement identificatie</dfn>De identificatie van een modelelement.
 </aside>
 
-*Toelichting* De identificatie van een modelelement kan bijvoorbeeld op de volgende twee manieren worden samengesteld,
-
- als **urn-URI**: `<urn:modelelement:imbaglv:objecten:Pand`  
- of als **http-URI**: `<http://.../def#Pand>`. 
+*Toelichting* De URI kan bijvoorbeeld op de volgende twee manieren voorkomen:
+ - **urn-URI**: `<urn:modelelement:imbaglv:objecten:Pand`;
+ - **http-URI**: `<http://.../def#Pand>`.
 
 De `modelelement identificatie` kan bepaald worden aan de hand van de <code><a>Naam</a></code> van het modelelement en de `Basis-URI` van de _package_ waarin het modelelement zich bevindt (op logisch niveau conform de naamgevingsconventies). Dit vormt de default waarde. In de meeste gevallen zal een modelleur dit metagegeven niet expliciet invullen maar uitgaan van de defaultwaarde.
 
