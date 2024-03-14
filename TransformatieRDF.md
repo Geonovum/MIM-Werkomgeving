@@ -224,7 +224,7 @@ De identificatie van een attribuutsoort is afgeleid van de `mim:modelelementiden
 
 Indien het datatype van een attribuutsoort gelijk is aan PrimitiefDatatype (of een daarvan afgeleid datatype), dan is sprake van een `owl:DatatypeProperty` en een `sh:nodeKind sh:Literal`. In alle andere gevallen is sprake van een `owl:Objecttype` en een `sh:nodeKind sh:IRI`. Zie ook de transformatie van de eigenschapen `mim:type`.
 
-De URI van de propertyshape wordt afgeleid van de naam van het modelelement dat de attribuutsoort "bezit" en de naam van de attribuutsoort. De URI van de `owl:DatatypeProperty` is gelijk aan de mim:modelelementidentificatie van de attribuutsoort.
+De URI van de propertyshape wordt afgeleid van de naam van het modelelement dat de attribuutsoort "bezit" en de naam van de attribuutsoort. De URI van de `owl:DatatypeProperty` is gelijk aan de mim:modelelementIdentificatie van de attribuutsoort.
 
 <pre class='ex-sparql'>
 CONSTRUCT {
@@ -264,7 +264,7 @@ WHERE {
 
 Een `mim:Gegevensgroep` wordt vertaald naar een `sh:PropertyShape` in combinatie met een `owl:ObjectProperty`. De nodekind van de propertyshape is een `sh:BlankNode`. Gedachte hierachter is dat de gegevensgroep de verbinding is tussen een objecttype en een gegevensgroeptype. Een gegevensgroeptype is vervolgens een groep van samenhangende attribuutsoorten, wat overeen komt met een class en een nodeshape (zie ook gegevensgroeptype). Omdat een gegevensgroeptype geen eigen identiteit heeft, zal dit gemodelleerd worden als blank node.
 
-De URI van de propertyshape wordt afgeleid van de naam van het modelelement dat de gegevensgroep "bezit" en de naam van de gegevensgroep. De URI van de `owl:ObjectProperty` is gelijk aan de mim:modelelementidentificatie van de gegevensgroep.
+De URI van de propertyshape wordt afgeleid van de naam van het modelelement dat de gegevensgroep "bezit" en de naam van de gegevensgroep. De URI van de `owl:ObjectProperty` is gelijk aan de mim:modelelementIdentificatie van de gegevensgroep.
 
 <pre class='ex-sparql'>
 CONSTRUCT {
@@ -329,7 +329,7 @@ In het MIM zijn er twee specificatievormen voor relaties: op basis van `mim:Rela
 
 Een `mim:Relatiesoort` wordt vertaald naar een `sh:PropertyShape` in combinatie met een `owl:ObjectProperty`. De nodekind van de propertyshape is een `sh:IRI`.
 
-De URI van de propertyshape wordt afgeleid van de naam van het modelelement dat de relatiesoort "bezit" en de naam van de relatiesoort. De URI van de `owl:ObjectProperty` is gelijk aan de mim:modelelementidentificatie van de relatiesoort.
+De URI van de propertyshape wordt afgeleid van de naam van het modelelement dat de relatiesoort "bezit" en de naam van de relatiesoort. De URI van de `owl:ObjectProperty` is gelijk aan de mim:modelelementIdentificatie van de relatiesoort.
 
 <pre class='ex-sparql'>
 CONSTRUCT {
@@ -419,7 +419,7 @@ In het MIM zijn er twee specificatievormen voor relaties: op basis van `mim:Rela
 
 Een `mim:Relatiesoort` wordt vertaald naar een `sh:PropertyShape` in combinatie met een `owl:ObjectProperty`. De nodekind van de propertyshape is een `sh:IRI`.
 
-De URI van de propertyshape wordt afgeleid van de naam van het modelelement dat de relatierol "bezit" en de naam van de relatierol. De URI van de `owl:ObjectProperty` is gelijk aan de mim:modelelementidentificatie van de relatiesoort. Aangezien er twee relatierollen gedefinieerd kunnen worden, kan ook sprake zijn van twee properties. In dat geval zijn deze twee properties elkaars inverse.
+De URI van de propertyshape wordt afgeleid van de naam van het modelelement dat de relatierol "bezit" en de naam van de relatierol. De URI van de `owl:ObjectProperty` is gelijk aan de mim:modelelementIdentificatie van de relatiesoort. Aangezien er twee relatierollen gedefinieerd kunnen worden, kan ook sprake zijn van twee properties. In dat geval zijn deze twee properties elkaars inverse.
 
 <pre class='ex-sparql'>
 CONSTRUCT {
@@ -1778,7 +1778,7 @@ Aspecten:
 
 |RDFS term | MIM-aspect | Uitleg |
 |----------|-------------|--------|
-| IRI | mim:modelelementidentificatie | De identificatie (URI) van het modelelement wordt in mim vastgelegd als eigenschap |
+| IRI | mim:modelelementIdentificatie | De identificatie (URI) van het modelelement wordt in mim vastgelegd als eigenschap |
 | rdfs:label, sh:name | mim:naam | Het rdfs:label (of sh:name als een meer technische naam gewenst is) van een nodeshape of class betreft de naam |
 | skos:altLabel, skos:prefLabel, rdfs:label, sh:name | mim:alias | skos:altLabel is letterlijk een alias, sh:name is ook een alias en wordt met name gebruikt voor meer technische namen, terwijl skos:prefLabel of skos:altLabel vaak een meer functionele naam bevat|
 | dct:subject | mim:begrip | dct:subject geeft dezelfde relatie weer als mim:begrip |
