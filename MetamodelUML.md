@@ -285,8 +285,6 @@ Rode tekst betreft een standaardelement binnen EA. Zwarte tekst in de kolom betr
   </p>
 </aside>
 
-
-
 ### Objecten en attributen in UML
 
 #### «Objecttype»
