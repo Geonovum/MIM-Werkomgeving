@@ -397,7 +397,7 @@ Diagram: [Kern](#kern)
 
 Generalisatie tussen objecttypes:
 
-Een generalisatierelatie geeft aan dat bepaalde eigenschappen van een objecttype (vaak attribuutsoorten en/of relatiesoorten) ook gelden voor de gerelateerde objecttypen, én dat deze qua semantiek, structuur en syntax gelijk zijn. We spreken dan van een supertype met subtypen. De modelelementen die generiek gelden worden in een generiek objecttype, het supertype, gemodelleerd en deze worden overerft door elk subtype (minimaal twee) die de `«Generalisatie»` legt naar dit generieke `«Objecttype»`.
+Een generalisatierelatie geeft aan dat bepaalde eigenschappen van een objecttype (vaak attribuutsoorten en/of relatiesoorten) ook gelden voor de gerelateerde objecttypen, én dat deze qua semantiek, structuur en syntax gelijk zijn. We spreken dan van een supertype met subtypen. De modelelementen die generiek gelden worden in een generiek objecttype, het supertype, gemodelleerd en deze worden overerft door elk subtype dat de `«Generalisatie»` legt naar dit generieke `«Objecttype»`.
 
 Generalisatie tussen datatypen:
 
@@ -1522,7 +1522,7 @@ betreft, zoals een `CharacterString`.
 
 #### Metagegeven: **Indicatie abstract object**
 <aside class="definition">
-  <dfn>Indicatie abstract object</dfn>Een indicatie die aangeeft of er objecten _kunnen_ bestaan die getypeerd worden als zijnde objecten (instanties) van alleen dit objecttype. Een abstract objecttype moet altijd de generalisatie zijn van één of meerdere objecttypes die niet abstract zijn.
+  <dfn>Indicatie abstract object</dfn>Een indicatie die aangeeft of er objecten _kunnen_ bestaan die getypeerd worden als zijnde objecten (instanties) van alleen dit objecttype.
 </aside>
 
 <aside class="note">
