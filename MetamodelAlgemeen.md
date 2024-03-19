@@ -1612,13 +1612,14 @@ Bijvoorbeeld de minimale waarde voor een geldigheidsdatum.
 
 *Toepassing*
 
-Gebruik op `«Attribuutsoort»` en `«Data-element»` met een `«Primitief datatype»` van het type:
-- `Integer`
-- `Decimal`
-- `Float`
-- `Real`
-- `DateTime`
-- `Date`
+
+Gebruik op attribuutsoorten, data elementen en referentie-elementen met een primitief datatype van het type:
+- Integer
+- Decimal
+- Float
+- Real
+- DateTime
+- Date
 
 Een modelelement mag maar één voorkomen van metagegeven `Minimumwaarde inclusief` of `Minimumwaarde exclusief` hebben.
 
@@ -1635,13 +1636,15 @@ Bijvoorbeeld de minimale inhoud van een bouwwerk.
 
 *Toepassing*
 
-Gebruik op `«Attribuutsoort»` en `«Data-element»` met een `«Primitief datatype»` van het type:
-- `Integer`
-- `Decimal`
-- `Float`
-- `Real`
-- `DateTime`
-- `Date`
+
+Gebruik op attribuutsoorten, data elementen en referentie-elementen met een primitief datatype van het type:
+- Integer
+- Decimal
+- Float
+- Real
+- DateTime
+- Date
+
 
 Een modelelement mag maar één voorkomen van metagegeven `Minimumwaarde inclusief` of `Minimumwaarde exclusief` hebben.
 
@@ -1658,13 +1661,15 @@ Bijvoorbeeld de minimale waarde voor een geldigheidsdatum.
 
 *Toepassing*
 
-Gebruik op `«Attribuutsoort»` en `«Data-element»` met een `«Primitief datatype»` van het type:
-- `Integer`
-- `Decimal`
-- `Float`
-- `Real`
-- `DateTime`
-- `Date`
+
+Gebruik op attribuutsoorten, data elementen en referentie-elementen met een primitief datatype van het type:
+- Integer
+- Decimal
+- Float
+- Real
+- DateTime
+- Date
+
 
 Een modelelement mag maar één voorkomen van metagegeven `Maximumwaarde inclusief` of `Maximumwaarde exclusief` hebben.
 
@@ -1681,13 +1686,14 @@ Bijvoorbeeld de maximale waarde voor een geldigheidsdatum.
 
 *Toepassing*
 
-Gebruik op `«Attribuutsoort»` en `«Data-element»` met een `«Primitief datatype»` van het type:
-- `Integer`
-- `Decimal`
-- `Float`
-- `Real`
-- `DateTime`
-- `Date`
+
+Gebruik op attribuutsoorten, data elementen en referentie-elementen met een primitief datatype van het type:
+- Integer
+- Decimal
+- Float
+- Real
+- DateTime
+- Date
 
 Een modelelement mag maar één voorkomen van metagegeven `Maximumwaarde inclusief` of `Maximumwaarde exclusief` hebben.
 
