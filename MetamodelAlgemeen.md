@@ -1717,7 +1717,9 @@ Een modelelement mag maar één voorkomen van metagegeven `Maximumwaarde inclusi
 </aside>
 
 *Toelichting:*
-`Mixin` kan gebruikt worden als metagegeven bij een `«Generalisatie»` bij modellen op: [[[#niveau-3-logisch-informatie-of-gegevensmodel]]], indien er sprake is van _multiple inheritance_, d.w.z. meerdere superklassen op een subklasse. Het is opgenomen om multiple-inheritance-implementatie-issues op te lossen in talen/specificaties die dit niet (of niet eenvoudig) ondersteunen. Met `Mixin = "Ja"` wordt aangegeven dat deze generalisatie en ook de gerelateerde superklasse niet in de implementatie voorkomt maar dat wel eigenschappen (attribuutsoorten en relatiesoorten/-rollen) worden overgenomen door de subklasse. `Mixin = "Ja"` geeft de mogelijkheid om de _multiple inheritance_ indien gewenst, in het MIM niveau 3 model te behouden maar er in de implementatie indien nodig rekening, mee te houden. De modelleur kan hiermee aangeven welke `«Generalisatie»` op een alternatieve manier wordt geïmplementeerd. Talen die _multiple inheritance_ wel ondersteunen negeren dit metagegeven.
+
+`Mixin` kan gebruikt worden als metagegeven bij een `Generalisatie` bij logische gegevensmodellen indien er sprake is van multiple inheritance, d.w.z. meerdere superklassen op een subklasse. Het is opgenomen om multiple inheritance implementatie-issues op te lossen in talen/specificaties die dit niet (of niet eenvoudig) ondersteunen. Met `Mixin = Ja` wordt aangegeven dat deze generalisatie en ook de gerelateerde superklasse niet in de implementatie voorkomt maar dat wel eigenschappen (attribuutsoorten en relatiesoorten/rollen) worden overgenomen door de subklasse. `Mixin = Ja` geeft de mogelijkheid om de multiple inheritance indien gewenst, in het MIM niveau 3 model te behouden maar er in de implementatie indien nodig rekening, mee te houden. De modelleur kan hiermee aangeven welke generalisatie op een alternatieve manier wordt geïmplementeerd. Talen die multiple inheritance wel ondersteunen negeren dit metagegeven.
+
 
 <figure id="Mixin">
   <img src="media/Mixin.png" alt="" />
