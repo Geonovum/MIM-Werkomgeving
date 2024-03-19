@@ -269,6 +269,7 @@ Deze paragraaf is een aanvulling op de paragraaf [[[#specificatie-metagegevens]]
 | minimumwaarde exclusief | [`mim:minimumwaardeExclusief`](http://bp4mc2.org/def/mim#minimumwaardeExclusief) | owl:DatatypeProperty  |  [grondslag](#metagegeven-minimumwaarde-exclusief) |
 | maximumwaarde inclusief | [`mim:maximumwaardeInclusief`](http://bp4mc2.org/def/mim#maximumwaardeInclusief) | owl:DatatypeProperty  |  [grondslag](#metagegeven-maximumwaarde-inclusief) |
 | maximumwaarde exclusief | [`mim:maximumwaardeExclusief`](http://bp4mc2.org/def/mim#maximumwaardeExclusief) | owl:DatatypeProperty  |  [grondslag](#metagegeven-maximumwaarde-exclusief) |
+| mixin | [`mim:mixin`](http://bp4mc2.org/def/mim#mixin) | owl:DatatypeProperty  |  [grondslag](#metagegeven-mixin) |
 
 ### Objecten en attributen in LD
 
@@ -509,6 +510,7 @@ De generalisaties worden naar het volgende aspect gespecificeerd:
 | Subtype                      | [`mim:definitie`](http://bp4mc2.org/def/mim#subtype) | 1 | [`mim:Objecttype`](http://bp4mc2.org/def/mim#Objecttype) |
 | Supertype                      | [`mim:definitie`](http://bp4mc2.org/def/mim#supertype) | 1 | [`mim:Objecttype`](http://bp4mc2.org/def/mim#Objecttype) |
 | Datum opname                 | [`mim:datumOpname`](http://bp4mc2.org/def/mim#datumOpname) | 1 | datum |
+| mixin                        | [`mim:mixin`](http://bp4mc2.org/def/mim#mixin)             | 1 | boolean |
 <!-- | Constraint                | [`mim:constraint`](http://bp4mc2.org/def/mim#constraint) | 0..n | [`mim:Constraint`](http://bp4mc2.org/def/mim#Constraint) | -->
 
 #### mim:Generalisatie bij datatypen

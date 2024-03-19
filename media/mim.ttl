@@ -446,6 +446,11 @@ mim:maximumwaardeExclusief a owl:DatatypeProperty ;
   rdfs:comment "Maximumwaarde exclusief (`<`) is de bovengrens van het waardebereik voor een attribuutsoort of data element getypeerd met een primitief datatype, exclusief die waarde zelf. De maximumwaarde moet van hetzelfde primitieve datatype zijn als het datatype van het modelelement waar het voor geldt."@nl ;
   dct:source mimdoc:sectie2.8.2.39;
 .
+mim:mixin a owl:DatatypeProperty;
+  rdfs:label "mixin"@nl;
+  rdfs:comment "Metagegeven om bij een generalisatie aan te geven dat bij een implementatie die geen multiple inheritance ondersteunt de eigenschappen van de superklasse worden overgenomen door de subklasse. De superklasse zelf komt niet in de implementatie voor."@nl;
+  dct:source mimdoc:metagegeven-mixin;
+.
 
 #Metagegevens modelelementen met relaties naar andere modelelementen
 mim:attribuut a owl:ObjectProperty;

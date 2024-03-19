@@ -145,7 +145,7 @@
 |Specialisatie van|[mim:Modelelement](#Modelelement)|
 |Definitie|De typering van het hiërarchische verband tussen een meer generiek en een meer specifiek modelelement van hetzelfde soort, waarbij het meer specifieke modelelement eigenschappen van het meer generieke modelelement overerft. Dit verband is alleen gedefinieerd voor objecttypen en datatypen.|
 |Bron|[Sectie 2.3.1 Generalisatie](https://docs.geostandaarden.nl/mim/mim/#generalisatie)|
-|Eigenschappen|[mim:constraint](#constraint), [mim:datumOpname](#datumOpname), [mim:subtype](#subtype), [mim:supertype](#supertype)|
+|Eigenschappen|[mim:constraint](#constraint), [mim:datumOpname](#datumOpname), [mim:mixin](#mixin), [mim:subtype](#subtype), [mim:supertype](#supertype)|
 
 ### mim:GestructureerdDatatype {#GestructureerdDatatype}
 
@@ -730,6 +730,15 @@
 |Definitie|Minimumwaarde inclusief (`>=`) is de ondergrens van het waardebereik voor een attribuutsoort of data element getypeerd met een primitief datatype, inclusief die waarde zelf. De minimumwaarde moet van hetzelfde primitieve datatype zijn als het datatype van het modelelement waar het voor geldt.|
 |Bron|[Sectie 2.8.2.36 Metagegeven: minimumwaarde inclusief](https://docs.geostandaarden.nl/mim/mim/#metagegeven-minimumwaarde-inclusief)|
 |Eigenschap van|[mim:DataElement](#DataElement), [mim:ReferentieElement](#ReferentieElement), [mim:Attribuutsoort](#Attribuutsoort), |
+
+### mim:mixin {#mixin}
+
+|URI|http://modellen.mim-standaard.nl/def/mim#mixin|
+|-|-|
+|Definitie|Metagegeven om bij een generalisatie aan te geven dat bij een implementatie die geen multiple inheritance ondersteunt de eigenschappen van de superklasse worden overgenomen door de subklasse. De superklasse zelf komt niet in de implementatie voor.|
+|Bron|[Metagegeven: Mixin](https://docs.geostandaarden.nl/mim/mim/#metagegeven-mixin)|
+|Datatype|[boolean](http://www.w3.org/2001/XMLSchema#boolean)|
+|Eigenschap van|[mim:Generalisatie](#Generalisatie), |
 
 ### mim:mogelijkGeenWaarde {#mogelijkGeenWaarde}
 
