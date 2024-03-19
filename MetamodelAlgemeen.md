@@ -1518,8 +1518,6 @@ betreft, zoals een `CharacterString`.
 
 *Toelichting*
 
-Een abstract objecttype moet altijd de generalisatie zijn van één of meerdere objecttypes die niet abstract zijn.
-
 Niet-abstract wordt ook wel _concreet_ genoemd. Bijvoorbeeld het abstracte `«Objecttype»` `"Voertuig"`, met concrete specialisaties `"Auto"`, `"Fiets"` en `"Bromfiets"`. Dit betekent dat er geen voertuigen mogen bestaan die alleen maar een voertuig zijn en waarbij in het midden gelaten mag worden of het een auto, fiets, bromfiets betreft. Als het `"Voertuig"` daarentegen niet als abstract is gemodelleerd, dan mogen er wel voertuigen bestaan die alleen maar een voertuig zijn en niet een auto, fiets of bromfiets. In beide gevallen kan er over de objecten gesproken worden als zijnde een voertuig en kunnen deze objecten in algemene zin als zodanig behandeld worden (zoals een `«Generalisatie»` bedoeld is).
 
 Wanneer een `«Objecttype»` niet abstract is, oftewel concreet, dan kunnen er objecten bestaan die een instantie van `«Objecttype»` zijn.
