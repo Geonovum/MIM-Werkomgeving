@@ -140,13 +140,17 @@ Voor elke mogelijkheid is een aparte `«MIM metaclass»` beschikbaar in het meta
 
 <aside class="example" title="Keuze tussen datatypen">
   <p>
-    Dit diagram is uitgewerkt voor <code>Objecttype</code>. Voor <code>Gegevensgroeptype</code> en <code>Relatieklasse</code> geldt hetzelfde patroon. Een <code>Attribuutsoort</code> heeft normaal één <code>Datatype</code>. Als er sprake is van een <code>Keuze</code>, dan is het <code>Attribuutsoort</code> gekoppeld met een <code>Keuze</code> en de <code>Keuze</code> geeft twee of meer <code>Datatypen</code> aan.
+      Dit diagram is uitgewerkt voor <code>Objecttype</code>. Voor <code>Gegevensgroeptype</code> en <code>Relatieklasse</code> geldt hetzelfde patroon. Een <code>Attribuutsoort</code> heeft normaal één <code>Datatype</code>. Als er sprake is van een <code>Keuze</code>, dan is het <code>Attribuutsoort</code> gekoppeld met een <code>Keuze</code> en de <code>Keuze</code> geeft twee of meer <code>Datatypen</code> aan.
   </p>
   <figure id="KeuzeDatatype1">
     <img src="media/KeuzeDatatype1.png" alt="" />
     <figcaption>Diagram: Keuze tussen datatypen</figcaption>
   </figure>
 </aside>
+
+Voor use case zie: ([use case 1: datatypekeuze](#datatypekeuze)).
+
+
 
 <!---
 <aside class="issue" title="Aanvullende tekst afkomstig uit de branch bij issue 190">
@@ -165,6 +169,8 @@ Voor elke mogelijkheid is een aparte `«MIM metaclass»` beschikbaar in het meta
     <figcaption>Diagram: Keuze tussen attribuutsoorten</figcaption>
   </figure>
 </aside>
+
+Voor use case zie: ([use case 2: attribuutkeuze_1](#attribuutkeuze_v1)).
 -->
 
 <aside class="example" title="Keuze tussen meerdere manieren om één betekenisvol attribuutsoort in te vullen">
@@ -177,6 +183,8 @@ Voor elke mogelijkheid is een aparte `«MIM metaclass»` beschikbaar in het meta
   </figure>
 </aside>
 
+Voor use case zie: ([use case 3: attribuutkeuze_2](#attribuutkeuze_v2)).
+
 <aside class="example" title="Keuze tussen relatiedoelen met één betekenisvolle relatiesoort">
   <p>
     Als nadere invulling van één betekenisvolle <code>Relatiesoort</code>. Dit diagram is uitgewerkt voor <code>Objecttype</code>. Voor <code>Gegevensgroeptype</code> geldt hetzelfde patroon, behalve dat een <code>Gegevensgroeptype</code> geen doel mag zijn van een <code>Relatiesoort</code>. Een <code>Objecttype</code> of <code>Gegevensgroep</code> kan normaal een <code>Relatiesoort</code> hebben, die gekoppeld is aan een <code>Objecttype</code>. Als er sprake is van een <code>Relatiesoort</code> met een <code>Keuze</code>, dan is het <code>Relatiedoel</code> van de <code>Relatiesoort</code> niet gekoppeld aan 1 <code>Objecttype</code>, maar dan is het <code>Objecttype</code> gekoppeld aan een <code>Keuze</code> en deze <code>Keuze</code> geeft 2 of meer <code>Relatiedoelen</code> aan.</p>
@@ -187,6 +195,8 @@ Voor elke mogelijkheid is een aparte `«MIM metaclass»` beschikbaar in het meta
   
   <p>Toelichting: een bron objecttype of gegevensgroeptype kan normaal een relatiesoort/relatierol hebben, die gekoppeld is aan (verwijst naar) een doel objecttype. Als er sprake is van een relatiesoort/relatierol met een relatiedoel keuze, dan is de relatiesoort niet gekoppeld aan 1 objecttype, maar dan is de relatiesoort gekoppeld aan een keuze en deze keuze is gekoppeld aan 2 of meer doel objecttypen. Elk objecttype is een afzonderlijk relatiedoel. Er moet voor deze ene relatiesoort/relatierol een keuze gemaakt worden voor 1 van de relatiedoelen. Het gerelateerde object is 1 van deze objecttypen, maar de betekenis van de relatie is hetzelfde, ongeacht van welk objecttype het object is.</p>
 </aside>
+
+Voor use case zie: ([use case 4: relatiedoel keuze](#relatiedoelkeuze)).
 
 <aside class="example" title="Keuze tussen 2 of meer relatiesoorten/relatierollen (elk afzonderlijk betekenisvol)">
   <p>Analoog aan de keuze tussen attribuutsoorten 2, maar dan voor relatiesoorten/relatierollen. Het objecttype kent 2 of meer relatiesoorten/relatierollen, met elk een eigen betekenis, en precies 1 hiervan is verplicht.</p>
@@ -208,7 +218,8 @@ Voor elke mogelijkheid is een aparte `«MIM metaclass»` beschikbaar in het meta
     </ul>
   </p>
 </aside>
-  
+
+Voor use case zie: ([use case 5: relatiedoel-met betekenis](#relatiedoelkeuzeMetBetekenis)). 
 
 #### Relatiesoort en relatierol
 
