@@ -459,8 +459,8 @@ Als de modelleur kiest om de `«Constraint»` niet alleen in gewone taal te besc
 
 ## Historie
 
-Deze paragraaf geeft in meer detail aan wat we onder de metagegevens *Indicatie
-materiële historie en Indicatie formele historie* verstaan.
+Deze paragraaf geeft in meer detail aan wat we onder de metagegevens *heeft tijdlijn geldigheid* en *heeft tijdlijn registratie* verstaan (was in MIM 1.1.1 *Indicatie
+materiële historie* en *heeft tijdlijn registratie*).
 
 Aanvullend beschrijft deze paragaaf een aantal aspecten waar rekening mee
 gehouden kan worden bij de uitwerking van historie in een informatiemodel op
@@ -503,7 +503,7 @@ Op conceptueel niveau is het wel altijd
 mogelijk om aan te geven dát het bijhouden van historie *aan de orde is* voor
 een (elk) gegeven, dat wil zeggen een attribuut of relatie van een object, te
 weten via een metagegeven. Deze metagegevens specificeren we als volgt: -
-*Indicatie materiële historie*: indicatie of de materiële historie van de
+*heeft tijdlijn geldigheid*: indicatie of de materiële historie van de
 attribuutsoort te bevragen is. Materiële historie geeft aan wanneer een
 verandering is opgetreden in de werkelijkheid die heeft geleid tot verandering
 van de attribuutwaarde. Materiële historie impliceert dat actuele, historische
@@ -516,20 +516,19 @@ verwerkt).
 <pre class='example'>
 ‘Bouwjaar pand’ heeft al materiële historie in zich: het bouwjaar is het moment 
 waarop de wijziging in de werkelijkheid zich voordeed en wijzigt niet. 
-De ‘indicatie materiële historie’ ervan is daarom Nee. 
+De ‘heeft tijdlijn geldigheid’ ervan is daarom Nee. 
 
 BSN van een Persoon geldt voor de persoon vanaf het moment dat de persoon in de 
-BRP is opgenomen en wijzigt niet: ‘indicatie materiële historie’ Nee. 
+BRP is opgenomen en wijzigt niet: ‘heeft tijdlijn geldigheid’ Nee. 
 
-De Achternaam van een persoon kan wijzigen: ‘indicatie materiële historie’ Ja. 
+De Achternaam van een persoon kan wijzigen: ‘heeft tijdlijn geldigheid’ Ja. 
 
 Als je niet toeziet op het daadwerkelijk kappen van een boom maar het gekapt zijn 
-wel in een registratie wil opnemen: ‘indicatie materiële historie’ Nee en 
-‘indicatie formele historie’ Ja.
+wel in een registratie wil opnemen: ‘heeft tijdlijn geldigheid’ Nee en 
+‘heeft tijdlijn registratie’ Ja.
 </pre>
 
-Richtlijn: op conceptueel niveau worden voor historie alléén indicatie materiële
-historie en indicatie formele historie bij een attribuut of relatie vastgelegd,
+Richtlijn: op conceptueel niveau worden voor historie alléén heeft tijdlijn geldigheid en heeft tijdlijn registratie bij een attribuut of relatie vastgelegd,
 en dus géén bij de tijdlijnen behorende attributen die gebruikt moeten worden
 voor het vastleggen van historie. Deze bij de tijdlijn behorende attributen
 worden op het logische niveau vastgelegd.
@@ -565,7 +564,8 @@ omdat het vaak ongewenst (en erg Gestructureerd of zelfs onmogelijk) is om
 verschillende implementaties naast elkaar in stand te houden en naar elkaar te
 vertalen.
 
-Opmerking: de metagegevens Indicatie materiële historie en Indicatie formele
+Opmerking: de metagegevens heeft tijdlijn geldigheid
+ en Indicatie formele
 mogen worden opgenomen in een logisch model (of worden overgenomen van het
 conceptuele naar het logische informatiemodel).
 
