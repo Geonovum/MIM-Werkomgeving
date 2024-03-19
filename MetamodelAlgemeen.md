@@ -1331,7 +1331,7 @@ weten de modelelementen attribuutsoort en relatiesoort.
 
 *Toelichting*
 
-Bijvoorbeeld: een persoon werkt bij een organisatie, oftewel het objecttype Persoon is de bron entiteit in deze relatie en het objecttype Organisatie is niet de bron entiteit. De relatie 'werkt bij' wordt in deze gemodelleerd vanuit de persoon (de organisatie werkt niet bij de persoon). Je kan ook stellen: de persoon werkt bij een organisatie in de rol van werkenemer. 
+Bijvoorbeeld: een persoon werkt bij een organisatie, oftewel het objecttype Persoon is de bron entiteit in deze relatie en het objecttype Organisatie is niet de bron entiteit. De relatie 'werkt bij' wordt in deze gemodelleerd vanuit de persoon (de organisatie werkt niet bij de persoon). Je kan ook stellen: de persoon werkt bij een organisatie in de rol van werknemer. 
 
 Modelleertechnisch wordt de relatietype getrokken van Persoon (de bron van het relatietype) naar Organisatie (het doel van het relatietype) en de naam van het relatietype houdt rekening met deze richting. 
 
