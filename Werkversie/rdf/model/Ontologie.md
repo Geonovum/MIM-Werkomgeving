@@ -127,7 +127,7 @@
 |Specialisatie van|[mim:Modelelement](#Modelelement)|
 |Definitie|Een typering van een groep van gelijksoortige gegevens die voor een objecttype van toepassing is.|
 |Bron|[Sectie 2.2.3 Gegevensgroep](https://docs.geostandaarden.nl/mim/mim/#gegevensgroep)|
-|Eigenschappen|[mim:alias](#alias), [mim:authentiek](#authentiek), [mim:begrip](#begrip), [mim:begripsterm](#begripsterm), [mim:constraint](#constraint), [mim:datumOpname](#datumOpname), [mim:definitie](#definitie), [mim:gegevensgroeptype](#gegevensgroeptype), [mim:herkomst](#herkomst), [mim:herkomstDefinitie](#herkomstDefinitie), [mim:indicatieFormeleHistorie](#indicatieFormeleHistorie), [mim:indicatieMaterieleHistorie](#indicatieMaterieleHistorie), [mim:kardinaliteit](#kardinaliteit), [mim:naam](#naam), [mim:toelichting](#toelichting)|
+|Eigenschappen|[mim:alias](#alias), [mim:authentiek](#authentiek), [mim:begrip](#begrip), [mim:begripsterm](#begripsterm), [mim:constraint](#constraint), [mim:datumOpname](#datumOpname), [mim:definitie](#definitie), [mim:gegevensgroeptype](#gegevensgroeptype), [mim:herkomst](#herkomst), [mim:herkomstDefinitie](#herkomstDefinitie), [mim:kardinaliteit](#kardinaliteit), [mim:naam](#naam), [mim:toelichting](#toelichting)|
 
 ### mim:Gegevensgroeptype {#Gegevensgroeptype}
 
@@ -491,7 +491,7 @@
 |Definitie|Indicatie of de formele historie van het kenmerk van het object bijgehouden wordt en te bevragen is.|
 |Bron|[Sectie 2.8.2.11 Metagegeven: indicatie formele historie](https://docs.geostandaarden.nl/mim/mim/#metagegeven-indicatie-formele-historie)|
 |Datatype|[boolean](http://www.w3.org/2001/XMLSchema#boolean)|
-|Eigenschap van|[mim:Gegevensgroep](#Gegevensgroep), [mim:Relatiesoort](#Relatiesoort), [mim:Attribuutsoort](#Attribuutsoort), [mim:Relatierol](#Relatierol), [mim:ExterneKoppeling](#ExterneKoppeling), [mim:Relatieklasse](#Relatieklasse), |
+|Eigenschap van|[mim:Relatiesoort](#Relatiesoort), [mim:Attribuutsoort](#Attribuutsoort), [mim:Relatierol](#Relatierol), [mim:ExterneKoppeling](#ExterneKoppeling), [mim:Relatieklasse](#Relatieklasse), |
 
 ### mim:indicatieMaterieleHistorie {#indicatieMaterieleHistorie}
 
@@ -500,7 +500,7 @@
 |Definitie|Indicatie of de materiële historie van het kenmerk van het object te bevragen is.|
 |Bron|[Sectie 2.8.2.10 Metagegeven: indicatie materiële historie](https://docs.geostandaarden.nl/mim/mim/#metagegeven-indicatie-materiele-historie)|
 |Datatype|[boolean](http://www.w3.org/2001/XMLSchema#boolean)|
-|Eigenschap van|[mim:Gegevensgroep](#Gegevensgroep), [mim:Relatiesoort](#Relatiesoort), [mim:Attribuutsoort](#Attribuutsoort), [mim:Relatierol](#Relatierol), [mim:ExterneKoppeling](#ExterneKoppeling), [mim:Relatieklasse](#Relatieklasse), |
+|Eigenschap van|[mim:Relatiesoort](#Relatiesoort), [mim:Attribuutsoort](#Attribuutsoort), [mim:Relatierol](#Relatierol), [mim:ExterneKoppeling](#ExterneKoppeling), [mim:Relatieklasse](#Relatieklasse), |
 
 ### mim:mimextensie {#mimextensie}
 
