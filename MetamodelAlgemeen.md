@@ -1954,7 +1954,7 @@ Een aantal metagegevens hebben als datatype `CharacterString`. Aanvullend geldt:
 -   Voor lengtes geldt dat er alleen getallen in mogen (van het datatype
     `Integer`).
 -   Voor datums geldt dat deze het volgende patroon volgen: `jjjjmmdd`
--   Voor de metagegevens `Definitie` en `Toelichting` geldt dat hiervoor tekst met opmaak (zoals _vet_, _cursief_, _onderstreept_ en _opsommingen_) gebruikt mag worden. Welke opmaak precies gebruikt kan worden, is afhankelijk van de mogelijkheden van de modelleeromgeving en de beoogde toepassing van het model.
+-   Voor de metagegevens `Definitie` en `Toelichting` geldt dat hiervoor tekst met opmaak (zoals _vet_, _cursief_, _onderstreept_ en _opsommingen_) gebruikt mag worden. Welke opmaak precies gebruikt kan worden, is afhankelijk van de mogelijkheden van de modelleeromgeving en de beoogde toepassing van het model. Gebruik hiervoor het metagegeven _tekstopmaak_. 
 
 Voor de volgende metagegevens geldt een specifiek waardebereik.
 
