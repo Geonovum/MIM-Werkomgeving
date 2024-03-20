@@ -248,6 +248,7 @@ Deze paragraaf is een aanvulling op de paragraaf [[[#specificatie-metagegevens]]
 | locatie | [`mim:locatie`](http://bp4mc2.org/def/mim#locatie) | owl:DatatypeProperty | [grondslag](#metagegeven-locatie) |
 | mim extensie | [`mim:extensie`](http://bp4mc2.org/def/mim#extensie) | owl:DatatypeProperty | [grondslag](#metagegeven-mim-extensie)
 | mim taal | [`mim:taal`](http://bp4mc2.org/def/mim#taal) | owl:DatatypeProperty | [grondslag](#metagegeven-mim-taal) |
+| mim tekstopmaak | [`mim:tekstopmaak`](http://bp4mc2.org/def/mim#tekstopmaak) | owl:DatatypeProperty | [grondslag](#metagegeven-tekstopmaak) |
 | mim versie | [`mim:versie`](http://bp4mc2.org/def/mim#versie) | owl:DatatypeProperty | [grondslag](#metagegeven-mim-versie) |
 | mogelijk geen waarde | [`mim:mogelijkGeenWaarde`](http://bp4mc2.org/def/mim#mogelijkGeenWaarde) | owl:DatatypeProperty | [grondslag](#metagegeven-mogelijk-geen-waarde) |
 | naam | [`mim:naam`](http://bp4mc2.org/def/mim#naam) | owl:DatatypeProperty | [grondslag](#metagegeven-naam) |
@@ -743,6 +744,7 @@ Informatiemodel packages worden naar de volgende aspecten gespecificeerd:
 | Informatiedomein             | [`mim:informatiedomein`](http://bp4mc2.org/def/mim#informatiedomein) | 1..1 | tekst |
 | Informatiemodeltype         | [`mim:informatiemodeltype`](http://bp4mc2.org/def/mim#informatiemodeltype) | 1..1 | Informatiemodeltypen |
 | Relatiemodelleringstype       | [`mim:relatiemodelleringstype`](http://bp4mc2.org/def/mim#relatiemodelleringstype) | 1..1 | Relatiemodelleringstypen |
+| tekstopmaak                  | [`mim:tekstopmaak`](http://bp4mc2.org/def/mim#tekstopmaak) | 0..1 | tekst |
 | Constraint                | [`mim:constraint`](http://bp4mc2.org/def/mim#constraint) | 0..n | [`mim:Constraint`](http://bp4mc2.org/def/mim#Constraint) |
 | Basis-URI                    | [`mim:basisUri`](http://bp4mc2.org/def/mim#basisUri) | 0..1 | tekst |
 
