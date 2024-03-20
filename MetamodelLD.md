@@ -248,6 +248,7 @@ Deze paragraaf is een aanvulling op de paragraaf [[[#specificatie-metagegevens]]
 | locatie | [`mim:locatie`](http://bp4mc2.org/def/mim#locatie) | owl:DatatypeProperty | [grondslag](#metagegeven-locatie) |
 | mim extensie | [`mim:extensie`](http://bp4mc2.org/def/mim#extensie) | owl:DatatypeProperty | [grondslag](#metagegeven-mim-extensie)
 | mim taal | [`mim:taal`](http://bp4mc2.org/def/mim#taal) | owl:DatatypeProperty | [grondslag](#metagegeven-mim-taal) |
+| mim tekstopmaak | [`mim:tekstopmaak`](http://bp4mc2.org/def/mim#tekstopmaak) | owl:DatatypeProperty | [grondslag](#metagegeven-tekstopmaak) |
 | mim versie | [`mim:versie`](http://bp4mc2.org/def/mim#versie) | owl:DatatypeProperty | [grondslag](#metagegeven-mim-versie) |
 | mogelijk geen waarde | [`mim:mogelijkGeenWaarde`](http://bp4mc2.org/def/mim#mogelijkGeenWaarde) | owl:DatatypeProperty | [grondslag](#metagegeven-mogelijk-geen-waarde) |
 | naam | [`mim:naam`](http://bp4mc2.org/def/mim#naam) | owl:DatatypeProperty | [grondslag](#metagegeven-naam) |
@@ -741,8 +742,9 @@ Informatiemodel packages worden naar de volgende aspecten gespecificeerd:
 | MIM extensie                 | [`mim:mimextensie`](http://bp4mc2.org/def/mim#mimextensie) | 0..1 | tekst |
 | MIM taal                     | [`mim:mimtaal`](http://bp4mc2.org/def/mim#mimtaal) | 0..1 | tekst |
 | Informatiedomein             | [`mim:informatiedomein`](http://bp4mc2.org/def/mim#informatiedomein) | 1..1 | tekst |
-| Informatiemodel type         | [`mim:informatiemodeltype`](http://bp4mc2.org/def/mim#informatiemodeltype) | 1..1 | Informatiemodeltypen |
-| Relatiemodelleringtype       | [`mim:relatiemodelleringtype`](http://bp4mc2.org/def/mim#relatiemodelleringtype) | 1..1 | Relatiemodelleringtypen |
+| Informatiemodeltype         | [`mim:informatiemodeltype`](http://bp4mc2.org/def/mim#informatiemodeltype) | 1..1 | Informatiemodeltypen |
+| Relatiemodelleringstype       | [`mim:relatiemodelleringstype`](http://bp4mc2.org/def/mim#relatiemodelleringstype) | 1..1 | Relatiemodelleringstypen |
+| tekstopmaak                  | [`mim:tekstopmaak`](http://bp4mc2.org/def/mim#tekstopmaak) | 0..1 | tekst |
 | Constraint                | [`mim:constraint`](http://bp4mc2.org/def/mim#constraint) | 0..n | [`mim:Constraint`](http://bp4mc2.org/def/mim#Constraint) |
 | Basis-URI                    | [`mim:basisUri`](http://bp4mc2.org/def/mim#basisUri) | 0..1 | tekst |
 
@@ -754,9 +756,9 @@ Het veld `mim:informatiemodeltype` verwijst naar één van de volgende mogelijke
 | [`mim:LogischInformatiemodel`](http://bp4mc2.org/def/mim#LogischInformatiemodel) | Niveau-3 model, conform [deze](#niveau-3-logisch-informatie-of-gegevensmodel) sectie |
 | [`mim:TechnischInformatiemodel`](http://bp4mc2.org/def/mim#TechnischInformatiemodel) | Niveau-4 model, conform [deze](#niveau-4-fysiek-of-technisch-gegevens-of-datamodel) sectie |
 
-Het veld `mim:relatiemodelleringtype` verwijst naar één van de volgende mogelijke waarden:
+Het veld `mim:relatiemodelleringstype` verwijst naar één van de volgende mogelijke waarden:
 
-| **Relatiemodelleringtype** | **Definitie** |
+| **Relatiemodelleringstype** | **Definitie** |
 |----------------------------|---------------|
 | [`mim:RelatiesoortLeidend`](http://bp4mc2.org/def/mim#RelatiesoortLeidend) | Relatiesoort leidend, conform [deze](#relatiesoort-alt-1-soort-leidend) en [deze](#relatierol-alt-1-soort-leidend) secties |
 | [`mim:RelatierolLeidend`](http://bp4mc2.org/def/mim#RelatierolLeidend) | Relatierol leidend, conform [deze](#relatiesoort-alt-2-rol-leidend) en [deze](#relatierol-alt-2-rol-leidend) secties |
