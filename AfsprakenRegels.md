@@ -716,7 +716,7 @@ Dit betekent expliciet niet dat kernmerken van verschillende objecten, met dezel
 
 Met natuurlijke taal wordt bedoeld, zoals de gebruikers erover praten, in normaal Nederlands. Veelal zijn dit alleen letters en cijfers, met spaties. Koppeltekens (`-` of `_`) kunnen gebruikt worden, indien gewenst, alsmede diakrieten.
 
-Zo kan bijvoorbeeld gekozen worden dat de eerste letter een hoofdletter is voor namen van de modelelementen Objecttypen, Gegevensgroeptype en Datatypen en dat de eerste letter een kleine letter is voor attribuutsoorten,en data-elementen e.d. Bijvoorbeeld: ‘Natuurlijk persoon’ en ‘naam’ met type CharacterString.
+Zo kan bijvoorbeeld gekozen worden dat de eerste letter een hoofdletter is voor namen van de modelelementen Objecttypen, Gegevensgroeptype en Datatypen en dat de eerste letter een kleine letter is voor attribuutsoorten, en data-elementen e.d. Bijvoorbeeld: ‘Natuurlijk persoon’ en ‘naam’ met type CharacterString.
 
 Regel: voor conceptuele informatiemodellen wordt altijd alternatief 1 gehanteerd.
 
