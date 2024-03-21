@@ -397,7 +397,7 @@ Diagram: [Kern](#kern)
 
 Generalisatie tussen objecttypes:
 
-Een generalisatierelatie geeft aan dat bepaalde eigenschappen van een objecttype (vaak attribuutsoorten en/of relatiesoorten) ook gelden voor de gerelateerde objecttypen, én dat deze qua semantiek, structuur en syntax gelijk zijn. We spreken dan van een supertype met subtypen. De modelelementen die generiek gelden worden in een generiek objecttype, het supertype, gemodelleerd en deze worden overerft door elk subtype dat de `«Generalisatie»` legt naar dit generieke `«Objecttype»`.
+Een generalisatierelatie geeft aan dat bepaalde eigenschappen van een objecttype (vaak attribuutsoorten en/of relatiesoorten) ook gelden voor de gerelateerde objecttypen, én dat deze qua semantiek, structuur en syntax gelijk zijn. We spreken dan van een supertype met subtypen. De modelelementen die generiek gelden worden in een generiek objecttype, het supertype, gemodelleerd en deze worden overerfd door elk subtype dat de `«Generalisatie»` legt naar dit generieke `«Objecttype»`.
 
 Generalisatie tussen datatypen:
 
