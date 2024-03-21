@@ -71,7 +71,7 @@ Het MIM model kent geen volgorde. Ondanks dat in de weergave attribuutsoorten in
 
 Een belangrijk gegeven in Linked Data is het munten van URI's. Bij de vertaling van een MIM modelelement naar een overeenkomstige resource in Linked Data vocabulaires zullen ook nieuwe URI's gemunt moeten worden. Enerzijds omdat er (soms) sprake is van meer dan één resource voor één modelelement, maar ook omdat een Linked Data resource wel equivalent is met een MIM modelelement, maar niet exact gelijk: we willen niet dat de formele semantiek van de Linked Data vocabulaires vermengd wordt met de formele semantiek van het MIM metamodel.
 
-Daarnaast geldt dat het in Linked Data gebruikelijk is om URI's over te nemen van andere (externe) vocabulaires c.q. modellen. Ook het MIM ondersteund dit, in de vorm van de mim metamodelklassen `mim:Extern` en `mim:View`. Echter, anders dan bij UML, behoren de modelementen uit deze externe modellen ook de URI's te krijgen die horen bij deze externe modellen. Ieder modelelement heeft dan ook een metagegeven `mim:modelelementidentificatie` waar de vocabulaire URI's op gebaseerd worden.
+Daarnaast geldt dat het in Linked Data gebruikelijk is om URI's over te nemen van andere (externe) vocabulaires c.q. modellen. Ook het MIM ondersteund dit, in de vorm van de mim metamodelklassen `mim:Extern` en `mim:View`. Echter, anders dan bij UML, behoren de modelelementen uit deze externe modellen ook de URI's te krijgen die horen bij deze externe modellen. Ieder modelelement heeft dan ook een metagegeven `mim:modelelementidentificatie` waar de vocabulaire URI's op gebaseerd worden.
 
 Indien sprake is van een view package, dan wordt de `mim:basisUri` en/of de expliciet ingevulde `mim:modelelementidentificatie` van deze view package alleen gebruikt voor de vocabulaire URI's (voorkomens van `owl:Class`, `owl:DatatypeProperty` en `owl:ObjectProperty`). Voor de voorkomens van shapes (`sh:NodeShape` en `sh:PropertyShape`) wordt juist gebruik gemaakt van de `mim:basisUri` zoals deze bij de eigen informatiemodel is opgegeven. Rationale hierachter is dat bij view-packages de "view" lokaal gedefinieerd is, maar de elementen wel afkomstig zijn uit een externe vocabulaire.
 
@@ -157,7 +157,7 @@ Onderstaande tabellen geven een overzicht van alle transformaties en een referen
 |`mim:constraint`|`mim:constraint`|[Constraint](#transformatie-constraint)|
 |`mim:element`|`sh:property`|[Data element](#transformatie-data-element)|
 |`mim:indicatieClassificerend`|`rdfs:subClassOf` (onder meer)|[indicatie classificerend](#transformatie-indicatie-classificerend)|
-|`mim:bevatModelelement`|`rdfs:isDefinedBy`, `owl:imports`|[bevat modelelement](#transformatie-bevat-modelement)|
+|`mim:bevatModelelement`|`rdfs:isDefinedBy`, `owl:imports`|[bevat modelelement](#transformatie-bevat-modelelement)|
 
 ### Instanties (datatypen)
 
@@ -1599,7 +1599,7 @@ WHERE {
 }
 </pre>
 
-### transformatie: bevat modelement
+### transformatie: bevat modelelement
 
 Een `mim:bevatModelelement` wordt vertaald naar een `mim:bevatModelelement`. In geval er sprake is van een owl:Ontology, dan wordt vertaald naar `owl:imports`.
 
@@ -1609,7 +1609,7 @@ CONSTRUCT {
   ?ontology mim:bevatModelelement ?ontologyelement .
 }
 WHERE {
-  ?package mim:bevatModelement ?modelelement.
+  ?package mim:bevatModelelement ?modelelement.
   ?package mim:equivalent ?ontology.
   ?modelelement mim:equivalent ?ontologyelement.
   ?ontologyelement a ?type . 
@@ -1619,7 +1619,7 @@ CONSTRUCT {
   ?ontology owl:imports ?importontology
 }
 WHERE {
-  ?package mim:bevatModelement ?subpackage.
+  ?package mim:bevatModelelement ?subpackage.
   ?package mim:equivalent ?ontology.
   ?subpackage mim:equivalent ?importedontology.
   ?importedontology a owl:Ontology.
@@ -1637,7 +1637,7 @@ CONSTRUCT {
   ?class rdfs:isDefinedBy ?ontology
 }
 WHERE {
-  ?package mim:bevatModelement ?modelelement.
+  ?package mim:bevatModelelement ?modelelement.
   ?package mim:equivalent ?packageontology.
   ?modelelement mim:equivalent ?class.
   ?class a owl:Class.
@@ -1650,7 +1650,7 @@ CONSTRUCT {
   ?property rdfs:isDefinedBy ?ontology
 }
 WHERE {
-  ?package mim:bevatModelement ?eigenaar.
+  ?package mim:bevatModelelement ?eigenaar.
   ?eigenaar ?eigenaarrelatie ?modelelement
   ?package mim:equivalent ?packageontology.
   ?modelelement mim:equivalent ?property.
@@ -1669,7 +1669,7 @@ CONSTRUCT {
   ?property rdfs:isDefinedBy ?ontology
 }
 WHERE {
-  ?package mim:bevatModelement ?eigenaar.
+  ?package mim:bevatModelelement ?eigenaar.
   ?modelelement ?eigenaarrelatie ?eigenaar
   ?package mim:equivalent ?packageontology.
   ?modelelement mim:equivalent ?property.
