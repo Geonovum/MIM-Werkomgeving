@@ -1771,7 +1771,7 @@ Verkorte schrijfwijze: **attribuut**
 
 *Toelichting*
 
-Objecttypen, gegevensgroeptypen of relatieklassen hebben attributsoorten (0,1,n) voor het specificeren van eigenschappen.
+Objecttypen, gegevensgroeptypen of relatieklassen hebben attribuutsoorten (0,1,n) voor het specificeren van eigenschappen.
 
 *Toepassing*: Objecttype, Gegevensgroeptype en Relatieklasse.
 
