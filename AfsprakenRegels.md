@@ -442,7 +442,7 @@ Een `«Constraint»` wordt beschreven met een:
 
 In Enterprise architect `12.x` lijkt het helaas (nog) niet mogelijk om constraints zoals bedoeld in UML op te nemen, te weten als `OpaqueExpression` met een `constraint string` en een aanduiding van de taal: natuurlijke taal, of OCL (of een andere zoals Java, maar deze wordt niet toegepast in dit metamodel). EA werkt met `UML Notes` en een `constraint type`.
 
-Het is daarnaast niet mogelijk om de tekst en de OCL in dezelfde constraint op te nemen. Het worden dan twee aparte constraints: één met tekst en één met OCL, met verplicht ook een andere naam. Vandaar onderstaande aanpak.Als de modelleur kiest om de `«Constraint»` alleen in gewone taal te beschrijven,
+Het is daarnaast niet mogelijk om de tekst en de OCL in dezelfde constraint op te nemen. Het worden dan twee aparte constraints: één met tekst en één met OCL, met verplicht ook een andere naam. Vandaar onderstaande aanpak. Als de modelleur kiest om de `«Constraint»` alleen in gewone taal te beschrijven,
 dan als volgt: 
 - **Naam** (`UML-constraint name`): een naam c.q. label, vaak in
 steekwoorden. 
