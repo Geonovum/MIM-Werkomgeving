@@ -1095,7 +1095,7 @@ Het gaat erom dat het voor gebruikers helder is hoe informatie die aan dit infor
 
 Bijvoorbeeld: een aantal treffende voorbeelden (waardes) van het kenmerk van het object of een aanduiding van wat er niet onder de definitie valt.
 
-Het is niet de bedoeling om andere metagegevens in de toelichting op te nemen, zoals populatie of begrip.De toelichting is op zichzelf helder en te begrijpen en is gericht op de betekenis van gegevens en/of de context van deze gegevens. De toelichting is niet gericht op de inwinning van de gegevens maar beschrijft de betekenis van hetgeen wat ingewonnen is, zodat het voor de gebruikers van de gegevens helder is wat de betekenis ervan is. Het is daarom niet de bedoeling om inwinregels of veelgestelde vragen zelf in de toelichting op te nemen. Uiteraard is het wel goed om kennis die in de inwinregels en antwoorden "verborgen" zit een plek te geven in de toelichting.
+Het is niet de bedoeling om andere metagegevens in de toelichting op te nemen, zoals populatie of begrip. De toelichting is op zichzelf helder en te begrijpen en is gericht op de betekenis van gegevens en/of de context van deze gegevens. De toelichting is niet gericht op de inwinning van de gegevens maar beschrijft de betekenis van hetgeen wat ingewonnen is, zodat het voor de gebruikers van de gegevens helder is wat de betekenis ervan is. Het is daarom niet de bedoeling om inwinregels of veelgestelde vragen zelf in de toelichting op te nemen. Uiteraard is het wel goed om kennis die in de inwinregels en antwoorden "verborgen" zit een plek te geven in de toelichting.
 
 *Toepassing*: alle modelelementen die het metagegeven **definitie** kennen.
 
