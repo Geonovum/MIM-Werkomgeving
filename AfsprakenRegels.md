@@ -580,7 +580,7 @@ De conventie hiervoor wordt opgenomen in de eigen extensie. Bijvoorbeeld:
 
 In een informatiemodel kan de behoefte bestaan om afgeleide gegevens op te nemen: dit zijn gegevens die afleidbaar zijn uit andere attribuut- en/of relatiesoorten binnen het informatiemodel. Dit lijkt op redundantie. Toch hebben we deze gegevens daar opgenomen waar er ten eerste vraag is naar het afgeleide gegeven en ten tweede het gegeven niet eenvoudig af te leiden is (er moet sprake zijn van enige mate van complexiteit). Dit wordt in UML weergegeven via `isDerived`. Zie ook [[[#attribuutsoort-0]]] en [[[#metagegeven-indicatie-afleidbaar]]].
 
-<aside class="example" title="Datum vesiging in Nederland van een ingeschreven persoon">
+<aside class="example" title="Datum vestiging in Nederland van een ingeschreven persoon">
     <code>Datum vestiging in Nederland</code> van een <code>Ingeschreven persoon</code>. De afleiding van dit gegeven is niet triviaal. Door het als afleidbaar gegeven op te nemen kan het opgevraagd worden zonder dat de historie of andere gegevens van het object opgevraagd hoeven te worden om daaruit dit gegeven af te leiden.
 </aside>
 
