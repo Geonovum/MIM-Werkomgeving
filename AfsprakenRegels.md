@@ -543,7 +543,7 @@ voor het vastleggen van historie. Deze bij de tijdlijn behorende attributen
 worden op het logische niveau vastgelegd.
 
 ### Historie op logisch niveau
-MIM schrijft geen implementatie van het conceptuele niveau voor.  Wel worden er aandachtspunten gegeven om rekening mee te houden. Denk bij de uitwerking o.a. aan de volgende aspecten:
+MIM schrijft geen implementatie van het logische niveau voor.  Wel worden er aandachtspunten gegeven om rekening mee te houden. Denk bij de uitwerking o.a. aan de volgende aspecten:
 
 -   Het bijhouden van historie met specifieke attributen per objecttype, zoals
     bijvoorbeeld: bouwjaar pand, of met generieke tijdlijnattributen attributen
