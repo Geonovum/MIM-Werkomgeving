@@ -298,7 +298,7 @@ Het wordt veelal als niet politiek correct beschouwd mensen als objecten te zien
 Een object heeft kenmerken waarvoor gegevens bekend zijn. 
 
 <aside class="definition">
-  <dfn>Gegeven</dfn>De betekenisvolle formulering van een waargenomen feit, waaraan een waarde kan worden toegekend.
+  <dfn>Gegeven</dfn>Een gegeven is een vastgelegde waarneming of bewering over een getypeerde eigenschap van een object.  
 </aside>
 
 <aside class="note" title="Gegeven">
@@ -307,21 +307,23 @@ Een object heeft kenmerken waarvoor gegevens bekend zijn.
 
 *Toelichting:*
 
-Voorbeelden van gegevens zijn de waardes ‘Jan’ en ‘1-1-1970’ betreffende de naam en de geboortedatum van een object van het type Persoon. 
+Voorbeelden van gegevens zijn: de naam van een persoon is 'Jan', de geboortedatum van Jan is ‘1-1-1970’. 
 
-Een informatiemodel specificeert niet de gegevens zelf. Een gegeven zoals '1-1-1970' noemen we een waarde voor een attribuut van Jan. In het informatiemodel wordt dit het attribuutsoort 'geboortedatum' of 'overlijdensdatum' van een objecttype Persoon genoemd. Het is dus ook van belang om welk kenmerk van Jan het gaat. Merk op dat een gegeven ‘1-1-1970’ geen informatie biedt zonder dat er eerst duidelijkheid is over het kenmerk c.q. het attribuutsoort 'geboortedatum' of 'overlijdensdatum' het gaat en om welke object van het objecttype Persoon het gaat. Het waargenomen feit dat twee objecten een relatie hebben wordt ook gezien als een een modelelement waarvoor een gegeven bekend kan zijn.
+Eigenschappen van een object kun je waarnemen of beweren en vervolgens vastleggen als gegeven. Aan alleen de _waarde_ '1-1-1970' heb je niet zo veel als je niet weet dat het om de _geboortedatum_ van een persoon gaat (de eigenschap) en om _welke persoon_ het precies gaat (het _onderwerp_ van gesprek). De waarde '1-1-1970' wordt vastgelegd als de geboortedatum van een specifiek persoon. Het is dus van belang om welke eigenschap van welke specifieke persoon het gaat. Verder is het uiteraard van belang om te weten wat de betekenis is die bij het gegeven hoort. 
 
-Een gegeven kan al bekend zijn zodra deze wordt waargenomen, maar in een informatievoorziening zijn gegevens de objectief waarneembare neerslag of registratie van feiten op een bepaald medium, zodanig dat deze gegevens uitgewisseld en voor langere tijd bewaard kunnen worden. Dat kan op papier, in digitale vorm, et cetera. Een gegeven in een informatievoorziening is dus een vastgelegde waarde voor een waargenomen feit dat toegekend is aan een kenmerk van een specifiek object. 
+Waarneming: een observatie die wordt waargenomen voor een eigenschap van een object. Bijvoorbeeld: de sensor waarneming dat de auto met kenteken 'AA 1234' met een snelheid van 120 kilometer per uur rijd. Een foto dat een brug op een bepaalde plek op aarde staat, of een meting van een geluid van 50 decibel. 
 
-Er zijn waardes die:
+Bewering: een uitspraak, die meestal als waar bedoeld is maar niet per definitie waar is. Mijn geboortedatum is '1-1-1970', de waarde van dit huis is 200.000 euro (in het jaar 2018). Wie bewering gedaan heeft is vaak relevant. Denk bij een bewering aan hetgeen waarover besloten wordt door een bevoegd gezag, of aan een persoon die een gegeven opgeeft voor een bepaald doel. Een bewering gedaan worden over iets dat in de werkelijkheid is waargenomen, zoals bij de aangifte van een geboortedatum van een baby. Maar een bewering hoeft niet te zijn waargenomen in de werkelijkheid, zoals wanneer er een bouwvergunning is verleend.    
+
+Vastgelegd: een gegeven kan in principe al bekend zijn zodra deze wordt waargenomen of beweerd, maar de waarneming moet eerst vastgelegd worden om bruikbaar te zijn in een informatievoorziening. De vastlegging kan op papier, in digitale vorm, op een foto, in een bericht, in een database et cetera. 
+
+Getypeerd: een model specificeert niet de gegevens zelf. Een gegeven zoals '1-1-1970' noemen we een waarde voor een attribuut van Jan. In het informatiemodel wordt dit bv. het _attribuutsoort_ 'geboortedatum' of _attribuutype_ 'overlijdensdatum' van een _objecttype_ Persoon genoemd. Dat twee objecten een relatie hebben, gemodelleerd in het model als _relatietype_, wordt ook gezien als een eigenschap waarvoor een gegeven bekend kan zijn. De modelelementen waarmee een getypeerde _eigenschap_ van een object gemodelleerd kan worden zijn: _attribuutsoort_, _relatiesoort_ en _externe koppeling_. Hier kunnen gegevens over bekend zijn. Het _datatype_ is hierbij van belang voor de waarde, en het _objecttype_ is van belang omdat het helder moet zijn om welk object het gaat. 
+
+Waarde: de waarde '1-1-1970' is een onderdeel van het gegeven. Om zeker te zijn dat het gegeven een toegestane waarde heeft moet de waarde van het gegeven voldoen aan het opgegeven datatype en eventuele aanvullende specificaties zoals een formeel patroon of dat de waarde voorkomt in een waardelijst. Er zijn waardes die:
 - een enkelvoudige structuur hebben, zoals bij de voornaam 'Jan', of het object Natuurlijk persoon met identificatie '123';
-- een interne structuur kennen die nader onderverdeeld is, zoals bijvoorbeeld een geometrie die bestaat uit meerdere coördinaten, een coördinaten referentiesysteem, enzovoorts. De onderdelen vormen samen de waarde (de onderdelen zijn zelf niet een gegeven, maar zijn slechts een onderdeel ervan).
+- een interne structuur kennen die nader onderverdeeld is, zoals bijvoorbeeld een geometrie die bestaat uit meerdere coördinaten, een coördinaten referentiesysteem, enzovoorts. De onderdelen, oftewel de data elementen, vormen samen de waarde (de dataelementen zijn zelf niet een gegeven, maar zijn slechts een onderdeel ervan).
 
-Er zijn slechts een aantal modelelementen waarmee een gegeven gemodelleerd kan worden. Dit zijn: _attribuutsoort_, _relatiesoort_ en _externe koppeling_. Hier kunnen gegevens voor bekend zijn. Andere modelelementen, zoals een objecttype of een datatype kunnen geen gegevens "bevatten". 
-
-Met de vastlegging van gegevens in een informatievoorziening wordt een model van de werkelijkheid bevroren in de tijd. Hoewel de werkelijkheid nooit stil staat, kan deze door het vastleggen van de gegevens toch worden bevroren. Bij een gegeven kunnen ook metagegevens worden vastgelegd, voor het bijhouden van *historie*, zoals de tijdslijn geldigheid en de tijdslijn registratie.
-
-Op deze manier weet een gebruiker van de informatievoorziening wanneer het gegeven geldig is (of is geweest) en wanneer het gegeven is vastgelegd op een bepaald medium. Het is (meestal) niet zinvol om voor onderdelen van een gegeven historie bij te houden, want een onderdeel van een gegeven representeert niet de gehele waarde van een feit. Daarnaast zijn gebruikers van een informatievoorziening meestal niet geïnteresseerd in gedeeltes van feiten.
+Met de vastlegging van gegevens in een informatievoorziening wordt een model van de werkelijkheid bevroren in de tijd. Hoewel de werkelijkheid nooit stil staat, kan deze door het vastleggen van de gegevens toch worden bevroren. Bij een gegeven kunnen ook metagegevens worden vastgelegd, voor het bijhouden van *historie*, zoals de tijdslijn geldigheid en de tijdslijn registratie. Op deze manier weet een gebruiker van de informatievoorziening wanneer het gegeven geldig is (of is geweest) en wanneer het gegeven is vastgelegd op een bepaald medium. Met betrekking tot gestructureerde datatypes: het is (meestal) niet zinvol om voor een onderdeel van een gegeven, oftewel een afzonderlijk data element van een gestructureerde datatype, historie bij te houden, want een onderdeel van een gegeven representeert niet de gehele waarde. 
 
 ### Objecttypen en attribuutsoorten  
 
