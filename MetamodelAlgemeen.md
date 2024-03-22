@@ -1617,18 +1617,50 @@ In essentie zijn er vier componenten die een meting of een waarneming beschrijve
 
 1. het _onderwerp_ (wat wordt er gemeten)
 1. de _waarde_ (de waarde die gemeten is)
-1. het _datatype_ van die waarde (kwalitatief (`Characterstring`), kwantitatief (`Integer` of `Real`))
+1. het _datatype_ van die waarde (kwalitatief:`Characterstring`, kwantitatief:`Integer` of `Real`)
 1. de _eenheid_ van de waarde
 
-De eerste drie zijn informatie-technisch uit te drukken met de informatie-elementen `«Attribuutsoort»` en `«Datatype»`. Voor `Eenheid` is een apart metagegeven gecreëerd dat gekoppeld wordt aan een `«Attribuutsoort»` of een `«Referentie-element»`.
+De eerste drie componenten zijn informatie-technisch uit te drukken met de informatie-elementen `«Attribuutsoort»` en `«Datatype»`. Voor de _eenheid_ van een waarde is een apart metagegeven gecreëerd dat gekoppeld wordt aan een `«Attribuutsoort»` of een `«Referentie-element»`.
 
-De waarde van `Eenheid` is een waarde uit de lijst gepubliceerd op:https://units-of-measurement.org/. [Handig overzicht gepubliceerd in PDF door UCUM](https://github.com/ucum-org/ucum/blob/main/common-units/TableOfExampleUcumCodesForElectronicMessagingwithPreface.pdf)).
+Voor de invulling van het metagegeven `Eenheid`, sluit het MIM aan bij het Internationale Stelsel van Eenheden [[SI]]. Een basislijst van mogelijke waarden is beschikbaar via [SI Reference Point](https://si-digital-framework.org/SI). Het SI-stelsel bestaat uit zeven _basiseenheden_. Aanvullend staat het systeem een onbeperkt aantal _afgeleide eenheden_ toe, die altijd kunnen worden uitgedrukt als producten van machten van de basiseenheden. Imperiale eenheden, zoals: _pound_, _inch_ en _foot_ zijn niet goedgekeurde SI-eenheden. Wel zijn er een aantal niet-SI-eenheden die wel goedgekeurd zijn voor _gebruik in samenstelling_ met SI-eenheden, zoals: _liter_, _uur_, _minuut_ en _temperatuur_ in graden Celsius. 
 
-Dit is een waarde in de vorm van een UCUM-code (niet de URL). Bijvoorbeeld: 
+<aside class="example" title="SI-stelsel">
+  <p><strong>Basiseenheden</strong>
+    <ul>
+      <li>kilogram, symbool: <code>kg</code></li>
+      <li>meter, symbool: <code>m</code></li>
+    </ul>
+  </p>
+  <p><strong>Afgeleide eenheden</strong>
+    <ul>
+      <li>gram, symbool: <code>g</code></li>
+      <li>kilometer, symbool: <code>km</code></li>
+    </ul>
+  </p>
+  <p><strong>Samengestelde eenheden</strong>
+    <ul>
+      <li>meter per seconde, symbool: <code>m/s</code></li>
+      <li>kg per kubieke meter, symbool: <code>kg/m3</code></li>
+    </ul>
+  </p>
+  <p><strong>Niet-SI-eenheden die die geaccepteerd zijn voor gebruik met de SI-eenheden</strong>
+    <ul>
+      <li>Bel (Decibel (1/10 Bel = 1 decibel) --> <code>dB</code></li>
+      <li>Liter, symbool: <code>l</code></li>
+    </ul>
+  </p>
+  <p><strong>Imperiale eenheden die niet geaccepteerd zijn voor gebruik met SI-eenheden</strong>
+    <ul>
+      <li>pound </li>
+      <li>inch </li>
+      <li>foot </li>
+      <li>yard </li>
+      <li>mile</li>
+    </ul>
+    </p>
+</aside>
 
- - Meter: `Eenheid`: `"m"`
- - Decibel:  `Eenheid`: `"dB"`
- - Kilogram per minuut: `Eenheid`: `"kg/min"`
+TOEVOEGEN: welke waarde opnemen in MIM? Antwoord: symbool
 
 *Toepassing:* Attribuutsoort, Referentie-element.
 
