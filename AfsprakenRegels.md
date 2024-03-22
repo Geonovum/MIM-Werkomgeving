@@ -440,7 +440,7 @@ Een `«Constraint»` wordt beschreven met een:
 1. **Specificatie in tekst** (`UML-Constraint Notes`, `type invariant`): een uitgebreide heldere  beschrijving van de `«Constraint»` in gewone tekst.
 1. [Optioneel] **Specificatie formeel** (`UML-Constraint Notes`, `type OCL`): formele specificatie in de [[[OCL]]] (OCL). De formele specificatie bevat dus de uitgebreide heldere beschrijving van de constraint in (a.) _gewone tekst_ én (b.) de _formele specificatie in OCL_.
 
-In Enterprise architect `12.x` lijkt het helaas (nog) niet mogelijk om constraints zoals bedoeld in UML op te nemen, te weten als `OpaqueExpression` met een `constraint string` en een aanduiding van de taal: natuurlijke taal, of OCL (of een andere zoals Java, maar deze wordt niet toegepast in dit metamodel). EA werkt met `UML Notes` en een `constraint type`.
+In Enterprise Architect `12.x` lijkt het helaas (nog) niet mogelijk om constraints zoals bedoeld in UML op te nemen, te weten als `OpaqueExpression` met een `constraint string` en een aanduiding van de taal: natuurlijke taal, of OCL (of een andere zoals Java, maar deze wordt niet toegepast in dit metamodel). EA werkt met `UML Notes` en een `constraint type`.
 
 Het is daarnaast niet mogelijk om de tekst en de OCL in dezelfde constraint op te nemen. Het worden dan twee aparte constraints: één met tekst en één met OCL, met verplicht ook een andere naam. Vandaar onderstaande aanpak. Als de modelleur kiest om de `«Constraint»` alleen in gewone taal te beschrijven,
 dan als volgt: 
@@ -456,6 +456,15 @@ Als de modelleur kiest om de `«Constraint»` niet alleen in gewone taal te besc
 **Aanbeveling**: als een eigenschap van één `«UML-attribute`, of één `«UML-association»` met een <code>«<a>Patroon</a>»</code> of een <code>«<a>Lengte</a>»</code> of een <code>«<a>Kardinaliteit</a>»</code> van een <code>«<a>Relatiesoort</a>»</code> vastgelegd kan worden, gebruik die dan en geen `«UML-constraint»`. Als er sprake is van een eigenschap die over meerdere informatiemodelelementen heen gaat, dan is er altijd sprake van een regel die we modelleren met een `«UML-constraint»`.
 
 **Aanbeveling**: wees terughoudend met het gebruik van constraints in het informatiemodel wanneer de kans reëel is dat het model hierdoor gaat wijzigen of als het niet direct over de _semantiek_, _structuur_ of _syntax_ van de te registreren gegevens gaat. Dit is bijvoorbeeld het geval wanneer er regels bestaan rondom informatie die elke paar jaar kan wijzigen, of die per toepassingsgebied (net) anders toegepast moet worden. Bijvoorbeeld: wanneer een persoon 65 jaar of ouder is, mag deze geen uitkering aanvragen. Wanneer er veel van zulke constraints in het informatiemodel worden opgenomen, zal dit leiden tot een ongewenste dynamiek waardoor er (te) vaak nieuwe versies moeten worden uitgebracht. De aanbeveling is om de specificatie van dergelijke constraints buiten het informatiemodel te specificeren, bijvoorbeeld als _validatieregel_.
+
+<aside class="example" title="Voorbeeld van een constraint voor een adres">
+    <p><strong>Naam van het constraint</strong></p>
+    <pre><code>idNummeraanduidingBAGEnOfLocatieomschrijving</code></pre>
+    <p><strong>Specificatie in tekst</strong></p>
+    <pre><code>/* Het adres middels idNummeraanduidingBAG en/of de locatieomschrijving moet gevuld zijn.*/</code></pre>
+    <p><strong>Specificatie formeel</strong></p>
+    <pre><code>inv. (idNummeraanduidingBAG,notEmpty() or locatieomschrijving.netEmpty()) or <br>(idNummeraanduidingBAG.notEmpty() and locatieomschrijving.notEmpty())</code></pre>
+</aside>
 
 ## Historie
 
