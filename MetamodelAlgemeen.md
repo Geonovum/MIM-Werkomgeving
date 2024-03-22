@@ -295,11 +295,12 @@ Het wordt veelal als niet politiek correct beschouwd mensen als objecten te zien
 
 #### Gegeven
 
-Een object heeft kenmerken waarvoor gegevens bekend zijn. 
+Een object heeft eigenschappen (ook wel kenmerken genoemd) waarvoor gegevens bekend zijn. 
 
 <aside class="definition">
   <dfn>Gegeven</dfn>Een gegeven is een vastgelegde waarneming of bewering over een getypeerde eigenschap van een object.  
 </aside>
+
 
 <aside class="note" title="Gegeven">
   Een <strong>gegeven is geen modelelement</strong> in een informatiemodel.
