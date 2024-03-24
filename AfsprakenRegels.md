@@ -496,9 +496,9 @@ bepaald moment is.
 attribuutwaarden: 
 - Wanneer is iets gebeurd, in de werkelijkheid of volgens
 opgave (wanneer zijn de opgenomen gegevens geldig)? Dit valt binnen de tijdlijn
-van de aangehouden werkelijkheid. 
+van de aangehouden werkelijkheid, zoals bepaald door een bevoegd gezag (een partij die erover gaat). 
 - Vanaf wanneer wist de overheid (als collectief van organisaties) dat de gegevens bekend 
-waren? Dit valt binnen de tijdlijn van het administratieproces of de administratieve werkelijkheid.
+waren? Dit valt binnen de tijdlijn van het administratieproces of de administratieve werkelijkheid. Op welke moment zijn de gegevens registreerd. 
 
 In de rapportage 'Architectuur van het stelsel' (Stroomlijning BasisGegevens,
 2006) wordt geadviseerd om beide tijdlijnen te registreren, om de
@@ -508,42 +508,49 @@ metamodel schrijft derhalve niet voor welke bij de tijdlijnen behorende
 attributen gebruikt moeten worden voor het vastleggen van historie.
 
 ### Historie op conceptueel niveau
-Op conceptueel niveau is het wel altijd
-mogelijk om aan te geven dát het bijhouden van historie *aan de orde is* voor
-een (elk) gegeven, dat wil zeggen een attribuut of relatie van een object, te
-weten via een metagegeven. Deze metagegevens specificeren we als volgt: -
-*heeft tijdlijn geldigheid*: indicatie of de materiële historie van de
-attribuutsoort te bevragen is. Materiële historie geeft aan wanneer een
-verandering is opgetreden in de werkelijkheid die heeft geleid tot verandering
-van de attribuutwaarde. Materiële historie impliceert dat actuele, historische
-en eventuele toekomstige attribuutwaarden te bevragen zijn. - *Indicatie formele
-historie*: indicatie of de formele historie van de attribuutsoort te bevragen
-is. Formele historie geeft aan wanneer in de administratie een verandering is
-verwerkt van de attribuutwaarde (wanneer was de verandering bekend en is deze
-verwerkt).
+Op conceptueel niveau is het wel altijd mogelijk om aan te geven dát het bijhouden van historie *aan de orde is* voor
+een (elk) gegeven, dat wil zeggen een attribuut of relatie van een object, te weten via een metagegeven. 
+
+Deze metagegevens specificeren we als volgt: 
+
+- *heeft tijdlijn geldigheid* (of 'indicatie materiele historie'): indicatie of de geldigheid (de materiële historie) van een 
+eigenschap, waarvoor gegevens bijgehouden worden, te bevragen is (moet zijn).
+
+Dit metagegeven impliceert dat actuele, historische en eventuele toekomstige attribuutwaarden te bevragen zijn op wanneer deze geldig zijn en dat het zinvol is om een tijdlijn geldigheid bij te houden voor de eigenschap, omdat deze kan veranderen. De geldigheid geeft aan wanneer een verandering is opgetreden in de werkelijkheid (materiële historie) die heeft geleid tot verandering van de attribuutwaarde. Het komt voor dat de geldigheid van een eigenschap wordt besloten, zoals wanneer een wet geldig wordt, of wanneer een vergunning wordt verleend. Veelal gebeurd dit met een geldigheid die geleden is in de (nabije) toekomst, maar het geldig worden kan ook in het verleden liggen. 
+
+Merk op: de *heeft tijdlijn geldigheid* geeft op conceptueel niveau niet aan dat er voor het gegeven een tijdlijn geldigheid wordt bijgehouden in de administratie. Het geeft aan _dat een eigenschap_ kan veranderen en er op de tijdlijn geldigheid verschillende waarden kunnen bestaan (op verschillende momenten). 
+
+- *heeft tijdlijn registratie* (of 'indicatie formele historie'): indicatie het registratiemoment (de formele historie) van een 
+eigenschap, waarvoor gegevens bijgehouden worden, te bevragen is (moet zijn).
+
+Dit metagegeven impliceert dat het registratiemoment wordt bijgehouden van wanneer in de administratie een verandering van een eigenschap is verwerkt. Hiermee kan de administratie antwoord te geven op de vraag: vanaf wanneer is de nieuwe waarde van het gegeven bekend in de administratie. Dit hangt sterk samen met de vraag: wanneer had een afnemer die behoefte heeft aan deze informatie deze informatie kunnen weten, als deze dit aan de administratie had gevraagd (eerder dan het registratiemoment is niet mogelijk). 
+
+Het registratiemoment van de verandering is altijd een moment in de echte tijd, de 'horloge' tijd. Op deze tijd kunnen vele tijdsmomenten relevant zijn, zoals een tijdstip van een besluit, een tijdstip van het doorgeven en ontvangen ervan aan een organisatie, het tijdstip van de registratie in een administratie, het tijdstip dat het gegeven beschikbaar is gekomen voor afnemers en meer. Het metagegeven 'heeft registratie tijdlijn' heeft alleen betrekking op de eis dat het registratiemoment te bevragen is. De andere tijdmomenten zijn ook vaak erg relevant, maar dit zijn eigenstandige functionele momenten. 
 
 <pre class='example'>
-‘Bouwjaar pand’ heeft al materiële historie in zich: het bouwjaar is het moment 
-waarop de wijziging in de werkelijkheid zich voordeed en wijzigt niet. 
-De ‘heeft tijdlijn geldigheid’ ervan is daarom Nee. 
+‘Bouwjaar pand’ heeft al materiële historie in zich: het bouwjaar is het moment waarop de wijziging in de werkelijkheid zich voordeed en wijzigt niet. Het pand kan maar 1x initieel gebouwd zijn. Net zoals een mens maar 1 geboortedatum heeft. 
+    
+De ‘heeft tijdlijn geldigheid’ ervan is daarom 'Nee'. 
 
+Het is dus in principe niet nodig om voor deze eigenschap een tijdlijn geldigheid (materiele historie) bij te houden. Althans niet op conceptueel niveau. Er kan een fout gemaakt kan zijn bij de registratie van dit gegeven maar dit doet niets af aan het feit dat het bouwjaar of de geboortedatum in de werkelijkheid niet kan veranderen. 
+    
 BSN van een Persoon geldt voor de persoon vanaf het moment dat de persoon in de 
-BRP is opgenomen en wijzigt niet: ‘heeft tijdlijn geldigheid’ Nee. 
+BRP is opgenomen en wijzigt niet: ‘heeft tijdlijn geldigheid’ = 'Nee'. 
 
-De Achternaam van een persoon kan wijzigen: ‘heeft tijdlijn geldigheid’ Ja. 
+Het is wel mogelijk dat een persoon een tweede BSN krijgt en de eerste niet meer gebruikt wordt. 
 
-Als je niet toeziet op het daadwerkelijk kappen van een boom maar het gekapt zijn 
-wel in een registratie wil opnemen: ‘heeft tijdlijn geldigheid’ Nee en 
-‘heeft tijdlijn registratie’ Ja.
+De meeste eigenschappen kunnen wel wijzigen. De Achternaam van een persoon kan wijzigen, het woonadres van een persoon kan wijzigen. 
+    
+De ‘heeft tijdlijn geldigheid’ ervan is daarom 'Ja'. 
+
+Op conceptueel niveau is ook aan te geven dat het registratiemoment in een administratie moet worden bijgehouden, via een tijdlijn registratie. Deze staat vrijwel altijd op Ja. Echter, wanneer alleen de meest actuele situatie bekend moet zijn, en historie niet bijhouden hoeft te worden, dan staat deze op Nee. Het kan zijn dat historie pas vanaf een bepaald moment bijgehouden wordt. Zet dan de 'heeft tijdslijn registratie' wel op Ja, en geef aan dat voor een bepaald moment er geen historie bekend is voor een object, of voor alle objecten in een administratie. 
+
 </pre>
 
-Richtlijn: op conceptueel niveau worden voor historie alléén heeft tijdlijn geldigheid en heeft tijdlijn registratie bij een attribuut of relatie vastgelegd,
-en dus géén bij de tijdlijnen behorende attributen die gebruikt moeten worden
-voor het vastleggen van historie. Deze bij de tijdlijn behorende attributen
-worden op het logische niveau vastgelegd.
+Richtlijn: op conceptueel niveau worden voor historie alléén heeft tijdlijn geldigheid en heeft tijdlijn registratie bij een attribuut of relatie vastgelegd. De attributen waaruit de tijdlijnen zelf bestaan (zoals bijvoorbeeld: 'begin geldigheid' en 'eind geldigheid' en 'begin registratie' en 'eind registratie') worden niet gemodelleerd in een conceptueel informatiemodel. Deze bij de tijdlijn behorende attributen worden (pas) op het logische niveau gemodelleerd. 
 
 ### Historie op logisch niveau
-MIM schrijft geen implementatie van het logische niveau voor.  Wel worden er aandachtspunten gegeven om rekening mee te houden. Denk bij de uitwerking o.a. aan de volgende aspecten:
+MIM schrijft geen implementatie van het logische niveau voor. De metagegevens 'heeft tijdlijn geldigheid' en 'heeft tijdlijn registratie' uit het conceptuele informatiemodel zullen waarschijnlijk uitgewerkt worden met een periode waarin de gegevens voor een eigenschap geldig zijn en een tijdsmoment wanneer deze gegevens geregistreerd zijn en mogelijk ook met een tijdsmoment waarop de geldigheid (begin en einde van de periode) zelf geregisteerd is. MIM schrijft niet voor hoe de uitwerking van de metagegevens eruit moet zien. Wel worden er aandachtspunten gegeven om rekening mee te houden. Denk bij de uitwerking o.a. aan de volgende aspecten:
 
 -   Het bijhouden van historie met specifieke attributen per objecttype, zoals
     bijvoorbeeld: bouwjaar pand, of met generieke tijdlijnattributen attributen
@@ -564,6 +571,7 @@ MIM schrijft geen implementatie van het logische niveau voor.  Wel worden er aan
     zijn gemaakt bij de verwerking), maar niet verwijderd kan worden omdat alle
     gegevens, ook foutieve, bestendig moeten worden bewaard. Voorbeeld: BAG
     indicatieNietBAG.
+    - Hoewel het niet nodig is om in een administratie voor een eigenschap die niet kan veranderen, en 'heeft tijdlijn geldigheid' = 'Nee' heeft in een conceptueel informatiemodel, alsnog toch wel een tijdlijn geldigheid bij te houden. De eigenschap zal dan altijd dezelfde waarde hebben. Bijvoorbeeld: een eigenschap zoals een geboortedatum van een mens is een eigenschap die elk mens verplicht heeft en wel precies 1 keer. Let wel, wanneer een gegeven niet kan veranderen in de werkelijkheid, kan deze initieel wel met een foute waarde geregistreerd worden. Wanneer later alsnog de goede waarde bekend wordt en deze verwerkt wordt op een later registatiemoment (op de tijdlijn registratie), dan kan een mens in de werkelijkheid niet ineens twee verschillende geboortedatums hebben en dus ook niet op de tijdlijn geldigheid. De eerste datum was fout, en moet als fout worden aangemerkt en is daarmee ook niet meer geldig. Alleen de tweede is juist en geldig. De tweede is dan ook met terugwerkende kracht geldig, de persoon heeft in de werkelijkheid altijd al deze tweede juiste geboortedatum gehad. Dit is zo, ondanks dat we dit in de administratie pas goed hebben geregistreerd op een later registratiemoment. Eerdere besluiten die gebaseerd zijn op de foute geboortedatum behorend in principe dan ook opnieuw bekeken te worden.
 
 Aanbeveling: het komt voor dat er binnen één domein, van één conceptueel
 informatiemodel, meerdere logische informatiemodellen worden uitgewerkt. Het is
@@ -573,10 +581,9 @@ omdat het vaak ongewenst (en erg Gestructureerd of zelfs onmogelijk) is om
 verschillende implementaties naast elkaar in stand te houden en naar elkaar te
 vertalen.
 
-Opmerking: de metagegevens heeft tijdlijn geldigheid
- en Indicatie formele
-mogen worden opgenomen in een logisch model (of worden overgenomen van het
-conceptuele naar het logische informatiemodel).
+Opmerking: de metagegevens heeft tijdlijn geldigheid en heeft tijdlijn geldigheid 
+mogen worden opgenomen in een logisch model (mogen worden overgenomen van het
+conceptuele naar het logische informatiemodel). 
 
 ### Beheer
 De enige waarden die mogelijk zijn, zijn 'Ja' of 'Nee'. Voor beheer kan 
