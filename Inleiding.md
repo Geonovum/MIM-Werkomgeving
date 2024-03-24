@@ -95,7 +95,7 @@ de onderlinge samenhang is aangegeven en er zijn nog andere manieren - maar geen
 
 Dit niveau valt niet binnen de scope van MIM en wordt om die reden slechts beknopt beschreven. Het dient vooral ter afbakening van de scope. Er kan meer in zitten dan hier beschreven en er gaat meer aan vooraf. Ten aanzien van begrippen en informatiemodellen en het verschil hiertussen zijn de belangrijkste punten:
 
-- Een begrip is de combinatie van een term of woord en een definitie. Begrippen worden door mensen gebruikt om mentaal de werkelijkheid te beschouwen en te begrijpen. Een begrip omvat niet de betekenis en structuur van data. 
+- Een begrip is de combinatie van een term of woord en een definitie. Begrippen worden door mensen gebruikt om mentaal de werkelijkheid te beschouwen en te begrijpen. Het is zeker niet zo dat elk begrip terug te komen in het conceptueel informatiemodel (zie ook de opmerking in de volgende paragraaf). 
 - Van een aantal begrippen ('concepten') zal later blijken dat het een eigenschap is van een object waarover we informatie zullen gaan bijgehouden, maar dit zal zeker niet voor alle begrippen zo zijn, begrippen beschrijven een domein vaak veel breder dan een informatiemodel dit doet. Een aantal begrippen zullen in het informatiemodel beschouwd gaan worden als informatieobjecten, een aantal begrippen worden een kenmerk/eigenschap van deze informatieobjecten, en een heel aantal begrippen zullen geen rol spelen in het informatiemodel omdat er geen data van is of komt.  
 - Voor het bijhouden van informatie wordt een gedetailleerde eenduidige structuur en betekenis aangebracht die data gericht is, maar bij het modelleren van begrippen wordt dit nog niet gedaan. De samenhang tussen informatie is hierbij vaak (bewust) beperkter dan de samenhang tussen begrippen. 
 
@@ -103,6 +103,7 @@ Dit niveau valt niet binnen de scope van MIM en wordt om die reden slechts bekno
 
 Een conceptueel informatiemodel beschrijft de modellering van de werkelijkheid binnen het beschouwde domein door 
 middel van de beschrijving van welke informatie (data met betekenis en structuur) een rol speelt. 
+
 Een conceptueel informatiemodel is hierbij onafhankelijk van het ontwerp van en de implementatie in systemen. 
 Het geeft een zo getrouw mogelijke beschrijving van die werkelijkheid en is in natuurlijke taal geformuleerd. 
 
@@ -120,6 +121,10 @@ zodat ‘de business’ en de ICT-specialisten elkaar (gaan) begrijpen voor wat 
 de informatie die in het domein wordt geregistreerd en/of kan worden uitgewisseld.*
 
 Dit niveau is volledig in scope van MIM. 
+
+Ten aanzien van het begrippenmodel: 
+- De onderwerpen van gesprek, eigenschappen en relaties uit het conceptueel informatiemodel hebben een relatie met één of meerdere begrippen uit het begrippenmodel: zo is duidelijk welke begrippen (met betekenis) er gebruikt zijn bij het modelleren van de informatie die we willen weten over de onderwerpen van gesprek, zoals gemodelleerd in het conceptueel informatiemodel.
+- Het is niet zo dat elk begrip uit een begrippenmodel terug moet komen in het conceptueel informatiemodel. Bijvoorbeeld omdat we niet geïnteresseerd zijn in informatie hierover. De direct gerelateerde begrippen zijn van invloed op de betekenis van de informatie. De anderen begrippen zijn minder relevant. Hoewel sommige begrippen die indirect gerelateerd zijn aan de gemodelleerde informatie alsnog wel handig kunnen zijn voor het nog wat beter begrijpen van de gemodelleerde informatie. 
 
 Ten aanzien van logische informatiemodellen:
 - Een conceptueel informatiemodel is onafhankelijk van standaarden voor gegevensuitwisseling.
