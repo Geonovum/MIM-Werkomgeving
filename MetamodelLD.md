@@ -510,7 +510,7 @@ De generalisaties worden naar het volgende aspect gespecificeerd:
 | Subtype                      | [`mim:definitie`](http://bp4mc2.org/def/mim#subtype) | 1 | [`mim:Objecttype`](http://bp4mc2.org/def/mim#Objecttype) |
 | Supertype                      | [`mim:definitie`](http://bp4mc2.org/def/mim#supertype) | 1 | [`mim:Objecttype`](http://bp4mc2.org/def/mim#Objecttype) |
 | Datum opname                 | [`mim:datumOpname`](http://bp4mc2.org/def/mim#datumOpname) | 1 | datum |
-| mixin                        | [`mim:mixin`](http://bp4mc2.org/def/mim#mixin)             | 1 | boolean |
+| Mixin                        | [`mim:mixin`](http://bp4mc2.org/def/mim#mixin)             | 1 | boolean |
 <!-- | Constraint                | [`mim:constraint`](http://bp4mc2.org/def/mim#constraint) | 0..n | [`mim:Constraint`](http://bp4mc2.org/def/mim#Constraint) | -->
 
 #### mim:Generalisatie bij datatypen
