@@ -218,7 +218,7 @@ Deze paragraaf is een aanvulling op de paragraaf [[[#specificatie-metagegevens]]
 | alias | [`mim:alias`](http://bp4mc2.org/def/mim#alias) | owl:DatatypeProperty | [grondslag](#metagegeven-alias) |
 | attribuut | [`mim:attribuut`](http://bp4mc2.org/def/mim#attribuut) | owl:ObjectProperty | [grondslag](#metagegeven-heeft-attribuut) |
 | authentiek | [`mim:authentiek`](http://bp4mc2.org/def/mim#authentiek) | owl:ObjectProperty | [grondslag](#metagegeven-authentiek) |
-| basis-URI | [`mim:basisUri`](http://bp4mc2.org/def/mim#basisUri) | owl:DatatypeProperty | [grondslag](#metagegeven-basis-uri) |
+| basis-URI | [`mim:basisUri`](http://bp4mc2.org/def/mim#basisUri) | owl:ObjectProperty | [grondslag](#metagegeven-basis-uri) |
 | begrip | [`mim:begrip`](http://bp4mc2.org/def/mim#begrip) | owl:ObjectProperty | [grondslag](#metagegeven-begrip) |
 | begripsterm | [`mim:begripsterm`](http://bp4mc2.org/def/mim#begripsterm) | owl:DatatypeProperty | [grondslag](#metagegeven-begrip) |
 | bron | [`mim:bron`](http://bp4mc2.org/def/mim#bron) | owl:ObjectProperty | [grondslag](#metagegeven-bron) |
@@ -266,7 +266,7 @@ Deze paragraaf is een aanvulling op de paragraaf [[[#specificatie-metagegevens]]
 | toelichting | [`mim:toelichting`](http://bp4mc2.org/def/mim#toelichting) | owl:DatatypeProperty | [grondslag](#metagegeven-toelichting)
 | type | [`mim:type`](http://bp4mc2.org/def/mim#type) | owl:ObjectProperty | [grondslag](#metagegeven-type) |
 | unidirectioneel | [`mim:unidirectioneel`](http://bp4mc2.org/def/mim#unidirectioneel) | owl:DatatypeProperty | [grondslag](#metagegeven-unidirectioneel) |
-| modelelement identificatie | [`mim:modelelementIdentificatie`](http://bp4mc2.org/def/mim#modelelementIdentificatie) | owl:DatatypeProperty | [grondslag](#metagegeven-modelelement-identificatie) |
+| modelelementidentificatie | [`mim:modelelementIdentificatie`](http://bp4mc2.org/def/mim#modelelementidentificatie) | owl:ObjectProperty | [grondslag](#metagegeven-modelelement-identificatie) |
 | waarde | [`mim:waarde`](http://bp4mc2.org/def/mim#waarde) | owl:ObjectProperty | [grondslag](#metagegeven-bevat-enumeratiewaarde) |
 | minimumwaarde inclusief | [`mim:minimumwaardeInclusief`](http://bp4mc2.org/def/mim#minimumwaardeInclusief) | owl:DatatypeProperty  |  [grondslag](#metagegeven-minimumwaarde-inclusief) |
 | minimumwaarde exclusief | [`mim:minimumwaardeExclusief`](http://bp4mc2.org/def/mim#minimumwaardeExclusief) | owl:DatatypeProperty  |  [grondslag](#metagegeven-minimumwaarde-exclusief) |
@@ -746,7 +746,7 @@ Informatiemodel packages worden naar de volgende aspecten gespecificeerd:
 
 | **Aspect**                   | **Eigenschap** | **Kardinaliteit** | **Datatype of klasse** |
 |------------------------------|----------------|-------------------|--------------|
-| Modelelement identificatie                       | [`mim:modelelementIdentificatie`](http://bp4mc2.org/def/mim#modelelementIdentificatie) | 1 | tekst |
+| Modelelement identificatie   | [`mim:modelelementIdentificatie`](http://bp4mc2.org/def/mim#modelelementIdentificatie) | 1 | tekst |
 | Naam                         | [`mim:naam`](http://bp4mc2.org/def/mim#naam) | 1 | tekst |
 | Alias                        | [`mim:alias`](http://bp4mc2.org/def/mim#alias) | 0..1 | tekst |
 | Definitie                    | [`mim:definitie`](http://bp4mc2.org/def/mim#definitie) | 1 | tekst |
