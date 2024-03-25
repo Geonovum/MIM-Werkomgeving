@@ -426,6 +426,7 @@ shape:Informatiemodel a sh:NodeShape;
   sh:property shape:mimversie;
   sh:property shape:mimextensie;
   sh:property shape:mimtaal;
+  sh:property shape:tekstopmaak;
   sh:property shape:datumOpname;
   sh:property shape:constraint;
 .
@@ -587,6 +588,14 @@ shape:mimextensie a sh:PropertyShape;
 shape:mimtaal a sh:PropertyShape;
   sh:path mim:mimtaal;
   sh:name "mim:mimtaal";
+  sh:order 1;
+  sh:maxCount 1;
+  sh:datatype xsd:string;
+.
+
+shape:tekstopmaak a sh:PropertyShape;
+  sh:path mim:tekstopmaak;
+  sh:name "mim:tekstopmaak";
   sh:order 1;
   sh:maxCount 1;
   sh:datatype xsd:string;

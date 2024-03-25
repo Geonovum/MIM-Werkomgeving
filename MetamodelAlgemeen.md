@@ -909,7 +909,7 @@ Bijvoorbeeld: `"1.0.1"` of `"1.1"` of `"1.1.1"`
 #### Metagegeven: **Tekstopmaak**
 
 <aside class="definition">
-  <dfn>MIM-taal</dfn>De specificatie van de opmaak van een tekstuele beschrijving in het model.
+  <dfn>Tekstopmaak</dfn>De specificatie van de opmaak van een tekstuele beschrijving in het model.
 </aside>
 
 *Toelichting* 
@@ -918,7 +918,7 @@ Bijvoorbeeld: `"rtf"`, `"html"`.
 
 De metagegevens 'definitie' en 'toelichting' bevatten tekst waarvan het nuttig kan zijn om deze op te maken. De opmaak zoals hier bedoeld betreft het verhogen van de leesbaarheid van de tekst, wanneer de modelleur van het model dit nuttig of nodig acht. Deze opmaak is nadrukkelijk niet bedoeld om aan te duiden in welke vorm het model gepubliceerd moet gaan worden (zoals in html, pdf, xml enz). In de MIM gedachte hoort een model vrij te zijn van deze overweging en kan een model in elk van deze, en ook in meerdere vormen tegelijk, gepubliceerd worden.  
 
-De tekst kan en mag een bepaalde opmaak bevatten, maar dit hoeft niet. Maar als ervoor gekozen wordt, dan geldt het voor alle definities en alle toelichtingen. Wellicht is opmaak ook van belang voor andere metagegevens (zoals patroon, populatie, kwaliteit en mogelijk andere) maar in deze versie van MIM is de opmaak alleen bedoeld voor 'definitie' en 'toelichting'. Wel kunt u deze opmaak van toepassing verklaren op metagegevens uit uw eigen extensie (zoals bedoeld in hoofdstuk 1).
+De tekst kan en mag een bepaalde opmaak bevatten, maar dit hoeft niet. Maar als ervoor gekozen wordt, dan geldt het voor alle definities en alle toelichtingen. Wellicht is opmaak ook van belang voor andere metagegevens (zoals patroon, populatie, kwaliteit en mogelijk andere) maar in deze versie van MIM is de opmaak alleen bedoeld voor 'definitie' en 'toelichting'. Wel kunt u deze opmaak van toepassing verklaren op metagegevens uit uw eigen extensie (zoals bedoeld in [[[#een-eigen-extensie-op-het-metamodel]]]).
 
 *Toepassing*: Informatiemodel (optioneel)
 

@@ -163,7 +163,7 @@
 |Specialisatie van|[mim:Package](#Package)|
 |Definitie|De groepering van alle modelelementen waaruit het informatiemodel is opgebouwd. Het informatiemodel als geheel.|
 |Bron|[Sectie 2.6.1 Informatiemodel](https://docs.geostandaarden.nl/mim/mim/#informatiemodel)|
-|Eigenschappen|[mim:alias](#alias), [mim:constraint](#constraint), [mim:datumOpname](#datumOpname), [mim:informatiedomein](#informatiedomein), [mim:informatiemodeltype](#informatiemodeltype), [mim:mimextensie](#mimextensie), [mim:mimtaal](#mimtaal), [mim:mimversie](#mimversie), [mim:naam](#naam), [mim:relatiemodelleringstype](#relatiemodelleringstype)|
+|Eigenschappen|[mim:alias](#alias), [mim:constraint](#constraint), [mim:datumOpname](#datumOpname), [mim:informatiedomein](#informatiedomein), [mim:informatiemodeltype](#informatiemodeltype), [mim:mimextensie](#mimextensie), [mim:mimtaal](#mimtaal), [mim:mimversie](#mimversie), [mim:naam](#naam), [mim:relatiemodelleringstype](#relatiemodelleringstype), [mim:tekstopmaak](#tekstopmaak)|
 
 ### mim:Keuze {#Keuze}
 
@@ -526,6 +526,15 @@
 |-|-|
 |Definitie|De versie van de MIM specificatie die gebruikt is om het informatiemodel in uit te drukken.|
 |Bron||
+|Datatype|[string](http://www.w3.org/2001/XMLSchema#string)|
+|Eigenschap van|[mim:Informatiemodel](#Informatiemodel), |
+
+### mim:tekstopmaak {#tekstopmaak}
+
+|URI|http://modellen.mim-standaard.nl/def/mim#tekstopmaak|
+|-|-|
+|Definitie|De specificatie van de opmaak van een tekstuele beschrijving in het model.|
+|Bron|[Metagegeven: Tekstopmaak](https://docs.geostandaarden.nl/mim/mim/#metagegeven-teksopmaak)|
 |Datatype|[string](http://www.w3.org/2001/XMLSchema#string)|
 |Eigenschap van|[mim:Informatiemodel](#Informatiemodel), |
 
