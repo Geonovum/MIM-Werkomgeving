@@ -50,7 +50,7 @@ In de SPARQL rules wordt gebruik gemaakt van een aantal SPARQL functies. In onde
 |t:nodeshapeuri|Formuleert de uri voor een nodeshape op basis van de naam van een MIM resource. De nodeshape URI is opgebouwd als `{shape-namespace}#{t:CamelCase(term)}`. De `{shape-namespace}` is een vooraf vastgestelde waarde die gelijk is aan de te maken shapesgraph.|
 |t:propertyshapeuri|Formuleert de uri voor een propertyshape op basis van de naam van een MIM resource en de naam van de MIM resource die hiervan de "bezitter" is. De propertyshape URI is opgebouwd als `{shape-namespace}#{t:CamelCase(bezittersnaam)}-{t:camelCase(naam)}`. Zie ook `t:nodeshapeuri`.|
 |t:nodepropertyuri|Formuleert de uri voor een property op basis van de naam van een MIM resource en de naam van de MIM resource die hiervan de "bezitter" is. De property URI is opgebouwd als `{namespace}#{t:CamelCase(bezittersnaam)}-{t:camelCase(naam)}`.|
-|t:statementuri|Formuleert de uri voor een rdf:Statement op basis van zijn afzonderlijke elementen. Mogelijke invulling kan het maken van een hash zijn op basis van de aaneenschakeling van subject, predicate en object.|
+|t:topropertyuri|Formuleert de uri voor een rdf:Property op basis van een andere uri door een t:camelCase functie toe te passen op het laatste segment van de andere uri.|
 |t:schemeuri|Formuleert de uri voor een concept-scheme op basis van de naam van een MIM resource. De concept-scheme URI is opgebouwd als `{namespace}/id/scheme/{t:CamelCase(naam)}`. De `{namespace}` is een vooraf vastgestelde waarde die gelijk is aan de locatie van de package.|
 |t:concepturi|Formuleert de uri voor een concept op basis van de naam van een MIM resource. De concept URI is opgebouwd als `{namespace}/id/concept/{t:CamelCase(naam)}`. De `{namespace}` is een vooraf vastgestelde waarde die gelijk is aan de locatie van de package.|
 |t:mincount|Formuleert de minimum kardinaliteit op basis van een kardinaliteitsaanduiding (zie bij mim:kardinaliteit). De waarde kan ook unbound zijn, in dat geval wordt ook de variable niet gebound en daardoor de betreffende triple niet opgevoerd.|
@@ -401,7 +401,7 @@ WHERE {
   ?doelklasse mim:seeAlso ?object.
   BIND (t:nodeshapeuri(?relatieklassenaam) as ?nodeshape)
   BIND (t:propertyshapeuri(?bezittersnaam,?relatieklassenaam) as ?propertyshape)
-  BIND (t:propertyuri(?relatieklassenaam) as ?objectproperty)
+  BIND (t:topropertyuri(?class) as ?objectproperty)
 }
 </pre>
 

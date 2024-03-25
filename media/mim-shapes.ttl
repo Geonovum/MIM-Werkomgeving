@@ -23,7 +23,6 @@ shape:Objecttype a sh:NodeShape;
   dct:source mimdoc:sectie3.2.1-Objecttype;
   sh:property [sh:path rdf:type; sh:hasValue mim:Objecttype];
   # Modelelementidentificatie metagegevens
-  sh:property shape:basisUri;
   sh:property shape:modelelementidentificatie;
   sh:property shape:isGedefinieerdIn;
   # Metagegevens
@@ -49,7 +48,6 @@ shape:Attribuutsoort a sh:NodeShape;
   sh:name "mim:Attribuutsoort";
   dct:source mimdoc:sectie3.2.1-Attribuutsoort;
   # Modelelementidentificatie metagegevens
-  sh:property shape:basisUri;
   sh:property shape:modelelementidentificatie;
   sh:property shape:isGedefinieerdIn;
   # Metagegevens
@@ -88,7 +86,6 @@ shape:Gegevensgroep a sh:NodeShape;
   sh:name "mim:Gegevensgroep";
   dct:source mimdoc:sectie2.3.1-Gegevensgroep;
   # Modelelementidentificatie metagegevens
-  sh:property shape:basisUri;
   sh:property shape:modelelementidentificatie;
   sh:property shape:isGedefinieerdIn;
   # Metagegevens
@@ -112,7 +109,6 @@ shape:Gegevensgroeptype a sh:NodeShape;
   dct:source mimdoc:sectie2.3.1-Gegevensgroeptype;
   sh:property [sh:path rdf:type; sh:hasValue mim:Gegevensgroeptype];
   # Modelelementidentificatie metagegevens
-  sh:property shape:basisUri;
   sh:property shape:modelelementidentificatie;
   sh:property shape:isGedefinieerdIn;
   # Metagegevens
@@ -134,7 +130,6 @@ shape:Relatiesoort a sh:NodeShape;
   sh:name "mim:Relatiesoort";
   dct:source mimdoc:sectie2.3.2.1-Relatiesoort;
   # Modelelementidentificatie metagegevens
-  sh:property shape:basisUri;
   sh:property shape:modelelementidentificatie;
   sh:property shape:isGedefinieerdIn;
   # Metagegevens
@@ -172,7 +167,6 @@ shape:Relatierol a sh:NodeShape;
   sh:name "mim:Relatierol";
   dct:source mimdoc:sectie2.3.2.1-Relatierol;
   # Modelelementidentificatie metagegevens
-  sh:property shape:basisUri;
   sh:property shape:modelelementidentificatie;
   sh:property shape:isGedefinieerdIn;
   # Metagegevens
@@ -201,7 +195,6 @@ shape:Generalisatie a sh:NodeShape;
   sh:name "mim:Generalisatie";
   dct:source mimdoc:sectie2.3.2.2-Generalisatie;
   # Modelelementidentificatie metagegevens
-  sh:property shape:basisUri;
   sh:property shape:modelelementidentificatie;
   sh:property shape:isGedefinieerdIn;
   # Metagegevens
@@ -216,7 +209,6 @@ shape:Relatieklasse a sh:NodeShape;
   sh:name "mim:Relatieklasse";
   dct:source mimdoc:sectie2.3.2.2-Relatieklasse;
   # Modelelementidentificatie metagegevens
-  sh:property shape:basisUri;
   sh:property shape:modelelementidentificatie;
   sh:property shape:isGedefinieerdIn;
   # Metagegevens
@@ -249,7 +241,6 @@ shape:ExterneKoppeling a sh:NodeShape;
   sh:name "mim:ExterneKoppeling";
   dct:source mimdoc:sectie2.3.2.2-ExterneKoppeling;
   # Modelelementidentificatie metagegevens
-  sh:property shape:basisUri;
   sh:property shape:modelelementidentificatie;
   sh:property shape:isGedefinieerdIn;
   # Metagegevens
@@ -282,7 +273,6 @@ shape:Referentielijst a sh:NodeShape;
   sh:name "mim:Referentielijst";
   dct:source mimdoc:sectie2.3.3-Referentielijst;
   # Modelelementidentificatie metagegevens
-  sh:property shape:basisUri;
   sh:property shape:modelelementidentificatie;
   sh:property shape:isGedefinieerdIn;
   # Metagegevens
@@ -303,7 +293,6 @@ shape:ReferentieElement a sh:NodeShape;
   sh:name "mim:ReferentieElement";
   dct:source mimdoc:sectie2.3.3-ReferentieElement;
   # Modelelementidentificatie metagegevens
-  sh:property shape:basisUri;
   sh:property shape:modelelementidentificatie;
   sh:property shape:isGedefinieerdIn;
   # Metagegevens
@@ -331,7 +320,6 @@ shape:Codelijst a sh:NodeShape;
   sh:name "mim:Codelijst";
   dct:source mimdoc:sectie2.3.3-Codelijst;
   # Modelelementidentificatie metagegevens
-  sh:property shape:basisUri;
   sh:property shape:modelelementidentificatie;
   sh:property shape:isGedefinieerdIn;
   # Metagegevens
@@ -356,7 +344,6 @@ shape:PrimitiefDatatype a sh:NodeShape;
   sh:name "mim:PrimitiefDatatype";
   dct:source mimdoc:sectie2.3.4-PrimitiefDatatype;
   # Modelelementidentificatie metagegevens
-  sh:property shape:basisUri;
   sh:property shape:modelelementidentificatie;
   sh:property shape:isGedefinieerdIn;
   # Metagegevens
@@ -378,7 +365,6 @@ shape:GestructureerdDatatype a sh:NodeShape;
   sh:name "mim:GestructureerdDatatype";
   dct:source mimdoc:sectie2.3.4-GestructureerdDatatype;
   # Modelelementidentificatie metagegevens
-  sh:property shape:basisUri;
   sh:property shape:modelelementidentificatie;
   sh:property shape:isGedefinieerdIn;
   # Metagegevens
@@ -400,7 +386,6 @@ shape:DataElement a sh:NodeShape;
   sh:name "mim:DataElement";
   dct:source mimdoc:sectie2.3.4-DataElement;
   # Modelelementidentificatie metagegevens
-  sh:property shape:basisUri;
   sh:property shape:modelelementidentificatie;
   sh:property shape:isGedefinieerdIn;
   # Metagegevens
@@ -426,7 +411,6 @@ shape:Keuze a sh:NodeShape;
   sh:targetClass mim:Keuze;
   sh:name "mim:Keuze";
   # Modelelementidentificatie metagegevens
-  sh:property shape:basisUri;
   sh:property shape:modelelementidentificatie;
   sh:property shape:isGedefinieerdIn;
   # Metagegevens
@@ -464,7 +448,6 @@ shape:KeuzeConstraint a sh:NodeShape;
   sh:targetClass mim:KeuzeConstraint;
   sh:name "mim:Keuzeconstraint";
   # Modelelementidentificatie metagegevens
-  sh:property shape:basisUri;
   sh:property shape:modelelementidentificatie;
   sh:property shape:isGedefinieerdIn;
   # Metagegevens
@@ -563,7 +546,6 @@ shape:Enumeratie a sh:NodeShape;
   sh:name "mim:Enumeratie";
   dct:source mimdoc:sectie2.3.6-Enumeratie;
   # Modelelementidentificatie metagegevens
-  sh:property shape:basisUri;
   sh:property shape:modelelementidentificatie;
   sh:property shape:isGedefinieerdIn;
   # Metagegevens
@@ -579,7 +561,6 @@ shape:Enumeratiewaarde a sh:NodeShape;
   sh:targetClass mim:Enumeratiewaarde;
   sh:name "mim:Enumeratiewaarde";
   # Modelelementidentificatie metagegevens
-  sh:property shape:basisUri;
   sh:property shape:modelelementidentificatie;
   sh:property shape:isGedefinieerdIn;
   # Metagegevens
@@ -596,7 +577,6 @@ shape:Constraint a sh:NodeShape;
   sh:targetClass mim:Constraint;
   sh:name "mim:Constraint";
   # Modelelementidentificatie metagegevens
-  sh:property shape:basisUri;
   sh:property shape:modelelementidentificatie;
   sh:property shape:isGedefinieerdIn;
   # Metagegevens
