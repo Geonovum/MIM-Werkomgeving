@@ -533,6 +533,8 @@ De generalisaties worden naar het volgende aspect gespecificeerd:
 
 | **Aspect**                  | **Kardinaliteit** | **Toelichting**                | **In UML 2.5**                        |    | **In EA**      | **In ...** |
 | -------------------------------- | -------- | ---------------------------------------- | ------------------------------------- | -- | -------------- | -------- |
+| **Modelelementidentificatie** | 1 | Identificerend metagegeven. | | | *Tagged value* | |
+| **Is gedefinieerd in** | 1| Algemeen metagegeven. | | | *Tagged value* | |
 | **Subtype**   | 1                  | De generalisatie relatie kent twee kanten, de bron kant (source) van de relatie en de doel kant (target) van de relatie. De bron kant van deze generalisatie relatie specificeert een _objecttype_ die een subtype/specialisatie is van het via deze generalisatie relatie aangegeven supertype (zie verwijst naar supertype). Kortweg, het subtype is een specialisatie van het supertype. Het objecttype dat het subtype is van deze generalisatie is verbonden met deze generalisatie. | */source: related Element bij Relationship Element* |      | *Source*  |            |
 | verwijst naar **supertype**  | 1    | Binding van deze generalisatie aan een objecttype. De generalisatie relatie kent twee kanten, de bron kant (source) van de relatie en de doel kant (target) van de relatie. De doel kant van deze generalisatie relatie specificeert een _objecttype_ die het supertype/de generalisatie is van het via deze generalisatie aangegeven subtype. Kortweg, het supertype is een generalisatie van het subtype. | */target: related Element bij Relationship Element* = UML-Class |      | *Target*  |                 |
 | **Datum opname** | 1               | Algemeen metagegeven                                         |                     |      | *Tagged value* |            |
@@ -545,6 +547,8 @@ De generalisaties worden naar het volgende aspect gespecificeerd:
 
 | **Aspect**                  | **Kardinaliteit** | **Toelichting**                | **In UML 2.5**                        |    | **In EA**      | **In ...** |
 | -------------------------------- | -------- | ---------------------------------------- | ------------------------------------- | -- | -------------- | -------- |
+| **Modelelementidentificatie** | 1 | Identificerend metagegeven. | | | *Tagged value* | |
+| **Is gedefinieerd in** | 1| Algemeen metagegeven. | | | *Tagged value* | |
 | **Subtype**   | 1                  | De generalisatie relatie kent twee kanten, de bron kant (source) van de relatie en de doel kant (target) van de relatie. De bron kant van deze generalisatie relatie specificeert een _datatype_ die een subtype/specialisatie is van het via deze generalisatie relatie aangegeven supertype (zie verwijst naar supertype). Kortweg, het subtype is een specialisatie van het supertype. Het datatype dat het subtype is van deze generalisatie is verbonden met deze generalisatie. 
  | */source: related Element bij Relationship Element* |      |      | *Source*  |            |
 | verwijst naar **supertype**  | 1    | Binding van deze generalisatie aan een datatype. De generalisatie relatie kent twee kanten, de bron kant (source) van de relatie en de doel kant (target) van de relatie. De doel kant van deze generalisatie relatie specificeert een _datatype_ die het supertype/de generalisatie is van het via deze generalisatie aangegeven subtype. Kortweg, het supertype is een generalisatie van het subtype. | */target: related Element bij Relationship Element* = UML-datatype |      |      | *Target*  |                 |
@@ -812,6 +816,7 @@ Een Keuze worden naar de volgende aspecten gespecificeerd:
 
 | **Aspect**                  | **Kardinaliteit** | **Toelichting**                | **In UML 2.5**                        |    | **In EA**      | **In ...** |
 | -------------------------------- | -------- | ---------------------------------------- | ------------------------------------- | -- | -------------- | -------- |
+| **Modelelementidentificatie** | 1 | Identificerend metagegeven. | | | *Tagged value* | |
 | **Naam**         | 1             | Algemeen metagegeven. *De naam van het domein package.* | *name van de metaclass Namedelement* |      | *Name*    |            |
 | **Alias**        | 0..1          | Algemeen metagegeven.    | *UML-Property* |      | *Alias*        |            |
 | **Herkomst**     | 0..1          | Algemeen metagegeven.    |                |      | *tagged value* |            |
@@ -917,11 +922,12 @@ View packages worden naar de volgende aspecten gespecificeerd, analoog aan
 <a>Constraint</a> betreft de metaclass UML Constraint en wordt naar de volgende
 aspecten gespecificeerd:
 
-| **Aspect**                                      | **Kardinaliteit** | **Toelichting**                                                                   | **In UML 2.5**                        |    | **In EA**                    | **In ...**  |
-| ----------------------------------------------- | ----------------- | ----------------------------------------------------------------------------------| ------------------------------------- | -- | ---------------------------- | ----------- |
-| **Naam√**                                       | 1                 | Algemeen metagegeven.                                                             | *name van de metaclass Named element* |    | *Name*                       |             |
-| **Specificatie tekst**                          | 0..1              | De specificatie van de Constraint in normale tekst.                               |                                       |    | *Notes (type = invariant)*   |             |
-| **Specificatie formeel**                        | 0..1              | De beschrijving van de Constraint in een formele specificatietaal, in OCL.        |                                       |    | *Notes (type =OCL)*          |             |
+| **Aspect**                                      | **Kardinaliteit** | **Toelichting**                                                                | **In UML 2.5**                        |    | **In EA**                    | **In ...**  |
+| ----------------------------------------------- | ----------------- | -------------------------------------------------------------------------------| ------------------------------------- | -- | ---------------------------- | ----------- |
+| **Modelelementidentificatie**                   | 1                 | Identificerend metagegeven.                                                    |                                       |    | *Tagged value*               |             |
+| **Naam√**                                       | 1                 | Algemeen metagegeven.                                                          | *name van de metaclass Named element* |    | *Name*                       |             |
+| **Specificatie tekst**                          | 0..1              | De specificatie van de Constraint in normale tekst.                            |                                       |    | *Notes (type = invariant)*   |             |
+| **Specificatie formeel**                        | 0..1              | De beschrijving van de Constraint in een formele specificatietaal, in OCL.     |                                       |    | *Notes (type =OCL)*          |             |
 | van toepassing op **Objecttype**                | 0..1              | Binding aan een Objecttype                                                     |                                       |    |                              |             |
 | van toepassing op **Attribuutsoort**            | 0..1              | Binding aan een Attribuutsoort                                                 |                                       |    |                              |             |
 | van toepassing op **Gegevensgroep**             | 0..1              | Binding aan een Gegevensgroep                                                  |                                       |    |                              |             |
