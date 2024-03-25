@@ -198,7 +198,7 @@ Een keuze tussen relatiesoorten wordt gedaan op basis van een keuzeconstraint. E
   <figcaption>Diagram: Packages in LD</figcaption>
 </figure>
 
-De relatie bevatModelelement geeft aan dat packages modelelementen kunnen bevatten. Welke modelelementen precies toegestaan zijn, wordt in het plaatje niet tot uitdrukking gebracht. Zie hiervoor [sectie 2.6](#packages).
+Het metagegeven <a href="#metagegeven-bevat-modelelement">bevat modelelement</a> geeft aan dat packages modelelementen kunnen bevatten. Dit metagegeven wordt in het Linked Data metamodel opgenomen als relatie. Welke modelelementen precies toegestaan zijn, wordt in het plaatje niet tot uitdrukking gebracht. Zie hiervoor [sectie 2.6](#packages).
 
 | **MIM metaclass**     | **Metaclass in RDF** | **Shape in RDF** | **Grondslag** |
 |-----------------------|----------------------|------------------|---------------|
