@@ -440,9 +440,9 @@ Een `«Constraint»` wordt beschreven met een:
 1. **Specificatie in tekst** (`UML-Constraint Notes`, `type invariant`): een uitgebreide heldere  beschrijving van de `«Constraint»` in gewone tekst.
 1. [Optioneel] **Specificatie formeel** (`UML-Constraint Notes`, `type OCL`): formele specificatie in de [[[OCL]]] (OCL). De formele specificatie bevat dus de uitgebreide heldere beschrijving van de constraint in (a.) _gewone tekst_ én (b.) de _formele specificatie in OCL_.
 
-In Enterprise architect `12.x` lijkt het helaas (nog) niet mogelijk om constraints zoals bedoeld in UML op te nemen, te weten als `OpaqueExpression` met een `constraint string` en een aanduiding van de taal: natuurlijke taal, of OCL (of een andere zoals Java, maar deze wordt niet toegepast in dit metamodel). EA werkt met `UML Notes` en een `constraint type`.
+In Enterprise Architect `12.x` lijkt het helaas (nog) niet mogelijk om constraints zoals bedoeld in UML op te nemen, te weten als `OpaqueExpression` met een `constraint string` en een aanduiding van de taal: natuurlijke taal, of OCL (of een andere zoals Java, maar deze wordt niet toegepast in dit metamodel). EA werkt met `UML Notes` en een `constraint type`.
 
-Het is daarnaast niet mogelijk om de tekst en de OCL in dezelfde constraint op te nemen. Het worden dan twee aparte constraints: één met tekst en één met OCL, met verplicht ook een andere naam. Vandaar onderstaande aanpak.Als de modelleur kiest om de `«Constraint»` alleen in gewone taal te beschrijven,
+Het is daarnaast niet mogelijk om de tekst en de OCL in dezelfde constraint op te nemen. Het worden dan twee aparte constraints: één met tekst en één met OCL, met verplicht ook een andere naam. Vandaar onderstaande aanpak. Als de modelleur kiest om de `«Constraint»` alleen in gewone taal te beschrijven,
 dan als volgt: 
 - **Naam** (`UML-constraint name`): een naam c.q. label, vaak in
 steekwoorden. 
@@ -457,10 +457,19 @@ Als de modelleur kiest om de `«Constraint»` niet alleen in gewone taal te besc
 
 **Aanbeveling**: wees terughoudend met het gebruik van constraints in het informatiemodel wanneer de kans reëel is dat het model hierdoor gaat wijzigen of als het niet direct over de _semantiek_, _structuur_ of _syntax_ van de te registreren gegevens gaat. Dit is bijvoorbeeld het geval wanneer er regels bestaan rondom informatie die elke paar jaar kan wijzigen, of die per toepassingsgebied (net) anders toegepast moet worden. Bijvoorbeeld: wanneer een persoon 65 jaar of ouder is, mag deze geen uitkering aanvragen. Wanneer er veel van zulke constraints in het informatiemodel worden opgenomen, zal dit leiden tot een ongewenste dynamiek waardoor er (te) vaak nieuwe versies moeten worden uitgebracht. De aanbeveling is om de specificatie van dergelijke constraints buiten het informatiemodel te specificeren, bijvoorbeeld als _validatieregel_.
 
+<aside class="example" title="Voorbeeld van een constraint voor een adres">
+    <p><strong>Naam van het constraint</strong></p>
+    <pre><code>idNummeraanduidingBAGEnOfLocatieomschrijving</code></pre>
+    <p><strong>Specificatie in tekst</strong></p>
+    <pre><code>/* Het adres middels idNummeraanduidingBAG en/of de locatieomschrijving moet gevuld zijn.*/</code></pre>
+    <p><strong>Specificatie formeel</strong></p>
+    <pre><code>inv. (idNummeraanduidingBAG,notEmpty() or locatieomschrijving.netEmpty()) or <br>(idNummeraanduidingBAG.notEmpty() and locatieomschrijving.notEmpty())</code></pre>
+</aside>
+
 ## Historie
 
-Deze paragraaf geeft in meer detail aan wat we onder de metagegevens *Indicatie
-materiële historie en Indicatie formele historie* verstaan.
+Deze paragraaf geeft in meer detail aan wat we onder de metagegevens *heeft tijdlijn geldigheid* en *heeft tijdlijn registratie* verstaan (was in MIM 1.1.1 *Indicatie
+materiële historie* en *heeft tijdlijn registratie*).
 
 Aanvullend beschrijft deze paragaaf een aantal aspecten waar rekening mee
 gehouden kan worden bij de uitwerking van historie in een informatiemodel op
@@ -487,9 +496,9 @@ bepaald moment is.
 attribuutwaarden: 
 - Wanneer is iets gebeurd, in de werkelijkheid of volgens
 opgave (wanneer zijn de opgenomen gegevens geldig)? Dit valt binnen de tijdlijn
-van de aangehouden werkelijkheid. 
+van de aangehouden werkelijkheid, zoals bepaald door een bevoegd gezag (een partij die erover gaat). 
 - Vanaf wanneer wist de overheid (als collectief van organisaties) dat de gegevens bekend 
-waren? Dit valt binnen de tijdlijn van het administratieproces of de administratieve werkelijkheid.
+waren? Dit valt binnen de tijdlijn van het administratieproces of de administratieve werkelijkheid. Op welke moment zijn de gegevens registreerd. 
 
 In de rapportage 'Architectuur van het stelsel' (Stroomlijning BasisGegevens,
 2006) wordt geadviseerd om beide tijdlijnen te registreren, om de
@@ -499,43 +508,47 @@ metamodel schrijft derhalve niet voor welke bij de tijdlijnen behorende
 attributen gebruikt moeten worden voor het vastleggen van historie.
 
 ### Historie op conceptueel niveau
-Op conceptueel niveau is het wel altijd
-mogelijk om aan te geven dát het bijhouden van historie *aan de orde is* voor
-een (elk) gegeven, dat wil zeggen een attribuut of relatie van een object, te
-weten via een metagegeven. Deze metagegevens specificeren we als volgt: -
-*Indicatie materiële historie*: indicatie of de materiële historie van de
-attribuutsoort te bevragen is. Materiële historie geeft aan wanneer een
-verandering is opgetreden in de werkelijkheid die heeft geleid tot verandering
-van de attribuutwaarde. Materiële historie impliceert dat actuele, historische
-en eventuele toekomstige attribuutwaarden te bevragen zijn. - *Indicatie formele
-historie*: indicatie of de formele historie van de attribuutsoort te bevragen
-is. Formele historie geeft aan wanneer in de administratie een verandering is
-verwerkt van de attribuutwaarde (wanneer was de verandering bekend en is deze
-verwerkt).
+Op conceptueel niveau is het wel altijd mogelijk om aan te geven dát het bijhouden van historie *aan de orde is* voor
+een (elk) gegeven, dat wil zeggen een attribuut of relatie van een object, te weten via een metagegeven. 
+
+Deze metagegevens specificeren we als volgt: 
+
+- *heeft tijdlijn geldigheid* (of 'indicatie materiele historie'): indicatie of de geldigheid (de materiële historie) van een 
+eigenschap, waarvoor gegevens bijgehouden worden, te bevragen is (moet zijn).
+
+Dit metagegeven impliceert dat actuele, historische en eventuele toekomstige eigenschappen te bevragen zijn op wanneer deze geldig zijn en dat het zinvol is om een tijdlijn geldigheid bij te houden voor de eigenschap, omdat deze kan veranderen. De geldigheid geeft aan wanneer een verandering is opgetreden in de werkelijkheid (materiële historie) die heeft geleid tot verandering van de eigenschap. Het komt voor dat de geldigheid van een eigenschap wordt besloten, zoals wanneer bepaalde regelgeving geldig wordt, of wanneer een vergunning wordt verleend. Veelal gebeurd dit met een geldigheid die gelegen is in de (nabije) toekomst, maar het geldig worden kan ook in het verleden liggen. 
+
+Merk op: de *heeft tijdlijn geldigheid* geeft op conceptueel niveau niet aan dat er voor het gegeven een tijdlijn geldigheid wordt bijgehouden in de administratie. Het geeft aan _dat een eigenschap_ kan veranderen en er op de tijdlijn geldigheid verschillende waarden kunnen bestaan (op verschillende momenten). 
+
+- *heeft tijdlijn registratie* (of 'indicatie formele historie'): indicatie dat het registratiemoment (de formele historie) van een 
+eigenschap, waarvoor gegevens bijgehouden worden, te bevragen is (moet zijn).
+
+Dit metagegeven impliceert dat het registratiemoment wordt bijgehouden van wanneer in de administratie een verandering van een eigenschap is verwerkt. Hiermee kan de administratie antwoord te geven op de vraag: vanaf wanneer de nieuwe waarde voor de eigenschap bekend in de administratie (het nieuwe gegeven). Als dit relevant is om te weten, geef dan de 'heeft tijdlijn registratie' = 'Ja' aan.  Dit metagegeven hangt sterk samen met de vraag: wanneer had een afnemer die behoefte heeft aan deze informatie deze informatie kunnen weten, als deze dit aan de administratie had gevraagd (eerder dan het registratiemoment is niet mogelijk). Het registratiemoment hiervan is altijd een moment in de echte tijd, de 'horloge' tijd. Er kunnen vele tijdsmomenten relevant zijn, zoals een tijdstip van een besluit, een tijdstip van het ontvangen van een melding of beschreven gebeurtenis bij een organisatie, het tijdstip van de registratie in een administratie, het tijdstip dat het gegeven beschikbaar is gekomen voor afnemers en meer. Het metagegeven 'heeft registratie tijdlijn' heeft alleen betrekking op de eis dat het registratiemoment te bevragen is vanuit een administratie. De andere tijdmomenten zijn ook vaak erg relevant, maar dit zijn eigenstandige functionele momenten. 
 
 <pre class='example'>
-‘Bouwjaar pand’ heeft al materiële historie in zich: het bouwjaar is het moment 
-waarop de wijziging in de werkelijkheid zich voordeed en wijzigt niet. 
-De ‘indicatie materiële historie’ ervan is daarom Nee. 
+‘Bouwjaar pand’ heeft al materiële historie in zich: het bouwjaar is het moment waarop de wijziging in de werkelijkheid zich voordeed en wijzigt niet. Het pand kan maar 1x initieel gebouwd zijn. Net zoals een mens maar 1 geboortedatum heeft. 
+    
+De ‘heeft tijdlijn geldigheid’ ervan is daarom 'Nee'. 
 
+Het is dus in principe niet nodig om voor deze eigenschap een tijdlijn geldigheid (materiele historie) bij te houden. Althans niet op conceptueel niveau. Er kan een fout gemaakt kan zijn bij de registratie van dit gegeven maar dit doet niets af aan het feit dat het bouwjaar of de geboortedatum in de werkelijkheid niet kan veranderen. 
+    
 BSN van een Persoon geldt voor de persoon vanaf het moment dat de persoon in de 
-BRP is opgenomen en wijzigt niet: ‘indicatie materiële historie’ Nee. 
+BRP is opgenomen en wijzigt niet: ‘heeft tijdlijn geldigheid’ = 'Nee'. 
 
-De Achternaam van een persoon kan wijzigen: ‘indicatie materiële historie’ Ja. 
+Het is wel mogelijk dat een persoon een tweede BSN krijgt en de eerste niet meer gebruikt wordt. 
 
-Als je niet toeziet op het daadwerkelijk kappen van een boom maar het gekapt zijn 
-wel in een registratie wil opnemen: ‘indicatie materiële historie’ Nee en 
-‘indicatie formele historie’ Ja.
+De meeste eigenschappen kunnen wel wijzigen. De Achternaam van een persoon kan wijzigen, het woonadres van een persoon kan wijzigen. 
+    
+De ‘heeft tijdlijn geldigheid’ ervan is daarom 'Ja'. 
+
+Op conceptueel niveau is ook aan te geven dat het registratiemoment in een administratie moet worden bijgehouden, via een tijdlijn registratie. Deze staat vrijwel altijd op Ja. Echter, wanneer alleen de meest actuele situatie bekend moet zijn, en historie niet bijhouden hoeft te worden, dan staat deze op Nee. Het kan zijn dat historie pas vanaf een bepaald moment bijgehouden wordt. Zet dan de 'heeft tijdslijn registratie' wel op Ja, en geef aan dat voor een bepaald moment er geen historie bekend is voor een object, of voor alle objecten in een administratie. 
+
 </pre>
 
-Richtlijn: op conceptueel niveau worden voor historie alléén indicatie materiële
-historie en indicatie formele historie bij een attribuut of relatie vastgelegd,
-en dus géén bij de tijdlijnen behorende attributen die gebruikt moeten worden
-voor het vastleggen van historie. Deze bij de tijdlijn behorende attributen
-worden op het logische niveau vastgelegd.
+Richtlijn: op conceptueel niveau worden voor historie alléén heeft tijdlijn geldigheid en heeft tijdlijn registratie bij een attribuut of relatie vastgelegd. De attributen waaruit de tijdlijnen zelf bestaan (zoals bijvoorbeeld: 'begin geldigheid' en 'eind geldigheid' en 'begin registratie' en 'eind registratie') worden niet gemodelleerd in een conceptueel informatiemodel. Deze bij de tijdlijn behorende attributen worden (pas) op het logische niveau gemodelleerd. 
 
 ### Historie op logisch niveau
-MIM schrijft geen implementatie van het conceptuele niveau voor.  Wel worden er aandachtspunten gegeven om rekening mee te houden. Denk bij de uitwerking o.a. aan de volgende aspecten:
+MIM schrijft geen implementatie van het logische niveau voor. De metagegevens 'heeft tijdlijn geldigheid' en 'heeft tijdlijn registratie' uit het conceptuele informatiemodel zullen waarschijnlijk uitgewerkt worden met een periode waarin de gegevens voor een eigenschap geldig zijn en een tijdsmoment wanneer deze gegevens geregistreerd zijn en mogelijk ook met een tijdsmoment waarop de geldigheid (begin en einde van de periode) zelf geregisteerd is. MIM schrijft niet voor hoe de uitwerking van de metagegevens eruit moet zien. Wel worden er aandachtspunten gegeven om rekening mee te houden. Denk bij de uitwerking o.a. aan de volgende aspecten:
 
 -   Het bijhouden van historie met specifieke attributen per objecttype, zoals
     bijvoorbeeld: bouwjaar pand, of met generieke tijdlijnattributen attributen
@@ -556,6 +569,7 @@ MIM schrijft geen implementatie van het conceptuele niveau voor.  Wel worden er 
     zijn gemaakt bij de verwerking), maar niet verwijderd kan worden omdat alle
     gegevens, ook foutieve, bestendig moeten worden bewaard. Voorbeeld: BAG
     indicatieNietBAG.
+    - Hoewel het niet nodig is om in een administratie voor een eigenschap die niet kan veranderen, en 'heeft tijdlijn geldigheid' = 'Nee' heeft in een conceptueel informatiemodel, alsnog toch wel een tijdlijn geldigheid bij te houden. De eigenschap zal dan altijd dezelfde waarde hebben. Bijvoorbeeld: een eigenschap zoals een geboortedatum van een mens is een eigenschap die elk mens verplicht heeft en wel precies 1 keer. Let wel, wanneer een gegeven niet kan veranderen in de werkelijkheid, kan deze initieel wel met een foute waarde geregistreerd worden. Wanneer later alsnog de goede waarde bekend wordt en deze verwerkt wordt op een later registatiemoment (op de tijdlijn registratie), dan kan een mens in de werkelijkheid niet ineens twee verschillende geboortedatums hebben en dus ook niet op de tijdlijn geldigheid. De eerste datum was fout, en moet als fout worden aangemerkt en is daarmee ook niet meer geldig. Alleen de tweede is juist en geldig. De tweede is dan ook met terugwerkende kracht geldig, de persoon heeft in de werkelijkheid altijd al deze tweede juiste geboortedatum gehad. Dit is zo, ondanks dat we dit in de administratie pas goed hebben geregistreerd op een later registratiemoment. Eerdere besluiten die gebaseerd zijn op de foute geboortedatum behorend in principe dan ook opnieuw bekeken te worden.
 
 Aanbeveling: het komt voor dat er binnen één domein, van één conceptueel
 informatiemodel, meerdere logische informatiemodellen worden uitgewerkt. Het is
@@ -565,9 +579,9 @@ omdat het vaak ongewenst (en erg Gestructureerd of zelfs onmogelijk) is om
 verschillende implementaties naast elkaar in stand te houden en naar elkaar te
 vertalen.
 
-Opmerking: de metagegevens Indicatie materiële historie en Indicatie formele
-mogen worden opgenomen in een logisch model (of worden overgenomen van het
-conceptuele naar het logische informatiemodel).
+Opmerking: de metagegevens heeft tijdlijn geldigheid en heeft tijdlijn geldigheid 
+mogen worden opgenomen in een logisch model (mogen worden overgenomen van het
+conceptuele naar het logische informatiemodel). 
 
 ### Beheer
 De enige waarden die mogelijk zijn, zijn 'Ja' of 'Nee'. Voor beheer kan 
@@ -580,7 +594,7 @@ De conventie hiervoor wordt opgenomen in de eigen extensie. Bijvoorbeeld:
 
 In een informatiemodel kan de behoefte bestaan om afgeleide gegevens op te nemen: dit zijn gegevens die afleidbaar zijn uit andere attribuut- en/of relatiesoorten binnen het informatiemodel. Dit lijkt op redundantie. Toch hebben we deze gegevens daar opgenomen waar er ten eerste vraag is naar het afgeleide gegeven en ten tweede het gegeven niet eenvoudig af te leiden is (er moet sprake zijn van enige mate van complexiteit). Dit wordt in UML weergegeven via `isDerived`. Zie ook [[[#attribuutsoort-0]]] en [[[#metagegeven-indicatie-afleidbaar]]].
 
-<aside class="example" title="Datum vesiging in Nederland van een ingeschreven persoon">
+<aside class="example" title="Datum vestiging in Nederland van een ingeschreven persoon">
     <code>Datum vestiging in Nederland</code> van een <code>Ingeschreven persoon</code>. De afleiding van dit gegeven is niet triviaal. Door het als afleidbaar gegeven op te nemen kan het opgevraagd worden zonder dat de historie of andere gegevens van het object opgevraagd hoeven te worden om daaruit dit gegeven af te leiden.
 </aside>
 
@@ -716,7 +730,7 @@ Dit betekent expliciet niet dat kernmerken van verschillende objecten, met dezel
 
 Met natuurlijke taal wordt bedoeld, zoals de gebruikers erover praten, in normaal Nederlands. Veelal zijn dit alleen letters en cijfers, met spaties. Koppeltekens (`-` of `_`) kunnen gebruikt worden, indien gewenst, alsmede diakrieten.
 
-Zo kan bijvoorbeeld gekozen worden dat de eerste letter een hoofdletter is voor namen van de modelelementen Objecttypen, Gegevensgroeptype en Datatypen en dat de eerste letter een kleine letter is voor attribuutsoorten,en data-elementen e.d. Bijvoorbeeld: ‘Natuurlijk persoon’ en ‘naam’ met type CharacterString.
+Zo kan bijvoorbeeld gekozen worden dat de eerste letter een hoofdletter is voor namen van de modelelementen Objecttypen, Gegevensgroeptype en Datatypen en dat de eerste letter een kleine letter is voor attribuutsoorten, en data-elementen e.d. Bijvoorbeeld: ‘Natuurlijk persoon’ en ‘naam’ met type CharacterString.
 
 Regel: voor conceptuele informatiemodellen wordt altijd alternatief 1 gehanteerd.
 

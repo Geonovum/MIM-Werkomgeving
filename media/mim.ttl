@@ -321,10 +321,20 @@ mim:identificerend a owl:DatatypeProperty;
   rdfs:comment "Een aanduiding dat een kenmerk of een combinatie van kenmerken van een objecttype uniek identificerend is voor alle objecten in de populatie van objecten van dit objecttype, of de aanduiding dat een referentie element uniek identificerend is voor alle lijst items in een referentielijst."@nl;
   dct:source mimdoc:sectie2.8.2.9;
 .
+mim:heeftTijdlijnGeldigheid a owl:DatatypeProperty;
+  rdfs:label "heeft tijdlijn geldigheid"@nl;
+  rdfs:comment "Indicatie of voor dit kenmerk een tijdlijn geldigheid bijgehouden wordt en te bevragen is."@nl;
+  dct:source mimdoc:metagegeven-heeft-tijdlijn-geldigheid;
+.
 mim:indicatieMaterieleHistorie a owl:DatatypeProperty;
   rdfs:label "Indicatie materiële historie"@nl;
   rdfs:comment "Indicatie of de materiële historie van het kenmerk van het object te bevragen is."@nl;
   dct:source mimdoc:sectie2.8.2.10;
+.
+mim:heeftTijdlijnRegistratie a owl:DatatypeProperty;
+  rdfs:label "heeft tijdlijn registratie"@nl;
+  rdfs:comment "Indicatie of voor dit kenmerk een tijdlijn registratie bijgehouden wordt en te bevragen is."@nl;
+  dct:source mimdoc:metagegeven-heeft-tijdlijn-registratie;
 .
 mim:indicatieFormeleHistorie a owl:DatatypeProperty;
   rdfs:label "Indicatie formele historie"@nl;
@@ -445,6 +455,11 @@ mim:maximumwaardeExclusief a owl:DatatypeProperty ;
   rdfs:label "maximumwaarde exclusief"@nl ;
   rdfs:comment "Maximumwaarde exclusief (`<`) is de bovengrens van het waardebereik voor een attribuutsoort of data element getypeerd met een primitief datatype, exclusief die waarde zelf. De maximumwaarde moet van hetzelfde primitieve datatype zijn als het datatype van het modelelement waar het voor geldt."@nl ;
   dct:source mimdoc:sectie2.8.2.39;
+.
+mim:mixin a owl:DatatypeProperty;
+  rdfs:label "mixin"@nl;
+  rdfs:comment "Metagegeven om bij een generalisatie aan te geven dat bij een implementatie die geen multiple inheritance ondersteunt de eigenschappen van de superklasse worden overgenomen door de subklasse. De superklasse zelf komt niet in de implementatie voor."@nl;
+  dct:source mimdoc:metagegeven-mixin;
 .
 
 #Metagegevens modelelementen met relaties naar andere modelelementen
