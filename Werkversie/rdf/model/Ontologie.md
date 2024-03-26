@@ -38,7 +38,7 @@
 |Specialisatie van|[mim:Modelelement](#Modelelement)|
 |Definitie|De typering van gelijksoortige gegevens die voor een objecttype van toepassing is.|
 |Bron|[Sectie 2.2.2 Attribuutsoort](https://docs.geostandaarden.nl/mim/mim/#attribuutsoort)|
-|Eigenschappen|[mim:alias](#alias), [mim:authentiek](#authentiek), [mim:begrip](#begrip), [mim:begripsterm](#begripsterm), [mim:constraint](#constraint), [mim:datumOpname](#datumOpname), [mim:definitie](#definitie), [mim:formeelPatroon](#formeelPatroon), [mim:herkomst](#herkomst), [mim:herkomstDefinitie](#herkomstDefinitie), [mim:identificerend](#identificerend), [mim:indicatieAfleidbaar](#indicatieAfleidbaar), [mim:indicatieClassificerend](#indicatieClassificerend), [mim:indicatieFormeleHistorie](#indicatieFormeleHistorie), [mim:indicatieMaterieleHistorie](#indicatieMaterieleHistorie), [mim:kardinaliteit](#kardinaliteit), [mim:lengte](#lengte), [mim:maximumwaardeExclusief](#maximumwaardeExclusief), [mim:maximumwaardeInclusief](#maximumwaardeInclusief), [mim:minimumwaardeExclusief](#minimumwaardeExclusief), [mim:minimumwaardeInclusief](#minimumwaardeInclusief), [mim:mogelijkGeenWaarde](#mogelijkGeenWaarde), [mim:naam](#naam), [mim:patroon](#patroon), [mim:toelichting](#toelichting), [mim:type](#type)|
+|Eigenschappen|[mim:alias](#alias), [mim:authentiek](#authentiek), [mim:begrip](#begrip), [mim:begripsterm](#begripsterm), [mim:constraint](#constraint), [mim:datumOpname](#datumOpname), [mim:definitie](#definitie), [mim:formeelPatroon](#formeelPatroon), [mim:heeftTijdlijnGeldigheid](#heeftTijdlijnGeldigheid), [mim:heeftTijdlijnRegistratie](#heeftTijdlijnRegistratie), [mim:herkomst](#herkomst), [mim:herkomstDefinitie](#herkomstDefinitie), [mim:identificerend](#identificerend), [mim:indicatieAfleidbaar](#indicatieAfleidbaar), [mim:indicatieClassificerend](#indicatieClassificerend), [mim:indicatieFormeleHistorie](#indicatieFormeleHistorie), [mim:indicatieMaterieleHistorie](#indicatieMaterieleHistorie), [mim:kardinaliteit](#kardinaliteit), [mim:lengte](#lengte), [mim:maximumwaardeExclusief](#maximumwaardeExclusief), [mim:maximumwaardeInclusief](#maximumwaardeInclusief), [mim:minimumwaardeExclusief](#minimumwaardeExclusief), [mim:minimumwaardeInclusief](#minimumwaardeInclusief), [mim:mogelijkGeenWaarde](#mogelijkGeenWaarde), [mim:naam](#naam), [mim:patroon](#patroon), [mim:toelichting](#toelichting), [mim:type](#type)|
 
 ### mim:Codelijst {#Codelijst}
 
@@ -118,7 +118,7 @@
 |Specialisatie van|[mim:Modelelement](#Modelelement)|
 |Definitie|Een associatie waarmee vanuit het perspectief van het eigen informatiemodel een objecttype uit het ‘eigen’ informatiemodel gekoppeld wordt aan een objecttype van een extern informatiemodel. De relatie zelf hoort bij het ‘eigen’ objecttype.|
 |Bron|[Sectie 2.3.4 Externe koppeling](https://docs.geostandaarden.nl/mim/mim/#externe-koppeling)|
-|Eigenschappen|[mim:aggregatietype](#aggregatietype), [mim:alias](#alias), [mim:authentiek](#authentiek), [mim:begrip](#begrip), [mim:begripsterm](#begripsterm), [mim:bron](#bron), [mim:constraint](#constraint), [mim:datumOpname](#datumOpname), [mim:definitie](#definitie), [mim:doel](#doel), [mim:herkomst](#herkomst), [mim:herkomstDefinitie](#herkomstDefinitie), [mim:indicatieAfleidbaar](#indicatieAfleidbaar), [mim:indicatieFormeleHistorie](#indicatieFormeleHistorie), [mim:indicatieMaterieleHistorie](#indicatieMaterieleHistorie), [mim:kardinaliteit](#kardinaliteit), [mim:mogelijkGeenWaarde](#mogelijkGeenWaarde), [mim:naam](#naam), [mim:toelichting](#toelichting), [mim:unidirectioneel](#unidirectioneel)|
+|Eigenschappen|[mim:aggregatietype](#aggregatietype), [mim:alias](#alias), [mim:authentiek](#authentiek), [mim:begrip](#begrip), [mim:begripsterm](#begripsterm), [mim:bron](#bron), [mim:constraint](#constraint), [mim:datumOpname](#datumOpname), [mim:definitie](#definitie), [mim:doel](#doel), [mim:heeftTijdlijnGeldigheid](#heeftTijdlijnGeldigheid), [mim:heeftTijdlijnRegistratie](#heeftTijdlijnRegistratie), [mim:herkomst](#herkomst), [mim:herkomstDefinitie](#herkomstDefinitie), [mim:indicatieAfleidbaar](#indicatieAfleidbaar), [mim:indicatieFormeleHistorie](#indicatieFormeleHistorie), [mim:indicatieMaterieleHistorie](#indicatieMaterieleHistorie), [mim:kardinaliteit](#kardinaliteit), [mim:mogelijkGeenWaarde](#mogelijkGeenWaarde), [mim:naam](#naam), [mim:toelichting](#toelichting), [mim:unidirectioneel](#unidirectioneel)|
 
 ### mim:Gegevensgroep {#Gegevensgroep}
 
@@ -127,7 +127,7 @@
 |Specialisatie van|[mim:Modelelement](#Modelelement)|
 |Definitie|Een typering van een groep van gelijksoortige gegevens die voor een objecttype van toepassing is.|
 |Bron|[Sectie 2.2.3 Gegevensgroep](https://docs.geostandaarden.nl/mim/mim/#gegevensgroep)|
-|Eigenschappen|[mim:alias](#alias), [mim:authentiek](#authentiek), [mim:begrip](#begrip), [mim:begripsterm](#begripsterm), [mim:constraint](#constraint), [mim:datumOpname](#datumOpname), [mim:definitie](#definitie), [mim:gegevensgroeptype](#gegevensgroeptype), [mim:herkomst](#herkomst), [mim:herkomstDefinitie](#herkomstDefinitie), [mim:indicatieFormeleHistorie](#indicatieFormeleHistorie), [mim:indicatieMaterieleHistorie](#indicatieMaterieleHistorie), [mim:kardinaliteit](#kardinaliteit), [mim:naam](#naam), [mim:toelichting](#toelichting)|
+|Eigenschappen|[mim:alias](#alias), [mim:authentiek](#authentiek), [mim:begrip](#begrip), [mim:begripsterm](#begripsterm), [mim:constraint](#constraint), [mim:datumOpname](#datumOpname), [mim:definitie](#definitie), [mim:gegevensgroeptype](#gegevensgroeptype), [mim:herkomst](#herkomst), [mim:herkomstDefinitie](#herkomstDefinitie), [mim:kardinaliteit](#kardinaliteit), [mim:naam](#naam), [mim:toelichting](#toelichting)|
 
 ### mim:Gegevensgroeptype {#Gegevensgroeptype}
 
@@ -145,7 +145,7 @@
 |Specialisatie van|[mim:Modelelement](#Modelelement)|
 |Definitie|De typering van het hiërarchische verband tussen een meer generiek en een meer specifiek modelelement van hetzelfde soort, waarbij het meer specifieke modelelement eigenschappen van het meer generieke modelelement overerft. Dit verband is alleen gedefinieerd voor objecttypen en datatypen.|
 |Bron|[Sectie 2.3.1 Generalisatie](https://docs.geostandaarden.nl/mim/mim/#generalisatie)|
-|Eigenschappen|[mim:constraint](#constraint), [mim:datumOpname](#datumOpname), [mim:subtype](#subtype), [mim:supertype](#supertype)|
+|Eigenschappen|[mim:constraint](#constraint), [mim:datumOpname](#datumOpname), [mim:mixin](#mixin), [mim:subtype](#subtype), [mim:supertype](#supertype)|
 
 ### mim:GestructureerdDatatype {#GestructureerdDatatype}
 
@@ -241,7 +241,7 @@
 |Specialisatie van|[mim:Relatiesoort](#Relatiesoort)|
 |Definitie|Een relatiesoort met eigenschappen.|
 |Bron|[Sectie 2.3.3 Relatieklasse](https://docs.geostandaarden.nl/mim/mim/#relatieklasse)|
-|Eigenschappen|[mim:aggregatietype](#aggregatietype), [mim:alias](#alias), [mim:attribuut](#attribuut), [mim:authentiek](#authentiek), [mim:begrip](#begrip), [mim:begripsterm](#begripsterm), [mim:constraint](#constraint), [mim:datumOpname](#datumOpname), [mim:definitie](#definitie), [mim:gegevensgroep](#gegevensgroep), [mim:herkomst](#herkomst), [mim:herkomstDefinitie](#herkomstDefinitie), [mim:indicatieAfleidbaar](#indicatieAfleidbaar), [mim:indicatieFormeleHistorie](#indicatieFormeleHistorie), [mim:indicatieMaterieleHistorie](#indicatieMaterieleHistorie), [mim:kardinaliteit](#kardinaliteit), [mim:mogelijkGeenWaarde](#mogelijkGeenWaarde), [mim:naam](#naam), [mim:toelichting](#toelichting), [mim:unidirectioneel](#unidirectioneel)|
+|Eigenschappen|[mim:aggregatietype](#aggregatietype), [mim:alias](#alias), [mim:attribuut](#attribuut), [mim:authentiek](#authentiek), [mim:begrip](#begrip), [mim:begripsterm](#begripsterm), [mim:constraint](#constraint), [mim:datumOpname](#datumOpname), [mim:definitie](#definitie), [mim:gegevensgroep](#gegevensgroep), [mim:heeftTijdlijnGeldigheid](#heeftTijdlijnGeldigheid), [mim:heeftTijdlijnRegistratie](#heeftTijdlijnRegistratie), [mim:herkomst](#herkomst), [mim:herkomstDefinitie](#herkomstDefinitie), [mim:indicatieAfleidbaar](#indicatieAfleidbaar), [mim:indicatieFormeleHistorie](#indicatieFormeleHistorie), [mim:indicatieMaterieleHistorie](#indicatieMaterieleHistorie), [mim:kardinaliteit](#kardinaliteit), [mim:mogelijkGeenWaarde](#mogelijkGeenWaarde), [mim:naam](#naam), [mim:toelichting](#toelichting), [mim:unidirectioneel](#unidirectioneel)|
 
 ### mim:RelatierolBron {#RelatierolBron}
 
@@ -268,7 +268,7 @@
 |Specialisatie van|[mim:Modelelement](#Modelelement)|
 |Definitie|De benaming van de manier waarop een object deelneemt aan een relatie met een ander object.|
 |Bron|[Sectie 2.3.5 Relatierol](https://docs.geostandaarden.nl/mim/mim/#relatierol)|
-|Eigenschappen|[mim:alias](#alias), [mim:authentiek](#authentiek), [mim:begrip](#begrip), [mim:begripsterm](#begripsterm), [mim:constraint](#constraint), [mim:datumOpname](#datumOpname), [mim:definitie](#definitie), [mim:herkomst](#herkomst), [mim:herkomstDefinitie](#herkomstDefinitie), [mim:identificerend](#identificerend), [mim:indicatieFormeleHistorie](#indicatieFormeleHistorie), [mim:indicatieMaterieleHistorie](#indicatieMaterieleHistorie), [mim:kardinaliteit](#kardinaliteit), [mim:mogelijkGeenWaarde](#mogelijkGeenWaarde), [mim:naam](#naam), [mim:toelichting](#toelichting)|
+|Eigenschappen|[mim:alias](#alias), [mim:authentiek](#authentiek), [mim:begrip](#begrip), [mim:begripsterm](#begripsterm), [mim:constraint](#constraint), [mim:datumOpname](#datumOpname), [mim:definitie](#definitie), [mim:heeftTijdlijnGeldigheid](#heeftTijdlijnGeldigheid), [mim:heeftTijdlijnRegistratie](#heeftTijdlijnRegistratie), [mim:herkomst](#herkomst), [mim:herkomstDefinitie](#herkomstDefinitie), [mim:identificerend](#identificerend), [mim:indicatieFormeleHistorie](#indicatieFormeleHistorie), [mim:indicatieMaterieleHistorie](#indicatieMaterieleHistorie), [mim:kardinaliteit](#kardinaliteit), [mim:mogelijkGeenWaarde](#mogelijkGeenWaarde), [mim:naam](#naam), [mim:toelichting](#toelichting)|
 
 ### mim:Relatiesoort {#Relatiesoort}
 
@@ -277,7 +277,7 @@
 |Specialisatie van|[mim:Modelelement](#Modelelement)|
 |Definitie|De typering van het structurele verband tussen een object van een objecttype en een (ander) object van een ander (of hetzelfde) objecttype.|
 |Bron|[Sectie 2.3.2 Relatiesoort](https://docs.geostandaarden.nl/mim/mim/#relatiesoort)|
-|Eigenschappen|[mim:aggregatietype](#aggregatietype), [mim:alias](#alias), [mim:authentiek](#authentiek), [mim:begrip](#begrip), [mim:begripsterm](#begripsterm), [mim:bron](#bron), [mim:constraint](#constraint), [mim:datumOpname](#datumOpname), [mim:definitie](#definitie), [mim:doel](#doel), [mim:herkomst](#herkomst), [mim:herkomstDefinitie](#herkomstDefinitie), [mim:identificerend](#identificerend), [mim:indicatieAfleidbaar](#indicatieAfleidbaar), [mim:indicatieFormeleHistorie](#indicatieFormeleHistorie), [mim:indicatieMaterieleHistorie](#indicatieMaterieleHistorie), [mim:kardinaliteit](#kardinaliteit), [mim:kardinaliteitRelatieBron](#kardinaliteitRelatieBron), [mim:mogelijkGeenWaarde](#mogelijkGeenWaarde), [mim:naam](#naam), [mim:relatierol](#relatierol), [mim:toelichting](#toelichting), [mim:unidirectioneel](#unidirectioneel)|
+|Eigenschappen|[mim:aggregatietype](#aggregatietype), [mim:alias](#alias), [mim:authentiek](#authentiek), [mim:begrip](#begrip), [mim:begripsterm](#begripsterm), [mim:bron](#bron), [mim:constraint](#constraint), [mim:datumOpname](#datumOpname), [mim:definitie](#definitie), [mim:doel](#doel), [mim:heeftTijdlijnGeldigheid](#heeftTijdlijnGeldigheid), [mim:heeftTijdlijnRegistratie](#heeftTijdlijnRegistratie), [mim:herkomst](#herkomst), [mim:herkomstDefinitie](#herkomstDefinitie), [mim:identificerend](#identificerend), [mim:indicatieAfleidbaar](#indicatieAfleidbaar), [mim:indicatieFormeleHistorie](#indicatieFormeleHistorie), [mim:indicatieMaterieleHistorie](#indicatieMaterieleHistorie), [mim:kardinaliteit](#kardinaliteit), [mim:kardinaliteitRelatieBron](#kardinaliteitRelatieBron), [mim:mogelijkGeenWaarde](#mogelijkGeenWaarde), [mim:naam](#naam), [mim:relatierol](#relatierol), [mim:toelichting](#toelichting), [mim:unidirectioneel](#unidirectioneel)|
 
 ### mim:View {#View}
 
@@ -491,7 +491,7 @@
 |Definitie|Indicatie of de formele historie van het kenmerk van het object bijgehouden wordt en te bevragen is.|
 |Bron|[Sectie 2.8.2.11 Metagegeven: indicatie formele historie](https://docs.geostandaarden.nl/mim/mim/#metagegeven-indicatie-formele-historie)|
 |Datatype|[boolean](http://www.w3.org/2001/XMLSchema#boolean)|
-|Eigenschap van|[mim:Gegevensgroep](#Gegevensgroep), [mim:Relatiesoort](#Relatiesoort), [mim:Attribuutsoort](#Attribuutsoort), [mim:Relatierol](#Relatierol), [mim:ExterneKoppeling](#ExterneKoppeling), [mim:Relatieklasse](#Relatieklasse), |
+|Eigenschap van|[mim:Relatiesoort](#Relatiesoort), [mim:Attribuutsoort](#Attribuutsoort), [mim:Relatierol](#Relatierol), [mim:ExterneKoppeling](#ExterneKoppeling), [mim:Relatieklasse](#Relatieklasse), |
 
 ### mim:indicatieMaterieleHistorie {#indicatieMaterieleHistorie}
 
@@ -500,7 +500,7 @@
 |Definitie|Indicatie of de materiële historie van het kenmerk van het object te bevragen is.|
 |Bron|[Sectie 2.8.2.10 Metagegeven: indicatie materiële historie](https://docs.geostandaarden.nl/mim/mim/#metagegeven-indicatie-materiele-historie)|
 |Datatype|[boolean](http://www.w3.org/2001/XMLSchema#boolean)|
-|Eigenschap van|[mim:Gegevensgroep](#Gegevensgroep), [mim:Relatiesoort](#Relatiesoort), [mim:Attribuutsoort](#Attribuutsoort), [mim:Relatierol](#Relatierol), [mim:ExterneKoppeling](#ExterneKoppeling), [mim:Relatieklasse](#Relatieklasse), |
+|Eigenschap van|[mim:Relatiesoort](#Relatiesoort), [mim:Attribuutsoort](#Attribuutsoort), [mim:Relatierol](#Relatierol), [mim:ExterneKoppeling](#ExterneKoppeling), [mim:Relatieklasse](#Relatieklasse), |
 
 ### mim:mimextensie {#mimextensie}
 
@@ -582,6 +582,24 @@
 |Bron|[Sectie 2.8.2.30 Metagegeven: formeel patroon](https://docs.geostandaarden.nl/mim/mim/#metagegeven-formeel-patroon)|
 |Datatype|[string](http://www.w3.org/2001/XMLSchema#string)|
 |Eigenschap van|[mim:DataElement](#DataElement), [mim:ReferentieElement](#ReferentieElement), [mim:PrimitiefDatatype](#PrimitiefDatatype), [mim:Attribuutsoort](#Attribuutsoort), [mim:GestructureerdDatatype](#GestructureerdDatatype), |
+
+### mim:heeftTijdlijnGeldigheid {#heeftTijdlijnGeldigheid}
+
+|URI|http://modellen.mim-standaard.nl/def/mim#heeftTijdlijnGeldigheid|
+|-|-|
+|Definitie|Indicatie of voor dit kenmerk een tijdlijn geldigheid bijgehouden wordt en te bevragen is.|
+|Bron|[Metagegeven: heeft tijdlijn geldigheid](https://docs.geostandaarden.nl/mim/mim/#metagegeven-heeft-tijdlijn-geldigheid)|
+|Datatype|[boolean](http://www.w3.org/2001/XMLSchema#boolean)|
+|Eigenschap van|[mim:Relatiesoort](#Relatiesoort), [mim:Attribuutsoort](#Attribuutsoort), [mim:Relatierol](#Relatierol), [mim:ExterneKoppeling](#ExterneKoppeling), [mim:Relatieklasse](#Relatieklasse), |
+
+### mim:heeftTijdlijnRegistratie {#heeftTijdlijnRegistratie}
+
+|URI|http://modellen.mim-standaard.nl/def/mim#heeftTijdlijnRegistratie|
+|-|-|
+|Definitie|Indicatie of voor dit kenmerk een tijdlijn registratie bijgehouden wordt en te bevragen is.|
+|Bron|[Metagegeven: heeft tijdlijn registratie](https://docs.geostandaarden.nl/mim/mim/#metagegeven-heeft-tijdlijn-registratie)|
+|Datatype|[boolean](http://www.w3.org/2001/XMLSchema#boolean)|
+|Eigenschap van|[mim:Relatiesoort](#Relatiesoort), [mim:Attribuutsoort](#Attribuutsoort), [mim:Relatierol](#Relatierol), [mim:ExterneKoppeling](#ExterneKoppeling), [mim:Relatieklasse](#Relatieklasse), |
 
 ### mim:herkomstDefinitie {#herkomstDefinitie}
 
@@ -730,6 +748,15 @@
 |Definitie|Minimumwaarde inclusief (`>=`) is de ondergrens van het waardebereik voor een attribuutsoort of data element getypeerd met een primitief datatype, inclusief die waarde zelf. De minimumwaarde moet van hetzelfde primitieve datatype zijn als het datatype van het modelelement waar het voor geldt.|
 |Bron|[Sectie 2.8.2.36 Metagegeven: minimumwaarde inclusief](https://docs.geostandaarden.nl/mim/mim/#metagegeven-minimumwaarde-inclusief)|
 |Eigenschap van|[mim:DataElement](#DataElement), [mim:ReferentieElement](#ReferentieElement), [mim:Attribuutsoort](#Attribuutsoort), |
+
+### mim:mixin {#mixin}
+
+|URI|http://modellen.mim-standaard.nl/def/mim#mixin|
+|-|-|
+|Definitie|Metagegeven om bij een generalisatie aan te geven dat bij een implementatie die geen multiple inheritance ondersteunt de eigenschappen van de superklasse worden overgenomen door de subklasse. De superklasse zelf komt niet in de implementatie voor.|
+|Bron|[Metagegeven: Mixin](https://docs.geostandaarden.nl/mim/mim/#metagegeven-mixin)|
+|Datatype|[boolean](http://www.w3.org/2001/XMLSchema#boolean)|
+|Eigenschap van|[mim:Generalisatie](#Generalisatie), |
 
 ### mim:mogelijkGeenWaarde {#mogelijkGeenWaarde}
 

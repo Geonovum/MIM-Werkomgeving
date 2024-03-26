@@ -71,9 +71,9 @@ Het MIM model kent geen volgorde. Ondanks dat in de weergave attribuutsoorten in
 
 Een belangrijk gegeven in Linked Data is het munten van URI's. Bij de vertaling van een MIM modelelement naar een overeenkomstige resource in Linked Data vocabulaires zullen ook nieuwe URI's gemunt moeten worden. Enerzijds omdat er (soms) sprake is van meer dan één resource voor één modelelement, maar ook omdat een Linked Data resource wel equivalent is met een MIM modelelement, maar niet exact gelijk: we willen niet dat de formele semantiek van de Linked Data vocabulaires vermengd wordt met de formele semantiek van het MIM metamodel.
 
-Daarnaast geldt dat het in Linked Data gebruikelijk is om URI's over te nemen van andere (externe) vocabulaires c.q. modellen. Ook het MIM ondersteund dit, in de vorm van de mim metamodelklassen `mim:Extern` en `mim:View`. Echter, anders dan bij UML, behoren de modelementen uit deze externe modellen ook de URI's te krijgen die horen bij deze externe modellen. Ieder modelelement heeft dan ook een metagegeven `mim:uri` waar de vocabulaire URI's op gebaseerd worden.
+Daarnaast geldt dat het in Linked Data gebruikelijk is om URI's over te nemen van andere (externe) vocabulaires c.q. modellen. Ook het MIM ondersteund dit, in de vorm van de mim metamodelklassen `mim:Extern` en `mim:View`. Echter, anders dan bij UML, behoren de modelelementen uit deze externe modellen ook de URI's te krijgen die horen bij deze externe modellen. Ieder modelelement heeft dan ook een metagegeven `mim:modelelementidentificatie` waar de vocabulaire URI's op gebaseerd worden.
 
-Indien sprake is van een view package, dan wordt de `mim:basisUri` en/of de expliciet ingevulde `mim:uri` van deze view package alleen gebruikt voor de vocabulaire URI's (voorkomens van `owl:Class`, `owl:DatatypeProperty` en `owl:ObjectProperty`). Voor de voorkomens van shapes (`sh:NodeShape` en `sh:PropertyShape`) wordt juist gebruik gemaakt van de `mim:basisUri` zoals deze bij de eigen informatiemodel is opgegeven. Rationale hierachter is dat bij view-packages de "view" lokaal gedefinieerd is, maar de elementen wel afkomstig zijn uit een externe vocabulaire.
+Indien sprake is van een view package, dan wordt de `mim:basisUri` en/of de expliciet ingevulde `mim:modelelementidentificatie` van deze view package alleen gebruikt voor de vocabulaire URI's (voorkomens van `owl:Class`, `owl:DatatypeProperty` en `owl:ObjectProperty`). Voor de voorkomens van shapes (`sh:NodeShape` en `sh:PropertyShape`) wordt juist gebruik gemaakt van de `mim:basisUri` zoals deze bij de eigen informatiemodel is opgegeven. Rationale hierachter is dat bij view-packages de "view" lokaal gedefinieerd is, maar de elementen wel afkomstig zijn uit een externe vocabulaire.
 
 ## Overzicht
 
@@ -125,7 +125,9 @@ Onderstaande tabellen geven een overzicht van alle transformaties en een referen
 |`mim:herkomst`|`mim:herkomst`|[herkomst](#transformatie-herkomst)|
 |`mim:herkomstDefinitie`|`mim:herkomstDefinitie`|[herkomst definitie](#transformatie-herkomst-definitie)|
 |`mim:datumOpname`|`mim:datumOpname`|[datum opname](#transformatie-datum-opname)|
+|`mim:heeftTijdlijnGeldigheid`|`mim:heeftTijdlijnGeldigheid`|[heeft tijdlijn geldigheid](#transformatie-heeft-tijdlijn-geldigheid)|
 |`mim:indicatieMaterieleHistorie`|`mim:indicatieMaterieleHistorie`|[indicatie materiële historie](#transformatie-indicatie-materiele-historie)|
+|`mim:heeftTijdlijnRegistratie`|`mim:heeftTijdlijnRegistratie`|[heeft tijdlijn registratie](#transformatie-heeft-tijdlijn-registratie)|
 |`mim:indicatieFormeleHistorie`|`mim:indicatieFormeleHistorie`|[indicatie formele historie](#transformatie-indicatie-formele-historie)|
 |`mim:kardinaliteit`|`sh:minCount`, `sh:maxCount`|[kardinaliteit](#transformatie-kardinaliteit)|
 |`mim:authentiek`|`mim:authentiek`|[authentiek](#transformatie-authentiek)|
@@ -157,7 +159,7 @@ Onderstaande tabellen geven een overzicht van alle transformaties en een referen
 |`mim:constraint`|`mim:constraint`|[Constraint](#transformatie-constraint)|
 |`mim:element`|`sh:property`|[Data element](#transformatie-data-element)|
 |`mim:indicatieClassificerend`|`rdfs:subClassOf` (onder meer)|[indicatie classificerend](#transformatie-indicatie-classificerend)|
-|`mim:bevatModelelement`|`rdfs:isDefinedBy`, `owl:imports`|[bevat modelelement](#transformatie-bevat-modelement)|
+|`mim:bevatModelelement`|`rdfs:isDefinedBy`, `owl:imports`|[bevat modelelement](#transformatie-bevat-modelelement)|
 
 ### Instanties (datatypen)
 
@@ -219,12 +221,12 @@ Mocht het veld `mim:begrip` niet gebruikt zijn, dan wordt gekeken naar het veld 
 </aside>
 
 <aside id='trans-5' class='note'>
-De identificatie van een attribuutsoort is afgeleid van de `mim:uri` van het attribuutsoort. Voor de propertyshape geldt dat deze ook nog afhankelijk is van de naam van het objecttype waartoe de attribuutsoort behoord. Aangezien een attribuutsoort binnen zijn objecttype uniek behoord te zijn conform het MIM, zal hiermee ook een unieke identificatie worden verkregen. Voor de identificatie van de propertyshape geldt dat deze uniek moet zijn binnen de package als sprake is van hetzelfde begrip. Een dergelijke regel geldt ook voor andere modelelementen die binnen een objecttype vallen.
+De identificatie van een attribuutsoort is afgeleid van de `mim:modelelementidentificatie` van het attribuutsoort. Voor de propertyshape geldt dat deze ook nog afhankelijk is van de naam van het objecttype waartoe de attribuutsoort behoord. Aangezien een attribuutsoort binnen zijn objecttype uniek behoord te zijn conform het MIM, zal hiermee ook een unieke identificatie worden verkregen. Voor de identificatie van de propertyshape geldt dat deze uniek moet zijn binnen de package als sprake is van hetzelfde begrip. Een dergelijke regel geldt ook voor andere modelelementen die binnen een objecttype vallen.
 </aside>
 
 Indien het datatype van een attribuutsoort gelijk is aan PrimitiefDatatype (of een daarvan afgeleid datatype), dan is sprake van een `owl:DatatypeProperty` en een `sh:nodeKind sh:Literal`. In alle andere gevallen is sprake van een `owl:Objecttype` en een `sh:nodeKind sh:IRI`. Zie ook de transformatie van de eigenschapen `mim:type`.
 
-De URI van de propertyshape wordt afgeleid van de naam van het modelelement dat de attribuutsoort "bezit" en de naam van de attribuutsoort. De URI van de datatypeproperty is gelijk aan de mim:uri van het attribuutsoort of wordt afgeleid van de naam van de attribuutsoort en de basis-URI van de bijbehorende package.
+De URI van de propertyshape wordt afgeleid van de naam van het modelelement dat de attribuutsoort "bezit" en de naam van de attribuutsoort. De URI van de `owl:DatatypeProperty` is gelijk aan de mim:modelelementIdentificatie van de attribuutsoort.
 
 <pre class='ex-sparql'>
 CONSTRUCT {
@@ -264,7 +266,7 @@ WHERE {
 
 Een `mim:Gegevensgroep` wordt vertaald naar een `sh:PropertyShape` in combinatie met een `owl:ObjectProperty`. De nodekind van de propertyshape is een `sh:BlankNode`. Gedachte hierachter is dat de gegevensgroep de verbinding is tussen een objecttype en een gegevensgroeptype. Een gegevensgroeptype is vervolgens een groep van samenhangende attribuutsoorten, wat overeen komt met een class en een nodeshape (zie ook gegevensgroeptype). Omdat een gegevensgroeptype geen eigen identiteit heeft, zal dit gemodelleerd worden als blank node.
 
-De URI van de propertyshape wordt afgeleid van de naam van het modelelement dat de gegevensgroep "bezit" en de naam van de gegevensgroep. De URI van de `owl:objectProperty` is gelijk aan de mim:uri van de gegevensgroep.
+De URI van de propertyshape wordt afgeleid van de naam van het modelelement dat de gegevensgroep "bezit" en de naam van de gegevensgroep. De URI van de `owl:ObjectProperty` is gelijk aan de mim:modelelementIdentificatie van de gegevensgroep.
 
 <pre class='ex-sparql'>
 CONSTRUCT {
@@ -318,7 +320,7 @@ Generalisatie kan gebruikt worden tussen objecttypen, maar ook tussen datatypen.
 Een `mim:Generalisatie` wordt vertaald naar een `rdfs:subClassOf`.
 
 <aside id='trans-7' class='note'>
-Generalisatie is in Linked Data ook mogelijk op properties, en daar ook wel gebruikelijk. Dit wordt nu formeel niet door het MIM ondersteunt. Indien in een RDF model een dergelijke situatie zich voordoet, kan dit vertaald worden naar een MIM model waarbij de aspecten `mim:subtype` en `mim:supertype` verwijzen naar een attribuutsoort of relatieklasse.
+Generalisatie is in Linked Data ook mogelijk op properties, en daar ook wel gebruikelijk. Dit wordt nu formeel niet door het MIM ondersteund. Indien in een RDF model een dergelijke situatie zich voordoet, kan dit vertaald worden naar een MIM model waarbij de aspecten `mim:subtype` en `mim:supertype` verwijzen naar een attribuutsoort of relatieklasse.
 </aside>
 
 ### Transformatie: Relatiesoort
@@ -329,7 +331,7 @@ In het MIM zijn er twee specificatievormen voor relaties: op basis van `mim:Rela
 
 Een `mim:Relatiesoort` wordt vertaald naar een `sh:PropertyShape` in combinatie met een `owl:ObjectProperty`. De nodekind van de propertyshape is een `sh:IRI`.
 
-De URI van de propertyshape wordt afgeleid van de naam van het modelelement dat de relatiesoort "bezit" en de naam van de relatiesoort. De URI van de `owl:objectProperty` is gelijk aan de mim:uri van de relatiesoort.
+De URI van de propertyshape wordt afgeleid van de naam van het modelelement dat de relatiesoort "bezit" en de naam van de relatiesoort. De URI van de `owl:ObjectProperty` is gelijk aan de mim:modelelementIdentificatie van de relatiesoort.
 
 <pre class='ex-sparql'>
 CONSTRUCT {
@@ -419,7 +421,7 @@ In het MIM zijn er twee specificatievormen voor relaties: op basis van `mim:Rela
 
 Een `mim:Relatiesoort` wordt vertaald naar een `sh:PropertyShape` in combinatie met een `owl:ObjectProperty`. De nodekind van de propertyshape is een `sh:IRI`.
 
-De URI van de propertyshape wordt afgeleid van de naam van het modelelement dat de relatierol "bezit" en de naam van de relatierol. De URI van de `owl:objectProperty` is gelijk aan de mim:uri van de relatiesoort. Aangezien er twee relatierollen gedefinieerd kunnen worden, kan ook sprake zijn van twee properties. In dat geval zijn deze twee properties elkaars inverse.
+De URI van de propertyshape wordt afgeleid van de naam van het modelelement dat de relatierol "bezit" en de naam van de relatierol. De URI van de `owl:ObjectProperty` is gelijk aan de mim:modelelementIdentificatie van de relatiesoort. Aangezien er twee relatierollen gedefinieerd kunnen worden, kan ook sprake zijn van twee properties. In dat geval zijn deze twee properties elkaars inverse.
 
 <pre class='ex-sparql'>
 CONSTRUCT {
@@ -1047,6 +1049,30 @@ WHERE {
 }
 </pre>
 
+### transformatie: heeft tijdlijn geldigheid
+
+> Indicatie of voor dit kenmerk een tijdlijn geldigheid bijgehouden wordt en te bevragen is.
+
+Een `mim:heeftTijdlijnGeldigheid` wordt direct, zonder aanpassing, overgenomen in het vertaalde model.
+
+<pre class='ex-sparql'>
+CONSTRUCT {
+  ?subject mim:heeftTijdlijnGeldigheid ?heeftTijdlijnGeldigheid
+}
+WHERE {
+  ?modelelement mim:heeftTijdlijnGeldigheid ?heeftTijdlijnGeldigheid.
+  ?subject mim:equivalent ?modelelement.
+}
+</pre>
+
+<aside id='trans-99-a' class='note'>
+In Linked Data zal een het hebben van een tijdlijn geldigheid altijd betekenen dat er een constructie wordt gerealiseerd waarbij de eigenschappen
+die betrekking hebben op de tijdlijn van de objectgegevens van het objecttype (zoals geldigheidsperiode, bron, herkomst) onderscheiden zijn van de
+eigenschappen van het objecttype zelf. Deze constructie is toegelicht in <a href="https://geonovum.github.io/NEN3610-Linkeddata/#regels-attributen-materieleHistorie">NEN3610 Linked Data</a>. Hoewel het denkbaar is om een dergelijke vertaling al direct mee te nemen bij het
+vertalen van het metagegeven "heeft tijdlijn geldigheid" is hier niet voor gekozen, omdat een dergelijke vertaling ook met zich
+meebrengt dat zichtbaar is gemaakt welke eigenschappen behoren tot het objecttype en welke eigenschappen tot de tijdlijn van de gegevens van het objecttype. Beter zou zijn als een dergelijk onderscheid al direct in het model is opgenomen.
+</aside>
+
 ### transformatie: indicatie materiële historie
 
 > Indicatie of de materiële historie van het kenmerk van het object te bevragen is.
@@ -1066,9 +1092,33 @@ WHERE {
 <aside id='trans-99' class='note'>
 In Linked Data zal een indicatie materiële historie altijd betekenen dat er een constructie wordt gerealiseerd waarbij de eigenschappen
 die betrekking hebben op de historie van het objecttype (zoals geldigheidsperiode, bron, herkomst) onderscheiden zijn van de
-eigenschappen van het objecttype zelf. Deze constructie is toegelicht in [NEN3610 Linked Data](https://geonovum.github.io/NEN3610-Linkeddata/#regels-attributen-materieleHistorie). Hoewel het denkbaar is om een dergelijke vertaling al direct mee te nemen bij het
+eigenschappen van het objecttype zelf. Deze constructie is toegelicht in <a href="https://geonovum.github.io/NEN3610-Linkeddata/#regels-attributen-materieleHistorie">NEN3610 Linked Data</a>. Hoewel het denkbaar is om een dergelijke vertaling al direct mee te nemen bij het
 vertalen van het metagegeven "indicatie materiële historie" is hier niet voor gekozen, omdat een dergelijke vertaling ook met zich
 meebrengt dat zichtbaar is gemaakt welke eigenschappen behoren tot het objecttype en welke eigenschappen tot de historie van het objecttype. Beter zou zijn als een dergelijk onderscheid al direct in het model is opgenomen.
+</aside>
+
+### transformatie: heeft tijdlijn registratie
+
+> Indicatie of voor dit kenmerk een tijdlijn geldigheid bijgehouden wordt en te bevragen is.
+
+Een `mim:heeftTijdlijnRegistratie` wordt direct, zonder aanpassing, overgenomen in het vertaalde model.
+
+<pre class='ex-sparql'>
+CONSTRUCT {
+  ?subject mim:heeftTijdlijnRegistratie ?heeftTijdlijnRegistratie
+}
+WHERE {
+  ?modelelement mim:heeftTijdlijnRegistratie ?heeftTijdlijnRegistratie.
+  ?subject mim:equivalent ?modelelement.
+}
+</pre>
+
+<aside id='trans-100-a' class='note'>
+In Linked Data zal een het hebben van een tijdlijn registratie altijd betekenen dat er een constructie wordt gerealiseerd waarbij de eigenschappen
+die betrekking hebben op de tijdlijnen van de objectgegevens van het objecttype (zoals geldigheidsperiode, bron, herkomst) onderscheiden zijn van de
+eigenschappen van het objecttype zelf. Deze constructie is toegelicht in <a href="https://geonovum.github.io/NEN3610-Linkeddata/#regels-attributen-materieleHistorie">NEN3610 Linked Data</a>. Hoewel het denkbaar is om een dergelijke vertaling al direct mee te nemen bij het
+vertalen van het metagegeven "heeft tijdlijn registratie" is hier niet voor gekozen, omdat een dergelijke vertaling ook met zich
+meebrengt dat zichtbaar is gemaakt welke eigenschappen behoren tot het objecttype en welke eigenschappen tot de tijdlijn van de gegevens van het objecttype. Beter zou zijn als een dergelijk onderscheid al direct in het model is opgenomen.
 </aside>
 
 ### transformatie: indicatie formele historie
@@ -1090,7 +1140,7 @@ WHERE {
 <aside id='trans-100' class='note'>
 In Linked Data zal een indicatie formele historie altijd betekenen dat er een constructie wordt gerealiseerd waarbij de eigenschappen
 die betrekking hebben op de historie van het objecttype (zoals geldigheidsperiode, bron, herkomst) onderscheiden zijn van de
-eigenschappen van het objecttype zelf. Deze constructie is toegelicht in [NEN3610 Linked Data](https://geonovum.github.io/NEN3610-Linkeddata/#regels-attributen-formeleHistorie). Hoewel het denkbaar is om een dergelijke vertaling al direct mee te nemen bij het
+eigenschappen van het objecttype zelf. Deze constructie is toegelicht in <a href="https://geonovum.github.io/NEN3610-Linkeddata/#regels-attributen-materieleHistorie">NEN3610 Linked Data</a>. Hoewel het denkbaar is om een dergelijke vertaling al direct mee te nemen bij het
 vertalen van het metagegeven "indicatie formele historie" is hier niet voor gekozen, omdat een dergelijke vertaling ook met zich
 meebrengt dat zichtbaar is gemaakt welke eigenschappen behoren tot het objecttype en welke eigenschappen tot de historie van het objecttype. Beter zou zijn als een dergelijk onderscheid al direct in het model is opgenomen.
 </aside>
@@ -1599,7 +1649,7 @@ WHERE {
 }
 </pre>
 
-### transformatie: bevat modelement
+### transformatie: bevat modelelement
 
 Een `mim:bevatModelelement` wordt vertaald naar een `mim:bevatModelelement`. In geval er sprake is van een owl:Ontology, dan wordt vertaald naar `owl:imports`.
 
@@ -1609,7 +1659,7 @@ CONSTRUCT {
   ?ontology mim:bevatModelelement ?ontologyelement .
 }
 WHERE {
-  ?package mim:bevatModelement ?modelelement.
+  ?package mim:bevatModelelement ?modelelement.
   ?package mim:equivalent ?ontology.
   ?modelelement mim:equivalent ?ontologyelement.
   ?ontologyelement a ?type . 
@@ -1619,7 +1669,7 @@ CONSTRUCT {
   ?ontology owl:imports ?importontology
 }
 WHERE {
-  ?package mim:bevatModelement ?subpackage.
+  ?package mim:bevatModelelement ?subpackage.
   ?package mim:equivalent ?ontology.
   ?subpackage mim:equivalent ?importedontology.
   ?importedontology a owl:Ontology.
@@ -1637,7 +1687,7 @@ CONSTRUCT {
   ?class rdfs:isDefinedBy ?ontology
 }
 WHERE {
-  ?package mim:bevatModelement ?modelelement.
+  ?package mim:bevatModelelement ?modelelement.
   ?package mim:equivalent ?packageontology.
   ?modelelement mim:equivalent ?class.
   ?class a owl:Class.
@@ -1650,7 +1700,7 @@ CONSTRUCT {
   ?property rdfs:isDefinedBy ?ontology
 }
 WHERE {
-  ?package mim:bevatModelement ?eigenaar.
+  ?package mim:bevatModelelement ?eigenaar.
   ?eigenaar ?eigenaarrelatie ?modelelement
   ?package mim:equivalent ?packageontology.
   ?modelelement mim:equivalent ?property.
@@ -1669,7 +1719,7 @@ CONSTRUCT {
   ?property rdfs:isDefinedBy ?ontology
 }
 WHERE {
-  ?package mim:bevatModelement ?eigenaar.
+  ?package mim:bevatModelelement ?eigenaar.
   ?modelelement ?eigenaarrelatie ?eigenaar
   ?package mim:equivalent ?packageontology.
   ?modelelement mim:equivalent ?property.
@@ -1758,6 +1808,22 @@ WHERE {
 }
 </pre>
 
+### transformatie: mixin
+
+> Metagegeven om bij een generalisatie aan te geven dat bij een implementatie die geen multiple inheritance ondersteunt de eigenschappen van de superklasse worden overgenomen door de subklasse. De superklasse zelf komt niet in de implementatie voor.
+
+Een `mim:mixin` wordt direct, zonder aanpassing, overgenomen in het vertaalde model.
+
+<pre class='ex-sparql'>
+CONSTRUCT {
+  ?subject mim:mixin ?mixin
+}
+WHERE {
+  ?modelelement mim:mixin ?mixin.
+  ?subject mim:equivalent ?modelelement.
+}
+</pre>
+
 ## Transformatie vanuit RDFS/OWL/SHACL
 
 Een Linked Data model dat is uitgedrukt in RDFS/OWL/SHACL kan gelezen worden als een MIM model. Hiervoor dient het model wel eerste getransformeerd te worden naar de MIM vocabulaire. Vervolgens dient het resultaat te voldoen aan de minimale eisen die worden gesteld aan een MIM vocabulaire.
@@ -1778,7 +1844,7 @@ Aspecten:
 
 |RDFS term | MIM-aspect | Uitleg |
 |----------|-------------|--------|
-| IRI | mim:uri | De URI van het modelelement wordt in mim vastgelegd als eigenschap |
+| IRI | mim:modelelementIdentificatie | De identificatie (URI) van het modelelement wordt in mim vastgelegd als eigenschap |
 | rdfs:label, sh:name | mim:naam | Het rdfs:label (of sh:name als een meer technische naam gewenst is) van een nodeshape of class betreft de naam |
 | skos:altLabel, skos:prefLabel, rdfs:label, sh:name | mim:alias | skos:altLabel is letterlijk een alias, sh:name is ook een alias en wordt met name gebruikt voor meer technische namen, terwijl skos:prefLabel of skos:altLabel vaak een meer functionele naam bevat|
 | dct:subject | mim:begrip | dct:subject geeft dezelfde relatie weer als mim:begrip |
