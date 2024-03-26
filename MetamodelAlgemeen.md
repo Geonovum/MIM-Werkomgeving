@@ -1392,18 +1392,6 @@ Voor de hand liggende formaten waarin een waardelijst is gepubliceerd zijn onder
 
 *Toepassing:* Codelijst en Referentielijst.
 
-#### Metagegeven: **Datatype**
-
-<aside class="definition">
-  <dfn>Datatype</dfn>Datatype van de waarden in een waardelijst.
-</aside>
-
-*Toelichting*
-
-Voorbeelden hiervan zijn `"Characterstring"` , `"Integer"`
-
-*Toepassing:* Codelijst
-
 #### Metagegeven: **Waarde-item**
 
 <aside class="definition">
@@ -1424,9 +1412,7 @@ Als een `«Codelijst»` een structuur heeft wordt hiermee aangegeven welk item i
 
 *Toelichting*
 
-
 MIM zegt niets over de technische implementatie van de codelijst. Om een referentie naar informatie over de technische implementatie wel in het model op te nemen is er de mogelijkheid om met het metagegeven Profielspecificatie de specifieke technische toepassing van de codelijst te beschrijven. Bij voorkeur is de referentie door middel van een url.
-
 
 *Toepassing:* Codelijst
 
