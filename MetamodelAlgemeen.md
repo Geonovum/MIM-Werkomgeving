@@ -1806,7 +1806,7 @@ Een subtype verwijst met een generalisatie naar een supertype.
 *Toepassing*: Objecttype en Datatype.
 
 #### Metagegeven: **heeft datatype**
-Verkorte schrijfwijze: **datatype**
+Verkorte schrijfwijze: **type**
 
 <aside class="definition">
   <dfn>heeft datatype</dfn>De binding van een datatype aan een eigenschap.
