@@ -858,7 +858,7 @@ We onderkennen een aantal specifieke metagegevens op het niveau van het informat
 </aside>
 
 *Toelichting*
-Dit kan zijn: `"Conceptueel"` of `"Logisch"`. Zoals bedoeld in: [[[#typering-van-modellen-en-wat-wel-en-niet-in-scope-is-van-deze-standaard]]]. Er moet een keuze gemaakt worden. Dit kan bijvoorbeeld uitgebreid worden met: `"Technisch"` wanneer er behoefte is om niveau 4 aan te geven.
+Dit kan zijn: `"Conceptueel"` of `"Logisch"`. Zoals bedoeld in: [[[#typering-van-modellen-gekoppeld-aan-beschouwingsniveaus]]]. Er moet een keuze gemaakt worden. Dit kan bijvoorbeeld uitgebreid worden met: `"Technisch"` wanneer er behoefte is om niveau 4 aan te geven.
 
 *Toepassing*: Informatiemodel (verplicht)
 
@@ -1028,7 +1028,7 @@ Opmerking: een uitzondering is gemaakt voor UML-modellen voor de UML-Enumeration
 *Toelichting*
 
 Hiermee wordt aangegeven hoe een informatiemodel element zich verhoudt tot de
-begrippen uit het begrippenkader, zoals genoemd in [[[#typering-van-modellen-en-wat-wel-en-niet-in-scope-is-van-deze-standaard]]].
+begrippen uit het begrippenkader, zoals genoemd in [[[#typering-van-modellen-gekoppeld-aan-beschouwingsniveaus]]].
 Dit is niet een 1 op 1 relatie. Voor meer informatie hierover, zie [[[#afspraken-regels]]].
 
 Bijvoorbeeld:
@@ -1856,6 +1856,19 @@ Verkorte schrijfwijze: **data-element**
 Een gestructureerd datatype bevat meerdere data-elementen.
 
 *Toepassing*: Gestructureerd datatype.
+
+#### Metagegeven: **bevat modelelement**
+Verkorte schrijfwijze: **modelelement**
+
+<aside class="definition">
+  <dfn>bevat modelelement</dfn>De binding tussen een package en een modelelement dat zich in dat package bevindt.
+</aside>
+
+*Toelichting*
+
+Een package `«Domein»` met de naam `Activiteiten` bevat `«Objecttype»` `Werken`, `Wonen` etc.
+
+*Toepassing*: Package, Informatiemodel, Domein, Extern, View.
 
 #### Metagegeven: **bevat enumeratiewaarde**
 Verkorte schrijfwijze: **enumeratiewaarde**
