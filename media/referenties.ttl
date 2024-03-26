@@ -502,6 +502,13 @@ mimdoc:sectie2.8.2.39 a dct:BibliographicResource;
   dct:isPartof mimdoc:sectie2.8.2;
 .
 
+mimdoc:metagegeven-mixin a dct:BibliographicResource;
+  rdfs:label "Metagegeven: Mixin";
+  dct:bibliographicCitation "Metagegeven: Mixin";
+  foaf:page <https://docs.geostandaarden.nl/mim/mim/#metagegeven-mixin>;
+  # dct:isPartOf TODO oppakken met https://github.com/Geonovum/MIM-Werkomgeving/issues/484
+.
+
 mimdoc:sectie2.8.4 a dct:BibliographicResource;
   rdfs:label "Structuur metamodel";
   dct:bibliographicCitation "Sectie 2.8.4 Structuur metamodel";

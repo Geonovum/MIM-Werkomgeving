@@ -1808,6 +1808,22 @@ WHERE {
 }
 </pre>
 
+### transformatie: mixin
+
+> Metagegeven om bij een generalisatie aan te geven dat bij een implementatie die geen multiple inheritance ondersteunt de eigenschappen van de superklasse worden overgenomen door de subklasse. De superklasse zelf komt niet in de implementatie voor.
+
+Een `mim:mixin` wordt direct, zonder aanpassing, overgenomen in het vertaalde model.
+
+<pre class='ex-sparql'>
+CONSTRUCT {
+  ?subject mim:mixin ?mixin
+}
+WHERE {
+  ?modelelement mim:mixin ?mixin.
+  ?subject mim:equivalent ?modelelement.
+}
+</pre>
+
 ## Transformatie vanuit RDFS/OWL/SHACL
 
 Een Linked Data model dat is uitgedrukt in RDFS/OWL/SHACL kan gelezen worden als een MIM model. Hiervoor dient het model wel eerste getransformeerd te worden naar de MIM vocabulaire. Vervolgens dient het resultaat te voldoen aan de minimale eisen die worden gesteld aan een MIM vocabulaire.
