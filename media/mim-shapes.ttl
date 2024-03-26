@@ -90,8 +90,6 @@ shape:Gegevensgroep a sh:NodeShape;
   sh:property shape:herkomst;
   sh:property shape:herkomstDefinitie;
   sh:property shape:datumOpname;
-  sh:property shape:indicatieMaterieleHistorie;
-  sh:property shape:indicatieFormeleHistorie;
   sh:property shape:kardinaliteit;
   sh:property shape:authentiek;
   sh:property shape:constraint;
