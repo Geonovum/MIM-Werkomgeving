@@ -909,7 +909,7 @@ Bijvoorbeeld: `"1.0.1"` of `"1.1"` of `"1.1.1"`
 #### Metagegeven: **Tekstopmaak**
 
 <aside class="definition">
-  <dfn>MIM-taal</dfn>De specificatie van de opmaak van een tekstuele beschrijving in het model.
+  <dfn>Tekstopmaak</dfn>De specificatie van de opmaak van een tekstuele beschrijving in het model.
 </aside>
 
 *Toelichting* 
