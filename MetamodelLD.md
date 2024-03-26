@@ -266,7 +266,7 @@ Deze paragraaf is een aanvulling op de paragraaf [[[#specificatie-metagegevens]]
 | toelichting | [`mim:toelichting`](http://bp4mc2.org/def/mim#toelichting) | owl:DatatypeProperty | [grondslag](#metagegeven-toelichting)
 | type | [`mim:type`](http://bp4mc2.org/def/mim#type) | owl:ObjectProperty | [grondslag](#metagegeven-type) |
 | unidirectioneel | [`mim:unidirectioneel`](http://bp4mc2.org/def/mim#unidirectioneel) | owl:DatatypeProperty | [grondslag](#metagegeven-unidirectioneel) |
-| modelelement identificatie | [`mim:modelelementIdentificatie`](http://bp4mc2.org/def/mim#modelelementIdentificatie) | owl:DatatypeProperty | [grondslag](#metagegeven-modelelement-identificatie) |
+| Modelelementidentificatie | [`mim:modelelementIdentificatie`](http://bp4mc2.org/def/mim#modelelementIdentificatie) | owl:DatatypeProperty | [grondslag](#metagegeven-modelelement-identificatie) |
 | waarde | [`mim:waarde`](http://bp4mc2.org/def/mim#waarde) | owl:ObjectProperty | [grondslag](#metagegeven-bevat-enumeratiewaarde) |
 | minimumwaarde inclusief | [`mim:minimumwaardeInclusief`](http://bp4mc2.org/def/mim#minimumwaardeInclusief) | owl:DatatypeProperty  |  [grondslag](#metagegeven-minimumwaarde-inclusief) |
 | minimumwaarde exclusief | [`mim:minimumwaardeExclusief`](http://bp4mc2.org/def/mim#minimumwaardeExclusief) | owl:DatatypeProperty  |  [grondslag](#metagegeven-minimumwaarde-exclusief) |
@@ -282,7 +282,7 @@ De objecttypen worden naar de volgende aspecten gespecificeerd:
 
 | **Aspect**                | **Eigenschap** | **Kardinaliteit** | **Datatype of klasse** |
 |---------------------------|----------------|-------------------|--------------|
-| Modelelement identificatie                       | [`mim:modelelementIdentificatie`](http://bp4mc2.org/def/mim#modelelementIdentificatie) | 1 | tekst |
+| Modelelementidentificatie                       | [`mim:modelelementIdentificatie`](http://bp4mc2.org/def/mim#modelelementIdentificatie) | 1 | tekst |
 | Naam                      | [`mim:naam`](http://bp4mc2.org/def/mim#naam) | 1 | tekst |
 | Alias                     | [`mim:alias`](http://bp4mc2.org/def/mim#alias) | 0..1 | tekst |
 | Begrip                    | [`mim:begrip`](http://bp4mc2.org/def/mim#begrip) | 0..* | [`skos:Concept`](http://www.w3.org/2004/02/skos/core#Concept) |
@@ -306,7 +306,7 @@ De attribuutsoorten worden naar de volgende aspecten gespecificeerd:
 
 | **Aspect**                   | **Eigenschap** | **Kardinaliteit** | **Datatype of klasse** |
 |------------------------------|----------------|-------------------|--------------|
-| Modelelement identificatie                       | [`mim:modelelementIdentificatie`](http://bp4mc2.org/def/mim#modelelementIdentificatie) | 1 | tekst |
+| Modelelementidentificatie                       | [`mim:modelelementIdentificatie`](http://bp4mc2.org/def/mim#modelelementIdentificatie) | 1 | tekst |
 | Naam                         | [`mim:naam`](http://bp4mc2.org/def/mim#naam) | 1 | tekst |
 | Alias                        | [`mim:alias`](http://bp4mc2.org/def/mim#alias) | 0..1 | tekst |
 | Begrip                    | [`mim:begrip`](http://bp4mc2.org/def/mim#begrip) | 0..* | [`skos:Concept`](http://www.w3.org/2004/02/skos/core#Concept) |
@@ -354,7 +354,7 @@ De gegevensgroepen worden naar de volgende aspecten gespecificeerd:
 
 | **Aspect**                   | **Eigenschap** | **Kardinaliteit** | **Datatype of klasse** |
 |------------------------------|----------------|-------------------|--------------|
-| Modelelement identificatie                       | [`mim:modelelementIdentificatie`](http://bp4mc2.org/def/mim#modelelementIdentificatie) | 1 | tekst |
+| Modelelementidentificatie                       | [`mim:modelelementIdentificatie`](http://bp4mc2.org/def/mim#modelelementIdentificatie) | 1 | tekst |
 | Naam                         | [`mim:naam`](http://bp4mc2.org/def/mim#naam) | 1 | tekst |
 | Alias                        | [`mim:alias`](http://bp4mc2.org/def/mim#alias) | 0..1 | tekst |
 | Begrip                    | [`mim:begrip`](http://bp4mc2.org/def/mim#begrip) | 0..* | [`skos:Concept`](http://www.w3.org/2004/02/skos/core#Concept) |
@@ -376,7 +376,7 @@ De gegevensgroeptypen worden naar de volgende aspecten gespecificeerd:
 
 | **Aspect**                   | **Eigenschap** | **Kardinaliteit** | **Datatype of klasse** |
 |------------------------------|----------------|-------------------|--------------|
-| Modelelement identificatie                       | [`mim:modelelementIdentificatie`](http://bp4mc2.org/def/mim#modelelementIdentificatie) | 1 | tekst |
+| Modelelementidentificatie                       | [`mim:modelelementIdentificatie`](http://bp4mc2.org/def/mim#modelelementIdentificatie) | 1 | tekst |
 | Naam                         | [`mim:naam`](http://bp4mc2.org/def/mim#naam) | 1 | tekst |
 | Alias                        | [`mim:alias`](http://bp4mc2.org/def/mim#alias) | 0..1 | tekst |
 | Begrip                    | [`mim:begrip`](http://bp4mc2.org/def/mim#begrip) | 0..* | [`skos:Concept`](http://www.w3.org/2004/02/skos/core#Concept) |
@@ -410,7 +410,7 @@ De relatiesoorten worden naar de volgende aspecten gespecificeerd.
 
 | **Aspect**                   | **Eigenschap** | **Kardinaliteit** | **Datatype of klasse** |
 |------------------------------|----------------|-------------------|--------------|
-| Modelelement identificatie                       | [`mim:modelelementIdentificatie`](http://bp4mc2.org/def/mim#modelelementIdentificatie) | 1 | tekst |
+| Modelelementidentificatie                       | [`mim:modelelementIdentificatie`](http://bp4mc2.org/def/mim#modelelementIdentificatie) | 1 | tekst |
 | Naam                         | [`mim:naam`](http://bp4mc2.org/def/mim#naam) | 1 | tekst |
 | Alias                        | [`mim:alias`](http://bp4mc2.org/def/mim#alias) | 0..1 | tekst |
 | Begrip                       | [`mim:begrip`](http://bp4mc2.org/def/mim#begrip) | 0..* | [`skos:Concept`](http://www.w3.org/2004/02/skos/core#Concept) |
@@ -451,7 +451,7 @@ De relatiesoorten worden naar de volgende aspecten gespecificeerd.
 
 | **Aspect**                   | **Eigenschap** | **Kardinaliteit** | **Datatype of klasse** |
 |------------------------------|----------------|-------------------|--------------|
-| Modelelement identificatie                       | [`mim:modelelementIdentificatie`](http://bp4mc2.org/def/mim#modelelementIdentificatie) | 1 | tekst |
+| Modelelementidentificatie                       | [`mim:modelelementIdentificatie`](http://bp4mc2.org/def/mim#modelelementIdentificatie) | 1 | tekst |
 | Naam                         | [`mim:naam`](http://bp4mc2.org/def/mim#naam) | 0..1 | tekst |
 | Alias                        | [`mim:alias`](http://bp4mc2.org/def/mim#alias) | 0..1 | tekst |
 | Begrip                       | [`mim:begrip`](http://bp4mc2.org/def/mim#begrip) | 0..* | [`skos:Concept`](http://www.w3.org/2004/02/skos/core#Concept) |
@@ -467,7 +467,7 @@ Voor relatierollen worden naar de volgende aspecten gespecificeerd.
 
 | **Aspect**                   | **Eigenschap** | **Kardinaliteit** | **Datatype of klasse** |
 |------------------------------|----------------|-------------------|--------------|
-| Modelelement identificatie                       | [`mim:modelelementIdentificatie`](http://bp4mc2.org/def/mim#modelelementIdentificatie) | 1 | tekst |
+| Modelelementidentificatie                       | [`mim:modelelementIdentificatie`](http://bp4mc2.org/def/mim#modelelementIdentificatie) | 1 | tekst |
 | Naam                         | [`mim:naam`](http://bp4mc2.org/def/mim#naam) | 0..1 | tekst |
 | Alias                        | [`mim:alias`](http://bp4mc2.org/def/mim#alias) | 0..1 | tekst |
 | Begrip                    | [`mim:begrip`](http://bp4mc2.org/def/mim#begrip) | 0..* | [`skos:Concept`](http://www.w3.org/2004/02/skos/core#Concept) |
@@ -489,7 +489,7 @@ aspecten gespecificeerd.
 
 | **Aspect**                   | **Eigenschap** | **Kardinaliteit** | **Datatype of klasse** |
 |------------------------------|----------------|-------------------|--------------|
-| Modelelement identificatie                       | [`mim:modelelementIdentificatie`](http://bp4mc2.org/def/mim#modelelementIdentificatie) | 1 | tekst |
+| Modelelementidentificatie                       | [`mim:modelelementIdentificatie`](http://bp4mc2.org/def/mim#modelelementIdentificatie) | 1 | tekst |
 | Naam                         | [`mim:naam`](http://bp4mc2.org/def/mim#naam) | 1 | tekst |
 | Alias                        | [`mim:alias`](http://bp4mc2.org/def/mim#alias) | 0..1 | tekst |
 | Begrip                       | [`mim:begrip`](http://bp4mc2.org/def/mim#begrip) | 0..* | [`skos:Concept`](http://www.w3.org/2004/02/skos/core#Concept) |
@@ -538,7 +538,7 @@ De relatieklassen worden naar de volgende aspecten gespecificeerd:
 
 | **Aspect**                   | **Eigenschap** | **Kardinaliteit** | **Datatype of klasse** |
 |------------------------------|----------------|-------------------|--------------|
-| Modelelement identificatie                       | [`mim:modelelementIdentificatie`](http://bp4mc2.org/def/mim#modelelementIdentificatie) | 1 | tekst |
+| Modelelementidentificatie                       | [`mim:modelelementIdentificatie`](http://bp4mc2.org/def/mim#modelelementIdentificatie) | 1 | tekst |
 | Naam                         | [`mim:naam`](http://bp4mc2.org/def/mim#naam) | 0..1 | tekst |
 | Alias                        | [`mim:alias`](http://bp4mc2.org/def/mim#alias) | 0..1 | tekst |
 | Herkomst                     | [`mim:herkomst`](http://bp4mc2.org/def/mim#herkomst) | 1 | tekst |
@@ -567,7 +567,7 @@ Externe koppelingen worden naar de volgende aspecten gespecificeerd.
 
 | **Aspect**                   | **Eigenschap** | **Kardinaliteit** | **Datatype of klasse** |
 |------------------------------|----------------|-------------------|--------------|
-| Modelelement identificatie                       | [`mim:modelelementIdentificatie`](http://bp4mc2.org/def/mim#modelelementIdentificatie) | 1 | tekst |
+| Modelelementidentificatie                       | [`mim:modelelementIdentificatie`](http://bp4mc2.org/def/mim#modelelementIdentificatie) | 1 | tekst |
 | Naam                         | [`mim:naam`](http://bp4mc2.org/def/mim#naam) | 1 | tekst |
 | Alias                        | [`mim:alias`](http://bp4mc2.org/def/mim#alias) | 0..1 | tekst |
 | Begrip                       | [`mim:begrip`](http://bp4mc2.org/def/mim#begrip) | 0..* | [`skos:Concept`](http://www.w3.org/2004/02/skos/core#Concept) |
@@ -602,7 +602,7 @@ Voor referentielijsten worden de volgende aspecten gespecificeerd:
 
 | **Aspect**                   | **Eigenschap** | **Kardinaliteit** | **Datatype of klasse** |
 |------------------------------|----------------|-------------------|--------------|
-| Modelelement identificatie                       | [`mim:modelelementIdentificatie`](http://bp4mc2.org/def/mim#modelelementIdentificatie) | 1 | tekst |
+| Modelelementidentificatie                       | [`mim:modelelementIdentificatie`](http://bp4mc2.org/def/mim#modelelementIdentificatie) | 1 | tekst |
 | Naam                         | [`mim:naam`](http://bp4mc2.org/def/mim#naam) | 1 | tekst |
 | Alias                        | [`mim:alias`](http://bp4mc2.org/def/mim#alias) | 0..1 | tekst |
 | Begrip                       | [`mim:begrip`](http://bp4mc2.org/def/mim#begrip) | 0..* | [`skos:Concept`](http://www.w3.org/2004/02/skos/core#Concept) |
@@ -623,7 +623,7 @@ De referentie-elementen worden naar de volgende aspecten gespecificeerd:
 
 | **Aspect**                   | **Eigenschap** | **Kardinaliteit** | **Datatype of klasse** |
 |------------------------------|----------------|-------------------|--------------|
-| Modelelement identificatie                       | [`mim:modelelementIdentificatie`](http://bp4mc2.org/def/mim#modelelementIdentificatie) | 1 | tekst |
+| Modelelementidentificatie                       | [`mim:modelelementIdentificatie`](http://bp4mc2.org/def/mim#modelelementIdentificatie) | 1 | tekst |
 | Naam                         | [`mim:naam`](http://bp4mc2.org/def/mim#naam) | 1 | tekst |
 | Alias                        | [`mim:alias`](http://bp4mc2.org/def/mim#alias) | 0..1 | tekst |
 | Begrip                    | [`mim:begrip`](http://bp4mc2.org/def/mim#begrip) | 0..* | [`skos:Concept`](http://www.w3.org/2004/02/skos/core#Concept) |
@@ -650,7 +650,7 @@ Voor codelijst worden de volgende aspecten gespecificeerd:
 
 | **Aspect**                   | **Eigenschap** | **Kardinaliteit** | **Datatype of klasse** |
 |------------------------------|----------------|-------------------|--------------|
-| Modelelement identificatie                       | [`mim:modelelementIdentificatie`](http://bp4mc2.org/def/mim#modelelementIdentificatie) | 1 | tekst |
+| Modelelementidentificatie                       | [`mim:modelelementIdentificatie`](http://bp4mc2.org/def/mim#modelelementIdentificatie) | 1 | tekst |
 | Naam                         | [`mim:naam`](http://bp4mc2.org/def/mim#naam) | 1 | tekst |
 | Alias                        | [`mim:alias`](http://bp4mc2.org/def/mim#alias) | 0..1 | tekst |
 | Begrip                    | [`mim:begrip`](http://bp4mc2.org/def/mim#begrip) | 0..* | [`skos:Concept`](http://www.w3.org/2004/02/skos/core#Concept) |
@@ -675,7 +675,7 @@ De datatypen worden naar de volgende aspecten gespecificeerd:
 
 | **Aspect**                   | **Eigenschap** | **Kardinaliteit** | **Datatype of klasse** |
 |------------------------------|----------------|-------------------|--------------|
-| Modelelement identificatie                       | [`mim:modelelementIdentificatie`](http://bp4mc2.org/def/mim#modelelementIdentificatie) | 1 | tekst |
+| Modelelementidentificatie                       | [`mim:modelelementIdentificatie`](http://bp4mc2.org/def/mim#modelelementIdentificatie) | 1 | tekst |
 | Naam                         | [`mim:naam`](http://bp4mc2.org/def/mim#naam) | 1 | tekst |
 | Alias                        | [`mim:alias`](http://bp4mc2.org/def/mim#alias) | 0..1 | tekst |
 | Begrip                    | [`mim:begrip`](http://bp4mc2.org/def/mim#begrip) | 0..* | [`skos:Concept`](http://www.w3.org/2004/02/skos/core#Concept) |
@@ -697,7 +697,7 @@ Voor Gestructureerde datatypen worden de volgende aspecten gespecificeerd:
 
 | **Aspect**                   | **Eigenschap** | **Kardinaliteit** | **Datatype of klasse** |
 |------------------------------|----------------|-------------------|--------------|
-| Modelelement identificatie                       | [`mim:modelelementIdentificatie`](http://bp4mc2.org/def/mim#modelelementIdentificatie) | 1 | tekst |
+| Modelelementidentificatie                       | [`mim:modelelementIdentificatie`](http://bp4mc2.org/def/mim#modelelementIdentificatie) | 1 | tekst |
 | Naam                         | [`mim:naam`](http://bp4mc2.org/def/mim#naam) | 1 | tekst |
 | Alias                        | [`mim:alias`](http://bp4mc2.org/def/mim#alias) | 0..1 | tekst |
 | Begrip                    | [`mim:begrip`](http://bp4mc2.org/def/mim#begrip) | 0..* | [`skos:Concept`](http://www.w3.org/2004/02/skos/core#Concept) |
@@ -718,7 +718,7 @@ De data-elementen worden naar de volgende aspecten gespecificeerd:
 
 | **Aspect**                   | **Eigenschap** | **Kardinaliteit** | **Datatype of klasse** |
 |------------------------------|----------------|-------------------|--------------|
-| Modelelement identificatie                       | [`mim:modelelementIdentificatie`](http://bp4mc2.org/def/mim#modelelementIdentificatie) | 1 | tekst |
+| Modelelementidentificatie                       | [`mim:modelelementIdentificatie`](http://bp4mc2.org/def/mim#modelelementIdentificatie) | 1 | tekst |
 | Naam                         | [`mim:naam`](http://bp4mc2.org/def/mim#naam) | 1 | tekst |
 | Alias                        | [`mim:alias`](http://bp4mc2.org/def/mim#alias) | 0..1 | tekst |
 | Begrip                    | [`mim:begrip`](http://bp4mc2.org/def/mim#begrip) | 0..* | [`skos:Concept`](http://www.w3.org/2004/02/skos/core#Concept) |
@@ -746,7 +746,7 @@ Informatiemodel packages worden naar de volgende aspecten gespecificeerd:
 
 | **Aspect**                   | **Eigenschap** | **Kardinaliteit** | **Datatype of klasse** |
 |------------------------------|----------------|-------------------|--------------|
-| Modelelement identificatie                       | [`mim:modelelementIdentificatie`](http://bp4mc2.org/def/mim#modelelementIdentificatie) | 1 | tekst |
+| Modelelementidentificatie                       | [`mim:modelelementIdentificatie`](http://bp4mc2.org/def/mim#modelelementIdentificatie) | 1 | tekst |
 | Naam                         | [`mim:naam`](http://bp4mc2.org/def/mim#naam) | 1 | tekst |
 | Alias                        | [`mim:alias`](http://bp4mc2.org/def/mim#alias) | 0..1 | tekst |
 | Definitie                    | [`mim:definitie`](http://bp4mc2.org/def/mim#definitie) | 1 | tekst |
@@ -783,7 +783,7 @@ Domein packages worden naar de volgende aspecten gespecificeerd:
 
 | **Aspect**                   | **Eigenschap** | **Kardinaliteit** | **Datatype of klasse** |
 |------------------------------|----------------|-------------------|--------------|
-| Modelelement identificatie                       | [`mim:modelelementIdentificatie`](http://bp4mc2.org/def/mim#modelelementIdentificatie) | 1 | tekst |
+| Modelelementidentificatie                       | [`mim:modelelementIdentificatie`](http://bp4mc2.org/def/mim#modelelementIdentificatie) | 1 | tekst |
 | Naam                         | [`mim:naam`](http://bp4mc2.org/def/mim#naam) | 1 | tekst |
 | Alias                        | [`mim:alias`](http://bp4mc2.org/def/mim#alias) | 0..1 | tekst |
 | Datum opname                 | [`mim:datumOpname`](http://bp4mc2.org/def/mim#datumOpname) | 1 | datum |
@@ -796,7 +796,7 @@ Externe packages worden naar de volgende aspecten gespecificeerd:
 
 | **Aspect**                   | **Eigenschap** | **Kardinaliteit** | **Datatype of klasse** |
 |------------------------------|----------------|-------------------|--------------|
-| Modelelement identificatie                       | [`mim:modelelementIdentificatie`](http://bp4mc2.org/def/mim#modelelementIdentificatie) | 1 | tekst |
+| Modelelementidentificatie                       | [`mim:modelelementIdentificatie`](http://bp4mc2.org/def/mim#modelelementIdentificatie) | 1 | tekst |
 | Naam                         | [`mim:naam`](http://bp4mc2.org/def/mim#naam) | 1 | tekst |
 | Alias                        | [`mim:alias`](http://bp4mc2.org/def/mim#alias) | 0..1 | tekst |
 | Locatie                      | [`mim:locatie`](http://bp4mc2.org/def/mim#locatie) | 1 | tekst |
@@ -813,7 +813,7 @@ View packages worden naar de volgende aspecten gespecificeerd:
 
 | **Aspect**                   | **Eigenschap** | **Kardinaliteit** | **Datatype of klasse** |
 |------------------------------|----------------|-------------------|--------------|
-| Modelelement identificatie                       | [`mim:modelelementIdentificatie`](http://bp4mc2.org/def/mim#modelelementIdentificatie) | 1 | tekst |
+| Modelelementidentificatie                       | [`mim:modelelementIdentificatie`](http://bp4mc2.org/def/mim#modelelementIdentificatie) | 1 | tekst |
 | Naam                         | [`mim:naam`](http://bp4mc2.org/def/mim#naam) | 1 | tekst |
 | Alias                        | [`mim:alias`](http://bp4mc2.org/def/mim#alias) | 0..1 | tekst |
 | Locatie                      | [`mim:locatie`](http://bp4mc2.org/def/mim#locatie) | 1 | tekst |
@@ -833,7 +833,7 @@ aspecten gespecificeerd:
 
 | **Aspect**                   | **Eigenschap** | **Kardinaliteit** | **Datatype of klasse** |
 |------------------------------|----------------|-------------------|--------------|
-| Modelelement identificatie                       | [`mim:modelelementIdentificatie`](http://bp4mc2.org/def/mim#modelelementIdentificatie) | 1 | tekst |
+| Modelelementidentificatie                       | [`mim:modelelementIdentificatie`](http://bp4mc2.org/def/mim#modelelementIdentificatie) | 1 | tekst |
 | Naam                         | [`mim:naam`](http://bp4mc2.org/def/mim#naam) | 1 | tekst |
 | Alias                        | [`mim:alias`](http://bp4mc2.org/def/mim#alias) | 0..1 | tekst |
 | Begrip                    | [`mim:begrip`](http://bp4mc2.org/def/mim#begrip) | 0..* | [`skos:Concept`](http://www.w3.org/2004/02/skos/core#Concept) |
@@ -852,7 +852,7 @@ volgende aspecten:
 
 | **Aspect**                   | **Eigenschap** | **Kardinaliteit** | **Datatype of klasse** |
 |------------------------------|----------------|-------------------|--------------|
-| Modelelement identificatie                       | [`mim:modelelementIdentificatie`](http://bp4mc2.org/def/mim#modelelementIdentificatie) | 1 | tekst |
+| Modelelementidentificatie                       | [`mim:modelelementIdentificatie`](http://bp4mc2.org/def/mim#modelelementIdentificatie) | 1 | tekst |
 | Naam                         | [`mim:naam`](http://bp4mc2.org/def/mim#naam) | 1 | tekst |
 | Definitie                    | [`mim:definitie`](http://bp4mc2.org/def/mim#definitie) | 0..1 | tekst |
 | Toelichting               | [`mim:toelichting`](http://bp4mc2.org/def/mim#toelichting) | 0..1 | tekst |
