@@ -198,7 +198,7 @@ CONSTRUCT {
 WHERE {
   ?objecttype a mim:Objecttype.
   ?objecttype mim:naam ?objecttypenaam.
-  
+
   BIND (t:uri(?objecttypenaam) as ?class)
   BIND (t:nodeshapeuri(?objecttypenaam) as ?nodeshape)
 }
@@ -628,12 +628,12 @@ WHERE {
 
 > Een in het eigen model gedefinieerd primitieve datatype. Deze worden wel door de modelleur gecreëerd, met een eigen naam en een eigen definitie (en eigen metagegevens).
 
-Een primitief datatype wordt vertaald naar een `rdfs:Datatype`. Indien er geen subklasse aanwezig is naar een andere datatype, dan wordt per default een subklasse van xsd:string toegevoegd.
+Een primitief datatype wordt vertaald naar een `sh:NodeShape`. Een dergelijke (literal) nodeshape kan dan gebruikt worden in een propertyshape via sh:node. In onderstaande uitwerking wordt als uitgangspunt gehanteerd dat een primitief datatype een subtype is van een elementair datatype. Theoretisch gezien zou een primitief datatype ook weer een specialisatie kunnen zijn van een ander primitief datatype, dit is hier niet meegenomen. Indien het primitieve datatype geen specialisatie is van een ander datatype, dan wordt verondersteld dat sprake is van een specialisatie van xs:string.
 
 <pre class='ex-sparql'>
 CONSTRUCT {
-  ?datatype a rdfs:Datatype.
-  ?datatype rdfs:subClassOf xsd:string.
+  ?datatype a sh:NodeShape.
+  ?datatype sh:datatype xsd:string.
   ?datatype mim:equivalent ?primitiefdatatype.
 }
 WHERE {
@@ -646,13 +646,16 @@ WHERE {
 }
 
 CONSTRUCT {
-  ?datatype a rdfs:Datatype.
+  ?datatype a sh:NodeShape.
+  ?datatype sh:datatype ?xsddatatype.
   ?datatype mim:equivalent ?primitiefdatatype.
 }
 WHERE {
   ?primitiefdatatype a mim:PrimitiefDatatype.
   ?primitiefdatatype mim:naam ?primitiefdatatypenaam.
-  ?generalisatie mim:subtype ?primitiefdatatype
+  ?generalisatie mim:subtype ?primitiefdatatype.
+  ?generalisatie mim:supertype ?standaarddatatype.
+  ?xsddatatype mim:equivalent ?standaarddatatype.
   BIND (t:uri(?primitiefdatatypenaam) as ?datatype)
 }
 </pre>
@@ -1254,7 +1257,8 @@ Een `mim:locatie` wordt direct, zonder aanpassing, overgenomen in het vertaalde 
 
 De vertaling van een `mim:type` hangt af van de vertaling van het datatype waar naar wordt verwezen:
 
-- Voor primitieve datatypen wordt vertaald naar een `sh:datatype`;
+- Voor standaard datatypen wordt vertaald naar een `sh:datatype`;
+- Voor eigen gespecificeerde primitieve datatypen wordt vertaald naar een `sh:node`;
 - Voor gestructureerde datatypen wordt vertaald naar een `sh:node`;
 - Voor een enumeratie wordt vertaald naar een `sh:node`;
 - Voor een referentielijst wordt vertaald naar een `sh:node`;
@@ -1271,6 +1275,7 @@ WHERE {
   ?type rdfs:subClassOf*/rdf:type mim:PrimitiefDatatype.
   ?subject mim:equivalent ?modelelement.
   ?datatype mim:equivalent ?type.
+  ?datatype a rdfs:Datatype.
 }
 
 CONSTRUCT {
@@ -1286,6 +1291,7 @@ WHERE {
        || ?mimtype = mim:Enumeratie
        || ?mimtype = mim:Referentielijst
        || ?mimtype = mim:Codelijst
+       || (?mimtype = mim:PrimitiefDatatype && ?datatypetype != rdfs:Datatype)
   )
 }
 </pre>
@@ -1662,7 +1668,7 @@ WHERE {
   ?package mim:bevatModelelement ?modelelement.
   ?package mim:equivalent ?ontology.
   ?modelelement mim:equivalent ?ontologyelement.
-  ?ontologyelement a ?type . 
+  ?ontologyelement a ?type .
   FILTER (?type != owl:Ontology)
 }
 CONSTRUCT {
