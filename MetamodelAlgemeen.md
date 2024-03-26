@@ -1622,34 +1622,34 @@ In essentie zijn er vier componenten die een meting of een waarneming beschrijve
 
 De eerste drie componenten zijn informatie-technisch uit te drukken met de informatie-elementen `«Attribuutsoort»` en `«Datatype»`. Voor de _eenheid_ van een waarde is een apart metagegeven gecreëerd dat gekoppeld wordt aan een `«Attribuutsoort»` of een `«Referentie-element»`.
 
-Voor de invulling van het metagegeven `Eenheid`, sluit het MIM aan bij het Internationale Stelsel van Eenheden [[SI]]. Een modelleur vult bij `Eenheid` het symbool van de eenheid in, bijvoorbeeld: `m` voor de lengtemaat _meter_. Een basislijst van mogelijke waarden en bijbehorende symbolen is beschikbaar via [SI Reference Point](https://si-digital-framework.org/SI). Het SI-stelsel bestaat uit zeven [basiseenheden](https://nl.wikipedia.org/wiki/SI-stelsel#SI-basiseenheden). Aanvullend staat het systeem een onbeperkt aantal [afgeleide eenheden](https://nl.wikipedia.org/wiki/SI-stelsel#Afgeleide_SI-eenheden) toe, die altijd kunnen worden uitgedrukt als producten van machten van de basiseenheden. Hiervoor zijn [SI-prefixen](https://nl.wikipedia.org/wiki/SI-stelsel#SI-prefixen_(vermenigvuldigingsfactoren) gedefinieerd. Naast de SI-eenheden zijn er een aantal niet-SI-eenheden die wel goedgekeurd zijn voor _gebruik in samenstelling_ met SI-eenheden, zoals: _liter_, _uur_, _minuut_ en _graden Celsius_. Imperiale eenheden, zoals: _pound_, _inch_ en _foot_ zijn niet goedgekeurde SI-eenheden.
+Voor de invulling van het metagegeven `Eenheid`, sluit het MIM aan bij het Internationale Stelsel van Eenheden [[SI]]. Een modelleur vult bij `Eenheid` de _unit expression_ van de eenheid in, bijvoorbeeld: `m` voor de lengtemaat _meter_. Een basislijst van mogelijke waarden en bijbehorende symbolen is beschikbaar via [SI Reference Point](https://si-digital-framework.org/SI). Het SI-stelsel bestaat uit zeven [basiseenheden](https://nl.wikipedia.org/wiki/SI-stelsel#SI-basiseenheden). Aanvullend staat het systeem een onbeperkt aantal [afgeleide eenheden](https://nl.wikipedia.org/wiki/SI-stelsel#Afgeleide_SI-eenheden) toe, die altijd kunnen worden uitgedrukt als producten van machten van de basiseenheden. Hiervoor zijn [SI-prefixen](https://nl.wikipedia.org/wiki/SI-stelsel#SI-prefixen_(vermenigvuldigingsfactoren) gedefinieerd. Naast de SI-eenheden zijn er een aantal niet-SI-eenheden die wel goedgekeurd zijn voor _gebruik in samenstelling_ met SI-eenheden, zoals: _liter_, _uur_, _minuut_ en _graden Celsius_. Imperiale eenheden, zoals: _pound_, _inch_ en _foot_ zijn niet goedgekeurde SI-eenheden.
 
 <aside class="example" title="Voorbeelden van eenheden in relatie tot het SI-stelsel">
   <p><strong>Basiseenheden</strong>
     <ul>
-      <li>kilogram, symbool: <code>kg</code> (grootheid: massa)</li>
-      <li>meter, symbool: <code>m</code> (grootheid: lengte)</li>
-      <li>seconde, symbool: <code>s</code> (grootheid: tijd)</li>
+      <li>kilogram, <i>unit expression</i>: <code>kg</code> (grootheid: massa)</li>
+      <li>meter, <i>unit expression</i>: <code>m</code> (grootheid: lengte)</li>
+      <li>seconde, <i>unit expression</i>: <code>s</code> (grootheid: tijd)</li>
     </ul>
   </p>
   <p><strong>Afgeleide eenheden</strong>
     <ul>
-      <li>gram, symbool: <code>g</code></li>
-      <li>kilometer, symbool: <code>km</code></li>
-      <li>hertz, symbool: <code>Hz</code></li>
-      <li>kilowattuur, symbool: <code>kWh</code></li>
+      <li>gram, <i>unit expression</i>: <code>g</code></li>
+      <li>kilometer, <i>unit expression</i>: <code>km</code></li>
+      <li>hertz, <i>unit expression</i>: <code>Hz</code></li>
+      <li>kilowattuur, <i>unit expression</i>: <code>kW.h</code></li>
     </ul>
   </p>
   <p><strong>Samengestelde eenheden</strong>
     <ul>
-      <li>meter per seconde, symbool: <code>m/s</code></li>
-      <li>vierkante meter, symbool: <code>m<sup>2</sup></code></li>
+      <li>meter per seconde, <i>unit expression</i>: <code>m.s</code></li>
+      <li>vierkante meter, <i>unit expression</i>: <code>m2</code></li>
     </ul>
   </p>
   <p><strong>Niet-SI-eenheden die geaccepteerd zijn voor gebruik in combinatie met SI-eenheden</strong>
     <ul>
-      <li>decibel (1/10 Bel = 1 decibel), symbol: <code>dB</code></li>
-      <li>liter, symbool: <code>l</code></li>
+      <li>decibel (1/10 Bel = 1 decibel), <i>unit expression</i>: <code>dB</code></li>
+      <li>liter, <i>unit expression</i>: <code>L</code></li>
     </ul>
   </p>
   <p><strong>Imperiale eenheden die niet geaccepteerd zijn voor gebruik met SI-eenheden</strong>
