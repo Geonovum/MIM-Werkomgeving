@@ -1830,6 +1830,24 @@ WHERE {
 }
 </pre>
 
+### transformatie: eenheid
+
+> Aanduiding van de eenheid die bij een meting of waarneming hoort.
+
+Een `mim:eenheid` wordt direct, zonder aanpassing, overgenomen in het vertaalde model. Dit heeft tot gevolg dat bij de betreffende PropertyShape via `mim:eenheid` duidelijk is over welke eenheid het gaat. Aangezien we gebruik maken van UOM URL's, kan vanuit daar ook de relatie worden gelegd met andere eenheid vocabulaires, zoals bijvoorbeeld [QUDT](https://qudt.org).
+
+<pre class='ex-sparql'>
+CONSTRUCT {
+  ?subject mim:eenheid ?eenheid
+}
+WHERE {
+  ?modelelement mim:eenheid ?eenheid.
+  ?subject mim:equivalent ?modelelement.
+}
+</pre>
+
+Er is niet gekozen voor een oplossing om attribuutsoorten te kwalificeren (bijvoorbeeld via een blank node en rdf:value). De reden is dat MIM ervoor kiest om de eenheid mee te nemen in de definitie van een attribuutsoort, dwz: één attribuutsoort heeft ook altijd (maximaal) één eenheid. Als de waarde in meerdere eenheden uit te drukken is (bijvoorbeeld lengte in mm en cm), dan is sprake van twee attribuutsoorten.
+
 ## Transformatie vanuit RDFS/OWL/SHACL
 
 Een Linked Data model dat is uitgedrukt in RDFS/OWL/SHACL kan gelezen worden als een MIM model. Hiervoor dient het model wel eerste getransformeerd te worden naar de MIM vocabulaire. Vervolgens dient het resultaat te voldoen aan de minimale eisen die worden gesteld aan een MIM vocabulaire.
