@@ -321,10 +321,20 @@ mim:identificerend a owl:DatatypeProperty;
   rdfs:comment "Een aanduiding dat een kenmerk of een combinatie van kenmerken van een objecttype uniek identificerend is voor alle objecten in de populatie van objecten van dit objecttype, of de aanduiding dat een referentie element uniek identificerend is voor alle lijst items in een referentielijst."@nl;
   dct:source mimdoc:sectie2.8.2.9;
 .
+mim:heeftTijdlijnGeldigheid a owl:DatatypeProperty;
+  rdfs:label "heeft tijdlijn geldigheid"@nl;
+  rdfs:comment "Indicatie of voor dit kenmerk een tijdlijn geldigheid bijgehouden wordt en te bevragen is."@nl;
+  dct:source mimdoc:metagegeven-heeft-tijdlijn-geldigheid;
+.
 mim:indicatieMaterieleHistorie a owl:DatatypeProperty;
   rdfs:label "Indicatie materiële historie"@nl;
   rdfs:comment "Indicatie of de materiële historie van het kenmerk van het object te bevragen is."@nl;
   dct:source mimdoc:sectie2.8.2.10;
+.
+mim:heeftTijdlijnRegistratie a owl:DatatypeProperty;
+  rdfs:label "heeft tijdlijn registratie"@nl;
+  rdfs:comment "Indicatie of voor dit kenmerk een tijdlijn registratie bijgehouden wordt en te bevragen is."@nl;
+  dct:source mimdoc:metagegeven-heeft-tijdlijn-registratie;
 .
 mim:indicatieFormeleHistorie a owl:DatatypeProperty;
   rdfs:label "Indicatie formele historie"@nl;
