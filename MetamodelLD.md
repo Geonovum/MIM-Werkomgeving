@@ -218,7 +218,7 @@ Deze paragraaf is een aanvulling op de paragraaf [[[#specificatie-metagegevens]]
 | alias | [`mim:alias`](http://bp4mc2.org/def/mim#alias) | owl:DatatypeProperty | [grondslag](#metagegeven-alias) |
 | attribuut | [`mim:attribuut`](http://bp4mc2.org/def/mim#attribuut) | owl:ObjectProperty | [grondslag](#metagegeven-heeft-attribuut) |
 | authentiek | [`mim:authentiek`](http://bp4mc2.org/def/mim#authentiek) | owl:ObjectProperty | [grondslag](#metagegeven-authentiek) |
-| basis-URI | [`mim:basisUri`](http://bp4mc2.org/def/mim#basisUri) | owl:ObjectProperty | [grondslag](#metagegeven-basis-uri) |
+| basis-URI | [`mim:basisUri`](http://bp4mc2.org/def/mim#basisUri) | owl:DatatypeProperty | [grondslag](#metagegeven-basis-uri) |
 | begrip | [`mim:begrip`](http://bp4mc2.org/def/mim#begrip) | owl:ObjectProperty | [grondslag](#metagegeven-begrip) |
 | begripsterm | [`mim:begripsterm`](http://bp4mc2.org/def/mim#begripsterm) | owl:DatatypeProperty | [grondslag](#metagegeven-begrip) |
 | bron | [`mim:bron`](http://bp4mc2.org/def/mim#bron) | owl:ObjectProperty | [grondslag](#metagegeven-bron) |
@@ -243,11 +243,12 @@ Deze paragraaf is een aanvulling op de paragraaf [[[#specificatie-metagegevens]]
 | indicatie formele historie | [`mim:indicatieFormeleHistorie`](http://bp4mc2.org/def/mim#indicatieFormeleHistorie) | owl:DatatypeProperty | [grondslag](#metagegeven-indicatie-formele-historie) |
 | informatiedomein | [`mim:informatiedomein`](http://bp4mc2.org/def/mim#informatiedomein) | owl:DatatypeProperty | [grondslag](#metagegeven-informatiedomein) |
 | informatiemodeltype | [`mim:informatiemodeltype`](http://bp4mc2.org/def/mim#informatiemodeltype) | owl:ObjectProperty | [grondslag](#metagegeven-informatiemodel-type) |
-| is gedefinieerd in | [`mim:isGedefinieerdIn`](http://bp4mc2.org/def/mim#isGedefinieerdIn) | owl:ObjectProperty | [grondslag](#metagegeven-is-gedefinieerd-in) |
+| is gedefinieerd in | [`mim:isGedefinieerdIn`](http://bp4mc2.org/def/mim#isGedefinieerdIn) | owl:DatatypeProperty | [grondslag](#metagegeven-is-gedefinieerd-in) |
 | kardinaliteit | [`mim:kardinaliteit`](http://bp4mc2.org/def/mim#kardinaliteit) | owl:DatatypeProperty | [grondslag](#metagegeven-kardinaliteit)
 | kwaliteit | [`mim:kwaliteit`](http://bp4mc2.org/def/mim#kwaliteit) | owl:DatatypeProperty | |
 | lengte | [`mim:lengte`](http://bp4mc2.org/def/mim#lengte) | owl:DatatypeProperty | [grondslag](#metagegeven-lengte) |
 | locatie | [`mim:locatie`](http://bp4mc2.org/def/mim#locatie) | owl:DatatypeProperty | [grondslag](#metagegeven-locatie) |
+| modelelementidentificatie | [`mim:modelelementidentificatie`](http://bp4mc2.org/def/mim#modelelementidentificatie) | owl:DatatypeProperty | [grondslag](#metagegeven-modelelement-identificatie) |
 | mim extensie | [`mim:extensie`](http://bp4mc2.org/def/mim#extensie) | owl:DatatypeProperty | [grondslag](#metagegeven-mim-extensie)
 | mim taal | [`mim:taal`](http://bp4mc2.org/def/mim#taal) | owl:DatatypeProperty | [grondslag](#metagegeven-mim-taal) |
 | mim tekstopmaak | [`mim:tekstopmaak`](http://bp4mc2.org/def/mim#tekstopmaak) | owl:DatatypeProperty | [grondslag](#metagegeven-tekstopmaak) |
@@ -266,7 +267,6 @@ Deze paragraaf is een aanvulling op de paragraaf [[[#specificatie-metagegevens]]
 | toelichting | [`mim:toelichting`](http://bp4mc2.org/def/mim#toelichting) | owl:DatatypeProperty | [grondslag](#metagegeven-toelichting)
 | type | [`mim:type`](http://bp4mc2.org/def/mim#type) | owl:ObjectProperty | [grondslag](#metagegeven-type) |
 | unidirectioneel | [`mim:unidirectioneel`](http://bp4mc2.org/def/mim#unidirectioneel) | owl:DatatypeProperty | [grondslag](#metagegeven-unidirectioneel) |
-| modelelementidentificatie | [`mim:modelelementidentificatie`](http://bp4mc2.org/def/mim#modelelementidentificatie) | owl:ObjectProperty | [grondslag](#metagegeven-modelelement-identificatie) |
 | waarde | [`mim:waarde`](http://bp4mc2.org/def/mim#waarde) | owl:ObjectProperty | [grondslag](#metagegeven-bevat-enumeratiewaarde) |
 | minimumwaarde inclusief | [`mim:minimumwaardeInclusief`](http://bp4mc2.org/def/mim#minimumwaardeInclusief) | owl:DatatypeProperty  |  [grondslag](#metagegeven-minimumwaarde-inclusief) |
 | minimumwaarde exclusief | [`mim:minimumwaardeExclusief`](http://bp4mc2.org/def/mim#minimumwaardeExclusief) | owl:DatatypeProperty  |  [grondslag](#metagegeven-minimumwaarde-exclusief) |
@@ -282,7 +282,7 @@ De objecttypen worden naar de volgende aspecten gespecificeerd:
 
 | **Aspect**                | **Eigenschap** | **Kardinaliteit** | **Datatype of klasse** |
 |---------------------------|----------------|-------------------|--------------|
-| Modelelementidentificatie | [`mim:modelelementidentificatie`](http://bp4mc2.org/def/mim#modelelementidentificatie) | 1 | tekst |
+| Modelelementidentificatie | [`mim:modelelementidentificatie`](http://bp4mc2.org/def/mim#modelelementidentificatie) | 1 | [`xsd:anyURI`](http://www.w3.org/2001/XMLSchema#anyURI) |
 | Naam                      | [`mim:naam`](http://bp4mc2.org/def/mim#naam) | 1 | tekst |
 | Alias                     | [`mim:alias`](http://bp4mc2.org/def/mim#alias) | 0..1 | tekst |
 | Begrip                    | [`mim:begrip`](http://bp4mc2.org/def/mim#begrip) | 0..* | [`skos:Concept`](http://www.w3.org/2004/02/skos/core#Concept) |
@@ -306,7 +306,7 @@ De attribuutsoorten worden naar de volgende aspecten gespecificeerd:
 
 | **Aspect**                   | **Eigenschap** | **Kardinaliteit** | **Datatype of klasse** |
 |------------------------------|----------------|-------------------|--------------|
-| Modelelementidentificatie | [`mim:modelelementidentificatie`](http://bp4mc2.org/def/mim#modelelementidentificatie) | 1 | tekst |
+| Modelelementidentificatie | [`mim:modelelementidentificatie`](http://bp4mc2.org/def/mim#modelelementidentificatie) | 1 | [`xsd:anyURI`](http://www.w3.org/2001/XMLSchema#anyURI) |
 | Naam                         | [`mim:naam`](http://bp4mc2.org/def/mim#naam) | 1 | tekst |
 | Alias                        | [`mim:alias`](http://bp4mc2.org/def/mim#alias) | 0..1 | tekst |
 | Begrip                    | [`mim:begrip`](http://bp4mc2.org/def/mim#begrip) | 0..* | [`skos:Concept`](http://www.w3.org/2004/02/skos/core#Concept) |
@@ -354,7 +354,7 @@ De gegevensgroepen worden naar de volgende aspecten gespecificeerd:
 
 | **Aspect**                   | **Eigenschap** | **Kardinaliteit** | **Datatype of klasse** |
 |------------------------------|----------------|-------------------|--------------|
-| Modelelementidentificatie | [`mim:modelelementidentificatie`](http://bp4mc2.org/def/mim#modelelementidentificatie) | 1 | tekst |
+| Modelelementidentificatie | [`mim:modelelementidentificatie`](http://bp4mc2.org/def/mim#modelelementidentificatie) | 1 | [`xsd:anyURI`](http://www.w3.org/2001/XMLSchema#anyURI) |
 | Naam                         | [`mim:naam`](http://bp4mc2.org/def/mim#naam) | 1 | tekst |
 | Alias                        | [`mim:alias`](http://bp4mc2.org/def/mim#alias) | 0..1 | tekst |
 | Begrip                    | [`mim:begrip`](http://bp4mc2.org/def/mim#begrip) | 0..* | [`skos:Concept`](http://www.w3.org/2004/02/skos/core#Concept) |
@@ -376,7 +376,7 @@ De gegevensgroeptypen worden naar de volgende aspecten gespecificeerd:
 
 | **Aspect**                   | **Eigenschap** | **Kardinaliteit** | **Datatype of klasse** |
 |------------------------------|----------------|-------------------|--------------|
-| Modelelementidentificatie | [`mim:modelelementidentificatie`](http://bp4mc2.org/def/mim#modelelementidentificatie) | 1 | tekst |
+| Modelelementidentificatie | [`mim:modelelementidentificatie`](http://bp4mc2.org/def/mim#modelelementidentificatie) | 1 | [`xsd:anyURI`](http://www.w3.org/2001/XMLSchema#anyURI) |
 | Naam                         | [`mim:naam`](http://bp4mc2.org/def/mim#naam) | 1 | tekst |
 | Alias                        | [`mim:alias`](http://bp4mc2.org/def/mim#alias) | 0..1 | tekst |
 | Begrip                    | [`mim:begrip`](http://bp4mc2.org/def/mim#begrip) | 0..* | [`skos:Concept`](http://www.w3.org/2004/02/skos/core#Concept) |
@@ -410,7 +410,7 @@ De relatiesoorten worden naar de volgende aspecten gespecificeerd.
 
 | **Aspect**                   | **Eigenschap** | **Kardinaliteit** | **Datatype of klasse** |
 |------------------------------|----------------|-------------------|--------------|
-| Modelelementidentificatie | [`mim:modelelementidentificatie`](http://bp4mc2.org/def/mim#modelelementidentificatie) | 1 | tekst |
+| Modelelementidentificatie | [`mim:modelelementidentificatie`](http://bp4mc2.org/def/mim#modelelementidentificatie) | 1 | [`xsd:anyURI`](http://www.w3.org/2001/XMLSchema#anyURI) |
 | Naam                         | [`mim:naam`](http://bp4mc2.org/def/mim#naam) | 1 | tekst |
 | Alias                        | [`mim:alias`](http://bp4mc2.org/def/mim#alias) | 0..1 | tekst |
 | Begrip                       | [`mim:begrip`](http://bp4mc2.org/def/mim#begrip) | 0..* | [`skos:Concept`](http://www.w3.org/2004/02/skos/core#Concept) |
@@ -451,7 +451,7 @@ De relatiesoorten worden naar de volgende aspecten gespecificeerd.
 
 | **Aspect**                   | **Eigenschap** | **Kardinaliteit** | **Datatype of klasse** |
 |------------------------------|----------------|-------------------|--------------|
-| Modelelementidentificatie | [`mim:modelelementidentificatie`](http://bp4mc2.org/def/mim#modelelementidentificatie) | 1 | tekst |
+| Modelelementidentificatie | [`mim:modelelementidentificatie`](http://bp4mc2.org/def/mim#modelelementidentificatie) | 1 | [`xsd:anyURI`](http://www.w3.org/2001/XMLSchema#anyURI) |
 | Naam                         | [`mim:naam`](http://bp4mc2.org/def/mim#naam) | 0..1 | tekst |
 | Alias                        | [`mim:alias`](http://bp4mc2.org/def/mim#alias) | 0..1 | tekst |
 | Begrip                       | [`mim:begrip`](http://bp4mc2.org/def/mim#begrip) | 0..* | [`skos:Concept`](http://www.w3.org/2004/02/skos/core#Concept) |
@@ -467,7 +467,7 @@ Voor relatierollen worden naar de volgende aspecten gespecificeerd.
 
 | **Aspect**                   | **Eigenschap** | **Kardinaliteit** | **Datatype of klasse** |
 |------------------------------|----------------|-------------------|--------------|
-| Modelelementidentificatie | [`mim:modelelementidentificatie`](http://bp4mc2.org/def/mim#modelelementidentificatie) | 1 | tekst |
+| Modelelementidentificatie | [`mim:modelelementidentificatie`](http://bp4mc2.org/def/mim#modelelementidentificatie) | 1 | [`xsd:anyURI`](http://www.w3.org/2001/XMLSchema#anyURI) |
 | Naam                         | [`mim:naam`](http://bp4mc2.org/def/mim#naam) | 0..1 | tekst |
 | Alias                        | [`mim:alias`](http://bp4mc2.org/def/mim#alias) | 0..1 | tekst |
 | Begrip                    | [`mim:begrip`](http://bp4mc2.org/def/mim#begrip) | 0..* | [`skos:Concept`](http://www.w3.org/2004/02/skos/core#Concept) |
@@ -489,7 +489,7 @@ aspecten gespecificeerd.
 
 | **Aspect**                   | **Eigenschap** | **Kardinaliteit** | **Datatype of klasse** |
 |------------------------------|----------------|-------------------|--------------|
-| Modelelementidentificatie | [`mim:modelelementidentificatie`](http://bp4mc2.org/def/mim#modelelementidentificatie) | 1 | tekst |
+| Modelelementidentificatie | [`mim:modelelementidentificatie`](http://bp4mc2.org/def/mim#modelelementidentificatie) | 1 | [`xsd:anyURI`](http://www.w3.org/2001/XMLSchema#anyURI) |
 | Naam                         | [`mim:naam`](http://bp4mc2.org/def/mim#naam) | 1 | tekst |
 | Alias                        | [`mim:alias`](http://bp4mc2.org/def/mim#alias) | 0..1 | tekst |
 | Begrip                       | [`mim:begrip`](http://bp4mc2.org/def/mim#begrip) | 0..* | [`skos:Concept`](http://www.w3.org/2004/02/skos/core#Concept) |
@@ -516,7 +516,7 @@ De generalisaties worden naar het volgende aspect gespecificeerd:
 
 | **Aspect**                   | **Eigenschap** | **Kardinaliteit** | **Datatype of klasse** |
 |------------------------------|----------------|-------------------|--------------|
-| Modelelementidentificatie | [`mim:modelelementidentificatie`](http://bp4mc2.org/def/mim#modelelementidentificatie) | 1 | tekst |
+| Modelelementidentificatie | [`mim:modelelementidentificatie`](http://bp4mc2.org/def/mim#modelelementidentificatie) | 1 | [`xsd:anyURI`](http://www.w3.org/2001/XMLSchema#anyURI) |
 | Is gedefinieerd in        | [`mim:isGedefinieerdIn`](http://bp4mc2.org/def/mim#isGedefinieerdIn) | 1 | [`mim:Package`](http://bp4mc2.org/def/mim#Package) |
 | Subtype                      | [`mim:definitie`](http://bp4mc2.org/def/mim#subtype) | 1 | [`mim:Objecttype`](http://bp4mc2.org/def/mim#Objecttype) |
 | Supertype                      | [`mim:definitie`](http://bp4mc2.org/def/mim#supertype) | 1 | [`mim:Objecttype`](http://bp4mc2.org/def/mim#Objecttype) |
@@ -530,7 +530,7 @@ De generalisaties worden naar het volgende aspect gespecificeerd:
 
 | **Aspect**                   | **Eigenschap** | **Kardinaliteit** | **Datatype of klasse** |
 |------------------------------|----------------|-------------------|--------------|
-| Modelelementidentificatie | [`mim:modelelementidentificatie`](http://bp4mc2.org/def/mim#modelelementidentificatie) | 1 | tekst |
+| Modelelementidentificatie | [`mim:modelelementidentificatie`](http://bp4mc2.org/def/mim#modelelementidentificatie) | 1 | [`xsd:anyURI`](http://www.w3.org/2001/XMLSchema#anyURI) |
 | Is gedefinieerd in        | [`mim:isGedefinieerdIn`](http://bp4mc2.org/def/mim#isGedefinieerdIn) | 1 | [`mim:Package`](http://bp4mc2.org/def/mim#Package) |
 | Subtype                      | [`mim:definitie`](http://bp4mc2.org/def/mim#subtype) | 1 | [`mim:Datatype`](http://bp4mc2.org/def/mim#Datatype) |
 | Supertype                      | [`mim:definitie`](http://bp4mc2.org/def/mim#supertype) | 1 | [`mim:Datatype`](http://bp4mc2.org/def/mim#Datatype) |
@@ -542,7 +542,7 @@ De relatieklassen worden naar de volgende aspecten gespecificeerd:
 
 | **Aspect**                   | **Eigenschap** | **Kardinaliteit** | **Datatype of klasse** |
 |------------------------------|----------------|-------------------|--------------|
-| Modelelementidentificatie | [`mim:modelelementidentificatie`](http://bp4mc2.org/def/mim#modelelementidentificatie) | 1 | tekst |
+| Modelelementidentificatie | [`mim:modelelementidentificatie`](http://bp4mc2.org/def/mim#modelelementidentificatie) | 1 | [`xsd:anyURI`](http://www.w3.org/2001/XMLSchema#anyURI) |
 | Naam                         | [`mim:naam`](http://bp4mc2.org/def/mim#naam) | 0..1 | tekst |
 | Alias                        | [`mim:alias`](http://bp4mc2.org/def/mim#alias) | 0..1 | tekst |
 | Herkomst                     | [`mim:herkomst`](http://bp4mc2.org/def/mim#herkomst) | 1 | tekst |
@@ -571,7 +571,7 @@ Externe koppelingen worden naar de volgende aspecten gespecificeerd.
 
 | **Aspect**                   | **Eigenschap** | **Kardinaliteit** | **Datatype of klasse** |
 |------------------------------|----------------|-------------------|--------------|
-| Modelelementidentificatie | [`mim:modelelementidentificatie`](http://bp4mc2.org/def/mim#modelelementidentificatie) | 1 | tekst |
+| Modelelementidentificatie | [`mim:modelelementidentificatie`](http://bp4mc2.org/def/mim#modelelementidentificatie) | 1 | [`xsd:anyURI`](http://www.w3.org/2001/XMLSchema#anyURI) |
 | Naam                         | [`mim:naam`](http://bp4mc2.org/def/mim#naam) | 1 | tekst |
 | Alias                        | [`mim:alias`](http://bp4mc2.org/def/mim#alias) | 0..1 | tekst |
 | Begrip                       | [`mim:begrip`](http://bp4mc2.org/def/mim#begrip) | 0..* | [`skos:Concept`](http://www.w3.org/2004/02/skos/core#Concept) |
@@ -606,7 +606,7 @@ Voor referentielijsten worden de volgende aspecten gespecificeerd:
 
 | **Aspect**                   | **Eigenschap** | **Kardinaliteit** | **Datatype of klasse** |
 |------------------------------|----------------|-------------------|--------------|
-| Modelelementidentificatie | [`mim:modelelementidentificatie`](http://bp4mc2.org/def/mim#modelelementidentificatie) | 1 | tekst |
+| Modelelementidentificatie | [`mim:modelelementidentificatie`](http://bp4mc2.org/def/mim#modelelementidentificatie) | 1 | [`xsd:anyURI`](http://www.w3.org/2001/XMLSchema#anyURI) |
 | Naam                         | [`mim:naam`](http://bp4mc2.org/def/mim#naam) | 1 | tekst |
 | Alias                        | [`mim:alias`](http://bp4mc2.org/def/mim#alias) | 0..1 | tekst |
 | Begrip                       | [`mim:begrip`](http://bp4mc2.org/def/mim#begrip) | 0..* | [`skos:Concept`](http://www.w3.org/2004/02/skos/core#Concept) |
@@ -627,7 +627,7 @@ De referentie-elementen worden naar de volgende aspecten gespecificeerd:
 
 | **Aspect**                   | **Eigenschap** | **Kardinaliteit** | **Datatype of klasse** |
 |------------------------------|----------------|-------------------|--------------|
-| Modelelementidentificatie | [`mim:modelelementidentificatie`](http://bp4mc2.org/def/mim#modelelementidentificatie) | 1 | tekst |
+| Modelelementidentificatie | [`mim:modelelementidentificatie`](http://bp4mc2.org/def/mim#modelelementidentificatie) | 1 | [`xsd:anyURI`](http://www.w3.org/2001/XMLSchema#anyURI) |
 | Naam                         | [`mim:naam`](http://bp4mc2.org/def/mim#naam) | 1 | tekst |
 | Alias                        | [`mim:alias`](http://bp4mc2.org/def/mim#alias) | 0..1 | tekst |
 | Begrip                    | [`mim:begrip`](http://bp4mc2.org/def/mim#begrip) | 0..* | [`skos:Concept`](http://www.w3.org/2004/02/skos/core#Concept) |
@@ -654,7 +654,7 @@ Voor codelijst worden de volgende aspecten gespecificeerd:
 
 | **Aspect**                   | **Eigenschap** | **Kardinaliteit** | **Datatype of klasse** |
 |------------------------------|----------------|-------------------|--------------|
-| Modelelementidentificatie | [`mim:modelelementidentificatie`](http://bp4mc2.org/def/mim#modelelementidentificatie) | 1 | tekst |
+| Modelelementidentificatie | [`mim:modelelementidentificatie`](http://bp4mc2.org/def/mim#modelelementidentificatie) | 1 | [`xsd:anyURI`](http://www.w3.org/2001/XMLSchema#anyURI) |
 | Naam                         | [`mim:naam`](http://bp4mc2.org/def/mim#naam) | 1 | tekst |
 | Alias                        | [`mim:alias`](http://bp4mc2.org/def/mim#alias) | 0..1 | tekst |
 | Begrip                    | [`mim:begrip`](http://bp4mc2.org/def/mim#begrip) | 0..* | [`skos:Concept`](http://www.w3.org/2004/02/skos/core#Concept) |
@@ -679,7 +679,7 @@ De datatypen worden naar de volgende aspecten gespecificeerd:
 
 | **Aspect**                   | **Eigenschap** | **Kardinaliteit** | **Datatype of klasse** |
 |------------------------------|----------------|-------------------|--------------|
-| Modelelementidentificatie | [`mim:modelelementidentificatie`](http://bp4mc2.org/def/mim#modelelementidentificatie) | 1 | tekst |
+| Modelelementidentificatie | [`mim:modelelementidentificatie`](http://bp4mc2.org/def/mim#modelelementidentificatie) | 1 | [`xsd:anyURI`](http://www.w3.org/2001/XMLSchema#anyURI) |
 | Naam                         | [`mim:naam`](http://bp4mc2.org/def/mim#naam) | 1 | tekst |
 | Alias                        | [`mim:alias`](http://bp4mc2.org/def/mim#alias) | 0..1 | tekst |
 | Begrip                    | [`mim:begrip`](http://bp4mc2.org/def/mim#begrip) | 0..* | [`skos:Concept`](http://www.w3.org/2004/02/skos/core#Concept) |
@@ -701,7 +701,7 @@ Voor Gestructureerde datatypen worden de volgende aspecten gespecificeerd:
 
 | **Aspect**                   | **Eigenschap** | **Kardinaliteit** | **Datatype of klasse** |
 |------------------------------|----------------|-------------------|--------------|
-| Modelelementidentificatie | [`mim:modelelementidentificatie`](http://bp4mc2.org/def/mim#modelelementidentificatie) | 1 | tekst |
+| Modelelementidentificatie | [`mim:modelelementidentificatie`](http://bp4mc2.org/def/mim#modelelementidentificatie) | 1 | [`xsd:anyURI`](http://www.w3.org/2001/XMLSchema#anyURI) |
 | Naam                         | [`mim:naam`](http://bp4mc2.org/def/mim#naam) | 1 | tekst |
 | Alias                        | [`mim:alias`](http://bp4mc2.org/def/mim#alias) | 0..1 | tekst |
 | Begrip                    | [`mim:begrip`](http://bp4mc2.org/def/mim#begrip) | 0..* | [`skos:Concept`](http://www.w3.org/2004/02/skos/core#Concept) |
@@ -722,7 +722,7 @@ De data-elementen worden naar de volgende aspecten gespecificeerd:
 
 | **Aspect**                   | **Eigenschap** | **Kardinaliteit** | **Datatype of klasse** |
 |------------------------------|----------------|-------------------|--------------|
-| Modelelementidentificatie | [`mim:modelelementidentificatie`](http://bp4mc2.org/def/mim#modelelementidentificatie) | 1 | tekst |
+| Modelelementidentificatie | [`mim:modelelementidentificatie`](http://bp4mc2.org/def/mim#modelelementidentificatie) | 1 | [`xsd:anyURI`](http://www.w3.org/2001/XMLSchema#anyURI) |
 | Naam                         | [`mim:naam`](http://bp4mc2.org/def/mim#naam) | 1 | tekst |
 | Alias                        | [`mim:alias`](http://bp4mc2.org/def/mim#alias) | 0..1 | tekst |
 | Begrip                    | [`mim:begrip`](http://bp4mc2.org/def/mim#begrip) | 0..* | [`skos:Concept`](http://www.w3.org/2004/02/skos/core#Concept) |
@@ -764,7 +764,7 @@ Informatiemodel packages worden naar de volgende aspecten gespecificeerd:
 | Relatiemodelleringstype       | [`mim:relatiemodelleringstype`](http://bp4mc2.org/def/mim#relatiemodelleringstype) | 1..1 | Relatiemodelleringstypen |
 | tekstopmaak                  | [`mim:tekstopmaak`](http://bp4mc2.org/def/mim#tekstopmaak) | 0..1 | tekst |
 | Constraint                | [`mim:constraint`](http://bp4mc2.org/def/mim#constraint) | 0..n | [`mim:Constraint`](http://bp4mc2.org/def/mim#Constraint) |
-| Basis-URI                    | [`mim:basisUri`](http://bp4mc2.org/def/mim#basisUri) | 0..1 | tekst |
+| Basis-URI                    | [`mim:basisUri`](http://bp4mc2.org/def/mim#basisUri) | 0..1 | [`xsd:anyURI`](http://www.w3.org/2001/XMLSchema#anyURI) |
 
 Het veld `mim:informatiemodeltype` verwijst naar één van de volgende mogelijke waarden:
 
@@ -787,12 +787,12 @@ Domein packages worden naar de volgende aspecten gespecificeerd:
 
 | **Aspect**                   | **Eigenschap** | **Kardinaliteit** | **Datatype of klasse** |
 |------------------------------|----------------|-------------------|--------------|
-| Modelelementidentificatie | [`mim:modelelementidentificatie`](http://bp4mc2.org/def/mim#modelelementidentificatie) | 1 | tekst |
+| Modelelementidentificatie | [`mim:modelelementidentificatie`](http://bp4mc2.org/def/mim#modelelementidentificatie) | 1 | [`xsd:anyURI`](http://www.w3.org/2001/XMLSchema#anyURI) |
 | Naam                         | [`mim:naam`](http://bp4mc2.org/def/mim#naam) | 1 | tekst |
 | Alias                        | [`mim:alias`](http://bp4mc2.org/def/mim#alias) | 0..1 | tekst |
 | Datum opname                 | [`mim:datumOpname`](http://bp4mc2.org/def/mim#datumOpname) | 1 | datum |
 | Constraint                | [`mim:constraint`](http://bp4mc2.org/def/mim#constraint) | 0..n | [`mim:Constraint`](http://bp4mc2.org/def/mim#Constraint) |
-| Basis-URI                    | [`mim:basisUri`](http://bp4mc2.org/def/mim#basisUri) | 0..1 | tekst |
+| Basis-URI                    | [`mim:basisUri`](http://bp4mc2.org/def/mim#basisUri) | 0..1 | [`xsd:anyURI`](http://www.w3.org/2001/XMLSchema#anyURI) |
 
 #### mim:Extern
 
@@ -800,7 +800,7 @@ Externe packages worden naar de volgende aspecten gespecificeerd:
 
 | **Aspect**                   | **Eigenschap** | **Kardinaliteit** | **Datatype of klasse** |
 |------------------------------|----------------|-------------------|--------------|
-| Modelelementidentificatie | [`mim:modelelementidentificatie`](http://bp4mc2.org/def/mim#modelelementidentificatie) | 1 | tekst |
+| Modelelementidentificatie | [`mim:modelelementidentificatie`](http://bp4mc2.org/def/mim#modelelementidentificatie) | 1 | [`xsd:anyURI`](http://www.w3.org/2001/XMLSchema#anyURI) |
 | Naam                         | [`mim:naam`](http://bp4mc2.org/def/mim#naam) | 1 | tekst |
 | Alias                        | [`mim:alias`](http://bp4mc2.org/def/mim#alias) | 0..1 | tekst |
 | Locatie                      | [`mim:locatie`](http://bp4mc2.org/def/mim#locatie) | 1 | tekst |
@@ -809,7 +809,7 @@ Externe packages worden naar de volgende aspecten gespecificeerd:
 | Herkomst                     | [`mim:herkomst`](http://bp4mc2.org/def/mim#herkomst) | 1 | tekst |
 | Datum opname                 | [`mim:datumOpname`](http://bp4mc2.org/def/mim#datumOpname) | 1 | datum |
 | Constraint                | [`mim:constraint`](http://bp4mc2.org/def/mim#constraint) | 0..n | [`mim:Constraint`](http://bp4mc2.org/def/mim#Constraint) |
-| Basis-URI                    | [`mim:basisUri`](http://bp4mc2.org/def/mim#basisUri) | 0..1 | tekst |
+| Basis-URI                    | [`mim:basisUri`](http://bp4mc2.org/def/mim#basisUri) | 0..1 | [`xsd:anyURI`](http://www.w3.org/2001/XMLSchema#anyURI) |
 
 #### mim:View
 
@@ -817,7 +817,7 @@ View packages worden naar de volgende aspecten gespecificeerd:
 
 | **Aspect**                   | **Eigenschap** | **Kardinaliteit** | **Datatype of klasse** |
 |------------------------------|----------------|-------------------|--------------|
-| Modelelementidentificatie | [`mim:modelelementidentificatie`](http://bp4mc2.org/def/mim#modelelementidentificatie) | 1 | tekst |
+| Modelelementidentificatie | [`mim:modelelementidentificatie`](http://bp4mc2.org/def/mim#modelelementidentificatie) | 1 | [`xsd:anyURI`](http://www.w3.org/2001/XMLSchema#anyURI) |
 | Naam                         | [`mim:naam`](http://bp4mc2.org/def/mim#naam) | 1 | tekst |
 | Alias                        | [`mim:alias`](http://bp4mc2.org/def/mim#alias) | 0..1 | tekst |
 | Locatie                      | [`mim:locatie`](http://bp4mc2.org/def/mim#locatie) | 1 | tekst |
@@ -826,7 +826,7 @@ View packages worden naar de volgende aspecten gespecificeerd:
 | Herkomst                     | [`mim:herkomst`](http://bp4mc2.org/def/mim#herkomst) | 1 | tekst |
 | Datum opname                 | [`mim:datumOpname`](http://bp4mc2.org/def/mim#datumOpname) | 1 | datum |
 | Constraint                | [`mim:constraint`](http://bp4mc2.org/def/mim#constraint) | 0..n | [`mim:Constraint`](http://bp4mc2.org/def/mim#Constraint) |
-| Basis-URI                    | [`mim:basisUri`](http://bp4mc2.org/def/mim#basisUri) | 0..1 | tekst |
+| Basis-URI                    | [`mim:basisUri`](http://bp4mc2.org/def/mim#basisUri) | 0..1 | [`xsd:anyURI`](http://www.w3.org/2001/XMLSchema#anyURI) |
 
 ### Overige modelelementen in LD
 
@@ -837,7 +837,7 @@ aspecten gespecificeerd:
 
 | **Aspect**                   | **Eigenschap** | **Kardinaliteit** | **Datatype of klasse** |
 |------------------------------|----------------|-------------------|--------------|
-| Modelelementidentificatie | [`mim:modelelementidentificatie`](http://bp4mc2.org/def/mim#modelelementidentificatie) | 1 | tekst |
+| Modelelementidentificatie | [`mim:modelelementidentificatie`](http://bp4mc2.org/def/mim#modelelementidentificatie) | 1 | [`xsd:anyURI`](http://www.w3.org/2001/XMLSchema#anyURI) |
 | Naam                         | [`mim:naam`](http://bp4mc2.org/def/mim#naam) | 1 | tekst |
 | Alias                        | [`mim:alias`](http://bp4mc2.org/def/mim#alias) | 0..1 | tekst |
 | Begrip                    | [`mim:begrip`](http://bp4mc2.org/def/mim#begrip) | 0..* | [`skos:Concept`](http://www.w3.org/2004/02/skos/core#Concept) |
@@ -856,7 +856,7 @@ volgende aspecten:
 
 | **Aspect**                   | **Eigenschap** | **Kardinaliteit** | **Datatype of klasse** |
 |------------------------------|----------------|-------------------|--------------|
-| Modelelementidentificatie | [`mim:modelelementidentificatie`](http://bp4mc2.org/def/mim#modelelementidentificatie) | 1 | tekst |
+| Modelelementidentificatie | [`mim:modelelementidentificatie`](http://bp4mc2.org/def/mim#modelelementidentificatie) | 1 | [`xsd:anyURI`](http://www.w3.org/2001/XMLSchema#anyURI) |
 | Naam                         | [`mim:naam`](http://bp4mc2.org/def/mim#naam) | 1 | tekst |
 | Definitie                    | [`mim:definitie`](http://bp4mc2.org/def/mim#definitie) | 0..1 | tekst |
 | Toelichting               | [`mim:toelichting`](http://bp4mc2.org/def/mim#toelichting) | 0..1 | tekst |

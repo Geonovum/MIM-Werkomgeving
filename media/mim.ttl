@@ -268,17 +268,17 @@ mim:mimtaal a owl:DatatypeProperty;
 .
 
 # Metagegevens modelelementen
-mim:basisUri a owl:ObjectProperty;
+mim:basisUri a owl:DatatypeProperty;
   rdfs:label "Basis-URI"@nl;
   rdfs:comment "De standaard basis-URI voor elk element in dit informatiemodel."@nl;
   dct:source mimdoc:metagegeven-basis-uri;
 .
-mim:modelelementidentificatie a owl:ObjectProperty;
+mim:modelelementidentificatie a owl:DatatypeProperty;
   rdfs:label "Modelelementidentificatie"@nl;
   rdfs:comment "De identificatie van een modelelement."@nl;
   dct:source mimdoc:metagegeven-modelelementidentificatie;
 .
-mim:isGedefinieerdIn a owl:ObjectProperty;
+mim:isGedefinieerdIn a owl:DatatypeProperty;
   rdfs:label "Modelelementidentificatie"@nl;
   rdfs:comment "De package waarin het modelelement gedefinieerd is."@nl;
   dct:source mimdoc:metagegeven-is-gedefinieerd-in;

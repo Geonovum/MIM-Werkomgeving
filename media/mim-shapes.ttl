@@ -686,7 +686,7 @@ shape:basisUri
   sh:order 1;
   sh:minCount 1;
   sh:maxCount 1;
-  sh:termType sh:IRI;
+  sh:datatype xsd:anyURI;
 .
 shape:modelelementidentificatie
   sh:path mim:modelelementidentificatie;
@@ -694,7 +694,7 @@ shape:modelelementidentificatie
   sh:order 1;
   sh:minCount 1;
   sh:maxCount 1;
-  sh:termType sh:IRI;
+  sh:datatype xsd:anyURI;
 .
 shape:isGedefinieerdIn
   sh:path mim:isGedefinieerdIn;

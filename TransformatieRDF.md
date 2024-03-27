@@ -196,9 +196,10 @@ CONSTRUCT {
 }
 WHERE {
   ?objecttype a mim:Objecttype.
-  ?objecttype mim:modelelementidentificatie ?class.
+  ?objecttype mim:modelelementidentificatie ?modelelementidentificatie.
   ?objecttype mim:naam ?objecttypenaam.
   
+  BIND (IRI(STR(?modelelementidentificatie)) as ?class)
   BIND (t:nodeshapeuri(?objecttypenaam) as ?nodeshape)
 }
 </pre>
@@ -238,10 +239,11 @@ CONSTRUCT {
 }
 WHERE {
   ?attribuutsoort a mim:Attribuutsoort.
-  ?attribuutsoort mim:modelelementidentificatie ?datatypeproperty.
+  ?attribuutsoort mim:modelelementidentificatie ?modelelementidentificatie.
   ?attribuutsoort mim:naam ?attribuutsoortnaam.
   ?bezitter mim:attribuut ?attribuutsoort.
   ?bezitter mim:naam ?bezittersnaam.
+  BIND (IRI(STR(?modelelementidentificatie)) as ?datatypeproperty)
   BIND (t:propertyshapeuri(?bezittersnaam,?attribuutsoortnaam) as ?propertyshape)
   {
     {
@@ -279,10 +281,11 @@ CONSTRUCT {
 }
 WHERE {
   ?gegevensgroep a mim:Gegevensgroep.
-  ?gegevensgroep mim:modelelementidentificatie ?objectproperty.
+  ?gegevensgroep mim:modelelementidentificatie ?modelelementidentificatie.
   ?gegevensgroep mim:naam ?gegevensgroepnaam.
   ?bezitter mim:gegevensgroep ?gegevensgroep.
   ?bezitter mim:naam ?bezittersnaam
+  BIND (IRI(STR(?modelelementidentificatie)) as ?objectproperty)
   BIND (t:propertyshapeuri(?bezittersnaam,?gegevensgroepnaam) as ?propertyshape)
 }
 </pre>
@@ -305,8 +308,9 @@ CONSTRUCT {
 }
 WHERE {
   ?gegevensgroeptype a mim:Gegevensgroeptype.
-  ?gegevensgroeptype mim:modelelementidentificatie ?class.
+  ?gegevensgroeptype mim:modelelementidentificatie ?modelelementidentificatie.
   ?gegevensgroeptype mim:naam ?gegevensgroeptypenaam.
+  BIND (IRI(STR(?modelelementidentificatie)) as ?class)
   BIND (t:nodeshapeuri(?gegevensgroeptypenaam) as ?nodeshape)
 }
 </pre>
@@ -344,10 +348,11 @@ CONSTRUCT {
 }
 WHERE {
   ?relatiesoort a mim:Relatiesoort.
-  ?relatiesoort mim:modelelementidentificatie ?objectproperty.
+  ?relatiesoort mim:modelelementidentificatie ?modelelementidentificatie.
   ?relatiesoort mim:naam ?relatiesoortnaam.
   ?bezitter mim:bron ?relatiesoort.
-  ?bezitter mim:naam ?bezittersnaam
+  ?bezitter mim:naam ?bezittersnaam.
+  BIND (IRI(STR(?modelelementidentificatie)) as ?objectproperty)
   BIND (t:propertyshapeuri(?bezittersnaam,?relatiesoortnaam) as ?propertyshape)
   FILTER NOT EXISTS {
     ?relatiesoort mim:relatierol ?rol
@@ -392,13 +397,14 @@ CONSTRUCT {
 }
 WHERE {
   ?relatieklasse a mim:Relatiesoort.
-  ?relatieklasse mim:modelelementidentificatie ?class.
+  ?relatieklasse mim:modelelementidentificatie ?modelelementidentificatie.
   ?relatieklasse mim:naam ?relatieklassenaam.
   ?relatieklasse mim:bron ?bezitter.
   ?bezitter mim:naam ?bezittersnaam.
   ?bezitter mim:seeAlso ?subject.
   ?relatieklasse mim:doel ?doelklasse.
   ?doelklasse mim:seeAlso ?object.
+  BIND (IRI(STR(?modelelementidentificatie)) as ?class)
   BIND (t:nodeshapeuri(?relatieklassenaam) as ?nodeshape)
   BIND (t:propertyshapeuri(?bezittersnaam,?relatieklassenaam) as ?propertyshape)
   BIND (t:topropertyuri(?class) as ?objectproperty)
@@ -434,11 +440,12 @@ CONSTRUCT {
 }
 WHERE {
   ?relatierol a ?type.
-  ?relatierol mim:modelelementidentificatie ?objectproperty.
+  ?relatierol mim:modelelementidentificatie ?modelelementidentificatie.
   ?relatierol mim:naam ?relatiesoortnaam.
   ?relatiesoort mim:relatierol ?relatierol.
   ?bezitter mim:bron ?relatiesoort.
-  ?bezitter mim:naam ?bezittersnaam
+  ?bezitter mim:naam ?bezittersnaam.
+  BIND (IRI(STR(?modelelementidentificatie)) as ?objectproperty)
   BIND (t:propertyshapeuri(?bezittersnaam,?relatiesoortnaam) as ?propertyshape)
   FILTER (?type = mim:RelatierolBron || ?type = mim:RelatierolDoel)
 }
@@ -486,8 +493,9 @@ CONSTRUCT {
 }
 WHERE {
   ?referentielijst a mim:Referentielijst.
-  ?referentielijst mim:modelelementidentificatie ?class.
+  ?referentielijst mim:modelelementidentificatie ?modelelementidentificatie.
   ?referentielijst mim:naam ?referentielijstnaam.
+  BIND (IRI(STR(?modelelementidentificatie)) as ?class)
   BIND (t:nodeshapeuri(?referentielijstnaam) as ?nodeshape)
 }
 </pre>
@@ -514,7 +522,7 @@ WHERE {
   ?referentieelement a mim:ReferentieElement.
   ?referentieelement mim:naam ?referentieelementnaam.
   ?bezitter mim:element ?referentieelement.
-  ?bezitter mim:naam ?bezittersnaam
+  ?bezitter mim:naam ?bezittersnaam.
   BIND (t:nodeshapeuri(?bezittersnaam) as ?nodeshape)
   BIND (t:propertyshapeuri(?bezittersnaam,?referentieelementnaam) as ?propertyshape)
   BIND (t:nodepropertyuri(?referentieelementnaam) as ?datatypeproperty)
@@ -559,8 +567,9 @@ CONSTRUCT {
 }
 WHERE {
   ?enumeratie a mim:Enumeratie.
-  ?enumeratie mim:modelelementidentificatie ?class.
+  ?enumeratie mim:modelelementidentificatie ?modelelementidentificatie.
   ?objecttype mim:naam ?enumeratienaam.
+  BIND (IRI(STR(?modelelementidentificatie)) as ?class)
   BIND (t:nodeshapeuri(?enumeratienaam) as ?nodeshape)
   BIND (t:schemeuri(?enumeratienaam) as ?scheme)
 }
@@ -615,8 +624,9 @@ CONSTRUCT {
 }
 WHERE {
   ?codelijst a mim:Codelijst.
-  ?codelijst mim:modelelementidentificatie ?class.
+  ?codelijst mim:modelelementidentificatie ?modelelementidentificatie.
   ?codelijst mim:naam ?codelijstnaam.
+  BIND (IRI(STR(?modelelementidentificatie)) as ?class)
   BIND (t:nodeshapeuri(?codelijstnaam) as ?nodeshape)
 }
 </pre>
@@ -638,8 +648,9 @@ CONSTRUCT {
 }
 WHERE {
   ?primitiefdatatype a mim:PrimitiefDatatype.
-  ?primitiefdatatype mim:modelelementidentificatie ?datatype.
+  ?primitiefdatatype mim:modelelementidentificatie ?modelelementidentificatie.
   ?primitiefdatatype mim:naam ?primitiefdatatypenaam.
+  BIND (IRI(STR(?modelelementidentificatie)) as ?datatype)
   FILTER NOT EXISTS {
     ?generalisatie mim:subtype ?primitiefdatatype
   }
@@ -651,9 +662,10 @@ CONSTRUCT {
 }
 WHERE {
   ?primitiefdatatype a mim:PrimitiefDatatype.
-  ?primitiefdatatype mim:modelelementidentificatie ?datatype.
+  ?primitiefdatatype mim:modelelementidentificatie ?modelelementidentificatie.
   ?primitiefdatatype mim:naam ?primitiefdatatypenaam.
-  ?generalisatie mim:subtype ?primitiefdatatype
+  ?generalisatie mim:subtype ?primitiefdatatype.
+  BIND (IRI(STR(?modelelementidentificatie)) as ?datatype)
 }
 </pre>
 
@@ -718,8 +730,9 @@ CONSTRUCT {
 }
 WHERE {
   ?gestructureerddatatype a mim:GestructureerdDatatype.
-  ?gestructureerddatatype mim:modelelementidentificatie ?nodeshape.
+  ?gestructureerddatatype mim:modelelementidentificatie ?modelelementidentificatie.
   ?gestructureerddatatype mim:naam ?gestructureerddatatypenaam.
+  BIND (IRI(STR(?modelelementidentificatie)) as ?nodeshape)
 }
 </pre>
 
@@ -872,7 +885,7 @@ De gedachte hierachter, is dat een externe package letterlijk is overgenomen van
 
 Een `mim:View` wordt omgezet naar een `owl:Ontology`. Daarbij geldt dat voor de locatie, de locatie wordt overgenomen uit de package van het type `mim:Informatiemodel`. Bovendien wordt een `owl:imports` relatie gelegd tussen de package van het type informatiemodel en deze view-package, EN er wordt een `owl:imports` gelegd van de view-package naar een externe locatie, op basis van de locatie bij deze view package.
 
-De gedachte hieracter, is dat een view package deels is overgenomen vanuit een extern model. Er zijn aanpassingen gedaan aan de structuur, maar niet aan de betekenis. Dit betekent dat er een "imports" relatie loopt van de domein-package naar de view-package, en vervolgens vanuit de view-package naar de externe package (die hier verder niet is opgenomen).
+De gedachte hierachter, is dat een view package deels is overgenomen vanuit een extern model. Er zijn aanpassingen gedaan aan de structuur, maar niet aan de betekenis. Dit betekent dat er een "imports" relatie loopt van de domein-package naar de view-package, en vervolgens vanuit de view-package naar de externe package (die hier verder niet is opgenomen).
 
 Deze constructie heeft ook consequenties voor de URI's van de modelelementen in deze view package. URI's van shapes (Nodeshapes en Propertyshapes) krijgen als namespace de de basis-URI van het eigen informatiemodel (dit gaat immers om de structuur en is lokaal gedefinieerd in relatie tot de domein-package). URI's van classes en properties krijgen als namespace de basis-URI van het model waar de view van is gemaakt, waarbij -net als bij `mim:Extern`- dit de namespace zal zijn van het externe model.
 
@@ -1635,7 +1648,8 @@ WHERE {
   ?attribuutsoort mim:indicatieClassificerend true .
   ?attribuutsoort mim:type ?enumeratie.
   ?enumeratie mim:waarde ?enumeratiewaarde.
-  ?enumeratiewaarde mim:modelelementidentificatie ?class.
+  ?enumeratiewaarde mim:modelelementidentificatie ?modelelementidentificatie.
+  BIND (IRI(STR(?modelelementidentificatie)) as ?class)
 }
 </pre>
 

@@ -290,30 +290,6 @@
 
 ## Eigenschappen (bindingen)
 
-### mim:basisUri {#basisUri}
-
-|URI|http://modellen.mim-standaard.nl/def/mim#basisUri|
-|-|-|
-|Definitie|De standaard basis-URI voor elk element in dit informatiemodel.|
-|Bron|[Metagegeven: Basis-URI](https://docs.geostandaarden.nl/mim/mim/#metagegeven-basis-uri)|
-|Eigenschap van|[mim:Domein](#Domein), [mim:Extern](#Extern), [mim:Informatiemodel](#Informatiemodel), [mim:View](#View), [mim:Package](#Package), |
-
-### mim:modelelementidentificatie {#modelelementidentificatie}
-
-|URI|http://modellen.mim-standaard.nl/def/mim#modelelementidentificatie|
-|-|-|
-|Definitie|De identificatie van een modelelement.|
-|Bron|[Metagegeven: Modelelementidentificatie](https://docs.geostandaarden.nl/mim/mim/#metagegeven-modelelementidentificatie)|
-|Eigenschap van|[mim:DataElement](#DataElement), [mim:Gegevensgroeptype](#Gegevensgroeptype), [mim:Gegevensgroep](#Gegevensgroep), [mim:Enumeratiewaarde](#Enumeratiewaarde), [mim:Generalisatie](#Generalisatie), [mim:Domein](#Domein), [mim:Objecttype](#Objecttype), [mim:Relatiesoort](#Relatiesoort), [mim:ReferentieElement](#ReferentieElement), [mim:Keuzeconstraint](#KeuzeConstraint), [mim:PrimitiefDatatype](#PrimitiefDatatype), [mim:Attribuutsoort](#Attribuutsoort), [mim:Constraint](#Constraint), [mim:Extern](#Extern), [mim:Relatierol](#Relatierol), [mim:Enumeratie](#Enumeratie), [mim:GestructureerdDatatype](#GestructureerdDatatype), [mim:Informatiemodel](#Informatiemodel), [mim:Codelijst](#Codelijst), [mim:View](#View), [mim:ExterneKoppeling](#ExterneKoppeling), [mim:Package](#Package), [mim:Relatieklasse](#Relatieklasse), [mim:Keuze](#Keuze), [mim:Referentielijst](#Referentielijst), |
-
-### mim:isGedefinieerdIn {#isGedefinieerdIn}
-
-|URI|http://modellen.mim-standaard.nl/def/mim#isGedefinieerdIn|
-|-|-|
-|Definitie|De package waarin het modelelement gedefinieerd is.|
-|Bron|[Metagegeven: is gedefinieerd in](https://docs.geostandaarden.nl/mim/mim/#metagegeven-is-gedefinieerd-in)|
-|Eigenschap van|[mim:DataElement](#DataElement), [mim:Gegevensgroeptype](#Gegevensgroeptype), [mim:Gegevensgroep](#Gegevensgroep), [mim:Enumeratiewaarde](#Enumeratiewaarde), [mim:Generalisatie](#Generalisatie), [mim:Domein](#Domein), [mim:Objecttype](#Objecttype), [mim:Relatiesoort](#Relatiesoort), [mim:ReferentieElement](#ReferentieElement), [mim:Keuzeconstraint](#KeuzeConstraint), [mim:PrimitiefDatatype](#PrimitiefDatatype), [mim:Attribuutsoort](#Attribuutsoort), [mim:Constraint](#Constraint), [mim:Extern](#Extern), [mim:Relatierol](#Relatierol), [mim:Enumeratie](#Enumeratie), [mim:GestructureerdDatatype](#GestructureerdDatatype), [mim:Informatiemodel](#Informatiemodel), [mim:Codelijst](#Codelijst), [mim:View](#View), [mim:ExterneKoppeling](#ExterneKoppeling), [mim:Package](#Package), [mim:Relatieklasse](#Relatieklasse), [mim:Keuze](#Keuze), [mim:Referentielijst](#Referentielijst), |
-
 ### mim:aggregatietype {#aggregatietype}
 
 |URI|http://modellen.mim-standaard.nl/def/mim#aggregatietype|
@@ -508,6 +484,15 @@
 
 ## Eigenschappen (metagegevens)
 
+### mim:basisUri {#basisUri}
+
+|URI|http://modellen.mim-standaard.nl/def/mim#basisUri|
+|-|-|
+|Definitie|De standaard basis-URI voor elk element in dit informatiemodel.|
+|Bron|[Metagegeven: Basis-URI](https://docs.geostandaarden.nl/mim/mim/#metagegeven-basis-uri)|
+|Datatype|[anyURI](http://www.w3.org/2001/XMLSchema#anyURI)|
+|Eigenschap van|[mim:Domein](#Domein), [mim:Extern](#Extern), [mim:Informatiemodel](#Informatiemodel), [mim:View](#View), [mim:Package](#Package), |
+
 ### mim:indicatieFormeleHistorie {#indicatieFormeleHistorie}
 
 |URI|http://modellen.mim-standaard.nl/def/mim#indicatieFormeleHistorie|
@@ -552,6 +537,23 @@
 |Bron||
 |Datatype|[string](http://www.w3.org/2001/XMLSchema#string)|
 |Eigenschap van|[mim:Informatiemodel](#Informatiemodel), |
+
+### mim:modelelementidentificatie {#modelelementidentificatie}
+
+|URI|http://modellen.mim-standaard.nl/def/mim#modelelementidentificatie|
+|-|-|
+|Definitie|De identificatie van een modelelement.|
+|Bron|[Metagegeven: Modelelementidentificatie](https://docs.geostandaarden.nl/mim/mim/#metagegeven-modelelementidentificatie)|
+|Datatype|[anyURI](http://www.w3.org/2001/XMLSchema#anyURI)|
+|Eigenschap van|[mim:DataElement](#DataElement), [mim:Gegevensgroeptype](#Gegevensgroeptype), [mim:Gegevensgroep](#Gegevensgroep), [mim:Enumeratiewaarde](#Enumeratiewaarde), [mim:Generalisatie](#Generalisatie), [mim:Domein](#Domein), [mim:Objecttype](#Objecttype), [mim:Relatiesoort](#Relatiesoort), [mim:ReferentieElement](#ReferentieElement), [mim:Keuzeconstraint](#KeuzeConstraint), [mim:PrimitiefDatatype](#PrimitiefDatatype), [mim:Attribuutsoort](#Attribuutsoort), [mim:Constraint](#Constraint), [mim:Extern](#Extern), [mim:Relatierol](#Relatierol), [mim:Enumeratie](#Enumeratie), [mim:GestructureerdDatatype](#GestructureerdDatatype), [mim:Informatiemodel](#Informatiemodel), [mim:Codelijst](#Codelijst), [mim:View](#View), [mim:ExterneKoppeling](#ExterneKoppeling), [mim:Package](#Package), [mim:Relatieklasse](#Relatieklasse), [mim:Keuze](#Keuze), [mim:Referentielijst](#Referentielijst), |
+
+### mim:isGedefinieerdIn {#isGedefinieerdIn}
+
+|URI|http://modellen.mim-standaard.nl/def/mim#isGedefinieerdIn|
+|-|-|
+|Definitie|De package waarin het modelelement gedefinieerd is.|
+|Bron|[Metagegeven: is gedefinieerd in](https://docs.geostandaarden.nl/mim/mim/#metagegeven-is-gedefinieerd-in)|
+|Eigenschap van|[mim:DataElement](#DataElement), [mim:Gegevensgroeptype](#Gegevensgroeptype), [mim:Gegevensgroep](#Gegevensgroep), [mim:Enumeratiewaarde](#Enumeratiewaarde), [mim:Generalisatie](#Generalisatie), [mim:Domein](#Domein), [mim:Objecttype](#Objecttype), [mim:Relatiesoort](#Relatiesoort), [mim:ReferentieElement](#ReferentieElement), [mim:Keuzeconstraint](#KeuzeConstraint), [mim:PrimitiefDatatype](#PrimitiefDatatype), [mim:Attribuutsoort](#Attribuutsoort), [mim:Constraint](#Constraint), [mim:Extern](#Extern), [mim:Relatierol](#Relatierol), [mim:Enumeratie](#Enumeratie), [mim:GestructureerdDatatype](#GestructureerdDatatype), [mim:Informatiemodel](#Informatiemodel), [mim:Codelijst](#Codelijst), [mim:View](#View), [mim:ExterneKoppeling](#ExterneKoppeling), [mim:Package](#Package), [mim:Relatieklasse](#Relatieklasse), [mim:Keuze](#Keuze), [mim:Referentielijst](#Referentielijst), |
 
 ### mim:alias {#alias}
 
