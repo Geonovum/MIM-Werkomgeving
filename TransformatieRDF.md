@@ -1414,17 +1414,11 @@ WHERE {
 
 In een MIM conform informatiemodel kunnen zowel abstracte als concrete klassen voorkomen. In UML kun je daarvan afleiden dat je geen instanties mag hebben van abstracte klassen, maar alleen van concrete klassen. In RDF wordt geen onderscheid gemaakt tussen het abstract of concreet zijn van klassen. In RDF worden klassen beschouwd als sets van dingen. Als je een set kunt beschrijven, dan kunnen er ook dingen zijn die tot die set behoren.
 
-Wel kun je aangeven dat indien er sprake is van een triple `<subject> rdf:type <abstract-class>` er minimaal óók een tweede triple moet zijn `<subject> rdf:type <non-abstract-class>`
-
 Een `mim:indicatieAbstractObject` wordt aanvullend direct, zonder aanpassing, overgenomen in het vertaalde model.
 
 <pre class='ex-sparql'>
 CONSTRUCT {
   ?subject mim:indicatieAbstractObject ?indicatieabstractobject.
-  ?subject sh:propertyShape [
-    sh:path rdf:type;
-    sh:minCount 2
-  ]
 }
 WHERE {
   ?modelelement mim:indicatieAbstractObject ?indicatieabstractobject.
