@@ -13,6 +13,7 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>.
 @prefix dct: <http://purl.org/dc/terms/>.
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix unit: <https://w3id.org/uom/>.
 
 #
 # NodeShapes
@@ -71,6 +72,7 @@ shape:Attribuutsoort a sh:NodeShape;
   sh:property shape:minimumwaardeExclusief;
   sh:property shape:maximumwaardeInclusief;
   sh:property shape:maximumwaardeExclusief;
+  sh:property shape:eenheid;
   # Eigenschappen alleen in de specificatietabel
   sh:property shape:identificerend;
   sh:property shape:constraint;
@@ -278,6 +280,7 @@ shape:ReferentieElement a sh:NodeShape;
   sh:property shape:minimumwaardeExclusief;
   sh:property shape:maximumwaardeInclusief;
   sh:property shape:maximumwaardeExclusief;
+  sh:property shape:eenheid;
   sh:property shape:constraint;
 .
 shape:Codelijst a sh:NodeShape;
@@ -944,11 +947,33 @@ shape:supertype a sh:PropertyShape;
 shape:mixin a sh:PropertyShape;
   sh:path mim:mixin;
   sh:name "mim:mixin";
-  sh:order 30; # TODO: update with https://github.com/Geonovum/MIM-Werkomgeving/issues/484
+  sh:order 31;
   sh:minCount 1 ;
   sh:maxCount 1 ;
   sh:datatype xsd:boolean;
   sh:defaultValue false;
+.
+shape:eenheid a sh:PropertyShape;
+  sh:path mim:eenheid;
+  sh:name "mim:eenheid";
+  sh:order 32;
+  sh:maxCount 1;
+  sh:node shape:UOMIndividual;
+.
+shape:UOMIndividual a sh:NodeShape;
+  sh:name "UOM Individual";
+  rdfs:comment "An individual from the UOM namespace";
+  dct:source <https://units-of-measurement.org>;
+  sh:property [
+    sh:path unit:SI_code;
+    sh:minCount 1;
+    sh:maxCount 1;
+  ];
+  sh:property [
+    sh:path unit:UCUM_code;
+    sh:minCount 1;
+    sh:maxCount 1;
+  ]
 .
 shape:ObjecttypeOFGestructureerdDatatype a sh:NodeShape;
   sh:name "1 van";

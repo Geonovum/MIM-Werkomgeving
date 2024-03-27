@@ -104,8 +104,8 @@ let respecConfig = {
     },
     {
       name:       "Pano Maria",
-      company:    "Geonovum",
-      companyURL: "https://www.geonovum.nl"
+      company:    "Skemu",
+      companyURL: "https://skemu.com"
     },
     {
       name:       "Thies Mesdag",

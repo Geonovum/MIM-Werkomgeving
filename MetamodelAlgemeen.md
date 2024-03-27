@@ -909,7 +909,7 @@ Bijvoorbeeld: `"1.0.1"` of `"1.1"` of `"1.1.1"`
 #### Metagegeven: **Tekstopmaak**
 
 <aside class="definition">
-  <dfn>MIM-taal</dfn>De specificatie van de opmaak van een tekstuele beschrijving in het model.
+  <dfn>Tekstopmaak</dfn>De specificatie van de opmaak van een tekstuele beschrijving in het model.
 </aside>
 
 *Toelichting* 
@@ -1806,7 +1806,7 @@ Een subtype verwijst met een generalisatie naar een supertype.
 *Toepassing*: Objecttype en Datatype.
 
 #### Metagegeven: **heeft datatype**
-Verkorte schrijfwijze: **datatype**
+Verkorte schrijfwijze: **type**
 
 <aside class="definition">
   <dfn>heeft datatype</dfn>De binding van een datatype aan een eigenschap.
@@ -1871,7 +1871,7 @@ Een package `«Domein»` met de naam `Activiteiten` bevat `«Objecttype»` `Werk
 *Toepassing*: Package, Informatiemodel, Domein, Extern, View.
 
 #### Metagegeven: **bevat enumeratiewaarde**
-Verkorte schrijfwijze: **enumeratiewaarde**
+Verkorte schrijfwijze: **waarde**
 
 <aside class="definition">
   <dfn>bevat enumeratie waarde</dfn>De binding van een enumeratiewaarde aan een enumeratie.

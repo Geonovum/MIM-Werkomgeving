@@ -537,7 +537,7 @@ De generalisaties worden naar het volgende aspect gespecificeerd:
 | verwijst naar **supertype**  | 1    | Binding van deze generalisatie aan een objecttype. De generalisatie relatie kent twee kanten, de bron kant (source) van de relatie en de doel kant (target) van de relatie. De doel kant van deze generalisatie relatie specificeert een _objecttype_ die het supertype/de generalisatie is van het via deze generalisatie aangegeven subtype. Kortweg, het supertype is een generalisatie van het subtype. | */target: related Element bij Relationship Element* = UML-Class |      | *Target*  |                 |
 | **Datum opname** | 1               | Algemeen metagegeven                                         |                     |      | *Tagged value* |            |
 | heeft **Constraint** | 0..* | Binding aan een constraint. |   | | *Constraint* | | 
-| **Mixin** | 0..1               | Alleen bij MIM niveau 3, logische modellen                                         |                     |      | *Tagged value* |            |
+| **Mixin** | 1               | Alleen bij MIM niveau 3, logische modellen                                         |                     |      | *Tagged value* |            |
 
 #### «Generalisatie» tussen datatypen
 
