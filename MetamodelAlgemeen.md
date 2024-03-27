@@ -858,7 +858,7 @@ We onderkennen een aantal specifieke metagegevens op het niveau van het informat
 </aside>
 
 *Toelichting*
-Dit kan zijn: `"Conceptueel"` of `"Logisch"`. Zoals bedoeld in: [[[#typering-van-modellen-en-wat-wel-en-niet-in-scope-is-van-deze-standaard]]]. Er moet een keuze gemaakt worden. Dit kan bijvoorbeeld uitgebreid worden met: `"Technisch"` wanneer er behoefte is om niveau 4 aan te geven.
+Dit kan zijn: `"Conceptueel"` of `"Logisch"`. Zoals bedoeld in: [[[#typering-van-modellen-gekoppeld-aan-beschouwingsniveaus]]]. Er moet een keuze gemaakt worden. Dit kan bijvoorbeeld uitgebreid worden met: `"Technisch"` wanneer er behoefte is om niveau 4 aan te geven.
 
 *Toepassing*: Informatiemodel (verplicht)
 
@@ -925,7 +925,7 @@ De tekst kan en mag een bepaalde opmaak bevatten, maar dit hoeft niet. Maar als 
 
  ### Modelelementidentificatie - metagegevens
 
-Informatiemodellen staan vaak niet op zichzelf. Ze kunnen elementen bevatten die refereren aan externe standaarden, waarin deze elementen een eigen identificatie hebben. Ook moeten de gemodelleerde elementen herbruikbaar zijn in andere modellen. Daarom is het nodig om de modelelementen uniek te kunnen identificeren. Wanneer een MIM-model uitgedrukt wordt in een Linked Data-model is het zelfs noodzakelijk om de modelelementen identificeren met een [[URI]]. De metagegevens <code><a>Basis-URI</a></code>, <code><a>Modelelement identificatie</a></code> en <code><a>is gedefinieerd in</a></code> maken het mogelijk om de modelelementen in een Linked Data-model te identificeren.
+Informatiemodellen staan vaak niet op zichzelf. Ze kunnen elementen bevatten die refereren aan externe standaarden, waarin deze elementen een eigen identificatie hebben. Ook moeten de gemodelleerde elementen herbruikbaar zijn in andere modellen. Daarom is het nodig om de modelelementen uniek te kunnen identificeren. Wanneer een MIM-model uitgedrukt wordt in een Linked Data-model is het zelfs noodzakelijk om de modelelementen identificeren met een [[URI]]. De metagegevens <code><a>Basis-URI</a></code>, <code><a>Modelelementidentificatie</a></code> en <code><a>is gedefinieerd in</a></code> maken het mogelijk om de modelelementen in een Linked Data-model te identificeren.
 
 
 
@@ -937,8 +937,10 @@ Informatiemodellen staan vaak niet op zichzelf. Ze kunnen elementen bevatten die
 
 *Toelichting* Een _uniform resource identifier_ (URI) is een compacte reeks tekens die een abstracte of fysieke resource identificeert. Een `Basis-URI` is het gemeenschappelijke deel van deze reeks tekens die voor alle elementen in het informatiemodel geldig is. De `Basis-URI` bevat altijd een `scheme`, dit kan bijvoorbeeld `http://` of `urn` zijn. En voldoet aan een gekozen URI-strategie. Wanneer er geen basis-URI is gespecificeerd wordt deze overgenomen van de eerst bovenliggende package met een basis-URI.
 
-Een informatiemodel moet echter ook gebruikt kunnen worden zonder dat er vastgestelde (http-)uri's beschikbaar zijn (bijvoorbeeld tijdens de ontwikkelfase). In dit geval kan een [[URN]] op basis van de package alias en de naam van het modelelement bepaald worden. Wanneer er geen basis-URI is gespecificeerd wordt deze overgenomen van de eerst bovenliggende package met een basis-URI. Wanneer deze er niet is, wordt er een default waarde bepaald conform het patroon `urn:modelelement:` + `{informatiemodel.naam}:` + `{package.naam}:`. De defaultwaarde voor de `Basis-URI` van een informatiemodel is dan `urn:modelelement:` + `informatiemodel.naam`, bijvoorbeeld `"urn:modelelement:imbaglv"`. Iedere onderliggende package krijgt ook een default Basis-URI die gelijk is aan de basis-URI van het informatiemodel gevolgd door `package.naam`, bijvoorbeeld `"urn:modelelement:imbaglv:objecten"`. Dit is noodzakelijk omdat niet alle namen binnen een informatiemodel per definitie uniek zijn (denk aan een objecttype "Locatie" in een domein "Locatie"). De `URI` van een attribuutsoort "huisnummer" bij een "nummeraanduiding" in domein "objecten" uit het IMBAGLV model wordt dan `"urn:modelelement:imbaglv:objecten:nummeraanduiding.huisnummer"`.
-
+Een informatiemodel moet echter ook gebruikt kunnen worden zonder dat er vastgestelde (http-)uri's beschikbaar zijn (bijvoorbeeld tijdens de ontwikkelfase). In dit geval kan een [[URN]] op basis van de package alias en de naam van het modelelement bepaald worden. 
+Wanneer er geen basis-URI is gespecificeerd wordt deze overgenomen van de eerst bovenliggende package met een basis-URI. Wanneer deze er niet is, wordt er een default waarde bepaald conform het patroon `urn:modelelement:` + `{informatiemodel.naam}:` + `{package.naam}:`. De defaultwaarde voor de `Basis-URI` van een informatiemodel is dan `urn:modelelement:` + `informatiemodel.naam`, bijvoorbeeld `"urn:modelelement:imbaglv"`. 
+Iedere onderliggende package krijgt ook een default Basis-URI die gelijk is aan de basis-URI van het informatiemodel gevolgd door `:package.naam`, bijvoorbeeld `"urn:modelelement:imbaglv:objecten"`. 
+Dit is noodzakelijk omdat niet alle namen binnen een informatiemodel per definitie uniek zijn (denk aan een objecttype "Locatie" in een domein "Locatie"). De `URI` van een attribuutsoort "huisnummer" bij een "nummeraanduiding" in domein "objecten" uit het IMBAGLV model wordt dan `"urn:modelelement:imbaglv:objecten:nummeraanduiding.huisnummer"`.
 
 *Toepassing*: informatiemodel (verplicht), domein, view, extern
 
@@ -947,19 +949,15 @@ Een informatiemodel moet echter ook gebruikt kunnen worden zonder dat er vastges
 </aside>
 
 
-#### Metagegeven: **Modelelement identificatie**
+#### Metagegeven: **Modelelementidentificatie**
 
 <aside class="definition">
-  <dfn>Modelelement identificatie</dfn>De identificatie van een modelelement.
+  <dfn>Modelelementidentificatie</dfn>De identificatie van een modelelement.
 </aside>
 
-*Toelichting* De URI kan bijvoorbeeld op de volgende twee manieren voorkomen:
- - **urn-URI**: `<urn:modelelement:imbaglv:objecten:Pand`;
- - **http-URI**: `<http://.../def#Pand>`.
+De `Modelelementidentificatie` kan bepaald worden aan de hand van de <code><a>Naam</a></code> van het modelelement en de `Basis-URI` van de _package_ waarin het modelelement zich bevindt (op logisch niveau conform de naamgevingsconventies). Dit vormt de default waarde. In de meeste gevallen zal een modelleur dit metagegeven niet expliciet invullen maar uitgaan van de defaultwaarde.
 
-De `modelelement identificatie` kan bepaald worden aan de hand van de <code><a>Naam</a></code> van het modelelement en de `Basis-URI` van de _package_ waarin het modelelement zich bevindt (op logisch niveau conform de naamgevingsconventies). Dit vormt de default waarde. In de meeste gevallen zal een modelleur dit metagegeven niet expliciet invullen maar uitgaan van de defaultwaarde.
-
-In sommige gevallen kan de `modelelement identificatie` van een modelelement niet bepaald worden aan de hand van de `Basis-URI` van de bijbehorende _package_ en de `Naam` van een modelelement. Bijvoorbeeld als gevolg van de gekozen URI-strategie of wanneer een <code><a>Attribuutsoort</a></code> uit een ander informatiemodel hergebruikt wordt (e.g. `nen3610-2022:identificatie`). In dit geval zal de modelleur het metagegeven `modelelement identificatie` wel invullen.
+In sommige gevallen kan de `modelelementidentificatie` van een modelelement niet bepaald worden aan de hand van de `Basis-URI` van de bijbehorende _package_ en de `Naam` van een modelelement. Bijvoorbeeld als gevolg van de gekozen URI-strategie of wanneer een <code><a>Attribuutsoort</a></code> uit een ander informatiemodel hergebruikt wordt (e.g. `nen3610-2022:identificatie`). In dit geval zal de modelleur het metagegeven `modelelementidentificatie` wel invullen.
 
 *Toepassing*:  alle modelelementen
 
@@ -1030,7 +1028,7 @@ Opmerking: een uitzondering is gemaakt voor UML-modellen voor de UML-Enumeration
 *Toelichting*
 
 Hiermee wordt aangegeven hoe een informatiemodel element zich verhoudt tot de
-begrippen uit het begrippenkader, zoals genoemd in [[[#typering-van-modellen-en-wat-wel-en-niet-in-scope-is-van-deze-standaard]]].
+begrippen uit het begrippenkader, zoals genoemd in [[[#typering-van-modellen-gekoppeld-aan-beschouwingsniveaus]]].
 Dit is niet een 1 op 1 relatie. Voor meer informatie hierover, zie [[[#afspraken-regels]]].
 
 Bijvoorbeeld:
@@ -1392,18 +1390,6 @@ Voor de hand liggende formaten waarin een waardelijst is gepubliceerd zijn onder
 
 *Toepassing:* Codelijst en Referentielijst.
 
-#### Metagegeven: **Datatype**
-
-<aside class="definition">
-  <dfn>Datatype</dfn>Datatype van de waarden in een waardelijst.
-</aside>
-
-*Toelichting*
-
-Voorbeelden hiervan zijn `"Characterstring"` , `"Integer"`
-
-*Toepassing:* Codelijst
-
 #### Metagegeven: **Waarde-item**
 
 <aside class="definition">
@@ -1422,11 +1408,11 @@ Als een `«Codelijst»` een structuur heeft wordt hiermee aangegeven welk item i
   <dfn>Profielspecificatie</dfn>Referentie naar het profiel dat de technische implementatie van de codelijst beschrijft.
 </aside>
 
+
+
 *Toelichting*
 
-
 MIM zegt niets over de technische implementatie van de codelijst. Om een referentie naar informatie over de technische implementatie wel in het model op te nemen is er de mogelijkheid om met het metagegeven Profielspecificatie de specifieke technische toepassing van de codelijst te beschrijven. Bij voorkeur is de referentie door middel van een url.
-
 
 *Toepassing:* Codelijst
 
@@ -1820,7 +1806,7 @@ Een subtype verwijst met een generalisatie naar een supertype.
 *Toepassing*: Objecttype en Datatype.
 
 #### Metagegeven: **heeft datatype**
-Verkorte schrijfwijze: **datatype**
+Verkorte schrijfwijze: **type**
 
 <aside class="definition">
   <dfn>heeft datatype</dfn>De binding van een datatype aan een eigenschap.
@@ -1871,8 +1857,21 @@ Een gestructureerd datatype bevat meerdere data-elementen.
 
 *Toepassing*: Gestructureerd datatype.
 
+#### Metagegeven: **bevat modelelement**
+Verkorte schrijfwijze: **modelelement**
+
+<aside class="definition">
+  <dfn>bevat modelelement</dfn>De binding tussen een package en een modelelement dat zich in dat package bevindt.
+</aside>
+
+*Toelichting*
+
+Een package `«Domein»` met de naam `Activiteiten` bevat `«Objecttype»` `Werken`, `Wonen` etc.
+
+*Toepassing*: Package, Informatiemodel, Domein, Extern, View.
+
 #### Metagegeven: **bevat enumeratiewaarde**
-Verkorte schrijfwijze: **enumeratiewaarde**
+Verkorte schrijfwijze: **waarde**
 
 <aside class="definition">
   <dfn>bevat enumeratie waarde</dfn>De binding van een enumeratiewaarde aan een enumeratie.
@@ -1901,7 +1900,7 @@ Een referentielijst bevat referentie-elementen.
 Verkorte schrijfwijze: **datatypekeuze**
 
 <aside class="definition">
-  <dfn>heeft keuzedatatype</dfn>De binding van een keuze uit datatypen aan een attribuutsoort.
+  <dfn>heeft datatypekeuze</dfn>De binding van een keuze uit datatypen aan een attribuutsoort.
 </aside>
 
 *Toelichting*
@@ -1910,11 +1909,11 @@ Een attribuutsoort kan als datatype een keuze uit datatypen hebben.
 
 *Toepassing*: Attribuutsoort.
 
-#### Metagegeven: **heeft keuzeattribuut**
-Verkorte schrijfwijze: **keuzeattribuut**
+#### Metagegeven: **heeft attribuutkeuze**
+Verkorte schrijfwijze: **attribuutkeuze**
 
 <aside class="definition">
-  <dfn>heeft keuzeattribuut</dfn>De binding van een keuze uit attributen aan een attribuutsoort of keuze.
+  <dfn>heeft attribuutkeuze</dfn>De binding van een keuze uit attributen aan een attribuutsoort.
 </aside>
 
 *Toelichting*
@@ -1923,16 +1922,42 @@ Een keuze tussen attribuutsoorten kan als eigenschap aan een objecttype, gegeven
 
 *Toepassing*: Objecttype, Gegevensgroeptype, Relatieklasse, Attribuutsoort.
 
-#### Metagegeven: **heeft keuzerelatiedoel**
-Verkorte schrijfwijze: **keuzerelatiedoel**
+#### Metagegeven: **heeft keuzeattribuut**
+Verkorte schrijfwijze: **keuzeattribuut**
 
 <aside class="definition">
-  <dfn>heeft keuzerelatiedoel</dfn>De binding van een keuze uit relatiedoelen aan een objecttype.
+  <dfn>heeft keuzeattribuut</dfn>De binding van een attribuutsoort aan een Keuze.
+</aside>
+
+*Toelichting*
+
+Een keuze tussen attribuutsoorten bindt 2 of meer attribuutsoorten.
+
+*Toepassing*: Keuze.
+
+#### Metagegeven: **heeft relatiedoelkeuze**
+Verkorte schrijfwijze: **relatiedoelkeuze**
+
+<aside class="definition">
+  <dfn>heeft relatiedoelkeuze</dfn>De binding van een keuze uit relatiedoelen aan een objecttype.
 </aside>
 
 *Toelichting*
 
 Een keuze tussen relatiedoelen kan als eigenschap aan een objecttype of gegevensgroeptype worden gekoppeld.
+
+*Toepassing*: Objecttype, Gegevensgroeptype, Keuze.
+
+#### Metagegeven: **heeft relatiesoortkeuze**
+Verkorte schrijfwijze: **relatiesoortkeuze**
+
+<aside class="definition">
+  <dfn>heeft relatiesoortkeuze</dfn>De binding van een keuze uit relatiesoorten aan een objecttype.
+</aside>
+
+*Toelichting*
+
+Een keuze tussen relatiesoorten kan als eigenschap aan een objecttype of gegevensgroeptype worden gekoppeld.
 
 *Toepassing*: Objecttype, Gegevensgroeptype, Keuze.
 
