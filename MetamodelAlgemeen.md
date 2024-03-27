@@ -858,7 +858,7 @@ We onderkennen een aantal specifieke metagegevens op het niveau van het informat
 </aside>
 
 *Toelichting*
-Dit kan zijn: `"Conceptueel"` of `"Logisch"`. Zoals bedoeld in: [[[#typering-van-modellen-en-wat-wel-en-niet-in-scope-is-van-deze-standaard]]]. Er moet een keuze gemaakt worden. Dit kan bijvoorbeeld uitgebreid worden met: `"Technisch"` wanneer er behoefte is om niveau 4 aan te geven.
+Dit kan zijn: `"Conceptueel"` of `"Logisch"`. Zoals bedoeld in: [[[#typering-van-modellen-gekoppeld-aan-beschouwingsniveaus]]]. Er moet een keuze gemaakt worden. Dit kan bijvoorbeeld uitgebreid worden met: `"Technisch"` wanneer er behoefte is om niveau 4 aan te geven.
 
 *Toepassing*: Informatiemodel (verplicht)
 
@@ -909,7 +909,7 @@ Bijvoorbeeld: `"1.0.1"` of `"1.1"` of `"1.1.1"`
 #### Metagegeven: **Tekstopmaak**
 
 <aside class="definition">
-  <dfn>MIM-taal</dfn>De specificatie van de opmaak van een tekstuele beschrijving in het model.
+  <dfn>Tekstopmaak</dfn>De specificatie van de opmaak van een tekstuele beschrijving in het model.
 </aside>
 
 *Toelichting* 
@@ -918,7 +918,7 @@ Bijvoorbeeld: `"rtf"`, `"html"`.
 
 De metagegevens 'definitie' en 'toelichting' bevatten tekst waarvan het nuttig kan zijn om deze op te maken. De opmaak zoals hier bedoeld betreft het verhogen van de leesbaarheid van de tekst, wanneer de modelleur van het model dit nuttig of nodig acht. Deze opmaak is nadrukkelijk niet bedoeld om aan te duiden in welke vorm het model gepubliceerd moet gaan worden (zoals in html, pdf, xml enz). In de MIM gedachte hoort een model vrij te zijn van deze overweging en kan een model in elk van deze, en ook in meerdere vormen tegelijk, gepubliceerd worden.  
 
-De tekst kan en mag een bepaalde opmaak bevatten, maar dit hoeft niet. Maar als ervoor gekozen wordt, dan geldt het voor alle definities en alle toelichtingen. Wellicht is opmaak ook van belang voor andere metagegevens (zoals patroon, populatie, kwaliteit en mogelijk andere) maar in deze versie van MIM is de opmaak alleen bedoeld voor 'definitie' en 'toelichting'. Wel kunt u deze opmaak van toepassing verklaren op metagegevens uit uw eigen extensie (zoals bedoeld in hoofdstuk 1).
+De tekst kan en mag een bepaalde opmaak bevatten, maar dit hoeft niet. Maar als ervoor gekozen wordt, dan geldt het voor alle definities en alle toelichtingen. Wellicht is opmaak ook van belang voor andere metagegevens (zoals patroon, populatie, kwaliteit en mogelijk andere) maar in deze versie van MIM is de opmaak alleen bedoeld voor 'definitie' en 'toelichting'. Wel kunt u deze opmaak van toepassing verklaren op metagegevens uit uw eigen extensie (zoals bedoeld in [[[#een-eigen-extensie-op-het-metamodel]]]).
 
 *Toepassing*: Informatiemodel (optioneel)
 
@@ -1028,7 +1028,7 @@ Opmerking: een uitzondering is gemaakt voor UML-modellen voor de UML-Enumeration
 *Toelichting*
 
 Hiermee wordt aangegeven hoe een informatiemodel element zich verhoudt tot de
-begrippen uit het begrippenkader, zoals genoemd in [[[#typering-van-modellen-en-wat-wel-en-niet-in-scope-is-van-deze-standaard]]].
+begrippen uit het begrippenkader, zoals genoemd in [[[#typering-van-modellen-gekoppeld-aan-beschouwingsniveaus]]].
 Dit is niet een 1 op 1 relatie. Voor meer informatie hierover, zie [[[#afspraken-regels]]].
 
 Bijvoorbeeld:
@@ -1806,7 +1806,7 @@ Een subtype verwijst met een generalisatie naar een supertype.
 *Toepassing*: Objecttype en Datatype.
 
 #### Metagegeven: **heeft datatype**
-Verkorte schrijfwijze: **datatype**
+Verkorte schrijfwijze: **type**
 
 <aside class="definition">
   <dfn>heeft datatype</dfn>De binding van een datatype aan een eigenschap.
@@ -1857,8 +1857,21 @@ Een gestructureerd datatype bevat meerdere data-elementen.
 
 *Toepassing*: Gestructureerd datatype.
 
+#### Metagegeven: **bevat modelelement**
+Verkorte schrijfwijze: **modelelement**
+
+<aside class="definition">
+  <dfn>bevat modelelement</dfn>De binding tussen een package en een modelelement dat zich in dat package bevindt.
+</aside>
+
+*Toelichting*
+
+Een package `«Domein»` met de naam `Activiteiten` bevat `«Objecttype»` `Werken`, `Wonen` etc.
+
+*Toepassing*: Package, Informatiemodel, Domein, Extern, View.
+
 #### Metagegeven: **bevat enumeratiewaarde**
-Verkorte schrijfwijze: **enumeratiewaarde**
+Verkorte schrijfwijze: **waarde**
 
 <aside class="definition">
   <dfn>bevat enumeratie waarde</dfn>De binding van een enumeratiewaarde aan een enumeratie.

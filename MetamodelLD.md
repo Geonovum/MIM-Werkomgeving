@@ -198,7 +198,7 @@ Een keuze tussen relatiesoorten wordt gedaan op basis van een keuzeconstraint. E
   <figcaption>Diagram: Packages in LD</figcaption>
 </figure>
 
-De relatie bevatModelelement geeft aan dat packages modelelementen kunnen bevatten. Welke modelelementen precies toegestaan zijn, wordt in het plaatje niet tot uitdrukking gebracht. Zie hiervoor [sectie 2.6](#packages).
+Het metagegeven <a href="#metagegeven-bevat-modelelement">bevat modelelement</a> geeft aan dat packages modelelementen kunnen bevatten. Dit metagegeven wordt in het Linked Data metamodel opgenomen als relatie. Welke modelelementen precies toegestaan zijn, wordt in het plaatje niet tot uitdrukking gebracht. Zie hiervoor [sectie 2.6](#packages).
 
 | **MIM metaclass**     | **Metaclass in RDF** | **Shape in RDF** | **Grondslag** |
 |-----------------------|----------------------|------------------|---------------|
@@ -296,9 +296,9 @@ De objecttypen worden naar de volgende aspecten gespecificeerd:
 | Kwaliteit                 | [`mim:kwaliteit`](http://bp4mc2.org/def/mim#kwaliteit) | 0..1 | tekst |
 | Toelichting               | [`mim:toelichting`](http://bp4mc2.org/def/mim#toelichting) | 0..1 | tekst |
 | Indicatie abstract object | [`mim:indicatieAbstractObject`](http://bp4mc2.org/def/mim#indicatieAbstractObject) | 1 | boolean |
-| Attribuut                 | [`mim:attribuut`](http://bp4mc2.org/def/mim#attribuut) | 0..n | [`mim:Attribuutsoort`](http://bp4mc2.org/def/mim#Attribuutsoort) |
-| Gegevensgroep             | [`mim:gegevensgroep`](http://bp4mc2.org/def/mim#gegevensgroep) | 0..n | [`mim:Gegevensgroep`](http://bp4mc2.org/def/mim#Gegevensgroep) |
-| Constraint                | [`mim:constraint`](http://bp4mc2.org/def/mim#constraint) | 0..n | [`mim:Constraint`](http://bp4mc2.org/def/mim#Constraint) |
+| Attribuut                 | [`mim:attribuut`](http://bp4mc2.org/def/mim#attribuut) | 0..* | [`mim:Attribuutsoort`](http://bp4mc2.org/def/mim#Attribuutsoort) |
+| Gegevensgroep             | [`mim:gegevensgroep`](http://bp4mc2.org/def/mim#gegevensgroep) | 0..* | [`mim:Gegevensgroep`](http://bp4mc2.org/def/mim#Gegevensgroep) |
+| Constraint                | [`mim:constraint`](http://bp4mc2.org/def/mim#constraint) | 0..* | [`mim:Constraint`](http://bp4mc2.org/def/mim#Constraint) |
 
 #### mim:Attribuutsoort
 
@@ -331,7 +331,8 @@ De attribuutsoorten worden naar de volgende aspecten gespecificeerd:
 | Indicatie classificerend     | [`mim:indicatieAfleidbaar`](http://bp4mc2.org/def/mim#indicatieAfleidbaar) | 1 | boolean |
 | Mogelijk geen waarde         | [`mim:mogelijkGeenWaarde`](http://bp4mc2.org/def/mim#mogelijkGeenWaarde) | 1 | boolean |
 | Identificerend               | [`mim:identificerend`](http://bp4mc2.org/def/mim#identificerend) | 0..1 | boolean |
-| Constraint                | [`mim:constraint`](http://bp4mc2.org/def/mim#constraint) | 0..n | [`mim:Constraint`](http://bp4mc2.org/def/mim#Constraint) |
+| Eenheid                      | [`mim:eenheid`](http://bp4mc2.org/def/mim#eenheid) | 0..1 | [`owl:NamedIndividual`](http://www.w3.org/2002/07/owl#NamedIndividual) |
+| Constraint                | [`mim:constraint`](http://bp4mc2.org/def/mim#constraint) | 0..* | [`mim:Constraint`](http://bp4mc2.org/def/mim#Constraint) |
 | Minimumwaarde inclusief      | [`mim:minimumwaardeInclusief`](http://bp4mc2.org/def/mim#minimumwaardeInclusief) | 0..1 | integer, decimal, float, real, dateTime, date |
 | Minimumwaarde exclusief      | [`mim:minimumwaardeExclusief`](http://bp4mc2.org/def/mim#minimumwaardeExclusief) | 0..1 | integer, decimal, float, real, dateTime, date |
 | Maximumwaarde inclusief      | [`mim:maximumwaardeInclusief`](http://bp4mc2.org/def/mim#maximumwaardeInclusief) | 0..1 | integer, decimal, float, real, dateTime, date |
@@ -347,6 +348,8 @@ Het veld `mim:authentiek` verwijst naar één van de volgende mogelijke waarden:
 | [`mim:WettelijkGegeven`](http://bp4mc2.org/def/mim#WettelijkGegeven) | Gegeven behorende bij een wettelijke registratie, niet zijnde een basisregistratie |
 | [`mim:LandelijkKerngegeven`](http://bp4mc2.org/def/mim#LandelijkKerngegeven) | Indien het een gegeven of een als relatiesoort gemodelleerd gegeven is in een landelijk sector- en domein-overstijgend informatiemodel en geen authentiek gegeven en geen basisgegeven is. |
 | [`mim:OverigeAuthenticiteit`](http://bp4mc2.org/def/mim#OverigeAuthenticiteit) | Indien het géén van de voorgaande categorieën betreft. Veelal gaat het dan om proces-, taakveld- of domeinspecifieke gegevens. |
+
+Het veld `mim:eenheid` verwijst naar een waarde afkomstig uit de [Unit-of-measurement lijst](https://units-of-measurement.org).
 
 #### mim:Gegevensgroep
 
@@ -368,7 +371,7 @@ De gegevensgroepen worden naar de volgende aspecten gespecificeerd:
 | Datum opname                 | [`mim:datumOpname`](http://bp4mc2.org/def/mim#datumOpname) | 1 | datum |
 | Kardinaliteit                | [`mim:kardinaliteit`](http://bp4mc2.org/def/mim#kardinaliteit) | 1 | tekst |
 | Authentiek                   | [`mim:authentiek`](http://bp4mc2.org/def/mim#authentiek) | 1 | Authenticiteit |
-| Constraint                | [`mim:constraint`](http://bp4mc2.org/def/mim#constraint) | 0..n | [`mim:Constraint`](http://bp4mc2.org/def/mim#Constraint) |
+| Constraint                | [`mim:constraint`](http://bp4mc2.org/def/mim#constraint) | 0..* | [`mim:Constraint`](http://bp4mc2.org/def/mim#Constraint) |
 
 #### mim:Gegevensgroeptype
 
@@ -386,9 +389,9 @@ De gegevensgroeptypen worden naar de volgende aspecten gespecificeerd:
 | Herkomst definitie           | [`mim:herkomstDefinitie`](http://bp4mc2.org/def/mim#herkomstDefinitie) | 0..1 | tekst |
 | Toelichting                  | [`mim:toelichting`](http://bp4mc2.org/def/mim#toelichting) | 0..1 | tekst |
 | Datum opname                 | [`mim:datumOpname`](http://bp4mc2.org/def/mim#datumOpname) | 1 | datum |
-| Attribuut                 | [`mim:attribuut`](http://bp4mc2.org/def/mim#attribuut) | 0..n | [`mim:Attribuutsoort`](http://bp4mc2.org/def/mim#Attribuutsoort) |
-| Gegevensgroep             | [`mim:gegevensgroep`](http://bp4mc2.org/def/mim#gegevensgroep) | 0..n | [`mim:Gegevensgroep`](http://bp4mc2.org/def/mim#Gegevensgroep) |
-| Constraint                | [`mim:constraint`](http://bp4mc2.org/def/mim#constraint) | 0..n | [`mim:Constraint`](http://bp4mc2.org/def/mim#Constraint) |
+| Attribuut                 | [`mim:attribuut`](http://bp4mc2.org/def/mim#attribuut) | 0..* | [`mim:Attribuutsoort`](http://bp4mc2.org/def/mim#Attribuutsoort) |
+| Gegevensgroep             | [`mim:gegevensgroep`](http://bp4mc2.org/def/mim#gegevensgroep) | 0..* | [`mim:Gegevensgroep`](http://bp4mc2.org/def/mim#Gegevensgroep) |
+| Constraint                | [`mim:constraint`](http://bp4mc2.org/def/mim#constraint) | 0..* | [`mim:Constraint`](http://bp4mc2.org/def/mim#Constraint) |
 
 ### Relaties in LD
 
@@ -435,7 +438,7 @@ De relatiesoorten worden naar de volgende aspecten gespecificeerd.
 | Authentiek                   | [`mim:authentiek`](http://bp4mc2.org/def/mim#authentiek) | 1 | Authenticiteit |
 | Indicatie afleidbaar         | [`mim:indicatieAfleidbaar`](http://bp4mc2.org/def/mim#indicatieAfleidbaar) | 1 | boolean |
 | Mogelijk geen waarde         | [`mim:mogelijkGeenWaarde`](http://bp4mc2.org/def/mim#mogelijkGeenWaarde) | 1 | boolean |
-| Constraint                | [`mim:constraint`](http://bp4mc2.org/def/mim#constraint) | 0..n | [`mim:Constraint`](http://bp4mc2.org/def/mim#Constraint) |
+| Constraint                | [`mim:constraint`](http://bp4mc2.org/def/mim#constraint) | 0..* | [`mim:Constraint`](http://bp4mc2.org/def/mim#Constraint) |
 
 Het veld `mim:aggregatietype` verwijst naar één van de volgende mogelijke waarden:
 
@@ -459,7 +462,7 @@ De relatiesoorten worden naar de volgende aspecten gespecificeerd.
 | Is gedefinieerd in        | [`mim:isGedefinieerdIn`](http://bp4mc2.org/def/mim#isGedefinieerdIn) | 1 | [`mim:Package`](http://bp4mc2.org/def/mim#Package) |
 | Definitie                    | [`mim:definitie`](http://bp4mc2.org/def/mim#definitie) | 0..1 | tekst |
 | Relatierol                   | [`mim:relatierol`](http://bp4mc2.org/def/mim#relatierol) | 1..2 | [`Relatierol`](http://bp4mc2.org/def/mim#Relatierol) |
-| Constraint                | [`mim:constraint`](http://bp4mc2.org/def/mim#constraint) | 0..n | [`mim:Constraint`](http://bp4mc2.org/def/mim#Constraint) |
+| Constraint                | [`mim:constraint`](http://bp4mc2.org/def/mim#constraint) | 0..* | [`mim:Constraint`](http://bp4mc2.org/def/mim#Constraint) |
 
 #### mim:Relatierol (alt 1: soort leidend)
 
@@ -474,7 +477,7 @@ Voor relatierollen worden naar de volgende aspecten gespecificeerd.
 | Begripsterm               | [`mim:begripsterm`](http://bp4mc2.org/def/mim#begripsterm) | 0..* | tekst |
 | Is gedefinieerd in        | [`mim:isGedefinieerdIn`](http://bp4mc2.org/def/mim#isGedefinieerdIn) | 1 | [`mim:Package`](http://bp4mc2.org/def/mim#Package) |
 | Definitie                    | [`mim:definitie`](http://bp4mc2.org/def/mim#definitie) | 0..1 | tekst |
-| Constraint                | [`mim:constraint`](http://bp4mc2.org/def/mim#constraint) | 0..n | [`mim:Constraint`](http://bp4mc2.org/def/mim#Constraint) |
+| Constraint                | [`mim:constraint`](http://bp4mc2.org/def/mim#constraint) | 0..* | [`mim:Constraint`](http://bp4mc2.org/def/mim#Constraint) |
 
 <!-- Herhaling van uitleg in hoofdstuk MetamodelAlgemeen.md
 #### Relatierol is leidend (alternatief 2)
@@ -508,7 +511,7 @@ aspecten gespecificeerd.
 | Indicatie formele historie   | [`mim:indicatieFormeleHistorie`](http://bp4mc2.org/def/mim#indicatieFormeleHistorie) | 1 | boolean |
 | Authentiek                   | [`mim:authentiek`](http://bp4mc2.org/def/mim#authentiek) | 1 | Authenticiteit |
 | Mogelijk geen waarde         | [`mim:mogelijkGeenWaarde`](http://bp4mc2.org/def/mim#mogelijkGeenWaarde) | 1 | boolean |
-| Constraint                | [`mim:constraint`](http://bp4mc2.org/def/mim#constraint) | 0..n | [`mim:Constraint`](http://bp4mc2.org/def/mim#Constraint) |
+| Constraint                | [`mim:constraint`](http://bp4mc2.org/def/mim#constraint) | 0..* | [`mim:Constraint`](http://bp4mc2.org/def/mim#Constraint) |
 
 #### mim:Generalisatie bij objecttypen
 
@@ -522,7 +525,7 @@ De generalisaties worden naar het volgende aspect gespecificeerd:
 | Supertype                      | [`mim:definitie`](http://bp4mc2.org/def/mim#supertype) | 1 | [`mim:Objecttype`](http://bp4mc2.org/def/mim#Objecttype) |
 | Datum opname                 | [`mim:datumOpname`](http://bp4mc2.org/def/mim#datumOpname) | 1 | datum |
 | Mixin                        | [`mim:mixin`](http://bp4mc2.org/def/mim#mixin)             | 1 | boolean |
-<!-- | Constraint                | [`mim:constraint`](http://bp4mc2.org/def/mim#constraint) | 0..n | [`mim:Constraint`](http://bp4mc2.org/def/mim#Constraint) | -->
+<!-- | Constraint                | [`mim:constraint`](http://bp4mc2.org/def/mim#constraint) | 0..* | [`mim:Constraint`](http://bp4mc2.org/def/mim#Constraint) | -->
 
 #### mim:Generalisatie bij datatypen
 
@@ -534,7 +537,7 @@ De generalisaties worden naar het volgende aspect gespecificeerd:
 | Is gedefinieerd in        | [`mim:isGedefinieerdIn`](http://bp4mc2.org/def/mim#isGedefinieerdIn) | 1 | [`mim:Package`](http://bp4mc2.org/def/mim#Package) |
 | Subtype                      | [`mim:definitie`](http://bp4mc2.org/def/mim#subtype) | 1 | [`mim:Datatype`](http://bp4mc2.org/def/mim#Datatype) |
 | Supertype                      | [`mim:definitie`](http://bp4mc2.org/def/mim#supertype) | 1 | [`mim:Datatype`](http://bp4mc2.org/def/mim#Datatype) |
-<!-- | Constraint                | [`mim:constraint`](http://bp4mc2.org/def/mim#constraint) | 0..n | [`mim:Constraint`](http://bp4mc2.org/def/mim#Constraint) | -->
+<!-- | Constraint                | [`mim:constraint`](http://bp4mc2.org/def/mim#constraint) | 0..* | [`mim:Constraint`](http://bp4mc2.org/def/mim#Constraint) | -->
 
 #### mim:Relatieklasse
 
@@ -553,7 +556,7 @@ De relatieklassen worden naar de volgende aspecten gespecificeerd:
 | Herkomst definitie           | [`mim:herkomstDefinitie`](http://bp4mc2.org/def/mim#herkomstDefinitie) | 1 | tekst |
 | Toelichting               | [`mim:toelichting`](http://bp4mc2.org/def/mim#toelichting) | 0..1 | tekst |
 | Datum opname                 | [`mim:datumOpname`](http://bp4mc2.org/def/mim#datumOpname) | 1 | datum |
-| Constraint                   | [`mim:constraint`](http://bp4mc2.org/def/mim#constraint) | 0..n | [`mim:Constraint`](http://bp4mc2.org/def/mim#Constraint) |
+| Constraint                   | [`mim:constraint`](http://bp4mc2.org/def/mim#constraint) | 0..* | [`mim:Constraint`](http://bp4mc2.org/def/mim#Constraint) |
 | Unidirectioneel              | [`mim:unidirectioneel`](http://bp4mc2.org/def/mim#unidirectioneel) | 1 | boolean |
 | Aggregatietype               | [`mim:aggregatietype`](http://bp4mc2.org/def/mim#aggregatietype) | 1 | Aggregatietype |
 | Kardinaliteit                | [`mim:kardinaliteit`](http://bp4mc2.org/def/mim#kardinaliteit) | 1 | tekst |
@@ -594,7 +597,7 @@ Externe koppelingen worden naar de volgende aspecten gespecificeerd.
 | Authentiek                   | [`mim:authentiek`](http://bp4mc2.org/def/mim#authentiek) | 1 | Authenticiteit |
 | Indicatie afleidbaar         | [`mim:indicatieAfleidbaar`](http://bp4mc2.org/def/mim#indicatieAfleidbaar) | 1 | boolean |
 | Mogelijk geen waarde         | [`mim:mogelijkGeenWaarde`](http://bp4mc2.org/def/mim#mogelijkGeenWaarde) | 1 | boolean |
-| Constraint                | [`mim:constraint`](http://bp4mc2.org/def/mim#constraint) | 0..n | [`mim:Constraint`](http://bp4mc2.org/def/mim#Constraint) |
+| Constraint                | [`mim:constraint`](http://bp4mc2.org/def/mim#constraint) | 0..* | [`mim:Constraint`](http://bp4mc2.org/def/mim#Constraint) |
 
 ### Waardelijsten in LD
 
@@ -619,7 +622,7 @@ Voor referentielijsten worden de volgende aspecten gespecificeerd:
 | Toelichting                  | [`mim:toelichting`](http://bp4mc2.org/def/mim#toelichting) | 0..1 | tekst |
 | Locatie                      | [`mim:locatie`](http://bp4mc2.org/def/mim#locatie) | 1 | tekst |
 | Referentie-element           | [`mim:referentieElement`](http://bp4mc2.org/def/mim#referentieElement) | 1..* | [`mim:ReferentieElement`](http://bp4mc2.org/def/mim#ReferentieElement) |
-| Constraint                | [`mim:constraint`](http://bp4mc2.org/def/mim#constraint) | 0..n | [`mim:Constraint`](http://bp4mc2.org/def/mim#Constraint) |
+| Constraint                | [`mim:constraint`](http://bp4mc2.org/def/mim#constraint) | 0..* | [`mim:Constraint`](http://bp4mc2.org/def/mim#Constraint) |
 
 #### mim:ReferentieElement
 
@@ -642,7 +645,9 @@ De referentie-elementen worden naar de volgende aspecten gespecificeerd:
 | Kardinaliteit                | [`mim:kardinaliteit`](http://bp4mc2.org/def/mim#kardinaliteit) | 1 | tekst |
 | Identificerend               | [`mim:identificerend`](http://bp4mc2.org/def/mim#identificerend) | 0..1 | tekst |
 | Toelichting                  | [`mim:toelichting`](http://bp4mc2.org/def/mim#toelichting) | 0..1 | tekst |
-| Constraint                | [`mim:constraint`](http://bp4mc2.org/def/mim#constraint) | 0..n | [`mim:Constraint`](http://bp4mc2.org/def/mim#Constraint) |
+| Constraint                | [`mim:constraint`](http://bp4mc2.org/def/mim#constraint) | 0..* | [`mim:Constraint`](http://bp4mc2.org/def/mim#Constraint) |
+| Eenheid                      | [`mim:eenheid`](http://bp4mc2.org/def/mim#eenheid) | 0..1 | [`owl:NamedIndividual`](http://www.w3.org/2002/07/) |
+| Constraint                | [`mim:constraint`](http://bp4mc2.org/def/mim#constraint) | 0..* | [`mim:Constraint`](http://bp4mc2.org/def/mim#Constraint) |
 | Minimumwaarde inclusief      | [`mim:minimumwaardeInclusief`](http://bp4mc2.org/def/mim#minimumwaardeInclusief) | 0..1 | integer, decimal, float, real, dateTime, date |
 | Minimumwaarde exclusief      | [`mim:minimumwaardeExclusief`](http://bp4mc2.org/def/mim#minimumwaardeExclusief) | 0..1 | integer, decimal, float, real, dateTime, date |
 | Maximumwaarde inclusief      | [`mim:maximumwaardeInclusief`](http://bp4mc2.org/def/mim#maximumwaardeInclusief) | 0..1 | integer, decimal, float, real, dateTime, date |
@@ -665,7 +670,7 @@ Voor codelijst worden de volgende aspecten gespecificeerd:
 | Datum opname                 | [`mim:datumOpname`](http://bp4mc2.org/def/mim#datumOpname) | 1 | datum |
 | Toelichting                  | [`mim:toelichting`](http://bp4mc2.org/def/mim#toelichting) | 0..1 | tekst |
 | Locatie                      | [`mim:locatie`](http://bp4mc2.org/def/mim#locatie) | 1 | tekst |
-| Constraint                | [`mim:constraint`](http://bp4mc2.org/def/mim#constraint) | 0..n | [`mim:Constraint`](http://bp4mc2.org/def/mim#Constraint) |
+| Constraint                | [`mim:constraint`](http://bp4mc2.org/def/mim#constraint) | 0..* | [`mim:Constraint`](http://bp4mc2.org/def/mim#Constraint) |
 
 ### Datatypen in LD
 
@@ -693,7 +698,7 @@ De datatypen worden naar de volgende aspecten gespecificeerd:
 | Formeel patroon              | [`mim:formeelPatroon`](http://bp4mc2.org/def/mim#formeelPatroon) | 0..1 | tekst |
 | Herkomst                     | [`mim:herkomst`](http://bp4mc2.org/def/mim#herkomst) | 1 | tekst |
 | Datum opname                 | [`mim:datumOpname`](http://bp4mc2.org/def/mim#datumOpname) | 1 | datum |
-| Constraint                | [`mim:constraint`](http://bp4mc2.org/def/mim#constraint) | 0..n | [`mim:Constraint`](http://bp4mc2.org/def/mim#Constraint) |
+| Constraint                | [`mim:constraint`](http://bp4mc2.org/def/mim#constraint) | 0..* | [`mim:Constraint`](http://bp4mc2.org/def/mim#Constraint) |
 
 #### mim:GestructureerdDatatype
 
@@ -714,7 +719,7 @@ Voor Gestructureerde datatypen worden de volgende aspecten gespecificeerd:
 | Formeel patroon              | [`mim:formeelPatroon`](http://bp4mc2.org/def/mim#formeelPatroon) | 0..1 | tekst |
 | Datum opname                 | [`mim:datumOpname`](http://bp4mc2.org/def/mim#datumOpname) | 1 | datum |
 | Data-element                 | [`mim:dataElement`](http://bp4mc2.org/def/mim#dataElement) | 0..* | [`mim:DataElement`](http://bp4mc2.org/def/mim#DataElement) |
-| Constraint                | [`mim:constraint`](http://bp4mc2.org/def/mim#constraint) | 0..n | [`mim:Constraint`](http://bp4mc2.org/def/mim#Constraint) |
+| Constraint                | [`mim:constraint`](http://bp4mc2.org/def/mim#constraint) | 0..* | [`mim:Constraint`](http://bp4mc2.org/def/mim#Constraint) |
 
 #### mim:DataElement
 
@@ -736,7 +741,7 @@ De data-elementen worden naar de volgende aspecten gespecificeerd:
 | Patroon                      | [`mim:patroon`](http://bp4mc2.org/def/mim#patroon) | 0..1 | tekst |
 | Formeel patroon              | [`mim:formeelPatroon`](http://bp4mc2.org/def/mim#formeelPatroon) | 0..1 | tekst |
 | Kardinaliteit                | [`mim:kardinaliteit`](http://bp4mc2.org/def/mim#kardinaliteit) | 1 | tekst |
-| Constraint                | [`mim:constraint`](http://bp4mc2.org/def/mim#constraint) | 0..n | [`mim:Constraint`](http://bp4mc2.org/def/mim#Constraint) |
+| Constraint                | [`mim:constraint`](http://bp4mc2.org/def/mim#constraint) | 0..* | [`mim:Constraint`](http://bp4mc2.org/def/mim#Constraint) |
 | Minimumwaarde inclusief      | [`mim:minimumwaardeInclusief`](http://bp4mc2.org/def/mim#minimumwaardeInclusief) | 0..1 | integer, decimal, float, real, dateTime, date |
 | Minimumwaarde exclusief      | [`mim:minimumwaardeExclusief`](http://bp4mc2.org/def/mim#minimumwaardeExclusief) | 0..1 | integer, decimal, float, real, dateTime, date |
 | Maximumwaarde inclusief      | [`mim:maximumwaardeInclusief`](http://bp4mc2.org/def/mim#maximumwaardeInclusief) | 0..1 | integer, decimal, float, real, dateTime, date |
@@ -763,7 +768,7 @@ Informatiemodel packages worden naar de volgende aspecten gespecificeerd:
 | Informatiemodeltype         | [`mim:informatiemodeltype`](http://bp4mc2.org/def/mim#informatiemodeltype) | 1..1 | Informatiemodeltypen |
 | Relatiemodelleringstype       | [`mim:relatiemodelleringstype`](http://bp4mc2.org/def/mim#relatiemodelleringstype) | 1..1 | Relatiemodelleringstypen |
 | tekstopmaak                  | [`mim:tekstopmaak`](http://bp4mc2.org/def/mim#tekstopmaak) | 0..1 | tekst |
-| Constraint                | [`mim:constraint`](http://bp4mc2.org/def/mim#constraint) | 0..n | [`mim:Constraint`](http://bp4mc2.org/def/mim#Constraint) |
+| Constraint                | [`mim:constraint`](http://bp4mc2.org/def/mim#constraint) | 0..* | [`mim:Constraint`](http://bp4mc2.org/def/mim#Constraint) |
 | Basis-URI                    | [`mim:basisUri`](http://bp4mc2.org/def/mim#basisUri) | 0..1 | [`xsd:anyURI`](http://www.w3.org/2001/XMLSchema#anyURI) |
 
 Het veld `mim:informatiemodeltype` verwijst naar één van de volgende mogelijke waarden:
@@ -791,7 +796,7 @@ Domein packages worden naar de volgende aspecten gespecificeerd:
 | Naam                         | [`mim:naam`](http://bp4mc2.org/def/mim#naam) | 1 | tekst |
 | Alias                        | [`mim:alias`](http://bp4mc2.org/def/mim#alias) | 0..1 | tekst |
 | Datum opname                 | [`mim:datumOpname`](http://bp4mc2.org/def/mim#datumOpname) | 1 | datum |
-| Constraint                | [`mim:constraint`](http://bp4mc2.org/def/mim#constraint) | 0..n | [`mim:Constraint`](http://bp4mc2.org/def/mim#Constraint) |
+| Constraint                | [`mim:constraint`](http://bp4mc2.org/def/mim#constraint) | 0..* | [`mim:Constraint`](http://bp4mc2.org/def/mim#Constraint) |
 | Basis-URI                    | [`mim:basisUri`](http://bp4mc2.org/def/mim#basisUri) | 0..1 | [`xsd:anyURI`](http://www.w3.org/2001/XMLSchema#anyURI) |
 
 #### mim:Extern
@@ -808,7 +813,7 @@ Externe packages worden naar de volgende aspecten gespecificeerd:
 | Toelichting               | [`mim:toelichting`](http://bp4mc2.org/def/mim#toelichting) | 0..1 | tekst |
 | Herkomst                     | [`mim:herkomst`](http://bp4mc2.org/def/mim#herkomst) | 1 | tekst |
 | Datum opname                 | [`mim:datumOpname`](http://bp4mc2.org/def/mim#datumOpname) | 1 | datum |
-| Constraint                | [`mim:constraint`](http://bp4mc2.org/def/mim#constraint) | 0..n | [`mim:Constraint`](http://bp4mc2.org/def/mim#Constraint) |
+| Constraint                | [`mim:constraint`](http://bp4mc2.org/def/mim#constraint) | 0..* | [`mim:Constraint`](http://bp4mc2.org/def/mim#Constraint) |
 | Basis-URI                    | [`mim:basisUri`](http://bp4mc2.org/def/mim#basisUri) | 0..1 | [`xsd:anyURI`](http://www.w3.org/2001/XMLSchema#anyURI) |
 
 #### mim:View
@@ -825,7 +830,7 @@ View packages worden naar de volgende aspecten gespecificeerd:
 | Toelichting               | [`mim:toelichting`](http://bp4mc2.org/def/mim#toelichting) | 0..1 | tekst |
 | Herkomst                     | [`mim:herkomst`](http://bp4mc2.org/def/mim#herkomst) | 1 | tekst |
 | Datum opname                 | [`mim:datumOpname`](http://bp4mc2.org/def/mim#datumOpname) | 1 | datum |
-| Constraint                | [`mim:constraint`](http://bp4mc2.org/def/mim#constraint) | 0..n | [`mim:Constraint`](http://bp4mc2.org/def/mim#Constraint) |
+| Constraint                | [`mim:constraint`](http://bp4mc2.org/def/mim#constraint) | 0..* | [`mim:Constraint`](http://bp4mc2.org/def/mim#Constraint) |
 | Basis-URI                    | [`mim:basisUri`](http://bp4mc2.org/def/mim#basisUri) | 0..1 | [`xsd:anyURI`](http://www.w3.org/2001/XMLSchema#anyURI) |
 
 ### Overige modelelementen in LD
@@ -847,7 +852,7 @@ aspecten gespecificeerd:
 | Toelichting               | [`mim:toelichting`](http://bp4mc2.org/def/mim#toelichting) | 0..1 | tekst |
 | Datum opname                 | [`mim:datumOpname`](http://bp4mc2.org/def/mim#datumOpname) | 1 | datum |
 | Waarde                       | [`mim:waarde`](http://bp4mc2.org/def/mim#Enumeratiewaarde) | 1..* | [`mim:Waarde`](http://bp4mc2.org/def/mim#Enumeratiewaarde) |
-| Constraint                | [`mim:constraint`](http://bp4mc2.org/def/mim#constraint) | 0..n | [`mim:Constraint`](http://bp4mc2.org/def/mim#Constraint) |
+| Constraint                | [`mim:constraint`](http://bp4mc2.org/def/mim#constraint) | 0..* | [`mim:Constraint`](http://bp4mc2.org/def/mim#Constraint) |
 
 #### mim:Enumeratiewaarde
 
@@ -865,7 +870,7 @@ volgende aspecten:
 | Begripsterm                  | [`mim:begripsterm`](http://bp4mc2.org/def/mim#begripsterm) | 0..* | tekst |
 | Is gedefinieerd in        | [`mim:isGedefinieerdIn`](http://bp4mc2.org/def/mim#isGedefinieerdIn) | 1 | [`mim:Package`](http://bp4mc2.org/def/mim#Package) |
 | Datum opname                 | [`mim:datumOpname`](http://bp4mc2.org/def/mim#datumOpname) | 1 | datum |
-| Constraint                | [`mim:constraint`](http://bp4mc2.org/def/mim#constraint) | 0..n | [`mim:Constraint`](http://bp4mc2.org/def/mim#Constraint) |
+| Constraint                | [`mim:constraint`](http://bp4mc2.org/def/mim#constraint) | 0..* | [`mim:Constraint`](http://bp4mc2.org/def/mim#Constraint) |
 
 Een enumeratiewaarde mag geen alias hebben, omdat in UML het alias-veld wordt gebruikt voor de mim:code. Mocht toch een `mim:alias` zijn opgegeven voor een enumeratiewaarde, dan dient deze gelezen te worden als een `mim:code`. In het RDF model is `mim:code` een subproperty van een `mim:alias`.
 

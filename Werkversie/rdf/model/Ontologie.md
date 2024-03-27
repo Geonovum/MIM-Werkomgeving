@@ -38,7 +38,7 @@
 |Specialisatie van|[mim:Modelelement](#Modelelement)|
 |Definitie|De typering van gelijksoortige gegevens die voor een objecttype van toepassing is.|
 |Bron|[Sectie 2.2.2 Attribuutsoort](https://docs.geostandaarden.nl/mim/mim/#attribuutsoort)|
-|Eigenschappen|[mim:alias](#alias), [mim:authentiek](#authentiek), [mim:begrip](#begrip), [mim:begripsterm](#begripsterm), [mim:constraint](#constraint), [mim:datumOpname](#datumOpname), [mim:definitie](#definitie), [mim:formeelPatroon](#formeelPatroon), [mim:heeftTijdlijnGeldigheid](#heeftTijdlijnGeldigheid), [mim:heeftTijdlijnRegistratie](#heeftTijdlijnRegistratie), [mim:herkomst](#herkomst), [mim:herkomstDefinitie](#herkomstDefinitie), [mim:identificerend](#identificerend), [mim:indicatieAfleidbaar](#indicatieAfleidbaar), [mim:indicatieClassificerend](#indicatieClassificerend), [mim:indicatieFormeleHistorie](#indicatieFormeleHistorie), [mim:indicatieMaterieleHistorie](#indicatieMaterieleHistorie), [mim:isGedefinieerdIn](#isGedefinieerdIn), [mim:kardinaliteit](#kardinaliteit), [mim:lengte](#lengte), [mim:maximumwaardeExclusief](#maximumwaardeExclusief), [mim:maximumwaardeInclusief](#maximumwaardeInclusief), [mim:minimumwaardeExclusief](#minimumwaardeExclusief), [mim:minimumwaardeInclusief](#minimumwaardeInclusief), [mim:modelelementidentificatie](#modelelementidentificatie), [mim:mogelijkGeenWaarde](#mogelijkGeenWaarde), [mim:naam](#naam), [mim:patroon](#patroon), [mim:toelichting](#toelichting), [mim:type](#type)|
+|Eigenschappen|[mim:alias](#alias), [mim:authentiek](#authentiek), [mim:begrip](#begrip), [mim:begripsterm](#begripsterm), [mim:constraint](#constraint), [mim:datumOpname](#datumOpname), [mim:definitie](#definitie), [mim:eenheid](#eenheid), [mim:formeelPatroon](#formeelPatroon), [mim:heeftTijdlijnGeldigheid](#heeftTijdlijnGeldigheid), [mim:heeftTijdlijnRegistratie](#heeftTijdlijnRegistratie), [mim:herkomst](#herkomst), [mim:herkomstDefinitie](#herkomstDefinitie), [mim:identificerend](#identificerend), [mim:indicatieAfleidbaar](#indicatieAfleidbaar), [mim:indicatieClassificerend](#indicatieClassificerend), [mim:indicatieFormeleHistorie](#indicatieFormeleHistorie), [mim:indicatieMaterieleHistorie](#indicatieMaterieleHistorie), [mim:isGedefinieerdIn](#isGedefinieerdIn), [mim:kardinaliteit](#kardinaliteit), [mim:lengte](#lengte), [mim:maximumwaardeExclusief](#maximumwaardeExclusief), [mim:maximumwaardeInclusief](#maximumwaardeInclusief), [mim:minimumwaardeExclusief](#minimumwaardeExclusief), [mim:minimumwaardeInclusief](#minimumwaardeInclusief), [mim:modelelementidentificatie](#modelelementidentificatie), [mim:mogelijkGeenWaarde](#mogelijkGeenWaarde), [mim:naam](#naam), [mim:patroon](#patroon), [mim:toelichting](#toelichting), [mim:type](#type)|
 
 ### mim:Codelijst {#Codelijst}
 
@@ -163,7 +163,7 @@
 |Specialisatie van|[mim:Package](#Package)|
 |Definitie|De groepering van alle modelelementen waaruit het informatiemodel is opgebouwd. Het informatiemodel als geheel.|
 |Bron|[Sectie 2.6.1 Informatiemodel](https://docs.geostandaarden.nl/mim/mim/#informatiemodel)|
-|Eigenschappen|[mim:alias](#alias), [mim:basisUri](#basisUri), [mim:constraint](#constraint), [mim:datumOpname](#datumOpname), [mim:informatiedomein](#informatiedomein), [mim:informatiemodeltype](#informatiemodeltype), [mim:isGedefinieerdIn](#isGedefinieerdIn), [mim:mimextensie](#mimextensie), [mim:mimtaal](#mimtaal), [mim:mimversie](#mimversie), [mim:modelelementidentificatie](#modelelementidentificatie), [mim:naam](#naam), [mim:relatiemodelleringstype](#relatiemodelleringstype)|
+|Eigenschappen|[mim:alias](#alias), [mim:basisUri](#basisUri), [mim:constraint](#constraint), [mim:datumOpname](#datumOpname), [mim:informatiedomein](#informatiedomein), [mim:informatiemodeltype](#informatiemodeltype), [mim:isGedefinieerdIn](#isGedefinieerdIn), [mim:mimextensie](#mimextensie), [mim:mimtaal](#mimtaal), [mim:mimversie](#mimversie), [mim:modelelementidentificatie](#modelelementidentificatie), [mim:naam](#naam), [mim:relatiemodelleringstype](#relatiemodelleringstype), [mim:tekstopmaak](#tekstopmaak)|
 
 ### mim:Keuze {#Keuze}
 
@@ -223,7 +223,7 @@
 |Specialisatie van|[mim:Modelelement](#Modelelement)|
 |Definitie|Een eigenschap van een object in een referentielijst in de vorm van een gegeven.|
 |Bron|[Sectie 2.4.2 Referentie element](https://docs.geostandaarden.nl/mim/mim/#referentie-element)|
-|Eigenschappen|[mim:alias](#alias), [mim:begrip](#begrip), [mim:begripsterm](#begripsterm), [mim:constraint](#constraint), [mim:datumOpname](#datumOpname), [mim:definitie](#definitie), [mim:formeelPatroon](#formeelPatroon), [mim:identificerend](#identificerend), [mim:isGedefinieerdIn](#isGedefinieerdIn), [mim:kardinaliteit](#kardinaliteit), [mim:lengte](#lengte), [mim:maximumwaardeExclusief](#maximumwaardeExclusief), [mim:maximumwaardeInclusief](#maximumwaardeInclusief), [mim:minimumwaardeExclusief](#minimumwaardeExclusief), [mim:minimumwaardeInclusief](#minimumwaardeInclusief), [mim:modelelementidentificatie](#modelelementidentificatie), [mim:naam](#naam), [mim:patroon](#patroon), [mim:toelichting](#toelichting), [mim:type](#type)|
+|Eigenschappen|[mim:alias](#alias), [mim:begrip](#begrip), [mim:begripsterm](#begripsterm), [mim:constraint](#constraint), [mim:datumOpname](#datumOpname), [mim:definitie](#definitie), [mim:eenheid](#eenheid), [mim:formeelPatroon](#formeelPatroon), [mim:identificerend](#identificerend), [mim:isGedefinieerdIn](#isGedefinieerdIn), [mim:kardinaliteit](#kardinaliteit), [mim:lengte](#lengte), [mim:maximumwaardeExclusief](#maximumwaardeExclusief), [mim:maximumwaardeInclusief](#maximumwaardeInclusief), [mim:minimumwaardeExclusief](#minimumwaardeExclusief), [mim:minimumwaardeInclusief](#minimumwaardeInclusief), [mim:modelelementidentificatie](#modelelementidentificatie), [mim:naam](#naam), [mim:patroon](#patroon), [mim:toelichting](#toelichting), [mim:type](#type)|
 
 ### mim:Referentielijst {#Referentielijst}
 
@@ -392,6 +392,14 @@
 |Bron|[Sectie 2.8.4.13 Metagegeven: heeft keuzerelatiedoel](https://docs.geostandaarden.nl/mim/mim/#metagegeven-heeft-keuzerelatiedoel)|
 |Eigenschap van||
 
+### mim:eenheid {#eenheid}
+
+|URI|http://modellen.mim-standaard.nl/def/mim#eenheid|
+|-|-|
+|Definitie|Aanduiding van de eenheid die bij een meting of waarneming hoort.|
+|Bron||
+|Eigenschap van|[mim:ReferentieElement](#ReferentieElement), [mim:Attribuutsoort](#Attribuutsoort), |
+
 ### equivalent {#equivalent}
 
 |URI|http://modellen.mim-standaard.nl/def/mim#equivalent|
@@ -554,6 +562,15 @@
 |Definitie|De package waarin het modelelement gedefinieerd is.|
 |Bron|[Metagegeven: is gedefinieerd in](https://docs.geostandaarden.nl/mim/mim/#metagegeven-is-gedefinieerd-in)|
 |Eigenschap van|[mim:DataElement](#DataElement), [mim:Gegevensgroeptype](#Gegevensgroeptype), [mim:Gegevensgroep](#Gegevensgroep), [mim:Enumeratiewaarde](#Enumeratiewaarde), [mim:Generalisatie](#Generalisatie), [mim:Domein](#Domein), [mim:Objecttype](#Objecttype), [mim:Relatiesoort](#Relatiesoort), [mim:ReferentieElement](#ReferentieElement), [mim:Keuzeconstraint](#KeuzeConstraint), [mim:PrimitiefDatatype](#PrimitiefDatatype), [mim:Attribuutsoort](#Attribuutsoort), [mim:Constraint](#Constraint), [mim:Extern](#Extern), [mim:Relatierol](#Relatierol), [mim:Enumeratie](#Enumeratie), [mim:GestructureerdDatatype](#GestructureerdDatatype), [mim:Informatiemodel](#Informatiemodel), [mim:Codelijst](#Codelijst), [mim:View](#View), [mim:ExterneKoppeling](#ExterneKoppeling), [mim:Package](#Package), [mim:Relatieklasse](#Relatieklasse), [mim:Keuze](#Keuze), [mim:Referentielijst](#Referentielijst), |
+
+### mim:tekstopmaak {#tekstopmaak}
+
+|URI|http://modellen.mim-standaard.nl/def/mim#tekstopmaak|
+|-|-|
+|Definitie|De specificatie van de opmaak van een tekstuele beschrijving in het model.|
+|Bron|[Metagegeven: Tekstopmaak](https://docs.geostandaarden.nl/mim/mim/#metagegeven-teksopmaak)|
+|Datatype|[string](http://www.w3.org/2001/XMLSchema#string)|
+|Eigenschap van|[mim:Informatiemodel](#Informatiemodel), |
 
 ### mim:alias {#alias}
 

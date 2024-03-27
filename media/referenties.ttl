@@ -279,6 +279,13 @@ mimdoc:sectie2.8.1.6 a dct:BibliographicResource;
   dct:isPartof mimdoc:sectie2.8.1;
 .
 
+mimdoc:metagegeven-tekstopmaak a dct:BibliographicResource;
+  rdfs:label "Metagegeven: Tekstopmaak";
+  dct:bibliographicCitation "Metagegeven: Tekstopmaak";
+  foaf:page <https://docs.geostandaarden.nl/mim/mim/#metagegeven-teksopmaak>;
+  # dct:isPartOf TODO oppakken met https://github.com/Geonovum/MIM-Werkomgeving/issues/484
+.
+
 mimdoc:metagegeven-basis-uri a dct:BibliographicResource;
   rdfs:label "Metagegeven: Basis-URI";
   dct:bibliographicCitation "Metagegeven: Basis-URI" ;

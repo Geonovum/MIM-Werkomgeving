@@ -539,7 +539,7 @@ De generalisaties worden naar het volgende aspect gespecificeerd:
 | verwijst naar **supertype**  | 1    | Binding van deze generalisatie aan een objecttype. De generalisatie relatie kent twee kanten, de bron kant (source) van de relatie en de doel kant (target) van de relatie. De doel kant van deze generalisatie relatie specificeert een _objecttype_ die het supertype/de generalisatie is van het via deze generalisatie aangegeven subtype. Kortweg, het supertype is een generalisatie van het subtype. | */target: related Element bij Relationship Element* = UML-Class |      | *Target*  |                 |
 | **Datum opname** | 1               | Algemeen metagegeven                                         |                     |      | *Tagged value* |            |
 | heeft **Constraint** | 0..* | Binding aan een constraint. |   | | *Constraint* | | 
-| **Mixin** | 0..1               | Alleen bij MIM niveau 3, logische modellen                                         |                     |      | *Tagged value* |            |
+| **Mixin** | 1               | Alleen bij MIM niveau 3, logische modellen                                         |                     |      | *Tagged value* |            |
 
 #### «Generalisatie» tussen datatypen
 
@@ -851,6 +851,7 @@ Domein packages worden naar de volgende aspecten gespecificeerd:
 | **Datum opname** | 1             | Algemeen metagegeven.    |                |      | *tagged value* |            |
 | heeft **Constraint** | 0..* | Binding aan een constraint. |   | | *Constraint* | | 
 | **Basis-URI**    | 0..1          | Algemeen metagegeven. *Het niet-unieke deel van de URI van ieder modelelement in deze package* |                |      | *Tagged value* |            |
+| bevat **Modelelement**    | 0..*         | *Binding van modelelementen die zich in package bevinden.* | *packagedElement*             |      | *Browser packagestructuur* |            |
 
 #### «Extern»
 
@@ -869,6 +870,7 @@ Externe packages worden naar de volgende aspecten gespecificeerd:
 | **Locatie**      | 1             | Algemeen metagegeven.    |                |      | *Tagged value* |            |
 | heeft **Constraint** | 0..* | Binding aan een constraint. |   | | *Constraint* | | 
 | **Basis-URI**    | 0..1          | Algemeen metagegeven. *Het niet-unieke deel van de URI van ieder modelelement in deze package* |                |      | *Tagged value* |            |
+| bevat **Modelelement**    | 0..*         | *Binding van modelelementen die zich in package bevinden.*| *packagedElement*             |      | *Browser packagestructuur* |            |
 
 #### «Informatiemodel»
 
@@ -891,10 +893,11 @@ Informatiemodel packages worden naar de volgende aspecten gespecificeerd:
 | **MIM extensie**           | 0..1               | *De aanduiding van een extensie op MIM.*                     |                                      |      | *Tagged value* |            |
 |                            |                    | *Bijvoorbeeld: Kadaster of NEN3610:2020*                     |                                      |      |                |            |
 | **MIM taal**               | 0..1               | *De aanduiding van de taal die gebruikt is voor de modelelementen.*  *Bijvoorbeeld: EN of NL* |                                      |      | *Tagged value* |            |
-| **Relatiemodelleringstype** | 1                  | Algemeen metagegeven.    Toelichting Type informatiemodel: zoals bedoeld in [[[#typering-van-modellen-en-wat-wel-en-niet-in-scope-is-van-deze-standaard]]]. Alle packages, oftewel «Domein» en «View», binnen het informatiemodel hebben hetzelfde type als het informatiemodel zelf. |                                      |      | *Tagged value* |            |
+| **Relatiemodelleringstype** | 1                  | Algemeen metagegeven.    Toelichting Type informatiemodel: zoals bedoeld in [[[#typering-van-modellen-gekoppeld-aan-beschouwingsniveaus]]]. Alle packages, oftewel «Domein» en «View», binnen het informatiemodel hebben hetzelfde type als het informatiemodel zelf. |                                      |      | *Tagged value* |            |
 | **Tekstopmaak**               | 0..1               | *Geldt voor hele model, voor de metagegevens die beschreven zijn het het metagegeven tekstopmaak.*|                                      |      | *Tagged value* |            |
 | heeft **Constraint** | 0..* | Binding aan een constraint. |   | | *Constraint* | | 
 | **Basis-URI**    | 0..1    | Algemeen metagegeven. *Het niet-unieke deel van de URI van ieder modelelement in deze package* |                |      | *Tagged value* |            |                                      |      | *Tagged value* |            |
+| bevat **Modelelement**    | 0..*         | *Binding van modelelementen die zich in package bevinden.* | *packagedElement*             |      | *Browser packagestructuur* |            |
 
 #### «View»
 
@@ -914,6 +917,7 @@ View packages worden naar de volgende aspecten gespecificeerd, analoog aan
 | **Locatie**      | 1             | Algemeen metagegeven.    |                |      | *Tagged value* |            |
 | heeft **Constraint** | 0..* | Binding aan een constraint. |   | | *Constraint* | | 
 | **Basis-URI**    | 0..1          | Algemeen metagegeven. *Het niet-unieke deel van de URI van ieder modelelement in deze package* |                |      | *Tagged value* |            |
+| bevat **Modelelement**    | 0..*         | *Binding van modelelementen die zich in package bevinden.* | *packagedElement*             |      | *Browser packagestructuur* |            |
 
 ### Overige modelelementen in UML
 

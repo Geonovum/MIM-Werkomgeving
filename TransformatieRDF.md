@@ -198,7 +198,7 @@ WHERE {
   ?objecttype a mim:Objecttype.
   ?objecttype mim:modelelementidentificatie ?modelelementidentificatie.
   ?objecttype mim:naam ?objecttypenaam.
-  
+
   BIND (IRI(STR(?modelelementidentificatie)) as ?class)
   BIND (t:nodeshapeuri(?objecttypenaam) as ?nodeshape)
 }
@@ -638,12 +638,12 @@ WHERE {
 
 > Een in het eigen model gedefinieerd primitieve datatype. Deze worden wel door de modelleur gecreëerd, met een eigen naam en een eigen definitie (en eigen metagegevens).
 
-Een primitief datatype wordt vertaald naar een `rdfs:Datatype`. Indien er geen subklasse aanwezig is naar een andere datatype, dan wordt per default een subklasse van xsd:string toegevoegd.
+Een primitief datatype wordt vertaald naar een `sh:NodeShape`. Een dergelijke (literal) nodeshape kan dan gebruikt worden in een propertyshape via sh:node. In onderstaande uitwerking wordt als uitgangspunt gehanteerd dat een primitief datatype een subtype is van een elementair datatype. Theoretisch gezien zou een primitief datatype ook weer een specialisatie kunnen zijn van een ander primitief datatype, dit is hier niet meegenomen. Indien het primitieve datatype geen specialisatie is van een ander datatype, dan wordt verondersteld dat sprake is van een specialisatie van xs:string.
 
 <pre class='ex-sparql'>
 CONSTRUCT {
-  ?datatype a rdfs:Datatype.
-  ?datatype rdfs:subClassOf xsd:string.
+  ?datatype a sh:NodeShape.
+  ?datatype sh:datatype xsd:string.
   ?datatype mim:equivalent ?primitiefdatatype.
 }
 WHERE {
@@ -657,14 +657,17 @@ WHERE {
 }
 
 CONSTRUCT {
-  ?datatype a rdfs:Datatype.
+  ?datatype a sh:NodeShape.
+  ?datatype sh:datatype ?xsddatatype.
   ?datatype mim:equivalent ?primitiefdatatype.
 }
 WHERE {
   ?primitiefdatatype a mim:PrimitiefDatatype.
   ?primitiefdatatype mim:modelelementidentificatie ?modelelementidentificatie.
   ?primitiefdatatype mim:naam ?primitiefdatatypenaam.
-  ?generalisatie mim:subtype ?primitiefdatatype.
+  ?generalisatie mim:subtype ?primitiefdatatype..
+  ?generalisatie mim:supertype ?standaarddatatype.
+  ?xsddatatype mim:equivalent ?standaarddatatype.
   BIND (IRI(STR(?modelelementidentificatie)) as ?datatype)
 }
 </pre>
@@ -909,6 +912,22 @@ WHERE {
 </pre>
 
 ## Properties
+
+### transformatie: tekstopmaak
+
+> De specificatie van de opmaak van een tekstuele beschrijving in het model.
+
+Een `mim:tekstopmaak` wordt direct, zonder aanpassing, overgenomen in het vertaalde model.
+
+<pre class='ex-sparql'>
+CONSTRUCT {
+  ?subject mim:tekstopmaak ?tekstopmaak
+}
+WHERE {
+  ?modelelement mim:tekstopmaak ?tekstopmaak.
+  ?subject mim:equivalent ?modelelement.
+}
+</pre>
 
 ### transformatie: naam
 
@@ -1267,7 +1286,8 @@ Een `mim:locatie` wordt direct, zonder aanpassing, overgenomen in het vertaalde 
 
 De vertaling van een `mim:type` hangt af van de vertaling van het datatype waar naar wordt verwezen:
 
-- Voor primitieve datatypen wordt vertaald naar een `sh:datatype`;
+- Voor standaard datatypen wordt vertaald naar een `sh:datatype`;
+- Voor eigen gespecificeerde primitieve datatypen wordt vertaald naar een `sh:node`;
 - Voor gestructureerde datatypen wordt vertaald naar een `sh:node`;
 - Voor een enumeratie wordt vertaald naar een `sh:node`;
 - Voor een referentielijst wordt vertaald naar een `sh:node`;
@@ -1284,6 +1304,7 @@ WHERE {
   ?type rdfs:subClassOf*/rdf:type mim:PrimitiefDatatype.
   ?subject mim:equivalent ?modelelement.
   ?datatype mim:equivalent ?type.
+  ?datatype a rdfs:Datatype.
 }
 
 CONSTRUCT {
@@ -1299,6 +1320,7 @@ WHERE {
        || ?mimtype = mim:Enumeratie
        || ?mimtype = mim:Referentielijst
        || ?mimtype = mim:Codelijst
+       || (?mimtype = mim:PrimitiefDatatype && ?datatypetype != rdfs:Datatype)
   )
 }
 </pre>
@@ -1421,17 +1443,11 @@ WHERE {
 
 In een MIM conform informatiemodel kunnen zowel abstracte als concrete klassen voorkomen. In UML kun je daarvan afleiden dat je geen instanties mag hebben van abstracte klassen, maar alleen van concrete klassen. In RDF wordt geen onderscheid gemaakt tussen het abstract of concreet zijn van klassen. In RDF worden klassen beschouwd als sets van dingen. Als je een set kunt beschrijven, dan kunnen er ook dingen zijn die tot die set behoren.
 
-Wel kun je aangeven dat indien er sprake is van een triple `<subject> rdf:type <abstract-class>` er minimaal óók een tweede triple moet zijn `<subject> rdf:type <non-abstract-class>`
-
 Een `mim:indicatieAbstractObject` wordt aanvullend direct, zonder aanpassing, overgenomen in het vertaalde model.
 
 <pre class='ex-sparql'>
 CONSTRUCT {
   ?subject mim:indicatieAbstractObject ?indicatieabstractobject.
-  ?subject sh:propertyShape [
-    sh:path rdf:type;
-    sh:minCount 2
-  ]
 }
 WHERE {
   ?modelelement mim:indicatieAbstractObject ?indicatieabstractobject.
@@ -1666,7 +1682,7 @@ WHERE {
   ?package mim:bevatModelelement ?modelelement.
   ?package mim:equivalent ?ontology.
   ?modelelement mim:equivalent ?ontologyelement.
-  ?ontologyelement a ?type . 
+  ?ontologyelement a ?type .
   FILTER (?type != owl:Ontology)
 }
 CONSTRUCT {
@@ -1827,6 +1843,24 @@ WHERE {
   ?subject mim:equivalent ?modelelement.
 }
 </pre>
+
+### transformatie: eenheid
+
+> Aanduiding van de eenheid die bij een meting of waarneming hoort.
+
+Een `mim:eenheid` wordt direct, zonder aanpassing, overgenomen in het vertaalde model. Dit heeft tot gevolg dat bij de betreffende PropertyShape via `mim:eenheid` duidelijk is over welke eenheid het gaat. Aangezien we gebruik maken van UOM URL's, kan vanuit daar ook de relatie worden gelegd met andere eenheid vocabulaires, zoals bijvoorbeeld [QUDT](https://qudt.org).
+
+<pre class='ex-sparql'>
+CONSTRUCT {
+  ?subject mim:eenheid ?eenheid
+}
+WHERE {
+  ?modelelement mim:eenheid ?eenheid.
+  ?subject mim:equivalent ?modelelement.
+}
+</pre>
+
+Er is niet gekozen voor een oplossing om attribuutsoorten te kwalificeren (bijvoorbeeld via een blank node en rdf:value). De reden is dat MIM ervoor kiest om de eenheid mee te nemen in de definitie van een attribuutsoort, dwz: één attribuutsoort heeft ook altijd (maximaal) één eenheid. Als de waarde in meerdere eenheden uit te drukken is (bijvoorbeeld lengte in mm en cm), dan is sprake van twee attribuutsoorten.
 
 ## Transformatie vanuit RDFS/OWL/SHACL
 

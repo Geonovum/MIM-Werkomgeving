@@ -266,6 +266,11 @@ mim:mimtaal a owl:DatatypeProperty;
   rdfs:comment "De aanduiding van de taal die gebruikt is voor de modelelementen."@nl;
   dct:source mimdoc:sectie2.11.6  ;
 .
+mim:tekstopmaak a owl:DatatypeProperty;
+  rdfs:label "Tekstopmaak"@nl;
+  rdfs:comment "De specificatie van de opmaak van een tekstuele beschrijving in het model."@nl;
+  dct:source mimdoc:metagegeven-tekstopmaak;
+.
 
 # Metagegevens modelelementen
 mim:basisUri a owl:DatatypeProperty;
@@ -475,6 +480,11 @@ mim:mixin a owl:DatatypeProperty;
   rdfs:label "mixin"@nl;
   rdfs:comment "Metagegeven om bij een generalisatie aan te geven dat bij een implementatie die geen multiple inheritance ondersteunt de eigenschappen van de superklasse worden overgenomen door de subklasse. De superklasse zelf komt niet in de implementatie voor."@nl;
   dct:source mimdoc:metagegeven-mixin;
+.
+mim:eenheid a owl:ObjectProperty;
+  rdfs:label "eenheid"@nl;
+  rdfs:comment "Aanduiding van de eenheid die bij een meting of waarneming hoort.";
+  dct:source mimdoc:sectie2.4.3.36;
 .
 
 #Metagegevens modelelementen met relaties naar andere modelelementen
