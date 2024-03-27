@@ -266,6 +266,11 @@ mim:mimtaal a owl:DatatypeProperty;
   rdfs:comment "De aanduiding van de taal die gebruikt is voor de modelelementen."@nl;
   dct:source mimdoc:sectie2.11.6  ;
 .
+mim:tekstopmaak a owl:DatatypeProperty;
+  rdfs:label "Tekstopmaak"@nl;
+  rdfs:comment "De specificatie van de opmaak van een tekstuele beschrijving in het model."@nl;
+  dct:source mimdoc:metagegeven-tekstopmaak;
+.
 
 # Metagegevens modelelementen
 mim:naam a owl:DatatypeProperty;

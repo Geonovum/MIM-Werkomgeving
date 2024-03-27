@@ -900,6 +900,22 @@ WHERE {
 
 ## Properties
 
+### transformatie: tekstopmaak
+
+> De specificatie van de opmaak van een tekstuele beschrijving in het model.
+
+Een `mim:tekstopmaak` wordt direct, zonder aanpassing, overgenomen in het vertaalde model.
+
+<pre class='ex-sparql'>
+CONSTRUCT {
+  ?subject mim:tekstopmaak ?tekstopmaak
+}
+WHERE {
+  ?modelelement mim:tekstopmaak ?tekstopmaak.
+  ?subject mim:equivalent ?modelelement.
+}
+</pre>
+
 ### transformatie: naam
 
 > De naam van een modelelement
