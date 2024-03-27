@@ -1844,7 +1844,7 @@ WHERE {
 
 > Aanduiding van de eenheid die bij een meting of waarneming hoort.
 
-Een `mim:eenheid` wordt direct, zonder aanpassing, overgenomen in het vertaalde model. Dit heeft tot gevolg dat bij de betreffende PropertyShape via `mim:eenheid` duidelijk is over welke eenheid het gaat. Aangezien we gebruik maken van UOM URL's, kan vanuit daar ook de relatie worden gelegd met andere eenheid vocabulaires, zoals bijvoorbeeld [QUDT](https://qudt.org).
+Een `mim:eenheid` wordt direct, zonder aanpassing, overgenomen in het vertaalde model. Dit heeft tot gevolg dat bij de betreffende PropertyShape via `mim:eenheid` duidelijk is over welke eenheid het gaat.
 
 <pre class='ex-sparql'>
 CONSTRUCT {
