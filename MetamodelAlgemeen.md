@@ -1871,7 +1871,7 @@ Een package `«Domein»` met de naam `Activiteiten` bevat `«Objecttype»` `Werk
 *Toepassing*: Package, Informatiemodel, Domein, Extern, View.
 
 #### Metagegeven: **bevat enumeratiewaarde**
-Verkorte schrijfwijze: **enumeratiewaarde**
+Verkorte schrijfwijze: **waarde**
 
 <aside class="definition">
   <dfn>bevat enumeratie waarde</dfn>De binding van een enumeratiewaarde aan een enumeratie.
