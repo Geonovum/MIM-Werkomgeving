@@ -332,7 +332,7 @@ De attribuutsoorten worden naar de volgende aspecten gespecificeerd:
 | Mogelijk geen waarde         | [`mim:mogelijkGeenWaarde`](http://bp4mc2.org/def/mim#mogelijkGeenWaarde) | 1 | boolean |
 | Identificerend               | [`mim:identificerend`](http://bp4mc2.org/def/mim#identificerend) | 0..1 | boolean |
 | Eenheid                      | [`mim:eenheid`](http://bp4mc2.org/def/mim#eenheid) | 0..1 | [`owl:NamedIndividual`](http://www.w3.org/2002/07/owl#NamedIndividual) |
-| Constraint                | [`mim:constraint`](http://bp4mc2.org/def/mim#constraint) | 0..n | [`mim:Constraint`](http://bp4mc2.org/def/mim#Constraint) |
+| Constraint                | [`mim:constraint`](http://bp4mc2.org/def/mim#constraint) | 0..* | [`mim:Constraint`](http://bp4mc2.org/def/mim#Constraint) |
 | Minimumwaarde inclusief      | [`mim:minimumwaardeInclusief`](http://bp4mc2.org/def/mim#minimumwaardeInclusief) | 0..1 | integer, decimal, float, real, dateTime, date |
 | Minimumwaarde exclusief      | [`mim:minimumwaardeExclusief`](http://bp4mc2.org/def/mim#minimumwaardeExclusief) | 0..1 | integer, decimal, float, real, dateTime, date |
 | Maximumwaarde inclusief      | [`mim:maximumwaardeInclusief`](http://bp4mc2.org/def/mim#maximumwaardeInclusief) | 0..1 | integer, decimal, float, real, dateTime, date |
@@ -642,7 +642,8 @@ De referentie-elementen worden naar de volgende aspecten gespecificeerd:
 | Identificerend               | [`mim:identificerend`](http://bp4mc2.org/def/mim#identificerend) | 0..1 | tekst |
 | Toelichting                  | [`mim:toelichting`](http://bp4mc2.org/def/mim#toelichting) | 0..1 | tekst |
 | Constraint                | [`mim:constraint`](http://bp4mc2.org/def/mim#constraint) | 0..* | [`mim:Constraint`](http://bp4mc2.org/def/mim#Constraint) |
-| Eenheid                      | [`mim:eenheid`](http://bp4mc2.org/def/mim#eenheid) | 0..1 | [`owl:NamedIndividual`](http://www.w3.org/2002/07/) | Constraint                | [`mim:constraint`](http://bp4mc2.org/def/mim#constraint) | 0..n | [`mim:Constraint`](http://bp4mc2.org/def/mim#Constraint) |
+| Eenheid                      | [`mim:eenheid`](http://bp4mc2.org/def/mim#eenheid) | 0..1 | [`owl:NamedIndividual`](http://www.w3.org/2002/07/) |
+| Constraint                | [`mim:constraint`](http://bp4mc2.org/def/mim#constraint) | 0..* | [`mim:Constraint`](http://bp4mc2.org/def/mim#Constraint) |
 | Minimumwaarde inclusief      | [`mim:minimumwaardeInclusief`](http://bp4mc2.org/def/mim#minimumwaardeInclusief) | 0..1 | integer, decimal, float, real, dateTime, date |
 | Minimumwaarde exclusief      | [`mim:minimumwaardeExclusief`](http://bp4mc2.org/def/mim#minimumwaardeExclusief) | 0..1 | integer, decimal, float, real, dateTime, date |
 | Maximumwaarde inclusief      | [`mim:maximumwaardeInclusief`](http://bp4mc2.org/def/mim#maximumwaardeInclusief) | 0..1 | integer, decimal, float, real, dateTime, date |
