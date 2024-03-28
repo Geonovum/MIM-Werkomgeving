@@ -651,7 +651,7 @@ aspecten gespecificeerd:
 | **Herkomst definitie** | 1    | Algemeen metagegeven.    |                                       |      | *Tagged value* | |
 | **Toelichting**  | 0..1       | Algemeen metagegeven.    |                                       |      | *tagged value* | |
 | **Datum opname** | 1          | Algemeen metagegeven.    |                                       |      | *tagged value* | |
-| bevat **enumeratiewaarde** | 1..* | Binding van een enumeratiewaarde. | *owned element* = UML-EnumerationLiteral |    | *association*        |     |
+| bevat enumeratie**waarde** | 1..* | Binding van een enumeratiewaarde. | *owned element* = UML-EnumerationLiteral |    | *association*        |     |
 | heeft **Constraint** | 0..* | Binding aan een constraint. |   | | *Constraint* | | 
 
 #### «Enumeratiewaarde»
@@ -688,7 +688,7 @@ Voor referentielijsten worden de volgende aspecten gespecificeerd:
 | **Herkomst definitie**  | 1         | Algemeen metagegeven. |                                       |    | *Tagged value* |     |
 | **Toelichting**      | 0..1         | Algemeen metagegeven. |                                       |    | *Tagged value* |     |
 | **Datum opname**     | 1            | Algemeen metagegeven. |                                       |    | *Tagged value* |     |
-| **Locatie**          | 1..1         | Algemeen metagegeven. |                                       |    | *Tagged value* |     |
+| **Locatie**          | 1         | Algemeen metagegeven. |                                       |    | *Tagged value* |     |
 | bevat **referentie-element** | 1..* | Binding aan een referentie-element. | *owned element* = UML-property  | | *attribute*   | |
 | verwijst naar **supertype**  | 0..* | Binding aan een generalisatie (naar een andere referentie lijst). | *owned element* = UML-Relationship |    | *association*   |   |
 | heeft **Constraint** | 0..* | Binding aan een constraint. |   | | *Constraint* | | 
@@ -720,7 +720,7 @@ De referentie-elementen worden naar de volgende aspecten gespecificeerd:
 | **Maximumwaarde inclusief** | 0..1          | Algemeen metagegeven. Een referentie-element mag of een metagegeven **Maximumwaarde inclusief** of **Maximumwaarde exclusief** hebben, niet beide. | |  | _Tagged value_ |            |
 | **Maximumwaarde exclusief** | 0..1          | Algemeen metagegeven. Een referentie-element mag of een metagegeven **Maximumwaarde inclusief** of **Maximumwaarde exclusief** hebben, niet beide. | |  | _Tagged value_ |            |
 | **Eenheid**  |0..1      | Toevoegen als het referentie-element een waarde betreft en de eenheid als metagegeven opgenomen moet worden.
-| heeft **datatype**       | 1       | Binding aan een datatype.     | *datatype* = UML-datatype |    | *type* = datatype          |     |
+| heeft data**type**       | 1       | Binding aan een datatype.     | *datatype* = UML-datatype |    | *type* = datatype          |     |
 | heeft **Constraint** | 0..* | Binding aan een constraint. |   | | *Constraint* | | 
 
 ### Datatypen in UML
@@ -797,7 +797,7 @@ De data-elementen worden naar de volgende aspecten gespecificeerd:
 | **Minimumwaarde exclusief** | 0..1 | Algemeen metagegeven. Een data-element mag of een metagegeven **Minimumwaarde inclusief** of **Minimumwaarde exclusief** hebben, niet beide. | | | _Tagged value_ | |
 | **Maximumwaarde inclusief** | 0..1 | Algemeen metagegeven. Een data-element mag of een metagegeven **Maximumwaarde inclusief** of **Maximumwaarde exclusief** hebben, niet beide. | | | _Tagged value_ | |
 | **Maximumwaarde exclusief** | 0..1 | Algemeen metagegeven. Een data-element mag of een metagegeven **Maximumwaarde inclusief** of **Maximumwaarde exclusief** hebben, niet beide. | | | _Tagged value_ | |
-| heeft **datatype**     | 1       | Binding aan een datatype.  | *datatype* = UML-datatype       |      | *type* = datatype |     |
+| heeft data**type**     | 1       | Binding aan een datatype.  | *datatype* = UML-datatype       |      | *type* = datatype |     |
 | heeft **Constraint** | 0..* | Binding aan een constraint. |   | | *Constraint* | | 
 
 #### «Keuze»
@@ -815,9 +815,9 @@ Een Keuze worden naar de volgende aspecten gespecificeerd:
 | **Herkomst definitie**  | 0..1   | Algemeen metagegeven.    |                |      | *Tagged value* |            |
 | **Toelichting**  | 0..1          | Algemeen metagegeven.    |                |      | *tagged value* |            |
 | **Datum opname** | 1             | Algemeen metagegeven.    |                |      | *tagged value* |            |
-| **heeft datatypekeuze**   | 0..* | Binding van een datatype, in UML via een additionale UML-property met stereotype keuze | *owned element* = UML-property en deze heeft en *datatype*     |   | *attribute*          |     |
-| heeft **attribuutkeuze**  | 0..* | Binding aan een attribuutsoort.  | *owned element* = UML-Property     |    | *attribute*          |     |
-| heeft **relatiedoelkeuze**| 0..* | Binding aan een relatiesoort.    | *owned element* = UML-Relationship |    | *association*        |     |
+| heeft data**type**keuze   | 0..* | Binding van een datatype, in UML via een additionale UML-property met stereotype keuze | *owned element* = UML-property en deze heeft en *datatype*     |   | *attribute*          |     |
+| heeft **keuzeattribuut**  | 0..* | Binding aan een attribuutsoort.  | *owned element* = UML-Property     |    | *attribute*          |     |
+| heeft **keuzerelatiedoel**| 0..* | Binding aan een relatiesoort.    | *owned element* = UML-Relationship |    | *association*        |     |
 | heeft **Constraint** | 0..* | Binding aan een constraint. |   | | *Constraint* | | 
 
 *Opmerking: de modelelementen waaruit gekozen kan worden heten sinds MIM 1.1 geen keuze-elementen meer. Keuze-element is komen te vervallen.*
@@ -857,8 +857,8 @@ Externe packages worden naar de volgende aspecten gespecificeerd:
 | **Toelichting**  | 0..1          | Algemeen metagegeven.    |                |      | *tagged value* |            |
 | **Datum opname** | 1             | Algemeen metagegeven.    |                |      | *tagged value* |            |
 | **Locatie**      | 1             | Algemeen metagegeven.    |                |      | *Tagged value* |            |
-| heeft **Constraint** | 0..* | Binding aan een constraint. |   | | *Constraint* | | 
 | **Basis-URI**    | 0..1          | Algemeen metagegeven. *Het niet-unieke deel van de URI van ieder modelelement in deze package* |                |      | *Tagged value* |            |
+| heeft **Constraint** | 0..* | Binding aan een constraint. |   | | *Constraint* | | 
 | bevat **Modelelement**    | 0..*         | *Binding van modelelementen die zich in package bevinden.*| *packagedElement*             |      | *Browser packagestructuur* |            |
 
 #### «Informatiemodel»
@@ -904,8 +904,8 @@ View packages worden naar de volgende aspecten gespecificeerd, analoog aan
 | **Toelichting**  | 0..1          | Algemeen metagegeven.    |                |      | *tagged value* |            |
 | **Datum opname** | 1             | Algemeen metagegeven.    |                |      | *tagged value* |            |
 | **Locatie**      | 1             | Algemeen metagegeven.    |                |      | *Tagged value* |            |
-| heeft **Constraint** | 0..* | Binding aan een constraint. |   | | *Constraint* | | 
 | **Basis-URI**    | 0..1          | Algemeen metagegeven. *Het niet-unieke deel van de URI van ieder modelelement in deze package* |                |      | *Tagged value* |            |
+| heeft **Constraint** | 0..* | Binding aan een constraint. |   | | *Constraint* | | 
 | bevat **Modelelement**    | 0..*         | *Binding van modelelementen die zich in package bevinden.* | *packagedElement*             |      | *Browser packagestructuur* |            |
 
 ### Overige modelelementen in UML
