@@ -454,7 +454,7 @@ De relatiesoorten worden naar de volgende aspecten gespecificeerd.
 | **Authentiek√**                   | 1                  | Algemeen metagegeven. |                                                              |      | *Tagged value*                                               |            |
 | **Indicatie afleidbaar**          | 1                  | Algemeen metagegeven. | *isDerived bij UML metaclass Assocation*                     |      | *isDerived*                                                  |            |
 | **Mogelijk geen waarde**          | 1                  | Algemeen metagegeven. |                                                              |      | *Tagged value*                                               |            |
-| verwijst naar **relatiedoel**   | 0..*  | Binding aan een objecttype. | */target: related Element bij Relationship Element* = UML-Class |    | *association target* = Class       |     |
+| verwijst naar relatie**doel**   | 0..*  | Binding aan een objecttype. | */target: related Element bij Relationship Element* = UML-Class |    | *association target* = Class       |     |
 | heeft **Constraint** | 0..* | Binding aan een constraint. |   | | *Constraint* | | 
 
 #### «Relatiesoort» (alt 2: rol leidend)
@@ -513,7 +513,6 @@ aspecten gespecificeerd.
 | **Datum opname**     | 1            | Algemeen metagegeven. |                                       |    | *Tagged value* |     |
 | **Identificerend**   | 0..1         | Algemeen metagegeven. | *isID bij de metaclass Property*      |    | *isID*         |     |
 | **Kardinaliteit√**   | 1            | Algemeen metagegeven. | *lowerValue en upperValue van de metaclass Multiplicity Element* |      | *Multiplicity* |            |
-| **Kardinaliteit relatie bron** | 1 | Algemeen metagegeven. | *lowerValue en upperValue van de metaclass MultiplicityElement*  |      | *Multiplicity* | | 
 | **Heeft tijdlijn geldigheid √**          | 1                  | Algemeen metagegeven.                                        |                                                              |      | *Tagged value* |            |
 | **Indicatie materiële historie √**          | 1                  | Algemeen metagegeven.                                        |                                                              |      | *Tagged value* |            |
 | **Heeft tijdlijn registratie √**          | 1                  | Algemeen metagegeven.                                        |                                                              |      | *Tagged value* |            |
