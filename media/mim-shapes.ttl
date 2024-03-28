@@ -13,7 +13,7 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>.
 @prefix dct: <http://purl.org/dc/terms/>.
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
-@prefix unit: <https://w3id.org/uom/>.
+@prefix si: <https://si-digital-framework.org/SI#>.
 
 #
 # NodeShapes
@@ -1077,22 +1077,7 @@ shape:eenheid a sh:PropertyShape;
   sh:name "mim:eenheid";
   sh:order 32;
   sh:maxCount 1;
-  sh:node shape:UOMIndividual;
-.
-shape:UOMIndividual a sh:NodeShape;
-  sh:name "UOM Individual";
-  rdfs:comment "An individual from the UOM namespace";
-  dct:source <https://units-of-measurement.org>;
-  sh:property [
-    sh:path unit:SI_code;
-    sh:minCount 1;
-    sh:maxCount 1;
-  ];
-  sh:property [
-    sh:path unit:UCUM_code;
-    sh:minCount 1;
-    sh:maxCount 1;
-  ]
+  sh:class si:MeasurementUnit;
 .
 shape:ObjecttypeOFGestructureerdDatatype a sh:NodeShape;
   sh:name "1 van";

@@ -37,13 +37,13 @@ Elk modelelement heeft een `«MIM metaclass»` met een naam. Hieraan is elk mode
 
 ### Modelelement
 
-Het modelelement is de superklasse van alle metaklassen in het MIM-metamodel.
+De klasse modelelement is de superklasse van alle metaklassen in het MIM-metamodel.
 
 <aside class="definition">
-  <dfn>Modelelement</dfn>Een metaklasse van een metamodel.
+  <dfn>Modelelement</dfn>Elk element uit een model met een op zichzelf staande identiteit, inclusief het model zelf.
 </aside>
 
-**Toelichting**: Modelelementen zijn de bouwstenen of metaklassen van het MIM-metamodel. Modelelement is de superklasse van alle metaklassen in het MIM.
+**Toelichting**: De identiteit van een modelelement wordt bepaald door zijn identificatie. Modelelement heeft een algemene definitie die zowel op metamodel- als op modelniveau geldt. Voor een metamodel beschrijft een modelelement een klasse van modelelementen, een metaklasse. Alle metaklassen in het MIM zijn modelelementen zoals bijvoorbeeld `«MIM metaclass»`: <a>Objecttype</a>, `«MIM metaclass»`: <a>Attribuutsoort</a>, `«MIM metaclass»`: <a>Generalisatie</a>. De metagegevens van de metaklassen worden niet gezien als modelelementen.
 
 ### Kern
 
@@ -923,11 +923,9 @@ De tekst kan en mag een bepaalde opmaak bevatten, maar dit hoeft niet. Maar als 
 *Toepassing*: Informatiemodel (optioneel)
 
 
- ### Modelelementidentificatie - metagegevens
+ ### Identificatie - metagegevens
 
-Informatiemodellen staan vaak niet op zichzelf. Ze kunnen elementen bevatten die refereren aan externe standaarden, waarin deze elementen een eigen identificatie hebben. Ook moeten de gemodelleerde elementen herbruikbaar zijn in andere modellen. Daarom is het nodig om de modelelementen uniek te kunnen identificeren. Wanneer een MIM-model uitgedrukt wordt in een Linked Data-model is het zelfs noodzakelijk om de modelelementen identificeren met een [[URI]]. De metagegevens <code><a>Basis-URI</a></code>, <code><a>Modelelementidentificatie</a></code> en <code><a>is gedefinieerd in</a></code> maken het mogelijk om de modelelementen in een Linked Data-model te identificeren.
-
-
+Informatiemodellen staan vaak niet op zichzelf. Ze kunnen elementen bevatten die refereren aan externe standaarden, waarin deze elementen een eigen identificatie hebben. Ook moeten de gemodelleerde elementen herbruikbaar zijn in andere modellen. Daarom is het nodig om de modelelementen uniek te kunnen identificeren. Wanneer een MIM-model uitgedrukt wordt in een Linked Data-model is het zelfs noodzakelijk om de modelelementen identificeren met een [[URI]]. De metagegevens <code><a>Basis-URI</a></code>, <code><a>Identificatie</a></code> en <code><a>is gedefinieerd in</a></code> maken het mogelijk om de modelelementen in een Linked Data-model te identificeren.
 
 #### Metagegeven: **Basis-URI**
 
@@ -949,27 +947,18 @@ Dit is noodzakelijk omdat niet alle namen binnen een informatiemodel per definit
 </aside>
 
 
-#### Metagegeven: **Modelelementidentificatie**
+#### Metagegeven: **Identificatie**
 
 <aside class="definition">
-  <dfn>Modelelementidentificatie</dfn>De identificatie van een modelelement.
+  <dfn>Identificatie</dfn>De identificatie van een modelelement.
 </aside>
 
-De `Modelelementidentificatie` kan bepaald worden aan de hand van de <code><a>Naam</a></code> van het modelelement en de `Basis-URI` van de _package_ waarin het modelelement zich bevindt (op logisch niveau conform de naamgevingsconventies). Dit vormt de default waarde. In de meeste gevallen zal een modelleur dit metagegeven niet expliciet invullen maar uitgaan van de defaultwaarde.
+De `Identificatie` kan bepaald worden aan de hand van de <code><a>Naam</a></code> van het modelelement en de `Basis-URI` van de _package_ waarin het modelelement zich bevindt (op logisch niveau conform de naamgevingsconventies). Dit vormt de default waarde. In de meeste gevallen zal een modelleur dit metagegeven niet expliciet invullen maar uitgaan van de defaultwaarde.
 
-In sommige gevallen kan de `modelelementidentificatie` van een modelelement niet bepaald worden aan de hand van de `Basis-URI` van de bijbehorende _package_ en de `Naam` van een modelelement. Bijvoorbeeld als gevolg van de gekozen URI-strategie of wanneer een <code><a>Attribuutsoort</a></code> uit een ander informatiemodel hergebruikt wordt (e.g. `nen3610-2022:identificatie`). In dit geval zal de modelleur het metagegeven `modelelementidentificatie` wel invullen.
+In sommige gevallen kan de `Identificatie` van een modelelement niet bepaald worden aan de hand van de `Basis-URI` van de bijbehorende _package_ en de `Naam` van een modelelement. Bijvoorbeeld als gevolg van de gekozen URI-strategie of wanneer een <code><a>Attribuutsoort</a></code> uit een ander informatiemodel hergebruikt wordt (e.g. `nen3610-2022:identificatie`). In dit geval zal de modelleur het metagegeven `Identificatie` wel invullen.
 
 *Toepassing*:  alle modelelementen
 
-#### Metagegeven: **is gedefinieerd in**
-
-<aside class="definition">
-  <dfn>is gedefinieerd in</dfn>De package waarin het modelelement gedefinieerd is.
-</aside>
-
-*Toelichting* De definiërende _package_ is meestal de _package_ die het modelelement bevat. De waarde voor dit metagegeven kan, wanneer dit het geval is, afgeleid worden. In afwijkende situaties moet de `URI` van de betreffende _package_ ingevuld worden. Een _package_ van het type <code><a>View</a></code> definieert nooit de modelelementen die het bevat, dit is altijd een ander _package_ van het type <code><a>Domein</a></code>. Het verschil met het metagegeven <code><a>Herkomst</a></code> is dat `Is gedefinieerd in` een directe verwijzing is naar een informatiemodel of een _package_ daarbinnen door middel van een `URI`. 
-
-*Toepassing*: alle modelelementen
 
 <!--Einde "Specificatie metagegevens informatiemodel" -->
 
@@ -1412,7 +1401,7 @@ Als een `«Codelijst»` een structuur heeft wordt hiermee aangegeven welk item i
 
 *Toelichting*
 
-MIM zegt niets over de technische implementatie van de codelijst. Om een referentie naar informatie over de technische implementatie wel in het model op te nemen is er de mogelijkheid om met het metagegeven Profielspecificatie de specifieke technische toepassing van de codelijst te beschrijven. Bij voorkeur is de referentie door middel van een url.
+MIM zegt niets over de technische implementatie van de codelijst. Om een referentie naar informatie over de technische implementatie wel in het model op te nemen is er de mogelijkheid om met het metagegeven `Profielspecificatie` de specifieke technische toepassing van de codelijst te beschrijven. Bij voorkeur is de referentie door middel van een url.
 
 *Toepassing:* Codelijst
 
@@ -1606,18 +1595,61 @@ In essentie zijn er vier componenten die een meting of een waarneming beschrijve
 
 1. het _onderwerp_ (wat wordt er gemeten)
 1. de _waarde_ (de waarde die gemeten is)
-1. het _datatype_ van die waarde (kwalitatief (`Characterstring`), kwantitatief (`Integer` of `Real`))
+1. het _datatype_ van die waarde (kwalitatief:`Boolean`, `Characterstring`, kwantitatief:`Integer`, `Real` of `Decimal`)
 1. de _eenheid_ van de waarde
 
-De eerste drie zijn informatie-technisch uit te drukken met de informatie-elementen `«Attribuutsoort»` en `«Datatype»`. Voor `Eenheid` is een apart metagegeven gecreëerd dat gekoppeld wordt aan een `«Attribuutsoort»` of een `«Referentie-element»`.
+De eerste drie componenten zijn uit te drukken met de modelelementen `«Attribuutsoort»` en `«Datatype»`. Voor de _eenheid_ van een waarde is een apart metagegeven gecreëerd dat gekoppeld wordt aan een `«Attribuutsoort»` of een `«Referentie-element»`.
 
-De waarde van `Eenheid` is een waarde uit de lijst gepubliceerd op:https://units-of-measurement.org/. [Handig overzicht gepubliceerd in PDF door UCUM](https://github.com/ucum-org/ucum/blob/main/common-units/TableOfExampleUcumCodesForElectronicMessagingwithPreface.pdf)).
+Voor de invulling van het metagegeven `Eenheid`, sluit het MIM aan bij het Internationale Stelsel van Eenheden [[SI]]. Een modelleur vult bij `Eenheid` de _unit expression_ van de eenheid in, bijvoorbeeld: `m` voor de lengtemaat _meter_. Een codelijst van mogelijke waarden en bijbehorende symbolen en _unit expressions_ is beschikbaar via [SI Reference Point](https://si-digital-framework.org/SI/units).
 
-Dit is een waarde in de vorm van een UCUM-code (niet de URL). Bijvoorbeeld: 
+Het SI-stelsel bestaat uit zeven [basiseenheden](https://nl.wikipedia.org/wiki/SI-stelsel#SI-basiseenheden). Aanvullend staat het systeem een onbeperkt aantal [afgeleide eenheden](https://nl.wikipedia.org/wiki/SI-stelsel#Afgeleide_SI-eenheden) toe, die altijd kunnen worden uitgedrukt als product van machten van de basiseenheden. Hiervoor zijn [SI-prefixen](https://nl.wikipedia.org/wiki/SI-stelsel#SI-prefixen_(vermenigvuldigingsfactoren) gedefinieerd. Naast de SI-eenheden zijn er een aantal niet-SI-eenheden die wel goedgekeurd zijn voor _gebruik in samenstelling_ met SI-eenheden, zoals: _liter_, _uur_, _minuut_ en _graden Celsius_. Imperiale eenheden, zoals: _pound_, _inch_ en _foot_ zijn niet goedgekeurde SI-eenheden.
 
- - Meter: `Eenheid`: `"m"`
- - Decibel:  `Eenheid`: `"dB"`
- - Kilogram per minuut: `Eenheid`: `"kg/min"`
+
+<aside class="example" title="Voorbeelden van eenheden in relatie tot het SI-stelsel">
+  <p><strong>Basiseenheden</strong>
+    <ul>
+      <li>seconde, <i>unit expression</i>: <code>s</code> (grootheid: tijd</li>
+      <li>meter, <i>unit expression</i>: <code>m</code> (grootheid: lengte</li>
+      <li>kilogram, <i>unit expression</i>: <code> kg</code> (grootheid: massa</li>
+      <li>Ampère, <i>unit expression</i>: <code> A</code> (grootheid: elektrische stroom</li>
+      <li>Kelvin, <i>unit expression</i>: <code> K</code> (grootheid: absolute temperatuur</li>
+      <li>mol, <i>unit expression</i>: <code>mol</code> (grootheid: hoeveelheid stof</li>
+      <li>candela, <i>unit expression</i>: <code>cd</code> (grootheid: lichtsterkte</li>
+    </ul>
+  </p>
+  <p><strong>Afgeleide SI-eenheden</strong>
+    <ul>
+      <li>gram, <i>unit expression</i>: <code>g</code></li>
+      <li>hertz, <i>unit expression</i>: <code>Hz</code></li>
+      <li>kilometer, <i>unit expression</i>: <code>km</code></li>
+    </ul>
+  </p>
+  <p><strong>Niet-SI-eenheden die geaccepteerd zijn voor gebruik in combinatie met SI-eenheden</strong>
+    <ul>
+      <li>day, <i>unit expression</i>: <code>d</code></li>
+      <li>decibel (1/10 Bel = 1 decibel), <i>unit expression</i>: <code>dB</code></li>
+      <li>hour, <i>unit expression</i>: <code>h</code></li>
+      <li>liter, <i>unit expression</i>: <code>L</code></li>
+      <li>minute, <i>unit expression</i>: <code>min</code></li>
+    </ul>
+  </p>
+  <p><strong>Samengestelde eenheden</strong>
+    <ul>
+      <li>kilowattuur, <i>unit expression</i>: <code>kW.h</code></li>
+      <li>meter per seconde, <i>unit expression</i>: <code>m.s</code></li>
+      <li>vierkante meter, <i>unit expression</i>: <code>m2</code></li>
+    </ul>
+  </p>
+  <p><strong>Imperiale eenheden die niet geaccepteerd zijn voor gebruik met SI-eenheden</strong>
+    <ul>
+      <li>pound </li>
+      <li>inch </li>
+      <li>foot </li>
+      <li>yard </li>
+      <li>mile</li>
+    </ul>
+    </p>
+</aside>
 
 *Toepassing:* Attribuutsoort, Referentie-element.
 

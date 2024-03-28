@@ -331,7 +331,7 @@ De attribuutsoorten worden naar de volgende aspecten gespecificeerd:
 | Indicatie classificerend     | [`mim:indicatieAfleidbaar`](http://bp4mc2.org/def/mim#indicatieAfleidbaar) | 1 | boolean |
 | Mogelijk geen waarde         | [`mim:mogelijkGeenWaarde`](http://bp4mc2.org/def/mim#mogelijkGeenWaarde) | 1 | boolean |
 | Identificerend               | [`mim:identificerend`](http://bp4mc2.org/def/mim#identificerend) | 0..1 | boolean |
-| Eenheid                      | [`mim:eenheid`](http://bp4mc2.org/def/mim#eenheid) | 0..1 | [`owl:NamedIndividual`](http://www.w3.org/2002/07/owl#NamedIndividual) |
+| Eenheid                      | [`mim:eenheid`](http://bp4mc2.org/def/mim#eenheid) | 0..1 | [`si:MeasurementUnit`](https://si-digital-framework.org/SI#MeasurementUnit) |
 | Constraint                | [`mim:constraint`](http://bp4mc2.org/def/mim#constraint) | 0..* | [`mim:Constraint`](http://bp4mc2.org/def/mim#Constraint) |
 | Minimumwaarde inclusief      | [`mim:minimumwaardeInclusief`](http://bp4mc2.org/def/mim#minimumwaardeInclusief) | 0..1 | integer, decimal, float, real, dateTime, date |
 | Minimumwaarde exclusief      | [`mim:minimumwaardeExclusief`](http://bp4mc2.org/def/mim#minimumwaardeExclusief) | 0..1 | integer, decimal, float, real, dateTime, date |
@@ -349,7 +349,7 @@ Het veld `mim:authentiek` verwijst naar één van de volgende mogelijke waarden:
 | [`mim:LandelijkKerngegeven`](http://bp4mc2.org/def/mim#LandelijkKerngegeven) | Indien het een gegeven of een als relatiesoort gemodelleerd gegeven is in een landelijk sector- en domein-overstijgend informatiemodel en geen authentiek gegeven en geen basisgegeven is. |
 | [`mim:OverigeAuthenticiteit`](http://bp4mc2.org/def/mim#OverigeAuthenticiteit) | Indien het géén van de voorgaande categorieën betreft. Veelal gaat het dan om proces-, taakveld- of domeinspecifieke gegevens. |
 
-Het veld `mim:eenheid` verwijst naar een waarde afkomstig uit de [Unit-of-measurement lijst](https://units-of-measurement.org).
+Het veld `mim:eenheid` verwijst naar een waarde afkomstig uit [SI Digital framework](https://si-digital-framework.org/SI/units?lang=en).
 
 #### mim:Gegevensgroep
 
@@ -646,7 +646,7 @@ De referentie-elementen worden naar de volgende aspecten gespecificeerd:
 | Identificerend               | [`mim:identificerend`](http://bp4mc2.org/def/mim#identificerend) | 0..1 | tekst |
 | Toelichting                  | [`mim:toelichting`](http://bp4mc2.org/def/mim#toelichting) | 0..1 | tekst |
 | Constraint                | [`mim:constraint`](http://bp4mc2.org/def/mim#constraint) | 0..* | [`mim:Constraint`](http://bp4mc2.org/def/mim#Constraint) |
-| Eenheid                      | [`mim:eenheid`](http://bp4mc2.org/def/mim#eenheid) | 0..1 | [`owl:NamedIndividual`](http://www.w3.org/2002/07/) |
+| Eenheid                      | [`mim:eenheid`](http://bp4mc2.org/def/mim#eenheid) | 0..1 | [`si:MeasurementUnit`](https://si-digital-framework.org/SI#MeasurementUnit) |
 | Constraint                | [`mim:constraint`](http://bp4mc2.org/def/mim#constraint) | 0..* | [`mim:Constraint`](http://bp4mc2.org/def/mim#Constraint) |
 | Minimumwaarde inclusief      | [`mim:minimumwaardeInclusief`](http://bp4mc2.org/def/mim#minimumwaardeInclusief) | 0..1 | integer, decimal, float, real, dateTime, date |
 | Minimumwaarde exclusief      | [`mim:minimumwaardeExclusief`](http://bp4mc2.org/def/mim#minimumwaardeExclusief) | 0..1 | integer, decimal, float, real, dateTime, date |
