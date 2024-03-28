@@ -925,7 +925,7 @@ De tekst kan en mag een bepaalde opmaak bevatten, maar dit hoeft niet. Maar als 
 
  ### Identificatie - metagegevens
 
-Informatiemodellen staan vaak niet op zichzelf. Ze kunnen elementen bevatten die refereren aan externe standaarden, waarin deze elementen een eigen identificatie hebben. Ook moeten de gemodelleerde elementen herbruikbaar zijn in andere modellen. Daarom is het nodig om de modelelementen uniek te kunnen identificeren. Wanneer een MIM-model uitgedrukt wordt in een Linked Data-model is het zelfs noodzakelijk om de modelelementen identificeren met een [[URI]]. De metagegevens <code><a>Basis-URI</a></code>, <code><a>Identificatie</a></code> en <code><a>is gedefinieerd in</a></code> maken het mogelijk om de modelelementen in een Linked Data-model te identificeren.
+Informatiemodellen staan vaak niet op zichzelf. Ze kunnen elementen bevatten die refereren aan externe standaarden, waarin deze elementen een eigen identificatie hebben. Ook moeten de gemodelleerde elementen herbruikbaar zijn in andere modellen. Daarom is het nodig om de modelelementen uniek te kunnen identificeren. Wanneer een MIM-model uitgedrukt wordt in een Linked Data-model is het zelfs noodzakelijk om de modelelementen identificeren met een [[URI]]. De metagegevens <code><a>Basis-URI</a></code> en <code><a>Identificatie</a></code> maken het mogelijk om de modelelementen in een Linked Data-model te identificeren.
 
 #### Metagegeven: **Basis-URI**
 

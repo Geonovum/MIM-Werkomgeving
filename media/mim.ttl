@@ -278,15 +278,10 @@ mim:basisUri a owl:DatatypeProperty;
   rdfs:comment "De standaard basis-URI voor elk element in dit informatiemodel."@nl;
   dct:source mimdoc:metagegeven-basis-uri;
 .
-mim:modelelementidentificatie a owl:DatatypeProperty;
-  rdfs:label "Modelelementidentificatie"@nl;
+mim:identificatie a owl:DatatypeProperty;
+  rdfs:label "Identificatie"@nl;
   rdfs:comment "De identificatie van een modelelement."@nl;
-  dct:source mimdoc:metagegeven-modelelementidentificatie;
-.
-mim:isGedefinieerdIn a owl:DatatypeProperty;
-  rdfs:label "Modelelementidentificatie"@nl;
-  rdfs:comment "De package waarin het modelelement gedefinieerd is."@nl;
-  dct:source mimdoc:metagegeven-is-gedefinieerd-in;
+  dct:source mimdoc:metagegeven-identificatie;
 .
 mim:naam a owl:DatatypeProperty;
   rdfs:label "naam"@nl;

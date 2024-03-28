@@ -292,16 +292,10 @@ mimdoc:metagegeven-basis-uri a dct:BibliographicResource;
   foaf:page <https://docs.geostandaarden.nl/mim/mim/#metagegeven-basis-uri>;
   # dct:isPartOf TODO oppakken met https://github.com/Geonovum/MIM-Werkomgeving/issues/484
 .
-mimdoc:metagegeven-modelelementidentificatie a dct:BibliographicResource;
-  rdfs:label "Metagegeven: Modelelementidentificatie";
-  dct:bibliographicCitation "Metagegeven: Modelelementidentificatie" ;
-  foaf:page <https://docs.geostandaarden.nl/mim/mim/#metagegeven-modelelementidentificatie>;
-  # dct:isPartOf TODO oppakken met https://github.com/Geonovum/MIM-Werkomgeving/issues/484
-.
-mimdoc:metagegeven-is-gedefinieerd-in a dct:BibliographicResource;
-  rdfs:label "Metagegeven: is gedefinieerd in";
-  dct:bibliographicCitation "Metagegeven: is gedefinieerd in" ;
-  foaf:page <https://docs.geostandaarden.nl/mim/mim/#metagegeven-is-gedefinieerd-in>;
+mimdoc:metagegeven-identificatie a dct:BibliographicResource;
+  rdfs:label "Metagegeven: Identificatie";
+  dct:bibliographicCitation "Metagegeven: Identificatie" ;
+  foaf:page <https://docs.geostandaarden.nl/mim/mim/#metagegeven-identificatie>;
   # dct:isPartOf TODO oppakken met https://github.com/Geonovum/MIM-Werkomgeving/issues/484
 .
 

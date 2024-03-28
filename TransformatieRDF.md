@@ -70,9 +70,9 @@ Het MIM model kent geen volgorde. Ondanks dat in de weergave attribuutsoorten in
 
 Een belangrijk gegeven in Linked Data is het munten van URI's. Bij de vertaling van een MIM modelelement naar een overeenkomstige resource in Linked Data vocabulaires zullen ook nieuwe URI's gemunt moeten worden. Enerzijds omdat er (soms) sprake is van meer dan één resource voor één modelelement, maar ook omdat een Linked Data resource wel equivalent is met een MIM modelelement, maar niet exact gelijk: we willen niet dat de formele semantiek van de Linked Data vocabulaires vermengd wordt met de formele semantiek van het MIM metamodel.
 
-Daarnaast geldt dat het in Linked Data gebruikelijk is om URI's over te nemen van andere (externe) vocabulaires c.q. modellen. Ook het MIM ondersteund dit, in de vorm van de mim metamodelklassen `mim:Extern` en `mim:View`. Echter, anders dan bij UML, behoren de modelelementen uit deze externe modellen ook de URI's te krijgen die horen bij deze externe modellen. Ieder modelelement heeft dan ook een metagegeven `mim:modelelementidentificatie` waar de vocabulaire URI's op gebaseerd worden.
+Daarnaast geldt dat het in Linked Data gebruikelijk is om URI's over te nemen van andere (externe) vocabulaires c.q. modellen. Ook het MIM ondersteund dit, in de vorm van de mim metamodelklassen `mim:Extern` en `mim:View`. Echter, anders dan bij UML, behoren de modelelementen uit deze externe modellen ook de URI's te krijgen die horen bij deze externe modellen. Ieder modelelement heeft dan ook een metagegeven `mim:identificatie` waar de vocabulaire URI's op gebaseerd worden.
 
-Indien sprake is van een view package, dan wordt de `mim:basisUri` en/of de expliciet ingevulde `mim:modelelementidentificatie` van deze view package alleen gebruikt voor de vocabulaire URI's (voorkomens van `owl:Class`, `owl:DatatypeProperty` en `owl:ObjectProperty`). Voor de voorkomens van shapes (`sh:NodeShape` en `sh:PropertyShape`) wordt juist gebruik gemaakt van de `mim:basisUri` zoals deze bij de eigen informatiemodel is opgegeven. Rationale hierachter is dat bij view-packages de "view" lokaal gedefinieerd is, maar de elementen wel afkomstig zijn uit een externe vocabulaire.
+Indien sprake is van een view package, dan wordt de `mim:basisUri` en/of de expliciet ingevulde `mim:identificatie` van deze view package alleen gebruikt voor de vocabulaire URI's (voorkomens van `owl:Class`, `owl:DatatypeProperty` en `owl:ObjectProperty`). Voor de voorkomens van shapes (`sh:NodeShape` en `sh:PropertyShape`) wordt juist gebruik gemaakt van de `mim:basisUri` zoals deze bij de eigen informatiemodel is opgegeven. Rationale hierachter is dat bij view-packages de "view" lokaal gedefinieerd is, maar de elementen wel afkomstig zijn uit een externe vocabulaire.
 
 ## Overzicht
 
@@ -196,10 +196,10 @@ CONSTRUCT {
 }
 WHERE {
   ?objecttype a mim:Objecttype.
-  ?objecttype mim:modelelementidentificatie ?modelelementidentificatie.
+  ?objecttype mim:identificatie ?identificatie.
   ?objecttype mim:naam ?objecttypenaam.
 
-  BIND (IRI(STR(?modelelementidentificatie)) as ?class)
+  BIND (IRI(STR(?identificatie)) as ?class)
   BIND (t:nodeshapeuri(?objecttypenaam) as ?nodeshape)
 }
 </pre>
@@ -221,12 +221,12 @@ Mocht het veld `mim:begrip` niet gebruikt zijn, dan wordt gekeken naar het veld 
 </aside>
 
 <aside id='trans-5' class='note'>
-De identificatie van een attribuutsoort is afgeleid van de `mim:modelelementidentificatie` van het attribuutsoort. Voor de propertyshape geldt dat deze ook nog afhankelijk is van de naam van het objecttype waartoe de attribuutsoort behoord. Aangezien een attribuutsoort binnen zijn objecttype uniek behoord te zijn conform het MIM, zal hiermee ook een unieke identificatie worden verkregen. Voor de identificatie van de propertyshape geldt dat deze uniek moet zijn binnen de package als sprake is van hetzelfde begrip. Een dergelijke regel geldt ook voor andere modelelementen die binnen een objecttype vallen.
+De identificatie van een attribuutsoort is afgeleid van de `mim:identificatie` van het attribuutsoort. Voor de propertyshape geldt dat deze ook nog afhankelijk is van de naam van het objecttype waartoe de attribuutsoort behoord. Aangezien een attribuutsoort binnen zijn objecttype uniek behoord te zijn conform het MIM, zal hiermee ook een unieke identificatie worden verkregen. Voor de identificatie van de propertyshape geldt dat deze uniek moet zijn binnen de package als sprake is van hetzelfde begrip. Een dergelijke regel geldt ook voor andere modelelementen die binnen een objecttype vallen.
 </aside>
 
 Indien het datatype van een attribuutsoort gelijk is aan PrimitiefDatatype (of een daarvan afgeleid datatype), dan is sprake van een `owl:DatatypeProperty` en een `sh:nodeKind sh:Literal`. In alle andere gevallen is sprake van een `owl:Objecttype` en een `sh:nodeKind sh:IRI`. Zie ook de transformatie van de eigenschapen `mim:type`.
 
-De URI van de propertyshape wordt afgeleid van de naam van het modelelement dat de attribuutsoort "bezit" en de naam van de attribuutsoort. De URI van de `owl:DatatypeProperty` is gelijk aan de mim:modelelementidentificatie van de attribuutsoort.
+De URI van de propertyshape wordt afgeleid van de naam van het modelelement dat de attribuutsoort "bezit" en de naam van de attribuutsoort. De URI van de `owl:DatatypeProperty` is gelijk aan de mim:identificatie van de attribuutsoort.
 
 <pre class='ex-sparql'>
 CONSTRUCT {
@@ -239,11 +239,11 @@ CONSTRUCT {
 }
 WHERE {
   ?attribuutsoort a mim:Attribuutsoort.
-  ?attribuutsoort mim:modelelementidentificatie ?modelelementidentificatie.
+  ?attribuutsoort mim:identificatie ?identificatie.
   ?attribuutsoort mim:naam ?attribuutsoortnaam.
   ?bezitter mim:attribuut ?attribuutsoort.
   ?bezitter mim:naam ?bezittersnaam.
-  BIND (IRI(STR(?modelelementidentificatie)) as ?datatypeproperty)
+  BIND (IRI(STR(?identificatie)) as ?datatypeproperty)
   BIND (t:propertyshapeuri(?bezittersnaam,?attribuutsoortnaam) as ?propertyshape)
   {
     {
@@ -268,7 +268,7 @@ WHERE {
 
 Een `mim:Gegevensgroep` wordt vertaald naar een `sh:PropertyShape` in combinatie met een `owl:ObjectProperty`. De nodekind van de propertyshape is een `sh:BlankNode`. Gedachte hierachter is dat de gegevensgroep de verbinding is tussen een objecttype en een gegevensgroeptype. Een gegevensgroeptype is vervolgens een groep van samenhangende attribuutsoorten, wat overeen komt met een class en een nodeshape (zie ook gegevensgroeptype). Omdat een gegevensgroeptype geen eigen identiteit heeft, zal dit gemodelleerd worden als blank node.
 
-De URI van de propertyshape wordt afgeleid van de naam van het modelelement dat de gegevensgroep "bezit" en de naam van de gegevensgroep. De URI van de `owl:ObjectProperty` is gelijk aan de mim:modelelementidentificatie van de gegevensgroep.
+De URI van de propertyshape wordt afgeleid van de naam van het modelelement dat de gegevensgroep "bezit" en de naam van de gegevensgroep. De URI van de `owl:ObjectProperty` is gelijk aan de mim:identificatie van de gegevensgroep.
 
 <pre class='ex-sparql'>
 CONSTRUCT {
@@ -281,11 +281,11 @@ CONSTRUCT {
 }
 WHERE {
   ?gegevensgroep a mim:Gegevensgroep.
-  ?gegevensgroep mim:modelelementidentificatie ?modelelementidentificatie.
+  ?gegevensgroep mim:identificatie ?identificatie.
   ?gegevensgroep mim:naam ?gegevensgroepnaam.
   ?bezitter mim:gegevensgroep ?gegevensgroep.
   ?bezitter mim:naam ?bezittersnaam
-  BIND (IRI(STR(?modelelementidentificatie)) as ?objectproperty)
+  BIND (IRI(STR(?identificatie)) as ?objectproperty)
   BIND (t:propertyshapeuri(?bezittersnaam,?gegevensgroepnaam) as ?propertyshape)
 }
 </pre>
@@ -308,9 +308,9 @@ CONSTRUCT {
 }
 WHERE {
   ?gegevensgroeptype a mim:Gegevensgroeptype.
-  ?gegevensgroeptype mim:modelelementidentificatie ?modelelementidentificatie.
+  ?gegevensgroeptype mim:identificatie ?identificatie.
   ?gegevensgroeptype mim:naam ?gegevensgroeptypenaam.
-  BIND (IRI(STR(?modelelementidentificatie)) as ?class)
+  BIND (IRI(STR(?identificatie)) as ?class)
   BIND (t:nodeshapeuri(?gegevensgroeptypenaam) as ?nodeshape)
 }
 </pre>
@@ -335,7 +335,7 @@ In het MIM zijn er twee specificatievormen voor relaties: op basis van `mim:Rela
 
 Een `mim:Relatiesoort` wordt vertaald naar een `sh:PropertyShape` in combinatie met een `owl:ObjectProperty`. De nodekind van de propertyshape is een `sh:IRI`.
 
-De URI van de propertyshape wordt afgeleid van de naam van het modelelement dat de relatiesoort "bezit" en de naam van de relatiesoort. De URI van de `owl:ObjectProperty` is gelijk aan de mim:modelelementidentificatie van de relatiesoort.
+De URI van de propertyshape wordt afgeleid van de naam van het modelelement dat de relatiesoort "bezit" en de naam van de relatiesoort. De URI van de `owl:ObjectProperty` is gelijk aan de mim:identificatie van de relatiesoort.
 
 <pre class='ex-sparql'>
 CONSTRUCT {
@@ -348,11 +348,11 @@ CONSTRUCT {
 }
 WHERE {
   ?relatiesoort a mim:Relatiesoort.
-  ?relatiesoort mim:modelelementidentificatie ?modelelementidentificatie.
+  ?relatiesoort mim:identificatie ?identificatie.
   ?relatiesoort mim:naam ?relatiesoortnaam.
   ?bezitter mim:bron ?relatiesoort.
   ?bezitter mim:naam ?bezittersnaam.
-  BIND (IRI(STR(?modelelementidentificatie)) as ?objectproperty)
+  BIND (IRI(STR(?identificatie)) as ?objectproperty)
   BIND (t:propertyshapeuri(?bezittersnaam,?relatiesoortnaam) as ?propertyshape)
   FILTER NOT EXISTS {
     ?relatiesoort mim:relatierol ?rol
@@ -397,14 +397,14 @@ CONSTRUCT {
 }
 WHERE {
   ?relatieklasse a mim:Relatiesoort.
-  ?relatieklasse mim:modelelementidentificatie ?modelelementidentificatie.
+  ?relatieklasse mim:identificatie ?identificatie.
   ?relatieklasse mim:naam ?relatieklassenaam.
   ?relatieklasse mim:bron ?bezitter.
   ?bezitter mim:naam ?bezittersnaam.
   ?bezitter mim:seeAlso ?subject.
   ?relatieklasse mim:doel ?doelklasse.
   ?doelklasse mim:seeAlso ?object.
-  BIND (IRI(STR(?modelelementidentificatie)) as ?class)
+  BIND (IRI(STR(?identificatie)) as ?class)
   BIND (t:nodeshapeuri(?relatieklassenaam) as ?nodeshape)
   BIND (t:propertyshapeuri(?bezittersnaam,?relatieklassenaam) as ?propertyshape)
   BIND (t:topropertyuri(?class) as ?objectproperty)
@@ -427,7 +427,7 @@ In het MIM zijn er twee specificatievormen voor relaties: op basis van `mim:Rela
 
 Een `mim:Relatiesoort` wordt vertaald naar een `sh:PropertyShape` in combinatie met een `owl:ObjectProperty`. De nodekind van de propertyshape is een `sh:IRI`.
 
-De URI van de propertyshape wordt afgeleid van de naam van het modelelement dat de relatierol "bezit" en de naam van de relatierol. De URI van de `owl:ObjectProperty` is gelijk aan de mim:modelelementidentificatie van de relatiesoort. Aangezien er twee relatierollen gedefinieerd kunnen worden, kan ook sprake zijn van twee properties. In dat geval zijn deze twee properties elkaars inverse.
+De URI van de propertyshape wordt afgeleid van de naam van het modelelement dat de relatierol "bezit" en de naam van de relatierol. De URI van de `owl:ObjectProperty` is gelijk aan de mim:identificatie van de relatiesoort. Aangezien er twee relatierollen gedefinieerd kunnen worden, kan ook sprake zijn van twee properties. In dat geval zijn deze twee properties elkaars inverse.
 
 <pre class='ex-sparql'>
 CONSTRUCT {
@@ -440,12 +440,12 @@ CONSTRUCT {
 }
 WHERE {
   ?relatierol a ?type.
-  ?relatierol mim:modelelementidentificatie ?modelelementidentificatie.
+  ?relatierol mim:identificatie ?identificatie.
   ?relatierol mim:naam ?relatiesoortnaam.
   ?relatiesoort mim:relatierol ?relatierol.
   ?bezitter mim:bron ?relatiesoort.
   ?bezitter mim:naam ?bezittersnaam.
-  BIND (IRI(STR(?modelelementidentificatie)) as ?objectproperty)
+  BIND (IRI(STR(?identificatie)) as ?objectproperty)
   BIND (t:propertyshapeuri(?bezittersnaam,?relatiesoortnaam) as ?propertyshape)
   FILTER (?type = mim:RelatierolBron || ?type = mim:RelatierolDoel)
 }
@@ -493,9 +493,9 @@ CONSTRUCT {
 }
 WHERE {
   ?referentielijst a mim:Referentielijst.
-  ?referentielijst mim:modelelementidentificatie ?modelelementidentificatie.
+  ?referentielijst mim:identificatie ?identificatie.
   ?referentielijst mim:naam ?referentielijstnaam.
-  BIND (IRI(STR(?modelelementidentificatie)) as ?class)
+  BIND (IRI(STR(?identificatie)) as ?class)
   BIND (t:nodeshapeuri(?referentielijstnaam) as ?nodeshape)
 }
 </pre>
@@ -567,9 +567,9 @@ CONSTRUCT {
 }
 WHERE {
   ?enumeratie a mim:Enumeratie.
-  ?enumeratie mim:modelelementidentificatie ?modelelementidentificatie.
+  ?enumeratie mim:identificatie ?identificatie.
   ?objecttype mim:naam ?enumeratienaam.
-  BIND (IRI(STR(?modelelementidentificatie)) as ?class)
+  BIND (IRI(STR(?identificatie)) as ?class)
   BIND (t:nodeshapeuri(?enumeratienaam) as ?nodeshape)
   BIND (t:schemeuri(?enumeratienaam) as ?scheme)
 }
@@ -624,9 +624,9 @@ CONSTRUCT {
 }
 WHERE {
   ?codelijst a mim:Codelijst.
-  ?codelijst mim:modelelementidentificatie ?modelelementidentificatie.
+  ?codelijst mim:identificatie ?identificatie.
   ?codelijst mim:naam ?codelijstnaam.
-  BIND (IRI(STR(?modelelementidentificatie)) as ?class)
+  BIND (IRI(STR(?identificatie)) as ?class)
   BIND (t:nodeshapeuri(?codelijstnaam) as ?nodeshape)
 }
 </pre>
@@ -648,9 +648,9 @@ CONSTRUCT {
 }
 WHERE {
   ?primitiefdatatype a mim:PrimitiefDatatype.
-  ?primitiefdatatype mim:modelelementidentificatie ?modelelementidentificatie.
+  ?primitiefdatatype mim:identificatie ?identificatie.
   ?primitiefdatatype mim:naam ?primitiefdatatypenaam.
-  BIND (IRI(STR(?modelelementidentificatie)) as ?datatype)
+  BIND (IRI(STR(?identificatie)) as ?datatype)
   FILTER NOT EXISTS {
     ?generalisatie mim:subtype ?primitiefdatatype
   }
@@ -663,12 +663,12 @@ CONSTRUCT {
 }
 WHERE {
   ?primitiefdatatype a mim:PrimitiefDatatype.
-  ?primitiefdatatype mim:modelelementidentificatie ?modelelementidentificatie.
+  ?primitiefdatatype mim:identificatie ?identificatie.
   ?primitiefdatatype mim:naam ?primitiefdatatypenaam.
   ?generalisatie mim:subtype ?primitiefdatatype..
   ?generalisatie mim:supertype ?standaarddatatype.
   ?xsddatatype mim:equivalent ?standaarddatatype.
-  BIND (IRI(STR(?modelelementidentificatie)) as ?datatype)
+  BIND (IRI(STR(?identificatie)) as ?datatype)
 }
 </pre>
 
@@ -733,9 +733,9 @@ CONSTRUCT {
 }
 WHERE {
   ?gestructureerddatatype a mim:GestructureerdDatatype.
-  ?gestructureerddatatype mim:modelelementidentificatie ?modelelementidentificatie.
+  ?gestructureerddatatype mim:identificatie ?identificatie.
   ?gestructureerddatatype mim:naam ?gestructureerddatatypenaam.
-  BIND (IRI(STR(?modelelementidentificatie)) as ?nodeshape)
+  BIND (IRI(STR(?identificatie)) as ?nodeshape)
 }
 </pre>
 
@@ -888,7 +888,7 @@ De gedachte hierachter, is dat een externe package letterlijk is overgenomen van
 
 Een `mim:View` wordt omgezet naar een `owl:Ontology`. Daarbij geldt dat voor de locatie, de locatie wordt overgenomen uit de package van het type `mim:Informatiemodel`. Bovendien wordt een `owl:imports` relatie gelegd tussen de package van het type informatiemodel en deze view-package, EN er wordt een `owl:imports` gelegd van de view-package naar een externe locatie, op basis van de locatie bij deze view package.
 
-De gedachte hierachter, is dat een view package deels is overgenomen vanuit een extern model. Er zijn aanpassingen gedaan aan de structuur, maar niet aan de betekenis. Dit betekent dat er een "imports" relatie loopt van de domein-package naar de view-package, en vervolgens vanuit de view-package naar de externe package (die hier verder niet is opgenomen).
+De gedachte hierachter, is dat een view package deels is overgenomen vanuitm een extern model. Er zijn aanpassingen gedaan aan de structuur, maar niet aan de betekenis. Dit betekent dat er een "imports" relatie loopt van de domein-package naar de view-package, en vervolgens vanuit de view-package naar de externe package (die hier verder niet is opgenomen).
 
 Deze constructie heeft ook consequenties voor de URI's van de modelelementen in deze view package. URI's van shapes (Nodeshapes en Propertyshapes) krijgen als namespace de de basis-URI van het eigen informatiemodel (dit gaat immers om de structuur en is lokaal gedefinieerd in relatie tot de domein-package). URI's van classes en properties krijgen als namespace de basis-URI van het model waar de view van is gemaakt, waarbij -net als bij `mim:Extern`- dit de namespace zal zijn van het externe model.
 
@@ -1664,91 +1664,61 @@ WHERE {
   ?attribuutsoort mim:indicatieClassificerend true .
   ?attribuutsoort mim:type ?enumeratie.
   ?enumeratie mim:waarde ?enumeratiewaarde.
-  ?enumeratiewaarde mim:modelelementidentificatie ?modelelementidentificatie.
-  BIND (IRI(STR(?modelelementidentificatie)) as ?class)
+  ?enumeratiewaarde mim:identificatie ?identificatie.
+  BIND (IRI(STR(?identificatie)) as ?class)
 }
 </pre>
 
 ### transformatie: bevat modelelement
 
-Een `mim:bevatModelelement` wordt vertaald naar een `mim:bevatModelelement`. In geval er sprake is van een owl:Ontology, dan wordt vertaald naar `owl:imports`.
+Een `mim:bevatModelelement` wordt vertaald naar een `rdfs:isDefinedBy`voor zover modelelementen vertaald worden naar een `owl:Class`, `owl:DatatypeProperty` of `owl:ObjectProperty`. Merk op dat de vertaling in de omgekeerde richting is. Als bijvoorbeeld een Domein X modelelement Objecttype Y bevat, dan zal de relatie `rdfs:isDefinedBy` gaan lopen vanaf de klasse Y naar de Ontology X. In geval er sprake is van een `owl:Ontology`, dan wordt vertaald naar `owl:imports`.
 
 In MIM is het niet nodig om voor alle modelelementen rechtstreeks aan te geven welke package dit modelelement bezit: het is ook mogelijk dat dit via andere modelelementen loopt. Als een rechtstreekse relatie niet aanwezig is, dan wordt deze afgeleide relatie gebruikt.
-<pre class='ex-sparql'>
-CONSTRUCT {
-  ?ontology mim:bevatModelelement ?ontologyelement .
-}
-WHERE {
-  ?package mim:bevatModelelement ?modelelement.
-  ?package mim:equivalent ?ontology.
-  ?modelelement mim:equivalent ?ontologyelement.
-  ?ontologyelement a ?type .
-  FILTER (?type != owl:Ontology)
-}
-CONSTRUCT {
-  ?ontology owl:imports ?importontology
-}
-WHERE {
-  ?package mim:bevatModelelement ?subpackage.
-  ?package mim:equivalent ?ontology.
-  ?subpackage mim:equivalent ?importedontology.
-  ?importedontology a owl:Ontology.
-}
-</pre>
-
-### transformatie: is gedefinieerd in
-
-Een `mim:isGedefinieerdIn` wordt vertaald naar een `rdfs:isDefinedBy` voor zover modelelementen vertaald worden naar een owl:Class, owl:DatatypeProperty of owl:ObjectProperty.
-
-In MIM is het niet nodig om voor alle modelelementen rechtstreeks aan te geven welke package het modelelement definieert: meestal is dit namelijk de package die het modelelement bevat. Als een rechtstreekse relatie niet aanwezig is, dan wordt mim:bevatModelelement gebruikt. Merk op dat deze vertaling in de omgekeerde richting is. Als bijvoorbeeld een Domein X modelelement Objecttype Y bevat, dan zal de relatie rdfs:isDefinedBy gaan lopen vanaf de klasse Y naar de Ontology X.
-
 <pre class='ex-sparql'>
 CONSTRUCT {
   ?class rdfs:isDefinedBy ?ontology
 }
 WHERE {
-  ?package mim:bevatModelelement ?modelelement.
-  ?package mim:equivalent ?packageontology.
-  ?modelelement mim:equivalent ?class.
+  ?package mim:bevatModelement ?modelelement.
+  ?package mim:equivalent ?ontology.
+  ?modelelement mim:equivalant ?class.
   ?class a owl:Class.
-
-  OPTIONAL { ?modelelement mim:isGedefinieerdIn ?setOntology }
-  BIND(coalesce(?setOntology, ?packageontology) as ?ontology
 }
-
 CONSTRUCT {
   ?property rdfs:isDefinedBy ?ontology
 }
 WHERE {
-  ?package mim:bevatModelelement ?eigenaar.
+  ?package mim:bevatModelement ?eigenaar.
   ?eigenaar ?eigenaarrelatie ?modelelement
-  ?package mim:equivalent ?packageontology.
-  ?modelelement mim:equivalent ?property.
+  ?package mim:equivalent ?ontology.
+  ?modelelement mim:equivalant ?property.
   FILTER NOT EXISTS {?package mim:bevatModelelement ?modelelement}
   FILTER (?eigenaarrelatie=mim:attribuut
        || ?eigenaarrelatie=mim:dataElement
        || ?eigenaarrelatie=mim:waarde
        || ?eigenaarrelatie=mim:referentieElement
        || ?eigenaarrelatie=mim:constraint)
-
-  OPTIONAL { ?modelelement mim:isGedefinieerdIn ?setOntology }
-  BIND(coalesce(?setOntology, ?packageontology) as ?ontology
 }
-
 CONSTRUCT {
   ?property rdfs:isDefinedBy ?ontology
 }
 WHERE {
-  ?package mim:bevatModelelement ?eigenaar.
+  ?package mim:bevatModelement ?eigenaar.
   ?modelelement ?eigenaarrelatie ?eigenaar
-  ?package mim:equivalent ?packageontology.
-  ?modelelement mim:equivalent ?property.
+  ?package mim:equivalent ?ontology.
+  ?modelelement mim:equivalant ?eigenschap.
   FILTER NOT EXISTS {?package mim:bevatModelelement ?modelelement}
   FILTER (?eigenaarrelatie=mim:bron
        || ?eigenaarrelatie=mim:subtype)
-
-  OPTIONAL { ?modelelement mim:isGedefinieerdIn ?setOntology }
-  BIND(coalesce(?setOntology, ?packageontology) as ?ontology
+}
+CONSTRUCT {
+  ?ontology owl:imports ?importontology
+}
+WHERE {
+  ?package mim:bevatModelement ?subpackage.
+  ?package mim:equivalent ?ontology.
+  ?subpackage mim:equivalent ?importedontology.
+  ?importedontology a owl:Ontology.
 }
 </pre>
 
@@ -1882,7 +1852,7 @@ Aspecten:
 
 |RDFS term | MIM-aspect | Uitleg |
 |----------|-------------|--------|
-| IRI | mim:modelelementidentificatie | De identificatie (URI) van het modelelement wordt in mim vastgelegd als eigenschap |
+| IRI | mim:identificatie | De identificatie (URI) van het modelelement wordt in mim vastgelegd als eigenschap |
 | rdfs:label, sh:name | mim:naam | Het rdfs:label (of sh:name als een meer technische naam gewenst is) van een nodeshape of class betreft de naam |
 | skos:altLabel, skos:prefLabel, rdfs:label, sh:name | mim:alias | skos:altLabel is letterlijk een alias, sh:name is ook een alias en wordt met name gebruikt voor meer technische namen, terwijl skos:prefLabel of skos:altLabel vaak een meer functionele naam bevat|
 | dct:subject | mim:begrip | dct:subject geeft dezelfde relatie weer als mim:begrip |
@@ -1893,7 +1863,6 @@ Aspecten:
 | sh:minLength en sh:maxLength | mim:lengte | De lengte wordt bepaald door sh:minLength en sh:maxLength |
 | sh:pattern | mim:formeelPatroon | Identieke betekenis |
 | sh:class | mim:doel | Indien een propertyshape een relatiesoort voorstelt, dan geeft sh:class het doel van de relatiesoort weer |
-| rdfs:isDefinedBy | mim:isGedefinieerdIn | rdfs:isDefinedBy geeft dezelfde relatie weer als mim:isGedefinieerdIn |
 
 Er zijn ook MIM aspecten die niet een overeenkomstige tegenhanger kennen in RDFS/OWL/SHACL. Indien een modelleur deze aspecten wel wil beschrijven in het originele RDFS/OWL/SHACL model, dan kan de modelleur deze direct toepassen. Het gaat daarbij om de volgende aspecten:
 
@@ -1905,7 +1874,7 @@ Er zijn ook MIM aspecten die niet een overeenkomstige tegenhanger kennen in RDFS
 | mim:herkomstDefinitie | Het wordt afgeraden om dit element te gebruiken, en dergelijke toelichtingen op te nemen bij het begrip zelf |
 | mim:datumOpname | Indien de ontologie onder versiebeheer staat, dan kan dit aspect afgeleid worden uit het versiesysteem |
 | mim:authentiek | Specifiek MIM aspect, belangrijk voor stelselcatalogus |
-| mim:identificatieAfleidbaar | |
+| mim:indicatieAfleidbaar | |
 | mim:kardinaliteitRelatieBron | Dit betreft de kardinaliteit van de inverse relatie die in het geval van het gebruik van dit aspect niet aanwezig is|
 | mim:locatie | Dis aspect is alleen van toepassing op waardelijsten en wordt direct, zonder aanpassing, overgenomen in het vertaalde model. |
 | mim:patroon | Dit betreft een tekstuele variant van sh:pattern / mim:formeelPatroon |

@@ -794,7 +794,7 @@ Een Keuze worden naar de volgende aspecten gespecificeerd:
 
 | **Aspect**                  | **Kardinaliteit** | **Toelichting**                | **In UML 2.5**                        |    | **In EA**      | **In ...** |
 | -------------------------------- | -------- | ---------------------------------------- | ------------------------------------- | -- | -------------- | -------- |
-| **Modelelementidentificatie** | 1 | Identificerend metagegeven. | | | *Tagged value* | |
+| **Identificatie** | 1 | Identificerend metagegeven. | | | *Tagged value* | |
 | **Naam**         | 1             | Algemeen metagegeven. *De naam van het domein package.* | *name van de metaclass Namedelement* |      | *Name*    |            |
 | **Alias**        | 0..1          | Algemeen metagegeven.    | *UML-Property* |      | *Alias*        |            |
 | **Herkomst**     | 0..1          | Algemeen metagegeven.    |                |      | *tagged value* |            |
