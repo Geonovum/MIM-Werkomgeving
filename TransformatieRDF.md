@@ -140,7 +140,7 @@ Onderstaande tabellen geven een overzicht van alle transformaties en een referen
 |`mim:uniekeAanduiding`|`mim:uniekeAanduiding`|[unieke aanduiding](#transformatie-unieke-aanduiding)
 |`mim:populatie`|`mim:populatie`|[populatie](#transformatie-populatie)|
 |`mim:kwaliteit`|`mim:kwaliteit`|[kwaliteit](#transformatie-kwaliteit)|
-|`mim:indicatieAbstractObject`|`sh:propertyShape` en `mim:indicatieAbstractObject`|[indicatie abstract object](#transformatie-indicatie-abstract-object)|
+|`mim:indicatieAbstractObject`|`mim:indicatieAbstractObject`|[indicatie abstract object](#transformatie-indicatie-abstract-object)|
 |`mim:identificerend`|`mim:identificerend`|[identificerend](#transformatie-identificerend)|
 |`mim:gegevensgroeptype`|`sh:node`|[gegevensgroeptype](#transformatie-gegevensgroeptype-eigenschap)|
 |`mim:unidirectioneel`|(bij false) `owl:inverseOf`|[unidirectioneel](#transformatie-unidirectioneel)|
