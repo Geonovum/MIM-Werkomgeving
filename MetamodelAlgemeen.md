@@ -268,7 +268,7 @@ Om duidelijk(er) te maken wat wordt bedoeld kijken we eerst naar het begrip ‘o
 #### Object
 
 <aside class="definition">
-  <dfn data-lt="objecten">Object</dfn>Een object is een identificeerbaar iets in het beschouwde domein.
+  <dfn data-lt="objecten">Object</dfn>Een object is een onderscheidbaar iets in het beschouwde domein.
 </aside>
 
 <aside class="note" title="Object vs. Objecttype">
