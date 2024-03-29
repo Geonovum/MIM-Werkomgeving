@@ -43,7 +43,7 @@ De klasse modelelement is de superklasse van alle metaklassen in het MIM-metamod
   <dfn>Modelelement</dfn>Elk element uit een model met een op zichzelf staande identiteit, inclusief het model zelf.
 </aside>
 
-**Toelichting**: De identiteit van een modelelement wordt bepaald door zijn identificatie. Modelelement heeft een algemene definitie die zowel op metamodel- als op modelniveau geldt. Voor een metamodel beschrijft een modelelement een klasse van modelelementen, een metaklasse. Alle metaklassen in het MIM zijn modelelementen zoals bijvoorbeeld `«MIM metaclass»`: <a>Objecttype</a>, `«MIM metaclass»`: <a>Attribuutsoort</a>, `«MIM metaclass»`: <a>Generalisatie</a>.
+**Toelichting**: De identiteit van een modelelement wordt bepaald door zijn identificatie. Modelelement heeft een algemene definitie die zowel op metamodel- als op modelniveau geldt. Voor een metamodel beschrijft een modelelement een klasse van modelelementen, een metaklasse. Alle metaklassen in het MIM zijn modelelementen zoals bijvoorbeeld `«MIM metaclass»`: <a>Objecttype</a>, `«MIM metaclass»`: <a>Attribuutsoort</a>, `«MIM metaclass»`: <a>Generalisatie</a>. De metagegevens van de metaklassen worden niet gezien als modelelementen.
 
 ### Kern
 
