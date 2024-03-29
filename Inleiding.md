@@ -211,7 +211,7 @@ ware de grammatica van de modelleertaal. Het metamodel in dit document is
 uitgewerkt voor modellering met UML en voor modellering met linked data.
 
 ## Uitdrukken in UML
-Zowel het metamodel als informatiemodellen kan worden uitgedrukt in UML.
+Zowel het metamodel als informatiemodellen kunnen worden uitgedrukt in UML.
 Registraties en afnemers hiervan kunnen deze gebruiken voor de inrichting van
 hun situatiespecifieke gegevenshuishouding. Belangrijk is dat de lezer eerst
 begrijpt wat we onder een informatiemodel en een metamodel verstaan en verder is
@@ -220,27 +220,12 @@ aan de hand van de vier lagen metamodel architectuur van de Object Management
 Group [[OMG]]. In deze paragaaf gaan we op deze concepten in.
 
 **Vier lagen metamodel architectuur OMG**  
-Voor de specificatie van het metamodel is gebruik gemaakt van dezelfde formele
-taal waarin de informatiemodellen zijn beschreven, namelijk UML. Het metamodel
+Voor de specificatie van het MIM is gebruik gemaakt van dezelfde formele
+taal als waarin informatiemodellen zijn beschreven, namelijk UML. Het metamodel
 van deze informatiemodellen is een uitbreiding op het basale UML-metamodel.
 
 Het basale UML-metamodel is een metamodel dat onderdeel uitmaakt van de vier
-lagen metamodel architectuur van OMG namelijk M0, M1, M2 en M3. Daarbij is elke
-laag een instantie van de laag daarboven (met uitzondering van de 1e laag) en
-maakt de laag gebruik van een in de naast hoger gelegen laag gespecificeerde
-uitdrukkingsmogelijkheden teneinde een specificatie in een andere context te
-vormen. De toplaag is de metamodellaag oftewel M3 laag en definieert de
-basisconstructies, m.a.w. de taal waarin de onderliggende laag is uitgedrukt.
-Metamodel Meta Object Facility (MOF) is een voorbeeld van deze laag. MOF is de
-basislaag voor de UML laag. De metamodel laag (M2) is een instantie van de M3
-laag. Op deze laag bevindt zich onder meer het metamodel UML. M.a.w. UML is een
-instantie van MOF. Deze laag is taaltechnisch rijker dan de M3 laag. De M2 laag
-definieert de semantiek en syntax van de modelconstructies in de M1 laag. De M1
-laag is de laag waarop zich het informatiemodel bevindt om een bedrijfscontext
-modelmatig te beschrijven. Deze M1 laag is een instantie van de M2 laag.
-Tenslotte is er nog de M0 laag waarop zich de objecten en data bevinden, de
-instanties van de M1 modelconstructies die een representatie van de concrete
-werkelijkheid op een specifiek tijdsmoment vormen.
+lagen metamodel architectuur van OMG namelijk M0, M1, M2 en M3.
 
 | **Metaniveau** | **Omschrijving**                                                             | **Elementen**                                                 |
 |----------------|------------------------------------------------------------------------------|---------------------------------------------------------------|
@@ -251,10 +236,23 @@ werkelijkheid op een specifiek tijdsmoment vormen.
 
 *Tabel 1 Vier lagen metamodel OMG*
 
-De informatiemodellen waarover we het hier in dit document hebben bevinden zich op de M1-laag. Dit metamodel is een UML profiel op basis van het UML metamodel (M2). Het UML metamodel is daarbij uitgebreid met speciale elementen, die geen onderdeel uitmaken van het basale UML-metamodel (M2). Deze nieuwe elementen zijn noodzakelijk voor het definiëren van de semantiek en syntax van de modelconstructies zoals we die in onze informatiemodellen hanteren. 
+Elke
+laag is een instantie van de laag daarboven (met uitzondering van de M3 laag) en maakt gebruik van in de naast hoger gelegen laag gespecificeerde
+uitdrukkingsmogelijkheden teneinde een specificatie in een andere laag te
+vormen. De M3 laag definieert de
+basisconstructies, de taal waarin de onderliggende laag is uitgedrukt.
+Metamodel Meta Object Facility (MOF) is een voorbeeld van een M3 laag. MOF is de
+basislaag voor de UML laag. De metamodel laag (M2) is een instantie van de M3
+laag. Op deze laag bevindt zich onder meer het metamodel UML. M.a.w. UML is een
+instantie van MOF. Deze laag is taaltechnisch rijker dan de M3 laag. De M2 laag
+definieert de semantiek en syntax van de modelconstructies in de M1 laag. De M1
+laag is de laag waarop zich het informatiemodel bevindt om een bedrijfscontext
+modelmatig te beschrijven. Deze M1 laag is een instantie van de M2 laag.
+Tenslotte is er nog de M0 laag waarop zich de objecten en data bevinden, de
+instanties van de M1 modelconstructies die een representatie van de concrete
+werkelijkheid op een specifiek tijdsmoment vormen.
 
-Zo is bijvoorbeeld de ene class de andere class niet. Bijvoorbeeld als een Persoon het onderwerp van gesprek is waarover we een aantal eigenschappen willen bijhouden dan modelleer je de Persoon als een class met als duiding dat dit een objecttype is, en bijvoorbeeld een  groepering van eigenschappen zoals geboortedatum en een geboorteplaats als een Class genaamd geboortegegevens met als duiding dat dit geen objecttype is. In veel specificatietalen, 
-met name de generiekere en de technische, gaat dit onderscheid verloren.
+ Het MIM in UML is een UML profiel op basis van het UML metamodel en bevindt zich op de M2-laag. Het UML metamodel is daarbij uitgebreid met speciale elementen, die geen onderdeel uitmaken van het basale UML-metamodel (M2). Deze nieuwe elementen zijn noodzakelijk voor het definiëren van de semantiek en syntax van de modelconstructies zoals we die in onze informatiemodellen hanteren. De informatiemodellen waarover we het hier in dit document hebben bevinden zich op de M1-laag, het maakt daarbij niet uit of het een conceptueel- of logischmodel betreft.
 
 Het UML metamodel (M2) is een ‘read only’ model. Dat wil zeggen dat we geen
 bestaande metaclass mogen aanpassen en we dus geen nieuw basis metaclass voor
@@ -268,13 +266,13 @@ Nadrukkelijk moet daarbij worden vermeld dat het MIM metamodel **geen** semantie
 Met het uitdrukken van het MIM metamodel in een UML profiel wordt het alleen mogelijk
 gemaakt om, zonder verlies van de originele semantiek van het MIM, een MIM model uit
 te drukken in UML. Met dit gebruik van een UML profiel volgen wij het gebruik van een UML profiel
-zoals de OMG zelf heeft op gesteld voor het Ontology Definition Metamodel [[ODM]]:
+zoals de OMG heeft op gesteld voor het Ontology Definition Metamodel [[ODM]]:
 
 > *The goal of a UML profile from the ODM perspective is to provide a bridge between the UML and knowledge representation communities on a well-grounded, semantic basis, with a broader goal of relating software and logical approaches to representing information. Profiles facilitate implementation using common notation on existing UML tools. They support renaming and specializing UML model elements in consistent ways, so that an instance of a UML model can be seen as an extended metamodel. Profiles allow a developer to leverage UML experience and tools while moving to integrating with an ontology represented in another metamodel.*" (sectie 8.4.2).
 
 ## Uitdrukken in Linked Data
 
-Zowel het metamodel als informatiemodellen kan worden uitgedrukt in Linked Data.
+Zowel het metamodel als informatiemodellen kunnen worden uitgedrukt in Linked Data.
 Registraties en afnemers hiervan kunnen deze gebruiken voor de inrichting van
 hun situatie specifieke gegevenshuishouding. Belangrijk is dat de lezer eerst
 begrijpt wat we onder een informatiemodel en een metamodel verstaan en verder is
