@@ -631,7 +631,6 @@ Voor codelijst worden de volgende aspecten gespecificeerd:
 | **Datum opname** | 1                  | Algemeen metagegeven.    |                |      | *tagged value* |            |
 | **Locatie**      | 1..1               | Algemeen metagegeven.    |                |      | *tagged value* |            |
 | **Doelformaat**  | 1..1               | Algemeen metagegeven.    |                |      | *tagged value* |            |
-| **Datatype**     | 1..1               | Algemeen metagegeven.    |                |      | *tagged value* |            |
 | **Waarde-item**  | 0..1               | Algemeen metagegeven.    |                |      | *tagged value* |            |
 | **Profielspecificatie**      | 0..1               | Algemeen metagegeven.    |                |      | *tagged value* |            |
 | heeft **Constraint** | 0..* | Binding aan een constraint. |   | | *Constraint* | | 
@@ -922,6 +921,7 @@ aspecten gespecificeerd:
 | **Naam√**                                       | 1                 | Algemeen metagegeven.                                                             | *name van de metaclass Named element* |    | *Name*                       |             |
 | **Specificatie tekst**                          | 0..1              | De specificatie van de Constraint in normale tekst.                               |                                       |    | *Notes (type = invariant)*   |             |
 | **Specificatie formeel**                        | 0..1              | De beschrijving van de Constraint in een formele specificatietaal, in OCL.        |                                       |    | *Notes (type =OCL)*          |             |
+| **Datum opname** | 1             | Algemeen metagegeven.    |                |      | *tagged value* |            |
 | van toepassing op **Objecttype**                | 0..1              | Binding aan een Objecttype                                                     |                                       |    |                              |             |
 | van toepassing op **Attribuutsoort**            | 0..1              | Binding aan een Attribuutsoort                                                 |                                       |    |                              |             |
 | van toepassing op **Gegevensgroep**             | 0..1              | Binding aan een Gegevensgroep                                                  |                                       |    |                              |             |
