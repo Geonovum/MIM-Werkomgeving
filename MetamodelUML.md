@@ -53,6 +53,7 @@ Bijna alle modelelementen hebben een UML-metaclass (UML 2.5) als basis. In de na
   <figcaption>Diagram: Kern zonder metagegevens</figcaption>
 </figure>
 
+In de [bijlage](#KernMetMetagegevens_Alt2.png) is het UML diagram met de metagegevens opgenomen.
 
 Kern zonder Metagegevens
 
@@ -78,6 +79,7 @@ Kern zonder Metagegevens
   <figcaption>Diagram: Datatypen zonder metagegevens</figcaption>
 </figure>
 
+In de [bijlage](#DatatypenMetMetagegevens.png) is het UML diagram met de metagegevens opgenomen.
 
 Datatypen zonder Metagegevens
 
@@ -251,6 +253,9 @@ _Externe koppeling_
   <img src="media/PackagesZonderMetagegevens.png" alt="" />
   <figcaption>Diagram: Packages zonder metagegevens</figcaption>
 </figure>
+
+In de [bijlage](#PackagesMetMetagegevens.png) is het UML diagram met de metagegevens opgenomen.
+
 
 _Packages_
 
