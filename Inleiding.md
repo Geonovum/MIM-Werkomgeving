@@ -198,7 +198,7 @@ Een metamodel en dus ook het MIM is daarmee de modelleertaal waarin een informat
 Deze metataal beschrijft als het ware de grammatica en de syntax van de modelleertaal.
 
 Vaak zie je dat het metamodel niet expliciet beschreven is en dat het metamodel
-een onderdeel van de domeinkennis is geworden. De syntax en de gramatica zit dan alleen in de hoofden van mensen en wordt impliciet toegepast in infromatiemodellen. Bij domein overstijgende
+een onderdeel van de domeinkennis is geworden. De syntax en de gramatica zit dan alleen in de hoofden van mensen en wordt impliciet toegepast in informatiemodellen. Bij domein overstijgende
 harmonisatie wordt het dan moeilijk om modellen met elkaar te vergelijken en op
 basis daarvan gegevens uit te wisselen. Beschrijving van het metamodel is daarom
 een randvoorwaarde indien er sprake is van een stelsel van samenhangende
