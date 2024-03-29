@@ -631,7 +631,6 @@ Voor codelijst worden de volgende aspecten gespecificeerd:
 | **Datum opname** | 1                  | Algemeen metagegeven.    |                |      | *tagged value* |            |
 | **Locatie**      | 1..1               | Algemeen metagegeven.    |                |      | *tagged value* |            |
 | **Doelformaat**  | 1..1               | Algemeen metagegeven.    |                |      | *tagged value* |            |
-| **Datatype**     | 1..1               | Algemeen metagegeven.    |                |      | *tagged value* |            |
 | **Waarde-item**  | 0..1               | Algemeen metagegeven.    |                |      | *tagged value* |            |
 | **Profielspecificatie**      | 0..1               | Algemeen metagegeven.    |                |      | *tagged value* |            |
 | heeft **Constraint** | 0..* | Binding aan een constraint. |   | | *Constraint* | | 
