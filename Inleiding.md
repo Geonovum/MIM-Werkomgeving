@@ -193,27 +193,27 @@ informatiemodel als basis te nemen en enkel uit te breiden met logische aspecten
 Een metamodel is een model van een model. Het definieert een verzameling van
 modelleerconstructies in de vorm van bouwstenen, oftewel modelelementen zoals een objecttype, 
 relatiesoort en attribuutsoort, met bijbehorende betekenis en met bijbehorende afspraken 
-omtrent hoe deze toe te passen. Een informatiemodel kan vervolgens hiermee gemaakt worden. 
-Het metamodel is daarmee de modelleertaal waarin een informatiemodel is uitgedrukt. 
+omtrent hoe deze toe te passen. Hiermee kan vervolgens een informatiemodel gemaakt worden. 
+Een metamodel en dus ook het MIM is daarmee de modelleertaal waarin een informatiemodel is uitgedrukt. 
 Deze metataal beschrijft als het ware de grammatica en de syntax van de modelleertaal.
 
 Vaak zie je dat het metamodel niet expliciet beschreven is en dat het metamodel
-een onderdeel van de domeinkennis is geworden. Bij domein overstijgende
+een onderdeel van de domeinkennis is geworden. De syntax en de gramatica zit dan alleen in de hoofden van mensen en wordt impliciet toegepast in infromatiemodellen. Bij domein overstijgende
 harmonisatie wordt het dan moeilijk om modellen met elkaar te vergelijken en op
 basis daarvan gegevens uit te wisselen. Beschrijving van het metamodel is daarom
 een randvoorwaarde indien er sprake is van een stelsel van samenhangende
 informatiemodellen. Anders gezegd, met (alleen) de in het metamodel opgenomen
 set van modelleerconstructies worden informatiemodellen gemaakt. Door het
-schrijven van modelleertalen (zoals [[UML]]) in een metataal (zoals MOF) wordt
+beschrijven van modelleertalen (zoals [[UML]]) in een metataal (zoals MOF) wordt
 gegarandeerd dat alle toepassingen van die talen op een standaard manier zijn
-opgebouwd en daardoor alom te begrijpen zijn. De metataal beschrijft als het
-ware de grammatica van de modelleertaal. Het metamodel in dit document is
+opgebouwd en daardoor alom toe te passen en te begrijpen zijn. De metataal beschrijft als het
+ware de grammatica van de modelleertaal. Het metamodel in dit document, het MIM, is
 uitgewerkt voor modellering met UML en voor modellering met linked data.
 
 ## Uitdrukken in UML
 Zowel het metamodel als informatiemodellen kunnen worden uitgedrukt in UML.
 Registraties en afnemers hiervan kunnen deze gebruiken voor de inrichting van
-hun situatiespecifieke gegevenshuishouding. Belangrijk is dat de lezer eerst
+hun situatie specifieke gegevenshuishouding. Belangrijk is dat de lezer eerst
 begrijpt wat we onder een informatiemodel en een metamodel verstaan en verder is
 het van belang om de modellen in de juiste context te plaatsen. Dit laatste doen we
 aan de hand van de vier lagen metamodel architectuur van de Object Management
