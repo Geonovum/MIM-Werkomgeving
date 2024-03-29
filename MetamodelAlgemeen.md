@@ -925,7 +925,7 @@ De tekst kan en mag een bepaalde opmaak bevatten, maar dit hoeft niet. Maar als 
 
  ### Modelelementidentificatie - metagegevens
 
-Informatiemodellen staan vaak niet op zichzelf. Ze kunnen elementen bevatten die refereren aan externe standaarden, waarin deze elementen een eigen identificatie hebben. Ook moeten de gemodelleerde elementen herbruikbaar zijn in andere modellen. Daarom is het nodig om de modelelementen uniek te kunnen identificeren. Wanneer een MIM-model uitgedrukt wordt in een Linked Data-model is het zelfs noodzakelijk om de modelelementen identificeren met een [[URI]]. De metagegevens <code><a>Basis-URI</a></code>, <code><a>Modelelementidentificatie</a></code> en <code><a>is gedefinieerd in</a></code> maken het mogelijk om de modelelementen in een Linked Data-model te identificeren.
+Informatiemodellen staan vaak niet op zichzelf. Ze kunnen elementen bevatten die refereren aan externe standaarden, waarin deze elementen een eigen identificatie hebben. Ook moeten de gemodelleerde elementen herbruikbaar zijn in andere modellen. Daarom is het nodig om de modelelementen uniek te kunnen identificeren. Wanneer een MIM-model uitgedrukt wordt in een Linked Data-model is het zelfs noodzakelijk om de modelelementen identificeren met een [[URI]]. De metagegevens <code><a>Basis-URI</a></code>, en <code><a>Modelelementidentificatie</a></code> maken het mogelijk om de modelelementen in een Linked Data-model te identificeren.
 
 
 
@@ -961,15 +961,6 @@ In sommige gevallen kan de `modelelementidentificatie` van een modelelement niet
 
 *Toepassing*:  alle modelelementen
 
-#### Metagegeven: **is gedefinieerd in**
-
-<aside class="definition">
-  <dfn>is gedefinieerd in</dfn>De package waarin het modelelement gedefinieerd is.
-</aside>
-
-*Toelichting* De definiërende _package_ is meestal de _package_ die het modelelement bevat. De waarde voor dit metagegeven kan, wanneer dit het geval is, afgeleid worden. In afwijkende situaties moet de `URI` van de betreffende _package_ ingevuld worden. Een _package_ van het type <code><a>View</a></code> definieert nooit de modelelementen die het bevat, dit is altijd een ander _package_ van het type <code><a>Domein</a></code>. Het verschil met het metagegeven <code><a>Herkomst</a></code> is dat `Is gedefinieerd in` een directe verwijzing is naar een informatiemodel of een _package_ daarbinnen door middel van een `URI`. 
-
-*Toepassing*: alle modelelementen
 
 <!--Einde "Specificatie metagegevens informatiemodel" -->
 
