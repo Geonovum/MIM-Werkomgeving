@@ -888,7 +888,7 @@ De gedachte hierachter, is dat een externe package letterlijk is overgenomen van
 
 Een `mim:View` wordt omgezet naar een `owl:Ontology`. Daarbij geldt dat voor de locatie, de locatie wordt overgenomen uit de package van het type `mim:Informatiemodel`. Bovendien wordt een `owl:imports` relatie gelegd tussen de package van het type informatiemodel en deze view-package, EN er wordt een `owl:imports` gelegd van de view-package naar een externe locatie, op basis van de locatie bij deze view package.
 
-De gedachte hierachter, is dat een view package deels is overgenomen vanuitm een extern model. Er zijn aanpassingen gedaan aan de structuur, maar niet aan de betekenis. Dit betekent dat er een "imports" relatie loopt van de domein-package naar de view-package, en vervolgens vanuit de view-package naar de externe package (die hier verder niet is opgenomen).
+De gedachte hierachter, is dat een view package deels is overgenomen vanuit een extern model. Er zijn aanpassingen gedaan aan de structuur, maar niet aan de betekenis. Dit betekent dat er een "imports" relatie loopt van de domein-package naar de view-package, en vervolgens vanuit de view-package naar de externe package (die hier verder niet is opgenomen).
 
 Deze constructie heeft ook consequenties voor de URI's van de modelelementen in deze view package. URI's van shapes (Nodeshapes en Propertyshapes) krijgen als namespace de de basis-URI van het eigen informatiemodel (dit gaat immers om de structuur en is lokaal gedefinieerd in relatie tot de domein-package). URI's van classes en properties krijgen als namespace de basis-URI van het model waar de view van is gemaakt, waarbij -net als bij `mim:Extern`- dit de namespace zal zijn van het externe model.
 
@@ -1679,19 +1679,19 @@ CONSTRUCT {
   ?class rdfs:isDefinedBy ?ontology
 }
 WHERE {
-  ?package mim:bevatModelement ?modelelement.
+  ?package mim:bevatModelelement ?modelelement.
   ?package mim:equivalent ?ontology.
-  ?modelelement mim:equivalant ?class.
+  ?modelelement mim:equivalent ?class.
   ?class a owl:Class.
 }
 CONSTRUCT {
   ?property rdfs:isDefinedBy ?ontology
 }
 WHERE {
-  ?package mim:bevatModelement ?eigenaar.
+  ?package mim:bevatModelelement ?eigenaar.
   ?eigenaar ?eigenaarrelatie ?modelelement
   ?package mim:equivalent ?ontology.
-  ?modelelement mim:equivalant ?property.
+  ?modelelement mim:equivalent ?property.
   FILTER NOT EXISTS {?package mim:bevatModelelement ?modelelement}
   FILTER (?eigenaarrelatie=mim:attribuut
        || ?eigenaarrelatie=mim:dataElement
@@ -1703,10 +1703,10 @@ CONSTRUCT {
   ?property rdfs:isDefinedBy ?ontology
 }
 WHERE {
-  ?package mim:bevatModelement ?eigenaar.
+  ?package mim:bevatModelelement ?eigenaar.
   ?modelelement ?eigenaarrelatie ?eigenaar
   ?package mim:equivalent ?ontology.
-  ?modelelement mim:equivalant ?eigenschap.
+  ?modelelement mim:equivalent ?eigenschap.
   FILTER NOT EXISTS {?package mim:bevatModelelement ?modelelement}
   FILTER (?eigenaarrelatie=mim:bron
        || ?eigenaarrelatie=mim:subtype)
@@ -1715,7 +1715,7 @@ CONSTRUCT {
   ?ontology owl:imports ?importontology
 }
 WHERE {
-  ?package mim:bevatModelement ?subpackage.
+  ?package mim:bevatModelelement ?subpackage.
   ?package mim:equivalent ?ontology.
   ?subpackage mim:equivalent ?importedontology.
   ?importedontology a owl:Ontology.
