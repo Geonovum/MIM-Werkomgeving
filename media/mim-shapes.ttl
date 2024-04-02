@@ -23,7 +23,7 @@ shape:Objecttype a sh:NodeShape;
   sh:name "mim:Objecttype";
   dct:source mimdoc:sectie3.2.1-Objecttype;
   sh:property [sh:path rdf:type; sh:hasValue mim:Objecttype];
-  # Modelelementidentificatie metagegevens
+  # Identificatie metagegevens
   sh:property shape:identificatie;
   # Metagegevens
   sh:property shape:naam;
@@ -47,7 +47,7 @@ shape:Attribuutsoort a sh:NodeShape;
   sh:targetClass mim:Attribuutsoort;
   sh:name "mim:Attribuutsoort";
   dct:source mimdoc:sectie3.2.1-Attribuutsoort;
-  # Modelelementidentificatie metagegevens
+  # Identificatie metagegevens
   sh:property shape:identificatie;
   # Metagegevens
   sh:property shape:naam;
@@ -85,7 +85,7 @@ shape:Gegevensgroep a sh:NodeShape;
   sh:targetClass mim:Gegevensgroep;
   sh:name "mim:Gegevensgroep";
   dct:source mimdoc:sectie2.3.1-Gegevensgroep;
-  # Modelelementidentificatie metagegevens
+  # Identificatie metagegevens
   sh:property shape:identificatie;
   # Metagegevens
   sh:property shape:naam;
@@ -107,7 +107,7 @@ shape:Gegevensgroeptype a sh:NodeShape;
   sh:name "mim:Gegevensgroeptype";
   dct:source mimdoc:sectie2.3.1-Gegevensgroeptype;
   sh:property [sh:path rdf:type; sh:hasValue mim:Gegevensgroeptype];
-  # Modelelementidentificatie metagegevens
+  # Identificatie metagegevens
   sh:property shape:identificatie;
   # Metagegevens
   sh:property shape:naam;
@@ -127,7 +127,7 @@ shape:Relatiesoort a sh:NodeShape;
   sh:targetClass mim:Relatiesoort;
   sh:name "mim:Relatiesoort";
   dct:source mimdoc:sectie2.3.2.1-Relatiesoort;
-  # Modelelementidentificatie metagegevens
+  # Identificatie metagegevens
   sh:property shape:identificatie;
   # Metagegevens
   sh:property shape:naam;
@@ -163,7 +163,7 @@ shape:Relatierol a sh:NodeShape;
   sh:targetClass mim:Relatierol;
   sh:name "mim:Relatierol";
   dct:source mimdoc:sectie2.3.2.1-Relatierol;
-  # Modelelementidentificatie metagegevens
+  # Identificatie metagegevens
   sh:property shape:identificatie;
   # Metagegevens
   sh:property shape:naam;
@@ -190,7 +190,7 @@ shape:Generalisatie a sh:NodeShape;
   sh:targetClass mim:Generalisatie;
   sh:name "mim:Generalisatie";
   dct:source mimdoc:sectie2.3.2.2-Generalisatie;
-  # Modelelementidentificatie metagegevens
+  # Identificatie metagegevens
   sh:property shape:identificatie;
   # Metagegevens
   sh:property shape:subtype;
@@ -203,7 +203,7 @@ shape:Relatieklasse a sh:NodeShape;
   sh:targetClass mim:Relatieklasse;
   sh:name "mim:Relatieklasse";
   dct:source mimdoc:sectie2.3.2.2-Relatieklasse;
-  # Modelelementidentificatie metagegevens
+  # Identificatie metagegevens
   sh:property shape:identificatie;
   # Metagegevens
   sh:property shape:naam;
@@ -234,7 +234,7 @@ shape:ExterneKoppeling a sh:NodeShape;
   sh:targetClass mim:ExterneKoppeling;
   sh:name "mim:ExterneKoppeling";
   dct:source mimdoc:sectie2.3.2.2-ExterneKoppeling;
-  # Modelelementidentificatie metagegevens
+  # Identificatie metagegevens
   sh:property shape:identificatie;
   # Metagegevens
   sh:property shape:naam;
@@ -265,7 +265,7 @@ shape:Referentielijst a sh:NodeShape;
   sh:targetClass mim:Referentielijst;
   sh:name "mim:Referentielijst";
   dct:source mimdoc:sectie2.3.3-Referentielijst;
-  # Modelelementidentificatie metagegevens
+  # Identificatie metagegevens
   sh:property shape:identificatie;
   # Metagegevens
   sh:property shape:naam;
@@ -284,7 +284,7 @@ shape:ReferentieElement a sh:NodeShape;
   sh:targetClass mim:ReferentieElement;
   sh:name "mim:ReferentieElement";
   dct:source mimdoc:sectie2.3.3-ReferentieElement;
-  # Modelelementidentificatie metagegevens
+  # Identificatie metagegevens
   sh:property shape:identificatie;
   # Metagegevens
   sh:property shape:naam;
@@ -311,7 +311,7 @@ shape:Codelijst a sh:NodeShape;
   sh:targetClass mim:Codelijst;
   sh:name "mim:Codelijst";
   dct:source mimdoc:sectie2.3.3-Codelijst;
-  # Modelelementidentificatie metagegevens
+  # Identificatie metagegevens
   sh:property shape:identificatie;
   # Metagegevens
   sh:property shape:naam_codelijst;
@@ -334,7 +334,7 @@ shape:PrimitiefDatatype a sh:NodeShape;
   sh:targetClass mim:PrimitiefDatatype;
   sh:name "mim:PrimitiefDatatype";
   dct:source mimdoc:sectie2.3.4-PrimitiefDatatype;
-  # Modelelementidentificatie metagegevens
+  # Identificatie metagegevens
   sh:property shape:identificatie;
   # Metagegevens
   sh:property shape:naam;
@@ -354,7 +354,7 @@ shape:GestructureerdDatatype a sh:NodeShape;
   sh:targetClass mim:GestructureerdDatatype;
   sh:name "mim:GestructureerdDatatype";
   dct:source mimdoc:sectie2.3.4-GestructureerdDatatype;
-  # Modelelementidentificatie metagegevens
+  # Identificatie metagegevens
   sh:property shape:identificatie;
   # Metagegevens
   sh:property shape:naam;
@@ -374,7 +374,7 @@ shape:DataElement a sh:NodeShape;
   sh:targetClass mim:DataElement;
   sh:name "mim:DataElement";
   dct:source mimdoc:sectie2.3.4-DataElement;
-  # Modelelementidentificatie metagegevens
+  # Identificatie metagegevens
   sh:property shape:identificatie;
   # Metagegevens
   sh:property shape:naam;
@@ -398,7 +398,7 @@ shape:DataElement a sh:NodeShape;
 shape:Keuze a sh:NodeShape;
   sh:targetClass mim:Keuze;
   sh:name "mim:Keuze";
-  # Modelelementidentificatie metagegevens
+  # Identificatie metagegevens
   sh:property shape:identificatie;
   # Metagegevens
   sh:property shape:naam;
@@ -434,7 +434,7 @@ shape:RelatiedoelKeuze a sh:NodeShape;
 shape:KeuzeConstraint a sh:NodeShape;
   sh:targetClass mim:KeuzeConstraint;
   sh:name "mim:Keuzeconstraint";
-  # Modelelementidentificatie metagegevens
+  # Identificatie metagegevens
   sh:property shape:identificatie;
   # Metagegevens
   sh:property shape:naam;
@@ -450,7 +450,7 @@ shape:KeuzeConstraint a sh:NodeShape;
 shape:Package a sh:NodeShape;
   sh:targetClass mim:Package;
   sh:name "mim:Package";
-  # Modelelementidentificatie metagegevens
+  # Identificatie metagegevens
   sh:property shape:basisUri;
   sh:property shape:identificatie;
   # Metagegevens
@@ -461,7 +461,7 @@ shape:Package a sh:NodeShape;
 shape:Informatiemodel a sh:NodeShape;
   sh:targetClass mim:Informatiemodel;
   sh:name "mim:Informatiemodel";
-  # Modelelementidentificatie metagegevens
+  # Identificatie metagegevens
   sh:property shape:basisUri;
   sh:property shape:identificatie;
   # Metagegevens
@@ -480,7 +480,7 @@ shape:Informatiemodel a sh:NodeShape;
 shape:Domein a sh:NodeShape;
   sh:targetClass mim:Domein;
   sh:name "mim:Domein";
-  # Modelelementidentificatie metagegevens
+  # Identificatie metagegevens
   sh:property shape:basisUri;
   sh:property shape:identificatie;
   # Metagegevens
@@ -493,7 +493,7 @@ shape:Extern a sh:NodeShape;
   sh:targetClass mim:Extern;
   sh:name "mim:Extern";
   dct:source mimdoc:sectie2.3.5-Extern;
-  # Modelelementidentificatie metagegevens
+  # Identificatie metagegevens
   sh:property shape:basisUri;
   sh:property shape:identificatie;
   # Metagegevens
@@ -510,7 +510,7 @@ shape:View a sh:NodeShape;
   sh:targetClass mim:View;
   sh:name "mim:View";
   dct:source mimdoc:sectie2.3.5-View;
-  # Modelelementidentificatie metagegevens
+  # Identificatie metagegevens
   sh:property shape:basisUri;
   sh:property shape:identificatie;
   # Metagegevens
@@ -527,7 +527,7 @@ shape:Enumeratie a sh:NodeShape;
   sh:targetClass mim:Enumeratie;
   sh:name "mim:Enumeratie";
   dct:source mimdoc:sectie2.3.6-Enumeratie;
-  # Modelelementidentificatie metagegevens
+  # Identificatie metagegevens
   sh:property shape:identificatie;
   # Metagegevens
   sh:property shape:naam;
@@ -541,7 +541,7 @@ shape:Enumeratie a sh:NodeShape;
 shape:Enumeratiewaarde a sh:NodeShape;
   sh:targetClass mim:Enumeratiewaarde;
   sh:name "mim:Enumeratiewaarde";
-  # Modelelementidentificatie metagegevens
+  # Identificatie metagegevens
   sh:property shape:identificatie;
   # Metagegevens
   sh:property shape:naam;
@@ -556,7 +556,7 @@ shape:Enumeratiewaarde a sh:NodeShape;
 shape:Constraint a sh:NodeShape;
   sh:targetClass mim:Constraint;
   sh:name "mim:Constraint";
-  # Modelelementidentificatie metagegevens
+  # Identificatie metagegevens
   sh:property shape:identificatie;
   # Metagegevens
   sh:property shape:naam;
