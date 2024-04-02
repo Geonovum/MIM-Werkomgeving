@@ -288,7 +288,7 @@ Om duidelijk(er) te maken wat wordt bedoeld kijken we eerst naar het begrip ‘o
 
 *Toelichting:* 
 
-Met 'het beschouwde domein' wordt bedoeld dat het om onderwerpen (en ding, een iets) van gesprek gaat binnen een discipline of domein. Een object is daarbij niet altijd fysiek het kunnen ook digitale, virtuele en conceptuele dingen zijn zoals kadastrale percelen, (maatschappelijke) activiteiten en processen. 
+Met 'het beschouwde domein' wordt bedoeld dat het om onderwerpen (en ding, een iets) van gesprek gaat binnen een discipline of domein. Een object is daarbij niet altijd fysiek het kunnen ook digitale, virtuele en conceptuele dingen zijn zoals administratieve grenzen, kadastrale percelen, (maatschappelijke) activiteiten en processen. 
 Hoe een 'onderscheidbaar iets' als een object beschouwd wordt, hangt af van het domein waarvoor het relevant is. Zo wordt de gebouwde omgeving in het ene domein beschouwd als een verzameling gebouwen terwijl een ander domein daarin panden onderscheidt. Een object is voor een domein relevant als eigenschappen (kenmerken) daarvan van belang zijn voor het functioneren van dat domein. 
 
 Een object wordt ook wel een *exemplaar of instantie* van een objecttype genoemd (vele soortgelijke exemplaren samen zijn getypeerd naar een objecttype). 
