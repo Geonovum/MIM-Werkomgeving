@@ -40,7 +40,7 @@ stereotype.
     </tr>
   </table>
   <p>
-    De linker kolom bevat het MIM-modelelement, zoals bedoeld in [[[#metamodel-algemeen]]]. De 2e en 3e kolom bevatten de uitdrukking van het MIM in UML, versie 2.5. De 2e en 5e kolom bevatten de uitdrukking van het MIM in Sparx Enterprise Architect. Deze gebruikt Class (i.p.v. UML-Class). Deze UML tool is (uiteraard) geen onderdeel van de MIM-specificatie. Het is zeker niet verplicht om deze te gebruiken, u kunt uw eigen tool gebruiken. Deze kolom staat erbij om illustratief aan te geven dat het soms nodig kan zijn om, afhankelijk van de tool, net iets specifieker aan te geven hoe het MIM in de tool exact uitgedrukt wordt. In de 6e kolom is ruimte gereserveerd om gebruik van een andere tool te duiden.
+    De linker kolom bevat het MIM-modelelement, zoals bedoeld in [[[#metamodel-algemeen]]]. De 2e en 3e kolom bevatten de uitdrukking van het MIM in UML, versie 2.5. De 2e en 5e kolom bevatten de uitdrukking van het MIM in Sparx Enterprise Architect. Deze gebruikt Class (i.p.v. UML-Class). Deze UML tool is (uiteraard) geen onderdeel van de MIM-specificatie. Het is zeker niet verplicht om deze tool te gebruiken. Deze kolom staat erbij om illustratief aan te geven dat het soms nodig kan zijn om, afhankelijk van de tool, net iets specifieker aan te geven hoe het MIM in de tool exact uitgedrukt wordt. In de 6e kolom is ruimte gereserveerd om gebruik van een andere tool te duiden.
   </p>
 </aside>
 
@@ -68,7 +68,7 @@ Kern zonder Metagegevens
 | Relatieklasse     | «Relatieklasse»     | (UML) Association én (UML) Class |      | Associationclass |            |
 
 <aside class="note" title="Stereotype «Datatype» afwezig in UML">
-  <p>Ook <code>Datatype</code> behoort ook tot de kern en is zoals aangegeven in het diagram bedoeld als een abstract modelelement. Er bestaat in de UML-uitwerking geen stereotype <code>«Datatype»</code>, daarom is het modelelement <code>Datatype</code> niet opgenomen in de tabel. <code>Datatype</code> is in de volgende paragraaf concreet uitgewerkt in verschillende verschijningsvormen met elk een eigen stereotype.</p>
+  <p>Ook <code>Datatype</code> behoort ook tot de kern en is zoals aangegeven in het diagram bedoeld als een abstract modelelement. <code>Datatype</code> is in de volgende paragraaf concreet uitgewerkt in verschillende verschijningsvormen met elk een eigen stereotype.</p>
 </aside> 
 
 ### Datatypen
@@ -97,6 +97,8 @@ _Datatypen_
 | Codelijst               | «Codelijst»             | (UML) Datatype           |      | Datatype           |            |
 
 ### Overige
+
+Naast de kern en de datatypen zijn er nog een aantal andere modelelementen met voor specifieke modelconstructies.
 
 #### Constraint
 
@@ -477,7 +479,7 @@ De relatiesoorten worden naar de volgende aspecten gespecificeerd.
 
 #### «Relatierol» (alt 1: soort leidend)
 
-Voor relatierollen worden naar de volgende aspecten gespecificeerd.
+Relatierollen worden naar de volgende aspecten gespecificeerd.
 
 | **Aspect**                  | **Kardinaliteit** | **Toelichting**                | **In UML 2.5**                        |    | **In EA**      | **In ...** |
 | -------------------------------- | -------- | ---------------------------------------- | ------------------------------------- | -- | -------------- | -------- |
@@ -520,7 +522,7 @@ aspecten gespecificeerd.
 
 #### «Generalisatie» tussen objecttypes
 
-De generalisaties worden naar het volgende aspect gespecificeerd:
+De generalisaties worden naar het volgende aspecten gespecificeerd:
 
 | **Aspect**                  | **Kardinaliteit** | **Toelichting**                | **In UML 2.5**                        |    | **In EA**      | **In ...** |
 | -------------------------------- | -------- | ---------------------------------------- | ------------------------------------- | -- | -------------- | -------- |
@@ -533,7 +535,7 @@ De generalisaties worden naar het volgende aspect gespecificeerd:
 
 #### «Generalisatie» tussen datatypen
 
-De generalisaties worden naar het volgende aspect gespecificeerd:
+De generalisaties worden naar de volgende aspecten gespecificeerd:
 
 | **Aspect**                  | **Kardinaliteit** | **Toelichting**                | **In UML 2.5**                        |    | **In EA**      | **In ...** |
 | -------------------------------- | -------- | ---------------------------------------- | ------------------------------------- | -- | -------------- | -------- |
@@ -722,7 +724,7 @@ DateTime, Surface.
 
 #### «Primitief datatype»
 
-De datatypen worden naar de volgende aspecten gespecificeerd:
+De primitieve datatypen worden naar de volgende aspecten gespecificeerd:
 
 | **Aspect**                  | **Kardinaliteit** | **Toelichting**                | **In UML 2.5**                        |    | **In EA**      | **In ...** |
 | -------------------------------- | -------- | ---------------------------------------- | ------------------------------------- | -- | -------------- | -------- |
@@ -743,7 +745,7 @@ De datatypen worden naar de volgende aspecten gespecificeerd:
 
 #### «Gestructureerd datatype»
 
-Voor Gestructureerde datatypen worden de volgende aspecten gespecificeerd:
+Voor gestructureerde datatypen worden de volgende aspecten gespecificeerd:
 
 | **Aspect**                  | **Kardinaliteit** | **Toelichting**                | **In UML 2.5**                        |    | **In EA**      | **In ...** |
 | -------------------------------- | -------- | ---------------------------------------- | ------------------------------------- | -- | -------------- | -------- |
