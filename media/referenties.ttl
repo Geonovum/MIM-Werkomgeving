@@ -286,6 +286,19 @@ mimdoc:metagegeven-tekstopmaak a dct:BibliographicResource;
   # dct:isPartOf TODO oppakken met https://github.com/Geonovum/MIM-Werkomgeving/issues/484
 .
 
+mimdoc:metagegeven-basis-uri a dct:BibliographicResource;
+  rdfs:label "Metagegeven: Basis-URI";
+  dct:bibliographicCitation "Metagegeven: Basis-URI" ;
+  foaf:page <https://docs.geostandaarden.nl/mim/mim/#metagegeven-basis-uri>;
+  # dct:isPartOf TODO oppakken met https://github.com/Geonovum/MIM-Werkomgeving/issues/484
+.
+mimdoc:metagegeven-identificatie a dct:BibliographicResource;
+  rdfs:label "Metagegeven: Identificatie";
+  dct:bibliographicCitation "Metagegeven: Identificatie" ;
+  foaf:page <https://docs.geostandaarden.nl/mim/mim/#metagegeven-identificatie>;
+  # dct:isPartOf TODO oppakken met https://github.com/Geonovum/MIM-Werkomgeving/issues/484
+.
+
 mimdoc:sectie2.8.2 a dct:BibliographicResource;
   rdfs:label "Specificatie metagegevens modelelementen";
   dct:bibliographicCitation "Sectie 2.8.2 Specificatie metagegevens modelelementen";

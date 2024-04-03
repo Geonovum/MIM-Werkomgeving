@@ -273,6 +273,16 @@ mim:tekstopmaak a owl:DatatypeProperty;
 .
 
 # Metagegevens modelelementen
+mim:basisUri a owl:DatatypeProperty;
+  rdfs:label "Basis-URI"@nl;
+  rdfs:comment "De standaard basis-URI voor elk element in dit informatiemodel."@nl;
+  dct:source mimdoc:metagegeven-basis-uri;
+.
+mim:identificatie a owl:DatatypeProperty;
+  rdfs:label "Identificatie"@nl;
+  rdfs:comment "De identificatie van een modelelement."@nl;
+  dct:source mimdoc:metagegeven-identificatie;
+.
 mim:naam a owl:DatatypeProperty;
   rdfs:label "naam"@nl;
   rdfs:comment "De naam van een modelelement."@nl;
