@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:java="http://www.yworks.com/xml/yfiles-common/1.0/java" xmlns:sys="http://www.yworks.com/xml/yfiles-common/markup/primitives/2.0" xmlns:x="http://www.yworks.com/xml/yfiles-common/markup/2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:y="http://www.yworks.com/xml/graphml" xmlns:yed="http://www.yworks.com/xml/yed/3" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://www.yworks.com/xml/schema/graphml/1.1/ygraphml.xsd">
+  <!--Created by yEd 3.23.2-->
+  <key for="port" id="d0" yfiles.type="portgraphics"/>
+  <key for="port" id="d1" yfiles.type="portgeometry"/>
+  <key for="port" id="d2" yfiles.type="portuserdata"/>
+  <key attr.name="url" attr.type="string" for="node" id="d3"/>
+  <key attr.name="description" attr.type="string" for="node" id="d4"/>
+  <key for="node" id="d5" yfiles.type="nodegraphics"/>
+  <key for="graphml" id="d6" yfiles.type="resources"/>
+  <key attr.name="statement-url" attr.type="string" for="edge" id="d7"/>
+  <key attr.name="url" attr.type="string" for="edge" id="d8"/>
+  <key attr.name="description" attr.type="string" for="edge" id="d9"/>
+  <key for="edge" id="d10" yfiles.type="edgegraphics"/>
+  <graph edgedefault="directed" id="G">
+    <node id="n0">
+      <data key="d3" xml:space="preserve"><![CDATA[http://modellen.mim-standaard.nl/def/mim-shapes#Aggregatietypen]]></data>
+      <data key="d4"/>
+      <data key="d5">
+        <y:GenericNode configuration="com.yworks.entityRelationship.big_entity">
+          <y:Geometry height="92.0" width="124.12734584450402" x="770.1077552941522" y="900.6557891203724"/>
+          <y:Fill color="#E8EEF7" color2="#B7C9E3" transparent="false"/>
+          <y:BorderStyle color="#000000" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" backgroundColor="#B7C9E3" configuration="com.yworks.entityRelationship.label.name" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasLineColor="false" height="18.1328125" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="t" textColor="#000000" verticalTextPosition="bottom" visible="true" width="100.03515625" x="12.046094797251953" xml:space="preserve" y="4.0">Aggregatietypen</y:NodeLabel>
+          <y:NodeLabel alignment="left" autoSizePolicy="content" configuration="com.yworks.entityRelationship.label.attributes" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="46.3984375" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="top" visible="true" width="80.76953125" x="2.0" xml:space="preserve" y="30.1328125">- Geen
+- Gedeeld
+- Compositie<y:LabelModel><y:ErdAttributesNodeLabelModel/></y:LabelModel><y:ModelParameter><y:ErdAttributesNodeLabelModelParameter/></y:ModelParameter></y:NodeLabel>
+        </y:GenericNode>
+      </data>
+    </node>
+    <node id="n1">
+      <data key="d3" xml:space="preserve"><![CDATA[http://modellen.mim-standaard.nl/def/mim-shapes#RelatierolBron]]></data>
+      <data key="d4"/>
+      <data key="d5">
+        <y:GenericNode configuration="com.yworks.entityRelationship.big_entity">
+          <y:Geometry height="40.0" width="200.0" x="-70.0014159032475" y="522.6693972914564"/>
+          <y:Fill color="#E8EEF7" color2="#B7C9E3" transparent="false"/>
+          <y:BorderStyle color="#000000" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" backgroundColor="#B7C9E3" configuration="com.yworks.entityRelationship.label.name" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasLineColor="false" height="18.1328125" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="t" textColor="#000000" verticalTextPosition="bottom" visible="true" width="115.064453125" x="42.4677734375" xml:space="preserve" y="4.0">mim:RelatierolBron</y:NodeLabel>
+          <y:NodeLabel alignment="left" autoSizePolicy="content" configuration="com.yworks.entityRelationship.label.attributes" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" hasText="false" height="4.0" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="top" visible="true" width="4.0" x="2.0" y="30.1328125">
+            <y:LabelModel>
+              <y:ErdAttributesNodeLabelModel/>
+            </y:LabelModel>
+            <y:ModelParameter>
+              <y:ErdAttributesNodeLabelModelParameter/>
+            </y:ModelParameter>
+          </y:NodeLabel>
+        </y:GenericNode>
+      </data>
+    </node>
+    <node id="n2">
+      <data key="d3" xml:space="preserve"><![CDATA[http://modellen.mim-standaard.nl/def/mim-shapes#Relatierol]]></data>
+      <data key="d4"/>
+      <data key="d5">
+        <y:GenericNode configuration="com.yworks.entityRelationship.big_entity">
+          <y:Geometry height="293.36603459806236" width="275.6065580076819" x="278.8820220165953" y="34.43160678388739"/>
+          <y:Fill color="#E8EEF7" color2="#B7C9E3" transparent="false"/>
+          <y:BorderStyle color="#000000" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" backgroundColor="#B7C9E3" configuration="com.yworks.entityRelationship.label.name" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasLineColor="false" height="18.1328125" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="t" textColor="#000000" verticalTextPosition="bottom" visible="true" width="88.43359375" x="93.58648212884094" xml:space="preserve" y="4.0">mim:Relatierol</y:NodeLabel>
+          <y:NodeLabel alignment="left" autoSizePolicy="content" configuration="com.yworks.entityRelationship.label.attributes" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="258.390625" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="top" visible="true" width="270.408203125" x="2.0" xml:space="preserve" y="30.1328125">mim:identificatie (anyURI) [1,1]
+mim:naam [1,1]
+mim:toelichting [0,1]
+mim:indicatieMaterieleHistorie (boolean) [1,1]
+mim:heeftTijdlijnGeldigheid (boolean) [1,1]
+mim:indicatieFormeleHistorie (boolean) [1,1]
+mim:heeftTijdlijnRegistratie (boolean) [1,1]
+mim:kardinaliteit (string) [1,1]
+mim:alias [0,1]
+mim:authentiek → Authenticiteit [1,1]
+mim:mogelijkGeenWaarde (boolean) [1,1]
+mim:identificerend (boolean) [0,1]
+mim:begripsterm [0,n]
+mim:begrip → Concept [0,n]
+mim:herkomst [1,1]
+mim:definitie [0,1]
+mim:datumOpname (date) [1,1]
+mim:herkomstDefinitie [1,1]
+<y:LabelModel><y:ErdAttributesNodeLabelModel/></y:LabelModel><y:ModelParameter><y:ErdAttributesNodeLabelModelParameter/></y:ModelParameter></y:NodeLabel>
+        </y:GenericNode>
+      </data>
+    </node>
+    <node id="n3">
+      <data key="d3" xml:space="preserve"><![CDATA[http://modellen.mim-standaard.nl/def/mim-shapes#RelatierolDoel]]></data>
+      <data key="d4"/>
+      <data key="d5">
+        <y:GenericNode configuration="com.yworks.entityRelationship.big_entity">
+          <y:Geometry height="40.0" width="200.0" x="703.3720179441199" y="522.6693972914564"/>
+          <y:Fill color="#E8EEF7" color2="#B7C9E3" transparent="false"/>
+          <y:BorderStyle color="#000000" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" backgroundColor="#B7C9E3" configuration="com.yworks.entityRelationship.label.name" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasLineColor="false" height="18.1328125" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="t" textColor="#000000" verticalTextPosition="bottom" visible="true" width="114.947265625" x="42.5263671875" xml:space="preserve" y="4.0">mim:RelatierolDoel</y:NodeLabel>
+          <y:NodeLabel alignment="left" autoSizePolicy="content" configuration="com.yworks.entityRelationship.label.attributes" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" hasText="false" height="4.0" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="top" visible="true" width="4.0" x="2.0" y="30.1328125">
+            <y:LabelModel>
+              <y:ErdAttributesNodeLabelModel/>
+            </y:LabelModel>
+            <y:ModelParameter>
+              <y:ErdAttributesNodeLabelModelParameter/>
+            </y:ModelParameter>
+          </y:NodeLabel>
+        </y:GenericNode>
+      </data>
+    </node>
+    <node id="n4">
+      <data key="d3" xml:space="preserve"><![CDATA[http://modellen.mim-standaard.nl/def/mim-shapes#Objecttype]]></data>
+      <data key="d4"/>
+      <data key="d5">
+        <y:GenericNode configuration="com.yworks.entityRelationship.big_entity">
+          <y:Geometry height="261.5310471151513" width="275.6065580076819" x="278.8820220165953" y="411.9038737338808"/>
+          <y:Fill color="#E8EEF7" color2="#B7C9E3" transparent="false"/>
+          <y:BorderStyle color="#000000" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" backgroundColor="#B7C9E3" configuration="com.yworks.entityRelationship.label.name" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasLineColor="false" height="18.1328125" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="t" textColor="#000000" verticalTextPosition="bottom" visible="true" width="96.513671875" x="89.54644306634094" xml:space="preserve" y="4.0">mim:Objecttype</y:NodeLabel>
+          <y:NodeLabel alignment="left" autoSizePolicy="content" configuration="com.yworks.entityRelationship.label.attributes" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="230.125" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="top" visible="true" width="262.486328125" x="2.0" xml:space="preserve" y="30.1328125">A41 [0,n]
+mim:gegevensgroep → Gegevensgroep [0,n]
+mim:attribuut [0,n]
+mim:identificatie (anyURI) [1,1]
+mim:naam [1,1]
+mim:toelichting [0,1]
+mim:indicatieAbstractObject (boolean) [1,1]
+mim:alias [0,1]
+mim:begripsterm [0,n]
+mim:begrip → Concept [0,n]
+mim:herkomst [1,1]
+mim:definitie [1,1]
+mim:datumOpname (date) [1,1]
+mim:herkomstDefinitie [1,1]
+mim:populatie (string) [0,1]
+mim:kwaliteit (string) [0,1]
+<y:LabelModel><y:ErdAttributesNodeLabelModel/></y:LabelModel><y:ModelParameter><y:ErdAttributesNodeLabelModelParameter/></y:ModelParameter></y:NodeLabel>
+        </y:GenericNode>
+      </data>
+    </node>
+    <node id="n5">
+      <data key="d3" xml:space="preserve"><![CDATA[http://modellen.mim-standaard.nl/def/mim-shapes#Relatiesoort]]></data>
+      <data key="d4"/>
+      <data key="d5">
+        <y:GenericNode configuration="com.yworks.entityRelationship.big_entity">
+          <y:Geometry height="378.2292718388186" width="275.60655800768177" x="278.8820220165953" y="757.5411532009632"/>
+          <y:Fill color="#E8EEF7" color2="#B7C9E3" transparent="false"/>
+          <y:BorderStyle color="#000000" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" backgroundColor="#B7C9E3" configuration="com.yworks.entityRelationship.label.name" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasLineColor="false" height="18.1328125" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="t" textColor="#000000" verticalTextPosition="bottom" visible="true" width="102.94140625" x="86.33257587884088" xml:space="preserve" y="4.0">mim:Relatiesoort</y:NodeLabel>
+          <y:NodeLabel alignment="left" autoSizePolicy="content" configuration="com.yworks.entityRelationship.label.attributes" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="343.1875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="top" visible="true" width="270.408203125" x="2.0" xml:space="preserve" y="30.1328125">mim:relatierol → Relatierol [1,2]
+mim:identificatie (anyURI) [1,1]
+mim:naam [1,1]
+mim:toelichting [0,1]
+mim:indicatieMaterieleHistorie (boolean) [1,1]
+mim:heeftTijdlijnGeldigheid (boolean) [1,1]
+mim:indicatieFormeleHistorie (boolean) [1,1]
+mim:heeftTijdlijnRegistratie (boolean) [1,1]
+mim:kardinaliteit (string) [1,1]
+mim:kardinaliteitRelatieBron (string) [0,1]
+mim:alias [0,1]
+mim:authentiek → Authenticiteit [1,1]
+mim:indicatieAfleidbaar (boolean) [1,1]
+mim:mogelijkGeenWaarde (boolean) [1,1]
+mim:identificerend (boolean) [0,1]
+mim:unidirectioneel (boolean) [1,1]
+mim:bron [1,1]
+mim:doel [1,1]
+mim:begripsterm [0,n]
+mim:begrip → Concept [0,n]
+mim:herkomst [1,1]
+mim:definitie [1,1]
+mim:datumOpname (date) [1,1]
+mim:herkomstDefinitie [1,1]
+<y:LabelModel><y:ErdAttributesNodeLabelModel/></y:LabelModel><y:ModelParameter><y:ErdAttributesNodeLabelModelParameter/></y:ModelParameter></y:NodeLabel>
+        </y:GenericNode>
+      </data>
+    </node>
+    <edge id="e0" source="n5" target="n0">
+      <data key="d7" xml:space="preserve"><![CDATA[urn:md5:http://modellen.mim-standaard.nl/def/mim-shapes#Relatiesoorthttp://modellen.mim-standaard.nl/def/mim-shapes#aggregatietype http://modellen.mim-standaard.nl/def/mim#aggregatietypehttp://modellen.mim-standaard.nl/def/mim-shapes#Aggregatietypen]]></data>
+      <data key="d8" xml:space="preserve"><![CDATA[http://modellen.mim-standaard.nl/def/mim-shapes#aggregatietype http://modellen.mim-standaard.nl/def/mim#aggregatietype]]></data>
+      <data key="d9"/>
+      <data key="d10">
+        <y:PolyLineEdge>
+          <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
+          <y:LineStyle color="#000000" type="line" width="1.0"/>
+          <y:Arrows source="none" target="standard"/>
+          <y:EdgeLabel alignment="center" backgroundColor="#FFFFFF" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasLineColor="false" height="18.1328125" horizontalTextPosition="center" iconTextGap="4" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" width="151.181640625" x="32.19446892874589" xml:space="preserve" y="-9.066378848377553">mim:aggregatietype [1,1]<y:LabelModel><y:SmartEdgeLabelModel autoRotationEnabled="false" defaultAngle="0.0" defaultDistance="10.0"/></y:LabelModel><y:ModelParameter><y:SmartEdgeLabelModelParameter angle="0.0" distance="30.0" distanceToCenter="true" position="center" ratio="0.5" segment="0"/></y:ModelParameter><y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" frozen="true" placement="anywhere" side="anywhere" sideReference="relative_to_edge_flow"/></y:EdgeLabel>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e1" source="n5" target="n2">
+      <data key="d7" xml:space="preserve"><![CDATA[urn:md5:http://modellen.mim-standaard.nl/def/mim-shapes#Relatiesoorthttp://modellen.mim-standaard.nl/def/mim-shapes#relatierol http://modellen.mim-standaard.nl/def/mim#relatierolhttp://modellen.mim-standaard.nl/def/mim-shapes#Relatierol]]></data>
+      <data key="d8" xml:space="preserve"><![CDATA[http://modellen.mim-standaard.nl/def/mim-shapes#relatierol http://modellen.mim-standaard.nl/def/mim#relatierol]]></data>
+      <data key="d9"/>
+      <data key="d10">
+        <y:PolyLineEdge>
+          <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0">
+            <y:Point x="-142.95640176600452" y="946.6557891203724"/>
+            <y:Point x="-142.95640176600452" y="181.11462408291857"/>
+          </y:Path>
+          <y:LineStyle color="#000000" type="line" width="1.0"/>
+          <y:Arrows source="none" target="standard"/>
+          <y:EdgeLabel alignment="center" backgroundColor="#FFFFFF" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasLineColor="false" height="18.1328125" horizontalTextPosition="center" iconTextGap="4" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" width="116.330078125" x="-375.4346598929093" xml:space="preserve" y="-774.6075438858314">mim:relatierol [1,2]<y:LabelModel><y:SmartEdgeLabelModel autoRotationEnabled="false" defaultAngle="0.0" defaultDistance="10.0"/></y:LabelModel><y:ModelParameter><y:SmartEdgeLabelModelParameter angle="0.0" distance="30.0" distanceToCenter="false" position="center" ratio="0.2914776378164058" segment="-1"/></y:ModelParameter><y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" frozen="true" placement="anywhere" side="anywhere" sideReference="relative_to_edge_flow"/></y:EdgeLabel>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e2" source="n1" target="n4">
+      <data key="d7" xml:space="preserve"><![CDATA[urn:md5:http://modellen.mim-standaard.nl/def/mim-shapes#RelatierolBronhttp://modellen.mim-standaard.nl/def/mim-shapes#bron http://modellen.mim-standaard.nl/def/mim#bronA40]]></data>
+      <data key="d8" xml:space="preserve"><![CDATA[http://modellen.mim-standaard.nl/def/mim-shapes#bron http://modellen.mim-standaard.nl/def/mim#bron]]></data>
+      <data key="d9"/>
+      <data key="d10">
+        <y:PolyLineEdge>
+          <y:Path sx="0.0" sy="0.0" tx="-62.23256642619832" ty="0.0"/>
+          <y:LineStyle color="#000000" type="line" width="1.0"/>
+          <y:Arrows source="none" target="standard"/>
+          <y:EdgeLabel alignment="center" backgroundColor="#FFFFFF" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasLineColor="false" height="18.1328125" horizontalTextPosition="center" iconTextGap="4" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" width="91.52734375" x="28.67234346194732" xml:space="preserve" y="-9.066381517137302">mim:bron [1,1]<y:LabelModel><y:SmartEdgeLabelModel autoRotationEnabled="false" defaultAngle="0.0" defaultDistance="10.0"/></y:LabelModel><y:ModelParameter><y:SmartEdgeLabelModelParameter angle="0.0" distance="30.0" distanceToCenter="true" position="center" ratio="0.5" segment="0"/></y:ModelParameter><y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" frozen="true" placement="anywhere" side="anywhere" sideReference="relative_to_edge_flow"/></y:EdgeLabel>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e3" source="n3" target="n4">
+      <data key="d7" xml:space="preserve"><![CDATA[urn:md5:http://modellen.mim-standaard.nl/def/mim-shapes#RelatierolDoelhttp://modellen.mim-standaard.nl/def/mim-shapes#doel http://modellen.mim-standaard.nl/def/mim#doelA36]]></data>
+      <data key="d8" xml:space="preserve"><![CDATA[http://modellen.mim-standaard.nl/def/mim-shapes#doel http://modellen.mim-standaard.nl/def/mim#doel]]></data>
+      <data key="d9"/>
+      <data key="d10">
+        <y:PolyLineEdge>
+          <y:Path sx="0.0" sy="0.0" tx="111.72156027033532" ty="0.0"/>
+          <y:LineStyle color="#000000" type="line" width="1.0"/>
+          <y:Arrows source="none" target="standard"/>
+          <y:EdgeLabel alignment="center" backgroundColor="#FFFFFF" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasLineColor="false" height="18.1328125" horizontalTextPosition="center" iconTextGap="4" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" width="89.32421875" x="-119.1134632228327" xml:space="preserve" y="-9.066381517137302">mim:doel [1,1]<y:LabelModel><y:SmartEdgeLabelModel autoRotationEnabled="false" defaultAngle="0.0" defaultDistance="10.0"/></y:LabelModel><y:ModelParameter><y:SmartEdgeLabelModelParameter angle="0.0" distance="30.0" distanceToCenter="true" position="center" ratio="0.5" segment="0"/></y:ModelParameter><y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" frozen="true" placement="anywhere" side="anywhere" sideReference="relative_to_edge_flow"/></y:EdgeLabel>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e4" source="n5" target="n4">
+      <data key="d7" xml:space="preserve"><![CDATA[urn:md5:http://modellen.mim-standaard.nl/def/mim-shapes#Relatiesoorthttp://modellen.mim-standaard.nl/def/mim-shapes#doel http://modellen.mim-standaard.nl/def/mim#doelA36]]></data>
+      <data key="d8" xml:space="preserve"><![CDATA[http://modellen.mim-standaard.nl/def/mim-shapes#doel http://modellen.mim-standaard.nl/def/mim#doel]]></data>
+      <data key="d9"/>
+      <data key="d10">
+        <y:PolyLineEdge>
+          <y:Path sx="86.53404557402709" sy="-24.6909893209093" tx="90.31182159999268" ty="101.81974464921319"/>
+          <y:LineStyle color="#000000" type="line" width="1.0"/>
+          <y:Arrows source="none" target="standard"/>
+          <y:EdgeLabel alignment="center" backgroundColor="#FFFFFF" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasLineColor="false" height="18.1328125" horizontalTextPosition="center" iconTextGap="4" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" width="89.32421875" x="-44.089874576908585" xml:space="preserve" y="-51.0968628773461">mim:doel [1,1]<y:LabelModel><y:SmartEdgeLabelModel autoRotationEnabled="false" defaultAngle="0.0" defaultDistance="10.0"/></y:LabelModel><y:ModelParameter><y:SmartEdgeLabelModelParameter angle="0.0" distance="30.0" distanceToCenter="true" position="center" ratio="0.5" segment="0"/></y:ModelParameter><y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" frozen="true" placement="anywhere" side="anywhere" sideReference="relative_to_edge_flow"/></y:EdgeLabel>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e5" source="n5" target="n4">
+      <data key="d7" xml:space="preserve"><![CDATA[urn:md5:http://modellen.mim-standaard.nl/def/mim-shapes#Relatiesoorthttp://modellen.mim-standaard.nl/def/mim-shapes#bron http://modellen.mim-standaard.nl/def/mim#bronA40]]></data>
+      <data key="d8" xml:space="preserve"><![CDATA[http://modellen.mim-standaard.nl/def/mim-shapes#bron http://modellen.mim-standaard.nl/def/mim#bron]]></data>
+      <data key="d9"/>
+      <data key="d10">
+        <y:PolyLineEdge>
+          <y:Path sx="-65.51404919842602" sy="-51.41812051508272" tx="-68.92310976068043" ty="87.38814704683018"/>
+          <y:LineStyle color="#000000" type="line" width="1.0"/>
+          <y:Arrows source="none" target="standard"/>
+          <y:EdgeLabel alignment="center" backgroundColor="#FFFFFF" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasLineColor="false" height="18.1328125" horizontalTextPosition="center" iconTextGap="4" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" width="91.52734375" x="-46.30461454871704" xml:space="preserve" y="-51.14379891250235">mim:bron [1,1]<y:LabelModel><y:SmartEdgeLabelModel autoRotationEnabled="false" defaultAngle="0.0" defaultDistance="10.0"/></y:LabelModel><y:ModelParameter><y:SmartEdgeLabelModelParameter angle="0.0" distance="30.0" distanceToCenter="true" position="center" ratio="0.5" segment="0"/></y:ModelParameter><y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" frozen="true" placement="anywhere" side="anywhere" sideReference="relative_to_edge_flow"/></y:EdgeLabel>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e6" source="n1" target="n2">
+      <data key="d7" xml:space="preserve"><![CDATA[urn:md5:http://modellen.mim-standaard.nl/def/mim-shapes#RelatierolBronrdfs:subClassOfhttp://modellen.mim-standaard.nl/def/mim-shapes#Relatierol]]></data>
+      <data key="d8" xml:space="preserve"><![CDATA[rdfs:subClassOf]]></data>
+      <data key="d9"/>
+      <data key="d10">
+        <y:PolyLineEdge>
+          <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
+          <y:LineStyle color="#000000" type="line" width="1.0"/>
+          <y:Arrows source="none" target="white_delta"/>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e7" source="n3" target="n2">
+      <data key="d7" xml:space="preserve"><![CDATA[urn:md5:http://modellen.mim-standaard.nl/def/mim-shapes#RelatierolDoelrdfs:subClassOfhttp://modellen.mim-standaard.nl/def/mim-shapes#Relatierol]]></data>
+      <data key="d8" xml:space="preserve"><![CDATA[rdfs:subClassOf]]></data>
+      <data key="d9"/>
+      <data key="d10">
+        <y:PolyLineEdge>
+          <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
+          <y:LineStyle color="#000000" type="line" width="1.0"/>
+          <y:Arrows source="none" target="white_delta"/>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+  </graph>
+  <data key="d6">
+    <y:Resources/>
+  </data>
+</graphml>
