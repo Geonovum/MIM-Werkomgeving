@@ -1,8 +1,10 @@
 # MIM vocabulary
-# Currently based on mim 1.1
+# Versie: MIM 1.2
 #
-# Source: https://www.geonovum.nl/geo-standaarden/metamodel-informatiemodellering/nationaal-metamodel-voor-informatiemodellering
-##
+# Bron: https://docs.geostandaarden.nl/mim/mim/
+#
+# Merk op: sh:order wordt gebruikt voor de volgorde in figuren en tabellen. Het exacte nummer is niet belangrijk, wel de volgorde ten opzichte van elkaar.
+#
 
 @prefix mim: <http://modellen.mim-standaard.nl/def/mim#>.
 @prefix mimdoc: <http://definities.mim-standaard.nl/id/referentie/>.
@@ -572,14 +574,14 @@ shape:Modelelement a sh:NodeShape;
 shape:bevatModelelement a sh:PropertyShape;
   sh:path mim:bevatModelelement;
   sh:name "mim:bevatModelelement";
-  sh:order 1;
+  sh:order 40;
   sh:class mim:Modelelement;
 .
 
 shape:informatiemodeltype a sh:PropertyShape;
   sh:path mim:informatiemodeltype;
   sh:name "mim:informatiemodeltype";
-  sh:order 1;
+  sh:order 41;
   sh:minCount 1;
   sh:maxCount 1;
   sh:node shape:Informatiemodeltypen
@@ -594,7 +596,7 @@ shape:Informatiemodeltypen a sh:NodeShape;
 shape:informatiedomein a sh:PropertyShape;
   sh:path mim:informatiedomein;
   sh:name "mim:informatiedomein";
-  sh:order 1;
+  sh:order 42;
   sh:minCount 1;
   sh:maxCount 1;
   sh:datatype xsd:string;
@@ -602,7 +604,7 @@ shape:informatiedomein a sh:PropertyShape;
 shape:relatiemodelleringstype a sh:PropertyShape;
   sh:path mim:relatiemodelleringstype;
   sh:name "mim:relatiemodelleringstype";
-  sh:order 1;
+  sh:order 43;
   sh:minCount 1;
   sh:maxCount 1;
   sh:node shape:Relatiemodelleringstypen
@@ -617,7 +619,7 @@ shape:Relatiemodelleringstypen a sh:NodeShape;
 shape:mimversie a sh:PropertyShape;
   sh:path mim:mimversie;
   sh:name "mim:mimversie";
-  sh:order 1;
+  sh:order 44;
   sh:minCount 1;
   sh:maxCount 1;
   sh:datatype xsd:string;
@@ -625,14 +627,14 @@ shape:mimversie a sh:PropertyShape;
 shape:mimextensie a sh:PropertyShape;
   sh:path mim:mimextensie;
   sh:name "mim:mimextensie";
-  sh:order 1;
+  sh:order 45;
   sh:maxCount 1;
   sh:datatype xsd:string;
 .
 shape:mimtaal a sh:PropertyShape;
   sh:path mim:mimtaal;
   sh:name "mim:mimtaal";
-  sh:order 1;
+  sh:order 46;
   sh:maxCount 1;
   sh:datatype xsd:string;
 .
@@ -640,21 +642,21 @@ shape:mimtaal a sh:PropertyShape;
 shape:tekstopmaak a sh:PropertyShape;
   sh:path mim:tekstopmaak;
   sh:name "mim:tekstopmaak";
-  sh:order 1;
+  sh:order 47;
   sh:maxCount 1;
   sh:datatype xsd:string;
 .
 
 # Metagegevens
-shape:basisUri
+shape:basisUri a sh:PropertyShape;
   sh:path mim:basisUri;
   sh:name "mim:basisUri";
-  sh:order 1;
+  sh:order 48;
   sh:minCount 1;
   sh:maxCount 1;
   sh:datatype xsd:anyURI;
 .
-shape:identificatie
+shape:identificatie a sh:PropertyShape;
   sh:path mim:identificatie;
   sh:name "mim:identificatie";
   sh:order 1;
@@ -665,7 +667,7 @@ shape:identificatie
 shape:naam a sh:PropertyShape;
   sh:path mim:naam;
   sh:name "mim:naam";
-  sh:order 1;
+  sh:order 2;
   sh:minCount 1;
   sh:maxCount 1;
   sh:or ( [ sh:datatype xsd:string ] [ sh:datatype rdf:langString ] ) ;
@@ -674,7 +676,7 @@ shape:naam a sh:PropertyShape;
 shape:naam_optioneel a sh:PropertyShape;
   sh:path mim:naam;
   sh:name "mim:naam";
-  sh:order 1;
+  sh:order 2;
   sh:maxCount 1;
   sh:or ( [ sh:datatype xsd:string ] [ sh:datatype rdf:langString ] ) ;
 .
@@ -682,7 +684,7 @@ shape:naam_optioneel a sh:PropertyShape;
 shape:naam_codelijst a sh:PropertyShape;
   sh:path mim:naam;
   sh:name "mim:naam";
-  sh:order 1;
+  sh:order 2;
   sh:minCount 1;
   sh:maxCount 1;
   sh:or ( [ sh:datatype xsd:string ] [ sh:datatype rdf:langString ] ) ;
@@ -691,14 +693,14 @@ shape:naam_codelijst a sh:PropertyShape;
 shape:alias a sh:PropertyShape;
   sh:path mim:alias;
   sh:name "mim:alias";
-  sh:order 2;
+  sh:order 3;
   sh:maxCount 1;
   sh:or ( [ sh:datatype xsd:string ] [ sh:datatype rdf:langString ] ) ;
 .
 shape:begrip a sh:PropertyShape;
   sh:path mim:begrip;
   sh:name "mim:begrip";
-  sh:order 3;
+  sh:order 4;
   sh:class skos:Concept;
 .
 shape:Begrip a sh:NodeShape;
@@ -709,13 +711,13 @@ shape:Begrip a sh:NodeShape;
 shape:begripsterm a sh:PropertyShape;
   sh:path mim:begripsterm;
   sh:name "mim:begripsterm";
-  sh:order 3;
+  sh:order 4;
   sh:or ( [ sh:datatype xsd:string ] [ sh:datatype rdf:langString ] ) ;
 .
 shape:herkomst a sh:PropertyShape;
   sh:path mim:herkomst;
   sh:name "mim:herkomst";
-  sh:order 4;
+  sh:order 5;
   sh:minCount 1;
   sh:maxCount 1;
   sh:or ( [ sh:datatype xsd:string ] [ sh:datatype rdf:langString ] ) ;
@@ -723,7 +725,7 @@ shape:herkomst a sh:PropertyShape;
 shape:definitie a sh:PropertyShape;
   sh:path mim:definitie;
   sh:name "mim:definitie";
-  sh:order 5;
+  sh:order 6;
   sh:minCount 1;
   sh:maxCount 1;
   sh:or ( [ sh:datatype xsd:string ] [ sh:datatype rdf:langString ] ) ;
@@ -732,14 +734,14 @@ shape:definitie a sh:PropertyShape;
 shape:definitie_optioneel a sh:PropertyShape;
   sh:path mim:definitie;
   sh:name "mim:definitie";
-  sh:order 5;
+  sh:order 6;
   sh:maxCount 1;
   sh:or ( [ sh:datatype xsd:string ] [ sh:datatype rdf:langString ] ) ;
 .
 shape:herkomstDefinitie a sh:PropertyShape;
   sh:path mim:herkomstDefinitie;
   sh:name "mim:herkomstDefinitie";
-  sh:order 6;
+  sh:order 7;
   sh:minCount 1;
   sh:maxCount 1;
   sh:or ( [ sh:datatype xsd:string ] [ sh:datatype rdf:langString ] ) ;
@@ -748,14 +750,14 @@ shape:herkomstDefinitie a sh:PropertyShape;
 shape:herkomstDefinitie_optioneel a sh:PropertyShape;
   sh:path mim:herkomstDefinitie;
   sh:name "mim:herkomstDefinitie";
-  sh:order 6;
+  sh:order 7;
   sh:maxCount 1;
   sh:or ( [ sh:datatype xsd:string ] [ sh:datatype rdf:langString ] ) ;
 .
 shape:datumOpname a sh:PropertyShape;
   sh:path mim:datumOpname;
   sh:name "mim:datumOpname";
-  sh:order 6;
+  sh:order 8;
   sh:minCount 1;
   sh:maxCount 1;
   sh:datatype xsd:date;
@@ -763,28 +765,28 @@ shape:datumOpname a sh:PropertyShape;
 shape:populatie a sh:PropertyShape;
   sh:path mim:populatie;
   sh:name "mim:populatie";
-  sh:order 8;
+  sh:order 9;
   sh:maxCount 1;
   sh:datatype xsd:string;
 .
 shape:kwaliteit a sh:PropertyShape;
   sh:path mim:kwaliteit;
   sh:name "mim:kwaliteit";
-  sh:order 9;
+  sh:order 10;
   sh:maxCount 1;
   sh:datatype xsd:string;
 .
 shape:toelichting a sh:PropertyShape;
   sh:path mim:toelichting;
   sh:name "mim:toelichting";
-  sh:order 10;
+  sh:order 11;
   sh:maxCount 1;
   sh:or ( [ sh:datatype xsd:string ] [ sh:datatype rdf:langString ] ) ;
 .
 shape:indicatieAbstractObject a sh:PropertyShape;
   sh:path mim:indicatieAbstractObject;
   sh:name "mim:indicatieAbstractObject";
-  sh:order 11;
+  sh:order 12;
   sh:minCount 1;
   sh:maxCount 1;
   sh:datatype xsd:boolean;
@@ -793,7 +795,7 @@ shape:indicatieAbstractObject a sh:PropertyShape;
 shape:type a sh:PropertyShape;
   sh:path mim:type;
   sh:name "mim:type";
-  sh:order 12;
+  sh:order 13;
   sh:minCount 1;
   sh:maxCount 1;
   sh:class mim:Datatype;
@@ -801,44 +803,35 @@ shape:type a sh:PropertyShape;
 shape:type_keuze a sh:PropertyShape;
   sh:path mim:type;
   sh:name "mim:type";
-  sh:order 12;
+  sh:order 13;
   sh:minCount 2;
   sh:class mim:Datatype;
 .
 shape:lengte a sh:PropertyShape;
   sh:path mim:lengte;
   sh:name "mim:lengte";
-  sh:order 13;
+  sh:order 14;
   sh:maxCount 1;
   sh:datatype xsd:string;
 .
 shape:patroon a sh:PropertyShape;
   sh:path mim:patroon;
   sh:name "mim:patroon";
-  sh:order 14;
+  sh:order 15;
   sh:maxCount 1;
   sh:datatype xsd:string;
 .
 shape:formeelPatroon a sh:PropertyShape;
   sh:path mim:formeelPatroon;
   sh:name "mim:formeelPatroon";
-  sh:order 15;
+  sh:order 16;
   sh:maxCount 1;
   sh:datatype xsd:string;
 .
 shape:heeftTijdlijnGeldigheid a sh:PropertyShape;
   sh:path mim:heeftTijdlijnGeldigheid;
   sh:name "mim:heeftTijdlijnGeldigheid";
-  sh:order 16; # TODO: update with https://github.com/Geonovum/MIM-Werkomgeving/issues/484
-  sh:minCount 1;
-  sh:maxCount 1;
-  sh:datatype xsd:boolean;
-  sh:defaultValue false;
-.
-shape:indicatieMaterieleHistorie a sh:PropertyShape;
-  sh:path mim:indicatieMaterieleHistorie;
-  sh:name "mim:indicatieMaterieleHistorie";
-  sh:order 16;
+  sh:order 17;
   sh:minCount 1;
   sh:maxCount 1;
   sh:datatype xsd:boolean;
@@ -847,7 +840,16 @@ shape:indicatieMaterieleHistorie a sh:PropertyShape;
 shape:heeftTijdlijnRegistratie a sh:PropertyShape;
   sh:path mim:heeftTijdlijnRegistratie;
   sh:name "mim:heeftTijdlijnRegistratie";
-  sh:order 17; # TODO: update with https://github.com/Geonovum/MIM-Werkomgeving/issues/484
+  sh:order 18;
+  sh:minCount 1;
+  sh:maxCount 1;
+  sh:datatype xsd:boolean;
+  sh:defaultValue false;
+.
+shape:indicatieMaterieleHistorie a sh:PropertyShape;
+  sh:path mim:indicatieMaterieleHistorie;
+  sh:name "mim:indicatieMaterieleHistorie";
+  sh:order 19;
   sh:minCount 1;
   sh:maxCount 1;
   sh:datatype xsd:boolean;
@@ -856,7 +858,7 @@ shape:heeftTijdlijnRegistratie a sh:PropertyShape;
 shape:indicatieFormeleHistorie a sh:PropertyShape;
   sh:path mim:indicatieFormeleHistorie;
   sh:name "mim:indicatieFormeleHistorie";
-  sh:order 17;
+  sh:order 20;
   sh:minCount 1;
   sh:maxCount 1;
   sh:datatype xsd:boolean;
@@ -865,7 +867,7 @@ shape:indicatieFormeleHistorie a sh:PropertyShape;
 shape:locatie a sh:PropertyShape;
   sh:path mim:locatie;
   sh:name "mim:locatie";
-  sh:order 18;
+  sh:order 21;
   sh:minCount 1;
   sh:maxCount 1;
   sh:datatype xsd:string;
@@ -873,14 +875,14 @@ shape:locatie a sh:PropertyShape;
 shape:locatie_optioneel a sh:PropertyShape;
   sh:path mim:locatie;
   sh:name "mim:locatie";
-  sh:order 18;
+  sh:order 21;
   sh:maxCount 1;
   sh:datatype xsd:string;
 .
 shape:kardinaliteit a sh:PropertyShape;
   sh:path mim:kardinaliteit;
   sh:name "mim:kardinaliteit";
-  sh:order 19;
+  sh:order 22;
   sh:minCount 1;
   sh:maxCount 1;
   sh:datatype xsd:string;
@@ -888,7 +890,7 @@ shape:kardinaliteit a sh:PropertyShape;
 shape:kardinaliteit_attribuut a sh:PropertyShape;
   sh:path mim:kardinaliteit;
   sh:name "mim:kardinaliteit";
-  sh:order 19;
+  sh:order 22;
   sh:minCount 1;
   sh:maxCount 1;
   sh:datatype xsd:string;
@@ -897,14 +899,14 @@ shape:kardinaliteit_attribuut a sh:PropertyShape;
 shape:kardinaliteitRelatieBron a sh:PropertyShape;
   sh:path mim:kardinaliteitRelatieBron;
   sh:name "mim:kardinaliteitRelatieBron";
-  sh:order 19;
+  sh:order 23;
   sh:maxCount 1;
   sh:datatype xsd:string;
 .
 shape:authentiek a sh:PropertyShape;
   sh:path mim:authentiek;
   sh:name "mim:authentiek";
-  sh:order 20;
+  sh:order 24;
   sh:minCount 1;
   sh:maxCount 1;
   sh:node shape:Authenticiteit
@@ -919,7 +921,7 @@ shape:Authenticiteit a sh:NodeShape;
 shape:indicatieAfleidbaar a sh:PropertyShape;
   sh:path mim:indicatieAfleidbaar;
   sh:name "mim:indicatieAfleidbaar";
-  sh:order 21;
+  sh:order 25;
   sh:minCount 1;
   sh:maxCount 1;
   sh:datatype xsd:boolean;
@@ -928,7 +930,7 @@ shape:indicatieAfleidbaar a sh:PropertyShape;
 shape:indicatieClassificerend a sh:PropertyShape;
   sh:path mim:indicatieClassificerend;
   sh:name "mim:indicatieClassificerend";
-  sh:order 22;
+  sh:order 26;
   sh:minCount 1;
   sh:maxCount 1;
   sh:datatype xsd:boolean;
@@ -937,7 +939,7 @@ shape:indicatieClassificerend a sh:PropertyShape;
 shape:mogelijkGeenWaarde a sh:PropertyShape;
   sh:path mim:mogelijkGeenWaarde;
   sh:name "mim:mogelijkGeenWaarde";
-  sh:order 23;
+  sh:order 27;
   sh:minCount 1;
   sh:maxCount 1;
   sh:datatype xsd:boolean;
@@ -946,7 +948,7 @@ shape:mogelijkGeenWaarde a sh:PropertyShape;
 shape:identificerend a sh:PropertyShape;
   sh:path mim:identificerend;
   sh:name "mim:identificerend";
-  sh:order 24;
+  sh:order 28;
   sh:maxCount 1;
   sh:datatype xsd:boolean;
   sh:defaultValue false;
@@ -954,7 +956,7 @@ shape:identificerend a sh:PropertyShape;
 shape:gegevensgroeptype a sh:PropertyShape;
   sh:path mim:gegevensgroeptype;
   sh:name "mim:gegevensgroeptype";
-  sh:order 25;
+  sh:order 29;
   sh:minCount 1;
   sh:maxCount 1;
   sh:class mim:Gegevensgroeptype;
@@ -962,7 +964,7 @@ shape:gegevensgroeptype a sh:PropertyShape;
 shape:unidirectioneel a sh:PropertyShape;
   sh:path mim:unidirectioneel;
   sh:name "mim:unidirectioneel";
-  sh:order 26;
+  sh:order 30;
   sh:minCount 1;
   sh:maxCount 1;
   sh:datatype xsd:boolean;
@@ -971,7 +973,7 @@ shape:unidirectioneel a sh:PropertyShape;
 shape:bron a sh:PropertyShape;
   sh:path mim:bron;
   sh:name "mim:bron";
-  sh:order 27;
+  sh:order 31;
   sh:minCount 1;
   sh:maxCount 1;
   sh:node [ sh:xone (shape:Objecttype shape:Gegevensgroeptype)]
@@ -979,7 +981,7 @@ shape:bron a sh:PropertyShape;
 shape:doel a sh:PropertyShape;
   sh:path mim:doel;
   sh:name "mim:doel";
-  sh:order 28;
+  sh:order 32;
   sh:minCount 1;
   sh:maxCount 1;
   sh:node [ sh:xone (shape:Objecttype shape:RelatiedoelKeuze)]
@@ -987,14 +989,14 @@ shape:doel a sh:PropertyShape;
 shape:doel_keuze a sh:PropertyShape;
   sh:path mim:doel;
   sh:name "mim:doel";
-  sh:order 28;
+  sh:order 32;
   sh:minCount 2;
   sh:class mim:Objecttype;
 .
 shape:subtype a sh:PropertyShape;
   sh:path mim:subtype;
   sh:name "mim:subtype";
-  sh:order 29;
+  sh:order 33;
   sh:minCount 1;
   sh:maxCount 1;
 #  sh:node shape:ObjecttypeOFGestructureerdDatatype
@@ -1003,7 +1005,7 @@ shape:subtype a sh:PropertyShape;
 shape:supertype a sh:PropertyShape;
   sh:path mim:supertype;
   sh:name "mim:supertype";
-  sh:order 30;
+  sh:order 34;
   sh:minCount 1;
   sh:maxCount 1;
 #  sh:node shape:ObjecttypeOFGestructureerdDatatype;
@@ -1012,7 +1014,7 @@ shape:supertype a sh:PropertyShape;
 shape:mixin a sh:PropertyShape;
   sh:path mim:mixin;
   sh:name "mim:mixin";
-  sh:order 31;
+  sh:order 35;
   sh:minCount 1 ;
   sh:maxCount 1 ;
   sh:datatype xsd:boolean;
@@ -1021,7 +1023,7 @@ shape:mixin a sh:PropertyShape;
 shape:eenheid a sh:PropertyShape;
   sh:path mim:eenheid;
   sh:name "mim:eenheid";
-  sh:order 32;
+  sh:order 36;
   sh:maxCount 1;
   sh:class si:MeasurementUnit;
 .
@@ -1035,7 +1037,7 @@ shape:ObjecttypeOFGestructureerdDatatype a sh:NodeShape;
 shape:aggregatietype a sh:PropertyShape;
   sh:path mim:aggregatietype;
   sh:name "mim:aggregatietype";
-  sh:order 31;
+  sh:order 37;
   sh:minCount 1;
   sh:maxCount 1;
   sh:node shape:Aggregatietypen;
@@ -1051,53 +1053,53 @@ shape:Aggregatietypen a sh:NodeShape;
 shape:code a sh:PropertyShape;
   sh:path mim:code;
   sh:name "mim:code";
-  sh:order 32;
+  sh:order 38;
   sh:maxCount 1;
   sh:datatype xsd:string;
 .
 shape:specificatieTekst a sh:PropertyShape;
   sh:path mim:specificatieTekst;
   sh:name "mim:specificatieTekst";
-  sh:order 33;
+  sh:order 39;
   sh:maxCount 1;
   sh:or ( [ sh:datatype xsd:string ] [ sh:datatype rdf:langString ] ) ;
 .
 shape:specificatieFormeel a sh:PropertyShape;
   sh:path mim:specificatieFormeel;
   sh:name "mim:specificatieFormeel";
-  sh:order 34;
+  sh:order 40;
   sh:maxCount 1;
   sh:datatype xsd:string;
 .
 shape:modelelement a sh:PropertyShape;
   sh:path mim:modelelement;
   sh:name "mim:modelelement";
-  sh:order 35;
+  sh:order 41;
   sh:class mim:Relatiesoort;
   sh:minCount 2;
 .
 shape:minimumwaardeInclusief a sh:PropertyShape;
   sh:path mim:minimumwaardeInclusief;
   sh:name "mim:minimumwaardeInclusief";
-  sh:order 36;
+  sh:order 42;
   sh:maxCount 1;
 .
 shape:minimumwaardeExclusief a sh:PropertyShape;
   sh:path mim:minimumwaardeExclusief;
   sh:name "mim:minimumwaardeExclusief";
-  sh:order 37;
+  sh:order 43;
   sh:maxCount 1;
 .
 shape:maximumwaardeInclusief a sh:PropertyShape;
   sh:path mim:maximumwaardeInclusief;
   sh:name "mim:maximumwaardeInclusief";
-  sh:order 38;
+  sh:order 44;
   sh:maxCount 1;
 .
 shape:maximumwaardeExclusief a sh:PropertyShape;
   sh:path mim:maximumwaardeExclusief;
   sh:name "mim:maximumwaardeExclusief";
-  sh:order 39;
+  sh:order 45;
   sh:maxCount 1;
 .
 
@@ -1106,45 +1108,53 @@ shape:maximumwaardeExclusief a sh:PropertyShape;
 shape:attribuut a sh:PropertyShape;
   sh:path mim:attribuut;
   sh:name "mim:attribuut";
+  sh:order 46;
   sh:node [sh:xone (shape:Attribuutsoort shape:AttribuutsoortKeuze)];
 .
 shape:attribuut_keuze a sh:PropertyShape;
   sh:path mim:attribuut;
   sh:name "mim:attribuut";
+  sh:order 47;
   sh:class mim:Attribuutsoort;
   sh:minCount 2;
 .
 shape:gegevensgroep a sh:PropertyShape;
   sh:path mim:gegevensgroep;
   sh:name "mim:gegevensgroep";
+  sh:order 48;
   sh:class mim:Gegevensgroep;
 .
 shape:waarde a sh:PropertyShape;
   sh:path mim:waarde;
   sh:name "mim:waarde";
+  sh:order 49;
   sh:minCount 1;
   sh:class mim:Enumeratiewaarde;
 .
 shape:constraint a sh:PropertyShape;
   sh:path mim:constraint;
   sh:name "mim:constraint";
+  sh:order 50;
   sh:class mim:Constraint;
   sh:nodeKind sh:BlankNode;
 .
 shape:dataElement a sh:PropertyShape;
   sh:path mim:dataElement;
   sh:name "mim:dataElement";
+  sh:order 51;
   sh:class mim:DataElement;
 .
 shape:referentieElement a sh:PropertyShape;
   sh:path mim:referentieElement;
   sh:name "mim:referentieElement";
+  sh:order 52;
   sh:class mim:ReferentieElement;
   sh:minCount 1;
 .
 shape:relatierol a sh:PropertyShape;
   sh:path mim:relatierol;
   sh:name "mim:relatierol";
+  sh:order 53;
   sh:class mim:Relatierol;
   sh:minCount 1;
   sh:maxCount 2;
