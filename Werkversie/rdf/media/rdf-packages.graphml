@@ -38,12 +38,12 @@
           <y:NodeLabel alignment="center" autoSizePolicy="content" backgroundColor="#B7C9E3" configuration="com.yworks.entityRelationship.label.name" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasLineColor="false" height="18.1328125" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="t" textColor="#000000" verticalTextPosition="bottom" visible="true" width="71.06640625" x="64.466796875" xml:space="preserve" y="4.0">mim:Extern</y:NodeLabel>
           <y:NodeLabel alignment="left" autoSizePolicy="content" configuration="com.yworks.entityRelationship.label.attributes" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="117.0625" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="top" visible="true" width="187.357421875" x="2.0" xml:space="preserve" y="30.1328125">mim:identificatie (anyURI) [1,1]
 mim:naam [1,1]
-mim:basisUri (anyURI) [1,1]
-mim:toelichting [0,1]
-mim:locatie (string) [1,1]
 mim:herkomst [1,1]
 mim:definitie [1,1]
 mim:datumOpname (date) [1,1]
+mim:toelichting [0,1]
+mim:locatie (string) [1,1]
+mim:basisUri (anyURI) [1,1]
 <y:LabelModel><y:ErdAttributesNodeLabelModel/></y:LabelModel><y:ModelParameter><y:ErdAttributesNodeLabelModelParameter/></y:ModelParameter></y:NodeLabel>
         </y:GenericNode>
       </data>
@@ -59,9 +59,9 @@ mim:datumOpname (date) [1,1]
           <y:NodeLabel alignment="center" autoSizePolicy="content" backgroundColor="#B7C9E3" configuration="com.yworks.entityRelationship.label.name" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasLineColor="false" height="18.1328125" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="t" textColor="#000000" verticalTextPosition="bottom" visible="true" width="78.8359375" x="60.58203125" xml:space="preserve" y="4.0">mim:Domein</y:NodeLabel>
           <y:NodeLabel alignment="left" autoSizePolicy="content" configuration="com.yworks.entityRelationship.label.attributes" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="74.6640625" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="top" visible="true" width="187.357421875" x="2.0" xml:space="preserve" y="30.1328125">mim:identificatie (anyURI) [1,1]
 mim:naam [1,1]
-mim:basisUri (anyURI) [1,1]
 mim:alias [0,1]
 mim:datumOpname (date) [1,1]
+mim:basisUri (anyURI) [1,1]
 <y:LabelModel><y:ErdAttributesNodeLabelModel/></y:LabelModel><y:ModelParameter><y:ErdAttributesNodeLabelModelParameter/></y:ModelParameter></y:NodeLabel>
         </y:GenericNode>
       </data>
@@ -76,17 +76,17 @@ mim:datumOpname (date) [1,1]
           <y:BorderStyle color="#000000" type="line" width="1.0"/>
           <y:NodeLabel alignment="center" autoSizePolicy="content" backgroundColor="#B7C9E3" configuration="com.yworks.entityRelationship.label.name" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasLineColor="false" height="18.1328125" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="t" textColor="#000000" verticalTextPosition="bottom" visible="true" width="130.0234375" x="124.98828125000006" xml:space="preserve" y="4.0">mim:Informatiemodel</y:NodeLabel>
           <y:NodeLabel alignment="left" autoSizePolicy="content" configuration="com.yworks.entityRelationship.label.attributes" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="173.59375" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="top" visible="true" width="368.34765625" x="2.0" xml:space="preserve" y="30.1328125">mim:identificatie (anyURI) [1,1]
-mim:mimextensie (string) [0,1]
-mim:mimtaal (string) [0,1]
 mim:naam [1,1]
-mim:basisUri (anyURI) [1,1]
-mim:informatiemodeltype → Informatiemodeltypen [1,1]
-mim:mimversie (string) [1,1]
-mim:relatiemodelleringstype → Relatiemodelleringstypen [1,1]
-mim:tekstopmaak (string) [0,1]
-mim:informatiedomein (string) [1,1]
 mim:alias [0,1]
 mim:datumOpname (date) [1,1]
+mim:informatiemodeltype → Informatiemodeltypen [1,1]
+mim:informatiedomein (string) [1,1]
+mim:relatiemodelleringstype → Relatiemodelleringstypen [1,1]
+mim:mimversie (string) [1,1]
+mim:mimextensie (string) [0,1]
+mim:mimtaal (string) [0,1]
+mim:tekstopmaak (string) [0,1]
+mim:basisUri (anyURI) [1,1]
 <y:LabelModel><y:ErdAttributesNodeLabelModel/></y:LabelModel><y:ModelParameter><y:ErdAttributesNodeLabelModelParameter/></y:ModelParameter></y:NodeLabel>
         </y:GenericNode>
       </data>
@@ -102,8 +102,8 @@ mim:datumOpname (date) [1,1]
           <y:NodeLabel alignment="center" autoSizePolicy="content" backgroundColor="#B7C9E3" configuration="com.yworks.entityRelationship.label.name" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasLineColor="false" height="18.1328125" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="t" textColor="#000000" verticalTextPosition="bottom" visible="true" width="80.88671875" x="59.556640625" xml:space="preserve" y="4.0">mim:Package</y:NodeLabel>
           <y:NodeLabel alignment="left" autoSizePolicy="content" configuration="com.yworks.entityRelationship.label.attributes" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="60.53125" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="top" visible="true" width="183.958984375" x="2.0" xml:space="preserve" y="30.1328125">mim:identificatie (anyURI) [1,1]
 mim:naam [1,1]
-mim:basisUri (anyURI) [1,1]
 mim:alias [0,1]
+mim:basisUri (anyURI) [1,1]
 <y:LabelModel><y:ErdAttributesNodeLabelModel/></y:LabelModel><y:ModelParameter><y:ErdAttributesNodeLabelModelParameter/></y:ModelParameter></y:NodeLabel>
         </y:GenericNode>
       </data>
@@ -119,12 +119,12 @@ mim:alias [0,1]
           <y:NodeLabel alignment="center" autoSizePolicy="content" backgroundColor="#B7C9E3" configuration="com.yworks.entityRelationship.label.name" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasLineColor="false" height="18.1328125" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="t" textColor="#000000" verticalTextPosition="bottom" visible="true" width="60.91796875" x="69.541015625" xml:space="preserve" y="4.0">mim:View</y:NodeLabel>
           <y:NodeLabel alignment="left" autoSizePolicy="content" configuration="com.yworks.entityRelationship.label.attributes" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="117.0625" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="top" visible="true" width="187.357421875" x="2.0" xml:space="preserve" y="30.1328125">mim:identificatie (anyURI) [1,1]
 mim:naam [1,1]
-mim:basisUri (anyURI) [1,1]
-mim:toelichting [0,1]
-mim:locatie (string) [1,1]
 mim:herkomst [1,1]
 mim:definitie [1,1]
 mim:datumOpname (date) [1,1]
+mim:toelichting [0,1]
+mim:locatie (string) [1,1]
+mim:basisUri (anyURI) [1,1]
 <y:LabelModel><y:ErdAttributesNodeLabelModel/></y:LabelModel><y:ModelParameter><y:ErdAttributesNodeLabelModelParameter/></y:ModelParameter></y:NodeLabel>
         </y:GenericNode>
       </data>
@@ -196,7 +196,8 @@ mim:datumOpname (date) [1,1]
       </data>
     </edge>
     <edge id="e5" source="n4" target="n0">
-      <data key="d7"/>
+      <data key="d7" xml:space="preserve"><![CDATA[urn:md5:http://modellen.mim-standaard.nl/def/mim-shapes#Packagerdfs:subClassOfhttp://modellen.mim-standaard.nl/def/mim-shapes#Modelelement]]></data>
+      <data key="d8" xml:space="preserve"><![CDATA[rdfs:subClassOf]]></data>
       <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>

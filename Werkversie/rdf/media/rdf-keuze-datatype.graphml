@@ -38,13 +38,13 @@
           <y:NodeLabel alignment="center" autoSizePolicy="content" backgroundColor="#B7C9E3" configuration="com.yworks.entityRelationship.label.name" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasLineColor="false" height="18.1328125" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="t" textColor="#000000" verticalTextPosition="bottom" visible="true" width="69.203125" x="65.3984375" xml:space="preserve" y="4.0">mim:Keuze</y:NodeLabel>
           <y:NodeLabel alignment="left" autoSizePolicy="content" configuration="com.yworks.entityRelationship.label.attributes" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="131.1953125" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="top" visible="true" width="187.357421875" x="2.0" xml:space="preserve" y="30.1328125">mim:identificatie (anyURI) [1,1]
 mim:naam [1,1]
-mim:toelichting [0,1]
 mim:alias [0,1]
-mim:begripsterm [0,n]
 mim:begrip → Concept [0,n]
+mim:begripsterm [0,n]
 mim:herkomst [1,1]
 mim:definitie [1,1]
 mim:datumOpname (date) [1,1]
+mim:toelichting [0,1]
 <y:LabelModel><y:ErdAttributesNodeLabelModel/></y:LabelModel><y:ModelParameter><y:ErdAttributesNodeLabelModelParameter/></y:ModelParameter></y:NodeLabel>
         </y:GenericNode>
       </data>
@@ -58,35 +58,34 @@ mim:datumOpname (date) [1,1]
           <y:Fill color="#E8EEF7" color2="#B7C9E3" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="1.0"/>
           <y:NodeLabel alignment="center" autoSizePolicy="content" backgroundColor="#B7C9E3" configuration="com.yworks.entityRelationship.label.name" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasLineColor="false" height="18.1328125" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="t" textColor="#000000" verticalTextPosition="bottom" visible="true" width="116.5" x="81.25" xml:space="preserve" y="4.0">mim:Attribuutsoort</y:NodeLabel>
-          <y:NodeLabel alignment="left" autoSizePolicy="content" configuration="com.yworks.entityRelationship.label.attributes" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="413.8515625" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="top" visible="true" width="270.408203125" x="2.0" xml:space="preserve" y="30.1328125">mim:identificatie (anyURI) [1,1]
+          <y:NodeLabel alignment="left" autoSizePolicy="content" configuration="com.yworks.entityRelationship.label.attributes" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="399.71875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="top" visible="true" width="270.408203125" x="2.0" xml:space="preserve" y="30.1328125">mim:identificatie (anyURI) [1,1]
 mim:naam [1,1]
+mim:alias [0,1]
+mim:begrip → Concept [0,n]
+mim:begripsterm [0,n]
+mim:herkomst [1,1]
+mim:definitie [1,1]
+mim:herkomstDefinitie [1,1]
+mim:datumOpname (date) [1,1]
 mim:toelichting [0,1]
-mim:type → Datatype [1,1]
 mim:lengte (string) [0,1]
 mim:patroon (string) [0,1]
 mim:formeelPatroon (string) [0,1]
-mim:indicatieMaterieleHistorie (boolean) [1,1]
 mim:heeftTijdlijnGeldigheid (boolean) [1,1]
-mim:indicatieFormeleHistorie (boolean) [1,1]
 mim:heeftTijdlijnRegistratie (boolean) [1,1]
+mim:indicatieMaterieleHistorie (boolean) [1,1]
+mim:indicatieFormeleHistorie (boolean) [1,1]
 mim:kardinaliteit (string) [1,1]
-mim:alias [0,1]
 mim:authentiek → Authenticiteit [1,1]
 mim:indicatieAfleidbaar (boolean) [1,1]
 mim:indicatieClassificerend (boolean) [1,1]
 mim:mogelijkGeenWaarde (boolean) [1,1]
 mim:identificerend (boolean) [0,1]
-mim:begripsterm [0,n]
-mim:begrip → Concept [0,n]
 mim:eenheid → MeasurementUnit [0,1]
 mim:minimumwaardeInclusief [0,1]
 mim:minimumwaardeExclusief [0,1]
 mim:maximumwaardeInclusief [0,1]
 mim:maximumwaardeExclusief [0,1]
-mim:herkomst [1,1]
-mim:definitie [1,1]
-mim:datumOpname (date) [1,1]
-mim:herkomstDefinitie [1,1]
 <y:LabelModel><y:ErdAttributesNodeLabelModel/></y:LabelModel><y:ModelParameter><y:ErdAttributesNodeLabelModelParameter/></y:ModelParameter></y:NodeLabel>
         </y:GenericNode>
       </data>
@@ -100,14 +99,8 @@ mim:herkomstDefinitie [1,1]
           <y:Fill color="#E8EEF7" color2="#B7C9E3" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="1.0"/>
           <y:NodeLabel alignment="center" autoSizePolicy="content" backgroundColor="#B7C9E3" configuration="com.yworks.entityRelationship.label.name" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasLineColor="false" height="18.1328125" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="t" textColor="#000000" verticalTextPosition="bottom" visible="true" width="132.53125" x="33.734375" xml:space="preserve" y="4.0">mim:Keuze (Datatype)</y:NodeLabel>
-          <y:NodeLabel alignment="left" autoSizePolicy="content" configuration="com.yworks.entityRelationship.label.attributes" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" hasText="false" height="4.0" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="top" visible="true" width="4.0" x="2.0" y="30.1328125">
-            <y:LabelModel>
-              <y:ErdAttributesNodeLabelModel/>
-            </y:LabelModel>
-            <y:ModelParameter>
-              <y:ErdAttributesNodeLabelModelParameter/>
-            </y:ModelParameter>
-          </y:NodeLabel>
+          <y:NodeLabel alignment="left" autoSizePolicy="content" configuration="com.yworks.entityRelationship.label.attributes" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="32.265625" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="top" visible="true" width="72.34375" x="2.0" xml:space="preserve" y="30.1328125">
+                  <y:LabelModel><y:ErdAttributesNodeLabelModel/></y:LabelModel><y:ModelParameter><y:ErdAttributesNodeLabelModelParameter/></y:ModelParameter></y:NodeLabel>
         </y:GenericNode>
       </data>
     </node>
@@ -156,7 +149,8 @@ mim:herkomstDefinitie [1,1]
       </data>
     </edge>
     <edge id="e3" source="n3" target="n1">
-      <data key="d7"/>
+      <data key="d7" xml:space="preserve"><![CDATA[urn:md5:http://modellen.mim-standaard.nl/def/mim-shapes#DatatypeKeuzeISAhttp://modellen.mim-standaard.nl/def/mim-shapes#Keuze]]></data>
+      <data key="d8" xml:space="preserve"><![CDATA[ISA]]></data>
       <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
