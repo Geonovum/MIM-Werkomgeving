@@ -207,7 +207,7 @@ Voor use case zie: ([use case 4: relatiedoel keuze](#relatiedoelkeuze)).
 
   <figure id="KeuzeRelatiedoel5">
     <img src="media/KeuzeRelatiedoel5.png" alt="" />
-    <figcaption>Keuze tussen relatiesoorten</figcaption>
+    <figcaption>Diagram: Keuze tussen relatiesoorten</figcaption>
   </figure>
 
   <p><strong>Toelichting</strong>: een bron objecttype of gegevensgroeptype kan normaal een relatiesoort/relatierol hebben, die gekoppeld is aan (verwijst naar) een doel objecttype. Als er sprake is van een relatiesoort/relatierol keuze, dan heeft het objecttype 1 koppeling met een 'keuze als relatie' naar een keuze. De 'keuze als relatie' heeft geen betekenis. De 'keuze tussen relaties' heeft 2 of meer relatiesoorten/relatierollen naar de doel objecttypes. Er moet een keuze gemaakt worden voor 1 van de relatiesoorten/relatierollen en daarmee voor het aan deze relatie gerelateerde doel objecttype.</p> 
@@ -1766,10 +1766,9 @@ Een modelelement mag maar één voorkomen van metagegeven `Maximumwaarde inclusi
 
 `Mixin` kan gebruikt worden als metagegeven bij een `Generalisatie` bij logische gegevensmodellen indien er sprake is van multiple inheritance, d.w.z. meerdere superklassen op een subklasse. Het is opgenomen om multiple inheritance implementatie-issues op te lossen in talen/specificaties die dit niet (of niet eenvoudig) ondersteunen. Met `Mixin = Ja` wordt aangegeven dat deze generalisatie en ook de gerelateerde superklasse niet in de implementatie voorkomt maar dat wel eigenschappen (attribuutsoorten en relatiesoorten/rollen) worden overgenomen door de subklasse. `Mixin = Ja` geeft de mogelijkheid om de multiple inheritance indien gewenst, in het MIM niveau 3 model te behouden maar er in de implementatie indien nodig rekening, mee te houden. De modelleur kan hiermee aangeven welke generalisatie op een alternatieve manier wordt geïmplementeerd. Talen die multiple inheritance wel ondersteunen negeren dit metagegeven.
 
-
 <figure id="Mixin">
   <img src="media/Mixin.png" alt="" />
-  <figcaption>Voorbeeld van multiple inheritance met het metagegeven 'Mixin = "Ja"' op een generalisatie.</figcaption>
+  <figcaption>Diagram: Voorbeeld van multiple inheritance met het metagegeven 'Mixin = "Ja"' op een generalisatie.</figcaption>
 </figure>
 
 *Toepassing:* Generalisatie en alleen bij MIM niveau 3. Niet gebruiken bij generalisaties tussen datatypen.
