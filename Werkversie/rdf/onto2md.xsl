@@ -141,7 +141,7 @@
 <xsl:template match="*" mode="meta-eigenschappen">
   <xsl:if test="exists(sh:property)">
     <xsl:text>|Eigenschappen|</xsl:text>
-    <xsl:for-each select="key('resource',sh:property/(@rdf:resource|@rdf:nodeID))"><xsl:sort select="sh:name"/>
+    <xsl:for-each select="key('resource',sh:property/(@rdf:resource|@rdf:nodeID))"><xsl:sort select="sh:order" data-type="number"/><xsl:sort select="sh:name"/>
       <xsl:if test="position()!=1"><xsl:text>, </xsl:text></xsl:if>
       <xsl:text>[</xsl:text><xsl:apply-templates select="." mode="label"/><xsl:text>](</xsl:text><xsl:apply-templates select="sh:path/@rdf:resource" mode="link"/><xsl:text>)</xsl:text>
     </xsl:for-each>

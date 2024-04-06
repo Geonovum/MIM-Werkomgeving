@@ -4,7 +4,7 @@
   PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
   PREFIX owl: <http://www.w3.org/2002/07/owl#>
   PREFIX sh: <http://www.w3.org/ns/shacl#>
-  PREFIX mim: <http://bp4mc2.org/def/mim#>
+  PREFIX mim: <http://modellen.mim-standaard.nl/def/mim#>
   INSERT {
     GRAPH <http://localhost:8080/data2model/container/mim> {
       ?objecttype a mim:Objecttype.
@@ -28,7 +28,7 @@
   PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
   PREFIX owl: <http://www.w3.org/2002/07/owl#>
   PREFIX sh: <http://www.w3.org/ns/shacl#>
-  PREFIX mim: <http://bp4mc2.org/def/mim#>
+  PREFIX mim: <http://modellen.mim-standaard.nl/def/mim#>
   INSERT {
     GRAPH <http://localhost:8080/data2model/container/mim> {
       ?objecttype mim:attribuut ?attribuutsoort.
@@ -73,7 +73,7 @@
     PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
     PREFIX owl: <http://www.w3.org/2002/07/owl#>
     PREFIX sh: <http://www.w3.org/ns/shacl#>
-    PREFIX mim: <http://bp4mc2.org/def/mim#>
+    PREFIX mim: <http://modellen.mim-standaard.nl/def/mim#>
     INSERT {
       GRAPH <http://localhost:8080/data2model/container/mim> {
         ?relatiesoort a mim:Relatiesoort.
@@ -116,7 +116,7 @@
   PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
   PREFIX owl: <http://www.w3.org/2002/07/owl#>
   PREFIX sh: <http://www.w3.org/ns/shacl#>
-  PREFIX mim: <http://bp4mc2.org/def/mim#>
+  PREFIX mim: <http://modellen.mim-standaard.nl/def/mim#>
   INSERT {
     GRAPH <http://localhost:8080/data2model/container/mim> {
       ?datatype a mim:GestructureerdDatatype.
@@ -150,7 +150,7 @@
   PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
   PREFIX owl: <http://www.w3.org/2002/07/owl#>
   PREFIX sh: <http://www.w3.org/ns/shacl#>
-  PREFIX mim: <http://bp4mc2.org/def/mim#>
+  PREFIX mim: <http://modellen.mim-standaard.nl/def/mim#>
   INSERT {
     GRAPH <http://localhost:8080/data2model/container/mim> {
       ?referentielijst a mim:Referentielijst.
@@ -191,7 +191,7 @@
   PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
   PREFIX owl: <http://www.w3.org/2002/07/owl#>
   PREFIX sh: <http://www.w3.org/ns/shacl#>
-  PREFIX mim: <http://bp4mc2.org/def/mim#>
+  PREFIX mim: <http://modellen.mim-standaard.nl/def/mim#>
   INSERT {
     GRAPH <http://localhost:8080/data2model/container/mim> {
       ?generalisatie a mim:Generalisatie.
@@ -220,7 +220,7 @@
     PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
     PREFIX owl: <http://www.w3.org/2002/07/owl#>
     PREFIX sh: <http://www.w3.org/ns/shacl#>
-    PREFIX mim: <http://bp4mc2.org/def/mim#>
+    PREFIX mim: <http://modellen.mim-standaard.nl/def/mim#>
     PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     INSERT {
       GRAPH <http://localhost:8080/data2model/container/mim> {
@@ -244,7 +244,7 @@
     PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
     PREFIX owl: <http://www.w3.org/2002/07/owl#>
     PREFIX sh: <http://www.w3.org/ns/shacl#>
-    PREFIX mim: <http://bp4mc2.org/def/mim#>
+    PREFIX mim: <http://modellen.mim-standaard.nl/def/mim#>
     INSERT {
       GRAPH <http://localhost:8080/data2model/container/mim> {
         ?element mim:naam ?naam
@@ -279,7 +279,7 @@
     PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
     PREFIX owl: <http://www.w3.org/2002/07/owl#>
     PREFIX sh: <http://www.w3.org/ns/shacl#>
-    PREFIX mim: <http://bp4mc2.org/def/mim#>
+    PREFIX mim: <http://modellen.mim-standaard.nl/def/mim#>
     INSERT {
       GRAPH <http://localhost:8080/data2model/container/mim> {
         ?element mim:alias ?alias
@@ -307,7 +307,7 @@
     PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
     PREFIX owl: <http://www.w3.org/2002/07/owl#>
     PREFIX sh: <http://www.w3.org/ns/shacl#>
-    PREFIX mim: <http://bp4mc2.org/def/mim#>
+    PREFIX mim: <http://modellen.mim-standaard.nl/def/mim#>
     PREFIX dct: <http://purl.org/dc/terms/>
     INSERT {
       GRAPH <http://localhost:8080/data2model/container/mim> {
@@ -336,7 +336,7 @@
     PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
     PREFIX owl: <http://www.w3.org/2002/07/owl#>
     PREFIX sh: <http://www.w3.org/ns/shacl#>
-    PREFIX mim: <http://bp4mc2.org/def/mim#>
+    PREFIX mim: <http://modellen.mim-standaard.nl/def/mim#>
     PREFIX dct: <http://purl.org/dc/terms/>
     INSERT {
       GRAPH <http://localhost:8080/data2model/container/mim> {
@@ -365,7 +365,7 @@
     PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
     PREFIX owl: <http://www.w3.org/2002/07/owl#>
     PREFIX sh: <http://www.w3.org/ns/shacl#>
-    PREFIX mim: <http://bp4mc2.org/def/mim#>
+    PREFIX mim: <http://modellen.mim-standaard.nl/def/mim#>
     PREFIX dct: <http://purl.org/dc/terms/>
     INSERT {
       GRAPH <http://localhost:8080/data2model/container/mim> {
@@ -392,7 +392,7 @@
     PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
     PREFIX owl: <http://www.w3.org/2002/07/owl#>
     PREFIX sh: <http://www.w3.org/ns/shacl#>
-    PREFIX mim: <http://bp4mc2.org/def/mim#>
+    PREFIX mim: <http://modellen.mim-standaard.nl/def/mim#>
     PREFIX dct: <http://purl.org/dc/terms/>
     INSERT {
       GRAPH <http://localhost:8080/data2model/container/mim> {
@@ -418,7 +418,7 @@
     PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
     PREFIX owl: <http://www.w3.org/2002/07/owl#>
     PREFIX sh: <http://www.w3.org/ns/shacl#>
-    PREFIX mim: <http://bp4mc2.org/def/mim#>
+    PREFIX mim: <http://modellen.mim-standaard.nl/def/mim#>
     PREFIX dct: <http://purl.org/dc/terms/>
     INSERT {
       GRAPH <http://localhost:8080/data2model/container/mim> {
@@ -447,7 +447,7 @@
     PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
     PREFIX owl: <http://www.w3.org/2002/07/owl#>
     PREFIX sh: <http://www.w3.org/ns/shacl#>
-    PREFIX mim: <http://bp4mc2.org/def/mim#>
+    PREFIX mim: <http://modellen.mim-standaard.nl/def/mim#>
     PREFIX dct: <http://purl.org/dc/terms/>
     INSERT {
       GRAPH <http://localhost:8080/data2model/container/mim> {
@@ -469,7 +469,7 @@
     PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
     PREFIX owl: <http://www.w3.org/2002/07/owl#>
     PREFIX sh: <http://www.w3.org/ns/shacl#>
-    PREFIX mim: <http://bp4mc2.org/def/mim#>
+    PREFIX mim: <http://modellen.mim-standaard.nl/def/mim#>
     PREFIX dct: <http://purl.org/dc/terms/>
     INSERT {
       GRAPH <http://localhost:8080/data2model/container/mim> {
@@ -495,7 +495,7 @@
     PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
     PREFIX owl: <http://www.w3.org/2002/07/owl#>
     PREFIX sh: <http://www.w3.org/ns/shacl#>
-    PREFIX mim: <http://bp4mc2.org/def/mim#>
+    PREFIX mim: <http://modellen.mim-standaard.nl/def/mim#>
     PREFIX dct: <http://purl.org/dc/terms/>
     INSERT {
       GRAPH <http://localhost:8080/data2model/container/mim> {
@@ -519,7 +519,7 @@
     PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
     PREFIX owl: <http://www.w3.org/2002/07/owl#>
     PREFIX sh: <http://www.w3.org/ns/shacl#>
-    PREFIX mim: <http://bp4mc2.org/def/mim#>
+    PREFIX mim: <http://modellen.mim-standaard.nl/def/mim#>
     INSERT {
       GRAPH <http://localhost:8080/data2model/container/mim> {
         ?element ?mimproperty ?mimvalue

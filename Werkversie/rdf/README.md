@@ -1,81 +1,12 @@
-# Metamodel voor informatiemodellen in RDF
+Vanuit deze map kan de ontologie Respec pagina en de Linked Data plaatjes gegenereerd worden.
 
-Op deze pagina vindt u de formele definitie en beschrijving van het Metamodel voor Informatiemodellen in RDF. Het betreft de RDF representatie van het metamodel beschreven in deze Github repository (op dit moment de Werkversie van 17 juli 2019).
+Hiervoor zijn de volgende stappen nodig:
 
-Deze werkversie is de opvolger van de MiM 1.0 versie, beschreven in https://docs.geostandaarden.nl/mim/mim10. (zie ook [overige documentatie](https://www.geonovum.nl/geo-standaarden/metamodel-informatiemodellering/nationaal-metamodel-voor-informatiemodellering)).
+1. Voer `import-libs.sh` uit om de juiste libraries te downloaden naar de lokale map 'libs';
+2. Voer `copyfiles.sh` uit. Dit zorgt de de graphml bestanden in de map 'media' gekopieerd worden naar de lokale map 'libs';
+3. Voer `onto2md.sh` uit. Dit zorgt voor het bestand Ontologie.md in de map "model". Deze map bevat de bestanden die op de http://modellen.mim-standaard.nl webserver geplaatst kunnen worden. Zie ook de README.md in die map.
+4. Voer `onto2graphml.sh` uit. Dit zorgt er voor dat de graphml bestanden worden gemaakt, waarbij als basis de "oude" graphml bestanden worden gebruikt (die in stap 2 zijn gekopieerd zodat ze niet verloren raken).
+5. Open 1 voor 1 de nieuwe graphml bestanden in de map 'media' en controleer de plaatsing van de elementen. Soms is het nodig om bepaalde elementen nog wat te schuiven.
+6. Exporteer het resultaat naar een .png bestand en plaats deze in de map /media in de ROOT van deze Github repository.
 
-Het MiM is een *metamodel*. Dit betekent dat in termen van het MiM een concreet informatiemodel kan worden uitgewerkt, bijvoorbeeld het informatiemodel Basisregistratie Adressen en Gebouwen. Het MiM is niet bedoeld om vervolgens in termen van dit informatiemodel een concrete dataset te vormen. Hiervoor is een transformatie nodig naar een (technisch) uitwisselings- of opslagmodel nodig.
-
-Op diezelfde manier levert het toepassen van het MiM in RDF geen ontologie of vocabulaire waarin RDF kan worden uitgedrukt: slechts het informatiemodel zelf is op deze manier in RDF uitgedrukt. Voor de vertaalslag naar een ontologie is een afzonderlijke transformatie nodig.
-
-Zo leidt een MiM objecttype "Schip" tot de volgende weergave in RDF:
-
-```
-@prefix vb: <http://bp4mc2.org/voorbeeld/>.
-@prefix mim: <http://bp4mc2.org/def/mim#>.
-
-vb:Schip a mim:Objecttype;
-  rdfs:label "Schip"@nl;
-.
-```
-
-`vb:Schip` is in dit voorbeeld een voorkomen van de klasse `mim:Objecttype`. dit voorkomen kent zelf geen voorkomens. Hiervoor is een vertaling nodig naar een `rdfs:Class`, bijvoorbeeld door:
-
-```
-@prefix vbo: <http://bp4mc2.org/voorbeeld/def#>.
-
-vbo:Schip a rdfs:Class;
-  rdfs:seeAlso vb:Schip;
-.
-vb:Pakjesboot12 a vbo:Schip.
-```
-
-## Het model
-
-Het RDF model is opgesplitst in twee delen (klik op het linkje om het daadwerkelijk modelonderdeel te openen):
-
-1. de [RDF vocabulaire](model/mim.ttl), met de (meta)klassen en (meta)eigenschappen;
-2. de [RDF Shapesgraph](model/mim-shapes.ttl), met "shapes", de gegevensconstraints die gelden op het gebruik van de klassen en eigenschappen.
-
-## Status
-
-De huidige status van deze beschrijving is *concept*. Op de volgende hoofdpunten zijn vervolgacties nodig:
-
-- Er staan nog enkele issues open op de manier waarop de huidige standaard geinterpreteerd moet worden. De vervolgacties daarvoor staan beschreven in de afzonderlijke issues.
-- Een handreiking is gewenst hoe vanuit een MiM RDF informatiemodel een RDF ontologie gemaakt kan worden. Hierbij kan aangesloten worden bij de ontwikkelingen rondom [NEN3610 en Linked data](https://github.com/Geonovum/NEN3610-Linkeddata). Dit komt overeen met [issue #72](https://github.com/Geonovum/MIM-Werkomgeving/issues/72).
-- Het MiM in RDF dient opgenomen te worden als onderdeel van de MiM standaard. Dit komt overeen met [issue #71](https://github.com/Geonovum/MIM-Werkomgeving/issues/71).
-
-## Interpretatie
-
-Bij het opstellen van het MiM in RDF is gebruik gemaakt van de tekstuele beschrijving van het MiM. Er is een 1-op-1 omzetting gedaan, zonder enige aanpassing van de beschrijvingen. Dit maakt het mogelijk om een MiM informatiemodel om te zetten van een UML representatie naar een RDF representatie en weer terug, zonder verlies van informatie.
-
-De volgende regels zijn gebruikt bij de omzetting van de MiM tekst naar RDF:
-
-1. Elk voorkomen van een MiM «metaclass» is omgezet naar een voorkomen van een `owl:Class`;
-2. Elk aspect van een MIM «metaclass» is omgezet naar een voorkomen van een `owl:DatatypeProperty`, voor zover sprake is van een aspect dat een waarde heeft die met een datatype is uit te drukken (zoals tekstuele, nummerieke of boolean aspecten);
-3. Elk aspect van een MIM «metaclass» is omgezet naar een voorkomen van een `owl:ObjectProperty`, voor zover sprake is van een aspect waarbij de waarde verwijst naar een voorkomen van een andere MiM «metaclass»;
-4. Een `rdfs:label` is opgenomen met de naam van de MiM «metaclass» c.q. het aspect;
-5. Een `rdfs:comment` is opgenomen met de definitie van de MiM «metaclass» c.q. het aspect.
-
-In een enkel geval ontbreekt in de tekst een beschrijving van het aspect. In dat geval is de target rolnaam gebruikt van de associatie, zoals afgebeeld in het figuur bij de tekst. In het voorkomende geval is hiervan een issue aangemaakt.
-
-Voor de omzetting van de gegevensconstraints (zoals cardinaliteiten, datatypen en properties per klasse), is op de volgende manier een SHACL shape graph gemaakt:
-
-1. Elk voorkomen van een MiM «metaclass» kent ook een `sh:NodeShape` met een `sh:name` die overeen komt de originele technische naam (UpperCamelCase);
-2. Voor elk voorkomen van een MiM «metaclass» zijn `sh:PropertyShapes` aangemaakt om aan te geven welke aspecten zijn toegestaan voor een MiM «metaclass», de cardinaliteiten en het datatype c.q. de geassocieerde MiM «metaclass».
-
-## Grafische weergave
-
-Onderstaand figuur geeft het MiM in RDF weer, opgesteld vanuit de ontologie en de shape graph, conform de visualisatie zoals gedefinieerd in [BP4mc2](http://bp4mc2.org/20181107/#grafische-representatie).
-
-### Kern
-![](diagrams/kern.png)
-
-### Datatype
-![](diagrams/datatype.png)
-
-### Constraint
-![](diagrams/constraint.png)
-
-### Relatie
-![](diagrams/relatie.png)
+Merk op: als er nieuwe metaklassen bij zijn gekomen, dan zullen deze niet automatisch toegevoegd worden, omdat onto2graphml uitgaat van de bestaande diagrammen en dus alle klassen weglaat die niet in de bestaande diagrammen voorkomen. Om toch alle metaklassen te krijgen, dien je in onto2graphml voor het juiste bestand de parameter 'follow' te vervangen door de parameter 'add'. Hierdoor krijg je alle metaklassen, en kun je degenen die je niet nodig hebt weghalen (in stap 5).

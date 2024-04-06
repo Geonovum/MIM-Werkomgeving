@@ -9,8 +9,8 @@ Op diezelfde manier levert het toepassen van het MIM in RDF geen ontologie of vo
 Zo leidt een MIM objecttype "Schip" tot de volgende weergave in RDF:
 
 <pre class='ex-turtle'>
-@prefix vb: &lt;http://bp4mc2.org/voorbeeld/>.
-@prefix mim: &lt;http://bp4mc2.org/def/mim#>.
+@prefix vb: &lt;http://modellen.mim-standaard.nl/voorbeeld/>.
+@prefix mim: &lt;http://modellen.mim-standaard.nl/def/mim#>.
 
 vb:Schip a mim:Objecttype;
   rdfs:label "Schip"@nl;
@@ -26,7 +26,7 @@ vb:Pakjesboot12 a vb:Schip.
 `vb:Schip` is immers geen klasse maar zelf een voorkomen! Om te kunnen uitdrukken dat de pakjesboot een voorkomen van de klasse Schip is, is een vertaling nodig naar een `rdfs:Class` of `owl:Class`, bijvoorbeeld door:
 
 <pre class='ex-turtle'>
-@prefix vbo: &lt;http://bp4mc2.org/voorbeeld/def#>.
+@prefix vbo: &lt;http://modellen.mim-standaard.nl/voorbeeld/def#>.
 
 vbo:Schip a rdfs:Class;
   mim:equivalent vb:Schip;
