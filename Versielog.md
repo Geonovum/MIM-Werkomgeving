@@ -46,6 +46,7 @@ De onderstaande tabel geeft een overzicht van de wijzigingen die in MIM 1.2 zijn
 | [445](https://github.com/Geonovum/MIM-Werkomgeving/issues/445)  | Aanpassen metagegeven `Datatype`.                                                         |
 | [446](https://github.com/Geonovum/MIM-Werkomgeving/issues/446)  | Aanpassen tekst metagegeven `Profielspecificatie`.                                        |
 | [450](https://github.com/Geonovum/MIM-Werkomgeving/issues/450)  | Toevoegen metagegeven `bevat modelelement`.                                               |
+| [451](https://github.com/Geonovum/MIM-Werkomgeving/issues/484)  | MIM namespace overal doorgevoerd http://modellen.mim-standaard.nl/def/mim.                                               |
 
 <!-- Tekstuele aanpassingen zonder inhoudelijke consequenties -->
 

@@ -4,9 +4,9 @@ let respecConfig = {
   // title is verplicht! Neem hier de titel van het document op ----------------------
   title: "MIM - Metamodel Informatie Modellering",
   //-- specStatus is verplicht! (activeer 1 van de volgende) --------------------------
-  specStatus:   "wv",               // Werkversie
+  //specStatus:   "wv",               // Werkversie
   // specStatus: "cv",               // Consultatieversie
-  //specStatus: "vv",               // Versie ter vaststelling
+  specStatus: "vv",               // Versie ter vaststelling
   //specStatus: "def",              // Vastgestelde versie
   //specStatus: "basis",            // Basis Document
   //-- specType is verplicht bij alle andere dan BASIS ---------------------------------
@@ -119,7 +119,7 @@ let respecConfig = {
     "NEN3610":
     {
       title: "NEN-3610 Basismodel geo-informatie",
-      href: "https://www.nen.nl/nen-3610-2011-a1-2016-nl-217738",
+      href: "https://www.nen.nl/nen-3610-2022-nl-296137",
       status: "BG-FINAL",
       publisher: "Nederlandse Norm (NEN)",
     },
