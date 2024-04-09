@@ -95,7 +95,7 @@ let respecConfig = {
     {
       name:       "Marco Brattinga",
       company:    "Ordina",
-      companyURL: "https://www.ordina.nl/"
+      companyURL: "https://www.ordina.com/"
     },
     {
       name:       "Paul Janssen",

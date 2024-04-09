@@ -11,14 +11,14 @@
 
 Deze bijlage bevat alle modelelementen en metagegevens in één diagram.
 
-*Kern - [Relatiesoort is leidend](#relatiesoort-leidend-alternatief-1)*
+*Kern - [Relatiesoort is leidend](#relatiesoort-alt-1-soort-leidend)*
 
 <figure id="KernMetMetagegevens_Alt1.png">
   <img src="media/KernMetMetagegevens_Alt1.png" alt="" />
   <figcaption>Diagram: Kern met metagegevens - relatiesoort leidend (alt 1)</figcaption>
 </figure>
   
-*Kern - [Relatierol is leidend](#relatierol-is-leidend-alternatief-2)*
+*Kern - [Relatierol is leidend](#relatierol-alt-2-rol-leidend)*
 
 <figure id="KernMetMetagegevens_Alt2.png">
   <img src="media/KernMetMetagegevens_Alt2.png" alt="" />

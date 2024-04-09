@@ -7328,7 +7328,7 @@ vb:Pakjesboot12 a vbo:Schip.</code></pre>
 <li>de <a href="media/mim.ttl">RDF vocabulaire</a>, met de (meta)klassen en (meta)eigenschappen;</li>
 <li>de <a href="media/mim-shapes.ttl">RDF Shapesgraph</a>, met "shapes", de structuur die gelden op het gebruik van de klassen en eigenschappen.</li>
 </ol>
-<p>In onderstaande paragrafen wordt zowel de vocabulaire als de structuur gezamenlijk per modelelement besproken. Een RDF representatie in turtle wordt gegeven en daarnaast ook een grafische representatie. Hiervoor wordt de verbeelding gebruikt zoals beschreven in het document: <a href="https://bp4mc2.org/20181107/#grafische-representatie">Best Practises for meaningful connected computing</a>.</p>
+<p>In onderstaande paragrafen wordt zowel de vocabulaire als de structuur gezamenlijk per modelelement besproken. Een RDF representatie in turtle wordt gegeven en daarnaast ook een grafische representatie. Hiervoor wordt de verbeelding gebruikt zoals beschreven in het document: <a href="https://bp4mc2.org/20181107/#grafische-representative">Best Practises for meaningful connected computing</a>.</p>
 <p>Met behulp van bovenstaande twee - machine leesbare - bestanden kan een geserialiseerd MIM model uitgedrukt in RDF (bijvoorbeeld een <a href="https://www.w3.org/TR/rdf-syntax-grammar/">XML</a>, <a href="https://www.w3.org/TR/json-ld11/">JSON</a> of <a href="https://www.w3.org/TR/turtle/">Turtle</a> bestand) gevalideerd worden of deze correct conform MIM is opgesteld. Hiervoor kan bijvoorbeeld <a href="https://github.com/architolk/mimtools">dit open source java tool</a> gebruikt worden.</p>
 <p>Bij het opstellen van het MIM in RDF is gebruik gemaakt van de algemene, tekstuele beschrijving van het MIM uit het hoofdstuk <a href="#metamodel-algemeen">Metamodel Algemeen</a>. Er is een 1-op-1 omzetting gedaan, zonder enige aanpassing van de beschrijvingen. Dit maakt het mogelijk om een MIM informatiemodel om te zetten van de ene representatie (bijvoorbeeld in UML) naar de andere en weer terug, zonder verlies van informatie.</p>
 <p>De volgende regels zijn gebruikt bij de omzetting van de MIM tekst naar RDF:</p>
@@ -10077,15 +10077,15 @@ DateTime, Surface.</p>
 </thead>
 <tbody><tr>
 <td><a href="http://modellen.mim-standaard.nl/def/mim#ConceptueelInformatiemodel"><code>mim:ConceptueelInformatiemodel</code></a></td>
-<td>Niveau-2 model, conform <a href="#niveau-2-conceptueel-informatiemodel">deze</a> sectie</td>
+<td>Niveau-2 model, conform <a href="#beschouwingsniveau-2-conceptueel-informatiemodel">deze</a> sectie</td>
 </tr>
 <tr>
 <td><a href="http://modellen.mim-standaard.nl/def/mim#LogischInformatiemodel"><code>mim:LogischInformatiemodel</code></a></td>
-<td>Niveau-3 model, conform <a href="#niveau-3-logisch-informatie-of-gegevensmodel">deze</a> sectie</td>
+<td>Niveau-3 model, conform <a href="#beschouwingsniveau-3-logisch-informatie-of-gegevensmodel">deze</a> sectie</td>
 </tr>
 <tr>
 <td><a href="http://modellen.mim-standaard.nl/def/mim#TechnischInformatiemodel"><code>mim:TechnischInformatiemodel</code></a></td>
-<td>Niveau-4 model, conform <a href="#niveau-4-fysiek-of-technisch-gegevens-of-datamodel">deze</a> sectie</td>
+<td>Niveau-4 model, conform <a href="#beschouwingsniveau-4-fysiek-of-technisch-gegevens-of-datamodel">deze</a> sectie</td>
 </tr>
 </tbody></table>
 <p>Het veld <code>mim:relatiemodelleringstype</code> verwijst naar één van de volgende mogelijke waarden:</p>
@@ -10783,7 +10783,7 @@ veranderen en/of het aantal domeinwaarden kan toe- of afnemen. De registratie en
 bijbehorende koppelvlakken worden dan ingericht om hier mee om te gaan. Dit
 wordt vooral toegepast bij lijsten die vaker aan verandering onderhevig zijn.</p>
 </section><section id="referentielijst-1"><div class="header-wrapper"><h4 id="x5-4-2-referentielijst"><bdi class="secno">5.4.2 </bdi>Referentielijst</h4><a class="self-link" href="#referentielijst-1" aria-label="Permalink for Section 5.4.2"></a></div>
-<p>Een lijst waarin we de betekenis en structuur van de lijst expliciet willen specificeren. Een voorbeeld is de referentielijst LAND of CultuurcodeOnbebouwd ( <a href="http://www.kadaster.nl/schemas/waardelijsten/CultuurcodeOnbebouwd">http://www.kadaster.nl/schemas/waardelijsten/CultuurcodeOnbebouwd</a> ). De referentielijst is hiermee een bijzondere vorm van datatype.</p>
+<p>Een lijst waarin we de betekenis en structuur van de lijst expliciet willen specificeren. Een voorbeeld is de referentielijst LAND of CultuurcodeOnbebouwd ( <a href="https://developer.kadaster.nl/schemas/waardelijsten/CultuurcodeOnbebouwd/">http://www.kadaster.nl/schemas/waardelijsten/CultuurcodeOnbebouwd</a> ). De referentielijst is hiermee een bijzondere vorm van datatype.</p>
 <p>De naamgeving Referentielijst kan verwarring oproepen maar in principe wordt
 altijd gerefereerd naar gegevens m.b.t. één rij uit de referentielijst. In het
 geval van de referentielijst LAND wordt altijd gerefereerd naar gegevens over
