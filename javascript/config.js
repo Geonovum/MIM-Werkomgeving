@@ -148,7 +148,7 @@ let respecConfig = {
     "SCAT":
     {
       title: "Stelselcatalogus",
-      href: "http://www.stelselcatalogus.nl/",
+      href: "https://www.logius.nl/domeinen/gegevensuitwisseling/stelselcatalogus",
       // status: "LD",
       publisher: "Logius",
     },
