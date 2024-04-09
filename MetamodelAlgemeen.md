@@ -407,7 +407,7 @@ Een generalisatierelatie geeft aan dat bepaalde eigenschappen van een objecttype
 
 Generalisatie tussen datatypen:
 
-Het meer specifieke datatype brengt een verbijzondering aan in de vorm van een meer restrictieve definitie, of een meer restrictief patroon/formeel patroon. Het andere datatype is bijvoorbeeld een `CharacterString`, `Integer`, `GM_Surface` of`DMO` en dient als basis voor een zelf te definiëren datatype (zie [Datatype zelf definiëren](#datatype-zelf-definieren)), zoals een `CharacterString` `Postcode`, of een `NietNegatiefGetal`.Deze generalisatie is van toepassing op de volgende datatypen: `«Primitief datatype»`, `«Gestructureerd datatype»`, `«Referentielijst»`, `«Codelijst»`,`«Enumeratie»`.
+Het meer specifieke datatype brengt een verbijzondering aan in de vorm van een meer restrictieve definitie, of een meer restrictief patroon/formeel patroon. Het andere datatype is bijvoorbeeld een `CharacterString`, `Integer`, `GM_Surface` of`DMO` en dient als basis voor een zelf te definiëren datatype (zie [Datatype zelf definiëren](#zelfgedefinieerd-datatype)), zoals een `CharacterString` `Postcode`, of een `NietNegatiefGetal`.Deze generalisatie is van toepassing op de volgende datatypen: `«Primitief datatype»`, `«Gestructureerd datatype»`, `«Referentielijst»`, `«Codelijst»`,`«Enumeratie»`.
 
 Meervoudige overerving of multiple-inheritance:
 
