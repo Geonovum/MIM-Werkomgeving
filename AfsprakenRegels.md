@@ -294,29 +294,16 @@ bijbehorende koppelvlakken worden dan ingericht om hier mee om te gaan. Dit
 wordt vooral toegepast bij lijsten die vaker aan verandering onderhevig zijn.
 
 ### Referentielijst
-Een lijst waarin we de betekenis en structuur van de lijst expliciet willen specificeren. Een voorbeeld is de referentielijst LAND of CultuurcodeOnbebouwd ( http://www.kadaster.nl/schemas/waardelijsten/CultuurcodeOnbebouwd ). De referentielijst is hiermee een bijzondere vorm van datatype.
+Een lijst waarin we de betekenis en structuur van de lijst expliciet willen specificeren. Een voorbeeld is de <a href="#referentielijst"><code>«Referentielijst»</code></a> `LAND` of [`CultuurcodeOnbebouwd`](https://developer.kadaster.nl/schemas/waardelijsten/CultuurcodeOnbebouwd). De `«Referentielijst»` is hiermee een bijzondere vorm van datatype.
 
-De naamgeving Referentielijst kan verwarring oproepen maar in principe wordt
-altijd gerefereerd naar gegevens m.b.t. één rij uit de referentielijst. In het
-geval van de referentielijst LAND wordt altijd gerefereerd naar gegevens over
-Nederland (NL) of gegevens over Duitsland.
+De naamgeving `«Referentielijst»` kan verwarring oproepen maar in principe wordt altijd gerefereerd naar gegevens m.b.t. één rij uit de `«Referentielijst»`. In het geval van de `«Referentielijst»` `LAND` wordt altijd gerefereerd naar gegevens over Nederland (`NL`) of gegevens over Duitsland.
 
-Let op, wanneer er voor een bepaald attribuut in een informatiemodel of
-koppelvlak van een andere organisatie gekozen is voor een referentielijst, en uw
-organisatie koppelt hiermee, dan is het (meestal) onverstandig om in het eigen
-informatiemodel dit te behandelen als enumeratie.
+Let op, wanneer er voor een bepaald attribuut in een informatiemodel of koppelvlak van een andere organisatie gekozen is voor een `«Referentielijst»`, en uw organisatie koppelt hiermee, dan is het (meestal) onverstandig om in het eigen informatiemodel dit te behandelen als enumeratie.
 
-Modelleerrichtlijn: elk attribuut van een object heeft een specifieke lijst met
-toegestane waarden. Modelleer daarom elke waardelijst bij voorkeur specifiek,
-met een eigen naam en locatie. Het is mogelijk dat de structuur van de data
-gelijk is voor een aantal lijsten. Er kan dan een generieke structuur
-gemodelleerd worden, bv. een abstracte referentielijst met naam *\_Waardelijst,*
-waarvan de specifieke waardelijsten overerven. Het metagegeven locatie is immers
-specifiek voor één waardelijst en moet per individuele waardelijst vastgelegd
-worden.
+Modelleerrichtlijn: elk attribuut van een object heeft een specifieke lijst met toegestane waarden. Modelleer daarom elke waardelijst bij voorkeur specifiek, met een eigen naam en locatie. Het is mogelijk dat de structuur van de data gelijk is voor een aantal lijsten. Er kan dan een generieke structuur gemodelleerd worden, bv. een abstracte `«Referentielijst»` met naam *\_Waardelijst,* waarvan de specifieke waardelijsten overerven. Het metagegeven locatie is immers specifiek voor één waardelijst en moet per individuele waardelijst vastgelegd worden.
 
 ### CodeList
-Gebruik een codelijst als in het informatiemodel de attributen, zoals bij een referentielijst, niet relevant zijn en je voor de definitie alleen wilt verwijzen naar de externe waardelijst.
+Gebruik een <a href="#codelijst"><code>«Codelijst»</code></a> als in het informatiemodel de attributen, zoals bij een `«Referentielijst»`, niet relevant zijn en je voor de definitie alleen wilt verwijzen naar de externe waardelijst.
 
 ## Abstracte objecttypes en concrete objecten
 
