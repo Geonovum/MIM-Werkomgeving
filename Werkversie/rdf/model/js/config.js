@@ -58,21 +58,57 @@ let respecConfig = {
   editors:
     [
       {
-        name: "voornaam achternaam",
-        company: "Geonovum",
-        companyURL: "https://www.geonovum.nl",
-      }
+        name:       "Dick Krijtenburg",
+        company:    "Geonovum",
+        companyURL: "https://www.geonovum.nl"
+      },
+      {
+        name:       "Paul Janssen",
+        company:    "Geonovum",
+        companyURL: "https://www.geonovum.nl"
+      },
+      {
+        name:       "Lennart van Bergen",
+        company:    "Kadaster",
+        companyURL: "https://www.kadaster.nl"
+      },
     ],
-  //-- de namen van de auteur(s) ------------------------------------------------------
-  //-- vul in: per auteur: name:, company:, companyURL: -------------------------------
+  //-- de namen van de Author(s) ------------------------------------------------------
+  //-- vul in: per Author: name:, company:, companyURL: -------------------------------
   authors:
     [
       {
-        name: "voornaam achternaam",
-        company: "Geonovum",
-        companyURL: "https://www.geonovum.nl",
-      }
+        name:       "Lennart van Bergen",
+        company:    "Kadaster",
+        companyURL: "https://www.kadaster.nl"
+      },
+      {
+        name:       "Thies Mesdag",
+        company:    "Kadaster",
+        companyURL: "https://www.kadaster.nl"
+      },
+      {
+        name:       "Marco Brattinga",
+        company:    "Ordina",
+        companyURL: "https://www.ordina.nl/"
+      },
+      {
+        name:       "Paul Janssen",
+        company:    "Geonovum",
+        companyURL: "https://www.geonovum.nl"
+      },
+      {
+        name:       "Pano Maria",
+        company:    "Skemu",
+        companyURL: "https://skemu.com"
+      },
+      {
+        name:       "Johan Boer",
+        company:    "VNG Realisatie",
+        companyURL: "https://www.vngrealisatie.nl/"
+      },
     ],
+
   // Create PDF and link to file in header (optional):
   // TODO: Change the filename as preferred.
   // alternateFormats: [
