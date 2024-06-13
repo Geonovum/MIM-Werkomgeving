@@ -1,0 +1,6 @@
+<MDG.Selections model="DBType=8;Connect=Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\1 Informatiemodellen\MIM\MIM 1.2 - def.eapx;Persist Security Info=False;LazyLoad=1;">
+	<Technology id="build01" name="MIM" version="MIM 1.2" notes="MIM 1.2 - Geonovum - build 01 - &#xA;&#xA;Enumeratiewaarde als extend op EnumerationLiteral en Attribute.&#xA;&#xA;" filename="C:\Users\p.janssen.GNM\Documents\Github\MIM-Werkomgeving\UML profieltooling\werkversie1.2\MDG_MIM_Toolbox_v1.2build1.0.xml" infoURI="https://docs.geostandaarden.nl/mim/mim/" supportURI="https://github.com/Geonovum/MIM-Werkomgeving/issues/"/>
+	<Profiles directory="C:\Users\p.janssen.GNM\Documents\Github\MIM-Werkomgeving\UML profieltooling\werkversie1.2" files="mim_profile_basis.xml,mim_profile_keuzeattribuut.xml,mim_profile_keuzebasis.xml,mim_profile_keuzedatatype.xml,mim_profile_keuzerelatie.xml"/>
+	<DiagramProfile directory="C:\Users\p.janssen.GNM\Documents\Github\MIM-Werkomgeving\UML profieltooling\werkversie1.2" files="mim_profile_diagram.xml"/>
+	<UIToolboxes directory="C:\Users\p.janssen.GNM\Documents\Github\MIM-Werkomgeving\UML profieltooling\werkversie1.2" files="mim_profile_toolbox.xml"/>
+</MDG.Selections>

@@ -1,0 +1,123 @@
+MDG_MIM_Toolbox_v1.2_build01.xml
+--------------------------------------------------------------------
+2024-04-23
+Release notes. v1.2_build01
+Reacties op de toolbox kunnen via de reguliere MIM github worden gemeld: https://github.com/Geonovum/MIM-Werkomgeving/issues
+
+Vorige versie: MDG_MIM_Toolbox_v1.1.1_build05.xml
+---------------------------------------------------------------------
+
+De 1.2 toolbox bevat de inhoud van MIM 1.2. Per stereotype is aangegeven welke tagged values (metagegevens) zijn toegevoegd tov vorige versie.
+
+
+Informatiemodel:
+Identificatie
+Tekstopmaak
+Basis-URI
+
+Domein:
+Identificatie
+Basis-URI
+
+View:
+Identificatie
+Basis-URI
+
+Extern:
+Identificatie
+Basis-URI
+
+Objecttype:
+Identificatie
+
+Generalisatie:
+Identificatie
+Mixin
+
+Attribuutsoort:
+Identificatie
+Heeft tijdlijn geldigheid
+Heeft tijdlijn registratie
+Minimumwaarde inclusief
+Minimumwaarde exclusief
+Maximumwaarde inclusief
+Maximumwaarde exclusief
+Eenheid
+
+Relatiesoort:
+Identificatie
+Heeft tijdlijn geldigheid
+Heeft tijdlijn registratie
+
+Relatierol:
+Identificatie
+Heeft tijdlijn geldigheid
+Heeft tijdlijn registratie
+
+Relatieklasse:
+Identificatie
+Heeft tijdlijn geldigheid
+Heeft tijdlijn registratie
+
+Externe koppeling:
+Identificatie
+Heeft tijdlijn geldigheid
+Heeft tijdlijn registratie
+
+Gegevensgroeptype:
+Identificatie
+
+Gegevensgroept:
+Identificatie
+
+Codelijst:
+Identificatie
+Doelformaat
+Waarde-item
+Profielspecificatie
+
+Gestructureerd datatype:
+Identificatie
+
+Data element:
+Identificatie
+Minimumwaarde inclusief
+Minimumwaarde exclusief
+Maximumwaarde inclusief
+Maximumwaarde exclusief
+
+Enumeratie:
+Identificatie
+
+Enumeratiewaarde:
+Identificatie
+(Enumeratiewaarde is een extend van:
+Type: EnumerationLiteral
+Type: Attribute)
+
+Primitief datatype:
+Identificatie
+
+Referentie-element:
+Identificatie
+Eenheid
+Minimumwaarde inclusief
+Minimumwaarde exclusief
+Maximumwaarde inclusief
+Maximumwaarde exclusief
+
+Referentielijst:
+Identificatie
+Doelformaat
+
+Keuze:
+Identificatie
+
+Keuzerelatie:
+Identificatie
+
+
+
+
+
+

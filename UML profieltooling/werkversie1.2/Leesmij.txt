@@ -1,0 +1,15 @@
+MDG_MIM_Toolbox_v1.2_build0X.xml
+
+Dit MDG bestand bevat het MIM 1.2 profiel dat in Enterprise Architect geladen kan worden.
+
+In EA verschijnt dan een MIM toolbox met alle modelelementen en stereotypen voor toepassing van MIM.
+
+Het MDG bestand wordt geladen via de 'resources' tab en daarin de resource 'MDG Technologies' middels de rechtermuisklik.
+
+De toolbox is beschikbaar onder de naam 'MIM' via het toolbox menu.
+
+Een uitgebreidere handleiding voor de installatie en gebruik van de MIM toolbox is te vinden op:
+Deze is ook van toepassing op de MIM 1.2 toolbox:
+https://github.com/Geonovum/MIM-Werkomgeving/blob/master/UML%20profieltooling/werkversie1.1.1/README.md
+
+Reacties op de toolbox kunnen via de reguliere MIM github worden gemeld: https://github.com/Geonovum/MIM-Werkomgeving/issues
