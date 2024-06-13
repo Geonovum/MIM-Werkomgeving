@@ -7307,7 +7307,7 @@ aspecten gespecificeerd:</p>
 <p>Vanuit een Linked Data perspectief is dit bijzonder. Een kernmerk van Linked Data is namelijk dat een informatiemodel op niveau 3 <em>ook</em> direct, zonder aanpassingen, bruikbaar is als informatiemodel op niveau 4. Sterker nog: Linked Data modellen zijn ook bruikbaar op niveau 1 en 2. Dit is vanuit het MIM zelf niet mogelijk. Hiervoor is een vertaalslag nodig naar een "echte" Linked Data ontologie.</p>
 <p>Zo leidt een MIM objecttype "Schip" tot de volgende weergave in RDF:</p>
 <pre class="ex-turtle" aria-busy="false"><code class="hljs">@prefix vb: &lt;http://modellen.mim-standaard.nl/voorbeeld/&gt; .
-@prefix mim: &lt;https://modellen.mim-standaard.nl/def/mim/#&gt; .
+@prefix mim: &lt;http://modellen.mim-standaard.nl/def/mim#&gt; .
 
 vb:Schip a mim:Objecttype;
   rdfs:label "Schip"@nl;
@@ -7351,7 +7351,7 @@ vb:Pakjesboot12 a vbo:Schip.</code></pre>
   <figcaption><a class="self-link" href="#media/rdf-kern">Figuur <bdi class="figno">27</bdi></a> <span class="fig-title">Diagram: Kern metamodel in LD</span></figcaption>
 </figure>
 
-<p>Als prefix wordt voor de vocabulaire gebruik gemaakt van <code>mim</code>, met de namespace <code>https://modellen.mim-standaard.nl/def/mim/#</code>. Voor de shapes wordt als prefix gebruik gemaakt van <code>shape</code>, met als namespace <code>https://modellen.mim-standaard.nl/def/mim/-shapes#</code>.</p>
+<p>Als prefix wordt voor de vocabulaire gebruik gemaakt van <code>mim</code>, met de namespace <code>http://modellen.mim-standaard.nl/def/mim#</code>. Voor de shapes wordt als prefix gebruik gemaakt van <code>shape</code>, met als namespace <code>http://modellen.mim-standaard.nl/def/mim-shapes#</code>.</p>
 <table class="simple">
 <thead>
 <tr>
@@ -7363,43 +7363,43 @@ vb:Pakjesboot12 a vbo:Schip.</code></pre>
 </thead>
 <tbody><tr>
 <td>Objecttype</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#Objecttype"><code>mim:Objecttype</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#Objecttype"><code>mim:Objecttype</code></a></td>
 <td>shape:Objecttype</td>
 <td><a href="#objecttypen-en-attribuutsoorten">grondslag</a></td>
 </tr>
 <tr>
 <td>Attribuutsoort</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#Attribuutsoort"><code>mim:Attribuutsoort</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#Attribuutsoort"><code>mim:Attribuutsoort</code></a></td>
 <td>shape:Attribuutsoort</td>
 <td><a href="#attribuutsoort">grondslag</a></td>
 </tr>
 <tr>
 <td>Gegevensgroep</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#Gegevensgroep"><code>mim:Gegevensgroep</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#Gegevensgroep"><code>mim:Gegevensgroep</code></a></td>
 <td>shape:Gegevensgroep</td>
 <td><a href="#gegevensgroep">grondslag</a></td>
 </tr>
 <tr>
 <td>Gegevensgroeptype</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#Gegevensgroeptype"><code>mim:Gegevensgroeptype</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#Gegevensgroeptype"><code>mim:Gegevensgroeptype</code></a></td>
 <td>shape:Gegevensgroeptype</td>
 <td><a href="#gegevensgroeptype">grondslag</a></td>
 </tr>
 <tr>
 <td>Generalisatie</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#Generalisatie"><code>mim:Generalisatie</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#Generalisatie"><code>mim:Generalisatie</code></a></td>
 <td>shape:Generalisatie</td>
 <td><a href="#generalisatie">grondslag</a></td>
 </tr>
 <tr>
 <td>Relatiesoort</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#Relatiesoort"><code>mim:Relatiesoort</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#Relatiesoort"><code>mim:Relatiesoort</code></a></td>
 <td>shape:Relatiesoort</td>
 <td><a href="#relatiesoort">grondslag</a></td>
 </tr>
 <tr>
 <td>Relatieklasse</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#Relatieklasse"><code>mim:Relatieklasse</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#Relatieklasse"><code>mim:Relatieklasse</code></a></td>
 <td>shape:Relatieklasse</td>
 <td><a href="#relatieklasse">grondslag</a></td>
 </tr>
@@ -7427,55 +7427,55 @@ vb:Pakjesboot12 a vbo:Schip.</code></pre>
 </thead>
 <tbody><tr>
 <td>Datatype</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#Datatype"><code>mim:Datatype</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#Datatype"><code>mim:Datatype</code></a></td>
 <td>shape:Datatype</td>
 <td><a href="#datatypen">grondslag</a></td>
 </tr>
 <tr>
 <td>Primitief datatype</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#PrimitiefDatatype"><code>mim:PrimitiefDatatype</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#PrimitiefDatatype"><code>mim:PrimitiefDatatype</code></a></td>
 <td>shape:PrimitiefDatatype</td>
 <td><a href="#primitief-datatype">grondslag</a></td>
 </tr>
 <tr>
 <td>Gestructureerd datatype</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#GestructuurdDatatype"><code>mim:GestructuurdDatatype</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#GestructuurdDatatype"><code>mim:GestructuurdDatatype</code></a></td>
 <td>shape:GestructuurdDatatype</td>
 <td><a href="#gestructureerd-datatype">grondslag</a></td>
 </tr>
 <tr>
 <td>Data element</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#DataElement"><code>mim:DataElement</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#DataElement"><code>mim:DataElement</code></a></td>
 <td>shape:DataElement</td>
 <td><a href="#data-element">grondslag</a></td>
 </tr>
 <tr>
 <td>Enumeratie</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#Enumeratie"><code>mim:Enumeratie</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#Enumeratie"><code>mim:Enumeratie</code></a></td>
 <td>shape:Enumeratie</td>
 <td><a href="#enumeratie">grondslag</a></td>
 </tr>
 <tr>
 <td>Enumeratiewaarde</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#Enumeratiewaarde"><code>mim:Enumeratiewaarde</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#Enumeratiewaarde"><code>mim:Enumeratiewaarde</code></a></td>
 <td>shape:Enumeratiewaarde</td>
 <td><a href="#enumeratiewaarde">grondslag</a></td>
 </tr>
 <tr>
 <td>Referentielijst</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#Referentielijst"><code>mim:Referentielijst</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#Referentielijst"><code>mim:Referentielijst</code></a></td>
 <td>shape:Referentielijst</td>
 <td><a href="#referentielijst">grondslag</a></td>
 </tr>
 <tr>
 <td>Referentie element</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#ReferentieElement"><code>mim:ReferentieElement</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#ReferentieElement"><code>mim:ReferentieElement</code></a></td>
 <td>shape:ReferentieElement</td>
 <td><a href="#referentie-element">grondslag</a></td>
 </tr>
 <tr>
 <td>Codelijst</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#Codelijst"><code>mim:Codelijst</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#Codelijst"><code>mim:Codelijst</code></a></td>
 <td>shape:Codelijst</td>
 <td><a href="#codelijst">grondslag</a></td>
 </tr>
@@ -7498,13 +7498,13 @@ vb:Pakjesboot12 a vbo:Schip.</code></pre>
 </thead>
 <tbody><tr>
 <td>Constraint</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#Constraint"><code>mim:Constraint</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#Constraint"><code>mim:Constraint</code></a></td>
 <td>shape:Constraint</td>
 <td><a href="#constraint">grondslag</a></td>
 </tr>
 <tr>
 <td>Keuzeconstraint</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#Keuze"><code>mim:Keuzeconstraint</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#Keuze"><code>mim:Keuzeconstraint</code></a></td>
 <td>shape:Keuze</td>
 <td><a href="#keuze">grondslag</a></td>
 </tr>
@@ -7527,25 +7527,25 @@ vb:Pakjesboot12 a vbo:Schip.</code></pre>
 </thead>
 <tbody><tr>
 <td>Keuze</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#Keuze"><code>mim:Keuze</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#Keuze"><code>mim:Keuze</code></a></td>
 <td>shape:Keuze</td>
 <td><a href="#keuze">grondslag</a></td>
 </tr>
 <tr>
 <td>Datatype</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#Datatype"><code>mim:Datatype</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#Datatype"><code>mim:Datatype</code></a></td>
 <td>shape:Datatype</td>
 <td><a href="#datatype">grondslag</a></td>
 </tr>
 <tr>
 <td>Objecttype</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#Objecttype"><code>mim:Objecttype</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#Objecttype"><code>mim:Objecttype</code></a></td>
 <td>shape:Objecttype</td>
 <td><a href="#objecttype">grondslag</a></td>
 </tr>
 <tr>
 <td>Attribuutsoort</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#Attribuutsoort"><code>mim:Attribuutsoort</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#Attribuutsoort"><code>mim:Attribuutsoort</code></a></td>
 <td>shape:Attribuutsoort</td>
 <td><a href="#attribuutsoort">grondslag</a></td>
 </tr>
@@ -7595,19 +7595,19 @@ vb:Pakjesboot12 a vbo:Schip.</code></pre>
 </thead>
 <tbody><tr>
 <td>Relatierol (abstract)</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#Relatierol"><code>Relatierol</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#Relatierol"><code>Relatierol</code></a></td>
 <td>shape:Relatierol</td>
 <td><a href="#relatierol">grondslag</a></td>
 </tr>
 <tr>
 <td>Relatierol bron</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#RelatierolBron"><code>RelatierolBron</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#RelatierolBron"><code>RelatierolBron</code></a></td>
 <td>shape:RelatierolBron</td>
 <td><a href="#relatierol">grondslag</a></td>
 </tr>
 <tr>
 <td>Relatierol doel</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#RelatierolDoel"><code>RelatierolDoel</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#RelatierolDoel"><code>RelatierolDoel</code></a></td>
 <td>shape:RelatierolDoel</td>
 <td><a href="#relatierol">grondslag</a></td>
 </tr>
@@ -7624,7 +7624,7 @@ vb:Pakjesboot12 a vbo:Schip.</code></pre>
 </thead>
 <tbody><tr>
 <td>Externe koppeling</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#ExterneKoppeling"><code>mim:ExterneKoppeling</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#ExterneKoppeling"><code>mim:ExterneKoppeling</code></a></td>
 <td>shape:ExterneKoppeling</td>
 <td><a href="#externe-koppeling">grondslag</a></td>
 </tr>
@@ -7647,31 +7647,31 @@ vb:Pakjesboot12 a vbo:Schip.</code></pre>
 </thead>
 <tbody><tr>
 <td>Package</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#Package"><code>mim:Package</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#Package"><code>mim:Package</code></a></td>
 <td>shape:Package</td>
 <td><a href="#packages">grondslag</a></td>
 </tr>
 <tr>
 <td>Informatiemodel</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#Informatiemodel"><code>mim:Informatiemodel</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#Informatiemodel"><code>mim:Informatiemodel</code></a></td>
 <td>shape:Informatiemodel</td>
 <td><a href="#informatiemodel">grondslag</a></td>
 </tr>
 <tr>
 <td>Domein (het eigen IM)</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#Domein"><code>mim:Domein</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#Domein"><code>mim:Domein</code></a></td>
 <td>shape:Domein</td>
 <td><a href="#domein">grondslag</a></td>
 </tr>
 <tr>
 <td>Extern</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#Extern"><code>mim:Extern</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#Extern"><code>mim:Extern</code></a></td>
 <td>shape:Extern</td>
 <td><a href="#extern">grondslag</a></td>
 </tr>
 <tr>
 <td>View</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#View"><code>mim:View</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#View"><code>mim:View</code></a></td>
 <td>shape:View</td>
 <td><a href="#view">grondslag</a></td>
 </tr>
@@ -7689,349 +7689,349 @@ vb:Pakjesboot12 a vbo:Schip.</code></pre>
 </thead>
 <tbody><tr>
 <td>aggregatietype</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#aggregatietype"><code>mim:aggregatietype</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#aggregatietype"><code>mim:aggregatietype</code></a></td>
 <td>owl:ObjectProperty</td>
 <td><a href="#metagegeven-aggregatietype">grondslag</a></td>
 </tr>
 <tr>
 <td>alias</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#alias"><code>mim:alias</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#alias"><code>mim:alias</code></a></td>
 <td>owl:DatatypeProperty</td>
 <td><a href="#metagegeven-alias">grondslag</a></td>
 </tr>
 <tr>
 <td>attribuut</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#attribuut"><code>mim:attribuut</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#attribuut"><code>mim:attribuut</code></a></td>
 <td>owl:ObjectProperty</td>
 <td><a href="#metagegeven-heeft-attribuut">grondslag</a></td>
 </tr>
 <tr>
 <td>authentiek</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#authentiek"><code>mim:authentiek</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#authentiek"><code>mim:authentiek</code></a></td>
 <td>owl:ObjectProperty</td>
 <td><a href="#metagegeven-authentiek">grondslag</a></td>
 </tr>
 <tr>
 <td>basis-URI</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#basisUri"><code>mim:basisUri</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#basisUri"><code>mim:basisUri</code></a></td>
 <td>owl:DatatypeProperty</td>
 <td><a href="#metagegeven-basis-uri">grondslag</a></td>
 </tr>
 <tr>
 <td>begrip</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#begrip"><code>mim:begrip</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#begrip"><code>mim:begrip</code></a></td>
 <td>owl:ObjectProperty</td>
 <td><a href="#metagegeven-begrip">grondslag</a></td>
 </tr>
 <tr>
 <td>begripsterm</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#begripsterm"><code>mim:begripsterm</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#begripsterm"><code>mim:begripsterm</code></a></td>
 <td>owl:DatatypeProperty</td>
 <td><a href="#metagegeven-begrip">grondslag</a></td>
 </tr>
 <tr>
 <td>bron</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#bron"><code>mim:bron</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#bron"><code>mim:bron</code></a></td>
 <td>owl:ObjectProperty</td>
 <td><a href="#metagegeven-bron">grondslag</a></td>
 </tr>
 <tr>
 <td>code</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#code"><code>mim:code</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#code"><code>mim:code</code></a></td>
 <td>owl:DatatypeProperty</td>
 <td><a href="#metagegeven-code">grondslag</a></td>
 </tr>
 <tr>
 <td>constraint</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#constraint"><code>mim:constraint</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#constraint"><code>mim:constraint</code></a></td>
 <td>owl:ObjectProperty</td>
 <td><a href="#metagegeven-heeft-constraint">grondslag</a></td>
 </tr>
 <tr>
 <td>data-element</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#dataElement"><code>mim:dataElement</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#dataElement"><code>mim:dataElement</code></a></td>
 <td>owl:ObjectProperty</td>
 <td><a href="#metagegeven-heeft-data-element">grondslag</a></td>
 </tr>
 <tr>
 <td>datum opname</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#datumOpname"><code>mim:datumOpname</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#datumOpname"><code>mim:datumOpname</code></a></td>
 <td>owl:DatatypeProperty</td>
 <td><a href="#metagegeven-datum-opname">grondslag</a></td>
 </tr>
 <tr>
 <td>definitie</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#definitie"><code>mim:definitie</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#definitie"><code>mim:definitie</code></a></td>
 <td>owl:DatatypeProperty</td>
 <td><a href="#metagegeven-definitie">grondslag</a></td>
 </tr>
 <tr>
 <td>doel</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#doel"><code>mim:doel</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#doel"><code>mim:doel</code></a></td>
 <td>owl:ObjectProperty</td>
 <td><a href="#metagegeven-doel">grondslag</a></td>
 </tr>
 <tr>
 <td>formeel patroon</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#formeelPatroon"><code>mim:formeelPatroon</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#formeelPatroon"><code>mim:formeelPatroon</code></a></td>
 <td>owl:DatatypeProperty</td>
 <td><a href="#metagegeven-formeel-patroon">grondslag</a></td>
 </tr>
 <tr>
 <td>gegevensgroep</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#gegevensgroep"><code>mim:gegevensgroep</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#gegevensgroep"><code>mim:gegevensgroep</code></a></td>
 <td>owl:ObjectProperty</td>
 <td><a href="#metagegeven-heeft-gegevensgroep">grondslag</a></td>
 </tr>
 <tr>
 <td>groeptype</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#groeptype"><code>mim:groeptype</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#groeptype"><code>mim:groeptype</code></a></td>
 <td>owl:ObjectProperty</td>
 <td><a href="#metagegeven-heeft-gegevensgroeptype">grondslag</a></td>
 </tr>
 <tr>
 <td>herkomst</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#herkomst"><code>mim:herkomst</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#herkomst"><code>mim:herkomst</code></a></td>
 <td>owl:DatatypeProperty</td>
 <td><a href="#metagegeven-herkomst">grondslag</a></td>
 </tr>
 <tr>
 <td>herkomst definitie</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#herkomstDefinitie"><code>mim:herkomstDefinitie</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#herkomstDefinitie"><code>mim:herkomstDefinitie</code></a></td>
 <td>owl:DatatypeProperty</td>
 <td><a href="#metagegeven-herkomst-definitie">grondslag</a></td>
 </tr>
 <tr>
 <td>identificerend</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#identificerend"><code>mim:identificerend</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#identificerend"><code>mim:identificerend</code></a></td>
 <td>owl:DatatypeProperty</td>
 <td><a href="#metagegeven-identificerend">grondslag</a></td>
 </tr>
 <tr>
 <td>indicatie abstract object</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#indicatieAbstractObject"><code>mim:indicatieAbstractObject</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#indicatieAbstractObject"><code>mim:indicatieAbstractObject</code></a></td>
 <td>owl:DatatypeProperty</td>
 <td><a href="#metagegeven-indicatie-abstract-object">grondslag</a></td>
 </tr>
 <tr>
 <td>indicatie afleidbaar</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#indicatieAfleidbaar"><code>mim:indicatieAfleidbaar</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#indicatieAfleidbaar"><code>mim:indicatieAfleidbaar</code></a></td>
 <td>owl:DatatypeProperty</td>
 <td><a href="#metagegeven-indicatie-afleidbaar">grondslag</a></td>
 </tr>
 <tr>
 <td>indicatie classificerend</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#indicatieAfleidbaar"><code>mim:indicatieClassificerend</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#indicatieAfleidbaar"><code>mim:indicatieClassificerend</code></a></td>
 <td>owl:DatatypeProperty</td>
 <td><a href="#metagegeven-indicatie-classificerend">grondslag</a></td>
 </tr>
 <tr>
 <td>heeft tijdlijn geldigheid</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#heeftTijdlijnGeldigheid"><code>mim:heeftTijdlijnGeldigheid</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#heeftTijdlijnGeldigheid"><code>mim:heeftTijdlijnGeldigheid</code></a></td>
 <td>owl:DatatypeProperty</td>
 <td><a href="#metagegeven-indicatie-materiele-historie">grondslag</a></td>
 </tr>
 <tr>
 <td>indicatie materiële historie</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#indicatieMaterieleHistorie"><code>mim:indicatieMaterieleHistorie</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#indicatieMaterieleHistorie"><code>mim:indicatieMaterieleHistorie</code></a></td>
 <td>owl:DatatypeProperty</td>
 <td><a href="#metagegeven-indicatie-materiele-historie">grondslag</a></td>
 </tr>
 <tr>
 <td>heeft tijdlijn registratie</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#heeftTijdlijnRegistratie"><code>mim:heeftTijdlijnRegistratie</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#heeftTijdlijnRegistratie"><code>mim:heeftTijdlijnRegistratie</code></a></td>
 <td>owl:DatatypeProperty</td>
 <td><a href="#metagegeven-indicatie-formele-historie">grondslag</a></td>
 </tr>
 <tr>
 <td>indicatie formele historie</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#indicatieFormeleHistorie"><code>mim:indicatieFormeleHistorie</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#indicatieFormeleHistorie"><code>mim:indicatieFormeleHistorie</code></a></td>
 <td>owl:DatatypeProperty</td>
 <td><a href="#metagegeven-indicatie-formele-historie">grondslag</a></td>
 </tr>
 <tr>
 <td>informatiedomein</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#informatiedomein"><code>mim:informatiedomein</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#informatiedomein"><code>mim:informatiedomein</code></a></td>
 <td>owl:DatatypeProperty</td>
 <td><a href="#metagegeven-informatiedomein">grondslag</a></td>
 </tr>
 <tr>
 <td>informatiemodeltype</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#informatiemodeltype"><code>mim:informatiemodeltype</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#informatiemodeltype"><code>mim:informatiemodeltype</code></a></td>
 <td>owl:ObjectProperty</td>
 <td><a href="#metagegeven-informatiemodeltype">grondslag</a></td>
 </tr>
 <tr>
 <td>kardinaliteit</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#kardinaliteit"><code>mim:kardinaliteit</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#kardinaliteit"><code>mim:kardinaliteit</code></a></td>
 <td>owl:DatatypeProperty</td>
 <td><a href="#metagegeven-kardinaliteit">grondslag</a></td>
 </tr>
 <tr>
 <td>kwaliteit</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#kwaliteit"><code>mim:kwaliteit</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#kwaliteit"><code>mim:kwaliteit</code></a></td>
 <td>owl:DatatypeProperty</td>
 <td></td>
 </tr>
 <tr>
 <td>lengte</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#lengte"><code>mim:lengte</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#lengte"><code>mim:lengte</code></a></td>
 <td>owl:DatatypeProperty</td>
 <td><a href="#metagegeven-lengte">grondslag</a></td>
 </tr>
 <tr>
 <td>locatie</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#locatie"><code>mim:locatie</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#locatie"><code>mim:locatie</code></a></td>
 <td>owl:DatatypeProperty</td>
 <td><a href="#metagegeven-locatie">grondslag</a></td>
 </tr>
 <tr>
 <td>identificatie</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#identificatie"><code>mim:identificatie</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#identificatie"><code>mim:identificatie</code></a></td>
 <td>owl:DatatypeProperty</td>
 <td><a href="#metagegeven-identificatie">grondslag</a></td>
 </tr>
 <tr>
 <td>mim extensie</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#extensie"><code>mim:extensie</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#extensie"><code>mim:extensie</code></a></td>
 <td>owl:DatatypeProperty</td>
 <td><a href="#metagegeven-mim-extensie">grondslag</a></td>
 </tr>
 <tr>
 <td>mim taal</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#taal"><code>mim:taal</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#taal"><code>mim:taal</code></a></td>
 <td>owl:DatatypeProperty</td>
 <td><a href="#metagegeven-mim-taal">grondslag</a></td>
 </tr>
 <tr>
 <td>mim tekstopmaak</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#tekstopmaak"><code>mim:tekstopmaak</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#tekstopmaak"><code>mim:tekstopmaak</code></a></td>
 <td>owl:DatatypeProperty</td>
 <td><a href="#metagegeven-tekstopmaak">grondslag</a></td>
 </tr>
 <tr>
 <td>mim versie</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#versie"><code>mim:versie</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#versie"><code>mim:versie</code></a></td>
 <td>owl:DatatypeProperty</td>
 <td><a href="#metagegeven-mim-versie">grondslag</a></td>
 </tr>
 <tr>
 <td>mogelijk geen waarde</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#mogelijkGeenWaarde"><code>mim:mogelijkGeenWaarde</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#mogelijkGeenWaarde"><code>mim:mogelijkGeenWaarde</code></a></td>
 <td>owl:DatatypeProperty</td>
 <td><a href="#metagegeven-mogelijk-geen-waarde">grondslag</a></td>
 </tr>
 <tr>
 <td>naam</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#naam"><code>mim:naam</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#naam"><code>mim:naam</code></a></td>
 <td>owl:DatatypeProperty</td>
 <td><a href="#metagegeven-naam">grondslag</a></td>
 </tr>
 <tr>
 <td>patroon</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#patroon"><code>mim:patroon</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#patroon"><code>mim:patroon</code></a></td>
 <td>owl:DatatypeProperty</td>
 <td><a href="#metagegeven-patroon">grondslag</a></td>
 </tr>
 <tr>
 <td>populatie</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#populatie"><code>mim:populatie</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#populatie"><code>mim:populatie</code></a></td>
 <td>owl:DatatypeProperty</td>
 <td></td>
 </tr>
 <tr>
 <td>referentie-element</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#referentieElement"><code>mim:referentieElement</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#referentieElement"><code>mim:referentieElement</code></a></td>
 <td>owl:ObjectProperty</td>
 <td><a href="#metagegeven-bevat-referentie-element">grondslag</a></td>
 </tr>
 <tr>
 <td>relatiemodelleringstype</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#relatiemodelleringstype"><code>mim:relatiemodelleringstype</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#relatiemodelleringstype"><code>mim:relatiemodelleringstype</code></a></td>
 <td>owl:ObjectProperty</td>
 <td><a href="#metagegeven-relatiemodelleringstype">grondslag</a></td>
 </tr>
 <tr>
 <td>relatierol</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#relatierol"><code>mim:relatierol</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#relatierol"><code>mim:relatierol</code></a></td>
 <td>owl:ObjectProperty</td>
 <td></td>
 </tr>
 <tr>
 <td>specificatie formeel</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#specificatieFormeel"><code>mim:specificatieFormeel</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#specificatieFormeel"><code>mim:specificatieFormeel</code></a></td>
 <td>owl:DatatypeProperty</td>
 <td></td>
 </tr>
 <tr>
 <td>specificatie tekst</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#specificatieTekst"><code>mim:specificatieTekst</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#specificatieTekst"><code>mim:specificatieTekst</code></a></td>
 <td>owl:DatatypeProperty</td>
 <td></td>
 </tr>
 <tr>
 <td>subtype</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#subtype"><code>mim:subtype</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#subtype"><code>mim:subtype</code></a></td>
 <td>owl:ObjectProperty</td>
 <td></td>
 </tr>
 <tr>
 <td>supertype</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#supertype"><code>mim:supertype</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#supertype"><code>mim:supertype</code></a></td>
 <td>owl:ObjectProperty</td>
 <td></td>
 </tr>
 <tr>
 <td>toelichting</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#toelichting"><code>mim:toelichting</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#toelichting"><code>mim:toelichting</code></a></td>
 <td>owl:DatatypeProperty</td>
 <td><a href="#metagegeven-toelichting">grondslag</a></td>
 </tr>
 <tr>
 <td>type</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#type"><code>mim:type</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#type"><code>mim:type</code></a></td>
 <td>owl:ObjectProperty</td>
 <td><a href="#metagegeven-type">grondslag</a></td>
 </tr>
 <tr>
 <td>unidirectioneel</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#unidirectioneel"><code>mim:unidirectioneel</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#unidirectioneel"><code>mim:unidirectioneel</code></a></td>
 <td>owl:DatatypeProperty</td>
 <td><a href="#metagegeven-unidirectioneel">grondslag</a></td>
 </tr>
 <tr>
 <td>waarde</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#waarde"><code>mim:waarde</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#waarde"><code>mim:waarde</code></a></td>
 <td>owl:ObjectProperty</td>
 <td><a href="#metagegeven-bevat-enumeratiewaarde">grondslag</a></td>
 </tr>
 <tr>
 <td>minimumwaarde inclusief</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#minimumwaardeInclusief"><code>mim:minimumwaardeInclusief</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#minimumwaardeInclusief"><code>mim:minimumwaardeInclusief</code></a></td>
 <td>owl:DatatypeProperty</td>
 <td><a href="#metagegeven-minimumwaarde-inclusief">grondslag</a></td>
 </tr>
 <tr>
 <td>minimumwaarde exclusief</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#minimumwaardeExclusief"><code>mim:minimumwaardeExclusief</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#minimumwaardeExclusief"><code>mim:minimumwaardeExclusief</code></a></td>
 <td>owl:DatatypeProperty</td>
 <td><a href="#metagegeven-minimumwaarde-exclusief">grondslag</a></td>
 </tr>
 <tr>
 <td>maximumwaarde inclusief</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#maximumwaardeInclusief"><code>mim:maximumwaardeInclusief</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#maximumwaardeInclusief"><code>mim:maximumwaardeInclusief</code></a></td>
 <td>owl:DatatypeProperty</td>
 <td><a href="#metagegeven-maximumwaarde-inclusief">grondslag</a></td>
 </tr>
 <tr>
 <td>maximumwaarde exclusief</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#maximumwaardeExclusief"><code>mim:maximumwaardeExclusief</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#maximumwaardeExclusief"><code>mim:maximumwaardeExclusief</code></a></td>
 <td>owl:DatatypeProperty</td>
 <td><a href="#metagegeven-maximumwaarde-exclusief">grondslag</a></td>
 </tr>
 <tr>
 <td>mixin</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#mixin"><code>mim:mixin</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#mixin"><code>mim:mixin</code></a></td>
 <td>owl:DatatypeProperty</td>
 <td><a href="#metagegeven-mixin">grondslag</a></td>
 </tr>
@@ -8050,99 +8050,99 @@ vb:Pakjesboot12 a vbo:Schip.</code></pre>
 </thead>
 <tbody><tr>
 <td>Identificatie</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#identificatie"><code>mim:identificatie</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#identificatie"><code>mim:identificatie</code></a></td>
 <td>1</td>
 <td><a href="http://www.w3.org/2001/XMLSchema#anyURI"><code>xsd:anyURI</code></a></td>
 </tr>
 <tr>
 <td>Naam</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#naam"><code>mim:naam</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#naam"><code>mim:naam</code></a></td>
 <td>1</td>
 <td>tekst</td>
 </tr>
 <tr>
 <td>Alias</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#alias"><code>mim:alias</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#alias"><code>mim:alias</code></a></td>
 <td>0..1</td>
 <td>tekst</td>
 </tr>
 <tr>
 <td>Begrip</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#begrip"><code>mim:begrip</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#begrip"><code>mim:begrip</code></a></td>
 <td>0..*</td>
 <td><a href="http://www.w3.org/2004/02/skos/core#Concept"><code>skos:Concept</code></a></td>
 </tr>
 <tr>
 <td>Begripsterm</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#begripsterm"><code>mim:begripsterm</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#begripsterm"><code>mim:begripsterm</code></a></td>
 <td>0..*</td>
 <td>tekst</td>
 </tr>
 <tr>
 <td>Herkomst</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#herkomst"><code>mim:herkomst</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#herkomst"><code>mim:herkomst</code></a></td>
 <td>1</td>
 <td>tekst</td>
 </tr>
 <tr>
 <td>Definitie</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#definitie"><code>mim:definitie</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#definitie"><code>mim:definitie</code></a></td>
 <td>1</td>
 <td>tekst</td>
 </tr>
 <tr>
 <td>Herkomst definitie</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#herkomstDefinitie"><code>mim:herkomstDefinitie</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#herkomstDefinitie"><code>mim:herkomstDefinitie</code></a></td>
 <td>1</td>
 <td>tekst</td>
 </tr>
 <tr>
 <td>Datum opname</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#datumOpname"><code>mim:datumOpname</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#datumOpname"><code>mim:datumOpname</code></a></td>
 <td>1</td>
 <td>datum</td>
 </tr>
 <tr>
 <td>Populatie</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#populatie"><code>mim:populatie</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#populatie"><code>mim:populatie</code></a></td>
 <td>0..1</td>
 <td>tekst</td>
 </tr>
 <tr>
 <td>Kwaliteit</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#kwaliteit"><code>mim:kwaliteit</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#kwaliteit"><code>mim:kwaliteit</code></a></td>
 <td>0..1</td>
 <td>tekst</td>
 </tr>
 <tr>
 <td>Toelichting</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#toelichting"><code>mim:toelichting</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#toelichting"><code>mim:toelichting</code></a></td>
 <td>0..1</td>
 <td>tekst</td>
 </tr>
 <tr>
 <td>Indicatie abstract object</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#indicatieAbstractObject"><code>mim:indicatieAbstractObject</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#indicatieAbstractObject"><code>mim:indicatieAbstractObject</code></a></td>
 <td>1</td>
 <td>boolean</td>
 </tr>
 <tr>
 <td>Attribuut</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#attribuut"><code>mim:attribuut</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#attribuut"><code>mim:attribuut</code></a></td>
 <td>0..*</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#Attribuutsoort"><code>mim:Attribuutsoort</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#Attribuutsoort"><code>mim:Attribuutsoort</code></a></td>
 </tr>
 <tr>
 <td>Gegevensgroep</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#gegevensgroep"><code>mim:gegevensgroep</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#gegevensgroep"><code>mim:gegevensgroep</code></a></td>
 <td>0..*</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#Gegevensgroep"><code>mim:Gegevensgroep</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#Gegevensgroep"><code>mim:Gegevensgroep</code></a></td>
 </tr>
 <tr>
 <td>Constraint</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#constraint"><code>mim:constraint</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#constraint"><code>mim:constraint</code></a></td>
 <td>0..*</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#Constraint"><code>mim:Constraint</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#Constraint"><code>mim:Constraint</code></a></td>
 </tr>
 </tbody></table>
 </section><section id="mim-attribuutsoort"><div class="header-wrapper"><h5 id="x4-3-1-2-mim-attribuutsoort"><bdi class="secno">4.3.1.2 </bdi>mim:Attribuutsoort</h5><a class="self-link" href="#mim-attribuutsoort" aria-label="Permalink for Section 4.3.1.2"></a></div>
@@ -8158,181 +8158,181 @@ vb:Pakjesboot12 a vbo:Schip.</code></pre>
 </thead>
 <tbody><tr>
 <td>Identificatie</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#identificatie"><code>mim:identificatie</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#identificatie"><code>mim:identificatie</code></a></td>
 <td>1</td>
 <td><a href="http://www.w3.org/2001/XMLSchema#anyURI"><code>xsd:anyURI</code></a></td>
 </tr>
 <tr>
 <td>Naam</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#naam"><code>mim:naam</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#naam"><code>mim:naam</code></a></td>
 <td>1</td>
 <td>tekst</td>
 </tr>
 <tr>
 <td>Alias</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#alias"><code>mim:alias</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#alias"><code>mim:alias</code></a></td>
 <td>0..1</td>
 <td>tekst</td>
 </tr>
 <tr>
 <td>Begrip</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#begrip"><code>mim:begrip</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#begrip"><code>mim:begrip</code></a></td>
 <td>0..*</td>
 <td><a href="http://www.w3.org/2004/02/skos/core#Concept"><code>skos:Concept</code></a></td>
 </tr>
 <tr>
 <td>Begripsterm</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#begripsterm"><code>mim:begripsterm</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#begripsterm"><code>mim:begripsterm</code></a></td>
 <td>0..*</td>
 <td>tekst</td>
 </tr>
 <tr>
 <td>Herkomst</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#herkomst"><code>mim:herkomst</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#herkomst"><code>mim:herkomst</code></a></td>
 <td>1</td>
 <td>tekst</td>
 </tr>
 <tr>
 <td>Definitie</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#definitie"><code>mim:definitie</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#definitie"><code>mim:definitie</code></a></td>
 <td>1</td>
 <td>tekst</td>
 </tr>
 <tr>
 <td>Herkomst definitie</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#herkomstDefinitie"><code>mim:herkomstDefinitie</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#herkomstDefinitie"><code>mim:herkomstDefinitie</code></a></td>
 <td>1</td>
 <td>tekst</td>
 </tr>
 <tr>
 <td>Datum opname</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#datumOpname"><code>mim:datumOpname</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#datumOpname"><code>mim:datumOpname</code></a></td>
 <td>1</td>
 <td>datum</td>
 </tr>
 <tr>
 <td>Type</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#type"><code>mim:type</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#type"><code>mim:type</code></a></td>
 <td>1</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#Datatype"><code>mim:Datatype</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#Datatype"><code>mim:Datatype</code></a></td>
 </tr>
 <tr>
 <td>Lengte</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#lengte"><code>mim:lengte</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#lengte"><code>mim:lengte</code></a></td>
 <td>0..1</td>
 <td>tekst</td>
 </tr>
 <tr>
 <td>Patroon</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#patroon"><code>mim:patroon</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#patroon"><code>mim:patroon</code></a></td>
 <td>0..1</td>
 <td>tekst</td>
 </tr>
 <tr>
 <td>Formeel patroon</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#formeelPatroon"><code>mim:formeelPatroon</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#formeelPatroon"><code>mim:formeelPatroon</code></a></td>
 <td>0..1</td>
 <td>tekst</td>
 </tr>
 <tr>
 <td>Heeft tijdlijn geldigheid</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#heeftTijdlijnGeldigheid"><code>mim:heeftTijdlijnGeldigheid</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#heeftTijdlijnGeldigheid"><code>mim:heeftTijdlijnGeldigheid</code></a></td>
 <td>1</td>
 <td>boolean</td>
 </tr>
 <tr>
 <td>Indicatie materiële historie</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#indicatieMaterieleHistorie"><code>mim:indicatieMaterieleHistorie</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#indicatieMaterieleHistorie"><code>mim:indicatieMaterieleHistorie</code></a></td>
 <td>1</td>
 <td>boolean</td>
 </tr>
 <tr>
 <td>Heeft tijdlijn registratie</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#heeftTijdlijnRegistratie"><code>mim:heeftTijdlijnRegistratie</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#heeftTijdlijnRegistratie"><code>mim:heeftTijdlijnRegistratie</code></a></td>
 <td>1</td>
 <td>boolean</td>
 </tr>
 <tr>
 <td>Indicatie formele historie</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#indicatieFormeleHistorie"><code>mim:indicatieFormeleHistorie</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#indicatieFormeleHistorie"><code>mim:indicatieFormeleHistorie</code></a></td>
 <td>1</td>
 <td>boolean</td>
 </tr>
 <tr>
 <td>Kardinaliteit</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#kardinaliteit"><code>mim:kardinaliteit</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#kardinaliteit"><code>mim:kardinaliteit</code></a></td>
 <td>1</td>
 <td>tekst</td>
 </tr>
 <tr>
 <td>Authentiek</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#authentiek"><code>mim:authentiek</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#authentiek"><code>mim:authentiek</code></a></td>
 <td>1</td>
 <td>Authenticiteit</td>
 </tr>
 <tr>
 <td>Toelichting</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#toelichting"><code>mim:toelichting</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#toelichting"><code>mim:toelichting</code></a></td>
 <td>0..1</td>
 <td>tekst</td>
 </tr>
 <tr>
 <td>Indicatie afleidbaar</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#indicatieAfleidbaar"><code>mim:indicatieAfleidbaar</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#indicatieAfleidbaar"><code>mim:indicatieAfleidbaar</code></a></td>
 <td>1</td>
 <td>boolean</td>
 </tr>
 <tr>
 <td>Indicatie classificerend</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#indicatieAfleidbaar"><code>mim:indicatieAfleidbaar</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#indicatieAfleidbaar"><code>mim:indicatieAfleidbaar</code></a></td>
 <td>1</td>
 <td>boolean</td>
 </tr>
 <tr>
 <td>Mogelijk geen waarde</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#mogelijkGeenWaarde"><code>mim:mogelijkGeenWaarde</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#mogelijkGeenWaarde"><code>mim:mogelijkGeenWaarde</code></a></td>
 <td>1</td>
 <td>boolean</td>
 </tr>
 <tr>
 <td>Identificerend</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#identificerend"><code>mim:identificerend</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#identificerend"><code>mim:identificerend</code></a></td>
 <td>0..1</td>
 <td>boolean</td>
 </tr>
 <tr>
 <td>Eenheid</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#eenheid"><code>mim:eenheid</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#eenheid"><code>mim:eenheid</code></a></td>
 <td>0..1</td>
 <td><a href="https://si-digital-framework.org/SI/units?lang=en"><code>si:MeasurementUnit</code></a></td>
 </tr>
 <tr>
 <td>Constraint</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#constraint"><code>mim:constraint</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#constraint"><code>mim:constraint</code></a></td>
 <td>0..*</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#Constraint"><code>mim:Constraint</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#Constraint"><code>mim:Constraint</code></a></td>
 </tr>
 <tr>
 <td>Minimumwaarde inclusief</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#minimumwaardeInclusief"><code>mim:minimumwaardeInclusief</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#minimumwaardeInclusief"><code>mim:minimumwaardeInclusief</code></a></td>
 <td>0..1</td>
 <td>integer, decimal, float, real, dateTime, date</td>
 </tr>
 <tr>
 <td>Minimumwaarde exclusief</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#minimumwaardeExclusief"><code>mim:minimumwaardeExclusief</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#minimumwaardeExclusief"><code>mim:minimumwaardeExclusief</code></a></td>
 <td>0..1</td>
 <td>integer, decimal, float, real, dateTime, date</td>
 </tr>
 <tr>
 <td>Maximumwaarde inclusief</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#maximumwaardeInclusief"><code>mim:maximumwaardeInclusief</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#maximumwaardeInclusief"><code>mim:maximumwaardeInclusief</code></a></td>
 <td>0..1</td>
 <td>integer, decimal, float, real, dateTime, date</td>
 </tr>
 <tr>
 <td>Maximumwaarde exclusief</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#maximumwaardeExclusief"><code>mim:maximumwaardeExclusief</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#maximumwaardeExclusief"><code>mim:maximumwaardeExclusief</code></a></td>
 <td>0..1</td>
 <td>integer, decimal, float, real, dateTime, date</td>
 </tr>
@@ -8346,23 +8346,23 @@ vb:Pakjesboot12 a vbo:Schip.</code></pre>
 </tr>
 </thead>
 <tbody><tr>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#Authentiek"><code>mim:Authentiek</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#Authentiek"><code>mim:Authentiek</code></a></td>
 <td>In een basisregistratie opgenomen gegeven dat bij wettelijk voorschrift als authentiek is aangemerkt.</td>
 </tr>
 <tr>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#Basisgegeven"><code>mim:Basisgegeven</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#Basisgegeven"><code>mim:Basisgegeven</code></a></td>
 <td>Een in een basisregistratie opgenomen gegeven.</td>
 </tr>
 <tr>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#WettelijkGegeven"><code>mim:WettelijkGegeven</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#WettelijkGegeven"><code>mim:WettelijkGegeven</code></a></td>
 <td>Gegeven behorende bij een wettelijke registratie, niet zijnde een basisregistratie</td>
 </tr>
 <tr>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#LandelijkKerngegeven"><code>mim:LandelijkKerngegeven</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#LandelijkKerngegeven"><code>mim:LandelijkKerngegeven</code></a></td>
 <td>Indien het een gegeven of een als relatiesoort gemodelleerd gegeven is in een landelijk sector- en domein-overstijgend informatiemodel en geen authentiek gegeven en geen basisgegeven is.</td>
 </tr>
 <tr>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#OverigeAuthenticiteit"><code>mim:OverigeAuthenticiteit</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#OverigeAuthenticiteit"><code>mim:OverigeAuthenticiteit</code></a></td>
 <td>Indien het géén van de voorgaande categorieën betreft. Veelal gaat het dan om proces-, taakveld- of domeinspecifieke gegevens.</td>
 </tr>
 </tbody></table>
@@ -8380,87 +8380,87 @@ vb:Pakjesboot12 a vbo:Schip.</code></pre>
 </thead>
 <tbody><tr>
 <td>Identificatie</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#identificatie"><code>mim:identificatie</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#identificatie"><code>mim:identificatie</code></a></td>
 <td>1</td>
 <td><a href="http://www.w3.org/2001/XMLSchema#anyURI"><code>xsd:anyURI</code></a></td>
 </tr>
 <tr>
 <td>Naam</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#naam"><code>mim:naam</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#naam"><code>mim:naam</code></a></td>
 <td>1</td>
 <td>tekst</td>
 </tr>
 <tr>
 <td>Alias</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#alias"><code>mim:alias</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#alias"><code>mim:alias</code></a></td>
 <td>0..1</td>
 <td>tekst</td>
 </tr>
 <tr>
 <td>Begrip</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#begrip"><code>mim:begrip</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#begrip"><code>mim:begrip</code></a></td>
 <td>0..*</td>
 <td><a href="http://www.w3.org/2004/02/skos/core#Concept"><code>skos:Concept</code></a></td>
 </tr>
 <tr>
 <td>Begripsterm</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#begripsterm"><code>mim:begripsterm</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#begripsterm"><code>mim:begripsterm</code></a></td>
 <td>0..*</td>
 <td>tekst</td>
 </tr>
 <tr>
 <td>Definitie</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#definitie"><code>mim:definitie</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#definitie"><code>mim:definitie</code></a></td>
 <td>1</td>
 <td>tekst</td>
 </tr>
 <tr>
 <td>Toelichting</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#toelichting"><code>mim:toelichting</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#toelichting"><code>mim:toelichting</code></a></td>
 <td>0..1</td>
 <td>tekst</td>
 </tr>
 <tr>
 <td>Gegevensgroeptype</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#gegevensgroeptype"><code>mim:gegevensgroeptype</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#gegevensgroeptype"><code>mim:gegevensgroeptype</code></a></td>
 <td>1</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#Gegevensgroeptype"><code>mim:Gegevensgroeptype</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#Gegevensgroeptype"><code>mim:Gegevensgroeptype</code></a></td>
 </tr>
 <tr>
 <td>Herkomst</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#herkomst"><code>mim:herkomst</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#herkomst"><code>mim:herkomst</code></a></td>
 <td>1</td>
 <td>tekst</td>
 </tr>
 <tr>
 <td>Herkomst definitie</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#herkomstDefinitie"><code>mim:herkomstDefinitie</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#herkomstDefinitie"><code>mim:herkomstDefinitie</code></a></td>
 <td>1</td>
 <td>tekst</td>
 </tr>
 <tr>
 <td>Datum opname</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#datumOpname"><code>mim:datumOpname</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#datumOpname"><code>mim:datumOpname</code></a></td>
 <td>1</td>
 <td>datum</td>
 </tr>
 <tr>
 <td>Kardinaliteit</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#kardinaliteit"><code>mim:kardinaliteit</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#kardinaliteit"><code>mim:kardinaliteit</code></a></td>
 <td>1</td>
 <td>tekst</td>
 </tr>
 <tr>
 <td>Authentiek</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#authentiek"><code>mim:authentiek</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#authentiek"><code>mim:authentiek</code></a></td>
 <td>1</td>
 <td>Authenticiteit</td>
 </tr>
 <tr>
 <td>Constraint</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#constraint"><code>mim:constraint</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#constraint"><code>mim:constraint</code></a></td>
 <td>0..*</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#Constraint"><code>mim:Constraint</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#Constraint"><code>mim:Constraint</code></a></td>
 </tr>
 </tbody></table>
 </section><section id="mim-gegevensgroeptype"><div class="header-wrapper"><h5 id="x4-3-1-4-mim-gegevensgroeptype"><bdi class="secno">4.3.1.4 </bdi>mim:Gegevensgroeptype</h5><a class="self-link" href="#mim-gegevensgroeptype" aria-label="Permalink for Section 4.3.1.4"></a></div>
@@ -8476,75 +8476,75 @@ vb:Pakjesboot12 a vbo:Schip.</code></pre>
 </thead>
 <tbody><tr>
 <td>Identificatie</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#identificatie"><code>mim:identificatie</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#identificatie"><code>mim:identificatie</code></a></td>
 <td>1</td>
 <td><a href="http://www.w3.org/2001/XMLSchema#anyURI"><code>xsd:anyURI</code></a></td>
 </tr>
 <tr>
 <td>Naam</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#naam"><code>mim:naam</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#naam"><code>mim:naam</code></a></td>
 <td>1</td>
 <td>tekst</td>
 </tr>
 <tr>
 <td>Alias</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#alias"><code>mim:alias</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#alias"><code>mim:alias</code></a></td>
 <td>0..1</td>
 <td>tekst</td>
 </tr>
 <tr>
 <td>Begrip</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#begrip"><code>mim:begrip</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#begrip"><code>mim:begrip</code></a></td>
 <td>0..*</td>
 <td><a href="http://www.w3.org/2004/02/skos/core#Concept"><code>skos:Concept</code></a></td>
 </tr>
 <tr>
 <td>Begripsterm</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#begripsterm"><code>mim:begripsterm</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#begripsterm"><code>mim:begripsterm</code></a></td>
 <td>0..*</td>
 <td>tekst</td>
 </tr>
 <tr>
 <td>Definitie</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#definitie"><code>mim:definitie</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#definitie"><code>mim:definitie</code></a></td>
 <td>0..1</td>
 <td>tekst</td>
 </tr>
 <tr>
 <td>Herkomst definitie</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#herkomstDefinitie"><code>mim:herkomstDefinitie</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#herkomstDefinitie"><code>mim:herkomstDefinitie</code></a></td>
 <td>0..1</td>
 <td>tekst</td>
 </tr>
 <tr>
 <td>Toelichting</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#toelichting"><code>mim:toelichting</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#toelichting"><code>mim:toelichting</code></a></td>
 <td>0..1</td>
 <td>tekst</td>
 </tr>
 <tr>
 <td>Datum opname</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#datumOpname"><code>mim:datumOpname</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#datumOpname"><code>mim:datumOpname</code></a></td>
 <td>1</td>
 <td>datum</td>
 </tr>
 <tr>
 <td>Attribuut</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#attribuut"><code>mim:attribuut</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#attribuut"><code>mim:attribuut</code></a></td>
 <td>0..*</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#Attribuutsoort"><code>mim:Attribuutsoort</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#Attribuutsoort"><code>mim:Attribuutsoort</code></a></td>
 </tr>
 <tr>
 <td>Gegevensgroep</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#gegevensgroep"><code>mim:gegevensgroep</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#gegevensgroep"><code>mim:gegevensgroep</code></a></td>
 <td>0..*</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#Gegevensgroep"><code>mim:Gegevensgroep</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#Gegevensgroep"><code>mim:Gegevensgroep</code></a></td>
 </tr>
 <tr>
 <td>Constraint</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#constraint"><code>mim:constraint</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#constraint"><code>mim:constraint</code></a></td>
 <td>0..*</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#Constraint"><code>mim:Constraint</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#Constraint"><code>mim:Constraint</code></a></td>
 </tr>
 </tbody></table>
 </section></section><section id="relaties-in-ld"><div class="header-wrapper"><h4 id="x4-3-2-relaties-in-ld"><bdi class="secno">4.3.2 </bdi>Relaties in LD</h4><a class="self-link" href="#relaties-in-ld" aria-label="Permalink for Section 4.3.2"></a></div>
@@ -8569,153 +8569,153 @@ vb:Pakjesboot12 a vbo:Schip.</code></pre>
 </thead>
 <tbody><tr>
 <td>Identificatie</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#identificatie"><code>mim:identificatie</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#identificatie"><code>mim:identificatie</code></a></td>
 <td>1</td>
 <td><a href="http://www.w3.org/2001/XMLSchema#anyURI"><code>xsd:anyURI</code></a></td>
 </tr>
 <tr>
 <td>Naam</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#naam"><code>mim:naam</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#naam"><code>mim:naam</code></a></td>
 <td>1</td>
 <td>tekst</td>
 </tr>
 <tr>
 <td>Alias</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#alias"><code>mim:alias</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#alias"><code>mim:alias</code></a></td>
 <td>0..1</td>
 <td>tekst</td>
 </tr>
 <tr>
 <td>Begrip</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#begrip"><code>mim:begrip</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#begrip"><code>mim:begrip</code></a></td>
 <td>0..*</td>
 <td><a href="http://www.w3.org/2004/02/skos/core#Concept"><code>skos:Concept</code></a></td>
 </tr>
 <tr>
 <td>Begripsterm</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#begripsterm"><code>mim:begripsterm</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#begripsterm"><code>mim:begripsterm</code></a></td>
 <td>0..*</td>
 <td>tekst</td>
 </tr>
 <tr>
 <td>Unidirectioneel</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#unidirectioneel"><code>mim:unidirectioneel</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#unidirectioneel"><code>mim:unidirectioneel</code></a></td>
 <td>1</td>
 <td>boolean</td>
 </tr>
 <tr>
 <td>Bron</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#bron"><code>mim:bron</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#bron"><code>mim:bron</code></a></td>
 <td>1</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#Objecttype"><code>mim:Objecttype</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#Objecttype"><code>mim:Objecttype</code></a></td>
 </tr>
 <tr>
 <td>Doel</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#doel"><code>mim:doel</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#doel"><code>mim:doel</code></a></td>
 <td>1</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#Objecttype"><code>mim:Objecttype</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#Objecttype"><code>mim:Objecttype</code></a></td>
 </tr>
 <tr>
 <td>Aggregatietype</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#aggregatietype"><code>mim:aggregatietype</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#aggregatietype"><code>mim:aggregatietype</code></a></td>
 <td>1</td>
 <td>Aggregatietype</td>
 </tr>
 <tr>
 <td>Kardinaliteit</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#kardinaliteit"><code>mim:kardinaliteit</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#kardinaliteit"><code>mim:kardinaliteit</code></a></td>
 <td>1</td>
 <td>tekst</td>
 </tr>
 <tr>
 <td>Kardinaliteit relatie bron</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#kardinaliteitRelatieBron"><code>mim:kardinaliteitRelatieBron</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#kardinaliteitRelatieBron"><code>mim:kardinaliteitRelatieBron</code></a></td>
 <td>0..1</td>
 <td>tekst</td>
 </tr>
 <tr>
 <td>Herkomst</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#herkomst"><code>mim:herkomst</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#herkomst"><code>mim:herkomst</code></a></td>
 <td>1</td>
 <td>tekst</td>
 </tr>
 <tr>
 <td>Definitie</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#definitie"><code>mim:definitie</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#definitie"><code>mim:definitie</code></a></td>
 <td>1</td>
 <td>tekst</td>
 </tr>
 <tr>
 <td>Toelichting</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#toelichting"><code>mim:toelichting</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#toelichting"><code>mim:toelichting</code></a></td>
 <td>0..1</td>
 <td>tekst</td>
 </tr>
 <tr>
 <td>Herkomst definitie</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#herkomstDefinitie"><code>mim:herkomstDefinitie</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#herkomstDefinitie"><code>mim:herkomstDefinitie</code></a></td>
 <td>1</td>
 <td>tekst</td>
 </tr>
 <tr>
 <td>Datum opname</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#datumOpname"><code>mim:datumOpname</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#datumOpname"><code>mim:datumOpname</code></a></td>
 <td>1</td>
 <td>datum</td>
 </tr>
 <tr>
 <td>Identificerend</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#identificerend"><code>mim:identificerend</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#identificerend"><code>mim:identificerend</code></a></td>
 <td>0..1</td>
 <td>boolean</td>
 </tr>
 <tr>
 <td>Heeft tijdlijn geldigheid</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#heeftTijdlijnGeldigheid"><code>mim:heeftTijdlijnGeldigheid</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#heeftTijdlijnGeldigheid"><code>mim:heeftTijdlijnGeldigheid</code></a></td>
 <td>1</td>
 <td>boolean</td>
 </tr>
 <tr>
 <td>Indicatie materiële historie</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#indicatieMaterieleHistorie"><code>mim:indicatieMaterieleHistorie</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#indicatieMaterieleHistorie"><code>mim:indicatieMaterieleHistorie</code></a></td>
 <td>1</td>
 <td>boolean</td>
 </tr>
 <tr>
 <td>Heeft tijdlijn registratie</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#heeftTijdlijnRegistratie"><code>mim:heeftTijdlijnRegistratie</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#heeftTijdlijnRegistratie"><code>mim:heeftTijdlijnRegistratie</code></a></td>
 <td>1</td>
 <td>boolean</td>
 </tr>
 <tr>
 <td>Indicatie formele historie</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#indicatieFormeleHistorie"><code>mim:indicatieFormeleHistorie</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#indicatieFormeleHistorie"><code>mim:indicatieFormeleHistorie</code></a></td>
 <td>1</td>
 <td>boolean</td>
 </tr>
 <tr>
 <td>Authentiek</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#authentiek"><code>mim:authentiek</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#authentiek"><code>mim:authentiek</code></a></td>
 <td>1</td>
 <td>Authenticiteit</td>
 </tr>
 <tr>
 <td>Indicatie afleidbaar</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#indicatieAfleidbaar"><code>mim:indicatieAfleidbaar</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#indicatieAfleidbaar"><code>mim:indicatieAfleidbaar</code></a></td>
 <td>1</td>
 <td>boolean</td>
 </tr>
 <tr>
 <td>Mogelijk geen waarde</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#mogelijkGeenWaarde"><code>mim:mogelijkGeenWaarde</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#mogelijkGeenWaarde"><code>mim:mogelijkGeenWaarde</code></a></td>
 <td>1</td>
 <td>boolean</td>
 </tr>
 <tr>
 <td>Constraint</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#constraint"><code>mim:constraint</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#constraint"><code>mim:constraint</code></a></td>
 <td>0..*</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#Constraint"><code>mim:Constraint</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#Constraint"><code>mim:Constraint</code></a></td>
 </tr>
 </tbody></table>
 <p>Het veld <code>mim:aggregatietype</code> verwijst naar één van de volgende mogelijke waarden:</p>
@@ -8727,15 +8727,15 @@ vb:Pakjesboot12 a vbo:Schip.</code></pre>
 </tr>
 </thead>
 <tbody><tr>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#Geen"><code>mim:Geen</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#Geen"><code>mim:Geen</code></a></td>
 <td>Er is geen sprake van een aggregatie</td>
 </tr>
 <tr>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#Compositie"><code>mim:Compositie</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#Compositie"><code>mim:Compositie</code></a></td>
 <td>Compositie (gesloten wiebertje)</td>
 </tr>
 <tr>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#Gedeeld"><code>mim:Gedeeld</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#Gedeeld"><code>mim:Gedeeld</code></a></td>
 <td>Gedeelde aggregatie (open wiebertje)</td>
 </tr>
 </tbody></table>
@@ -8752,51 +8752,51 @@ vb:Pakjesboot12 a vbo:Schip.</code></pre>
 </thead>
 <tbody><tr>
 <td>Identificatie</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#identificatie"><code>mim:identificatie</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#identificatie"><code>mim:identificatie</code></a></td>
 <td>1</td>
 <td><a href="http://www.w3.org/2001/XMLSchema#anyURI"><code>xsd:anyURI</code></a></td>
 </tr>
 <tr>
 <td>Naam</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#naam"><code>mim:naam</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#naam"><code>mim:naam</code></a></td>
 <td>0..1</td>
 <td>tekst</td>
 </tr>
 <tr>
 <td>Alias</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#alias"><code>mim:alias</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#alias"><code>mim:alias</code></a></td>
 <td>0..1</td>
 <td>tekst</td>
 </tr>
 <tr>
 <td>Begrip</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#begrip"><code>mim:begrip</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#begrip"><code>mim:begrip</code></a></td>
 <td>0..*</td>
 <td><a href="http://www.w3.org/2004/02/skos/core#Concept"><code>skos:Concept</code></a></td>
 </tr>
 <tr>
 <td>Begripsterm</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#begripsterm"><code>mim:begripsterm</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#begripsterm"><code>mim:begripsterm</code></a></td>
 <td>0..*</td>
 <td>tekst</td>
 </tr>
 <tr>
 <td>Definitie</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#definitie"><code>mim:definitie</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#definitie"><code>mim:definitie</code></a></td>
 <td>0..1</td>
 <td>tekst</td>
 </tr>
 <tr>
 <td>Relatierol</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#relatierol"><code>mim:relatierol</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#relatierol"><code>mim:relatierol</code></a></td>
 <td>1..2</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#Relatierol"><code>Relatierol</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#Relatierol"><code>Relatierol</code></a></td>
 </tr>
 <tr>
 <td>Constraint</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#constraint"><code>mim:constraint</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#constraint"><code>mim:constraint</code></a></td>
 <td>0..*</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#Constraint"><code>mim:Constraint</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#Constraint"><code>mim:Constraint</code></a></td>
 </tr>
 </tbody></table>
 </section><section id="mim-relatierol-alt-1-soort-leidend"><div class="header-wrapper"><h5 id="x4-3-2-3-mim-relatierol-alt-1-soort-leidend"><bdi class="secno">4.3.2.3 </bdi>mim:Relatierol (alt 1: soort leidend)</h5><a class="self-link" href="#mim-relatierol-alt-1-soort-leidend" aria-label="Permalink for Section 4.3.2.3"></a></div>
@@ -8812,45 +8812,45 @@ vb:Pakjesboot12 a vbo:Schip.</code></pre>
 </thead>
 <tbody><tr>
 <td>Identificatie</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#identificatie"><code>mim:identificatie</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#identificatie"><code>mim:identificatie</code></a></td>
 <td>1</td>
 <td><a href="http://www.w3.org/2001/XMLSchema#anyURI"><code>xsd:anyURI</code></a></td>
 </tr>
 <tr>
 <td>Naam</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#naam"><code>mim:naam</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#naam"><code>mim:naam</code></a></td>
 <td>0..1</td>
 <td>tekst</td>
 </tr>
 <tr>
 <td>Alias</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#alias"><code>mim:alias</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#alias"><code>mim:alias</code></a></td>
 <td>0..1</td>
 <td>tekst</td>
 </tr>
 <tr>
 <td>Begrip</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#begrip"><code>mim:begrip</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#begrip"><code>mim:begrip</code></a></td>
 <td>0..*</td>
 <td><a href="http://www.w3.org/2004/02/skos/core#Concept"><code>skos:Concept</code></a></td>
 </tr>
 <tr>
 <td>Begripsterm</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#begripsterm"><code>mim:begripsterm</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#begripsterm"><code>mim:begripsterm</code></a></td>
 <td>0..*</td>
 <td>tekst</td>
 </tr>
 <tr>
 <td>Definitie</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#definitie"><code>mim:definitie</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#definitie"><code>mim:definitie</code></a></td>
 <td>0..1</td>
 <td>tekst</td>
 </tr>
 <tr>
 <td>Constraint</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#constraint"><code>mim:constraint</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#constraint"><code>mim:constraint</code></a></td>
 <td>0..*</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#Constraint"><code>mim:Constraint</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#Constraint"><code>mim:Constraint</code></a></td>
 </tr>
 </tbody></table>
 
@@ -8869,117 +8869,117 @@ aspecten gespecificeerd.</p>
 </thead>
 <tbody><tr>
 <td>Identificatie</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#identificatie"><code>mim:identificatie</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#identificatie"><code>mim:identificatie</code></a></td>
 <td>1</td>
 <td><a href="http://www.w3.org/2001/XMLSchema#anyURI"><code>xsd:anyURI</code></a></td>
 </tr>
 <tr>
 <td>Naam</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#naam"><code>mim:naam</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#naam"><code>mim:naam</code></a></td>
 <td>1</td>
 <td>tekst</td>
 </tr>
 <tr>
 <td>Alias</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#alias"><code>mim:alias</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#alias"><code>mim:alias</code></a></td>
 <td>0..1</td>
 <td>tekst</td>
 </tr>
 <tr>
 <td>Begrip</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#begrip"><code>mim:begrip</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#begrip"><code>mim:begrip</code></a></td>
 <td>0..*</td>
 <td><a href="http://www.w3.org/2004/02/skos/core#Concept"><code>skos:Concept</code></a></td>
 </tr>
 <tr>
 <td>Begripsterm</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#begripsterm"><code>mim:begripsterm</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#begripsterm"><code>mim:begripsterm</code></a></td>
 <td>0..*</td>
 <td>tekst</td>
 </tr>
 <tr>
 <td>Kardinaliteit</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#kardinaliteit"><code>mim:kardinaliteit</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#kardinaliteit"><code>mim:kardinaliteit</code></a></td>
 <td>1</td>
 <td>tekst</td>
 </tr>
 <tr>
 <td>Herkomst</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#herkomst"><code>mim:herkomst</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#herkomst"><code>mim:herkomst</code></a></td>
 <td>1</td>
 <td>tekst</td>
 </tr>
 <tr>
 <td>Definitie</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#definitie"><code>mim:definitie</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#definitie"><code>mim:definitie</code></a></td>
 <td>1</td>
 <td>tekst</td>
 </tr>
 <tr>
 <td>Toelichting</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#toelichting"><code>mim:toelichting</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#toelichting"><code>mim:toelichting</code></a></td>
 <td>0..1</td>
 <td>tekst</td>
 </tr>
 <tr>
 <td>Herkomst definitie</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#herkomstDefinitie"><code>mim:herkomstDefinitie</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#herkomstDefinitie"><code>mim:herkomstDefinitie</code></a></td>
 <td>1</td>
 <td>tekst</td>
 </tr>
 <tr>
 <td>Datum opname</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#datumOpname"><code>mim:datumOpname</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#datumOpname"><code>mim:datumOpname</code></a></td>
 <td>1</td>
 <td>datum</td>
 </tr>
 <tr>
 <td>Identificerend</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#identificerend"><code>mim:identificerend</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#identificerend"><code>mim:identificerend</code></a></td>
 <td>0..1</td>
 <td>boolean</td>
 </tr>
 <tr>
 <td>Heeft tijdlijn geldigheid</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#heeftTijdlijnGeldigheid"><code>mim:heeftTijdlijnGeldigheid</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#heeftTijdlijnGeldigheid"><code>mim:heeftTijdlijnGeldigheid</code></a></td>
 <td>1</td>
 <td>boolean</td>
 </tr>
 <tr>
 <td>Indicatie materiële historie</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#indicatieMaterieleHistorie"><code>mim:indicatieMaterieleHistorie</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#indicatieMaterieleHistorie"><code>mim:indicatieMaterieleHistorie</code></a></td>
 <td>1</td>
 <td>boolean</td>
 </tr>
 <tr>
 <td>Heeft tijdlijn registratie</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#heeftTijdlijnRegistratie"><code>mim:heeftTijdlijnRegistratie</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#heeftTijdlijnRegistratie"><code>mim:heeftTijdlijnRegistratie</code></a></td>
 <td>1</td>
 <td>boolean</td>
 </tr>
 <tr>
 <td>Indicatie formele historie</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#indicatieFormeleHistorie"><code>mim:indicatieFormeleHistorie</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#indicatieFormeleHistorie"><code>mim:indicatieFormeleHistorie</code></a></td>
 <td>1</td>
 <td>boolean</td>
 </tr>
 <tr>
 <td>Authentiek</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#authentiek"><code>mim:authentiek</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#authentiek"><code>mim:authentiek</code></a></td>
 <td>1</td>
 <td>Authenticiteit</td>
 </tr>
 <tr>
 <td>Mogelijk geen waarde</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#mogelijkGeenWaarde"><code>mim:mogelijkGeenWaarde</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#mogelijkGeenWaarde"><code>mim:mogelijkGeenWaarde</code></a></td>
 <td>1</td>
 <td>boolean</td>
 </tr>
 <tr>
 <td>Constraint</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#constraint"><code>mim:constraint</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#constraint"><code>mim:constraint</code></a></td>
 <td>0..*</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#Constraint"><code>mim:Constraint</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#Constraint"><code>mim:Constraint</code></a></td>
 </tr>
 </tbody></table>
 </section><section id="mim-generalisatie-bij-objecttypen"><div class="header-wrapper"><h5 id="x4-3-2-5-mim-generalisatie-bij-objecttypen"><bdi class="secno">4.3.2.5 </bdi>mim:Generalisatie bij objecttypen</h5><a class="self-link" href="#mim-generalisatie-bij-objecttypen" aria-label="Permalink for Section 4.3.2.5"></a></div>
@@ -8995,31 +8995,31 @@ aspecten gespecificeerd.</p>
 </thead>
 <tbody><tr>
 <td>Identificatie</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#identificatie"><code>mim:identificatie</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#identificatie"><code>mim:identificatie</code></a></td>
 <td>1</td>
 <td><a href="http://www.w3.org/2001/XMLSchema#anyURI"><code>xsd:anyURI</code></a></td>
 </tr>
 <tr>
 <td>Subtype</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#subtype"><code>mim:definitie</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#subtype"><code>mim:definitie</code></a></td>
 <td>1</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#Objecttype"><code>mim:Objecttype</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#Objecttype"><code>mim:Objecttype</code></a></td>
 </tr>
 <tr>
 <td>Supertype</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#supertype"><code>mim:definitie</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#supertype"><code>mim:definitie</code></a></td>
 <td>1</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#Objecttype"><code>mim:Objecttype</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#Objecttype"><code>mim:Objecttype</code></a></td>
 </tr>
 <tr>
 <td>Datum opname</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#datumOpname"><code>mim:datumOpname</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#datumOpname"><code>mim:datumOpname</code></a></td>
 <td>1</td>
 <td>datum</td>
 </tr>
 <tr>
 <td>Mixin</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#mixin"><code>mim:mixin</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#mixin"><code>mim:mixin</code></a></td>
 <td>1</td>
 <td>boolean</td>
 </tr>
@@ -9039,21 +9039,21 @@ aspecten gespecificeerd.</p>
 </thead>
 <tbody><tr>
 <td>Identificatie</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#identificatie"><code>mim:identificatie</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#identificatie"><code>mim:identificatie</code></a></td>
 <td>1</td>
 <td><a href="http://www.w3.org/2001/XMLSchema#anyURI"><code>xsd:anyURI</code></a></td>
 </tr>
 <tr>
 <td>Subtype</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#subtype"><code>mim:definitie</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#subtype"><code>mim:definitie</code></a></td>
 <td>1</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#Datatype"><code>mim:Datatype</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#Datatype"><code>mim:Datatype</code></a></td>
 </tr>
 <tr>
 <td>Supertype</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#supertype"><code>mim:definitie</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#supertype"><code>mim:definitie</code></a></td>
 <td>1</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#Datatype"><code>mim:Datatype</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#Datatype"><code>mim:Datatype</code></a></td>
 </tr>
 </tbody></table>
 
@@ -9071,127 +9071,127 @@ aspecten gespecificeerd.</p>
 </thead>
 <tbody><tr>
 <td>Identificatie</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#identificatie"><code>mim:identificatie</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#identificatie"><code>mim:identificatie</code></a></td>
 <td>1</td>
 <td><a href="http://www.w3.org/2001/XMLSchema#anyURI"><code>xsd:anyURI</code></a></td>
 </tr>
 <tr>
 <td>Naam</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#naam"><code>mim:naam</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#naam"><code>mim:naam</code></a></td>
 <td>0..1</td>
 <td>tekst</td>
 </tr>
 <tr>
 <td>Alias</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#alias"><code>mim:alias</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#alias"><code>mim:alias</code></a></td>
 <td>0..1</td>
 <td>tekst</td>
 </tr>
 <tr>
 <td>Herkomst</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#herkomst"><code>mim:herkomst</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#herkomst"><code>mim:herkomst</code></a></td>
 <td>1</td>
 <td>tekst</td>
 </tr>
 <tr>
 <td>Begrip</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#begrip"><code>mim:begrip</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#begrip"><code>mim:begrip</code></a></td>
 <td>0..*</td>
 <td><a href="http://www.w3.org/2004/02/skos/core#Concept"><code>skos:Concept</code></a></td>
 </tr>
 <tr>
 <td>Begripsterm</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#begripsterm"><code>mim:begripsterm</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#begripsterm"><code>mim:begripsterm</code></a></td>
 <td>0..*</td>
 <td>tekst</td>
 </tr>
 <tr>
 <td>Definitie</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#definitie"><code>mim:definitie</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#definitie"><code>mim:definitie</code></a></td>
 <td>0..1</td>
 <td>tekst</td>
 </tr>
 <tr>
 <td>Herkomst definitie</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#herkomstDefinitie"><code>mim:herkomstDefinitie</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#herkomstDefinitie"><code>mim:herkomstDefinitie</code></a></td>
 <td>1</td>
 <td>tekst</td>
 </tr>
 <tr>
 <td>Toelichting</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#toelichting"><code>mim:toelichting</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#toelichting"><code>mim:toelichting</code></a></td>
 <td>0..1</td>
 <td>tekst</td>
 </tr>
 <tr>
 <td>Datum opname</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#datumOpname"><code>mim:datumOpname</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#datumOpname"><code>mim:datumOpname</code></a></td>
 <td>1</td>
 <td>datum</td>
 </tr>
 <tr>
 <td>Constraint</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#constraint"><code>mim:constraint</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#constraint"><code>mim:constraint</code></a></td>
 <td>0..*</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#Constraint"><code>mim:Constraint</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#Constraint"><code>mim:Constraint</code></a></td>
 </tr>
 <tr>
 <td>Unidirectioneel</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#unidirectioneel"><code>mim:unidirectioneel</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#unidirectioneel"><code>mim:unidirectioneel</code></a></td>
 <td>1</td>
 <td>boolean</td>
 </tr>
 <tr>
 <td>Aggregatietype</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#aggregatietype"><code>mim:aggregatietype</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#aggregatietype"><code>mim:aggregatietype</code></a></td>
 <td>1</td>
 <td>Aggregatietype</td>
 </tr>
 <tr>
 <td>Kardinaliteit</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#kardinaliteit"><code>mim:kardinaliteit</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#kardinaliteit"><code>mim:kardinaliteit</code></a></td>
 <td>1</td>
 <td>tekst</td>
 </tr>
 <tr>
 <td>Heeft tijdlijn geldigheid</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#heeftTijdlijnGeldigheid"><code>mim:heeftTijdlijnGeldigheid</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#heeftTijdlijnGeldigheid"><code>mim:heeftTijdlijnGeldigheid</code></a></td>
 <td>1</td>
 <td>boolean</td>
 </tr>
 <tr>
 <td>Indicatie materiële historie</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#indicatieMaterieleHistorie"><code>mim:indicatieMaterieleHistorie</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#indicatieMaterieleHistorie"><code>mim:indicatieMaterieleHistorie</code></a></td>
 <td>1</td>
 <td>boolean</td>
 </tr>
 <tr>
 <td>Heeft tijdlijn registratie</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#heeftTijdlijnRegistratie"><code>mim:heeftTijdlijnRegistratie</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#heeftTijdlijnRegistratie"><code>mim:heeftTijdlijnRegistratie</code></a></td>
 <td>1</td>
 <td>boolean</td>
 </tr>
 <tr>
 <td>Indicatie formele historie</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#indicatieFormeleHistorie"><code>mim:indicatieFormeleHistorie</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#indicatieFormeleHistorie"><code>mim:indicatieFormeleHistorie</code></a></td>
 <td>1</td>
 <td>boolean</td>
 </tr>
 <tr>
 <td>Authentiek</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#authentiek"><code>mim:authentiek</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#authentiek"><code>mim:authentiek</code></a></td>
 <td>1</td>
 <td>Authenticiteit</td>
 </tr>
 <tr>
 <td>Indicatie afleidbaar</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#indicatieAfleidbaar"><code>mim:indicatieAfleidbaar</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#indicatieAfleidbaar"><code>mim:indicatieAfleidbaar</code></a></td>
 <td>1</td>
 <td>boolean</td>
 </tr>
 <tr>
 <td>Mogelijk geen waarde</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#mogelijkGeenWaarde"><code>mim:mogelijkGeenWaarde</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#mogelijkGeenWaarde"><code>mim:mogelijkGeenWaarde</code></a></td>
 <td>1</td>
 <td>boolean</td>
 </tr>
@@ -9209,141 +9209,141 @@ aspecten gespecificeerd.</p>
 </thead>
 <tbody><tr>
 <td>Identificatie</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#identificatie"><code>mim:identificatie</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#identificatie"><code>mim:identificatie</code></a></td>
 <td>1</td>
 <td><a href="http://www.w3.org/2001/XMLSchema#anyURI"><code>xsd:anyURI</code></a></td>
 </tr>
 <tr>
 <td>Naam</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#naam"><code>mim:naam</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#naam"><code>mim:naam</code></a></td>
 <td>1</td>
 <td>tekst</td>
 </tr>
 <tr>
 <td>Alias</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#alias"><code>mim:alias</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#alias"><code>mim:alias</code></a></td>
 <td>0..1</td>
 <td>tekst</td>
 </tr>
 <tr>
 <td>Begrip</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#begrip"><code>mim:begrip</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#begrip"><code>mim:begrip</code></a></td>
 <td>0..*</td>
 <td><a href="http://www.w3.org/2004/02/skos/core#Concept"><code>skos:Concept</code></a></td>
 </tr>
 <tr>
 <td>Begripsterm</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#begripsterm"><code>mim:begripsterm</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#begripsterm"><code>mim:begripsterm</code></a></td>
 <td>0..*</td>
 <td>tekst</td>
 </tr>
 <tr>
 <td>Unidirectioneel</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#unidirectioneel"><code>mim:unidirectioneel</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#unidirectioneel"><code>mim:unidirectioneel</code></a></td>
 <td>1</td>
 <td>boolean</td>
 </tr>
 <tr>
 <td>Bron</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#bron"><code>mim:bron</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#bron"><code>mim:bron</code></a></td>
 <td>1</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#Objecttype"><code>mim:Objecttype</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#Objecttype"><code>mim:Objecttype</code></a></td>
 </tr>
 <tr>
 <td>Doel</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#doel"><code>mim:doel</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#doel"><code>mim:doel</code></a></td>
 <td>1</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#Objecttype"><code>mim:Objecttype</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#Objecttype"><code>mim:Objecttype</code></a></td>
 </tr>
 <tr>
 <td>Aggregatietype</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#aggregatietype"><code>mim:aggregatietype</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#aggregatietype"><code>mim:aggregatietype</code></a></td>
 <td>1</td>
 <td>Aggregatietype</td>
 </tr>
 <tr>
 <td>Kardinaliteit</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#kardinaliteit"><code>mim:kardinaliteit</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#kardinaliteit"><code>mim:kardinaliteit</code></a></td>
 <td>1</td>
 <td>tekst</td>
 </tr>
 <tr>
 <td>Herkomst</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#herkomst"><code>mim:herkomst</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#herkomst"><code>mim:herkomst</code></a></td>
 <td>1</td>
 <td>tekst</td>
 </tr>
 <tr>
 <td>Definitie</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#definitie"><code>mim:definitie</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#definitie"><code>mim:definitie</code></a></td>
 <td>1</td>
 <td>tekst</td>
 </tr>
 <tr>
 <td>Toelichting</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#toelichting"><code>mim:toelichting</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#toelichting"><code>mim:toelichting</code></a></td>
 <td>0..1</td>
 <td>tekst</td>
 </tr>
 <tr>
 <td>Herkomst definitie</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#herkomstDefinitie"><code>mim:herkomstDefinitie</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#herkomstDefinitie"><code>mim:herkomstDefinitie</code></a></td>
 <td>1</td>
 <td>tekst</td>
 </tr>
 <tr>
 <td>Datum opname</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#datumOpname"><code>mim:datumOpname</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#datumOpname"><code>mim:datumOpname</code></a></td>
 <td>1</td>
 <td>datum</td>
 </tr>
 <tr>
 <td>Heeft tijdlijn geldigheid</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#heeftTijdlijnGeldigheid"><code>mim:heeftTijdlijnGeldigheid</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#heeftTijdlijnGeldigheid"><code>mim:heeftTijdlijnGeldigheid</code></a></td>
 <td>1</td>
 <td>boolean</td>
 </tr>
 <tr>
 <td>Indicatie materiële historie</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#indicatieMaterieleHistorie"><code>mim:indicatieMaterieleHistorie</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#indicatieMaterieleHistorie"><code>mim:indicatieMaterieleHistorie</code></a></td>
 <td>1</td>
 <td>boolean</td>
 </tr>
 <tr>
 <td>Heeft tijdlijn registratie</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#heeftTijdlijnRegistratie"><code>mim:heeftTijdlijnRegistratie</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#heeftTijdlijnRegistratie"><code>mim:heeftTijdlijnRegistratie</code></a></td>
 <td>1</td>
 <td>boolean</td>
 </tr>
 <tr>
 <td>Indicatie formele historie</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#indicatieFormeleHistorie"><code>mim:indicatieFormeleHistorie</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#indicatieFormeleHistorie"><code>mim:indicatieFormeleHistorie</code></a></td>
 <td>1</td>
 <td>boolean</td>
 </tr>
 <tr>
 <td>Authentiek</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#authentiek"><code>mim:authentiek</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#authentiek"><code>mim:authentiek</code></a></td>
 <td>1</td>
 <td>Authenticiteit</td>
 </tr>
 <tr>
 <td>Indicatie afleidbaar</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#indicatieAfleidbaar"><code>mim:indicatieAfleidbaar</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#indicatieAfleidbaar"><code>mim:indicatieAfleidbaar</code></a></td>
 <td>1</td>
 <td>boolean</td>
 </tr>
 <tr>
 <td>Mogelijk geen waarde</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#mogelijkGeenWaarde"><code>mim:mogelijkGeenWaarde</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#mogelijkGeenWaarde"><code>mim:mogelijkGeenWaarde</code></a></td>
 <td>1</td>
 <td>boolean</td>
 </tr>
 <tr>
 <td>Constraint</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#constraint"><code>mim:constraint</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#constraint"><code>mim:constraint</code></a></td>
 <td>0..*</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#Constraint"><code>mim:Constraint</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#Constraint"><code>mim:Constraint</code></a></td>
 </tr>
 </tbody></table>
 </section></section><section id="waardelijsten-in-ld"><div class="header-wrapper"><h4 id="x4-3-3-waardelijsten-in-ld"><bdi class="secno">4.3.3 </bdi>Waardelijsten in LD</h4><a class="self-link" href="#waardelijsten-in-ld" aria-label="Permalink for Section 4.3.3"></a></div>
@@ -9361,81 +9361,81 @@ aspecten gespecificeerd.</p>
 </thead>
 <tbody><tr>
 <td>Identificatie</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#identificatie"><code>mim:identificatie</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#identificatie"><code>mim:identificatie</code></a></td>
 <td>1</td>
 <td><a href="http://www.w3.org/2001/XMLSchema#anyURI"><code>xsd:anyURI</code></a></td>
 </tr>
 <tr>
 <td>Naam</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#naam"><code>mim:naam</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#naam"><code>mim:naam</code></a></td>
 <td>1</td>
 <td>tekst</td>
 </tr>
 <tr>
 <td>Alias</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#alias"><code>mim:alias</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#alias"><code>mim:alias</code></a></td>
 <td>0..1</td>
 <td>tekst</td>
 </tr>
 <tr>
 <td>Begrip</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#begrip"><code>mim:begrip</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#begrip"><code>mim:begrip</code></a></td>
 <td>0..*</td>
 <td><a href="http://www.w3.org/2004/02/skos/core#Concept"><code>skos:Concept</code></a></td>
 </tr>
 <tr>
 <td>Begripsterm</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#begripsterm"><code>mim:begripsterm</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#begripsterm"><code>mim:begripsterm</code></a></td>
 <td>0..*</td>
 <td>tekst</td>
 </tr>
 <tr>
 <td>Herkomst</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#herkomst"><code>mim:herkomst</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#herkomst"><code>mim:herkomst</code></a></td>
 <td>1</td>
 <td>tekst</td>
 </tr>
 <tr>
 <td>Definitie</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#definitie"><code>mim:definitie</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#definitie"><code>mim:definitie</code></a></td>
 <td>1</td>
 <td>tekst</td>
 </tr>
 <tr>
 <td>Herkomst definitie</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#herkomstDefinitie"><code>mim:herkomstDefinitie</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#herkomstDefinitie"><code>mim:herkomstDefinitie</code></a></td>
 <td>1</td>
 <td>tekst</td>
 </tr>
 <tr>
 <td>Datum opname</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#datumOpname"><code>mim:datumOpname</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#datumOpname"><code>mim:datumOpname</code></a></td>
 <td>1</td>
 <td>datum</td>
 </tr>
 <tr>
 <td>Toelichting</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#toelichting"><code>mim:toelichting</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#toelichting"><code>mim:toelichting</code></a></td>
 <td>0..1</td>
 <td>tekst</td>
 </tr>
 <tr>
 <td>Locatie</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#locatie"><code>mim:locatie</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#locatie"><code>mim:locatie</code></a></td>
 <td>1</td>
 <td>tekst</td>
 </tr>
 <tr>
 <td>Referentie-element</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#referentieElement"><code>mim:referentieElement</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#referentieElement"><code>mim:referentieElement</code></a></td>
 <td>1..*</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#ReferentieElement"><code>mim:ReferentieElement</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#ReferentieElement"><code>mim:ReferentieElement</code></a></td>
 </tr>
 <tr>
 <td>Constraint</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#constraint"><code>mim:constraint</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#constraint"><code>mim:constraint</code></a></td>
 <td>0..*</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#Constraint"><code>mim:Constraint</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#Constraint"><code>mim:Constraint</code></a></td>
 </tr>
 </tbody></table>
 </section><section id="mim-referentieelement"><div class="header-wrapper"><h5 id="x4-3-3-2-mim-referentieelement"><bdi class="secno">4.3.3.2 </bdi>mim:ReferentieElement</h5><a class="self-link" href="#mim-referentieelement" aria-label="Permalink for Section 4.3.3.2"></a></div>
@@ -9451,127 +9451,127 @@ aspecten gespecificeerd.</p>
 </thead>
 <tbody><tr>
 <td>Identificatie</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#identificatie"><code>mim:identificatie</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#identificatie"><code>mim:identificatie</code></a></td>
 <td>1</td>
 <td><a href="http://www.w3.org/2001/XMLSchema#anyURI"><code>xsd:anyURI</code></a></td>
 </tr>
 <tr>
 <td>Naam</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#naam"><code>mim:naam</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#naam"><code>mim:naam</code></a></td>
 <td>1</td>
 <td>tekst</td>
 </tr>
 <tr>
 <td>Alias</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#alias"><code>mim:alias</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#alias"><code>mim:alias</code></a></td>
 <td>0..1</td>
 <td>tekst</td>
 </tr>
 <tr>
 <td>Begrip</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#begrip"><code>mim:begrip</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#begrip"><code>mim:begrip</code></a></td>
 <td>0..*</td>
 <td><a href="http://www.w3.org/2004/02/skos/core#Concept"><code>skos:Concept</code></a></td>
 </tr>
 <tr>
 <td>Begripsterm</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#begripsterm"><code>mim:begripsterm</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#begripsterm"><code>mim:begripsterm</code></a></td>
 <td>0..*</td>
 <td>tekst</td>
 </tr>
 <tr>
 <td>Definitie</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#definitie"><code>mim:definitie</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#definitie"><code>mim:definitie</code></a></td>
 <td>1</td>
 <td>tekst</td>
 </tr>
 <tr>
 <td>Datum opname</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#datumOpname"><code>mim:datumOpname</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#datumOpname"><code>mim:datumOpname</code></a></td>
 <td>1</td>
 <td>datum</td>
 </tr>
 <tr>
 <td>Type</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#type"><code>mim:type</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#type"><code>mim:type</code></a></td>
 <td>1</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#Datatype"><code>mim:Datatype</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#Datatype"><code>mim:Datatype</code></a></td>
 </tr>
 <tr>
 <td>Lengte</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#lengte"><code>mim:lengte</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#lengte"><code>mim:lengte</code></a></td>
 <td>0..1</td>
 <td>tekst</td>
 </tr>
 <tr>
 <td>Patroon</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#patroon"><code>mim:patroon</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#patroon"><code>mim:patroon</code></a></td>
 <td>0..1</td>
 <td>tekst</td>
 </tr>
 <tr>
 <td>Formeel patroon</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#formeelPatroon"><code>mim:formeelPatroon</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#formeelPatroon"><code>mim:formeelPatroon</code></a></td>
 <td>0..1</td>
 <td>tekst</td>
 </tr>
 <tr>
 <td>Kardinaliteit</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#kardinaliteit"><code>mim:kardinaliteit</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#kardinaliteit"><code>mim:kardinaliteit</code></a></td>
 <td>1</td>
 <td>tekst</td>
 </tr>
 <tr>
 <td>Identificerend</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#identificerend"><code>mim:identificerend</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#identificerend"><code>mim:identificerend</code></a></td>
 <td>0..1</td>
 <td>tekst</td>
 </tr>
 <tr>
 <td>Toelichting</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#toelichting"><code>mim:toelichting</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#toelichting"><code>mim:toelichting</code></a></td>
 <td>0..1</td>
 <td>tekst</td>
 </tr>
 <tr>
 <td>Constraint</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#constraint"><code>mim:constraint</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#constraint"><code>mim:constraint</code></a></td>
 <td>0..*</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#Constraint"><code>mim:Constraint</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#Constraint"><code>mim:Constraint</code></a></td>
 </tr>
 <tr>
 <td>Eenheid</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#eenheid"><code>mim:eenheid</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#eenheid"><code>mim:eenheid</code></a></td>
 <td>0..1</td>
 <td><a href="https://si-digital-framework.org/SI/units?lang=en"><code>si:MeasurementUnit</code></a></td>
 </tr>
 <tr>
 <td>Constraint</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#constraint"><code>mim:constraint</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#constraint"><code>mim:constraint</code></a></td>
 <td>0..*</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#Constraint"><code>mim:Constraint</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#Constraint"><code>mim:Constraint</code></a></td>
 </tr>
 <tr>
 <td>Minimumwaarde inclusief</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#minimumwaardeInclusief"><code>mim:minimumwaardeInclusief</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#minimumwaardeInclusief"><code>mim:minimumwaardeInclusief</code></a></td>
 <td>0..1</td>
 <td>integer, decimal, float, real, dateTime, date</td>
 </tr>
 <tr>
 <td>Minimumwaarde exclusief</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#minimumwaardeExclusief"><code>mim:minimumwaardeExclusief</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#minimumwaardeExclusief"><code>mim:minimumwaardeExclusief</code></a></td>
 <td>0..1</td>
 <td>integer, decimal, float, real, dateTime, date</td>
 </tr>
 <tr>
 <td>Maximumwaarde inclusief</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#maximumwaardeInclusief"><code>mim:maximumwaardeInclusief</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#maximumwaardeInclusief"><code>mim:maximumwaardeInclusief</code></a></td>
 <td>0..1</td>
 <td>integer, decimal, float, real, dateTime, date</td>
 </tr>
 <tr>
 <td>Maximumwaarde exclusief</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#maximumwaardeExclusief"><code>mim:maximumwaardeExclusief</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#maximumwaardeExclusief"><code>mim:maximumwaardeExclusief</code></a></td>
 <td>0..1</td>
 <td>integer, decimal, float, real, dateTime, date</td>
 </tr>
@@ -9589,69 +9589,69 @@ aspecten gespecificeerd.</p>
 </thead>
 <tbody><tr>
 <td>Identificatie</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#identificatie"><code>mim:identificatie</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#identificatie"><code>mim:identificatie</code></a></td>
 <td>1</td>
 <td><a href="http://www.w3.org/2001/XMLSchema#anyURI"><code>xsd:anyURI</code></a></td>
 </tr>
 <tr>
 <td>Naam</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#naam"><code>mim:naam</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#naam"><code>mim:naam</code></a></td>
 <td>1</td>
 <td>tekst</td>
 </tr>
 <tr>
 <td>Alias</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#alias"><code>mim:alias</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#alias"><code>mim:alias</code></a></td>
 <td>0..1</td>
 <td>tekst</td>
 </tr>
 <tr>
 <td>Begrip</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#begrip"><code>mim:begrip</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#begrip"><code>mim:begrip</code></a></td>
 <td>0..*</td>
 <td><a href="http://www.w3.org/2004/02/skos/core#Concept"><code>skos:Concept</code></a></td>
 </tr>
 <tr>
 <td>Begripsterm</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#begripsterm"><code>mim:begripsterm</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#begripsterm"><code>mim:begripsterm</code></a></td>
 <td>0..*</td>
 <td>tekst</td>
 </tr>
 <tr>
 <td>Herkomst</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#herkomst"><code>mim:herkomst</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#herkomst"><code>mim:herkomst</code></a></td>
 <td>1</td>
 <td>tekst</td>
 </tr>
 <tr>
 <td>Definitie</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#definitie"><code>mim:definitie</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#definitie"><code>mim:definitie</code></a></td>
 <td>1</td>
 <td>tekst</td>
 </tr>
 <tr>
 <td>Datum opname</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#datumOpname"><code>mim:datumOpname</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#datumOpname"><code>mim:datumOpname</code></a></td>
 <td>1</td>
 <td>datum</td>
 </tr>
 <tr>
 <td>Toelichting</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#toelichting"><code>mim:toelichting</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#toelichting"><code>mim:toelichting</code></a></td>
 <td>0..1</td>
 <td>tekst</td>
 </tr>
 <tr>
 <td>Locatie</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#locatie"><code>mim:locatie</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#locatie"><code>mim:locatie</code></a></td>
 <td>1</td>
 <td>tekst</td>
 </tr>
 <tr>
 <td>Constraint</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#constraint"><code>mim:constraint</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#constraint"><code>mim:constraint</code></a></td>
 <td>0..*</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#Constraint"><code>mim:Constraint</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#Constraint"><code>mim:Constraint</code></a></td>
 </tr>
 </tbody></table>
 </section></section><section id="datatypen-in-ld"><div class="header-wrapper"><h4 id="x4-3-4-datatypen-in-ld"><bdi class="secno">4.3.4 </bdi>Datatypen in LD</h4><a class="self-link" href="#datatypen-in-ld" aria-label="Permalink for Section 4.3.4"></a></div>
@@ -9671,87 +9671,87 @@ DateTime, Surface.</p>
 </thead>
 <tbody><tr>
 <td>Identificatie</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#identificatie"><code>mim:identificatie</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#identificatie"><code>mim:identificatie</code></a></td>
 <td>1</td>
 <td><a href="http://www.w3.org/2001/XMLSchema#anyURI"><code>xsd:anyURI</code></a></td>
 </tr>
 <tr>
 <td>Naam</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#naam"><code>mim:naam</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#naam"><code>mim:naam</code></a></td>
 <td>1</td>
 <td>tekst</td>
 </tr>
 <tr>
 <td>Alias</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#alias"><code>mim:alias</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#alias"><code>mim:alias</code></a></td>
 <td>0..1</td>
 <td>tekst</td>
 </tr>
 <tr>
 <td>Begrip</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#begrip"><code>mim:begrip</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#begrip"><code>mim:begrip</code></a></td>
 <td>0..*</td>
 <td><a href="http://www.w3.org/2004/02/skos/core#Concept"><code>skos:Concept</code></a></td>
 </tr>
 <tr>
 <td>Begripsterm</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#begripsterm"><code>mim:begripsterm</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#begripsterm"><code>mim:begripsterm</code></a></td>
 <td>0..*</td>
 <td>tekst</td>
 </tr>
 <tr>
 <td>Definitie</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#definitie"><code>mim:definitie</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#definitie"><code>mim:definitie</code></a></td>
 <td>1</td>
 <td>tekst</td>
 </tr>
 <tr>
 <td>Toelichting</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#toelichting"><code>mim:toelichting</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#toelichting"><code>mim:toelichting</code></a></td>
 <td>0..1</td>
 <td>tekst</td>
 </tr>
 <tr>
 <td>Type</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#type"><code>mim:type</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#type"><code>mim:type</code></a></td>
 <td>1</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#Datatype"><code>mim:Datatype</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#Datatype"><code>mim:Datatype</code></a></td>
 </tr>
 <tr>
 <td>Lengte</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#lengte"><code>mim:lengte</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#lengte"><code>mim:lengte</code></a></td>
 <td>0..1</td>
 <td>tekst</td>
 </tr>
 <tr>
 <td>Patroon</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#patroon"><code>mim:patroon</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#patroon"><code>mim:patroon</code></a></td>
 <td>0..1</td>
 <td>tekst</td>
 </tr>
 <tr>
 <td>Formeel patroon</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#formeelPatroon"><code>mim:formeelPatroon</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#formeelPatroon"><code>mim:formeelPatroon</code></a></td>
 <td>0..1</td>
 <td>tekst</td>
 </tr>
 <tr>
 <td>Herkomst</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#herkomst"><code>mim:herkomst</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#herkomst"><code>mim:herkomst</code></a></td>
 <td>1</td>
 <td>tekst</td>
 </tr>
 <tr>
 <td>Datum opname</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#datumOpname"><code>mim:datumOpname</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#datumOpname"><code>mim:datumOpname</code></a></td>
 <td>1</td>
 <td>datum</td>
 </tr>
 <tr>
 <td>Constraint</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#constraint"><code>mim:constraint</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#constraint"><code>mim:constraint</code></a></td>
 <td>0..*</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#Constraint"><code>mim:Constraint</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#Constraint"><code>mim:Constraint</code></a></td>
 </tr>
 </tbody></table>
 </section><section id="mim-gestructureerddatatype"><div class="header-wrapper"><h5 id="x4-3-4-2-mim-gestructureerddatatype"><bdi class="secno">4.3.4.2 </bdi>mim:GestructureerdDatatype</h5><a class="self-link" href="#mim-gestructureerddatatype" aria-label="Permalink for Section 4.3.4.2"></a></div>
@@ -9767,81 +9767,81 @@ DateTime, Surface.</p>
 </thead>
 <tbody><tr>
 <td>Identificatie</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#identificatie"><code>mim:identificatie</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#identificatie"><code>mim:identificatie</code></a></td>
 <td>1</td>
 <td><a href="http://www.w3.org/2001/XMLSchema#anyURI"><code>xsd:anyURI</code></a></td>
 </tr>
 <tr>
 <td>Naam</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#naam"><code>mim:naam</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#naam"><code>mim:naam</code></a></td>
 <td>1</td>
 <td>tekst</td>
 </tr>
 <tr>
 <td>Alias</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#alias"><code>mim:alias</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#alias"><code>mim:alias</code></a></td>
 <td>0..1</td>
 <td>tekst</td>
 </tr>
 <tr>
 <td>Begrip</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#begrip"><code>mim:begrip</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#begrip"><code>mim:begrip</code></a></td>
 <td>0..*</td>
 <td><a href="http://www.w3.org/2004/02/skos/core#Concept"><code>skos:Concept</code></a></td>
 </tr>
 <tr>
 <td>Begripsterm</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#begripsterm"><code>mim:begripsterm</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#begripsterm"><code>mim:begripsterm</code></a></td>
 <td>0..*</td>
 <td>tekst</td>
 </tr>
 <tr>
 <td>Herkomst</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#herkomst"><code>mim:herkomst</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#herkomst"><code>mim:herkomst</code></a></td>
 <td>1</td>
 <td>tekst</td>
 </tr>
 <tr>
 <td>Definitie</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#definitie"><code>mim:definitie</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#definitie"><code>mim:definitie</code></a></td>
 <td>1</td>
 <td>tekst</td>
 </tr>
 <tr>
 <td>Toelichting</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#toelichting"><code>mim:toelichting</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#toelichting"><code>mim:toelichting</code></a></td>
 <td>0..1</td>
 <td>tekst</td>
 </tr>
 <tr>
 <td>Patroon</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#patroon"><code>mim:patroon</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#patroon"><code>mim:patroon</code></a></td>
 <td>0..1</td>
 <td>tekst</td>
 </tr>
 <tr>
 <td>Formeel patroon</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#formeelPatroon"><code>mim:formeelPatroon</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#formeelPatroon"><code>mim:formeelPatroon</code></a></td>
 <td>0..1</td>
 <td>tekst</td>
 </tr>
 <tr>
 <td>Datum opname</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#datumOpname"><code>mim:datumOpname</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#datumOpname"><code>mim:datumOpname</code></a></td>
 <td>1</td>
 <td>datum</td>
 </tr>
 <tr>
 <td>Data-element</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#dataElement"><code>mim:dataElement</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#dataElement"><code>mim:dataElement</code></a></td>
 <td>0..*</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#DataElement"><code>mim:DataElement</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#DataElement"><code>mim:DataElement</code></a></td>
 </tr>
 <tr>
 <td>Constraint</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#constraint"><code>mim:constraint</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#constraint"><code>mim:constraint</code></a></td>
 <td>0..*</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#Constraint"><code>mim:Constraint</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#Constraint"><code>mim:Constraint</code></a></td>
 </tr>
 </tbody></table>
 </section><section id="mim-dataelement"><div class="header-wrapper"><h5 id="x4-3-4-3-mim-dataelement"><bdi class="secno">4.3.4.3 </bdi>mim:DataElement</h5><a class="self-link" href="#mim-dataelement" aria-label="Permalink for Section 4.3.4.3"></a></div>
@@ -9857,109 +9857,109 @@ DateTime, Surface.</p>
 </thead>
 <tbody><tr>
 <td>Identificatie</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#identificatie"><code>mim:identificatie</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#identificatie"><code>mim:identificatie</code></a></td>
 <td>1</td>
 <td><a href="http://www.w3.org/2001/XMLSchema#anyURI"><code>xsd:anyURI</code></a></td>
 </tr>
 <tr>
 <td>Naam</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#naam"><code>mim:naam</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#naam"><code>mim:naam</code></a></td>
 <td>1</td>
 <td>tekst</td>
 </tr>
 <tr>
 <td>Alias</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#alias"><code>mim:alias</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#alias"><code>mim:alias</code></a></td>
 <td>0..1</td>
 <td>tekst</td>
 </tr>
 <tr>
 <td>Begrip</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#begrip"><code>mim:begrip</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#begrip"><code>mim:begrip</code></a></td>
 <td>0..*</td>
 <td><a href="http://www.w3.org/2004/02/skos/core#Concept"><code>skos:Concept</code></a></td>
 </tr>
 <tr>
 <td>Begripsterm</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#begripsterm"><code>mim:begripsterm</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#begripsterm"><code>mim:begripsterm</code></a></td>
 <td>0..*</td>
 <td>tekst</td>
 </tr>
 <tr>
 <td>Definitie</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#definitie"><code>mim:definitie</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#definitie"><code>mim:definitie</code></a></td>
 <td>1</td>
 <td>tekst</td>
 </tr>
 <tr>
 <td>Toelichting</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#toelichting"><code>mim:toelichting</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#toelichting"><code>mim:toelichting</code></a></td>
 <td>0..1</td>
 <td>tekst</td>
 </tr>
 <tr>
 <td>Datum opname</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#datumOpname"><code>mim:datumOpname</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#datumOpname"><code>mim:datumOpname</code></a></td>
 <td>1</td>
 <td>datum</td>
 </tr>
 <tr>
 <td>Type</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#type"><code>mim:type</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#type"><code>mim:type</code></a></td>
 <td>1</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#Datatype"><code>mim:Datatype</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#Datatype"><code>mim:Datatype</code></a></td>
 </tr>
 <tr>
 <td>Lengte</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#lengte"><code>mim:lengte</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#lengte"><code>mim:lengte</code></a></td>
 <td>0..1</td>
 <td>tekst</td>
 </tr>
 <tr>
 <td>Patroon</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#patroon"><code>mim:patroon</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#patroon"><code>mim:patroon</code></a></td>
 <td>0..1</td>
 <td>tekst</td>
 </tr>
 <tr>
 <td>Formeel patroon</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#formeelPatroon"><code>mim:formeelPatroon</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#formeelPatroon"><code>mim:formeelPatroon</code></a></td>
 <td>0..1</td>
 <td>tekst</td>
 </tr>
 <tr>
 <td>Kardinaliteit</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#kardinaliteit"><code>mim:kardinaliteit</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#kardinaliteit"><code>mim:kardinaliteit</code></a></td>
 <td>1</td>
 <td>tekst</td>
 </tr>
 <tr>
 <td>Constraint</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#constraint"><code>mim:constraint</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#constraint"><code>mim:constraint</code></a></td>
 <td>0..*</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#Constraint"><code>mim:Constraint</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#Constraint"><code>mim:Constraint</code></a></td>
 </tr>
 <tr>
 <td>Minimumwaarde inclusief</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#minimumwaardeInclusief"><code>mim:minimumwaardeInclusief</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#minimumwaardeInclusief"><code>mim:minimumwaardeInclusief</code></a></td>
 <td>0..1</td>
 <td>integer, decimal, float, real, dateTime, date</td>
 </tr>
 <tr>
 <td>Minimumwaarde exclusief</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#minimumwaardeExclusief"><code>mim:minimumwaardeExclusief</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#minimumwaardeExclusief"><code>mim:minimumwaardeExclusief</code></a></td>
 <td>0..1</td>
 <td>integer, decimal, float, real, dateTime, date</td>
 </tr>
 <tr>
 <td>Maximumwaarde inclusief</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#maximumwaardeInclusief"><code>mim:maximumwaardeInclusief</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#maximumwaardeInclusief"><code>mim:maximumwaardeInclusief</code></a></td>
 <td>0..1</td>
 <td>integer, decimal, float, real, dateTime, date</td>
 </tr>
 <tr>
 <td>Maximumwaarde exclusief</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#maximumwaardeExclusief"><code>mim:maximumwaardeExclusief</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#maximumwaardeExclusief"><code>mim:maximumwaardeExclusief</code></a></td>
 <td>0..1</td>
 <td>integer, decimal, float, real, dateTime, date</td>
 </tr>
@@ -9978,91 +9978,91 @@ DateTime, Surface.</p>
 </thead>
 <tbody><tr>
 <td>Identificatie</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#identificatie"><code>mim:identificatie</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#identificatie"><code>mim:identificatie</code></a></td>
 <td>1</td>
 <td><a href="http://www.w3.org/2001/XMLSchema#anyURI"><code>xsd:anyURI</code></a></td>
 </tr>
 <tr>
 <td>Naam</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#naam"><code>mim:naam</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#naam"><code>mim:naam</code></a></td>
 <td>1</td>
 <td>tekst</td>
 </tr>
 <tr>
 <td>Alias</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#alias"><code>mim:alias</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#alias"><code>mim:alias</code></a></td>
 <td>0..1</td>
 <td>tekst</td>
 </tr>
 <tr>
 <td>Definitie</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#definitie"><code>mim:definitie</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#definitie"><code>mim:definitie</code></a></td>
 <td>1</td>
 <td>tekst</td>
 </tr>
 <tr>
 <td>Herkomst</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#herkomst"><code>mim:herkomst</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#herkomst"><code>mim:herkomst</code></a></td>
 <td>1</td>
 <td>tekst</td>
 </tr>
 <tr>
 <td>Datum opname</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#datumOpname"><code>mim:datumOpname</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#datumOpname"><code>mim:datumOpname</code></a></td>
 <td>1</td>
 <td>datum</td>
 </tr>
 <tr>
 <td>MIM versie</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#mimversie"><code>mim:mimversie</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#mimversie"><code>mim:mimversie</code></a></td>
 <td>1</td>
 <td>tekst</td>
 </tr>
 <tr>
 <td>MIM extensie</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#mimextensie"><code>mim:mimextensie</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#mimextensie"><code>mim:mimextensie</code></a></td>
 <td>0..1</td>
 <td>tekst</td>
 </tr>
 <tr>
 <td>MIM taal</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#mimtaal"><code>mim:mimtaal</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#mimtaal"><code>mim:mimtaal</code></a></td>
 <td>0..1</td>
 <td>tekst</td>
 </tr>
 <tr>
 <td>Informatiedomein</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#informatiedomein"><code>mim:informatiedomein</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#informatiedomein"><code>mim:informatiedomein</code></a></td>
 <td>1..1</td>
 <td>tekst</td>
 </tr>
 <tr>
 <td>Informatiemodeltype</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#informatiemodeltype"><code>mim:informatiemodeltype</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#informatiemodeltype"><code>mim:informatiemodeltype</code></a></td>
 <td>1..1</td>
 <td>Informatiemodeltypen</td>
 </tr>
 <tr>
 <td>Relatiemodelleringstype</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#relatiemodelleringstype"><code>mim:relatiemodelleringstype</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#relatiemodelleringstype"><code>mim:relatiemodelleringstype</code></a></td>
 <td>1..1</td>
 <td>Relatiemodelleringstypen</td>
 </tr>
 <tr>
 <td>tekstopmaak</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#tekstopmaak"><code>mim:tekstopmaak</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#tekstopmaak"><code>mim:tekstopmaak</code></a></td>
 <td>0..1</td>
 <td>tekst</td>
 </tr>
 <tr>
 <td>Constraint</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#constraint"><code>mim:constraint</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#constraint"><code>mim:constraint</code></a></td>
 <td>0..*</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#Constraint"><code>mim:Constraint</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#Constraint"><code>mim:Constraint</code></a></td>
 </tr>
 <tr>
 <td>Basis-URI</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#basisUri"><code>mim:basisUri</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#basisUri"><code>mim:basisUri</code></a></td>
 <td>0..1</td>
 <td><a href="http://www.w3.org/2001/XMLSchema#anyURI"><code>xsd:anyURI</code></a></td>
 </tr>
@@ -10076,15 +10076,15 @@ DateTime, Surface.</p>
 </tr>
 </thead>
 <tbody><tr>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#ConceptueelInformatiemodel"><code>mim:ConceptueelInformatiemodel</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#ConceptueelInformatiemodel"><code>mim:ConceptueelInformatiemodel</code></a></td>
 <td>Niveau-2 model, conform <a href="#beschouwingsniveau-2-conceptueel-informatiemodel">deze</a> sectie</td>
 </tr>
 <tr>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#LogischInformatiemodel"><code>mim:LogischInformatiemodel</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#LogischInformatiemodel"><code>mim:LogischInformatiemodel</code></a></td>
 <td>Niveau-3 model, conform <a href="#beschouwingsniveau-3-logisch-informatie-of-gegevensmodel">deze</a> sectie</td>
 </tr>
 <tr>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#TechnischInformatiemodel"><code>mim:TechnischInformatiemodel</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#TechnischInformatiemodel"><code>mim:TechnischInformatiemodel</code></a></td>
 <td>Niveau-4 model, conform <a href="#beschouwingsniveau-4-fysiek-of-technisch-gegevens-of-datamodel">deze</a> sectie</td>
 </tr>
 </tbody></table>
@@ -10097,11 +10097,11 @@ DateTime, Surface.</p>
 </tr>
 </thead>
 <tbody><tr>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#RelatiesoortLeidend"><code>mim:RelatiesoortLeidend</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#RelatiesoortLeidend"><code>mim:RelatiesoortLeidend</code></a></td>
 <td>Relatiesoort leidend, conform <a href="#relatiesoort-alt-1-soort-leidend">deze</a> en <a href="#relatierol-alt-1-soort-leidend">deze</a> secties</td>
 </tr>
 <tr>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#RelatierolLeidend"><code>mim:RelatierolLeidend</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#RelatierolLeidend"><code>mim:RelatierolLeidend</code></a></td>
 <td>Relatierol leidend, conform <a href="#relatiesoort-alt-2-rol-leidend">deze</a> en <a href="#relatierol-alt-2-rol-leidend">deze</a> secties</td>
 </tr>
 </tbody></table>
@@ -10118,37 +10118,37 @@ DateTime, Surface.</p>
 </thead>
 <tbody><tr>
 <td>Identificatie</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#identificatie"><code>mim:identificatie</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#identificatie"><code>mim:identificatie</code></a></td>
 <td>1</td>
 <td><a href="http://www.w3.org/2001/XMLSchema#anyURI"><code>xsd:anyURI</code></a></td>
 </tr>
 <tr>
 <td>Naam</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#naam"><code>mim:naam</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#naam"><code>mim:naam</code></a></td>
 <td>1</td>
 <td>tekst</td>
 </tr>
 <tr>
 <td>Alias</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#alias"><code>mim:alias</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#alias"><code>mim:alias</code></a></td>
 <td>0..1</td>
 <td>tekst</td>
 </tr>
 <tr>
 <td>Datum opname</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#datumOpname"><code>mim:datumOpname</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#datumOpname"><code>mim:datumOpname</code></a></td>
 <td>1</td>
 <td>datum</td>
 </tr>
 <tr>
 <td>Constraint</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#constraint"><code>mim:constraint</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#constraint"><code>mim:constraint</code></a></td>
 <td>0..*</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#Constraint"><code>mim:Constraint</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#Constraint"><code>mim:Constraint</code></a></td>
 </tr>
 <tr>
 <td>Basis-URI</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#basisUri"><code>mim:basisUri</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#basisUri"><code>mim:basisUri</code></a></td>
 <td>0..1</td>
 <td><a href="http://www.w3.org/2001/XMLSchema#anyURI"><code>xsd:anyURI</code></a></td>
 </tr>
@@ -10166,61 +10166,61 @@ DateTime, Surface.</p>
 </thead>
 <tbody><tr>
 <td>Identificatie</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#identificatie"><code>mim:identificatie</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#identificatie"><code>mim:identificatie</code></a></td>
 <td>1</td>
 <td><a href="http://www.w3.org/2001/XMLSchema#anyURI"><code>xsd:anyURI</code></a></td>
 </tr>
 <tr>
 <td>Naam</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#naam"><code>mim:naam</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#naam"><code>mim:naam</code></a></td>
 <td>1</td>
 <td>tekst</td>
 </tr>
 <tr>
 <td>Alias</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#alias"><code>mim:alias</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#alias"><code>mim:alias</code></a></td>
 <td>0..1</td>
 <td>tekst</td>
 </tr>
 <tr>
 <td>Locatie</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#locatie"><code>mim:locatie</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#locatie"><code>mim:locatie</code></a></td>
 <td>1</td>
 <td>tekst</td>
 </tr>
 <tr>
 <td>Definitie</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#definitie"><code>mim:definitie</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#definitie"><code>mim:definitie</code></a></td>
 <td>1</td>
 <td>tekst</td>
 </tr>
 <tr>
 <td>Toelichting</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#toelichting"><code>mim:toelichting</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#toelichting"><code>mim:toelichting</code></a></td>
 <td>0..1</td>
 <td>tekst</td>
 </tr>
 <tr>
 <td>Herkomst</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#herkomst"><code>mim:herkomst</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#herkomst"><code>mim:herkomst</code></a></td>
 <td>1</td>
 <td>tekst</td>
 </tr>
 <tr>
 <td>Datum opname</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#datumOpname"><code>mim:datumOpname</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#datumOpname"><code>mim:datumOpname</code></a></td>
 <td>1</td>
 <td>datum</td>
 </tr>
 <tr>
 <td>Constraint</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#constraint"><code>mim:constraint</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#constraint"><code>mim:constraint</code></a></td>
 <td>0..*</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#Constraint"><code>mim:Constraint</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#Constraint"><code>mim:Constraint</code></a></td>
 </tr>
 <tr>
 <td>Basis-URI</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#basisUri"><code>mim:basisUri</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#basisUri"><code>mim:basisUri</code></a></td>
 <td>0..1</td>
 <td><a href="http://www.w3.org/2001/XMLSchema#anyURI"><code>xsd:anyURI</code></a></td>
 </tr>
@@ -10238,61 +10238,61 @@ DateTime, Surface.</p>
 </thead>
 <tbody><tr>
 <td>Identificatie</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#identificatie"><code>mim:identificatie</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#identificatie"><code>mim:identificatie</code></a></td>
 <td>1</td>
 <td><a href="http://www.w3.org/2001/XMLSchema#anyURI"><code>xsd:anyURI</code></a></td>
 </tr>
 <tr>
 <td>Naam</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#naam"><code>mim:naam</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#naam"><code>mim:naam</code></a></td>
 <td>1</td>
 <td>tekst</td>
 </tr>
 <tr>
 <td>Alias</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#alias"><code>mim:alias</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#alias"><code>mim:alias</code></a></td>
 <td>0..1</td>
 <td>tekst</td>
 </tr>
 <tr>
 <td>Locatie</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#locatie"><code>mim:locatie</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#locatie"><code>mim:locatie</code></a></td>
 <td>1</td>
 <td>tekst</td>
 </tr>
 <tr>
 <td>Definitie</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#definitie"><code>mim:definitie</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#definitie"><code>mim:definitie</code></a></td>
 <td>1</td>
 <td>tekst</td>
 </tr>
 <tr>
 <td>Toelichting</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#toelichting"><code>mim:toelichting</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#toelichting"><code>mim:toelichting</code></a></td>
 <td>0..1</td>
 <td>tekst</td>
 </tr>
 <tr>
 <td>Herkomst</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#herkomst"><code>mim:herkomst</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#herkomst"><code>mim:herkomst</code></a></td>
 <td>1</td>
 <td>tekst</td>
 </tr>
 <tr>
 <td>Datum opname</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#datumOpname"><code>mim:datumOpname</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#datumOpname"><code>mim:datumOpname</code></a></td>
 <td>1</td>
 <td>datum</td>
 </tr>
 <tr>
 <td>Constraint</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#constraint"><code>mim:constraint</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#constraint"><code>mim:constraint</code></a></td>
 <td>0..*</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#Constraint"><code>mim:Constraint</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#Constraint"><code>mim:Constraint</code></a></td>
 </tr>
 <tr>
 <td>Basis-URI</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#basisUri"><code>mim:basisUri</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#basisUri"><code>mim:basisUri</code></a></td>
 <td>0..1</td>
 <td><a href="http://www.w3.org/2001/XMLSchema#anyURI"><code>xsd:anyURI</code></a></td>
 </tr>
@@ -10312,63 +10312,63 @@ aspecten gespecificeerd:</p>
 </thead>
 <tbody><tr>
 <td>Identificatie</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#identificatie"><code>mim:identificatie</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#identificatie"><code>mim:identificatie</code></a></td>
 <td>1</td>
 <td><a href="http://www.w3.org/2001/XMLSchema#anyURI"><code>xsd:anyURI</code></a></td>
 </tr>
 <tr>
 <td>Naam</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#naam"><code>mim:naam</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#naam"><code>mim:naam</code></a></td>
 <td>1</td>
 <td>tekst</td>
 </tr>
 <tr>
 <td>Alias</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#alias"><code>mim:alias</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#alias"><code>mim:alias</code></a></td>
 <td>0..1</td>
 <td>tekst</td>
 </tr>
 <tr>
 <td>Begrip</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#begrip"><code>mim:begrip</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#begrip"><code>mim:begrip</code></a></td>
 <td>0..*</td>
 <td><a href="http://www.w3.org/2004/02/skos/core#Concept"><code>skos:Concept</code></a></td>
 </tr>
 <tr>
 <td>Begripsterm</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#begripsterm"><code>mim:begripsterm</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#begripsterm"><code>mim:begripsterm</code></a></td>
 <td>0..*</td>
 <td>tekst</td>
 </tr>
 <tr>
 <td>Definitie</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#definitie"><code>mim:definitie</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#definitie"><code>mim:definitie</code></a></td>
 <td>1</td>
 <td>tekst</td>
 </tr>
 <tr>
 <td>Toelichting</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#toelichting"><code>mim:toelichting</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#toelichting"><code>mim:toelichting</code></a></td>
 <td>0..1</td>
 <td>tekst</td>
 </tr>
 <tr>
 <td>Datum opname</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#datumOpname"><code>mim:datumOpname</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#datumOpname"><code>mim:datumOpname</code></a></td>
 <td>1</td>
 <td>datum</td>
 </tr>
 <tr>
 <td>Waarde</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#Enumeratiewaarde"><code>mim:waarde</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#Enumeratiewaarde"><code>mim:waarde</code></a></td>
 <td>1..*</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#Enumeratiewaarde"><code>mim:Waarde</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#Enumeratiewaarde"><code>mim:Waarde</code></a></td>
 </tr>
 <tr>
 <td>Constraint</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#constraint"><code>mim:constraint</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#constraint"><code>mim:constraint</code></a></td>
 <td>0..*</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#Constraint"><code>mim:Constraint</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#Constraint"><code>mim:Constraint</code></a></td>
 </tr>
 </tbody></table>
 </section><section id="mim-enumeratiewaarde"><div class="header-wrapper"><h5 id="x4-3-6-2-mim-enumeratiewaarde"><bdi class="secno">4.3.6.2 </bdi>mim:Enumeratiewaarde</h5><a class="self-link" href="#mim-enumeratiewaarde" aria-label="Permalink for Section 4.3.6.2"></a></div>
@@ -10385,57 +10385,57 @@ volgende aspecten:</p>
 </thead>
 <tbody><tr>
 <td>Identificatie</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#identificatie"><code>mim:identificatie</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#identificatie"><code>mim:identificatie</code></a></td>
 <td>1</td>
 <td><a href="http://www.w3.org/2001/XMLSchema#anyURI"><code>xsd:anyURI</code></a></td>
 </tr>
 <tr>
 <td>Naam</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#naam"><code>mim:naam</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#naam"><code>mim:naam</code></a></td>
 <td>1</td>
 <td>tekst</td>
 </tr>
 <tr>
 <td>Definitie</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#definitie"><code>mim:definitie</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#definitie"><code>mim:definitie</code></a></td>
 <td>0..1</td>
 <td>tekst</td>
 </tr>
 <tr>
 <td>Toelichting</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#toelichting"><code>mim:toelichting</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#toelichting"><code>mim:toelichting</code></a></td>
 <td>0..1</td>
 <td>tekst</td>
 </tr>
 <tr>
 <td>Code</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#code"><code>mim:code</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#code"><code>mim:code</code></a></td>
 <td>0..1</td>
 <td>tekst</td>
 </tr>
 <tr>
 <td>Begrip</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#begrip"><code>mim:begrip</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#begrip"><code>mim:begrip</code></a></td>
 <td>0..*</td>
 <td><a href="http://www.w3.org/2004/02/skos/core#Concept"><code>skos:Concept</code></a></td>
 </tr>
 <tr>
 <td>Begripsterm</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#begripsterm"><code>mim:begripsterm</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#begripsterm"><code>mim:begripsterm</code></a></td>
 <td>0..*</td>
 <td>tekst</td>
 </tr>
 <tr>
 <td>Datum opname</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#datumOpname"><code>mim:datumOpname</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#datumOpname"><code>mim:datumOpname</code></a></td>
 <td>1</td>
 <td>datum</td>
 </tr>
 <tr>
 <td>Constraint</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#constraint"><code>mim:constraint</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#constraint"><code>mim:constraint</code></a></td>
 <td>0..*</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#Constraint"><code>mim:Constraint</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#Constraint"><code>mim:Constraint</code></a></td>
 </tr>
 </tbody></table>
 <p>Een enumeratiewaarde mag geen alias hebben, omdat in UML het alias-veld wordt gebruikt voor de mim:code. Mocht toch een <code>mim:alias</code> zijn opgegeven voor een enumeratiewaarde, dan dient deze gelezen te worden als een <code>mim:code</code>. In het RDF model is <code>mim:code</code> een subproperty van een <code>mim:alias</code>.</p>
@@ -10453,19 +10453,19 @@ volgende aspecten:</p>
 </thead>
 <tbody><tr>
 <td>Naam</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#naam"><code>mim:naam</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#naam"><code>mim:naam</code></a></td>
 <td>1</td>
 <td>tekst</td>
 </tr>
 <tr>
 <td>Specificatie-tekst</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#specificatieTekst"><code>mim:specificatieTekst</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#specificatieTekst"><code>mim:specificatieTekst</code></a></td>
 <td>0..1</td>
 <td>tekst</td>
 </tr>
 <tr>
 <td>Specificatie-formeel</td>
-<td><a href="https://modellen.mim-standaard.nl/def/mim/#specificatieFormeel"><code>mim:specificatieFormeel</code></a></td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#specificatieFormeel"><code>mim:specificatieFormeel</code></a></td>
 <td>0..1</td>
 <td>tekst</td>
 </tr>
@@ -14655,7 +14655,7 @@ shape:geboorteVSoverlijden a sh:PropertyShape;
   </section></section>
   
 
-<protonpass-root-e98a data-protonpass-role="root"></protonpass-root-e98a><section id="references" class="appendix"><div class="header-wrapper"><h2 id="b-referenties"><bdi class="secno">B. </bdi>Referenties</h2><a class="self-link" href="#references" aria-label="Permalink for Appendix B."></a></div><section id="normatieve-referenties">
+<section id="references" class="appendix"><div class="header-wrapper"><h2 id="b-referenties"><bdi class="secno">B. </bdi>Referenties</h2><a class="self-link" href="#references" aria-label="Permalink for Appendix B."></a></div><section id="normatieve-referenties">
     <div class="header-wrapper"><h3 id="b-1-normatieve-referenties"><bdi class="secno">B.1 </bdi>Normatieve referenties</h3><a class="self-link" href="#normatieve-referenties" aria-label="Permalink for Appendix B.1"></a></div>
     <dl class="bibliography"><dt id="bib-gab">[GAB]</dt><dd>
       <a href="https://www.noraonline.nl/wiki/Gemeenschappelijke_Afspraken_Berichten"><cite>Gemeenschappelijke Afspraken Berichten</cite></a>.  Nederlandse Overheid Referentie Architectuur (NORA). LD. URL: <a href="https://www.noraonline.nl/wiki/Gemeenschappelijke_Afspraken_Berichten">https://www.noraonline.nl/wiki/Gemeenschappelijke_Afspraken_Berichten</a>

@@ -1,0 +1,2566 @@
+<!DOCTYPE html><html lang="nl"><head>
+<meta charset="utf-8">
+<meta name="generator" content="ReSpec 32.1.10">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<style>
+dfn{cursor:pointer}
+.dfn-panel{position:absolute;z-index:35;min-width:300px;max-width:500px;padding:.5em .75em;margin-top:.6em;font-family:"Helvetica Neue",sans-serif;font-size:small;background:#fff;color:#000;box-shadow:0 1em 3em -.4em rgba(0,0,0,.3),0 0 1px 1px rgba(0,0,0,.05);border-radius:2px}
+.dfn-panel:not(.docked)>.caret{position:absolute;top:-9px}
+.dfn-panel:not(.docked)>.caret::after,.dfn-panel:not(.docked)>.caret::before{content:"";position:absolute;border:10px solid transparent;border-top:0;border-bottom:10px solid #fff;top:0}
+.dfn-panel:not(.docked)>.caret::before{border-bottom:9px solid #a2a9b1}
+.dfn-panel *{margin:0}
+.dfn-panel b{display:block;color:#000;margin-top:.25em}
+.dfn-panel ul a[href]{color:#333}
+.dfn-panel>div{display:flex}
+.dfn-panel a.self-link{font-weight:700;margin-right:auto}
+.dfn-panel .marker{padding:.1em;margin-left:.5em;border-radius:.2em;text-align:center;white-space:nowrap;font-size:90%;color:#040b1c}
+.dfn-panel .marker.dfn-exported{background:#d1edfd;box-shadow:0 0 0 .125em #1ca5f940}
+.dfn-panel .marker.idl-block{background:#8ccbf2;box-shadow:0 0 0 .125em #0670b161}
+.dfn-panel a:not(:hover){text-decoration:none!important;border-bottom:none!important}
+.dfn-panel a[href]:hover{border-bottom-width:1px}
+.dfn-panel ul{padding:0}
+.dfn-panel li{margin-left:1em}
+.dfn-panel.docked{position:fixed;left:.5em;top:unset;bottom:2em;margin:0 auto;max-width:calc(100vw - .75em * 2 - .5em - .2em * 2);max-height:30vh;overflow:auto}
+</style>
+        
+
+        
+        
+<title>MIM Ontologie voor informatiemodelleren</title>
+
+        
+        
+<link rel="stylesheet" type="text/css" href="./media/style.css">
+        
+<link rel="shortcut icon" type="image/x-icon" href="https://tools.geostandaarden.nl/respec/style/logos/Geonovum.ico">
+        
+        
+        
+        
+        
+<style id="respec-mainstyle">
+@keyframes pop{
+0%{transform:scale(1,1)}
+25%{transform:scale(1.25,1.25);opacity:.75}
+100%{transform:scale(1,1)}
+}
+:is(h1,h2,h3,h4,h5,h6,a) abbr{border:none}
+dfn{font-weight:700}
+a.internalDFN{color:inherit;border-bottom:1px solid #99c;text-decoration:none}
+a.externalDFN{color:inherit;border-bottom:1px dotted #ccc;text-decoration:none}
+a.bibref{text-decoration:none}
+.respec-offending-element:target{animation:pop .25s ease-in-out 0s 1}
+.respec-offending-element,a[href].respec-offending-element{text-decoration:red wavy underline}
+@supports not (text-decoration:red wavy underline){
+.respec-offending-element:not(pre){display:inline-block}
+.respec-offending-element{background:url(data:image/gif;base64,R0lGODdhBAADAPEAANv///8AAP///wAAACwAAAAABAADAEACBZQjmIAFADs=) bottom repeat-x}
+}
+#references :target{background:#eaf3ff;animation:pop .4s ease-in-out 0s 1}
+cite .bibref{font-style:normal}
+code{color:#c63501}
+th code{color:inherit}
+a[href].orcid{padding-left:4px;padding-right:4px}
+a[href].orcid>svg{margin-bottom:-2px}
+.toc a,.tof a{text-decoration:none}
+a .figno,a .secno{color:#000}
+ol.tof,ul.tof{list-style:none outside none}
+.caption{margin-top:.5em;font-style:italic}
+table.simple{border-spacing:0;border-collapse:collapse;border-bottom:3px solid #005a9c}
+.simple th{background:#005a9c;color:#fff;padding:3px 5px;text-align:left}
+.simple th a{color:#fff;padding:3px 5px;text-align:left}
+.simple th[scope=row]{background:inherit;color:inherit;border-top:1px solid #ddd}
+.simple td{padding:3px 10px;border-top:1px solid #ddd}
+.simple tr:nth-child(even){background:#f0f6ff}
+.section dd>p:first-child{margin-top:0}
+.section dd>p:last-child{margin-bottom:0}
+.section dd{margin-bottom:1em}
+.section dl.attrs dd,.section dl.eldef dd{margin-bottom:0}
+#issue-summary>ul{column-count:2}
+#issue-summary li{list-style:none;display:inline-block}
+details.respec-tests-details{margin-left:1em;display:inline-block;vertical-align:top}
+details.respec-tests-details>*{padding-right:2em}
+details.respec-tests-details[open]{z-index:999999;position:absolute;border:thin solid #cad3e2;border-radius:.3em;background-color:#fff;padding-bottom:.5em}
+details.respec-tests-details[open]>summary{border-bottom:thin solid #cad3e2;padding-left:1em;margin-bottom:1em;line-height:2em}
+details.respec-tests-details>ul{width:100%;margin-top:-.3em}
+details.respec-tests-details>li{padding-left:1em}
+.self-link:hover{opacity:1;text-decoration:none;background-color:transparent}
+aside.example .marker>a.self-link{color:inherit}
+.header-wrapper{display:flex;align-items:baseline}
+:is(h2,h3,h4,h5,h6):not(#toc>h2,#abstract>h2,#sotd>h2,.head>h2){position:relative;left:-.5em}
+:is(h2,h3,h4,h5,h6):not(#toch2)+a.self-link{color:inherit;order:-1;position:relative;left:-1.1em;font-size:1rem;opacity:.5}
+:is(h2,h3,h4,h5,h6)+a.self-link::before{content:"§";text-decoration:none;color:var(--heading-text)}
+:is(h2,h3)+a.self-link{top:-.2em}
+:is(h4,h5,h6)+a.self-link::before{color:#000}
+@media (max-width:767px){
+dd{margin-left:0}
+}
+@media print{
+.removeOnSave{display:none}
+}
+</style>
+    
+<meta name="description" content="">
+<style>
+var{position:relative;cursor:pointer}
+var[data-type]::after,var[data-type]::before{position:absolute;left:50%;top:-6px;opacity:0;transition:opacity .4s;pointer-events:none}
+var[data-type]::before{content:"";transform:translateX(-50%);border-width:4px 6px 0 6px;border-style:solid;border-color:transparent;border-top-color:#000}
+var[data-type]::after{content:attr(data-type);transform:translateX(-50%) translateY(-100%);background:#000;text-align:center;font-family:"Dank Mono","Fira Code",monospace;font-style:normal;padding:6px;border-radius:3px;color:#daca88;text-indent:0;font-weight:400}
+var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
+</style>
+<script id="initialUserConfig" type="application/json">{
+  "specStatus": "GN-WV",
+  "specType": "ST",
+  "format": "markdown",
+  "editors": [
+    {
+      "name": "Dick Krijtenburg",
+      "company": "Geonovum",
+      "companyURL": "https://www.geonovum.nl"
+    },
+    {
+      "name": "Paul Janssen",
+      "company": "Geonovum",
+      "companyURL": "https://www.geonovum.nl"
+    },
+    {
+      "name": "Lennart van Bergen",
+      "company": "Kadaster",
+      "companyURL": "https://www.kadaster.nl"
+    }
+  ],
+  "authors": [
+    {
+      "name": "Lennart van Bergen",
+      "company": "Kadaster",
+      "companyURL": "https://www.kadaster.nl"
+    },
+    {
+      "name": "Thies Mesdag",
+      "company": "Kadaster",
+      "companyURL": "https://www.kadaster.nl"
+    },
+    {
+      "name": "Marco Brattinga",
+      "company": "Ordina",
+      "companyURL": "https://www.ordina.nl/"
+    },
+    {
+      "name": "Paul Janssen",
+      "company": "Geonovum",
+      "companyURL": "https://www.geonovum.nl"
+    },
+    {
+      "name": "Pano Maria",
+      "company": "Geonovum",
+      "companyURL": "https://www.geonovum.nl"
+    },
+    {
+      "name": "Johan Boer",
+      "company": "VNG Realisatie",
+      "companyURL": "https://www.vngrealisatie.nl/"
+    }
+  ],
+  "shortName": "mim-ontologie",
+  "pubDomain": "mim",
+  "github": "https://github.com/Geonovum/MIM-Werkomgeving/Werkversie/rdf/model",
+  "issueBase": "https://github.com/Geonovum/MIM-Werkomgeving/issues/",
+  "edDraftURI": "https://modellen.mim-standaard.nl/def/mim/",
+  "licence": "cc-by-nd",
+  "localBiblio": {
+    "MDA": {
+      "title": "Model Driven Architecture (MDA) Guide",
+      "href": "",
+      "status": "rev. 2.0, 1-6-2014",
+      "publisher": "",
+      "company": "Object Management Group"
+    },
+    "UML": {
+      "title": "Unified Modeling Language (UML)",
+      "href": "http://uml.org",
+      "status": "",
+      "publisher": "",
+      "company": ""
+    },
+    "ODM": {
+      "title": "Ontology Definition Metamodel",
+      "href": "https://www.omg.org/spec/ODM/1.1",
+      "status": "versie 1.1, September 2014",
+      "publisher": "",
+      "company": "Object Management Group"
+    },
+    "OMG": {
+      "title": "OMG Unified Modeling Language TM",
+      "href": "http://www.omg.org/spec/UML/2.5",
+      "status": "versie 2.5",
+      "publisher": "",
+      "company": ""
+    },
+    "SCAT": {
+      "title": "Stelselcatalogus",
+      "href": "http://www.stelselcatalogus.nl",
+      "status": "",
+      "publisher": "",
+      "company": ""
+    },
+    "GAB": {
+      "title": "GAB",
+      "href": "https://www.noraonline.nl/wiki/Gemeenschappelijke_Afspraken_Berichten",
+      "status": "",
+      "publisher": "",
+      "company": ""
+    },
+    "Linked-Data": {
+      "title": "Linked Data",
+      "href": "https://www.noraonline.nl/wiki/Linked_Data",
+      "status": "",
+      "publisher": "",
+      "company": ""
+    },
+    "iso-8601": {
+      "title": "Representation of dates and times. ISO 8601:2004.",
+      "href": "http://www.iso.org/iso/catalogue_detail?csnumber=40874",
+      "publisher": "International Organization for Standardization (ISO)",
+      "date": "2004",
+      "status": "ISO 8601:2004"
+    },
+    "NORA": {
+      "title": "Handreiking gegevensbeschrijving (NORA)",
+      "href": "http://noraonline.nl/wiki/Gegevensbeschrijvingen/Handreiking",
+      "status": "",
+      "publisher": "",
+      "company": ""
+    },
+    "iso-11404": {
+      "title": "11404:2008 Information technology – General Purpose Datatypes (GPD)",
+      "href": "https://www.nen.nl/nen-iso-iec-11404-2008-en-122652",
+      "status": "",
+      "publisher": "",
+      "company": "NEN-ISO/IEC"
+    },
+    "REGEXP": {
+      "title": "Formeel patroon (Reguliere Expressies)",
+      "href": "http://perldoc.perl.org/perlre.html",
+      "status": "",
+      "publisher": "",
+      "company": ""
+    },
+    "OCL": {
+      "title": "OCL",
+      "href": "http://www.omg.org/spec/OCL/2.4/",
+      "status": "",
+      "publisher": "",
+      "company": ""
+    },
+    "NEN3610": {
+      "title": "NEN-3610 Basismodel geo-informatie",
+      "href": "https://www.nen.nl/nen-3610-2011-a1-2016-nl-217738",
+      "date": "Mei 2016",
+      "publisher": "NEN"
+    },
+    "GeoJSON": {
+      "title": "GeoJSON",
+      "href": "https://geojson.org/",
+      "publisher": "",
+      "status": "",
+      "company": ""
+    },
+    "SOAP": {
+      "title": "SOAP Specifications",
+      "href": "https://www.w3.org/TR/SOAP/",
+      "publisher": "",
+      "status": "",
+      "company": ""
+    }
+  },
+  "maxTocLevel": 4,
+  "organisationStylesURL": "https://tools.geostandaarden.nl/respec/style/",
+  "organisationPrefix": "GN-",
+  "publishISODate": "2023-01-31T00:00:00.000Z",
+  "generatedSubtitle": "Werkversie 31 januari 2023"
+}</script>
+<link rel="stylesheet" href="https://tools.geostandaarden.nl/respec/style/GN-WV.css"></head>
+    
+    <body class="h-entry informative"><div class="head">
+    <a class="logo" href="https://www.geonovum.nl/"><img alt="Geonovum" height="67" id="Geonovum" src="https://tools.geostandaarden.nl/respec/style/logos/Geonovum.svg" width="132">
+  </a> <h1 id="title" class="title">MIM Ontologie voor informatiemodelleren</h1>
+    
+    <h2>
+      Geonovum Standaard<br>
+      Werkversie
+      <time class="dt-published" datetime="2023-01-31">31 januari 2023</time>
+    </h2>
+    <dl>
+      <dt>Deze versie:</dt><dd class="status">
+              <a class="u-url status" href="https://modellen.mim-standaard.nl/def/mim/">https://modellen.mim-standaard.nl/def/mim/</a>
+            </dd><dt>Laatst gepubliceerde versie:</dt><dd>
+              none
+            </dd>
+      <dt>Laatste werkversie:</dt><dd><a href="https://modellen.mim-standaard.nl/def/mim/">https://modellen.mim-standaard.nl/def/mim/</a></dd>
+      
+      
+      
+      
+      
+      <dt>Redacteurs:</dt>
+      <dd class="editor p-author h-card vcard">
+    <span class="p-name fn">Dick Krijtenburg</span> (<a class="p-org org h-org" href="https://www.geonovum.nl">Geonovum</a>)
+  </dd><dd class="editor p-author h-card vcard">
+    <span class="p-name fn">Paul Janssen</span> (<a class="p-org org h-org" href="https://www.geonovum.nl">Geonovum</a>)
+  </dd><dd class="editor p-author h-card vcard">
+    <span class="p-name fn">Lennart van Bergen</span> (<a class="p-org org h-org" href="https://www.kadaster.nl">Kadaster</a>)
+  </dd>
+      
+      <dt>Auteurs:</dt><dd class="editor p-author h-card vcard">
+    <span class="p-name fn">Lennart van Bergen</span> (<a class="p-org org h-org" href="https://www.kadaster.nl">Kadaster</a>)
+  </dd><dd class="editor p-author h-card vcard">
+    <span class="p-name fn">Thies Mesdag</span> (<a class="p-org org h-org" href="https://www.kadaster.nl">Kadaster</a>)
+  </dd><dd class="editor p-author h-card vcard">
+    <span class="p-name fn">Marco Brattinga</span> (<a class="p-org org h-org" href="https://www.ordina.nl/">Ordina</a>)
+  </dd><dd class="editor p-author h-card vcard">
+    <span class="p-name fn">Paul Janssen</span> (<a class="p-org org h-org" href="https://www.geonovum.nl">Geonovum</a>)
+  </dd><dd class="editor p-author h-card vcard">
+    <span class="p-name fn">Pano Maria</span> (<a class="p-org org h-org" href="https://www.geonovum.nl">Geonovum</a>)
+  </dd><dd class="editor p-author h-card vcard">
+    <span class="p-name fn">Johan Boer</span> (<a class="p-org org h-org" href="https://www.vngrealisatie.nl/">VNG Realisatie</a>)
+  </dd>
+      <dt>Doe mee:</dt><dd>
+    <a href="https://github.com/Geonovum/MIM-Werkomgeving/Werkversie/rdf/model/">GitHub Geonovum/MIM-Werkomgeving</a>
+  </dd><dd>
+    <a href="https://github.com/Geonovum/MIM-Werkomgeving/Werkversie/rdf/model/issues/">Dien een melding in</a>
+  </dd><dd>
+    <a href="https://github.com/Geonovum/MIM-Werkomgeving/Werkversie/rdf/model/commits/">Revisiehistorie</a>
+  </dd><dd>
+    <a href="https://github.com/Geonovum/MIM-Werkomgeving/Werkversie/rdf/model/pulls/">Pull requests</a>
+  </dd>
+    </dl>
+    
+    
+    
+    <p class="copyright" lang="en">
+          This document is licensed under a
+          <a rel="license" href="https://creativecommons.org/licenses/by/4.0/" class="subfoot">Creative Commons Attribution 4.0 License</a>.
+        </p>
+    <hr title="Separator for header">
+  </div>
+        <section id="abstract" class="introductory"><h2>Samenvatting</h2><p></p></section>
+        <section id="sotd" class="introductory"><h2>Status van dit document</h2>Dit is een werkversie die op elk moment kan worden gewijzigd, verwijderd of vervangen door andere documenten. Het is geen door de werkgroep goedgekeurde consultatieversie.<p></p></section><nav id="toc"><h2 class="introductory" id="inhoudsopgave">Inhoudsopgave</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#abstract">Samenvatting</a></li><li class="tocline"><a class="tocxref" href="#sotd">Status van dit document</a></li><li class="tocline"><a class="tocxref" href="#inleiding"><bdi class="secno">1. </bdi>Inleiding</a></li><li class="tocline"><a class="tocxref" href="#ontologie"><bdi class="secno">2. </bdi>Ontologie</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#klassen"><bdi class="secno">2.1 </bdi>Klassen</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#Attribuutsoort"><bdi class="secno">2.1.1 </bdi>mim:Attribuutsoort</a></li><li class="tocline"><a class="tocxref" href="#Codelijst"><bdi class="secno">2.1.2 </bdi>mim:Codelijst</a></li><li class="tocline"><a class="tocxref" href="#Constraint"><bdi class="secno">2.1.3 </bdi>mim:Constraint</a></li><li class="tocline"><a class="tocxref" href="#DataElement"><bdi class="secno">2.1.4 </bdi>mim:DataElement</a></li><li class="tocline"><a class="tocxref" href="#Datatype"><bdi class="secno">2.1.5 </bdi>mim:Datatype</a></li><li class="tocline"><a class="tocxref" href="#Domein"><bdi class="secno">2.1.6 </bdi>mim:Domein</a></li><li class="tocline"><a class="tocxref" href="#Enumeratie"><bdi class="secno">2.1.7 </bdi>mim:Enumeratie</a></li><li class="tocline"><a class="tocxref" href="#Enumeratiewaarde"><bdi class="secno">2.1.8 </bdi>mim:Enumeratiewaarde</a></li><li class="tocline"><a class="tocxref" href="#Extern"><bdi class="secno">2.1.9 </bdi>mim:Extern</a></li><li class="tocline"><a class="tocxref" href="#ExterneKoppeling"><bdi class="secno">2.1.10 </bdi>mim:ExterneKoppeling</a></li><li class="tocline"><a class="tocxref" href="#Gegevensgroep"><bdi class="secno">2.1.11 </bdi>mim:Gegevensgroep</a></li><li class="tocline"><a class="tocxref" href="#Gegevensgroeptype"><bdi class="secno">2.1.12 </bdi>mim:Gegevensgroeptype</a></li><li class="tocline"><a class="tocxref" href="#Generalisatie"><bdi class="secno">2.1.13 </bdi>mim:Generalisatie</a></li><li class="tocline"><a class="tocxref" href="#GestructureerdDatatype"><bdi class="secno">2.1.14 </bdi>mim:GestructureerdDatatype</a></li><li class="tocline"><a class="tocxref" href="#Informatiemodel"><bdi class="secno">2.1.15 </bdi>mim:Informatiemodel</a></li><li class="tocline"><a class="tocxref" href="#Keuze"><bdi class="secno">2.1.16 </bdi>mim:Keuze</a></li><li class="tocline"><a class="tocxref" href="#KeuzeConstraint"><bdi class="secno">2.1.17 </bdi>mim:Keuzeconstraint</a></li><li class="tocline"><a class="tocxref" href="#Modelelement"><bdi class="secno">2.1.18 </bdi>mim:Modelelement</a></li><li class="tocline"><a class="tocxref" href="#Objecttype"><bdi class="secno">2.1.19 </bdi>mim:Objecttype</a></li><li class="tocline"><a class="tocxref" href="#Package"><bdi class="secno">2.1.20 </bdi>mim:Package</a></li><li class="tocline"><a class="tocxref" href="#PrimitiefDatatype"><bdi class="secno">2.1.21 </bdi>mim:PrimitiefDatatype</a></li><li class="tocline"><a class="tocxref" href="#ReferentieElement"><bdi class="secno">2.1.22 </bdi>mim:ReferentieElement</a></li><li class="tocline"><a class="tocxref" href="#Referentielijst"><bdi class="secno">2.1.23 </bdi>mim:Referentielijst</a></li><li class="tocline"><a class="tocxref" href="#Relatieklasse"><bdi class="secno">2.1.24 </bdi>mim:Relatieklasse</a></li><li class="tocline"><a class="tocxref" href="#RelatierolBron"><bdi class="secno">2.1.25 </bdi>mim:RelatierolBron</a></li><li class="tocline"><a class="tocxref" href="#RelatierolDoel"><bdi class="secno">2.1.26 </bdi>mim:RelatierolDoel</a></li><li class="tocline"><a class="tocxref" href="#Relatierol"><bdi class="secno">2.1.27 </bdi>mim:Relatierol</a></li><li class="tocline"><a class="tocxref" href="#Relatiesoort"><bdi class="secno">2.1.28 </bdi>mim:Relatiesoort</a></li><li class="tocline"><a class="tocxref" href="#View"><bdi class="secno">2.1.29 </bdi>mim:View</a></li></ol></li><li class="tocline"><a class="tocxref" href="#eigenschappen-bindingen"><bdi class="secno">2.2 </bdi>Eigenschappen (bindingen)</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#aggregatietype"><bdi class="secno">2.2.1 </bdi>mim:aggregatietype</a></li><li class="tocline"><a class="tocxref" href="#attribuut"><bdi class="secno">2.2.2 </bdi>mim:attribuut</a></li><li class="tocline"><a class="tocxref" href="#attribuutkeuze"><bdi class="secno">2.2.3 </bdi>attribuutkeuze</a></li><li class="tocline"><a class="tocxref" href="#authentiek"><bdi class="secno">2.2.4 </bdi>mim:authentiek</a></li><li class="tocline"><a class="tocxref" href="#begrip"><bdi class="secno">2.2.5 </bdi>mim:begrip</a></li><li class="tocline"><a class="tocxref" href="#bevatModelelement"><bdi class="secno">2.2.6 </bdi>mim:bevatModelelement</a></li><li class="tocline"><a class="tocxref" href="#bron"><bdi class="secno">2.2.7 </bdi>mim:bron</a></li><li class="tocline"><a class="tocxref" href="#constraint"><bdi class="secno">2.2.8 </bdi>mim:constraint</a></li><li class="tocline"><a class="tocxref" href="#dataElement"><bdi class="secno">2.2.9 </bdi>mim:dataElement</a></li><li class="tocline"><a class="tocxref" href="#datatypekeuze"><bdi class="secno">2.2.10 </bdi>datatypekeuze</a></li><li class="tocline"><a class="tocxref" href="#doel"><bdi class="secno">2.2.11 </bdi>mim:doel</a></li><li class="tocline"><a class="tocxref" href="#doelkeuze"><bdi class="secno">2.2.12 </bdi>doelkeuze</a></li><li class="tocline"><a class="tocxref" href="#equivalent"><bdi class="secno">2.2.13 </bdi>equivalent</a></li><li class="tocline"><a class="tocxref" href="#gegevensgroep"><bdi class="secno">2.2.14 </bdi>mim:gegevensgroep</a></li><li class="tocline"><a class="tocxref" href="#gegevensgroeptype"><bdi class="secno">2.2.15 </bdi>mim:gegevensgroeptype</a></li><li class="tocline"><a class="tocxref" href="#modelelement"><bdi class="secno">2.2.16 </bdi>mim:modelelement</a></li><li class="tocline"><a class="tocxref" href="#referentieElement"><bdi class="secno">2.2.17 </bdi>mim:referentieElement</a></li><li class="tocline"><a class="tocxref" href="#relatiemodelleringstype"><bdi class="secno">2.2.18 </bdi>mim:relatiemodelleringstype</a></li><li class="tocline"><a class="tocxref" href="#relatierol"><bdi class="secno">2.2.19 </bdi>mim:relatierol</a></li><li class="tocline"><a class="tocxref" href="#subtype"><bdi class="secno">2.2.20 </bdi>mim:subtype</a></li><li class="tocline"><a class="tocxref" href="#supertype"><bdi class="secno">2.2.21 </bdi>mim:supertype</a></li><li class="tocline"><a class="tocxref" href="#type"><bdi class="secno">2.2.22 </bdi>mim:type</a></li><li class="tocline"><a class="tocxref" href="#waarde"><bdi class="secno">2.2.23 </bdi>mim:waarde</a></li></ol></li><li class="tocline"><a class="tocxref" href="#eigenschappen-metagegevens"><bdi class="secno">2.3 </bdi>Eigenschappen (metagegevens)</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#indicatieFormeleHistorie"><bdi class="secno">2.3.1 </bdi>mim:indicatieFormeleHistorie</a></li><li class="tocline"><a class="tocxref" href="#indicatieMaterieleHistorie"><bdi class="secno">2.3.2 </bdi>mim:indicatieMaterieleHistorie</a></li><li class="tocline"><a class="tocxref" href="#mimextensie"><bdi class="secno">2.3.3 </bdi>mim:mimextensie</a></li><li class="tocline"><a class="tocxref" href="#mimtaal"><bdi class="secno">2.3.4 </bdi>mim:mimtaal</a></li><li class="tocline"><a class="tocxref" href="#mimversie"><bdi class="secno">2.3.5 </bdi>mim:mimversie</a></li><li class="tocline"><a class="tocxref" href="#alias"><bdi class="secno">2.3.6 </bdi>mim:alias</a></li><li class="tocline"><a class="tocxref" href="#begripsterm"><bdi class="secno">2.3.7 </bdi>mim:begripsterm</a></li><li class="tocline"><a class="tocxref" href="#code"><bdi class="secno">2.3.8 </bdi>mim:code</a></li><li class="tocline"><a class="tocxref" href="#datumOpname"><bdi class="secno">2.3.9 </bdi>mim:datumOpname</a></li><li class="tocline"><a class="tocxref" href="#definitie"><bdi class="secno">2.3.10 </bdi>mim:definitie</a></li><li class="tocline"><a class="tocxref" href="#formeelPatroon"><bdi class="secno">2.3.11 </bdi>mim:formeelPatroon</a></li><li class="tocline"><a class="tocxref" href="#herkomstDefinitie"><bdi class="secno">2.3.12 </bdi>mim:herkomstDefinitie</a></li><li class="tocline"><a class="tocxref" href="#herkomst"><bdi class="secno">2.3.13 </bdi>mim:herkomst</a></li><li class="tocline"><a class="tocxref" href="#identificerend"><bdi class="secno">2.3.14 </bdi>mim:identificerend</a></li><li class="tocline"><a class="tocxref" href="#indicatieAbstractObject"><bdi class="secno">2.3.15 </bdi>mim:indicatieAbstractObject</a></li><li class="tocline"><a class="tocxref" href="#indicatieAfleidbaar"><bdi class="secno">2.3.16 </bdi>mim:indicatieAfleidbaar</a></li><li class="tocline"><a class="tocxref" href="#indicatieClassificerend"><bdi class="secno">2.3.17 </bdi>mim:indicatieClassificerend</a></li><li class="tocline"><a class="tocxref" href="#informatiedomein"><bdi class="secno">2.3.18 </bdi>mim:informatiedomein</a></li><li class="tocline"><a class="tocxref" href="#informatiemodeltype"><bdi class="secno">2.3.19 </bdi>mim:informatiemodeltype</a></li><li class="tocline"><a class="tocxref" href="#kardinaliteitRelatieBron"><bdi class="secno">2.3.20 </bdi>mim:kardinaliteitRelatieBron</a></li><li class="tocline"><a class="tocxref" href="#kardinaliteit"><bdi class="secno">2.3.21 </bdi>mim:kardinaliteit</a></li><li class="tocline"><a class="tocxref" href="#kwaliteit"><bdi class="secno">2.3.22 </bdi>mim:kwaliteit</a></li><li class="tocline"><a class="tocxref" href="#lengte"><bdi class="secno">2.3.23 </bdi>mim:lengte</a></li><li class="tocline"><a class="tocxref" href="#locatie"><bdi class="secno">2.3.24 </bdi>mim:locatie</a></li><li class="tocline"><a class="tocxref" href="#mogelijkGeenWaarde"><bdi class="secno">2.3.25 </bdi>mim:mogelijkGeenWaarde</a></li><li class="tocline"><a class="tocxref" href="#naam"><bdi class="secno">2.3.26 </bdi>mim:naam</a></li><li class="tocline"><a class="tocxref" href="#patroon"><bdi class="secno">2.3.27 </bdi>mim:patroon</a></li><li class="tocline"><a class="tocxref" href="#populatie"><bdi class="secno">2.3.28 </bdi>mim:populatie</a></li><li class="tocline"><a class="tocxref" href="#specificatieFormeel"><bdi class="secno">2.3.29 </bdi>mim:specificatieFormeel</a></li><li class="tocline"><a class="tocxref" href="#specificatieTekst"><bdi class="secno">2.3.30 </bdi>mim:specificatieTekst</a></li><li class="tocline"><a class="tocxref" href="#toelichting"><bdi class="secno">2.3.31 </bdi>mim:toelichting</a></li><li class="tocline"><a class="tocxref" href="#unidirectioneel"><bdi class="secno">2.3.32 </bdi>mim:unidirectioneel</a></li></ol></li></ol></li></ol></nav>
+
+        
+        
+        
+
+        
+        
+        
+
+        
+        <section id="inleiding"><div class="header-wrapper"><h2 id="x1-inleiding"><bdi class="secno">1. </bdi>Inleiding</h2><a class="self-link" href="#inleiding" aria-label="Permalink for Section 1."></a></div>
+<p>In dit document wordt de MIM ontologie versie 1.1.1 gepresenteerd. Dit is een onderdeel van de <a href="https://docs.geostandaarden.nl/mim/mim/">MIM standaard</a> versie 1.1.1. In de MIM standaard wordt in <a href="https://docs.geostandaarden.nl/mim/mim/#metamodel-in-linked-data-ld">hoofdstuk 4</a> het MIM metamodel in linked data toegepast. De ontologie die daar uit voortkomt is de MIM ontologie.</p>
+<p>De ontologie is gepubliceerd op modellen.mim-standaard.nl</p>
+<p>Het begrippenkader van MIM is gepubliceerd op <a href="https://definities.geostandaarden.nl/mim/nl/">MIM begrippenkader</a></p>
+<p>Door het publiceren van de MIM ontologie is een koppeling naar andere meta-modellen mogelijk. Dit kan worden gebruikt voor koppeling van semantiek en gegevens uit verschillende bronnen.</p>
+</section>
+        <section id="ontologie"><div class="header-wrapper"><h2 id="x2-ontologie"><bdi class="secno">2. </bdi>Ontologie</h2><a class="self-link" href="#ontologie" aria-label="Permalink for Section 2."></a></div>
+<section id="klassen"><div class="header-wrapper"><h3 id="x2-1-klassen"><bdi class="secno">2.1 </bdi>Klassen</h3><a class="self-link" href="#klassen" aria-label="Permalink for Section 2.1"></a></div>
+<ul>
+<li><a href="#Modelelement">mim:Modelelement</a><ul>
+<li><a href="#Attribuutsoort">mim:Attribuutsoort</a></li>
+<li><a href="#Constraint">mim:Constraint</a><ul>
+<li><a href="#KeuzeConstraint">mim:Keuzeconstraint</a></li>
+</ul>
+</li>
+<li><a href="#DataElement">mim:DataElement</a></li>
+<li><a href="#Datatype">mim:Datatype</a><ul>
+<li><a href="#Codelijst">mim:Codelijst</a></li>
+<li><a href="#Enumeratie">mim:Enumeratie</a></li>
+<li><a href="#GestructureerdDatatype">mim:GestructureerdDatatype</a></li>
+<li><a href="#Keuze">mim:Keuze</a></li>
+<li><a href="#PrimitiefDatatype">mim:PrimitiefDatatype</a></li>
+<li><a href="#Referentielijst">mim:Referentielijst</a></li>
+</ul>
+</li>
+<li><a href="#Enumeratiewaarde">mim:Enumeratiewaarde</a></li>
+<li><a href="#ExterneKoppeling">mim:ExterneKoppeling</a></li>
+<li><a href="#Gegevensgroep">mim:Gegevensgroep</a></li>
+<li><a href="#Gegevensgroeptype">mim:Gegevensgroeptype</a></li>
+<li><a href="#Generalisatie">mim:Generalisatie</a></li>
+<li><a href="#Objecttype">mim:Objecttype</a></li>
+<li><a href="#Package">mim:Package</a><ul>
+<li><a href="#Domein">mim:Domein</a></li>
+<li><a href="#Extern">mim:Extern</a></li>
+<li><a href="#Informatiemodel">mim:Informatiemodel</a></li>
+<li><a href="#View">mim:View</a></li>
+</ul>
+</li>
+<li><a href="#ReferentieElement">mim:ReferentieElement</a></li>
+<li><a href="#Relatierol">mim:Relatierol</a><ul>
+<li><a href="#RelatierolBron">mim:RelatierolBron</a></li>
+<li><a href="#RelatierolDoel">mim:RelatierolDoel</a></li>
+</ul>
+</li>
+<li><a href="#Relatiesoort">mim:Relatiesoort</a><ul>
+<li><a href="#Relatieklasse">mim:Relatieklasse</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<section id="mim-attribuutsoort"><div class="header-wrapper"><h4 id="Attribuutsoort"><bdi class="secno">2.1.1 </bdi>mim:Attribuutsoort</h4><a class="self-link" href="#Attribuutsoort" aria-label="Permalink for Section 2.1.1"></a></div><table class="simple">
+<thead>
+<tr>
+<th>URI</th>
+<th><a href="http://modellen.mim-standaard.nl/def/mim#Attribuutsoort">http://modellen.mim-standaard.nl/def/mim#Attribuutsoort</a></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Specialisatie van</td>
+<td><a href="#Modelelement">mim:Modelelement</a></td>
+</tr>
+<tr>
+<td>Definitie</td>
+<td>De typering van gelijksoortige gegevens die voor een objecttype van toepassing is.</td>
+</tr>
+<tr>
+<td>Bron</td>
+<td><a href="https://docs.geostandaarden.nl/mim/mim/#attribuutsoort">Sectie 2.2.2 Attribuutsoort</a></td>
+</tr>
+<tr>
+<td>Eigenschappen</td>
+<td><a href="#alias">mim:alias</a>, <a href="#authentiek">mim:authentiek</a>, <a href="#begrip">mim:begrip</a>, <a href="#begripsterm">mim:begripsterm</a>, <a href="#datumOpname">mim:datumOpname</a>, <a href="#definitie">mim:definitie</a>, <a href="#formeelPatroon">mim:formeelPatroon</a>, <a href="#herkomst">mim:herkomst</a>, <a href="#herkomstDefinitie">mim:herkomstDefinitie</a>, <a href="#identificerend">mim:identificerend</a>, <a href="#indicatieAfleidbaar">mim:indicatieAfleidbaar</a>, <a href="#indicatieClassificerend">mim:indicatieClassificerend</a>, <a href="#indicatieFormeleHistorie">mim:indicatieFormeleHistorie</a>, <a href="#indicatieMaterieleHistorie">mim:indicatieMaterieleHistorie</a>, <a href="#kardinaliteit">mim:kardinaliteit</a>, <a href="#lengte">mim:lengte</a>, <a href="#mogelijkGeenWaarde">mim:mogelijkGeenWaarde</a>, <a href="#naam">mim:naam</a>, <a href="#patroon">mim:patroon</a>, <a href="#toelichting">mim:toelichting</a>, <a href="#type">mim:type</a></td>
+</tr>
+</tbody></table>
+</section><section id="mim-codelijst"><div class="header-wrapper"><h4 id="Codelijst"><bdi class="secno">2.1.2 </bdi>mim:Codelijst</h4><a class="self-link" href="#Codelijst" aria-label="Permalink for Section 2.1.2"></a></div><table class="simple">
+<thead>
+<tr>
+<th>URI</th>
+<th><a href="http://modellen.mim-standaard.nl/def/mim#Codelijst">http://modellen.mim-standaard.nl/def/mim#Codelijst</a></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Specialisatie van</td>
+<td><a href="#Datatype">mim:Datatype</a></td>
+</tr>
+<tr>
+<td>Definitie</td>
+<td>De representatie van een lijst met een opsomming van de mogelijke domeinwaarden van een attribuutsoort, die buiten het model in een externe waardenlijst worden beheerd. De domeinwaarden in de lijst kunnen in de loop van de tijd aangepast, uitgebreid, of verwijderd worden, zonder dat het informatiemodel aangepast wordt (in tegenstelling tot bij een enumeratie). De representatie bevat geen kenmerken, voor alle kenmerken wordt verwezen naar de specificatie van de externe waardelijst.</td>
+</tr>
+<tr>
+<td>Bron</td>
+<td><a href="https://docs.geostandaarden.nl/mim/mim/#codelijst">Sectie 2.4.5 Codelijst</a></td>
+</tr>
+<tr>
+<td>Eigenschappen</td>
+<td><a href="#alias">mim:alias</a>, <a href="#begrip">mim:begrip</a>, <a href="#begripsterm">mim:begripsterm</a>, <a href="#datumOpname">mim:datumOpname</a>, <a href="#definitie">mim:definitie</a>, <a href="#herkomst">mim:herkomst</a>, <a href="#locatie">mim:locatie</a>, <a href="#naam">mim:naam</a>, <a href="#toelichting">mim:toelichting</a></td>
+</tr>
+</tbody></table>
+</section><section id="mim-constraint"><div class="header-wrapper"><h4 id="Constraint"><bdi class="secno">2.1.3 </bdi>mim:Constraint</h4><a class="self-link" href="#Constraint" aria-label="Permalink for Section 2.1.3"></a></div><table class="simple">
+<thead>
+<tr>
+<th>URI</th>
+<th><a href="http://modellen.mim-standaard.nl/def/mim#Constraint">http://modellen.mim-standaard.nl/def/mim#Constraint</a></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Specialisatie van</td>
+<td><a href="#Modelelement">mim:Modelelement</a></td>
+</tr>
+<tr>
+<td>Definitie</td>
+<td>Een constraint is een conditie of een beperking, die over een of meerdere modelelementen uit het informatiemodel geldt.</td>
+</tr>
+<tr>
+<td>Bron</td>
+<td></td>
+</tr>
+<tr>
+<td>Eigenschappen</td>
+<td><a href="#naam">mim:naam</a>, <a href="#specificatieFormeel">mim:specificatieFormeel</a>, <a href="#specificatieTekst">mim:specificatieTekst</a></td>
+</tr>
+</tbody></table>
+</section><section id="mim-dataelement"><div class="header-wrapper"><h4 id="DataElement"><bdi class="secno">2.1.4 </bdi>mim:DataElement</h4><a class="self-link" href="#DataElement" aria-label="Permalink for Section 2.1.4"></a></div><table class="simple">
+<thead>
+<tr>
+<th>URI</th>
+<th><a href="http://modellen.mim-standaard.nl/def/mim#DataElement">http://modellen.mim-standaard.nl/def/mim#DataElement</a></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Specialisatie van</td>
+<td><a href="#Modelelement">mim:Modelelement</a></td>
+</tr>
+<tr>
+<td>Definitie</td>
+<td>Een onderdeel/element van een Gestructureerd datatype die als type een datatype heeft.</td>
+</tr>
+<tr>
+<td>Bron</td>
+<td><a href="https://docs.geostandaarden.nl/mim/mim/#data-element">Sectie 2.5.3 Gestructureerd datatype</a></td>
+</tr>
+<tr>
+<td>Eigenschappen</td>
+<td><a href="#alias">mim:alias</a>, <a href="#begrip">mim:begrip</a>, <a href="#begripsterm">mim:begripsterm</a>, <a href="#datumOpname">mim:datumOpname</a>, <a href="#definitie">mim:definitie</a>, <a href="#formeelPatroon">mim:formeelPatroon</a>, <a href="#kardinaliteit">mim:kardinaliteit</a>, <a href="#lengte">mim:lengte</a>, <a href="#naam">mim:naam</a>, <a href="#patroon">mim:patroon</a>, <a href="#toelichting">mim:toelichting</a>, <a href="#type">mim:type</a></td>
+</tr>
+</tbody></table>
+</section><section id="mim-datatype"><div class="header-wrapper"><h4 id="Datatype"><bdi class="secno">2.1.5 </bdi>mim:Datatype</h4><a class="self-link" href="#Datatype" aria-label="Permalink for Section 2.1.5"></a></div><table class="simple">
+<thead>
+<tr>
+<th>URI</th>
+<th><a href="http://modellen.mim-standaard.nl/def/mim#Datatype">http://modellen.mim-standaard.nl/def/mim#Datatype</a></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Specialisatie van</td>
+<td><a href="#Modelelement">mim:Modelelement</a></td>
+</tr>
+<tr>
+<td>Definitie</td>
+<td>Een beschrijving van de structuur waaraan een waarde, oftewel de data zelf, aan moet voldoen.</td>
+</tr>
+<tr>
+<td>Bron</td>
+<td><a href="https://docs.geostandaarden.nl/mim/mim/#datatypen-0">Sectie 2.5 Datatypen</a></td>
+</tr>
+</tbody></table>
+</section><section id="mim-domein"><div class="header-wrapper"><h4 id="Domein"><bdi class="secno">2.1.6 </bdi>mim:Domein</h4><a class="self-link" href="#Domein" aria-label="Permalink for Section 2.1.6"></a></div><table class="simple">
+<thead>
+<tr>
+<th>URI</th>
+<th><a href="http://modellen.mim-standaard.nl/def/mim#Domein">http://modellen.mim-standaard.nl/def/mim#Domein</a></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Specialisatie van</td>
+<td><a href="#Package">mim:Package</a></td>
+</tr>
+<tr>
+<td>Definitie</td>
+<td>Een groepering van constructies die een semantisch samenhangend gedeelte van een informatiemodel beschrijven.</td>
+</tr>
+<tr>
+<td>Bron</td>
+<td><a href="https://docs.geostandaarden.nl/mim/mim/#domein">Sectie 2.6.2 Domein</a></td>
+</tr>
+<tr>
+<td>Eigenschappen</td>
+<td><a href="#alias">mim:alias</a>, <a href="#datumOpname">mim:datumOpname</a>, <a href="#naam">mim:naam</a></td>
+</tr>
+</tbody></table>
+</section><section id="mim-enumeratie"><div class="header-wrapper"><h4 id="Enumeratie"><bdi class="secno">2.1.7 </bdi>mim:Enumeratie</h4><a class="self-link" href="#Enumeratie" aria-label="Permalink for Section 2.1.7"></a></div><table class="simple">
+<thead>
+<tr>
+<th>URI</th>
+<th><a href="http://modellen.mim-standaard.nl/def/mim#Enumeratie">http://modellen.mim-standaard.nl/def/mim#Enumeratie</a></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Specialisatie van</td>
+<td><a href="#Datatype">mim:Datatype</a></td>
+</tr>
+<tr>
+<td>Definitie</td>
+<td>Een datatype waarvan de mogelijke waarden limitatief zijn opgesomd in een statische lijst.</td>
+</tr>
+<tr>
+<td>Bron</td>
+<td><a href="https://docs.geostandaarden.nl/mim/mim/#enumeratie">Sectie 2.4.3 Enumeratie</a></td>
+</tr>
+<tr>
+<td>Eigenschappen</td>
+<td><a href="#datumOpname">mim:datumOpname</a>, <a href="#definitie">mim:definitie</a>, <a href="#naam">mim:naam</a>, <a href="#toelichting">mim:toelichting</a>, <a href="#waarde">mim:waarde</a></td>
+</tr>
+</tbody></table>
+</section><section id="mim-enumeratiewaarde"><div class="header-wrapper"><h4 id="Enumeratiewaarde"><bdi class="secno">2.1.8 </bdi>mim:Enumeratiewaarde</h4><a class="self-link" href="#Enumeratiewaarde" aria-label="Permalink for Section 2.1.8"></a></div><table class="simple">
+<thead>
+<tr>
+<th>URI</th>
+<th><a href="http://modellen.mim-standaard.nl/def/mim#Enumeratiewaarde">http://modellen.mim-standaard.nl/def/mim#Enumeratiewaarde</a></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Specialisatie van</td>
+<td><a href="#Modelelement">mim:Modelelement</a></td>
+</tr>
+<tr>
+<td>Definitie</td>
+<td>Een gedefinieerde waarde, in de vorm van een eenmalig vastgesteld constant gegeven.</td>
+</tr>
+<tr>
+<td>Bron</td>
+<td><a href="https://docs.geostandaarden.nl/mim/mim/#enumeratiewaarde">Sectie 2.4.4 Enumeratiewaarde</a></td>
+</tr>
+<tr>
+<td>Eigenschappen</td>
+<td><a href="#begrip">mim:begrip</a>, <a href="#begripsterm">mim:begripsterm</a>, <a href="#code">mim:code</a>, <a href="#datumOpname">mim:datumOpname</a>, <a href="#definitie">mim:definitie</a>, <a href="#naam">mim:naam</a>, <a href="#toelichting">mim:toelichting</a></td>
+</tr>
+</tbody></table>
+</section><section id="mim-extern"><div class="header-wrapper"><h4 id="Extern"><bdi class="secno">2.1.9 </bdi>mim:Extern</h4><a class="self-link" href="#Extern" aria-label="Permalink for Section 2.1.9"></a></div><table class="simple">
+<thead>
+<tr>
+<th>URI</th>
+<th><a href="http://modellen.mim-standaard.nl/def/mim#Extern">http://modellen.mim-standaard.nl/def/mim#Extern</a></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Specialisatie van</td>
+<td><a href="#Package">mim:Package</a></td>
+</tr>
+<tr>
+<td>Definitie</td>
+<td>Een groepering van constructies die een externe instantie beheert en beschikbaar stelt aan een informatiemodel en die in het informatiemodel ongewijzigd gebruikt worden.</td>
+</tr>
+<tr>
+<td>Bron</td>
+<td><a href="https://docs.geostandaarden.nl/mim/mim/#extern">Sectie 2.6.3 Extern</a></td>
+</tr>
+<tr>
+<td>Eigenschappen</td>
+<td><a href="#datumOpname">mim:datumOpname</a>, <a href="#definitie">mim:definitie</a>, <a href="#herkomst">mim:herkomst</a>, <a href="#locatie">mim:locatie</a>, <a href="#naam">mim:naam</a>, <a href="#toelichting">mim:toelichting</a></td>
+</tr>
+</tbody></table>
+</section><section id="mim-externekoppeling"><div class="header-wrapper"><h4 id="ExterneKoppeling"><bdi class="secno">2.1.10 </bdi>mim:ExterneKoppeling</h4><a class="self-link" href="#ExterneKoppeling" aria-label="Permalink for Section 2.1.10"></a></div><table class="simple">
+<thead>
+<tr>
+<th>URI</th>
+<th><a href="http://modellen.mim-standaard.nl/def/mim#ExterneKoppeling">http://modellen.mim-standaard.nl/def/mim#ExterneKoppeling</a></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Specialisatie van</td>
+<td><a href="#Modelelement">mim:Modelelement</a></td>
+</tr>
+<tr>
+<td>Definitie</td>
+<td>Een associatie waarmee vanuit het perspectief van het eigen informatiemodel een objecttype uit het ‘eigen’ informatiemodel gekoppeld wordt aan een objecttype van een extern informatiemodel. De relatie zelf hoort bij het ‘eigen’ objecttype.</td>
+</tr>
+<tr>
+<td>Bron</td>
+<td><a href="https://docs.geostandaarden.nl/mim/mim/#externe-koppeling">Sectie 2.3.4 Externe koppeling</a></td>
+</tr>
+<tr>
+<td>Eigenschappen</td>
+<td><a href="#aggregatietype">mim:aggregatietype</a>, <a href="#alias">mim:alias</a>, <a href="#authentiek">mim:authentiek</a>, <a href="#begrip">mim:begrip</a>, <a href="#begripsterm">mim:begripsterm</a>, <a href="#bron">mim:bron</a>, <a href="#datumOpname">mim:datumOpname</a>, <a href="#definitie">mim:definitie</a>, <a href="#doel">mim:doel</a>, <a href="#herkomst">mim:herkomst</a>, <a href="#herkomstDefinitie">mim:herkomstDefinitie</a>, <a href="#indicatieAfleidbaar">mim:indicatieAfleidbaar</a>, <a href="#indicatieFormeleHistorie">mim:indicatieFormeleHistorie</a>, <a href="#indicatieMaterieleHistorie">mim:indicatieMaterieleHistorie</a>, <a href="#kardinaliteit">mim:kardinaliteit</a>, <a href="#mogelijkGeenWaarde">mim:mogelijkGeenWaarde</a>, <a href="#naam">mim:naam</a>, <a href="#toelichting">mim:toelichting</a>, <a href="#unidirectioneel">mim:unidirectioneel</a></td>
+</tr>
+</tbody></table>
+</section><section id="mim-gegevensgroep"><div class="header-wrapper"><h4 id="Gegevensgroep"><bdi class="secno">2.1.11 </bdi>mim:Gegevensgroep</h4><a class="self-link" href="#Gegevensgroep" aria-label="Permalink for Section 2.1.11"></a></div><table class="simple">
+<thead>
+<tr>
+<th>URI</th>
+<th><a href="http://modellen.mim-standaard.nl/def/mim#Gegevensgroep">http://modellen.mim-standaard.nl/def/mim#Gegevensgroep</a></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Specialisatie van</td>
+<td><a href="#Modelelement">mim:Modelelement</a></td>
+</tr>
+<tr>
+<td>Definitie</td>
+<td>Een typering van een groep van gelijksoortige gegevens die voor een objecttype van toepassing is.</td>
+</tr>
+<tr>
+<td>Bron</td>
+<td><a href="https://docs.geostandaarden.nl/mim/mim/#gegevensgroep">Sectie 2.2.3 Gegevensgroep</a></td>
+</tr>
+<tr>
+<td>Eigenschappen</td>
+<td><a href="#alias">mim:alias</a>, <a href="#authentiek">mim:authentiek</a>, <a href="#begrip">mim:begrip</a>, <a href="#begripsterm">mim:begripsterm</a>, <a href="#datumOpname">mim:datumOpname</a>, <a href="#definitie">mim:definitie</a>, <a href="#gegevensgroeptype">mim:gegevensgroeptype</a>, <a href="#herkomst">mim:herkomst</a>, <a href="#herkomstDefinitie">mim:herkomstDefinitie</a>, <a href="#indicatieFormeleHistorie">mim:indicatieFormeleHistorie</a>, <a href="#indicatieMaterieleHistorie">mim:indicatieMaterieleHistorie</a>, <a href="#kardinaliteit">mim:kardinaliteit</a>, <a href="#naam">mim:naam</a>, <a href="#toelichting">mim:toelichting</a></td>
+</tr>
+</tbody></table>
+</section><section id="mim-gegevensgroeptype"><div class="header-wrapper"><h4 id="Gegevensgroeptype"><bdi class="secno">2.1.12 </bdi>mim:Gegevensgroeptype</h4><a class="self-link" href="#Gegevensgroeptype" aria-label="Permalink for Section 2.1.12"></a></div><table class="simple">
+<thead>
+<tr>
+<th>URI</th>
+<th><a href="http://modellen.mim-standaard.nl/def/mim#Gegevensgroeptype">http://modellen.mim-standaard.nl/def/mim#Gegevensgroeptype</a></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Specialisatie van</td>
+<td><a href="#Modelelement">mim:Modelelement</a></td>
+</tr>
+<tr>
+<td>Definitie</td>
+<td>Een groep van met elkaar samenhangende attribuutsoorten. Een gegevensgroeptype is altijd een type van een gegevensgroep.</td>
+</tr>
+<tr>
+<td>Bron</td>
+<td><a href="https://docs.geostandaarden.nl/mim/mim/#gegevensgroeptype">Sectie 2.2.4 Gegevensgroeptype</a></td>
+</tr>
+<tr>
+<td>Eigenschappen</td>
+<td><a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"></a>, <a href="#alias">mim:alias</a>, <a href="#attribuut">mim:attribuut</a>, <a href="#begrip">mim:begrip</a>, <a href="#begripsterm">mim:begripsterm</a>, <a href="#constraint">mim:constraint</a>, <a href="#datumOpname">mim:datumOpname</a>, <a href="#definitie">mim:definitie</a>, <a href="#gegevensgroep">mim:gegevensgroep</a>, <a href="#herkomstDefinitie">mim:herkomstDefinitie</a>, <a href="#naam">mim:naam</a>, <a href="#toelichting">mim:toelichting</a></td>
+</tr>
+</tbody></table>
+</section><section id="mim-generalisatie"><div class="header-wrapper"><h4 id="Generalisatie"><bdi class="secno">2.1.13 </bdi>mim:Generalisatie</h4><a class="self-link" href="#Generalisatie" aria-label="Permalink for Section 2.1.13"></a></div><table class="simple">
+<thead>
+<tr>
+<th>URI</th>
+<th><a href="http://modellen.mim-standaard.nl/def/mim#Generalisatie">http://modellen.mim-standaard.nl/def/mim#Generalisatie</a></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Specialisatie van</td>
+<td><a href="#Modelelement">mim:Modelelement</a></td>
+</tr>
+<tr>
+<td>Definitie</td>
+<td>De typering van het hiërarchische verband tussen een meer generiek en een meer specifiek modelelement van hetzelfde soort, waarbij het meer specifieke modelelement eigenschappen van het meer generieke modelelement overerft. Dit verband is alleen gedefinieerd voor objecttypen en datatypen.</td>
+</tr>
+<tr>
+<td>Bron</td>
+<td><a href="https://docs.geostandaarden.nl/mim/mim/#generalisatie">Sectie 2.3.1 Generalisatie</a></td>
+</tr>
+<tr>
+<td>Eigenschappen</td>
+<td><a href="#datumOpname">mim:datumOpname</a>, <a href="#subtype">mim:subtype</a>, <a href="#supertype">mim:supertype</a></td>
+</tr>
+</tbody></table>
+</section><section id="mim-gestructureerddatatype"><div class="header-wrapper"><h4 id="GestructureerdDatatype"><bdi class="secno">2.1.14 </bdi>mim:GestructureerdDatatype</h4><a class="self-link" href="#GestructureerdDatatype" aria-label="Permalink for Section 2.1.14"></a></div><table class="simple">
+<thead>
+<tr>
+<th>URI</th>
+<th><a href="http://modellen.mim-standaard.nl/def/mim#GestructureerdDatatype">http://modellen.mim-standaard.nl/def/mim#GestructureerdDatatype</a></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Specialisatie van</td>
+<td><a href="#Datatype">mim:Datatype</a></td>
+</tr>
+<tr>
+<td>Definitie</td>
+<td>Specifiek benoemd datatype dat de structuur van een gegeven beschrijft, samengesteld uit minimaal twee elementen die in samenhang betekenisvol zijn.</td>
+</tr>
+<tr>
+<td>Bron</td>
+<td><a href="https://docs.geostandaarden.nl/mim/mim/#gestructureerd-datatype">Sectie 2.5.2 Gestructureerd datatype</a></td>
+</tr>
+<tr>
+<td>Eigenschappen</td>
+<td><a href="#alias">mim:alias</a>, <a href="#begrip">mim:begrip</a>, <a href="#begripsterm">mim:begripsterm</a>, <a href="#dataElement">mim:dataElement</a>, <a href="#datumOpname">mim:datumOpname</a>, <a href="#definitie">mim:definitie</a>, <a href="#formeelPatroon">mim:formeelPatroon</a>, <a href="#herkomst">mim:herkomst</a>, <a href="#naam">mim:naam</a>, <a href="#patroon">mim:patroon</a>, <a href="#toelichting">mim:toelichting</a></td>
+</tr>
+</tbody></table>
+</section><section id="mim-informatiemodel"><div class="header-wrapper"><h4 id="Informatiemodel"><bdi class="secno">2.1.15 </bdi>mim:Informatiemodel</h4><a class="self-link" href="#Informatiemodel" aria-label="Permalink for Section 2.1.15"></a></div><table class="simple">
+<thead>
+<tr>
+<th>URI</th>
+<th><a href="http://modellen.mim-standaard.nl/def/mim#Informatiemodel">http://modellen.mim-standaard.nl/def/mim#Informatiemodel</a></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Specialisatie van</td>
+<td><a href="#Package">mim:Package</a></td>
+</tr>
+<tr>
+<td>Definitie</td>
+<td>De groepering van alle modelelementen waaruit het informatiemodel is opgebouwd. Het informatiemodel als geheel.</td>
+</tr>
+<tr>
+<td>Bron</td>
+<td><a href="https://docs.geostandaarden.nl/mim/mim/#informatiemodel">Sectie 2.6.1 Informatiemodel</a></td>
+</tr>
+<tr>
+<td>Eigenschappen</td>
+<td><a href="#alias">mim:alias</a>, <a href="#datumOpname">mim:datumOpname</a>, <a href="#informatiedomein">mim:informatiedomein</a>, <a href="#informatiemodeltype">mim:informatiemodeltype</a>, <a href="#mimextensie">mim:mimextensie</a>, <a href="#mimtaal">mim:mimtaal</a>, <a href="#mimversie">mim:mimversie</a>, <a href="#naam">mim:naam</a>, <a href="#relatiemodelleringstype">mim:relatiemodelleringstype</a></td>
+</tr>
+</tbody></table>
+</section><section id="mim-keuze"><div class="header-wrapper"><h4 id="Keuze"><bdi class="secno">2.1.16 </bdi>mim:Keuze</h4><a class="self-link" href="#Keuze" aria-label="Permalink for Section 2.1.16"></a></div><table class="simple">
+<thead>
+<tr>
+<th>URI</th>
+<th><a href="http://modellen.mim-standaard.nl/def/mim#Keuze">http://modellen.mim-standaard.nl/def/mim#Keuze</a></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Specialisatie van</td>
+<td><a href="#Datatype">mim:Datatype</a></td>
+</tr>
+<tr>
+<td>Definitie</td>
+<td>Een opsomming van meerdere modelelementen, waarbij er maar van één tegelijkertijd sprake kan zijn.</td>
+</tr>
+<tr>
+<td>Bron</td>
+<td></td>
+</tr>
+<tr>
+<td>Eigenschappen</td>
+<td><a href="#alias">mim:alias</a>, <a href="#begrip">mim:begrip</a>, <a href="#begripsterm">mim:begripsterm</a>, <a href="#datumOpname">mim:datumOpname</a>, <a href="#definitie">mim:definitie</a>, <a href="#herkomst">mim:herkomst</a>, <a href="#naam">mim:naam</a>, <a href="#toelichting">mim:toelichting</a></td>
+</tr>
+</tbody></table>
+</section><section id="mim-keuzeconstraint"><div class="header-wrapper"><h4 id="KeuzeConstraint"><bdi class="secno">2.1.17 </bdi>mim:Keuzeconstraint</h4><a class="self-link" href="#KeuzeConstraint" aria-label="Permalink for Section 2.1.17"></a></div><table class="simple">
+<thead>
+<tr>
+<th>URI</th>
+<th><a href="http://modellen.mim-standaard.nl/def/mim#KeuzeConstraint">http://modellen.mim-standaard.nl/def/mim#KeuzeConstraint</a></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Specialisatie van</td>
+<td><a href="#Constraint">mim:Constraint</a></td>
+</tr>
+<tr>
+<td>Definitie</td>
+<td>Een conditie met een opsomming van meerdere modelelementen, waarbij er maar van één tegelijkertijd sprake kan zijn.</td>
+</tr>
+<tr>
+<td>Bron</td>
+<td></td>
+</tr>
+<tr>
+<td>Eigenschappen</td>
+<td><a href="#alias">mim:alias</a>, <a href="#begrip">mim:begrip</a>, <a href="#begripsterm">mim:begripsterm</a>, <a href="#datumOpname">mim:datumOpname</a>, <a href="#definitie">mim:definitie</a>, <a href="#herkomst">mim:herkomst</a>, <a href="#modelelement">mim:modelelement</a>, <a href="#naam">mim:naam</a>, <a href="#toelichting">mim:toelichting</a></td>
+</tr>
+</tbody></table>
+</section><section id="mim-modelelement"><div class="header-wrapper"><h4 id="Modelelement"><bdi class="secno">2.1.18 </bdi>mim:Modelelement</h4><a class="self-link" href="#Modelelement" aria-label="Permalink for Section 2.1.18"></a></div><table class="simple">
+<thead>
+<tr>
+<th>URI</th>
+<th><a href="http://modellen.mim-standaard.nl/def/mim#Modelelement">http://modellen.mim-standaard.nl/def/mim#Modelelement</a></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Definitie</td>
+<td>Een modelelement uit het Metamodel voor Informatie Modellering (MIM)</td>
+</tr>
+</tbody></table>
+</section><section id="mim-objecttype"><div class="header-wrapper"><h4 id="Objecttype"><bdi class="secno">2.1.19 </bdi>mim:Objecttype</h4><a class="self-link" href="#Objecttype" aria-label="Permalink for Section 2.1.19"></a></div><table class="simple">
+<thead>
+<tr>
+<th>URI</th>
+<th><a href="http://modellen.mim-standaard.nl/def/mim#Objecttype">http://modellen.mim-standaard.nl/def/mim#Objecttype</a></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Specialisatie van</td>
+<td><a href="#Modelelement">mim:Modelelement</a></td>
+</tr>
+<tr>
+<td>Definitie</td>
+<td>De typering van een groep objecten die binnen een domein relevant zijn en als gelijksoortig worden beschouwd.</td>
+</tr>
+<tr>
+<td>Bron</td>
+<td><a href="https://docs.geostandaarden.nl/mim/mim/#objecttype">Sectie 2.2.1 Objecttype</a></td>
+</tr>
+<tr>
+<td>Eigenschappen</td>
+<td><a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"></a>, <a href="#alias">mim:alias</a>, <a href="#attribuut">mim:attribuut</a>, <a href="#begrip">mim:begrip</a>, <a href="#begripsterm">mim:begripsterm</a>, <a href="#constraint">mim:constraint</a>, <a href="#datumOpname">mim:datumOpname</a>, <a href="#definitie">mim:definitie</a>, <a href="#gegevensgroep">mim:gegevensgroep</a>, <a href="#herkomst">mim:herkomst</a>, <a href="#herkomstDefinitie">mim:herkomstDefinitie</a>, <a href="#indicatieAbstractObject">mim:indicatieAbstractObject</a>, <a href="#kwaliteit">mim:kwaliteit</a>, <a href="#naam">mim:naam</a>, <a href="#populatie">mim:populatie</a>, <a href="#toelichting">mim:toelichting</a></td>
+</tr>
+</tbody></table>
+</section><section id="mim-package"><div class="header-wrapper"><h4 id="Package"><bdi class="secno">2.1.20 </bdi>mim:Package</h4><a class="self-link" href="#Package" aria-label="Permalink for Section 2.1.20"></a></div><table class="simple">
+<thead>
+<tr>
+<th>URI</th>
+<th><a href="http://modellen.mim-standaard.nl/def/mim#Package">http://modellen.mim-standaard.nl/def/mim#Package</a></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Specialisatie van</td>
+<td><a href="#Modelelement">mim:Modelelement</a></td>
+</tr>
+<tr>
+<td>Definitie</td>
+<td>Een package is een benoemde en begrensde verzameling/groepering van modelelementen.</td>
+</tr>
+<tr>
+<td>Bron</td>
+<td><a href="https://docs.geostandaarden.nl/mim/mim/#packages">Sectie 2.6 Packages</a></td>
+</tr>
+<tr>
+<td>Eigenschappen</td>
+<td><a href="#alias">mim:alias</a>, <a href="#bevatModelelement">mim:bevatModelelement</a>, <a href="#naam">mim:naam</a></td>
+</tr>
+</tbody></table>
+</section><section id="mim-primitiefdatatype"><div class="header-wrapper"><h4 id="PrimitiefDatatype"><bdi class="secno">2.1.21 </bdi>mim:PrimitiefDatatype</h4><a class="self-link" href="#PrimitiefDatatype" aria-label="Permalink for Section 2.1.21"></a></div><table class="simple">
+<thead>
+<tr>
+<th>URI</th>
+<th><a href="http://modellen.mim-standaard.nl/def/mim#PrimitiefDatatype">http://modellen.mim-standaard.nl/def/mim#PrimitiefDatatype</a></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Specialisatie van</td>
+<td><a href="#Datatype">mim:Datatype</a></td>
+</tr>
+<tr>
+<td>Definitie</td>
+<td>Een primitief datatype is een datatype met een eenvoudige basisstructuur, oftewel enkelvoudig en zonder gelaagdheid.</td>
+</tr>
+<tr>
+<td>Bron</td>
+<td><a href="https://docs.geostandaarden.nl/mim/mim/#primitief-datatype">Sectie 2.5.1 Primitief datatype</a></td>
+</tr>
+<tr>
+<td>Eigenschappen</td>
+<td><a href="#alias">mim:alias</a>, <a href="#begrip">mim:begrip</a>, <a href="#begripsterm">mim:begripsterm</a>, <a href="#datumOpname">mim:datumOpname</a>, <a href="#definitie">mim:definitie</a>, <a href="#formeelPatroon">mim:formeelPatroon</a>, <a href="#herkomst">mim:herkomst</a>, <a href="#lengte">mim:lengte</a>, <a href="#naam">mim:naam</a>, <a href="#patroon">mim:patroon</a>, <a href="#toelichting">mim:toelichting</a></td>
+</tr>
+</tbody></table>
+</section><section id="mim-referentieelement"><div class="header-wrapper"><h4 id="ReferentieElement"><bdi class="secno">2.1.22 </bdi>mim:ReferentieElement</h4><a class="self-link" href="#ReferentieElement" aria-label="Permalink for Section 2.1.22"></a></div><table class="simple">
+<thead>
+<tr>
+<th>URI</th>
+<th><a href="http://modellen.mim-standaard.nl/def/mim#ReferentieElement">http://modellen.mim-standaard.nl/def/mim#ReferentieElement</a></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Specialisatie van</td>
+<td><a href="#Modelelement">mim:Modelelement</a></td>
+</tr>
+<tr>
+<td>Definitie</td>
+<td>Een eigenschap van een object in een referentielijst in de vorm van een gegeven.</td>
+</tr>
+<tr>
+<td>Bron</td>
+<td><a href="https://docs.geostandaarden.nl/mim/mim/#referentie-element">Sectie 2.4.2 Referentie element</a></td>
+</tr>
+<tr>
+<td>Eigenschappen</td>
+<td><a href="#alias">mim:alias</a>, <a href="#begrip">mim:begrip</a>, <a href="#begripsterm">mim:begripsterm</a>, <a href="#datumOpname">mim:datumOpname</a>, <a href="#definitie">mim:definitie</a>, <a href="#formeelPatroon">mim:formeelPatroon</a>, <a href="#identificerend">mim:identificerend</a>, <a href="#kardinaliteit">mim:kardinaliteit</a>, <a href="#lengte">mim:lengte</a>, <a href="#naam">mim:naam</a>, <a href="#patroon">mim:patroon</a>, <a href="#toelichting">mim:toelichting</a>, <a href="#type">mim:type</a></td>
+</tr>
+</tbody></table>
+</section><section id="mim-referentielijst"><div class="header-wrapper"><h4 id="Referentielijst"><bdi class="secno">2.1.23 </bdi>mim:Referentielijst</h4><a class="self-link" href="#Referentielijst" aria-label="Permalink for Section 2.1.23"></a></div><table class="simple">
+<thead>
+<tr>
+<th>URI</th>
+<th><a href="http://modellen.mim-standaard.nl/def/mim#Referentielijst">http://modellen.mim-standaard.nl/def/mim#Referentielijst</a></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Specialisatie van</td>
+<td><a href="#Datatype">mim:Datatype</a></td>
+</tr>
+<tr>
+<td>Definitie</td>
+<td>De representatie van een lijst met een opsomming van de mogelijke domeinwaarden van een attribuutsoort, die buiten het model in een externe waardenlijst worden beheerd. De domeinwaarden in de lijst kunnen in de loop van de tijd aangepast, uitgebreid, of verwijderd worden, zonder dat het informatiemodel aangepast wordt (in tegenstelling tot bij een enumeratie). De representatie bevat een aantal kenmerken, die overgenomen zijn van de specificatie van de externe waardelijst.</td>
+</tr>
+<tr>
+<td>Bron</td>
+<td><a href="https://docs.geostandaarden.nl/mim/mim/#referentielijst">Sectie 2.4.1 Referentielijst</a></td>
+</tr>
+<tr>
+<td>Eigenschappen</td>
+<td><a href="#alias">mim:alias</a>, <a href="#begrip">mim:begrip</a>, <a href="#begripsterm">mim:begripsterm</a>, <a href="#datumOpname">mim:datumOpname</a>, <a href="#definitie">mim:definitie</a>, <a href="#herkomst">mim:herkomst</a>, <a href="#locatie">mim:locatie</a>, <a href="#naam">mim:naam</a>, <a href="#referentieElement">mim:referentieElement</a>, <a href="#toelichting">mim:toelichting</a></td>
+</tr>
+</tbody></table>
+</section><section id="mim-relatieklasse"><div class="header-wrapper"><h4 id="Relatieklasse"><bdi class="secno">2.1.24 </bdi>mim:Relatieklasse</h4><a class="self-link" href="#Relatieklasse" aria-label="Permalink for Section 2.1.24"></a></div><table class="simple">
+<thead>
+<tr>
+<th>URI</th>
+<th><a href="http://modellen.mim-standaard.nl/def/mim#Relatieklasse">http://modellen.mim-standaard.nl/def/mim#Relatieklasse</a></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Specialisatie van</td>
+<td><a href="#Relatiesoort">mim:Relatiesoort</a></td>
+</tr>
+<tr>
+<td>Definitie</td>
+<td>Een relatiesoort met eigenschappen.</td>
+</tr>
+<tr>
+<td>Bron</td>
+<td><a href="https://docs.geostandaarden.nl/mim/mim/#relatieklasse">Sectie 2.3.3 Relatieklasse</a></td>
+</tr>
+<tr>
+<td>Eigenschappen</td>
+<td><a href="#aggregatietype">mim:aggregatietype</a>, <a href="#alias">mim:alias</a>, <a href="#attribuut">mim:attribuut</a>, <a href="#authentiek">mim:authentiek</a>, <a href="#begrip">mim:begrip</a>, <a href="#begripsterm">mim:begripsterm</a>, <a href="#constraint">mim:constraint</a>, <a href="#datumOpname">mim:datumOpname</a>, <a href="#definitie">mim:definitie</a>, <a href="#gegevensgroep">mim:gegevensgroep</a>, <a href="#herkomst">mim:herkomst</a>, <a href="#herkomstDefinitie">mim:herkomstDefinitie</a>, <a href="#indicatieAfleidbaar">mim:indicatieAfleidbaar</a>, <a href="#indicatieFormeleHistorie">mim:indicatieFormeleHistorie</a>, <a href="#indicatieMaterieleHistorie">mim:indicatieMaterieleHistorie</a>, <a href="#kardinaliteit">mim:kardinaliteit</a>, <a href="#mogelijkGeenWaarde">mim:mogelijkGeenWaarde</a>, <a href="#naam">mim:naam</a>, <a href="#toelichting">mim:toelichting</a>, <a href="#unidirectioneel">mim:unidirectioneel</a></td>
+</tr>
+</tbody></table>
+</section><section id="mim-relatierolbron"><div class="header-wrapper"><h4 id="RelatierolBron"><bdi class="secno">2.1.25 </bdi>mim:RelatierolBron</h4><a class="self-link" href="#RelatierolBron" aria-label="Permalink for Section 2.1.25"></a></div><table class="simple">
+<thead>
+<tr>
+<th>URI</th>
+<th><a href="http://modellen.mim-standaard.nl/def/mim#RelatierolBron">http://modellen.mim-standaard.nl/def/mim#RelatierolBron</a></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Specialisatie van</td>
+<td><a href="#Relatierol">mim:Relatierol</a></td>
+</tr>
+<tr>
+<td>Definitie</td>
+<td>De relatierol die de rol beschrijft van de bron van de relatie.</td>
+</tr>
+<tr>
+<td>Bron</td>
+<td><a href="https://docs.geostandaarden.nl/mim/mim/#relatierol">Sectie 2.3.5 Relatierol</a></td>
+</tr>
+<tr>
+<td>Eigenschappen</td>
+<td><a href="#bron">mim:bron</a></td>
+</tr>
+</tbody></table>
+</section><section id="mim-relatieroldoel"><div class="header-wrapper"><h4 id="RelatierolDoel"><bdi class="secno">2.1.26 </bdi>mim:RelatierolDoel</h4><a class="self-link" href="#RelatierolDoel" aria-label="Permalink for Section 2.1.26"></a></div><table class="simple">
+<thead>
+<tr>
+<th>URI</th>
+<th><a href="http://modellen.mim-standaard.nl/def/mim#RelatierolDoel">http://modellen.mim-standaard.nl/def/mim#RelatierolDoel</a></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Specialisatie van</td>
+<td><a href="#Relatierol">mim:Relatierol</a></td>
+</tr>
+<tr>
+<td>Definitie</td>
+<td>De relatierol die de rol beschrijft van het doel van de relatie.</td>
+</tr>
+<tr>
+<td>Bron</td>
+<td><a href="https://docs.geostandaarden.nl/mim/mim/#relatierol">Sectie 2.3.5 Relatierol</a></td>
+</tr>
+<tr>
+<td>Eigenschappen</td>
+<td><a href="#doel">mim:doel</a></td>
+</tr>
+</tbody></table>
+</section><section id="mim-relatierol"><div class="header-wrapper"><h4 id="Relatierol"><bdi class="secno">2.1.27 </bdi>mim:Relatierol</h4><a class="self-link" href="#Relatierol" aria-label="Permalink for Section 2.1.27"></a></div><table class="simple">
+<thead>
+<tr>
+<th>URI</th>
+<th><a href="http://modellen.mim-standaard.nl/def/mim#Relatierol">http://modellen.mim-standaard.nl/def/mim#Relatierol</a></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Specialisatie van</td>
+<td><a href="#Modelelement">mim:Modelelement</a></td>
+</tr>
+<tr>
+<td>Definitie</td>
+<td>De benaming van de manier waarop een object deelneemt aan een relatie met een ander object.</td>
+</tr>
+<tr>
+<td>Bron</td>
+<td><a href="https://docs.geostandaarden.nl/mim/mim/#relatierol">Sectie 2.3.5 Relatierol</a></td>
+</tr>
+<tr>
+<td>Eigenschappen</td>
+<td><a href="#alias">mim:alias</a>, <a href="#authentiek">mim:authentiek</a>, <a href="#begrip">mim:begrip</a>, <a href="#begripsterm">mim:begripsterm</a>, <a href="#datumOpname">mim:datumOpname</a>, <a href="#definitie">mim:definitie</a>, <a href="#herkomst">mim:herkomst</a>, <a href="#herkomstDefinitie">mim:herkomstDefinitie</a>, <a href="#identificerend">mim:identificerend</a>, <a href="#indicatieFormeleHistorie">mim:indicatieFormeleHistorie</a>, <a href="#indicatieMaterieleHistorie">mim:indicatieMaterieleHistorie</a>, <a href="#kardinaliteit">mim:kardinaliteit</a>, <a href="#mogelijkGeenWaarde">mim:mogelijkGeenWaarde</a>, <a href="#naam">mim:naam</a>, <a href="#toelichting">mim:toelichting</a></td>
+</tr>
+</tbody></table>
+</section><section id="mim-relatiesoort"><div class="header-wrapper"><h4 id="Relatiesoort"><bdi class="secno">2.1.28 </bdi>mim:Relatiesoort</h4><a class="self-link" href="#Relatiesoort" aria-label="Permalink for Section 2.1.28"></a></div><table class="simple">
+<thead>
+<tr>
+<th>URI</th>
+<th><a href="http://modellen.mim-standaard.nl/def/mim#Relatiesoort">http://modellen.mim-standaard.nl/def/mim#Relatiesoort</a></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Specialisatie van</td>
+<td><a href="#Modelelement">mim:Modelelement</a></td>
+</tr>
+<tr>
+<td>Definitie</td>
+<td>De typering van het structurele verband tussen een object van een objecttype en een (ander) object van een ander (of hetzelfde) objecttype.</td>
+</tr>
+<tr>
+<td>Bron</td>
+<td><a href="https://docs.geostandaarden.nl/mim/mim/#relatiesoort">Sectie 2.3.2 Relatiesoort</a></td>
+</tr>
+<tr>
+<td>Eigenschappen</td>
+<td><a href="#aggregatietype">mim:aggregatietype</a>, <a href="#alias">mim:alias</a>, <a href="#authentiek">mim:authentiek</a>, <a href="#begrip">mim:begrip</a>, <a href="#begripsterm">mim:begripsterm</a>, <a href="#bron">mim:bron</a>, <a href="#datumOpname">mim:datumOpname</a>, <a href="#definitie">mim:definitie</a>, <a href="#doel">mim:doel</a>, <a href="#herkomst">mim:herkomst</a>, <a href="#herkomstDefinitie">mim:herkomstDefinitie</a>, <a href="#identificerend">mim:identificerend</a>, <a href="#indicatieAfleidbaar">mim:indicatieAfleidbaar</a>, <a href="#indicatieFormeleHistorie">mim:indicatieFormeleHistorie</a>, <a href="#indicatieMaterieleHistorie">mim:indicatieMaterieleHistorie</a>, <a href="#kardinaliteit">mim:kardinaliteit</a>, <a href="#kardinaliteitRelatieBron">mim:kardinaliteitRelatieBron</a>, <a href="#mogelijkGeenWaarde">mim:mogelijkGeenWaarde</a>, <a href="#naam">mim:naam</a>, <a href="#relatierol">mim:relatierol</a>, <a href="#toelichting">mim:toelichting</a>, <a href="#unidirectioneel">mim:unidirectioneel</a></td>
+</tr>
+</tbody></table>
+</section><section id="mim-view"><div class="header-wrapper"><h4 id="View"><bdi class="secno">2.1.29 </bdi>mim:View</h4><a class="self-link" href="#View" aria-label="Permalink for Section 2.1.29"></a></div><table class="simple">
+<thead>
+<tr>
+<th>URI</th>
+<th><a href="http://modellen.mim-standaard.nl/def/mim#View">http://modellen.mim-standaard.nl/def/mim#View</a></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Specialisatie van</td>
+<td><a href="#Package">mim:Package</a></td>
+</tr>
+<tr>
+<td>Definitie</td>
+<td>Een groepering van objecttypen die gespecificeerd zijn in een extern informatiemodel en vanuit het perspectief van het eigen informatiemodel inzicht geeft welke gegevens van deze objecttypen relevant zijn binnen het eigen informatiemodel.</td>
+</tr>
+<tr>
+<td>Bron</td>
+<td><a href="https://docs.geostandaarden.nl/mim/mim/#view">Sectie 2.6.4 View</a></td>
+</tr>
+<tr>
+<td>Eigenschappen</td>
+<td><a href="#datumOpname">mim:datumOpname</a>, <a href="#definitie">mim:definitie</a>, <a href="#herkomst">mim:herkomst</a>, <a href="#locatie">mim:locatie</a>, <a href="#naam">mim:naam</a>, <a href="#toelichting">mim:toelichting</a></td>
+</tr>
+</tbody></table>
+</section></section><section id="eigenschappen-bindingen"><div class="header-wrapper"><h3 id="x2-2-eigenschappen-bindingen"><bdi class="secno">2.2 </bdi>Eigenschappen (bindingen)</h3><a class="self-link" href="#eigenschappen-bindingen" aria-label="Permalink for Section 2.2"></a></div>
+<section id="mim-aggregatietype"><div class="header-wrapper"><h4 id="aggregatietype"><bdi class="secno">2.2.1 </bdi>mim:aggregatietype</h4><a class="self-link" href="#aggregatietype" aria-label="Permalink for Section 2.2.1"></a></div><table class="simple">
+<thead>
+<tr>
+<th>URI</th>
+<th><a href="http://modellen.mim-standaard.nl/def/mim#aggregatietype">http://modellen.mim-standaard.nl/def/mim#aggregatietype</a></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Definitie</td>
+<td>Aanduiding of het objecttype die de eigenaar is van een relatie het doel van relatie ziet als een samen te voegen onderdeel die bij het objecttype hoort.</td>
+</tr>
+<tr>
+<td>Bron</td>
+<td><a href="https://docs.geostandaarden.nl/mim/mim/#metagegeven-aggregatietype">Sectie 2.8.2.21 Metagegeven: aggregatietype</a></td>
+</tr>
+<tr>
+<td>Eigenschap van</td>
+<td><a href="#ExterneKoppeling">mim:ExterneKoppeling</a>, <a href="#Relatiesoort">mim:Relatiesoort</a>, <a href="#Relatieklasse">mim:Relatieklasse</a>,</td>
+</tr>
+<tr>
+<td>Mogelijke waarden</td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#Geen">Geen</a><a href="http://modellen.mim-standaard.nl/def/mim#Gedeeld">Gedeeld</a><a href="http://modellen.mim-standaard.nl/def/mim#Compositie">Compositie</a></td>
+</tr>
+</tbody></table>
+</section><section id="mim-attribuut"><div class="header-wrapper"><h4 id="attribuut"><bdi class="secno">2.2.2 </bdi>mim:attribuut</h4><a class="self-link" href="#attribuut" aria-label="Permalink for Section 2.2.2"></a></div><table class="simple">
+<thead>
+<tr>
+<th>URI</th>
+<th><a href="http://modellen.mim-standaard.nl/def/mim#attribuut">http://modellen.mim-standaard.nl/def/mim#attribuut</a></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Definitie</td>
+<td>De binding van een attribuutsoort als eigenschap aan een objecttype.</td>
+</tr>
+<tr>
+<td>Bron</td>
+<td><a href="https://docs.geostandaarden.nl/mim/mim/#metagegeven-heeft-attribuut">Sectie 2.8.4.1 Metagegeven: heeft attribuut</a></td>
+</tr>
+<tr>
+<td>Eigenschap van</td>
+<td><a href="#Gegevensgroeptype">mim:Gegevensgroeptype</a>, <a href="#Objecttype">mim:Objecttype</a>, <a href="#Relatieklasse">mim:Relatieklasse</a>,</td>
+</tr>
+<tr>
+<td>Gerelateerde klasse</td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#Attribuutsoort">mim:Attribuutsoort</a></td>
+</tr>
+</tbody></table>
+</section><section id="attribuutkeuze-0"><div class="header-wrapper"><h4 id="attribuutkeuze"><bdi class="secno">2.2.3 </bdi>attribuutkeuze</h4><a class="self-link" href="#attribuutkeuze" aria-label="Permalink for Section 2.2.3"></a></div><table class="simple">
+<thead>
+<tr>
+<th>URI</th>
+<th><a href="http://modellen.mim-standaard.nl/def/mim#attribuutkeuze">http://modellen.mim-standaard.nl/def/mim#attribuutkeuze</a></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Definitie</td>
+<td>De binding van een keuze uit attributen aan een attribuutsoort of keuze.</td>
+</tr>
+<tr>
+<td>Bron</td>
+<td><a href="https://docs.geostandaarden.nl/mim/mim/#metagegeven-heeft-keuzeattribuut">Sectie 2.8.4.12 Metagegeven: heeft keuzeattribuut</a></td>
+</tr>
+<tr>
+<td>Eigenschap van</td>
+<td></td>
+</tr>
+</tbody></table>
+</section><section id="mim-authentiek"><div class="header-wrapper"><h4 id="authentiek"><bdi class="secno">2.2.4 </bdi>mim:authentiek</h4><a class="self-link" href="#authentiek" aria-label="Permalink for Section 2.2.4"></a></div><table class="simple">
+<thead>
+<tr>
+<th>URI</th>
+<th><a href="http://modellen.mim-standaard.nl/def/mim#authentiek">http://modellen.mim-standaard.nl/def/mim#authentiek</a></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Definitie</td>
+<td>Aanduiding of het kenmerk een authentiek gegeven betreft.</td>
+</tr>
+<tr>
+<td>Bron</td>
+<td><a href="https://docs.geostandaarden.nl/mim/mim/#metagegeven-authentiek">Sectie 2.8.2.14 Metagegeven: authentiek</a></td>
+</tr>
+<tr>
+<td>Eigenschap van</td>
+<td><a href="#Gegevensgroep">mim:Gegevensgroep</a>, <a href="#ExterneKoppeling">mim:ExterneKoppeling</a>, <a href="#Relatiesoort">mim:Relatiesoort</a>, <a href="#Attribuutsoort">mim:Attribuutsoort</a>, <a href="#Relatieklasse">mim:Relatieklasse</a>, <a href="#Relatierol">mim:Relatierol</a>,</td>
+</tr>
+<tr>
+<td>Mogelijke waarden</td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#Authentiek">Authentiek</a><a href="http://modellen.mim-standaard.nl/def/mim#OverigeAuthenticiteit">Overige authenticiteit</a><a href="http://modellen.mim-standaard.nl/def/mim#WettelijkGegeven">Wettelijk gegeven</a><a href="http://modellen.mim-standaard.nl/def/mim#Basisgegeven">Basisgegeven</a><a href="http://modellen.mim-standaard.nl/def/mim#LandelijkKerngegeven">LandelijkKerngegeven</a></td>
+</tr>
+</tbody></table>
+</section><section id="mim-begrip"><div class="header-wrapper"><h4 id="begrip"><bdi class="secno">2.2.5 </bdi>mim:begrip</h4><a class="self-link" href="#begrip" aria-label="Permalink for Section 2.2.5"></a></div><table class="simple">
+<thead>
+<tr>
+<th>URI</th>
+<th><a href="http://modellen.mim-standaard.nl/def/mim#begrip">http://modellen.mim-standaard.nl/def/mim#begrip</a></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Definitie</td>
+<td>Verwijzing naar een begrip, vanuit een modelelement, waarmee wordt aangegeven op welk begrip, of begrippen, het informatiemodel element is gebaseerd.</td>
+</tr>
+<tr>
+<td>Bron</td>
+<td><a href="https://docs.geostandaarden.nl/mim/mim/#metagegeven-begrip">Sectie 2.8.2.3 Metagegeven: begrip</a></td>
+</tr>
+<tr>
+<td>Eigenschap van</td>
+<td><a href="#DataElement">mim:DataElement</a>, <a href="#Gegevensgroeptype">mim:Gegevensgroeptype</a>, <a href="#Gegevensgroep">mim:Gegevensgroep</a>, <a href="#GestructureerdDatatype">mim:GestructureerdDatatype</a>, <a href="#Enumeratiewaarde">mim:Enumeratiewaarde</a>, <a href="#Codelijst">mim:Codelijst</a>, <a href="#ExterneKoppeling">mim:ExterneKoppeling</a>, <a href="#Objecttype">mim:Objecttype</a>, <a href="#Relatiesoort">mim:Relatiesoort</a>, <a href="#ReferentieElement">mim:ReferentieElement</a>, <a href="#KeuzeConstraint">mim:Keuzeconstraint</a>, <a href="#PrimitiefDatatype">mim:PrimitiefDatatype</a>, <a href="#Attribuutsoort">mim:Attribuutsoort</a>, <a href="#Relatieklasse">mim:Relatieklasse</a>, <a href="#Keuze">mim:Keuze</a>, <a href="#Referentielijst">mim:Referentielijst</a>, <a href="#Relatierol">mim:Relatierol</a>,</td>
+</tr>
+<tr>
+<td>Gerelateerde klasse</td>
+<td></td>
+</tr>
+</tbody></table>
+</section><section id="mim-bevatmodelelement"><div class="header-wrapper"><h4 id="bevatModelelement"><bdi class="secno">2.2.6 </bdi>mim:bevatModelelement</h4><a class="self-link" href="#bevatModelelement" aria-label="Permalink for Section 2.2.6"></a></div><table class="simple">
+<thead>
+<tr>
+<th>URI</th>
+<th><a href="http://modellen.mim-standaard.nl/def/mim#bevatModelelement">http://modellen.mim-standaard.nl/def/mim#bevatModelelement</a></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Eigenschap van</td>
+<td><a href="#Package">mim:Package</a>,</td>
+</tr>
+<tr>
+<td>Gerelateerde klasse</td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#Modelelement">mim:Modelelement</a></td>
+</tr>
+</tbody></table>
+</section><section id="mim-bron"><div class="header-wrapper"><h4 id="bron"><bdi class="secno">2.2.7 </bdi>mim:bron</h4><a class="self-link" href="#bron" aria-label="Permalink for Section 2.2.7"></a></div><table class="simple">
+<thead>
+<tr>
+<th>URI</th>
+<th><a href="http://modellen.mim-standaard.nl/def/mim#bron">http://modellen.mim-standaard.nl/def/mim#bron</a></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Definitie</td>
+<td>Aanduiding van het bronobject in een relatie tussen objecten. Een bronobject heeft middels een relatiesoort een relatie met een doelobject.</td>
+</tr>
+<tr>
+<td>Bron</td>
+<td><a href="https://docs.geostandaarden.nl/mim/mim/#metagegeven-bron">Sectie 2.8.2.18 Metagegeven: bron</a></td>
+</tr>
+<tr>
+<td>Eigenschap van</td>
+<td><a href="#RelatierolBron">mim:RelatierolBron</a>, <a href="#ExterneKoppeling">mim:ExterneKoppeling</a>, <a href="#Relatiesoort">mim:Relatiesoort</a>,</td>
+</tr>
+</tbody></table>
+</section><section id="mim-constraint-0"><div class="header-wrapper"><h4 id="constraint"><bdi class="secno">2.2.8 </bdi>mim:constraint</h4><a class="self-link" href="#constraint" aria-label="Permalink for Section 2.2.8"></a></div><table class="simple">
+<thead>
+<tr>
+<th>URI</th>
+<th><a href="http://modellen.mim-standaard.nl/def/mim#constraint">http://modellen.mim-standaard.nl/def/mim#constraint</a></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Definitie</td>
+<td>De binding van een constraint aan een modelelement.</td>
+</tr>
+<tr>
+<td>Bron</td>
+<td><a href="https://docs.geostandaarden.nl/mim/mim/#metagegeven-heeft-constraint">Sectie 2.8.4.14 Metagegeven: heeft constraint</a></td>
+</tr>
+<tr>
+<td>Eigenschap van</td>
+<td><a href="#Gegevensgroeptype">mim:Gegevensgroeptype</a>, <a href="#Objecttype">mim:Objecttype</a>, <a href="#Relatieklasse">mim:Relatieklasse</a>,</td>
+</tr>
+<tr>
+<td>Gerelateerde klasse</td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#Constraint">mim:Constraint</a></td>
+</tr>
+</tbody></table>
+</section><section id="mim-dataelement-0"><div class="header-wrapper"><h4 id="dataElement"><bdi class="secno">2.2.9 </bdi>mim:dataElement</h4><a class="self-link" href="#dataElement" aria-label="Permalink for Section 2.2.9"></a></div><table class="simple">
+<thead>
+<tr>
+<th>URI</th>
+<th><a href="http://modellen.mim-standaard.nl/def/mim#dataElement">http://modellen.mim-standaard.nl/def/mim#dataElement</a></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Definitie</td>
+<td>De binding van een data element aan een gestructureerd datatype.</td>
+</tr>
+<tr>
+<td>Bron</td>
+<td><a href="https://docs.geostandaarden.nl/mim/mim/#metagegeven-heeft-data-element">Sectie 2.8.4.8 Metagegeven: heeft data element</a></td>
+</tr>
+<tr>
+<td>Eigenschap van</td>
+<td><a href="#GestructureerdDatatype">mim:GestructureerdDatatype</a>,</td>
+</tr>
+<tr>
+<td>Gerelateerde klasse</td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#DataElement">mim:DataElement</a></td>
+</tr>
+</tbody></table>
+</section><section id="datatypekeuze-0"><div class="header-wrapper"><h4 id="datatypekeuze"><bdi class="secno">2.2.10 </bdi>datatypekeuze</h4><a class="self-link" href="#datatypekeuze" aria-label="Permalink for Section 2.2.10"></a></div><table class="simple">
+<thead>
+<tr>
+<th>URI</th>
+<th><a href="http://modellen.mim-standaard.nl/def/mim#datatypekeuze">http://modellen.mim-standaard.nl/def/mim#datatypekeuze</a></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Definitie</td>
+<td>De binding van een keuze uit datatypen aan een attribuutsoort.</td>
+</tr>
+<tr>
+<td>Bron</td>
+<td><a href="https://docs.geostandaarden.nl/mim/mim/#metagegeven-heeft-datatypekeuze">Sectie 2.8.4.11 Metagegeven: heeft datatypekeuze</a></td>
+</tr>
+<tr>
+<td>Eigenschap van</td>
+<td></td>
+</tr>
+</tbody></table>
+</section><section id="mim-doel"><div class="header-wrapper"><h4 id="doel"><bdi class="secno">2.2.11 </bdi>mim:doel</h4><a class="self-link" href="#doel" aria-label="Permalink for Section 2.2.11"></a></div><table class="simple">
+<thead>
+<tr>
+<th>URI</th>
+<th><a href="http://modellen.mim-standaard.nl/def/mim#doel">http://modellen.mim-standaard.nl/def/mim#doel</a></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Definitie</td>
+<td>Aanduiding van het gerelateerde objecttype die het eindpunt van de relatie aangeeft. Naar objecten van dit objecttype wordt verwezen.</td>
+</tr>
+<tr>
+<td>Bron</td>
+<td><a href="https://docs.geostandaarden.nl/mim/mim/#metagegeven-doel">Sectie 2.8.2.19 Metagegeven: doel</a></td>
+</tr>
+<tr>
+<td>Eigenschap van</td>
+<td><a href="#RelatierolDoel">mim:RelatierolDoel</a>, <a href="#ExterneKoppeling">mim:ExterneKoppeling</a>, <a href="#Relatiesoort">mim:Relatiesoort</a>,</td>
+</tr>
+<tr>
+<td>Gerelateerde klasse</td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#Objecttype">mim:Objecttype</a></td>
+</tr>
+</tbody></table>
+</section><section id="doelkeuze-0"><div class="header-wrapper"><h4 id="doelkeuze"><bdi class="secno">2.2.12 </bdi>doelkeuze</h4><a class="self-link" href="#doelkeuze" aria-label="Permalink for Section 2.2.12"></a></div><table class="simple">
+<thead>
+<tr>
+<th>URI</th>
+<th><a href="http://modellen.mim-standaard.nl/def/mim#doelkeuze">http://modellen.mim-standaard.nl/def/mim#doelkeuze</a></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Definitie</td>
+<td>De binding van een keuze uit relatiedoelen aan een objecttype.</td>
+</tr>
+<tr>
+<td>Bron</td>
+<td><a href="https://docs.geostandaarden.nl/mim/mim/#metagegeven-heeft-keuzerelatiedoel">Sectie 2.8.4.13 Metagegeven: heeft keuzerelatiedoel</a></td>
+</tr>
+<tr>
+<td>Eigenschap van</td>
+<td></td>
+</tr>
+</tbody></table>
+</section><section id="equivalent-0"><div class="header-wrapper"><h4 id="equivalent"><bdi class="secno">2.2.13 </bdi>equivalent</h4><a class="self-link" href="#equivalent" aria-label="Permalink for Section 2.2.13"></a></div><table class="simple">
+<thead>
+<tr>
+<th>URI</th>
+<th><a href="http://modellen.mim-standaard.nl/def/mim#equivalent">http://modellen.mim-standaard.nl/def/mim#equivalent</a></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Definitie</td>
+<td>Geeft aan dat een mim metamodel-element equivalent is met een meta-element uit een Linked Data vocabulaire</td>
+</tr>
+<tr>
+<td>Eigenschap van</td>
+<td></td>
+</tr>
+</tbody></table>
+</section><section id="mim-gegevensgroep-0"><div class="header-wrapper"><h4 id="gegevensgroep"><bdi class="secno">2.2.14 </bdi>mim:gegevensgroep</h4><a class="self-link" href="#gegevensgroep" aria-label="Permalink for Section 2.2.14"></a></div><table class="simple">
+<thead>
+<tr>
+<th>URI</th>
+<th><a href="http://modellen.mim-standaard.nl/def/mim#gegevensgroep">http://modellen.mim-standaard.nl/def/mim#gegevensgroep</a></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Definitie</td>
+<td>De binding van een gegevensgroep als groep van eigenschappen aan een objecttype of gegevensgroeptype.</td>
+</tr>
+<tr>
+<td>Bron</td>
+<td><a href="https://docs.geostandaarden.nl/mim/mim/#metagegeven-heeft-gegevensgroep">Sectie 2.8.4.2 Metagegeven: heeft gegevensgroep</a></td>
+</tr>
+<tr>
+<td>Eigenschap van</td>
+<td><a href="#Gegevensgroeptype">mim:Gegevensgroeptype</a>, <a href="#Objecttype">mim:Objecttype</a>, <a href="#Relatieklasse">mim:Relatieklasse</a>,</td>
+</tr>
+<tr>
+<td>Gerelateerde klasse</td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#Gegevensgroep">mim:Gegevensgroep</a></td>
+</tr>
+</tbody></table>
+</section><section id="mim-gegevensgroeptype-0"><div class="header-wrapper"><h4 id="gegevensgroeptype"><bdi class="secno">2.2.15 </bdi>mim:gegevensgroeptype</h4><a class="self-link" href="#gegevensgroeptype" aria-label="Permalink for Section 2.2.15"></a></div><table class="simple">
+<thead>
+<tr>
+<th>URI</th>
+<th><a href="http://modellen.mim-standaard.nl/def/mim#gegevensgroeptype">http://modellen.mim-standaard.nl/def/mim#gegevensgroeptype</a></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Definitie</td>
+<td>De binding van een gegevensgroeptype als waardetype aan een gegevensgroep.</td>
+</tr>
+<tr>
+<td>Bron</td>
+<td><a href="https://docs.geostandaarden.nl/mim/mim/#metagegeven-heeft-gegevensgroeptype">Sectie 2.8.4.3 Metagegeven: heeft gegevensgroeptype</a></td>
+</tr>
+<tr>
+<td>Eigenschap van</td>
+<td><a href="#Gegevensgroep">mim:Gegevensgroep</a>,</td>
+</tr>
+<tr>
+<td>Gerelateerde klasse</td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#Gegevensgroeptype">mim:Gegevensgroeptype</a></td>
+</tr>
+</tbody></table>
+</section><section id="mim-modelelement-0"><div class="header-wrapper"><h4 id="modelelement"><bdi class="secno">2.2.16 </bdi>mim:modelelement</h4><a class="self-link" href="#modelelement" aria-label="Permalink for Section 2.2.16"></a></div><table class="simple">
+<thead>
+<tr>
+<th>URI</th>
+<th><a href="http://modellen.mim-standaard.nl/def/mim#modelelement">http://modellen.mim-standaard.nl/def/mim#modelelement</a></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Eigenschap van</td>
+<td><a href="#KeuzeConstraint">mim:Keuzeconstraint</a>,</td>
+</tr>
+<tr>
+<td>Gerelateerde klasse</td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#Relatiesoort">mim:Relatiesoort</a></td>
+</tr>
+</tbody></table>
+</section><section id="mim-referentieelement-0"><div class="header-wrapper"><h4 id="referentieElement"><bdi class="secno">2.2.17 </bdi>mim:referentieElement</h4><a class="self-link" href="#referentieElement" aria-label="Permalink for Section 2.2.17"></a></div><table class="simple">
+<thead>
+<tr>
+<th>URI</th>
+<th><a href="http://modellen.mim-standaard.nl/def/mim#referentieElement">http://modellen.mim-standaard.nl/def/mim#referentieElement</a></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Definitie</td>
+<td>De binding van een referentie element aan een referentielijst.</td>
+</tr>
+<tr>
+<td>Bron</td>
+<td><a href="https://docs.geostandaarden.nl/mim/mim/#metagegeven-bevat-referentie-element">Sectie 2.8.4.10 Metagegeven: bevat referentie element</a></td>
+</tr>
+<tr>
+<td>Eigenschap van</td>
+<td><a href="#Referentielijst">mim:Referentielijst</a>,</td>
+</tr>
+<tr>
+<td>Gerelateerde klasse</td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#ReferentieElement">mim:ReferentieElement</a></td>
+</tr>
+</tbody></table>
+</section><section id="mim-relatiemodelleringstype"><div class="header-wrapper"><h4 id="relatiemodelleringstype"><bdi class="secno">2.2.18 </bdi>mim:relatiemodelleringstype</h4><a class="self-link" href="#relatiemodelleringstype" aria-label="Permalink for Section 2.2.18"></a></div><table class="simple">
+<thead>
+<tr>
+<th>URI</th>
+<th><a href="http://modellen.mim-standaard.nl/def/mim#relatiemodelleringstype">http://modellen.mim-standaard.nl/def/mim#relatiemodelleringstype</a></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Definitie</td>
+<td>Aanduiding van een in MIM gedefinieerd alternatief voor een modelleringswijze, en welke keuze hierbij is gemaakt.</td>
+</tr>
+<tr>
+<td>Bron</td>
+<td><a href="https://docs.geostandaarden.nl/mim/mim/#metagegeven-relatiemodelleringstype">Sectie 2.8.1.3 Metagegeven: relatiemodelleringstype</a></td>
+</tr>
+<tr>
+<td>Eigenschap van</td>
+<td><a href="#Informatiemodel">mim:Informatiemodel</a>,</td>
+</tr>
+<tr>
+<td>Mogelijke waarden</td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#RelatiesoortLeidend">Relatiesoort leidend</a><a href="http://modellen.mim-standaard.nl/def/mim#RelatierolLeidend">Relatierol leidend</a></td>
+</tr>
+</tbody></table>
+</section><section id="mim-relatierol-0"><div class="header-wrapper"><h4 id="relatierol"><bdi class="secno">2.2.19 </bdi>mim:relatierol</h4><a class="self-link" href="#relatierol" aria-label="Permalink for Section 2.2.19"></a></div><table class="simple">
+<thead>
+<tr>
+<th>URI</th>
+<th><a href="http://modellen.mim-standaard.nl/def/mim#relatierol">http://modellen.mim-standaard.nl/def/mim#relatierol</a></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Eigenschap van</td>
+<td><a href="#Relatiesoort">mim:Relatiesoort</a>,</td>
+</tr>
+<tr>
+<td>Gerelateerde klasse</td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#Relatierol">mim:Relatierol</a></td>
+</tr>
+</tbody></table>
+</section><section id="mim-subtype"><div class="header-wrapper"><h4 id="subtype"><bdi class="secno">2.2.20 </bdi>mim:subtype</h4><a class="self-link" href="#subtype" aria-label="Permalink for Section 2.2.20"></a></div><table class="simple">
+<thead>
+<tr>
+<th>URI</th>
+<th><a href="http://modellen.mim-standaard.nl/def/mim#subtype">http://modellen.mim-standaard.nl/def/mim#subtype</a></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Definitie</td>
+<td>Het objecttype dat een specialisatie is van een (ander) objecttype.</td>
+</tr>
+<tr>
+<td>Eigenschap van</td>
+<td><a href="#Generalisatie">mim:Generalisatie</a>,</td>
+</tr>
+</tbody></table>
+</section><section id="mim-supertype"><div class="header-wrapper"><h4 id="supertype"><bdi class="secno">2.2.21 </bdi>mim:supertype</h4><a class="self-link" href="#supertype" aria-label="Permalink for Section 2.2.21"></a></div><table class="simple">
+<thead>
+<tr>
+<th>URI</th>
+<th><a href="http://modellen.mim-standaard.nl/def/mim#supertype">http://modellen.mim-standaard.nl/def/mim#supertype</a></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Definitie</td>
+<td>De binding van een supertype aan een subtype middels een generalisatie.</td>
+</tr>
+<tr>
+<td>Bron</td>
+<td><a href="https://docs.geostandaarden.nl/mim/mim/#metagegeven-verwijst-naar-supertype">Sectie 2.8.4.4 Metagegeven: verwijst naar supertype</a></td>
+</tr>
+<tr>
+<td>Eigenschap van</td>
+<td><a href="#Generalisatie">mim:Generalisatie</a>,</td>
+</tr>
+</tbody></table>
+</section><section id="mim-type"><div class="header-wrapper"><h4 id="type"><bdi class="secno">2.2.22 </bdi>mim:type</h4><a class="self-link" href="#type" aria-label="Permalink for Section 2.2.22"></a></div><table class="simple">
+<thead>
+<tr>
+<th>URI</th>
+<th><a href="http://modellen.mim-standaard.nl/def/mim#type">http://modellen.mim-standaard.nl/def/mim#type</a></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Definitie</td>
+<td>Het datatype waarmee waarden van dit modelelement worden vastgelegd.</td>
+</tr>
+<tr>
+<td>Bron</td>
+<td><a href="https://docs.geostandaarden.nl/mim/mim/#metagegeven-type-domein-van-een-waarde-een-gegeven">Sectie 2.8.2.23 Metagegeven: type</a></td>
+</tr>
+<tr>
+<td>Eigenschap van</td>
+<td><a href="#DataElement">mim:DataElement</a>, <a href="#ReferentieElement">mim:ReferentieElement</a>, <a href="#Attribuutsoort">mim:Attribuutsoort</a>,</td>
+</tr>
+<tr>
+<td>Gerelateerde klasse</td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#Datatype">mim:Datatype</a></td>
+</tr>
+</tbody></table>
+</section><section id="mim-waarde"><div class="header-wrapper"><h4 id="waarde"><bdi class="secno">2.2.23 </bdi>mim:waarde</h4><a class="self-link" href="#waarde" aria-label="Permalink for Section 2.2.23"></a></div><table class="simple">
+<thead>
+<tr>
+<th>URI</th>
+<th><a href="http://modellen.mim-standaard.nl/def/mim#waarde">http://modellen.mim-standaard.nl/def/mim#waarde</a></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Definitie</td>
+<td>De binding van een enumeratiewaarde aan een enumeratie.</td>
+</tr>
+<tr>
+<td>Bron</td>
+<td><a href="https://docs.geostandaarden.nl/mim/mim/#metagegeven-bevat-enumeratiewaarde">Sectie 2.8.4.9 Metagegeven: bevat enumeratiewaarde</a></td>
+</tr>
+<tr>
+<td>Eigenschap van</td>
+<td><a href="#Enumeratie">mim:Enumeratie</a>,</td>
+</tr>
+<tr>
+<td>Gerelateerde klasse</td>
+<td><a href="http://modellen.mim-standaard.nl/def/mim#Enumeratiewaarde">mim:Enumeratiewaarde</a></td>
+</tr>
+</tbody></table>
+</section></section><section id="eigenschappen-metagegevens"><div class="header-wrapper"><h3 id="x2-3-eigenschappen-metagegevens"><bdi class="secno">2.3 </bdi>Eigenschappen (metagegevens)</h3><a class="self-link" href="#eigenschappen-metagegevens" aria-label="Permalink for Section 2.3"></a></div>
+<section id="mim-indicatieformelehistorie"><div class="header-wrapper"><h4 id="indicatieFormeleHistorie"><bdi class="secno">2.3.1 </bdi>mim:indicatieFormeleHistorie</h4><a class="self-link" href="#indicatieFormeleHistorie" aria-label="Permalink for Section 2.3.1"></a></div><table class="simple">
+<thead>
+<tr>
+<th>URI</th>
+<th><a href="http://modellen.mim-standaard.nl/def/mim#indicatieFormeleHistorie">http://modellen.mim-standaard.nl/def/mim#indicatieFormeleHistorie</a></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Definitie</td>
+<td>Indicatie of de formele historie van het kenmerk van het object bijgehouden wordt en te bevragen is.</td>
+</tr>
+<tr>
+<td>Bron</td>
+<td><a href="https://docs.geostandaarden.nl/mim/mim/#metagegeven-indicatie-formele-historie">Sectie 2.8.2.11 Metagegeven: indicatie formele historie</a></td>
+</tr>
+<tr>
+<td>Datatype</td>
+<td><a href="http://www.w3.org/2001/XMLSchema#boolean">boolean</a></td>
+</tr>
+<tr>
+<td>Eigenschap van</td>
+<td><a href="#Gegevensgroep">mim:Gegevensgroep</a>, <a href="#ExterneKoppeling">mim:ExterneKoppeling</a>, <a href="#Relatiesoort">mim:Relatiesoort</a>, <a href="#Attribuutsoort">mim:Attribuutsoort</a>, <a href="#Relatieklasse">mim:Relatieklasse</a>, <a href="#Relatierol">mim:Relatierol</a>,</td>
+</tr>
+</tbody></table>
+</section><section id="mim-indicatiematerielehistorie"><div class="header-wrapper"><h4 id="indicatieMaterieleHistorie"><bdi class="secno">2.3.2 </bdi>mim:indicatieMaterieleHistorie</h4><a class="self-link" href="#indicatieMaterieleHistorie" aria-label="Permalink for Section 2.3.2"></a></div><table class="simple">
+<thead>
+<tr>
+<th>URI</th>
+<th><a href="http://modellen.mim-standaard.nl/def/mim#indicatieMaterieleHistorie">http://modellen.mim-standaard.nl/def/mim#indicatieMaterieleHistorie</a></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Definitie</td>
+<td>Indicatie of de materiële historie van het kenmerk van het object te bevragen is.</td>
+</tr>
+<tr>
+<td>Bron</td>
+<td><a href="https://docs.geostandaarden.nl/mim/mim/#metagegeven-indicatie-materiele-historie">Sectie 2.8.2.10 Metagegeven: indicatie materiële historie</a></td>
+</tr>
+<tr>
+<td>Datatype</td>
+<td><a href="http://www.w3.org/2001/XMLSchema#boolean">boolean</a></td>
+</tr>
+<tr>
+<td>Eigenschap van</td>
+<td><a href="#Gegevensgroep">mim:Gegevensgroep</a>, <a href="#ExterneKoppeling">mim:ExterneKoppeling</a>, <a href="#Relatiesoort">mim:Relatiesoort</a>, <a href="#Attribuutsoort">mim:Attribuutsoort</a>, <a href="#Relatieklasse">mim:Relatieklasse</a>, <a href="#Relatierol">mim:Relatierol</a>,</td>
+</tr>
+</tbody></table>
+</section><section id="mim-mimextensie"><div class="header-wrapper"><h4 id="mimextensie"><bdi class="secno">2.3.3 </bdi>mim:mimextensie</h4><a class="self-link" href="#mimextensie" aria-label="Permalink for Section 2.3.3"></a></div><table class="simple">
+<thead>
+<tr>
+<th>URI</th>
+<th><a href="http://modellen.mim-standaard.nl/def/mim#mimextensie">http://modellen.mim-standaard.nl/def/mim#mimextensie</a></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Definitie</td>
+<td>De aanduiding van een extensie op MIM.</td>
+</tr>
+<tr>
+<td>Bron</td>
+<td></td>
+</tr>
+<tr>
+<td>Datatype</td>
+<td><a href="http://www.w3.org/2001/XMLSchema#string">string</a></td>
+</tr>
+<tr>
+<td>Eigenschap van</td>
+<td><a href="#Informatiemodel">mim:Informatiemodel</a>,</td>
+</tr>
+</tbody></table>
+</section><section id="mim-mimtaal"><div class="header-wrapper"><h4 id="mimtaal"><bdi class="secno">2.3.4 </bdi>mim:mimtaal</h4><a class="self-link" href="#mimtaal" aria-label="Permalink for Section 2.3.4"></a></div><table class="simple">
+<thead>
+<tr>
+<th>URI</th>
+<th><a href="http://modellen.mim-standaard.nl/def/mim#mimtaal">http://modellen.mim-standaard.nl/def/mim#mimtaal</a></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Definitie</td>
+<td>De aanduiding van de taal die gebruikt is voor de modelelementen.</td>
+</tr>
+<tr>
+<td>Bron</td>
+<td></td>
+</tr>
+<tr>
+<td>Datatype</td>
+<td><a href="http://www.w3.org/2001/XMLSchema#string">string</a></td>
+</tr>
+<tr>
+<td>Eigenschap van</td>
+<td><a href="#Informatiemodel">mim:Informatiemodel</a>,</td>
+</tr>
+</tbody></table>
+</section><section id="mim-mimversie"><div class="header-wrapper"><h4 id="mimversie"><bdi class="secno">2.3.5 </bdi>mim:mimversie</h4><a class="self-link" href="#mimversie" aria-label="Permalink for Section 2.3.5"></a></div><table class="simple">
+<thead>
+<tr>
+<th>URI</th>
+<th><a href="http://modellen.mim-standaard.nl/def/mim#mimversie">http://modellen.mim-standaard.nl/def/mim#mimversie</a></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Definitie</td>
+<td>De versie van de MIM specificatie die gebruikt is om het informatiemodel in uit te drukken.</td>
+</tr>
+<tr>
+<td>Bron</td>
+<td></td>
+</tr>
+<tr>
+<td>Datatype</td>
+<td><a href="http://www.w3.org/2001/XMLSchema#string">string</a></td>
+</tr>
+<tr>
+<td>Eigenschap van</td>
+<td><a href="#Informatiemodel">mim:Informatiemodel</a>,</td>
+</tr>
+</tbody></table>
+</section><section id="mim-alias"><div class="header-wrapper"><h4 id="alias"><bdi class="secno">2.3.6 </bdi>mim:alias</h4><a class="self-link" href="#alias" aria-label="Permalink for Section 2.3.6"></a></div><table class="simple">
+<thead>
+<tr>
+<th>URI</th>
+<th><a href="http://modellen.mim-standaard.nl/def/mim#alias">http://modellen.mim-standaard.nl/def/mim#alias</a></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Definitie</td>
+<td>De weergave van de naam van een modelelement in natuurlijke taal (niet technisch).</td>
+</tr>
+<tr>
+<td>Bron</td>
+<td><a href="https://docs.geostandaarden.nl/mim/mim/#metagegeven-alias">Sectie 2.8.2.2 Metagegeven: alias</a></td>
+</tr>
+<tr>
+<td>Datatype</td>
+<td><a href="http://www.w3.org/2001/XMLSchema#string">string</a> of <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString">langString</a></td>
+</tr>
+<tr>
+<td>Eigenschap van</td>
+<td><a href="#DataElement">mim:DataElement</a>, <a href="#Gegevensgroeptype">mim:Gegevensgroeptype</a>, <a href="#Gegevensgroep">mim:Gegevensgroep</a>, <a href="#GestructureerdDatatype">mim:GestructureerdDatatype</a>, <a href="#Informatiemodel">mim:Informatiemodel</a>, <a href="#Codelijst">mim:Codelijst</a>, <a href="#ExterneKoppeling">mim:ExterneKoppeling</a>, <a href="#Package">mim:Package</a>, <a href="#Domein">mim:Domein</a>, <a href="#Objecttype">mim:Objecttype</a>, <a href="#Relatiesoort">mim:Relatiesoort</a>, <a href="#ReferentieElement">mim:ReferentieElement</a>, <a href="#KeuzeConstraint">mim:Keuzeconstraint</a>, <a href="#PrimitiefDatatype">mim:PrimitiefDatatype</a>, <a href="#Attribuutsoort">mim:Attribuutsoort</a>, <a href="#Relatieklasse">mim:Relatieklasse</a>, <a href="#Keuze">mim:Keuze</a>, <a href="#Referentielijst">mim:Referentielijst</a>, <a href="#Relatierol">mim:Relatierol</a>,</td>
+</tr>
+</tbody></table>
+</section><section id="mim-begripsterm"><div class="header-wrapper"><h4 id="begripsterm"><bdi class="secno">2.3.7 </bdi>mim:begripsterm</h4><a class="self-link" href="#begripsterm" aria-label="Permalink for Section 2.3.7"></a></div><table class="simple">
+<thead>
+<tr>
+<th>URI</th>
+<th><a href="http://modellen.mim-standaard.nl/def/mim#begripsterm">http://modellen.mim-standaard.nl/def/mim#begripsterm</a></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Definitie</td>
+<td>Verwijzing naar een begrip in de vorm van een term, vanuit een modelelement, waarmee wordt aangegeven op welk begrip, of begrippen, het informatiemodel element is gebaseerd.</td>
+</tr>
+<tr>
+<td>Bron</td>
+<td><a href="https://docs.geostandaarden.nl/mim/mim/#metagegeven-begrip">Sectie 2.8.2.3 Metagegeven: begrip</a></td>
+</tr>
+<tr>
+<td>Datatype</td>
+<td><a href="http://www.w3.org/2001/XMLSchema#string">string</a> of <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString">langString</a></td>
+</tr>
+<tr>
+<td>Eigenschap van</td>
+<td><a href="#DataElement">mim:DataElement</a>, <a href="#Gegevensgroeptype">mim:Gegevensgroeptype</a>, <a href="#Gegevensgroep">mim:Gegevensgroep</a>, <a href="#GestructureerdDatatype">mim:GestructureerdDatatype</a>, <a href="#Enumeratiewaarde">mim:Enumeratiewaarde</a>, <a href="#Codelijst">mim:Codelijst</a>, <a href="#ExterneKoppeling">mim:ExterneKoppeling</a>, <a href="#Objecttype">mim:Objecttype</a>, <a href="#Relatiesoort">mim:Relatiesoort</a>, <a href="#ReferentieElement">mim:ReferentieElement</a>, <a href="#KeuzeConstraint">mim:Keuzeconstraint</a>, <a href="#PrimitiefDatatype">mim:PrimitiefDatatype</a>, <a href="#Attribuutsoort">mim:Attribuutsoort</a>, <a href="#Relatieklasse">mim:Relatieklasse</a>, <a href="#Keuze">mim:Keuze</a>, <a href="#Referentielijst">mim:Referentielijst</a>, <a href="#Relatierol">mim:Relatierol</a>,</td>
+</tr>
+</tbody></table>
+</section><section id="mim-code"><div class="header-wrapper"><h4 id="code"><bdi class="secno">2.3.8 </bdi>mim:code</h4><a class="self-link" href="#code" aria-label="Permalink for Section 2.3.8"></a></div><table class="simple">
+<thead>
+<tr>
+<th>URI</th>
+<th><a href="http://modellen.mim-standaard.nl/def/mim#code">http://modellen.mim-standaard.nl/def/mim#code</a></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Definitie</td>
+<td>De in een registratie of informatiemodel aan de enumeratiewaarde toegekend unieke code</td>
+</tr>
+<tr>
+<td>Bron</td>
+<td><a href="https://docs.geostandaarden.nl/mim/mim/#metagegeven-code">Sectie 2.8.2.27 Metagegeven: code</a></td>
+</tr>
+<tr>
+<td>Datatype</td>
+<td><a href="http://www.w3.org/2001/XMLSchema#string">string</a></td>
+</tr>
+<tr>
+<td>Eigenschap van</td>
+<td><a href="#Enumeratiewaarde">mim:Enumeratiewaarde</a>,</td>
+</tr>
+</tbody></table>
+</section><section id="mim-datumopname"><div class="header-wrapper"><h4 id="datumOpname"><bdi class="secno">2.3.9 </bdi>mim:datumOpname</h4><a class="self-link" href="#datumOpname" aria-label="Permalink for Section 2.3.9"></a></div><table class="simple">
+<thead>
+<tr>
+<th>URI</th>
+<th><a href="http://modellen.mim-standaard.nl/def/mim#datumOpname">http://modellen.mim-standaard.nl/def/mim#datumOpname</a></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Definitie</td>
+<td>De datum waarop het modelelement is opgenomen in het informatiemodel.</td>
+</tr>
+<tr>
+<td>Bron</td>
+<td><a href="https://docs.geostandaarden.nl/mim/mim/#metagegeven-datum-opname">Sectie 2.8.2.8 Metagegeven: datum opname</a></td>
+</tr>
+<tr>
+<td>Datatype</td>
+<td><a href="http://www.w3.org/2001/XMLSchema#date">date</a></td>
+</tr>
+<tr>
+<td>Eigenschap van</td>
+<td><a href="#DataElement">mim:DataElement</a>, <a href="#Gegevensgroeptype">mim:Gegevensgroeptype</a>, <a href="#Gegevensgroep">mim:Gegevensgroep</a>, <a href="#Enumeratie">mim:Enumeratie</a>, <a href="#GestructureerdDatatype">mim:GestructureerdDatatype</a>, <a href="#Informatiemodel">mim:Informatiemodel</a>, <a href="#Enumeratiewaarde">mim:Enumeratiewaarde</a>, <a href="#Codelijst">mim:Codelijst</a>, <a href="#View">mim:View</a>, <a href="#Generalisatie">mim:Generalisatie</a>, <a href="#ExterneKoppeling">mim:ExterneKoppeling</a>, <a href="#Domein">mim:Domein</a>, <a href="#Objecttype">mim:Objecttype</a>, <a href="#Relatiesoort">mim:Relatiesoort</a>, <a href="#ReferentieElement">mim:ReferentieElement</a>, <a href="#KeuzeConstraint">mim:Keuzeconstraint</a>, <a href="#PrimitiefDatatype">mim:PrimitiefDatatype</a>, <a href="#Attribuutsoort">mim:Attribuutsoort</a>, <a href="#Relatieklasse">mim:Relatieklasse</a>, <a href="#Keuze">mim:Keuze</a>, <a href="#Referentielijst">mim:Referentielijst</a>, <a href="#Extern">mim:Extern</a>, <a href="#Relatierol">mim:Relatierol</a>,</td>
+</tr>
+</tbody></table>
+</section><section id="mim-definitie"><div class="header-wrapper"><h4 id="definitie"><bdi class="secno">2.3.10 </bdi>mim:definitie</h4><a class="self-link" href="#definitie" aria-label="Permalink for Section 2.3.10"></a></div><table class="simple">
+<thead>
+<tr>
+<th>URI</th>
+<th><a href="http://modellen.mim-standaard.nl/def/mim#definitie">http://modellen.mim-standaard.nl/def/mim#definitie</a></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Definitie</td>
+<td>De beschrijving van de betekenis van dit modelelement.</td>
+</tr>
+<tr>
+<td>Bron</td>
+<td><a href="https://docs.geostandaarden.nl/mim/mim/#metagegeven-definitie">Sectie 2.8.2.5 Metagegeven: definitie</a></td>
+</tr>
+<tr>
+<td>Datatype</td>
+<td><a href="http://www.w3.org/2001/XMLSchema#string">string</a>, <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString">langString</a></td>
+</tr>
+<tr>
+<td>Eigenschap van</td>
+<td><a href="#Gegevensgroeptype">mim:Gegevensgroeptype</a>, <a href="#Enumeratiewaarde">mim:Enumeratiewaarde</a>, <a href="#Relatierol">mim:Relatierol</a>, <a href="#DataElement">mim:DataElement</a>, <a href="#Gegevensgroep">mim:Gegevensgroep</a>, <a href="#Enumeratie">mim:Enumeratie</a>, <a href="#GestructureerdDatatype">mim:GestructureerdDatatype</a>, <a href="#Codelijst">mim:Codelijst</a>, <a href="#View">mim:View</a>, <a href="#ExterneKoppeling">mim:ExterneKoppeling</a>, <a href="#Objecttype">mim:Objecttype</a>, <a href="#Relatiesoort">mim:Relatiesoort</a>, <a href="#ReferentieElement">mim:ReferentieElement</a>, <a href="#KeuzeConstraint">mim:Keuzeconstraint</a>, <a href="#PrimitiefDatatype">mim:PrimitiefDatatype</a>, <a href="#Attribuutsoort">mim:Attribuutsoort</a>, <a href="#Relatieklasse">mim:Relatieklasse</a>, <a href="#Keuze">mim:Keuze</a>, <a href="#Referentielijst">mim:Referentielijst</a>, <a href="#Extern">mim:Extern</a>,</td>
+</tr>
+</tbody></table>
+</section><section id="mim-formeelpatroon"><div class="header-wrapper"><h4 id="formeelPatroon"><bdi class="secno">2.3.11 </bdi>mim:formeelPatroon</h4><a class="self-link" href="#formeelPatroon" aria-label="Permalink for Section 2.3.11"></a></div><table class="simple">
+<thead>
+<tr>
+<th>URI</th>
+<th><a href="http://modellen.mim-standaard.nl/def/mim#formeelPatroon">http://modellen.mim-standaard.nl/def/mim#formeelPatroon</a></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Definitie</td>
+<td>Zoals patroon, formeel vastgelegd, uitgedrukt in een formele taal die door de computer wordt herkend.</td>
+</tr>
+<tr>
+<td>Bron</td>
+<td><a href="https://docs.geostandaarden.nl/mim/mim/#metagegeven-formeel-patroon">Sectie 2.8.2.26 Metagegeven: formeel patroon</a></td>
+</tr>
+<tr>
+<td>Datatype</td>
+<td><a href="http://www.w3.org/2001/XMLSchema#string">string</a></td>
+</tr>
+<tr>
+<td>Eigenschap van</td>
+<td><a href="#DataElement">mim:DataElement</a>, <a href="#GestructureerdDatatype">mim:GestructureerdDatatype</a>, <a href="#ReferentieElement">mim:ReferentieElement</a>, <a href="#PrimitiefDatatype">mim:PrimitiefDatatype</a>, <a href="#Attribuutsoort">mim:Attribuutsoort</a>,</td>
+</tr>
+</tbody></table>
+</section><section id="mim-herkomstdefinitie"><div class="header-wrapper"><h4 id="herkomstDefinitie"><bdi class="secno">2.3.12 </bdi>mim:herkomstDefinitie</h4><a class="self-link" href="#herkomstDefinitie" aria-label="Permalink for Section 2.3.12"></a></div><table class="simple">
+<thead>
+<tr>
+<th>URI</th>
+<th><a href="http://modellen.mim-standaard.nl/def/mim#herkomstDefinitie">http://modellen.mim-standaard.nl/def/mim#herkomstDefinitie</a></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Definitie</td>
+<td>De registratie of het informatiemodel waaruit de definitie is overgenomen dan wel een aanduiding die aangeeft uit welke bronnen de definitie is samengesteld.</td>
+</tr>
+<tr>
+<td>Bron</td>
+<td><a href="https://docs.geostandaarden.nl/mim/mim/#metagegeven-herkomst-definitie">Sectie 2.8.2.6 Metagegeven: herkomst definitie</a></td>
+</tr>
+<tr>
+<td>Datatype</td>
+<td><a href="http://www.w3.org/2001/XMLSchema#string">string</a>, <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString">langString</a></td>
+</tr>
+<tr>
+<td>Eigenschap van</td>
+<td><a href="#Gegevensgroep">mim:Gegevensgroep</a>, <a href="#ExterneKoppeling">mim:ExterneKoppeling</a>, <a href="#Objecttype">mim:Objecttype</a>, <a href="#Relatiesoort">mim:Relatiesoort</a>, <a href="#Attribuutsoort">mim:Attribuutsoort</a>, <a href="#Relatieklasse">mim:Relatieklasse</a>, <a href="#Relatierol">mim:Relatierol</a>, <a href="#Gegevensgroeptype">mim:Gegevensgroeptype</a>,</td>
+</tr>
+</tbody></table>
+</section><section id="mim-herkomst"><div class="header-wrapper"><h4 id="herkomst"><bdi class="secno">2.3.13 </bdi>mim:herkomst</h4><a class="self-link" href="#herkomst" aria-label="Permalink for Section 2.3.13"></a></div><table class="simple">
+<thead>
+<tr>
+<th>URI</th>
+<th><a href="http://modellen.mim-standaard.nl/def/mim#herkomst">http://modellen.mim-standaard.nl/def/mim#herkomst</a></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Definitie</td>
+<td>De registratie of het informatiemodel waaraan het modelelement ontleend is dan wel de eigen organisatie indien het door de eigen organisatie toegevoegd is.</td>
+</tr>
+<tr>
+<td>Bron</td>
+<td><a href="https://docs.geostandaarden.nl/mim/mim/#metagegeven-naam">Sectie 2.8.2.4 Metagegeven: naam</a></td>
+</tr>
+<tr>
+<td>Datatype</td>
+<td><a href="http://www.w3.org/2001/XMLSchema#string">string</a> of <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString">langString</a></td>
+</tr>
+<tr>
+<td>Eigenschap van</td>
+<td><a href="#Gegevensgroep">mim:Gegevensgroep</a>, <a href="#GestructureerdDatatype">mim:GestructureerdDatatype</a>, <a href="#Codelijst">mim:Codelijst</a>, <a href="#View">mim:View</a>, <a href="#ExterneKoppeling">mim:ExterneKoppeling</a>, <a href="#Objecttype">mim:Objecttype</a>, <a href="#Relatiesoort">mim:Relatiesoort</a>, <a href="#KeuzeConstraint">mim:Keuzeconstraint</a>, <a href="#PrimitiefDatatype">mim:PrimitiefDatatype</a>, <a href="#Attribuutsoort">mim:Attribuutsoort</a>, <a href="#Relatieklasse">mim:Relatieklasse</a>, <a href="#Keuze">mim:Keuze</a>, <a href="#Referentielijst">mim:Referentielijst</a>, <a href="#Extern">mim:Extern</a>, <a href="#Relatierol">mim:Relatierol</a>,</td>
+</tr>
+</tbody></table>
+</section><section id="mim-identificerend"><div class="header-wrapper"><h4 id="identificerend"><bdi class="secno">2.3.14 </bdi>mim:identificerend</h4><a class="self-link" href="#identificerend" aria-label="Permalink for Section 2.3.14"></a></div><table class="simple">
+<thead>
+<tr>
+<th>URI</th>
+<th><a href="http://modellen.mim-standaard.nl/def/mim#identificerend">http://modellen.mim-standaard.nl/def/mim#identificerend</a></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Definitie</td>
+<td>Een aanduiding dat een kenmerk of een combinatie van kenmerken van een objecttype uniek identificerend is voor alle objecten in de populatie van objecten van dit objecttype, of de aanduiding dat een referentie element uniek identificerend is voor alle lijst items in een referentielijst.</td>
+</tr>
+<tr>
+<td>Bron</td>
+<td><a href="https://docs.geostandaarden.nl/mim/mim/#metagegeven-identificerend">Sectie 2.8.2.9 Metagegeven: identificerend</a></td>
+</tr>
+<tr>
+<td>Datatype</td>
+<td><a href="http://www.w3.org/2001/XMLSchema#boolean">boolean</a></td>
+</tr>
+<tr>
+<td>Eigenschap van</td>
+<td><a href="#Relatiesoort">mim:Relatiesoort</a>, <a href="#ReferentieElement">mim:ReferentieElement</a>, <a href="#Attribuutsoort">mim:Attribuutsoort</a>, <a href="#Relatierol">mim:Relatierol</a>,</td>
+</tr>
+</tbody></table>
+</section><section id="mim-indicatieabstractobject"><div class="header-wrapper"><h4 id="indicatieAbstractObject"><bdi class="secno">2.3.15 </bdi>mim:indicatieAbstractObject</h4><a class="self-link" href="#indicatieAbstractObject" aria-label="Permalink for Section 2.3.15"></a></div><table class="simple">
+<thead>
+<tr>
+<th>URI</th>
+<th><a href="http://modellen.mim-standaard.nl/def/mim#indicatieAbstractObject">http://modellen.mim-standaard.nl/def/mim#indicatieAbstractObject</a></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Definitie</td>
+<td>Een indicatie die aangeeft of er objecten kunnen bestaan die getypeerd worden als zijnde objecten (instanties) van alleen dit objecttype. Een abstract objecttype moet altijd de generalisatie zijn van één of meerdere objecttypes die niet abstract zijn.</td>
+</tr>
+<tr>
+<td>Bron</td>
+<td><a href="https://docs.geostandaarden.nl/mim/mim/#metagegeven-indicatie-abstract-object">Sectie 2.8.2.28 Metagegeven: indicatie abstract object</a></td>
+</tr>
+<tr>
+<td>Datatype</td>
+<td><a href="http://www.w3.org/2001/XMLSchema#boolean">boolean</a></td>
+</tr>
+<tr>
+<td>Eigenschap van</td>
+<td><a href="#Objecttype">mim:Objecttype</a>,</td>
+</tr>
+</tbody></table>
+</section><section id="mim-indicatieafleidbaar"><div class="header-wrapper"><h4 id="indicatieAfleidbaar"><bdi class="secno">2.3.16 </bdi>mim:indicatieAfleidbaar</h4><a class="self-link" href="#indicatieAfleidbaar" aria-label="Permalink for Section 2.3.16"></a></div><table class="simple">
+<thead>
+<tr>
+<th>URI</th>
+<th><a href="http://modellen.mim-standaard.nl/def/mim#indicatieAfleidbaar">http://modellen.mim-standaard.nl/def/mim#indicatieAfleidbaar</a></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Definitie</td>
+<td>Aanduiding dat gegeven afleidbaar is uit andere attribuut- en/of relatiesoorten.</td>
+</tr>
+<tr>
+<td>Bron</td>
+<td><a href="https://docs.geostandaarden.nl/mim/mim/#metagegeven-indicatie-afleidbaar">Sectie 2.8.2.15 Metagegeven: indicatie afleidbaar</a></td>
+</tr>
+<tr>
+<td>Datatype</td>
+<td><a href="http://www.w3.org/2001/XMLSchema#boolean">boolean</a></td>
+</tr>
+<tr>
+<td>Eigenschap van</td>
+<td><a href="#ExterneKoppeling">mim:ExterneKoppeling</a>, <a href="#Relatiesoort">mim:Relatiesoort</a>, <a href="#Attribuutsoort">mim:Attribuutsoort</a>, <a href="#Relatieklasse">mim:Relatieklasse</a>,</td>
+</tr>
+</tbody></table>
+</section><section id="mim-indicatieclassificerend"><div class="header-wrapper"><h4 id="indicatieClassificerend"><bdi class="secno">2.3.17 </bdi>mim:indicatieClassificerend</h4><a class="self-link" href="#indicatieClassificerend" aria-label="Permalink for Section 2.3.17"></a></div><table class="simple">
+<thead>
+<tr>
+<th>URI</th>
+<th><a href="http://modellen.mim-standaard.nl/def/mim#indicatieClassificerend">http://modellen.mim-standaard.nl/def/mim#indicatieClassificerend</a></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Definitie</td>
+<td>Indicatie dat een attribuutsoort het objecttype waar het bij hoort classificeert in (sub)typen.</td>
+</tr>
+<tr>
+<td>Bron</td>
+<td><a href="https://docs.geostandaarden.nl/mim/mim/#metagegeven-indicatie-classificerend">Sectie 2.8.2.16 Metagegeven: identificatie classificerend</a></td>
+</tr>
+<tr>
+<td>Datatype</td>
+<td><a href="http://www.w3.org/2001/XMLSchema#boolean">boolean</a></td>
+</tr>
+<tr>
+<td>Eigenschap van</td>
+<td><a href="#Attribuutsoort">mim:Attribuutsoort</a>,</td>
+</tr>
+</tbody></table>
+</section><section id="mim-informatiedomein"><div class="header-wrapper"><h4 id="informatiedomein"><bdi class="secno">2.3.18 </bdi>mim:informatiedomein</h4><a class="self-link" href="#informatiedomein" aria-label="Permalink for Section 2.3.18"></a></div><table class="simple">
+<thead>
+<tr>
+<th>URI</th>
+<th><a href="http://modellen.mim-standaard.nl/def/mim#informatiedomein">http://modellen.mim-standaard.nl/def/mim#informatiedomein</a></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Definitie</td>
+<td>Aanduiding van het functionele domein waartoe het informatiemodel behoort.</td>
+</tr>
+<tr>
+<td>Bron</td>
+<td><a href="https://docs.geostandaarden.nl/mim/mim/#metagegeven-informatiedomein">Sectie 2.8.1.1 Metagegeven: informatiedomein</a></td>
+</tr>
+<tr>
+<td>Datatype</td>
+<td><a href="http://www.w3.org/2001/XMLSchema#string">string</a></td>
+</tr>
+<tr>
+<td>Eigenschap van</td>
+<td><a href="#Informatiemodel">mim:Informatiemodel</a>,</td>
+</tr>
+</tbody></table>
+</section><section id="mim-informatiemodeltype"><div class="header-wrapper"><h4 id="informatiemodeltype"><bdi class="secno">2.3.19 </bdi>mim:informatiemodeltype</h4><a class="self-link" href="#informatiemodeltype" aria-label="Permalink for Section 2.3.19"></a></div><table class="simple">
+<thead>
+<tr>
+<th>URI</th>
+<th><a href="http://modellen.mim-standaard.nl/def/mim#informatiemodeltype">http://modellen.mim-standaard.nl/def/mim#informatiemodeltype</a></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Definitie</td>
+<td>De beschrijving van de aard van het informatiemodel, hoe het geïnterpreteerd moet worden.</td>
+</tr>
+<tr>
+<td>Bron</td>
+<td><a href="https://docs.geostandaarden.nl/mim/mim/#metagegeven-informatiemodel-type">Sectie 2.8.1.2 Metagegeven: informatiemodeltype</a></td>
+</tr>
+<tr>
+<td>Eigenschap van</td>
+<td><a href="#Informatiemodel">mim:Informatiemodel</a>,</td>
+</tr>
+</tbody></table>
+</section><section id="mim-kardinaliteitrelatiebron"><div class="header-wrapper"><h4 id="kardinaliteitRelatieBron"><bdi class="secno">2.3.20 </bdi>mim:kardinaliteitRelatieBron</h4><a class="self-link" href="#kardinaliteitRelatieBron" aria-label="Permalink for Section 2.3.20"></a></div><table class="simple">
+<thead>
+<tr>
+<th>URI</th>
+<th><a href="http://modellen.mim-standaard.nl/def/mim#kardinaliteitRelatieBron">http://modellen.mim-standaard.nl/def/mim#kardinaliteitRelatieBron</a></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Definitie</td>
+<td>De kardinaliteit relatie bron geeft bij een relatiesoort aan hoeveel instanties van het bron objecttype in een relatie met één instantie van het doel objecttype verbonden kunnen zijn.</td>
+</tr>
+<tr>
+<td>Bron</td>
+<td><a href="https://docs.geostandaarden.nl/mim/mim/#metagegeven-kardinaliteit-relatie-bron">Sectie 2.8.2.13 Metagegeven: kardinaliteit relatie bron</a></td>
+</tr>
+<tr>
+<td>Datatype</td>
+<td><a href="http://www.w3.org/2001/XMLSchema#string">string</a></td>
+</tr>
+<tr>
+<td>Eigenschap van</td>
+<td><a href="#Relatiesoort">mim:Relatiesoort</a>,</td>
+</tr>
+</tbody></table>
+</section><section id="mim-kardinaliteit"><div class="header-wrapper"><h4 id="kardinaliteit"><bdi class="secno">2.3.21 </bdi>mim:kardinaliteit</h4><a class="self-link" href="#kardinaliteit" aria-label="Permalink for Section 2.3.21"></a></div><table class="simple">
+<thead>
+<tr>
+<th>URI</th>
+<th><a href="http://modellen.mim-standaard.nl/def/mim#kardinaliteit">http://modellen.mim-standaard.nl/def/mim#kardinaliteit</a></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Definitie</td>
+<td>De kardinaliteit geeft aan hoeveel keer waarden van dit kenmerk van een object kunnen voorkomen bij een object van het betreffende objecttype.</td>
+</tr>
+<tr>
+<td>Bron</td>
+<td><a href="https://docs.geostandaarden.nl/mim/mim/#metagegeven-kardinaliteit">Sectie 2.8.2.12 Metagegeven: kardinaliteit</a></td>
+</tr>
+<tr>
+<td>Datatype</td>
+<td><a href="http://www.w3.org/2001/XMLSchema#string">string</a></td>
+</tr>
+<tr>
+<td>Eigenschap van</td>
+<td><a href="#DataElement">mim:DataElement</a>, <a href="#Gegevensgroep">mim:Gegevensgroep</a>, <a href="#ExterneKoppeling">mim:ExterneKoppeling</a>, <a href="#Relatiesoort">mim:Relatiesoort</a>, <a href="#ReferentieElement">mim:ReferentieElement</a>, <a href="#Relatieklasse">mim:Relatieklasse</a>, <a href="#Relatierol">mim:Relatierol</a>, <a href="#Attribuutsoort">mim:Attribuutsoort</a>,</td>
+</tr>
+</tbody></table>
+</section><section id="mim-kwaliteit"><div class="header-wrapper"><h4 id="kwaliteit"><bdi class="secno">2.3.22 </bdi>mim:kwaliteit</h4><a class="self-link" href="#kwaliteit" aria-label="Permalink for Section 2.3.22"></a></div><table class="simple">
+<thead>
+<tr>
+<th>URI</th>
+<th><a href="http://modellen.mim-standaard.nl/def/mim#kwaliteit">http://modellen.mim-standaard.nl/def/mim#kwaliteit</a></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Definitie</td>
+<td>Beschrijving van de mate waarin in de registratie opgenomen objecten van het desbetreffende type volledig, juist, actueel, nauwkeurig en betrouwbaar zijn.</td>
+</tr>
+<tr>
+<td>Bron</td>
+<td><a href="https://docs.geostandaarden.nl/mim/mim/#metagegeven-kwaliteit">Sectie 2.8.2.30 Metagegeven: kwaliteit</a></td>
+</tr>
+<tr>
+<td>Datatype</td>
+<td><a href="http://www.w3.org/2001/XMLSchema#string">string</a></td>
+</tr>
+<tr>
+<td>Eigenschap van</td>
+<td><a href="#Objecttype">mim:Objecttype</a>,</td>
+</tr>
+</tbody></table>
+</section><section id="mim-lengte"><div class="header-wrapper"><h4 id="lengte"><bdi class="secno">2.3.23 </bdi>mim:lengte</h4><a class="self-link" href="#lengte" aria-label="Permalink for Section 2.3.23"></a></div><table class="simple">
+<thead>
+<tr>
+<th>URI</th>
+<th><a href="http://modellen.mim-standaard.nl/def/mim#lengte">http://modellen.mim-standaard.nl/def/mim#lengte</a></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Definitie</td>
+<td>De aanduiding van de lengte van een gegeven, volgens de aangegeven notatiewijze.</td>
+</tr>
+<tr>
+<td>Bron</td>
+<td><a href="https://docs.geostandaarden.nl/mim/mim/#metagegeven-lengte">Sectie 2.8.2.24 Metagegeven: lengte</a></td>
+</tr>
+<tr>
+<td>Datatype</td>
+<td><a href="http://www.w3.org/2001/XMLSchema#string">string</a></td>
+</tr>
+<tr>
+<td>Eigenschap van</td>
+<td><a href="#DataElement">mim:DataElement</a>, <a href="#ReferentieElement">mim:ReferentieElement</a>, <a href="#PrimitiefDatatype">mim:PrimitiefDatatype</a>, <a href="#Attribuutsoort">mim:Attribuutsoort</a>,</td>
+</tr>
+</tbody></table>
+</section><section id="mim-locatie"><div class="header-wrapper"><h4 id="locatie"><bdi class="secno">2.3.24 </bdi>mim:locatie</h4><a class="self-link" href="#locatie" aria-label="Permalink for Section 2.3.24"></a></div><table class="simple">
+<thead>
+<tr>
+<th>URI</th>
+<th><a href="http://modellen.mim-standaard.nl/def/mim#locatie">http://modellen.mim-standaard.nl/def/mim#locatie</a></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Definitie</td>
+<td>Als het type van het attribuutsoort een waardenlijst is, dan wordt hier de locatie waar deze te vinden is opgegeven.</td>
+</tr>
+<tr>
+<td>Bron</td>
+<td><a href="https://docs.geostandaarden.nl/mim/mim/#metagegeven-locatie">Sectie 2.8.2.22 Metagegeven: locatie</a></td>
+</tr>
+<tr>
+<td>Datatype</td>
+<td><a href="http://www.w3.org/2001/XMLSchema#string">string</a></td>
+</tr>
+<tr>
+<td>Eigenschap van</td>
+<td><a href="#Codelijst">mim:Codelijst</a>, <a href="#View">mim:View</a>, <a href="#Referentielijst">mim:Referentielijst</a>, <a href="#Extern">mim:Extern</a>,</td>
+</tr>
+</tbody></table>
+</section><section id="mim-mogelijkgeenwaarde"><div class="header-wrapper"><h4 id="mogelijkGeenWaarde"><bdi class="secno">2.3.25 </bdi>mim:mogelijkGeenWaarde</h4><a class="self-link" href="#mogelijkGeenWaarde" aria-label="Permalink for Section 2.3.25"></a></div><table class="simple">
+<thead>
+<tr>
+<th>URI</th>
+<th><a href="http://modellen.mim-standaard.nl/def/mim#mogelijkGeenWaarde">http://modellen.mim-standaard.nl/def/mim#mogelijkGeenWaarde</a></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Definitie</td>
+<td>Aanduiding dat van een aspect geen waarde is geregistreerd, maar dat onduidelijk is of de waarde er werkelijk ook niet is.</td>
+</tr>
+<tr>
+<td>Bron</td>
+<td><a href="https://docs.geostandaarden.nl/mim/mim/#metagegeven-mogelijk-geen-waarde">Sectie 2.8.2.17 Metagegeven: mogelijk geen waarde</a></td>
+</tr>
+<tr>
+<td>Datatype</td>
+<td><a href="http://www.w3.org/2001/XMLSchema#boolean">boolean</a></td>
+</tr>
+<tr>
+<td>Eigenschap van</td>
+<td><a href="#ExterneKoppeling">mim:ExterneKoppeling</a>, <a href="#Relatiesoort">mim:Relatiesoort</a>, <a href="#Attribuutsoort">mim:Attribuutsoort</a>, <a href="#Relatieklasse">mim:Relatieklasse</a>, <a href="#Relatierol">mim:Relatierol</a>,</td>
+</tr>
+</tbody></table>
+</section><section id="mim-naam"><div class="header-wrapper"><h4 id="naam"><bdi class="secno">2.3.26 </bdi>mim:naam</h4><a class="self-link" href="#naam" aria-label="Permalink for Section 2.3.26"></a></div><table class="simple">
+<thead>
+<tr>
+<th>URI</th>
+<th><a href="http://modellen.mim-standaard.nl/def/mim#naam">http://modellen.mim-standaard.nl/def/mim#naam</a></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Definitie</td>
+<td>De naam van een modelelement.</td>
+</tr>
+<tr>
+<td>Bron</td>
+<td><a href="https://docs.geostandaarden.nl/mim/mim/#metagegeven-naam">Sectie 2.8.2.1 Metagegeven: naam</a></td>
+</tr>
+<tr>
+<td>Datatype</td>
+<td><a href="http://www.w3.org/2001/XMLSchema#string">string</a>, <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString">langString</a></td>
+</tr>
+<tr>
+<td>Eigenschap van</td>
+<td><a href="#Codelijst">mim:Codelijst</a>, <a href="#DataElement">mim:DataElement</a>, <a href="#Gegevensgroeptype">mim:Gegevensgroeptype</a>, <a href="#Gegevensgroep">mim:Gegevensgroep</a>, <a href="#Enumeratie">mim:Enumeratie</a>, <a href="#GestructureerdDatatype">mim:GestructureerdDatatype</a>, <a href="#Informatiemodel">mim:Informatiemodel</a>, <a href="#Enumeratiewaarde">mim:Enumeratiewaarde</a>, <a href="#View">mim:View</a>, <a href="#ExterneKoppeling">mim:ExterneKoppeling</a>, <a href="#Package">mim:Package</a>, <a href="#Domein">mim:Domein</a>, <a href="#Objecttype">mim:Objecttype</a>, <a href="#Relatiesoort">mim:Relatiesoort</a>, <a href="#ReferentieElement">mim:ReferentieElement</a>, <a href="#KeuzeConstraint">mim:Keuzeconstraint</a>, <a href="#PrimitiefDatatype">mim:PrimitiefDatatype</a>, <a href="#Attribuutsoort">mim:Attribuutsoort</a>, <a href="#Relatieklasse">mim:Relatieklasse</a>, <a href="#Keuze">mim:Keuze</a>, <a href="#Referentielijst">mim:Referentielijst</a>, <a href="#Constraint">mim:Constraint</a>, <a href="#Extern">mim:Extern</a>, <a href="#Relatierol">mim:Relatierol</a>,</td>
+</tr>
+</tbody></table>
+</section><section id="mim-patroon"><div class="header-wrapper"><h4 id="patroon"><bdi class="secno">2.3.27 </bdi>mim:patroon</h4><a class="self-link" href="#patroon" aria-label="Permalink for Section 2.3.27"></a></div><table class="simple">
+<thead>
+<tr>
+<th>URI</th>
+<th><a href="http://modellen.mim-standaard.nl/def/mim#patroon">http://modellen.mim-standaard.nl/def/mim#patroon</a></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Definitie</td>
+<td>De verzameling van waarden die gegevens van deze attribuutsoort kunnen hebben, oftewel het waardenbereik, uitgedrukt in een specifieke structuur.</td>
+</tr>
+<tr>
+<td>Bron</td>
+<td><a href="https://docs.geostandaarden.nl/mim/mim/#metagegeven-patroon">Sectie 2.8.2.25 Metagegeven: patroon</a></td>
+</tr>
+<tr>
+<td>Datatype</td>
+<td><a href="http://www.w3.org/2001/XMLSchema#string">string</a></td>
+</tr>
+<tr>
+<td>Eigenschap van</td>
+<td><a href="#DataElement">mim:DataElement</a>, <a href="#GestructureerdDatatype">mim:GestructureerdDatatype</a>, <a href="#ReferentieElement">mim:ReferentieElement</a>, <a href="#PrimitiefDatatype">mim:PrimitiefDatatype</a>, <a href="#Attribuutsoort">mim:Attribuutsoort</a>,</td>
+</tr>
+</tbody></table>
+</section><section id="mim-populatie"><div class="header-wrapper"><h4 id="populatie"><bdi class="secno">2.3.28 </bdi>mim:populatie</h4><a class="self-link" href="#populatie" aria-label="Permalink for Section 2.3.28"></a></div><table class="simple">
+<thead>
+<tr>
+<th>URI</th>
+<th><a href="http://modellen.mim-standaard.nl/def/mim#populatie">http://modellen.mim-standaard.nl/def/mim#populatie</a></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Definitie</td>
+<td>Voor objecttypen die deel uitmaken van een (basis)registratie betreft dit de beschrijving van de exemplaren van het gedefinieerde objecttype die in de desbetreffende (basis)­registratie voorhanden zijn.</td>
+</tr>
+<tr>
+<td>Bron</td>
+<td><a href="https://docs.geostandaarden.nl/mim/mim/#metagegeven-populatie">Sectie 2.8.2.29 Metagegeven: populatie</a></td>
+</tr>
+<tr>
+<td>Datatype</td>
+<td><a href="http://www.w3.org/2001/XMLSchema#string">string</a></td>
+</tr>
+<tr>
+<td>Eigenschap van</td>
+<td><a href="#Objecttype">mim:Objecttype</a>,</td>
+</tr>
+</tbody></table>
+</section><section id="mim-specificatieformeel"><div class="header-wrapper"><h4 id="specificatieFormeel"><bdi class="secno">2.3.29 </bdi>mim:specificatieFormeel</h4><a class="self-link" href="#specificatieFormeel" aria-label="Permalink for Section 2.3.29"></a></div><table class="simple">
+<thead>
+<tr>
+<th>URI</th>
+<th><a href="http://modellen.mim-standaard.nl/def/mim#specificatieFormeel">http://modellen.mim-standaard.nl/def/mim#specificatieFormeel</a></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Definitie</td>
+<td>De beschrijving van de constraint in een formele specificatietaal, in OCL</td>
+</tr>
+<tr>
+<td>Datatype</td>
+<td><a href="http://www.w3.org/2001/XMLSchema#string">string</a></td>
+</tr>
+<tr>
+<td>Eigenschap van</td>
+<td><a href="#Constraint">mim:Constraint</a>,</td>
+</tr>
+</tbody></table>
+</section><section id="mim-specificatietekst"><div class="header-wrapper"><h4 id="specificatieTekst"><bdi class="secno">2.3.30 </bdi>mim:specificatieTekst</h4><a class="self-link" href="#specificatieTekst" aria-label="Permalink for Section 2.3.30"></a></div><table class="simple">
+<thead>
+<tr>
+<th>URI</th>
+<th><a href="http://modellen.mim-standaard.nl/def/mim#specificatieTekst">http://modellen.mim-standaard.nl/def/mim#specificatieTekst</a></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Definitie</td>
+<td>De specificatie van de constraint in normale tekst.</td>
+</tr>
+<tr>
+<td>Datatype</td>
+<td><a href="http://www.w3.org/2001/XMLSchema#string">string</a> of <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString">langString</a></td>
+</tr>
+<tr>
+<td>Eigenschap van</td>
+<td><a href="#Constraint">mim:Constraint</a>,</td>
+</tr>
+</tbody></table>
+</section><section id="mim-toelichting"><div class="header-wrapper"><h4 id="toelichting"><bdi class="secno">2.3.31 </bdi>mim:toelichting</h4><a class="self-link" href="#toelichting" aria-label="Permalink for Section 2.3.31"></a></div><table class="simple">
+<thead>
+<tr>
+<th>URI</th>
+<th><a href="http://modellen.mim-standaard.nl/def/mim#toelichting">http://modellen.mim-standaard.nl/def/mim#toelichting</a></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Definitie</td>
+<td>Een inhoudelijke toelichting op de definitie, ter verheldering of nadere duiding.</td>
+</tr>
+<tr>
+<td>Bron</td>
+<td><a href="https://docs.geostandaarden.nl/mim/mim/#metagegeven-toelichting">Sectie 2.8.2.7 Metagegeven: toelichting</a></td>
+</tr>
+<tr>
+<td>Datatype</td>
+<td><a href="http://www.w3.org/2001/XMLSchema#string">string</a> of <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString">langString</a></td>
+</tr>
+<tr>
+<td>Eigenschap van</td>
+<td><a href="#DataElement">mim:DataElement</a>, <a href="#Gegevensgroeptype">mim:Gegevensgroeptype</a>, <a href="#Gegevensgroep">mim:Gegevensgroep</a>, <a href="#Enumeratie">mim:Enumeratie</a>, <a href="#GestructureerdDatatype">mim:GestructureerdDatatype</a>, <a href="#Enumeratiewaarde">mim:Enumeratiewaarde</a>, <a href="#Codelijst">mim:Codelijst</a>, <a href="#View">mim:View</a>, <a href="#ExterneKoppeling">mim:ExterneKoppeling</a>, <a href="#Objecttype">mim:Objecttype</a>, <a href="#Relatiesoort">mim:Relatiesoort</a>, <a href="#ReferentieElement">mim:ReferentieElement</a>, <a href="#KeuzeConstraint">mim:Keuzeconstraint</a>, <a href="#PrimitiefDatatype">mim:PrimitiefDatatype</a>, <a href="#Attribuutsoort">mim:Attribuutsoort</a>, <a href="#Relatieklasse">mim:Relatieklasse</a>, <a href="#Keuze">mim:Keuze</a>, <a href="#Referentielijst">mim:Referentielijst</a>, <a href="#Extern">mim:Extern</a>, <a href="#Relatierol">mim:Relatierol</a>,</td>
+</tr>
+</tbody></table>
+</section><section id="mim-unidirectioneel"><div class="header-wrapper"><h4 id="unidirectioneel"><bdi class="secno">2.3.32 </bdi>mim:unidirectioneel</h4><a class="self-link" href="#unidirectioneel" aria-label="Permalink for Section 2.3.32"></a></div><table class="simple">
+<thead>
+<tr>
+<th>URI</th>
+<th><a href="http://modellen.mim-standaard.nl/def/mim#unidirectioneel">http://modellen.mim-standaard.nl/def/mim#unidirectioneel</a></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Definitie</td>
+<td>De richting van een relatie, welke betekenis geeft aan de relatie vanuit het perspectief van de eigenaar van de relatie.</td>
+</tr>
+<tr>
+<td>Bron</td>
+<td><a href="https://docs.geostandaarden.nl/mim/mim/#metagegeven-unidirectioneel">Sectie 2.8.2.20 Metagegeven: unidirectioneel</a></td>
+</tr>
+<tr>
+<td>Datatype</td>
+<td><a href="http://www.w3.org/2001/XMLSchema#boolean">boolean</a></td>
+</tr>
+<tr>
+<td>Eigenschap van</td>
+<td><a href="#ExterneKoppeling">mim:ExterneKoppeling</a>, <a href="#Relatiesoort">mim:Relatiesoort</a>, <a href="#Relatieklasse">mim:Relatieklasse</a>,</td>
+</tr>
+</tbody></table>
+</section></section></section>
+
+    
+
+<p role="navigation" id="back-to-top">
+    <a href="#title"><abbr title="Back to Top">↑</abbr></a>
+  </p><script id="respec-dfn-panel">(() => {
+// @ts-check
+if (document.respec) {
+  document.respec.ready.then(setupPanel);
+} else {
+  setupPanel();
+}
+
+function setupPanel() {
+  const listener = panelListener();
+  document.body.addEventListener("keydown", listener);
+  document.body.addEventListener("click", listener);
+}
+
+function panelListener() {
+  /** @type {HTMLElement} */
+  let panel = null;
+  return event => {
+    const { target, type } = event;
+
+    if (!(target instanceof HTMLElement)) return;
+
+    // For keys, we only care about Enter key to activate the panel
+    // otherwise it's activated via a click.
+    if (type === "keydown" && event.key !== "Enter") return;
+
+    const action = deriveAction(event);
+
+    switch (action) {
+      case "show": {
+        hidePanel(panel);
+        /** @type {HTMLElement} */
+        const dfn = target.closest("dfn, .index-term");
+        panel = document.getElementById(`dfn-panel-for-${dfn.id}`);
+        const coords = deriveCoordinates(event);
+        displayPanel(dfn, panel, coords);
+        break;
+      }
+      case "dock": {
+        panel.style.left = null;
+        panel.style.top = null;
+        panel.classList.add("docked");
+        break;
+      }
+      case "hide": {
+        hidePanel(panel);
+        panel = null;
+        break;
+      }
+    }
+  };
+}
+
+/**
+ * @param {MouseEvent|KeyboardEvent} event
+ */
+function deriveCoordinates(event) {
+  const target = /** @type HTMLElement */ (event.target);
+
+  // We prevent synthetic AT clicks from putting
+  // the dialog in a weird place. The AT events sometimes
+  // lack coordinates, so they have clientX/Y = 0
+  const rect = target.getBoundingClientRect();
+  if (
+    event instanceof MouseEvent &&
+    event.clientX >= rect.left &&
+    event.clientY >= rect.top
+  ) {
+    // The event probably happened inside the bounding rect...
+    return { x: event.clientX, y: event.clientY };
+  }
+
+  // Offset to the middle of the element
+  const x = rect.x + rect.width / 2;
+  // Placed at the bottom of the element
+  const y = rect.y + rect.height;
+  return { x, y };
+}
+
+/**
+ * @param {Event} event
+ */
+function deriveAction(event) {
+  const target = /** @type {HTMLElement} */ (event.target);
+  const hitALink = !!target.closest("a");
+  if (target.closest("dfn:not([data-cite]), .index-term")) {
+    return hitALink ? "none" : "show";
+  }
+  if (target.closest(".dfn-panel")) {
+    if (hitALink) {
+      return target.classList.contains("self-link") ? "hide" : "dock";
+    }
+    const panel = target.closest(".dfn-panel");
+    return panel.classList.contains("docked") ? "hide" : "none";
+  }
+  if (document.querySelector(".dfn-panel:not([hidden])")) {
+    return "hide";
+  }
+  return "none";
+}
+
+/**
+ * @param {HTMLElement} dfn
+ * @param {HTMLElement} panel
+ * @param {{ x: number, y: number }} clickPosition
+ */
+function displayPanel(dfn, panel, { x, y }) {
+  panel.hidden = false;
+  // distance (px) between edge of panel and the pointing triangle (caret)
+  const MARGIN = 20;
+
+  const dfnRects = dfn.getClientRects();
+  // Find the `top` offset when the `dfn` can be spread across multiple lines
+  let closestTop = 0;
+  let minDiff = Infinity;
+  for (const rect of dfnRects) {
+    const { top, bottom } = rect;
+    const diffFromClickY = Math.abs((top + bottom) / 2 - y);
+    if (diffFromClickY < minDiff) {
+      minDiff = diffFromClickY;
+      closestTop = top;
+    }
+  }
+
+  const top = window.scrollY + closestTop + dfnRects[0].height;
+  const left = x - MARGIN;
+  panel.style.left = `${left}px`;
+  panel.style.top = `${top}px`;
+
+  // Find if the panel is flowing out of the window
+  const panelRect = panel.getBoundingClientRect();
+  const SCREEN_WIDTH = Math.min(window.innerWidth, window.screen.width);
+  if (panelRect.right > SCREEN_WIDTH) {
+    const newLeft = Math.max(MARGIN, x + MARGIN - panelRect.width);
+    const newCaretOffset = left - newLeft;
+    panel.style.left = `${newLeft}px`;
+    /** @type {HTMLElement} */
+    const caret = panel.querySelector(".caret");
+    caret.style.left = `${newCaretOffset}px`;
+  }
+
+  // As it's a dialog, we trap focus.
+  // TODO: when <dialog> becomes a implemented, we should really
+  // use that.
+  trapFocus(panel, dfn);
+}
+
+/**
+ * @param {HTMLElement} panel
+ * @param {HTMLElement} dfn
+ * @returns
+ */
+function trapFocus(panel, dfn) {
+  /** @type NodeListOf<HTMLAnchorElement> elements */
+  const anchors = panel.querySelectorAll("a[href]");
+  // No need to trap focus
+  if (!anchors.length) return;
+
+  // Move focus to first anchor element
+  const first = anchors.item(0);
+  first.focus();
+
+  const trapListener = createTrapListener(anchors, panel, dfn);
+  panel.addEventListener("keydown", trapListener);
+
+  // Hiding the panel releases the trap
+  const mo = new MutationObserver(records => {
+    const [record] = records;
+    const target = /** @type HTMLElement */ (record.target);
+    if (target.hidden) {
+      panel.removeEventListener("keydown", trapListener);
+      mo.disconnect();
+    }
+  });
+  mo.observe(panel, { attributes: true, attributeFilter: ["hidden"] });
+}
+
+/**
+ *
+ * @param {NodeListOf<HTMLAnchorElement>} anchors
+ * @param {HTMLElement} panel
+ * @param {HTMLElement} dfn
+ * @returns
+ */
+function createTrapListener(anchors, panel, dfn) {
+  const lastIndex = anchors.length - 1;
+  let currentIndex = 0;
+  return event => {
+    switch (event.key) {
+      // Hitting "Tab" traps us in a nice loop around elements.
+      case "Tab": {
+        event.preventDefault();
+        currentIndex += event.shiftKey ? -1 : +1;
+        if (currentIndex < 0) {
+          currentIndex = lastIndex;
+        } else if (currentIndex > lastIndex) {
+          currentIndex = 0;
+        }
+        anchors.item(currentIndex).focus();
+        break;
+      }
+
+      // Hitting "Enter" on an anchor releases the trap.
+      case "Enter":
+        hidePanel(panel);
+        break;
+
+      // Hitting "Escape" returns focus to dfn.
+      case "Escape":
+        hidePanel(panel);
+        dfn.focus();
+        return;
+    }
+  };
+}
+
+/** @param {HTMLElement} panel */
+function hidePanel(panel) {
+  if (!panel) return;
+  panel.hidden = true;
+  panel.classList.remove("docked");
+}
+})()</script><script src="https://www.w3.org/scripts/TR/2021/fixup.js"></script><protonpass-root-ed71 data-protonpass-role="root"></protonpass-root-ed71></body></html>
