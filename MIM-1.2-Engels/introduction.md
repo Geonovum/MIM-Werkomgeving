@@ -32,8 +32,17 @@ We describe the metamodel in five chapters and an appendix. Continue reading the
 
 The chapter [Metamodel General](#metamodel-general) contains the description of all building blocks or model elements of the metamodel, in the form of definitions and specifications. The meaning and explanation of the model elements of the metamodel forms the material with which an exhaustive model specification can be prepared. While the illustrations in this general chapter are created in UML, the metamodel is certainly not limited to UML. There are separate chapters for implementing MIM in UML and Linked Data.
 
-The chapter [Metamodel in UML]](#metamodel-in-uml) describes what the implementation of MIM in [[UML]] looks like. This chapter describes how the metamodel relates to the UML metamodel, what extensions or specializations of the UML metamodel are made.
+The chapter [Metamodel in UML](#metamodel-in-uml) describes what the implementation of MIM in [[UML]] looks like. This chapter describes how the metamodel relates to the UML metamodel, what extensions or specializations of the UML metamodel are made.
 
-The chapter [Metamodel in Linked Data (LD)]](#metamodel-in-linked-data-ld) describes what the implementation of MIM in [[Linked-Data]] looks like. This section describes how the metamodel relates to the Linked Data metamodel. In doing so, a strict translation has been made. This means that the Linked Data model in question can only be used as a MIM model. For a model that can be used to actually express Linked Data, a translation is needed which is described in the appendix [Transformation MIM - RDFS/OWL/SHACL](#transformation-mim-rdfs-owl-shacl). In this way, such an RDFS/OWL/SHACL model can also be seen as an MIM model.
+The chapter [Metamodel in Linked Data (LD)](#metamodel-in-linked-data-ld) describes what the implementation of MIM in [[Linked-Data]] looks like. This section describes how the metamodel relates to the Linked Data metamodel. In doing so, a strict translation has been made. This means that the Linked Data model in question can only be used as a MIM model. For a model that can be used to actually express Linked Data, a translation is needed which is described in the appendix [Transformation MIM - RDFS/OWL/SHACL](#transformation-mim-rdfs-owl-shacl). In this way, such an RDFS/OWL/SHACL model can also be seen as an MIM model.
 
-The chapter []()
+In the chapter [Agreements &amp; Rules](#agreements-rules) we go into detail on a number of aspects. It is a more comprehensive explanation, in addition to the chapter [Metamodel General](#metamodel-general), consisting of further agreements, rules, guidelines and recommendations when applying the metamodel.
+
+Finally, a number of appendices are available. These are tools or additions to the MIM.
+
+- The appendix [Template naming conventions](#template-naming-conventions) provides a fill-in tool to document own naming conventions, per model element mentioned in this metamodel.
+- The appendix [Transformation MIM - RDFS/OWL/SHACL](#transformation-mim-rdfs-owl-shacl) describes how to transform an MIM model into an RDF model that can be used to actually express Linked Data in and vice versa (at the instance level, conforming to the specification at the information model level).
+
+## Usage Guide
+
+The building blocks, or model elements, described in this metamodel can be used to create an information model.  To create such an information model, it is usually sufficient to go through the chapter [Metamodel General](#metamodel-general), choose modeling with either UML or linked data, and read the corresponding chapter.  You can treat the other chapters for reference, for when questions arise during modeling. Next, take your favorite modeling tool and start modelleren.
