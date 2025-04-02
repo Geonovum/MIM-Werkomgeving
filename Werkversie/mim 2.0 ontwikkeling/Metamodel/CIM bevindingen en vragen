@@ -8,11 +8,13 @@ Verschillen ten opzichte van het logisch gegevensmodel die relevant zijn om te w
 - LGM zegt: deze fiets is verkocht aan een klant, maar de verkoop is van winkel aan klant, een verkoop is van een ingeschreven onderneming in het handelsregister
 - LGM zegt: een winkel is een locatie, en niet een rechtspersoon of natuurlijk persoon die een fiets kan verkopen en het geld kan ontvangen. Zie ook definitie van winkel, wat gedefinieerd is als een locatie, een vestiging. 
 - Bestelling is niet gemodelleerd, die is tussen leverancier en de fietsenwinkelleverancier, wel gemodelleerd is de aflevering van de leverancier aan de fietsenwinkelvestiging
+- De verkoop, is dat de koop (de bestelling) of de levering (het verkoopbonnetje)? Moet blijken uit de definitie. De definitie in het SBM is de koop. 
 
 Wat er lijkt te ontbreken maar (mogelijk) wel relevant is: 
 - Classificatie vs typering in supertype-subtype (objectttypen met andere eigenschappen) 
-- Wanneer classificeren of typeren? 
-- Gebruiken we bij classificaties, zoals bij een classificerend attribuuttype, bij voorkeur het woord soort (en juist niet type)? 
+  - Wanneer classificeren of typeren? 
+  - Gebruiken we bij classificaties, zoals bij een classificerend attribuuttype, bij voorkeur het woord soort (en juist niet type)? 
+- Bestaansafhankelijkheid en ontstaansafhankelijkheid, is UML aggregatietype=compoment voldoende?
 
 MIM lijkt nog misschien wat beperkt te zijn op het gebied van het modelleren van een relatietype:
 - relaties kun je van a naar b lezen of van b naar a, zijn die 2 relaties of 1 met twee beschrijvende aspecten, het concept inverse speelt hier ook een rol 
@@ -22,8 +24,9 @@ MIM lijkt nog misschien wat beperkt te zijn op het gebied van het modelleren van
 Casus (beetje) realistisch(er) maken, (te gezochte onlogische verwijderen en vervangen door realistische) 
 - geografische locatie bij winkel, bij adres, keuze hiervan ook weg
 - batterij hernoemen naar fietsaccu en ook een artikel maken zodat er ook een reden is om artikel te hebben in dit CIM 
+- in primer opnemen dat het bij de verkoop niet om de levering gaat maar om de bestelling (de koop) 
 
-MIM voor mensen die geen modeleertaal kennnn:
+MIM voor mensen die geen modelleertaal kennnn:
 - Wel of niet generalisaties en relatieklassen, als je een CIM vooral als begrijpmodel wilt gebruiken (dan eenvoudige houden)
   - Standpunt: dat mag ook, maar een CIM is precies en tegelijkertijd op een eenvoudige manier kunnen presenteren. 
 
@@ -37,3 +40,4 @@ Standpunt: een CIM beschrijft een informatiebehoefte, en moet dekkend zijn voor 
 Je kan ook te ver gaan: 
 - nieuwsbrief specialiceren naar fietsenwinkel nieuwsbrief, dat de nieuwsbrief over de fietsenwinkel gaat is niet een apart type nieuwsbrief
 - kenbaar maken dat je een nieuwsbrief wilt ontvangen is wat anders dan een nieuwsbrief zelf, extra begrip nodig? Nee, dat gaat te ver, de tekst 'heeft interesse aangegeven voor het ontvangen van een nieuwsbrief'
+
