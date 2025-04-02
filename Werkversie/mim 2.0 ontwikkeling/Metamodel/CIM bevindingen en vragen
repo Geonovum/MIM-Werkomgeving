@@ -9,5 +9,8 @@ Verschillen ten opzichte van het logisch gegevensmodel die relevant zijn om te w
 - LGM zegt: een winkel is een locatie, en niet een rechtspersoon of natuurlijk persoon die een fiets kan verkopen en het geld kan ontvangen. Zie ook definitie van winkel, wat gedefinieerd is als een locatie, een vestiging. 
 - Bestelling is niet gemodelleerd, die is tussen leverancier en de fietsenwinkelleverancier, wel gemodelleerd is de aflevering van de leverancier aan de fietsenwinkelvestiging
 
-
+Wat er lijkt te ontbreken maar (mogelijk) wel relevant is: 
+- Classificatie vs typering in supertype-subtype (objectttypen met andere eigenschappen) 
+- Wanneer classificeren of typeren? 
+- Gebruiken we bij classificaties, zoals bij een classificerend attribuuttype, bij voorkeur het woord soort (en juist niet type)? 
 
