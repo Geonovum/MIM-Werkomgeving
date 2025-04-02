@@ -2,7 +2,7 @@ Bevindingen bij maken CIM, van o.a. fietsenwinkel
 
 Extern en view packages
 1. Naamgeving van dit package: gebruiken we informatiedomein of naam van model?
-2. Bij objecttype in extern: wel of niet meemodelleren identificatie
+2. Bij objecttype in extern: wel of niet meemodelleren identificatie (en als je meer wilt modelleren dan dit, dan een view) 
 
 Verschillen ten opzichte van het logisch gegevensmodel die relevant zijn om te weten 
 - LGM zegt: deze fiets is verkocht aan een klant, maar de verkoop is van winkel aan klant, een verkoop is van een ingeschreven onderneming in het handelsregister
@@ -14,3 +14,26 @@ Wat er lijkt te ontbreken maar (mogelijk) wel relevant is:
 - Wanneer classificeren of typeren? 
 - Gebruiken we bij classificaties, zoals bij een classificerend attribuuttype, bij voorkeur het woord soort (en juist niet type)? 
 
+MIM lijkt nog misschien wat beperkt te zijn op het gebied van het modelleren van een relatietype:
+- relaties kun je van a naar b lezen of van b naar a, zijn die 2 relaties of 1 met twee beschrijvende aspecten, het concept inverse speelt hier ook een rol 
+- wat in de ene modelleertaal een relatie heet, heet in de andere een relatieklasse
+- misschien is het opnemen van 2 relaties (a naar b en b naar a) wel een oplossing die te vertalen is naar ale modelleertalen? 
+
+Casus (beetje) realistisch(er) maken, (te gezochte onlogische verwijderen en vervangen door realistische) 
+- geografische locatie bij winkel, bij adres, keuze hiervan ook weg
+- batterij hernoemen naar fietsaccu en ook een artikel maken zodat er ook een reden is om artikel te hebben in dit CIM 
+
+MIM voor mensen die geen modeleertaal kennnn:
+- Wel of niet generalisaties en relatieklassen, als je een CIM vooral als begrijpmodel wilt gebruiken (dan eenvoudige houden)
+  - Standpunt: dat mag ook, maar een CIM is precies en tegelijkertijd op een eenvoudige manier kunnen presenteren. 
+
+Vraag: tekstuele representatie van MIM, bv. een aggregatie met een gesloten wiebertje in UML, verbaliseren als: X is een component van Y, en is bestaansafhankelijk van Y. 
+
+Standpunt: een CIM beschrijft een informatiebehoefte, en moet dekkend zijn voor alle gegevens die er zijn, waar informatiebehoefte voor is, niet meer en ook niet minder (meer kan zodra je ook de gegevens ervoor wilt, maar het is expliciet niet de bedoeling om alle begrippen een plek te geven in je CIM) 
+- Upper ontologies even nog niet meegenomen 
+- een CIM moet geen terminologie issues geven aan een logisch gegevensmodel, zoals termen bedenken voor relatierollen als het CIM die zelf niet heeft beschreven. Modelleer dus altijd rollen (misschien kan je ze weglaten als dit om dezelfde term gaat als de naam van het target objecttype) 
+- richting van een relatie of relaties 2 kanten op beschrijven 
+
+Je kan ook te ver gaan: 
+- nieuwsbrief specialiceren naar fietsenwinkel nieuwsbrief, dat de nieuwsbrief over de fietsenwinkel gaat is niet een apart type nieuwsbrief
+- kenbaar maken dat je een nieuwsbrief wilt ontvangen is wat anders dan een nieuwsbrief zelf, extra begrip nodig? Nee, dat gaat te ver, de tekst 'heeft interesse aangegeven voor het ontvangen van een nieuwsbrief'
