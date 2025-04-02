@@ -1,6 +1,6 @@
 # Introduction
 
-Before you is the information modeling metamodel (MIM), for describing information models. With the meta-model, we have established a common starting point for creating information models. The model contains clear agreements on defining data specifications while accommodating different levels of modeling. A special feature of the model is that the agreements span multiple levels of government. This document was prepared with knowledge contributed by the MIM community.
+This documents presents the information metamodel (MIM), for describing information models. With the meta-model, we have established a common starting point for creating information models. The model contains clear agreements on defining data specifications while accommodating different levels of modeling. A special feature of the model is that the agreements span multiple levels of government. This document was prepared with knowledge contributed by the MIM community.
 Kadaster, Geonovum, VNG Realisatie, DUO and other parties contributed.
 
 ## Scope.
