@@ -45,4 +45,13 @@ Finally, a number of appendices are available. These are tools or additions to t
 
 ## Usage Guide
 
-The building blocks, or model elements, described in this metamodel can be used to create an information model.  To create such an information model, it is usually sufficient to go through the chapter [Metamodel General](#metamodel-general), choose modeling with either UML or linked data, and read the corresponding chapter.  You can treat the other chapters for reference, for when questions arise during modeling. Next, take your favorite modeling tool and start modelleren.
+The building blocks, or model elements, described in this meta-model can be used to create an information model.  To create such an information model, it usually suffices to go through the chapter Metamodel General, choose modelling with either UML or linked data, and read the corresponding chapter.  You can treat the other chapters as reference work, for when questions arise during modelling. Next, take your favourite modelling tool and get started. Tools have been created for certain modelling tools, so you can use these tools to create the model elements by clicking on them and dragging them to a diagram, for example, and also validate whether your model correctly follows the MIM (which is automatic if you use the tools). Finally, it is possible to look at information models of organisations that have already published an MIM information model. Detailed examples will also be created for specific modelling and queries.
+
+
+## What is an information model 
+
+When we want to collect, register or exchange information on certain topics, it is important to first describe this information properly. We do this so that it is clear and unambiguous for anyone working with the information: 
+- what the information is about, e.g. information about a person or a building. Person and building are called the objects, the subjects of conversation 
+- that these subjects of conversation are modelled as information objects 
+- the properties/characteristics themselves, whose information we keep, e.g. the name of a person or the year of construction of a building; 
+- what the meaning of that information is, the semantics - how this information is structured, in terms of interrelationships and the internal structure of the data.
