@@ -1,3 +1,13 @@
 Bevindingen bij maken CIM, van o.a. fietsenwinkel
 
+Extern en view packages
+1. Naamgeving van dit package: gebruiken we informatiedomein of naam van model?
+2. Bij objecttype in extern: wel of niet meemodelleren identificatie
+
+Verschillen ten opzichte van het logisch gegevensmodel die relevant zijn om te weten 
+- LGM zegt: deze fiets is verkocht aan een klant, maar de verkoop is van winkel aan klant, een verkoop is van een ingeschreven onderneming in het handelsregister
+- LGM zegt: een winkel is een locatie, en niet een rechtspersoon of natuurlijk persoon die een fiets kan verkopen en het geld kan ontvangen. Zie ook definitie van winkel, wat gedefinieerd is als een locatie, een vestiging. 
+- Bestelling is niet gemodelleerd, die is tussen leverancier en de fietsenwinkelleverancier, wel gemodelleerd is de aflevering van de leverancier aan de fietsenwinkelvestiging
+
+
 
