@@ -280,7 +280,20 @@ The management of the MIM is handled by Geonovum, with support from the Kadaster
 
 ## Standard References
 
-#Naam**Referentie**1.Unified Modeling Language (UML)[[UML]]2.OMG Unified Modeling Language TM versie 2.5[[OMG]]3.RDF Concepts and abstract syntax[[RDF11-CONCEPTS]]4.Shape Constraint Language[[SHACL]]5.Stelselcatalogus[[SCAT]]6.GAB[[GAB]]7.Handreiking gegevensbeschrijving (NORA)[[NORA]]8.ISO 11404[[ISO-11404]]9.ISO 8601[[ISO-8601]]10.Formeel patroon (Reguliere Expressies)[[PERLRE]]11.OCL[[OCL]]12.NEN 3610 Basismodel Geo-informatie (vanaf /A1:2016)[[NEN3610]]
+| \#  | Naam                                                | **Referentie**        |
+|-----|-----------------------------------------------------|-----------------------|
+| 1.  | Unified Modeling Language (UML)                     | [[UML]]               |
+| 2.  | OMG Unified Modeling Language TM versie 2.5         | [[OMG]]               |
+| 3.  | RDF Concepts and abstract syntax                    | [[RDF11-CONCEPTS]]    |
+| 4.  | Shape Constraint Language                           | [[SHACL]]             |
+| 5.  | Stelselcatalogus                                    | [[SCAT]]              |
+| 6.  | GAB                                                 | [[GAB]]               |
+| 7.  | Handreiking gegevensbeschrijving (NORA)             | [[NORA]]              |
+| 8.  | ISO 11404                                           | [[ISO-11404]]         |
+| 9.  | ISO 8601                                            | [[ISO-8601]]          |
+| 10. | Formeel patroon (Reguliere Expressies)              | [[PERLRE]]            |
+| 11. | OCL                                                 | [[OCL]]               |
+| 12. | NEN 3610 Basismodel Geo-informatie (vanaf /A1:2016) | [[NEN3610]]           |
 
 The Stelselcatalogus [[SCAT]], the GAB [[GAB]], and the Handreiking gegevensbeschrijving [[NORA]] intersect in several areas, but there may be differences in the agreements made at these interfaces. For the meta-model, we therefore apply the following rule of play: the Stelselcatalogus is leading as much as possible, followed by the GAB, and lastly, the manual.
 
