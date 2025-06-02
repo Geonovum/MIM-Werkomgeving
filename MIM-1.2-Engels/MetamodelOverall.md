@@ -786,4 +786,30 @@ For example: A Pand (building unit) is the smallest unit that, at the time of it
 
 *Application*: all model elements.
 
-#### 
+#### Metadata: **Origin definition**
+
+<aside class="definition">
+  <dfn>Resource definition</dfn>The record or information model from which the definition is taken or a designation indicating the sources from which the definition is composed.
+</aside>
+
+
+*Explanation*
+
+
+Usually this metadata specifies ``my IM'`, for example ``BRK'` if it is the information model of the BRK.
+
+
+But the origin of the definition of the attribute `address` may also have as a value `‘BAG’`. Or `"BAG and BRK"`, 
+where the documentation further explains what this means, such as that the definition was adopted and then further refined within its own information model, or further split into two separate definitions.
+
+
+This metadata is not intended for cases where a definition is only inspired by another definition, or the other definition is actually redefined to such an extent that the original definition no longer applies.
+
+
+The point is to make it clear to users how information conforming to this information model relates to information conforming to the other information model. 
+The metadata entry `Resource definition` clarifies this.
+
+
+*Application*: all model elements that have the metadata `Definition`.
+
+#### Metadata: **Explanation**
