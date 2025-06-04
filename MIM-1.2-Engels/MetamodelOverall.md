@@ -1415,4 +1415,357 @@ Use on attribute types, data elements, and reference elements with a primitive d
 
 A model element may have only one occurrence of metadata Minimum Value Inclusive or Minimum Value Exclusive.
 
-#### Metadata: **Maximum Value Inclusive**
+#### Metadata: **Maximum value inclusive**
+
+<aside class="definition">
+  <dfn>Maximum value inclusive</dfn>
+  Maximum value inclusive (`<=`) is the upper bound of the value range for an attribute type or data element typed with a primitive datatype, including that value itself. The maximum value must be of the same primitive datatype as the datatype of the model element to which it applies.
+</aside>
+
+*Explanation*
+
+For example, the minimum value for a validity date.
+
+*Application*
+
+Use on attribute types, data elements, and reference elements with a primitive datatype of type:
+- Integer
+- Decimal
+- Float
+- Real
+- DateTime
+- Date
+
+A model element may only have one occurrence of metadata `Maximum value inclusive` or `Maximum value exclusive`.
+
+#### Metadata: **Maximum value exclusive**
+
+<aside class="definition">
+  <dfn>Maximum value exclusive</dfn>
+  Maximum value exclusive (`<`) is the upper bound of the value range for an attribute type or data element typed with a primitive datatype, excluding that value itself. The maximum value must be of the same primitive datatype as the datatype of the model element to which it applies.
+</aside>
+
+*Explanation*
+
+For example, the maximum value for a validity date.
+
+*Application*
+
+Use on attribute types, data elements, and reference elements with a primitive datatype of type:
+- Integer
+- Decimal
+- Float
+- Real
+- DateTime
+- Date
+
+A model element may only have one occurrence of metadata `Maximum value inclusive` or `Maximum value exclusive`.
+
+#### Metadata: **Mixin**
+
+<aside class="definition">
+  <dfn>Mixin</dfn>Metadata to indicate for a generalization that in an implementation that does not support multiple inheritance, the properties of the superclass are inherited by the subclass. The superclass itself does not appear in the implementation.
+</aside>
+
+*Explanation:*
+
+`Mixin` can be used as metadata for a `Generalization` in logical data models if multiple inheritance is involved, i.e., multiple superclasses on a subclass. It is included to solve multiple inheritance implementation issues in languages/specifications that do not (or not easily) support it. `Mixin = Yes` indicates that this generalization and also the related superclass do not appear in the implementation, but that properties (attribute types and relationship types/roles) are inherited by the subclass. `Mixin = Yes` makes it possible to retain multiple inheritance in the MIM level 3 model if desired, but to take it into account in the implementation if necessary. The modeler can thus indicate which generalization is implemented in an alternative way. Languages that do support multiple inheritance ignore this metadata.
+
+<figure id="Mixin">
+  <img src="media/Mixin.png" alt="" />
+  <figcaption>Diagram: Example of multiple inheritance with the metadata 'Mixin = "Yes"' on a generalization.</figcaption>
+</figure>
+
+*Application:* Generalization and only at MIM level 3. Do not use for generalizations between datatypes.
+
+### Model element bindings - metadata
+
+Bindings indicate how model elements can and may be connected to each other.
+
+Some examples:
+ - Binding between an `«Objecttype»` and an `«Attribuutsoort»`, to indicate that an `«Attribuutsoort»` can be modeled as a property of an `«Objecttype»`
+ - Binding between an `«Objecttype»` and a `«Generalisatie»`;
+ - Binding between an `«Enumeratie»` and an `«Enumeratiewaarde»`.
+
+An example of what is not allowed:
+ - Binding between an `«Attribuutsoort»` and a `«Relatiesoort»`.
+
+This metadata is only needed for binding model elements to each other and is almost always part of a modeling language (with which an information model can be created). In modeling languages, the binding is not always named and is then implicitly present. The metadata then does not need to be explicitly included in that modeling language. Because this chapter is described independently of a modeling language, the names of the bindings have been included. Should it be relevant to use the names of the connections somewhere: two spellings are indicated that are equivalent, separated by a `/` (forward slash). The bindings can also be read in diagram form at the beginning of this chapter, in [[[#structuur-metamodel]]].
+
+#### Metadata: **has attribute**
+Abbreviated notation: **attribute**
+
+<aside class="definition">
+  <dfn>has attribute</dfn>The binding of an attribute type as a property to an object type.
+</aside>
+
+*Explanation*
+
+Object types, data group types or relationship classes have attribute types (0,1,n) for specifying properties.
+
+*Application*: Object type, Data group type and Relationship class.
+
+#### Metadata: **has data group**
+Abbreviated notation: **data group**
+
+<aside class="definition">
+  <dfn>has data group</dfn>The binding of a data group as a group of properties to an object type or data group type.
+</aside>
+
+*Explanation*
+
+Object types and relationship classes have data groups (0,1,n) for specifying groups of properties.
+
+*Application*: Object types with Data groups or a Data group type that itself also contains a Data group type.
+
+#### Metadata: **has data group type**
+Abbreviated notation: **data group type**
+
+<aside class="definition">
+  <dfn>has data group type</dfn>The binding of a data group type as a value type to a data group.
+</aside>
+
+*Explanation*
+
+An attribute with the stereotype data group has a data group type as its value type.
+
+*Application*: Data group.
+
+#### Metadata: **refers to supertype**
+Abbreviated notation: **supertype**
+
+<aside class="definition">
+  <dfn>refers to supertype</dfn>The binding of a supertype to a subtype by means of a generalization.
+</aside>
+
+*Explanation*
+
+A subtype refers to a supertype with a generalization.
+
+*Application*: Object type and Datatype.
+
+#### Metadata: **has datatype**
+Abbreviated notation: **type**
+
+<aside class="definition">
+  <dfn>has datatype</dfn>The binding of a datatype to a property.
+</aside>
+
+*Explanation*
+
+A datatype is assigned to an attribute type, among other things.
+
+*Application*: Attribute type, Choice, Reference element, Data element
+
+#### Metadata: **has relationship type**
+Abbreviated notation: **relationship type**
+
+<aside class="definition">
+  <dfn>has relationship type</dfn>The binding of an object type to an object type by means of a relationship type.
+</aside>
+
+*Explanation*
+
+An object type can have a relationship to itself or another object type.
+
+*Application*: Object type, Data group type.
+
+#### Metadata: **has external link**
+Abbreviated notation: **external link**
+
+<aside class="definition">
+  <dfn>has external link</dfn>The binding of an object type from an external package to an object type.
+</aside>
+
+*Explanation*
+
+An object type can have a relationship with an object type in an external package.
+
+*Application*: Object type, Data group type.
+
+#### Metadata: **has data element**
+Abbreviated notation: **data element**
+
+<aside class="definition">
+  <dfn>has data element</dfn>The binding of a data element to a structured datatype.
+</aside>
+
+*Explanation*
+
+A structured datatype contains multiple data elements.
+
+*Application*: Structured datatype.
+
+#### Metadata: **contains model element**
+Abbreviated notation: **model element**
+
+<aside class="definition">
+  <dfn>contains model element</dfn>The binding between a package and a model element located within that package.
+</aside>
+
+*Explanation*
+
+A package `«Domein»` with the name `Activities` contains `«Objecttype»` `Work`, `Live` etc.
+
+*Application*: Package, Information model, Domain, External, View.
+
+#### Metadata: **contains enumeration value**
+Abbreviated notation: **value**
+
+<aside class="definition">
+  <dfn>contains enumeration value</dfn>The binding of an enumeration value to an enumeration.
+</aside>
+
+*Explanation*
+
+An `«Enumeratie»` contains `«Enumeratiewaarden»`.
+
+*Application*: Enumeration.
+
+#### Metadata: **contains reference element**
+Abbreviated notation: **reference element**
+
+<aside class="definition">
+  <dfn>contains reference element</dfn>The binding of a reference element to a reference list.
+</aside>
+
+*Explanation*
+
+A reference list contains reference elements.
+
+*Application*: Reference list.
+
+#### Metadata: **has datatype choice**
+Abbreviated notation: **datatype choice**
+
+<aside class="definition">
+  <dfn>has datatype choice</dfn>The binding of a choice of datatypes to an attribute type.
+</aside>
+
+*Explanation*
+
+An attribute type can have a choice of datatypes as its datatype.
+
+*Application*: Attribute type.
+
+#### Metadata: **has attribute choice**
+Abbreviated notation: **attribute choice**
+
+<aside class="definition">
+  <dfn>has attribute choice</dfn>The binding of a choice of attributes to an attribute type.
+</aside>
+
+*Explanation*
+
+A choice between attribute types can be linked as a property to an object type, data group type or relationship class.
+
+*Application*: Object type, Data group type, Relationship class, Attribute type.
+
+#### Metadata: **has choice attribute**
+Abbreviated notation: **choice attribute**
+
+<aside class="definition">
+  <dfn>has choice attribute</dfn>The binding of an attribute type to a Choice.
+</aside>
+
+*Explanation*
+
+A choice between attribute types binds 2 or more attribute types.
+
+*Application*: Choice.
+
+#### Metadata: **has relationship target choice**
+Abbreviated notation: **relationship target choice**
+
+<aside class="definition">
+  <dfn>has relationship target choice</dfn>The binding of a choice of relationship targets to an object type.
+</aside>
+
+*Explanation*
+
+A choice between relationship targets can be linked as a property to an object type or data group type.
+
+*Application*: Object type, Data group type, Choice.
+
+#### Metadata: **has relationship type choice**
+Abbreviated notation: **relationship type choice**
+
+<aside class="definition">
+  <dfn>has relationship type choice</dfn>The binding of a choice of relationship types to an object type.
+</aside>
+
+*Explanation*
+
+A choice between relationship types can be linked as a property to an object type or data group type.
+
+*Application*: Object type, Data group type, Choice.
+
+#### Metadata: **has constraint**
+Abbreviated notation: **constraint**
+
+<aside class="definition">
+  <dfn>has constraint</dfn>The binding of a constraint to a model element.
+</aside>
+
+*Explanation*
+
+A `Constraint` is linked to the context of the model element to which it applies. A `Constraint` can be applied to all types of model elements.
+
+### Allowed values of metadata
+
+Explanation of the allowed values for (certain) metadata.
+
+#### Value range
+
+A number of metadata have `CharacterString` as their datatype. Additionally:
+
+- For lengths, only numbers (of datatype `Integer`) are allowed.
+- For dates, the following pattern applies: `yyyymmdd`
+- For the metadata `Definition` and `Explanation`, text with formatting (such as *bold*, *italic*, *underlined* and *lists*) may be used. Which formatting can be used exactly depends on the capabilities of the modeling environment and the intended application of the model. Use the metadata _text formatting_ for this.
+
+For the following metadata, a specific value range applies.
+
+| **Metadata** | **Value Range** |
+|---|---|
+| <a>Has timeline registration</a> | `Yes`, `No` |
+| <a>Has timeline validity</a> | `Yes`, `No` |
+| <a>Classification indicator</a> | `Yes`, `No` |
+| <a>Abstract object indicator</a> | `Yes`, `No` |
+| <a>Possibly no value</a> | `Yes`, `No` |
+| <a>Mixin</a> | `Yes`, `No` |
+| <a>Aggregation type</a> | `Composition`, `Shared`, `None` |
+| <a>Authentic</a> | `Authentic`, `Basic data`, `Legal data`, `National core data`, `Other` |
+
+<aside class="note" title="Value = Other">
+  As a modeler, specify what is meant by <code>Other</code> when applied in an information model.
+</aside>
+
+Metadata with `Yes` and `No` are semantically intended as a boolean (no other values are possible such as unknown, other, or no value (empty)). For technical implementation purposes, it is allowed to interpret `Yes` and `No` and possibly replace them with a `Boolean`. Note that for human-readable functional documentation, the values `Yes` and `No` indicated in the table should always be used.
+
+#### Default values
+
+Some metadata have a default value. However, it is not necessary to explicitly state this default value in the information model. The default is indicated here. Only when this default is deviated from is this indicated in the information model.
+
+| **Metadata** | **Default Value** |
+|---|---|
+| <a>Has timeline validity</a> | `No` |
+| <a>Has timeline registration</a> | `No` |
+| <a>Material history indicator</a> | `No` |
+| <a>Formal history indicator</a> | `No` |
+| <a>Classification indicator</a> | `No` |
+| <a>Abstract object indicator</a> | `No` |
+| <a>Possibly no value</a> | `No` |
+| <a>Identifying</a> | `No` |
+| <a>Unidirectional</a> | `Yes` |
+| <a>Cardinality</a> (`«Attribuutsoort»`) | `1` |
+| <a>Aggregation type</a> | `None` |
+| <a>Mixin</a> | `No` |
+
+<aside class="note" title="Metadata with a default value">
+  Metadata with a default value must not be optional. Choose the default value defensively.
+</aside>
+
+<aside class="note" title="Cardinality of Relationships">
+  <p>The cardinality of a relationship is not in the table because default values exist for it. The cardinality at the target end must always be specified. The cardinality at the source/owner end of a relationship is optional to fill in.</p>
+  <p>If nothing is entered, then nothing is said about the cardinality and it has no default value. In practice, this means that a cardinality at the source end is implemented as `0..*`.</p>
+</aside>
