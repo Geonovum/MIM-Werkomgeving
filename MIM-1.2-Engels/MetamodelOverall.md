@@ -813,3 +813,606 @@ The metadata entry `Resource definition` clarifies this.
 *Application*: all model elements that have the metadata `Definition`.
 
 #### Metadata: **Explanation**
+
+<aside class="definition">
+  <dfn>Explanation</dfn>A substantive explanation of the definition, for clarification or further interpretation
+</aside>
+
+*Explanation*
+For example: some striking examples (values) of the attribute of the object or an indication of what is not covered by the definition.
+
+It is not intended to include other metadata in the explanation, such as population or term. The explanation is clear and understandable in itself and focuses on the meaning of data and/or the context of these data. The explanatory note does not focus on the collection of the data but describes the meaning of what has been collected so that it is clear to users of the data what its meaning is. It is therefore not the intention to include collection rules or frequently asked questions themselves in the explanatory notes. Of course, it is good to give knowledge "hidden" in the collection rules and answers a place in the explanatory notes.
+
+*Application*: all model elements that have the metadata `definition`.
+
+#### Metadata: **Date of recording**
+
+<aside class="definition">
+  <dfn>Date of recording</dfn>The date when the model element was added to the information model.
+</aside>
+
+*Explanation*
+For example: `"1-1-2012"`.
+
+*Application*: all model elements except data type elements, packages and other.
+
+#### Metadata: **Identifying**
+
+<aside class="definition">
+  <dfn>Identifying</dfn>An indication that a characteristic or a combination of characteristics of an object type uniquely identifies all objects in the population of objects of that object type, or an indication that a reference element uniquely identifies all list items in a reference list.
+</aside>
+
+*Explanation*
+ Objects in an administration or data facility often have, or receive, one identifying attribute. It may also be that a number of attributes are identifying in combination, such as two attribute types or an attribute type and a relation type. The combination with a relation type is only done for object types that do not have a unique identifier themselves and therefore need to compose them with the unique identifier of a related object type. The model element `"Reference list"` is the only type of value list that can have this metadata, because the enumeration itself is identifying and the unique identifying code of a code list is outside the information model.
+
+*Application*: attribute type, all relationships (relationship type, relationship role, relationship class, external link), reference element.
+
+#### Metadata: **has timeline validity**
+
+<aside class="definition">
+  <dfn>has timeline validity</dfn>Indication whether a timeline validity is maintained for this attribute and can be queried.
+</aside>
+
+*Explanation*
+
+For example: `"Yes"`, `"No"`.
+
+`Timeline validity` refers to recording the moment in time when a real-world change has occurred that results in a change to the value of an object's attribute. The data is considered _valid_ as of a specific point in time, and this timestamp is stored as metadata alongside the data.
+
+It is common for a fact to be determined or decided to have been valid starting from a point in the past. Likewise, a fact may become valid only from a certain point in the (near) future. For further explanation, see [[[#appointment-rules]]].
+
+The term "by query" refers to the ability to search the historical validity of data—that is, from when the data is considered valid and until when it is no longer considered _valid_. This metadata is only meaningful for attributes for which a value is maintained. The values to be entered are defined in [[[#allowed-values-metadata]]].
+
+*Application*: all model elements that are or can be an attribute of an Object Type, for which data can be maintained: Attribute Type and Relationships (Relationship Type, Relationship Class, External Link).
+
+#### Metadata: **indication of material history**
+
+<aside class="definition">
+  <dfn>Indication of material history</dfn>Indication of whether the material history of an object's attribute is tracked and can be queried.
+</aside>
+
+<aside class="note" title="Notes on 'indication of material history'">
+<ol>
+  <li>This metadata is equivalent to the metadata <code><a>has timeline validity</a></code>;</li>
+  <li>In future versions of MIM, version 2.x and later, this metadata will be phased out. Due to backwards compatibility, it is still present in MIM 1.x.</li>
+</ol>
+</aside>
+
+*Explanation*
+
+For example: `"Yes"`, `"No"`.
+
+"Can be queried" means that history is recorded in some way, which can also be queried in some way. This metadata is only meaningful for attributes for which data is maintained. The value to be entered comes from: see [[[#allowed-values-metadata]]].  
+Material history indicates when a change has occurred in reality that has led to a change in the attribute value. For further explanation, see [[[#appointment-rules]]].  
+The value to be entered comes from: see [[[#allowed-values-metadata]]].
+
+Material history indicates when a change has occurred in reality that has led to a change in the attribute value. For further explanation, see the section [Appointments & Rules](#appointment-rules).
+
+*Application*: all model elements that can be a characteristic of an Object Type, for which data can be maintained: Attribute type and relationships (Relationship type, Relationship class, External Link).
+#### Metadata: **has timeline registration**
+
+<aside class="definition">
+  <dfn>has timeline registration</dfn>Indicates whether timeline registration is maintained and can be queried for this attribute.
+</aside>
+
+*Explanation*
+
+For example: `"Yes"`, `"No"`.
+
+Timeline registration refers to tracking on a timeline when a specific value for an attribute of an object is recorded, i.e., _registered_. This point in time is stored in some way as metadata alongside the data. The registration may take place on a specific medium or in the record of an information system. The moment of registration is always the moment the data is recorded in real time (the actual clock time). Each time the same data is recorded in another place, it creates a separate timestamp on the timeline that may be relevant to keep. For further explanation, see the section [Appointments & Rules](#appointments-rules).
+
+"Can be queried" means: the time when the data was registered is recorded as history in some way, and this method is searchable. This metadata is only meaningful for attributes for which a value is maintained. Note that in practice, the moment of registration is often—but not necessarily—the same as the moment when the data becomes available to users of the information system. The value to be entered comes from: see [[[#allowed-values-metadata]]].
+
+*Application*: all model elements that can be a characteristic of an Object Type, for which data can be maintained: Attribute type and relationships (Relationship type, Relationship class, External Link).
+
+#### Metadata: **Indication of formal history**
+
+<aside class="definition">
+  <dfn>Indication of formal history</dfn>Indicates whether the formal history of the object's attribute is tracked and can be queried.
+</aside>
+
+<aside class="note" title="Notes on 'indication of formal history'">
+<ol>
+  <li>This metadata is equivalent to the metadata <code><a>has timeline registration</a></code>;</li>
+  <li>In future versions of MIM, version 2.x and later, this metadata will be phased out. Due to backwards compatibility, it is still present in MIM 1.x.</li>
+</ol>
+</aside>
+
+*Explanation*
+
+For example: `"Yes"`, `"No"`.
+
+"Can be queried" means that history is tracked in some way, which is searchable in some way. This metadata is only meaningful for attributes for which data is maintained. The value to be entered comes from: see [[[#allowed-values-metadata]]].  
+Formal history indicates when a change is known and processed in the administration. For further explanation, see [[[#appointments-rules]]]. The value to be entered comes from: see [[[#allowed-values-metadata]]].
+
+Formal history indicates when a change is known and processed in the administration. For further explanation, see [[[#appointments-rules]]].
+
+*Application*: all model elements that can be a characteristic of an Object Type, for which data can be maintained: Attribute type and relationships (Relationship type, Relationship class, External Link).
+
+#### Metadata: **Cardinality**
+
+<aside class="definition">
+  <dfn>Cardinality</dfn>The cardinality indicates how many times values of this attribute of an object can occur for an instance of the corresponding object type.
+</aside>
+
+*Explanation*
+
+1. Value: `1..1`: An object always has this attribute. Example: birthdate of a person.  
+1. Value: `1..*`: An object always has this attribute, and the attribute may occur multiple times. Example: number of chapters in a book (in this domain there is always at least `1`).  
+1. Value: `0..1`: May not always be available. Example: surname prefix.  
+1. Value: `0..*`: Not always available, but the attribute can also occur multiple times. Example: accommodation units located in a building (`garage: 0`, `house: 1`, `apartment: *`). Other numbers than `0`, `1`, and `*` are also allowed, e.g., `2..*` or `0..2`. The notation of `*` varies per modeling language. With `*` is meant _many_ (not specifically defined, but for example `10` or `100` is allowed).
+
+If an `«AttributeType»` is part of a `«DataGroupType»`, then the cardinality of the `«AttributeType»` within the `«DataGroupType»` is specified. For the final cardinality of how often data occurs with the object, the cardinality of the data group and the cardinality of the `«AttributeType»` must both be considered.
+
+Note that it may be the case that an object does or should have the attribute, but it has not yet been possible to collect or determine this data. It is then known that the object does have this attribute, but its value is unknown. In that case, the cardinality is not changed from `1` to `0`, but it is indicated that a value may be missing. More on this is described in [[[#appointments-rules]]].
+
+A `«Generalization»` is a special type of relationship. The cardinality of both the source and the target is always, by definition, `1..1`. Therefore, this does not need to be indicated separately with a cardinality.
+
+*Application*: all model elements that can be a characteristic of an ObjectType.
+
+#### Metadata: **Cardinality relationship source**
+
+<aside class="definition">
+  <dfn>Cardinality relationship source</dfn>The cardinality of the relationship source indicates, for a relationship type, how many instances of the source object type can be connected in a relationship with one instance of the target object type.
+</aside>
+
+Example: a residential unit is located in a building. The owner of the relationship is the residential unit (the source of the relationship), and the target of the relationship is the building.
+
+- The cardinality of the target of the relationship indicates: in how many buildings can one residential unit be located. Answer: `1..*`  
+- The cardinality of the source indicates: how many residential units can be located in one building. Answer: `0..*`
+
+This cardinality is especially useful for validation, but at the data level it (usually) does not appear, because relationships in MIM are directed.
+
+*Explanation*
+
+The cardinality of the source of the relationship indicates how many instances of the source can refer to a single instance of the target of the relationship. If the cardinality on the source side is not specified, there is no default value.
+
+*Application*: relationship type, external link, and relationship class
+
+#### Metadata: **Authoritative**
+
+<aside class="definition">
+  <dfn>Authoritative</dfn>Indication of whether the attribute concerns an authoritative data item.
+</aside>
+
+*Explanation*
+
+Examples: `"Authoritative"`, `"Basic data"`, `"National core data"`, `"Municipal core data"`, `"Other"`.
+
+`Authoritative` applies to, for example, the citizen service number (BSN) of a natural person. In the law governing a base registration, it is established which data are authoritative. An attribute is authoritative if the correctness (high-quality data) is guaranteed through formal acquisition processes and legal regulations. Authoritative data must be used by all government institutions mandatorily and without further investigation in the execution of public legal tasks.
+
+The value to be filled in comes from: see [[[#allowed-values-metadata]]]
+
+*Application*: all model elements that can be a characteristic of an ObjectType.
+
+#### Metadata: **Indication derivable**
+
+<aside class="definition">
+  <dfn>Indication derivable</dfn>Indication that the data can be derived from other attribute and/or relationship types.
+</aside>
+
+*Explanation*
+
+For example: the `name` of a public space, such as `"Burgemeester Baron van Voerst van Lyndenstraat"`, becomes in its shortened form the abbreviated name: `"Burg Bar v V v Lyndenstr"` – this is a derived value. Another example: the `owner` of a house can be derived from other data recorded within the information model.
+
+The derived data itself is not a source data item and must be updated if the source data is updated. The description of the attribute will specify which data is involved and possibly how the derivation takes place.
+
+Although the definition does not state it explicitly, the example makes it clear that this concerns data derived *within* the context of the model. In other words, the metadata is intended to indicate a *dependency* within the model.
+
+*Application*: model elements for which a value can be provided, namely the model elements AttributeType and RelationshipType.
+
+#### Metadata: **Indication classifying**
+
+<aside class="definition">
+  <dfn>Indication classifying</dfn>Indication that an attribute type classifies the object type it belongs to into (sub)types.
+</aside>
+
+*Explanation*
+
+An `«ObjectType»` can be classified into subtypes using an `«AttributeType»`. For example: `building type`. `"Tower"`, `"Church"`, `"Bunker"`, `"Swimming pool"` are all types of buildings. In a level 2 model, such types can be modeled as object types and specializations of the `«ObjectType»` building. Especially at level 3, it can be relevant to structure this information explicitly by including an aspect that directly records the building type, independent of the modeling of object types.
+
+Practically, it may then be decided not to include the underlying object types in the model anymore and only record this aspect. Also, in combination with `Indication derivable`, this aspect can be derived from the most specific `«ObjectType»`, if such object types have been modeled. The value to be filled in comes from: see [[[#allowed-values-metadata]]]
+
+*Application*: AttributeType.
+
+#### Metadata: **Possibly no value**
+
+<aside class="definition">
+  <dfn>Possibly no value</dfn>Indication that no value has been registered for an aspect, but it is unclear whether the value truly does not exist.
+</aside>
+
+*Explanation*
+
+This concerns cases where it is unclear whether the value exists at all, or if it is known or expected that a value should exist, it is unclear *what* the value is. This metadata then indicates that such uncertainty is allowed (or allowed to remain). Often, this is only permitted under certain conditions, with a justification provided.
+
+- Example: `country of origin`. Every person comes from a country, but it may be unclear at the time which country that is;
+- Example: `RSIN` (Legal Entities and Partnerships Identification Number) of an organization, for data collected before the RSIN existed. The RSIN is a required field in the current information model, but for older data the value is unknown.
+
+*Application*: model elements for which a value can be provided, i.e., the model elements AttributeType and RelationshipType.
+#### Metadata: **Source**
+
+<aside class="definition">
+  <dfn>Source</dfn>Indication of the source object in a relationship between objects. A source object has a relationship with a target object via a relationship type.
+</aside>
+
+*Explanation*
+
+Example: a person has an address. You can model this using a `«RelationshipType»` between an `«ObjectType»` `Person` and an `«ObjectType»` `Address`. The metadata `Source` of the `«RelationshipType»` then has the value: `"Person"`.
+
+*Application*: RelationshipType and External Link.
+
+#### Metadata: **Target**
+
+<aside class="definition">
+  <dfn>Target</dfn>Indication of the related object type that represents the endpoint of the relationship. This is the object type that is referred to.
+</aside>
+
+*Explanation*
+
+Example: a person has an address. You can model this using a `«RelationshipType»` between an `«ObjectType»` `Person` and an `«ObjectType»` `Address`. The metadata `Target` of the `«RelationshipType»` then has the value: `"Address"`.
+
+*Application*: RelationshipType and External Link.
+
+#### Metadata: **Unidirectional**
+
+<aside class="definition">
+  <dfn>Unidirectional</dfn>The direction of a relationship, which gives meaning to the relationship from the perspective of the owner of the relationship.
+</aside>
+
+*Explanation*
+
+It is common to indicate a direction. The meaning of `A` to `B` differs from that of `B` to `A`. It also indicates which `«ObjectType»` maintains the characteristic, in other words, who the owner is.
+
+Example: a person has a mailing address. The direction of the relationship is from the `«ObjectType»` `Person` to the `«ObjectType»` `Address`. The owner of the relationship (the source, in this case: `Person`) is aware of the related object type (the target, in this case: `Address`).
+
+In a modeling language, this is often indicated with an arrow. The arrow starts at the source and points to the related `«ObjectType»`, the target of the relationship. All relationships are always directed from the source object to the related target object.
+
+*Application*: RelationshipType and External Link.
+
+#### Metadata: **Aggregation Type**
+
+<aside class="definition">
+  <dfn>Aggregation Type</dfn>Indicates whether the object type that owns a relationship considers the target of the relationship as a composite part belonging to the object type, and what kind of composition the relationship represents.
+</aside>
+
+*Explanation*
+
+An object can be composed of constituent parts that are also individually recognizable as object types within the information model. This is called aggregation. It is modeled with an `AttributeType` where this metadata is filled with an aggregation type. There are two types: a composition aggregation and a shared aggregation. Aggregation is essentially a relationship, and the aggregation type provides additional information. By default, a relationship is not an aggregation, in which case the value of this metadata is `None`.
+
+- `"Composition"` (Dutch: _"Compositie"_): the target object is an integral part of the owning object and is not shared with others. The owner is fully responsible for managing the information about the part. If the owner ceases to exist, the parts automatically cease to exist as well. The target object cannot exist independently: it ceases to exist if the owner does. However, a part can be replaced while keeping the owner object intact.
+- `"Shared"` (Dutch: _"Gedeeld"_): the part can be used and shared by multiple owners. For example: a student can be part of multiple classes.
+
+Example: a car has various parts, including an engine. In the information model, the focus is primarily on the car, and the engine is relevant only because it is a part of the car. An engine in this case can only be used by one car, and if the car disappears, the engine also disappears. In other words, the engine is an inseparable part of a car and cannot be used by another object or exist independently—it is an aggregation of type composition (`Aggregation Type`: `"Composition"`).
+
+*Application*: RelationshipType and External Link.
+
+#### Metadata: **Location**
+
+<aside class="definition">
+  <dfn>Location</dfn>If the type of the attribute type is a value list, this specifies where it can be found.
+</aside>
+
+*Explanation*
+
+The location is a published source accessible to users. If possible, this metadata is filled with a URI or URL (if a URI is not available, a URL can be used where the value list can be found based on its name), for example: `Location`: `http://www.organization.nl/schemas/valuelists/ValueListName`.
+
+*Application*: Code list and Reference list.
+
+#### Metadata: **Target Format**
+
+<aside class="definition">
+  <dfn>Target Format</dfn>The format in which a value list is published.
+</aside>
+
+*Explanation*
+
+Common formats for publishing value lists include SKOS and CSV.
+
+*Application:* Code list and Reference list.
+
+#### Metadata: **Value Item**
+
+<aside class="definition">
+  <dfn>Value Item</dfn>The item (or element) of the list that represents the value.
+</aside>
+
+*Explanation*
+
+If a `«CodeList»` has a structure, this metadata indicates which item in the `«CodeList»` represents the value.
+
+*Application:* Code list
+
+#### Metadata: **Profile Specification**
+
+<aside class="definition">
+  <dfn>Profile Specification</dfn>Reference to the profile that describes the technical implementation of the code list.
+</aside>
+
+*Explanation*
+
+MIM does not prescribe the technical implementation of the code list. To allow referencing information about the technical implementation in the model, the `Profile Specification` metadata can be used to describe the specific technical application of the code list. Preferably, the reference is a URL.
+
+*Application:* Code list
+
+#### Metadata: **Type**
+
+The domain of a value of a data item.
+
+<aside class="definition">
+  <dfn>Type</dfn>The datatype used to record values of this model element.
+</aside>
+
+*Explanation*
+
+- For example: the `Type` of the attribute `geometry` is the `«Datatype»` `SurfaceOrMultiSurface`;
+- For example: the `Type` of the attribute `surname` is the `«Datatype»` `CharacterString`.
+
+An `«AttributeType»` uses a `«Datatype»` to specify the allowed value type. The same applies to a `«Data Element»`, a `«Reference Element»`, and a `«Choice»`. This must always conform to a datatype from this metamodel (or an extension of it) or to a `«Primitive Datatype»` external to this model. If the value comes from a dynamic value list, the name of the relevant `«Reference List»` or `«Code List»` is used as the type. If it is a value from a static enumeration, the name of the relevant `«Enumeration»` is used as the type.
+
+*Application:* All information elements that model an attribute: AttributeType, Data Element, Reference Element, Datatype Choice, Target Choice.
+
+#### Metadata: **Length**
+
+<aside class="definition">
+  <dfn>Length</dfn>The indication of the length of a data item, according to the specified notation.
+</aside>
+
+The notation and meaning are as follows:
+
+For characters:
+
+| **Notation** | **Meaning**                                                                                 |
+|--------------|----------------------------------------------------------------------------------------------|
+| `"1"`        | The length is exactly 1                                                                      |
+| `"2.."`      | The length is at least 2 (inclusive) or more (unbounded)                                     |
+| `"2..9"`     | The length is at least 2 and at most 9 (inclusive)                                           |
+
+For numbers:
+
+| **Notation** | **Meaning**                                                                                                   |
+|--------------|---------------------------------------------------------------------------------------------------------------|
+| `"3"`        | The length is at most 3 (inclusive: 1, 2, or 3 digits) before the decimal point                               |
+| `"3,2"`      | The length is at most 3 digits before the decimal point, and at most 2 digits after the decimal point         |
+
+Numbers other than `"1"`, `"2"`, `"3"`, or `"9"` can of course be used to specify the desired length.
+
+*Explanation*
+
+This concerns the functional length of a data item—that is, how many characters or how many digits before and after the decimal point. The length refers to the data that a model element concerns. For an `«AttributeType»`, it refers to the length of the attribute's data. For a `«Structured Datatype»`, each `«Data Element»` gets its own length specification referring only to that `«Data Element»`.
+
+Examples:
+* A person’s name with minimum length 2 and unbounded: `CharacterString`, `length`: `"2.."`
+* A street name with minimum 2 and maximum 80 characters: `CharacterString`, `length`: `"2..80"`
+* An identifier as a number with maximum length 16: `Integer`, `length`: `"16"`
+* An identifier of exactly 16 characters, including leading zeros: `CharacterString`, `length`: `"16"`
+* A percentage with 2 digits after the decimal: `Decimal`, `length`: `"3,2"`
+
+Previously common notations:
+* `AN80` corresponds to `CharacterString`, `length`: `"1..80"`
+* `N8` corresponds to `Integer`, `length`: `"8"` (i.e., from `"-99999999"` to `"+99999999"`)
+* `N3,2` corresponds to `Decimal`, `length`: `"3,2"`
+
+Common maximum values for `CharacterString` include: `"80"`, `"200"`, `"4000"`.
+
+A number that allows leading zeros, such as a `municipalityCode`: `"0060"`, should be specified as a `CharacterString`. The _number_ `"0001"` does not exist as such; it is simply the number `"1"`.
+
+The length applies only when there is data. Optional data should be left blank. It is not recommended to specify a minimum length of `"0"` for optional data. If the data is filled in, then the minimum length is `"1"`.
+
+The `"-"` sign for negative numbers does not affect the length specification.
+
+Not all constraints on a data item can be captured by the length. In those cases, use <code><a>Pattern</a></code>, <code><a>Formal Pattern</a></code>, or another way to specify minimum and/or maximum values. For example:
+* One or two digits after the decimal cannot be specified with length alone;
+* One or two digits before the decimal cannot be specified with length alone;
+* An exact number of digits for a number (e.g., exactly 16, not 1 or 15);
+* The value range of a number within the specified length;
+* Whether a number may be negative or must be positive.
+
+*Application:* AttributeType, Primitive Datatype (only if the datatype is defined in the information model itself), Data Element, Reference Element.
+
+#### Metadata: **Pattern**
+
+<aside class="definition">
+  <dfn>Pattern</dfn>The set of values that data of this attribute type can have, i.e., the value range, expressed in a specific structure.
+</aside>
+
+*Explanation*
+
+The structure is described in words. For example: `"Conforming to the Dutch standard for describing a postal code"`. Specifying a pattern only applies when the specification indicates that the value (directly or indirectly) concerns a `«Primitive datatype»`, such as a `CharacterString`.
+
+*Application:* The model elements in the groups Datatype and Attribute Type.
+
+#### Metadata: **Formal pattern**
+
+<aside class="definition">
+  <dfn>Formal pattern</dfn>Like pattern, but formally defined, expressed in a formal language recognized by the computer.
+</aside>
+
+*Explanation*
+
+The structure is described as a regular expression.
+
+For example: `"[1-9][0-9][0-9][0-9][A-Z][A-Z]"`
+
+Specifying a pattern only applies when the specification indicates that the value (directly or indirectly) concerns a `«Primitive datatype»`, such as a `CharacterString`.
+
+*Application:* The model elements in the groups Datatype and Attribute Type.
+
+#### Metadata: **Code**
+
+<aside class="definition">
+  <dfn>Code</dfn>The unique code assigned to the enumeration value in a registry or information model.
+</aside>
+
+*Application:* Enumeration value.
+
+#### Metadata: **Abstract object indication**
+
+<aside class="definition">
+  <dfn>Abstract object indication</dfn>An indication showing whether objects can exist that are typed as being objects (instances) of only this object type.
+</aside>
+
+<aside class="note">
+  One information model may contain an abstract object type that <i>within this information model</i> is a <code>«Generalization»</code> of no other <code>«Object type»</code>. These non-abstract object types may also exist outside the information model and be specified there. This occurs in information models that define an abstract typing to which (more concrete) information models want to connect and provide further elaboration.
+</aside>
+
+*Explanation*
+
+Non-abstract is also called _concrete_. For example, the abstract `«Object type»` `"Vehicle"`, with concrete specializations `"Car"`, `"Bicycle"`, and `"Moped"`. This means that there may not exist vehicles that are only vehicles without specifying whether it is a car, bicycle, or moped. If `"Vehicle"` is modeled as non-abstract, then vehicles can exist that are only vehicles and not specifically identifiable as a car, bicycle, or moped. In both cases, these objects can be referred to as vehicles and can be treated generally as such (as intended by a `«Generalization»`).
+
+If an `«Object type»` is non-abstract, i.e., concrete, then objects can exist that are instances of that `«Object type»`.
+
+If an `«Object type»` is abstract, then no objects can exist that are instances of this `«Object type»`. There must always be a concrete (non-abstract) `«Object type»` that has the abstract `«Object type»` as `«Generalization»`. Objects then are instances of the concrete `«Object type»` and not of the abstract `«Object type»`. These objects still satisfy both `«Object type»` definitions and can be treated generally as such.
+
+See also section [[[#abstract-object-types-and-concrete-objects]]] for further explanation of the phenomenon of abstract object types.
+
+*Application:* Object type
+#### Metadata: **Population**
+
+<aside class="definition">
+  <dfn>Population</dfn>For object types that are part of a (basic) registration, this concerns the description of the instances of the defined object type that are available in the respective (basic) registration.
+</aside>
+
+*Explanation*
+
+The definition of an `«Object type»` indicates which instances in reality are meant, namely those instances that comply with the definition. However, the metadata `Population` in a (basic) registration can be more limited in use, because not all instances that comply with the definition are registered. There are thus instances that comply with the definition but are not registered and therefore cannot be requested.
+
+The `Population` is a _further delimitation of the definition_, a description of the _subset_ of the set of all _instances_ of this `«Object type»` that:
+ - are registered or exchanged and/or
+ - comply with the definition but are not registered or exchanged.
+If all instances that fall under the definition are registered and/or can be exchanged, then the `Population` may be left empty.
+
+The `Population` can also be used to indicate that not all instances of an `«Object type»` are included in the registration but only those that meet a condition. The condition has no further effect on the definition.
+
+<aside class='example'>
+    <p>The Cadastre was established in 1832 and has cadastral deeds that are registered since then. The definition of a cadastral deed includes all deeds, and these can be requested from the Cadastre, but not all deeds are available as data (digitally) from the BRK. The following is included in <code>Population</code>:</p>
+    <p><code>"All cadastral deeds related to cadastral objects on which a real right existed on January 1, 1980, and all cadastral objects created thereafter are included in the BRK."</code></p>
+    <p>This is an example of a condition.</p>
+</aside>
+
+<aside class='example'>
+    <p>There are buildings in the Netherlands with a military function that are not desirable to include in the registration and are therefore not included based on instructions from the Ministry of Defence. The following is included in <code>Population</code>:</p>
+    <p><code>"All buildings on Dutch territory that comply with the object definition, except for some military buildings, as referred to in the <a href="https://zoek.officielebekendmakingen.nl/kst-30968-3.html">explanatory memorandum to the Basic Registrations Addresses and Buildings Act</a>."</code></p>
+</aside>
+
+*Application:* Object type
+
+#### Metadata: **Quality**
+
+<aside class="definition">
+  <dfn>Quality</dfn>Description of the degree to which objects of the relevant type recorded in the registration are complete, correct, current, accurate, and reliable.
+</aside>
+
+*Explanation*
+
+This metadata may contain a description about the quality of data acquisition for this object type.
+
+*Application:* Object type
+
+#### Metadata: **Unit**
+
+<aside class="definition">
+  <dfn>Unit</dfn>Designation of the unit associated with a measurement or observation.
+</aside>
+
+*Explanation*
+
+Essentially, there are four components that describe a measurement or an observation:
+
+1. the _subject_ (what is measured)
+2. the _value_ (the measured value)
+3. the _datatype_ of that value (qualitative: `Boolean`, `CharacterString`, quantitative: `Integer`, `Real` or `Decimal`)
+4. the _unit_ of the value
+
+The first three components can be expressed using the model elements `«Attribute type»` and `«Datatype»`. For the _unit_ of a value, a separate metadata element is created, which is linked to an `«Attribute type»` or a `«Reference element»`.
+
+For specifying the metadata `Unit`, the MIM aligns with the International System of Units [[SI]]. A modeller fills in the _unit expression_ of the unit, for example: `m` for the length measure _meter_. A code list of possible values and corresponding symbols and _unit expressions_ is available via [SI Reference Point](https://si-digital-framework.org/SI/units).
+
+The SI system consists of seven [basiseenheden](https://nl.wikipedia.org/wiki/SI-stelsel#SI-basiseenheden). Additionally, the system allows an unlimited number of [afgeleide eenheden](https://nl.wikipedia.org/wiki/SI-stelsel#Afgeleide_SI-eenheden), which can always be expressed as a product of powers of the base units. For this purpose, [SI-prefixen](https://nl.wikipedia.org/wiki/SI-stelsel#SI-prefixen_(vermenigvuldigingsfactoren)) are defined. Besides the SI units, there are some non-SI units approved for _use in combination_ with SI units, such as: _liter_, _hour_, _minute_, and _degree Celsius_. Imperial units, such as _pound_, _inch_, and _foot_, are not approved SI units.
+
+<aside class="example" title="Examples of units in relation to the SI system">
+  <p><strong>Base units</strong>
+    <ul>
+      <li>second, <i>unit expression</i>: <code>s</code> (quantity: time)</li>
+      <li>meter, <i>unit expression</i>: <code>m</code> (quantity: length)</li>
+      <li>kilogram, <i>unit expression</i>: <code>kg</code> (quantity: mass)</li>
+      <li>ampere, <i>unit expression</i>: <code>A</code> (quantity: electric current)</li>
+      <li>kelvin, <i>unit expression</i>: <code>K</code> (quantity: absolute temperature)</li>
+      <li>mole, <i>unit expression</i>: <code>mol</code> (quantity: amount of substance)</li>
+      <li>candela, <i>unit expression</i>: <code>cd</code> (quantity: luminous intensity)</li>
+    </ul>
+  </p>
+  <p><strong>Derived SI units</strong>
+    <ul>
+      <li>gram, <i>unit expression</i>: <code>g</code></li>
+      <li>hertz, <i>unit expression</i>: <code>Hz</code></li>
+      <li>kilometer, <i>unit expression</i>: <code>km</code></li>
+    </ul>
+  </p>
+  <p><strong>Non-SI units accepted for use with SI units</strong>
+    <ul>
+      <li>day, <i>unit expression</i>: <code>d</code></li>
+      <li>decibel (1/10 Bel = 1 decibel), <i>unit expression</i>: <code>dB</code></li>
+      <li>hour, <i>unit expression</i>: <code>h</code></li>
+      <li>liter, <i>unit expression</i>: <code>L</code></li>
+      <li>minute, <i>unit expression</i>: <code>min</code></li>
+    </ul>
+  </p>
+  <p><strong>Compound units</strong>
+    <ul>
+      <li>kilowatt-hour, <i>unit expression</i>: <code>kW.h</code></li>
+      <li>meter per second, <i>unit expression</i>: <code>m.s</code></li>
+      <li>square meter, <i>unit expression</i>: <code>m2</code></li>
+    </ul>
+  </p>
+  <p><strong>Imperial units not accepted for use with SI units</strong>
+    <ul>
+      <li>pound</li>
+      <li>inch</li>
+      <li>foot</li>
+      <li>yard</li>
+      <li>mile</li>
+    </ul>
+  </p>
+</aside>
+
+*Application:* Attribute type, Reference element.
+
+#### Metadata: **Minimum Value Inclusive**
+<aside class="definition"> <dfn>Minimum Value Inclusive</dfn> Minimum value inclusive (`>=`) is the lower bound of the value range for an attribute type or data element typed with a primitive datatype, including that value itself. The minimum value must be of the same primitive datatype as the datatype of the model element it applies to. </aside>
+
+*Explanation*
+For example, the minimum value for a validity date.
+
+*Application*
+
+Use on attribute types, data elements, and reference elements with a primitive datatype of the type:
+
+- Integer
+- Decimal
+- Float
+- Real
+- DateTime
+- Date
+
+A model element may have only one occurrence of metadata Minimum Value Inclusive or Minimum Value Exclusive.
+
+#### Metadata: **Minimum Value Exclusive**
+<aside class="definition"> <dfn>Minimum Value Exclusive</dfn> Minimum value exclusive (`>`) is the lower bound of the value range for an attribute type or data element typed with a primitive datatype, excluding that value itself. The minimum value must be of the same primitive datatype as the datatype of the model element it applies to. </aside>
+
+*Explanation*
+
+For example, the minimum volume of a building.
+*Application*
+
+Use on attribute types, data elements, and reference elements with a primitive datatype of the type:
+
+- Integer
+- Decimal
+- Float
+- Real
+- DateTime
+- Date
+
+A model element may have only one occurrence of metadata Minimum Value Inclusive or Minimum Value Exclusive.
+
+#### Metadata: **Maximum Value Inclusive**
