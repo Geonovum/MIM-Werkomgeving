@@ -113,11 +113,11 @@ In the figure above, not all bindings have been drawn around `mim:Relationship T
 | **MIM metaclass** | **Metaclass in RDF** | **Shape in RDF** | **Base** |
 |-------------------|----------------------|------------------|---------------|
 | Constraint        | [`mim:Constraint`](http://modellen.mim-standaard.nl/def/mim#Constraint) | shape:Constraint | [base](#constraint) |
-| Keuzeconstraint   | [`mim:Keuzeconstraint`](http://modellen.mim-standaard.nl/def/mim#Keuze) | shape:Choice | [base](#choice) |
+| unionconstraint   | [`mim:unionconstraint`](http://modellen.mim-standaard.nl/def/mim#union) | shape:union | [base](#union) |
 
-#### Choice
+#### union
 
-The "choice construct" allows a choice between multiple attribute types, data types and relationship targets (object types). Only one type of these three may be associated with one specific choice. If this data type is chosen for an attribute type or relationship purpose, it has the following meaning, depending on the connected type:
+The "union construct" allows a union between multiple attribute types, data types and relationship targets (object types). Only one type of these three may be associated with one specific choice. If this data type is chosen for an attribute type or relationship purpose, it has the following meaning, depending on the connected type:
 
 - Attribute type: a choice between attribute types **instead of** the attribute type this choice has as data type;
 - Data type: a choice between data types **instead of** this choice data type;
@@ -125,43 +125,43 @@ The "choice construct" allows a choice between multiple attribute types, data ty
 
 | **MIM metaclass** | **Metaclass in RDF** | **Shape in RDF** | **Base** |
 |-------------------|----------------------|------------------|---------------|
-| Keuze             | [`mim:Keuze`](http://modellen.mim-standaard.nl/def/mim#Keuze) | shape:Keuze | [base](#keuze) |
+| union             | [`mim:union`](http://modellen.mim-standaard.nl/def/mim#union) | shape:union | [base](#union) |
 | Datatype          | [`mim:Datatype`](http://modellen.mim-standaard.nl/def/mim#Datatype) | shape:Datatype | [base](#datatype) |
 | Objecttype        | [`mim:Objecttype`](http://modellen.mim-standaard.nl/def/mim#Objecttype) | shape:Objecttype | [base](#objecttype) |
 | Attribuutsoort    | [`mim:Attribuutsoort`](http://modellen.mim-standaard.nl/def/mim#Attribuutsoort) | shape:Attribuutsoort | [base](#attribuutsoort) |
 
 *Data type selection*
 
-<figure id="media/rdf-keuze-datatype">
-  <img src="media/rdf-keuze-datatype.png" alt="" />
-  <figcaption>Diagram: Datatypekeuze in LD</figcaption>
+<figure id="media/rdf-union-datatype">
+  <img src="media/rdf-union-datatype.png" alt="" />
+  <figcaption>Diagram: Datatypeunion in LD</figcaption>
 </figure>
 
 Since an `mim:Choice` is a specialisation of an `mim:Datatype`, an attribute type may refer to a Choice via an `mim:type` one. In this case, such a choice itself has at least two `mim:type` references to the 2 (or more) data types from which to choose.
 
 *Attribute selection*
 
-<figure id="media/rdf-keuze-attribuut">
-  <img src="media/rdf-keuze-attribuut.png" alt="" />
-  <figcaption>Diagram: Attribuutkeuze in LD</figcaption>
+<figure id="media/rdf-union-attribuut">
+  <img src="media/rdf-union-attribuut.png" alt="" />
+  <figcaption>Diagram: Attribuutunion in LD</figcaption>
 </figure>
 
 If an `mim:Choice` is used for a choice between attribute types, then from an object type via an `mim:attribute` is not referred to an attribute type, but to the choice. The choice itself in turn refers to the attribute types being chosen between.
 
 *Relationship target selection*
 
-<figure id="media/rdf-keuze-relatietarget">
-  <img src="media/rdf-keuze-relatietarget.png" alt="" />
-  <figcaption>Diagram: Relatietargetkeuze in LD</figcaption>
+<figure id="media/rdf-union-relatietarget">
+  <img src="media/rdf-union-relatietarget.png" alt="" />
+  <figcaption>Diagram: Relatietargetunion in LD</figcaption>
 </figure>
 
 If an `mim:Choice` is used for a choice between object types that are the relationship targets for a relationship type, then from a relationship type via an `mim:target` is not referred to an object type, but to the choice. The choice itself in turn refers to the object types being chosen between.
 
 *Relationship choice*
 
-<figure id="media/rdf-keuze-relatiesoort">
-  <img src="media/rdf-keuze-relatiesoort.png" alt="" />
-  <figcaption>Diagram: Relatiesoortkeuze in LD</figcaption>
+<figure id="media/rdf-union-relatiesoort">
+  <img src="media/rdf-union-relatiesoort.png" alt="" />
+  <figcaption>Diagram: Relatiesoortunion in LD</figcaption>
 </figure>
 
 A choice between relationship types is made based on a choice constraint. A choice constraint is not a data type, but rather a constraint that, in this case, indicates that a choice must be made between two relation types.
@@ -266,3 +266,8 @@ This section complements the [[[#specification-metadata]]] section. The meaning 
 | maximumwaarde inclusief | [`mim:maximumwaardeInclusief`](http://modellen.mim-standaard.nl/def/mim#maximumwaardeInclusief) | owl:DatatypeProperty  |  [grondslag](#metagegeven-maximumwaarde-inclusief) |
 | maximumwaarde exclusief | [`mim:maximumwaardeExclusief`](http://modellen.mim-standaard.nl/def/mim#maximumwaardeExclusief) | owl:DatatypeProperty  |  [grondslag](#metagegeven-maximumwaarde-exclusief) |
 | mixin | [`mim:mixin`](http://modellen.mim-standaard.nl/def/mim#mixin) | owl:DatatypeProperty  |  [grondslag](#metagegeven-mixin) |
+
+### Objects and attributes in LD
+#### mim:Featuretype
+
+The object types are specified according to the following aspects:ы
