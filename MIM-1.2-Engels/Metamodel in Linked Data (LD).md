@@ -62,3 +62,22 @@ To convert the data constraints (such as cardinalities, data types and propertie
 
 Compared to the UML representation of the MIM metamodel, the MIM in RDF only has the use of metadata names and not the names of the bindings associated with these metadata. For example, for the binding between Object Type and Attribute Type, the UML metamodel has the binding name "has attribute" and the role name "attribute". The MIM in RDF uses only the role name "attribute" in this case.
 
+### Core
+<figure id="media/rdf-kern">
+  <img src="media/rdf-kern.png" alt="" />
+  <figcaption>Diagram: Kern metamodel in LD</figcaption>
+</figure>
+
+As a prefix for the vocabulary `mim`,with the  namespace `http://modellen.mim-standaard.nl/def/mim#`, will be used. The prefix for the shapes is going to be `shape`, with the following namespace `http://modellen.mim-standaard.nl/def/mim-shapes#`.
+
+| **MIM metaclass** | **Metaclass in RDF** | **Shape in RDF** | **Basis** |
+|-------------------|----------------------|------------------|---------------|
+| Featuretype        | [`mim:Objecttype`](http://modellen.mim-standaard.nl/def/mim#Objecttype) | shape:Objecttype | [basis](#objecttypen-en-attribuutsoorten) |
+| Attributetype   | [`mim:Attribuuttype`](http://modellen.mim-standaard.nl/def/mim#Attribuutsoort) | shape:Attribuuttype | [basis](#attribuutsoort)
+| Datatype    | [`mim:Gegevensgroep`](http://modellen.mim-standaard.nl/def/mim#Gegevensgroep) | shape:Gegevensgroep | [basis](#gegevensgroep) |
+| Gegevensgroeptype | [`mim:Gegevensgroeptype`](http://modellen.mim-standaard.nl/def/mim#Gegevensgroeptype) | shape:Gegevensgroeptype | [basis](#gegevensgroeptype) |
+| Generalisatie     | [`mim:Generalisatie`](http://modellen.mim-standaard.nl/def/mim#Generalisatie) | shape:Generalisatie | [basis](#generalisatie) |
+| Relatiesoort      | [`mim:Relatiesoort`](http://modellen.mim-standaard.nl/def/mim#Relatiesoort) | shape:Relatiesoort | [basis](#relatiesoort) |
+| Relatieklasse     | [`mim:Relatieklasse`](http://modellen.mim-standaard.nl/def/mim#Relatieklasse) | shape:Relatieklasse | [basis](#relatieklasse) |
+
+In the figure above, not all bindings have been drawn around `mim:Relationship Type`: this would make the figure unnecessarily complex. The bindings with `mim:Data group type` have not been drawn. This is depicted in the figure below. This shows that a `mim:Data Group Type` can have outgoing relations, but no incoming relations: that is always a `mim:Object Type`.
