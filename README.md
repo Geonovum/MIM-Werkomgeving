@@ -1,5 +1,19 @@
 # MIM-Werkomgeving
 
+------------------------------------------------------------
+MIM 2.0 ontwikkeling is in een ander repository:
+Het werkdocument van het mim-metamodel (2.0) staat hier:
+MIM-Metamodel: <https://geonovum.github.io/mim-metamodel>
+
+Profielen van MIM implementaties in verschillende modelleertalen:
+MIM-UML: <https://geonovum.github.io/mim-uml>
+MIM-LD: <https://geonovum.github.io/mim-ld>
+MIM-OmtoUML: <https://geonovum.github.io/mim-ontouml>
+MIM-FBM: <https://geonovum.github.io/mim-fbm>
+MIM-ArchiMate: <https://geonovum.github.io/mim-archimate>
+-------------------------------------------------------------
+
+
 Dit is de repository van het Metamodel Informatie Modellering (MIM). Hierin staat de werkversie van het MIM. Daarnaast bevat de repository bestanden die horen bij de werkversie van MIM.
 
  - De webversie staat hier: <https://geonovum.github.io/MIM-Werkomgeving>
