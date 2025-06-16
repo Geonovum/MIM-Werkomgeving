@@ -72,8 +72,8 @@ As a prefix for the vocabulary `mim`,with the  namespace `http://modellen.mim-st
 
 | **MIM metaclass** | **Metaclass in RDF** | **Shape in RDF** | **Base** |
 |-------------------|----------------------|------------------|---------------|
-| Featuretype        | [`mim:Objecttype`](http://modellen.mim-standaard.nl/def/mim#Objecttype) | shape:Objecttype | [base](#objecttypen-en-attribuutsoorten) |
-| Attributetype   | [`mim:Attribuuttype`](http://modellen.mim-standaard.nl/def/mim#Attribuutsoort) | shape:Attribuuttype | [base](#attribuutsoort)
+| Featuretype        | [`mim:Objecttype`](http://modellen.mim-standaard.nl/def/mim#Objecttype) | shape:Objecttype | [base](#objecttypen-en-attributesoorten) |
+| Attributetype   | [`mim:Attribuuttype`](http://modellen.mim-standaard.nl/def/mim#Attribuutsoort) | shape:Attribuuttype | [base](#attributesoort)
 | Datatype    | [`mim:Gegevensgroep`](http://modellen.mim-standaard.nl/def/mim#Gegevensgroep) | shape:Gegevensgroep | [base](#gegevensgroep) |
 | Gegevensgroeptype | [`mim:Gegevensgroeptype`](http://modellen.mim-standaard.nl/def/mim#Gegevensgroeptype) | shape:Gegevensgroeptype | [base](#gegevensgroeptype) |
 | Generalisatie     | [`mim:Generalisatie`](http://modellen.mim-standaard.nl/def/mim#Generalisatie) | shape:Generalisatie | [base](#generalisatie) |
@@ -128,7 +128,7 @@ The "union construct" allows a union between multiple attribute types, data type
 | union             | [`mim:union`](http://modellen.mim-standaard.nl/def/mim#union) | shape:union | [base](#union) |
 | Datatype          | [`mim:Datatype`](http://modellen.mim-standaard.nl/def/mim#Datatype) | shape:Datatype | [base](#datatype) |
 | Objecttype        | [`mim:Objecttype`](http://modellen.mim-standaard.nl/def/mim#Objecttype) | shape:Objecttype | [base](#objecttype) |
-| Attribuutsoort    | [`mim:Attribuutsoort`](http://modellen.mim-standaard.nl/def/mim#Attribuutsoort) | shape:Attribuutsoort | [base](#attribuutsoort) |
+| Attribuutsoort    | [`mim:Attribuutsoort`](http://modellen.mim-standaard.nl/def/mim#Attribuutsoort) | shape:Attribuutsoort | [base](#attributesoort) |
 
 *Data type selection*
 
@@ -141,8 +141,8 @@ Since an `mim:Choice` is a specialisation of an `mim:Datatype`, an attribute typ
 
 *Attribute selection*
 
-<figure id="media/rdf-union-attribuut">
-  <img src="media/rdf-union-attribuut.png" alt="" />
+<figure id="media/rdf-union-attribute">
+  <img src="media/rdf-union-attribute.png" alt="" />
   <figcaption>Diagram: Attribuutunion in LD</figcaption>
 </figure>
 
@@ -175,15 +175,15 @@ A choice between relationship types is made based on a choice constraint. A choi
 
 | **MIM metaclass** | **Metaclass in RDF** | **Shape in RDF** | **Base** |
 |-------------------|----------------------|------------------|---------------|
-| AssociationRole (abstract) | [`AssociationRole`](http://modellen.mim-standaard.nl/def/mim#AssociationRole) | shape:AssociationRole | [grondslag](#AssociationRole) |
-| AssociationRole source       | [`AssociationRolesource`](http://modellen.mim-standaard.nl/def/mim#AssociationRolesource) | shape:AssociationRolesource | [grondslag](#AssociationRole) |
-| AssociationRole target       | [`AssociationRoletarget`](http://modellen.mim-standaard.nl/def/mim#AssociationRoletarget) | shape:AssociationRoletarget | [grondslag](#AssociationRole) |
+| AssociationRole (abstract) | [`AssociationRole`](http://modellen.mim-standaard.nl/def/mim#AssociationRole) | shape:AssociationRole | [base](#AssociationRole) |
+| AssociationRole source       | [`AssociationRolesource`](http://modellen.mim-standaard.nl/def/mim#AssociationRolesource) | shape:AssociationRolesource | [base](#AssociationRole) |
+| AssociationRole target       | [`AssociationRoletarget`](http://modellen.mim-standaard.nl/def/mim#AssociationRoletarget) | shape:AssociationRoletarget | [base](#AssociationRole) |
 
 #### External link
 
 | **MIM metaclass** | **Metaclass in RDF** | **Shape in RDF** | **Base** |
 |-------------------|----------------------|------------------|---------------|
-| Externe koppeling | [`mim:ExterneKoppeling`](http://modellen.mim-standaard.nl/def/mim#ExterneKoppeling) | shape:ExterneKoppeling | [grondslag](#externe-koppeling) |
+| Externe koppeling | [`mim:ExterneKoppeling`](http://modellen.mim-standaard.nl/def/mim#ExterneKoppeling) | shape:ExterneKoppeling | [base](#externe-koppeling) |
 
 #### Pakketten
 
@@ -197,97 +197,97 @@ The metadata <a href="#metadata-contains-model-element">contains-model-element</
 | **MIM metaclass**     | **Metaclass in RDF** | **Shape in RDF** | **Base** |
 |-----------------------|----------------------|------------------|---------------|
 | Package               | [`mim:Package`](http://modellen.mim-standaard.nl/def/mim#Package) | shape:Package | [base](#packages) |
-| Informatiemodel       | [`mim:Informatiemodel`](http://modellen.mim-standaard.nl/def/mim#Informatiemodel) | shape:Informatiemodel | [grondslag](#informatiemodel) |
-| Domain (het eigen IM) | [`mim:Domain`](http://modellen.mim-standaard.nl/def/mim#Domain) | shape:Domain | [base](#domain) |
-| External                | [`mim:External`](http://modellen.mim-standaard.nl/def/mim#External) | shape:External | [base](#external) |
+| InformationModel      | [`mim:InformationModel`](http://modellen.mim-standaard.nl/def/mim#InformationModel) | shape:InformationModel | [base](#informatiemodel) |
+| Domain (its own IM)   | [`mim:Domain`](http://modellen.mim-standaard.nl/def/mim#Domain) | shape:Domain | [base](#domain) |
+| External              | [`mim:External`](http://modellen.mim-standaard.nl/def/mim#External) | shape:External | [base](#external) |
 | View                  | [`mim:View`](http://modellen.mim-standaard.nl/def/mim#View) | shape:View | [base](#view) |
 
 ## Specification metadata in LD
 
 This section complements the [[[#specification-metadata]]] section. The meaning of metadata is specified in LD independently of the class to which this metadata belongs. Below is a listing of all metadata and the corresponding meta property in RDF. The data rules (structure) for the metadata are specific per class, though, and are covered in the relevant section.
 
-| **MIM metagegeven** | **Meta-ownership in RDF** | **RDF type** | **Grondslag** |
+| **MIM metadata** | **Meta-ownership in RDF** | **RDF type** | **Base** |
 |---------------------|----------------------------|--------------|---------------|
-| aggregatietype | [`mim:aggregatietype`](http://modellen.mim-standaard.nl/def/mim#aggregatietype) | owl:ObjectProperty | [grondslag](#metagegeven-aggregatietype) |
-| alias | [`mim:alias`](http://modellen.mim-standaard.nl/def/mim#alias) | owl:DatatypeProperty | [grondslag](#metagegeven-alias) |
-| attribuut | [`mim:attribuut`](http://modellen.mim-standaard.nl/def/mim#attribuut) | owl:ObjectProperty | [grondslag](#metagegeven-heeft-attribuut) |
-| authentiek | [`mim:authentiek`](http://modellen.mim-standaard.nl/def/mim#authentiek) | owl:ObjectProperty | [grondslag](#metagegeven-authentiek) |
-| basis-URI | [`mim:basisUri`](http://modellen.mim-standaard.nl/def/mim#basisUri) | owl:DatatypeProperty | [grondslag](#metagegeven-basis-uri) |
-| begrip | [`mim:begrip`](http://modellen.mim-standaard.nl/def/mim#begrip) | owl:ObjectProperty | [grondslag](#metagegeven-begrip) |
-| begripsterm | [`mim:begripsterm`](http://modellen.mim-standaard.nl/def/mim#begripsterm) | owl:DatatypeProperty | [grondslag](#metagegeven-begrip) |
-| bron | [`mim:bron`](http://modellen.mim-standaard.nl/def/mim#bron) | owl:ObjectProperty | [grondslag](#metagegeven-bron) |
-| code | [`mim:code`](http://modellen.mim-standaard.nl/def/mim#code) | owl:DatatypeProperty | [grondslag](#metagegeven-code) |
-| constraint | [`mim:constraint`](http://modellen.mim-standaard.nl/def/mim#constraint) | owl:ObjectProperty | [grondslag](#metagegeven-heeft-constraint) |
-| data-element | [`mim:dataElement`](http://modellen.mim-standaard.nl/def/mim#dataElement) | owl:ObjectProperty | [grondslag](#metagegeven-heeft-data-element) |
-| datum opname | [`mim:datumOpname`](http://modellen.mim-standaard.nl/def/mim#datumOpname) | owl:DatatypeProperty | [grondslag](#metagegeven-datum-opname) |
-| definitie | [`mim:definitie`](http://modellen.mim-standaard.nl/def/mim#definitie) | owl:DatatypeProperty | [grondslag](#metagegeven-definitie) |
-| doel | [`mim:doel`](http://modellen.mim-standaard.nl/def/mim#doel) | owl:ObjectProperty | [grondslag](#metagegeven-doel) |
-| formeel patroon | [`mim:formeelPatroon`](http://modellen.mim-standaard.nl/def/mim#formeelPatroon) | owl:DatatypeProperty | [grondslag](#metagegeven-formeel-patroon) |
-| gegevensgroep | [`mim:gegevensgroep`](http://modellen.mim-standaard.nl/def/mim#gegevensgroep) | owl:ObjectProperty | [grondslag](#metagegeven-heeft-gegevensgroep) |
-| groeptype | [`mim:groeptype`](http://modellen.mim-standaard.nl/def/mim#groeptype) | owl:ObjectProperty | [grondslag](#metagegeven-heeft-gegevensgroeptype) |
-| herkomst | [`mim:herkomst`](http://modellen.mim-standaard.nl/def/mim#herkomst) | owl:DatatypeProperty | [grondslag](#metagegeven-herkomst) |
-| herkomst definitie | [`mim:herkomstDefinitie`](http://modellen.mim-standaard.nl/def/mim#herkomstDefinitie) | owl:DatatypeProperty | [grondslag](#metagegeven-herkomst-definitie) |
-| identificerend | [`mim:identificerend`](http://modellen.mim-standaard.nl/def/mim#identificerend) | owl:DatatypeProperty | [grondslag](#metagegeven-identificerend) |
-| indicatie abstract object | [`mim:indicatieAbstractObject`](http://modellen.mim-standaard.nl/def/mim#indicatieAbstractObject) | owl:DatatypeProperty | [grondslag](#metagegeven-indicatie-abstract-object)|
-| indicatie afleidbaar | [`mim:indicatieAfleidbaar`](http://modellen.mim-standaard.nl/def/mim#indicatieAfleidbaar) | owl:DatatypeProperty | [grondslag](#metagegeven-indicatie-afleidbaar) |
-| indicatie classificerend | [`mim:indicatieClassificerend`](http://modellen.mim-standaard.nl/def/mim#indicatieAfleidbaar) | owl:DatatypeProperty | [grondslag](#metagegeven-indicatie-classificerend) |
-| heeft tijdlijn geldigheid | [`mim:heeftTijdlijnGeldigheid`](http://modellen.mim-standaard.nl/def/mim#heeftTijdlijnGeldigheid) | owl:DatatypeProperty | [grondslag](#metagegeven-indicatie-materiele-historie) |
-| indicatie materiële historie | [`mim:indicatieMaterieleHistorie`](http://modellen.mim-standaard.nl/def/mim#indicatieMaterieleHistorie) | owl:DatatypeProperty | [grondslag](#metagegeven-indicatie-materiele-historie) |
-| heeft tijdlijn registratie | [`mim:heeftTijdlijnRegistratie`](http://modellen.mim-standaard.nl/def/mim#heeftTijdlijnRegistratie) | owl:DatatypeProperty | [grondslag](#metagegeven-indicatie-formele-historie) |
-| indicatie formele historie | [`mim:indicatieFormeleHistorie`](http://modellen.mim-standaard.nl/def/mim#indicatieFormeleHistorie) | owl:DatatypeProperty | [grondslag](#metagegeven-indicatie-formele-historie) |
-| informatiedomein | [`mim:informatiedomein`](http://modellen.mim-standaard.nl/def/mim#informatiedomein) | owl:DatatypeProperty | [grondslag](#metagegeven-informatiedomein) |
-| informatiemodeltype | [`mim:informatiemodeltype`](http://modellen.mim-standaard.nl/def/mim#informatiemodeltype) | owl:ObjectProperty | [grondslag](#metagegeven-informatiemodeltype) |
-| kardinaliteit | [`mim:kardinaliteit`](http://modellen.mim-standaard.nl/def/mim#kardinaliteit) | owl:DatatypeProperty | [grondslag](#metagegeven-kardinaliteit)
+| aggregatietype | [`mim:aggregatietype`](http://modellen.mim-standaard.nl/def/mim#aggregatietype) | owl:ObjectProperty | [base](#metadata-aggregatietype) |
+| alias | [`mim:alias`](http://modellen.mim-standaard.nl/def/mim#alias) | owl:DatatypeProperty | [base](#metadata-alias) |
+| attribute | [`mim:attribute`](http://modellen.mim-standaard.nl/def/mim#attribute) | owl:ObjectProperty | [base](#metadata-heeft-attribute) |
+| authentic | [`mim:authentic`](http://modellen.mim-standaard.nl/def/mim#authentic) | owl:ObjectProperty | [base](#metadata-authentic) |
+| basis-URI | [`mim:basisUri`](http://modellen.mim-standaard.nl/def/mim#basisUri) | owl:DatatypeProperty | [base](#metadata-basis-uri) |
+| concept | [`mim:concept`](http://modellen.mim-standaard.nl/def/mim#concept) | owl:ObjectProperty | [base](#metadata-concept) |
+| term | [`mim:term`](http://modellen.mim-standaard.nl/def/mim#term) | owl:DatatypeProperty | [base](#metadata-concept) |
+| source | [`mim:source`](http://modellen.mim-standaard.nl/def/mim#source) | owl:ObjectProperty | [base](#metadata-source) |
+| code | [`mim:code`](http://modellen.mim-standaard.nl/def/mim#code) | owl:DatatypeProperty | [base](#metadata-code) |
+| constraint | [`mim:constraint`](http://modellen.mim-standaard.nl/def/mim#constraint) | owl:ObjectProperty | [base](#metadata-heeft-constraint) |
+| data-element | [`mim:dataElement`](http://modellen.mim-standaard.nl/def/mim#dataElement) | owl:ObjectProperty | [base](#metadata-heeft-data-element) |
+| datum opname | [`mim:datumOpname`](http://modellen.mim-standaard.nl/def/mim#datumOpname) | owl:DatatypeProperty | [base](#metadata-datum-opname) |
+| definitie | [`mim:definitie`](http://modellen.mim-standaard.nl/def/mim#definitie) | owl:DatatypeProperty | [base](#metadata-definitie) |
+| doel | [`mim:doel`](http://modellen.mim-standaard.nl/def/mim#doel) | owl:ObjectProperty | [base](#metadata-doel) |
+| formeel patroon | [`mim:formeelPatroon`](http://modellen.mim-standaard.nl/def/mim#formeelPatroon) | owl:DatatypeProperty | [base](#metadata-formeel-patroon) |
+| gegevensgroep | [`mim:gegevensgroep`](http://modellen.mim-standaard.nl/def/mim#gegevensgroep) | owl:ObjectProperty | [base](#metadata-heeft-gegevensgroep) |
+| groeptype | [`mim:groeptype`](http://modellen.mim-standaard.nl/def/mim#groeptype) | owl:ObjectProperty | [base](#metadata-heeft-gegevensgroeptype) |
+| herkomst | [`mim:herkomst`](http://modellen.mim-standaard.nl/def/mim#herkomst) | owl:DatatypeProperty | [base](#metadata-herkomst) |
+| herkomst definitie | [`mim:herkomstDefinitie`](http://modellen.mim-standaard.nl/def/mim#herkomstDefinitie) | owl:DatatypeProperty | [base](#metadata-herkomst-definitie) |
+| identificerend | [`mim:identificerend`](http://modellen.mim-standaard.nl/def/mim#identificerend) | owl:DatatypeProperty | [base](#metadata-identificerend) |
+| indicatie abstract object | [`mim:indicatieAbstractObject`](http://modellen.mim-standaard.nl/def/mim#indicatieAbstractObject) | owl:DatatypeProperty | [base](#metadata-indicatie-abstract-object)|
+| indicatie afleidbaar | [`mim:indicatieAfleidbaar`](http://modellen.mim-standaard.nl/def/mim#indicatieAfleidbaar) | owl:DatatypeProperty | [base](#metadata-indicatie-afleidbaar) |
+| indicatie classificerend | [`mim:indicatieClassificerend`](http://modellen.mim-standaard.nl/def/mim#indicatieAfleidbaar) | owl:DatatypeProperty | [base](#metadata-indicatie-classificerend) |
+| heeft tijdlijn geldigheid | [`mim:heeftTijdlijnGeldigheid`](http://modellen.mim-standaard.nl/def/mim#heeftTijdlijnGeldigheid) | owl:DatatypeProperty | [base](#metadata-indicatie-materiele-historie) |
+| indicatie materiële historie | [`mim:indicatieMaterieleHistorie`](http://modellen.mim-standaard.nl/def/mim#indicatieMaterieleHistorie) | owl:DatatypeProperty | [base](#metadata-indicatie-materiele-historie) |
+| heeft tijdlijn registratie | [`mim:heeftTijdlijnRegistratie`](http://modellen.mim-standaard.nl/def/mim#heeftTijdlijnRegistratie) | owl:DatatypeProperty | [base](#metadata-indicatie-formele-historie) |
+| indicatie formele historie | [`mim:indicatieFormeleHistorie`](http://modellen.mim-standaard.nl/def/mim#indicatieFormeleHistorie) | owl:DatatypeProperty | [base](#metadata-indicatie-formele-historie) |
+| informatiedomein | [`mim:informatiedomein`](http://modellen.mim-standaard.nl/def/mim#informatiedomein) | owl:DatatypeProperty | [base](#metadata-informatiedomein) |
+| informatiemodeltype | [`mim:informatiemodeltype`](http://modellen.mim-standaard.nl/def/mim#informatiemodeltype) | owl:ObjectProperty | [base](#metadata-informatiemodeltype) |
+| kardinaliteit | [`mim:kardinaliteit`](http://modellen.mim-standaard.nl/def/mim#kardinaliteit) | owl:DatatypeProperty | [base](#metadata-kardinaliteit)
 | kwaliteit | [`mim:kwaliteit`](http://modellen.mim-standaard.nl/def/mim#kwaliteit) | owl:DatatypeProperty | |
-| lengte | [`mim:lengte`](http://modellen.mim-standaard.nl/def/mim#lengte) | owl:DatatypeProperty | [grondslag](#metagegeven-lengte) |
-| locatie | [`mim:locatie`](http://modellen.mim-standaard.nl/def/mim#locatie) | owl:DatatypeProperty | [grondslag](#metagegeven-locatie) |
-| identificatie | [`mim:identificatie`](http://modellen.mim-standaard.nl/def/mim#identificatie) | owl:DatatypeProperty | [grondslag](#metagegeven-identificatie) |
-| mim extensie | [`mim:extensie`](http://modellen.mim-standaard.nl/def/mim#extensie) | owl:DatatypeProperty | [grondslag](#metagegeven-mim-extensie)
-| mim taal | [`mim:taal`](http://modellen.mim-standaard.nl/def/mim#taal) | owl:DatatypeProperty | [grondslag](#metagegeven-mim-taal) |
-| mim tekstopmaak | [`mim:tekstopmaak`](http://modellen.mim-standaard.nl/def/mim#tekstopmaak) | owl:DatatypeProperty | [grondslag](#metagegeven-tekstopmaak) |
-| mim versie | [`mim:versie`](http://modellen.mim-standaard.nl/def/mim#versie) | owl:DatatypeProperty | [grondslag](#metagegeven-mim-versie) |
-| mogelijk geen waarde | [`mim:mogelijkGeenWaarde`](http://modellen.mim-standaard.nl/def/mim#mogelijkGeenWaarde) | owl:DatatypeProperty | [grondslag](#metagegeven-mogelijk-geen-waarde) |
-| naam | [`mim:naam`](http://modellen.mim-standaard.nl/def/mim#naam) | owl:DatatypeProperty | [grondslag](#metagegeven-naam) |
-| patroon | [`mim:patroon`](http://modellen.mim-standaard.nl/def/mim#patroon) | owl:DatatypeProperty | [grondslag](#metagegeven-patroon) |
+| lengte | [`mim:lengte`](http://modellen.mim-standaard.nl/def/mim#lengte) | owl:DatatypeProperty | [base](#metadata-lengte) |
+| locatie | [`mim:locatie`](http://modellen.mim-standaard.nl/def/mim#locatie) | owl:DatatypeProperty | [base](#metadata-locatie) |
+| identificatie | [`mim:identificatie`](http://modellen.mim-standaard.nl/def/mim#identificatie) | owl:DatatypeProperty | [base](#metadata-identificatie) |
+| mim extensie | [`mim:extensie`](http://modellen.mim-standaard.nl/def/mim#extensie) | owl:DatatypeProperty | [base](#metadata-mim-extensie)
+| mim taal | [`mim:taal`](http://modellen.mim-standaard.nl/def/mim#taal) | owl:DatatypeProperty | [base](#metadata-mim-taal) |
+| mim tekstopmaak | [`mim:tekstopmaak`](http://modellen.mim-standaard.nl/def/mim#tekstopmaak) | owl:DatatypeProperty | [base](#metadata-tekstopmaak) |
+| mim versie | [`mim:versie`](http://modellen.mim-standaard.nl/def/mim#versie) | owl:DatatypeProperty | [base](#metadata-mim-versie) |
+| mogelijk geen waarde | [`mim:mogelijkGeenWaarde`](http://modellen.mim-standaard.nl/def/mim#mogelijkGeenWaarde) | owl:DatatypeProperty | [base](#metadata-mogelijk-geen-waarde) |
+| naam | [`mim:naam`](http://modellen.mim-standaard.nl/def/mim#naam) | owl:DatatypeProperty | [base](#metadata-naam) |
+| patroon | [`mim:patroon`](http://modellen.mim-standaard.nl/def/mim#patroon) | owl:DatatypeProperty | [base](#metadata-patroon) |
 | populatie | [`mim:populatie`](http://modellen.mim-standaard.nl/def/mim#populatie) | owl:DatatypeProperty | |
-| referentie-element | [`mim:referentieElement`](http://modellen.mim-standaard.nl/def/mim#referentieElement) | owl:ObjectProperty | [grondslag](#metagegeven-bevat-referentie-element) |
-| relatiemodelleringstype | [`mim:relatiemodelleringstype`](http://modellen.mim-standaard.nl/def/mim#relatiemodelleringstype) | owl:ObjectProperty | [grondslag](#metagegeven-relatiemodelleringstype) |
+| referentie-element | [`mim:referentieElement`](http://modellen.mim-standaard.nl/def/mim#referentieElement) | owl:ObjectProperty | [base](#metadata-bevat-referentie-element) |
+| relatiemodelleringstype | [`mim:relatiemodelleringstype`](http://modellen.mim-standaard.nl/def/mim#relatiemodelleringstype) | owl:ObjectProperty | [base](#metadata-relatiemodelleringstype) |
 | relatierol | [`mim:relatierol`](http://modellen.mim-standaard.nl/def/mim#relatierol) | owl:ObjectProperty | |
 | specificatie formeel | [`mim:specificatieFormeel`](http://modellen.mim-standaard.nl/def/mim#specificatieFormeel) | owl:DatatypeProperty | |
-| specificatie tekst | [`mim:specificatieTekst`](http://modellen.mim-standaard.nl/def/mim#specificatieTekst) | owl:DatatypeProperty | |
+| specificatie text | [`mim:specificatieTekst`](http://modellen.mim-standaard.nl/def/mim#specificatieTekst) | owl:DatatypeProperty | |
 | subtype | [`mim:subtype`](http://modellen.mim-standaard.nl/def/mim#subtype) | owl:ObjectProperty | |
 | supertype | [`mim:supertype`](http://modellen.mim-standaard.nl/def/mim#supertype) | owl:ObjectProperty | |
-| toelichting | [`mim:toelichting`](http://modellen.mim-standaard.nl/def/mim#toelichting) | owl:DatatypeProperty | [grondslag](#metagegeven-toelichting)
-| type | [`mim:type`](http://modellen.mim-standaard.nl/def/mim#type) | owl:ObjectProperty | [grondslag](#metagegeven-type) |
-| unidirectioneel | [`mim:unidirectioneel`](http://modellen.mim-standaard.nl/def/mim#unidirectioneel) | owl:DatatypeProperty | [grondslag](#metagegeven-unidirectioneel) |
-| waarde | [`mim:waarde`](http://modellen.mim-standaard.nl/def/mim#waarde) | owl:ObjectProperty | [grondslag](#metagegeven-bevat-enumeratiewaarde) |
-| minimumwaarde inclusief | [`mim:minimumwaardeInclusief`](http://modellen.mim-standaard.nl/def/mim#minimumwaardeInclusief) | owl:DatatypeProperty  |  [grondslag](#metagegeven-minimumwaarde-inclusief) |
-| minimumwaarde exclusief | [`mim:minimumwaardeExclusief`](http://modellen.mim-standaard.nl/def/mim#minimumwaardeExclusief) | owl:DatatypeProperty  |  [grondslag](#metagegeven-minimumwaarde-exclusief) |
-| maximumwaarde inclusief | [`mim:maximumwaardeInclusief`](http://modellen.mim-standaard.nl/def/mim#maximumwaardeInclusief) | owl:DatatypeProperty  |  [grondslag](#metagegeven-maximumwaarde-inclusief) |
-| maximumwaarde exclusief | [`mim:maximumwaardeExclusief`](http://modellen.mim-standaard.nl/def/mim#maximumwaardeExclusief) | owl:DatatypeProperty  |  [grondslag](#metagegeven-maximumwaarde-exclusief) |
-| mixin | [`mim:mixin`](http://modellen.mim-standaard.nl/def/mim#mixin) | owl:DatatypeProperty  |  [grondslag](#metagegeven-mixin) |
+| toelichting | [`mim:toelichting`](http://modellen.mim-standaard.nl/def/mim#toelichting) | owl:DatatypeProperty | [base](#metadata-toelichting)
+| type | [`mim:type`](http://modellen.mim-standaard.nl/def/mim#type) | owl:ObjectProperty | [base](#metadata-type) |
+| unidirectioneel | [`mim:unidirectioneel`](http://modellen.mim-standaard.nl/def/mim#unidirectioneel) | owl:DatatypeProperty | [base](#metadata-unidirectioneel) |
+| waarde | [`mim:waarde`](http://modellen.mim-standaard.nl/def/mim#waarde) | owl:ObjectProperty | [base](#metadata-bevat-enumeratiewaarde) |
+| minimumwaarde inclusief | [`mim:minimumwaardeInclusief`](http://modellen.mim-standaard.nl/def/mim#minimumwaardeInclusief) | owl:DatatypeProperty  |  [base](#metadata-minimumwaarde-inclusief) |
+| minimumwaarde exclusief | [`mim:minimumwaardeExclusief`](http://modellen.mim-standaard.nl/def/mim#minimumwaardeExclusief) | owl:DatatypeProperty  |  [base](#metadata-minimumwaarde-exclusief) |
+| maximumwaarde inclusief | [`mim:maximumwaardeInclusief`](http://modellen.mim-standaard.nl/def/mim#maximumwaardeInclusief) | owl:DatatypeProperty  |  [base](#metadata-maximumwaarde-inclusief) |
+| maximumwaarde exclusief | [`mim:maximumwaardeExclusief`](http://modellen.mim-standaard.nl/def/mim#maximumwaardeExclusief) | owl:DatatypeProperty  |  [base](#metadata-maximumwaarde-exclusief) |
+| mixin | [`mim:mixin`](http://modellen.mim-standaard.nl/def/mim#mixin) | owl:DatatypeProperty  |  [base](#metadata-mixin) |
 
 ### Objects and attributes in LD
 #### mim:Featuretype
 
 The object types are specified according to the following aspects:
 
-| **Aspect**                | **ownership** | **Kardinaliteit** | **Datatype or class** |
+| **Aspect**                | **ownership** | **Cardinality** | **Datatype or class** |
 |---------------------------|----------------|-------------------|--------------|
-| Identificatie | [`mim:identificatie`](http://modellen.mim-standaard.nl/def/mim#identificatie) | 1 | [`xsd:anyURI`](http://www.w3.org/2001/XMLSchema#anyURI) |
-| Naam                      | [`mim:naam`](http://modellen.mim-standaard.nl/def/mim#naam) | 1 | tekst |
-| Alias                     | [`mim:alias`](http://modellen.mim-standaard.nl/def/mim#alias) | 0..1 | tekst |
-| Begrip                    | [`mim:begrip`](http://modellen.mim-standaard.nl/def/mim#begrip) | 0..* | [`skos:Concept`](http://www.w3.org/2004/02/skos/core#Concept) |
-| Begripsterm               | [`mim:begripsterm`](http://modellen.mim-standaard.nl/def/mim#begripsterm) | 0..* | tekst |
-| Herkomst                  | [`mim:herkomst`](http://modellen.mim-standaard.nl/def/mim#herkomst) | 1 | tekst |
-| Definitie                 | [`mim:definitie`](http://modellen.mim-standaard.nl/def/mim#definitie) | 1 | tekst |
-| Herkomst definitie        | [`mim:herkomstDefinitie`](http://modellen.mim-standaard.nl/def/mim#herkomstDefinitie) | 1 | tekst |
+| Identification | [`mim:identificatie`](http://modellen.mim-standaard.nl/def/mim#identificatie) | 1 | [`xsd:anyURI`](http://www.w3.org/2001/XMLSchema#anyURI) |
+| Name                      | [`mim:naam`](http://modellen.mim-standaard.nl/def/mim#naam) | 1 | text |
+| Alias                     | [`mim:alias`](http://modellen.mim-standaard.nl/def/mim#alias) | 0..1 | text |
+| Concept                    | [`mim:concept`](http://modellen.mim-standaard.nl/def/mim#concept) | 0..* | [`skos:Concept`](http://www.w3.org/2004/02/skos/core#Concept) |
+| Term               | [`mim:term`](http://modellen.mim-standaard.nl/def/mim#term) | 0..* | text |
+| Origin                  | [`mim:herkomst`](http://modellen.mim-standaard.nl/def/mim#herkomst) | 1 | text |
+| Definition                 | [`mim:definitie`](http://modellen.mim-standaard.nl/def/mim#definitie) | 1 | text |
+| Origin definitie        | [`mim:herkomstDefinitie`](http://modellen.mim-standaard.nl/def/mim#herkomstDefinitie) | 1 | text |
 | Datum opname              | [`mim:datumOpname`](http://modellen.mim-standaard.nl/def/mim#datumOpname) | 1 | datum |
-| Populatie                 | [`mim:populatie`](http://modellen.mim-standaard.nl/def/mim#populatie) | 0..1 | tekst |
-| Kwaliteit                 | [`mim:kwaliteit`](http://modellen.mim-standaard.nl/def/mim#kwaliteit) | 0..1 | tekst |
-| Toelichting               | [`mim:toelichting`](http://modellen.mim-standaard.nl/def/mim#toelichting) | 0..1 | tekst |
+| Populatie                 | [`mim:populatie`](http://modellen.mim-standaard.nl/def/mim#populatie) | 0..1 | text |
+| Kwaliteit                 | [`mim:kwaliteit`](http://modellen.mim-standaard.nl/def/mim#kwaliteit) | 0..1 | text |
+| Toelichting               | [`mim:toelichting`](http://modellen.mim-standaard.nl/def/mim#toelichting) | 0..1 | text |
 | Indicatie abstract object | [`mim:indicatieAbstractObject`](http://modellen.mim-standaard.nl/def/mim#indicatieAbstractObject) | 1 | boolean |
-| Attribuut                 | [`mim:attribuut`](http://modellen.mim-standaard.nl/def/mim#attribuut) | 0..* | [`mim:Attribuutsoort`](http://modellen.mim-standaard.nl/def/mim#Attribuutsoort) |
+| Attribut                  | [`mim:attribute`](http://modellen.mim-standaard.nl/def/mim#attribute) | 0..* | [`mim:Attribuutsoort`](http://modellen.mim-standaard.nl/def/mim#Attribuutsoort) |
 | Gegevensgroep             | [`mim:gegevensgroep`](http://modellen.mim-standaard.nl/def/mim#gegevensgroep) | 0..* | [`mim:Gegevensgroep`](http://modellen.mim-standaard.nl/def/mim#Gegevensgroep) |
 | Constraint                | [`mim:constraint`](http://modellen.mim-standaard.nl/def/mim#constraint) | 0..* | [`mim:Constraint`](http://modellen.mim-standaard.nl/def/mim#Constraint) |
 
@@ -295,28 +295,28 @@ The object types are specified according to the following aspects:
 
 The attribute types are specified according to the following aspects:
 
-| **Aspect**                   | **Eigenschap** | **Kardinaliteit** | **Datatype of klasse** |
+| **Aspect**                   | **Ownership** | **Cardinality** | **Datatype or class** |
 |------------------------------|----------------|-------------------|--------------|
-| Identificatie | [`mim:identificatie`](http://modellen.mim-standaard.nl/def/mim#identificatie) | 1 | [`xsd:anyURI`](http://www.w3.org/2001/XMLSchema#anyURI) |
-| Naam                         | [`mim:naam`](http://modellen.mim-standaard.nl/def/mim#naam) | 1 | tekst |
-| Alias                        | [`mim:alias`](http://modellen.mim-standaard.nl/def/mim#alias) | 0..1 | tekst |
-| Begrip                    | [`mim:begrip`](http://modellen.mim-standaard.nl/def/mim#begrip) | 0..* | [`skos:Concept`](http://www.w3.org/2004/02/skos/core#Concept) |
-| Begripsterm               | [`mim:begripsterm`](http://modellen.mim-standaard.nl/def/mim#begripsterm) | 0..* | tekst |
-| Herkomst                     | [`mim:herkomst`](http://modellen.mim-standaard.nl/def/mim#herkomst) | 1 | tekst |
-| Definitie                    | [`mim:definitie`](http://modellen.mim-standaard.nl/def/mim#definitie) | 1 | tekst |
-| Herkomst definitie           | [`mim:herkomstDefinitie`](http://modellen.mim-standaard.nl/def/mim#herkomstDefinitie) | 1 | tekst |
+| Identification | [`mim:identificatie`](http://modellen.mim-standaard.nl/def/mim#identificatie) | 1 | [`xsd:anyURI`](http://www.w3.org/2001/XMLSchema#anyURI) |
+| Name                         | [`mim:naam`](http://modellen.mim-standaard.nl/def/mim#naam) | 1 | text |
+| Alias                        | [`mim:alias`](http://modellen.mim-standaard.nl/def/mim#alias) | 0..1 | text |
+| Concept                    | [`mim:concept`](http://modellen.mim-standaard.nl/def/mim#concept) | 0..* | [`skos:Concept`](http://www.w3.org/2004/02/skos/core#Concept) |
+| Term               | [`mim:term`](http://modellen.mim-standaard.nl/def/mim#term) | 0..* | text |
+| Origin                     | [`mim:herkomst`](http://modellen.mim-standaard.nl/def/mim#herkomst) | 1 | text |
+| Definition                    | [`mim:definitie`](http://modellen.mim-standaard.nl/def/mim#definitie) | 1 | text |
+| Origin definitie           | [`mim:herkomstDefinitie`](http://modellen.mim-standaard.nl/def/mim#herkomstDefinitie) | 1 | text |
 | Datum opname                 | [`mim:datumOpname`](http://modellen.mim-standaard.nl/def/mim#datumOpname) | 1 | datum |
 | Type                         | [`mim:type`](http://modellen.mim-standaard.nl/def/mim#type) | 1 | [`mim:Datatype`](http://modellen.mim-standaard.nl/def/mim#Datatype) |
-| Lengte                       | [`mim:lengte`](http://modellen.mim-standaard.nl/def/mim#lengte) | 0..1 | tekst |
-| Patroon                      | [`mim:patroon`](http://modellen.mim-standaard.nl/def/mim#patroon) | 0..1 | tekst |
-| Formeel patroon              | [`mim:formeelPatroon`](http://modellen.mim-standaard.nl/def/mim#formeelPatroon) | 0..1 | tekst |
+| Lengte                       | [`mim:lengte`](http://modellen.mim-standaard.nl/def/mim#lengte) | 0..1 | text |
+| Patroon                      | [`mim:patroon`](http://modellen.mim-standaard.nl/def/mim#patroon) | 0..1 | text |
+| Formeel patroon              | [`mim:formeelPatroon`](http://modellen.mim-standaard.nl/def/mim#formeelPatroon) | 0..1 | text |
 | Heeft tijdlijn geldigheid    | [`mim:heeftTijdlijnGeldigheid`](http://modellen.mim-standaard.nl/def/mim#heeftTijdlijnGeldigheid) | 1 | boolean |
 | Indicatie materiële historie | [`mim:indicatieMaterieleHistorie`](http://modellen.mim-standaard.nl/def/mim#indicatieMaterieleHistorie) | 1 | boolean |
 | Heeft tijdlijn registratie   | [`mim:heeftTijdlijnRegistratie`](http://modellen.mim-standaard.nl/def/mim#heeftTijdlijnRegistratie) | 1 | boolean |
 | Indicatie formele historie   | [`mim:indicatieFormeleHistorie`](http://modellen.mim-standaard.nl/def/mim#indicatieFormeleHistorie) | 1 | boolean |
-| Kardinaliteit                | [`mim:kardinaliteit`](http://modellen.mim-standaard.nl/def/mim#kardinaliteit) | 1 | tekst |
-| Authentiek                   | [`mim:authentiek`](http://modellen.mim-standaard.nl/def/mim#authentiek) | 1 | Authenticiteit |
-| Toelichting                  | [`mim:toelichting`](http://modellen.mim-standaard.nl/def/mim#toelichting) | 0..1 | tekst |
+| Cardinality                | [`mim:kardinaliteit`](http://modellen.mim-standaard.nl/def/mim#kardinaliteit) | 1 | text |
+| Authentiek                   | [`mim:authentic`](http://modellen.mim-standaard.nl/def/mim#authentic) | 1 | Authenticiteit |
+| Toelichting                  | [`mim:toelichting`](http://modellen.mim-standaard.nl/def/mim#toelichting) | 0..1 | text |
 | Indicatie afleidbaar         | [`mim:indicatieAfleidbaar`](http://modellen.mim-standaard.nl/def/mim#indicatieAfleidbaar) | 1 | boolean |
 | Indicatie classificerend     | [`mim:indicatieAfleidbaar`](http://modellen.mim-standaard.nl/def/mim#indicatieAfleidbaar) | 1 | boolean |
 | Mogelijk geen waarde         | [`mim:mogelijkGeenWaarde`](http://modellen.mim-standaard.nl/def/mim#mogelijkGeenWaarde) | 1 | boolean |
@@ -330,12 +330,12 @@ The attribute types are specified according to the following aspects:
 
 The `mim:authentic` field refers to one of the following possible values:
 
-| **Authenticiteit** | **Definitie** |
+| **Authenticiteit** | **Definition** |
 |--------------------|---------------|
-| [`mim:Authentiek`](http://modellen.mim-standaard.nl/def/mim#Authentiek) | In een basisregistratie opgenomen gegeven dat bij wettelijk voorschrift als authentiek is aangemerkt. |
+| [`mim:Authentiek`](http://modellen.mim-standaard.nl/def/mim#Authentiek) | In een basisregistratie opgenomen gegeven dat bij wettelijk voorschrift als authentic is aangemerkt. |
 | [`mim:Basisgegeven`](http://modellen.mim-standaard.nl/def/mim#Basisgegeven) | Een in een basisregistratie opgenomen gegeven. |
 | [`mim:WettelijkGegeven`](http://modellen.mim-standaard.nl/def/mim#WettelijkGegeven) | Gegeven behorende bij een wettelijke registratie, niet zijnde een basisregistratie |
-| [`mim:LandelijkKerngegeven`](http://modellen.mim-standaard.nl/def/mim#LandelijkKerngegeven) | Indien het een gegeven of een als relatiesoort gemodelleerd gegeven is in een landelijk sector- en domein-overstijgend informatiemodel en geen authentiek gegeven en geen basisgegeven is. |
+| [`mim:LandelijkKerngegeven`](http://modellen.mim-standaard.nl/def/mim#LandelijkKerngegeven) | Indien het een gegeven of een als relatiesoort gemodelleerd gegeven is in een landelijk sector- en domein-overstijgend informatiemodel en geen authentic gegeven en geen basisgegeven is. |
 | [`mim:OverigeAuthenticiteit`](http://modellen.mim-standaard.nl/def/mim#OverigeAuthenticiteit) | Indien het géén van de voorgaande categorieën betreft. Veelal gaat het dan om proces-, taakveld- of domeinspecifieke gegevens. |
 
 The `mim:unit` field refers to a value taken from [SI Digital framework](https://si-digital-framework.org/SI/units?lang=en).
@@ -344,39 +344,39 @@ The `mim:unit` field refers to a value taken from [SI Digital framework](https:/
 
 The data groups are specified by the following aspects:
 
-| **Aspect**                   | **Eigenschap** | **Kardinaliteit** | **Datatype of klasse** |
+| **Aspect**                   | **Ownership** | **Cardinality** | **Datatype or class** |
 |------------------------------|----------------|-------------------|--------------|
-| Identificatie | [`mim:identificatie`](http://modellen.mim-standaard.nl/def/mim#identificatie) | 1 | [`xsd:anyURI`](http://www.w3.org/2001/XMLSchema#anyURI) |
-| Naam                         | [`mim:naam`](http://modellen.mim-standaard.nl/def/mim#naam) | 1 | tekst |
-| Alias                        | [`mim:alias`](http://modellen.mim-standaard.nl/def/mim#alias) | 0..1 | tekst |
-| Begrip                    | [`mim:begrip`](http://modellen.mim-standaard.nl/def/mim#begrip) | 0..* | [`skos:Concept`](http://www.w3.org/2004/02/skos/core#Concept) |
-| Begripsterm               | [`mim:begripsterm`](http://modellen.mim-standaard.nl/def/mim#begripsterm) | 0..* | tekst |
-| Definitie                    | [`mim:definitie`](http://modellen.mim-standaard.nl/def/mim#definitie) | 1 | tekst |
-| Toelichting                  | [`mim:toelichting`](http://modellen.mim-standaard.nl/def/mim#toelichting) | 0..1 | tekst |
+| Identification | [`mim:identificatie`](http://modellen.mim-standaard.nl/def/mim#identificatie) | 1 | [`xsd:anyURI`](http://www.w3.org/2001/XMLSchema#anyURI) |
+| Name                         | [`mim:naam`](http://modellen.mim-standaard.nl/def/mim#naam) | 1 | text |
+| Alias                        | [`mim:alias`](http://modellen.mim-standaard.nl/def/mim#alias) | 0..1 | text |
+| Concept                    | [`mim:concept`](http://modellen.mim-standaard.nl/def/mim#concept) | 0..* | [`skos:Concept`](http://www.w3.org/2004/02/skos/core#Concept) |
+| Term               | [`mim:term`](http://modellen.mim-standaard.nl/def/mim#term) | 0..* | text |
+| Definition                    | [`mim:definitie`](http://modellen.mim-standaard.nl/def/mim#definitie) | 1 | text |
+| Toelichting                  | [`mim:toelichting`](http://modellen.mim-standaard.nl/def/mim#toelichting) | 0..1 | text |
 | Gegevensgroeptype            | [`mim:gegevensgroeptype`](http://modellen.mim-standaard.nl/def/mim#gegevensgroeptype) | 1 | [`mim:Gegevensgroeptype`](http://modellen.mim-standaard.nl/def/mim#Gegevensgroeptype) |
-| Herkomst                     | [`mim:herkomst`](http://modellen.mim-standaard.nl/def/mim#herkomst) | 1 | tekst |
-| Herkomst definitie           | [`mim:herkomstDefinitie`](http://modellen.mim-standaard.nl/def/mim#herkomstDefinitie) | 1 | tekst |
+| Origin                     | [`mim:herkomst`](http://modellen.mim-standaard.nl/def/mim#herkomst) | 1 | text |
+| Origin definitie           | [`mim:herkomstDefinitie`](http://modellen.mim-standaard.nl/def/mim#herkomstDefinitie) | 1 | text |
 | Datum opname                 | [`mim:datumOpname`](http://modellen.mim-standaard.nl/def/mim#datumOpname) | 1 | datum |
-| Kardinaliteit                | [`mim:kardinaliteit`](http://modellen.mim-standaard.nl/def/mim#kardinaliteit) | 1 | tekst |
-| Authentiek                   | [`mim:authentiek`](http://modellen.mim-standaard.nl/def/mim#authentiek) | 1 | Authenticiteit |
+| Cardinality                | [`mim:kardinaliteit`](http://modellen.mim-standaard.nl/def/mim#kardinaliteit) | 1 | text |
+| Authentiek                   | [`mim:authentic`](http://modellen.mim-standaard.nl/def/mim#authentic) | 1 | Authenticiteit |
 | Constraint                | [`mim:constraint`](http://modellen.mim-standaard.nl/def/mim#constraint) | 0..* | [`mim:Constraint`](http://modellen.mim-standaard.nl/def/mim#Constraint) |
 
 #### mim:AttributeGroupType
 
 The data group types are specified by the following aspects:
 
-| **Aspect**                   | **Eigenschap** | **Kardinaliteit** | **Datatype of klasse** |
+| **Aspect**                   | **Ownership** | **Cardinality** | **Datatype or class** |
 |------------------------------|----------------|-------------------|--------------|
-| Identificatie | [`mim:identificatie`](http://modellen.mim-standaard.nl/def/mim#identificatie) | 1 | [`xsd:anyURI`](http://www.w3.org/2001/XMLSchema#anyURI) |
-| Naam                         | [`mim:naam`](http://modellen.mim-standaard.nl/def/mim#naam) | 1 | tekst |
-| Alias                        | [`mim:alias`](http://modellen.mim-standaard.nl/def/mim#alias) | 0..1 | tekst |
-| Begrip                    | [`mim:begrip`](http://modellen.mim-standaard.nl/def/mim#begrip) | 0..* | [`skos:Concept`](http://www.w3.org/2004/02/skos/core#Concept) |
-| Begripsterm               | [`mim:begripsterm`](http://modellen.mim-standaard.nl/def/mim#begripsterm) | 0..* | tekst |
-| Definitie                    | [`mim:definitie`](http://modellen.mim-standaard.nl/def/mim#definitie) | 0..1 | tekst |
-| Herkomst definitie           | [`mim:herkomstDefinitie`](http://modellen.mim-standaard.nl/def/mim#herkomstDefinitie) | 0..1 | tekst |
-| Toelichting                  | [`mim:toelichting`](http://modellen.mim-standaard.nl/def/mim#toelichting) | 0..1 | tekst |
+| Identification | [`mim:identificatie`](http://modellen.mim-standaard.nl/def/mim#identificatie) | 1 | [`xsd:anyURI`](http://www.w3.org/2001/XMLSchema#anyURI) |
+| Name                         | [`mim:naam`](http://modellen.mim-standaard.nl/def/mim#naam) | 1 | text |
+| Alias                        | [`mim:alias`](http://modellen.mim-standaard.nl/def/mim#alias) | 0..1 | text |
+| Concept                    | [`mim:concept`](http://modellen.mim-standaard.nl/def/mim#concept) | 0..* | [`skos:Concept`](http://www.w3.org/2004/02/skos/core#Concept) |
+| Term               | [`mim:term`](http://modellen.mim-standaard.nl/def/mim#term) | 0..* | text |
+| Definition                    | [`mim:definitie`](http://modellen.mim-standaard.nl/def/mim#definitie) | 0..1 | text |
+| Origin definitie           | [`mim:herkomstDefinitie`](http://modellen.mim-standaard.nl/def/mim#herkomstDefinitie) | 0..1 | text |
+| Toelichting                  | [`mim:toelichting`](http://modellen.mim-standaard.nl/def/mim#toelichting) | 0..1 | text |
 | Datum opname                 | [`mim:datumOpname`](http://modellen.mim-standaard.nl/def/mim#datumOpname) | 1 | datum |
-| Attribuut                 | [`mim:attribuut`](http://modellen.mim-standaard.nl/def/mim#attribuut) | 0..* | [`mim:Attribuutsoort`](http://modellen.mim-standaard.nl/def/mim#Attribuutsoort) |
+| Attribut                 | [`mim:attribute`](http://modellen.mim-standaard.nl/def/mim#attribute) | 0..* | [`mim:Attribuutsoort`](http://modellen.mim-standaard.nl/def/mim#Attribuutsoort) |
 | Gegevensgroep             | [`mim:gegevensgroep`](http://modellen.mim-standaard.nl/def/mim#gegevensgroep) | 0..* | [`mim:Gegevensgroep`](http://modellen.mim-standaard.nl/def/mim#Gegevensgroep) |
 | Constraint                | [`mim:constraint`](http://modellen.mim-standaard.nl/def/mim#constraint) | 0..* | [`mim:Constraint`](http://modellen.mim-standaard.nl/def/mim#Constraint) |
 
@@ -393,37 +393,37 @@ Both alternatives use relationship type and relationship role, but with differen
 
 Association types are specified according to the following aspects.
 
-| **Aspect**                   | **Eigenschap** | **Kardinaliteit** | **Datatype of klasse** |
+| **Aspect**                   | **Ownership** | **Cardinality** | **Datatype or class** |
 |------------------------------|----------------|-------------------|--------------|
-| Identificatie | [`mim:identificatie`](http://modellen.mim-standaard.nl/def/mim#identificatie) | 1 | [`xsd:anyURI`](http://www.w3.org/2001/XMLSchema#anyURI) |
-| Naam                         | [`mim:naam`](http://modellen.mim-standaard.nl/def/mim#naam) | 1 | tekst |
-| Alias                        | [`mim:alias`](http://modellen.mim-standaard.nl/def/mim#alias) | 0..1 | tekst |
-| Begrip                       | [`mim:begrip`](http://modellen.mim-standaard.nl/def/mim#begrip) | 0..* | [`skos:Concept`](http://www.w3.org/2004/02/skos/core#Concept) |
-| Begripsterm                  | [`mim:begripsterm`](http://modellen.mim-standaard.nl/def/mim#begripsterm) | 0..* | tekst |
+| Identification | [`mim:identificatie`](http://modellen.mim-standaard.nl/def/mim#identificatie) | 1 | [`xsd:anyURI`](http://www.w3.org/2001/XMLSchema#anyURI) |
+| Name                         | [`mim:naam`](http://modellen.mim-standaard.nl/def/mim#naam) | 1 | text |
+| Alias                        | [`mim:alias`](http://modellen.mim-standaard.nl/def/mim#alias) | 0..1 | text |
+| Concept                       | [`mim:concept`](http://modellen.mim-standaard.nl/def/mim#concept) | 0..* | [`skos:Concept`](http://www.w3.org/2004/02/skos/core#Concept) |
+| Term                  | [`mim:term`](http://modellen.mim-standaard.nl/def/mim#term) | 0..* | text |
 | Unidirectioneel              | [`mim:unidirectioneel`](http://modellen.mim-standaard.nl/def/mim#unidirectioneel) | 1 | boolean |
-| Bron                         | [`mim:bron`](http://modellen.mim-standaard.nl/def/mim#bron) | 1 | [`mim:Objecttype`](http://modellen.mim-standaard.nl/def/mim#Objecttype) |
+| Bron                         | [`mim:source`](http://modellen.mim-standaard.nl/def/mim#source) | 1 | [`mim:Objecttype`](http://modellen.mim-standaard.nl/def/mim#Objecttype) |
 | Doel                         | [`mim:doel`](http://modellen.mim-standaard.nl/def/mim#doel) | 1 | [`mim:Objecttype`](http://modellen.mim-standaard.nl/def/mim#Objecttype) |
 | Aggregatietype               | [`mim:aggregatietype`](http://modellen.mim-standaard.nl/def/mim#aggregatietype) | 1 | Aggregatietype |
-| Kardinaliteit                | [`mim:kardinaliteit`](http://modellen.mim-standaard.nl/def/mim#kardinaliteit) | 1 | tekst |
-| Kardinaliteit relatie bron   | [`mim:kardinaliteitRelatieBron`](http://modellen.mim-standaard.nl/def/mim#kardinaliteitRelatieBron) | 0..1 | tekst |
-| Herkomst                     | [`mim:herkomst`](http://modellen.mim-standaard.nl/def/mim#herkomst) | 1 | tekst |
-| Definitie                    | [`mim:definitie`](http://modellen.mim-standaard.nl/def/mim#definitie) | 1 | tekst |
-| Toelichting                  | [`mim:toelichting`](http://modellen.mim-standaard.nl/def/mim#toelichting) | 0..1 | tekst |
-| Herkomst definitie           | [`mim:herkomstDefinitie`](http://modellen.mim-standaard.nl/def/mim#herkomstDefinitie) | 1 | tekst |
+| Cardinality                | [`mim:kardinaliteit`](http://modellen.mim-standaard.nl/def/mim#kardinaliteit) | 1 | text |
+| Cardinality relatie source   | [`mim:kardinaliteitRelatieBron`](http://modellen.mim-standaard.nl/def/mim#kardinaliteitRelatieBron) | 0..1 | text |
+| Origin                     | [`mim:herkomst`](http://modellen.mim-standaard.nl/def/mim#herkomst) | 1 | text |
+| Definition                    | [`mim:definitie`](http://modellen.mim-standaard.nl/def/mim#definitie) | 1 | text |
+| Toelichting                  | [`mim:toelichting`](http://modellen.mim-standaard.nl/def/mim#toelichting) | 0..1 | text |
+| Origin definitie           | [`mim:herkomstDefinitie`](http://modellen.mim-standaard.nl/def/mim#herkomstDefinitie) | 1 | text |
 | Datum opname                 | [`mim:datumOpname`](http://modellen.mim-standaard.nl/def/mim#datumOpname) | 1 | datum |
 | Identificerend               | [`mim:identificerend`](http://modellen.mim-standaard.nl/def/mim#identificerend) | 0..1 | boolean |
 | Heeft tijdlijn geldigheid    | [`mim:heeftTijdlijnGeldigheid`](http://modellen.mim-standaard.nl/def/mim#heeftTijdlijnGeldigheid) | 1 | boolean |
 | Indicatie materiële historie | [`mim:indicatieMaterieleHistorie`](http://modellen.mim-standaard.nl/def/mim#indicatieMaterieleHistorie) | 1 | boolean |
 | Heeft tijdlijn registratie   | [`mim:heeftTijdlijnRegistratie`](http://modellen.mim-standaard.nl/def/mim#heeftTijdlijnRegistratie) | 1 | boolean |
 | Indicatie formele historie   | [`mim:indicatieFormeleHistorie`](http://modellen.mim-standaard.nl/def/mim#indicatieFormeleHistorie) | 1 | boolean |
-| Authentiek                   | [`mim:authentiek`](http://modellen.mim-standaard.nl/def/mim#authentiek) | 1 | Authenticiteit |
+| Authentiek                   | [`mim:authentic`](http://modellen.mim-standaard.nl/def/mim#authentic) | 1 | Authenticiteit |
 | Indicatie afleidbaar         | [`mim:indicatieAfleidbaar`](http://modellen.mim-standaard.nl/def/mim#indicatieAfleidbaar) | 1 | boolean |
 | Mogelijk geen waarde         | [`mim:mogelijkGeenWaarde`](http://modellen.mim-standaard.nl/def/mim#mogelijkGeenWaarde) | 1 | boolean |
 | Constraint                | [`mim:constraint`](http://modellen.mim-standaard.nl/def/mim#constraint) | 0..* | [`mim:Constraint`](http://modellen.mim-standaard.nl/def/mim#Constraint) |
 
 The `mim:aggregation type` field refers to one of the following possible values:
 
-| **Aggregatietype** | **Definitie** |
+| **Aggregatietype** | **Definition** |
 |--------------------|---------------|
 | [`mim:Geen`](http://modellen.mim-standaard.nl/def/mim#Geen) | Er is geen sprake van een aggregatie |
 | [`mim:Compositie`](http://modellen.mim-standaard.nl/def/mim#Compositie) | Compositie (gesloten wiebertje) |
@@ -433,14 +433,14 @@ The `mim:aggregation type` field refers to one of the following possible values:
 
 Association types are specified according to the following aspects.
 
-| **Aspect**                   | **Eigenschap** | **Kardinaliteit** | **Datatype of klasse** |
+| **Aspect**                   | **Ownership** | **Cardinality** | **Datatype or class** |
 |------------------------------|----------------|-------------------|--------------|
-| Identificatie | [`mim:identificatie`](http://modellen.mim-standaard.nl/def/mim#identificatie) | 1 | [`xsd:anyURI`](http://www.w3.org/2001/XMLSchema#anyURI) |
-| Naam                         | [`mim:naam`](http://modellen.mim-standaard.nl/def/mim#naam) | 0..1 | tekst |
-| Alias                        | [`mim:alias`](http://modellen.mim-standaard.nl/def/mim#alias) | 0..1 | tekst |
-| Begrip                       | [`mim:begrip`](http://modellen.mim-standaard.nl/def/mim#begrip) | 0..* | [`skos:Concept`](http://www.w3.org/2004/02/skos/core#Concept) |
-| Begripsterm                  | [`mim:begripsterm`](http://modellen.mim-standaard.nl/def/mim#begripsterm) | 0..* | tekst |
-| Definitie                    | [`mim:definitie`](http://modellen.mim-standaard.nl/def/mim#definitie) | 0..1 | tekst |
+| Identification | [`mim:identificatie`](http://modellen.mim-standaard.nl/def/mim#identificatie) | 1 | [`xsd:anyURI`](http://www.w3.org/2001/XMLSchema#anyURI) |
+| Name                         | [`mim:naam`](http://modellen.mim-standaard.nl/def/mim#naam) | 0..1 | text |
+| Alias                        | [`mim:alias`](http://modellen.mim-standaard.nl/def/mim#alias) | 0..1 | text |
+| Concept                       | [`mim:concept`](http://modellen.mim-standaard.nl/def/mim#concept) | 0..* | [`skos:Concept`](http://www.w3.org/2004/02/skos/core#Concept) |
+| Term                  | [`mim:term`](http://modellen.mim-standaard.nl/def/mim#term) | 0..* | text |
+| Definition                    | [`mim:definitie`](http://modellen.mim-standaard.nl/def/mim#definitie) | 0..1 | text |
 | Relatierol                   | [`mim:relatierol`](http://modellen.mim-standaard.nl/def/mim#relatierol) | 1..2 | [`Relatierol`](http://modellen.mim-standaard.nl/def/mim#Relatierol) |
 | Constraint                | [`mim:constraint`](http://modellen.mim-standaard.nl/def/mim#constraint) | 0..* | [`mim:Constraint`](http://modellen.mim-standaard.nl/def/mim#Constraint) |
 
@@ -448,14 +448,14 @@ Association types are specified according to the following aspects.
 
 For relationship roles, the following aspects are specified.
 
-| **Aspect**                   | **Eigenschap** | **Kardinaliteit** | **Datatype of klasse** |
+| **Aspect**                   | **Ownership** | **Cardinality** | **Datatype or class** |
 |------------------------------|----------------|-------------------|--------------|
-| Identificatie | [`mim:identificatie`](http://modellen.mim-standaard.nl/def/mim#identificatie) | 1 | [`xsd:anyURI`](http://www.w3.org/2001/XMLSchema#anyURI) |
-| Naam                         | [`mim:naam`](http://modellen.mim-standaard.nl/def/mim#naam) | 0..1 | tekst |
-| Alias                        | [`mim:alias`](http://modellen.mim-standaard.nl/def/mim#alias) | 0..1 | tekst |
-| Begrip                    | [`mim:begrip`](http://modellen.mim-standaard.nl/def/mim#begrip) | 0..* | [`skos:Concept`](http://www.w3.org/2004/02/skos/core#Concept) |
-| Begripsterm               | [`mim:begripsterm`](http://modellen.mim-standaard.nl/def/mim#begripsterm) | 0..* | tekst |
-| Definitie                    | [`mim:definitie`](http://modellen.mim-standaard.nl/def/mim#definitie) | 0..1 | tekst |
+| Identification | [`mim:identificatie`](http://modellen.mim-standaard.nl/def/mim#identificatie) | 1 | [`xsd:anyURI`](http://www.w3.org/2001/XMLSchema#anyURI) |
+| Name                         | [`mim:naam`](http://modellen.mim-standaard.nl/def/mim#naam) | 0..1 | text |
+| Alias                        | [`mim:alias`](http://modellen.mim-standaard.nl/def/mim#alias) | 0..1 | text |
+| Concept                    | [`mim:concept`](http://modellen.mim-standaard.nl/def/mim#concept) | 0..* | [`skos:Concept`](http://www.w3.org/2004/02/skos/core#Concept) |
+| Term               | [`mim:term`](http://modellen.mim-standaard.nl/def/mim#term) | 0..* | text |
+| Definition                    | [`mim:definitie`](http://modellen.mim-standaard.nl/def/mim#definitie) | 0..1 | text |
 | Constraint                | [`mim:constraint`](http://modellen.mim-standaard.nl/def/mim#constraint) | 0..* | [`mim:Constraint`](http://modellen.mim-standaard.nl/def/mim#Constraint) |
 
 
@@ -463,25 +463,25 @@ For relationship roles, the following aspects are specified.
 
 For association role, the target role of a relationship type will have the following aspects specified.
 
-| **Aspect**                   | **Eigenschap** | **Kardinaliteit** | **Datatype of klasse** |
+| **Aspect**                   | **Ownership** | **Cardinality** | **Datatype or class** |
 |------------------------------|----------------|-------------------|--------------|
-| Identificatie | [`mim:identificatie`](http://modellen.mim-standaard.nl/def/mim#identificatie) | 1 | [`xsd:anyURI`](http://www.w3.org/2001/XMLSchema#anyURI) |
-| Naam                         | [`mim:naam`](http://modellen.mim-standaard.nl/def/mim#naam) | 1 | tekst |
-| Alias                        | [`mim:alias`](http://modellen.mim-standaard.nl/def/mim#alias) | 0..1 | tekst |
-| Begrip                       | [`mim:begrip`](http://modellen.mim-standaard.nl/def/mim#begrip) | 0..* | [`skos:Concept`](http://www.w3.org/2004/02/skos/core#Concept) |
-| Begripsterm                  | [`mim:begripsterm`](http://modellen.mim-standaard.nl/def/mim#begripsterm) | 0..* | tekst |
-| Kardinaliteit                | [`mim:kardinaliteit`](http://modellen.mim-standaard.nl/def/mim#kardinaliteit) | 1 | tekst |
-| Herkomst                     | [`mim:herkomst`](http://modellen.mim-standaard.nl/def/mim#herkomst) | 1 | tekst |
-| Definitie                    | [`mim:definitie`](http://modellen.mim-standaard.nl/def/mim#definitie) | 1 | tekst |
-| Toelichting                  | [`mim:toelichting`](http://modellen.mim-standaard.nl/def/mim#toelichting) | 0..1 | tekst |
-| Herkomst definitie           | [`mim:herkomstDefinitie`](http://modellen.mim-standaard.nl/def/mim#herkomstDefinitie) | 1 | tekst |
+| Identification | [`mim:identificatie`](http://modellen.mim-standaard.nl/def/mim#identificatie) | 1 | [`xsd:anyURI`](http://www.w3.org/2001/XMLSchema#anyURI) |
+| Name                         | [`mim:naam`](http://modellen.mim-standaard.nl/def/mim#naam) | 1 | text |
+| Alias                        | [`mim:alias`](http://modellen.mim-standaard.nl/def/mim#alias) | 0..1 | text |
+| Concept                       | [`mim:concept`](http://modellen.mim-standaard.nl/def/mim#concept) | 0..* | [`skos:Concept`](http://www.w3.org/2004/02/skos/core#Concept) |
+| Term                  | [`mim:term`](http://modellen.mim-standaard.nl/def/mim#term) | 0..* | text |
+| Cardinality                | [`mim:kardinaliteit`](http://modellen.mim-standaard.nl/def/mim#kardinaliteit) | 1 | text |
+| Origin                     | [`mim:herkomst`](http://modellen.mim-standaard.nl/def/mim#herkomst) | 1 | text |
+| Definition                    | [`mim:definitie`](http://modellen.mim-standaard.nl/def/mim#definitie) | 1 | text |
+| Toelichting                  | [`mim:toelichting`](http://modellen.mim-standaard.nl/def/mim#toelichting) | 0..1 | text |
+| Origin definitie           | [`mim:herkomstDefinitie`](http://modellen.mim-standaard.nl/def/mim#herkomstDefinitie) | 1 | text |
 | Datum opname                 | [`mim:datumOpname`](http://modellen.mim-standaard.nl/def/mim#datumOpname) | 1 | datum |
 | Identificerend               | [`mim:identificerend`](http://modellen.mim-standaard.nl/def/mim#identificerend) | 0..1 | boolean |
 | Heeft tijdlijn geldigheid    | [`mim:heeftTijdlijnGeldigheid`](http://modellen.mim-standaard.nl/def/mim#heeftTijdlijnGeldigheid) | 1 | boolean |
 | Indicatie materiële historie | [`mim:indicatieMaterieleHistorie`](http://modellen.mim-standaard.nl/def/mim#indicatieMaterieleHistorie) | 1 | boolean |
 | Heeft tijdlijn registratie   | [`mim:heeftTijdlijnRegistratie`](http://modellen.mim-standaard.nl/def/mim#heeftTijdlijnRegistratie) | 1 | boolean |
 | Indicatie formele historie   | [`mim:indicatieFormeleHistorie`](http://modellen.mim-standaard.nl/def/mim#indicatieFormeleHistorie) | 1 | boolean |
-| Authentiek                   | [`mim:authentiek`](http://modellen.mim-standaard.nl/def/mim#authentiek) | 1 | Authenticiteit |
+| Authentiek                   | [`mim:authentic`](http://modellen.mim-standaard.nl/def/mim#authentic) | 1 | Authenticiteit |
 | Mogelijk geen waarde         | [`mim:mogelijkGeenWaarde`](http://modellen.mim-standaard.nl/def/mim#mogelijkGeenWaarde) | 1 | boolean |
 | Constraint                | [`mim:constraint`](http://modellen.mim-standaard.nl/def/mim#constraint) | 0..* | [`mim:Constraint`](http://modellen.mim-standaard.nl/def/mim#Constraint) |
 
@@ -489,9 +489,9 @@ For association role, the target role of a relationship type will have the follo
 
 The generalisations are specified by the following aspect:
 
-| **Aspect**                   | **Eigenschap** | **Kardinaliteit** | **Datatype of klasse** |
+| **Aspect**                   | **Ownership** | **Cardinality** | **Datatype or class** |
 |------------------------------|----------------|-------------------|--------------|
-| Identificatie | [`mim:identificatie`](http://modellen.mim-standaard.nl/def/mim#identificatie) | 1 | [`xsd:anyURI`](http://www.w3.org/2001/XMLSchema#anyURI) |
+| Identification | [`mim:identificatie`](http://modellen.mim-standaard.nl/def/mim#identificatie) | 1 | [`xsd:anyURI`](http://www.w3.org/2001/XMLSchema#anyURI) |
 | Subtype                      | [`mim:definitie`](http://modellen.mim-standaard.nl/def/mim#subtype) | 1 | [`mim:Objecttype`](http://modellen.mim-standaard.nl/def/mim#Objecttype) |
 | Supertype                      | [`mim:definitie`](http://modellen.mim-standaard.nl/def/mim#supertype) | 1 | [`mim:Objecttype`](http://modellen.mim-standaard.nl/def/mim#Objecttype) |
 | Datum opname                 | [`mim:datumOpname`](http://modellen.mim-standaard.nl/def/mim#datumOpname) | 1 | datum |
@@ -502,9 +502,9 @@ The generalisations are specified by the following aspect:
 
 The generalisations are specified by the following aspect:
 
-| **Aspect**                   | **Eigenschap** | **Kardinaliteit** | **Datatype of klasse** |
+| **Aspect**                   | **Ownership** | **Cardinality** | **Datatype or class** |
 |------------------------------|----------------|-------------------|--------------|
-| Identificatie | [`mim:identificatie`](http://modellen.mim-standaard.nl/def/mim#identificatie) | 1 | [`xsd:anyURI`](http://www.w3.org/2001/XMLSchema#anyURI) |
+| Identification | [`mim:identificatie`](http://modellen.mim-standaard.nl/def/mim#identificatie) | 1 | [`xsd:anyURI`](http://www.w3.org/2001/XMLSchema#anyURI) |
 | Subtype                      | [`mim:definitie`](http://modellen.mim-standaard.nl/def/mim#subtype) | 1 | [`mim:Datatype`](http://modellen.mim-standaard.nl/def/mim#Datatype) |
 | Supertype                      | [`mim:definitie`](http://modellen.mim-standaard.nl/def/mim#supertype) | 1 | [`mim:Datatype`](http://modellen.mim-standaard.nl/def/mim#Datatype) |
 <!-- | Constraint                | [`mim:constraint`](http://modellen.mim-standaard.nl/def/mim#constraint) | 0..* | [`mim:Constraint`](http://modellen.mim-standaard.nl/def/mim#Constraint) | -->
@@ -513,27 +513,27 @@ The generalisations are specified by the following aspect:
 
 The association classes are specified according to the following aspects:
 
-| **Aspect**                   | **Eigenschap** | **Kardinaliteit** | **Datatype of klasse** |
+| **Aspect**                   | **Ownership** | **Cardinality** | **Datatype or class** |
 |------------------------------|----------------|-------------------|--------------|
-| Identificatie | [`mim:identificatie`](http://modellen.mim-standaard.nl/def/mim#identificatie) | 1 | [`xsd:anyURI`](http://www.w3.org/2001/XMLSchema#anyURI) |
-| Naam                         | [`mim:naam`](http://modellen.mim-standaard.nl/def/mim#naam) | 0..1 | tekst |
-| Alias                        | [`mim:alias`](http://modellen.mim-standaard.nl/def/mim#alias) | 0..1 | tekst |
-| Herkomst                     | [`mim:herkomst`](http://modellen.mim-standaard.nl/def/mim#herkomst) | 1 | tekst |
-| Begrip                    | [`mim:begrip`](http://modellen.mim-standaard.nl/def/mim#begrip) | 0..* | [`skos:Concept`](http://www.w3.org/2004/02/skos/core#Concept) |
-| Begripsterm               | [`mim:begripsterm`](http://modellen.mim-standaard.nl/def/mim#begripsterm) | 0..* | tekst |
-| Definitie                    | [`mim:definitie`](http://modellen.mim-standaard.nl/def/mim#definitie) | 0..1 | tekst |
-| Herkomst definitie           | [`mim:herkomstDefinitie`](http://modellen.mim-standaard.nl/def/mim#herkomstDefinitie) | 1 | tekst |
-| Toelichting               | [`mim:toelichting`](http://modellen.mim-standaard.nl/def/mim#toelichting) | 0..1 | tekst |
+| Identification | [`mim:identificatie`](http://modellen.mim-standaard.nl/def/mim#identificatie) | 1 | [`xsd:anyURI`](http://www.w3.org/2001/XMLSchema#anyURI) |
+| Name                         | [`mim:naam`](http://modellen.mim-standaard.nl/def/mim#naam) | 0..1 | text |
+| Alias                        | [`mim:alias`](http://modellen.mim-standaard.nl/def/mim#alias) | 0..1 | text |
+| Origin                     | [`mim:herkomst`](http://modellen.mim-standaard.nl/def/mim#herkomst) | 1 | text |
+| Concept                    | [`mim:concept`](http://modellen.mim-standaard.nl/def/mim#concept) | 0..* | [`skos:Concept`](http://www.w3.org/2004/02/skos/core#Concept) |
+| Term               | [`mim:term`](http://modellen.mim-standaard.nl/def/mim#term) | 0..* | text |
+| Definition                    | [`mim:definitie`](http://modellen.mim-standaard.nl/def/mim#definitie) | 0..1 | text |
+| Origin definitie           | [`mim:herkomstDefinitie`](http://modellen.mim-standaard.nl/def/mim#herkomstDefinitie) | 1 | text |
+| Toelichting               | [`mim:toelichting`](http://modellen.mim-standaard.nl/def/mim#toelichting) | 0..1 | text |
 | Datum opname                 | [`mim:datumOpname`](http://modellen.mim-standaard.nl/def/mim#datumOpname) | 1 | datum |
 | Constraint                   | [`mim:constraint`](http://modellen.mim-standaard.nl/def/mim#constraint) | 0..* | [`mim:Constraint`](http://modellen.mim-standaard.nl/def/mim#Constraint) |
 | Unidirectioneel              | [`mim:unidirectioneel`](http://modellen.mim-standaard.nl/def/mim#unidirectioneel) | 1 | boolean |
 | Aggregatietype               | [`mim:aggregatietype`](http://modellen.mim-standaard.nl/def/mim#aggregatietype) | 1 | Aggregatietype |
-| Kardinaliteit                | [`mim:kardinaliteit`](http://modellen.mim-standaard.nl/def/mim#kardinaliteit) | 1 | tekst |
+| Cardinality                | [`mim:kardinaliteit`](http://modellen.mim-standaard.nl/def/mim#kardinaliteit) | 1 | text |
 | Heeft tijdlijn geldigheid    | [`mim:heeftTijdlijnGeldigheid`](http://modellen.mim-standaard.nl/def/mim#heeftTijdlijnGeldigheid) | 1 | boolean |
 | Indicatie materiële historie | [`mim:indicatieMaterieleHistorie`](http://modellen.mim-standaard.nl/def/mim#indicatieMaterieleHistorie) | 1 | boolean |
 | Heeft tijdlijn registratie   | [`mim:heeftTijdlijnRegistratie`](http://modellen.mim-standaard.nl/def/mim#heeftTijdlijnRegistratie) | 1 | boolean |
 | Indicatie formele historie   | [`mim:indicatieFormeleHistorie`](http://modellen.mim-standaard.nl/def/mim#indicatieFormeleHistorie) | 1 | boolean |
-| Authentiek                   | [`mim:authentiek`](http://modellen.mim-standaard.nl/def/mim#authentiek) | 1 | Authenticiteit |
+| Authentiek                   | [`mim:authentic`](http://modellen.mim-standaard.nl/def/mim#authentic) | 1 | Authenticiteit |
 | Indicatie afleidbaar         | [`mim:indicatieAfleidbaar`](http://modellen.mim-standaard.nl/def/mim#indicatieAfleidbaar) | 1 | boolean |
 | Mogelijk geen waarde         | [`mim:mogelijkGeenWaarde`](http://modellen.mim-standaard.nl/def/mim#mogelijkGeenWaarde) | 1 | boolean |
 
@@ -541,28 +541,28 @@ The association classes are specified according to the following aspects:
 
 External links are specified according to the following aspects.
 
-| **Aspect**                   | **Eigenschap** | **Kardinaliteit** | **Datatype of klasse** |
+| **Aspect**                   | **Ownership** | **Cardinality** | **Datatype or class** |
 |------------------------------|----------------|-------------------|--------------|
-| Identificatie | [`mim:identificatie`](http://modellen.mim-standaard.nl/def/mim#identificatie) | 1 | [`xsd:anyURI`](http://www.w3.org/2001/XMLSchema#anyURI) |
-| Naam                         | [`mim:naam`](http://modellen.mim-standaard.nl/def/mim#naam) | 1 | tekst |
-| Alias                        | [`mim:alias`](http://modellen.mim-standaard.nl/def/mim#alias) | 0..1 | tekst |
-| Begrip                       | [`mim:begrip`](http://modellen.mim-standaard.nl/def/mim#begrip) | 0..* | [`skos:Concept`](http://www.w3.org/2004/02/skos/core#Concept) |
-| Begripsterm                  | [`mim:begripsterm`](http://modellen.mim-standaard.nl/def/mim#begripsterm) | 0..* | tekst |
+| Identification | [`mim:identificatie`](http://modellen.mim-standaard.nl/def/mim#identificatie) | 1 | [`xsd:anyURI`](http://www.w3.org/2001/XMLSchema#anyURI) |
+| Name                         | [`mim:naam`](http://modellen.mim-standaard.nl/def/mim#naam) | 1 | text |
+| Alias                        | [`mim:alias`](http://modellen.mim-standaard.nl/def/mim#alias) | 0..1 | text |
+| Concept                       | [`mim:concept`](http://modellen.mim-standaard.nl/def/mim#concept) | 0..* | [`skos:Concept`](http://www.w3.org/2004/02/skos/core#Concept) |
+| Term                  | [`mim:term`](http://modellen.mim-standaard.nl/def/mim#term) | 0..* | text |
 | Unidirectioneel              | [`mim:unidirectioneel`](http://modellen.mim-standaard.nl/def/mim#unidirectioneel) | 1 | boolean |
-| Bron                         | [`mim:bron`](http://modellen.mim-standaard.nl/def/mim#bron) | 1 | [`mim:Objecttype`](http://modellen.mim-standaard.nl/def/mim#Objecttype) |
+| Bron                         | [`mim:source`](http://modellen.mim-standaard.nl/def/mim#source) | 1 | [`mim:Objecttype`](http://modellen.mim-standaard.nl/def/mim#Objecttype) |
 | Doel                         | [`mim:doel`](http://modellen.mim-standaard.nl/def/mim#doel) | 1 | [`mim:Objecttype`](http://modellen.mim-standaard.nl/def/mim#Objecttype) |
 | Aggregatietype               | [`mim:aggregatietype`](http://modellen.mim-standaard.nl/def/mim#aggregatietype) | 1 | Aggregatietype |
-| Kardinaliteit                | [`mim:kardinaliteit`](http://modellen.mim-standaard.nl/def/mim#kardinaliteit) | 1 | tekst |
-| Herkomst                     | [`mim:herkomst`](http://modellen.mim-standaard.nl/def/mim#herkomst) | 1 | tekst |
-| Definitie                    | [`mim:definitie`](http://modellen.mim-standaard.nl/def/mim#definitie) | 1 | tekst |
-| Toelichting                  | [`mim:toelichting`](http://modellen.mim-standaard.nl/def/mim#toelichting) | 0..1 | tekst |
-| Herkomst definitie           | [`mim:herkomstDefinitie`](http://modellen.mim-standaard.nl/def/mim#herkomstDefinitie) | 1 | tekst |
+| Cardinality                | [`mim:kardinaliteit`](http://modellen.mim-standaard.nl/def/mim#kardinaliteit) | 1 | text |
+| Origin                     | [`mim:herkomst`](http://modellen.mim-standaard.nl/def/mim#herkomst) | 1 | text |
+| Definition                    | [`mim:definitie`](http://modellen.mim-standaard.nl/def/mim#definitie) | 1 | text |
+| Toelichting                  | [`mim:toelichting`](http://modellen.mim-standaard.nl/def/mim#toelichting) | 0..1 | text |
+| Origin definitie           | [`mim:herkomstDefinitie`](http://modellen.mim-standaard.nl/def/mim#herkomstDefinitie) | 1 | text |
 | Datum opname                 | [`mim:datumOpname`](http://modellen.mim-standaard.nl/def/mim#datumOpname) | 1 | datum |
 | Heeft tijdlijn geldigheid    | [`mim:heeftTijdlijnGeldigheid`](http://modellen.mim-standaard.nl/def/mim#heeftTijdlijnGeldigheid) | 1 | boolean |
 | Indicatie materiële historie | [`mim:indicatieMaterieleHistorie`](http://modellen.mim-standaard.nl/def/mim#indicatieMaterieleHistorie) | 1 | boolean |
 | Heeft tijdlijn registratie   | [`mim:heeftTijdlijnRegistratie`](http://modellen.mim-standaard.nl/def/mim#heeftTijdlijnRegistratie) | 1 | boolean |
 | Indicatie formele historie   | [`mim:indicatieFormeleHistorie`](http://modellen.mim-standaard.nl/def/mim#indicatieFormeleHistorie) | 1 | boolean |
-| Authentiek                   | [`mim:authentiek`](http://modellen.mim-standaard.nl/def/mim#authentiek) | 1 | Authenticiteit |
+| Authentiek                   | [`mim:authentic`](http://modellen.mim-standaard.nl/def/mim#authentic) | 1 | Authenticiteit |
 | Indicatie afleidbaar         | [`mim:indicatieAfleidbaar`](http://modellen.mim-standaard.nl/def/mim#indicatieAfleidbaar) | 1 | boolean |
 | Mogelijk geen waarde         | [`mim:mogelijkGeenWaarde`](http://modellen.mim-standaard.nl/def/mim#mogelijkGeenWaarde) | 1 | boolean |
 | Constraint                | [`mim:constraint`](http://modellen.mim-standaard.nl/def/mim#constraint) | 0..* | [`mim:Constraint`](http://modellen.mim-standaard.nl/def/mim#Constraint) |
@@ -578,19 +578,19 @@ Where a location is mentioned in the specifications below, it is assumed in Link
 
 For reference lists, the following aspects are specified:
 
-| **Aspect**                   | **Eigenschap** | **Kardinaliteit** | **Datatype of klasse** |
+| **Aspect**                   | **Ownership** | **Cardinality** | **Datatype or class** |
 |------------------------------|----------------|-------------------|--------------|
-| Identificatie | [`mim:identificatie`](http://modellen.mim-standaard.nl/def/mim#identificatie) | 1 | [`xsd:anyURI`](http://www.w3.org/2001/XMLSchema#anyURI) |
-| Naam                         | [`mim:naam`](http://modellen.mim-standaard.nl/def/mim#naam) | 1 | tekst |
-| Alias                        | [`mim:alias`](http://modellen.mim-standaard.nl/def/mim#alias) | 0..1 | tekst |
-| Begrip                       | [`mim:begrip`](http://modellen.mim-standaard.nl/def/mim#begrip) | 0..* | [`skos:Concept`](http://www.w3.org/2004/02/skos/core#Concept) |
-| Begripsterm                  | [`mim:begripsterm`](http://modellen.mim-standaard.nl/def/mim#begripsterm) | 0..* | tekst |
-| Herkomst                     | [`mim:herkomst`](http://modellen.mim-standaard.nl/def/mim#herkomst) | 1 | tekst |
-| Definitie                    | [`mim:definitie`](http://modellen.mim-standaard.nl/def/mim#definitie) | 1 | tekst |
-| Herkomst definitie           | [`mim:herkomstDefinitie`](http://modellen.mim-standaard.nl/def/mim#herkomstDefinitie) | 1 | tekst |
+| Identification | [`mim:identificatie`](http://modellen.mim-standaard.nl/def/mim#identificatie) | 1 | [`xsd:anyURI`](http://www.w3.org/2001/XMLSchema#anyURI) |
+| Name                         | [`mim:naam`](http://modellen.mim-standaard.nl/def/mim#naam) | 1 | text |
+| Alias                        | [`mim:alias`](http://modellen.mim-standaard.nl/def/mim#alias) | 0..1 | text |
+| Concept                       | [`mim:concept`](http://modellen.mim-standaard.nl/def/mim#concept) | 0..* | [`skos:Concept`](http://www.w3.org/2004/02/skos/core#Concept) |
+| Term                  | [`mim:term`](http://modellen.mim-standaard.nl/def/mim#term) | 0..* | text |
+| Origin                     | [`mim:herkomst`](http://modellen.mim-standaard.nl/def/mim#herkomst) | 1 | text |
+| Definition                    | [`mim:definitie`](http://modellen.mim-standaard.nl/def/mim#definitie) | 1 | text |
+| Origin definitie           | [`mim:herkomstDefinitie`](http://modellen.mim-standaard.nl/def/mim#herkomstDefinitie) | 1 | text |
 | Datum opname                 | [`mim:datumOpname`](http://modellen.mim-standaard.nl/def/mim#datumOpname) | 1 | datum |
-| Toelichting                  | [`mim:toelichting`](http://modellen.mim-standaard.nl/def/mim#toelichting) | 0..1 | tekst |
-| Locatie                      | [`mim:locatie`](http://modellen.mim-standaard.nl/def/mim#locatie) | 1 | tekst |
+| Toelichting                  | [`mim:toelichting`](http://modellen.mim-standaard.nl/def/mim#toelichting) | 0..1 | text |
+| Locatie                      | [`mim:locatie`](http://modellen.mim-standaard.nl/def/mim#locatie) | 1 | text |
 | Referentie-element           | [`mim:referentieElement`](http://modellen.mim-standaard.nl/def/mim#referentieElement) | 1..* | [`mim:ReferentieElement`](http://modellen.mim-standaard.nl/def/mim#ReferentieElement) |
 | Constraint                | [`mim:constraint`](http://modellen.mim-standaard.nl/def/mim#constraint) | 0..* | [`mim:Constraint`](http://modellen.mim-standaard.nl/def/mim#Constraint) |
 
@@ -598,22 +598,22 @@ For reference lists, the following aspects are specified:
 
 The reference elements are specified according to the following aspects:
 
-| **Aspect**                   | **Eigenschap** | **Kardinaliteit** | **Datatype of klasse** |
+| **Aspect**                   | **Ownership** | **Cardinality** | **Datatype or class** |
 |------------------------------|----------------|-------------------|--------------|
-| Identificatie | [`mim:identificatie`](http://modellen.mim-standaard.nl/def/mim#identificatie) | 1 | [`xsd:anyURI`](http://www.w3.org/2001/XMLSchema#anyURI) |
-| Naam                         | [`mim:naam`](http://modellen.mim-standaard.nl/def/mim#naam) | 1 | tekst |
-| Alias                        | [`mim:alias`](http://modellen.mim-standaard.nl/def/mim#alias) | 0..1 | tekst |
-| Begrip                    | [`mim:begrip`](http://modellen.mim-standaard.nl/def/mim#begrip) | 0..* | [`skos:Concept`](http://www.w3.org/2004/02/skos/core#Concept) |
-| Begripsterm               | [`mim:begripsterm`](http://modellen.mim-standaard.nl/def/mim#begripsterm) | 0..* | tekst |
-| Definitie                    | [`mim:definitie`](http://modellen.mim-standaard.nl/def/mim#definitie) | 1 | tekst |
+| Identification | [`mim:identificatie`](http://modellen.mim-standaard.nl/def/mim#identificatie) | 1 | [`xsd:anyURI`](http://www.w3.org/2001/XMLSchema#anyURI) |
+| Name                         | [`mim:naam`](http://modellen.mim-standaard.nl/def/mim#naam) | 1 | text |
+| Alias                        | [`mim:alias`](http://modellen.mim-standaard.nl/def/mim#alias) | 0..1 | text |
+| Concept                    | [`mim:concept`](http://modellen.mim-standaard.nl/def/mim#concept) | 0..* | [`skos:Concept`](http://www.w3.org/2004/02/skos/core#Concept) |
+| Term               | [`mim:term`](http://modellen.mim-standaard.nl/def/mim#term) | 0..* | text |
+| Definition                    | [`mim:definitie`](http://modellen.mim-standaard.nl/def/mim#definitie) | 1 | text |
 | Datum opname                 | [`mim:datumOpname`](http://modellen.mim-standaard.nl/def/mim#datumOpname) | 1 | datum |
 | Type                         | [`mim:type`](http://modellen.mim-standaard.nl/def/mim#type) | 1 | [`mim:Datatype`](http://modellen.mim-standaard.nl/def/mim#Datatype) |
-| Lengte                       | [`mim:lengte`](http://modellen.mim-standaard.nl/def/mim#lengte) | 0..1 | tekst |
-| Patroon                      | [`mim:patroon`](http://modellen.mim-standaard.nl/def/mim#patroon) | 0..1 | tekst |
-| Formeel patroon              | [`mim:formeelPatroon`](http://modellen.mim-standaard.nl/def/mim#formeelPatroon) | 0..1 | tekst |
-| Kardinaliteit                | [`mim:kardinaliteit`](http://modellen.mim-standaard.nl/def/mim#kardinaliteit) | 1 | tekst |
-| Identificerend               | [`mim:identificerend`](http://modellen.mim-standaard.nl/def/mim#identificerend) | 0..1 | tekst |
-| Toelichting                  | [`mim:toelichting`](http://modellen.mim-standaard.nl/def/mim#toelichting) | 0..1 | tekst |
+| Lengte                       | [`mim:lengte`](http://modellen.mim-standaard.nl/def/mim#lengte) | 0..1 | text |
+| Patroon                      | [`mim:patroon`](http://modellen.mim-standaard.nl/def/mim#patroon) | 0..1 | text |
+| Formeel patroon              | [`mim:formeelPatroon`](http://modellen.mim-standaard.nl/def/mim#formeelPatroon) | 0..1 | text |
+| Cardinality                | [`mim:kardinaliteit`](http://modellen.mim-standaard.nl/def/mim#kardinaliteit) | 1 | text |
+| Identificerend               | [`mim:identificerend`](http://modellen.mim-standaard.nl/def/mim#identificerend) | 0..1 | text |
+| Toelichting                  | [`mim:toelichting`](http://modellen.mim-standaard.nl/def/mim#toelichting) | 0..1 | text |
 | Constraint                | [`mim:constraint`](http://modellen.mim-standaard.nl/def/mim#constraint) | 0..* | [`mim:Constraint`](http://modellen.mim-standaard.nl/def/mim#Constraint) |
 | Eenheid                      | [`mim:eenheid`](http://modellen.mim-standaard.nl/def/mim#eenheid) | 0..1 | [`si:MeasurementUnit`](https://si-digital-framework.org/SI/units?lang=en) |
 | Constraint                | [`mim:constraint`](http://modellen.mim-standaard.nl/def/mim#constraint) | 0..* | [`mim:Constraint`](http://modellen.mim-standaard.nl/def/mim#Constraint) |
@@ -626,18 +626,18 @@ The reference elements are specified according to the following aspects:
 
 For code list, the following aspects are specified:
 
-| **Aspect**                   | **Eigenschap** | **Kardinaliteit** | **Datatype of klasse** |
+| **Aspect**                   | **Ownership** | **Cardinality** | **Datatype or class** |
 |------------------------------|----------------|-------------------|--------------|
-| Identificatie | [`mim:identificatie`](http://modellen.mim-standaard.nl/def/mim#identificatie) | 1 | [`xsd:anyURI`](http://www.w3.org/2001/XMLSchema#anyURI) |
-| Naam                         | [`mim:naam`](http://modellen.mim-standaard.nl/def/mim#naam) | 1 | tekst |
-| Alias                        | [`mim:alias`](http://modellen.mim-standaard.nl/def/mim#alias) | 0..1 | tekst |
-| Begrip                    | [`mim:begrip`](http://modellen.mim-standaard.nl/def/mim#begrip) | 0..* | [`skos:Concept`](http://www.w3.org/2004/02/skos/core#Concept) |
-| Begripsterm               | [`mim:begripsterm`](http://modellen.mim-standaard.nl/def/mim#begripsterm) | 0..* | tekst |
-| Herkomst                     | [`mim:herkomst`](http://modellen.mim-standaard.nl/def/mim#herkomst) | 1 | tekst |
-| Definitie                    | [`mim:definitie`](http://modellen.mim-standaard.nl/def/mim#definitie) | 1 | tekst |
+| Identification | [`mim:identificatie`](http://modellen.mim-standaard.nl/def/mim#identificatie) | 1 | [`xsd:anyURI`](http://www.w3.org/2001/XMLSchema#anyURI) |
+| Name                         | [`mim:naam`](http://modellen.mim-standaard.nl/def/mim#naam) | 1 | text |
+| Alias                        | [`mim:alias`](http://modellen.mim-standaard.nl/def/mim#alias) | 0..1 | text |
+| Concept                    | [`mim:concept`](http://modellen.mim-standaard.nl/def/mim#concept) | 0..* | [`skos:Concept`](http://www.w3.org/2004/02/skos/core#Concept) |
+| Term               | [`mim:term`](http://modellen.mim-standaard.nl/def/mim#term) | 0..* | text |
+| Origin                     | [`mim:herkomst`](http://modellen.mim-standaard.nl/def/mim#herkomst) | 1 | text |
+| Definition                    | [`mim:definitie`](http://modellen.mim-standaard.nl/def/mim#definitie) | 1 | text |
 | Datum opname                 | [`mim:datumOpname`](http://modellen.mim-standaard.nl/def/mim#datumOpname) | 1 | datum |
-| Toelichting                  | [`mim:toelichting`](http://modellen.mim-standaard.nl/def/mim#toelichting) | 0..1 | tekst |
-| Locatie                      | [`mim:locatie`](http://modellen.mim-standaard.nl/def/mim#locatie) | 1 | tekst |
+| Toelichting                  | [`mim:toelichting`](http://modellen.mim-standaard.nl/def/mim#toelichting) | 0..1 | text |
+| Locatie                      | [`mim:locatie`](http://modellen.mim-standaard.nl/def/mim#locatie) | 1 | text |
 | Constraint                | [`mim:constraint`](http://modellen.mim-standaard.nl/def/mim#constraint) | 0..* | [`mim:Constraint`](http://modellen.mim-standaard.nl/def/mim#Constraint) |
 
 ### Datatypes in LD
@@ -647,20 +647,20 @@ It concerns metadata for data types defined in the information model, or excludi
 
 The data types are specified according to the following aspects:
 
-| **Aspect**                   | **Eigenschap** | **Kardinaliteit** | **Datatype of klasse** |
+| **Aspect**                   | **Ownership** | **Cardinality** | **Datatype or class** |
 |------------------------------|----------------|-------------------|--------------|
-| Identificatie | [`mim:identificatie`](http://modellen.mim-standaard.nl/def/mim#identificatie) | 1 | [`xsd:anyURI`](http://www.w3.org/2001/XMLSchema#anyURI) |
-| Naam                         | [`mim:naam`](http://modellen.mim-standaard.nl/def/mim#naam) | 1 | tekst |
-| Alias                        | [`mim:alias`](http://modellen.mim-standaard.nl/def/mim#alias) | 0..1 | tekst |
-| Begrip                    | [`mim:begrip`](http://modellen.mim-standaard.nl/def/mim#begrip) | 0..* | [`skos:Concept`](http://www.w3.org/2004/02/skos/core#Concept) |
-| Begripsterm               | [`mim:begripsterm`](http://modellen.mim-standaard.nl/def/mim#begripsterm) | 0..* | tekst |
-| Definitie                    | [`mim:definitie`](http://modellen.mim-standaard.nl/def/mim#definitie) | 1 | tekst |
-| Toelichting               | [`mim:toelichting`](http://modellen.mim-standaard.nl/def/mim#toelichting) | 0..1 | tekst |
+| Identification | [`mim:identificatie`](http://modellen.mim-standaard.nl/def/mim#identificatie) | 1 | [`xsd:anyURI`](http://www.w3.org/2001/XMLSchema#anyURI) |
+| Name                         | [`mim:naam`](http://modellen.mim-standaard.nl/def/mim#naam) | 1 | text |
+| Alias                        | [`mim:alias`](http://modellen.mim-standaard.nl/def/mim#alias) | 0..1 | text |
+| Concept                    | [`mim:concept`](http://modellen.mim-standaard.nl/def/mim#concept) | 0..* | [`skos:Concept`](http://www.w3.org/2004/02/skos/core#Concept) |
+| Term               | [`mim:term`](http://modellen.mim-standaard.nl/def/mim#term) | 0..* | text |
+| Definition                    | [`mim:definitie`](http://modellen.mim-standaard.nl/def/mim#definitie) | 1 | text |
+| Toelichting               | [`mim:toelichting`](http://modellen.mim-standaard.nl/def/mim#toelichting) | 0..1 | text |
 | Type                         | [`mim:type`](http://modellen.mim-standaard.nl/def/mim#type) | 1 | [`mim:Datatype`](http://modellen.mim-standaard.nl/def/mim#Datatype) |
-| Lengte                       | [`mim:lengte`](http://modellen.mim-standaard.nl/def/mim#lengte) | 0..1 | tekst |
-| Patroon                      | [`mim:patroon`](http://modellen.mim-standaard.nl/def/mim#patroon) | 0..1 | tekst |
-| Formeel patroon              | [`mim:formeelPatroon`](http://modellen.mim-standaard.nl/def/mim#formeelPatroon) | 0..1 | tekst |
-| Herkomst                     | [`mim:herkomst`](http://modellen.mim-standaard.nl/def/mim#herkomst) | 1 | tekst |
+| Lengte                       | [`mim:lengte`](http://modellen.mim-standaard.nl/def/mim#lengte) | 0..1 | text |
+| Patroon                      | [`mim:patroon`](http://modellen.mim-standaard.nl/def/mim#patroon) | 0..1 | text |
+| Formeel patroon              | [`mim:formeelPatroon`](http://modellen.mim-standaard.nl/def/mim#formeelPatroon) | 0..1 | text |
+| Origin                     | [`mim:herkomst`](http://modellen.mim-standaard.nl/def/mim#herkomst) | 1 | text |
 | Datum opname                 | [`mim:datumOpname`](http://modellen.mim-standaard.nl/def/mim#datumOpname) | 1 | datum |
 | Constraint                | [`mim:constraint`](http://modellen.mim-standaard.nl/def/mim#constraint) | 0..* | [`mim:Constraint`](http://modellen.mim-standaard.nl/def/mim#Constraint) |
 
@@ -668,18 +668,18 @@ The data types are specified according to the following aspects:
 
 For Structured data types, the following aspects are specified:
 
-| **Aspect**                   | **Eigenschap** | **Kardinaliteit** | **Datatype of klasse** |
+| **Aspect**                   | **Ownership** | **Cardinality** | **Datatype or class** |
 |------------------------------|----------------|-------------------|--------------|
-| Identificatie | [`mim:identificatie`](http://modellen.mim-standaard.nl/def/mim#identificatie) | 1 | [`xsd:anyURI`](http://www.w3.org/2001/XMLSchema#anyURI) |
-| Naam                         | [`mim:naam`](http://modellen.mim-standaard.nl/def/mim#naam) | 1 | tekst |
-| Alias                        | [`mim:alias`](http://modellen.mim-standaard.nl/def/mim#alias) | 0..1 | tekst |
-| Begrip                    | [`mim:begrip`](http://modellen.mim-standaard.nl/def/mim#begrip) | 0..* | [`skos:Concept`](http://www.w3.org/2004/02/skos/core#Concept) |
-| Begripsterm               | [`mim:begripsterm`](http://modellen.mim-standaard.nl/def/mim#begripsterm) | 0..* | tekst |
-| Herkomst                     | [`mim:herkomst`](http://modellen.mim-standaard.nl/def/mim#herkomst) | 1 | tekst |
-| Definitie                    | [`mim:definitie`](http://modellen.mim-standaard.nl/def/mim#definitie) | 1 | tekst |
-| Toelichting               | [`mim:toelichting`](http://modellen.mim-standaard.nl/def/mim#toelichting) | 0..1 | tekst |
-| Patroon                      | [`mim:patroon`](http://modellen.mim-standaard.nl/def/mim#patroon) | 0..1 | tekst |
-| Formeel patroon              | [`mim:formeelPatroon`](http://modellen.mim-standaard.nl/def/mim#formeelPatroon) | 0..1 | tekst |
+| Identification | [`mim:identificatie`](http://modellen.mim-standaard.nl/def/mim#identificatie) | 1 | [`xsd:anyURI`](http://www.w3.org/2001/XMLSchema#anyURI) |
+| Name                         | [`mim:naam`](http://modellen.mim-standaard.nl/def/mim#naam) | 1 | text |
+| Alias                        | [`mim:alias`](http://modellen.mim-standaard.nl/def/mim#alias) | 0..1 | text |
+| Concept                    | [`mim:concept`](http://modellen.mim-standaard.nl/def/mim#concept) | 0..* | [`skos:Concept`](http://www.w3.org/2004/02/skos/core#Concept) |
+| Term               | [`mim:term`](http://modellen.mim-standaard.nl/def/mim#term) | 0..* | text |
+| Origin                     | [`mim:herkomst`](http://modellen.mim-standaard.nl/def/mim#herkomst) | 1 | text |
+| Definition                    | [`mim:definitie`](http://modellen.mim-standaard.nl/def/mim#definitie) | 1 | text |
+| Toelichting               | [`mim:toelichting`](http://modellen.mim-standaard.nl/def/mim#toelichting) | 0..1 | text |
+| Patroon                      | [`mim:patroon`](http://modellen.mim-standaard.nl/def/mim#patroon) | 0..1 | text |
+| Formeel patroon              | [`mim:formeelPatroon`](http://modellen.mim-standaard.nl/def/mim#formeelPatroon) | 0..1 | text |
 | Datum opname                 | [`mim:datumOpname`](http://modellen.mim-standaard.nl/def/mim#datumOpname) | 1 | datum |
 | Data-element                 | [`mim:dataElement`](http://modellen.mim-standaard.nl/def/mim#dataElement) | 0..* | [`mim:DataElement`](http://modellen.mim-standaard.nl/def/mim#DataElement) |
 | Constraint                | [`mim:constraint`](http://modellen.mim-standaard.nl/def/mim#constraint) | 0..* | [`mim:Constraint`](http://modellen.mim-standaard.nl/def/mim#Constraint) |
@@ -688,21 +688,21 @@ For Structured data types, the following aspects are specified:
 
 The data elements are specified according to the following aspects:
 
-| **Aspect**                   | **Eigenschap** | **Kardinaliteit** | **Datatype of klasse** |
+| **Aspect**                   | **Ownership** | **Cardinality** | **Datatype or class** |
 |------------------------------|----------------|-------------------|--------------|
-| Identificatie | [`mim:identificatie`](http://modellen.mim-standaard.nl/def/mim#identificatie) | 1 | [`xsd:anyURI`](http://www.w3.org/2001/XMLSchema#anyURI) |
-| Naam                         | [`mim:naam`](http://modellen.mim-standaard.nl/def/mim#naam) | 1 | tekst |
-| Alias                        | [`mim:alias`](http://modellen.mim-standaard.nl/def/mim#alias) | 0..1 | tekst |
-| Begrip                    | [`mim:begrip`](http://modellen.mim-standaard.nl/def/mim#begrip) | 0..* | [`skos:Concept`](http://www.w3.org/2004/02/skos/core#Concept) |
-| Begripsterm               | [`mim:begripsterm`](http://modellen.mim-standaard.nl/def/mim#begripsterm) | 0..* | tekst |
-| Definitie                    | [`mim:definitie`](http://modellen.mim-standaard.nl/def/mim#definitie) | 1 | tekst |
-| Toelichting               | [`mim:toelichting`](http://modellen.mim-standaard.nl/def/mim#toelichting) | 0..1 | tekst |
+| Identification | [`mim:identificatie`](http://modellen.mim-standaard.nl/def/mim#identificatie) | 1 | [`xsd:anyURI`](http://www.w3.org/2001/XMLSchema#anyURI) |
+| Name                         | [`mim:naam`](http://modellen.mim-standaard.nl/def/mim#naam) | 1 | text |
+| Alias                        | [`mim:alias`](http://modellen.mim-standaard.nl/def/mim#alias) | 0..1 | text |
+| Concept                    | [`mim:concept`](http://modellen.mim-standaard.nl/def/mim#concept) | 0..* | [`skos:Concept`](http://www.w3.org/2004/02/skos/core#Concept) |
+| Term               | [`mim:term`](http://modellen.mim-standaard.nl/def/mim#term) | 0..* | text |
+| Definition                    | [`mim:definitie`](http://modellen.mim-standaard.nl/def/mim#definitie) | 1 | text |
+| Toelichting               | [`mim:toelichting`](http://modellen.mim-standaard.nl/def/mim#toelichting) | 0..1 | text |
 | Datum opname                 | [`mim:datumOpname`](http://modellen.mim-standaard.nl/def/mim#datumOpname) | 1 | datum |
 | Type                         | [`mim:type`](http://modellen.mim-standaard.nl/def/mim#type) | 1 | [`mim:Datatype`](http://modellen.mim-standaard.nl/def/mim#Datatype) |
-| Lengte                       | [`mim:lengte`](http://modellen.mim-standaard.nl/def/mim#lengte) | 0..1 | tekst |
-| Patroon                      | [`mim:patroon`](http://modellen.mim-standaard.nl/def/mim#patroon) | 0..1 | tekst |
-| Formeel patroon              | [`mim:formeelPatroon`](http://modellen.mim-standaard.nl/def/mim#formeelPatroon) | 0..1 | tekst |
-| Kardinaliteit                | [`mim:kardinaliteit`](http://modellen.mim-standaard.nl/def/mim#kardinaliteit) | 1 | tekst |
+| Lengte                       | [`mim:lengte`](http://modellen.mim-standaard.nl/def/mim#lengte) | 0..1 | text |
+| Patroon                      | [`mim:patroon`](http://modellen.mim-standaard.nl/def/mim#patroon) | 0..1 | text |
+| Formeel patroon              | [`mim:formeelPatroon`](http://modellen.mim-standaard.nl/def/mim#formeelPatroon) | 0..1 | text |
+| Cardinality                | [`mim:kardinaliteit`](http://modellen.mim-standaard.nl/def/mim#kardinaliteit) | 1 | text |
 | Constraint                | [`mim:constraint`](http://modellen.mim-standaard.nl/def/mim#constraint) | 0..* | [`mim:Constraint`](http://modellen.mim-standaard.nl/def/mim#Constraint) |
 | Minimumwaarde inclusief      | [`mim:minimumwaardeInclusief`](http://modellen.mim-standaard.nl/def/mim#minimumwaardeInclusief) | 0..1 | integer, decimal, float, real, dateTime, date |
 | Minimumwaarde exclusief      | [`mim:minimumwaardeExclusief`](http://modellen.mim-standaard.nl/def/mim#minimumwaardeExclusief) | 0..1 | integer, decimal, float, real, dateTime, date |
@@ -715,35 +715,35 @@ The data elements are specified according to the following aspects:
 
 Information model packages are specified according to the following aspects:
 
-| **Aspect**                   | **Eigenschap** | **Kardinaliteit** | **Datatype of klasse** |
+| **Aspect**                   | **Ownership** | **Cardinality** | **Datatype or class** |
 |------------------------------|----------------|-------------------|--------------|
-| Identificatie | [`mim:identificatie`](http://modellen.mim-standaard.nl/def/mim#identificatie) | 1 | [`xsd:anyURI`](http://www.w3.org/2001/XMLSchema#anyURI) |
-| Naam                         | [`mim:naam`](http://modellen.mim-standaard.nl/def/mim#naam) | 1 | tekst |
-| Alias                        | [`mim:alias`](http://modellen.mim-standaard.nl/def/mim#alias) | 0..1 | tekst |
-| Definitie                    | [`mim:definitie`](http://modellen.mim-standaard.nl/def/mim#definitie) | 1 | tekst |
-| Herkomst                     | [`mim:herkomst`](http://modellen.mim-standaard.nl/def/mim#herkomst) | 1 | tekst |
+| Identification | [`mim:identificatie`](http://modellen.mim-standaard.nl/def/mim#identificatie) | 1 | [`xsd:anyURI`](http://www.w3.org/2001/XMLSchema#anyURI) |
+| Name                         | [`mim:naam`](http://modellen.mim-standaard.nl/def/mim#naam) | 1 | text |
+| Alias                        | [`mim:alias`](http://modellen.mim-standaard.nl/def/mim#alias) | 0..1 | text |
+| Definition                    | [`mim:definitie`](http://modellen.mim-standaard.nl/def/mim#definitie) | 1 | text |
+| Origin                     | [`mim:herkomst`](http://modellen.mim-standaard.nl/def/mim#herkomst) | 1 | text |
 | Datum opname                 | [`mim:datumOpname`](http://modellen.mim-standaard.nl/def/mim#datumOpname) | 1 | datum |
-| MIM versie                   | [`mim:mimversie`](http://modellen.mim-standaard.nl/def/mim#mimversie) | 1 | tekst |
-| MIM extensie                 | [`mim:mimextensie`](http://modellen.mim-standaard.nl/def/mim#mimextensie) | 0..1 | tekst |
-| MIM taal                     | [`mim:mimtaal`](http://modellen.mim-standaard.nl/def/mim#mimtaal) | 0..1 | tekst |
-| Informatiedomein             | [`mim:informatiedomein`](http://modellen.mim-standaard.nl/def/mim#informatiedomein) | 1..1 | tekst |
-| Informatiemodeltype         | [`mim:informatiemodeltype`](http://modellen.mim-standaard.nl/def/mim#informatiemodeltype) | 1..1 | Informatiemodeltypen |
+| MIM versie                   | [`mim:mimversie`](http://modellen.mim-standaard.nl/def/mim#mimversie) | 1 | text |
+| MIM extensie                 | [`mim:mimextensie`](http://modellen.mim-standaard.nl/def/mim#mimextensie) | 0..1 | text |
+| MIM taal                     | [`mim:mimtaal`](http://modellen.mim-standaard.nl/def/mim#mimtaal) | 0..1 | text |
+| Informatiedomein             | [`mim:informatiedomein`](http://modellen.mim-standaard.nl/def/mim#informatiedomein) | 1..1 | text |
+| InformationModeltype         | [`mim:informatiemodeltype`](http://modellen.mim-standaard.nl/def/mim#informatiemodeltype) | 1..1 | InformationModeltypen |
 | Relatiemodelleringstype       | [`mim:relatiemodelleringstype`](http://modellen.mim-standaard.nl/def/mim#relatiemodelleringstype) | 1..1 | Relatiemodelleringstypen |
-| tekstopmaak                  | [`mim:tekstopmaak`](http://modellen.mim-standaard.nl/def/mim#tekstopmaak) | 0..1 | tekst |
+| tekstopmaak                  | [`mim:tekstopmaak`](http://modellen.mim-standaard.nl/def/mim#tekstopmaak) | 0..1 | text |
 | Constraint                | [`mim:constraint`](http://modellen.mim-standaard.nl/def/mim#constraint) | 0..* | [`mim:Constraint`](http://modellen.mim-standaard.nl/def/mim#Constraint) |
 | Basis-URI                    | [`mim:basisUri`](http://modellen.mim-standaard.nl/def/mim#basisUri) | 0..1 | [`xsd:anyURI`](http://www.w3.org/2001/XMLSchema#anyURI) |
 
 The `mim:information model type` field refers to one of the following possible values:
 
-| **Informatiemodeltype** | **Definitie** |
+| **InformationModeltype** | **Definition** |
 |-------------------------|---------------|
-| [`mim:ConceptueelInformatiemodel`](http://modellen.mim-standaard.nl/def/mim#ConceptueelInformatiemodel) | Niveau-2 model, conform [deze](#beschouwingsniveau-2-conceptueel-informatiemodel) sectie |
-| [`mim:LogischInformatiemodel`](http://modellen.mim-standaard.nl/def/mim#LogischInformatiemodel) | Niveau-3 model, conform [deze](#beschouwingsniveau-3-logisch-informatie-of-gegevensmodel) sectie |
-| [`mim:TechnischInformatiemodel`](http://modellen.mim-standaard.nl/def/mim#TechnischInformatiemodel) | Niveau-4 model, conform [deze](#beschouwingsniveau-4-fysiek-of-technisch-gegevens-of-datamodel) sectie |
+| [`mim:ConceptueelInformationModel`](http://modellen.mim-standaard.nl/def/mim#ConceptueelInformationModel) | Niveau-2 model, conform [deze](#beschouwingsniveau-2-conceptueel-informatiemodel) sectie |
+| [`mim:LogischInformationModel`](http://modellen.mim-standaard.nl/def/mim#LogischInformationModel) | Niveau-3 model, conform [deze](#beschouwingsniveau-3-logisch-informatie-of-gegevensmodel) sectie |
+| [`mim:TechnischInformationModel`](http://modellen.mim-standaard.nl/def/mim#TechnischInformationModel) | Niveau-4 model, conform [deze](#beschouwingsniveau-4-fysiek-of-technisch-gegevens-of-datamodel) sectie |
 
 The `mim:relationshipModellingType` field refers to one of the following possible values:
 
-| **Relatiemodelleringstype** | **Definitie** |
+| **Relatiemodelleringstype** | **Definition** |
 |----------------------------|---------------|
 | [`mim:RelatiesoortLeidend`](http://modellen.mim-standaard.nl/def/mim#RelatiesoortLeidend) | Relatiesoort leidend, conform [deze](#relatiesoort-alt-1-soort-leidend) en [deze](#relatierol-alt-1-soort-leidend) secties |
 | [`mim:RelatierolLeidend`](http://modellen.mim-standaard.nl/def/mim#RelatierolLeidend) | Relatierol leidend, conform [deze](#relatiesoort-alt-2-rol-leidend) en [deze](#relatierol-alt-2-rol-leidend) secties |
@@ -752,11 +752,11 @@ The `mim:relationshipModellingType` field refers to one of the following possibl
 
 Domain packages are specified according to the following aspects:
 
-| **Aspect**                   | **Eigenschap** | **Kardinaliteit** | **Datatype of klasse** |
+| **Aspect**                   | **Ownership** | **Cardinality** | **Datatype or class** |
 |------------------------------|----------------|-------------------|--------------|
-| Identificatie | [`mim:identificatie`](http://modellen.mim-standaard.nl/def/mim#identificatie) | 1 | [`xsd:anyURI`](http://www.w3.org/2001/XMLSchema#anyURI) |
-| Naam                         | [`mim:naam`](http://modellen.mim-standaard.nl/def/mim#naam) | 1 | tekst |
-| Alias                        | [`mim:alias`](http://modellen.mim-standaard.nl/def/mim#alias) | 0..1 | tekst |
+| Identification | [`mim:identificatie`](http://modellen.mim-standaard.nl/def/mim#identificatie) | 1 | [`xsd:anyURI`](http://www.w3.org/2001/XMLSchema#anyURI) |
+| Name                         | [`mim:naam`](http://modellen.mim-standaard.nl/def/mim#naam) | 1 | text |
+| Alias                        | [`mim:alias`](http://modellen.mim-standaard.nl/def/mim#alias) | 0..1 | text |
 | Datum opname                 | [`mim:datumOpname`](http://modellen.mim-standaard.nl/def/mim#datumOpname) | 1 | datum |
 | Constraint                | [`mim:constraint`](http://modellen.mim-standaard.nl/def/mim#constraint) | 0..* | [`mim:Constraint`](http://modellen.mim-standaard.nl/def/mim#Constraint) |
 | Basis-URI                    | [`mim:basisUri`](http://modellen.mim-standaard.nl/def/mim#basisUri) | 0..1 | [`xsd:anyURI`](http://www.w3.org/2001/XMLSchema#anyURI) |
@@ -765,15 +765,15 @@ Domain packages are specified according to the following aspects:
 
 External packages are specified according to the following aspects:
 
-| **Aspect**                   | **Eigenschap** | **Kardinaliteit** | **Datatype of klasse** |
+| **Aspect**                   | **Ownership** | **Cardinality** | **Datatype or class** |
 |------------------------------|----------------|-------------------|--------------|
-| Identificatie | [`mim:identificatie`](http://modellen.mim-standaard.nl/def/mim#identificatie) | 1 | [`xsd:anyURI`](http://www.w3.org/2001/XMLSchema#anyURI) |
-| Naam                         | [`mim:naam`](http://modellen.mim-standaard.nl/def/mim#naam) | 1 | tekst |
-| Alias                        | [`mim:alias`](http://modellen.mim-standaard.nl/def/mim#alias) | 0..1 | tekst |
-| Locatie                      | [`mim:locatie`](http://modellen.mim-standaard.nl/def/mim#locatie) | 1 | tekst |
-| Definitie                    | [`mim:definitie`](http://modellen.mim-standaard.nl/def/mim#definitie) | 1 | tekst |
-| Toelichting               | [`mim:toelichting`](http://modellen.mim-standaard.nl/def/mim#toelichting) | 0..1 | tekst |
-| Herkomst                     | [`mim:herkomst`](http://modellen.mim-standaard.nl/def/mim#herkomst) | 1 | tekst |
+| Identification | [`mim:identificatie`](http://modellen.mim-standaard.nl/def/mim#identificatie) | 1 | [`xsd:anyURI`](http://www.w3.org/2001/XMLSchema#anyURI) |
+| Name                         | [`mim:naam`](http://modellen.mim-standaard.nl/def/mim#naam) | 1 | text |
+| Alias                        | [`mim:alias`](http://modellen.mim-standaard.nl/def/mim#alias) | 0..1 | text |
+| Locatie                      | [`mim:locatie`](http://modellen.mim-standaard.nl/def/mim#locatie) | 1 | text |
+| Definition                    | [`mim:definitie`](http://modellen.mim-standaard.nl/def/mim#definitie) | 1 | text |
+| Toelichting               | [`mim:toelichting`](http://modellen.mim-standaard.nl/def/mim#toelichting) | 0..1 | text |
+| Origin                     | [`mim:herkomst`](http://modellen.mim-standaard.nl/def/mim#herkomst) | 1 | text |
 | Datum opname                 | [`mim:datumOpname`](http://modellen.mim-standaard.nl/def/mim#datumOpname) | 1 | datum |
 | Constraint                | [`mim:constraint`](http://modellen.mim-standaard.nl/def/mim#constraint) | 0..* | [`mim:Constraint`](http://modellen.mim-standaard.nl/def/mim#Constraint) |
 | Basis-URI                    | [`mim:basisUri`](http://modellen.mim-standaard.nl/def/mim#basisUri) | 0..1 | [`xsd:anyURI`](http://www.w3.org/2001/XMLSchema#anyURI) |
@@ -782,15 +782,15 @@ External packages are specified according to the following aspects:
 
 View packages are specified according to the following aspects:
 
-| **Aspect**                   | **Eigenschap** | **Kardinaliteit** | **Datatype of klasse** |
+| **Aspect**                   | **Ownership** | **Cardinality** | **Datatype or class** |
 |------------------------------|----------------|-------------------|--------------|
-| Identificatie | [`mim:identificatie`](http://modellen.mim-standaard.nl/def/mim#identificatie) | 1 | [`xsd:anyURI`](http://www.w3.org/2001/XMLSchema#anyURI) |
-| Naam                         | [`mim:naam`](http://modellen.mim-standaard.nl/def/mim#naam) | 1 | tekst |
-| Alias                        | [`mim:alias`](http://modellen.mim-standaard.nl/def/mim#alias) | 0..1 | tekst |
-| Locatie                      | [`mim:locatie`](http://modellen.mim-standaard.nl/def/mim#locatie) | 1 | tekst |
-| Definitie                    | [`mim:definitie`](http://modellen.mim-standaard.nl/def/mim#definitie) | 1 | tekst |
-| Toelichting               | [`mim:toelichting`](http://modellen.mim-standaard.nl/def/mim#toelichting) | 0..1 | tekst |
-| Herkomst                     | [`mim:herkomst`](http://modellen.mim-standaard.nl/def/mim#herkomst) | 1 | tekst |
+| Identification | [`mim:identificatie`](http://modellen.mim-standaard.nl/def/mim#identificatie) | 1 | [`xsd:anyURI`](http://www.w3.org/2001/XMLSchema#anyURI) |
+| Name                         | [`mim:naam`](http://modellen.mim-standaard.nl/def/mim#naam) | 1 | text |
+| Alias                        | [`mim:alias`](http://modellen.mim-standaard.nl/def/mim#alias) | 0..1 | text |
+| Locatie                      | [`mim:locatie`](http://modellen.mim-standaard.nl/def/mim#locatie) | 1 | text |
+| Definition                    | [`mim:definitie`](http://modellen.mim-standaard.nl/def/mim#definitie) | 1 | text |
+| Toelichting               | [`mim:toelichting`](http://modellen.mim-standaard.nl/def/mim#toelichting) | 0..1 | text |
+| Origin                     | [`mim:herkomst`](http://modellen.mim-standaard.nl/def/mim#herkomst) | 1 | text |
 | Datum opname                 | [`mim:datumOpname`](http://modellen.mim-standaard.nl/def/mim#datumOpname) | 1 | datum |
 | Constraint                | [`mim:constraint`](http://modellen.mim-standaard.nl/def/mim#constraint) | 0..* | [`mim:Constraint`](http://modellen.mim-standaard.nl/def/mim#Constraint) |
 | Basis-URI                    | [`mim:basisUri`](http://modellen.mim-standaard.nl/def/mim#basisUri) | 0..1 | [`xsd:anyURI`](http://www.w3.org/2001/XMLSchema#anyURI) |
@@ -802,15 +802,15 @@ View packages are specified according to the following aspects:
 Enumerations refer to the Enumeration metaclass and are sent to the following
 aspects:
 
-| **Aspect**                   | **Eigenschap** | **Kardinaliteit** | **Datatype of klasse** |
+| **Aspect**                   | **Ownership** | **Cardinality** | **Datatype or class** |
 |------------------------------|----------------|-------------------|--------------|
-| Identificatie | [`mim:identificatie`](http://modellen.mim-standaard.nl/def/mim#identificatie) | 1 | [`xsd:anyURI`](http://www.w3.org/2001/XMLSchema#anyURI) |
-| Naam                         | [`mim:naam`](http://modellen.mim-standaard.nl/def/mim#naam) | 1 | tekst |
-| Alias                        | [`mim:alias`](http://modellen.mim-standaard.nl/def/mim#alias) | 0..1 | tekst |
-| Begrip                    | [`mim:begrip`](http://modellen.mim-standaard.nl/def/mim#begrip) | 0..* | [`skos:Concept`](http://www.w3.org/2004/02/skos/core#Concept) |
-| Begripsterm               | [`mim:begripsterm`](http://modellen.mim-standaard.nl/def/mim#begripsterm) | 0..* | tekst |
-| Definitie                    | [`mim:definitie`](http://modellen.mim-standaard.nl/def/mim#definitie) | 1 | tekst |
-| Toelichting               | [`mim:toelichting`](http://modellen.mim-standaard.nl/def/mim#toelichting) | 0..1 | tekst |
+| Identification | [`mim:identificatie`](http://modellen.mim-standaard.nl/def/mim#identificatie) | 1 | [`xsd:anyURI`](http://www.w3.org/2001/XMLSchema#anyURI) |
+| Name                         | [`mim:naam`](http://modellen.mim-standaard.nl/def/mim#naam) | 1 | text |
+| Alias                        | [`mim:alias`](http://modellen.mim-standaard.nl/def/mim#alias) | 0..1 | text |
+| Concept                    | [`mim:concept`](http://modellen.mim-standaard.nl/def/mim#concept) | 0..* | [`skos:Concept`](http://www.w3.org/2004/02/skos/core#Concept) |
+| Term               | [`mim:term`](http://modellen.mim-standaard.nl/def/mim#term) | 0..* | text |
+| Definition                    | [`mim:definitie`](http://modellen.mim-standaard.nl/def/mim#definitie) | 1 | text |
+| Toelichting               | [`mim:toelichting`](http://modellen.mim-standaard.nl/def/mim#toelichting) | 0..1 | text |
 | Datum opname                 | [`mim:datumOpname`](http://modellen.mim-standaard.nl/def/mim#datumOpname) | 1 | datum |
 | Waarde                       | [`mim:waarde`](http://modellen.mim-standaard.nl/def/mim#Enumeratiewaarde) | 1..* | [`mim:Waarde`](http://modellen.mim-standaard.nl/def/mim#Enumeratiewaarde) |
 | Constraint                | [`mim:constraint`](http://modellen.mim-standaard.nl/def/mim#constraint) | 0..* | [`mim:Constraint`](http://modellen.mim-standaard.nl/def/mim#Constraint) |
@@ -820,15 +820,15 @@ aspects:
 The enumeration value itself concerns the UML-EnumerationLiteral metaclass and has
 following aspects:
 
-| **Aspect**                   | **Eigenschap** | **Kardinaliteit** | **Datatype of klasse** |
+| **Aspect**                   | **Ownership** | **Cardinality** | **Datatype or class** |
 |------------------------------|----------------|-------------------|--------------|
-| Identificatie | [`mim:identificatie`](http://modellen.mim-standaard.nl/def/mim#identificatie) | 1 | [`xsd:anyURI`](http://www.w3.org/2001/XMLSchema#anyURI) |
-| Naam                         | [`mim:naam`](http://modellen.mim-standaard.nl/def/mim#naam) | 1 | tekst |
-| Definitie                    | [`mim:definitie`](http://modellen.mim-standaard.nl/def/mim#definitie) | 0..1 | tekst |
-| Toelichting               | [`mim:toelichting`](http://modellen.mim-standaard.nl/def/mim#toelichting) | 0..1 | tekst |
-| Code                         | [`mim:code`](http://modellen.mim-standaard.nl/def/mim#code) | 0..1 | tekst |
-| Begrip                       | [`mim:begrip`](http://modellen.mim-standaard.nl/def/mim#begrip) | 0..* | [`skos:Concept`](http://www.w3.org/2004/02/skos/core#Concept) |
-| Begripsterm                  | [`mim:begripsterm`](http://modellen.mim-standaard.nl/def/mim#begripsterm) | 0..* | tekst |
+| Identification | [`mim:identificatie`](http://modellen.mim-standaard.nl/def/mim#identificatie) | 1 | [`xsd:anyURI`](http://www.w3.org/2001/XMLSchema#anyURI) |
+| Name                         | [`mim:naam`](http://modellen.mim-standaard.nl/def/mim#naam) | 1 | text |
+| Definition                    | [`mim:definitie`](http://modellen.mim-standaard.nl/def/mim#definitie) | 0..1 | text |
+| Toelichting               | [`mim:toelichting`](http://modellen.mim-standaard.nl/def/mim#toelichting) | 0..1 | text |
+| Code                         | [`mim:code`](http://modellen.mim-standaard.nl/def/mim#code) | 0..1 | text |
+| Concept                       | [`mim:concept`](http://modellen.mim-standaard.nl/def/mim#concept) | 0..* | [`skos:Concept`](http://www.w3.org/2004/02/skos/core#Concept) |
+| Term                  | [`mim:term`](http://modellen.mim-standaard.nl/def/mim#term) | 0..* | text |
 | Datum opname                 | [`mim:datumOpname`](http://modellen.mim-standaard.nl/def/mim#datumOpname) | 1 | datum |
 | Constraint                | [`mim:constraint`](http://modellen.mim-standaard.nl/def/mim#constraint) | 0..* | [`mim:Constraint`](http://modellen.mim-standaard.nl/def/mim#Constraint) |
 
@@ -839,11 +839,11 @@ An enumeration value may not have an alias, because in UML the alias field is us
 The enumeration value itself concerns the metaclass UML-EnumerationLiteral and has following aspects:
 
 
-| **Aspect**                   | **Eigenschap** | **Kardinaliteit** | **Datatype of _klasse** |
+| **Aspect**                   | **Ownership** | **Cardinality** | **Datatype of _klasse** |
 |------------------------------|----------------|-------------------|--------------|
-| Naam                         | [`mim:naam`](http://modellen.mim-standaard.nl/def/mim#naam) | 1 | tekst |
-| Specificatie-tekst           | [`mim:specificatieTekst`](http://modellen.mim-standaard.nl/def/mim#specificatieTekst) | 0..1 | tekst |
-| Specificatie-formeel         | [`mim:specificatieFormeel`](http://modellen.mim-standaard.nl/def/mim#specificatieFormeel) | 0..1 | tekst |
+| Name                         | [`mim:naam`](http://modellen.mim-standaard.nl/def/mim#naam) | 1 | text |
+| Specificatie-tekst           | [`mim:specificatieTekst`](http://modellen.mim-standaard.nl/def/mim#specificatieTekst) | 0..1 | text |
+| Specificatie-formeel         | [`mim:specificatieFormeel`](http://modellen.mim-standaard.nl/def/mim#specificatieFormeel) | 0..1 | text |
 
 ## Linked Data Tooling
 
