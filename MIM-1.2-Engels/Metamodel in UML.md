@@ -245,9 +245,9 @@ _Relatiesoort en relatierol_
 | Relatierol source     | «Relatierol»   | Property              |      | AssociationEnd |            |
 | Relatierol target     | «Relatierol»   | Property              |      | AssociationEnd |            |
 
-#### Externe koppeling
+#### External link
 
-_Externe koppeling_
+_External link_
 
 | **MIM metaclass** | **Stereotype**      | **Metaclass UML 2.5** |      | **In EA**   | **In ...** |
 | ----------------- | ------------------- | --------------------- | ---- | ----------- | ---------- |
@@ -273,17 +273,20 @@ _Packages_
 | Extern                | «Extern»          | (UML) Package         |      | Package   |            |
 | View                  | «View»            | (UML) Package         |      | Package   |            |
 
-## Specificatie metagegevens in UML
+## Specification metadata in UML
 
-Deze paragraaf is een aanvulling op [[[#specificatie-metagegevens]]]. In de hierna volgende paragrafen worden de metagegevens per modelelement gespecificeerd in tabellen. Per metagegeven zijn de volgende onderdelen gespecificeerd:
+This section is a supplement to [[[#specificationmetadata]]]. In the sections that follow, the metadata for each model element is specified in tables. For each metadata, the following items are specified:
 
- - **Aspect**: Het benoemde metagegeven. De aanduiding `√ `betekent: conform stelselafspraken voor basisregistraties. Een `*` betekent: conform de stelselcatalogus. Zie ook de paragraaf in H3 hierover. 
- - **Kardinaliteit**: Aantal maal dat een metagegeven opgenomen kan worden bij dit modelelement.
- - **Toelichting**: Nadere uitleg over het metagegeven.
- - **In UML 2.5**: De naam waarmee het metagegeven in UML 2.5 is benoemd. Het betreft veelal overerving van een metagegeven van een UML metaclass die niet in dit document is benoemd.
- - **In EA**: Aanduiding hoe het metagegeven in Sparx Enterprise Architect (EA) is aangegeven.
+ - **Aspect**: The named metadata. The indication `√ `means: in accordance with system agreements for basic registrations. A `*` means: in conformity with the system catalogue. See also the section in H3 on this.
+ - **Cardinality**: Number of times a metadata entry can be included with this model element.
+ - **Explanation**: Further explanation of the metadata.
+ - **In UML 2.5**: The name by which the metadata is named in UML 2.5. It usually refers to inheritance of a metadata from a UML metaclass not named in this document.
+ - **In EA**: Indication of how the metadata is declared in Sparx Enterprise Architect (EA).
 
-Rode tekst betreft een standaardelement binnen EA. Zwarte tekst in de kolom betreft een uitbreiding op het UM-metamodel, via _tagged values_ of aanvullende stereotypes.
+Red text refers to a standard element within EA. Black text in the column refers to an extension to the UM metamodel, via _tagged values_ or additional stereotypes.
+*** Translated with www.DeepL.com/Translator (free version) ***
+
+
 
 <aside class="note" title="Nadere toelichting op het metagegeven Alias">
   <p>
@@ -297,11 +300,11 @@ Rode tekst betreft een standaardelement binnen EA. Zwarte tekst in de kolom betr
   </p>
 </aside>
 
-### Objecten en attributen in UML
+### Objects and attributes in UML
 
 #### «Objecttype»
 
-De objecttypen worden naar de volgende aspecten gespecificeerd:
+The object types are specified according to the following aspects:
 
 | **Aspect**                       | **Kardinaliteit** | **Toelichting**                | **In UML 2.5**                        |    | **In EA**      | **In ...** |
 | -------------------------------- | -------- | ---------------------------------------- | ------------------------------------- | -- | -------------- | -------- |
