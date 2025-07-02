@@ -1,16 +1,26 @@
 # MIM-Werkomgeving
 
 > [!NOTE]
-MIM 2.0 ontwikkeling is in een ander repository. 
+MIM 2.0 ontwikkeling is in een ander repository: <https://github.com/Geonovum/mim-metamodel>
 Het werkdocument van het mim-metamodel (2.0) staat hier:  
 MIM-Metamodel: <https://geonovum.github.io/mim-metamodel>  
 
 > Profielen van MIM implementaties in verschillende modelleertalen:  
-MIM-UML: <https://geonovum.github.io/mim-uml>  
-MIM-LD: <https://geonovum.github.io/mim-ld>  
-MIM-OmtoUML: <https://geonovum.github.io/mim-ontouml>  
-MIM-FBM: <https://geonovum.github.io/mim-fbm>  
-MIM-ArchiMate: <https://geonovum.github.io/mim-archimate>  
+MIM-UML:
+github rep: <https://github.com/Geonovum/mim-uml>  
+document: <https://geonovum.github.io/mim-uml>  
+MIM-LD: 
+github rep: <https://github.com/Geonovum/mim-ld>  
+document: <https://geonovum.github.io/mim-ld>  
+MIM-OmtoUML:  
+github rep: <https://github.com/Geonovum/mim-ontouml>  
+document: <https://geonovum.github.io/mim-ontouml>  
+MIM-FBM:  
+github rep: <https://github.com/Geonovum/mim-fbm>  
+document: <https://geonovum.github.io/mim-fbm>  
+MIM-ArchiMate:  
+github rep: <https://github.com/Geonovum/mim-archimate>  
+document: <https://geonovum.github.io/mim-archimate>  
 
 
 
