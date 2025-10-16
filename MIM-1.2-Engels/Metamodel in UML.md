@@ -135,19 +135,19 @@ There are five situations in which a choice construct is applied:
 Each application has its own subset of the metamodel.  
 The choice construct makes it possible to select between multiple datatypes, attribute types, and relationship targets.  
 In UML, we retain the same modeling principle: a datatype remains a datatype, an attribute type remains an attribute type, and a relationship type remains a relationship type.  
-The UML elements that use the stereotype `keuze` (choice) are **not themselves** a datatype, attribute type, or relationship target.  
+The UML elements that use the stereotype `union` (choice) are **not themselves** a datatype, attribute type, or relationship target.  
 Note that the diagrams are modeled at the metamodel level; below each diagram, text describes how this applies at the information model level.
 
 #### Use Case 1: Choice between Datatypes
 
 <figure id="ChoiceDatatype1UML">
-  <img src="media/KeuzeDatatype1UML.png" alt="" />
+  <img src="media/UnionDatatype1UML.png" alt="" />
   <figcaption>Diagram: Choice between datatypes in UML</figcaption>
 </figure>
 
 **Modeling this Choice in an information model:**
-- Model a _UML Datatype_ with the stereotype _«keuze»_.  
-- Within it, model two or more MIM datatypes. For this, include a _UML attribute_ with stereotype _«keuze»_ inside the choice, and assign the desired (MIM) Datatype as its type.  
+- Model a _UML Datatype_ with the stereotype _«union»_.  
+- Within it, model two or more MIM datatypes. For this, include a _UML attribute_ with stereotype _«union»_ inside the choice, and assign the desired (MIM) Datatype as its type.  
   Note: this extra UML attribute is **not** itself a choice option — the choice is between the datatypes.
 
 **Using the Choice for a (MIM) Attribute Type:**
@@ -156,30 +156,30 @@ Note that the diagrams are modeled at the metamodel level; below each diagram, t
 #### Use Case 2: Choice between Two or More Attribute Types
 
 <figure id="ChoiceAttributeType2UML">
-  <img src="media/KeuzeAttribuutsoort2UML.png" alt="" />
+  <img src="media/UnionAttribuutsoort2UML.png" alt="" />
   <figcaption>Diagram: Choice between two or more attribute types</figcaption>
 </figure>
 
 **Modeling this Choice in an information model:**
-- Model a _UML Class_ with the stereotype _«keuze»_.  
+- Model a _UML Class_ with the stereotype _«union»_.  
 - Inside it, model two or more MIM attribute types. Each (MIM) Attribuutsoort is modeled normally, as a _UML Property (attribute)_ with the stereotype _«Attribuutsoort»_ (and this UML Property has as its type a MIM Datatype).
 
 **Using the Choice for a (MIM) Objecttype or (MIM) Data Group Type:**
-- Model in an Objecttype or Data Group Type a _UML Property (attribute)_ with the stereotype _«keuze»_, and link it to the modeled Choice via typing.  
-  This _UML Property_ with stereotype _«keuze»_ is **not** a (MIM) Attribute Type itself.  
+- Model in an Objecttype or Data Group Type a _UML Property (attribute)_ with the stereotype _«union»_, and link it to the modeled Choice via typing.  
+  This _UML Property_ with stereotype _«union»_ is **not** a (MIM) Attribute Type itself.  
   Only UML Properties with stereotype _«Attribuutsoort»_ represent a (MIM) Attribute Type.
 
 #### Use Case 3: Choice between Multiple Ways to Populate One Meaningful Attribute Type
 
 <figure id="ChoiceAttributeType3UML">
-  <img src="media/KeuzeAttribuutsoort3UML.png" alt="" />
+  <img src="media/UnionAttribuutsoort3UML.png" alt="" />
   <figcaption>Diagram: Choice between multiple ways to populate one meaningful attribute type</figcaption>
 </figure>
 
 **Modeling this Choice in an information model:**
-- Model a _UML Class_ with the stereotype _«keuze»_.  
-- Within it, model two or more choice options by creating, for each, a UML Property (attribute) with the stereotype _«keuze»_ (and this UML Property has as its datatype a MIM Datatype).  
-  Note: this _UML Property (attribute)_ with stereotype _«keuze»_ is **not** itself a (MIM) Attribute Type.
+- Model a _UML Class_ with the stereotype _«union»_.  
+- Within it, model two or more choice options by creating, for each, a UML Property (attribute) with the stereotype _«union»_ (and this UML Property has as its datatype a MIM Datatype).  
+  Note: this _UML Property (attribute)_ with stereotype _«union»_ is **not** itself a (MIM) Attribute Type.
 
 **Using the Choice for a (MIM) Attribute Type:**
 - In a (MIM) Objecttype or Data Group Type, model a MIM Attribute Type as usual, and link the previously modeled Choice to it via typing.
@@ -187,14 +187,14 @@ Note that the diagrams are modeled at the metamodel level; below each diagram, t
 #### Use Case 4: Choice between Relationship Targets, as a Further Specification of One Meaningful Relationship Type
 
 <figure id="ChoiceRelationTarget4UML">
-  <img src="media/KeuzeRelatiedoel4UML.png" alt="" />
+  <img src="media/UnionRelatiedoel4UML.png" alt="" />
   <figcaption>Diagram: Choice between relationship targets as further specification of one meaningful relationship type</figcaption>
 </figure>
 
 **Modeling this Choice in an information model:**
-- Model a _UML Class_ with the stereotype _«keuze»_.  
-- Inside it, model two or more outgoing _UML Associations_ with the stereotype _«keuze»_, each with a (MIM) Objecttype as its target.  
-  This _UML Association_ with stereotype _«keuze»_ is **not** itself a Relationship Type or External Link.
+- Model a _UML Class_ with the stereotype _«union»_.  
+- Inside it, model two or more outgoing _UML Associations_ with the stereotype _«union»_, each with a (MIM) Objecttype as its target.  
+  This _UML Association_ with stereotype _«union»_ is **not** itself a Relationship Type or External Link.
 
 **Using the Choice for a (MIM) Objecttype or Data Group Type:**
 - Model in a (MIM) Objecttype or Data Group Type a (MIM) Relationship Type or External Link, as usual.
@@ -202,37 +202,37 @@ Note that the diagrams are modeled at the metamodel level; below each diagram, t
 #### Use Case 5: Choice between Relationship Types / Roles (Each Meaningful in Itself)
 
 <figure id="ChoiceRelationType5UML">
-  <img src="media/KeuzeRelatiedoel5UML.png" alt="" />
+  <img src="media/UnionRelatiedoel5UML.png" alt="" />
   <figcaption>Diagram: Choice between relationship types/roles, each meaningful in itself</figcaption>
 </figure>
 
 **Modeling this Choice in an information model:**
-- Model a _UML Class_ with the stereotype _«keuze»_.  
+- Model a _UML Class_ with the stereotype _«union»_.  
 - Within it, model two or more MIM Relationship Types, each with a target.  
   Each Relationship Type is modeled as usual: a _UML Property_ (association) with the stereotype _«Relatiesoort»_ or _«Externe koppeling»_, with a target role.
 
 **Using the Choice for a (MIM) Objecttype or Data Group Type:**
-- Model in a (MIM) Objecttype or Data Group Type a _UML Association_ with the stereotype _«keuze»_, and link the modeled Choice to it as the association’s target.  
-  This _UML Association_ with stereotype _«keuze»_ is **not** itself a Relationship Type or External Link.
+- Model in a (MIM) Objecttype or Data Group Type a _UML Association_ with the stereotype _«union»_, and link the modeled Choice to it as the association’s target.  
+  This _UML Association_ with stereotype _«union»_ is **not** itself a Relationship Type or External Link.
 
 #### Modeling of a Choice in UML
 
-There are three metaclasses named `Keuze`, each extending a different UML metaclass.  
+There are three metaclasses named `Union`, each extending a different UML metaclass.  
 The UML metaclass used indicates which variant of the Choice construct it represents.
 
 | **MIM Metaclass** | **Stereotype** | **UML 2.5 Metaclass** |      | **In Enterprise Architect (EA)** | **In ...** |
 | ----------------- | -------------- | --------------------- | ---- | -------------------------------- | ---------- |
-| Choice            | «Keuze»        | (UML) Class           |      | Class                            |            |
-| Choice            | «Keuze»        | (UML) Datatype        |      | Datatype                         |            |
-| Choice            | «Keuze»        | (UML) Property        |      | Attribute                        |            |
+| Choice            | «Union»        | (UML) Class           |      | Class                            |            |
+| Choice            | «Union»        | (UML) Datatype        |      | Datatype                         |            |
+| Choice            | «Union»        | (UML) Property        |      | Attribute                        |            |
 
-- If a UML Class with stereotype `«keuze»` is used, it contains only attribute types and/or relationship targets — the elements to choose from.  
-- If a UML Datatype with stereotype `«keuze»` is used, it contains only datatypes — the datatypes to choose from.  
-- If a UML Property with stereotype `«keuze»` is used, it serves as a helper construct to connect the Choice model element to the MIM model element for which the choice applies.
+- If a UML Class with stereotype `«union»` is used, it contains only attribute types and/or relationship targets — the elements to choose from.  
+- If a UML Datatype with stereotype `«union»` is used, it contains only datatypes — the datatypes to choose from.  
+- If a UML Property with stereotype `«union»` is used, it serves as a helper construct to connect the Choice model element to the MIM model element for which the choice applies.
 
 Note: this table does **not** list the elements that can be chosen between (those are datatypes, attribute types, and relationship types).  
 Instead, it describes the **Choice modeling mechanism** in UML — the auxiliary constructs needed to connect the possible elements to the MIM element to which the choice applies.  
-These auxiliary constructs carry the stereotype _«keuze»_, indicating their meaning differs from that of MIM elements such as Datatype, Attribute Type, or Relationship Type.
+These auxiliary constructs carry the stereotype _«union»_, indicating their meaning differs from that of MIM elements such as Datatype, Attribute Type, or Relationship Type.
 
 
 #### Relatierol
@@ -418,7 +418,7 @@ De gegevensgroeptypen worden naar de volgende aspecten gespecificeerd:
 </aside>
 
 Het metamodel heeft twee manieren om een relatie tussen twee objecttypen te
-beschrijven. Deze keuze wordt aangegeven in de eigen extensie, zoals beschreven
+beschrijven. Deze union wordt aangegeven in de eigen extensie, zoals beschreven
 in [[[#alternatieven]]]. Alleen het gekozen alternatief is relevant voor de modellering in uw informatiemodel. Welke alternatief je ook kiest: beide hanteren `<code>`«Relatiesoort»`</code>` en `<code>`«Relatierol»`</code>`, maar met andere regels voor gebruik.
 
 **Alternatief 1: Relatiesoort is leidend**
@@ -794,9 +794,9 @@ De data-elementen worden naar de volgende aspecten gespecificeerd:
 | heeft data**type**                            | 1                       | Binding aan een datatype.                                                                                                                               | *datatype* = UML-datatype                                       |  | *type* = datatype |                  |
 | heeft**Constraint**                           | 0..*                    | Binding aan een constraint.                                                                                                                             |                                                                   |  | *Constraint*      |                  |
 
-#### «Keuze»
+#### «Union»
 
-Een Keuze worden naar de volgende aspecten gespecificeerd:
+Een Union worden naar de volgende aspecten gespecificeerd:
 
 | **Aspect**                | **Kardinaliteit** | **Toelichting**                                                                  | **In UML 2.5**                                           |  | **In EA**  | **In ...** |
 | ------------------------------- | ----------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------- | - | ---------------- | ---------------- |
@@ -809,12 +809,12 @@ Een Keuze worden naar de volgende aspecten gespecificeerd:
 | **Herkomst definitie**    | 0..1                    | Algemeen metagegeven.                                                                  |                                                                |  | *Tagged value* |                  |
 | **Toelichting**           | 0..1                    | Algemeen metagegeven.                                                                  |                                                                |  | *tagged value* |                  |
 | **Datum opname**          | 1                       | Algemeen metagegeven.                                                                  |                                                                |  | *tagged value* |                  |
-| heeft data**type**keuze   | 0..*                    | Binding van een datatype, in UML via een additionale UML-property met stereotype keuze | *owned element* = UML-property en deze heeft en *datatype* |  | *attribute*    |                  |
-| heeft**keuzeattribuut**   | 0..*                    | Binding aan een attribuutsoort.                                                        | *owned element* = UML-Property                               |  | *attribute*    |                  |
-| heeft**keuzerelatiedoel** | 0..*                    | Binding aan een relatiesoort.                                                          | *owned element* = UML-Relationship                           |  | *association*  |                  |
+| heeft data**type**union   | 0..*                    | Binding van een datatype, in UML via een additionale UML-property met stereotype union | *owned element* = UML-property en deze heeft en *datatype* |  | *attribute*    |                  |
+| heeft**unionattribuut**   | 0..*                    | Binding aan een attribuutsoort.                                                        | *owned element* = UML-Property                               |  | *attribute*    |                  |
+| heeft**unionrelatiedoel** | 0..*                    | Binding aan een relatiesoort.                                                          | *owned element* = UML-Relationship                           |  | *association*  |                  |
 | heeft**Constraint**       | 0..*                    | Binding aan een constraint.                                                            |                                                                |  | *Constraint*   |                  |
 
-*Opmerking: de modelelementen waaruit gekozen kan worden heten sinds MIM 1.1 geen keuze-elementen meer. Keuze-element is komen te vervallen.*
+*Opmerking: de modelelementen waaruit gekozen kan worden heten sinds MIM 1.1 geen union-elementen meer. Union-element is komen te vervallen.*
 
 ### Packages in UML
 
@@ -932,7 +932,7 @@ aspecten gespecificeerd:
 | van toepassing op**Primitief datatype**      | 0..1                    | Binding aan een Primitief datatype                                         |                                         |  |                              |                  |
 | van toepassing op**Gestructureerd datatype** | 0..1                    | Binding aan een Gestructureerd datatype                                    |                                         |  |                              |                  |
 | van toepassing op**Data-element**            | 0..1                    | Binding aan een Data-element                                               |                                         |  |                              |                  |
-| van toepassing op**Keuze**                   | 0..1                    | Binding aan een Keuze                                                      |                                         |  |                              |                  |
+| van toepassing op**Union**                   | 0..1                    | Binding aan een Union                                                      |                                         |  |                              |                  |
 | van toepassing op**Domein**                  | 0..1                    | Binding aan een Domein                                                     |                                         |  |                              |                  |
 | van toepassing op**Extern**                  | 0..1                    | Binding aan een Extern                                                     |                                         |  |                              |                  |
 | van toepassing op**Informatiemodel**         | 0..1                    | Binding aan een Informatiemodel                                            |                                         |  |                              |                  |

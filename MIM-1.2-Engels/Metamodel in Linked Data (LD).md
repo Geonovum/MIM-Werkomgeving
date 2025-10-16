@@ -13,7 +13,7 @@ From a Linked Data perspective, this is special. A core feature of Linked Data i
 For example, an MIM object type "Ship" leads to the following representation in RDF:
 
 <pre class='ex-turtle'>
-@prefix vb: &lt;http://modellen.mim-standaard.nl/voorbeeld/> .
+@prefix vb: &lt;http://modellen.mim-standaard.nl/example/> .
 @prefix mim: &lt;http://modellen.mim-standaard.nl/def/mim#> .
 
 vb:Ship a mim:Objecttype;
@@ -24,7 +24,7 @@ vb:Ship a mim:Objecttype;
 `vb:Ship` in this example is an occurrence of the class `mim:Objecttype`. this occurrence itself has no occurrences. This requires a translation to a `rdfs:Class`, for example by:
 
 <pre class='ex-turtle'>
-@prefix vbo: &lt;http://modellen.mim-standaard.nl/voorbeeld/def#>.
+@prefix vbo: &lt;http://modellen.mim-standaard.nl/example/def#>.
 
 vbo:Ship a rdfs:Class;
   mim:equivalent vb:Ship;
@@ -63,9 +63,9 @@ To convert the data constraints (such as cardinalities, data types and propertie
 Compared to the UML representation of the MIM metamodel, the MIM in RDF only has the use of metadata names and not the names of the bindings associated with these metadata. For example, for the binding between Object Type and Attribute Type, the UML metamodel has the binding name "has attribute" and the role name "attribute". The MIM in RDF uses only the role name "attribute" in this case.
 
 ### Core
-<figure id="media/rdf-kern">
-  <img src="media/rdf-kern.png" alt="" />
-  <figcaption>Diagram: Kern metamodel in LD</figcaption>
+<figure id="media/rdf-core">
+  <img src="media/rdf-core.png" alt="" />
+  <figcaption>Diagram: Core metamodel in LD</figcaption>
 </figure>
 
 As a prefix for the vocabulary `mim`,with the  namespace `http://modellen.mim-standaard.nl/def/mim#`, will be used. The prefix for the shapes is going to be `shape`, with the following namespace `http://modellen.mim-standaard.nl/def/mim-shapes#`.
@@ -73,10 +73,10 @@ As a prefix for the vocabulary `mim`,with the  namespace `http://modellen.mim-st
 | **MIM metaclass** | **Metaclass in RDF** | **Shape in RDF** | **Base** |
 |-------------------|----------------------|------------------|---------------|
 | Featuretype        | [`mim:Objecttype`](http://modellen.mim-standaard.nl/def/mim#Objecttype) | shape:Objecttype | [base](#objecttypen-en-attributesoorten) |
-| Attributetype   | [`mim:Attribuuttype`](http://modellen.mim-standaard.nl/def/mim#Attribuutsoort) | shape:Attribuuttype | [base](#attributesoort)
-| Datatype    | [`mim:Gegevensgroep`](http://modellen.mim-standaard.nl/def/mim#Gegevensgroep) | shape:Gegevensgroep | [base](#gegevensgroep) |
-| Gegevensgroeptype | [`mim:Gegevensgroeptype`](http://modellen.mim-standaard.nl/def/mim#Gegevensgroeptype) | shape:Gegevensgroeptype | [base](#gegevensgroeptype) |
-| Generalisatie     | [`mim:Generalisatie`](http://modellen.mim-standaard.nl/def/mim#Generalisatie) | shape:Generalisatie | [base](#generalisatie) |
+| Attributetype   | [`mim:Attributetype`](http://modellen.mim-standaard.nl/def/mim#Attribuutsoort) | shape:Attributetype | [base](#attributesoort)
+| Datatype    | [`mim:Datatypegroup`](http://modellen.mim-standaard.nl/def/mim#Datatypegroup) | shape:Datatypegroup | [base](#datatypegroup) |
+| Datatypegrouptype | [`mim:Datatypegrouptype`](http://modellen.mim-standaard.nl/def/mim#Datatypegrouptype) | shape:Datatypegrouptype | [base](#datatypegrouptype) |
+| Generalisation     | [`mim:Generalisation`](http://modellen.mim-standaard.nl/def/mim#Generalisation) | shape:Generalisation | [base](#generalisation) |
 | Relatiesoort      | [`mim:Relatiesoort`](http://modellen.mim-standaard.nl/def/mim#Relatiesoort) | shape:Relatiesoort | [base](#relatiesoort) |
 | Relatieklasse     | [`mim:Relatieklasse`](http://modellen.mim-standaard.nl/def/mim#Relatieklasse) | shape:Relatieklasse | [base](#relatieklasse) |
 
@@ -223,8 +223,8 @@ This section complements the [[[#specification-metadata]]] section. The meaning 
 | definitie | [`mim:definitie`](http://modellen.mim-standaard.nl/def/mim#definitie) | owl:DatatypeProperty | [base](#metadata-definitie) |
 | doel | [`mim:doel`](http://modellen.mim-standaard.nl/def/mim#doel) | owl:ObjectProperty | [base](#metadata-doel) |
 | formeel patroon | [`mim:formeelPatroon`](http://modellen.mim-standaard.nl/def/mim#formeelPatroon) | owl:DatatypeProperty | [base](#metadata-formeel-patroon) |
-| gegevensgroep | [`mim:gegevensgroep`](http://modellen.mim-standaard.nl/def/mim#gegevensgroep) | owl:ObjectProperty | [base](#metadata-heeft-gegevensgroep) |
-| groeptype | [`mim:groeptype`](http://modellen.mim-standaard.nl/def/mim#groeptype) | owl:ObjectProperty | [base](#metadata-heeft-gegevensgroeptype) |
+| datatypegroup | [`mim:datatypegroup`](http://modellen.mim-standaard.nl/def/mim#datatypegroup) | owl:ObjectProperty | [base](#metadata-heeft-datatypegroup) |
+| groeptype | [`mim:groeptype`](http://modellen.mim-standaard.nl/def/mim#groeptype) | owl:ObjectProperty | [base](#metadata-heeft-datatypegrouptype) |
 | herkomst | [`mim:herkomst`](http://modellen.mim-standaard.nl/def/mim#herkomst) | owl:DatatypeProperty | [base](#metadata-herkomst) |
 | herkomst definitie | [`mim:herkomstDefinitie`](http://modellen.mim-standaard.nl/def/mim#herkomstDefinitie) | owl:DatatypeProperty | [base](#metadata-herkomst-definitie) |
 | identificerend | [`mim:identificerend`](http://modellen.mim-standaard.nl/def/mim#identificerend) | owl:DatatypeProperty | [base](#metadata-identificerend) |
@@ -288,7 +288,7 @@ The object types are specified according to the following aspects:
 | Toelichting               | [`mim:toelichting`](http://modellen.mim-standaard.nl/def/mim#toelichting) | 0..1 | text |
 | Indicatie abstract object | [`mim:indicatieAbstractObject`](http://modellen.mim-standaard.nl/def/mim#indicatieAbstractObject) | 1 | boolean |
 | Attribut                  | [`mim:attribute`](http://modellen.mim-standaard.nl/def/mim#attribute) | 0..* | [`mim:Attribuutsoort`](http://modellen.mim-standaard.nl/def/mim#Attribuutsoort) |
-| Gegevensgroep             | [`mim:gegevensgroep`](http://modellen.mim-standaard.nl/def/mim#gegevensgroep) | 0..* | [`mim:Gegevensgroep`](http://modellen.mim-standaard.nl/def/mim#Gegevensgroep) |
+| Datatypegroup             | [`mim:datatypegroup`](http://modellen.mim-standaard.nl/def/mim#datatypegroup) | 0..* | [`mim:Datatypegroup`](http://modellen.mim-standaard.nl/def/mim#Datatypegroup) |
 | Constraint                | [`mim:constraint`](http://modellen.mim-standaard.nl/def/mim#constraint) | 0..* | [`mim:Constraint`](http://modellen.mim-standaard.nl/def/mim#Constraint) |
 
 #### mim:Attribuutsoort
@@ -335,7 +335,7 @@ The `mim:authentic` field refers to one of the following possible values:
 | [`mim:Authentiek`](http://modellen.mim-standaard.nl/def/mim#Authentiek) | In een basisregistratie opgenomen gegeven dat bij wettelijk voorschrift als authentic is aangemerkt. |
 | [`mim:Basisgegeven`](http://modellen.mim-standaard.nl/def/mim#Basisgegeven) | Een in een basisregistratie opgenomen gegeven. |
 | [`mim:WettelijkGegeven`](http://modellen.mim-standaard.nl/def/mim#WettelijkGegeven) | Gegeven behorende bij een wettelijke registratie, niet zijnde een basisregistratie |
-| [`mim:LandelijkKerngegeven`](http://modellen.mim-standaard.nl/def/mim#LandelijkKerngegeven) | Indien het een gegeven of een als relatiesoort gemodelleerd gegeven is in een landelijk sector- en domein-overstijgend informatiemodel en geen authentic gegeven en geen basisgegeven is. |
+| [`mim:LandelijkCoregegeven`](http://modellen.mim-standaard.nl/def/mim#LandelijkCoregegeven) | Indien het een gegeven of een als relatiesoort gemodelleerd gegeven is in een landelijk sector- en domein-overstijgend informatiemodel en geen authentic gegeven en geen basisgegeven is. |
 | [`mim:OverigeAuthenticiteit`](http://modellen.mim-standaard.nl/def/mim#OverigeAuthenticiteit) | Indien het géén van de voorgaande categorieën betreft. Veelal gaat het dan om proces-, taakveld- of domeinspecifieke gegevens. |
 
 The `mim:unit` field refers to a value taken from [SI Digital framework](https://si-digital-framework.org/SI/units?lang=en).
@@ -353,7 +353,7 @@ The data groups are specified by the following aspects:
 | Term               | [`mim:term`](http://modellen.mim-standaard.nl/def/mim#term) | 0..* | text |
 | Definition                    | [`mim:definitie`](http://modellen.mim-standaard.nl/def/mim#definitie) | 1 | text |
 | Toelichting                  | [`mim:toelichting`](http://modellen.mim-standaard.nl/def/mim#toelichting) | 0..1 | text |
-| Gegevensgroeptype            | [`mim:gegevensgroeptype`](http://modellen.mim-standaard.nl/def/mim#gegevensgroeptype) | 1 | [`mim:Gegevensgroeptype`](http://modellen.mim-standaard.nl/def/mim#Gegevensgroeptype) |
+| Datatypegrouptype            | [`mim:datatypegrouptype`](http://modellen.mim-standaard.nl/def/mim#datatypegrouptype) | 1 | [`mim:Datatypegrouptype`](http://modellen.mim-standaard.nl/def/mim#Datatypegrouptype) |
 | Origin                     | [`mim:herkomst`](http://modellen.mim-standaard.nl/def/mim#herkomst) | 1 | text |
 | Origin definiton           | [`mim:herkomstDefinitie`](http://modellen.mim-standaard.nl/def/mim#herkomstDefinitie) | 1 | text |
 | Date of recording                 | [`mim:datumOpname`](http://modellen.mim-standaard.nl/def/mim#datumOpname) | 1 | datum |
@@ -377,7 +377,7 @@ The data group types are specified by the following aspects:
 | Toelichting                  | [`mim:toelichting`](http://modellen.mim-standaard.nl/def/mim#toelichting) | 0..1 | text |
 | Date of recording                 | [`mim:datumOpname`](http://modellen.mim-standaard.nl/def/mim#datumOpname) | 1 | datum |
 | Attribut                 | [`mim:attribute`](http://modellen.mim-standaard.nl/def/mim#attribute) | 0..* | [`mim:Attribuutsoort`](http://modellen.mim-standaard.nl/def/mim#Attribuutsoort) |
-| Gegevensgroep             | [`mim:gegevensgroep`](http://modellen.mim-standaard.nl/def/mim#gegevensgroep) | 0..* | [`mim:Gegevensgroep`](http://modellen.mim-standaard.nl/def/mim#Gegevensgroep) |
+| Datatypegroup             | [`mim:datatypegroup`](http://modellen.mim-standaard.nl/def/mim#datatypegroup) | 0..* | [`mim:Datatypegroup`](http://modellen.mim-standaard.nl/def/mim#Datatypegroup) |
 | Constraint                | [`mim:constraint`](http://modellen.mim-standaard.nl/def/mim#constraint) | 0..* | [`mim:Constraint`](http://modellen.mim-standaard.nl/def/mim#Constraint) |
 
 ### Relationships in LD
